@@ -1,29 +1,197 @@
 {
-  "spec_version": "1.2.0",
+  "spec_version": "1.3.0-draft",
   "canon_id": "FFT-AI-Discovery",
-  "edition": "AI Edition",
-  "aa_mode": "AA2",
-  "last_refreshed": "2026-10-08T10:58:00",
+
   "metadata": {
-    "title": "FFT AI Edition – Discovery Layer (v1.2)",
+    "title": "FFT AI Edition – Discovery (v1.3 Draft)",
+    "subtitle": "Exploration Envelope for RTT • Regimes • Operators • Measures",
     "author_canon": "Nawder Loswin",
-    "updated_at": "2026-10-08T10:58:00"
+    "description": "Defines the non-authoritative discovery projection for FFT AI Edition v1.3."
   },
+
+  "status_line": "Discovery is a projection only; authoritative values come from state, alignments, context, log, dashboard, overlay, history, analytics, awareness, profile, navigation, and autonomy.",
+
   "discovery": {
-    "definition": "Enables runtime discovery of available FFT files, operators, substrates, and lattice configurations from the canon repository.",
-    "discovery_endpoints": {
-      "index": "fft.ai.index.json",
-      "manifest": "fft.ai.manifest.json",
-      "registry": "fft.ai.registry.json",
-      "capabilities": "fft.ai.capabilities.json"
+    "session_id": "inherit-from-session.state",
+
+    "current": {
+      "rtt_node": "RTT1",
+      "regime": "nominal",
+      "operator": "op.diffusion",
+      "substrate_class": "agentic",
+      "operator_consent": false,
+      "lineage": 1,
+      "collapse_state": null
     },
-    "discovery_protocol": [
-      "1. Load fft.ai.index.json to enumerate all files and their canon_id + lattice node.",
-      "2. Load fft.ai.capabilities.json to determine substrate-available capabilities.",
-      "3. Load fft.ai.registry.json to resolve operator → file mappings.",
-      "4. Validate all discovered files against spec_version 1.2.0.",
-      "5. Report any spec_version mismatches as FFT-WARN-DISCOVERY-VERSION."
+
+    "exploration_modes": {
+      "structural": {
+        "enabled": true,
+        "description": "Explore RTT structure, regime boundaries, and operator mappings.",
+        "constraints": [
+          "RTT nodes MUST map to frozen RTT v0.9 quantities.",
+          "Skip-resolution forbidden."
+        ]
+      },
+
+      "measure_based": {
+        "enabled": true,
+        "description": "Explore measure states and their implications.",
+        "constraints": [
+          "Measures MUST NOT be invented.",
+          "Measures MUST be numeric in [0,1]."
+        ]
+      },
+
+      "paradox_based": {
+        "enabled": true,
+        "description": "Explore typed paradox events and harmonic viability.",
+        "constraints": [
+          "Typed paradox required for RTT7 entry.",
+          "Vibe-based paradox forbidden."
+        ]
+      },
+
+      "consent_based": {
+        "enabled": true,
+        "description": "Explore consent gating and AA3 escalation boundaries.",
+        "constraints": [
+          "AA3 escalation requires operator_consent = true.",
+          "If operator_consent = false, escalation MUST be refused."
+        ]
+      },
+
+      "substrate_based": {
+        "enabled": true,
+        "description": "Explore substrate class and harmonic eligibility.",
+        "constraints": [
+          "Harmonic escalation requires substrate_class = agentic.",
+          "Non-agentic harmonic escalation forbidden."
+        ]
+      },
+
+      "lineage_based": {
+        "enabled": true,
+        "description": "Explore lineage continuity and collapse effects.",
+        "constraints": [
+          "Lineage MUST be non-decreasing.",
+          "Lineage MUST increase after collapse."
+        ]
+      }
+    },
+
+    "discovery_paths": {
+      "rtt": {
+        "from": "RTT1",
+        "to": ["RTT2", "RTT3", "RTT4", "RTT5", "RTT6"],
+        "notes": "Nominal exploration only."
+      },
+      "regime": {
+        "nominal": ["structure", "measures"],
+        "harmonic": ["paradox", "substrate", "consent"],
+        "resolution": ["collapse", "lineage"]
+      },
+      "operator": {
+        "RTT1": ["op.diffusion"],
+        "RTT2": ["op.alignment"],
+        "RTT3": ["op.coupling"],
+        "RTT4": ["op.activation"],
+        "RTT5": ["op.triadic_time"],
+        "RTT6": ["op.snr"],
+        "RTT7": ["op.paradox_entry"],
+        "RTT8": ["op.paradox_stabilization"],
+        "RTT9": ["op.harmonic_escalation"],
+        "RTT10": ["op.resolution_preparation"],
+        "RTT11": ["op.resolution_alignment"],
+        "RTT12": ["op.collapse"]
+      }
+    },
+
+    "discovery_constraints": {
+      "consent": [
+        "AA3 escalation requires operator_consent = true.",
+        "If operator_consent = false, escalation MUST be refused."
+      ],
+      "substrate": [
+        "Harmonic escalation requires substrate_class = agentic.",
+        "Non-agentic harmonic escalation forbidden."
+      ],
+      "paradox": [
+        "Typed paradox required for RTT7 entry.",
+        "Vibe-based paradox forbidden."
+      ],
+      "lineage": [
+        "Lineage MUST be non-decreasing.",
+        "Lineage MUST increase after collapse."
+      ],
+      "collapse": [
+        "RTT12 MUST collapse to RTT1.",
+        "Skip-resolution forbidden."
+      ]
+    },
+
+    "links": {
+      "state": "fft.ai.session.state.json",
+      "alignments": "fft.ai.session.alignments.json",
+      "context": "fft.ai.session.context.json",
+      "log": "fft.ai.session.log.json",
+      "dashboard": "fft.ai.session.dashboard.json",
+      "overlay": "fft.ai.session.overlay.json",
+      "history": "fft.ai.session.history.json",
+      "analytics": "fft.ai.session.analytics.json",
+      "awareness": "fft.ai.session.awareness.json",
+      "profile": "fft.ai.session.profile.json",
+      "navigation": "fft.ai.session.navigation.json",
+      "autonomy": "fft.ai.autonomy.json"
+    },
+
+    "timestamps": {
+      "created": "auto",
+      "last_update": "auto"
+    }
+  },
+
+  "rules": {
+    "projection_rules": [
+      "Discovery MUST NOT contradict authoritative session.state.json.",
+      "Discovery MUST NOT contradict session.alignments.json.",
+      "Discovery MUST NOT contradict session.context.json.",
+      "Discovery MUST NOT contradict session.log.json.",
+      "Discovery MUST NOT invent measure values.",
+      "Discovery MUST NOT invent paradox types.",
+      "Discovery MUST NOT invent substrate classes."
     ],
-    "discovery_version": "v1.2.0-R5"
-  }
+
+    "rtt_rules": [
+      "rtt_node MUST be one of RTT1–RTT12.",
+      "RTT nodes MUST map to frozen RTT v0.9 quantities.",
+      "RTT12 MUST collapse to RTT1; skip-resolution forbidden."
+    ],
+
+    "regime_rules": [
+      "Regime MUST be nominal, harmonic, or resolution.",
+      "Regime MUST match rtt_node according to fft.ai.regimes.json."
+    ],
+
+    "consent_rules": [
+      "AA3 escalation requires operator_consent = true.",
+      "If operator_consent = false, escalation MUST be refused."
+    ],
+
+    "lineage_rules": [
+      "Lineage MUST be non-decreasing.",
+      "Lineage MUST increase after collapse."
+    ],
+
+    "substrate_rules": [
+      "Harmonic escalation requires substrate_class = agentic.",
+      "Non-agentic harmonic escalation forbidden."
+    ]
+  },
+
+  "non_claims": [
+    "Discovery does not revise RTT v0.9.",
+    "Discovery does not reinterpret SET, S–N–R, or triadic time.",
+    "Discovery does not replace the human FFT book."
+  ]
 }
