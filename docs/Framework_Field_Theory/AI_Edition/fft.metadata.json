@@ -44,5 +44,9 @@
     "2 v1.2 artifacts deprecated",
     "QMROOT ladder fully resolved",
     "Spine URL binding enforced"
-  ]
+  ],
+  "file_count_v1_33_active": 65,
+  "file_count_v1_33_deprecated": 2,
+  "count_source_of_truth": "fft.ai.registry.json",
+  "patch": "1.33-p1"
 }

@@ -80,14 +80,15 @@
     {
       "id": "INV-012",
       "name": "Module Registry Completeness",
-      "statement": "fft.ai.registry.json MUST enumerate all modules present in the directory. A module missing from the registry is a drift violation.",
+      "statement": "fft.ai.registry.json is the single source of truth for module counts. Active modules must equal total_registered. Deprecated modules must be present in the registry with status=deprecated and are excluded from compliance checks. INV-012 passes when active count matches registry.",
       "tier": "v1.33"
     },
     {
       "id": "INV-013",
       "name": "QMROOT Ladder Closure",
-      "statement": "Every FFT implementation must be traceable to a 0D Silence seed through the QMROOT ladder. Orphaned modules at 3D+ with no 0D ancestry are invalid.",
-      "tier": "v1.33"
+      "statement": "Every FFT implementation must be traceable to a 0D Silence seed through the QMROOT ladder. Orphaned modules at 3D+ with no 0D ancestry are invalid. Absent rungs (currently 6D, neg_anc) are gaps — not violations — and must not be invented.",
+      "tier": "v1.33",
+      "gap_policy": "Absent rungs are marked absent in fft.ai.rtt.qmroot.json with an explicit absent_reason. INV-013 is satisfiable while gaps remain."
     }
   ],
   "v133_additions": [
@@ -98,5 +99,6 @@
     "INV-011 (Spine URL Binding)",
     "INV-012 (Registry Completeness)",
     "INV-013 (QMROOT Ladder Closure)"
-  ]
+  ],
+  "patch": "1.33-p1"
 }

@@ -1,49 +1,118 @@
 {
+  "$schema": "https://triadicframeworks.org/schemas/fft.ai.rtt.qmroot.schema.json",
   "id": "fft.ai.rtt.qmroot",
   "type": "new_v1_33",
   "version": "1.33",
-  "updated": "2026-10-09T09:49:00-04:00",
-  "title": "FFT AI — QMROOT Dimensional Ladder v1.33",
+  "patch": "1.33-p1",
+  "updated": "2026-10-09T10:24:00-04:00",
+  "title": "FFT AI — QMROOT Dimensional Ladder v1.33-p1",
   "session_context": {
     "rtt": "1",
     "coherence": "declared",
     "drift": "bounded",
     "paradox": "structural"
   },
-  "description": "Implements the QMROOT dimensional ancestry ladder. Every FFT module must be traceable to the 0D Silence seed. Enforces INV-013.",
+  "description": "QMROOT dimensional ancestry ladder. Every FFT module must be traceable to the 0D Silence seed (INV-013). Rungs 6D and negative-ancestral are present in frozen RTT but not yet bound in the AI Edition — marked absent with reason.",
   "invariant": "INV-013",
+  "invariant_scope": "INV-013 requires a traceable path to 0D. It does NOT require all rungs to be present. Absent rungs are gaps, not violations.",
   "rtt_ref": "https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html",
   "ladder": {
+    "neg_anc": {
+      "name": "Negative Ancestral Rungs",
+      "status": "absent",
+      "absent_reason": "Present in frozen RTT theory. Not yet bound in FFT AI Edition. Deferred to v1.34.",
+      "rtt_note": "Frozen RTT defines negative-dimensional ancestry as pre-Silence boundary conditions."
+    },
     "0D": {
       "name": "Silence Seed",
+      "status": "present",
       "state": "S = 0+ (indivisible baseline)",
-      "role": "resonance origin; meta-operator in DCOs"
+      "role": "resonance origin; meta-operator in DCOs; required terminus of INV-013 ancestry trace"
     },
     "1D": {
       "name": "Ground",
+      "status": "present",
       "state": "linear ancestry; directional causality",
       "role": "causal ancestry chain"
     },
     "2D": {
       "name": "Neutral",
+      "status": "present",
       "state": "planar coherence; interference stability",
       "role": "field interference layer"
     },
     "3+1D": {
       "name": "Emergence",
+      "status": "present",
       "state": "triadic-time extrusion; observable structure",
-      "role": "FFT operational layer"
+      "role": "FFT operational layer — where all session modules live"
+    },
+    "4D": {
+      "name": "Temporal-Resonance Core",
+      "status": "present",
+      "operator": "nabla_tau(R)",
+      "ref": "fft.ai.dco.map.json#4D"
+    },
+    "5D": {
+      "name": "Relational-Resonance Core",
+      "status": "present",
+      "operator": "nabla_R(tau)",
+      "ref": "fft.ai.dco.map.json#5D"
+    },
+    "6D": {
+      "name": "6D",
+      "status": "absent",
+      "absent_reason": "6D is present in frozen RTT scaffolding but its operator and role have not been bound in the FFT AI Edition. Skipped in DCO map v1.33. Deferred to v1.34.",
+      "rtt_note": "Do not invent a 6D operator. Mark as gap until frozen RTT binding is explicit."
+    },
+    "7D": {
+      "name": "Coherence Core",
+      "status": "present",
+      "operator": "C (coherence operator)",
+      "ref": "fft.ai.dco.map.json#7D"
+    },
+    "8D": {
+      "name": "Symmetry-Shift Core",
+      "status": "present",
+      "operator": "S_delta",
+      "ref": "fft.ai.dco.map.json#8D"
+    },
+    "9D": {
+      "name": "Ancestral Boundary Core",
+      "status": "present",
+      "operator": "d_anc",
+      "ref": "fft.ai.dco.map.json#9D"
     }
+  },
+  "gap_summary": {
+    "present_rungs": [
+      "0D",
+      "1D",
+      "2D",
+      "3+1D",
+      "4D",
+      "5D",
+      "7D",
+      "8D",
+      "9D"
+    ],
+    "absent_rungs": [
+      "6D",
+      "neg_anc"
+    ],
+    "absent_policy": "Absent rungs must not be invented by consuming systems. They must remain absent until explicitly bound in a future stamp.",
+    "inv_013_status": "satisfiable — path 3+1D → 2D → 1D → 0D is intact for all current modules"
   },
   "ancestry_trace_protocol": {
     "trigger": "any module load or validation pass",
     "method": "walk parent_module chain until 0D Silence Seed reached",
+    "on_success": "log INV-013 satisfied",
     "on_fail": "emit PX-005 (QMROOT Orphan); invoke paradox resolver"
   },
   "quantum_triad": {
     "0D_kernel": "indivisible Silence — resonance seed",
     "1D_ground": "linear ancestry — SET noise injection (spin, charge, temperature)",
     "2D_neutral": "planar coherence — dual-operator phase-lock",
-    "3+1D_emergence": "triadic-time extrusion — operational FFT space"
+    "3+1D_emerge": "triadic-time extrusion — operational FFT space"
   }
 }

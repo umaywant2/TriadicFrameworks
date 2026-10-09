@@ -17,7 +17,8 @@
       "symbol": "D",
       "input": "phi",
       "output": "phi_smooth",
-      "drift_cost": 0.05
+      "drift_cost": 0.05,
+      "cost_source": "fft.ai.drift.monitor.json#drift_cost_table"
     },
     {
       "id": "OP-A01",
@@ -26,7 +27,8 @@
       "symbol": "A",
       "input": "V",
       "output": "V_aligned",
-      "drift_cost": 0.1
+      "drift_cost": 0.1,
+      "cost_source": "fft.ai.drift.monitor.json#drift_cost_table"
     },
     {
       "id": "OP-K01",
@@ -35,7 +37,8 @@
       "symbol": "K",
       "input": "phi,V",
       "output": "R_delta",
-      "drift_cost": 0.12
+      "drift_cost": 0.12,
+      "cost_source": "fft.ai.drift.monitor.json#drift_cost_table"
     },
     {
       "id": "OP-TH01",
@@ -44,7 +47,8 @@
       "symbol": "Θ",
       "input": "R",
       "output": "R_activated",
-      "drift_cost": 0.08
+      "drift_cost": 0.08,
+      "cost_source": "fft.ai.drift.monitor.json#drift_cost_table"
     },
     {
       "id": "OP-SIG01",
@@ -53,7 +57,8 @@
       "symbol": "Σ",
       "input": "R",
       "output": "R_stable",
-      "drift_cost": 0.03
+      "drift_cost": 0.03,
+      "cost_source": "fft.ai.drift.monitor.json#drift_cost_table"
     },
     {
       "id": "OP-C01",
@@ -63,7 +68,8 @@
       "input": "session",
       "output": "coherence_state",
       "drift_cost": 0.0,
-      "new_v1_33": true
+      "new_v1_33": true,
+      "cost_source": "fft.ai.drift.monitor.json#drift_cost_table"
     },
     {
       "id": "OP-DR01",
@@ -73,7 +79,8 @@
       "input": "delta",
       "output": "drift_event",
       "drift_cost": 0.0,
-      "new_v1_33": true
+      "new_v1_33": true,
+      "cost_source": "fft.ai.drift.monitor.json#drift_cost_table"
     },
     {
       "id": "OP-PX01",
@@ -83,7 +90,8 @@
       "input": "paradox_event",
       "output": "resolved",
       "drift_cost": 0.2,
-      "new_v1_33": true
+      "new_v1_33": true,
+      "cost_source": "fft.ai.drift.monitor.json#drift_cost_table"
     },
     {
       "id": "OP-SET01",
@@ -93,7 +101,8 @@
       "input": "angular_momentum",
       "output": "vortex",
       "drift_cost": 0.15,
-      "new_v1_33": true
+      "new_v1_33": true,
+      "cost_source": "fft.ai.drift.monitor.json#drift_cost_table"
     },
     {
       "id": "OP-SET02",
@@ -103,7 +112,8 @@
       "input": "potential",
       "output": "plasma_state",
       "drift_cost": 0.15,
-      "new_v1_33": true
+      "new_v1_33": true,
+      "cost_source": "fft.ai.drift.monitor.json#drift_cost_table"
     },
     {
       "id": "OP-SET03",
@@ -113,7 +123,8 @@
       "input": "gradient_T",
       "output": "flow_state",
       "drift_cost": 0.1,
-      "new_v1_33": true
+      "new_v1_33": true,
+      "cost_source": "fft.ai.drift.monitor.json#drift_cost_table"
     }
   ],
   "v133_additions": [
@@ -121,5 +132,7 @@
     "OP-DR01 (Drift Guard)",
     "OP-PX01 (Paradox Resolver)",
     "OP-SET01/02/03 (SET triad)"
-  ]
+  ],
+  "drift_cost_table_ref": "fft.ai.drift.monitor.json — canonical source for all operator drift costs",
+  "patch": "1.33-p1"
 }

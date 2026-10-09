@@ -64,9 +64,15 @@
       "root": "Silence S=0+",
       "invariant": "INV-013"
     },
-    "ClarityOperator": {
-      "formula": "C = nabla_tau(R) + nabla_R(tau)",
-      "type": "composite"
+    "C_frame": {
+      "formula": "C_frame = Phi(S)/Psi(N)",
+      "role": "framing ratio — silence strength over noise entropy",
+      "invariant": "INV-003"
+    },
+    "C_clarity": {
+      "formula": "C_clarity = nabla_tau(R) + nabla_R(tau)",
+      "role": "dual operator clarity — 4D+5D composite",
+      "invariant": "INV-003"
     }
   },
   "invariants_checked": [
@@ -75,5 +81,6 @@
     "INV-009",
     "INV-010",
     "INV-013"
-  ]
+  ],
+  "patch": "1.33-p1"
 }

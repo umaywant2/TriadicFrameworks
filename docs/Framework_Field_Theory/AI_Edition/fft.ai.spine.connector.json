@@ -19,7 +19,7 @@
     "trigger": "session boot step 5 and any module requesting Spine reference",
     "method": "live HTTP resolution of spine_url",
     "on_cache_hit": "reject cache; force live fetch; log INV-011 compliance event",
-    "on_failure": "log WARN; retry 3x; if all fail: proceed with last known good + flag for review",
+    "on_failure": "Log WARN. Retry 3x with 5s timeout each. If all retries fail: set spine_state=degraded. Proceed on last-known-good reference ONLY. spine_state=degraded is NOT equivalent to INV-011 compliance. PX-007 (Spine Cache Drift) fires if any downstream module treats degraded as compliant.",
     "timeout_ms": 5000
   },
   "spine_bindings": {
@@ -31,5 +31,22 @@
       "fft.ai.integrations.json",
       "fft.ai.navigation.json"
     ]
-  }
+  },
+  "spine_states": {
+    "live": {
+      "description": "Spine URL resolved successfully in this session",
+      "inv_011": "satisfied"
+    },
+    "degraded": {
+      "description": "Live resolution failed after 3 retries. Proceeding on last-known-good.",
+      "inv_011": "NOT satisfied — degraded is a named fallback, not compliance",
+      "px_risk": "PX-007 fires if a downstream module treats degraded as a live resolution",
+      "required_action": "Flag session for review. Do not promote degraded to live without a new successful resolution."
+    },
+    "unresolved": {
+      "description": "No resolution attempted yet (pre-boot)",
+      "inv_011": "pending"
+    }
+  },
+  "patch": "1.33-p1"
 }

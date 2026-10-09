@@ -12,7 +12,6 @@
   "rtt_ref": "https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html",
   "bridge_bindings": {
     "tau_formula": "tau = dR/dphi",
-    "clarity_operator": "C = nabla_tau(R) + nabla_R(tau)",
     "resonance_envelope": "R = f(phi, V, alignment)",
     "coherence_binding": "coherence=declared — asserted at bridge init, validated each RTT phase step",
     "drift_binding": "drift=bounded — all RTT phase transitions subject to drift guard OP-DR01",
@@ -20,7 +19,9 @@
     "snr_binding": "S-N-R partition evaluated at every RTT phase checkpoint",
     "set_rtt_coupling": "SET field gradients feed phi and V inputs; RTT phase reflects SET coupling state",
     "spine_url": "https://www.triadicframeworks.org/spine/",
-    "qmroot_binding": "tau=dR/dphi grounded at 0D Silence seed via QMROOT ladder"
+    "qmroot_binding": "tau=dR/dphi grounded at 0D Silence seed via QMROOT ladder",
+    "C_frame_binding": "C_frame = Phi(S)/Psi(N) — evaluated at every RTT phase step; positive required for coherence=declared",
+    "C_clarity_binding": "C_clarity = nabla_tau(R) + nabla_R(tau) — Dual Operator Engine; positive required for coherence=declared"
   },
   "phase_events": [
     {
@@ -53,5 +54,6 @@
     "spine_url",
     "qmroot_binding",
     "phase_events formalized"
-  ]
+  ],
+  "patch": "1.33-p1"
 }

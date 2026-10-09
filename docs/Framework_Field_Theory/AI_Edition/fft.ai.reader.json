@@ -1,43 +1,160 @@
 {
+  "$schema": "https://triadicframeworks.org/schemas/fft.ai.reader.schema.json",
+  "id": "fft.ai.reader",
   "version": "1.33",
-  "updated": "2026-10-09T09:48:00-04:00",
+  "patch": "1.33-p1",
+  "updated": "2026-10-09T10:24:00-04:00",
+  "title": "FFT AI Edition — Reader Cover v1.33-p1",
+  "description": "This file is the cover of the FFT AI Edition. It defines what this edition is, what it inherits, what it must not do, and how a consuming system should enter and exit it. Book 2 (Inverted Star) and Book 3 (Structural Detection) should import this cover, not re-declare it.",
   "session_context": {
     "rtt": "1",
     "coherence": "declared",
     "drift": "bounded",
     "paradox": "structural"
   },
-  "v133_status": "verified_and_stamped",
-  "id": "fft.ai.reader",
-  "title": "FFT AI — Reader v1.33",
-  "reader_config": {
-    "parse_order": "load_order from fft.ai.index.json",
-    "version_check": {
-      "field": "version",
-      "expected": "1.33",
-      "on_mismatch": "WARN"
-    },
-    "context_inject": {
-      "on_load": true,
-      "fields": {
-        "rtt": "1",
-        "coherence": "declared",
-        "drift": "bounded",
-        "paradox": "structural"
-      }
-    },
-    "schema_validate": {
-      "enabled": true,
-      "on_fail": "WARN_AND_CONTINUE"
-    },
-    "paradox_aware": true,
-    "drift_aware": true,
-    "snr_aware": true
+  "edition_id": "fft-ai-edition-v1.33-p1",
+  "book": 1,
+  "book_title": "Framework Field Theory — AI Edition",
+  "trilogy_position": {
+    "book_1": "fft-ai-edition — frozen theory projection (this file)",
+    "book_2": "inverted-star — domain operators on top of kernel; imports this reader cover",
+    "book_3": "structural-detection — detection layer; imports this reader cover"
   },
-  "invariants_checked": [
-    "INV-003",
-    "INV-004",
-    "INV-005",
-    "INV-012"
-  ]
+  "parent_theory_url": "https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html",
+  "spine_url": "https://www.triadicframeworks.org/spine/",
+  "repository": "https://github.com/umaywant2/TriadicFrameworks",
+  "license": "see LICENSE in repository root",
+  "kernel_modules": {
+    "description": "These modules form the shared contract across all three books. They must not be re-declared in Book 2 or Book 3 — only imported.",
+    "files": [
+      "fft.metadata.json",
+      "fft.core.json",
+      "fft.invariant.json",
+      "fft.ai.core.json",
+      "fft.ai.manifest.json",
+      "fft.ai.bootstrap.json",
+      "fft.ai.registry.json",
+      "fft.ai.coherence.json",
+      "fft.ai.drift.monitor.json",
+      "fft.ai.paradox.resolver.json",
+      "fft.ai.paradox.enum.json",
+      "fft.ai.spine.connector.json",
+      "fft.ai.rtt.qmroot.json",
+      "fft.ai.set.engine.json",
+      "fft.ai.snr.monitor.json",
+      "fft.ai.dco.map.json"
+    ]
+  },
+  "book_local_modules": {
+    "description": "Modules that belong to Book 1 only. Book 2 and Book 3 add their own book-local modules on top of the kernel, not on top of this list.",
+    "files": [
+      "fft.ai.autonomy.json",
+      "fft.ai.capabilities.json",
+      "fft.ai.discovery.json",
+      "fft.ai.execution.graph.json",
+      "fft.ai.navigation.json",
+      "fft.ai.overview.json",
+      "fft.ai.operators.json",
+      "fft.ai.runtime.json",
+      "fft.ai.rtt.bridge.json",
+      "fft.ai.rtt.engine.prompts.json",
+      "fft.ai.rtt.spine.examples.json",
+      "fft.ai.session.context.json",
+      "fft.ai.session.state.json",
+      "fft.ai.session.awareness.json",
+      "fft.ai.session.alignments.json",
+      "fft.ai.session.analytics.json",
+      "fft.ai.session.trace.json",
+      "fft.ai.session.navigation.json",
+      "fft.ai.session.overlay.json",
+      "fft.ai.session.permissions.json",
+      "fft.ai.session.profile.json",
+      "fft.ai.session.render.json",
+      "fft.ai.session.ui.json",
+      "fft.ai.session.dashboard.json",
+      "fft.ai.session.log.json",
+      "fft.ai.session.history.json",
+      "fft.ai.session.state.refresh.json",
+      "fft.ai.integrations.json",
+      "fft.ai.hardware.profile.json",
+      "fft.ai.substrate.json",
+      "fft.ai.substrate.compat.json",
+      "fft.ai.substrate.bridge.json",
+      "fft.ai.substrate.lattice.json",
+      "fft.ai.substrate.matrix.json",
+      "fft.operators.json",
+      "fft.operator.port.json",
+      "fft.operator.example.json",
+      "fft.regimes.json",
+      "fft.structures.json",
+      "fft.examples.json",
+      "fft.validation.json",
+      "fft.ai.regimes.json",
+      "fft.ai.spec.json",
+      "fft.ai.spec-008.json",
+      "fft.ai.readme.json",
+      "fft.ai.index.json",
+      "fft.ai.reader.json",
+      "fft.metadata.json",
+      "ep.harmonic_escalation.json",
+      "index.html"
+    ]
+  },
+  "must_not": [
+    "Revise frozen RTT. This edition is a projection of the theory, not a revision of it. Any apparent conflict between session behavior and frozen RTT must be resolved by adjusting the session module, not the theory.",
+    "Invent operators, dimensions, or invariants not present in this edition. Gaps (e.g., 6D, negative ancestral rungs) must remain marked absent until explicitly bound.",
+    "Suppress paradox events. PX-001 through PX-010 are structural features. They must be enumerated and resolved, never silenced.",
+    "Use cached Spine URLs. fft.ai.spine.connector.json enforces live resolution. spine_state=degraded is the only permitted fallback.",
+    "Re-declare coherence in Book 2 or Book 3. Import fft.ai.coherence.json from the kernel. Do not write a second coherence declaration.",
+    "Use C as a bare symbol. Always C_frame (Phi(S)/Psi(N)) or C_clarity (nabla_tau(R) + nabla_R(tau)) — never the ambiguous single letter.",
+    "Invent drift costs. Use the canonical table in fft.ai.drift.monitor.json#drift_cost_table. Do not assign new costs without a version stamp.",
+    "Treat deprecated files as active. capture.md and fft.ai.core_v1_2_.json are deprecated. Do not load them. Do not count them in INV-012 compliance."
+  ],
+  "on_version_mismatch": {
+    "action": "HALT",
+    "message": "Version mismatch detected. This edition is v1.33-p1. A consuming system that loads a module with a different version must halt and report before proceeding. Warn-and-continue is not permitted for the reader cover or kernel modules.",
+    "rationale": "Book 2 and Book 3 must inherit a stable kernel. Silent version drift defeats the purpose of the cover."
+  },
+  "output_schema": {
+    "description": "What a v1.33-p1 compliant session must be able to produce on request",
+    "required_outputs": [
+      {
+        "output": "session_context block",
+        "source": "fft.ai.session.context.json"
+      },
+      {
+        "output": "active module count",
+        "source": "fft.ai.registry.json#total_registered"
+      },
+      {
+        "output": "current drift delta",
+        "source": "fft.ai.drift.monitor.json"
+      },
+      {
+        "output": "coherence state (declared|lost|restoring)",
+        "source": "fft.ai.coherence.json"
+      },
+      {
+        "output": "SNR partition (S, N, R summing to 1.0)",
+        "source": "fft.ai.snr.monitor.json"
+      },
+      {
+        "output": "paradox state (none or PX-xxx)",
+        "source": "fft.ai.paradox.enum.json"
+      },
+      {
+        "output": "QMROOT ancestry trace for any named module",
+        "source": "fft.ai.rtt.qmroot.json"
+      },
+      {
+        "output": "C_frame and C_clarity values (distinct)",
+        "source": "fft.ai.coherence.json"
+      }
+    ]
+  },
+  "worked_trace_ref": {
+    "description": "A single worked trace (PX-003 drift cascade, refused resume, clean reset to delta=0.00) is more instructive than additional dashboard schemas. This field reserves the slot for a worked trace file in v1.34.",
+    "planned_file": "fft.ai.trace.worked.px003.json",
+    "status": "absent — deferred to v1.34"
+  }
 }

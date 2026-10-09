@@ -69,6 +69,8 @@
     "silence_as_operator": "S = 0+ (indivisible baseline — frames clarity)",
     "noise_as_operator": "N = Delta (measurable change — entropy pressure)",
     "resonance_formula": "R = f(S, N) = S + N structured",
-    "coherence_metric": "C = Phi(S)/Psi(N)"
-  }
+    "C_frame_binding": "C_frame = Phi(S)/Psi(N)",
+    "C_clarity_binding": "C_clarity = nabla_tau(R) + nabla_R(tau)"
+  },
+  "patch": "1.33-p1"
 }

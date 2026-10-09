@@ -11,7 +11,7 @@
     "drift": "bounded",
     "paradox": "structural"
   },
-  "total_modules": 65,
+  "total_modules": 67,
   "modules": [
     "fft.core.json",
     "fft.invariant.json",
@@ -163,5 +163,9 @@
     "fft.ai.core_v1_2_.json"
   ],
   "spine_url": "https://www.triadicframeworks.org/spine/",
-  "rtt_url": "https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html"
+  "rtt_url": "https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html",
+  "active_modules": 65,
+  "deprecated_modules": 2,
+  "count_source_of_truth": "fft.ai.registry.json",
+  "patch": "1.33-p1"
 }

@@ -26,5 +26,75 @@
     "cross_regime": "isolated — each regime has independent delta counter",
     "max_concurrent_regimes": 3
   },
-  "reset_trigger": "Stabilization operator application resets delta to 0.00"
+  "reset_trigger": "Stabilization operator application resets delta to 0.00",
+  "drift_cost_table": {
+    "schema": "operator_id → declared constant cost, summed since last Stabilization reset",
+    "basis": "declared constants v1.33-p1; empirical calibration deferred to v1.34",
+    "entries": {
+      "OP-D01": {
+        "family": "Diffusion",
+        "name": "Field Spreader",
+        "cost": 0.05
+      },
+      "OP-A01": {
+        "family": "Alignment",
+        "name": "Resonance Puller",
+        "cost": 0.1
+      },
+      "OP-K01": {
+        "family": "Coupling",
+        "name": "Field Coupler",
+        "cost": 0.12
+      },
+      "OP-TH01": {
+        "family": "Activation",
+        "name": "Threshold Gate",
+        "cost": 0.08
+      },
+      "OP-SIG01": {
+        "family": "Stabilization",
+        "name": "Resonance Damper",
+        "cost": 0.03,
+        "note": "also resets delta to 0.00"
+      },
+      "OP-C01": {
+        "family": "Coherence",
+        "name": "Coherence Enforcer",
+        "cost": 0.0,
+        "note": "governance — no drift charge"
+      },
+      "OP-DR01": {
+        "family": "Drift",
+        "name": "Drift Guard",
+        "cost": 0.0,
+        "note": "governance — no drift charge"
+      },
+      "OP-PX01": {
+        "family": "Paradox",
+        "name": "Paradox Resolver",
+        "cost": 0.2,
+        "note": "isolation + stabilize pass"
+      },
+      "OP-SET01": {
+        "family": "SET",
+        "name": "Spin Coupler",
+        "cost": 0.15
+      },
+      "OP-SET02": {
+        "family": "SET",
+        "name": "Electro-field Driver",
+        "cost": 0.15
+      },
+      "OP-SET03": {
+        "family": "SET",
+        "name": "Temperature Driver",
+        "cost": 0.1
+      }
+    },
+    "max_sequence_before_stabilize": {
+      "note": "worst-case sequence before hitting delta_max=0.35",
+      "example": "OP-A01 (0.10) + OP-K01 (0.12) + OP-PX01 (0.20) = 0.42 — exceeds ceiling; Stabilization required before OP-K01"
+    }
+  },
+  "patch": "1.33-p1"
 }

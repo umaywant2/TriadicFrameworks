@@ -56,7 +56,7 @@
     {
       "id": "PX-008",
       "name": "Registry Gap",
-      "description": "One or more of 67 modules absent from registry — INV-012 violated",
+      "description": "One or more active modules absent from registry — INV-012 violated. Active count must equal fft.ai.registry.json#total_registered (currently 65). Deprecated modules are excluded from this count.",
       "resolution": "re-register missing modules; halt if critical"
     },
     {
@@ -76,5 +76,8 @@
     "All 10 paradox types formalized in v1.33",
     "paradox=structural mode binding",
     "resolution chains for each"
-  ]
+  ],
+  "count_source": "fft.ai.registry.json — single source of truth for all module counts",
+  "active_modules": 65,
+  "patch": "1.33-p1"
 }

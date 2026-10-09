@@ -70,8 +70,39 @@
       "id": "VAL-012",
       "target": "index.html",
       "check": "version string '1.33' present in UI"
+    },
+    {
+      "id": "VAL-013",
+      "target": "fft.ai.coherence.json",
+      "check": "C_frame and C_clarity both present as distinct fields"
+    },
+    {
+      "id": "VAL-014",
+      "target": "fft.ai.drift.monitor.json",
+      "check": "drift_cost_table present with all 11 operator entries"
+    },
+    {
+      "id": "VAL-015",
+      "target": "fft.ai.rtt.qmroot.json",
+      "check": "6D and neg_anc both present with status=absent"
+    },
+    {
+      "id": "VAL-016",
+      "target": "fft.ai.registry.json",
+      "check": "total_registered == 65 (active); deprecated entries have status=deprecated"
+    },
+    {
+      "id": "VAL-017",
+      "target": "fft.ai.reader.json",
+      "check": "must_not array present with >= 8 entries; on_version_mismatch.action == HALT"
+    },
+    {
+      "id": "VAL-018",
+      "target": "fft.ai.spine.connector.json",
+      "check": "spine_states present with live, degraded, unresolved; degraded explicitly not INV-011 compliant"
     }
   ],
-  "pass_threshold": "all 12 rules pass",
-  "invariants_checked": "INV-001 through INV-013"
+  "pass_threshold": "all 18 rules pass",
+  "invariants_checked": "INV-001 through INV-013",
+  "patch": "1.33-p1"
 }

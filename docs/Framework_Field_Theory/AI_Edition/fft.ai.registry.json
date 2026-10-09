@@ -9,7 +9,7 @@
     "drift": "bounded",
     "paradox": "structural"
   },
-  "total_registered": 67,
+  "total_registered": 65,
   "invariant": "INV-012",
   "registry": {
     "fft.core.json": {
@@ -271,10 +271,31 @@
     "fft.ai.snr.monitor.json": {
       "version": "1.33",
       "tier": "NEW"
+    },
+    "capture.md": {
+      "version": "1.33",
+      "tier": "DEP",
+      "status": "deprecated",
+      "replacement": "fft.ai.session.context.json + fft.ai.session.log.json"
+    },
+    "fft.ai.core_v1_2_.json": {
+      "version": "1.2",
+      "tier": "DEP",
+      "status": "deprecated",
+      "replacement": "fft.ai.core.json"
     }
   },
   "deprecated_excluded": [
     "capture.md",
     "fft.ai.core_v1_2_.json"
-  ]
+  ],
+  "count_policy": {
+    "source_of_truth": "fft.ai.registry.json",
+    "active_modules": 65,
+    "deprecated": 2,
+    "total_in_dir": 67,
+    "note": "INV-012 and PX-008 enforce active_modules count (65). Deprecated entries are present in registry with status=deprecated and are excluded from compliance checks."
+  },
+  "total_in_directory": 67,
+  "patch": "1.33-p1"
 }

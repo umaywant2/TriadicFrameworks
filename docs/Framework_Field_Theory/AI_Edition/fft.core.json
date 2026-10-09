@@ -158,13 +158,14 @@
     "2D (Neutral/interference)",
     "3+1D (emergence via triadic-time extrusion)"
   ],
-  "coherence_metric": "C = Φ(S)/Ψ(N) — framing strength over entropy pressure",
-  "clarity_operator": "C = ∇τR + ∇Rτ  (Dual Operator Engine)",
   "v133_additions": [
     "coherence=declared binding injected at field init",
     "drift=bounded guard on all operator regime transitions",
     "paradox=structural enum cross-linked from fft.ai.paradox.enum.json",
     "QMROOT ladder fully resolved through 9D",
     "New modules: coherence, drift, paradox, rtt.qmroot, set.engine, spine.connector, dco.map, snr.monitor"
-  ]
+  ],
+  "C_frame": "Phi(S)/Psi(N) — framing strength over entropy pressure",
+  "C_clarity": "nabla_tau(R) + nabla_R(tau) — Dual Operator Engine (4D+5D composite)",
+  "patch": "1.33-p1"
 }
