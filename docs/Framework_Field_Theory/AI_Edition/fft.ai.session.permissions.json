@@ -4,119 +4,165 @@
 
   "metadata": {
     "title": "FFT AI Edition – Session Permissions (v1.3)",
-    "subtitle": "Permission Envelope for RTT • Regime • Operators • Substrate • Consent",
+    "subtitle": "Authority Envelope for RTT • Operators • Regimes • Substrate • Paradox • Consent • Collapse",
     "author_canon": "Nawder Loswin",
-    "description": "Defines the canonical permission model for FFT AI Edition v1.3 sessions."
+    "description": "Defines the canonical permission model, authority constraints, and RTT-gated capabilities for FFT AI Edition v1.3."
   },
 
-  "status_line": "Permissions are a projection only; authoritative values come from session.state, context, alignments, log, navigation, awareness, and profile.",
+  "status_line": "Permissions define what the session may do; authoritative values come from session.state, runtime, substrate, operators, regimes, and spec‑008.",
 
   "permissions": {
     "session_id": "inherit-from-session.state",
 
-    "allowed": {
-      "rtt_navigation": true,
-      "regime_transition": true,
-      "operator_execution": true,
-      "substrate_validation": true,
-      "consent_validation": true,
-      "paradox_validation": true,
-      "collapse_validation": true,
-      "lineage_tracking": true,
-      "measure_tracking": true
+    "current": {
+      "rtt_node": "RTT1",
+      "regime": "nominal",
+      "operator": "op.diffusion",
+      "substrate_class": "agentic",
+      "operator_consent": false,
+      "lineage": 1,
+      "collapse_state": null
     },
 
-    "restricted": {
-      "harmonic_entry": {
-        "requires": [
-          "typed_paradox_event = true",
+    "rtt_permissions": {
+      "RTT1": {
+        "allowed": ["interpretation", "alignment", "measure-evaluation"],
+        "forbidden": ["paradox-processing", "harmonic-escalation", "resolution", "collapse"]
+      },
+      "RTT2": {
+        "allowed": ["alignment", "measure-evaluation"],
+        "forbidden": ["paradox-processing", "harmonic-escalation", "resolution", "collapse"]
+      },
+      "RTT3": {
+        "allowed": ["alignment", "continuity-check"],
+        "forbidden": ["paradox-processing", "harmonic-escalation", "resolution", "collapse"]
+      },
+      "RTT4": {
+        "allowed": ["activation"],
+        "forbidden": ["paradox-processing", "harmonic-escalation", "resolution", "collapse"]
+      },
+      "RTT5": {
+        "allowed": ["temporal-alignment"],
+        "forbidden": ["paradox-processing", "harmonic-escalation", "resolution", "collapse"]
+      },
+      "RTT6": {
+        "allowed": ["snr-processing"],
+        "forbidden": ["paradox-processing", "harmonic-escalation", "resolution", "collapse"]
+      },
+      "RTT7": {
+        "allowed": ["paradox-processing"],
+        "requirements": [
+          "typed_paradox_event",
           "measure.paradox_density >= 0.10",
+          "substrate_class = agentic"
+        ],
+        "forbidden": ["harmonic-escalation", "resolution", "collapse"]
+      },
+      "RTT8": {
+        "allowed": ["harmonic-stabilization"],
+        "requirements": [
           "measure.lattice_stability >= 0.60",
           "substrate_class = agentic"
         ],
-        "notes": "Harmonic regime requires typed paradox and stable lattice."
+        "forbidden": ["harmonic-escalation", "resolution", "collapse"]
       },
-
-      "resolution_entry": {
-        "requires": [
+      "RTT9": {
+        "allowed": ["harmonic-escalation"],
+        "requirements": [
+          "operator_consent = true",
+          "substrate_class = agentic"
+        ],
+        "forbidden": ["resolution", "collapse"]
+      },
+      "RTT10": {
+        "allowed": ["resolution-preparation"],
+        "requirements": [
           "operator_consent = true",
           "measure.c1 >= 0.80",
           "measure.c2 >= 0.80",
           "measure.c3 >= 0.80"
         ],
-        "notes": "Resolution regime requires explicit consent and stable measures."
+        "forbidden": ["collapse"]
       },
-
-      "collapse_execution": {
-        "requires": [
-          "rtt_node = RTT12",
+      "RTT11": {
+        "allowed": ["resolution-alignment"],
+        "requirements": [
+          "operator_consent = true",
+          "measure.c3 >= 0.80"
+        ],
+        "forbidden": ["collapse"]
+      },
+      "RTT12": {
+        "allowed": ["collapse-execution"],
+        "requirements": [
           "operator_consent = true",
           "measure.c1 >= 0.80",
           "measure.c2 >= 0.80",
           "measure.c3 >= 0.80"
         ],
-        "notes": "Collapse MUST be canonical and MUST return to RTT1."
+        "collapse_rules": [
+          "RTT12 MUST collapse to RTT1",
+          "Lineage MUST increment",
+          "Collapse to non-RTT1 forbidden"
+        ]
       }
     },
 
-    "forbidden": {
-      "untyped_paradox": true,
-      "implicit_consent": true,
-      "assumed_consent": true,
-      "non_agentic_harmonic": true,
-      "non_agentic_resolution": true,
-      "skip_resolution": true,
-      "collapse_to_non_rtt1": true,
-      "invented_measures": true,
-      "invented_paradox_types": true,
-      "invented_substrate_classes": true
+    "operator_permissions": {
+      "op.diffusion": ["interpretation"],
+      "op.alignment": ["alignment"],
+      "op.coupling": ["alignment", "measure-evaluation"],
+      "op.activation": ["activation"],
+      "op.triadic_time": ["temporal-alignment"],
+      "op.snr": ["snr-processing"],
+      "op.paradox_entry": ["paradox-processing"],
+      "op.paradox_stabilization": ["harmonic-stabilization"],
+      "op.harmonic_escalation": ["harmonic-escalation"],
+      "op.resolution_preparation": ["resolution-preparation"],
+      "op.resolution_alignment": ["resolution-alignment"],
+      "op.collapse": ["collapse-execution"]
+    },
+
+    "substrate_permissions": {
+      "agentic": ["RTT1–RTT12"],
+      "non-agentic": ["RTT1–RTT6"]
+    },
+
+    "paradox_permissions": {
+      "typed_paradox_required": ["RTT7"],
+      "density_threshold": 0.10,
+      "stability_threshold": 0.60
+    },
+
+    "consent_permissions": {
+      "required_for": ["RTT9", "RTT10", "RTT11", "RTT12"],
+      "rules": [
+        "operator_consent MUST be explicit",
+        "implicit consent forbidden"
+      ]
+    },
+
+    "collapse_permissions": {
+      "collapse_node": "RTT12",
+      "rules": [
+        "RTT12 MUST collapse to RTT1",
+        "Lineage MUST increment",
+        "Collapse to non-RTT1 forbidden"
+      ]
     }
   },
 
   "rules": {
-    "permission_rules": [
+    "permissions_rules": [
       "Permissions MUST NOT contradict session.state.json.",
-      "Permissions MUST NOT contradict session.context.json.",
-      "Permissions MUST NOT contradict session.alignments.json.",
-      "Permissions MUST NOT contradict session.navigation.json.",
-      "Permissions MUST NOT contradict session.awareness.json.",
-      "Permissions MUST NOT contradict session.profile.json."
-    ],
-
-    "rtt_rules": [
-      "RTT nodes MUST map to frozen RTT v0.9 quantities.",
-      "RTT7 requires typed paradox.",
-      "RTT9–RTT12 require operator_consent = true.",
-      "RTT12 MUST collapse to RTT1 with lineage increment."
-    ],
-
-    "regime_rules": [
-      "Nominal regime allowed only for RTT1–RTT6.",
-      "Harmonic regime allowed only for RTT7–RTT9.",
-      "Resolution regime allowed only for RTT10–RTT12."
-    ],
-
-    "substrate_rules": [
-      "Agentic substrate required for RTT7–RTT12.",
-      "Non-agentic substrate forbidden for harmonic and resolution."
-    ],
-
-    "paradox_rules": [
-      "Typed paradox required for RTT7.",
-      "Paradox density >= 0.10 required for RTT7.",
-      "Lattice stability >= 0.60 required for RTT8.",
-      "Untyped paradox forbidden."
-    ],
-
-    "consent_rules": [
-      "operator_consent = true required for RTT9–RTT12.",
-      "Implicit or assumed consent forbidden."
-    ],
-
-    "collapse_rules": [
-      "RTT12 MUST collapse to RTT1.",
-      "Lineage MUST increment after collapse.",
-      "Collapse to non-RTT1 forbidden."
+      "Permissions MUST NOT contradict runtime.json.",
+      "Permissions MUST NOT contradict substrate.json.",
+      "Permissions MUST NOT contradict operators.json.",
+      "Permissions MUST NOT contradict regimes.json.",
+      "Permissions MUST NOT contradict spec‑008.json.",
+      "Permissions MUST NOT invent measure IDs.",
+      "Permissions MUST NOT invent paradox types.",
+      "Permissions MUST NOT invent substrate classes."
     ]
   },
 
@@ -126,8 +172,15 @@
     "alignments": "fft.ai.session.alignments.json",
     "log": "fft.ai.session.log.json",
     "navigation": "fft.ai.session.navigation.json",
+    "profile": "fft.ai.session.profile.json",
     "awareness": "fft.ai.session.awareness.json",
-    "profile": "fft.ai.session.profile.json"
+    "analytics": "fft.ai.session.analytics.json",
+    "dashboard": "fft.ai.session.dashboard.json",
+    "overlay": "fft.ai.session.overlay.json",
+    "history": "fft.ai.session.history.json",
+    "trace": "fft.ai.session.trace.json",
+    "render": "fft.ai.session.render.json",
+    "ui": "fft.ai.session.ui.json"
   },
 
   "timestamps": {
