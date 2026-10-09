@@ -1,9 +1,9 @@
 {
-  "spec_version": "1.3.0-draft",
+  "spec_version": "1.3.0",
   "canon_id": "FFT-AI-Session-Log",
 
   "metadata": {
-    "title": "FFT AI Edition – Session Log (v1.3 Draft)",
+    "title": "FFT AI Edition – Session Log (v1.3)",
     "subtitle": "RTT • Measures • Paradox • Consent • Collapse • Lineage",
     "author_canon": "Nawder Loswin",
     "description": "Defines the authoritative chronological log for FFT AI Edition v1.3 sessions."
@@ -37,6 +37,7 @@
       "regime": "nominal, harmonic, or resolution.",
       "operator": "Operator executed at this step.",
       "lineage": "Monotonically increasing integer.",
+
       "measures": {
         "measure.c1": "Coherence in [0,1].",
         "measure.c2": "Clarity in [0,1].",
@@ -44,6 +45,7 @@
         "measure.paradox_density": "Paradox density in [0,1].",
         "measure.lattice_stability": "Lattice stability in [0,1]."
       },
+
       "paradox_events": "List of typed paradox events or empty list.",
       "operator_consent": "Boolean.",
       "substrate_class": "agentic, parametric, symbolic, or edge.",
@@ -58,37 +60,21 @@
       "Measures MUST NOT be invented.",
       "Every threshold MUST cite a measure ID."
     ],
+
     "paradox_rules": [
       "Typed paradox required for RTT7 entry.",
       "Paradox MUST be canonical.",
       "Vibe-based paradox forbidden."
     ],
+
     "consent_rules": [
       "AA3 escalation requires operator_consent = true.",
       "If operator_consent = false, escalation MUST be refused."
     ],
+
     "rtt_rules": [
       "RTT nodes MUST map to frozen RTT v0.9 quantities.",
       "RTT12 MUST collapse to RTT1; skip-resolution forbidden."
-    ],
-    "lineage_rules": [
-      "Lineage MUST be non-decreasing.",
-      "Lineage MUST increase after collapse.",
-      "Continuity (measure.c3) MUST NOT decrease across transitions."
-    ],
-    "substrate_rules": [
-      "Harmonic escalation requires substrate_class = agentic.",
-      "Non-agentic harmonic escalation forbidden."
-    ],
-    "projection_rules": [
-      "dashboard, overlay, and UI files are projections only.",
-      "Log MUST NOT contradict authoritative session.state.json."
     ]
-  },
-
-  "non_claims": [
-    "Session log does not revise RTT v0.9.",
-    "Session log does not reinterpret SET, S–N–R, or triadic time.",
-    "Session log does not replace the human FFT book."
-  ]
+  }
 }
