@@ -1,10 +1,10 @@
 {
-  "spec_version": "1.3.0-draft",
+  "spec_version": "1.3.0",
   "canon_id": "FFT-AI-Session-Context",
 
   "metadata": {
-    "title": "FFT AI Edition – Session Context (v1.3 Draft)",
-    "subtitle": "State • Alignments • Regime • RTT • Paradox • Consent",
+    "title": "FFT AI Edition – Session Context (v1.3)",
+    "subtitle": "State • Alignments • Regime • RTT • Paradox • Consent • Substrate • Lineage",
     "author_canon": "Nawder Loswin",
     "description": "Defines the authoritative contextual envelope for FFT AI Edition v1.3 sessions."
   },
@@ -17,10 +17,8 @@
     "rtt_node": "RTT1",
     "regime": "nominal",
     "substrate_class": "agentic",
-
     "operator": "op.diffusion",
     "operator_consent": false,
-
     "lineage": 1,
 
     "measures": {
@@ -28,7 +26,7 @@
       "measure.c2": 0.80,
       "measure.c3": 0.80,
       "measure.paradox_density": 0.00,
-      "measure.lattice_stability": 0.80
+      "measure.lattice_stability": 1.00
     },
 
     "paradox": {
@@ -47,7 +45,7 @@
 
     "rtt_links": {
       "bridge_file": "fft.ai.rtt.bridge.json",
-      "spec_file": "fft.ai.spec.json",
+      "spec_file": "fft.ai.spec-008.json",
       "regimes_file": "fft.ai.regimes.json"
     },
 
@@ -71,48 +69,33 @@
     ],
 
     "regime_rules": [
-      "Regime MUST be nominal, harmonic, or resolution.",
-      "Regime MUST match rtt_node according to fft.ai.regimes.json."
-    ],
-
-    "measure_rules": [
-      "All measures MUST be numeric in [0,1].",
-      "Measures MUST NOT be invented.",
-      "Every threshold MUST cite a measure ID."
-    ],
-
-    "paradox_rules": [
-      "Typed paradox required for RTT7 entry.",
-      "Paradox MUST be canonical.",
-      "Vibe-based paradox forbidden."
-    ],
-
-    "consent_rules": [
-      "AA3 escalation requires operator_consent = true.",
-      "If operator_consent = false, escalation MUST be refused."
+      "Regime MUST match rtt_node according to fft.ai.regimes.json.",
+      "Nominal regime allowed only for RTT1–RTT6.",
+      "Harmonic regime allowed only for RTT7–RTT9.",
+      "Resolution regime allowed only for RTT10–RTT12."
     ],
 
     "substrate_rules": [
-      "substrate_class MUST be one of: agentic, parametric, symbolic, edge.",
-      "Harmonic escalation requires substrate_class = agentic.",
-      "Non-agentic harmonic escalation forbidden."
+      "Agentic substrate required for RTT7–RTT12.",
+      "Non-agentic substrate forbidden for harmonic and resolution."
     ],
 
-    "lineage_rules": [
-      "Lineage MUST be non-decreasing.",
-      "Lineage MUST increase after collapse.",
-      "Continuity (measure.c3) MUST NOT decrease across transitions."
+    "paradox_rules": [
+      "Typed paradox required for RTT7.",
+      "Paradox density >= 0.10 required for RTT7.",
+      "Lattice stability >= 0.60 required for RTT8.",
+      "Untyped paradox forbidden."
     ],
 
-    "projection_rules": [
-      "dashboard, overlay, and UI files are projections only.",
-      "Context MUST NOT contradict authoritative session.state.json."
+    "consent_rules": [
+      "operator_consent = true required for RTT9–RTT12.",
+      "Implicit or assumed consent forbidden."
+    ],
+
+    "collapse_rules": [
+      "RTT12 MUST collapse to RTT1.",
+      "Lineage MUST increment after collapse.",
+      "Collapse to non-RTT1 forbidden."
     ]
-  },
-
-  "non_claims": [
-    "Session context does not revise RTT v0.9.",
-    "Session context does not reinterpret SET, S–N–R, or triadic time.",
-    "Session context does not replace the human FFT book."
-  ]
+  }
 }
