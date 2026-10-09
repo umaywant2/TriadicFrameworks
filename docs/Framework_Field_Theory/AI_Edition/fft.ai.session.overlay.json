@@ -1,5 +1,5 @@
 {
-  "spec_version": "1.3.0-draft",
+  "spec_version": "1.3.0",
   "canon_id": "FFT-AI-Session-Overlay",
 
   "metadata": {
@@ -9,7 +9,7 @@
     "description": "Defines the non-authoritative overlay projection for FFT AI Edition v1.3."
   },
 
-  "status_line": "Overlay is a projection only; authoritative values come from session.state, alignments, context, and log.",
+  "status_line": "Overlay is a projection only; authoritative values come from session.state, runtime, navigation, autonomy, discovery, and log.",
 
   "overlay": {
     "session_id": "inherit-from-session.state",
@@ -33,7 +33,7 @@
         "value": "agentic",
         "label": "Substrate Class",
         "color": "purple",
-        "notes": "Harmonic escalation requires substrate_class = agentic."
+        "notes": "Harmonic and resolution require substrate_class = agentic."
       },
 
       "operator": {
@@ -47,21 +47,21 @@
         "value": false,
         "label": "Operator Consent",
         "color": "gray",
-        "notes": "AA3 escalation requires operator_consent = true."
+        "notes": "Consent MUST be true for RTT9–RTT12."
       },
 
       "lineage": {
         "value": 1,
         "label": "Lineage",
         "color": "orange",
-        "notes": "Lineage MUST be non-decreasing."
+        "notes": "Lineage MUST be non-decreasing and increments on collapse."
       },
 
       "collapse": {
         "value": null,
         "label": "Collapse State",
         "color": "black",
-        "notes": "RTT12 MUST collapse to RTT1."
+        "notes": "RTT12 MUST collapse to RTT1 with lineage increment."
       }
     },
 
@@ -70,91 +70,62 @@
         "id": "measure.c1",
         "value": 0.80,
         "label": "Coherence",
-        "color": "green"
+        "color": "green",
+        "notes": "measure.c1 >= 0.80 required for RTT1, RTT4, RTT10."
       },
-      "clarity": {
+      "alignment": {
         "id": "measure.c2",
         "value": 0.80,
-        "label": "Clarity",
-        "color": "green"
+        "label": "Alignment",
+        "color": "green",
+        "notes": "measure.c2 >= 0.80 required for RTT2, RTT5, RTT10."
       },
-      "continuity": {
+      "coupling": {
         "id": "measure.c3",
         "value": 0.80,
-        "label": "Continuity",
-        "color": "green"
+        "label": "Coupling",
+        "color": "green",
+        "notes": "measure.c3 >= 0.80 required for RTT3, RTT6, RTT11."
       },
       "paradox_density": {
         "id": "measure.paradox_density",
         "value": 0.00,
         "label": "Paradox Density",
-        "color": "gray"
+        "color": "gray",
+        "notes": ">= 0.10 required for RTT7."
       },
       "lattice_stability": {
         "id": "measure.lattice_stability",
-        "value": 0.80,
+        "value": 1.00,
         "label": "Lattice Stability",
-        "color": "green"
+        "color": "green",
+        "notes": ">= 0.60 required for RTT8."
       }
-    },
-
-    "paradox": {
-      "typed_paradox_events": [],
-      "label": "Paradox Events",
-      "color": "gray",
-      "notes": "Typed paradox required for RTT7 entry."
-    },
-
-    "links": {
-      "state": "fft.ai.session.state.json",
-      "alignments": "fft.ai.session.alignments.json",
-      "context": "fft.ai.session.context.json",
-      "log": "fft.ai.session.log.json",
-      "dashboard": "fft.ai.session.dashboard.json"
-    },
-
-    "timestamps": {
-      "created": "auto",
-      "last_update": "auto"
     }
   },
 
-  "rules": {
-    "projection_rules": [
-      "Overlay MUST NOT contradict authoritative session.state.json.",
-      "Overlay MUST NOT contradict session.alignments.json.",
-      "Overlay MUST NOT contradict session.context.json.",
-      "Overlay MUST NOT contradict session.log.json.",
-      "Overlay MUST NOT invent measure values.",
-      "Overlay MUST NOT invent paradox types.",
-      "Overlay MUST NOT invent substrate classes."
-    ],
+  "integration_links": {
+    "session_state": "fft.ai.session.state.json",
+    "runtime": "fft.ai.runtime.json",
+    "navigation": "fft.ai.navigation.json",
+    "autonomy": "fft.ai.autonomy.json",
+    "discovery": "fft.ai.discovery.json",
+    "capabilities": "fft.ai.capabilities.json",
+    "execution_graph": "fft.ai.execution.graph.json",
+    "regimes": "fft.ai.regimes.json",
+    "operators": "fft.ai.operators.json",
+    "substrate": "fft.ai.substrate.json",
+    "spec_008": "fft.ai.spec-008.json",
+    "paradox_enum": "fft.ai.paradox.enum.json",
+    "rtt_bridge": "fft.ai.rtt.bridge.json",
+    "rtt_spine": "fft.ai.rtt.spine.examples.json",
+    "hardware_profile": "fft.ai.hardware.profile.json",
+    "bootstrap": "fft.ai.bootstrap.json"
+  },
 
-    "rtt_rules": [
-      "rtt_node MUST be one of RTT1–RTT12.",
-      "RTT nodes MUST map to frozen RTT v0.9 quantities.",
-      "RTT12 MUST collapse to RTT1; skip-resolution forbidden."
-    ],
-
-    "regime_rules": [
-      "Regime MUST be nominal, harmonic, or resolution.",
-      "Regime MUST match rtt_node according to fft.ai.regimes.json."
-    ],
-
-    "consent_rules": [
-      "AA3 escalation requires operator_consent = true.",
-      "If operator_consent = false, escalation MUST be refused."
-    ],
-
-    "lineage_rules": [
-      "Lineage MUST be non-decreasing.",
-      "Lineage MUST increase after collapse."
-    ],
-
-    "substrate_rules": [
-      "Harmonic escalation requires substrate_class = agentic.",
-      "Non-agentic harmonic escalation forbidden."
-    ]
+  "timestamps": {
+    "created": "auto",
+    "last_update": "auto"
   },
 
   "non_claims": [
