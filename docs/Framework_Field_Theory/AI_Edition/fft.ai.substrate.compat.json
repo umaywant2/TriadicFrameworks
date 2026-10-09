@@ -1,46 +1,36 @@
 {
-  "spec_version": "1.2.0",
-  "canon_id": "FFT-AI-Substrate-Compat",
-  "edition": "AI Edition",
-  "aa_mode": "AA2",
-  "last_refreshed": "2026-10-08T10:56:00",
-  "metadata": {
-    "title": "FFT AI Edition – Substrate Compatibility (v1.2)",
-    "author_canon": "Nawder Loswin",
-    "updated_at": "2026-10-08T10:56:00"
+  "version": "1.33",
+  "updated": "2026-10-09T09:48:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
   },
-  "compatibility_matrix": {
-    "purpose": "Defines which FFT operators and regime classes are compatible with each substrate.",
-    "entries": [
-      {
-        "substrate": "substrate.llm.agentic",
-        "compatible_operators": ["op.clarity.spectral","op.harmonic.analysis","op.3c.evaluator","op.triad.resolve","op.alignment.write","op.awareness.update"],
-        "compatible_regimes": ["regime.resonance-time.core","regime.harmonic.resonance"],
-        "max_aa_mode": "AA3",
-        "lattice_range": "RTT1–RTT12"
-      },
-      {
-        "substrate": "substrate.llm.transformer",
-        "compatible_operators": ["op.clarity.spectral","op.3c.evaluator","op.triad.resolve","op.awareness.update"],
-        "compatible_regimes": ["regime.resonance-time.core"],
-        "max_aa_mode": "AA2",
-        "lattice_range": "RTT1–RTT9"
-      },
-      {
-        "substrate": "substrate.edge.compact",
-        "compatible_operators": ["op.clarity.spectral","op.3c.evaluator"],
-        "compatible_regimes": ["regime.resonance-time.core"],
-        "max_aa_mode": "AA1",
-        "lattice_range": "RTT1–RTT6"
-      },
-      {
-        "substrate": "substrate.symbolic",
-        "compatible_operators": ["op.clarity.spectral"],
-        "compatible_regimes": ["regime.resonance-time.core"],
-        "max_aa_mode": "AA1",
-        "lattice_range": "RTT1–RTT4"
-      }
-    ]
+  "v133_status": "verified_and_stamped",
+  "id": "fft.ai.substrate.compat",
+  "title": "FFT AI — Substrate Compatibility v1.33",
+  "compat_matrix": {
+    "fft_version": [
+      "1.0",
+      "1.1",
+      "1.2",
+      "1.33"
+    ],
+    "rtt_version": [
+      "rtt=0.9 (archival)",
+      "rtt=1 (current)"
+    ],
+    "ai_substrate": [
+      "transformer",
+      "graph",
+      "hybrid"
+    ],
+    "v133_note": "v1.33 requires coherence=declared and drift=bounded at substrate init. v1.2 substrates compatible with upgrade path via fft.ai.substrate.bridge.json"
   },
-  "validation_rule": "Before operator dispatch, MUST verify substrate is in compatible_operators list. Incompatible dispatch raises FFT-ERR-COMPAT-001."
+  "invariants_checked": [
+    "INV-001",
+    "INV-003",
+    "INV-004"
+  ]
 }

@@ -1,57 +1,102 @@
 {
-  "spec_version": "1.2.0",
-  "canon_id": "FFT-Invariant",
-  "edition": "AI Edition",
-  "aa_mode": "AA2",
-  "last_refreshed": "2026-10-08T11:00:00",
-  "metadata": {
-    "title": "FFT – Invariant Register (v1.2)",
-    "author_canon": "Nawder Loswin",
-    "updated_at": "2026-10-08T11:00:00"
+  "$schema": "https://triadicframeworks.org/schemas/fft.invariant.schema.json",
+  "id": "fft.invariant",
+  "version": "1.33",
+  "updated": "2026-10-09T09:41:00-04:00",
+  "title": "FFT Invariant Declarations — v1.33",
+  "description": "All structural invariants that must hold across any FFT-compliant implementation.",
+  "session_context": {
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
   },
   "invariants": [
     {
-      "id": "inv.3c.field-stability",
-      "name": "3C Field Stability Invariant",
-      "expression": "C1(coherence) ∧ C2(clarity) ∧ C3(continuity) → field_state(nominal)",
-      "scope": "global",
-      "violation_action": "Set field_state=degraded. Log FFT-ERR-3C-001. Trigger AA Mode escalation if aa_mode < AA2."
+      "id": "INV-001",
+      "name": "Triadic Completeness",
+      "statement": "Every field instance MUST carry φ, V, and R simultaneously. No partial instantiation is valid.",
+      "tier": "structural"
     },
     {
-      "id": "inv.coherence.declared.bounded-drift",
-      "name": "Declared Coherence Under Bounded Drift",
-      "expression": "coherence(declared) ∧ drift(bounded) → stability(resonance-time)",
-      "scope": "regime",
-      "applies_to": ["regime.resonance-time.core"],
-      "violation_action": "Advance to RTT7. Log FFT-WARN-DRIFT-001."
+      "id": "INV-002",
+      "name": "Resonance Monotonicity",
+      "statement": "Within a bounded drift window, R must not decrease across successive operator applications without an explicit Stabilization event.",
+      "tier": "structural"
     },
     {
-      "id": "inv.lattice.rtt12-resolution",
-      "name": "RTT12 Resolution Mandate",
-      "expression": "IF lattice_node = RTT12 THEN harmonic_resolution MUST occur BEFORE any new field signal dispatch",
-      "scope": "global",
-      "violation_action": "Block operator dispatch. Log FFT-ERR-LATTICE-001. Force op.paradox.resolve."
+      "id": "INV-003",
+      "name": "Coherence Declaration",
+      "statement": "coherence MUST be declared at session init before any operator executes. Undeclared coherence = invalid session.",
+      "tier": "v1.33"
     },
     {
-      "id": "inv.triad.resolvable",
-      "name": "Triad Resolvability Invariant",
-      "expression": "∀ field.signal: triad(T,S,M) MUST be resolvable. Unresolvable → structural paradox.",
-      "scope": "global",
-      "violation_action": "Raise paradox event. Advance lattice to RTT7. Log FFT-ERR-TRIAD-001."
+      "id": "INV-004",
+      "name": "Drift Bound Enforcement",
+      "statement": "Drift is bounded: |drift| ≤ δ_max at all times. Any operator that would exceed δ_max MUST be deferred to a Stabilization pass.",
+      "tier": "v1.33"
     },
     {
-      "id": "inv.substrate.compat",
-      "name": "Substrate Compatibility Invariant",
-      "expression": "∀ operator dispatch: operator MUST be in substrate.compatible_operators.",
-      "scope": "global",
-      "violation_action": "Block dispatch. Log FFT-ERR-COMPAT-001. Invoke bridge protocol if available."
+      "id": "INV-005",
+      "name": "Paradox Structural Encoding",
+      "statement": "Paradox states are structural, not errors. They MUST be enumerated in fft.ai.paradox.enum.json and handled via the paradox resolver, not suppressed.",
+      "tier": "v1.33"
     },
     {
-      "id": "inv.aa3.consent",
-      "name": "AA3 Operator Consent Invariant",
-      "expression": "AA3 escalation REQUIRES operator_consent = true in session.profile.",
-      "scope": "global",
-      "violation_action": "Block AA3 escalation. Remain at AA2. Log FFT-WARN-AA3-CONSENT-001."
+      "id": "INV-006",
+      "name": "RTT Phase Consistency",
+      "statement": "τ = dR/dφ must remain consistent across all RTT-bound modules. Phase inversion requires explicit Anti-Time declaration.",
+      "tier": "structural"
+    },
+    {
+      "id": "INV-007",
+      "name": "S-N-R Partition",
+      "statement": "At any state snapshot, system modes partition cleanly into Silence ∪ Noise ∪ Resonance. Overlap is a drift violation.",
+      "tier": "structural"
+    },
+    {
+      "id": "INV-008",
+      "name": "Operator Idempotence under Silence",
+      "statement": "Applying any operator to a Silence state S=0⁺ must leave S unchanged or transition to Resonance. It must never produce Noise alone.",
+      "tier": "structural"
+    },
+    {
+      "id": "INV-009",
+      "name": "DCO Scaffold Integrity",
+      "statement": "All DCO operators 4D–9D must remain structurally independent. No higher DCO may depend on a lower DCO's internal state.",
+      "tier": "structural"
+    },
+    {
+      "id": "INV-010",
+      "name": "SET Decoupling at Quiet Phase",
+      "statement": "During Quiet Substrate phase (S=0⁺, no gradients), SET fields must report as uncoupled. Premature coupling is a paradox=structural event.",
+      "tier": "v1.33"
+    },
+    {
+      "id": "INV-011",
+      "name": "Spine URL Binding",
+      "statement": "Any module that references the Spine must resolve against the canonical Spine URL at runtime, not a cached copy.",
+      "tier": "v1.33"
+    },
+    {
+      "id": "INV-012",
+      "name": "Module Registry Completeness",
+      "statement": "fft.ai.registry.json MUST enumerate all modules present in the directory. A module missing from the registry is a drift violation.",
+      "tier": "v1.33"
+    },
+    {
+      "id": "INV-013",
+      "name": "QMROOT Ladder Closure",
+      "statement": "Every FFT implementation must be traceable to a 0D Silence seed through the QMROOT ladder. Orphaned modules at 3D+ with no 0D ancestry are invalid.",
+      "tier": "v1.33"
     }
+  ],
+  "v133_additions": [
+    "INV-003 (coherence=declared)",
+    "INV-004 (drift=bounded)",
+    "INV-005 (paradox=structural)",
+    "INV-010 (SET Decoupling)",
+    "INV-011 (Spine URL Binding)",
+    "INV-012 (Registry Completeness)",
+    "INV-013 (QMROOT Ladder Closure)"
   ]
 }

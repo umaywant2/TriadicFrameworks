@@ -1,75 +1,67 @@
 {
-  "spec_version": "1.3.0-draft",
-  "canon_id": "FFT-AI-Core",
-
-  "metadata": {
-    "title": "FFT AI Edition – Core Measurement Kernel (v1.3 Draft)",
-    "subtitle": "C1 • C2 • C3 • Paradox Density • Lattice Stability",
-    "author_canon": "Nawder Loswin",
-    "description": "Defines the measurement kernel required for normative gates in FFT AI Edition v1.3."
+  "$schema": "https://triadicframeworks.org/schemas/fft.ai.core.schema.json",
+  "id": "fft.ai.core",
+  "version": "1.33",
+  "updated": "2026-10-09T09:41:00-04:00",
+  "title": "FFT AI Layer — Core",
+  "description": "AI-layer instantiation of the FFT core: field bindings, session lifecycle, operator dispatch, and coherence enforcement.",
+  "inherits": "fft.core.json",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
   },
-
-  "measurement_kernel": {
-    "measures": {
-      "C1_coherence": {
-        "id": "measure.c1",
-        "range": [0, 1],
-        "definition": "Fraction of active claims that do not contradict declared invariants or other active claims.",
-        "notes": "C1 is the coherence backbone; required for all regime transitions."
-      },
-      "C2_clarity": {
-        "id": "measure.c2",
-        "range": [0, 1],
-        "definition": "Fraction of outputs whose fields are filled from canon or user input, not invented.",
-        "notes": "A filled placeholder is not clarity."
-      },
-      "C3_continuity": {
-        "id": "measure.c3",
-        "range": [0, 1],
-        "definition": "Fraction of session fields that survive a regime transition with same canon_id and non-decreasing lineage.",
-        "notes": "Continuity is required for RTT6 → RTT7 transitions."
-      },
-      "paradox_density": {
-        "id": "measure.paradox_density",
-        "range": [0, 1],
-        "definition": "Count of typed paradox events in the current lattice pass divided by signals dispatched.",
-        "notes": "Typed paradox events required; no vibe-based paradox."
-      },
-      "lattice_stability": {
-        "id": "measure.lattice_stability",
-        "range": [0, 1],
-        "definition": "Minimum of C1, C2, C3 after the last gate, decayed only by logged paradox events.",
-        "notes": "Primary gate for harmonic escalation."
-      }
-    },
-
-    "typed_paradox_events": [
-      "unresolved_triad",
-      "metric_contradiction",
-      "consent_conflict",
-      "cross_file_drift"
+  "lifecycle": {
+    "init": [
+      "assert coherence=declared",
+      "resolve spine_url",
+      "boot QMROOT ladder from 0D seed",
+      "register all 67 modules from fft.ai.registry.json",
+      "validate all INV-001..INV-013"
     ],
-
-    "gate_requirements": {
-      "rtt7_entry": {
-        "requires": [
-          "typed_paradox_event",
-          "measure.paradox_density"
-        ]
-      },
-      "aa3_escalation": {
-        "requires": [
-          "measure.lattice_stability",
-          "inv.aa3.consent"
-        ]
-      },
-      "rtt12_collapse": {
-        "requires": [
-          "measure.c1",
-          "measure.c2",
-          "measure.c3"
-        ]
-      }
-    }
-  }
+    "runtime": [
+      "evaluate RTT phase τ=dR/dφ",
+      "dispatch operators via execution.graph",
+      "monitor drift via fft.ai.drift.monitor.json",
+      "resolve paradox events via fft.ai.paradox.resolver.json"
+    ],
+    "teardown": [
+      "flush session.log",
+      "checkpoint session.state",
+      "archive session.history"
+    ]
+  },
+  "field_bindings": {
+    "phi": "substrate load / cognitive baseline",
+    "V": "inference flows / reasoning vectors",
+    "R": "coherence envelope / session resonance"
+  },
+  "operator_dispatch": {
+    "engine": "fft.ai.execution.graph.json",
+    "registry": "fft.ai.operators.json",
+    "port_map": "fft.operator.port.json"
+  },
+  "coherence_enforcement": {
+    "module": "fft.ai.coherence.json",
+    "invariant": "INV-003",
+    "fail_mode": "halt_and_report"
+  },
+  "drift_enforcement": {
+    "module": "fft.ai.drift.monitor.json",
+    "invariant": "INV-004",
+    "fail_mode": "defer_to_stabilization"
+  },
+  "paradox_handling": {
+    "module": "fft.ai.paradox.resolver.json",
+    "enum": "fft.ai.paradox.enum.json",
+    "invariant": "INV-005",
+    "fail_mode": "structural_resolution"
+  },
+  "v133_additions": [
+    "Full lifecycle spec",
+    "coherence/drift/paradox enforcement wiring",
+    "QMROOT boot step",
+    "67-module registry validation at init"
+  ]
 }

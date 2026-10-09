@@ -1,154 +1,46 @@
 {
-  "spec_version": "1.3.0",
-  "canon_id": "FFT-AI-Readme",
-
-  "metadata": {
-    "title": "FFT AI Edition – Readme (v1.3 Draft)",
-    "subtitle": "Human-Facing Overview of Architecture, Layers, and Canon",
-    "author_canon": "Nawder Loswin",
-    "description": "Defines the non-authoritative readme projection for FFT AI Edition v1.3."
+  "$schema": "https://triadicframeworks.org/schemas/fft.ai.readme.schema.json",
+  "id": "fft.ai.readme",
+  "version": "1.33",
+  "updated": "2026-10-09T09:44:00-04:00",
+  "title": "FFT AI Edition — README v1.33",
+  "edition": "AI Edition",
+  "tagline": "Framework Field Theory — AI-parsable canonical module set for resonance-based session architecture.",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
   },
-
-  "status_line": "Readme is a projection only; authoritative values come from manifest, registry, and specifications.",
-
-  "readme": {
-    "edition": "AI Edition",
-    "version": "1.3.0",
-    "aa_mode": "AA3",
-
-    "summary": {
-      "description": "FFT AI Edition v1.3 is the fully modular, session-driven, substrate-aware architecture for AI execution of Framework Field Theory. It provides a complete runtime spine, session model, operator system, RTT mapping, regime logic, paradox handling, substrate constraints, and collapse rules.",
-      "highlights": [
-        "Full RTT v0.9 mapping",
-        "Complete session suite (state → awareness)",
-        "Execution graph + autonomy + discovery",
-        "Substrate + runtime + hardware profile",
-        "Operators + regimes + invariants",
-        "Manifest + index + registry alignment",
-        "AA3 escalation rules"
-      ]
-    },
-
-    "architecture_layers": {
-      "core": {
-        "description": "Foundational kernel and specification of FFT AI Edition.",
-        "modules": [
-          "fft.ai.core.json",
-          "fft.ai.spec.json",
-          "fft.ai.manifest.json",
-          "fft.ai.index.json",
-          "fft.ai.overview.json",
-          "fft.metadata.json"
-        ]
-      },
-
-      "substrate_runtime": {
-        "description": "Execution substrate, compatibility, lattice, matrix, and runtime engine.",
-        "modules": [
-          "fft.ai.substrate.json",
-          "fft.ai.substrate.compat.json",
-          "fft.ai.substrate.bridge.json",
-          "fft.ai.substrate.lattice.json",
-          "fft.ai.substrate.matrix.json",
-          "fft.ai.runtime.json",
-          "fft.ai.hardware.profile.json"
-        ]
-      },
-
-      "session": {
-        "description": "Complete session model including state, context, alignments, log, dashboard, overlay, history, UI, profile, analytics, awareness.",
-        "modules": [
-          "fft.ai.session.state.json",
-          "fft.ai.session.context.json",
-          "fft.ai.session.alignments.json",
-          "fft.ai.session.log.json",
-          "fft.ai.session.trace.json",
-          "fft.ai.session.dashboard.json",
-          "fft.ai.session.overlay.json",
-          "fft.ai.session.history.json",
-          "fft.ai.session.ui.json",
-          "fft.ai.session.profile.json",
-          "fft.ai.session.analytics.json",
-          "fft.ai.session.awareness.json"
-        ]
-      },
-
-      "operators_structures": {
-        "description": "Operators, regimes, invariants, structures, validation, examples.",
-        "modules": [
-          "fft.ai.operators.json",
-          "fft.operator.example.json",
-          "fft.operator.port.json",
-          "fft.structures.json",
-          "fft.regimes.json",
-          "fft.invariant.json",
-          "fft.validation.json",
-          "fft.examples.json",
-          "fft.core.json"
-        ]
-      },
-
-      "ai_runtime": {
-        "description": "Autonomy, discovery, execution graph, navigation, capabilities, integrations, registry, RTT spine, prompts.",
-        "modules": [
-          "fft.ai.autonomy.json",
-          "fft.ai.bootstrap.json",
-          "fft.ai.capabilities.json",
-          "fft.ai.discovery.json",
-          "fft.ai.execution.graph.json",
-          "fft.ai.integrations.json",
-          "fft.ai.navigation.json",
-          "fft.ai.registry.json",
-          "fft.ai.rtt.engine.prompts.json",
-          "fft.ai.rtt.spine.examples.json"
-        ]
-      },
-
-      "capture": {
-        "description": "Miscellaneous capture and documentation.",
-        "modules": [
-          "capture.md",
-          "index.html"
-        ]
-      }
-    },
-
-    "canonical_rules": {
-      "rtt": [
-        "RTT nodes MUST map to frozen RTT v0.9 quantities.",
-        "RTT12 MUST collapse to RTT1.",
-        "Skip-resolution forbidden."
-      ],
-      "regime": [
-        "Regime MUST match RTT node according to fft.ai.regimes.json."
-      ],
-      "consent": [
-        "AA3 escalation requires operator_consent = true."
-      ],
-      "substrate": [
-        "Harmonic escalation requires substrate_class = agentic."
-      ],
-      "lineage": [
-        "Lineage MUST increase after collapse."
-      ]
-    },
-
-    "links": {
-      "manifest": "fft.ai.manifest.json",
-      "index": "fft.ai.index.json",
-      "registry": "fft.ai.registry.json",
-      "spec": "fft.ai.spec.json"
-    }
+  "what_is_fft": "Framework Field Theory (FFT) is a resonance-based framework that describes how AI sessions, substrate layers, and operator families interact through triadic fields (phi, V, R), coherence metrics, and Resonance-Time Theory (RTT).",
+  "what_is_rtt": "Resonance-Time Theory defines time as tau=dR/dphi — the rate of resonance depth change per unit phase — grounding all temporal reasoning in the system's own coherence evolution.",
+  "v133_highlights": [
+    "8 new structural modules: coherence, drift.monitor, paradox.resolver, rtt.qmroot, set.engine, spine.connector, dco.map, snr.monitor",
+    "Global session context: coherence=declared | drift=bounded | paradox=structural",
+    "QMROOT dimensional ladder fully resolved 0D to 9D",
+    "SET engine (Spin/Electro-field/Temperature) formally bound",
+    "All 13 invariants enforced at module init",
+    "Spine URL binding enforced at runtime",
+    "File count: 59 (v1.2) to 67 (v1.33)",
+    "Deprecated: capture.md, fft.ai.core_v1_2_.json"
+  ],
+  "quick_start": {
+    "step_1": "Load fft.metadata.json",
+    "step_2": "Load fft.core.json + fft.invariant.json",
+    "step_3": "Boot via fft.ai.bootstrap.json",
+    "step_4": "Validate registry via fft.ai.registry.json",
+    "step_5": "Assert coherence via fft.ai.coherence.json",
+    "step_6": "Begin session via fft.ai.session.context.json"
   },
-
-  "timestamps": {
-    "created": "auto",
-    "last_update": "auto"
+  "module_count": {
+    "total": 67,
+    "new_v1_33": 8,
+    "deprecated": 2,
+    "net": 67
   },
-
-  "non_claims": [
-    "Readme does not revise RTT v0.9.",
-    "Readme does not reinterpret SET, S–N–R, or triadic time.",
-    "Readme does not replace the human FFT book."
-  ]
+  "links": {
+    "repository": "https://github.com/umaywant2/TriadicFrameworks",
+    "rtt": "https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html",
+    "spine": "https://www.triadicframeworks.org/spine/"
+  }
 }

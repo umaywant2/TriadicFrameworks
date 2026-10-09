@@ -1,0 +1,30 @@
+{
+  "id": "fft.ai.drift.monitor",
+  "type": "new_v1_33",
+  "version": "1.33",
+  "updated": "2026-10-09T09:49:00-04:00",
+  "title": "FFT AI — Drift Monitor v1.33",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "description": "Enforces drift=bounded invariant (INV-004). Tracks cumulative drift delta across all operator applications and enforces the delta_max ceiling.",
+  "invariant": "INV-004",
+  "delta_max": 0.35,
+  "alert_threshold": 0.3,
+  "monitoring": {
+    "frequency": "after every operator dispatch",
+    "delta_calc": "sum of drift_cost values for all operators since last Stabilization",
+    "on_alert": "emit DRIFT WARNING to session.log; reduce autonomy mode if AM-003+",
+    "on_exceed": "halt operator dispatch; invoke Stabilization; log DRIFT ERROR; emit paradox PX-003 if 3+ consecutive"
+  },
+  "drift_accounting": {
+    "per_operator": true,
+    "per_regime": true,
+    "cross_regime": "isolated — each regime has independent delta counter",
+    "max_concurrent_regimes": 3
+  },
+  "reset_trigger": "Stabilization operator application resets delta to 0.00"
+}

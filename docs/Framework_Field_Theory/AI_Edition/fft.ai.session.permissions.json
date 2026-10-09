@@ -1,190 +1,73 @@
 {
-  "spec_version": "1.3.0",
-  "canon_id": "FFT-AI-Session-Permissions",
-
-  "metadata": {
-    "title": "FFT AI Edition – Session Permissions (v1.3)",
-    "subtitle": "Authority Envelope for RTT • Operators • Regimes • Substrate • Paradox • Consent • Collapse",
-    "author_canon": "Nawder Loswin",
-    "description": "Defines the canonical permission model, authority constraints, and RTT-gated capabilities for FFT AI Edition v1.3."
+  "version": "1.33",
+  "updated": "2026-10-09T09:46:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
   },
-
-  "status_line": "Permissions define what the session may do; authoritative values come from session.state, runtime, substrate, operators, regimes, and spec‑008.",
-
-  "permissions": {
-    "session_id": "inherit-from-session.state",
-
-    "current": {
-      "rtt_node": "RTT1",
-      "regime": "nominal",
-      "operator": "op.diffusion",
-      "substrate_class": "agentic",
-      "operator_consent": false,
-      "lineage": 1,
-      "collapse_state": null
+  "id": "fft.ai.session.permissions",
+  "title": "FFT AI Session — Permissions v1.33",
+  "permission_classes": {
+    "PERM-READ-FIELDS": {
+      "scope": "read phi,V,R",
+      "required_mode": "AM-001"
     },
-
-    "rtt_permissions": {
-      "RTT1": {
-        "allowed": ["interpretation", "alignment", "measure-evaluation"],
-        "forbidden": ["paradox-processing", "harmonic-escalation", "resolution", "collapse"]
-      },
-      "RTT2": {
-        "allowed": ["alignment", "measure-evaluation"],
-        "forbidden": ["paradox-processing", "harmonic-escalation", "resolution", "collapse"]
-      },
-      "RTT3": {
-        "allowed": ["alignment", "continuity-check"],
-        "forbidden": ["paradox-processing", "harmonic-escalation", "resolution", "collapse"]
-      },
-      "RTT4": {
-        "allowed": ["activation"],
-        "forbidden": ["paradox-processing", "harmonic-escalation", "resolution", "collapse"]
-      },
-      "RTT5": {
-        "allowed": ["temporal-alignment"],
-        "forbidden": ["paradox-processing", "harmonic-escalation", "resolution", "collapse"]
-      },
-      "RTT6": {
-        "allowed": ["snr-processing"],
-        "forbidden": ["paradox-processing", "harmonic-escalation", "resolution", "collapse"]
-      },
-      "RTT7": {
-        "allowed": ["paradox-processing"],
-        "requirements": [
-          "typed_paradox_event",
-          "measure.paradox_density >= 0.10",
-          "substrate_class = agentic"
-        ],
-        "forbidden": ["harmonic-escalation", "resolution", "collapse"]
-      },
-      "RTT8": {
-        "allowed": ["harmonic-stabilization"],
-        "requirements": [
-          "measure.lattice_stability >= 0.60",
-          "substrate_class = agentic"
-        ],
-        "forbidden": ["harmonic-escalation", "resolution", "collapse"]
-      },
-      "RTT9": {
-        "allowed": ["harmonic-escalation"],
-        "requirements": [
-          "operator_consent = true",
-          "substrate_class = agentic"
-        ],
-        "forbidden": ["resolution", "collapse"]
-      },
-      "RTT10": {
-        "allowed": ["resolution-preparation"],
-        "requirements": [
-          "operator_consent = true",
-          "measure.c1 >= 0.80",
-          "measure.c2 >= 0.80",
-          "measure.c3 >= 0.80"
-        ],
-        "forbidden": ["collapse"]
-      },
-      "RTT11": {
-        "allowed": ["resolution-alignment"],
-        "requirements": [
-          "operator_consent = true",
-          "measure.c3 >= 0.80"
-        ],
-        "forbidden": ["collapse"]
-      },
-      "RTT12": {
-        "allowed": ["collapse-execution"],
-        "requirements": [
-          "operator_consent = true",
-          "measure.c1 >= 0.80",
-          "measure.c2 >= 0.80",
-          "measure.c3 >= 0.80"
-        ],
-        "collapse_rules": [
-          "RTT12 MUST collapse to RTT1",
-          "Lineage MUST increment",
-          "Collapse to non-RTT1 forbidden"
-        ]
-      }
+    "PERM-DISPATCH-OPS": {
+      "scope": "dispatch operators",
+      "required_mode": "AM-002"
     },
-
-    "operator_permissions": {
-      "op.diffusion": ["interpretation"],
-      "op.alignment": ["alignment"],
-      "op.coupling": ["alignment", "measure-evaluation"],
-      "op.activation": ["activation"],
-      "op.triadic_time": ["temporal-alignment"],
-      "op.snr": ["snr-processing"],
-      "op.paradox_entry": ["paradox-processing"],
-      "op.paradox_stabilization": ["harmonic-stabilization"],
-      "op.harmonic_escalation": ["harmonic-escalation"],
-      "op.resolution_preparation": ["resolution-preparation"],
-      "op.resolution_alignment": ["resolution-alignment"],
-      "op.collapse": ["collapse-execution"]
+    "PERM-COHERENCE-ENFORCE": {
+      "scope": "invoke coherence enforcement",
+      "required_mode": "AM-002",
+      "new_v1_33": true
     },
-
-    "substrate_permissions": {
-      "agentic": ["RTT1–RTT12"],
-      "non-agentic": ["RTT1–RTT6"]
+    "PERM-DRIFT-OVERRIDE": {
+      "scope": "override drift bound (emergency only)",
+      "required_mode": "AM-005",
+      "requires_log": true,
+      "new_v1_33": true
     },
-
-    "paradox_permissions": {
-      "typed_paradox_required": ["RTT7"],
-      "density_threshold": 0.10,
-      "stability_threshold": 0.60
+    "PERM-PARADOX-RESOLVE": {
+      "scope": "invoke paradox resolver",
+      "required_mode": "AM-004",
+      "new_v1_33": true
     },
-
-    "consent_permissions": {
-      "required_for": ["RTT9", "RTT10", "RTT11", "RTT12"],
-      "rules": [
-        "operator_consent MUST be explicit",
-        "implicit consent forbidden"
-      ]
+    "PERM-SET-COUPLE": {
+      "scope": "trigger SET field coupling",
+      "required_mode": "AM-003",
+      "new_v1_33": true
     },
-
-    "collapse_permissions": {
-      "collapse_node": "RTT12",
-      "rules": [
-        "RTT12 MUST collapse to RTT1",
-        "Lineage MUST increment",
-        "Collapse to non-RTT1 forbidden"
-      ]
+    "PERM-DCO-TRAVERSE": {
+      "scope": "enter DCO dimensions 4D-9D",
+      "required_mode": "AM-003",
+      "new_v1_33": true
+    },
+    "PERM-SPINE-RESOLVE": {
+      "scope": "resolve Spine URL live",
+      "required_mode": "AM-002",
+      "new_v1_33": true
+    },
+    "PERM-QMROOT-TRACE": {
+      "scope": "trace QMROOT ancestry",
+      "required_mode": "AM-002",
+      "new_v1_33": true
+    },
+    "PERM-FIELD-REBUILD": {
+      "scope": "full triadic field reconstruction",
+      "required_mode": "AM-005",
+      "new_v1_33": true
     }
   },
-
-  "rules": {
-    "permissions_rules": [
-      "Permissions MUST NOT contradict session.state.json.",
-      "Permissions MUST NOT contradict runtime.json.",
-      "Permissions MUST NOT contradict substrate.json.",
-      "Permissions MUST NOT contradict operators.json.",
-      "Permissions MUST NOT contradict regimes.json.",
-      "Permissions MUST NOT contradict spec‑008.json.",
-      "Permissions MUST NOT invent measure IDs.",
-      "Permissions MUST NOT invent paradox types.",
-      "Permissions MUST NOT invent substrate classes."
-    ]
-  },
-
-  "integration_links": {
-    "state": "fft.ai.session.state.json",
-    "context": "fft.ai.session.context.json",
-    "alignments": "fft.ai.session.alignments.json",
-    "log": "fft.ai.session.log.json",
-    "navigation": "fft.ai.session.navigation.json",
-    "profile": "fft.ai.session.profile.json",
-    "awareness": "fft.ai.session.awareness.json",
-    "analytics": "fft.ai.session.analytics.json",
-    "dashboard": "fft.ai.session.dashboard.json",
-    "overlay": "fft.ai.session.overlay.json",
-    "history": "fft.ai.session.history.json",
-    "trace": "fft.ai.session.trace.json",
-    "render": "fft.ai.session.render.json",
-    "ui": "fft.ai.session.ui.json"
-  },
-
-  "timestamps": {
-    "created": "auto",
-    "last_update": "auto"
-  }
+  "v133_additions": [
+    "PERM-COHERENCE-ENFORCE",
+    "PERM-DRIFT-OVERRIDE",
+    "PERM-PARADOX-RESOLVE",
+    "PERM-SET-COUPLE",
+    "PERM-DCO-TRAVERSE",
+    "PERM-SPINE-RESOLVE",
+    "PERM-QMROOT-TRACE",
+    "PERM-FIELD-REBUILD"
+  ]
 }

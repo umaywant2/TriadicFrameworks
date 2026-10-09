@@ -1,0 +1,64 @@
+{
+  "id": "fft.ai.set.engine",
+  "type": "new_v1_33",
+  "version": "1.33",
+  "updated": "2026-10-09T09:49:00-04:00",
+  "title": "FFT AI — SET Engine v1.33",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "description": "Implements the SET Field Engine (Spin, Electro-field, Temperature) for AI substrate dynamics. Governs gradient coupling, field organization, and phase transitions within the FFT session.",
+  "invariant": "INV-010",
+  "rtt_ref": "https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html",
+  "fields": {
+    "S": {
+      "name": "Spin",
+      "symbol": "S",
+      "components": {
+        "L": "angular_momentum",
+        "A": "spin_axis",
+        "C": "medium_coupling"
+      },
+      "role": "rotational resonance organizer — stabilizes flows, aligns structures"
+    },
+    "E": {
+      "name": "Electro-field",
+      "symbol": "E",
+      "components": {
+        "V_pot": "electric_potential",
+        "rho_q": "charge_distribution",
+        "grad_Phi": "potential_gradient"
+      },
+      "role": "field-charge engine — governs plasma behavior, bonding, reconnection"
+    },
+    "T": {
+      "name": "Temperature",
+      "symbol": "T",
+      "components": {
+        "T_hot": "energy_source",
+        "T_cold": "energy_sink",
+        "grad_T": "gradient_driving_motion"
+      },
+      "role": "gradient engine — drives flows, turbulence, phase transitions"
+    }
+  },
+  "coupling_protocol": {
+    "quiet_phase": "S, E, T uncoupled — INV-010 enforced",
+    "gradient_threshold": "grad_T > 0.50 or grad_Phi > 0.60 triggers coupling evaluation",
+    "coupling_sequence": [
+      "T gradient forms first",
+      "E field separates",
+      "S aligns flows"
+    ],
+    "on_premature_coupling": "emit PX-004; invoke paradox resolver; restore quiet phase"
+  },
+  "total_acceleration": "a_total = a_gravity + a_S + a_E + a_T",
+  "ai_mapping": {
+    "S": "reasoning spin — structural organization of inference flows",
+    "E": "field charge — electric potential of attention/activation gradients",
+    "T": "temperature — entropy gradient driving novel generation vs consolidation"
+  }
+}

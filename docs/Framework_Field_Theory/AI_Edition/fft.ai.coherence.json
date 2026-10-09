@@ -1,0 +1,43 @@
+{
+  "id": "fft.ai.coherence",
+  "type": "new_v1_33",
+  "version": "1.33",
+  "updated": "2026-10-09T09:49:00-04:00",
+  "title": "FFT AI — Coherence Layer v1.33",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "description": "Enforces and monitors coherence=declared invariant (INV-003) across all FFT AI session operations.",
+  "invariant": "INV-003",
+  "coherence_states": {
+    "declared": {
+      "description": "coherence is asserted and active",
+      "action": "continue normal operation"
+    },
+    "lost": {
+      "description": "coherence dropped below threshold",
+      "action": "invoke recovery sequence; log PARADOX PX-006"
+    },
+    "restoring": {
+      "description": "recovery in progress",
+      "action": "hold operator dispatch; run Alignment+Coupling sequence"
+    }
+  },
+  "declaration_protocol": {
+    "assert_at": "session boot step 4",
+    "verify_every": "each RTT phase step",
+    "threshold": "R >= 0.40 AND clarity_op > 0",
+    "recovery": [
+      "invoke Alignment operator",
+      "invoke Coupling operator",
+      "re-evaluate R",
+      "if R >= 0.40: restore to declared"
+    ]
+  },
+  "metric": "C = Phi(S)/Psi(N) — framing strength over entropy pressure",
+  "clarity_operator": "C = nabla_tau(R) + nabla_R(tau)",
+  "log_channel": "fft.ai.session.log.json — PARADOX level on coherence loss"
+}

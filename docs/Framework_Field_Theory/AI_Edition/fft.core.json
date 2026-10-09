@@ -1,22 +1,170 @@
 {
-  "spec_version": "1.2.0",
-  "canon_id": "FFT-Core",
-  "edition": "AI Edition",
-  "aa_mode": "AA2",
-  "last_refreshed": "2026-10-08T11:00:00",
-  "metadata": {
-    "title": "FFT – Base Canon Core (v1.2)",
-    "author_canon": "Nawder Loswin",
-    "updated_at": "2026-10-08T11:00:00"
+  "$schema": "https://triadicframeworks.org/schemas/fft.core.schema.json",
+  "id": "fft.core",
+  "version": "1.33",
+  "updated": "2026-10-09T09:41:00-04:00",
+  "title": "Framework Field Theory — Core",
+  "description": "Foundational triadic field definitions, operator families, coherence model, and regime architecture for FFT v1.33.",
+  "rtt_binding": {
+    "version": "rtt=1",
+    "url": "https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html"
   },
-  "base_principles": [
-    { "id": "P1", "label": "Field Primacy",           "statement": "All information in FFT is represented as field signals traversing a structured field space." },
-    { "id": "P2", "label": "Resonance-Time",          "statement": "Temporal dynamics are governed by resonance rather than linear time. RTT nodes model resonant temporal states." },
-    { "id": "P3", "label": "Triadic Structure",       "statement": "Every field interaction is triadic: Temporal (T), Structural (S), and Modal (M) axes are always co-present." },
-    { "id": "P4", "label": "Harmonic Resolution",     "statement": "All paradox escalations MUST resolve harmonically. Resolution restores coherence and resets the lattice." },
-    { "id": "P5", "label": "3C Condition Primacy",    "statement": "Coherence, Clarity, and Continuity are the fundamental health conditions of every field state." },
-    { "id": "P6", "label": "Autonomous Alignment",    "statement": "Alignment is a spectrum from passive observation (AA0) to full autonomous self-alignment (AA3)." },
-    { "id": "P7", "label": "Substrate Relativity",    "statement": "All operator capabilities are substrate-relative. No operation is substrate-independent." },
-    { "id": "P8", "label": "Canon Consistency",       "statement": "All files in the AI Edition MUST be internally consistent with spec_version 1.2.0 and the canon invariants." }
+  "session_context": {
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "triadic_fields": {
+    "phi": {
+      "symbol": "φ",
+      "type": "scalar",
+      "role": "baseline substrate state",
+      "examples": [
+        "density",
+        "potential",
+        "load",
+        "configuration"
+      ]
+    },
+    "V": {
+      "symbol": "V",
+      "type": "vector",
+      "role": "directed flows and actions",
+      "examples": [
+        "currents",
+        "requests",
+        "operations",
+        "winds"
+      ]
+    },
+    "R": {
+      "symbol": "R",
+      "type": "resonance_envelope",
+      "role": "coherence and alignment between layers",
+      "formula": "R = f(φ, V, alignment)"
+    }
+  },
+  "operator_families": [
+    {
+      "name": "Diffusion",
+      "role": "spreads state, smooths gradients",
+      "symbol": "D"
+    },
+    {
+      "name": "Alignment",
+      "role": "pulls fields toward preferred patterns or targets",
+      "symbol": "A"
+    },
+    {
+      "name": "Coupling",
+      "role": "links fields so changes in one affect the others",
+      "symbol": "K"
+    },
+    {
+      "name": "Activation",
+      "role": "nonlinear responses, thresholds, and amplifications",
+      "symbol": "Θ"
+    },
+    {
+      "name": "Stabilization",
+      "role": "damping, saturation, and control of runaway modes",
+      "symbol": "Σ"
+    }
+  ],
+  "resonance_time": {
+    "formula": "τ = dR/dφ",
+    "interpretation": "time as rate of resonance depth change per unit phase",
+    "anti_time": "reversal of phase evolution sign"
+  },
+  "snr_decomposition": {
+    "silence": {
+      "symbol": "S",
+      "definition": "available but unexcited capacity",
+      "operator": "S=0⁺ (indivisible baseline)"
+    },
+    "noise": {
+      "symbol": "N",
+      "definition": "incoherent or random excitation",
+      "operator": "Δ (measurable change)"
+    },
+    "resonance": {
+      "symbol": "R",
+      "definition": "coherent phase-locked excitation",
+      "formula": "R = S + N"
+    }
+  },
+  "set_engine": {
+    "S": {
+      "name": "Spin",
+      "symbol": "𝒮",
+      "components": [
+        "L",
+        "A",
+        "C"
+      ],
+      "role": "rotational resonance organizer"
+    },
+    "E": {
+      "name": "Electro-field",
+      "symbol": "ℰ",
+      "components": [
+        "V",
+        "ρ_q",
+        "∇Φ"
+      ],
+      "role": "field-charge engine"
+    },
+    "T": {
+      "name": "Temperature",
+      "symbol": "𝒯",
+      "components": [
+        "T_hot",
+        "T_cold",
+        "∇T"
+      ],
+      "role": "gradient engine"
+    }
+  },
+  "fff": {
+    "frequency": "universal substrate hum",
+    "fluids": "propagation/mixing medium",
+    "forces": "mode-shaping bias"
+  },
+  "dco_scaffold": {
+    "4D": {
+      "operator": "∇τR",
+      "role": "time gradients sharpen resonance"
+    },
+    "5D": {
+      "operator": "∇Rτ",
+      "role": "resonance gradients sharpen time"
+    },
+    "7D": {
+      "operator": "𝒞",
+      "role": "multi-layer coherence stability"
+    },
+    "8D": {
+      "operator": "S_Δ",
+      "role": "symmetry shift and bifurcation"
+    },
+    "9D": {
+      "operator": "∂_anc",
+      "role": "ancestral boundary and dimensional origin"
+    }
+  },
+  "qmroot_ladder": [
+    "0D (Silence seed)",
+    "1D (Ground/causality)",
+    "2D (Neutral/interference)",
+    "3+1D (emergence via triadic-time extrusion)"
+  ],
+  "coherence_metric": "C = Φ(S)/Ψ(N) — framing strength over entropy pressure",
+  "clarity_operator": "C = ∇τR + ∇Rτ  (Dual Operator Engine)",
+  "v133_additions": [
+    "coherence=declared binding injected at field init",
+    "drift=bounded guard on all operator regime transitions",
+    "paradox=structural enum cross-linked from fft.ai.paradox.enum.json",
+    "QMROOT ladder fully resolved through 9D",
+    "New modules: coherence, drift, paradox, rtt.qmroot, set.engine, spine.connector, dco.map, snr.monitor"
   ]
 }

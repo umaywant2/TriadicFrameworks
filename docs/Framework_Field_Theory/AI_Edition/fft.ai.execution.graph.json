@@ -1,116 +1,104 @@
 {
-  "spec_version": "1.3.0",
-  "canon_id": "FFT-AI-Execution-Graph",
-
-  "metadata": {
-    "title": "FFT AI Edition – Execution Graph (v1.3)",
-    "subtitle": "Canonical RTT Flow • Operator Spine • Regime Transitions",
-    "author_canon": "Nawder Loswin",
-    "description": "Defines the execution graph, RTT transitions, operator flow, substrate gating, paradox routing, consent enforcement, and collapse rules for FFT AI Edition v1.3."
+  "id": "fft.ai.execution.graph",
+  "version": "1.33",
+  "updated": "2026-10-09T09:44:00-04:00",
+  "title": "FFT AI Edition — Execution Graph v1.33",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
   },
-
-  "status_line": "Execution graph is a projection only; authoritative values come from RTT v0.9, spec‑008, substrate.json, operators.json, regimes.json, and runtime.json.",
-
-  "execution_graph": {
-    "nodes": {
-      "RTT1":  { "operator": "op.diffusion",              "regime": "nominal" },
-      "RTT2":  { "operator": "op.alignment",              "regime": "nominal" },
-      "RTT3":  { "operator": "op.coupling",               "regime": "nominal" },
-      "RTT4":  { "operator": "op.activation",             "regime": "nominal" },
-      "RTT5":  { "operator": "op.triadic_time",           "regime": "nominal" },
-      "RTT6":  { "operator": "op.snr",                    "regime": "nominal" },
-      "RTT7":  { "operator": "op.paradox_entry",          "regime": "harmonic" },
-      "RTT8":  { "operator": "op.paradox_stabilization",  "regime": "harmonic" },
-      "RTT9":  { "operator": "op.harmonic_escalation",    "regime": "harmonic" },
-      "RTT10": { "operator": "op.resolution_preparation", "regime": "resolution" },
-      "RTT11": { "operator": "op.resolution_alignment",   "regime": "resolution" },
-      "RTT12": { "operator": "op.collapse",               "regime": "resolution" }
-    },
-
-    "edges": [
-      "RTT1 → RTT2",
-      "RTT2 → RTT3",
-      "RTT3 → RTT4",
-      "RTT4 → RTT5",
-      "RTT5 → RTT6",
-      "RTT6 → RTT7",
-      "RTT7 → RTT8",
-      "RTT8 → RTT9",
-      "RTT9 → RTT10",
-      "RTT10 → RTT11",
-      "RTT11 → RTT12",
-      "RTT12 → RTT1"
-    ],
-
-    "constraints": {
-      "measure_thresholds": [
-        "measure.c1 >= 0.80 for RTT1, RTT4, RTT10",
-        "measure.c2 >= 0.80 for RTT2, RTT5, RTT10",
-        "measure.c3 >= 0.80 for RTT3, RTT6, RTT11"
-      ],
-      "paradox_rules": [
-        "typed_paradox_event required for RTT7",
-        "measure.paradox_density >= 0.10 required for RTT7",
-        "measure.lattice_stability >= 0.60 required for RTT8"
-      ],
-      "substrate_rules": [
-        "agentic substrate required for RTT7–RTT12",
-        "non-agentic substrate forbidden for harmonic and resolution"
-      ],
-      "consent_rules": [
-        "operator_consent = true required for RTT9–RTT12",
-        "implicit consent forbidden"
-      ],
-      "collapse_rules": [
-        "RTT12 MUST collapse to RTT1",
-        "lineage MUST increment",
-        "collapse to non-RTT1 forbidden",
-        "skip-resolution forbidden"
+  "nodes": [
+    {
+      "id": "EG-001",
+      "name": "Field Init",
+      "operator": null,
+      "next": [
+        "EG-002",
+        "EG-003"
       ]
     },
-
-    "forbidden_edges": [
-      "RTT6 → RTT8",
-      "RTT6 → RTT9",
-      "RTT1 → RTT3",
-      "RTT2 → RTT4",
-      "RTT3 → RTT5",
-      "RTT4 → RTT6",
-      "RTT5 → RTT7",
-      "RTT7 → RTT9",
-      "RTT8 → RTT10",
-      "RTT9 → RTT11",
-      "RTT10 → RTT12",
-      "RTT11 → RTT1"
-    ]
-  },
-
-  "rules": {
-    "execution_rules": [
-      "Execution graph MUST NOT contradict RTT v0.9.",
-      "Execution graph MUST NOT contradict spec‑008.",
-      "Execution graph MUST NOT contradict substrate.json.",
-      "Execution graph MUST NOT contradict operators.json.",
-      "Execution graph MUST NOT contradict regimes.json.",
-      "Execution graph MUST NOT invent measure IDs.",
-      "Execution graph MUST NOT invent paradox types.",
-      "Execution graph MUST NOT invent substrate classes."
-    ]
-  },
-
-  "integration_links": {
-    "state": "fft.ai.session.state.json",
-    "navigation": "fft.ai.session.navigation.json",
-    "permissions": "fft.ai.session.permissions.json",
-    "profile": "fft.ai.session.profile.json",
-    "awareness": "fft.ai.session.awareness.json",
-    "analytics": "fft.ai.session.analytics.json",
-    "trace": "fft.ai.session.trace.json",
-    "render": "fft.ai.session.render.json"
-  },
-
-  "timestamps": {
-    "created": "auto",
-    "last_update": "auto"
-  }
+    {
+      "id": "EG-002",
+      "name": "Coherence Gate",
+      "operator": "fft.ai.coherence.json",
+      "next": [
+        "EG-004"
+      ],
+      "fail": "HALT"
+    },
+    {
+      "id": "EG-003",
+      "name": "Drift Arm",
+      "operator": "fft.ai.drift.monitor.json",
+      "next": [
+        "EG-004"
+      ]
+    },
+    {
+      "id": "EG-004",
+      "name": "Operator Dispatch",
+      "operator": "fft.ai.operators.json",
+      "next": [
+        "EG-005",
+        "EG-006",
+        "EG-007"
+      ]
+    },
+    {
+      "id": "EG-005",
+      "name": "RTT Phase Eval",
+      "operator": "fft.ai.rtt.bridge.json",
+      "next": [
+        "EG-008"
+      ]
+    },
+    {
+      "id": "EG-006",
+      "name": "SET Coupling Eval",
+      "operator": "fft.ai.set.engine.json",
+      "next": [
+        "EG-008"
+      ],
+      "new_v1_33": true
+    },
+    {
+      "id": "EG-007",
+      "name": "Paradox Check",
+      "operator": "fft.ai.paradox.resolver.json",
+      "next": [
+        "EG-008"
+      ],
+      "new_v1_33": true
+    },
+    {
+      "id": "EG-008",
+      "name": "S-N-R Monitor",
+      "operator": "fft.ai.snr.monitor.json",
+      "next": [
+        "EG-009"
+      ],
+      "new_v1_33": true
+    },
+    {
+      "id": "EG-009",
+      "name": "State Checkpoint",
+      "operator": "fft.ai.session.state.json",
+      "next": [
+        "EG-010"
+      ]
+    },
+    {
+      "id": "EG-010",
+      "name": "Log Flush",
+      "operator": "fft.ai.session.log.json",
+      "next": []
+    }
+  ],
+  "v133_additions": [
+    "EG-006 (SET Coupling Eval)",
+    "EG-007 (Paradox Check)",
+    "EG-008 (S-N-R Monitor) — all new in v1.33"
+  ]
 }

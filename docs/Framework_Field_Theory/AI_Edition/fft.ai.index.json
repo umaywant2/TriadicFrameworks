@@ -1,153 +1,293 @@
 {
-  "spec_version": "1.3.0",
-  "canon_id": "FFT-AI-Index",
-
-  "metadata": {
-    "title": "FFT AI Edition – Index (v1.3)",
-    "subtitle": "Root Registry for All FFT AI Edition Modules",
-    "author_canon": "Nawder Loswin",
-    "description": "Defines the canonical index and load order for FFT AI Edition v1.3."
+  "$schema": "https://triadicframeworks.org/schemas/fft.ai.index.schema.json",
+  "id": "fft.ai.index",
+  "version": "1.33",
+  "updated": "2026-10-09T09:41:00-04:00",
+  "title": "FFT AI Edition — Directory Index v1.33",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
   },
-
-  "status_line": "Index is the root registry; all modules MUST appear here.",
-
+  "total_files": 65,
   "index": {
-    "session_id": "inherit-from-session.state",
-
-    "modules": {
-      "core": [
-        "fft.ai.core.json",
-        "fft.ai.core_v1_2_.json",
-        "fft.core.json",
-        "fft.invariant.json",
-        "fft.structures.json",
-        "fft.metadata.json"
-      ],
-
-      "specifications": [
-        "fft.ai.spec.json",
-        "fft.ai.spec-008.json",
-        "fft.ai.manifest.json",
-        "fft.validation.json"
-      ],
-
-      "substrate": [
-        "fft.ai.substrate.json",
-        "fft.ai.substrate.bridge.json",
-        "fft.ai.substrate.compat.json",
-        "fft.ai.substrate.lattice.json",
-        "fft.ai.substrate.matrix.json"
-      ],
-
-      "operators": [
-        "fft.ai.operators.json",
-        "fft.operator.example.json",
-        "fft.operator.port.json"
-      ],
-
-      "regimes": [
-        "fft.ai.regimes.json",
-        "fft.regimes.json"
-      ],
-
-      "rtt": [
-        "fft.ai.rtt.bridge.json",
-        "fft.ai.rtt.spine.examples.json",
-        "fft.ai.rtt.engine.prompts.json"
-      ],
-
-      "runtime": [
-        "fft.ai.runtime.json",
-        "fft.ai.hardware.profile.json",
-        "fft.ai.bootstrap.json",
-        "fft.ai.integrations.json",
-        "fft.ai.discovery.json",
-        "fft.ai.execution.graph.json",
-        "fft.ai.capabilities.json",
-        "fft.ai.reader.json",
-        "fft.ai.overview.json",
-        "fft.ai.registry.json"
-      ],
-
-      "session": [
-        "fft.ai.session.state.json",
-        "fft.ai.session.state.refresh.json",
-        "fft.ai.session.context.json",
-        "fft.ai.session.alignments.json",
-        "fft.ai.session.log.json",
-        "fft.ai.session.history.json",
-        "fft.ai.session.navigation.json",
-        "fft.ai.session.permissions.json",
-        "fft.ai.session.profile.json",
-        "fft.ai.session.awareness.json",
-        "fft.ai.session.analytics.json",
-        "fft.ai.session.dashboard.json",
-        "fft.ai.session.overlay.json",
-        "fft.ai.session.ui.json",
-        "fft.ai.session.trace.json",
-        "fft.ai.session.render.json"
-      ],
-
-      "examples": [
-        "fft.examples.json"
-      ],
-
-      "edition": [
-        "fft.ai.index.json",
-        "fft.ai.readme.json"
-      ]
+    "fft.core.json": {
+      "tier": "A",
+      "v1_33_status": "generated"
     },
-
-    "load_order": [
-      "core",
-      "specifications",
-      "substrate",
-      "operators",
-      "regimes",
-      "rtt",
-      "runtime",
-      "session",
-      "examples",
-      "edition"
-    ],
-
-    "integration_map": {
-      "state": "fft.ai.session.state.json",
-      "context": "fft.ai.session.context.json",
-      "alignments": "fft.ai.session.alignments.json",
-      "log": "fft.ai.session.log.json",
-      "history": "fft.ai.session.history.json",
-      "analytics": "fft.ai.session.analytics.json",
-      "navigation": "fft.ai.session.navigation.json",
-      "permissions": "fft.ai.session.permissions.json",
-      "profile": "fft.ai.session.profile.json",
-      "awareness": "fft.ai.session.awareness.json",
-      "dashboard": "fft.ai.session.dashboard.json",
-      "overlay": "fft.ai.session.overlay.json",
-      "ui": "fft.ai.session.ui.json",
-      "trace": "fft.ai.session.trace.json",
-      "render": "fft.ai.session.render.json"
+    "fft.invariant.json": {
+      "tier": "A",
+      "v1_33_status": "generated"
+    },
+    "fft.metadata.json": {
+      "tier": "A",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.core.json": {
+      "tier": "A",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.manifest.json": {
+      "tier": "A",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.index.json": {
+      "tier": "A",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.spec.json": {
+      "tier": "A",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.spec-008.json": {
+      "tier": "A",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.readme.json": {
+      "tier": "A",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.bootstrap.json": {
+      "tier": "A",
+      "v1_33_status": "generated"
+    },
+    "index.html": {
+      "tier": "A",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.autonomy.json": {
+      "tier": "B",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.capabilities.json": {
+      "tier": "B",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.discovery.json": {
+      "tier": "B",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.execution.graph.json": {
+      "tier": "B",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.navigation.json": {
+      "tier": "B",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.overview.json": {
+      "tier": "B",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.operators.json": {
+      "tier": "B",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.runtime.json": {
+      "tier": "B",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.registry.json": {
+      "tier": "B",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.rtt.engine.prompts.json": {
+      "tier": "C",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.rtt.bridge.json": {
+      "tier": "C",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.rtt.spine.examples.json": {
+      "tier": "C",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.session.context.json": {
+      "tier": "C",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.session.state.json": {
+      "tier": "C",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.session.awareness.json": {
+      "tier": "C",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.session.alignments.json": {
+      "tier": "C",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.session.analytics.json": {
+      "tier": "C",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.session.trace.json": {
+      "tier": "C",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.session.navigation.json": {
+      "tier": "C",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.session.overlay.json": {
+      "tier": "C",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.session.permissions.json": {
+      "tier": "C",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.session.profile.json": {
+      "tier": "C",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.session.render.json": {
+      "tier": "C",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.session.ui.json": {
+      "tier": "C",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.session.dashboard.json": {
+      "tier": "C",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.session.log.json": {
+      "tier": "C",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.session.history.json": {
+      "tier": "C",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.session.state.refresh.json": {
+      "tier": "C",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.integrations.json": {
+      "tier": "C",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.paradox.enum.json": {
+      "tier": "C",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.hardware.profile.json": {
+      "tier": "C",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.substrate.json": {
+      "tier": "D",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.substrate.compat.json": {
+      "tier": "D",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.substrate.bridge.json": {
+      "tier": "D",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.substrate.lattice.json": {
+      "tier": "D",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.substrate.matrix.json": {
+      "tier": "D",
+      "v1_33_status": "generated"
+    },
+    "fft.operators.json": {
+      "tier": "D",
+      "v1_33_status": "generated"
+    },
+    "fft.operator.port.json": {
+      "tier": "D",
+      "v1_33_status": "generated"
+    },
+    "fft.operator.example.json": {
+      "tier": "D",
+      "v1_33_status": "generated"
+    },
+    "fft.regimes.json": {
+      "tier": "D",
+      "v1_33_status": "generated"
+    },
+    "fft.structures.json": {
+      "tier": "D",
+      "v1_33_status": "generated"
+    },
+    "fft.examples.json": {
+      "tier": "D",
+      "v1_33_status": "generated"
+    },
+    "fft.validation.json": {
+      "tier": "D",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.reader.json": {
+      "tier": "D",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.regimes.json": {
+      "tier": "D",
+      "v1_33_status": "generated"
+    },
+    "ep.harmonic_escalation.json": {
+      "tier": "EP",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.coherence.json": {
+      "tier": "NEW",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.drift.monitor.json": {
+      "tier": "NEW",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.paradox.resolver.json": {
+      "tier": "NEW",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.rtt.qmroot.json": {
+      "tier": "NEW",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.set.engine.json": {
+      "tier": "NEW",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.spine.connector.json": {
+      "tier": "NEW",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.dco.map.json": {
+      "tier": "NEW",
+      "v1_33_status": "generated"
+    },
+    "fft.ai.snr.monitor.json": {
+      "tier": "NEW",
+      "v1_33_status": "generated"
     }
   },
-
-  "rules": {
-    "index_rules": [
-      "Index MUST list all modules.",
-      "Index MUST NOT invent module names.",
-      "Index MUST NOT omit session-layer modules.",
-      "Index MUST NOT contradict manifest.json.",
-      "Index MUST NOT contradict registry.json."
-    ],
-
-    "load_rules": [
-      "Load order MUST begin with core.",
-      "Session-layer MUST load after runtime.",
-      "Render MUST load last."
-    ]
-  },
-
-  "timestamps": {
-    "created": "auto",
-    "last_update": "auto"
-  }
+  "load_order": [
+    "fft.metadata.json",
+    "fft.core.json",
+    "fft.invariant.json",
+    "fft.ai.core.json",
+    "fft.ai.manifest.json",
+    "fft.ai.bootstrap.json",
+    "fft.ai.registry.json",
+    "fft.ai.coherence.json",
+    "fft.ai.drift.monitor.json",
+    "fft.ai.paradox.resolver.json",
+    "fft.ai.spine.connector.json",
+    "fft.ai.rtt.qmroot.json",
+    "fft.ai.set.engine.json",
+    "fft.ai.snr.monitor.json",
+    "fft.ai.dco.map.json"
+  ]
 }

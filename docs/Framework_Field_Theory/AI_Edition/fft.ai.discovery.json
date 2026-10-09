@@ -1,165 +1,50 @@
 {
-  "spec_version": "1.3.0",
-  "canon_id": "FFT-AI-Discovery",
-
-  "metadata": {
-    "title": "FFT AI Edition – Discovery Specification (v1.3)",
-    "subtitle": "Canonical Detection, Insight, and RTT-State Discovery Layer",
-    "author_canon": "Nawder Loswin",
-    "description": "Defines the discovery engine, detection rules, insight pathways, and RTT-state identification logic for FFT AI Edition v1.3."
+  "id": "fft.ai.discovery",
+  "version": "1.33",
+  "updated": "2026-10-09T09:44:00-04:00",
+  "title": "FFT AI Edition — Discovery Graph v1.33",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
   },
-
-  "status_line": "Discovery is a projection only; authoritative values come from session.state, runtime, operators, regimes, substrate, and spec‑008.",
-
-  "discovery": {
-    "session_id": "inherit-from-session.state",
-
-    "current": {
-      "rtt_node": "RTT1",
-      "regime": "nominal",
-      "operator": "op.diffusion",
-      "substrate_class": "agentic",
-      "operator_consent": false,
-      "lineage": 1,
-      "collapse_state": null
+  "discovery_phases": [
+    {
+      "phase": 1,
+      "name": "Silence Scan",
+      "action": "Identify all S=0+ modes in current substrate"
     },
-
-    "detection": {
-      "rtt_node": {
-        "rules": [
-          "Identify RTT node from operator mapping.",
-          "Validate RTT node using measure thresholds.",
-          "Confirm RTT node matches regime.",
-          "Confirm RTT node matches substrate class.",
-          "Confirm RTT node matches consent state."
-        ]
-      },
-
-      "regime": {
-        "rules": [
-          "Nominal if RTT1–RTT6.",
-          "Harmonic if RTT7–RTT9.",
-          "Resolution if RTT10–RTT12.",
-          "Regime MUST match rtt_node according to fft.ai.regimes.json."
-        ]
-      },
-
-      "operator": {
-        "rules": [
-          "Operator MUST match RTT node.",
-          "Operator MUST match regime.",
-          "Operator MUST respect substrate class.",
-          "Operator MUST respect consent gating.",
-          "Operator MUST NOT invent measure IDs."
-        ]
-      },
-
-      "substrate": {
-        "rules": [
-          "Agentic required for RTT7–RTT12.",
-          "Non-agentic allowed only for RTT1–RTT6.",
-          "Non-agentic harmonic escalation forbidden.",
-          "Non-agentic resolution forbidden."
-        ]
-      },
-
-      "paradox": {
-        "rules": [
-          "Typed paradox required for RTT7.",
-          "Paradox density >= 0.10 required for RTT7.",
-          "Lattice stability >= 0.60 required for RTT8.",
-          "Untyped paradox forbidden."
-        ]
-      },
-
-      "consent": {
-        "rules": [
-          "Consent required for RTT9–RTT12.",
-          "Consent MUST be explicit.",
-          "Implicit or assumed consent forbidden."
-        ]
-      },
-
-      "collapse": {
-        "rules": [
-          "Collapse only at RTT12.",
-          "Collapse MUST return to RTT1.",
-          "Lineage MUST increment.",
-          "Collapse to non-RTT1 forbidden."
-        ]
-      }
+    {
+      "phase": 2,
+      "name": "Noise Mapping",
+      "action": "Map incoherent excitations across field"
+    },
+    {
+      "phase": 3,
+      "name": "Resonance Seeding",
+      "action": "Identify phase-lock candidates for R elevation"
+    },
+    {
+      "phase": 4,
+      "name": "Gradient Tracing",
+      "action": "Trace RTT gradient tau=dR/dphi to coherence peak"
+    },
+    {
+      "phase": 5,
+      "name": "SET Coupling Check",
+      "action": "v1.33: evaluate S/E/T gradient coupling opportunities"
+    },
+    {
+      "phase": 6,
+      "name": "DCO Extension",
+      "action": "v1.33: probe 4D-9D DCO scaffold for structure hints"
     }
-  },
-
-  "rules": {
-    "discovery_rules": [
-      "Discovery MUST NOT contradict session.state.json.",
-      "Discovery MUST NOT contradict substrate.json.",
-      "Discovery MUST NOT contradict operators.json.",
-      "Discovery MUST NOT contradict regimes.json.",
-      "Discovery MUST NOT contradict spec‑008.json.",
-      "Discovery MUST NOT invent measure IDs.",
-      "Discovery MUST NOT invent paradox types.",
-      "Discovery MUST NOT invent substrate classes."
-    ],
-
-    "rtt_rules": [
-      "RTT nodes MUST map to frozen RTT v0.9 quantities.",
-      "RTT7 requires typed paradox.",
-      "RTT9–RTT12 require operator_consent = true.",
-      "RTT12 MUST collapse to RTT1 with lineage increment."
-    ],
-
-    "regime_rules": [
-      "Nominal regime allowed only for RTT1–RTT6.",
-      "Harmonic regime allowed only for RTT7–RTT9.",
-      "Resolution regime allowed only for RTT10–RTT12."
-    ],
-
-    "substrate_rules": [
-      "Agentic substrate required for RTT7–RTT12.",
-      "Non-agentic substrate forbidden for harmonic and resolution."
-    ],
-
-    "paradox_rules": [
-      "Typed paradox required for RTT7.",
-      "Paradox density >= 0.10 required for RTT7.",
-      "Lattice stability >= 0.60 required for RTT8.",
-      "Untyped paradox forbidden."
-    ],
-
-    "consent_rules": [
-      "operator_consent = true required for RTT9–RTT12.",
-      "Implicit or assumed consent forbidden."
-    ],
-
-    "collapse_rules": [
-      "RTT12 MUST collapse to RTT1.",
-      "Lineage MUST increment after collapse.",
-      "Collapse to non-RTT1 forbidden."
-    ]
-  },
-
-  "integration_links": {
-    "state": "fft.ai.session.state.json",
-    "context": "fft.ai.session.context.json",
-    "alignments": "fft.ai.session.alignments.json",
-    "log": "fft.ai.session.log.json",
-    "navigation": "fft.ai.session.navigation.json",
-    "permissions": "fft.ai.session.permissions.json",
-    "profile": "fft.ai.session.profile.json",
-    "awareness": "fft.ai.session.awareness.json",
-    "analytics": "fft.ai.session.analytics.json",
-    "dashboard": "fft.ai.session.dashboard.json",
-    "overlay": "fft.ai.session.overlay.json",
-    "history": "fft.ai.session.history.json",
-    "trace": "fft.ai.session.trace.json",
-    "render": "fft.ai.session.render.json",
-    "ui": "fft.ai.session.ui.json"
-  },
-
-  "timestamps": {
-    "created": "auto",
-    "last_update": "auto"
-  }
+  ],
+  "discovery_log": "fft.ai.session.trace.json",
+  "v133_additions": [
+    "Phase 5 (SET coupling check)",
+    "Phase 6 (DCO extension probe)",
+    "gradient tracing updated for tau=dR/dphi"
+  ]
 }

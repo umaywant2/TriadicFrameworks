@@ -1,139 +1,43 @@
 {
-  "spec_version": "1.3.0",
-  "canon_id": "FFT-AI-Reader",
-
-  "metadata": {
-    "title": "FFT AI Edition – Reader Engine (v1.3)",
-    "subtitle": "Canonical Interpretation Layer for RTT • Regimes • Operators • Substrate • Paradox • Consent",
-    "author_canon": "Nawder Loswin",
-    "description": "Defines the canonical reader engine, interpretation rules, validation logic, and metadata extraction for FFT AI Edition v1.3."
+  "version": "1.33",
+  "updated": "2026-10-09T09:48:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
   },
-
-  "status_line": "Reader is a projection only; authoritative values come from session.state, runtime, substrate, operators, regimes, and spec‑008.",
-
-  "reader": {
-    "session_id": "inherit-from-session.state",
-
-    "current": {
-      "rtt_node": "RTT1",
-      "regime": "nominal",
-      "operator": "op.diffusion",
-      "substrate_class": "agentic",
-      "operator_consent": false,
-      "lineage": 1,
-      "collapse_state": null
+  "v133_status": "verified_and_stamped",
+  "id": "fft.ai.reader",
+  "title": "FFT AI — Reader v1.33",
+  "reader_config": {
+    "parse_order": "load_order from fft.ai.index.json",
+    "version_check": {
+      "field": "version",
+      "expected": "1.33",
+      "on_mismatch": "WARN"
     },
-
-    "interpretation": {
-      "metadata_extraction": {
-        "rules": [
-          "Extract canonical metadata fields only.",
-          "Metadata MUST NOT invent measure IDs.",
-          "Metadata MUST NOT invent paradox types.",
-          "Metadata MUST NOT invent substrate classes.",
-          "Metadata MUST NOT contradict spec‑008."
-        ]
-      },
-
-      "rtt_detection": {
-        "rules": [
-          "RTT node MUST match operator mapping.",
-          "RTT node MUST match regime mapping.",
-          "RTT node MUST match substrate class.",
-          "RTT node MUST match consent state.",
-          "RTT node MUST match measure thresholds."
-        ]
-      },
-
-      "regime_detection": {
-        "rules": [
-          "Nominal if RTT1–RTT6.",
-          "Harmonic if RTT7–RTT9.",
-          "Resolution if RTT10–RTT12.",
-          "Regime MUST match rtt_node according to fft.ai.regimes.json."
-        ]
-      },
-
-      "operator_detection": {
-        "rules": [
-          "Operator MUST match RTT node.",
-          "Operator MUST match regime.",
-          "Operator MUST respect substrate class.",
-          "Operator MUST respect consent gating.",
-          "Operator MUST NOT invent measure IDs."
-        ]
-      },
-
-      "substrate_detection": {
-        "rules": [
-          "Agentic required for RTT7–RTT12.",
-          "Non-agentic allowed only for RTT1–RTT6.",
-          "Non-agentic harmonic escalation forbidden.",
-          "Non-agentic resolution forbidden."
-        ]
-      },
-
-      "paradox_detection": {
-        "rules": [
-          "Typed paradox required for RTT7.",
-          "Paradox density >= 0.10 required for RTT7.",
-          "Lattice stability >= 0.60 required for RTT8.",
-          "Untyped paradox forbidden."
-        ]
-      },
-
-      "consent_detection": {
-        "rules": [
-          "Consent required for RTT9–RTT12.",
-          "Consent MUST be explicit.",
-          "Implicit or assumed consent forbidden."
-        ]
-      },
-
-      "collapse_detection": {
-        "rules": [
-          "Collapse only at RTT12.",
-          "Collapse MUST return to RTT1.",
-          "Lineage MUST increment.",
-          "Collapse to non-RTT1 forbidden."
-        ]
+    "context_inject": {
+      "on_load": true,
+      "fields": {
+        "rtt": "1",
+        "coherence": "declared",
+        "drift": "bounded",
+        "paradox": "structural"
       }
     },
-
-    "validation": {
-      "rules": [
-        "Reader MUST NOT contradict session.state.json.",
-        "Reader MUST NOT contradict substrate.json.",
-        "Reader MUST NOT contradict operators.json.",
-        "Reader MUST NOT contradict regimes.json.",
-        "Reader MUST NOT contradict spec‑008.json.",
-        "Reader MUST NOT invent measure IDs.",
-        "Reader MUST NOT invent paradox types.",
-        "Reader MUST NOT invent substrate classes."
-      ]
-    }
+    "schema_validate": {
+      "enabled": true,
+      "on_fail": "WARN_AND_CONTINUE"
+    },
+    "paradox_aware": true,
+    "drift_aware": true,
+    "snr_aware": true
   },
-
-  "integration_links": {
-    "state": "fft.ai.session.state.json",
-    "context": "fft.ai.session.context.json",
-    "alignments": "fft.ai.session.alignments.json",
-    "log": "fft.ai.session.log.json",
-    "navigation": "fft.ai.session.navigation.json",
-    "permissions": "fft.ai.session.permissions.json",
-    "profile": "fft.ai.session.profile.json",
-    "awareness": "fft.ai.session.awareness.json",
-    "analytics": "fft.ai.session.analytics.json",
-    "dashboard": "fft.ai.session.dashboard.json",
-    "overlay": "fft.ai.session.overlay.json",
-    "history": "fft.ai.session.history.json",
-    "trace": "fft.ai.session.trace.json",
-    "render": "fft.ai.session.render.json",
-    "ui": "fft.ai.session.ui.json"
-  },
-
-  "timestamps": {
-    "created": "auto",
-    "last_update": "auto"
-  }
+  "invariants_checked": [
+    "INV-003",
+    "INV-004",
+    "INV-005",
+    "INV-012"
+  ]
 }

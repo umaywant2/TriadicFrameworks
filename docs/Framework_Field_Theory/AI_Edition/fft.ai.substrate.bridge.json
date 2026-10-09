@@ -1,51 +1,29 @@
 {
-  "spec_version": "1.2.0",
-  "canon_id": "FFT-AI-Substrate-Bridge",
-  "edition": "AI Edition",
-  "aa_mode": "AA2",
-  "last_refreshed": "2026-10-08T10:56:00",
-  "metadata": {
-    "title": "FFT AI Edition – Substrate Bridge (v1.2)",
-    "author_canon": "Nawder Loswin",
-    "updated_at": "2026-10-08T10:56:00"
+  "version": "1.33",
+  "updated": "2026-10-09T09:48:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
   },
-  "bridge": {
-    "purpose": "Translates FFT operator calls across substrate boundaries, enabling cross-substrate field signal relay and harmonic synchronization.",
-    "bridge_protocols": [
-      {
-        "id": "bridge.agentic-to-transformer",
-        "from": "substrate.llm.agentic",
-        "to": "substrate.llm.transformer",
-        "translation_rules": [
-          "Strip AA3-only operators; substitute AA2 equivalents.",
-          "Clamp lattice node to RTT9 maximum.",
-          "Re-evaluate 3C thresholds against transformer profile."
-        ],
-        "supported": true
-      },
-      {
-        "id": "bridge.agentic-to-edge",
-        "from": "substrate.llm.agentic",
-        "to": "substrate.edge.compact",
-        "translation_rules": [
-          "Strip harmonic operators (RTT7–RTT12).",
-          "Reduce field signal batch to ≤16 signals.",
-          "Force AA Mode to AA1."
-        ],
-        "supported": true
-      },
-      {
-        "id": "bridge.transformer-to-symbolic",
-        "from": "substrate.llm.transformer",
-        "to": "substrate.symbolic",
-        "translation_rules": [
-          "Encode field signals as propositional clauses.",
-          "Strip all harmonic operators.",
-          "C1/C2/C3 mapped to propositional truth values."
-        ],
-        "supported": true
-      }
-    ],
-    "bridge_failure_policy": "On bridge failure, raise FFT-ERR-BRIDGE-001 and revert to source substrate with AA Mode AA2."
-  }
+  "v133_status": "verified_and_stamped",
+  "id": "fft.ai.substrate.bridge",
+  "title": "FFT AI — Substrate Bridge v1.33",
+  "bridge_purpose": "Upgrades v1.2 substrate instances to v1.33 compliance",
+  "upgrade_steps": [
+    "Assert coherence=declared (INV-003)",
+    "Arm drift monitor delta_max=0.35 (INV-004)",
+    "Register 8 new modules in registry (INV-012)",
+    "Initialize QMROOT ladder (INV-013)",
+    "Bind Spine URL live (INV-011)"
+  ],
+  "rollback": "Restore v1.2 substrate snapshot if step 1 fails",
+  "invariants_checked": [
+    "INV-003",
+    "INV-004",
+    "INV-011",
+    "INV-012",
+    "INV-013"
+  ]
 }

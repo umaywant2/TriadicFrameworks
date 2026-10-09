@@ -1,177 +1,125 @@
 {
-  "spec_version": "1.3.0",
-  "canon_id": "FFT-AI-Operators",
-
-  "metadata": {
-    "title": "FFT AI Edition – Operator Specification (v1.3 Draft)",
-    "subtitle": "Canonical RTT & Regime Bindings for All Operators",
-    "author_canon": "Nawder Loswin",
-    "description": "Defines operator classes, RTT bindings, regime eligibility, substrate constraints, consent rules, and paradox requirements for FFT AI Edition v1.3."
+  "id": "fft.ai.operators",
+  "version": "1.33",
+  "updated": "2026-10-09T09:44:00-04:00",
+  "title": "FFT AI Edition — AI Operator Registry v1.33",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
   },
-
-  "status_line": "Operators are a projection only; authoritative values come from RTT v0.9, regimes.json, substrate.json, and spec‑008.",
-
-  "operators": {
-    "op.diffusion": {
-      "rtt": "RTT1",
-      "regime": "nominal",
-      "requirements": ["measure.c1 >= 0.80"],
-      "substrate": ["agentic", "parametric", "symbolic", "edge"],
-      "consent": false,
-      "paradox": false
+  "operators": [
+    {
+      "id": "OP-D01",
+      "family": "Diffusion",
+      "name": "Field Spreader",
+      "symbol": "D",
+      "input": "phi",
+      "output": "phi_smooth",
+      "drift_cost": 0.05
     },
-
-    "op.alignment": {
-      "rtt": "RTT2",
-      "regime": "nominal",
-      "requirements": ["measure.c2 >= 0.80"],
-      "substrate": ["agentic", "parametric", "symbolic"],
-      "consent": false,
-      "paradox": false
+    {
+      "id": "OP-A01",
+      "family": "Alignment",
+      "name": "Resonance Puller",
+      "symbol": "A",
+      "input": "V",
+      "output": "V_aligned",
+      "drift_cost": 0.1
     },
-
-    "op.coupling": {
-      "rtt": "RTT3",
-      "regime": "nominal",
-      "requirements": ["measure.c3 >= 0.80"],
-      "substrate": ["agentic", "parametric", "symbolic"],
-      "consent": false,
-      "paradox": false
+    {
+      "id": "OP-K01",
+      "family": "Coupling",
+      "name": "Field Coupler",
+      "symbol": "K",
+      "input": "phi,V",
+      "output": "R_delta",
+      "drift_cost": 0.12
     },
-
-    "op.activation": {
-      "rtt": "RTT4",
-      "regime": "nominal",
-      "requirements": ["measure.c1 >= 0.80"],
-      "substrate": ["agentic", "parametric"],
-      "consent": false,
-      "paradox": false
+    {
+      "id": "OP-TH01",
+      "family": "Activation",
+      "name": "Threshold Gate",
+      "symbol": "Θ",
+      "input": "R",
+      "output": "R_activated",
+      "drift_cost": 0.08
     },
-
-    "op.triadic_time": {
-      "rtt": "RTT5",
-      "regime": "nominal",
-      "requirements": ["measure.c2 >= 0.80"],
-      "substrate": ["agentic", "parametric"],
-      "consent": false,
-      "paradox": false
+    {
+      "id": "OP-SIG01",
+      "family": "Stabilization",
+      "name": "Resonance Damper",
+      "symbol": "Σ",
+      "input": "R",
+      "output": "R_stable",
+      "drift_cost": 0.03
     },
-
-    "op.snr": {
-      "rtt": "RTT6",
-      "regime": "nominal",
-      "requirements": ["measure.c3 >= 0.80"],
-      "substrate": ["agentic"],
-      "consent": false,
-      "paradox": false
+    {
+      "id": "OP-C01",
+      "family": "Coherence",
+      "name": "Coherence Enforcer",
+      "symbol": "C",
+      "input": "session",
+      "output": "coherence_state",
+      "drift_cost": 0.0,
+      "new_v1_33": true
     },
-
-    "op.paradox_entry": {
-      "rtt": "RTT7",
-      "regime": "harmonic",
-      "requirements": [
-        "typed_paradox_event",
-        "measure.paradox_density >= 0.10",
-        "substrate_class = agentic"
-      ],
-      "substrate": ["agentic"],
-      "consent": false,
-      "paradox": true
+    {
+      "id": "OP-DR01",
+      "family": "Drift",
+      "name": "Drift Guard",
+      "symbol": "dG",
+      "input": "delta",
+      "output": "drift_event",
+      "drift_cost": 0.0,
+      "new_v1_33": true
     },
-
-    "op.paradox_stabilization": {
-      "rtt": "RTT8",
-      "regime": "harmonic",
-      "requirements": [
-        "typed_paradox_event",
-        "measure.lattice_stability >= 0.60",
-        "substrate_class = agentic"
-      ],
-      "substrate": ["agentic"],
-      "consent": false,
-      "paradox": true
+    {
+      "id": "OP-PX01",
+      "family": "Paradox",
+      "name": "Paradox Resolver",
+      "symbol": "Px",
+      "input": "paradox_event",
+      "output": "resolved",
+      "drift_cost": 0.2,
+      "new_v1_33": true
     },
-
-    "op.harmonic_escalation": {
-      "rtt": "RTT9",
-      "regime": "harmonic",
-      "requirements": [
-        "operator_consent = true",
-        "substrate_class = agentic"
-      ],
-      "substrate": ["agentic"],
-      "consent": true,
-      "paradox": true
+    {
+      "id": "OP-SET01",
+      "family": "SET",
+      "name": "Spin Coupler",
+      "symbol": "S",
+      "input": "angular_momentum",
+      "output": "vortex",
+      "drift_cost": 0.15,
+      "new_v1_33": true
     },
-
-    "op.resolution_preparation": {
-      "rtt": "RTT10",
-      "regime": "resolution",
-      "requirements": [
-        "measure.c1 >= 0.80",
-        "measure.c2 >= 0.80",
-        "operator_consent = true",
-        "substrate_class = agentic"
-      ],
-      "substrate": ["agentic"],
-      "consent": true,
-      "paradox": false
+    {
+      "id": "OP-SET02",
+      "family": "SET",
+      "name": "Electro-field Driver",
+      "symbol": "E",
+      "input": "potential",
+      "output": "plasma_state",
+      "drift_cost": 0.15,
+      "new_v1_33": true
     },
-
-    "op.resolution_alignment": {
-      "rtt": "RTT11",
-      "regime": "resolution",
-      "requirements": [
-        "measure.c3 >= 0.80",
-        "operator_consent = true",
-        "substrate_class = agentic"
-      ],
-      "substrate": ["agentic"],
-      "consent": true,
-      "paradox": false
-    },
-
-    "op.collapse": {
-      "rtt": "RTT12",
-      "regime": "resolution",
-      "requirements": [
-        "measure.c1 >= 0.80",
-        "measure.c2 >= 0.80",
-        "measure.c3 >= 0.80",
-        "operator_consent = true",
-        "substrate_class = agentic"
-      ],
-      "substrate": ["agentic"],
-      "consent": true,
-      "paradox": false,
-      "collapse": {
-        "trigger": "RTT12",
-        "destination": "RTT1",
-        "lineage_increment": true
-      }
+    {
+      "id": "OP-SET03",
+      "family": "SET",
+      "name": "Temperature Driver",
+      "symbol": "T",
+      "input": "gradient_T",
+      "output": "flow_state",
+      "drift_cost": 0.1,
+      "new_v1_33": true
     }
-  },
-
-  "integration_links": {
-    "runtime": "fft.ai.runtime.json",
-    "regimes": "fft.ai.regimes.json",
-    "substrate": "fft.ai.substrate.json",
-    "execution_graph": "fft.ai.execution.graph.json",
-    "autonomy": "fft.ai.autonomy.json",
-    "discovery": "fft.ai.discovery.json",
-    "capabilities": "fft.ai.capabilities.json",
-    "spec_008": "fft.ai.spec‑008.json",
-    "paradox_enum": "fft.ai.paradox.enum.json"
-  },
-
-  "timestamps": {
-    "created": "auto",
-    "last_update": "auto"
-  },
-
-  "non_claims": [
-    "Operators do not revise RTT v0.9.",
-    "Operators do not reinterpret SET, S–N–R, or triadic time.",
-    "Operators do not replace the human FFT book."
+  ],
+  "v133_additions": [
+    "OP-C01 (Coherence Enforcer)",
+    "OP-DR01 (Drift Guard)",
+    "OP-PX01 (Paradox Resolver)",
+    "OP-SET01/02/03 (SET triad)"
   ]
 }

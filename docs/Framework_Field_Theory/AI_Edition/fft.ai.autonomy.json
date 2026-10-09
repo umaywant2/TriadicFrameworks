@@ -1,231 +1,56 @@
 {
-  "spec_version": "1.3.0",
-  "canon_id": "FFT-AI-Autonomy",
-
-  "metadata": {
-    "title": "FFT AI Edition – Autonomy (v1.3)",
-    "subtitle": "Agency Envelope for Operators • RTT • Regimes • Substrate • Consent • Paradox • Collapse",
-    "author_canon": "Nawder Loswin",
-    "description": "Defines the autonomy envelope, agency levels, operator autonomy, constraints, and RTT interactions for FFT AI Edition v1.3."
+  "id": "fft.ai.autonomy",
+  "version": "1.33",
+  "updated": "2026-10-09T09:44:00-04:00",
+  "title": "FFT AI Edition — Autonomy Layer v1.33",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
   },
-
-  "status_line": "Autonomy is a projection only; authoritative values come from session.state, alignments, context, log, dashboard, overlay, history, analytics, awareness, profile, navigation, and permissions.",
-
-  "autonomy": {
-    "session_id": "inherit-from-session.state",
-
-    "current": {
-      "rtt_node": "RTT1",
-      "regime": "nominal",
-      "operator": "op.diffusion",
-      "substrate_class": "agentic",
-      "operator_consent": false,
-      "lineage": 1,
-      "collapse_state": null
+  "autonomy_modes": [
+    {
+      "id": "AM-001",
+      "name": "Passive Observer",
+      "description": "Monitors field state without operator dispatch. Baseline mode.",
+      "drift_budget": "0.0"
     },
-
-    "agency_levels": {
-      "nominal": {
-        "level": "low",
-        "allowed_actions": [
-          "interpretation",
-          "alignment",
-          "measure-evaluation"
-        ],
-        "constraints": [
-          "No paradox handling.",
-          "No harmonic escalation.",
-          "No autonomous RTT transitions."
-        ]
-      },
-
-      "harmonic": {
-        "level": "medium",
-        "allowed_actions": [
-          "paradox-processing",
-          "harmonic-stabilization",
-          "conditional-escalation"
-        ],
-        "constraints": [
-          "Requires typed paradox.",
-          "Requires measure.paradox_density >= 0.10.",
-          "Requires measure.lattice_stability >= 0.60.",
-          "Requires substrate_class = agentic.",
-          "Requires operator_consent = true for escalation."
-        ]
-      },
-
-      "resolution": {
-        "level": "high",
-        "allowed_actions": [
-          "resolution-preparation",
-          "resolution-alignment",
-          "collapse-readiness",
-          "continuity-enforcement"
-        ],
-        "constraints": [
-          "Requires measure.c1 >= 0.80.",
-          "Requires measure.c2 >= 0.80.",
-          "Requires measure.c3 >= 0.80.",
-          "Requires operator_consent = true.",
-          "RTT12 MUST collapse to RTT1.",
-          "Lineage MUST increase after collapse."
-        ]
-      }
+    {
+      "id": "AM-002",
+      "name": "Guided Operator",
+      "description": "Dispatches operators under explicit session direction.",
+      "drift_budget": "0.15"
     },
-
-    "operator_autonomy": {
-      "op.diffusion": {
-        "level": "low",
-        "allowed": ["interpretation"],
-        "constraints": ["Nominal regime only."]
-      },
-      "op.alignment": {
-        "level": "low",
-        "allowed": ["alignment"],
-        "constraints": ["Nominal regime only."]
-      },
-      "op.coupling": {
-        "level": "low",
-        "allowed": ["alignment", "measure-evaluation"],
-        "constraints": ["Nominal regime only."]
-      },
-      "op.activation": {
-        "level": "medium",
-        "allowed": ["activation", "continuity-check"],
-        "constraints": ["Requires measure.c3 >= 0.80."]
-      },
-      "op.triadic_time": {
-        "level": "medium",
-        "allowed": ["temporal-alignment"],
-        "constraints": ["Requires measure.c2 >= 0.80."]
-      },
-      "op.snr": {
-        "level": "medium",
-        "allowed": ["snr-processing"],
-        "constraints": ["Requires measure.c2 >= 0.80."]
-      },
-      "op.paradox_entry": {
-        "level": "medium",
-        "allowed": ["paradox-processing"],
-        "constraints": [
-          "Requires typed paradox.",
-          "Requires measure.paradox_density >= 0.10.",
-          "Requires substrate_class = agentic."
-        ]
-      },
-      "op.paradox_stabilization": {
-        "level": "medium",
-        "allowed": ["harmonic-stabilization"],
-        "constraints": [
-          "Requires measure.lattice_stability >= 0.60.",
-          "Requires substrate_class = agentic."
-        ]
-      },
-      "op.harmonic_escalation": {
-        "level": "high",
-        "allowed": ["conditional-escalation"],
-        "constraints": [
-          "Requires operator_consent = true.",
-          "Requires substrate_class = agentic."
-        ]
-      },
-      "op.resolution_preparation": {
-        "level": "high",
-        "allowed": ["resolution-preparation"],
-        "constraints": [
-          "Requires operator_consent = true.",
-          "Requires measure.c1 >= 0.80.",
-          "Requires measure.c2 >= 0.80.",
-          "Requires measure.c3 >= 0.80."
-        ]
-      },
-      "op.resolution_alignment": {
-        "level": "high",
-        "allowed": ["resolution-alignment"],
-        "constraints": [
-          "Requires operator_consent = true.",
-          "Requires measure.c3 >= 0.80."
-        ]
-      },
-      "op.collapse": {
-        "level": "critical",
-        "allowed": ["collapse-execution"],
-        "constraints": [
-          "Requires operator_consent = true.",
-          "Requires measure.c1 >= 0.80.",
-          "Requires measure.c2 >= 0.80.",
-          "Requires measure.c3 >= 0.80.",
-          "RTT12 MUST collapse to RTT1.",
-          "Lineage MUST increase after collapse."
-        ]
-      }
+    {
+      "id": "AM-003",
+      "name": "Coherence Navigator",
+      "description": "Autonomously routes through resonance gradient toward coherence peak.",
+      "drift_budget": "0.25"
+    },
+    {
+      "id": "AM-004",
+      "name": "Paradox Resolver",
+      "description": "Activates full paradox=structural resolution chain without prompting.",
+      "drift_budget": "0.35"
+    },
+    {
+      "id": "AM-005",
+      "name": "Field Architect",
+      "description": "v1.33 new: full triadic field reconstruction under bounded drift.",
+      "drift_budget": "0.50",
+      "new_v1_33": true
     }
+  ],
+  "escalation_policy": {
+    "trigger": "R < 0.40 for 3 consecutive evaluations",
+    "action": "escalate to AM-004",
+    "log": "fft.ai.session.log.json"
   },
-
-  "rules": {
-    "autonomy_rules": [
-      "Autonomy MUST NOT contradict session.state.json.",
-      "Autonomy MUST NOT contradict substrate.json.",
-      "Autonomy MUST NOT contradict operators.json.",
-      "Autonomy MUST NOT contradict regimes.json.",
-      "Autonomy MUST NOT contradict spec‑008.json.",
-      "Autonomy MUST NOT invent measure IDs.",
-      "Autonomy MUST NOT invent paradox types.",
-      "Autonomy MUST NOT invent substrate classes."
-    ],
-
-    "rtt_rules": [
-      "RTT nodes MUST map to frozen RTT v0.9 quantities.",
-      "RTT7 requires typed paradox.",
-      "RTT9–RTT12 require operator_consent = true.",
-      "RTT12 MUST collapse to RTT1 with lineage increment."
-    ],
-
-    "substrate_rules": [
-      "Agentic substrate required for RTT7–RTT12.",
-      "Non-agentic substrate forbidden for harmonic and resolution."
-    ],
-
-    "paradox_rules": [
-      "Typed paradox required for RTT7.",
-      "Paradox density >= 0.10 required for RTT7.",
-      "Lattice stability >= 0.60 required for RTT8.",
-      "Untyped paradox forbidden."
-    ],
-
-    "consent_rules": [
-      "operator_consent = true required for RTT9–RTT12.",
-      "Implicit or assumed consent forbidden."
-    ],
-
-    "collapse_rules": [
-      "RTT12 MUST collapse to RTT1.",
-      "Lineage MUST increment after collapse.",
-      "Collapse to non-RTT1 forbidden."
-    ]
-  },
-
-  "integration_links": {
-    "state": "fft.ai.session.state.json",
-    "context": "fft.ai.session.context.json",
-    "alignments": "fft.ai.session.alignments.json",
-    "log": "fft.ai.session.log.json",
-    "navigation": "fft.ai.session.navigation.json",
-    "permissions": "fft.ai.session.permissions.json",
-    "profile": "fft.ai.session.profile.json",
-    "awareness": "fft.ai.session.awareness.json",
-    "analytics": "fft.ai.session.analytics.json",
-    "dashboard": "fft.ai.session.dashboard.json",
-    "overlay": "fft.ai.session.overlay.json",
-    "history": "fft.ai.session.history.json",
-    "trace": "fft.ai.session.trace.json",
-    "render": "fft.ai.session.render.json",
-    "ui": "fft.ai.session.ui.json"
-  },
-
-  "timestamps": {
-    "created": "auto",
-    "last_update": "auto"
-  }
+  "v133_additions": [
+    "AM-005 Field Architect mode",
+    "drift_budget per mode",
+    "escalation policy",
+    "coherence/paradox wiring"
+  ]
 }

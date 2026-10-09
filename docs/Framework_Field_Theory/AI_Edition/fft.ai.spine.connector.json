@@ -1,0 +1,35 @@
+{
+  "id": "fft.ai.spine.connector",
+  "type": "new_v1_33",
+  "version": "1.33",
+  "updated": "2026-10-09T09:49:00-04:00",
+  "title": "FFT AI — Spine Connector v1.33",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "description": "Manages live connection to the TriadicFrameworks Spine. Enforces INV-011: Spine URL must be resolved at runtime, never from cache.",
+  "invariant": "INV-011",
+  "spine_url": "https://www.triadicframeworks.org/spine/",
+  "rtt_url": "https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html",
+  "cache_policy": "no-cache",
+  "resolution_protocol": {
+    "trigger": "session boot step 5 and any module requesting Spine reference",
+    "method": "live HTTP resolution of spine_url",
+    "on_cache_hit": "reject cache; force live fetch; log INV-011 compliance event",
+    "on_failure": "log WARN; retry 3x; if all fail: proceed with last known good + flag for review",
+    "timeout_ms": 5000
+  },
+  "spine_bindings": {
+    "canonical_ref": "https://www.triadicframeworks.org/spine/",
+    "bound_at": "2026-10-09T09:49:00-04:00",
+    "modules_dependent": [
+      "fft.ai.rtt.bridge.json",
+      "fft.ai.rtt.spine.examples.json",
+      "fft.ai.integrations.json",
+      "fft.ai.navigation.json"
+    ]
+  }
+}

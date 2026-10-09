@@ -1,0 +1,74 @@
+{
+  "id": "fft.ai.snr.monitor",
+  "type": "new_v1_33",
+  "version": "1.33",
+  "updated": "2026-10-09T09:49:00-04:00",
+  "title": "FFT AI — S-N-R Monitor v1.33",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "description": "Continuously monitors the Silence-Noise-Resonance partition. Enforces INV-007: S+N+R=1.0 at every snapshot, no overlap.",
+  "invariant": "INV-007",
+  "rtt_ref": "https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html",
+  "thresholds": {
+    "silence_floor": 0.05,
+    "noise_ceiling": 0.8,
+    "resonance_target": {
+      "min": 0.7,
+      "max": 0.95
+    }
+  },
+  "partition_rule": "S + N + R_snr = 1.0 at every state snapshot. Overlap = drift violation.",
+  "snr_zones": {
+    "deep_silence": {
+      "R_snr": [
+        0.0,
+        0.1
+      ],
+      "recommendation": "Await gradient formation; SET uncoupled"
+    },
+    "noise_dominant": {
+      "R_snr": [
+        0.1,
+        0.4
+      ],
+      "recommendation": "Apply Alignment; watch for coherence loss"
+    },
+    "transition": {
+      "R_snr": [
+        0.4,
+        0.7
+      ],
+      "recommendation": "Escalate operators; monitor drift"
+    },
+    "resonance_zone": {
+      "R_snr": [
+        0.7,
+        0.95
+      ],
+      "recommendation": "Maintain; apply Stabilization if approaching 0.95"
+    },
+    "saturation": {
+      "R_snr": [
+        0.95,
+        1.0
+      ],
+      "recommendation": "Mandatory Stabilization; reduce operator rate"
+    }
+  },
+  "monitoring": {
+    "frequency": "after every operator dispatch and on every session state refresh",
+    "on_overlap": "emit PX-002 (S-N-R Overlap); rebalance partition",
+    "on_imbalance": "log WARN; suggest operator adjustment",
+    "report_to": "fft.ai.session.state.json#snr_state"
+  },
+  "dual_law_binding": {
+    "silence_as_operator": "S = 0+ (indivisible baseline — frames clarity)",
+    "noise_as_operator": "N = Delta (measurable change — entropy pressure)",
+    "resonance_formula": "R = f(S, N) = S + N structured",
+    "coherence_metric": "C = Phi(S)/Psi(N)"
+  }
+}

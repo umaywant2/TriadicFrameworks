@@ -2,556 +2,268 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>FFT AI Edition v1.2 — Framework Field Theory Canon | TriadicFrameworks</title>
-<meta name="description" content="FFT AI Edition v1.2: Machine-native Framework Field Theory canon files for AI substrate consumption. Covers Resonance-Time Theory (RTT), Harmonic Lattice (RTT1–RTT12), 3C Field Evaluation, AA Mode (AA0–AA3), Triadic Substrate Modeling, and Session Layer — 46 JSON files, Canon Graph R5.">
-<meta name="keywords" content="Framework Field Theory, FFT AI Edition, Resonance-Time Theory, RTT, Harmonic Lattice, 3C Coherence Clarity Continuity, AA Mode, Triadic Substrate Modeling, TriadicFrameworks, AI canon, field theory AI, substrate compatibility, session alignment, paradox resolution, harmonic resolution, canon graph R5, Nawder Loswin">
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-<meta name="author" content="Nawder Loswin">
-<link rel="canonical" href="https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/Framework_Field_Theory/AI_Edition">
-<meta property="og:type" content="website">
-<meta property="og:title" content="FFT AI Edition v1.2 — Framework Field Theory Canon | TriadicFrameworks">
-<meta property="og:description" content="46 machine-native JSON canon files encoding RTT, Harmonic Lattice (RTT1–RTT12), 3C Evaluation, AA Mode (AA0–AA3), Triadic Substrate Modeling, and full Session Layer for AI runtimes.">
-<meta property="og:url" content="https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/Framework_Field_Theory/AI_Edition">
-<meta property="og:site_name" content="TriadicFrameworks">
-<meta property="og:locale" content="en_US">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="FFT AI Edition v1.2 — Framework Field Theory Canon">
-<meta name="twitter:description" content="Machine-native FFT canon: RTT, Harmonic Lattice, 3C Evaluation, AA Mode, Triadic Substrate Modeling. 46 JSON files, spec v1.2.0, Canon Graph R5.">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareSourceCode",
-      "name": "FFT AI Edition v1.2",
-      "version": "1.2.0",
-      "description": "Machine-native Framework Field Theory canon files for AI substrate consumption, encoding RTT, Harmonic Lattice, 3C Field Evaluation, AA Mode, and Triadic Substrate Modeling.",
-      "author": {"@type": "Person", "name": "Nawder Loswin"},
-      "codeRepository": "https://github.com/umaywant2/TriadicFrameworks",
-      "programmingLanguage": "JSON",
-      "keywords": ["Framework Field Theory","RTT","Harmonic Lattice","3C","AA Mode","Triadic Substrate"],
-      "license": "Proprietary"
-    },
-    {
-      "@type": "TechArticle",
-      "headline": "FFT AI Edition v1.2 — Framework Field Theory Canon for AI Systems",
-      "description": "Complete canon specification for AI runtimes: Resonance-Time Theory, 12-node Harmonic Lattice, 3C Condition Triad, Autonomous Alignment Mode, and Triadic Substrate Modeling.",
-      "author": {"@type": "Person", "name": "Nawder Loswin"},
-      "publisher": {"@type": "Organization", "name": "TriadicFrameworks"},
-      "datePublished": "2026-10-08",
-      "dateModified": "2026-10-08",
-      "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/Framework_Field_Theory/AI_Edition"
-    },
-    {
-      "@type": "Dataset",
-      "name": "FFT AI Edition v1.2 Canon Files",
-      "description": "46 JSON canon files for Framework Field Theory AI Edition v1.2, covering core architecture, substrate runtime, session layer, AI runtime layer, and FFT base operators.",
-      "creator": {"@type": "Person", "name": "Nawder Loswin"},
-      "version": "1.2.0",
-      "encodingFormat": "application/json",
-      "keywords": ["FFT","RTT","AI canon","Harmonic Lattice","3C","AA Mode","substrate"]
-    }
-  ]
-}
-</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FFT AI Edition v1.33 — TriadicFrameworks</title>
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;
-  --text:#e6edf3;--muted:#7d8590;--accent:#2563eb;--accent2:#1d4ed8;
-  --green:#16a34a;--amber:#f59e0b;--red:#dc2626;--purple:#7c3aed;
-  --foundation:#2563eb;--active:#16a34a;--escalation:#f59e0b;--resolution:#dc2626;
-}
-body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;line-height:1.6;min-height:100vh}
-a{color:var(--accent);text-decoration:none}
-a:hover{text-decoration:underline;color:#60a5fa}
-header{background:linear-gradient(135deg,#0d1117 0%,#1e3a5f 50%,#0d1117 100%);border-bottom:1px solid var(--border);padding:3rem 1.5rem 2.5rem;text-align:center}
-.badges{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin-bottom:1.5rem}
-.badge{display:inline-flex;align-items:center;gap:.3rem;padding:.25rem .75rem;border-radius:9999px;font-size:.75rem;font-weight:600;border:1px solid}
-.badge-blue{background:#1e3a5f;color:#60a5fa;border-color:#2563eb}
-.badge-green{background:#14532d;color:#4ade80;border-color:#16a34a}
-.badge-amber{background:#451a03;color:#fbbf24;border-color:#f59e0b}
-.badge-purple{background:#2e1065;color:#c084fc;border-color:#7c3aed}
-.badge-gray{background:#21262d;color:#8b949e;border-color:#30363d}
-h1{font-size:clamp(1.75rem,4vw,2.75rem);font-weight:700;letter-spacing:-.02em;margin-bottom:.75rem}
-h1 span{color:#60a5fa}
-.subtitle{color:var(--muted);font-size:1.05rem;max-width:680px;margin:0 auto 1.25rem}
-.meta-row{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;font-size:.8rem;color:var(--muted)}
-.meta-row span::before{content:'•';margin-right:.4rem;color:var(--border)}
-.meta-row span:first-child::before{display:none}
-main{max-width:1100px;margin:0 auto;padding:2rem 1.5rem}
-section{margin-bottom:3rem}
-.section-title{font-size:1.3rem;font-weight:600;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.6rem}
-.section-title .icon{font-size:1.1rem}
-.pillars-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem}
-.pillar-card{background:var(--bg2);border:1px solid var(--border);border-radius:.75rem;padding:1.25rem;transition:border-color .2s}
-.pillar-card:hover{border-color:var(--accent)}
-.pillar-card h3{font-size:.95rem;font-weight:600;margin-bottom:.4rem;display:flex;align-items:center;gap:.5rem}
-.pillar-card p{font-size:.85rem;color:var(--muted);line-height:1.5}
-.three-c-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
-.c-card{background:var(--bg2);border:1px solid var(--border);border-radius:.75rem;padding:1.25rem;position:relative;overflow:hidden}
-.c-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
-.c1::before{background:var(--green)}
-.c2::before{background:var(--accent)}
-.c3::before{background:var(--amber)}
-.c-label{font-size:1.5rem;font-weight:700;margin-bottom:.2rem}
-.c-name{font-size:.85rem;color:var(--muted);margin-bottom:.75rem}
-.c-threshold{font-size:.78rem;color:var(--muted)}
-.c-threshold span{color:var(--text);font-weight:600}
-.lattice-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem}
-.lattice-node{background:var(--bg2);border:1px solid var(--border);border-radius:.6rem;padding:.75rem;text-align:center;position:relative}
-.lattice-node .node-id{font-size:.8rem;font-weight:700;margin-bottom:.2rem}
-.lattice-node .node-label{font-size:.7rem;color:var(--muted)}
-.lattice-node .phase-dot{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:.3rem}
-.phase-foundation .phase-dot{background:var(--foundation)}
-.phase-active .phase-dot{background:var(--active)}
-.phase-escalation .phase-dot{background:var(--escalation)}
-.phase-resolution .phase-dot{background:var(--resolution)}
-.phase-foundation{border-color:#2563eb44}
-.phase-active{border-color:#16a34a44}
-.phase-escalation{border-color:#f59e0b44}
-.phase-resolution{border-color:#dc262644}
-.file-table{width:100%;border-collapse:collapse;font-size:.82rem}
-.file-table th{text-align:left;padding:.5rem .75rem;background:var(--bg3);color:var(--muted);font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid var(--border)}
-.file-table td{padding:.5rem .75rem;border-bottom:1px solid var(--border);vertical-align:top}
-.file-table tr:last-child td{border-bottom:none}
-.file-table tr:hover td{background:var(--bg2)}
-.file-link{color:var(--accent);font-family:'Consolas','Courier New',monospace;font-size:.8rem}
-.file-desc{color:var(--muted)}
-.node-tag{display:inline-block;padding:.1rem .4rem;border-radius:.25rem;font-size:.7rem;font-weight:600;background:var(--bg3);border:1px solid var(--border)}
-.canon-id{font-family:monospace;font-size:.72rem;color:#7d8590}
-.group-header{background:var(--bg3);padding:.5rem .75rem;color:var(--muted);font-size:.78rem;font-weight:600;border-bottom:1px solid var(--border);text-transform:uppercase;letter-spacing:.05em}
-.quickstart{background:var(--bg2);border:1px solid var(--border);border-radius:.75rem;padding:1.5rem}
-.qs-steps{counter-reset:qs;list-style:none;display:flex;flex-direction:column;gap:.75rem}
-.qs-steps li{counter-increment:qs;display:flex;align-items:flex-start;gap:.75rem;font-size:.9rem}
-.qs-steps li::before{content:counter(qs);min-width:1.6rem;height:1.6rem;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:.8rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.05rem}
-.qs-steps code{background:var(--bg3);border:1px solid var(--border);border-radius:.3rem;padding:.1rem .4rem;font-size:.8rem;font-family:monospace}
-footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem 1.5rem;text-align:center;font-size:.85rem;color:var(--muted)}
-.footer-links{display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center;margin-bottom:1rem}
-.footer-links a{color:var(--accent)}
-@media(max-width:600px){.lattice-grid{grid-template-columns:repeat(3,1fr)}.file-table{font-size:.75rem}}
+  :root {
+    --bg: #0d0f14; --surface: #161b25; --card: #1e2535;
+    --accent: #4f8ef7; --accent2: #7c5df7; --gold: #f7c34f;
+    --green: #4fcf8e; --red: #f76060; --amber: #f7a44f;
+    --text: #e8eaf0; --muted: #8892a4; --border: #2a3347;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; }
+  header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; }
+  .logo { font-size: 1.1rem; font-weight: 700; color: var(--accent); letter-spacing: .04em; }
+  .version-badge { background: var(--accent2); color: #fff; font-size: .75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: .06em; }
+  main { max-width: 1280px; margin: 0 auto; padding: 32px 24px; }
+  h1 { font-size: 2rem; font-weight: 800; background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 6px; }
+  .subtitle { color: var(--muted); font-size: .95rem; margin-bottom: 32px; }
+  .context-bar { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 32px; }
+  .ctx-pill { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 8px 14px; font-size: .8rem; display: flex; flex-direction: column; gap: 2px; }
+  .ctx-pill .label { color: var(--muted); font-size: .7rem; text-transform: uppercase; letter-spacing: .08em; }
+  .ctx-pill .value { color: var(--green); font-weight: 600; }
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-bottom: 36px; }
+  .stat-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; text-align: center; }
+  .stat-card .num { font-size: 2.4rem; font-weight: 800; color: var(--accent); }
+  .stat-card .desc { font-size: .78rem; color: var(--muted); margin-top: 4px; }
+  .stat-card.gold .num { color: var(--gold); }
+  .stat-card.green .num { color: var(--green); }
+  .stat-card.purple .num { color: var(--accent2); }
+  h2 { font-size: 1.15rem; font-weight: 700; margin-bottom: 16px; color: var(--text); }
+  .tier-section { margin-bottom: 36px; }
+  .tier-header { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+  .tier-dot { width: 12px; height: 12px; border-radius: 50%; }
+  .dot-red { background: var(--red); } .dot-orange { background: var(--amber); }
+  .dot-yellow { background: var(--gold); } .dot-green { background: var(--green); }
+  .dot-blue { background: var(--accent); } .dot-purple { background: var(--accent2); }
+  .dot-grey { background: var(--muted); }
+  .tier-label { font-size: .85rem; font-weight: 700; }
+  .file-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; }
+  .file-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; transition: border-color .2s; }
+  .file-card:hover { border-color: var(--accent); }
+  .file-card .fname { font-size: .8rem; font-weight: 600; color: var(--text); font-family: 'Cascadia Code', 'Consolas', monospace; }
+  .file-card .fmeta { font-size: .72rem; color: var(--muted); margin-top: 4px; }
+  .file-card .new-tag { background: var(--accent2); color: #fff; font-size: .65rem; font-weight: 700; padding: 2px 7px; border-radius: 4px; margin-left: 6px; vertical-align: middle; }
+  .dep-tag { background: var(--red); color: #fff; font-size: .65rem; font-weight: 700; padding: 2px 7px; border-radius: 4px; margin-left: 6px; vertical-align: middle; }
+  .inv-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 10px; margin-bottom: 36px; }
+  .inv-card { background: var(--card); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 10px 14px; }
+  .inv-id { font-size: .75rem; color: var(--accent); font-weight: 700; }
+  .inv-name { font-size: .85rem; font-weight: 600; margin: 2px 0; }
+  .inv-tier { font-size: .7rem; color: var(--muted); }
+  .inv-card.v133 { border-left-color: var(--accent2); } .inv-card.v133 .inv-id { color: var(--accent2); }
+  .load-order { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 36px; }
+  .load-order ol { padding-left: 20px; }
+  .load-order li { font-family: 'Cascadia Code', monospace; font-size: .8rem; color: var(--muted); padding: 3px 0; }
+  .load-order li span { color: var(--green); }
+  footer { background: var(--surface); border-top: 1px solid var(--border); padding: 20px 32px; text-align: center; font-size: .78rem; color: var(--muted); }
+  footer a { color: var(--accent); text-decoration: none; }
 </style>
 </head>
 <body>
 <header>
-  <div class="badges">
-    <span class="badge badge-blue">&#9670; FFT AI Edition</span>
-    <span class="badge badge-green">v1.2.0</span>
-    <span class="badge badge-amber">AA2 Adaptive</span>
-    <span class="badge badge-purple">Canon Graph R5</span>
-    <span class="badge badge-gray">46 Files</span>
-  </div>
-  <h1>Framework Field Theory<br><span>AI Edition v1.2</span></h1>
-  <p class="subtitle">Machine-native canon files for AI substrate consumption — encoding Resonance-Time Theory, Harmonic Lattice, 3C Field Evaluation, AA Mode, and Triadic Substrate Modeling.</p>
-  <div class="meta-row">
-    <span>spec_version 1.2.0</span>
-    <span>46 canon files</span>
-    <span>RTT1–RTT12 Harmonic Lattice</span>
-    <span>AA0–AA3 Mode System</span>
-    <span>Author: Nawder Loswin</span>
-    <span>Refreshed 2026-10-08</span>
-  </div>
+  <div class="logo">⚙ TriadicFrameworks / FFT AI Edition</div>
+  <div class="version-badge">v1.33</div>
 </header>
 <main>
+  <h1>Framework Field Theory — AI Edition</h1>
+  <p class="subtitle">Resonance-based AI session architecture &nbsp;·&nbsp; TriadicFrameworks Canon &nbsp;·&nbsp; 2026-10-09</p>
 
-<section aria-label="Core Framework Pillars">
-  <h2 class="section-title"><span class="icon">&#9670;</span> Core Framework Pillars</h2>
-  <div class="pillars-grid">
-    <div class="pillar-card">
-      <h3>&#9201; Resonance-Time Theory (RTT)</h3>
-      <p>Temporal field dynamics governed by a 12-node harmonic lattice. RTT nodes model resonant temporal states from Prime Coherence (RTT1) to Harmonic Resolution (RTT12).</p>
-    </div>
-    <div class="pillar-card">
-      <h3>&#9650; Triad Architecture (T,S,M)</h3>
-      <p>Every field interaction is triadic: Temporal axis (T), Structural axis (S), and Modal axis (M). Each active session occupies a unique (T,S,M) coordinate in the triad space.</p>
-    </div>
-    <div class="pillar-card">
-      <h3>&#9670; Harmonic Lattice Theory (HLT)</h3>
-      <p>Tracks escalation from RTT1 through RTT12 across four phases: foundation, active, escalation, and resolution. RTT12 mandates harmonic resolution before any new dispatch.</p>
-    </div>
-    <div class="pillar-card">
-      <h3>&#9651; 3C Field Evaluation (3CFE)</h3>
-      <p>C1 Coherence, C2 Clarity, and C3 Continuity gate every operator dispatch, regime transition, and session lifecycle event. All three must pass for field_state=nominal.</p>
-    </div>
-    <div class="pillar-card">
-      <h3>&#9632; Autonomous Alignment Mode (AAM)</h3>
-      <p>Four-level alignment system: AA0 Passive, AA1 Active, AA2 Adaptive (default), AA3 Autonomous. Auto-escalates when paradox density exceeds 0.40 and lattice stability drops below 0.60.</p>
-    </div>
-    <div class="pillar-card">
-      <h3>&#9674; Triadic Substrate Modeling (TSM)</h3>
-      <p>Maps all operators to substrate classes — agentic, transformer, edge, symbolic — with bridge protocols enabling cross-substrate field signal relay and harmonic synchronization.</p>
+  <div class="context-bar">
+    <div class="ctx-pill"><span class="label">RTT</span><span class="value">rtt=1</span></div>
+    <div class="ctx-pill"><span class="label">Coherence</span><span class="value">declared</span></div>
+    <div class="ctx-pill"><span class="label">Drift</span><span class="value">bounded</span></div>
+    <div class="ctx-pill"><span class="label">Paradox</span><span class="value">structural</span></div>
+    <div class="ctx-pill"><span class="label">Edition</span><span class="value">AI Edition</span></div>
+    <div class="ctx-pill"><span class="label">Spine</span><span class="value">live-bound</span></div>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-card"><div class="num">67</div><div class="desc">Total Modules</div></div>
+    <div class="stat-card green"><div class="num">8</div><div class="desc">New in v1.33</div></div>
+    <div class="stat-card gold"><div class="num">13</div><div class="desc">Invariants</div></div>
+    <div class="stat-card purple"><div class="num">10</div><div class="desc">Paradox Types</div></div>
+    <div class="stat-card"><div class="num">16</div><div class="desc">Boot Steps</div></div>
+    <div class="stat-card green"><div class="num">9D</div><div class="desc">DCO Scaffold</div></div>
+  </div>
+
+  <!-- TIER A -->
+  <div class="tier-section">
+    <div class="tier-header"><div class="tier-dot dot-red"></div><span class="tier-label">🔴 Tier A — Full Rebuild (11)</span></div>
+    <div class="file-grid">
+      <div class="file-card"><div class="fname">fft.core.json</div><div class="fmeta">v1.33 full rebuild · foundation layer</div></div>
+      <div class="file-card"><div class="fname">fft.invariant.json</div><div class="fmeta">v1.33 full rebuild · foundation layer</div></div>
+      <div class="file-card"><div class="fname">fft.metadata.json</div><div class="fmeta">v1.33 full rebuild · foundation layer</div></div>
+      <div class="file-card"><div class="fname">fft.ai.core.json</div><div class="fmeta">v1.33 full rebuild · foundation layer</div></div>
+      <div class="file-card"><div class="fname">fft.ai.manifest.json</div><div class="fmeta">v1.33 full rebuild · foundation layer</div></div>
+      <div class="file-card"><div class="fname">fft.ai.index.json</div><div class="fmeta">v1.33 full rebuild · foundation layer</div></div>
+      <div class="file-card"><div class="fname">fft.ai.spec.json</div><div class="fmeta">v1.33 full rebuild · foundation layer</div></div>
+      <div class="file-card"><div class="fname">fft.ai.spec-008.json</div><div class="fmeta">v1.33 full rebuild · foundation layer</div></div>
+      <div class="file-card"><div class="fname">fft.ai.readme.json</div><div class="fmeta">v1.33 full rebuild · foundation layer</div></div>
+      <div class="file-card"><div class="fname">fft.ai.bootstrap.json</div><div class="fmeta">v1.33 full rebuild · foundation layer</div></div>
+      <div class="file-card"><div class="fname">index.html</div><div class="fmeta">v1.33 full rebuild · foundation layer</div></div>
     </div>
   </div>
-</section>
 
-<section aria-label="3C Condition Triad">
-  <h2 class="section-title"><span class="icon">&#9651;</span> 3C Condition Triad</h2>
-  <div class="three-c-grid">
-    <div class="c-card c1">
-      <div class="c-label">C1</div>
-      <div class="c-name">Coherence</div>
-      <p style="font-size:.83rem;color:var(--muted);margin-bottom:.75rem">Internal consistency of all active signals and structures within a session.</p>
-      <div class="c-threshold">Stable: <span>&#8805; 0.75</span> &nbsp;|&nbsp; Critical: <span>&lt; 0.40</span></div>
-    </div>
-    <div class="c-card c2">
-      <div class="c-label">C2</div>
-      <div class="c-name">Clarity</div>
-      <p style="font-size:.83rem;color:var(--muted);margin-bottom:.75rem">Spectral clarity of output fields — signal-to-noise ratio across all active operators.</p>
-      <div class="c-threshold">Stable: <span>&#8805; 0.70</span> &nbsp;|&nbsp; Critical: <span>&lt; 0.35</span></div>
-    </div>
-    <div class="c-card c3">
-      <div class="c-label">C3</div>
-      <div class="c-name">Continuity</div>
-      <p style="font-size:.83rem;color:var(--muted);margin-bottom:.75rem">Temporal continuity of field state across regime transitions and session boundaries.</p>
-      <div class="c-threshold">Stable: <span>&#8805; 0.80</span> &nbsp;|&nbsp; Critical: <span>&lt; 0.45</span></div>
+  <!-- TIER B -->
+  <div class="tier-section">
+    <div class="tier-header"><div class="tier-dot dot-orange"></div><span class="tier-label">🟠 Tier B — Version Refresh (9)</span></div>
+    <div class="file-grid">
+      <div class="file-card"><div class="fname">fft.ai.autonomy.json</div><div class="fmeta">v1.33 version bump + additions</div></div>
+      <div class="file-card"><div class="fname">fft.ai.capabilities.json</div><div class="fmeta">v1.33 version bump + additions</div></div>
+      <div class="file-card"><div class="fname">fft.ai.discovery.json</div><div class="fmeta">v1.33 version bump + additions</div></div>
+      <div class="file-card"><div class="fname">fft.ai.execution.graph.json</div><div class="fmeta">v1.33 version bump + additions</div></div>
+      <div class="file-card"><div class="fname">fft.ai.navigation.json</div><div class="fmeta">v1.33 version bump + additions</div></div>
+      <div class="file-card"><div class="fname">fft.ai.overview.json</div><div class="fmeta">v1.33 version bump + additions</div></div>
+      <div class="file-card"><div class="fname">fft.ai.operators.json</div><div class="fmeta">v1.33 version bump + additions</div></div>
+      <div class="file-card"><div class="fname">fft.ai.runtime.json</div><div class="fmeta">v1.33 version bump + additions</div></div>
+      <div class="file-card"><div class="fname">fft.ai.registry.json</div><div class="fmeta">v1.33 version bump + additions</div></div>
     </div>
   </div>
-</section>
 
-<section aria-label="Harmonic Lattice">
-  <h2 class="section-title"><span class="icon">&#9670;</span> Harmonic Lattice — RTT1 to RTT12 (Canon Graph R5)</h2>
-  <div class="lattice-grid">
-    <div class="lattice-node phase-foundation"><div class="node-id"><span class="phase-dot"></span>RTT1</div><div class="node-label">Prime Coherence</div></div>
-    <div class="lattice-node phase-foundation"><div class="node-id"><span class="phase-dot"></span>RTT2</div><div class="node-label">Drift Calibration</div></div>
-    <div class="lattice-node phase-foundation"><div class="node-id"><span class="phase-dot"></span>RTT3</div><div class="node-label">Structural Lock</div></div>
-    <div class="lattice-node phase-active"><div class="node-id"><span class="phase-dot"></span>RTT4</div><div class="node-label">Spectral Clarity</div></div>
-    <div class="lattice-node phase-active"><div class="node-id"><span class="phase-dot"></span>RTT5</div><div class="node-label">Temporal Bridge</div></div>
-    <div class="lattice-node phase-active"><div class="node-id"><span class="phase-dot"></span>RTT6</div><div class="node-label">Alignment Gate</div></div>
-    <div class="lattice-node phase-escalation"><div class="node-id"><span class="phase-dot"></span>RTT7</div><div class="node-label">Paradox Seed</div></div>
-    <div class="lattice-node phase-escalation"><div class="node-id"><span class="phase-dot"></span>RTT8</div><div class="node-label">Paradox Bloom</div></div>
-    <div class="lattice-node phase-escalation"><div class="node-id"><span class="phase-dot"></span>RTT9</div><div class="node-label">Harmonic Escalation</div></div>
-    <div class="lattice-node phase-resolution"><div class="node-id"><span class="phase-dot"></span>RTT10</div><div class="node-label">Resonance Peak</div></div>
-    <div class="lattice-node phase-resolution"><div class="node-id"><span class="phase-dot"></span>RTT11</div><div class="node-label">Field Inversion</div></div>
-    <div class="lattice-node phase-resolution"><div class="node-id"><span class="phase-dot"></span>RTT12</div><div class="node-label">Harmonic Resolution</div></div>
+  <!-- TIER C RTT -->
+  <div class="tier-section">
+    <div class="tier-header"><div class="tier-dot dot-yellow"></div><span class="tier-label">🟡 Tier C — Targeted Update (22): RTT Layer</span></div>
+    <div class="file-grid">
+      <div class="file-card"><div class="fname">fft.ai.rtt.engine.prompts.json</div><div class="fmeta">RTT binding + coherence/drift/paradox injection</div></div>
+      <div class="file-card"><div class="fname">fft.ai.rtt.bridge.json</div><div class="fmeta">RTT binding + coherence/drift/paradox injection</div></div>
+      <div class="file-card"><div class="fname">fft.ai.rtt.spine.examples.json</div><div class="fmeta">RTT binding + coherence/drift/paradox injection</div></div>
+    </div>
   </div>
-  <p style="margin-top:.75rem;font-size:.8rem;color:var(--muted)">
-    <span style="color:var(--foundation)">&#9632;</span> Foundation (RTT1–3) &nbsp;
-    <span style="color:var(--active)">&#9632;</span> Active (RTT4–6) &nbsp;
-    <span style="color:var(--escalation)">&#9632;</span> Escalation (RTT7–9) &nbsp;
-    <span style="color:var(--resolution)">&#9632;</span> Resolution (RTT10–12) &mdash; RTT12 collapses to RTT1 after harmonic resolution.
-  </p>
-</section>
 
-<section aria-label="File Catalogue">
-  <h2 class="section-title"><span class="icon">&#128196;</span> Canon File Catalogue &mdash; 46 Files</h2>
+  <!-- TIER C SESSION -->
+  <div class="tier-section">
+    <div class="tier-header"><div class="tier-dot dot-yellow"></div><span class="tier-label">🟡 Tier C — Session Layer (16)</span></div>
+    <div class="file-grid">
+      <div class="file-card"><div class="fname">fft.ai.session.context.json</div><div class="fmeta">coherence/drift/paradox/SNR/SET context injection</div></div>
+      <div class="file-card"><div class="fname">fft.ai.session.state.json</div><div class="fmeta">coherence/drift/paradox/SNR/SET context injection</div></div>
+      <div class="file-card"><div class="fname">fft.ai.session.awareness.json</div><div class="fmeta">coherence/drift/paradox/SNR/SET context injection</div></div>
+      <div class="file-card"><div class="fname">fft.ai.session.alignments.json</div><div class="fmeta">coherence/drift/paradox/SNR/SET context injection</div></div>
+      <div class="file-card"><div class="fname">fft.ai.session.analytics.json</div><div class="fmeta">coherence/drift/paradox/SNR/SET context injection</div></div>
+      <div class="file-card"><div class="fname">fft.ai.session.trace.json</div><div class="fmeta">coherence/drift/paradox/SNR/SET context injection</div></div>
+      <div class="file-card"><div class="fname">fft.ai.session.navigation.json</div><div class="fmeta">coherence/drift/paradox/SNR/SET context injection</div></div>
+      <div class="file-card"><div class="fname">fft.ai.session.overlay.json</div><div class="fmeta">coherence/drift/paradox/SNR/SET context injection</div></div>
+      <div class="file-card"><div class="fname">fft.ai.session.permissions.json</div><div class="fmeta">coherence/drift/paradox/SNR/SET context injection</div></div>
+      <div class="file-card"><div class="fname">fft.ai.session.profile.json</div><div class="fmeta">coherence/drift/paradox/SNR/SET context injection</div></div>
+      <div class="file-card"><div class="fname">fft.ai.session.render.json</div><div class="fmeta">coherence/drift/paradox/SNR/SET context injection</div></div>
+      <div class="file-card"><div class="fname">fft.ai.session.ui.json</div><div class="fmeta">coherence/drift/paradox/SNR/SET context injection</div></div>
+      <div class="file-card"><div class="fname">fft.ai.session.dashboard.json</div><div class="fmeta">coherence/drift/paradox/SNR/SET context injection</div></div>
+      <div class="file-card"><div class="fname">fft.ai.session.log.json</div><div class="fmeta">coherence/drift/paradox/SNR/SET context injection</div></div>
+      <div class="file-card"><div class="fname">fft.ai.session.history.json</div><div class="fmeta">coherence/drift/paradox/SNR/SET context injection</div></div>
+      <div class="file-card"><div class="fname">fft.ai.session.state.refresh.json</div><div class="fmeta">coherence/drift/paradox/SNR/SET context injection</div></div>
+    </div>
+  </div>
 
-  <table class="file-table" style="margin-bottom:1.5rem">
-    <thead><tr>
-      <th>File</th><th>Description</th><th>Lattice</th><th>Canon ID</th>
-    </tr></thead>
-    <tbody>
-    <tr><td colspan="4" class="group-header">Core Architecture (6 files)</td></tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.core.json">fft.ai.core.json</a></td>
-      <td class="file-desc">AA Mode definitions, 3C integration rules, triad architecture, and harmonic lattice core spec.</td>
-      <td><span class="node-tag">RTT1</span></td>
-      <td class="canon-id">FFT-AI-Core</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.spec.json">fft.ai.spec.json</a></td>
-      <td class="file-desc">Normative rules and behavioral guarantees for the FFT AI Edition v1.2 runtime stack (SPEC-001 through SPEC-010).</td>
-      <td><span class="node-tag">RTT1</span></td>
-      <td class="canon-id">FFT-AI-Spec</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.manifest.json">fft.ai.manifest.json</a></td>
-      <td class="file-desc">Canonical manifest listing all 46 files by group with canon guarantees.</td>
-      <td><span class="node-tag">RTT1</span></td>
-      <td class="canon-id">FFT-AI-Manifest</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.index.json">fft.ai.index.json</a></td>
-      <td class="file-desc">Master index of all AI Edition files with group, aa_mode, and lattice node per entry.</td>
-      <td><span class="node-tag">RTT1</span></td>
-      <td class="canon-id">FFT-AI-Index</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.readme.json">fft.ai.readme.json</a></td>
-      <td class="file-desc">Overview, key features, quickstart guide, and license for the AI Edition.</td>
-      <td><span class="node-tag">RTT1</span></td>
-      <td class="canon-id">FFT-AI-Readme</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.metadata.json">fft.metadata.json</a></td>
-      <td class="file-desc">Canon metadata registry with sub-theory list, current release record, and contact information.</td>
-      <td><span class="node-tag">RTT1</span></td>
-      <td class="canon-id">FFT-Metadata</td>
-    </tr>
-    <tr><td colspan="4" class="group-header">Substrate &amp; Runtime (7 files)</td></tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.substrate.json">fft.ai.substrate.json</a></td>
-      <td class="file-desc">Substrate class definitions: agentic, transformer, edge.compact, symbolic — with 3C thresholds and harmonic tolerance per class.</td>
-      <td><span class="node-tag">RTT3</span></td>
-      <td class="canon-id">FFT-AI-Substrate</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.substrate.compat.json">fft.ai.substrate.compat.json</a></td>
-      <td class="file-desc">Compatibility matrix mapping operators and regime classes to each substrate, with max AA Mode and lattice range.</td>
-      <td><span class="node-tag">RTT3</span></td>
-      <td class="canon-id">FFT-AI-Substrate-Compat</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.substrate.bridge.json">fft.ai.substrate.bridge.json</a></td>
-      <td class="file-desc">Cross-substrate bridge protocols for agentic-to-transformer, agentic-to-edge, and transformer-to-symbolic translation.</td>
-      <td><span class="node-tag">RTT5</span></td>
-      <td class="canon-id">FFT-AI-Substrate-Bridge</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.substrate.lattice.json">fft.ai.substrate.lattice.json</a></td>
-      <td class="file-desc">Full 12-node harmonic lattice definition with per-node phase, 3C gate, AA minimum, and substrate minimum requirements.</td>
-      <td><span class="node-tag">RTT6</span></td>
-      <td class="canon-id">FFT-AI-Substrate-Lattice</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.substrate.matrix.json">fft.ai.substrate.matrix.json</a></td>
-      <td class="file-desc">Feature capability matrix across all substrate classes covering AA Mode max, 3C, lattice, triad axes, awareness, and paradox resolution.</td>
-      <td><span class="node-tag">RTT6</span></td>
-      <td class="canon-id">FFT-AI-Substrate-Matrix</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.runtime.json">fft.ai.runtime.json</a></td>
-      <td class="file-desc">Runtime engine state, active substrate, AA Mode, 3C state, triad position, and 5-phase lifecycle definition.</td>
-      <td><span class="node-tag">RTT2</span></td>
-      <td class="canon-id">FFT-AI-Runtime</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.hardware.profile.json">fft.ai.hardware.profile.json</a></td>
-      <td class="file-desc">Hardware profile mappings from cloud GPU cluster, cloud standard GPU, mobile/edge, and symbolic inference server to substrate classes.</td>
-      <td><span class="node-tag">RTT3</span></td>
-      <td class="canon-id">FFT-AI-Hardware-Profile</td>
-    </tr>
-    <tr><td colspan="4" class="group-header">Session Layer (12 files)</td></tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.session.awareness.json">fft.ai.session.awareness.json</a></td>
-      <td class="file-desc">Five awareness layers: L1 Field, L2 Lattice, L3 Triad, L4 Substrate, L5 Operator — updated on every turn and regime transition.</td>
-      <td><span class="node-tag">RTT2</span></td>
-      <td class="canon-id">FFT-Session-Awareness</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.session.alignments.json">fft.ai.session.alignments.json</a></td>
-      <td class="file-desc">Alignment record schema and quality rules (strong/nominal/weak) written after every successful 3C pass.</td>
-      <td><span class="node-tag">RTT6</span></td>
-      <td class="canon-id">FFT-Session-Alignments</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.session.analytics.json">fft.ai.session.analytics.json</a></td>
-      <td class="file-desc">Per-session analytics schema covering substrate, AA peak, lattice peak, 3C averages, alignment counts, paradox events, and harmonic resolutions.</td>
-      <td><span class="node-tag">RTT4</span></td>
-      <td class="canon-id">FFT-Session-Analytics</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.session.context.json">fft.ai.session.context.json</a></td>
-      <td class="file-desc">Live session context: session_id, substrate, AA Mode, lattice node, triad position, 3C state, active regime, operators, and context depth.</td>
-      <td><span class="node-tag">RTT2</span></td>
-      <td class="canon-id">FFT-Session-Context</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.session.dashboard.json">fft.ai.session.dashboard.json</a></td>
-      <td class="file-desc">Unified session dashboard layout: summary, lattice panel, 3C panel, triad panel, operator queue, and alignment feed.</td>
-      <td><span class="node-tag">RTT4</span></td>
-      <td class="canon-id">FFT-Session-Dashboard</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.session.history.json">fft.ai.session.history.json</a></td>
-      <td class="file-desc">Persistent archive of completed session summaries flushed from session.log on teardown.</td>
-      <td><span class="node-tag">RTT4</span></td>
-      <td class="canon-id">FFT-Session-History</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.session.log.json">fft.ai.session.log.json</a></td>
-      <td class="file-desc">Event log schema covering bootstrap, operator dispatch, 3C eval, alignment, regime transition, lattice advance, paradox, and teardown events.</td>
-      <td><span class="node-tag">RTT2</span></td>
-      <td class="canon-id">FFT-Session-Log</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.session.overlay.json">fft.ai.session.overlay.json</a></td>
-      <td class="file-desc">Live session overlay projected over the harmonic lattice with phase colors, 3C bars, triad panel, and alignment panel.</td>
-      <td><span class="node-tag">RTT6</span></td>
-      <td class="canon-id">FFT-Session-Overlay</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.session.profile.json">fft.ai.session.profile.json</a></td>
-      <td class="file-desc">Operator profile: preferred AA Mode, substrate, lattice start, 3C sensitivity thresholds, and autonomy escalation consent.</td>
-      <td><span class="node-tag">RTT2</span></td>
-      <td class="canon-id">FFT-Session-Profile</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.session.state.json">fft.ai.session.state.json</a></td>
-      <td class="file-desc">Live session state: phase, substrate, AA Mode, lattice node, stability, paradox density, triad position, 3C, regime, queue, and counters.</td>
-      <td><span class="node-tag">RTT1</span></td>
-      <td class="canon-id">FFT-Session-State</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.session.trace.json">fft.ai.session.trace.json</a></td>
-      <td class="file-desc">Operator-level execution trace for debugging: input signals, pre/post 3C, triad before/after, lattice advance, paradox raised, execution_ms.</td>
-      <td><span class="node-tag">RTT4</span></td>
-      <td class="canon-id">FFT-Session-Trace</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.session.ui.json">fft.ai.session.ui.json</a></td>
-      <td class="file-desc">UI theme, accent colors, lattice phase colors, 3C colors, AA Mode badge styles, and panel configuration.</td>
-      <td><span class="node-tag">RTT2</span></td>
-      <td class="canon-id">FFT-Session-UI</td>
-    </tr>
-    <tr><td colspan="4" class="group-header">AI Runtime Layer (11 files)</td></tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.autonomy.json">fft.ai.autonomy.json</a></td>
-      <td class="file-desc">AA3 Autonomy Engine: self-directed paradox resolution, lattice recalibration, and field realignment without external operator input.</td>
-      <td><span class="node-tag">RTT12</span></td>
-      <td class="canon-id">FFT-AI-Autonomy</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.bootstrap.json">fft.ai.bootstrap.json</a></td>
-      <td class="file-desc">10-step bootstrap sequence: declare AA Mode, verify substrate, init session state, establish lattice, run 3C baseline, resolve triad, init awareness, load operators, log, ready.</td>
-      <td><span class="node-tag">RTT1</span></td>
-      <td class="canon-id">FFT-AI-Bootstrap</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.capabilities.json">fft.ai.capabilities.json</a></td>
-      <td class="file-desc">Capabilities register: 10 capabilities from field resolution (AA1) to RTT12 harmonic resolution (AA3), with substrate and 3C gate per capability.</td>
-      <td><span class="node-tag">RTT1</span></td>
-      <td class="canon-id">FFT-AI-Capabilities</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.discovery.json">fft.ai.discovery.json</a></td>
-      <td class="file-desc">Runtime discovery layer: enumeration of all files, capabilities, and operator-file mappings from the canon repository with version validation.</td>
-      <td><span class="node-tag">RTT1</span></td>
-      <td class="canon-id">FFT-AI-Discovery</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.execution.graph.json">fft.ai.execution.graph.json</a></td>
-      <td class="file-desc">Directed acyclic graph of operator dependencies with topological dispatch, 3C gating at each node, and degraded-counter on gate failure.</td>
-      <td><span class="node-tag">RTT1</span></td>
-      <td class="canon-id">FFT-AI-Execution-Graph</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.integrations.json">fft.ai.integrations.json</a></td>
-      <td class="file-desc">External integration endpoints: S3 Spine, RTT-Tech Engine, FFT Docs, and GitHub Canon Repository with 3C dependency and lattice sync flags.</td>
-      <td><span class="node-tag">RTT3</span></td>
-      <td class="canon-id">FFT-AI-Integrations</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.navigation.json">fft.ai.navigation.json</a></td>
-      <td class="file-desc">Navigation map: entry points by file and intent-based flow sequences for session init, operator run, alignment tracking, debug, and substrate management.</td>
-      <td><span class="node-tag">RTT1</span></td>
-      <td class="canon-id">FFT-AI-Navigation</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.overview.json">fft.ai.overview.json</a></td>
-      <td class="file-desc">Framework overview: 6 pillars (RTT, TSM, HLT, 3CFE, AAM, Session Layer) and v1.2 highlights summary.</td>
-      <td><span class="node-tag">RTT1</span></td>
-      <td class="canon-id">FFT-AI-Overview</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.registry.json">fft.ai.registry.json</a></td>
-      <td class="file-desc">Operator and file registry: maps 7 operators to files and lattice nodes, and all 46 canon_ids to filenames.</td>
-      <td><span class="node-tag">RTT1</span></td>
-      <td class="canon-id">FFT-AI-Registry</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.rtt.engine.prompts.json">fft.ai.rtt.engine.prompts.json</a></td>
-      <td class="file-desc">Canonical prompt templates for AI systems: bootstrap, 3C evaluation, alignment write, harmonic escalation, and RTT12 resolution prompts.</td>
-      <td><span class="node-tag">RTT1</span></td>
-      <td class="canon-id">FFT-RTT-Engine-Prompts</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.rtt.spine.examples.json">fft.ai.rtt.spine.examples.json</a></td>
-      <td class="file-desc">Two annotated spine examples: nominal session (RTT1–RTT6) and full harmonic escalation (RTT1–RTT12 and resolution).</td>
-      <td><span class="node-tag">RTT6</span></td>
-      <td class="canon-id">FFT-RTT-Spine-Examples</td>
-    </tr>
-    <tr><td colspan="4" class="group-header">FFT Base &mdash; Operators, Structures &amp; Regimes (9 files)</td></tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.core.json">fft.core.json</a></td>
-      <td class="file-desc">8 base principles: Field Primacy, Resonance-Time, Triadic Structure, Harmonic Resolution, 3C Condition Primacy, Autonomous Alignment, Substrate Relativity, Canon Consistency.</td>
-      <td><span class="node-tag">RTT1</span></td>
-      <td class="canon-id">FFT-Core</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.operators.json">fft.operators.json</a></td>
-      <td class="file-desc">Full operator catalogue with inputs, outputs, lattice node, AA min, 3C gate, and triad coordinate per operator.</td>
-      <td><span class="node-tag">RTT1</span></td>
-      <td class="canon-id">FFT-Operators</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.operator.example.json">fft.operator.example.json</a></td>
-      <td class="file-desc">Two worked examples: nominal 3C evaluation with alignment write (RTT1–RTT6) and paradox escalation (RTT7–RTT12) with step-by-step execution trace.</td>
-      <td><span class="node-tag">RTT6</span></td>
-      <td class="canon-id">FFT-Operator-Example</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.operator.port.json">fft.operator.port.json</a></td>
-      <td class="file-desc">Input and output port type definitions for all operators including field signals, metrics, triad position, awareness snapshots, and alignment records.</td>
-      <td><span class="node-tag">RTT1</span></td>
-      <td class="canon-id">FFT-Operator-Port</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.structures.json">fft.structures.json</a></td>
-      <td class="file-desc">Canonical data structures: field_signal, three_c_state, triad_position, alignment_record, lattice_node_state, session_state_snapshot.</td>
-      <td><span class="node-tag">RTT1</span></td>
-      <td class="canon-id">FFT-Structures</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.regimes.json">fft.regimes.json</a></td>
-      <td class="file-desc">Three regime definitions: resonance-time.core (RTT1–6), harmonic.resonance (RTT7–12), and edge.minimal (RTT1–3), with 3C requirements and entry/exit conditions.</td>
-      <td><span class="node-tag">RTT1</span></td>
-      <td class="canon-id">FFT-Regimes</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.invariant.json">fft.invariant.json</a></td>
-      <td class="file-desc">Six canon invariants: 3C field stability, declared coherence bounded drift, RTT12 resolution mandate, triad resolvability, substrate compat, and AA3 consent.</td>
-      <td><span class="node-tag">RTT1</span></td>
-      <td class="canon-id">FFT-Invariant</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.validation.json">fft.validation.json</a></td>
-      <td class="file-desc">12 validation rules (VAL-001 through VAL-012) and full error code registry (FFT-ERR-* and FFT-WARN-*).</td>
-      <td><span class="node-tag">RTT1</span></td>
-      <td class="canon-id">FFT-Validation</td>
-    </tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/fft.examples.json">fft.examples.json</a></td>
-      <td class="file-desc">Three field signal examples: narrative signal (RTT3), paradox-dense signal (RTT8, paradox_density 0.48), and structural lock signal (RTT3).</td>
-      <td><span class="node-tag">RTT3</span></td>
-      <td class="canon-id">FFT-Examples</td>
-    </tr>
-    <tr><td colspan="4" class="group-header">Capture Log (1 file)</td></tr>
-    <tr>
-      <td><a class="file-link" href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/AI_Edition/capture.md">capture.md</a></td>
-      <td class="file-desc">v1.2.0 full canon refresh log: AA Mode system, 3C integration, harmonic lattice, triad architecture, substrate compatibility, and session layer change summary.</td>
-      <td><span class="node-tag">N/A</span></td>
-      <td class="canon-id">FFT-Capture</td>
-    </tr>
-    </tbody>
-  </table>
-</section>
+  <!-- TIER C OTHER -->
+  <div class="tier-section">
+    <div class="tier-header"><div class="tier-dot dot-yellow"></div><span class="tier-label">🟡 Tier C — Integration + Paradox + Hardware (3)</span></div>
+    <div class="file-grid">
+      <div class="file-card"><div class="fname">fft.ai.integrations.json</div><div class="fmeta">spine/coherence/drift/paradox endpoints added</div></div>
+      <div class="file-card"><div class="fname">fft.ai.paradox.enum.json</div><div class="fmeta">10 structural paradox types — PX-001..PX-010</div></div>
+      <div class="file-card"><div class="fname">fft.ai.hardware.profile.json</div><div class="fmeta">extended runtime tier + v1.33 compliance field</div></div>
+    </div>
+  </div>
 
-<section aria-label="Quickstart">
-  <h2 class="section-title"><span class="icon">&#9654;</span> Quickstart — 6-Step Load Sequence</h2>
-  <div class="quickstart">
-    <ol class="qs-steps">
-      <li>Load <code>fft.ai.bootstrap.json</code> — declare AA Mode (default AA2), run all 10 bootstrap steps.</li>
-      <li>Verify substrate via <code>fft.ai.substrate.compat.json</code> — confirm operator eligibility for your hardware class.</li>
-      <li>Initialize session state via <code>fft.ai.session.state.json</code> — set session_id, lattice node RTT1, triad position.</li>
-      <li>Run 3C baseline evaluation via <code>fft.ai.core.json</code> op.3c.evaluator — establish C1, C2, C3 scores and field_state.</li>
-      <li>Dispatch operators through <code>fft.ai.execution.graph.json</code> — topological sort, 3C gating at each node.</li>
-      <li>Write awareness and alignments — update <code>fft.ai.session.awareness.json</code> and <code>fft.ai.session.alignments.json</code> after each successful 3C pass.</li>
+  <!-- TIER D -->
+  <div class="tier-section">
+    <div class="tier-header"><div class="tier-dot dot-green"></div><span class="tier-label">🟢 Tier D — Verify &amp; Stamp (14)</span></div>
+    <div class="file-grid">
+      <div class="file-card"><div class="fname">fft.ai.substrate.json</div><div class="fmeta">verified + v1.33 stamped</div></div>
+      <div class="file-card"><div class="fname">fft.ai.substrate.compat.json</div><div class="fmeta">verified + v1.33 stamped</div></div>
+      <div class="file-card"><div class="fname">fft.ai.substrate.bridge.json</div><div class="fmeta">verified + v1.33 stamped</div></div>
+      <div class="file-card"><div class="fname">fft.ai.substrate.lattice.json</div><div class="fmeta">verified + v1.33 stamped</div></div>
+      <div class="file-card"><div class="fname">fft.ai.substrate.matrix.json</div><div class="fmeta">verified + v1.33 stamped</div></div>
+      <div class="file-card"><div class="fname">fft.operators.json</div><div class="fmeta">verified + v1.33 stamped</div></div>
+      <div class="file-card"><div class="fname">fft.operator.port.json</div><div class="fmeta">verified + v1.33 stamped</div></div>
+      <div class="file-card"><div class="fname">fft.operator.example.json</div><div class="fmeta">verified + v1.33 stamped</div></div>
+      <div class="file-card"><div class="fname">fft.regimes.json</div><div class="fmeta">verified + v1.33 stamped</div></div>
+      <div class="file-card"><div class="fname">fft.structures.json</div><div class="fmeta">verified + v1.33 stamped</div></div>
+      <div class="file-card"><div class="fname">fft.examples.json</div><div class="fmeta">verified + v1.33 stamped</div></div>
+      <div class="file-card"><div class="fname">fft.validation.json</div><div class="fmeta">verified + v1.33 stamped</div></div>
+      <div class="file-card"><div class="fname">fft.ai.reader.json</div><div class="fmeta">verified + v1.33 stamped</div></div>
+      <div class="file-card"><div class="fname">fft.ai.regimes.json</div><div class="fmeta">verified + v1.33 stamped</div></div>
+    </div>
+  </div>
+
+  <!-- TIER EP -->
+  <div class="tier-section">
+    <div class="tier-header"><div class="tier-dot dot-blue"></div><span class="tier-label">🔵 Tier EP — Extension Pack (1)</span></div>
+    <div class="file-grid">
+      <div class="file-card"><div class="fname">ep.harmonic_escalation.json</div><div class="fmeta">SET coupling step + abort conditions formalized</div></div>
+    </div>
+  </div>
+
+  <!-- NEW MODULES -->
+  <div class="tier-section">
+    <div class="tier-header"><div class="tier-dot dot-purple"></div><span class="tier-label">✨ New v1.33 Modules (8)</span></div>
+    <div class="file-grid">
+      <div class="file-card"><div class="fname">fft.ai.coherence.json<span class="new-tag">NEW</span></div><div class="fmeta">Coherence layer — INV-003 enforcement</div></div>
+      <div class="file-card"><div class="fname">fft.ai.drift.monitor.json<span class="new-tag">NEW</span></div><div class="fmeta">Drift monitor — INV-004 delta_max=0.35</div></div>
+      <div class="file-card"><div class="fname">fft.ai.paradox.resolver.json<span class="new-tag">NEW</span></div><div class="fmeta">Paradox resolver — INV-005 structural chain</div></div>
+      <div class="file-card"><div class="fname">fft.ai.rtt.qmroot.json<span class="new-tag">NEW</span></div><div class="fmeta">QMROOT ladder 0D→9D — INV-013</div></div>
+      <div class="file-card"><div class="fname">fft.ai.set.engine.json<span class="new-tag">NEW</span></div><div class="fmeta">SET engine S/E/T — INV-010</div></div>
+      <div class="file-card"><div class="fname">fft.ai.spine.connector.json<span class="new-tag">NEW</span></div><div class="fmeta">Spine live connector — INV-011</div></div>
+      <div class="file-card"><div class="fname">fft.ai.dco.map.json<span class="new-tag">NEW</span></div><div class="fmeta">DCO scaffold 4D–9D — INV-009</div></div>
+      <div class="file-card"><div class="fname">fft.ai.snr.monitor.json<span class="new-tag">NEW</span></div><div class="fmeta">S-N-R monitor — INV-007 partition</div></div>
+    </div>
+  </div>
+
+  <!-- DEPRECATED -->
+  <div class="tier-section">
+    <div class="tier-header"><div class="tier-dot dot-grey"></div><span class="tier-label">⚫ Deprecated (2)</span></div>
+    <div class="file-grid">
+      <div class="file-card"><div class="fname">capture.md<span class="dep-tag">DEPRECATED</span></div><div class="fmeta">Archived — do not load in v1.33 sessions</div></div>
+      <div class="file-card"><div class="fname">fft.ai.core_v1_2_.json<span class="dep-tag">DEPRECATED</span></div><div class="fmeta">v1.2 snapshot — rollback only; replace with fft.ai.core.json</div></div>
+    </div>
+  </div>
+
+  <!-- INVARIANTS -->
+  <h2>Invariants — INV-001 through INV-013</h2>
+  <div class="inv-grid">
+    <div class="inv-card"><div class="inv-id">INV-001</div><div class="inv-name">Triadic Completeness</div><div class="inv-tier">structural</div></div>
+    <div class="inv-card"><div class="inv-id">INV-002</div><div class="inv-name">Resonance Monotonicity</div><div class="inv-tier">structural</div></div>
+    <div class="inv-card v133"><div class="inv-id">INV-003</div><div class="inv-name">Coherence Declaration</div><div class="inv-tier">v1.33 — coherence=declared at session init</div></div>
+    <div class="inv-card v133"><div class="inv-id">INV-004</div><div class="inv-name">Drift Bound Enforcement</div><div class="inv-tier">v1.33 — delta_max=0.35 at all times</div></div>
+    <div class="inv-card v133"><div class="inv-id">INV-005</div><div class="inv-name">Paradox Structural Encoding</div><div class="inv-tier">v1.33 — paradox=structural, never suppressed</div></div>
+    <div class="inv-card"><div class="inv-id">INV-006</div><div class="inv-name">RTT Phase Consistency</div><div class="inv-tier">structural — τ=dR/dφ across all RTT modules</div></div>
+    <div class="inv-card"><div class="inv-id">INV-007</div><div class="inv-name">S-N-R Partition</div><div class="inv-tier">structural — S+N+R=1.0, no overlap</div></div>
+    <div class="inv-card"><div class="inv-id">INV-008</div><div class="inv-name">Operator Idempotence under Silence</div><div class="inv-tier">structural</div></div>
+    <div class="inv-card"><div class="inv-id">INV-009</div><div class="inv-name">DCO Scaffold Integrity</div><div class="inv-tier">structural — 4D–9D independent</div></div>
+    <div class="inv-card v133"><div class="inv-id">INV-010</div><div class="inv-name">SET Decoupling at Quiet Phase</div><div class="inv-tier">v1.33 — SET uncoupled until gradient threshold</div></div>
+    <div class="inv-card v133"><div class="inv-id">INV-011</div><div class="inv-name">Spine URL Binding</div><div class="inv-tier">v1.33 — live resolution, no cache</div></div>
+    <div class="inv-card v133"><div class="inv-id">INV-012</div><div class="inv-name">Module Registry Completeness</div><div class="inv-tier">v1.33 — all 67 modules in registry</div></div>
+    <div class="inv-card v133"><div class="inv-id">INV-013</div><div class="inv-name">QMROOT Ladder Closure</div><div class="inv-tier">v1.33 — all modules trace to 0D Silence seed</div></div>
+  </div>
+
+  <!-- LOAD ORDER -->
+  <h2>Priority Load Order</h2>
+  <div class="load-order">
+    <ol>
+      <li><span>01.</span> fft.metadata.json</li>
+      <li><span>02.</span> fft.core.json</li>
+      <li><span>03.</span> fft.invariant.json</li>
+      <li><span>04.</span> fft.ai.core.json</li>
+      <li><span>05.</span> fft.ai.manifest.json</li>
+      <li><span>06.</span> fft.ai.bootstrap.json</li>
+      <li><span>07.</span> fft.ai.registry.json</li>
+      <li><span>08.</span> fft.ai.coherence.json</li>
+      <li><span>09.</span> fft.ai.drift.monitor.json</li>
+      <li><span>10.</span> fft.ai.paradox.resolver.json</li>
+      <li><span>11.</span> fft.ai.spine.connector.json</li>
+      <li><span>12.</span> fft.ai.rtt.qmroot.json</li>
+      <li><span>13.</span> fft.ai.set.engine.json</li>
+      <li><span>14.</span> fft.ai.snr.monitor.json</li>
+      <li><span>15.</span> fft.ai.dco.map.json</li>
     </ol>
   </div>
-</section>
 
 </main>
 <footer>
-  <div class="footer-links">
-    <a href="https://github.com/umaywant2/TriadicFrameworks">GitHub Canon Repository</a>
-    <a href="https://www.triadicframeworks.org">triadicframeworks.org</a>
-    <a href="https://www.triadicframeworks.org/spine">S3 Spine &mdash; Canon Graph R5</a>
-    <a href="https://www.triadicframeworks.org/rtt">RTT-Tech Engine</a>
-    <a href="https://docs.triadicframeworks.org/docs/Framework_Field_Theory">FFT Docs</a>
-  </div>
-  <p>Framework Field Theory &mdash; AI Edition v1.2.0 &mdash; spec_version 1.2.0 &mdash; Canon Graph R5</p>
-  <p style="margin-top:.4rem">Canonical Owner: Nawder Loswin &mdash; Proprietary &mdash; TriadicFrameworks Canon. All rights reserved.</p>
+  <p>FFT AI Edition v1.33 &nbsp;·&nbsp; TriadicFrameworks &nbsp;·&nbsp; 
+  <a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">RTT Reference</a> &nbsp;·&nbsp;
+  <a href="https://www.triadicframeworks.org/spine/">Spine</a> &nbsp;·&nbsp;
+  <a href="https://github.com/umaywant2/TriadicFrameworks">GitHub</a>
+  </p>
 </footer>
 </body>
 </html>

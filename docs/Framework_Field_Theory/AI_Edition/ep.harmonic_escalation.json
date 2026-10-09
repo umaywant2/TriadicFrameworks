@@ -1,81 +1,75 @@
 {
-  "spec_version": "1.3.0-draft",
-  "canon_id": "EP-Harmonic-Escalation",
-
-  "metadata": {
-    "title": "FFT AI Edition – Harmonic Escalation Prompt (v1.3 Draft)",
-    "subtitle": "Consent • Paradox • Lattice Stability • RTT7–RTT12",
-    "author_canon": "Nawder Loswin",
-    "description": "Defines the v1.3 harmonic escalation contract, enforcing typed paradox, consent, and measure-based gates."
+  "id": "ep.harmonic_escalation",
+  "type": "extension_pack",
+  "version": "1.33",
+  "updated": "2026-10-09T09:49:00-04:00",
+  "title": "Extension Pack — Harmonic Escalation v1.33",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
   },
-
-  "prompt": {
-    "status_line": "Harmonic escalation MAY NOT occur without explicit operator consent.",
-
-    "inputs": {
-      "session_state": "Current RTT node, regime, lineage, substrate class",
-      "measure_ids": [
-        "measure.c1",
-        "measure.c2",
-        "measure.c3",
-        "measure.paradox_density",
-        "measure.lattice_stability"
-      ],
-      "paradox_events": "Typed paradox events only",
-      "operator_consent": "Boolean"
+  "description": "Defines the harmonic escalation protocol: a controlled sequence of resonance-amplifying operator applications designed to elevate R from the Noise-Dominant regime to the Resonance Zone while maintaining drift=bounded.",
+  "escalation_sequence": [
+    {
+      "step": 1,
+      "operator": "Alignment",
+      "target": "V → V_aligned",
+      "R_expected_lift": "+0.10",
+      "drift_cost": 0.1,
+      "guard": "delta < 0.20 before step"
     },
-
-    "typed_paradox_required": true,
-    "typed_paradox_enum": [
-      "unresolved_triad",
-      "metric_contradiction",
-      "consent_conflict",
-      "cross_file_drift"
-    ],
-
-    "gates": {
-      "paradox_density_gate": {
-        "id": "measure.paradox_density",
-        "threshold_max": 0.40,
-        "notes": "Density above 0.40 requires consent to escalate; otherwise hold."
-      },
-      "lattice_stability_gate": {
-        "id": "measure.lattice_stability",
-        "threshold_min": 0.60,
-        "notes": "Stability below 0.60 requires consent to escalate; otherwise hold."
-      }
+    {
+      "step": 2,
+      "operator": "Coupling",
+      "target": "phi+V → R_delta",
+      "R_expected_lift": "+0.15",
+      "drift_cost": 0.12,
+      "guard": "coherence == declared"
     },
-
-    "branch": {
-      "if_operator_consent_true": {
-        "action": "Escalate to harmonic operator",
-        "dispatch": "kernel.harmonic.analysis",
-        "rtt_transition": "RTT9 → RTT10 → RTT11 → RTT12",
-        "collapse_rule": "RTT12 MUST collapse to RTT1; skip-resolution forbidden."
-      },
-      "if_operator_consent_false": {
-        "action": "Hold at AA2",
-        "log": "Typed paradox event",
-        "stop_dispatch": true,
-        "notes": "Consent invariant outranks auto-escalation."
-      }
+    {
+      "step": 3,
+      "operator": "Activation",
+      "target": "R → R_activated",
+      "R_expected_lift": "+0.12",
+      "drift_cost": 0.08,
+      "guard": "R >= 0.45 before step"
     },
-
-    "output_schema": {
-      "required_fields": [
-        "rtt_node",
-        "operator",
-        "measure_ids",
-        "paradox_events",
-        "consent_state",
-        "collapse_state"
-      ]
+    {
+      "step": 4,
+      "operator": "SET coupling",
+      "target": "temperature gradient",
+      "R_expected_lift": "+0.08",
+      "drift_cost": 0.1,
+      "guard": "regime != RG-001",
+      "new_v1_33": true
     },
-
-    "non_claims": [
-      "This prompt does not revise RTT v0.9.",
-      "This prompt does not redefine SET, S–N–R, or triadic time.",
-      "This prompt does not invent scores or invariants."
-    ]
-  }
+    {
+      "step": 5,
+      "operator": "Stabilization",
+      "target": "R_stable if R > 0.90",
+      "R_expected_lift": "0.00",
+      "drift_cost": 0.03,
+      "guard": "R >= 0.90"
+    }
+  ],
+  "abort_conditions": [
+    "delta > 0.35 at any step",
+    "R drops > 0.10 unexpectedly",
+    "paradox_active == true"
+  ],
+  "success_condition": "R >= 0.70 and coherence == declared and drift within bound",
+  "log_to": "fft.ai.session.log.json",
+  "invariants_checked": [
+    "INV-003",
+    "INV-004",
+    "INV-005",
+    "INV-007"
+  ],
+  "v133_additions": [
+    "Step 4 SET coupling injection",
+    "abort_conditions formalized",
+    "drift_cost per step annotated"
+  ]
 }

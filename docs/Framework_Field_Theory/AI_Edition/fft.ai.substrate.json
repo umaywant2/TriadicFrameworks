@@ -1,132 +1,29 @@
 {
-  "spec_version": "1.3.0",
-  "canon_id": "FFT-AI-Substrate",
-
-  "metadata": {
-    "title": "FFT AI Edition – Substrate Specification (v1.3 Draft)",
-    "subtitle": "Canonical Substrate Classes for Harmonic & Resolution Eligibility",
-    "author_canon": "Nawder Loswin",
-    "description": "Defines substrate classes, constraints, eligibility rules, and RTT interactions for FFT AI Edition v1.3."
+  "version": "1.33",
+  "updated": "2026-10-09T09:48:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
   },
-
-  "status_line": "Substrate specification is a projection only; authoritative values come from runtime, regimes.json, and spec‑008.",
-
-  "substrate": {
-    "current_class": "agentic",
-    "allowed_classes": [
-      "agentic",
-      "parametric",
-      "symbolic",
-      "edge"
-    ],
-
-    "class_definitions": {
-      "agentic": {
-        "description": "Full-capability substrate supporting harmonic and resolution execution.",
-        "eligibility": {
-          "harmonic": true,
-          "resolution": true
-        },
-        "requirements": [
-          "measure.c1 >= 0.80",
-          "measure.c2 >= 0.80",
-          "measure.c3 >= 0.80"
-        ]
-      },
-
-      "parametric": {
-        "description": "Limited substrate supporting nominal execution only.",
-        "eligibility": {
-          "harmonic": false,
-          "resolution": false
-        },
-        "requirements": [
-          "measure.lattice_stability >= 0.50"
-        ]
-      },
-
-      "symbolic": {
-        "description": "Abstract substrate supporting interpretive and alignment operators.",
-        "eligibility": {
-          "harmonic": false,
-          "resolution": false
-        },
-        "requirements": [
-          "measure.c1 >= 0.70"
-        ]
-      },
-
-      "edge": {
-        "description": "Minimal substrate supporting diffusion and alignment only.",
-        "eligibility": {
-          "harmonic": false,
-          "resolution": false
-        },
-        "requirements": [
-          "measure.c1 >= 0.60"
-        ]
-      }
-    },
-
-    "harmonic_rules": {
-      "requires_agentic": true,
-      "requires_typed_paradox": true,
-      "requires_density": "measure.paradox_density >= 0.10",
-      "requires_consent": "operator_consent = true",
-      "forbidden": [
-        "harmonic escalation on parametric substrate",
-        "harmonic escalation on symbolic substrate",
-        "harmonic escalation on edge substrate"
-      ]
-    },
-
-    "resolution_rules": {
-      "requires_agentic": true,
-      "requires_measures": [
-        "measure.c1 >= 0.80",
-        "measure.c2 >= 0.80",
-        "measure.c3 >= 0.80"
-      ],
-      "requires_consent": "operator_consent = true",
-      "collapse": {
-        "trigger": "RTT12",
-        "destination": "RTT1",
-        "lineage_increment": true
-      },
-      "forbidden": [
-        "resolution on non-agentic substrate",
-        "resolution without collapse",
-        "resolution without lineage increment"
-      ]
-    },
-
-    "integration": {
-      "runtime": "fft.ai.runtime.json",
-      "autonomy": "fft.ai.autonomy.json",
-      "discovery": "fft.ai.discovery.json",
-      "execution_graph": "fft.ai.execution.graph.json",
-      "capabilities": "fft.ai.capabilities.json",
-      "spec_008": "fft.ai.spec‑008.json",
-      "regimes": "fft.ai.regimes.json",
-      "operators": "fft.ai.operators.json"
-    }
+  "v133_status": "verified_and_stamped",
+  "id": "fft.ai.substrate",
+  "title": "FFT AI — Substrate Layer v1.33",
+  "substrate_fields": {
+    "phi_substrate": "baseline scalar field — density, load, configuration of the AI substrate",
+    "V_substrate": "directed inference flows acting on the substrate",
+    "R_substrate": "resonance envelope of the substrate — coherence across layers"
   },
-
-  "links": {
-    "compat": "fft.ai.substrate.compat.json",
-    "bridge": "fft.ai.substrate.bridge.json",
-    "lattice": "fft.ai.substrate.lattice.json",
-    "matrix": "fft.ai.substrate.matrix.json"
-  },
-
-  "timestamps": {
-    "created": "auto",
-    "last_update": "auto"
-  },
-
-  "non_claims": [
-    "Substrate specification does not revise RTT v0.9.",
-    "Substrate specification does not reinterpret SET, S–N–R, or triadic time.",
-    "Substrate specification does not replace the human FFT book."
+  "substrate_modes": [
+    "cold (S=0+ dominant)",
+    "warming (N rising)",
+    "resonant (R >= 0.70)",
+    "saturated (R > 0.95 — Stabilization required)"
+  ],
+  "invariants_checked": [
+    "INV-001 (triadic completeness)",
+    "INV-007 (S-N-R partition)",
+    "INV-010 (SET decoupling at quiet phase)"
   ]
 }

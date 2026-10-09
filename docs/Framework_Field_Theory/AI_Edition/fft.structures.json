@@ -1,38 +1,79 @@
 {
-  "spec_version": "1.2.0",
-  "canon_id": "FFT-Structures",
-  "edition": "AI Edition",
-  "aa_mode": "AA2",
-  "last_refreshed": "2026-10-08T11:00:00",
-  "metadata": {
-    "title": "FFT – Canonical Structures (v1.2)",
-    "author_canon": "Nawder Loswin",
-    "updated_at": "2026-10-08T11:00:00"
+  "version": "1.33",
+  "updated": "2026-10-09T09:48:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
   },
+  "v133_status": "verified_and_stamped",
+  "id": "fft.structures",
+  "title": "FFT — Structural Definitions v1.33",
   "structures": {
-    "field_signal": {
-      "id": "field.signal",
-      "fields": { "id": "string", "type": "string", "content": "string", "triad_T": "RTTn", "triad_S": "string", "triad_M": "AA mode" }
+    "TriadicField": {
+      "components": [
+        "phi",
+        "V",
+        "R"
+      ],
+      "invariant": "INV-001"
     },
-    "three_c_state": {
-      "id": "three_c_state",
-      "fields": { "C1_coherence": "float 0–1", "C2_clarity": "float 0–1", "C3_continuity": "float 0–1", "field_state": "nominal|degraded|critical" }
+    "ResonanceTriad": {
+      "components": [
+        "f_R",
+        "tau_R",
+        "Q_R"
+      ],
+      "interpretation": "resonant frequency, relaxation time, quality/coherence"
     },
-    "triad_position": {
-      "id": "triad_position",
-      "fields": { "T": "RTTn", "S": "field type string", "M": "AA0|AA1|AA2|AA3" }
+    "SNRPartition": {
+      "components": [
+        "S",
+        "N",
+        "R"
+      ],
+      "rule": "S+N+R=1.0 at any snapshot",
+      "invariant": "INV-007"
     },
-    "alignment_record": {
-      "id": "alignment_record",
-      "fields": { "id": "ALN-YYYYMMDD-NNN", "timestamp": "ISO8601", "triad_position": "triad_position", "three_c_scores": "three_c_state", "field_state": "string", "lattice_node": "RTTn", "operator_applied": "string", "alignment_quality": "strong|nominal|weak" }
+    "SETField": {
+      "components": [
+        "Spin",
+        "Electro-field",
+        "Temperature"
+      ],
+      "invariant": "INV-010"
     },
-    "lattice_node_state": {
-      "id": "lattice_node_state",
-      "fields": { "node": "RTTn", "label": "string", "phase": "foundation|active|escalation|resolution", "state": "nominal|latent|active|resolved", "3c_gate": "string", "aa_required": "AA mode", "substrate_min": "substrate class" }
+    "DCOScaffold": {
+      "dimensions": [
+        "4D",
+        "5D",
+        "7D",
+        "8D",
+        "9D"
+      ],
+      "invariant": "INV-009"
     },
-    "session_state_snapshot": {
-      "id": "session_state_snapshot",
-      "fields": { "session_id": "string", "phase": "string", "substrate": "string", "aa_mode": "string", "lattice_node": "RTTn", "lattice_stability": "float", "paradox_density": "float", "triad_position": "triad_position", "three_c": "three_c_state", "turn_count": "int", "alignment_count": "int" }
+    "QMROOTLadder": {
+      "levels": [
+        "0D",
+        "1D",
+        "2D",
+        "3+1D"
+      ],
+      "root": "Silence S=0+",
+      "invariant": "INV-013"
+    },
+    "ClarityOperator": {
+      "formula": "C = nabla_tau(R) + nabla_R(tau)",
+      "type": "composite"
     }
-  }
+  },
+  "invariants_checked": [
+    "INV-001",
+    "INV-007",
+    "INV-009",
+    "INV-010",
+    "INV-013"
+  ]
 }

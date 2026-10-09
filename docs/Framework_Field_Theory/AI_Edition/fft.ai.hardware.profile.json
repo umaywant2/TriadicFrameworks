@@ -1,120 +1,44 @@
 {
-  "spec_version": "1.3.0",
-  "canon_id": "FFT-AI-Hardware-Profile",
-
-  "metadata": {
-    "title": "FFT AI Edition – Hardware Profile (v1.3)",
-    "subtitle": "Execution Substrate Descriptor for RTT • Regimes • Operators • Paradox • Consent • Collapse",
-    "author_canon": "Nawder Loswin",
-    "description": "Defines the hardware execution profile, substrate class, RTT capability ranges, paradox gating, consent gating, collapse readiness, and performance envelope for FFT AI Edition v1.3."
+  "id": "fft.ai.hardware.profile",
+  "version": "1.33",
+  "updated": "2026-10-09T09:46:00-04:00",
+  "title": "FFT AI — Hardware Profile v1.33",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
   },
-
-  "status_line": "Hardware profile defines the execution substrate; authoritative values come from substrate.json, runtime.json, operators.json, regimes.json, and spec‑008.",
-
-  "hardware_profile": {
-    "session_id": "inherit-from-session.state",
-
-    "execution_substrate": {
-      "class": "agentic",
-      "compatibility": [
-        "substrate.compat.json",
-        "substrate.bridge.json",
-        "substrate.lattice.json",
-        "substrate.matrix.json"
+  "runtime_tiers": {
+    "minimal": {
+      "description": "Basic FFT session: fields + operators + session lifecycle",
+      "min_context_window": "8k tokens",
+      "modules_required": [
+        "fft.core.json",
+        "fft.invariant.json",
+        "fft.ai.core.json",
+        "fft.ai.bootstrap.json",
+        "fft.ai.session.context.json"
       ],
-      "constraints": [
-        "Agentic substrate required for RTT7–RTT12.",
-        "Non-agentic substrate forbidden for harmonic and resolution.",
-        "Substrate MUST support paradox density evaluation.",
-        "Substrate MUST support lattice stability evaluation."
-      ]
+      "v1_33_compliance": "partial"
     },
-
-    "rtt_capability_range": {
-      "nominal": ["RTT1", "RTT2", "RTT3", "RTT4", "RTT5", "RTT6"],
-      "harmonic": ["RTT7", "RTT8", "RTT9"],
-      "resolution": ["RTT10", "RTT11", "RTT12"]
+    "standard": {
+      "description": "Full v1.33 compliance: all 67 modules, all invariants enforced",
+      "min_context_window": "32k tokens",
+      "modules_required": "all 67",
+      "v1_33_compliance": "full"
     },
-
-    "paradox_capability_range": {
-      "typed_paradox_required": ["RTT7"],
-      "density_threshold": 0.10,
-      "stability_threshold": 0.60,
-      "notes": "Hardware MUST support paradox evaluation for harmonic regime."
-    },
-
-    "consent_capability_range": {
-      "required_for": ["RTT9", "RTT10", "RTT11", "RTT12"],
-      "rules": [
-        "operator_consent MUST be explicit.",
-        "Implicit or assumed consent forbidden."
-      ]
-    },
-
-    "collapse_capability_range": {
-      "collapse_node": "RTT12",
-      "rules": [
-        "RTT12 MUST collapse to RTT1.",
-        "Lineage MUST increment after collapse.",
-        "Collapse to non-RTT1 forbidden."
-      ]
-    },
-
-    "performance_envelope": {
-      "nominal": {
-        "latency": "low",
-        "stability": "high",
-        "requirements": ["measure.c1 >= 0.80"]
-      },
-      "harmonic": {
-        "latency": "medium",
-        "stability": "medium",
-        "requirements": [
-          "measure.paradox_density >= 0.10",
-          "measure.lattice_stability >= 0.60"
-        ]
-      },
-      "resolution": {
-        "latency": "high",
-        "stability": "high",
-        "requirements": [
-          "measure.c1 >= 0.80",
-          "measure.c2 >= 0.80",
-          "measure.c3 >= 0.80",
-          "operator_consent = true"
-        ]
-      }
+    "extended": {
+      "description": "Multi-regime, full DCO scaffold, SET coupling, long session history",
+      "min_context_window": "128k tokens",
+      "modules_required": "all 67 + ep.*",
+      "v1_33_compliance": "full+extended",
+      "new_v1_33": true
     }
   },
-
-  "rules": {
-    "hardware_rules": [
-      "Hardware profile MUST NOT contradict substrate.json.",
-      "Hardware profile MUST NOT contradict runtime.json.",
-      "Hardware profile MUST NOT contradict operators.json.",
-      "Hardware profile MUST NOT contradict regimes.json.",
-      "Hardware profile MUST NOT contradict spec‑008.json.",
-      "Hardware profile MUST NOT invent measure IDs.",
-      "Hardware profile MUST NOT invent paradox types.",
-      "Hardware profile MUST NOT invent substrate classes."
-    ]
-  },
-
-  "integration_links": {
-    "substrate": "fft.ai.substrate.json",
-    "runtime": "fft.ai.runtime.json",
-    "operators": "fft.ai.operators.json",
-    "regimes": "fft.ai.regimes.json",
-    "paradox_enum": "fft.ai.paradox.enum.json",
-    "spec_008": "fft.ai.spec-008.json",
-    "execution_graph": "fft.ai.execution.graph.json",
-    "capabilities": "fft.ai.capabilities.json",
-    "autonomy": "fft.ai.autonomy.json",
-    "discovery": "fft.ai.discovery.json"
-  },
-
-  "timestamps": {
-    "created": "auto",
-    "last_update": "auto"
-  }
+  "v133_additions": [
+    "extended runtime tier",
+    "32k minimum for full compliance",
+    "v1_33_compliance field per tier"
+  ]
 }

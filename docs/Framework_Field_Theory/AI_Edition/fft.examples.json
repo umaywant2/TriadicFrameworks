@@ -1,42 +1,69 @@
 {
-  "spec_version": "1.2.0",
-  "canon_id": "FFT-Examples",
-  "edition": "AI Edition",
-  "aa_mode": "AA2",
-  "last_refreshed": "2026-10-08T11:00:00",
-  "metadata": {
-    "title": "FFT – Field Examples (v1.2)",
-    "author_canon": "Nawder Loswin",
-    "updated_at": "2026-10-08T11:00:00"
+  "version": "1.33",
+  "updated": "2026-10-09T09:48:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
   },
+  "v133_status": "verified_and_stamped",
+  "id": "fft.examples",
+  "title": "FFT — Framework Examples v1.33",
   "examples": [
     {
-      "id": "ex.field.narrative",
-      "label": "Narrative Field Signal",
-      "type": "field.signal",
-      "content": "A temporal-narrative signal describing a structural drift event across three regime boundaries.",
-      "triad": { "T": "RTT3", "S": "field.signal", "M": "AA2" },
-      "expected_clarity": 0.82,
-      "expected_coherence": 0.88
+      "id": "FEX-001",
+      "domain": "AI Session",
+      "scenario": "Boot and coherence assertion",
+      "fields": {
+        "phi": 0.5,
+        "V": 0.3,
+        "R": 0.2
+      },
+      "action": "bootstrap → coherence=declared → R rises to 0.72"
     },
     {
-      "id": "ex.field.paradox",
-      "label": "Paradox-Dense Field Signal",
-      "type": "field.signal",
-      "content": "A self-contradictory temporal signal generating paradox density 0.48.",
-      "triad": { "T": "RTT8", "S": "field.signal", "M": "AA3" },
-      "expected_clarity": 0.51,
-      "expected_coherence": 0.63,
-      "expected_paradox_density": 0.48
+      "id": "FEX-002",
+      "domain": "Cosmology",
+      "scenario": "SET Quiet Substrate → Resonance Ignition",
+      "S": "uncoupled",
+      "E": "uncoupled",
+      "T": "no gradient",
+      "transition": "nabla_T forms → SET couples → R rises"
     },
     {
-      "id": "ex.field.structural",
-      "label": "Structural Lock Signal",
-      "type": "field.signal",
-      "content": "A well-formed structural signal with high coherence and no drift.",
-      "triad": { "T": "RTT3", "S": "field.signal", "M": "AA1" },
-      "expected_clarity": 0.93,
-      "expected_coherence": 0.95
+      "id": "FEX-003",
+      "domain": "Computation",
+      "scenario": "Multi-regime drift isolation",
+      "regimes": 3,
+      "delta_per_regime": "bounded",
+      "cross_coupling": "suppressed"
+    },
+    {
+      "id": "FEX-004",
+      "domain": "Paradox",
+      "scenario": "Anti-time inversion → PX-001 resolution",
+      "paradox": "PX-001",
+      "resolution": "field_isolation → re-coherence",
+      "result": "R restored"
+    },
+    {
+      "id": "FEX-005",
+      "domain": "QMROOT",
+      "scenario": "Module ancestry trace: session.context → 0D",
+      "trace": [
+        "3+1D",
+        "2D",
+        "1D",
+        "0D Silence seed"
+      ]
     }
+  ],
+  "invariants_checked": [
+    "INV-001",
+    "INV-003",
+    "INV-004",
+    "INV-005",
+    "INV-013"
   ]
 }

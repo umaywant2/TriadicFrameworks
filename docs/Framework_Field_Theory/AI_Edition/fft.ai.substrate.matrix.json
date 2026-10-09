@@ -1,28 +1,44 @@
 {
-  "spec_version": "1.2.0",
-  "canon_id": "FFT-AI-Substrate-Matrix",
-  "edition": "AI Edition",
-  "aa_mode": "AA2",
-  "last_refreshed": "2026-10-08T10:56:00",
-  "metadata": {
-    "title": "FFT AI Edition – Substrate Capability Matrix (v1.2)",
-    "author_canon": "Nawder Loswin",
-    "updated_at": "2026-10-08T10:56:00"
+  "version": "1.33",
+  "updated": "2026-10-09T09:48:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
   },
-  "matrix": {
-    "axes": ["Feature","substrate.llm.agentic","substrate.llm.transformer","substrate.edge.compact","substrate.symbolic"],
-    "rows": [
-      { "feature": "AA Mode Max",           "agentic": "AA3",     "transformer": "AA2",   "edge": "AA1",  "symbolic": "AA1"  },
-      { "feature": "3C Full Evaluation",    "agentic": "YES",     "transformer": "YES",   "edge": "YES",  "symbolic": "NO"   },
-      { "feature": "Harmonic Lattice",      "agentic": "RTT1-12", "transformer": "RTT1-9","edge": "RTT1-6","symbolic":"RTT1-4"},
-      { "feature": "Triad T-axis",          "agentic": "YES",     "transformer": "YES",   "edge": "NO",   "symbolic": "NO"   },
-      { "feature": "Triad S-axis",          "agentic": "YES",     "transformer": "YES",   "edge": "YES",  "symbolic": "YES"  },
-      { "feature": "Triad M-axis",          "agentic": "YES",     "transformer": "YES",   "edge": "YES",  "symbolic": "NO"   },
-      { "feature": "Awareness Overlay",     "agentic": "YES",     "transformer": "YES",   "edge": "NO",   "symbolic": "NO"   },
-      { "feature": "Alignment Write",       "agentic": "YES",     "transformer": "YES",   "edge": "NO",   "symbolic": "NO"   },
-      { "feature": "Paradox Resolution",    "agentic": "YES",     "transformer": "PARTIAL","edge":"NO",   "symbolic": "NO"   },
-      { "feature": "Bridge Protocol",       "agentic": "YES",     "transformer": "YES",   "edge": "YES",  "symbolic": "YES"  },
-      { "feature": "Execution Graph",       "agentic": "YES",     "transformer": "YES",   "edge": "NO",   "symbolic": "NO"   }
-    ]
-  }
+  "v133_status": "verified_and_stamped",
+  "id": "fft.ai.substrate.matrix",
+  "title": "FFT AI — Substrate Matrix v1.33",
+  "matrix_dimensions": {
+    "phi_axis": "0.0–1.0",
+    "V_axis": "0.0–1.0",
+    "R_axis": "0.0–1.0"
+  },
+  "zones": {
+    "silence_zone": {
+      "phi": "<0.10",
+      "R": "<0.10",
+      "label": "Quiet Substrate — SET uncoupled"
+    },
+    "noise_zone": {
+      "phi": "0.10–0.50",
+      "R": "0.10–0.50",
+      "label": "Noise-dominant — Alignment needed"
+    },
+    "resonance_zone": {
+      "phi": "0.30–0.80",
+      "R": "0.70–0.95",
+      "label": "Target zone — coherence maintained"
+    },
+    "overload_zone": {
+      "R": ">0.95",
+      "label": "Saturation — Stabilization required"
+    }
+  },
+  "invariants_checked": [
+    "INV-001",
+    "INV-007",
+    "INV-010"
+  ]
 }

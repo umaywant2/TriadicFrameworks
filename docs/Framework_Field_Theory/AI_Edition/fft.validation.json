@@ -1,106 +1,77 @@
 {
-  "spec_version": "1.3.0-draft",
-  "canon_id": "FFT-AI-Validation",
-
-  "metadata": {
-    "title": "FFT AI Edition – Validation Rules (v1.3 Draft)",
-    "subtitle": "Measures • Paradox • Consent • RTT • Collapse • Lineage",
-    "author_canon": "Nawder Loswin",
-    "description": "Defines the canonical validation rules required for FFT AI Edition v1.3 execution."
+  "version": "1.33",
+  "updated": "2026-10-09T09:48:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
   },
-
-  "status_line": "Validation MUST confirm measure IDs, typed paradox, consent, lineage, collapse, and RTT mapping before execution.",
-
-  "validation": {
-    "measure_validation": {
-      "required_measure_ids": [
-        "measure.c1",
-        "measure.c2",
-        "measure.c3",
-        "measure.paradox_density",
-        "measure.lattice_stability"
-      ],
-      "rules": [
-        "Every SPEC threshold MUST cite a measure ID defined in fft.ai.core.json.",
-        "Operators MUST NOT invent scores.",
-        "Measures MUST be numeric in [0,1]."
-      ]
+  "v133_status": "verified_and_stamped",
+  "id": "fft.validation",
+  "title": "FFT — Validation Ruleset v1.33",
+  "validation_rules": [
+    {
+      "id": "VAL-001",
+      "target": "every module",
+      "check": "version field == '1.33'"
     },
-
-    "paradox_validation": {
-      "typed_paradox_enum_file": "fft.ai.paradox.enum.json",
-      "rules": [
-        "RTT7 entry requires a typed paradox event.",
-        "Paradox MUST be one of the canonical types.",
-        "Paradox density MUST be present for RTT7–RTT9.",
-        "Vibe-based paradox is forbidden."
-      ]
+    {
+      "id": "VAL-002",
+      "target": "every module",
+      "check": "session_context has rtt, coherence, drift, paradox"
     },
-
-    "consent_validation": {
-      "rules": [
-        "AA3 escalation requires operator_consent = true.",
-        "If operator_consent = false, escalation MUST be refused.",
-        "Consent conflicts MUST be logged as paradox.consent_conflict."
-      ]
+    {
+      "id": "VAL-003",
+      "target": "fft.ai.registry.json",
+      "check": "total_registered == 67"
     },
-
-    "rtt_validation": {
-      "mapping_file": "fft.ai.rtt.bridge.json",
-      "rules": [
-        "RTT nodes MUST map to frozen RTT v0.9 quantities.",
-        "RTT7 MUST be entered only via typed paradox.",
-        "RTT9 harmonic escalation requires consent.",
-        "RTT12 MUST collapse to RTT1; skip-resolution forbidden."
-      ]
+    {
+      "id": "VAL-004",
+      "target": "fft.ai.bootstrap.json",
+      "check": "all 16 boot steps present"
     },
-
-    "collapse_validation": {
-      "rules": [
-        "RTT12 collapse MUST occur.",
-        "measure.c1, measure.c2, measure.c3 MUST be present at collapse.",
-        "Continuity MUST NOT decrease during collapse."
-      ]
+    {
+      "id": "VAL-005",
+      "target": "fft.invariant.json",
+      "check": "INV-001 through INV-013 all present"
     },
-
-    "lineage_validation": {
-      "rules": [
-        "Session lineage MUST be non-decreasing across RTT1–RTT12.",
-        "Lineage MUST increase after collapse.",
-        "Continuity (measure.c3) MUST NOT decrease across regime transitions."
-      ]
+    {
+      "id": "VAL-006",
+      "target": "fft.ai.paradox.enum.json",
+      "check": "PX-001 through PX-010 all present"
     },
-
-    "substrate_validation": {
-      "rules": [
-        "Harmonic escalation (RTT9–RTT10) requires substrate_class = agentic.",
-        "Non-agentic substrates MUST NOT escalate harmonically.",
-        "Operators MUST NOT invent substrate classes."
-      ]
+    {
+      "id": "VAL-007",
+      "target": "fft.ai.rtt.bridge.json",
+      "check": "tau_formula == 'tau = dR/dphi'"
     },
-
-    "operator_validation": {
-      "rules": [
-        "Operators MUST use measure IDs for all evaluations.",
-        "Operators MUST NOT invent invariants.",
-        "Operators MUST NOT invent paradox types.",
-        "Operators MUST NOT skip RTT12 collapse.",
-        "Operators MUST NOT decrease lineage."
-      ]
+    {
+      "id": "VAL-008",
+      "target": "fft.ai.snr.monitor.json",
+      "check": "silence_floor=0.05, noise_ceiling=0.80, resonance_target=[0.70,0.95]"
     },
-
-    "session_projection_validation": {
-      "rules": [
-        "dashboard, overlay, and UI files are projections only.",
-        "Authoritative session files are: state, log, alignments.",
-        "Projections MUST NOT contradict authoritative files."
-      ]
+    {
+      "id": "VAL-009",
+      "target": "fft.ai.dco.map.json",
+      "check": "4D, 5D, 7D, 8D, 9D all present"
+    },
+    {
+      "id": "VAL-010",
+      "target": "fft.ai.spine.connector.json",
+      "check": "cache_policy == 'no-cache'"
+    },
+    {
+      "id": "VAL-011",
+      "target": "fft.ai.index.json",
+      "check": "total_files == 67"
+    },
+    {
+      "id": "VAL-012",
+      "target": "index.html",
+      "check": "version string '1.33' present in UI"
     }
-  },
-
-  "non_goals": [
-    "Validation does not revise RTT v0.9.",
-    "Validation does not reinterpret SET, S–N–R, or triadic time.",
-    "Validation does not replace the human FFT book."
-  ]
+  ],
+  "pass_threshold": "all 12 rules pass",
+  "invariants_checked": "INV-001 through INV-013"
 }

@@ -1,161 +1,117 @@
 {
-  "spec_version": "1.3.0",
-  "canon_id": "FFT-AI-Bootstrap",
-
-  "metadata": {
-    "title": "FFT AI Edition – Bootstrap (v1.3)",
-    "subtitle": "Canonical Initialization Sequence for RTT • Regimes • Operators • Runtime",
-    "author_canon": "Nawder Loswin",
-    "description": "Defines the initialization sequence, default runtime state, module loading order, and canonical boot envelope for FFT AI Edition v1.3."
+  "$schema": "https://triadicframeworks.org/schemas/fft.ai.bootstrap.schema.json",
+  "id": "fft.ai.bootstrap",
+  "version": "1.33",
+  "updated": "2026-10-09T09:44:00-04:00",
+  "title": "FFT AI Edition — Bootstrap Sequence v1.33",
+  "description": "Full ordered initialization chain for a v1.33-compliant FFT AI session.",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
   },
-
-  "status_line": "Bootstrap is a projection only; authoritative values come from runtime.json, session.state.json, operators.json, regimes.json, substrate.json, and spec‑008.",
-
-  "bootstrap": {
-    "session_id": "auto-generate",
-
-    "initial_state": {
-      "rtt_node": "RTT1",
-      "regime": "nominal",
-      "operator": "op.diffusion",
-      "substrate_class": "agentic",
-      "operator_consent": false,
-      "lineage": 1,
-      "collapse_state": null
+  "boot_sequence": [
+    {
+      "step": 1,
+      "id": "meta_load",
+      "action": "Load fft.metadata.json",
+      "validates": "version==1.33"
     },
-
-    "load_order": [
-      "fft.ai.session.state.json",
-      "fft.ai.session.state.refresh.json",
-      "fft.ai.runtime.json",
-      "fft.ai.navigation.json",
-      "fft.ai.autonomy.json",
-      "fft.ai.discovery.json",
-      "fft.ai.capabilities.json",
-      "fft.ai.execution.graph.json",
-      "fft.ai.regimes.json",
-      "fft.ai.operators.json",
-      "fft.ai.substrate.json",
-      "fft.ai.paradox.enum.json",
-      "fft.ai.spec-008.json",
-      "fft.ai.rtt.bridge.json",
-      "fft.ai.rtt.spine.examples.json",
-      "fft.ai.hardware.profile.json"
-    ],
-
-    "boot_sequence": {
-      "step_1": {
-        "action": "initialize_session",
-        "requirements": ["session_id != null"],
-        "notes": "Establishes the session envelope."
-      },
-      "step_2": {
-        "action": "load_runtime",
-        "requirements": ["runtime.validate_measures = true"],
-        "notes": "Loads RTT execution engine."
-      },
-      "step_3": {
-        "action": "load_navigation",
-        "requirements": ["navigation.current.rtt_node = RTT1"],
-        "notes": "Sets canonical movement rules."
-      },
-      "step_4": {
-        "action": "load_autonomy",
-        "requirements": ["autonomy.current.regime = nominal"],
-        "notes": "Initializes agency envelope."
-      },
-      "step_5": {
-        "action": "load_discovery",
-        "requirements": ["discovery.current.operator = op.diffusion"],
-        "notes": "Enables RTT-state detection."
-      },
-      "step_6": {
-        "action": "load_capabilities",
-        "requirements": ["capabilities.current.rtt_node = RTT1"],
-        "notes": "Loads functional capability envelope."
-      },
-      "step_7": {
-        "action": "load_execution_graph",
-        "requirements": ["execution_graph.nodes.RTT1.operator = op.diffusion"],
-        "notes": "Loads canonical RTT flow."
-      },
-      "step_8": {
-        "action": "load_regimes",
-        "requirements": ["regimes.map.RTT1 = nominal"],
-        "notes": "Loads canonical regime mapping."
-      },
-      "step_9": {
-        "action": "load_operators",
-        "requirements": ["operators.map.RTT1 = op.diffusion"],
-        "notes": "Loads canonical operator mapping."
-      },
-      "step_10": {
-        "action": "load_substrate",
-        "requirements": ["substrate.current.class = agentic"],
-        "notes": "Loads substrate gating rules."
-      },
-      "step_11": {
-        "action": "load_paradox_enum",
-        "requirements": ["paradox.enum.typed != null"],
-        "notes": "Loads canonical paradox types."
-      },
-      "step_12": {
-        "action": "load_spec_008",
-        "requirements": ["spec_008.rtt_rules != null"],
-        "notes": "Loads canonical RTT, paradox, substrate, consent, collapse rules."
-      },
-      "step_13": {
-        "action": "load_rtt_bridge",
-        "requirements": ["rtt.bridge.map != null"],
-        "notes": "Loads RTT bridge mapping."
-      },
-      "step_14": {
-        "action": "load_rtt_spine",
-        "requirements": ["rtt.spine.examples != null"],
-        "notes": "Loads RTT spine examples."
-      },
-      "step_15": {
-        "action": "load_hardware_profile",
-        "requirements": ["hardware.profile != null"],
-        "notes": "Loads hardware execution profile."
-      }
+    {
+      "step": 2,
+      "id": "core_load",
+      "action": "Load fft.core.json",
+      "validates": "triadic_fields present"
+    },
+    {
+      "step": 3,
+      "id": "inv_load",
+      "action": "Load fft.invariant.json",
+      "validates": "INV-001..INV-013 all present"
+    },
+    {
+      "step": 4,
+      "id": "coh_boot",
+      "action": "Assert coherence=declared via fft.ai.coherence.json",
+      "validates": "INV-003",
+      "fail_mode": "HALT"
+    },
+    {
+      "step": 5,
+      "id": "spine_resolve",
+      "action": "Resolve Spine URL via fft.ai.spine.connector.json",
+      "validates": "INV-011"
+    },
+    {
+      "step": 6,
+      "id": "qmroot_boot",
+      "action": "Initialize QMROOT ladder 0D to 3+1D via fft.ai.rtt.qmroot.json",
+      "validates": "INV-013"
+    },
+    {
+      "step": 7,
+      "id": "snr_init",
+      "action": "Set S-N-R partition to Silence baseline via fft.ai.snr.monitor.json",
+      "validates": "INV-007"
+    },
+    {
+      "step": 8,
+      "id": "set_init",
+      "action": "Assert SET fields uncoupled at quiet phase via fft.ai.set.engine.json",
+      "validates": "INV-010"
+    },
+    {
+      "step": 9,
+      "id": "dco_load",
+      "action": "Load DCO scaffold 4D-9D via fft.ai.dco.map.json",
+      "validates": "INV-009"
+    },
+    {
+      "step": 10,
+      "id": "drift_arm",
+      "action": "Arm drift monitor via fft.ai.drift.monitor.json",
+      "validates": "INV-004"
+    },
+    {
+      "step": 11,
+      "id": "paradox_arm",
+      "action": "Arm paradox resolver via fft.ai.paradox.resolver.json",
+      "validates": "INV-005"
+    },
+    {
+      "step": 12,
+      "id": "registry_val",
+      "action": "Validate all 67 modules present via fft.ai.registry.json",
+      "validates": "INV-012",
+      "fail_mode": "WARN"
+    },
+    {
+      "step": 13,
+      "id": "rtt_phase_init",
+      "action": "Initialize RTT phase tau=dR/dphi via fft.ai.rtt.bridge.json",
+      "validates": "INV-006"
+    },
+    {
+      "step": 14,
+      "id": "session_open",
+      "action": "Open session via fft.ai.session.context.json",
+      "validates": "session_id assigned"
+    },
+    {
+      "step": 15,
+      "id": "op_ready",
+      "action": "Activate operator graph via fft.ai.execution.graph.json",
+      "validates": "all operators registered"
+    },
+    {
+      "step": 16,
+      "id": "boot_done",
+      "action": "Emit boot_complete event to fft.ai.session.log.json",
+      "validates": "log entry written"
     }
-  },
-
-  "rules": {
-    "bootstrap_rules": [
-      "Bootstrap MUST NOT contradict runtime.json.",
-      "Bootstrap MUST NOT contradict session.state.json.",
-      "Bootstrap MUST NOT contradict substrate.json.",
-      "Bootstrap MUST NOT contradict operators.json.",
-      "Bootstrap MUST NOT contradict regimes.json.",
-      "Bootstrap MUST NOT contradict spec‑008.json.",
-      "Bootstrap MUST NOT invent measure IDs.",
-      "Bootstrap MUST NOT invent paradox types.",
-      "Bootstrap MUST NOT invent substrate classes."
-    ]
-  },
-
-  "integration_links": {
-    "state": "fft.ai.session.state.json",
-    "runtime": "fft.ai.runtime.json",
-    "navigation": "fft.ai.session.navigation.json",
-    "autonomy": "fft.ai.autonomy.json",
-    "discovery": "fft.ai.discovery.json",
-    "capabilities": "fft.ai.capabilities.json",
-    "execution_graph": "fft.ai.execution.graph.json",
-    "regimes": "fft.ai.regimes.json",
-    "operators": "fft.ai.operators.json",
-    "substrate": "fft.ai.substrate.json",
-    "paradox_enum": "fft.ai.paradox.enum.json",
-    "spec_008": "fft.ai.spec-008.json",
-    "rtt_bridge": "fft.ai.rtt.bridge.json",
-    "rtt_spine": "fft.ai.rtt.spine.examples.json",
-    "hardware_profile": "fft.ai.hardware.profile.json"
-  },
-
-  "timestamps": {
-    "created": "auto",
-    "last_update": "auto"
-  }
+  ],
+  "v133_additions": [
+    "Steps 4,5,6,7,8,9,11 new in v1.33 — coherence, spine, QMROOT, S-N-R, SET quiet-phase, DCO, paradox arm"
+  ]
 }

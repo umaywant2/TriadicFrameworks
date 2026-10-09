@@ -1,140 +1,62 @@
 {
-  "spec_version": "1.3.0",
-  "canon_id": "FFT-AI-Session-Analytics",
-
-  "metadata": {
-    "title": "FFT AI Edition – Session Analytics (v1.3)",
-    "subtitle": "Derived Metrics for RTT • Regime • Measures • Paradox • Consent • Collapse",
-    "author_canon": "Nawder Loswin",
-    "description": "Defines the non-authoritative analytics projection for FFT AI Edition v1.3."
+  "version": "1.33",
+  "updated": "2026-10-09T09:46:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
   },
-
-  "status_line": "Analytics is a projection only; authoritative values come from session.state, alignments, context, log, dashboard, overlay, history, analytics, navigation, permissions, profile, trace, and render.",
-
-  "analytics": {
-    "session_id": "inherit-from-session.state",
-
-    "derived": {
-      "coherence_score": {
-        "source": "measure.c1",
-        "value": 0.80,
-        "label": "Coherence Score",
-        "notes": "Direct projection of measure.c1; MUST NOT transform."
-      },
-
-      "clarity_score": {
-        "source": "measure.c2",
-        "value": 0.80,
-        "label": "Clarity Score",
-        "notes": "Direct projection of measure.c2."
-      },
-
-      "continuity_score": {
-        "source": "measure.c3",
-        "value": 0.80,
-        "label": "Continuity Score",
-        "notes": "Direct projection of measure.c3; MUST NOT decrease across transitions."
-      },
-
-      "stability_index": {
-        "source": "measure.lattice_stability",
-        "value": 1.00,
-        "label": "Lattice Stability Index",
-        "notes": "Projection only; authoritative value comes from session.state."
-      },
-
-      "paradox_intensity": {
-        "source": "measure.paradox_density",
-        "value": 0.00,
-        "label": "Paradox Intensity",
-        "notes": "Typed paradox required for RTT7 entry; density MUST be canonical."
-      },
-
-      "harmonic_viability": {
-        "value": false,
-        "label": "Harmonic Viability",
-        "rules": [
-          "measure.paradox_density >= 0.10",
-          "measure.lattice_stability >= 0.60",
-          "substrate_class = agentic",
-          "operator_consent = true"
-        ],
-        "notes": "Projection only; MUST NOT override authoritative state."
-      },
-
-      "collapse_readiness": {
-        "value": false,
-        "label": "Collapse Readiness",
-        "rules": [
-          "rtt_node = RTT12",
-          "measure.c1 >= 0.80",
-          "measure.c2 >= 0.80",
-          "measure.c3 >= 0.80"
-        ],
-        "notes": "Projection only; collapse MUST return to RTT1."
+  "id": "fft.ai.session.analytics",
+  "title": "FFT AI Session — Analytics v1.33",
+  "metrics": {
+    "R_mean": "rolling mean of R over session",
+    "R_variance": "variance of R — high variance = instability",
+    "tau_trend": "slope of tau over time — positive = coherence building",
+    "drift_events": {
+      "count": 0,
+      "last_ts": null,
+      "max_delta_seen": null,
+      "new_v1_33": true
+    },
+    "paradox_events": {
+      "count": 0,
+      "types_seen": [],
+      "resolution_rate": null,
+      "new_v1_33": true
+    },
+    "snr_history": {
+      "snapshots": [],
+      "imbalance_events": 0,
+      "new_v1_33": true
+    },
+    "set_activations": {
+      "S_events": 0,
+      "E_events": 0,
+      "T_events": 0,
+      "new_v1_33": true
+    },
+    "coherence_breaks": {
+      "count": 0,
+      "recovery_time_mean": null,
+      "new_v1_33": true
+    },
+    "operator_counts": {
+      "by_family": {
+        "Diffusion": 0,
+        "Alignment": 0,
+        "Coupling": 0,
+        "Activation": 0,
+        "Stabilization": 0
       }
-    }
+    },
+    "session_duration": null
   },
-
-  "rules": {
-    "analytics_rules": [
-      "Analytics MUST NOT contradict session.state.json.",
-      "Analytics MUST NOT contradict substrate.json.",
-      "Analytics MUST NOT contradict operators.json.",
-      "Analytics MUST NOT contradict regimes.json.",
-      "Analytics MUST NOT contradict spec‑008.json.",
-      "Analytics MUST NOT invent measure IDs.",
-      "Analytics MUST NOT invent paradox types.",
-      "Analytics MUST NOT invent substrate classes."
-    ],
-
-    "measure_rules": [
-      "measure.c1 >= 0.80 required for RTT1, RTT4, RTT10.",
-      "measure.c2 >= 0.80 required for RTT2, RTT5, RTT10.",
-      "measure.c3 >= 0.80 required for RTT3, RTT6, RTT11.",
-      "measure.paradox_density >= 0.10 required for RTT7.",
-      "measure.lattice_stability >= 0.60 required for RTT8."
-    ],
-
-    "paradox_rules": [
-      "Typed paradox required for RTT7.",
-      "Paradox density >= 0.10 required for RTT7.",
-      "Lattice stability >= 0.60 required for RTT8.",
-      "Untyped paradox forbidden."
-    ],
-
-    "consent_rules": [
-      "operator_consent = true required for RTT9–RTT12.",
-      "Implicit or assumed consent forbidden."
-    ],
-
-    "collapse_rules": [
-      "RTT12 MUST collapse to RTT1.",
-      "Lineage MUST increment after collapse.",
-      "Collapse to non-RTT1 forbidden."
-    ]
-  },
-
-  "integration_links": {
-    "state": "fft.ai.session.state.json",
-    "context": "fft.ai.session.context.json",
-    "alignments": "fft.ai.session.alignments.json",
-    "log": "fft.ai.session.log.json",
-    "dashboard": "fft.ai.session.dashboard.json",
-    "overlay": "fft.ai.session.overlay.json",
-    "history": "fft.ai.session.history.json",
-    "analytics": "fft.ai.session.analytics.json",
-    "navigation": "fft.ai.session.navigation.json",
-    "permissions": "fft.ai.session.permissions.json",
-    "profile": "fft.ai.session.profile.json",
-    "awareness": "fft.ai.session.awareness.json",
-    "trace": "fft.ai.session.trace.json",
-    "render": "fft.ai.session.render.json",
-    "ui": "fft.ai.session.ui.json"
-  },
-
-  "timestamps": {
-    "created": "auto",
-    "last_update": "auto"
-  }
+  "v133_additions": [
+    "drift_events tracking",
+    "paradox_events tracking",
+    "snr_history",
+    "set_activations",
+    "coherence_breaks"
+  ]
 }

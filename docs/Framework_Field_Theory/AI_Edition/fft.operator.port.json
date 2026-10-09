@@ -1,36 +1,35 @@
 {
-  "spec_version": "1.2.0",
-  "canon_id": "FFT-Operator-Port",
-  "edition": "AI Edition",
-  "aa_mode": "AA2",
-  "last_refreshed": "2026-10-08T11:00:00",
-  "metadata": {
-    "title": "FFT – Operator Port Definitions (v1.2)",
-    "author_canon": "Nawder Loswin",
-    "updated_at": "2026-10-08T11:00:00"
+  "version": "1.33",
+  "updated": "2026-10-09T09:48:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
   },
-  "port_types": {
-    "input_ports": [
-      { "type": "field.signal",          "description": "Raw field signal batch input.",               "cardinality": "1..N" },
-      { "type": "metric.coherence",      "description": "C1 coherence score input.",                   "cardinality": "1"    },
-      { "type": "metric.clarity",        "description": "C2 clarity metric input.",                    "cardinality": "1"    },
-      { "type": "metric.continuity",     "description": "C3 continuity metric input.",                 "cardinality": "1"    },
-      { "type": "metric.harmonic",       "description": "Harmonic metric from RTT7–RTT12.",            "cardinality": "1"    },
-      { "type": "field_state",           "description": "Evaluated field state token.",               "cardinality": "1"    },
-      { "type": "triad_position",        "description": "Resolved (T,S,M) triad coordinate.",         "cardinality": "1"    },
-      { "type": "awareness_snapshot",    "description": "Output of op.awareness.update.",             "cardinality": "1"    }
-    ],
-    "output_ports": [
-      { "type": "metric.clarity",        "description": "Computed C2 clarity value.",                 "range": "0.0–1.0"    },
-      { "type": "metric.coherence",      "description": "Measured C1 coherence value.",               "range": "0.0–1.0"    },
-      { "type": "metric.continuity",     "description": "Measured C3 continuity value.",              "range": "0.0–1.0"    },
-      { "type": "metric.harmonic",       "description": "Harmonic paradox intensity.",                "range": "0.0–1.0"    },
-      { "type": "field_state",           "description": "nominal | degraded | critical.",             "range": "enum"       },
-      { "type": "triad_position",        "description": "Resolved (T,S,M) coordinate object.",       "range": "object"     },
-      { "type": "awareness_snapshot",    "description": "Updated awareness layer state.",             "range": "object"     },
-      { "type": "alignment_record",      "description": "Written alignment record with quality.",     "range": "object"     },
-      { "type": "drift_state",           "description": "bounded | unbounded.",                       "range": "enum"       },
-      { "type": "coherence_baseline",    "description": "Updated coherence baseline after RTT12.",   "range": "0.0–1.0"    }
-    ]
-  }
+  "v133_status": "verified_and_stamped",
+  "id": "fft.operator.port",
+  "title": "FFT — Operator Port Map v1.33",
+  "ports": {
+    "D_in": "phi (scalar field)",
+    "D_out": "phi_smooth",
+    "A_in": "V (vector field)",
+    "A_out": "V_aligned",
+    "K_in": "phi, V",
+    "K_out": "R_delta",
+    "Th_in": "R",
+    "Th_out": "R_activated",
+    "Sg_in": "R",
+    "Sg_out": "R_stable"
+  },
+  "port_rules": [
+    "No operator may write to a port not in its D_out/A_out/K_out/Th_out/Sg_out",
+    "Drift cost tracked per port write",
+    "Coherence gate evaluated before any port write"
+  ],
+  "invariants_checked": [
+    "INV-001",
+    "INV-003",
+    "INV-004"
+  ]
 }

@@ -1,136 +1,94 @@
 {
-  "spec_version": "1.3.0-draft",
-  "canon_id": "FFT-AI-Spec",
-
-  "metadata": {
-    "title": "FFT AI Edition – Specification (v1.3 Draft)",
-    "subtitle": "Normative Gates • Measures • Regimes • RTT • AA Levels",
-    "author_canon": "Nawder Loswin",
-    "description": "Defines the normative rules governing FFT AI Edition v1.3, including load order, measures, invariants, regime transitions, RTT lattice, paradox handling, and AA-level semantics."
+  "$schema": "https://triadicframeworks.org/schemas/fft.ai.spec.schema.json",
+  "id": "fft.ai.spec",
+  "version": "1.33",
+  "updated": "2026-10-09T09:41:00-04:00",
+  "title": "FFT AI Edition — Specification v1.33",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
   },
-
-  "status_line": {
-    "claim": "FFT AI Edition v1.3 is an operational projection of the human FFT book and frozen RTT v0.9.",
-    "non_claims": [
-      "This edition does not revise RTT v0.9.",
-      "This edition does not reinterpret SET, S–N–R, or triadic time.",
-      "This edition does not replace the human FFT book."
-    ]
-  },
-
-  "load_order": [
-    "fft.metadata.json",
-    "fft.ai.reader.json",
-    "fft.invariant.json",
-    "fft.ai.core.json",
-    "fft.ai.rtt.bridge.json",
-    "fft.ai.spec-008.json",
-    "fft.ai.substrate.compat.json",
-    "fft.ai.substrate.bridge.json",
-    "fft.ai.session.state.json",
-    "fft.ai.session.alignments.json",
-    "fft.ai.session.log.json"
+  "compliance_requirements": [
+    "All 67 modules present and registry-validated (INV-012)",
+    "coherence=declared asserted at session init (INV-003)",
+    "drift bounded within δ_max at all times (INV-004)",
+    "paradox states enumerated and structurally resolved (INV-005)",
+    "QMROOT ladder traceable from 0D for all modules (INV-013)",
+    "Spine URL resolved at runtime, not cached (INV-011)",
+    "S-N-R partition maintained without overlap (INV-007)",
+    "RTT phase τ=dR/dφ consistent across RTT-bound modules (INV-006)"
   ],
-
-  "measure_requirements": {
-    "required_measures": [
-      "measure.c1",
-      "measure.c2",
-      "measure.c3",
-      "measure.paradox_density",
-      "measure.lattice_stability"
-    ],
-    "rule": "Every threshold in this SPEC MUST cite a measure ID defined in fft.ai.core.json."
-  },
-
-  "invariants": {
-    "coherence_declared": "Coherence MUST be declared before any regime transition.",
-    "drift_bounded": "Drift MUST remain bounded for resonance-time stability.",
-    "typed_paradox_required": "RTT7 entry requires a typed paradox event.",
-    "aa3_consent": "AA3 escalation requires explicit operator consent.",
-    "collapse_required": "RTT12 MUST collapse to RTT1; skip-resolution forbidden.",
-    "continuity_non_decreasing": "measure.c3 MUST NOT decrease across regime transitions."
-  },
-
-  "regimes": {
-    "nominal": {
-      "description": "Stable coherence, bounded drift, no paradox.",
-      "entry_requirements": ["measure.c1 >= 0.80", "measure.c2 >= 0.80", "measure.c3 >= 0.80"]
+  "spec_sections": {
+    "S1": {
+      "title": "Field Definitions",
+      "ref": "fft.core.json#triadic_fields"
     },
-    "harmonic": {
-      "description": "Paradox present; harmonic escalation possible with consent.",
-      "entry_requirements": [
-        "typed_paradox_event",
-        "measure.paradox_density >= 0.10",
-        "measure.lattice_stability >= 0.60",
-        "operator_consent = true"
-      ]
+    "S2": {
+      "title": "Invariants",
+      "ref": "fft.invariant.json"
     },
-    "resolution": {
-      "description": "RTT10–RTT12; collapse required.",
-      "entry_requirements": ["measure.c1", "measure.c2", "measure.c3"]
+    "S3": {
+      "title": "Session Lifecycle",
+      "ref": "fft.ai.core.json#lifecycle"
+    },
+    "S4": {
+      "title": "Operator Dispatch",
+      "ref": "fft.ai.execution.graph.json"
+    },
+    "S5": {
+      "title": "RTT Integration",
+      "ref": "fft.ai.rtt.bridge.json"
+    },
+    "S6": {
+      "title": "Coherence Layer",
+      "ref": "fft.ai.coherence.json"
+    },
+    "S7": {
+      "title": "Drift Monitor",
+      "ref": "fft.ai.drift.monitor.json"
+    },
+    "S8": {
+      "title": "Paradox Resolution",
+      "ref": "fft.ai.paradox.resolver.json"
+    },
+    "S9": {
+      "title": "SET Engine",
+      "ref": "fft.ai.set.engine.json"
+    },
+    "S10": {
+      "title": "DCO Scaffold",
+      "ref": "fft.ai.dco.map.json"
+    },
+    "S11": {
+      "title": "S-N-R Monitor",
+      "ref": "fft.ai.snr.monitor.json"
+    },
+    "S12": {
+      "title": "Spine Connector",
+      "ref": "fft.ai.spine.connector.json"
+    },
+    "S13": {
+      "title": "QMROOT Integration",
+      "ref": "fft.ai.rtt.qmroot.json"
+    },
+    "S14": {
+      "title": "Extension Packs",
+      "ref": "ep.harmonic_escalation.json"
+    },
+    "S15": {
+      "title": "Substrate Layer",
+      "ref": "fft.ai.substrate.json"
+    },
+    "S16": {
+      "title": "Validation",
+      "ref": "fft.validation.json"
     }
   },
-
-  "rtt_lattice": {
-    "nodes": 12,
-    "mapping_file": "fft.ai.rtt.bridge.json",
-    "rules": {
-      "rtt7_entry": {
-        "requires": ["typed_paradox_event", "measure.paradox_density"],
-        "forbids": ["vibe_paradox", "implicit_paradox"]
-      },
-      "aa3_escalation": {
-        "requires": ["inv.aa3.consent", "measure.lattice_stability"],
-        "branch": {
-          "if_consent_true": "Escalate to harmonic operator.",
-          "if_consent_false": "Hold at AA2, log paradox event, stop dispatch."
-        }
-      },
-      "rtt12_collapse": {
-        "requires": ["measure.c1", "measure.c2", "measure.c3"],
-        "rule": "RTT12 MUST collapse to RTT1; skip-resolution forbidden."
-      }
-    }
-  },
-
-  "paradox": {
-    "typed_paradox_enum_file": "fft.ai.paradox.enum.json",
-    "typed_only": "Paradox MUST be one of the canonical types; no invented types allowed.",
-    "density_gate": {
-      "id": "measure.paradox_density",
-      "threshold_max": 0.40
-    }
-  },
-
-  "aa_levels": {
-    "AA0": "No awareness; substrate unverified.",
-    "AA1": "Awareness only; no alignment.",
-    "AA2": "Awareness + alignment; paradox handling allowed.",
-    "AA3": "Harmonic escalation permitted ONLY with operator_consent = true."
-  },
-
-  "operator_contract": {
-    "must": [
-      "Use measure IDs for all evaluations.",
-      "Refuse escalation without consent.",
-      "Refuse execution if substrate is unverified.",
-      "Refuse invented scores or invariants.",
-      "Honor RTT12 collapse."
-    ],
-    "must_not": [
-      "Invent paradox types.",
-      "Skip RTT12 collapse.",
-      "Decrease lineage across RTT nodes.",
-      "Invent substrate classes."
-    ]
-  },
-
-  "reader_contract_reference": "fft.ai.reader.json",
-
-  "session_rules": {
-    "lineage_non_decreasing": "Session lineage MUST NOT decrease across RTT1–RTT12.",
-    "continuity_non_decreasing": "measure.c3 MUST NOT decrease across regime transitions.",
-    "rewind_mapping": "RTT11 inversion maps directly to frozen RTT rewind."
-  }
+  "v133_delta": [
+    "Sections S6–S13 new in v1.33",
+    "All session modules updated with coherence/drift/paradox fields",
+    "67-module file count enforced"
+  ]
 }

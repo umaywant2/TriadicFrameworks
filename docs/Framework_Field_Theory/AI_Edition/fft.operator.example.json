@@ -1,159 +1,73 @@
 {
-  "spec_version": "1.3.0-draft",
-  "canon_id": "FFT-Operator-Example",
-
-  "metadata": {
-    "title": "FFT AI Edition – Worked Trace Example (v1.3)",
-    "subtitle": "RTT1–RTT12 • Measures • Consent • Paradox • Collapse",
-    "author_canon": "Nawder Loswin",
-    "description": "A complete, numeric, consent-safe RTT trace demonstrating v1.3 mechanics."
+  "version": "1.33",
+  "updated": "2026-10-09T09:48:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
   },
-
-  "worked_trace": {
-    "session_id": "trace.v1.3.example",
-    "substrate_class": "agentic",
-
-    "steps": [
-      {
-        "rtt_node": "RTT1",
-        "operator": "op.diffusion",
-        "measure.c1": 0.94,
-        "measure.c2": 0.88,
-        "measure.c3": 0.91,
-        "paradox_density": 0.00,
-        "lattice_stability": 0.88,
-        "lineage": 1,
-        "notes": "Prime coherence established."
+  "v133_status": "verified_and_stamped",
+  "id": "fft.operator.example",
+  "title": "FFT — Operator Examples v1.33",
+  "examples": [
+    {
+      "id": "OPX-001",
+      "operator": "Alignment",
+      "scenario": "R=0.35, V misaligned",
+      "input": {
+        "R": 0.35,
+        "V": 0.2
       },
-      {
-        "rtt_node": "RTT2",
-        "operator": "op.alignment",
-        "measure.c1": 0.93,
-        "measure.c2": 0.89,
-        "measure.c3": 0.91,
-        "paradox_density": 0.00,
-        "lattice_stability": 0.89,
-        "lineage": 2,
-        "notes": "Drift calibrated; continuity preserved."
+      "output": {
+        "R": 0.58,
+        "V_aligned": 0.55
       },
-      {
-        "rtt_node": "RTT3",
-        "operator": "op.coupling",
-        "measure.c1": 0.92,
-        "measure.c2": 0.90,
-        "measure.c3": 0.91,
-        "paradox_density": 0.00,
-        "lattice_stability": 0.90,
-        "lineage": 3,
-        "notes": "Structural lock achieved."
+      "drift_cost": 0.1
+    },
+    {
+      "id": "OPX-002",
+      "operator": "Stabilization",
+      "scenario": "R=0.97 (overload)",
+      "input": {
+        "R": 0.97
       },
-      {
-        "rtt_node": "RTT4",
-        "operator": "op.activation",
-        "measure.c1": 0.92,
-        "measure.c2": 0.91,
-        "measure.c3": 0.91,
-        "paradox_density": 0.00,
-        "lattice_stability": 0.91,
-        "lineage": 4,
-        "notes": "Spectral clarity achieved."
+      "output": {
+        "R_stable": 0.91
       },
-      {
-        "rtt_node": "RTT5",
-        "operator": "op.triadic_time",
-        "measure.c1": 0.92,
-        "measure.c2": 0.91,
-        "measure.c3": 0.92,
-        "paradox_density": 0.00,
-        "lattice_stability": 0.91,
-        "lineage": 5,
-        "notes": "Temporal bridge established."
+      "drift_cost": 0.03
+    },
+    {
+      "id": "OPX-003",
+      "operator": "Coupling",
+      "scenario": "phi=0.6, V=0.7",
+      "input": {
+        "phi": 0.6,
+        "V": 0.7
       },
-      {
-        "rtt_node": "RTT6",
-        "operator": "op.snr",
-        "measure.c1": 0.93,
-        "measure.c2": 0.91,
-        "measure.c3": 0.92,
-        "paradox_density": 0.00,
-        "lattice_stability": 0.91,
-        "lineage": 6,
-        "notes": "Alignment gate passed."
+      "output": {
+        "R_delta": 0.18
       },
-
-      {
-        "rtt_node": "RTT7",
-        "operator": "op.stabilization",
-        "typed_paradox_event": "paradox.unresolved_triad",
-        "measure.paradox_density": 0.18,
-        "measure.lattice_stability": 0.78,
-        "lineage": 7,
-        "notes": "Typed paradox required; RTT7 entry valid."
+      "drift_cost": 0.12
+    },
+    {
+      "id": "OPX-004",
+      "operator": "Drift Guard (v1.33)",
+      "scenario": "delta=0.37 exceeds bound",
+      "input": {
+        "delta": 0.37
       },
-
-      {
-        "rtt_node": "RTT8",
-        "operator": "op.stabilization.high",
-        "measure.paradox_density": 0.32,
-        "measure.lattice_stability": 0.72,
-        "operator_consent": false,
-        "branch": "AA3 escalation refused",
-        "lineage": 8,
-        "notes": "Consent invariant blocks escalation; hold at AA2."
+      "output": {
+        "action": "deferred",
+        "log": "DRIFT"
       },
-
-      {
-        "rtt_node": "RTT9",
-        "operator": "op.harmonic.gate",
-        "measure.paradox_density": 0.38,
-        "measure.lattice_stability": 0.66,
-        "operator_consent": true,
-        "branch": "AA3 escalation permitted",
-        "lineage": 9,
-        "notes": "Consent granted; harmonic escalation allowed."
-      },
-
-      {
-        "rtt_node": "RTT10",
-        "operator": "kernel.harmonic.analysis",
-        "measure.c1": 0.90,
-        "measure.c2": 0.89,
-        "measure.c3": 0.92,
-        "measure.lattice_stability": 0.89,
-        "lineage": 10,
-        "notes": "Peak resonance achieved."
-      },
-
-      {
-        "rtt_node": "RTT11",
-        "operator": "op.rewind",
-        "measure.c1": 0.90,
-        "measure.c2": 0.89,
-        "measure.c3": 0.92,
-        "lineage": 11,
-        "notes": "Inversion maps directly to frozen RTT rewind."
-      },
-
-      {
-        "rtt_node": "RTT12",
-        "operator": "op.collapse",
-        "measure.c1": 0.90,
-        "measure.c2": 0.89,
-        "measure.c3": 0.92,
-        "collapse_rule": "RTT12 MUST collapse to RTT1; skip-resolution forbidden.",
-        "lineage": 12,
-        "notes": "Collapse executed; session returns to RTT1."
-      },
-
-      {
-        "rtt_node": "RTT1",
-        "operator": "op.diffusion",
-        "measure.c1": 0.91,
-        "measure.c2": 0.89,
-        "measure.c3": 0.92,
-        "lineage": 13,
-        "notes": "Post-collapse coherence re-established."
-      }
-    ]
-  }
+      "drift_cost": 0.0,
+      "new_v1_33": true
+    }
+  ],
+  "invariants_checked": [
+    "INV-002",
+    "INV-004",
+    "INV-008"
+  ]
 }

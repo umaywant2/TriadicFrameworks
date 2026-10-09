@@ -1,122 +1,119 @@
 {
-  "spec_version": "1.3.0",
-  "canon_id": "FFT-AI-Overview",
-
-  "metadata": {
-    "title": "FFT AI Edition – Overview (v1.3)",
-    "subtitle": "Conceptual Map of Architecture • Layers • Runtime • Session • Substrate • Operators • RTT",
-    "author_canon": "Nawder Loswin",
-    "description": "Defines the canonical overview projection for FFT AI Edition v1.3."
+  "id": "fft.ai.overview",
+  "version": "1.33",
+  "updated": "2026-10-09T09:44:00-04:00",
+  "title": "FFT AI Edition — Overview v1.33",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
   },
-
-  "status_line": "Overview is a projection only; authoritative values come from manifest, registry, index, and module specifications.",
-
-  "overview": {
-    "edition": "AI Edition",
-    "aa_mode": "AA3",
-    "version": "1.3.0",
-
-    "architecture": {
-      "core": {
-        "description": "Foundational kernel of FFT AI Edition.",
-        "modules": [
-          "fft.ai.core.json",
-          "fft.ai.core_v1_2_.json",
-          "fft.ai.spec.json",
-          "fft.ai.spec-008.json",
-          "fft.ai.manifest.json",
-          "fft.ai.index.json",
-          "fft.ai.readme.json",
-          "fft.metadata.json"
-        ]
-      },
-
-      "substrate_runtime": {
-        "description": "Execution substrate, compatibility, lattice, matrix, and runtime.",
-        "modules": [
-          "fft.ai.substrate.json",
-          "fft.ai.substrate.compat.json",
-          "fft.ai.substrate.bridge.json",
-          "fft.ai.substrate.lattice.json",
-          "fft.ai.substrate.matrix.json",
-          "fft.ai.runtime.json",
-          "fft.ai.hardware.profile.json",
-          "fft.ai.bootstrap.json",
-          "fft.ai.integrations.json",
-          "fft.ai.discovery.json",
-          "fft.ai.execution.graph.json",
-          "fft.ai.capabilities.json",
-          "fft.ai.reader.json",
-          "fft.ai.overview.json",
-          "fft.ai.registry.json"
-        ]
-      },
-
-      "session_layer": {
-        "description": "Full session model including state, context, alignments, log, dashboard, overlay, history, UI, profile, analytics, awareness, navigation, permissions, render, and trace.",
-        "modules": [
-          "fft.ai.session.state.json",
-          "fft.ai.session.state.refresh.json",
-          "fft.ai.session.context.json",
-          "fft.ai.session.alignments.json",
-          "fft.ai.session.log.json",
-          "fft.ai.session.trace.json",
-          "fft.ai.session.dashboard.json",
-          "fft.ai.session.overlay.json",
-          "fft.ai.session.history.json",
-          "fft.ai.session.ui.json",
-          "fft.ai.session.profile.json",
-          "fft.ai.session.analytics.json",
-          "fft.ai.session.awareness.json",
-          "fft.ai.session.navigation.json",
-          "fft.ai.session.permissions.json",
-          "fft.ai.session.render.json"
-        ]
-      },
-
-      "operators_structures": {
-        "description": "Operators, regimes, invariants, structures, validation, examples, paradox enumeration.",
-        "modules": [
-          "fft.ai.operators.json",
-          "fft.operator.example.json",
-          "fft.operator.port.json",
-          "fft.structures.json",
-          "fft.regimes.json",
-          "fft.invariant.json",
-          "fft.validation.json",
-          "fft.examples.json",
-          "fft.ai.paradox.enum.json",
-          "fft.ai.rtt.bridge.json",
-          "fft.ai.rtt.spine.examples.json",
-          "fft.ai.rtt.engine.prompts.json"
-        ]
-      }
+  "summary": "FFT AI Edition v1.33 is the resonance-compliant AI module set for Framework Field Theory. It binds RTT, SET, QMROOT, and the triadic field model into a coherent, drift-bounded, paradox-aware session architecture.",
+  "architecture_layers": [
+    {
+      "layer": "Foundation",
+      "files": [
+        "fft.core.json",
+        "fft.invariant.json",
+        "fft.metadata.json"
+      ]
+    },
+    {
+      "layer": "AI Core",
+      "files": [
+        "fft.ai.core.json",
+        "fft.ai.bootstrap.json",
+        "fft.ai.manifest.json",
+        "fft.ai.index.json"
+      ]
+    },
+    {
+      "layer": "Coherence",
+      "files": [
+        "fft.ai.coherence.json",
+        "fft.ai.drift.monitor.json",
+        "fft.ai.paradox.resolver.json"
+      ],
+      "new_v1_33": true
+    },
+    {
+      "layer": "RTT",
+      "files": [
+        "fft.ai.rtt.bridge.json",
+        "fft.ai.rtt.qmroot.json",
+        "fft.ai.rtt.spine.examples.json",
+        "fft.ai.rtt.engine.prompts.json"
+      ]
+    },
+    {
+      "layer": "SET+DCO+SNR",
+      "files": [
+        "fft.ai.set.engine.json",
+        "fft.ai.dco.map.json",
+        "fft.ai.snr.monitor.json"
+      ],
+      "new_v1_33": true
+    },
+    {
+      "layer": "Operators",
+      "files": [
+        "fft.ai.operators.json",
+        "fft.operators.json",
+        "fft.operator.port.json",
+        "fft.operator.example.json",
+        "fft.ai.execution.graph.json"
+      ]
+    },
+    {
+      "layer": "Session",
+      "files": [
+        "fft.ai.session.context.json",
+        "fft.ai.session.state.json",
+        "fft.ai.session.awareness.json",
+        "fft.ai.session.alignments.json",
+        "fft.ai.session.analytics.json",
+        "fft.ai.session.trace.json",
+        "fft.ai.session.navigation.json",
+        "fft.ai.session.overlay.json",
+        "fft.ai.session.permissions.json",
+        "fft.ai.session.profile.json",
+        "fft.ai.session.render.json",
+        "fft.ai.session.ui.json",
+        "fft.ai.session.dashboard.json",
+        "fft.ai.session.log.json",
+        "fft.ai.session.history.json",
+        "fft.ai.session.state.refresh.json"
+      ]
+    },
+    {
+      "layer": "Substrate",
+      "files": [
+        "fft.ai.substrate.json",
+        "fft.ai.substrate.compat.json",
+        "fft.ai.substrate.bridge.json",
+        "fft.ai.substrate.lattice.json",
+        "fft.ai.substrate.matrix.json"
+      ]
+    },
+    {
+      "layer": "Spine",
+      "files": [
+        "fft.ai.spine.connector.json"
+      ],
+      "new_v1_33": true
+    },
+    {
+      "layer": "Extension",
+      "files": [
+        "ep.harmonic_escalation.json"
+      ]
     }
-  },
-
-  "rules": {
-    "overview_rules": [
-      "Overview MUST list all modules in manifest.json.",
-      "Overview MUST NOT invent module names.",
-      "Overview MUST NOT omit session-layer modules.",
-      "Overview MUST match registry.json.",
-      "Overview MUST match index.json.",
-      "Overview MUST match spec-008.json."
-    ]
-  },
-
-  "integration_links": {
-    "manifest": "fft.ai.manifest.json",
-    "registry": "fft.ai.registry.json",
-    "index": "fft.ai.index.json",
-    "runtime": "fft.ai.runtime.json",
-    "session_state": "fft.ai.session.state.json",
-    "session_trace": "fft.ai.session.trace.json",
-    "session_render": "fft.ai.session.render.json"
-  },
-
-  "timestamps": {
-    "created": "auto",
-    "last_update": "auto"
-  }
+  ],
+  "v133_additions": [
+    "Coherence layer (3 files)",
+    "SET+DCO+SNR layer (3 files)",
+    "Spine layer (1 file)",
+    "session context fields updated across all 16 session modules"
+  ]
 }

@@ -1,71 +1,77 @@
 {
-  "spec_version": "1.3.0",
-  "canon_id": "FFT-AI-Session-Dashboard",
-
-  "metadata": {
-    "title": "FFT AI Edition – Session Dashboard (v1.3)",
-    "subtitle": "RTT • Regime • Measures • Paradox • Consent • Substrate • Lineage",
-    "author_canon": "Nawder Loswin",
-    "description": "Defines the canonical dashboard projection for FFT AI Edition v1.3."
+  "version": "1.33",
+  "updated": "2026-10-09T09:46:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
   },
-
-  "status_line": "Dashboard is a projection only; authoritative values come from session.state, alignments, context, and log.",
-
-  "dashboard": {
-    "session_id": "inherit-from-session.state",
-
-    "rtt_node": "RTT1",
-    "regime": "nominal",
-    "substrate_class": "agentic",
-    "operator": "op.diffusion",
-    "operator_consent": false,
-    "lineage": 1,
-
-    "measures": {
-      "coherence": {
-        "id": "measure.c1",
-        "value": 0.80,
-        "status": "stable"
-      },
-      "clarity": {
-        "id": "measure.c2",
-        "value": 0.80,
-        "status": "stable"
-      },
-      "continuity": {
-        "id": "measure.c3",
-        "value": 0.80,
-        "status": "stable"
-      },
-      "paradox_density": {
-        "id": "measure.paradox_density",
-        "value": 0.00,
-        "status": "none"
-      },
-      "lattice_stability": {
-        "id": "measure.lattice_stability",
-        "value": 1.00,
-        "status": "stable"
-      }
+  "id": "fft.ai.session.dashboard",
+  "title": "FFT AI Session — Dashboard v1.33",
+  "widgets": [
+    {
+      "id": "W01",
+      "name": "Field Triad",
+      "component": "field_triad",
+      "position": "top-left"
     },
-
-    "paradox": {
-      "typed_paradox_events": [],
-      "status": "none"
+    {
+      "id": "W02",
+      "name": "RTT Tau Gauge",
+      "component": "tau_gauge",
+      "position": "top-center"
     },
-
-    "collapse_state": null,
-
-    "links": {
-      "state": "fft.ai.session.state.json",
-      "alignments": "fft.ai.session.alignments.json",
-      "context": "fft.ai.session.context.json",
-      "log": "fft.ai.session.log.json"
+    {
+      "id": "W03",
+      "name": "Coherence Badge",
+      "component": "coherence_badge",
+      "position": "top-right",
+      "new_v1_33": true
     },
-
-    "timestamps": {
-      "created": "auto",
-      "last_update": "auto"
+    {
+      "id": "W04",
+      "name": "Drift Meter",
+      "component": "drift_meter",
+      "position": "mid-left",
+      "new_v1_33": true
+    },
+    {
+      "id": "W05",
+      "name": "S-N-R Bar",
+      "component": "snr_bar",
+      "position": "mid-center",
+      "new_v1_33": true
+    },
+    {
+      "id": "W06",
+      "name": "Paradox Alert",
+      "component": "paradox_alert",
+      "position": "mid-right",
+      "new_v1_33": true
+    },
+    {
+      "id": "W07",
+      "name": "SET Triad",
+      "component": "set_triad",
+      "position": "bot-left",
+      "new_v1_33": true
+    },
+    {
+      "id": "W08",
+      "name": "DCO Indicator",
+      "component": "dco_indicator",
+      "position": "bot-center",
+      "new_v1_33": true
+    },
+    {
+      "id": "W09",
+      "name": "Operator Log",
+      "component": "operator_log",
+      "position": "bot-right"
     }
-  }
+  ],
+  "v133_additions": [
+    "W03-W08 all new in v1.33: coherence, drift, S-N-R, paradox, SET, DCO widgets"
+  ]
 }

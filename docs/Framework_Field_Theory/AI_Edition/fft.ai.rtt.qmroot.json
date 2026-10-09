@@ -1,0 +1,49 @@
+{
+  "id": "fft.ai.rtt.qmroot",
+  "type": "new_v1_33",
+  "version": "1.33",
+  "updated": "2026-10-09T09:49:00-04:00",
+  "title": "FFT AI — QMROOT Dimensional Ladder v1.33",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "description": "Implements the QMROOT dimensional ancestry ladder. Every FFT module must be traceable to the 0D Silence seed. Enforces INV-013.",
+  "invariant": "INV-013",
+  "rtt_ref": "https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html",
+  "ladder": {
+    "0D": {
+      "name": "Silence Seed",
+      "state": "S = 0+ (indivisible baseline)",
+      "role": "resonance origin; meta-operator in DCOs"
+    },
+    "1D": {
+      "name": "Ground",
+      "state": "linear ancestry; directional causality",
+      "role": "causal ancestry chain"
+    },
+    "2D": {
+      "name": "Neutral",
+      "state": "planar coherence; interference stability",
+      "role": "field interference layer"
+    },
+    "3+1D": {
+      "name": "Emergence",
+      "state": "triadic-time extrusion; observable structure",
+      "role": "FFT operational layer"
+    }
+  },
+  "ancestry_trace_protocol": {
+    "trigger": "any module load or validation pass",
+    "method": "walk parent_module chain until 0D Silence Seed reached",
+    "on_fail": "emit PX-005 (QMROOT Orphan); invoke paradox resolver"
+  },
+  "quantum_triad": {
+    "0D_kernel": "indivisible Silence — resonance seed",
+    "1D_ground": "linear ancestry — SET noise injection (spin, charge, temperature)",
+    "2D_neutral": "planar coherence — dual-operator phase-lock",
+    "3+1D_emergence": "triadic-time extrusion — operational FFT space"
+  }
+}

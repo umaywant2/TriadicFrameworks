@@ -1,47 +1,75 @@
 {
-  "spec_version": "1.2.0",
-  "canon_id": "FFT-Regimes",
-  "edition": "AI Edition",
-  "aa_mode": "AA2",
-  "last_refreshed": "2026-10-08T11:00:00",
-  "metadata": {
-    "title": "FFT – Regime Catalogue (v1.2)",
-    "author_canon": "Nawder Loswin",
-    "updated_at": "2026-10-08T11:00:00"
+  "version": "1.33",
+  "updated": "2026-10-09T09:48:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
   },
+  "v133_status": "verified_and_stamped",
+  "id": "fft.regimes",
+  "title": "FFT — Regime Definitions v1.33",
   "regimes": [
     {
-      "id": "regime.resonance-time.core",
-      "name": "Resonance-Time Core Regime",
-      "class": "resonance-time",
-      "lattice_nodes": ["RTT1","RTT2","RTT3","RTT4","RTT5","RTT6"],
-      "aa_mode_range": ["AA0","AA1","AA2"],
-      "3c_requirements": { "C1_min": 0.70, "C2_min": 0.65, "C3_min": 0.75 },
-      "constraints": ["coherence=declared","drift=bounded","paradox=structural"],
-      "entry_condition": "bootstrap complete",
-      "exit_condition": "paradox_density > 0.40 OR operator escalates to regime.harmonic.resonance"
+      "id": "RG-001",
+      "name": "Quiet Substrate",
+      "R_range": [
+        0.0,
+        0.1
+      ],
+      "SET": "uncoupled",
+      "dominant": "Silence"
     },
     {
-      "id": "regime.harmonic.resonance",
-      "name": "Harmonic Resonance Regime",
-      "class": "harmonic",
-      "lattice_nodes": ["RTT7","RTT8","RTT9","RTT10","RTT11","RTT12"],
-      "aa_mode_range": ["AA2","AA3"],
-      "3c_requirements": { "C1_min": 0.55, "C2_min": 0.50, "C3_min": 0.60 },
-      "constraints": ["paradox=harmonic","aa_mode>=AA2","substrate=substrate.llm.agentic"],
-      "entry_condition": "paradox_density > 0.40",
-      "exit_condition": "RTT12 harmonic resolution complete → collapse to regime.resonance-time.core at RTT1"
+      "id": "RG-002",
+      "name": "Noise-Dominant",
+      "R_range": [
+        0.1,
+        0.4
+      ],
+      "SET": "partial",
+      "dominant": "Noise"
     },
     {
-      "id": "regime.edge.minimal",
-      "name": "Edge Minimal Regime",
-      "class": "edge",
-      "lattice_nodes": ["RTT1","RTT2","RTT3"],
-      "aa_mode_range": ["AA0","AA1"],
-      "3c_requirements": { "C1_min": 0.60, "C2_min": 0.55, "C3_min": 0.65 },
-      "constraints": ["substrate=substrate.edge.compact","operators=minimal-set"],
-      "entry_condition": "substrate=substrate.edge.compact declared at bootstrap",
-      "exit_condition": "substrate upgrade to transformer or agentic"
+      "id": "RG-003",
+      "name": "Coherence Ascent",
+      "R_range": [
+        0.4,
+        0.7
+      ],
+      "SET": "coupling",
+      "dominant": "Resonance-building"
+    },
+    {
+      "id": "RG-004",
+      "name": "Resonance Zone",
+      "R_range": [
+        0.7,
+        0.95
+      ],
+      "SET": "coupled",
+      "dominant": "Resonance"
+    },
+    {
+      "id": "RG-005",
+      "name": "Saturation",
+      "R_range": [
+        0.95,
+        1.0
+      ],
+      "SET": "over-coupled",
+      "dominant": "Stabilization-required"
     }
+  ],
+  "multi_regime_v133": {
+    "max_concurrent": 3,
+    "isolation": true,
+    "drift_per_regime": "bounded independently"
+  },
+  "invariants_checked": [
+    "INV-004",
+    "INV-007",
+    "INV-010"
   ]
 }

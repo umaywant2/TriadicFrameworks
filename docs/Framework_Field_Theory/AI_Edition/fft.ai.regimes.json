@@ -1,123 +1,43 @@
 {
-  "spec_version": "1.3.0",
-  "canon_id": "FFT-AI-Regimes",
-
-  "metadata": {
-    "title": "FFT AI Edition – Regime Specification (v1.3 Draft)",
-    "subtitle": "Canonical RTT → Regime Mapping and Constraints",
-    "author_canon": "Nawder Loswin",
-    "description": "Defines regime classes, RTT bindings, constraints, and transition rules for FFT AI Edition v1.3."
+  "version": "1.33",
+  "updated": "2026-10-09T09:48:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
   },
-
-  "status_line": "Regimes are a projection only; authoritative values come from RTT v0.9, spec‑008, substrate.json, and runtime.json.",
-
-  "regimes": {
-    "nominal": {
-      "rtt_nodes": ["RTT1", "RTT2", "RTT3", "RTT4", "RTT5", "RTT6"],
-      "description": "Stable, non-harmonic execution regime. Supports interpretive, alignment, coupling, activation, triadic-time, and SNR operators.",
-      "requirements": [
-        "measure.c1 >= 0.80",
-        "measure.c2 >= 0.80",
-        "measure.c3 >= 0.80"
-      ],
-      "substrate": ["agentic", "parametric", "symbolic", "edge"],
-      "consent": false,
-      "paradox": false,
-      "forbidden": [
-        "typed paradox",
-        "harmonic escalation",
-        "resolution operators",
-        "collapse"
-      ]
+  "v133_status": "verified_and_stamped",
+  "id": "fft.ai.regimes",
+  "title": "FFT AI — AI-Layer Regime Map v1.33",
+  "ai_regime_map": {
+    "RG-001": {
+      "ai_behavior": "Observe only; no operator dispatch",
+      "autonomy_mode": "AM-001"
     },
-
-    "harmonic": {
-      "rtt_nodes": ["RTT7", "RTT8", "RTT9"],
-      "description": "Paradox-enabled regime. Supports paradox entry, stabilization, and harmonic escalation.",
-      "requirements": [
-        "typed_paradox_event",
-        "measure.paradox_density >= 0.10",
-        "substrate_class = agentic"
-      ],
-      "substrate": ["agentic"],
-      "consent": "required for RTT9",
-      "paradox": true,
-      "forbidden": [
-        "resolution_preparation",
-        "resolution_alignment",
-        "collapse"
-      ]
+    "RG-002": {
+      "ai_behavior": "Alignment operators only; watch for drift",
+      "autonomy_mode": "AM-002"
     },
-
-    "resolution": {
-      "rtt_nodes": ["RTT10", "RTT11", "RTT12"],
-      "description": "Final regime enabling resolution preparation, alignment, and collapse.",
-      "requirements": [
-        "operator_consent = true",
-        "measure.c1 >= 0.80",
-        "measure.c2 >= 0.80",
-        "measure.c3 >= 0.80",
-        "substrate_class = agentic"
-      ],
-      "substrate": ["agentic"],
-      "consent": true,
-      "paradox": false,
-      "collapse": {
-        "trigger": "RTT12",
-        "destination": "RTT1",
-        "lineage_increment": true
-      },
-      "forbidden": [
-        "harmonic escalation",
-        "typed paradox",
-        "skip-resolution"
-      ]
+    "RG-003": {
+      "ai_behavior": "Full operator dispatch; SET coupling begins",
+      "autonomy_mode": "AM-003"
+    },
+    "RG-004": {
+      "ai_behavior": "Maintain resonance; monitor coherence continuously",
+      "autonomy_mode": "AM-003"
+    },
+    "RG-005": {
+      "ai_behavior": "Stabilization priority; escalate if R drops",
+      "autonomy_mode": "AM-004"
     }
   },
-
-  "transition_rules": {
-    "nominal_to_harmonic": {
-      "trigger": "typed_paradox_event",
-      "requirements": [
-        "measure.paradox_density >= 0.10",
-        "substrate_class = agentic"
-      ]
-    },
-    "harmonic_to_resolution": {
-      "trigger": "operator_consent = true",
-      "requirements": [
-        "measure.c1 >= 0.80",
-        "measure.c2 >= 0.80",
-        "measure.c3 >= 0.80"
-      ]
-    },
-    "resolution_to_nominal": {
-      "trigger": "collapse (RTT12)",
-      "destination": "RTT1",
-      "lineage_increment": true
-    }
-  },
-
-  "integration_links": {
-    "runtime": "fft.ai.runtime.json",
-    "operators": "fft.ai.operators.json",
-    "substrate": "fft.ai.substrate.json",
-    "execution_graph": "fft.ai.execution.graph.json",
-    "autonomy": "fft.ai.autonomy.json",
-    "discovery": "fft.ai.discovery.json",
-    "capabilities": "fft.ai.capabilities.json",
-    "spec_008": "fft.ai.spec‑008.json",
-    "paradox_enum": "fft.ai.paradox.enum.json"
-  },
-
-  "timestamps": {
-    "created": "auto",
-    "last_update": "auto"
-  },
-
-  "non_claims": [
-    "Regimes do not revise RTT v0.9.",
-    "Regimes do not reinterpret SET, S–N–R, or triadic time.",
-    "Regimes do not replace the human FFT book."
+  "paradox_override": "Any regime: if paradox_active==true, autonomy escalates to AM-004 minimum",
+  "invariants_checked": [
+    "INV-003",
+    "INV-004",
+    "INV-005",
+    "INV-007",
+    "INV-010"
   ]
 }
