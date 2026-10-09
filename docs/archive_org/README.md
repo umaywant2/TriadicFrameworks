@@ -1,9 +1,8 @@
-<img width="682" height="682" alt="rtt_archive_org_module_image" src="https://github.com/user-attachments/assets/7f1682a6-31fe-4e0c-80dd-5ce26a040872" />
-
-# **Internet Archive Module**
+<img width="1194" height="672" alt="archive_org_" src="https://github.com/user-attachments/assets/45dc5550-65eb-4291-944f-38c2f5b431f7" />
 
 - [`archive_org_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/archive_org/archive_org_module.json) — Agentic module schema role assignments
 
+# **Internet Archive Module**
 The **archive_org** module provides a structured, AI‑parsable interface to:
 
 - Wayback Machine snapshots  
