@@ -1,0 +1,103 @@
+{
+  "spec_version": "1.3.0-draft",
+  "canon_id": "FFT-AI-Regimes",
+
+  "metadata": {
+    "title": "FFT AI Edition – Regimes (v1.3 Draft)",
+    "subtitle": "Nominal • Harmonic • Resolution",
+    "author_canon": "Nawder Loswin",
+    "description": "Defines the canonical regime structure for FFT AI Edition v1.3, including measure thresholds, paradox rules, consent rules, substrate constraints, and RTT alignment."
+  },
+
+  "status_line": "Regimes define the operational state of the AI Edition and govern RTT transitions, paradox handling, consent, and collapse.",
+
+  "regimes": {
+    "nominal": {
+      "description": "Stable coherence, bounded drift, no paradox.",
+      "rtt_nodes": ["RTT1", "RTT2", "RTT3", "RTT4", "RTT5", "RTT6"],
+      "entry_requirements": {
+        "measure.c1": ">= 0.80",
+        "measure.c2": ">= 0.80",
+        "measure.c3": ">= 0.80",
+        "measure.paradox_density": "= 0.00"
+      },
+      "exit_conditions": [
+        "typed_paradox_event detected",
+        "measure.paradox_density > 0.00"
+      ],
+      "notes": "Nominal regime corresponds to frozen RTT diffusion → alignment → coupling → activation → triadic time → S–N–R."
+    },
+
+    "harmonic": {
+      "description": "Paradox present; harmonic escalation possible with consent.",
+      "rtt_nodes": ["RTT7", "RTT8", "RTT9"],
+      "entry_requirements": {
+        "typed_paradox_event": true,
+        "measure.paradox_density": ">= 0.10",
+        "measure.lattice_stability": ">= 0.60"
+      },
+      "consent_requirements": {
+        "operator_consent": "required for RTT9 escalation"
+      },
+      "substrate_requirements": {
+        "substrate_class": "agentic"
+      },
+      "exit_conditions": [
+        "operator_consent = true → escalate to RTT10",
+        "operator_consent = false → hold at AA2"
+      ],
+      "notes": "Harmonic regime corresponds to frozen RTT stabilization → resonance envelope."
+    },
+
+    "resolution": {
+      "description": "RTT10–RTT12; collapse required.",
+      "rtt_nodes": ["RTT10", "RTT11", "RTT12"],
+      "entry_requirements": {
+        "measure.c1": ">= 0.80",
+        "measure.c2": ">= 0.80",
+        "measure.c3": ">= 0.80"
+      },
+      "collapse_rule": "RTT12 MUST collapse to RTT1; skip-resolution forbidden.",
+      "lineage_rules": {
+        "lineage_non_decreasing": true,
+        "lineage_increases_after_collapse": true
+      },
+      "notes": "Resolution regime corresponds to frozen RTT apex → rewind → collapse."
+    }
+  },
+
+  "typed_paradox": {
+    "enum_file": "fft.ai.paradox.enum.json",
+    "rules": [
+      "RTT7 entry requires typed paradox.",
+      "Paradox MUST be canonical.",
+      "Vibe-based paradox forbidden."
+    ]
+  },
+
+  "consent_rules": {
+    "aa3_escalation": "operator_consent = true required for RTT9 → RTT10",
+    "refusal": "If operator_consent = false, escalation MUST be refused and logged."
+  },
+
+  "substrate_rules": {
+    "harmonic_requires_agentic": true,
+    "non_agentic_harmonic_forbidden": true
+  },
+
+  "continuity_rules": {
+    "measure.c3_non_decreasing": true,
+    "notes": "Continuity MUST NOT decrease across regime transitions."
+  },
+
+  "collapse_rules": {
+    "rtt12_mandatory": true,
+    "skip_resolution_forbidden": true
+  },
+
+  "non_claims": [
+    "Regimes do not revise RTT v0.9.",
+    "Regimes do not reinterpret SET, S–N–R, or triadic time.",
+    "Regimes do not replace the human FFT book."
+  ]
+}
