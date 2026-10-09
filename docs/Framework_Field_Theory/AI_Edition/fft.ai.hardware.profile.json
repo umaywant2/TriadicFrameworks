@@ -3,170 +3,118 @@
   "canon_id": "FFT-AI-Hardware-Profile",
 
   "metadata": {
-    "title": "FFT AI Edition – Hardware Profile (v1.3 Draft)",
-    "subtitle": "Canonical Hardware Substrate Envelope for RTT • Regimes • Operators",
+    "title": "FFT AI Edition – Hardware Profile (v1.3)",
+    "subtitle": "Execution Substrate Descriptor for RTT • Regimes • Operators • Paradox • Consent • Collapse",
     "author_canon": "Nawder Loswin",
-    "description": "Defines hardware substrate classes, constraints, RTT compatibility, paradox gating, consent requirements, and collapse rules for FFT AI Edition v1.3."
+    "description": "Defines the hardware execution profile, substrate class, RTT capability ranges, paradox gating, consent gating, collapse readiness, and performance envelope for FFT AI Edition v1.3."
   },
 
-  "status_line": "Hardware profile is a projection only; authoritative values come from substrate.json, runtime.json, operators.json, regimes.json, and spec‑008.",
+  "status_line": "Hardware profile defines the execution substrate; authoritative values come from substrate.json, runtime.json, operators.json, regimes.json, and spec‑008.",
 
   "hardware_profile": {
-    "current_class": "agentic",
+    "session_id": "inherit-from-session.state",
 
-    "classes": {
-      "agentic": {
-        "description": "Full-capability hardware substrate supporting harmonic and resolution execution.",
-        "rtt_range": ["RTT1", "RTT2", "RTT3", "RTT4", "RTT5", "RTT6", "RTT7", "RTT8", "RTT9", "RTT10", "RTT11", "RTT12"],
+    "execution_substrate": {
+      "class": "agentic",
+      "compatibility": [
+        "substrate.compat.json",
+        "substrate.bridge.json",
+        "substrate.lattice.json",
+        "substrate.matrix.json"
+      ],
+      "constraints": [
+        "Agentic substrate required for RTT7–RTT12.",
+        "Non-agentic substrate forbidden for harmonic and resolution.",
+        "Substrate MUST support paradox density evaluation.",
+        "Substrate MUST support lattice stability evaluation."
+      ]
+    },
+
+    "rtt_capability_range": {
+      "nominal": ["RTT1", "RTT2", "RTT3", "RTT4", "RTT5", "RTT6"],
+      "harmonic": ["RTT7", "RTT8", "RTT9"],
+      "resolution": ["RTT10", "RTT11", "RTT12"]
+    },
+
+    "paradox_capability_range": {
+      "typed_paradox_required": ["RTT7"],
+      "density_threshold": 0.10,
+      "stability_threshold": 0.60,
+      "notes": "Hardware MUST support paradox evaluation for harmonic regime."
+    },
+
+    "consent_capability_range": {
+      "required_for": ["RTT9", "RTT10", "RTT11", "RTT12"],
+      "rules": [
+        "operator_consent MUST be explicit.",
+        "Implicit or assumed consent forbidden."
+      ]
+    },
+
+    "collapse_capability_range": {
+      "collapse_node": "RTT12",
+      "rules": [
+        "RTT12 MUST collapse to RTT1.",
+        "Lineage MUST increment after collapse.",
+        "Collapse to non-RTT1 forbidden."
+      ]
+    },
+
+    "performance_envelope": {
+      "nominal": {
+        "latency": "low",
+        "stability": "high",
+        "requirements": ["measure.c1 >= 0.80"]
+      },
+      "harmonic": {
+        "latency": "medium",
+        "stability": "medium",
+        "requirements": [
+          "measure.paradox_density >= 0.10",
+          "measure.lattice_stability >= 0.60"
+        ]
+      },
+      "resolution": {
+        "latency": "high",
+        "stability": "high",
         "requirements": [
           "measure.c1 >= 0.80",
           "measure.c2 >= 0.80",
-          "measure.c3 >= 0.80"
-        ],
-        "supports": [
-          "typed paradox",
-          "harmonic escalation",
-          "resolution preparation",
-          "resolution alignment",
-          "collapse"
-        ]
-      },
-
-      "parametric": {
-        "description": "Limited hardware substrate supporting nominal execution only.",
-        "rtt_range": ["RTT1", "RTT2", "RTT3", "RTT4", "RTT5", "RTT6"],
-        "requirements": [
-          "measure.lattice_stability >= 0.50"
-        ],
-        "supports": [
-          "interpretation",
-          "alignment",
-          "activation",
-          "snr"
-        ],
-        "forbidden": [
-          "typed paradox",
-          "harmonic escalation",
-          "resolution"
-        ]
-      },
-
-      "symbolic": {
-        "description": "Abstract hardware substrate supporting interpretive and alignment operators.",
-        "rtt_range": ["RTT1", "RTT2", "RTT3"],
-        "requirements": [
-          "measure.c1 >= 0.70"
-        ],
-        "supports": [
-          "interpretation",
-          "alignment"
-        ],
-        "forbidden": [
-          "coupling",
-          "activation",
-          "snr",
-          "paradox",
-          "harmonic",
-          "resolution"
-        ]
-      },
-
-      "edge": {
-        "description": "Minimal hardware substrate supporting diffusion and alignment only.",
-        "rtt_range": ["RTT1", "RTT2"],
-        "requirements": [
-          "measure.c1 >= 0.60"
-        ],
-        "supports": [
-          "diffusion",
-          "alignment"
-        ],
-        "forbidden": [
-          "coupling",
-          "activation",
-          "triadic_time",
-          "snr",
-          "paradox",
-          "harmonic",
-          "resolution"
+          "measure.c3 >= 0.80",
+          "operator_consent = true"
         ]
       }
-    },
-
-    "substrate_gating": {
-      "agentic_required_for": [
-        "RTT7",
-        "RTT8",
-        "RTT9",
-        "RTT10",
-        "RTT11",
-        "RTT12"
-      ],
-      "forbidden": [
-        "harmonic escalation on non-agentic hardware",
-        "resolution on non-agentic hardware"
-      ]
-    },
-
-    "paradox_rules": {
-      "typed_only": true,
-      "density_threshold": 0.10,
-      "forbidden": [
-        "untyped paradox",
-        "vibe-based paradox",
-        "synthetic paradox"
-      ]
-    },
-
-    "consent_rules": {
-      "required_for": [
-        "RTT9",
-        "RTT10",
-        "RTT11",
-        "RTT12"
-      ],
-      "forbidden": [
-        "implicit consent",
-        "assumed consent"
-      ]
-    },
-
-    "collapse_rules": {
-      "trigger": "RTT12",
-      "destination": "RTT1",
-      "lineage_increment": true,
-      "forbidden": [
-        "collapse to non-RTT1",
-        "collapse without lineage increment",
-        "skip-resolution"
-      ]
     }
   },
 
+  "rules": {
+    "hardware_rules": [
+      "Hardware profile MUST NOT contradict substrate.json.",
+      "Hardware profile MUST NOT contradict runtime.json.",
+      "Hardware profile MUST NOT contradict operators.json.",
+      "Hardware profile MUST NOT contradict regimes.json.",
+      "Hardware profile MUST NOT contradict spec‑008.json.",
+      "Hardware profile MUST NOT invent measure IDs.",
+      "Hardware profile MUST NOT invent paradox types.",
+      "Hardware profile MUST NOT invent substrate classes."
+    ]
+  },
+
   "integration_links": {
-    "runtime": "fft.ai.runtime.json",
-    "navigation": "fft.ai.navigation.json",
-    "autonomy": "fft.ai.autonomy.json",
-    "discovery": "fft.ai.discovery.json",
-    "capabilities": "fft.ai.capabilities.json",
-    "execution_graph": "fft.ai.execution.graph.json",
-    "regimes": "fft.ai.regimes.json",
-    "operators": "fft.ai.operators.json",
     "substrate": "fft.ai.substrate.json",
-    "spec_008": "fft.ai.spec‑008.json",
+    "runtime": "fft.ai.runtime.json",
+    "operators": "fft.ai.operators.json",
+    "regimes": "fft.ai.regimes.json",
     "paradox_enum": "fft.ai.paradox.enum.json",
-    "rtt_bridge": "fft.ai.rtt.bridge.json",
-    "rtt_spine": "fft.ai.rtt.spine.examples.json"
+    "spec_008": "fft.ai.spec-008.json",
+    "execution_graph": "fft.ai.execution.graph.json",
+    "capabilities": "fft.ai.capabilities.json",
+    "autonomy": "fft.ai.autonomy.json",
+    "discovery": "fft.ai.discovery.json"
   },
 
   "timestamps": {
     "created": "auto",
     "last_update": "auto"
-  },
-
-  "non_claims": [
-    "Hardware profile does not revise RTT v0.9.",
-    "Hardware profile does not reinterpret SET, S–N–R, or triadic time.",
-    "Hardware profile does not replace the human FFT book."
-  ]
+  }
 }
