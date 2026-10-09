@@ -1,3 +1,5 @@
+<img width="1024" height="1024" alt="rtt_archive_org_module_image" src="https://github.com/user-attachments/assets/7f1682a6-31fe-4e0c-80dd-5ce26a040872" />
+
 Alright, Nawder — **this is the right way to restart the conversation.**  
 Slow, deliberate, structural. No jumping ahead. No assuming the shape of the module before we talk through the *why*.
 
