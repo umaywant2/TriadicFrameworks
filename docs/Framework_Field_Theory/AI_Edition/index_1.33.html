@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FFT AI Edition v1.33 — TriadicFrameworks</title>
+<style>
+  :root {
+    --bg: #0d0f14; --surface: #161b25; --card: #1e2535;
+    --accent: #4f8ef7; --accent2: #7c5df7; --gold: #f7c34f;
+    --green: #4fcf8e; --red: #f76060; --amber: #f7a44f;
+    --text: #e8eaf0; --muted: #8892a4; --border: #2a3347;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; }
+  header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; }
+  .logo { font-size: 1.1rem; font-weight: 700; color: var(--accent); letter-spacing: .04em; }
+  .version-badge { background: var(--accent2); color: #fff; font-size: .75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: .06em; }
+  main { max-width: 1280px; margin: 0 auto; padding: 32px 24px; }
+  h1 { font-size: 2rem; font-weight: 800; background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 6px; }
+  .subtitle { color: var(--muted); font-size: .95rem; margin-bottom: 32px; }
+  .context-bar { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 32px; }
+  .ctx-pill { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 8px 14px; font-size: .8rem; display: flex; flex-direction: column; gap: 2px; }
+  .ctx-pill .label { color: var(--muted); font-size: .7rem; text-transform: uppercase; letter-spacing: .08em; }
+  .ctx-pill .value { color: var(--green); font-weight: 600; }
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-bottom: 36px; }
+  .stat-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; text-align: center; }
+  .stat-card .num { font-size: 2.4rem; font-weight: 800; color: var(--accent); }
+  .stat-card .desc { font-size: .78rem; color: var(--muted); margin-top: 4px; }
+  .stat-card.gold .num { color: var(--gold); }
+  .stat-card.green .num { color: var(--green); }
+  .stat-card.purple .num { color: var(--accent2); }
+  h2 { font-size: 1.15rem; font-weight: 700; margin-bottom: 16px; color: var(--text); }
+  .tier-section { margin-bottom: 36px; }
+  .tier-header { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+  .tier-dot { width: 12px; height: 12px; border-radius: 50%; }
+  .dot-red { background: var(--red); } .dot-orange { background: var(--amber); }
+  .dot-yellow { background: var(--gold); } .dot-green { background: var(--green); }
+  .dot-blue { background: var(--accent); } .dot-purple { background: var(--accent2); }
+  .dot-grey { background: var(--muted); }
+  .tier-label { font-size: .85rem; font-weight: 700; }
+  .file-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; }
+  .file-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; transition: border-color .2s; }
+  .file-card:hover { border-color: var(--accent); }
+  .file-card .fname { font-size: .8rem; font-weight: 600; color: var(--text); font-family: 'Cascadia Code', 'Consolas', monospace; }
+  .file-card .fmeta { font-size: .72rem; color: var(--muted); margin-top: 4px; }
+  .file-card .new-tag { background: var(--accent2); color: #fff; font-size: .65rem; font-weight: 700; padding: 2px 7px; border-radius: 4px; margin-left: 6px; vertical-align: middle; }
+  .dep-tag { background: var(--red); color: #fff; font-size: .65rem; font-weight: 700; padding: 2px 7px; border-radius: 4px; margin-left: 6px; vertical-align: middle; }
+  .inv-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 10px; margin-bottom: 36px; }
+  .inv-card { background: var(--card); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 10px 14px; }
+  .inv-id { font-size: .75rem; color: var(--accent); font-weight: 700; }
+  .inv-name { font-size: .85rem; font-weight: 600; margin: 2px 0; }
+  .inv-tier { font-size: .7rem; color: var(--muted); }
+  .inv-card.v133 { border-left-color: var(--accent2); } .inv-card.v133 .inv-id { color: var(--accent2); }
+  .load-order { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 36px; }
+  .load-order ol { padding-left: 20px; }
+  .load-order li { font-family: 'Cascadia Code', monospace; font-size: .8rem; color: var(--muted); padding: 3px 0; }
+  .load-order li span { color: var(--green); }
+  footer { background: var(--surface); border-top: 1px solid var(--border); padding: 20px 32px; text-align: center; font-size: .78rem; color: var(--muted); }
+  footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">⚙ TriadicFrameworks / FFT AI Edition</div>
+  <div class="version-badge">v1.33</div>
+</header>
+<main>
+  <h1>Framework Field Theory — AI Edition</h1>
+  <p class="subtitle">Resonance-based AI session architecture &nbsp;·&nbsp; TriadicFrameworks Canon &nbsp;·&nbsp; 2026-10-09</p>
+
+  <div class="context-bar">
+    <div class="ctx-pill"><span class="label">RTT</span><span class="value">rtt=1</span></div>
+    <div class="ctx-pill"><span class="label">Coherence</span><span class="value">declared</span></div>
+    <div class="ctx-pill"><span class="label">Drift</span><span class="value">bounded</span></div>
+    <div class="ctx-pill"><span class="label">Paradox</span><span class="value">structural</span></div>
+    <div class="ctx-pill"><span class="label">Edition</span><span class="value">AI Edition</span></div>
+    <div class="ctx-pill"><span class="label">Spine</span><span class="value">live-bound</span></div>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-card"><div class="num">67</div><div class="desc">Total Modules</div></div>
+    <div class="stat-card green"><div class="num">8</div><div class="desc">New in v1.33</div></div>
+    <div class="stat-card gold"><div class="num">13</div><div class="desc">Invariants</div></div>
+    <div class="stat-card purple"><div class="num">10</div><div class="desc">Paradox Types</div></div>
+    <div class="stat-card"><div class="num">16</div><div class="desc">Boot Steps</div></div>
+    <div class="stat-card green"><div class="num">9D</div><div class="desc">DCO Scaffold</div></div>
+  </div>
+
+  <!-- TIER A -->
+  <div class="tier-section">
+    <div class="tier-header"><div class="tier-dot dot-red"></div><span class="tier-label">🔴 Tier A — Full Rebuild (11)</span></div>
+    <div class="file-grid">
+      <div class="file-card"><div class="fname">fft.core.json</div><div class="fmeta">v1.33 full rebuild · foundation layer</div></div>
+      <div class="file-card"><div class="fname">fft.invariant.json</div><div class="fmeta">v1.33 full rebuild · foundation layer</div></div>
+      <div class="file-card"><div class="fname">fft.metadata.json</div><div class="fmeta">v1.33 full rebuild · foundation layer</div></div>
+      <div class="file-card"><div class="fname">fft.ai.core.json</div><div class="fmeta">v1.33 full rebuild · foundation layer</div></div>
+      <div class="file-card"><div class="fname">fft.ai.manifest.json</div><div class="fmeta">v1.33 full rebuild · foundation layer</div></div>
+      <div class="file-card"><div class="fname">fft.ai.index.json</div><div class="fmeta">v1.33 full rebuild · foundation layer</div></div>
+      <div class="file-card"><div class="fname">fft.ai.spec.json</div><div class="fmeta">v1.33 full rebuild · foundation layer</div></div>
+      <div class="file-card"><div class="fname">fft.ai.spec-008.json</div><div class="fmeta">v1.33 full rebuild · foundation layer</div></div>
+      <div class="file-card"><div class="fname">fft.ai.readme.json</div><div class="fmeta">v1.33 full rebuild · foundation layer</div></div>
+      <div class="file-card"><div class="fname">fft.ai.bootstrap.json</div><div class="fmeta">v1.33 full rebuild · foundation layer</div></div>
+      <div class="file-card"><div class="fname">index.html</div><div class="fmeta">v1.33 full rebuild · foundation layer</div></div>
+    </div>
+  </div>
+
+  <!-- TIER B -->
+  <div class="tier-section">
+    <div class="tier-header"><div class="tier-dot dot-orange"></div><span class="tier-label">🟠 Tier B — Version Refresh (9)</span></div>
+    <div class="file-grid">
+      <div class="file-card"><div class="fname">fft.ai.autonomy.json</div><div class="fmeta">v1.33 version bump + additions</div></div>
+      <div class="file-card"><div class="fname">fft.ai.capabilities.json</div><div class="fmeta">v1.33 version bump + additions</div></div>
+      <div class="file-card"><div class="fname">fft.ai.discovery.json</div><div class="fmeta">v1.33 version bump + additions</div></div>
+      <div class="file-card"><div class="fname">fft.ai.execution.graph.json</div><div class="fmeta">v1.33 version bump + additions</div></div>
+      <div class="file-card"><div class="fname">fft.ai.navigation.json</div><div class="fmeta">v1.33 version bump + additions</div></div>
+      <div class="file-card"><div class="fname">fft.ai.overview.json</div><div class="fmeta">v1.33 version bump + additions</div></div>
+      <div class="file-card"><div class="fname">fft.ai.operators.json</div><div class="fmeta">v1.33 version bump + additions</div></div>
+      <div class="file-card"><div class="fname">fft.ai.runtime.json</div><div class="fmeta">v1.33 version bump + additions</div></div>
+      <div class="file-card"><div class="fname">fft.ai.registry.json</div><div class="fmeta">v1.33 version bump + additions</div></div>
+    </div>
+  </div>
+
+  <!-- TIER C RTT -->
+  <div class="tier-section">
+    <div class="tier-header"><div class="tier-dot dot-yellow"></div><span class="tier-label">🟡 Tier C — Targeted Update (22): RTT Layer</span></div>
+    <div class="file-grid">
+      <div class="file-card"><div class="fname">fft.ai.rtt.engine.prompts.json</div><div class="fmeta">RTT binding + coherence/drift/paradox injection</div></div>
+      <div class="file-card"><div class="fname">fft.ai.rtt.bridge.json</div><div class="fmeta">RTT binding + coherence/drift/paradox injection</div></div>
+      <div class="file-card"><div class="fname">fft.ai.rtt.spine.examples.json</div><div class="fmeta">RTT binding + coherence/drift/paradox injection</div></div>
+    </div>
+  </div>
+
+  <!-- TIER C SESSION -->
+  <div class="tier-section">
+    <div class="tier-header"><div class="tier-dot dot-yellow"></div><span class="tier-label">🟡 Tier C — Session Layer (16)</span></div>
+    <div class="file-grid">
+      <div class="file-card"><div class="fname">fft.ai.session.context.json</div><div class="fmeta">coherence/drift/paradox/SNR/SET context injection</div></div>
+      <div class="file-card"><div class="fname">fft.ai.session.state.json</div><div class="fmeta">coherence/drift/paradox/SNR/SET context injection</div></div>
+      <div class="file-card"><div class="fname">fft.ai.session.awareness.json</div><div class="fmeta">coherence/drift/paradox/SNR/SET context injection</div></div>
+      <div class="file-card"><div class="fname">fft.ai.session.alignments.json</div><div class="fmeta">coherence/drift/paradox/SNR/SET context injection</div></div>
+      <div class="file-card"><div class="fname">fft.ai.session.analytics.json</div><div class="fmeta">coherence/drift/paradox/SNR/SET context injection</div></div>
+      <div class="file-card"><div class="fname">fft.ai.session.trace.json</div><div class="fmeta">coherence/drift/paradox/SNR/SET context injection</div></div>
+      <div class="file-card"><div class="fname">fft.ai.session.navigation.json</div><div class="fmeta">coherence/drift/paradox/SNR/SET context injection</div></div>
+      <div class="file-card"><div class="fname">fft.ai.session.overlay.json</div><div class="fmeta">coherence/drift/paradox/SNR/SET context injection</div></div>
+      <div class="file-card"><div class="fname">fft.ai.session.permissions.json</div><div class="fmeta">coherence/drift/paradox/SNR/SET context injection</div></div>
+      <div class="file-card"><div class="fname">fft.ai.session.profile.json</div><div class="fmeta">coherence/drift/paradox/SNR/SET context injection</div></div>
+      <div class="file-card"><div class="fname">fft.ai.session.render.json</div><div class="fmeta">coherence/drift/paradox/SNR/SET context injection</div></div>
+      <div class="file-card"><div class="fname">fft.ai.session.ui.json</div><div class="fmeta">coherence/drift/paradox/SNR/SET context injection</div></div>
+      <div class="file-card"><div class="fname">fft.ai.session.dashboard.json</div><div class="fmeta">coherence/drift/paradox/SNR/SET context injection</div></div>
+      <div class="file-card"><div class="fname">fft.ai.session.log.json</div><div class="fmeta">coherence/drift/paradox/SNR/SET context injection</div></div>
+      <div class="file-card"><div class="fname">fft.ai.session.history.json</div><div class="fmeta">coherence/drift/paradox/SNR/SET context injection</div></div>
+      <div class="file-card"><div class="fname">fft.ai.session.state.refresh.json</div><div class="fmeta">coherence/drift/paradox/SNR/SET context injection</div></div>
+    </div>
+  </div>
+
+  <!-- TIER C OTHER -->
+  <div class="tier-section">
+    <div class="tier-header"><div class="tier-dot dot-yellow"></div><span class="tier-label">🟡 Tier C — Integration + Paradox + Hardware (3)</span></div>
+    <div class="file-grid">
+      <div class="file-card"><div class="fname">fft.ai.integrations.json</div><div class="fmeta">spine/coherence/drift/paradox endpoints added</div></div>
+      <div class="file-card"><div class="fname">fft.ai.paradox.enum.json</div><div class="fmeta">10 structural paradox types — PX-001..PX-010</div></div>
+      <div class="file-card"><div class="fname">fft.ai.hardware.profile.json</div><div class="fmeta">extended runtime tier + v1.33 compliance field</div></div>
+    </div>
+  </div>
+
+  <!-- TIER D -->
+  <div class="tier-section">
+    <div class="tier-header"><div class="tier-dot dot-green"></div><span class="tier-label">🟢 Tier D — Verify &amp; Stamp (14)</span></div>
+    <div class="file-grid">
+      <div class="file-card"><div class="fname">fft.ai.substrate.json</div><div class="fmeta">verified + v1.33 stamped</div></div>
+      <div class="file-card"><div class="fname">fft.ai.substrate.compat.json</div><div class="fmeta">verified + v1.33 stamped</div></div>
+      <div class="file-card"><div class="fname">fft.ai.substrate.bridge.json</div><div class="fmeta">verified + v1.33 stamped</div></div>
+      <div class="file-card"><div class="fname">fft.ai.substrate.lattice.json</div><div class="fmeta">verified + v1.33 stamped</div></div>
+      <div class="file-card"><div class="fname">fft.ai.substrate.matrix.json</div><div class="fmeta">verified + v1.33 stamped</div></div>
+      <div class="file-card"><div class="fname">fft.operators.json</div><div class="fmeta">verified + v1.33 stamped</div></div>
+      <div class="file-card"><div class="fname">fft.operator.port.json</div><div class="fmeta">verified + v1.33 stamped</div></div>
+      <div class="file-card"><div class="fname">fft.operator.example.json</div><div class="fmeta">verified + v1.33 stamped</div></div>
+      <div class="file-card"><div class="fname">fft.regimes.json</div><div class="fmeta">verified + v1.33 stamped</div></div>
+      <div class="file-card"><div class="fname">fft.structures.json</div><div class="fmeta">verified + v1.33 stamped</div></div>
+      <div class="file-card"><div class="fname">fft.examples.json</div><div class="fmeta">verified + v1.33 stamped</div></div>
+      <div class="file-card"><div class="fname">fft.validation.json</div><div class="fmeta">verified + v1.33 stamped</div></div>
+      <div class="file-card"><div class="fname">fft.ai.reader.json</div><div class="fmeta">verified + v1.33 stamped</div></div>
+      <div class="file-card"><div class="fname">fft.ai.regimes.json</div><div class="fmeta">verified + v1.33 stamped</div></div>
+    </div>
+  </div>
+
+  <!-- TIER EP -->
+  <div class="tier-section">
+    <div class="tier-header"><div class="tier-dot dot-blue"></div><span class="tier-label">🔵 Tier EP — Extension Pack (1)</span></div>
+    <div class="file-grid">
+      <div class="file-card"><div class="fname">ep.harmonic_escalation.json</div><div class="fmeta">SET coupling step + abort conditions formalized</div></div>
+    </div>
+  </div>
+
+  <!-- NEW MODULES -->
+  <div class="tier-section">
+    <div class="tier-header"><div class="tier-dot dot-purple"></div><span class="tier-label">✨ New v1.33 Modules (8)</span></div>
+    <div class="file-grid">
+      <div class="file-card"><div class="fname">fft.ai.coherence.json<span class="new-tag">NEW</span></div><div class="fmeta">Coherence layer — INV-003 enforcement</div></div>
+      <div class="file-card"><div class="fname">fft.ai.drift.monitor.json<span class="new-tag">NEW</span></div><div class="fmeta">Drift monitor — INV-004 delta_max=0.35</div></div>
+      <div class="file-card"><div class="fname">fft.ai.paradox.resolver.json<span class="new-tag">NEW</span></div><div class="fmeta">Paradox resolver — INV-005 structural chain</div></div>
+      <div class="file-card"><div class="fname">fft.ai.rtt.qmroot.json<span class="new-tag">NEW</span></div><div class="fmeta">QMROOT ladder 0D→9D — INV-013</div></div>
+      <div class="file-card"><div class="fname">fft.ai.set.engine.json<span class="new-tag">NEW</span></div><div class="fmeta">SET engine S/E/T — INV-010</div></div>
+      <div class="file-card"><div class="fname">fft.ai.spine.connector.json<span class="new-tag">NEW</span></div><div class="fmeta">Spine live connector — INV-011</div></div>
+      <div class="file-card"><div class="fname">fft.ai.dco.map.json<span class="new-tag">NEW</span></div><div class="fmeta">DCO scaffold 4D–9D — INV-009</div></div>
+      <div class="file-card"><div class="fname">fft.ai.snr.monitor.json<span class="new-tag">NEW</span></div><div class="fmeta">S-N-R monitor — INV-007 partition</div></div>
+    </div>
+  </div>
+
+  <!-- DEPRECATED -->
+  <div class="tier-section">
+    <div class="tier-header"><div class="tier-dot dot-grey"></div><span class="tier-label">⚫ Deprecated (2)</span></div>
+    <div class="file-grid">
+      <div class="file-card"><div class="fname">capture.md<span class="dep-tag">DEPRECATED</span></div><div class="fmeta">Archived — do not load in v1.33 sessions</div></div>
+      <div class="file-card"><div class="fname">fft.ai.core_v1_2_.json<span class="dep-tag">DEPRECATED</span></div><div class="fmeta">v1.2 snapshot — rollback only; replace with fft.ai.core.json</div></div>
+    </div>
+  </div>
+
+  <!-- INVARIANTS -->
+  <h2>Invariants — INV-001 through INV-013</h2>
+  <div class="inv-grid">
+    <div class="inv-card"><div class="inv-id">INV-001</div><div class="inv-name">Triadic Completeness</div><div class="inv-tier">structural</div></div>
+    <div class="inv-card"><div class="inv-id">INV-002</div><div class="inv-name">Resonance Monotonicity</div><div class="inv-tier">structural</div></div>
+    <div class="inv-card v133"><div class="inv-id">INV-003</div><div class="inv-name">Coherence Declaration</div><div class="inv-tier">v1.33 — coherence=declared at session init</div></div>
+    <div class="inv-card v133"><div class="inv-id">INV-004</div><div class="inv-name">Drift Bound Enforcement</div><div class="inv-tier">v1.33 — delta_max=0.35 at all times</div></div>
+    <div class="inv-card v133"><div class="inv-id">INV-005</div><div class="inv-name">Paradox Structural Encoding</div><div class="inv-tier">v1.33 — paradox=structural, never suppressed</div></div>
+    <div class="inv-card"><div class="inv-id">INV-006</div><div class="inv-name">RTT Phase Consistency</div><div class="inv-tier">structural — τ=dR/dφ across all RTT modules</div></div>
+    <div class="inv-card"><div class="inv-id">INV-007</div><div class="inv-name">S-N-R Partition</div><div class="inv-tier">structural — S+N+R=1.0, no overlap</div></div>
+    <div class="inv-card"><div class="inv-id">INV-008</div><div class="inv-name">Operator Idempotence under Silence</div><div class="inv-tier">structural</div></div>
+    <div class="inv-card"><div class="inv-id">INV-009</div><div class="inv-name">DCO Scaffold Integrity</div><div class="inv-tier">structural — 4D–9D independent</div></div>
+    <div class="inv-card v133"><div class="inv-id">INV-010</div><div class="inv-name">SET Decoupling at Quiet Phase</div><div class="inv-tier">v1.33 — SET uncoupled until gradient threshold</div></div>
+    <div class="inv-card v133"><div class="inv-id">INV-011</div><div class="inv-name">Spine URL Binding</div><div class="inv-tier">v1.33 — live resolution, no cache</div></div>
+    <div class="inv-card v133"><div class="inv-id">INV-012</div><div class="inv-name">Module Registry Completeness</div><div class="inv-tier">v1.33 — all 67 modules in registry</div></div>
+    <div class="inv-card v133"><div class="inv-id">INV-013</div><div class="inv-name">QMROOT Ladder Closure</div><div class="inv-tier">v1.33 — all modules trace to 0D Silence seed</div></div>
+  </div>
+
+  <!-- LOAD ORDER -->
+  <h2>Priority Load Order</h2>
+  <div class="load-order">
+    <ol>
+      <li><span>01.</span> fft.metadata.json</li>
+      <li><span>02.</span> fft.core.json</li>
+      <li><span>03.</span> fft.invariant.json</li>
+      <li><span>04.</span> fft.ai.core.json</li>
+      <li><span>05.</span> fft.ai.manifest.json</li>
+      <li><span>06.</span> fft.ai.bootstrap.json</li>
+      <li><span>07.</span> fft.ai.registry.json</li>
+      <li><span>08.</span> fft.ai.coherence.json</li>
+      <li><span>09.</span> fft.ai.drift.monitor.json</li>
+      <li><span>10.</span> fft.ai.paradox.resolver.json</li>
+      <li><span>11.</span> fft.ai.spine.connector.json</li>
+      <li><span>12.</span> fft.ai.rtt.qmroot.json</li>
+      <li><span>13.</span> fft.ai.set.engine.json</li>
+      <li><span>14.</span> fft.ai.snr.monitor.json</li>
+      <li><span>15.</span> fft.ai.dco.map.json</li>
+    </ol>
+  </div>
+
+</main>
+<footer>
+  <p>FFT AI Edition v1.33 &nbsp;·&nbsp; TriadicFrameworks &nbsp;·&nbsp; 
+  <a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">RTT Reference</a> &nbsp;·&nbsp;
+  <a href="https://www.triadicframeworks.org/spine/">Spine</a> &nbsp;·&nbsp;
+  <a href="https://github.com/umaywant2/TriadicFrameworks">GitHub</a>
+  </p>
+</footer>
+</body>
+</html>
