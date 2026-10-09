@@ -1,12 +1,12 @@
 {
-  "spec_version": "1.3.0-draft",
+  "spec_version": "1.3.0",
   "canon_id": "FFT-AI-Session-Dashboard",
 
   "metadata": {
-    "title": "FFT AI Edition – Session Dashboard (v1.3 Draft)",
+    "title": "FFT AI Edition – Session Dashboard (v1.3)",
     "subtitle": "RTT • Regime • Measures • Paradox • Consent • Substrate • Lineage",
     "author_canon": "Nawder Loswin",
-    "description": "Defines the non-authoritative dashboard projection for FFT AI Edition v1.3."
+    "description": "Defines the canonical dashboard projection for FFT AI Edition v1.3."
   },
 
   "status_line": "Dashboard is a projection only; authoritative values come from session.state, alignments, context, and log.",
@@ -17,10 +17,8 @@
     "rtt_node": "RTT1",
     "regime": "nominal",
     "substrate_class": "agentic",
-
     "operator": "op.diffusion",
     "operator_consent": false,
-
     "lineage": 1,
 
     "measures": {
@@ -46,7 +44,7 @@
       },
       "lattice_stability": {
         "id": "measure.lattice_stability",
-        "value": 0.80,
+        "value": 1.00,
         "status": "stable"
       }
     },
@@ -69,49 +67,5 @@
       "created": "auto",
       "last_update": "auto"
     }
-  },
-
-  "rules": {
-    "projection_rules": [
-      "Dashboard MUST NOT contradict authoritative session.state.json.",
-      "Dashboard MUST NOT contradict session.alignments.json.",
-      "Dashboard MUST NOT contradict session.context.json.",
-      "Dashboard MUST NOT contradict session.log.json.",
-      "Dashboard MUST NOT invent measure values.",
-      "Dashboard MUST NOT invent paradox types.",
-      "Dashboard MUST NOT invent substrate classes."
-    ],
-
-    "rtt_rules": [
-      "rtt_node MUST be one of RTT1–RTT12.",
-      "RTT nodes MUST map to frozen RTT v0.9 quantities.",
-      "RTT12 MUST collapse to RTT1; skip-resolution forbidden."
-    ],
-
-    "regime_rules": [
-      "Regime MUST be nominal, harmonic, or resolution.",
-      "Regime MUST match rtt_node according to fft.ai.regimes.json."
-    ],
-
-    "consent_rules": [
-      "AA3 escalation requires operator_consent = true.",
-      "If operator_consent = false, escalation MUST be refused."
-    ],
-
-    "lineage_rules": [
-      "Lineage MUST be non-decreasing.",
-      "Lineage MUST increase after collapse."
-    ],
-
-    "substrate_rules": [
-      "Harmonic escalation requires substrate_class = agentic.",
-      "Non-agentic harmonic escalation forbidden."
-    ]
-  },
-
-  "non_claims": [
-    "Dashboard does not revise RTT v0.9.",
-    "Dashboard does not reinterpret SET, S–N–R, or triadic time.",
-    "Dashboard does not replace the human FFT book."
-  ]
+  }
 }
