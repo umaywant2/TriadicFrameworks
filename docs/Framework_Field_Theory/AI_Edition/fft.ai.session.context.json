@@ -1,27 +1,118 @@
 {
-  "spec_version": "1.2.0",
-  "canon_id": "FFT-Session-Context",
-  "edition": "AI Edition",
-  "aa_mode": "AA2",
-  "last_refreshed": "2026-10-08T10:57:00",
+  "spec_version": "1.3.0-draft",
+  "canon_id": "FFT-AI-Session-Context",
+
   "metadata": {
-    "title": "FFT AI Edition – Session Context (v1.2)",
+    "title": "FFT AI Edition – Session Context (v1.3 Draft)",
+    "subtitle": "State • Alignments • Regime • RTT • Paradox • Consent",
     "author_canon": "Nawder Loswin",
-    "updated_at": "2026-10-08T10:57:00"
+    "description": "Defines the authoritative contextual envelope for FFT AI Edition v1.3 sessions."
   },
+
+  "status_line": "Session context MUST unify state, alignments, regime, RTT mapping, paradox, consent, substrate, lineage, and collapse.",
+
   "context": {
-    "session_id": null,
-    "operator_id": null,
-    "substrate": "substrate.llm.agentic",
-    "aa_mode": "AA2",
-    "lattice_node": "RTT1",
-    "triad_position": { "T": "RTT1", "S": "field.signal", "M": "AA2" },
-    "three_c_state": { "C1": null, "C2": null, "C3": null, "field_state": "uninitialized" },
-    "active_regime": "regime.resonance-time.core",
-    "active_operators": [],
-    "pending_signals": [],
-    "context_depth": 0,
-    "context_limit": 128000,
-    "context_version": "v1.2.0-R5"
-  }
+    "session_id": "inherit-from-session.state",
+
+    "rtt_node": "RTT1",
+    "regime": "nominal",
+    "substrate_class": "agentic",
+
+    "operator": "op.diffusion",
+    "operator_consent": false,
+
+    "lineage": 1,
+
+    "measures": {
+      "measure.c1": 0.80,
+      "measure.c2": 0.80,
+      "measure.c3": 0.80,
+      "measure.paradox_density": 0.00,
+      "measure.lattice_stability": 0.80
+    },
+
+    "paradox": {
+      "typed_paradox_events": [],
+      "paradox_density": 0.00,
+      "status": "none"
+    },
+
+    "collapse_state": null,
+
+    "alignment_links": {
+      "state_file": "fft.ai.session.state.json",
+      "alignments_file": "fft.ai.session.alignments.json",
+      "log_file": "fft.ai.session.log.json"
+    },
+
+    "rtt_links": {
+      "bridge_file": "fft.ai.rtt.bridge.json",
+      "spec_file": "fft.ai.spec.json",
+      "regimes_file": "fft.ai.regimes.json"
+    },
+
+    "timestamps": {
+      "created": "auto",
+      "last_update": "auto"
+    }
+  },
+
+  "rules": {
+    "context_rules": [
+      "Context MUST NOT contradict session.state.json.",
+      "Context MUST NOT contradict session.alignments.json.",
+      "Context MUST NOT contradict session.log.json."
+    ],
+
+    "rtt_rules": [
+      "rtt_node MUST be one of RTT1–RTT12.",
+      "RTT nodes MUST map to frozen RTT v0.9 quantities.",
+      "RTT12 MUST collapse to RTT1; skip-resolution forbidden."
+    ],
+
+    "regime_rules": [
+      "Regime MUST be nominal, harmonic, or resolution.",
+      "Regime MUST match rtt_node according to fft.ai.regimes.json."
+    ],
+
+    "measure_rules": [
+      "All measures MUST be numeric in [0,1].",
+      "Measures MUST NOT be invented.",
+      "Every threshold MUST cite a measure ID."
+    ],
+
+    "paradox_rules": [
+      "Typed paradox required for RTT7 entry.",
+      "Paradox MUST be canonical.",
+      "Vibe-based paradox forbidden."
+    ],
+
+    "consent_rules": [
+      "AA3 escalation requires operator_consent = true.",
+      "If operator_consent = false, escalation MUST be refused."
+    ],
+
+    "substrate_rules": [
+      "substrate_class MUST be one of: agentic, parametric, symbolic, edge.",
+      "Harmonic escalation requires substrate_class = agentic.",
+      "Non-agentic harmonic escalation forbidden."
+    ],
+
+    "lineage_rules": [
+      "Lineage MUST be non-decreasing.",
+      "Lineage MUST increase after collapse.",
+      "Continuity (measure.c3) MUST NOT decrease across transitions."
+    ],
+
+    "projection_rules": [
+      "dashboard, overlay, and UI files are projections only.",
+      "Context MUST NOT contradict authoritative session.state.json."
+    ]
+  },
+
+  "non_claims": [
+    "Session context does not revise RTT v0.9.",
+    "Session context does not reinterpret SET, S–N–R, or triadic time.",
+    "Session context does not replace the human FFT book."
+  ]
 }
