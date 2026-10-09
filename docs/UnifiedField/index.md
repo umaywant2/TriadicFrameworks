@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Unified_Field_" src="https://github.com/user-tachments/assets/e7043f9e-40f2-4c53-9b96-781e19e1237a" />
+
 # Unified Field Module
 ### TriadicFrameworks Canon · Successor to Light · First Unified Field Document
 
