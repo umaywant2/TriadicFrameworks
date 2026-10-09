@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IS-Φ — Phase-Map Operator</title>
+</head>
+<body>
+
+<pre id="ai-operator" data-format="json">
+{
+  "operator": {
+    "id": "IS-Φ",
+    "name": "Phase-Map",
+    "module": "rtt.inverted_star.ai",
+    "version": "2.0-draft",
+    "role": "phase-to-operator structural map",
+    "layer": "surface-deep",
+    "alignment": "structural",
+
+    "phase_map": {
+      "rise": "Δ",
+      "saturation": "Δ",
+      "fracture": "Δ→Ω",
+      "inversion": "Ω",
+      "collapse": "∇",
+      "dissolution": "∇→Σ",
+      "silence": "Σ"
+    },
+
+    "dependencies": {
+      "requires_kernel": true,
+      "kernel_version": "1.33-p1"
+    },
+
+    "constraints": {
+      "must_not_redeclare_RTT_phases": true,
+      "must_not_declare_second_coherence": true,
+      "must_not_use_bare_C": true,
+      "must_not_invent_drift_costs": true,
+      "must_not_use_cached_spine": true,
+      "must_not_load_deprecated_files": true
+    },
+
+    "drift_sensitivity": {
+      "Diffusion": "low",
+      "Alignment": "low",
+      "Coupling": "medium",
+      "ParadoxResolver": "low",
+      "Stabilization": "low"
+    }
+  }
+}
+</pre>
+
+</body>
+</html>
