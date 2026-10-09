@@ -3,23 +3,25 @@
   "canon_id": "FFT-AI-Manifest",
   "edition": "AI Edition",
   "aa_mode": "AA3",
-  "last_refreshed": "2026-10-09T07:16:00",
+  "last_refreshed": "2026-10-09T08:40:00",
 
   "metadata": {
     "title": "FFT AI Edition – Canonical Manifest (v1.3)",
     "author_canon": "Nawder Loswin",
     "license": "Proprietary – TriadicFrameworks Canon",
-    "updated_at": "2026-10-09T07:16:00",
+    "updated_at": "2026-10-09T08:40:00",
     "tags": ["FFT", "Manifest", "Canon", "v1.3"]
   },
 
   "manifest": {
-    "total_files": 57,
+    "total_files": 63,
 
     "groups": {
       "core_architecture": [
         "fft.ai.core.json",
+        "fft.ai.core_v1_2_.json",
         "fft.ai.spec.json",
+        "fft.ai.spec-008.json",
         "fft.ai.manifest.json",
         "fft.ai.index.json",
         "fft.ai.readme.json",
@@ -38,6 +40,7 @@
 
       "session_layer": [
         "fft.ai.session.state.json",
+        "fft.ai.session.state.refresh.json",
         "fft.ai.session.context.json",
         "fft.ai.session.alignments.json",
         "fft.ai.session.log.json",
@@ -48,7 +51,10 @@
         "fft.ai.session.ui.json",
         "fft.ai.session.profile.json",
         "fft.ai.session.analytics.json",
-        "fft.ai.session.awareness.json"
+        "fft.ai.session.awareness.json",
+        "fft.ai.session.navigation.json",
+        "fft.ai.session.permissions.json",
+        "fft.ai.session.render.json"
       ],
 
       "operators_structures": [
@@ -60,7 +66,8 @@
         "fft.invariant.json",
         "fft.validation.json",
         "fft.examples.json",
-        "fft.core.json"
+        "fft.core.json",
+        "fft.ai.paradox.enum.json"
       ],
 
       "ai_runtime_layer": [
@@ -71,23 +78,43 @@
         "fft.ai.execution.graph.json",
         "fft.ai.integrations.json",
         "fft.ai.navigation.json",
+        "fft.ai.reader.json",
         "fft.ai.overview.json",
-        "fft.ai.registry.json",
-        "fft.ai.rtt.engine.prompts.json",
-        "fft.ai.rtt.spine.examples.json"
-      ],
-
-      "capture": [
-        "capture.md"
+        "fft.ai.registry.json"
       ]
     }
   },
 
-  "canon_guarantees": [
-    "All v1.3 files include aa_mode, measure IDs, typed paradox fields, substrate class, lineage, and collapse rules.",
-    "spec_version 1.3.0 is consistent across the entire manifest.",
-    "Substrate compatibility declared in every runtime, hardware, autonomy, and session file.",
-    "Awareness, analytics, profile, and navigation layers present in all session files.",
-    "Execution graph, autonomy, discovery, and capabilities layers fully aligned with RTT v0.9 and regime mapping."
+  "rules": {
+    "manifest_rules": [
+      "Manifest MUST list all modules in the AI Edition.",
+      "Manifest MUST NOT invent module names.",
+      "Manifest MUST NOT omit session-layer modules.",
+      "Manifest MUST match fft.ai.index.json.",
+      "Manifest MUST match fft.ai.registry.json.",
+      "Manifest MUST match fft.ai.spec-008.json."
+    ],
+
+    "load_rules": [
+      "Core architecture MUST load first.",
+      "Session-layer MUST load after runtime.",
+      "Render MUST load last."
+    ]
+  },
+
+  "integration": {
+    "index": "fft.ai.index.json",
+    "registry": "fft.ai.registry.json",
+    "spec": "fft.ai.spec.json",
+    "spec_008": "fft.ai.spec-008.json",
+    "runtime": "fft.ai.runtime.json",
+    "session_state": "fft.ai.session.state.json",
+    "session_trace": "fft.ai.session.trace.json",
+    "session_render": "fft.ai.session.render.json"
+  },
+
+  "timestamps": {
+    "created": "2025-01-01T00:00:00",
+    "last_update": "2026-10-09T08:40:00"
   }
 }
