@@ -1,24 +1,9 @@
-# **Arrival Substrate Model**  
+<img width="1194" height="672" alt="Arrival_Substrate_Integration_" src="https://github.com/user-attachments/assets/454a7522-9a95-49fe-a83f-ea9d061b3fd1" />
 
 - [`arrival_substrate_model_module.json`](arrival_substrate_model_module.json) — Agentic module schema role assignments
 
+# **Arrival Substrate Model**  
 *A life‑aligned substrate describing how living systems continuously enter, negotiate, and stabilize within new regimes.*
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🟣Arrival%20Substrate%20Model-📘Life%20Aligned%20Substrate%20AI%20Ready-4c8eda?style=for-the-badge" alt="Arrival Substrate Model | Life‑Aligned Substrate • AI‑Ready"/>
 
 ---
 
@@ -257,3 +242,18 @@ This block:
 
 ---
 
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🟣Arrival%20Substrate%20Model-📘Life%20Aligned%20Substrate%20AI%20Ready-4c8eda?style=for-the-badge" alt="Arrival Substrate Model | Life‑Aligned Substrate • AI‑Ready"/>
