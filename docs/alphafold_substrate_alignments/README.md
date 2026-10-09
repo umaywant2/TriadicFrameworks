@@ -1,4 +1,4 @@
-<img width="682" height="682" alt="rtt_alphafold_image" src="https://github.com/user-attachments/assets/dc1edd57-4351-4b4e-a59f-1b760e55c2be" />
+<img width="1194" height="672" alt="alphafold_substrate_alignments_" src="https://github.com/user-attachments/assets/73cf3900-2d10-46cb-98e2-43586ed71a7a" />
 
 # *AlphaFold Substrate Alignments*  
 
