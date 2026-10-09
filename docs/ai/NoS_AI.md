@@ -1,3 +1,5 @@
+<img width="1024" height="1024" alt="rtt_ai_genesis_image" src="https://github.com/user-attachments/assets/0c0d121d-c056-40ee-b168-633b41f52dba" />
+
 # NoS: Minimal AI instrument
 
 This document defines the non-negotiable constraints for a minimal AI instrument.
