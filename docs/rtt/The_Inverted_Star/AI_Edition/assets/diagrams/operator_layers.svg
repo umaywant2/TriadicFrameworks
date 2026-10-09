@@ -1,1 +1,45 @@
-. 
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="720" height="360" viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg">
+
+  <style>
+    .layer-box { fill:#111; stroke:#666; stroke-width:1.5; }
+    .layer-title { fill:#fff; font-family:system-ui, sans-serif; font-size:14px; font-weight:bold; }
+    .op-text { fill:#9cf; font-family:system-ui, sans-serif; font-size:12px; }
+    .title { fill:#fff; font-family:system-ui, sans-serif; font-size:16px; font-weight:bold; }
+  </style>
+
+  <text x="360" y="30" text-anchor="middle" class="title">
+    Inverted Star — Operator Layers
+  </text>
+
+  <!-- surface-deep (Φ) -->
+  <rect x="60" y="70" width="180" height="80" rx="8" class="layer-box"/>
+  <text x="150" y="90" text-anchor="middle" class="layer-title">surface–deep</text>
+  <text x="150" y="115" text-anchor="middle" class="op-text">Φ — Phase‑Map</text>
+  <text x="150" y="135" text-anchor="middle" class="op-text">structural alignment</text>
+
+  <!-- mid-deep (Δ) -->
+  <rect x="260" y="70" width="180" height="80" rx="8" class="layer-box"/>
+  <text x="350" y="90" text-anchor="middle" class="layer-title">mid–deep</text>
+  <text x="350" y="115" text-anchor="middle" class="op-text">Δ — Delta‑Shift</text>
+  <text x="350" y="135" text-anchor="middle" class="op-text">pre‑inversion tension</text>
+
+  <!-- deep (Ω, Σ) -->
+  <rect x="460" y="70" width="200" height="80" rx="8" class="layer-box"/>
+  <text x="560" y="90" text-anchor="middle" class="layer-title">deep</text>
+  <text x="560" y="115" text-anchor="middle" class="op-text">Ω — Omega‑Turn (inversion)</text>
+  <text x="560" y="135" text-anchor="middle" class="op-text">Σ — Silence‑Boundary (0D)</text>
+
+  <!-- deep-mid (∇) -->
+  <rect x="160" y="190" width="200" height="80" rx="8" class="layer-box"/>
+  <text x="260" y="210" text-anchor="middle" class="layer-title">deep–mid</text>
+  <text x="260" y="235" text-anchor="middle" class="op-text">∇ — Gradient‑Rebuild</text>
+  <text x="260" y="255" text-anchor="middle" class="op-text">post‑inversion stabilization</text>
+
+  <!-- cross-cutting (Rₓ) -->
+  <rect x="380" y="190" width="200" height="80" rx="8" class="layer-box"/>
+  <text x="480" y="210" text-anchor="middle" class="layer-title">cross‑cutting</text>
+  <text x="480" y="235" text-anchor="middle" class="op-text">Rₓ — Reversal‑Cross</text>
+  <text x="480" y="255" text-anchor="middle" class="op-text">cross‑operator interactions</text>
+
+</svg>
