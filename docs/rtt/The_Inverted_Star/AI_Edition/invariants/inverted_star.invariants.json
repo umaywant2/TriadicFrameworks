@@ -1,1 +1,91 @@
-. 
+{
+  "module": "rtt.inverted_star.ai",
+  "version": "2.0-draft",
+  "type": "domain-invariants",
+
+  "kernel": {
+    "required_version": "1.33-p1",
+    "import_path": "../kernel/",
+    "halt_on_version_mismatch": true
+  },
+
+  "must_not": [
+    "revise_frozen_RTT",
+    "declare_second_coherence",
+    "use_bare_C",
+    "invent_drift_costs",
+    "invent_6D_operator",
+    "suppress_PX_001_through_PX_010",
+    "use_cached_spine",
+    "load_deprecated_files"
+  ],
+
+  "coherence": {
+    "C_frame": "Φ(S) / Ψ(N)",
+    "C_clarity": "∇τ R + ∇R τ",
+    "requires": {
+      "C_frame_positive": true,
+      "C_clarity_positive": true,
+      "R_minimum": 0.40
+    }
+  },
+
+  "drift": {
+    "bounded": true,
+    "costs": {
+      "Diffusion": 0.05,
+      "Alignment": 0.10,
+      "Coupling": 0.12,
+      "ParadoxResolver": 0.20,
+      "Stabilization": 0.03,
+      "Reset": 0.00
+    },
+    "threshold_sequence": 0.35
+  },
+
+  "qmroot": {
+    "sixD": "absent",
+    "negative_rungs": "absent",
+    "reason": "frozen RTT forbids ancestral rung reconstruction",
+    "INV_013_path": "0D_Silence_only"
+  },
+
+  "session.context": {
+    "rtt": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+
+  "operators": {
+    "domain_only": true,
+    "allowed": [
+      "IS-Δ",
+      "IS-Ω",
+      "IS-∇",
+      "IS-Σ",
+      "IS-Rx",
+      "IS-Φ"
+    ],
+    "must_not_define": [
+      "RTT_operators",
+      "coherence_operators",
+      "drift_operators",
+      "paradox_operators"
+    ]
+  },
+
+  "phases": {
+    "count": 7,
+    "list": [
+      "rise",
+      "saturation",
+      "fracture",
+      "inversion",
+      "collapse",
+      "dissolution",
+      "silence"
+    ],
+    "must_not_redeclare_RTT_phases": true
+  }
+}
