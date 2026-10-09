@@ -1,35 +1,116 @@
 {
-  "spec_version": "1.2.0",
-  "canon_id": "FFT-Session-UI",
-  "edition": "AI Edition",
-  "aa_mode": "AA2",
-  "last_refreshed": "2026-10-08T10:57:00",
+  "spec_version": "1.3.0-draft",
+  "canon_id": "FFT-AI-Session-UI",
+
   "metadata": {
-    "title": "FFT AI Edition – Session UI (v1.2)",
+    "title": "FFT AI Edition – Session UI (v1.3 Draft)",
+    "subtitle": "Structured Interface for RTT • Regime • Measures • Paradox • Consent",
     "author_canon": "Nawder Loswin",
-    "updated_at": "2026-10-08T10:57:00"
+    "description": "Defines the non-authoritative UI projection for FFT AI Edition v1.3."
   },
+
+  "status_line": "UI is a projection only; authoritative values come from session.state, alignments, context, log, dashboard, and overlay.",
+
   "ui": {
-    "theme": "dark",
-    "accent_color": "#2563eb",
-    "lattice_phase_colors": {
-      "foundation": "#2563eb",
-      "active": "#16a34a",
-      "escalation": "#f59e0b",
-      "resolution": "#dc2626"
+    "session_id": "inherit-from-session.state",
+
+    "header": {
+      "rtt_node": "RTT1",
+      "regime": "nominal",
+      "substrate_class": "agentic",
+      "operator": "op.diffusion",
+      "operator_consent": false,
+      "lineage": 1
     },
-    "three_c_colors": {
-      "nominal": "#16a34a",
-      "degraded": "#f59e0b",
-      "critical": "#dc2626"
+
+    "panels": {
+      "measures": {
+        "title": "Measures",
+        "items": [
+          { "label": "Coherence", "id": "measure.c1", "value": 0.80 },
+          { "label": "Clarity", "id": "measure.c2", "value": 0.80 },
+          { "label": "Continuity", "id": "measure.c3", "value": 0.80 },
+          { "label": "Paradox Density", "id": "measure.paradox_density", "value": 0.00 },
+          { "label": "Lattice Stability", "id": "measure.lattice_stability", "value": 0.80 }
+        ]
+      },
+
+      "paradox": {
+        "title": "Paradox",
+        "typed_paradox_events": [],
+        "status": "none"
+      },
+
+      "collapse": {
+        "title": "Collapse",
+        "state": null,
+        "notes": "RTT12 MUST collapse to RTT1."
+      },
+
+      "substrate": {
+        "title": "Substrate",
+        "class": "agentic",
+        "harmonic_allowed": true
+      }
     },
-    "aa_mode_badges": {
-      "AA0": { "label": "Passive",    "color": "#6b7280" },
-      "AA1": { "label": "Active",     "color": "#3b82f6" },
-      "AA2": { "label": "Adaptive",   "color": "#16a34a" },
-      "AA3": { "label": "Autonomous", "color": "#f59e0b" }
+
+    "links": {
+      "state": "fft.ai.session.state.json",
+      "alignments": "fft.ai.session.alignments.json",
+      "context": "fft.ai.session.context.json",
+      "log": "fft.ai.session.log.json",
+      "dashboard": "fft.ai.session.dashboard.json",
+      "overlay": "fft.ai.session.overlay.json",
+      "history": "fft.ai.session.history.json"
     },
-    "panels_enabled": ["lattice","3c","triad","overlay","alignment_feed","operator_queue","trace"],
-    "ui_version": "v1.2.0-R5"
-  }
+
+    "timestamps": {
+      "created": "auto",
+      "last_update": "auto"
+    }
+  },
+
+  "rules": {
+    "projection_rules": [
+      "UI MUST NOT contradict authoritative session.state.json.",
+      "UI MUST NOT contradict session.alignments.json.",
+      "UI MUST NOT contradict session.context.json.",
+      "UI MUST NOT contradict session.log.json.",
+      "UI MUST NOT invent measure values.",
+      "UI MUST NOT invent paradox types.",
+      "UI MUST NOT invent substrate classes."
+    ],
+
+    "rtt_rules": [
+      "rtt_node MUST be one of RTT1–RTT12.",
+      "RTT nodes MUST map to frozen RTT v0.9 quantities.",
+      "RTT12 MUST collapse to RTT1; skip-resolution forbidden."
+    ],
+
+    "regime_rules": [
+      "Regime MUST be nominal, harmonic, or resolution.",
+      "Regime MUST match rtt_node according to fft.ai.regimes.json."
+    ],
+
+    "consent_rules": [
+      "AA3 escalation requires operator_consent = true.",
+      "If operator_consent = false, escalation MUST be refused."
+    ],
+
+    "lineage_rules": [
+      "Lineage MUST be non-decreasing.",
+      "Lineage MUST increase after collapse."
+    ],
+
+    "substrate_rules": [
+      "Harmonic escalation requires substrate_class = agentic.",
+      "Non-agentic harmonic escalation forbidden."
+    ]
+  },
+
+  "non_claims": [
+    "UI does not revise RTT v0.9.",
+    "UI does not reinterpret SET, S–N–R, or triadic time.",
+    "UI does not replace the human FFT book."
+  ]
 }
