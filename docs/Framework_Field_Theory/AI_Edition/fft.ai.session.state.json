@@ -1,34 +1,96 @@
 {
-  "spec_version": "1.2.0",
-  "canon_id": "FFT-Session-State",
-  "edition": "AI Edition",
-  "aa_mode": "AA2",
-  "last_refreshed": "2026-10-08T10:57:00",
+  "spec_version": "1.3.0-draft",
+  "canon_id": "FFT-AI-Session-State",
+
   "metadata": {
-    "title": "FFT AI Edition – Session State (v1.2)",
+    "title": "FFT AI Edition – Session State (v1.3 Draft)",
+    "subtitle": "RTT • Regime • Measures • Paradox • Consent • Lineage",
     "author_canon": "Nawder Loswin",
-    "updated_at": "2026-10-08T10:57:00"
+    "description": "Defines the authoritative session state for FFT AI Edition v1.3."
   },
-  "state": {
-    "session_id": null,
-    "phase": "pre-bootstrap",
-    "substrate": "substrate.llm.agentic",
-    "aa_mode": "AA2",
-    "lattice_node": "RTT1",
-    "lattice_stability": 1.0,
-    "paradox_density": 0.0,
-    "escalation_active": false,
-    "triad_position": { "T": "RTT1", "S": "field.signal", "M": "AA2" },
-    "three_c": {
-      "C1_coherence": 1.0,
-      "C2_clarity": 1.0,
-      "C3_continuity": 1.0,
-      "field_state": "nominal"
+
+  "status_line": "Session state is authoritative; all projections must conform to it.",
+
+  "session_state": {
+    "session_id": "auto-generated",
+    "substrate_class": "agentic",
+
+    "rtt_node": "RTT1",
+    "regime": "nominal",
+
+    "operator": "op.diffusion",
+    "operator_consent": false,
+
+    "lineage": 1,
+
+    "measures": {
+      "measure.c1": 0.80,
+      "measure.c2": 0.80,
+      "measure.c3": 0.80,
+      "measure.paradox_density": 0.00,
+      "measure.lattice_stability": 0.80
     },
-    "active_regime": "regime.resonance-time.core",
-    "operator_queue": [],
-    "alignment_count": 0,
-    "turn_count": 0,
-    "state_version": "v1.2.0-R5"
-  }
+
+    "paradox_events": [],
+    "collapse_state": null,
+
+    "timestamps": {
+      "created": "auto",
+      "last_update": "auto"
+    }
+  },
+
+  "rules": {
+    "authoritative_rules": [
+      "Session state MUST be authoritative.",
+      "dashboard, overlay, and UI files are projections only.",
+      "Projections MUST NOT contradict session state."
+    ],
+
+    "rtt_rules": [
+      "rtt_node MUST be one of RTT1–RTT12.",
+      "RTT nodes MUST map to frozen RTT v0.9 quantities.",
+      "RTT12 MUST collapse to RTT1; skip-resolution forbidden."
+    ],
+
+    "regime_rules": [
+      "Regime MUST be one of: nominal, harmonic, resolution.",
+      "Regime MUST match rtt_node according to fft.ai.regimes.json."
+    ],
+
+    "measure_rules": [
+      "All measures MUST be numeric in [0,1].",
+      "Measures MUST NOT be invented.",
+      "Every threshold MUST cite a measure ID."
+    ],
+
+    "paradox_rules": [
+      "Paradox events MUST be typed.",
+      "Typed paradox required for RTT7 entry.",
+      "Vibe-based paradox forbidden."
+    ],
+
+    "consent_rules": [
+      "AA3 escalation requires operator_consent = true.",
+      "If operator_consent = false, escalation MUST be refused."
+    ],
+
+    "lineage_rules": [
+      "Lineage MUST be non-decreasing.",
+      "Lineage MUST increase after collapse.",
+      "Continuity (measure.c3) MUST NOT decrease across transitions."
+    ],
+
+    "substrate_rules": [
+      "substrate_class MUST be one of: agentic, parametric, symbolic, edge.",
+      "Harmonic escalation requires substrate_class = agentic.",
+      "Non-agentic harmonic escalation forbidden."
+    ]
+  },
+
+  "non_claims": [
+    "Session state does not revise RTT v0.9.",
+    "Session state does not reinterpret SET, S–N–R, or triadic time.",
+    "Session state does not replace the human FFT book."
+  ]
 }
