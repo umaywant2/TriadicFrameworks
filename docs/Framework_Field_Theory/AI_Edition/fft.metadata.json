@@ -1,47 +1,96 @@
 {
-  "spec_version": "1.2.0",
+  "spec_version": "1.3.0-draft",
   "canon_id": "FFT-Metadata",
-  "edition": "AI Edition",
-  "aa_mode": "AA2",
-  "last_refreshed": "2026-10-08T11:00:00",
+
   "metadata": {
-    "title": "FFT – Canon Metadata Registry (v1.2)",
+    "title": "Framework Field Theory – AI Edition Metadata (v1.3 Draft)",
+    "subtitle": "SPDX • Book Linkage • RTT Linkage • Invariants • Non-Goals",
     "author_canon": "Nawder Loswin",
-    "license": "Proprietary – TriadicFrameworks Canon",
-    "created_at": "2026-10-08T08:30:00",
-    "updated_at": "2026-10-08T11:00:00",
-    "canonical_version": "1.2.0",
-    "edition": "AI Edition",
-    "tags": ["FFT","RTT","Triadic","Canon","Metadata","AA-Mode","3C","Harmonic-Lattice","v1.2"]
+
+    "spdx_license": "MIT",
+
+    "description": "Defines canonical metadata for FFT AI Edition v1.3, including licensing, book linkage, RTT linkage, invariants, non-goals, and load-bearing file declarations."
   },
-  "canon_registry": {
-    "framework": "Framework Field Theory",
-    "abbreviation": "FFT",
-    "sub_theories": [
-      "Resonance-Time Theory (RTT)",
-      "Triadic Substrate Modeling (TSM)",
-      "Harmonic Lattice Theory (HLT)",
-      "3C Field Evaluation (3CFE)",
-      "Autonomous Alignment Mode (AAM)"
+
+  "edition": {
+    "version": "1.3.0-draft",
+    "refresh_stamp": "2026-10-08",
+    "canon_graph": "R6",
+    "load_bearing_files": [
+      "fft.ai.reader.json",
+      "fft.ai.core.json",
+      "fft.ai.rtt.bridge.json",
+      "fft.ai.spec.json",
+      "fft.ai.spec-008.json",
+      "fft.ai.substrate.compat.json",
+      "fft.ai.substrate.bridge.json",
+      "fft.ai.session.state.json",
+      "fft.ai.session.alignments.json",
+      "fft.ai.session.log.json"
+    ]
+  },
+
+  "book_linkage": {
+    "claim": "FFT AI Edition is an operational projection of the human FFT book.",
+    "non_claims": [
+      "AI Edition does not replace the human FFT book.",
+      "AI Edition does not revise book-era definitions.",
+      "AI Edition does not reinterpret SET, S–N–R, or triadic time."
     ],
-    "current_release": {
-      "version": "1.2.0",
-      "released_at": "2026-10-08T11:00:00",
-      "release_type": "Full Canon Refresh",
-      "changes": [
-        "AA Mode system fully defined (AA0–AA3) with escalation/reversion rules",
-        "3C condition triad (C1/C2/C3) integrated at all operator gates and session lifecycle events",
-        "12-node harmonic lattice (RTT1–RTT12) with per-node substrate and AA Mode requirements",
-        "Triad-based dimensional architecture (T,S,M) for all operator dispatch",
-        "Complete session layer: awareness (L1–L5), alignments, analytics, context, dashboard, history, log, overlay, profile, state, trace, UI",
-        "Substrate bridge and capability matrix for multi-platform operator dispatch",
-        "Execution graph with topological sort and 3C-gated dispatch",
-        "All 46 files regenerated to spec_version 1.2.0 canon"
-      ]
+    "chapter_pointers": {
+      "diffusion": "Ch. 3",
+      "alignment": "Ch. 4",
+      "coupling": "Ch. 5",
+      "activation": "Ch. 6",
+      "triadic_time": "Ch. 7",
+      "snr": "Ch. 8",
+      "stabilization": "Ch. 9",
+      "resonance_envelope": "Ch. 10",
+      "apex": "Ch. 11",
+      "rewind": "Ch. 12",
+      "collapse": "Ch. 13"
     }
   },
-  "contact": {
-    "canonical_owner": "Nawder Loswin",
-    "repository": "https://github.com/umaywant2/TriadicFrameworks"
+
+  "rtt_linkage": {
+    "claim": "RTT12 lattice is a projection of frozen RTT v0.9.",
+    "non_claims": [
+      "AI Edition does not revise RTT v0.9.",
+      "AI Edition does not alter frozen RTT lineage or safety envelopes.",
+      "AI Edition does not redefine frozen RTT operators."
+    ],
+    "bridge_file": "fft.ai.rtt.bridge.json"
+  },
+
+  "invariants": {
+    "coherence_declared": "Coherence MUST be declared before any regime transition.",
+    "drift_bounded": "Drift MUST remain bounded for resonance-time stability.",
+    "typed_paradox_required": "RTT7 entry requires a typed paradox event.",
+    "aa3_consent": "AA3 escalation requires explicit operator consent.",
+    "collapse_required": "RTT12 MUST collapse to RTT1; skip-resolution forbidden.",
+    "measure_required": "Every gate MUST cite a measure ID defined in fft.ai.core.json."
+  },
+
+  "non_goals": [
+    "Do not invent scores.",
+    "Do not invent invariants.",
+    "Do not invent operators or regimes.",
+    "Do not invent substrate classes.",
+    "Do not revise frozen RTT v0.9.",
+    "Do not reinterpret the human FFT book."
+  ],
+
+  "measure_ids": [
+    "measure.c1",
+    "measure.c2",
+    "measure.c3",
+    "measure.paradox_density",
+    "measure.lattice_stability"
+  ],
+
+  "session_rules": {
+    "lineage_non_decreasing": "Session lineage MUST NOT decrease across RTT1–RTT12.",
+    "continuity_non_decreasing": "measure.c3 MUST NOT decrease across regime transitions.",
+    "rewind_mapping": "RTT11 inversion maps directly to frozen RTT rewind."
   }
 }
