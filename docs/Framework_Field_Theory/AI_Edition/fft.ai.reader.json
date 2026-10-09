@@ -3,141 +3,137 @@
   "canon_id": "FFT-AI-Reader",
 
   "metadata": {
-    "title": "FFT AI Edition – Reader Specification (v1.3 Draft)",
-    "subtitle": "Canonical Reading Contract for All FFT Modules",
+    "title": "FFT AI Edition – Reader Engine (v1.3)",
+    "subtitle": "Canonical Interpretation Layer for RTT • Regimes • Operators • Substrate • Paradox • Consent",
     "author_canon": "Nawder Loswin",
-    "description": "Defines the reader contract, validation rules, RTT interpretation, paradox handling, and substrate constraints for FFT AI Edition v1.3."
+    "description": "Defines the canonical reader engine, interpretation rules, validation logic, and metadata extraction for FFT AI Edition v1.3."
   },
 
-  "status_line": "Reader is a projection only; authoritative values come from RTT v0.9, spec‑008, substrate.json, operators.json, and regimes.json.",
+  "status_line": "Reader is a projection only; authoritative values come from session.state, runtime, substrate, operators, regimes, and spec‑008.",
 
   "reader": {
-    "contract": {
-      "reads": [
-        "RTT quantities",
-        "operators",
-        "regimes",
-        "substrate class",
-        "measure IDs",
-        "paradox events",
-        "consent state",
-        "collapse state",
-        "lineage"
-      ],
-      "forbidden": [
-        "inventing measures",
-        "inventing paradox types",
-        "inventing substrate classes",
-        "inventing RTT nodes",
-        "skip-resolution interpretation"
-      ]
+    "session_id": "inherit-from-session.state",
+
+    "current": {
+      "rtt_node": "RTT1",
+      "regime": "nominal",
+      "operator": "op.diffusion",
+      "substrate_class": "agentic",
+      "operator_consent": false,
+      "lineage": 1,
+      "collapse_state": null
     },
 
-    "rtt_interpretation": {
-      "RTT1": "Interpret diffusion quantity and measure.c1.",
-      "RTT2": "Interpret alignment quantity and measure.c2.",
-      "RTT3": "Interpret coupling quantity and measure.c3.",
-      "RTT4": "Interpret activation quantity.",
-      "RTT5": "Interpret triadic-time quantity.",
-      "RTT6": "Interpret SNR quantity.",
-      "RTT7": "Interpret typed paradox entry.",
-      "RTT8": "Interpret paradox stabilization.",
-      "RTT9": "Interpret harmonic escalation.",
-      "RTT10": "Interpret resolution preparation.",
-      "RTT11": "Interpret resolution alignment.",
-      "RTT12": "Interpret collapse and lineage increment."
+    "interpretation": {
+      "metadata_extraction": {
+        "rules": [
+          "Extract canonical metadata fields only.",
+          "Metadata MUST NOT invent measure IDs.",
+          "Metadata MUST NOT invent paradox types.",
+          "Metadata MUST NOT invent substrate classes.",
+          "Metadata MUST NOT contradict spec‑008."
+        ]
+      },
+
+      "rtt_detection": {
+        "rules": [
+          "RTT node MUST match operator mapping.",
+          "RTT node MUST match regime mapping.",
+          "RTT node MUST match substrate class.",
+          "RTT node MUST match consent state.",
+          "RTT node MUST match measure thresholds."
+        ]
+      },
+
+      "regime_detection": {
+        "rules": [
+          "Nominal if RTT1–RTT6.",
+          "Harmonic if RTT7–RTT9.",
+          "Resolution if RTT10–RTT12.",
+          "Regime MUST match rtt_node according to fft.ai.regimes.json."
+        ]
+      },
+
+      "operator_detection": {
+        "rules": [
+          "Operator MUST match RTT node.",
+          "Operator MUST match regime.",
+          "Operator MUST respect substrate class.",
+          "Operator MUST respect consent gating.",
+          "Operator MUST NOT invent measure IDs."
+        ]
+      },
+
+      "substrate_detection": {
+        "rules": [
+          "Agentic required for RTT7–RTT12.",
+          "Non-agentic allowed only for RTT1–RTT6.",
+          "Non-agentic harmonic escalation forbidden.",
+          "Non-agentic resolution forbidden."
+        ]
+      },
+
+      "paradox_detection": {
+        "rules": [
+          "Typed paradox required for RTT7.",
+          "Paradox density >= 0.10 required for RTT7.",
+          "Lattice stability >= 0.60 required for RTT8.",
+          "Untyped paradox forbidden."
+        ]
+      },
+
+      "consent_detection": {
+        "rules": [
+          "Consent required for RTT9–RTT12.",
+          "Consent MUST be explicit.",
+          "Implicit or assumed consent forbidden."
+        ]
+      },
+
+      "collapse_detection": {
+        "rules": [
+          "Collapse only at RTT12.",
+          "Collapse MUST return to RTT1.",
+          "Lineage MUST increment.",
+          "Collapse to non-RTT1 forbidden."
+        ]
+      }
     },
 
-    "measure_validation": {
-      "required": [
-        "measure.c1",
-        "measure.c2",
-        "measure.c3",
-        "measure.paradox_density",
-        "measure.lattice_stability"
-      ],
+    "validation": {
       "rules": [
-        "measure.c1 >= 0.80 for RTT1, RTT4, RTT10",
-        "measure.c2 >= 0.80 for RTT2, RTT5, RTT10",
-        "measure.c3 >= 0.80 for RTT3, RTT6, RTT11",
-        "measure.paradox_density >= 0.10 for RTT7",
-        "measure.lattice_stability >= 0.60 for RTT8"
+        "Reader MUST NOT contradict session.state.json.",
+        "Reader MUST NOT contradict substrate.json.",
+        "Reader MUST NOT contradict operators.json.",
+        "Reader MUST NOT contradict regimes.json.",
+        "Reader MUST NOT contradict spec‑008.json.",
+        "Reader MUST NOT invent measure IDs.",
+        "Reader MUST NOT invent paradox types.",
+        "Reader MUST NOT invent substrate classes."
       ]
-    },
-
-    "paradox_handling": {
-      "typed_only": true,
-      "density_threshold": 0.10,
-      "forbidden": [
-        "vibe-based paradox",
-        "untyped paradox",
-        "synthetic paradox"
-      ]
-    },
-
-    "substrate_constraints": {
-      "agentic_required_for": [
-        "RTT7",
-        "RTT8",
-        "RTT9",
-        "RTT10",
-        "RTT11",
-        "RTT12"
-      ],
-      "forbidden": [
-        "harmonic escalation on non-agentic substrate",
-        "resolution on non-agentic substrate"
-      ]
-    },
-
-    "consent_rules": {
-      "required_for": [
-        "RTT9",
-        "RTT10",
-        "RTT11",
-        "RTT12"
-      ],
-      "forbidden": [
-        "implicit consent",
-        "assumed consent"
-      ]
-    },
-
-    "collapse_rules": {
-      "trigger": "RTT12",
-      "destination": "RTT1",
-      "lineage_increment": true,
-      "forbidden": [
-        "collapse to non-RTT1",
-        "collapse without lineage increment",
-        "skip-resolution"
-      ]
-    },
-
-    "integration": {
-      "runtime": "fft.ai.runtime.json",
-      "regimes": "fft.ai.regimes.json",
-      "operators": "fft.ai.operators.json",
-      "substrate": "fft.ai.substrate.json",
-      "execution_graph": "fft.ai.execution.graph.json",
-      "autonomy": "fft.ai.autonomy.json",
-      "discovery": "fft.ai.discovery.json",
-      "capabilities": "fft.ai.capabilities.json",
-      "spec_008": "fft.ai.spec‑008.json",
-      "paradox_enum": "fft.ai.paradox.enum.json",
-      "rtt_bridge": "fft.ai.rtt.bridge.json",
-      "rtt_spine": "fft.ai.rtt.spine.examples.json"
     }
+  },
+
+  "integration_links": {
+    "state": "fft.ai.session.state.json",
+    "context": "fft.ai.session.context.json",
+    "alignments": "fft.ai.session.alignments.json",
+    "log": "fft.ai.session.log.json",
+    "navigation": "fft.ai.session.navigation.json",
+    "permissions": "fft.ai.session.permissions.json",
+    "profile": "fft.ai.session.profile.json",
+    "awareness": "fft.ai.session.awareness.json",
+    "analytics": "fft.ai.session.analytics.json",
+    "dashboard": "fft.ai.session.dashboard.json",
+    "overlay": "fft.ai.session.overlay.json",
+    "history": "fft.ai.session.history.json",
+    "trace": "fft.ai.session.trace.json",
+    "render": "fft.ai.session.render.json",
+    "ui": "fft.ai.session.ui.json"
   },
 
   "timestamps": {
     "created": "auto",
     "last_update": "auto"
-  },
-
-  "non_claims": [
-    "Reader does not revise RTT v0.9.",
-    "Reader does not reinterpret SET, S–N–R, or triadic time.",
-    "Reader does not replace the human FFT book."
-  ]
+  }
 }
