@@ -1,50 +1,155 @@
 {
-  "spec_version": "1.2.0",
-  "canon_id": "FFT-Session-Awareness",
-  "edition": "AI Edition",
-  "aa_mode": "AA2",
-  "last_refreshed": "2026-10-08T10:57:00",
+  "spec_version": "1.3.0-draft",
+  "canon_id": "FFT-AI-Session-Awareness",
+
   "metadata": {
-    "title": "FFT AI Edition – Session Awareness (v1.2)",
+    "title": "FFT AI Edition – Session Awareness (v1.3 Draft)",
+    "subtitle": "Cognitive Envelope for RTT • Regime • Measures • Paradox • Consent",
     "author_canon": "Nawder Loswin",
-    "updated_at": "2026-10-08T10:57:00"
+    "description": "Defines the non-authoritative awareness projection for FFT AI Edition v1.3."
   },
+
+  "status_line": "Awareness is a projection only; authoritative values come from session.state, alignments, context, log, dashboard, overlay, history, and analytics.",
+
   "awareness": {
-    "definition": "Session Awareness tracks the live understanding the runtime has of its own field state, triad position, operator context, and substrate health. Updated on every turn and regime transition.",
-    "layers": {
-      "L1_field_awareness": {
-        "label": "Field Awareness",
-        "description": "Awareness of the current field signal set: types, sources, and 3C scores.",
-        "current_signals": [],
-        "three_c_snapshot": { "C1": null, "C2": null, "C3": null, "field_state": "uninitialized" }
+    "session_id": "inherit-from-session.state",
+
+    "cognitive_state": {
+      "rtt_node": {
+        "value": "RTT1",
+        "awareness": "System recognizes current RTT node and its constraints.",
+        "notes": "RTT nodes MUST map to frozen RTT v0.9 quantities."
       },
-      "L2_lattice_awareness": {
-        "label": "Lattice Awareness",
-        "description": "Awareness of current RTT node, escalation trajectory, and paradox density.",
-        "current_node": "RTT1",
-        "phase": "foundation",
-        "paradox_density": 0.0,
-        "escalation_active": false
+
+      "regime": {
+        "value": "nominal",
+        "awareness": "System identifies regime and its operational boundaries.",
+        "notes": "Regime MUST match rtt_node according to fft.ai.regimes.json."
       },
-      "L3_triad_awareness": {
-        "label": "Triad Awareness",
-        "description": "Awareness of (T,S,M) position: temporal, structural, and modal axes.",
-        "triad_position": { "T": "RTT1", "S": "field.signal", "M": "AA2" }
+
+      "substrate": {
+        "value": "agentic",
+        "awareness": "System is aware of substrate class and harmonic eligibility.",
+        "notes": "Harmonic escalation requires substrate_class = agentic."
       },
-      "L4_substrate_awareness": {
-        "label": "Substrate Awareness",
-        "description": "Awareness of active substrate, its 3C thresholds, and bridge availability.",
-        "active_substrate": "substrate.llm.agentic",
-        "bridge_active": false,
-        "substrate_health": "nominal"
+
+      "operator": {
+        "value": "op.diffusion",
+        "awareness": "System recognizes active operator and its measure requirements.",
+        "notes": "Operator MUST match current RTT node."
       },
-      "L5_operator_awareness": {
-        "label": "Operator Awareness",
-        "description": "Awareness of which operators are currently eligible given substrate, AA Mode, and 3C state.",
-        "eligible_operators": ["op.clarity.spectral","op.harmonic.analysis","op.3c.evaluator","op.triad.resolve","op.alignment.write","op.awareness.update"]
+
+      "consent": {
+        "value": false,
+        "awareness": "System is aware of consent state and AA3 gating.",
+        "notes": "AA3 escalation requires operator_consent = true."
+      },
+
+      "lineage": {
+        "value": 1,
+        "awareness": "System tracks lineage continuity and collapse effects.",
+        "notes": "Lineage MUST be non-decreasing."
+      },
+
+      "collapse": {
+        "value": null,
+        "awareness": "System is aware of collapse readiness and RTT12 rules.",
+        "notes": "RTT12 MUST collapse to RTT1."
       }
     },
-    "update_trigger": "After every operator dispatch, regime transition, or 3C evaluation.",
-    "awareness_version": "v1.2.0-R5"
-  }
+
+    "measure_awareness": {
+      "coherence": {
+        "id": "measure.c1",
+        "value": 0.80,
+        "awareness": "System recognizes coherence as stable."
+      },
+      "clarity": {
+        "id": "measure.c2",
+        "value": 0.80,
+        "awareness": "System recognizes clarity as stable."
+      },
+      "continuity": {
+        "id": "measure.c3",
+        "value": 0.80,
+        "awareness": "System recognizes continuity as stable."
+      },
+      "paradox_density": {
+        "id": "measure.paradox_density",
+        "value": 0.00,
+        "awareness": "System recognizes absence of paradox."
+      },
+      "lattice_stability": {
+        "id": "measure.lattice_stability",
+        "value": 0.80,
+        "awareness": "System recognizes lattice stability as strong."
+      }
+    },
+
+    "paradox_awareness": {
+      "typed_paradox_events": [],
+      "awareness": "System recognizes no paradox events.",
+      "notes": "Typed paradox required for RTT7 entry."
+    },
+
+    "links": {
+      "state": "fft.ai.session.state.json",
+      "alignments": "fft.ai.session.alignments.json",
+      "context": "fft.ai.session.context.json",
+      "log": "fft.ai.session.log.json",
+      "dashboard": "fft.ai.session.dashboard.json",
+      "overlay": "fft.ai.session.overlay.json",
+      "history": "fft.ai.session.history.json",
+      "analytics": "fft.ai.session.analytics.json"
+    },
+
+    "timestamps": {
+      "created": "auto",
+      "last_update": "auto"
+    }
+  },
+
+  "rules": {
+    "projection_rules": [
+      "Awareness MUST NOT contradict authoritative session.state.json.",
+      "Awareness MUST NOT contradict session.alignments.json.",
+      "Awareness MUST NOT contradict session.context.json.",
+      "Awareness MUST NOT contradict session.log.json.",
+      "Awareness MUST NOT invent measure values.",
+      "Awareness MUST NOT invent paradox types.",
+      "Awareness MUST NOT invent substrate classes."
+    ],
+
+    "rtt_rules": [
+      "rtt_node MUST be one of RTT1–RTT12.",
+      "RTT nodes MUST map to frozen RTT v0.9 quantities.",
+      "RTT12 MUST collapse to RTT1; skip-resolution forbidden."
+    ],
+
+    "regime_rules": [
+      "Regime MUST be nominal, harmonic, or resolution.",
+      "Regime MUST match rtt_node according to fft.ai.regimes.json."
+    ],
+
+    "consent_rules": [
+      "AA3 escalation requires operator_consent = true.",
+      "If operator_consent = false, escalation MUST be refused."
+    ],
+
+    "lineage_rules": [
+      "Lineage MUST be non-decreasing.",
+      "Lineage MUST increase after collapse."
+    ],
+
+    "substrate_rules": [
+      "Harmonic escalation requires substrate_class = agentic.",
+      "Non-agentic harmonic escalation forbidden."
+    ]
+  },
+
+  "non_claims": [
+    "Awareness does not revise RTT v0.9.",
+    "Awareness does not reinterpret SET, S–N–R, or triadic time.",
+    "Awareness does not replace the human FFT book."
+  ]
 }
