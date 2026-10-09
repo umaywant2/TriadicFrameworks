@@ -1,3 +1,6 @@
+
+- [`module.json`](module.json) — Agentic module schema role assignments
+
 # `.well-known` — Public Service Metadata Surface
 
 The **`.well-known`** directory contains all machine‑readable service descriptors, capability manifests, authentication metadata, and agent‑skill definitions that external systems use to discover, authenticate, and interact with TriadicFrameworks.
