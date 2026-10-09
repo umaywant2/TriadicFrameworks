@@ -1,1 +1,55 @@
-.  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IS-Δ — Delta-Shift Operator</title>
+</head>
+<body>
+
+<pre id="ai-operator" data-format="json">
+{
+  "operator": {
+    "id": "IS-Δ",
+    "name": "Delta-Shift",
+    "module": "rtt.inverted_star.ai",
+    "version": "2.0-draft",
+    "role": "pre-inversion tension acceleration",
+    "layer": "mid-deep",
+    "alignment": "N",
+    "phase": ["rise", "saturation", "fracture"],
+
+    "transforms": {
+      "tension": "increase",
+      "cycle_rate": "unstable",
+      "echo_depth": "noisy"
+    },
+
+    "dependencies": {
+      "requires_kernel": true,
+      "kernel_version": "1.33-p1"
+    },
+
+    "constraints": {
+      "must_not_redeclare_RTT": true,
+      "must_not_declare_second_coherence": true,
+      "must_not_use_bare_C": true,
+      "must_not_invent_drift_costs": true,
+      "must_not_invent_6D_operator": true,
+      "must_not_suppress_PX_001_through_PX_010": true,
+      "must_not_use_cached_spine": true,
+      "must_not_load_deprecated_files": true
+    },
+
+    "drift_sensitivity": {
+      "Diffusion": "high",
+      "Alignment": "high",
+      "Coupling": "high",
+      "ParadoxResolver": "medium",
+      "Stabilization": "low"
+    }
+  }
+}
+</pre>
+
+</body>
+</html>
