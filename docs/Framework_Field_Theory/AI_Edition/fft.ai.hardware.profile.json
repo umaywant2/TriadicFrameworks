@@ -1,131 +1,167 @@
 {
-  "spec_version": "1.3.0-draft",
+  "spec_version": "1.3.0",
   "canon_id": "FFT-AI-Hardware-Profile",
 
   "metadata": {
     "title": "FFT AI Edition – Hardware Profile (v1.3 Draft)",
-    "subtitle": "Substrate Envelope for Execution • Stability • Constraints",
+    "subtitle": "Canonical Hardware Substrate Envelope for RTT • Regimes • Operators",
     "author_canon": "Nawder Loswin",
-    "description": "Defines the non-authoritative hardware profile for FFT AI Edition v1.3."
+    "description": "Defines hardware substrate classes, constraints, RTT compatibility, paradox gating, consent requirements, and collapse rules for FFT AI Edition v1.3."
   },
 
-  "status_line": "Hardware profile is a projection only; authoritative values come from substrate.json, runtime.json, and session.state.",
+  "status_line": "Hardware profile is a projection only; authoritative values come from substrate.json, runtime.json, operators.json, regimes.json, and spec‑008.",
 
   "hardware_profile": {
-    "session_id": "inherit-from-session.state",
+    "current_class": "agentic",
 
-    "substrate": {
-      "class": "agentic",
-      "awareness": "System recognizes substrate class and harmonic eligibility.",
-      "constraints": [
-        "Harmonic escalation requires substrate_class = agentic.",
-        "Non-agentic harmonic escalation forbidden."
-      ]
-    },
-
-    "execution_modes": {
-      "cpu": {
-        "enabled": true,
-        "awareness": "Nominal execution path.",
-        "constraints": ["Suitable for RTT1–RTT6."]
-      },
-      "gpu": {
-        "enabled": true,
-        "awareness": "Harmonic execution path.",
-        "constraints": [
-          "Requires typed paradox.",
-          "Requires operator_consent = true.",
-          "Suitable for RTT7–RTT9."
+    "classes": {
+      "agentic": {
+        "description": "Full-capability hardware substrate supporting harmonic and resolution execution.",
+        "rtt_range": ["RTT1", "RTT2", "RTT3", "RTT4", "RTT5", "RTT6", "RTT7", "RTT8", "RTT9", "RTT10", "RTT11", "RTT12"],
+        "requirements": [
+          "measure.c1 >= 0.80",
+          "measure.c2 >= 0.80",
+          "measure.c3 >= 0.80"
+        ],
+        "supports": [
+          "typed paradox",
+          "harmonic escalation",
+          "resolution preparation",
+          "resolution alignment",
+          "collapse"
         ]
       },
-      "accelerated": {
-        "enabled": true,
-        "awareness": "Resolution execution path.",
-        "constraints": [
-          "Requires measure.c1, c2, c3 >= 0.80.",
-          "Suitable for RTT10–RTT12."
+
+      "parametric": {
+        "description": "Limited hardware substrate supporting nominal execution only.",
+        "rtt_range": ["RTT1", "RTT2", "RTT3", "RTT4", "RTT5", "RTT6"],
+        "requirements": [
+          "measure.lattice_stability >= 0.50"
+        ],
+        "supports": [
+          "interpretation",
+          "alignment",
+          "activation",
+          "snr"
+        ],
+        "forbidden": [
+          "typed paradox",
+          "harmonic escalation",
+          "resolution"
+        ]
+      },
+
+      "symbolic": {
+        "description": "Abstract hardware substrate supporting interpretive and alignment operators.",
+        "rtt_range": ["RTT1", "RTT2", "RTT3"],
+        "requirements": [
+          "measure.c1 >= 0.70"
+        ],
+        "supports": [
+          "interpretation",
+          "alignment"
+        ],
+        "forbidden": [
+          "coupling",
+          "activation",
+          "snr",
+          "paradox",
+          "harmonic",
+          "resolution"
+        ]
+      },
+
+      "edge": {
+        "description": "Minimal hardware substrate supporting diffusion and alignment only.",
+        "rtt_range": ["RTT1", "RTT2"],
+        "requirements": [
+          "measure.c1 >= 0.60"
+        ],
+        "supports": [
+          "diffusion",
+          "alignment"
+        ],
+        "forbidden": [
+          "coupling",
+          "activation",
+          "triadic_time",
+          "snr",
+          "paradox",
+          "harmonic",
+          "resolution"
         ]
       }
     },
 
-    "stability": {
-      "lattice_stability": {
-        "id": "measure.lattice_stability",
-        "value": 0.80,
-        "awareness": "Hardware stability mirrors lattice stability.",
-        "notes": "Projection only; authoritative value comes from session.state."
-      }
-    },
-
-    "paradox_handling": {
-      "typed_paradox_events": [],
-      "awareness": "Hardware layer recognizes paradox constraints.",
-      "constraints": [
-        "Typed paradox required for RTT7 entry.",
-        "Paradox density MUST be canonical."
+    "substrate_gating": {
+      "agentic_required_for": [
+        "RTT7",
+        "RTT8",
+        "RTT9",
+        "RTT10",
+        "RTT11",
+        "RTT12"
+      ],
+      "forbidden": [
+        "harmonic escalation on non-agentic hardware",
+        "resolution on non-agentic hardware"
       ]
     },
 
-    "collapse_support": {
-      "enabled": true,
-      "awareness": "Hardware supports collapse execution.",
-      "rules": [
-        "RTT12 MUST collapse to RTT1.",
-        "Lineage MUST increase after collapse."
+    "paradox_rules": {
+      "typed_only": true,
+      "density_threshold": 0.10,
+      "forbidden": [
+        "untyped paradox",
+        "vibe-based paradox",
+        "synthetic paradox"
       ]
     },
 
-    "links": {
-      "state": "fft.ai.session.state.json",
-      "alignments": "fft.ai.session.alignments.json",
-      "context": "fft.ai.session.context.json",
-      "log": "fft.ai.session.log.json",
-      "dashboard": "fft.ai.session.dashboard.json",
-      "overlay": "fft.ai.session.overlay.json",
-      "history": "fft.ai.session.history.json",
-      "analytics": "fft.ai.session.analytics.json",
-      "awareness": "fft.ai.session.awareness.json",
-      "profile": "fft.ai.session.profile.json",
-      "navigation": "fft.ai.session.navigation.json",
-      "autonomy": "fft.ai.autonomy.json",
-      "discovery": "fft.ai.discovery.json",
-      "execution_graph": "fft.ai.execution.graph.json",
-      "substrate": "fft.ai.substrate.json",
-      "runtime": "fft.ai.runtime.json"
+    "consent_rules": {
+      "required_for": [
+        "RTT9",
+        "RTT10",
+        "RTT11",
+        "RTT12"
+      ],
+      "forbidden": [
+        "implicit consent",
+        "assumed consent"
+      ]
     },
 
-    "timestamps": {
-      "created": "auto",
-      "last_update": "auto"
+    "collapse_rules": {
+      "trigger": "RTT12",
+      "destination": "RTT1",
+      "lineage_increment": true,
+      "forbidden": [
+        "collapse to non-RTT1",
+        "collapse without lineage increment",
+        "skip-resolution"
+      ]
     }
   },
 
-  "rules": {
-    "projection_rules": [
-      "Hardware profile MUST NOT contradict authoritative session.state.json.",
-      "Hardware profile MUST NOT contradict substrate.json.",
-      "Hardware profile MUST NOT contradict runtime.json.",
-      "Hardware profile MUST NOT invent measure values.",
-      "Hardware profile MUST NOT invent paradox types.",
-      "Hardware profile MUST NOT invent substrate classes."
-    ],
+  "integration_links": {
+    "runtime": "fft.ai.runtime.json",
+    "navigation": "fft.ai.navigation.json",
+    "autonomy": "fft.ai.autonomy.json",
+    "discovery": "fft.ai.discovery.json",
+    "capabilities": "fft.ai.capabilities.json",
+    "execution_graph": "fft.ai.execution.graph.json",
+    "regimes": "fft.ai.regimes.json",
+    "operators": "fft.ai.operators.json",
+    "substrate": "fft.ai.substrate.json",
+    "spec_008": "fft.ai.spec‑008.json",
+    "paradox_enum": "fft.ai.paradox.enum.json",
+    "rtt_bridge": "fft.ai.rtt.bridge.json",
+    "rtt_spine": "fft.ai.rtt.spine.examples.json"
+  },
 
-    "substrate_rules": [
-      "substrate_class MUST be one of: agentic, parametric, symbolic, edge.",
-      "Harmonic escalation requires substrate_class = agentic.",
-      "Non-agentic harmonic escalation forbidden."
-    ],
-
-    "execution_rules": [
-      "Execution modes MUST match RTT node.",
-      "Accelerated mode requires resolution regime.",
-      "GPU mode requires harmonic regime."
-    ],
-
-    "collapse_rules": [
-      "RTT12 MUST collapse to RTT1.",
-      "Lineage MUST increase after collapse."
-    ]
+  "timestamps": {
+    "created": "auto",
+    "last_update": "auto"
   },
 
   "non_claims": [
