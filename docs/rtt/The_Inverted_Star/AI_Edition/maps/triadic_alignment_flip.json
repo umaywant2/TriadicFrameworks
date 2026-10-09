@@ -1,1 +1,37 @@
-. 
+{
+  "map": "triadic_alignment_flip",
+  "module": "rtt.inverted_star.ai",
+  "version": "2.0-draft",
+
+  "alignment_states": [
+    "N",
+    "S",
+    "R",
+    "0R"
+  ],
+
+  "flip_sequence": {
+    "fracture": "N→S (emergent)",
+    "inversion": "N→S (complete)",
+    "collapse": "S→R",
+    "dissolution": "R→0R (approaching)",
+    "silence": "0R"
+  },
+
+  "operator_alignment": {
+    "Δ": "N",
+    "Ω": "N→S",
+    "∇": "R",
+    "Σ": "0R",
+    "Rₓ": "mixed",
+    "Φ": "structural"
+  },
+
+  "triadic_map": {
+    "rise": ["Δ", "N"],
+    "fracture": ["Δ→Ω", "mixed"],
+    "inversion": ["Ω", "N→S"],
+    "collapse": ["∇", "R"],
+    "silence": ["Σ", "0R"]
+  }
+}
