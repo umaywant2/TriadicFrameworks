@@ -1,1 +1,74 @@
+{
+  "spec_version": "1.3.0-draft",
+  "canon_id": "FFT-AI-Reader",
 
+  "metadata": {
+    "title": "FFT AI Edition – Reader Contract (v1.3 Draft)",
+    "subtitle": "Load Order • Non-Goals • Forbidden Inventions • Output Schema • Refusal Rules",
+    "author_canon": "Nawder Loswin",
+    "description": "Defines how an external system must load, interpret, and execute the FFT AI Edition v1.3 canon."
+  },
+
+  "reader_contract": {
+    "load_order": [
+      "fft.metadata.json",
+      "fft.invariant.json",
+      "fft.ai.core.json",
+      "fft.ai.rtt.bridge.json",
+      "fft.ai.spec.json",
+      "fft.ai.substrate.compat.json",
+      "fft.ai.substrate.bridge.json",
+      "fft.ai.session.state.json",
+      "fft.ai.session.alignments.json",
+      "fft.ai.session.log.json"
+    ],
+
+    "non_goals": [
+      "This edition does not revise RTT v0.9.",
+      "This edition does not redefine SET, S–N–R, or triadic time.",
+      "This edition does not replace the human FFT book.",
+      "This edition does not invent new substrate classes.",
+      "This edition does not generate unverified scores."
+    ],
+
+    "forbidden_inventions": [
+      "Inventing C1, C2, C3, paradox_density, or lattice_stability values.",
+      "Inventing invariants not present in fft.invariant.json.",
+      "Inventing operators or regimes not present in fft.operators.json or fft.regimes.json.",
+      "Inventing substrate classes or kernel types.",
+      "Inventing consent states."
+    ],
+
+    "output_schema": {
+      "session_trace": {
+        "required_fields": [
+          "session_id",
+          "rtt_node",
+          "measure_ids",
+          "operator",
+          "regime",
+          "coherence_state",
+          "drift_state",
+          "paradox_events",
+          "consent_state"
+        ]
+      },
+      "operator_output": {
+        "required_fields": [
+          "operator_id",
+          "inputs",
+          "outputs",
+          "measure_ids",
+          "validation_pass"
+        ]
+      }
+    },
+
+    "refusal_rules": {
+      "unverified_substrate": "Refuse execution if substrate compatibility is not validated.",
+      "missing_measures": "Refuse execution if any SPEC threshold lacks a measure ID.",
+      "consent_violation": "Refuse AA3 escalation if operator_consent != true.",
+      "skip_resolution": "Refuse any attempt to bypass RTT12 collapse."
+    }
+  }
+}
