@@ -1,0 +1,185 @@
+{
+  "module": {
+    "name": "docs-well-known",
+    "category": "infrastructure",
+    "summary": "Public machine-readable service metadata for TriadicFrameworks.",
+    "purpose": "Exposes authentication, identity, agent-skill, and service-discovery metadata used by external systems.",
+    "version": "1.0.0",
+    "audience": "External agents, OAuth/OpenID clients, service registries, Cloudflare Agent Skills, and automated systems."
+  },
+
+  "roles": {
+    "engine": [],
+    "profile": ["agent.json", "agent-card.json", "web-bot-auth.json", "webmcp.json"],
+    "signature": ["jwks.json", "http-message-signatures-directory"],
+    "diagnostic": ["openid-configuration", "oauth-authorization-server", "oauth-protected-resource"],
+    "map": [
+      "api-catalog",
+      "modules/index.json",
+      "modules/quad-engine.json",
+      "modules/rtt.json",
+      "modules/triadic-gravity.json"
+    ],
+    "example": [],
+    "extension": [
+      "agent-skills/index.json",
+      "agent-skills/coherence-layers",
+      "agent-skills/link-headers",
+      "agent-skills/mcp",
+      "agent-skills/openloop",
+      "agent-skills/quad-engine",
+      "agent-skills/rtt-operators",
+      "agent-skills/tft3pack",
+      "agent-skills/triadic-gravity",
+      "agent-skills/triadic-modules",
+      "agent-skills/web-bot-auth"
+    ],
+    "index": [],
+    "reference": ["Auth.md", "security.txt"],
+    "template": []
+  },
+
+  "analyzer_layers": {
+    "operator": [],
+    "dimensional": [],
+    "regime": [],
+    "drift": [],
+    "coherence": ["agent-skills/coherence-layers"],
+    "cross-cutting": [
+      "api-catalog",
+      "modules/index.json",
+      "security.txt"
+    ]
+  },
+
+  "files": {
+    "agent.json": {
+      "role": "profile",
+      "layer": "cross-cutting",
+      "purpose": "Primary agent descriptor for TriadicFrameworks."
+    },
+    "agent-card.json": {
+      "role": "profile",
+      "layer": "cross-cutting",
+      "purpose": "Machine-readable agent identity card."
+    },
+    "web-bot-auth.json": {
+      "role": "profile",
+      "layer": "cross-cutting",
+      "purpose": "Bot authentication configuration."
+    },
+    "webmcp.json": {
+      "role": "profile",
+      "layer": "cross-cutting",
+      "purpose": "WebMCP server and skill configuration."
+    },
+
+    "jwks.json": {
+      "role": "signature",
+      "layer": "cross-cutting",
+      "purpose": "JSON Web Key Set for cryptographic verification."
+    },
+    "http-message-signatures-directory": {
+      "role": "signature",
+      "layer": "cross-cutting",
+      "purpose": "HTTP message signature keys and metadata."
+    },
+
+    "openid-configuration": {
+      "role": "diagnostic",
+      "layer": "cross-cutting",
+      "purpose": "OpenID Connect discovery document."
+    },
+    "oauth-authorization-server": {
+      "role": "diagnostic",
+      "layer": "cross-cutting",
+      "purpose": "OAuth 2.0 authorization server metadata."
+    },
+    "oauth-protected-resource": {
+      "role": "diagnostic",
+      "layer": "cross-cutting",
+      "purpose": "Protected resource configuration."
+    },
+
+    "Auth.md": {
+      "role": "reference",
+      "layer": "cross-cutting",
+      "purpose": "Human-readable overview of authentication flows."
+    },
+    "security.txt": {
+      "role": "reference",
+      "layer": "cross-cutting",
+      "purpose": "Public security contact and disclosure policy."
+    },
+
+    "api-catalog": {
+      "role": "map",
+      "layer": "cross-cutting",
+      "purpose": "Service documentation links and API registry."
+    },
+
+    "modules/index.json": {
+      "role": "map",
+      "layer": "cross-cutting",
+      "purpose": "Module registry index."
+    },
+    "modules/quad-engine.json": {
+      "role": "map",
+      "layer": "cross-cutting",
+      "purpose": "Quad Engine module configuration."
+    },
+    "modules/rtt.json": {
+      "role": "map",
+      "layer": "cross-cutting",
+      "purpose": "RTT module configuration."
+    },
+    "modules/triadic-gravity.json": {
+      "role": "map",
+      "layer": "cross-cutting",
+      "purpose": "Triadic Gravity module configuration."
+    },
+
+    "auth/refresh": {
+      "role": "diagnostic",
+      "layer": "cross-cutting",
+      "purpose": "Refresh token endpoint configuration."
+    },
+    "auth/token": {
+      "role": "diagnostic",
+      "layer": "cross-cutting",
+      "purpose": "Token issuance endpoint configuration."
+    },
+
+    "mcp/server-card.json": {
+      "role": "profile",
+      "layer": "cross-cutting",
+      "purpose": "Machine-readable MCP server descriptor."
+    },
+
+    "quad-engine/index.md": {
+      "role": "reference",
+      "layer": "cross-cutting",
+      "purpose": "Human-readable overview of Quad Engine."
+    },
+    "rtt/operators/index.md": {
+      "role": "reference",
+      "layer": "cross-cutting",
+      "purpose": "RTT operator overview."
+    },
+    "rtt/operators/rtt-op-1.md": {
+      "role": "reference",
+      "layer": "cross-cutting",
+      "purpose": "RTT operator definition."
+    },
+    "rtt/operators/rtt-op-2.md": {
+      "role": "reference",
+      "layer": "cross-cutting",
+      "purpose": "RTT operator definition."
+    },
+    "triadic-gravity/index.md": {
+      "role": "reference",
+      "layer": "cross-cutting",
+      "purpose": "Triadic Gravity overview."
+    }
+  }
+}
