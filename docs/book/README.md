@@ -1,5 +1,7 @@
 <img width="1194" height="672" alt="the_book_" src="https://github.com/user-attachments/assets/a1e76733-300b-42f9-b665-97bca7d3d1ea" />
 
+- [`module.json`](module.json) — Agentic module schema role assignments
+
 # TriadicFrameworks Book — Folder Overview
 
 The **TriadicFrameworks Book** is the long‑form, reader‑oriented exposition of the canon. While the main website provides module‑level reference documentation, this folder contains the narrative, pedagogical, and conceptual journey designed to introduce newcomers to the TriadicFrameworks worldview and guide them through its structure with clarity and intention.
