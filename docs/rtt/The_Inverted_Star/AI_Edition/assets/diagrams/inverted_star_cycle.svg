@@ -1,1 +1,66 @@
-. 
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="720" height="360" viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg">
+
+  <style>
+    .phase { fill:#111; stroke:#666; stroke-width:1.5; }
+    .phase-text { fill:#eee; font-family:system-ui, sans-serif; font-size:12px; }
+    .op-text { fill:#9cf; font-family:system-ui, sans-serif; font-size:11px; }
+    .arrow { stroke:#888; stroke-width:1.5; marker-end:url(#arrowhead); }
+    .title { fill:#fff; font-family:system-ui, sans-serif; font-size:16px; font-weight:bold; }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <polygon points="0 0 6 3 0 6" fill="#888"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="30" text-anchor="middle" class="title">
+    Inverted Star — Phase & Operator Cycle
+  </text>
+
+  <!-- Phases row -->
+  <!-- rise -->
+  <rect x="40" y="80" width="80" height="40" rx="6" class="phase"/>
+  <text x="80" y="100" text-anchor="middle" class="phase-text">rise</text>
+  <text x="80" y="115" text-anchor="middle" class="op-text">Δ / N</text>
+
+  <!-- saturation -->
+  <rect x="140" y="80" width="80" height="40" rx="6" class="phase"/>
+  <text x="180" y="100" text-anchor="middle" class="phase-text">saturation</text>
+  <text x="180" y="115" text-anchor="middle" class="op-text">Δ / N</text>
+
+  <!-- fracture -->
+  <rect x="240" y="80" width="80" height="40" rx="6" class="phase"/>
+  <text x="280" y="100" text-anchor="middle" class="phase-text">fracture</text>
+  <text x="280" y="115" text-anchor="middle" class="op-text">Δ→Ω / mixed</text>
+
+  <!-- inversion -->
+  <rect x="340" y="80" width="80" height="40" rx="6" class="phase"/>
+  <text x="380" y="100" text-anchor="middle" class="phase-text">inversion</text>
+  <text x="380" y="115" text-anchor="middle" class="op-text">Ω / N→S</text>
+
+  <!-- collapse -->
+  <rect x="440" y="80" width="80" height="40" rx="6" class="phase"/>
+  <text x="480" y="100" text-anchor="middle" class="phase-text">collapse</text>
+  <text x="480" y="115" text-anchor="middle" class="op-text">∇ / R</text>
+
+  <!-- dissolution -->
+  <rect x="540" y="80" width="80" height="40" rx="6" class="phase"/>
+  <text x="580" y="100" text-anchor="middle" class="phase-text">dissolution</text>
+  <text x="580" y="115" text-anchor="middle" class="op-text">∇→Σ / R</text>
+
+  <!-- silence -->
+  <rect x="640" y="80" width="80" height="40" rx="6" class="phase"/>
+  <text x="680" y="100" text-anchor="middle" class="phase-text">silence</text>
+  <text x="680" y="115" text-anchor="middle" class="op-text">Σ / 0R</text>
+
+  <!-- arrows -->
+  <line x1="120" y1="100" x2="140" y2="100" class="arrow"/>
+  <line x1="220" y1="100" x2="240" y2="100" class="arrow"/>
+  <line x1="320" y1="100" x2="340" y2="100" class="arrow"/>
+  <line x1="420" y1="100" x2="440" y2="100" class="arrow"/>
+  <line x1="520" y1="100" x2="540" y2="100" class="arrow"/>
+  <line x1="620" y1="100" x2="640" y2="100" class="arrow"/>
+
+</svg>
