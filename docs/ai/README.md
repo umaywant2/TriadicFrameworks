@@ -1,4 +1,4 @@
-<img width="682" height="682" alt="rtt_ai_genesis_image" src="https://github.com/user-attachments/assets/0c0d121d-c056-40ee-b168-633b41f52dba" />
+<img width="1194" height="672" alt="ai_core_" src="https://github.com/user-attachments/assets/7125b221-9a55-4e89-a57e-6a4cebfcb767" />
 
 # AI 
 
