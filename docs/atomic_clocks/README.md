@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="atomic_clock_" src="https://github.com/user-attachments/assets/fd70acb4-d41a-4f47-bfcc-73b8d914a37f" />
 
 - [`atomic_clocks_module.json`](atomic_clocks_module.json) — Agentic module schema role assignments
 
