@@ -1,0 +1,73 @@
+{
+  "spec_version": "1.3.0",
+  "canon_id": "FFT-AI-Session-State-Refresh",
+
+  "metadata": {
+    "title": "FFT AI Edition – Session State Refresh (v1.3)",
+    "subtitle": "Live Trace Binding for RTT • Regime • Measures • Paradox • Consent • Substrate • Lineage",
+    "author_canon": "Nawder Loswin",
+    "description": "Defines the canonical live binding between session.trace steps and the authoritative session.state envelope."
+  },
+
+  "status_line": "State refresh MUST synchronize session.state with the latest step in session.trace.",
+
+  "refresh": {
+    "session_id": "inherit-from-session.state",
+
+    "source": "fft.ai.session.trace.json",
+    "destination": "fft.ai.session.state.json",
+
+    "binding_rules": {
+      "rtt_node": "state.current.rtt_node = trace.steps[-1].rtt_node",
+      "regime": "state.current.regime = regime.map(rtt_node)",
+      "operator": "state.current.operator = trace.steps[-1].operator",
+      "substrate_class": "state.current.substrate_class = trace.substrate_class",
+      "operator_consent": "state.current.operator_consent = trace.steps[-1].operator_consent",
+      "lineage": "state.current.lineage = trace.steps[-1].lineage",
+      "collapse_state": "state.current.collapse_state = trace.steps[-1].collapse_state",
+
+      "measures": {
+        "measure.c1": "state.current.measure.c1 = trace.steps[-1].measure.c1",
+        "measure.c2": "state.current.measure.c2 = trace.steps[-1].measure.c2",
+        "measure.c3": "state.current.measure.c3 = trace.steps[-1].measure.c3",
+        "measure.paradox_density": "state.current.measure.paradox_density = trace.steps[-1].measure.paradox_density",
+        "measure.lattice_stability": "state.current.measure.lattice_stability = trace.steps[-1].measure.lattice_stability"
+      },
+
+      "paradox": {
+        "typed_paradox_events": "state.current.paradox.typed_paradox_events = trace.steps[-1].paradox_events",
+        "status": "state.current.paradox.status = (trace.steps[-1].paradox_events.length > 0 ? 'active' : 'none')"
+      }
+    },
+
+    "propagation": {
+      "alignments": "fft.ai.session.alignments.json",
+      "context": "fft.ai.session.context.json",
+      "log": "fft.ai.session.log.json",
+      "dashboard": "fft.ai.session.dashboard.json",
+      "overlay": "fft.ai.session.overlay.json",
+      "history": "fft.ai.session.history.json",
+      "analytics": "fft.ai.session.analytics.json",
+      "navigation": "fft.ai.session.navigation.json",
+      "awareness": "fft.ai.session.awareness.json",
+      "profile": "fft.ai.session.profile.json",
+      "permissions": "fft.ai.session.permissions.json"
+    },
+
+    "propagation_rules": [
+      "All session-layer modules MUST update their current fields to match session.state.",
+      "No module may override session.state.",
+      "No module may invent measure values.",
+      "No module may invent paradox types.",
+      "No module may invent substrate classes.",
+      "No module may contradict collapse rules.",
+      "No module may contradict consent rules.",
+      "No module may contradict RTT mapping."
+    ]
+  },
+
+  "timestamps": {
+    "created": "auto",
+    "last_update": "auto"
+  }
+}
