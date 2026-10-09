@@ -4,12 +4,12 @@
 
   "metadata": {
     "title": "FFT AI Edition – Session Awareness (v1.3)",
-    "subtitle": "Cognitive Envelope for RTT • Regime • Measures • Paradox • Consent",
+    "subtitle": "Cognitive Envelope for RTT • Regime • Measures • Paradox • Consent • Substrate • Collapse",
     "author_canon": "Nawder Loswin",
     "description": "Defines the non-authoritative awareness projection for FFT AI Edition v1.3."
   },
 
-  "status_line": "Awareness is a projection only; authoritative values come from session.state, alignments, context, log, dashboard, overlay, history, and analytics.",
+  "status_line": "Awareness is a projection only; authoritative values come from session.state, alignments, context, log, dashboard, overlay, history, analytics, navigation, permissions, profile, trace, and render.",
 
   "awareness": {
     "session_id": "inherit-from-session.state",
@@ -20,37 +20,31 @@
         "awareness": "System recognizes current RTT node and its constraints.",
         "notes": "RTT nodes MUST map to frozen RTT v0.9 quantities."
       },
-
       "regime": {
         "value": "nominal",
         "awareness": "System identifies regime and its operational boundaries.",
         "notes": "Regime MUST match rtt_node according to fft.ai.regimes.json."
       },
-
       "substrate": {
         "value": "agentic",
         "awareness": "System is aware of substrate class and harmonic eligibility.",
         "notes": "Harmonic escalation requires substrate_class = agentic."
       },
-
       "operator": {
         "value": "op.diffusion",
         "awareness": "System recognizes active operator and its measure requirements.",
         "notes": "Operator MUST match current RTT node."
       },
-
       "consent": {
         "value": false,
         "awareness": "System is aware of consent state and AA3 gating.",
         "notes": "AA3 escalation requires operator_consent = true."
       },
-
       "lineage": {
         "value": 1,
         "awareness": "System tracks lineage continuity and collapse effects.",
         "notes": "Lineage MUST be non-decreasing."
       },
-
       "collapse": {
         "value": null,
         "awareness": "System is aware of collapse readiness and RTT12 rules.",
@@ -77,7 +71,7 @@
       "paradox_density": {
         "id": "measure.paradox_density",
         "value": 0.00,
-        "awareness": "System recognizes paradox density as none."
+        "awareness": "System recognizes paradox density as nominal."
       },
       "lattice_stability": {
         "id": "measure.lattice_stability",
@@ -89,69 +83,61 @@
     "paradox_awareness": {
       "typed_paradox_events": [],
       "density": 0.00,
+      "stability": 1.00,
       "status": "none",
-      "notes": "Typed paradox required for RTT7 entry."
+      "notes": [
+        "Typed paradox required for RTT7.",
+        "Paradox density >= 0.10 required for RTT7.",
+        "Lattice stability >= 0.60 required for RTT8."
+      ]
+    },
+
+    "consent_awareness": {
+      "value": false,
+      "requirements": [
+        "operator_consent = true required for RTT9–RTT12.",
+        "Implicit or assumed consent forbidden."
+      ]
+    },
+
+    "collapse_awareness": {
+      "value": null,
+      "requirements": [
+        "RTT12 MUST collapse to RTT1.",
+        "Lineage MUST increment after collapse.",
+        "Collapse to non-RTT1 forbidden."
+      ]
     }
   },
 
   "rules": {
     "awareness_rules": [
       "Awareness MUST NOT contradict session.state.json.",
-      "Awareness MUST NOT contradict session.alignments.json.",
-      "Awareness MUST NOT contradict session.context.json.",
-      "Awareness MUST NOT contradict session.log.json.",
+      "Awareness MUST NOT contradict substrate.json.",
+      "Awareness MUST NOT contradict operators.json.",
+      "Awareness MUST NOT contradict regimes.json.",
+      "Awareness MUST NOT contradict spec‑008.json.",
       "Awareness MUST NOT invent measure IDs.",
       "Awareness MUST NOT invent paradox types.",
       "Awareness MUST NOT invent substrate classes."
-    ],
-
-    "rtt_rules": [
-      "RTT nodes MUST map to frozen RTT v0.9 quantities.",
-      "RTT7 requires typed paradox.",
-      "RTT9–RTT12 require operator_consent = true.",
-      "RTT12 MUST collapse to RTT1 with lineage increment."
-    ],
-
-    "regime_rules": [
-      "Nominal regime allowed only for RTT1–RTT6.",
-      "Harmonic regime allowed only for RTT7–RTT9.",
-      "Resolution regime allowed only for RTT10–RTT12."
-    ],
-
-    "substrate_rules": [
-      "Agentic substrate required for RTT7–RTT12.",
-      "Non-agentic substrate forbidden for harmonic and resolution."
-    ],
-
-    "paradox_rules": [
-      "Typed paradox required for RTT7.",
-      "Paradox density >= 0.10 required for RTT7.",
-      "Lattice stability >= 0.60 required for RTT8.",
-      "Untyped paradox forbidden."
-    ],
-
-    "consent_rules": [
-      "operator_consent = true required for RTT9–RTT12.",
-      "Implicit or assumed consent forbidden."
-    ],
-
-    "collapse_rules": [
-      "RTT12 MUST collapse to RTT1.",
-      "Lineage MUST increment after collapse.",
-      "Collapse to non-RTT1 forbidden."
     ]
   },
 
   "integration_links": {
-    "session_state": "fft.ai.session.state.json",
-    "alignments": "fft.ai.session.alignments.json",
+    "state": "fft.ai.session.state.json",
     "context": "fft.ai.session.context.json",
+    "alignments": "fft.ai.session.alignments.json",
     "log": "fft.ai.session.log.json",
     "dashboard": "fft.ai.session.dashboard.json",
     "overlay": "fft.ai.session.overlay.json",
     "history": "fft.ai.session.history.json",
     "analytics": "fft.ai.session.analytics.json",
-    "navigation": "fft.ai.session.navigation.json"
+    "navigation": "fft.ai.session.navigation.json",
+    "permissions": "fft.ai.session.permissions.json",
+    "profile": "fft.ai.session.profile.json",
+    "trace": "fft.ai.session.trace.json",
+    "render": "fft.ai.session.render.json",
+    "ui": "fft.ai.session.ui.json"
   },
 
   "timestamps": {
