@@ -3,13 +3,13 @@
   "canon_id": "FFT-AI-Autonomy",
 
   "metadata": {
-    "title": "FFT AI Edition – Autonomy (v1.3 Draft)",
-    "subtitle": "Agency Envelope for Operators • RTT • Regimes • Consent",
+    "title": "FFT AI Edition – Autonomy (v1.3)",
+    "subtitle": "Agency Envelope for Operators • RTT • Regimes • Substrate • Consent • Paradox • Collapse",
     "author_canon": "Nawder Loswin",
-    "description": "Defines the autonomy envelope, agency levels, constraints, and RTT interactions for FFT AI Edition v1.3."
+    "description": "Defines the autonomy envelope, agency levels, operator autonomy, constraints, and RTT interactions for FFT AI Edition v1.3."
   },
 
-  "status_line": "Autonomy is a projection only; authoritative values come from session.state, alignments, context, log, dashboard, overlay, history, analytics, awareness, profile, and navigation.",
+  "status_line": "Autonomy is a projection only; authoritative values come from session.state, alignments, context, log, dashboard, overlay, history, analytics, awareness, profile, navigation, and permissions.",
 
   "autonomy": {
     "session_id": "inherit-from-session.state",
@@ -20,7 +20,8 @@
       "operator": "op.diffusion",
       "substrate_class": "agentic",
       "operator_consent": false,
-      "lineage": 1
+      "lineage": 1,
+      "collapse_state": null
     },
 
     "agency_levels": {
@@ -48,6 +49,7 @@
         "constraints": [
           "Requires typed paradox.",
           "Requires measure.paradox_density >= 0.10.",
+          "Requires measure.lattice_stability >= 0.60.",
           "Requires substrate_class = agentic.",
           "Requires operator_consent = true for escalation."
         ]
@@ -62,7 +64,9 @@
           "continuity-enforcement"
         ],
         "constraints": [
-          "Requires measure.c1, c2, c3 >= 0.80.",
+          "Requires measure.c1 >= 0.80.",
+          "Requires measure.c2 >= 0.80.",
+          "Requires measure.c3 >= 0.80.",
           "Requires operator_consent = true.",
           "RTT12 MUST collapse to RTT1.",
           "Lineage MUST increase after collapse."
@@ -72,106 +76,156 @@
 
     "operator_autonomy": {
       "op.diffusion": {
-        "autonomy": "low",
-        "notes": "Nominal-only operator."
+        "level": "low",
+        "allowed": ["interpretation"],
+        "constraints": ["Nominal regime only."]
       },
       "op.alignment": {
-        "autonomy": "low",
-        "notes": "Nominal-only operator."
+        "level": "low",
+        "allowed": ["alignment"],
+        "constraints": ["Nominal regime only."]
       },
       "op.coupling": {
-        "autonomy": "low",
-        "notes": "Nominal-only operator."
+        "level": "low",
+        "allowed": ["alignment", "measure-evaluation"],
+        "constraints": ["Nominal regime only."]
       },
       "op.activation": {
-        "autonomy": "low",
-        "notes": "Nominal-only operator."
+        "level": "medium",
+        "allowed": ["activation", "continuity-check"],
+        "constraints": ["Requires measure.c3 >= 0.80."]
       },
       "op.triadic_time": {
-        "autonomy": "low",
-        "notes": "Nominal-only operator."
+        "level": "medium",
+        "allowed": ["temporal-alignment"],
+        "constraints": ["Requires measure.c2 >= 0.80."]
       },
       "op.snr": {
-        "autonomy": "low",
-        "notes": "Nominal-only operator."
+        "level": "medium",
+        "allowed": ["snr-processing"],
+        "constraints": ["Requires measure.c2 >= 0.80."]
       },
-
       "op.paradox_entry": {
-        "autonomy": "medium",
-        "notes": "Requires typed paradox and agentic substrate."
+        "level": "medium",
+        "allowed": ["paradox-processing"],
+        "constraints": [
+          "Requires typed paradox.",
+          "Requires measure.paradox_density >= 0.10.",
+          "Requires substrate_class = agentic."
+        ]
       },
       "op.paradox_stabilization": {
-        "autonomy": "medium",
-        "notes": "Requires lattice stability >= 0.60."
+        "level": "medium",
+        "allowed": ["harmonic-stabilization"],
+        "constraints": [
+          "Requires measure.lattice_stability >= 0.60.",
+          "Requires substrate_class = agentic."
+        ]
       },
       "op.harmonic_escalation": {
-        "autonomy": "medium",
-        "notes": "Requires operator_consent = true."
+        "level": "high",
+        "allowed": ["conditional-escalation"],
+        "constraints": [
+          "Requires operator_consent = true.",
+          "Requires substrate_class = agentic."
+        ]
       },
-
       "op.resolution_preparation": {
-        "autonomy": "high",
-        "notes": "Requires measure.c1 and c2 >= 0.80."
+        "level": "high",
+        "allowed": ["resolution-preparation"],
+        "constraints": [
+          "Requires operator_consent = true.",
+          "Requires measure.c1 >= 0.80.",
+          "Requires measure.c2 >= 0.80.",
+          "Requires measure.c3 >= 0.80."
+        ]
       },
       "op.resolution_alignment": {
-        "autonomy": "high",
-        "notes": "Requires measure.c3 >= 0.80."
+        "level": "high",
+        "allowed": ["resolution-alignment"],
+        "constraints": [
+          "Requires operator_consent = true.",
+          "Requires measure.c3 >= 0.80."
+        ]
       },
       "op.collapse": {
-        "autonomy": "high",
-        "notes": "Requires full measure thresholds and agentic substrate."
-      }
-    },
-
-    "autonomy_transitions": {
-      "nominal_to_harmonic": {
-        "trigger": "typed_paradox_event",
-        "requirements": [
-          "measure.paradox_density >= 0.10",
-          "substrate_class = agentic"
+        "level": "critical",
+        "allowed": ["collapse-execution"],
+        "constraints": [
+          "Requires operator_consent = true.",
+          "Requires measure.c1 >= 0.80.",
+          "Requires measure.c2 >= 0.80.",
+          "Requires measure.c3 >= 0.80.",
+          "RTT12 MUST collapse to RTT1.",
+          "Lineage MUST increase after collapse."
         ]
-      },
-      "harmonic_to_resolution": {
-        "trigger": "operator_consent = true",
-        "requirements": [
-          "measure.c1 >= 0.80",
-          "measure.c2 >= 0.80",
-          "measure.c3 >= 0.80"
-        ]
-      },
-      "resolution_to_nominal": {
-        "trigger": "collapse (RTT12)",
-        "destination": "RTT1",
-        "lineage_increment": true
       }
     }
   },
 
+  "rules": {
+    "autonomy_rules": [
+      "Autonomy MUST NOT contradict session.state.json.",
+      "Autonomy MUST NOT contradict substrate.json.",
+      "Autonomy MUST NOT contradict operators.json.",
+      "Autonomy MUST NOT contradict regimes.json.",
+      "Autonomy MUST NOT contradict spec‑008.json.",
+      "Autonomy MUST NOT invent measure IDs.",
+      "Autonomy MUST NOT invent paradox types.",
+      "Autonomy MUST NOT invent substrate classes."
+    ],
+
+    "rtt_rules": [
+      "RTT nodes MUST map to frozen RTT v0.9 quantities.",
+      "RTT7 requires typed paradox.",
+      "RTT9–RTT12 require operator_consent = true.",
+      "RTT12 MUST collapse to RTT1 with lineage increment."
+    ],
+
+    "substrate_rules": [
+      "Agentic substrate required for RTT7–RTT12.",
+      "Non-agentic substrate forbidden for harmonic and resolution."
+    ],
+
+    "paradox_rules": [
+      "Typed paradox required for RTT7.",
+      "Paradox density >= 0.10 required for RTT7.",
+      "Lattice stability >= 0.60 required for RTT8.",
+      "Untyped paradox forbidden."
+    ],
+
+    "consent_rules": [
+      "operator_consent = true required for RTT9–RTT12.",
+      "Implicit or assumed consent forbidden."
+    ],
+
+    "collapse_rules": [
+      "RTT12 MUST collapse to RTT1.",
+      "Lineage MUST increment after collapse.",
+      "Collapse to non-RTT1 forbidden."
+    ]
+  },
+
   "integration_links": {
-    "runtime": "fft.ai.runtime.json",
-    "session_state": "fft.ai.session.state.json",
-    "navigation": "fft.ai.navigation.json",
-    "regimes": "fft.ai.regimes.json",
-    "operators": "fft.ai.operators.json",
-    "substrate": "fft.ai.substrate.json",
-    "execution_graph": "fft.ai.execution.graph.json",
-    "autonomy": "fft.ai.autonomy.json",
-    "discovery": "fft.ai.discovery.json",
-    "capabilities": "fft.ai.capabilities.json",
-    "spec_008": "fft.ai.spec‑008.json",
-    "paradox_enum": "fft.ai.paradox.enum.json",
-    "rtt_bridge": "fft.ai.rtt.bridge.json",
-    "rtt_spine": "fft.ai.rtt.spine.examples.json"
+    "state": "fft.ai.session.state.json",
+    "context": "fft.ai.session.context.json",
+    "alignments": "fft.ai.session.alignments.json",
+    "log": "fft.ai.session.log.json",
+    "navigation": "fft.ai.session.navigation.json",
+    "permissions": "fft.ai.session.permissions.json",
+    "profile": "fft.ai.session.profile.json",
+    "awareness": "fft.ai.session.awareness.json",
+    "analytics": "fft.ai.session.analytics.json",
+    "dashboard": "fft.ai.session.dashboard.json",
+    "overlay": "fft.ai.session.overlay.json",
+    "history": "fft.ai.session.history.json",
+    "trace": "fft.ai.session.trace.json",
+    "render": "fft.ai.session.render.json",
+    "ui": "fft.ai.session.ui.json"
   },
 
   "timestamps": {
     "created": "auto",
     "last_update": "auto"
-  },
-
-  "non_claims": [
-    "Autonomy does not revise RTT v0.9.",
-    "Autonomy does not reinterpret SET, S–N–R, or triadic time.",
-    "Autonomy does not replace the human FFT book."
-  ]
+  }
 }
