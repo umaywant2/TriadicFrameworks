@@ -1,4 +1,3 @@
-<img width="1194" height="672" alt="audio_industry_reviewed" src="https://github.com/user-attachments/assets/fc27f741-1951-491f-8abe-b0808f137c39" />
 
 - [`audio_module.json`](audio_module.json) — Agentic module schema role assignments
 
