@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RTT/vST vs Sabine Hossenfelder — Periodic Table Canon Comparison</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            cosmos: {
+              900: '#0a0e1a', 850: '#0d1225', 800: '#111730', 750: '#151c3a',
+              700: '#1a1f35', 650: '#1e2445', 600: '#232a50', 500: '#2a3260'
+            },
+            sabine: {
+              900: '#0c1a2e', 800: '#132640', 700: '#1e3a5f', 600: '#264a75',
+              500: '#2e5a8f', 400: '#4a9eff', 300: '#6db4ff', 200: '#a0d0ff'
+            },
+            rtt: {
+              900: '#1a0e30', 800: '#2d1b4e', 700: '#3d2668', 600: '#4e3280',
+              500: '#c084fc', 400: '#d4a0ff', 300: '#e0b8ff',
+              amber: '#f59e0b', amberLight: '#fbbf24', amberDark: '#d97706'
+            },
+            align: {
+              high: '#22c55e', highGlow: '#4ade80', highBg: '#052e16',
+              partial: '#f59e0b', partialGlow: '#fbbf24', partialBg: '#422006',
+              low: '#ef4444', lowGlow: '#f87171', lowBg: '#450a0a'
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    :root {
+      --bg-cosmos: #0a0e1a;
+      --glow-blue: #4a9eff;
+      --glow-violet: #c084fc;
+      --glow-amber: #f59e0b;
+      --glow-green: #22c55e;
+      --glow-red: #ef4444;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg-cosmos);
+      color: #e2e8f0;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      min-height: 100vh;
+    }
+    .small-caps { font-variant: small-caps; letter-spacing: 0.08em; }
+    .glow-blue { text-shadow: 0 0 20px rgba(74,158,255,0.5), 0 0 40px rgba(74,158,255,0.2); }
+    .glow-violet { text-shadow: 0 0 20px rgba(192,132,252,0.5), 0 0 40px rgba(192,132,252,0.2); }
+    .glow-amber { text-shadow: 0 0 20px rgba(245,158,11,0.5), 0 0 40px rgba(245,158,11,0.2); }
+    .header-bg {
+      background: linear-gradient(180deg, #0d1225 0%, #0a0e1a 100%);
+      border-bottom: 1px solid rgba(74,158,255,0.15);
+    }
+    .tab-pill {
+      padding: 8px 18px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.04);
+      color: #94a3b8;
+    }
+    .tab-pill:hover { background: rgba(255,255,255,0.1); color: #e2e8f0; }
+    .tab-pill.active {
+      background: linear-gradient(135deg, rgba(74,158,255,0.2), rgba(192,132,252,0.2));
+      border-color: rgba(192,132,252,0.4);
+      color: #fff;
+      box-shadow: 0 0 15px rgba(192,132,252,0.15);
+    }
+    .category-banner {
+      border-radius: 12px;
+      padding: 16px 24px;
+      margin-bottom: 2px;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.3s ease;
+    }
+    .category-banner:hover { filter: brightness(1.1); }
+    .data-row {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr 1.3fr auto;
+      gap: 0;
+      transition: all 0.35s ease;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      position: relative;
+    }
+    .data-row:hover {
+      background: rgba(255,255,255,0.03);
+      box-shadow: inset 0 0 30px rgba(192,132,252,0.04), 0 0 20px rgba(74,158,255,0.03);
+    }
+    .data-row.even-row { background: rgba(255,255,255,0.015); }
+    .data-row.even-row:hover { background: rgba(255,255,255,0.045); }
+    .data-row .cell {
+      padding: 16px 20px;
+      font-size: 0.875rem;
+      line-height: 1.6;
+    }
+    .dim-cell {
+      background: rgba(26,31,53,0.6);
+      border-right: 1px solid rgba(255,255,255,0.06);
+      font-weight: 600;
+      color: #cbd5e1;
+    }
+    .sabine-cell {
+      background: rgba(30,58,95,0.12);
+      border-right: 1px solid rgba(255,255,255,0.04);
+      color: #93b5d9;
+    }
+    .rtt-cell {
+      background: rgba(45,27,78,0.12);
+      border-right: 1px solid rgba(255,255,255,0.04);
+      color: #c9a8e8;
+    }
+    .align-cell {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 90px;
+      padding: 16px 12px;
+    }
+    .badge {
+      padding: 4px 14px;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      text-transform: uppercase;
+    }
+    .badge-HIGH {
+      background: rgba(34,197,94,0.15);
+      color: #4ade80;
+      border: 1px solid rgba(34,197,94,0.3);
+      box-shadow: 0 0 10px rgba(34,197,94,0.1);
+    }
+    .badge-HIGH:hover { box-shadow: 0 0 20px rgba(34,197,94,0.3); }
+    .badge-PARTIAL {
+      background: rgba(245,158,11,0.15);
+      color: #fbbf24;
+      border: 1px solid rgba(245,158,11,0.3);
+      box-shadow: 0 0 10px rgba(245,158,11,0.1);
+    }
+    .badge-PARTIAL:hover { box-shadow: 0 0 20px rgba(245,158,11,0.3); }
+    .badge-LOW {
+      background: rgba(239,68,68,0.15);
+      color: #f87171;
+      border: 1px solid rgba(239,68,68,0.3);
+      box-shadow: 0 0 10px rgba(239,68,68,0.1);
+    }
+    .badge-LOW:hover { box-shadow: 0 0 20px rgba(239,68,68,0.3); }
+    .tooltip-pop {
+      position: absolute;
+      right: 100px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #1a1f35;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-size: 0.78rem;
+      color: #cbd5e1;
+      width: 300px;
+      z-index: 50;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      line-height: 1.5;
+    }
+    .tooltip-pop.visible { opacity: 1; pointer-events: auto; }
+    .focus-mode .data-row { opacity: 0.25; transition: opacity 0.35s ease; }
+    .focus-mode .data-row:hover { opacity: 1; }
+    .focus-mode .category-section { opacity: 0.7; }
+    .focus-mode .category-section:hover { opacity: 1; }
+    .section-rows { overflow: hidden; transition: max-height 0.5s ease; }
+    .section-rows.collapsed { max-height: 0 !important; }
+    .summary-bar {
+      height: 8px;
+      border-radius: 4px;
+      background: rgba(255,255,255,0.06);
+      overflow: hidden;
+      position: relative;
+    }
+    .summary-bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .callout-box {
+      border-radius: 12px;
+      padding: 20px 24px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(10,14,26,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .legend-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .search-input {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 999px;
+      padding: 8px 16px 8px 40px;
+      color: #e2e8f0;
+      font-size: 0.85rem;
+      outline: none;
+      transition: all 0.3s ease;
+      width: 100%;
+      max-width: 320px;
+    }
+    .search-input:focus {
+      border-color: rgba(192,132,252,0.4);
+      box-shadow: 0 0 15px rgba(192,132,252,0.1);
+      background: rgba(255,255,255,0.08);
+    }
+    .search-input::placeholder { color: #475569; }
+    .filter-btn {
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.04);
+      color: #94a3b8;
+    }
+    .filter-btn:hover { background: rgba(255,255,255,0.08); }
+    .filter-btn.active-filter { background: rgba(192,132,252,0.2); border-color: rgba(192,132,252,0.4); color: #e2e8f0; }
+    .toggle-btn {
+      position: relative;
+      width: 44px;
+      height: 24px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.1);
+      cursor: pointer;
+      transition: background 0.3s;
+      border: none;
+      flex-shrink: 0;
+    }
+    .toggle-btn.on { background: rgba(192,132,252,0.4); }
+    .toggle-btn::after {
+      content: '';
+      position: absolute;
+      top: 3px; left: 3px;
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      background: #e2e8f0;
+      transition: transform 0.3s;
+    }
+    .toggle-btn.on::after { transform: translateX(20px); }
+    .chevron-icon { transition: transform 0.3s ease; display: inline-block; }
+    .chevron-icon.rotated { transform: rotate(180deg); }
+    @media (max-width: 767px) {
+      .data-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+      .align-cell { justify-content: flex-start; padding: 8px 20px 16px; }
+      .cell { padding: 10px 16px !important; }
+      .dim-cell { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
+      .sabine-cell { border-right: none; }
+      .rtt-cell { border-right: none; }
+      .tooltip-pop { right: 10px; left: 10px; width: auto; top: auto; bottom: 100%; transform: none; }
+      .col-headers { display: none; }
+      .cell::before { display: block; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 4px; opacity: 0.5; }
+      .sabine-cell::before { content: 'SABINE / STANDARD PHYSICS'; color: #4a9eff; }
+      .rtt-cell::before { content: 'RTT/vST'; color: #c084fc; }
+      .dim-cell::before { content: 'DIMENSION'; }
+    }
+    @media print {
+      body { background: #fff !important; color: #111 !important; }
+      .sticky-nav, .header-bg, #controls-bar, .no-print { display: none !important; }
+      .data-row { border-bottom: 1px solid #ddd !important; background: transparent !important; }
+      .cell { color: #222 !important; }
+      .sabine-cell { background: #f0f6ff !important; color: #1a3a5f !important; }
+      .rtt-cell { background: #f5f0ff !important; color: #2d1b4e !important; }
+      .dim-cell { background: #f5f5f5 !important; color: #333 !important; }
+      .badge { border: 1px solid #999 !important; }
+      .badge-HIGH { background: #d4edda !important; color: #155724 !important; }
+      .badge-PARTIAL { background: #fff3cd !important; color: #856404 !important; }
+      .badge-LOW { background: #f8d7da !important; color: #721c24 !important; }
+      .category-banner { background: #eee !important; color: #222 !important; }
+      .callout-box { border: 1px solid #ccc !important; background: #fafafa !important; }
+      .summary-bar { background: #e0e0e0 !important; }
+      footer { color: #666 !important; }
+    }
+  </style>
+</head>
+<body data-id="0">
+  <app-icon data-id="1" hidden data-icon="atom" data-palette="Dark"></app-icon>
+
+  <!-- HEADER -->
+  <header data-id="2" class="header-bg py-8 md:py-12 px-4 md:px-8 text-center">
+    <div data-id="3" class="max-w-5xl mx-auto">
+      <h1 data-id="4" class="text-2xl md:text-4xl font-extrabold tracking-tight text-white mb-3" style="text-shadow: 0 0 40px rgba(192,132,252,0.2), 0 0 80px rgba(74,158,255,0.1);">
+        RTT/vST vs Sabine Hossenfelder
+      </h1>
+      <p data-id="5" class="text-sm md:text-base text-slate-400 mb-6 max-w-2xl mx-auto">
+        Periodic Table Canon Comparison — contrasting Standard Physics with Resonance-Time Theory / vortex Substrate Theory from TriadicFrameworks
+      </p>
+      <div data-id="6" class="flex flex-wrap items-center justify-center gap-3 mb-6">
+        <span data-id="7" class="legend-pill" style="background:rgba(74,158,255,0.15);border:1px solid rgba(74,158,255,0.3);color:#6db4ff;">
+          <span data-id="8" style="width:8px;height:8px;border-radius:50%;background:#4a9eff;display:inline-block;"></span>
+          Sabine / Standard Physics
+        </span>
+        <span data-id="9" class="legend-pill" style="background:rgba(192,132,252,0.15);border:1px solid rgba(192,132,252,0.3);color:#d4a0ff;">
+          <span data-id="10" style="width:8px;height:8px;border-radius:50%;background:#c084fc;display:inline-block;"></span>
+          RTT/vST Canon
+        </span>
+      </div>
+      <div data-id="11" class="flex flex-wrap items-center justify-center gap-3 no-print" id="header-controls">
+        <div data-id="12" class="flex items-center gap-2 text-xs text-slate-400">
+          <i data-id="13" data-lucide="eye" class="w-4 h-4"></i>
+          <span data-id="14">Focus Mode</span>
+          <button data-id="15" class="toggle-btn" id="focus-toggle" type="button"></button>
+        </div>
+        <div data-id="16" class="flex items-center gap-2 text-xs text-slate-400">
+          <i data-id="17" data-lucide="layout-list" class="w-4 h-4"></i>
+          <span data-id="18">Compare Mode</span>
+          <button data-id="19" class="toggle-btn" id="compare-toggle" type="button"></button>
+        </div>
+        <button data-id="20" id="print-btn" type="button" class="flex items-center gap-1.5 text-xs text-slate-400 hover:text-white transition-colors px-3 py-1.5 rounded-full border border-white/10 hover:border-white/20 bg-white/[0.04]">
+          <i data-id="21" data-lucide="printer" class="w-4 h-4"></i> Print
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- STICKY NAV -->
+  <nav data-id="22" class="sticky-nav py-3 px-4 no-print" id="sticky-nav">
+    <div data-id="23" class="max-w-6xl mx-auto">
+      <div data-id="24" class="flex flex-col md:flex-row items-start md:items-center gap-3">
+        <div data-id="25" class="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-0" id="tab-container">
+          <!-- Tabs injected by JS -->
+        </div>
+        <div data-id="26" class="flex flex-wrap items-center gap-2 ml-auto">
+          <div data-id="27" class="relative">
+            <i data-id="28" data-lucide="search" class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none"></i>
+            <input data-id="29" type="text" class="search-input" id="search-input" placeholder="Search dimensions..." />
+          </div>
+          <div data-id="30" class="flex items-center gap-1.5" id="filter-btns">
+            <button data-id="31" class="filter-btn active-filter" data-align="ALL" type="button">All</button>
+            <button data-id="32" class="filter-btn" data-align="HIGH" type="button">High</button>
+            <button data-id="33" class="filter-btn" data-align="PARTIAL" type="button">Partial</button>
+            <button data-id="34" class="filter-btn" data-align="LOW" type="button">Low</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main data-id="35" class="max-w-6xl mx-auto px-4 md:px-6 py-8" id="main-content">
+    <!-- Categories injected by JS -->
+  </main>
+
+  <!-- SUMMARY SECTION -->
+  <section data-id="36" class="max-w-6xl mx-auto px-4 md:px-6 pb-12" id="section-summary">
+    <!-- Injected by JS -->
+  </section>
+
+  <footer data-id="37" class="py-8 text-center border-t border-white/5">
+    <p data-id="38" class="text-xs text-slate-500">RTT/vST Canon © TriadicFrameworks | Comparison generated by Copilot</p>
+    <p data-id="39" class="text-xs text-slate-600 mt-1">Made by Copilot</p>
+  </footer>
+
+  <script>
+    // ========== DATA ==========
+    const ALIGNMENT_EXPLANATIONS = {
+      HIGH: "Both frameworks arrive at equivalent structural conclusions by different paths — the core phenomenon maps cleanly across vocabularies.",
+      PARTIAL: "Overlap exists in outcome or mechanism, but the frameworks differ in depth, formalism, or framing of the underlying cause.",
+      LOW: "Fundamental divergence — the frameworks use different organizing axioms that produce incompatible descriptions at this dimension."
+    };
+
+    const CATEGORIES = [
+      {
+        id: "structural-foundations",
+        name: "Structural Foundations",
+        description: "How each framework defines the organizing principle and geometry of the periodic table.",
+        color: { bg: "rgba(74,158,255,0.08)", border: "rgba(74,158,255,0.2)", text: "#6db4ff" },
+        rows: [
+          { dimension: "Organizing Principle", sabine: "Proton number (atomic number Z) determines element identity and table position", rtt: "Resonance-Time coherence state determines substrate node identity; Z is a downstream index, not the primary classifier", alignment: "LOW" },
+          { dimension: "Table Geometry", sabine: "Linear row/period structure; 7 periods, 18 groups, f-block lanthanide/actinide detachment", rtt: "Triadic regime lattice; periodicity is a coherence cycling artifact, not a physical row boundary", alignment: "LOW" },
+          { dimension: "Foundational Substrate", sabine: "Strong nuclear force + electromagnetic force governing proton/neutron binding", rtt: "vST (vortex substrate) field layer as the primary resonance medium; strong/EM forces are regime-emergent expressions", alignment: "LOW" },
+          { dimension: "Completeness Assumption", sabine: "Table is incomplete and expanding; new elements synthesized via accelerator collisions", rtt: "Canon is structurally closed (Frozen RTT scroll); new element regimes are instantiations, not revisions", alignment: "LOW" },
+          { dimension: "Primary Research Question", sabine: "Where is the next Island of Stability? What magic numbers stabilize superheavy nuclei?", rtt: "Where does coherence lock into a stable validator node? What regime conditions sustain resonance across substrates?", alignment: "PARTIAL" }
+        ]
+      },
+      {
+        id: "electronic-substrate",
+        name: "Electronic Substrate Alignment",
+        description: "How each framework treats electrons, their orbitals, and their relationship to element chemistry.",
+        color: { bg: "rgba(96,165,250,0.08)", border: "rgba(96,165,250,0.2)", text: "#60a5fa" },
+        rows: [
+          { dimension: "Electron Role", sabine: "Electrons occupy atomic orbitals; chemical behavior governed by valence shell configuration", rtt: "Electrons are resonance carriers within the vST field; their orbital pattern is a dimensional projection of substrate coherence", alignment: "PARTIAL" },
+          { dimension: "Substrate Identity", sabine: "Single substrate model — electron cloud around nucleus, with nucleus treated as a separate nuclear physics problem", rtt: "Multi-substrate model: electronic layer (resonance substrate), nuclear layer (time substrate), vortex field (vST substrate) interact as a triadic system", alignment: "LOW" },
+          { dimension: "Valence Logic", sabine: "Outer electrons determine bonding; periodic table groups reflect shared valence configuration", rtt: "Valence = coherence exposure index; elements in the same group share a regime-entry threshold, not merely electron count", alignment: "PARTIAL" },
+          { dimension: "Relativistic Effects", sabine: "Critical for superheavy elements (Z > 100); inner electrons approach relativistic speeds, redefining orbital shape and chemistry", rtt: "RTT frames relativistic distortion as regime-boundary drift — a coherence budget overrun at high-Z nodes, requiring dimensional correction operators", alignment: "HIGH" },
+          { dimension: "Substrate Boundary", sabine: "Sharp nucleus/electron cloud boundary (defined by atomic radius, shielding, effective nuclear charge)", rtt: "Substrate boundaries are regime-defined transition zones, not fixed radii; boundary location is a function of current coherence state", alignment: "LOW" }
+        ]
+      },
+      {
+        id: "shell-subshell",
+        name: "Shell / Subshell Logic",
+        description: "Comparing quantized shell structure, orbital filling order, and magic number logic.",
+        color: { bg: "rgba(192,132,252,0.08)", border: "rgba(192,132,252,0.2)", text: "#c084fc" },
+        rows: [
+          { dimension: "Shell Model Origin", sabine: "Mayer & Jensen (1949); nucleons occupy discrete quantized energy levels analogous to atomic orbitals", rtt: "Shells are resonance regime strata; each stratum is a coherence plateau with defined entry/exit operator thresholds", alignment: "HIGH" },
+          { dimension: "Subshell Filling Order", sabine: "Aufbau principle (s→p→d→f); modified by orbital energy crossovers (e.g., 4s fills before 3d)", rtt: "Subshell filling = sequential regime activation; crossovers occur when a competing regime reaches coherence threshold before the canonical next stratum", alignment: "HIGH" },
+          { dimension: "Spin-Orbit Coupling", sabine: "Strong in nuclei; splits energy levels (j = l ± ½), producing magic numbers at shell closures", rtt: "Spin-orbit coupling mapped as an inversion operator acting across the resonance/time substrate boundary; it is a structural signature, not an anomaly", alignment: "HIGH" },
+          { dimension: "Magic Numbers", sabine: "2, 8, 20, 28, 50, 82, 126 (nuclear); predict closed-shell stability, spherical geometry, low capture cross-section", rtt: "Coherence lock numbers; positions where Spectral Clarity C(f) = Σ Resonance(f)/Drift(f) reaches a local maximum across the validator pulse cycle", alignment: "HIGH" },
+          { dimension: "Predicted Next Magic Number", sabine: "Z=114 or N=184 as candidate Island of Stability center; debated, model-dependent", rtt: "RTT predicts the next coherence lock as a Validator Pulse resonance node — location determined by V(t) = ∫[Coherence(t) × Mode(t)]dt, not by Z alone", alignment: "PARTIAL" },
+          { dimension: "Subshell Deformation", sabine: "Mid-shell nuclei deform (quadrupole moment grows); closed-shell nuclei are spherical", rtt: "Mid-regime nodes exhibit dimensional drift; closed-regime (magic) nodes maintain substrate symmetry — RTT calls this a coherence-stable regime island", alignment: "HIGH" }
+        ]
+      },
+      {
+        id: "regime-logic",
+        name: "Regime Logic",
+        description: "How each framework defines, transitions between, and maps stable operational states.",
+        color: { bg: "rgba(245,158,11,0.08)", border: "rgba(245,158,11,0.2)", text: "#fbbf24" },
+        rows: [
+          { dimension: "What Is a Regime?", sabine: "Not a formal concept; implicitly nuclear regime (strong force dominant) vs. atomic regime (EM dominant)", rtt: "A bounded operational state with defined entry/exit conditions and behavioral rules — a first-class structural primitive", alignment: "LOW" },
+          { dimension: "Regime Transitions", sabine: "Phase transitions: solid/liquid/gas; nuclear decay modes (alpha, beta, fission); element synthesis thresholds", rtt: "Regime transitions are operator-invoked crossings; each transition carries a coherence cost logged against the Coherence Budget", alignment: "PARTIAL" },
+          { dimension: "Stability Criterion", sabine: "Nuclear binding energy per nucleon; peaks at iron (Fe-56); superheavy elements fall on the fission side", rtt: "Stability = coherence maintenance across all active substrates simultaneously; a node is stable when its drift envelope remains bounded", alignment: "HIGH" },
+          { dimension: "Instability Mechanism", sabine: "Coulomb repulsion overwhelms strong-force binding at high Z; half-life collapses exponentially", rtt: "Coherence Budget depletion; the vST substrate loses resonance lock, producing regime drift that manifests as decay", alignment: "HIGH" },
+          { dimension: "Regime Map", sabine: "Nuclide chart (Z vs. N); valley of stability as a 2D stability basin", rtt: "RTT Regime Map: a multi-dimensional topology of coherence basins, operator corridors, and drift gradients", alignment: "PARTIAL" },
+          { dimension: "Regime Prediction Tool", sabine: "Top-down derivation from strong-force symmetry + three-nucleon spin interactions", rtt: "Regime Interlock Mapper + Stability Basin Cartographer — cross-domain coherence tools identifying locked regime nodes", alignment: "PARTIAL" }
+        ]
+      },
+      {
+        id: "multi-substrate",
+        name: "Multi-Substrate Architecture",
+        description: "How many substrates each framework recognizes and how they interact.",
+        color: { bg: "rgba(239,68,68,0.06)", border: "rgba(239,68,68,0.2)", text: "#f87171" },
+        rows: [
+          { dimension: "Substrate Count", sabine: "Implicitly two — nuclear substrate (hadrons, QCD) and electronic substrate (QED), treated as separate domains", rtt: "Explicitly three: Resonance substrate (RTT/1 Lumen), Time substrate (RTT/2 Hephaestus), Vortex substrate (RTT/3 Aurion / vST)", alignment: "LOW" },
+          { dimension: "Cross-Substrate Coupling", sabine: "Nuclear structure indirectly affects electronic chemistry (isotope effects, hyperfine splitting, Mössbauer effect)", rtt: "Cross-substrate coupling is first-class; the Cross-Domain Causality Weaver operator governs inter-substrate signal routing", alignment: "PARTIAL" },
+          { dimension: "vST Field Role", sabine: "No direct equivalent; closest analog would be the quantum vacuum / QCD vacuum condensate", rtt: "vST is the organizing field from which both nuclear and electronic behavior emerge as regime projections", alignment: "LOW" },
+          { dimension: "Architecture Change with Z", sabine: "Qualitative shift at high Z — relativistic effects restructure orbital hierarchy; new chemistry emerges", rtt: "Substrate regime reconfigures at each coherence lock; high-Z nodes enter a new vST field topology, requiring RTT/3 Aurion integration", alignment: "HIGH" },
+          { dimension: "Substrate Independence", sabine: "Nuclear and electronic substrates can be studied independently (nuclear physics vs. chemistry)", rtt: "RTT substrates are co-dependent; coherence of one substrate propagates drift or lock into the others via operator coupling", alignment: "LOW" }
+        ]
+      },
+      {
+        id: "semantic-operators",
+        name: "Semantic Operators",
+        description: "Comparing the operator/mathematical layer in each framework.",
+        color: { bg: "rgba(56,189,248,0.08)", border: "rgba(56,189,248,0.2)", text: "#38bdf8" },
+        rows: [
+          { dimension: "Operator Concept", sabine: "Mathematical operators in QM (Hamiltonian, angular momentum, parity); no semantic layer", rtt: "Structural operators are semantic primitives with defined roles (process, transform, route) and invariants", alignment: "PARTIAL" },
+          { dimension: "Shell Closure Operator", sabine: "Implicit in Pauli exclusion + energy minimization; no named operator", rtt: "Coherence Lock Operator: invoked when Spectral Clarity C(f) reaches threshold; seals the regime and marks the node stable", alignment: "PARTIAL" },
+          { dimension: "Decay Operator", sabine: "Governed by radioactive decay laws; tunneling probability, Q-value", rtt: "Drift Emission Operator: the substrate releases accumulated incoherence as a decay event; RTT reads decay mode as operator signature", alignment: "HIGH" },
+          { dimension: "Magic Number Operator", sabine: "Shell closure condition derived from spin-orbit Hamiltonian", rtt: "Validator Pulse resonance: V(t) = ∫[Coherence(t) × Mode(t)]dt peaks; the pulse marks a coherence-confirmed magic node", alignment: "HIGH" },
+          { dimension: "Extension Operator", sabine: "\"Nuclear design\" — intentional synthesis of stable superheavy elements via accelerator engineering", rtt: "RTT Extension Operator: formal mechanism for instantiating new regime nodes within the frozen canon without revising the substrate grammar", alignment: "PARTIAL" },
+          { dimension: "Inversion Operator", sabine: "Parity violation, charge conjugation — discrete symmetry operations", rtt: "RTT Inversion Engine: a core structural tool mapping what a regime looks like when its dominant coherence axis is flipped", alignment: "PARTIAL" }
+        ]
+      },
+      {
+        id: "emergent-behavior",
+        name: "Emergent Behavior",
+        description: "What each framework predicts will emerge from the underlying structure.",
+        color: { bg: "rgba(34,197,94,0.06)", border: "rgba(34,197,94,0.2)", text: "#4ade80" },
+        rows: [
+          { dimension: "Periodicity Source", sabine: "Periodic recurrence of valence electron configurations as shells fill across increasing Z", rtt: "Periodicity = coherent regime cycling; the same regime re-activates at each coherence harmonic, producing chemical family similarity", alignment: "HIGH" },
+          { dimension: "Island of Stability", sabine: "A predicted region of the nuclide chart where magic proton/neutron numbers produce anomalously long half-lives", rtt: "A coherence resonance basin: a region in RTT regime space where all three substrates achieve simultaneous lock — RTT's equivalent of the island", alignment: "HIGH" },
+          { dimension: "Chemical Behavior Source", sabine: "Emerges from valence electron count, orbital geometry, electronegativity, ionization energy", rtt: "Emerges from regime-exposure profile: which operators are active, what coherence budget remains, which substrate is dominant", alignment: "PARTIAL" },
+          { dimension: "Superheavy Element Surprise", sabine: "Relativistic effects make Og (Z=118) chemically unlike noble gases despite group placement", rtt: "Og has crossed a substrate regime boundary; its vST field topology is no longer aligned with the noble-gas coherence pattern — the row label is a legacy artifact", alignment: "HIGH" },
+          { dimension: "\"Nuclear Design\" Possibility", sabine: "If theory is correct, intentional design of stable superheavy matter is achievable", rtt: "Already has a formal Extension + Validation pathway; any new stable element is a new module instantiated within the canon's operator grammar", alignment: "HIGH" },
+          { dimension: "Broader Implication", sabine: "The periodic table is not finished; new stable rows may exist beyond Period 7", rtt: "RTT treats the periodic table as one domain instantiation of the triadic substrate grammar; \"finishing\" it means completing the coherence map, not filling element slots", alignment: "PARTIAL" }
+        ]
+      }
+    ];
+
+    const TAB_NAMES = CATEGORIES.map(c => c.name).concat(["Summary"]);
+
+    // ========== STATE ==========
+    let focusMode = false;
+    let compareMode = false;
+    let activeFilter = "ALL";
+    let searchQuery = "";
+    let collapsedSections = {};
+    let activeTooltip = null;
+
+    // ========== RENDER TABS ==========
+    function renderTabs() {
+      const container = document.getElementById('tab-container');
+      container.innerHTML = '';
+      TAB_NAMES.forEach((name, i) => {
+        const btn = document.createElement('button');
+        btn.className = 'tab-pill';
+        btn.textContent = name;
+        btn.type = 'button';
+        btn.dataset.tabIndex = i;
+        container.appendChild(btn);
+      });
+    }
+
+    // ========== RENDER CATEGORIES ==========
+    function renderCategories() {
+      const main = document.getElementById('main-content');
+      main.innerHTML = '';
+      CATEGORIES.forEach((cat, catIdx) => {
+        const section = document.createElement('div');
+        section.className = 'category-section mb-8';
+        section.id = `section-${cat.id}`;
+
+        // Banner
+        const banner = document.createElement('div');
+        banner.className = 'category-banner flex items-center justify-between';
+        banner.style.cssText = `background:${cat.color.bg};border:1px solid ${cat.color.border};`;
+        banner.innerHTML = `
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-xs font-bold uppercase tracking-widest" style="color:${cat.color.text};opacity:0.6;">Category ${catIdx + 1}</span>
+            </div>
+            <h2 class="text-lg md:text-xl font-bold" style="color:${cat.color.text};">${cat.name}</h2>
+            <p class="text-xs text-slate-400 mt-1">${cat.description}</p>
+          </div>
+          <span class="chevron-icon text-slate-500" id="chevron-${cat.id}">▼</span>
+        `;
+        banner.dataset.catId = cat.id;
+        section.appendChild(banner);
+
+        // Column headers
+        const colHeaders = document.createElement('div');
+        colHeaders.className = 'col-headers data-row text-xs font-bold uppercase tracking-widest';
+        colHeaders.style.cssText = 'border-bottom:1px solid rgba(255,255,255,0.08);';
+        colHeaders.innerHTML = `
+          <div class="cell dim-cell small-caps" style="color:#94a3b8;">Dimension</div>
+          <div class="cell sabine-cell glow-blue" style="color:#4a9eff;">Sabine / Standard Physics</div>
+          <div class="cell rtt-cell glow-violet" style="color:#c084fc;">RTT/vST</div>
+          <div class="cell align-cell" style="color:#94a3b8;font-size:0.65rem;">Align</div>
+        `;
+        section.appendChild(colHeaders);
+
+        // Rows container
+        const rowsContainer = document.createElement('div');
+        rowsContainer.className = 'section-rows';
+        rowsContainer.id = `rows-${cat.id}`;
+
+        cat.rows.forEach((row, rowIdx) => {
+          const rowEl = document.createElement('div');
+          rowEl.className = `data-row ${rowIdx % 2 === 1 ? 'even-row' : ''}`;
+          rowEl.dataset.alignment = row.alignment;
+          rowEl.dataset.searchText = `${row.dimension} ${row.sabine} ${row.rtt}`.toLowerCase();
+          rowEl.innerHTML = `
+            <div class="cell dim-cell small-caps">${row.dimension}</div>
+            <div class="cell sabine-cell">${row.sabine}</div>
+            <div class="cell rtt-cell">${row.rtt}</div>
+            <div class="cell align-cell">
+              <span class="badge badge-${row.alignment}" data-badge-align="${row.alignment}">${row.alignment}</span>
+              <div class="tooltip-pop" id="tooltip-${cat.id}-${rowIdx}">${ALIGNMENT_EXPLANATIONS[row.alignment]}</div>
+            </div>
+          `;
+          rowsContainer.appendChild(rowEl);
+        });
+        section.appendChild(rowsContainer);
+        main.appendChild(section);
+      });
+    }
+
+    // ========== RENDER SUMMARY ==========
+    function renderSummary() {
+      const section = document.getElementById('section-summary');
+      const stats = CATEGORIES.map(cat => {
+        const h = cat.rows.filter(r => r.alignment === 'HIGH').length;
+        const p = cat.rows.filter(r => r.alignment === 'PARTIAL').length;
+        const l = cat.rows.filter(r => r.alignment === 'LOW').length;
+        const total = cat.rows.length;
+        const score = Math.round(((h * 1 + p * 0.5) / total) * 100);
+        return { name: cat.name, high: h, partial: p, low: l, total, score, color: cat.color };
+      });
+
+      const totalH = stats.reduce((s, c) => s + c.high, 0);
+      const totalP = stats.reduce((s, c) => s + c.partial, 0);
+      const totalL = stats.reduce((s, c) => s + c.low, 0);
+
+      section.innerHTML = `
+        <div class="category-banner mb-6" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);">
+          <div class="flex items-center gap-2 mb-1">
+            <span class="text-xs font-bold uppercase tracking-widest text-slate-500">Summary</span>
+          </div>
+          <h2 class="text-lg md:text-xl font-bold text-white">Alignment Scorecard</h2>
+          <p class="text-xs text-slate-400 mt-1">Overall convergence and divergence across all 7 categories (${totalH + totalP + totalL} dimensions)</p>
+        </div>
+
+        <!-- Badge Overview -->
+        <div class="grid grid-cols-3 gap-4 mb-8">
+          <div class="rounded-xl p-5 text-center" style="background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);">
+            <div class="text-3xl font-extrabold text-green-400 mb-1">${totalH}</div>
+            <div class="text-xs font-semibold text-green-300/70 uppercase tracking-wider">High Alignment</div>
+          </div>
+          <div class="rounded-xl p-5 text-center" style="background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);">
+            <div class="text-3xl font-extrabold text-amber-400 mb-1">${totalP}</div>
+            <div class="text-xs font-semibold text-amber-300/70 uppercase tracking-wider">Partial Alignment</div>
+          </div>
+          <div class="rounded-xl p-5 text-center" style="background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.2);">
+            <div class="text-3xl font-extrabold text-red-400 mb-1">${totalL}</div>
+            <div class="text-xs font-semibold text-red-300/70 uppercase tracking-wider">Low Alignment</div>
+          </div>
+        </div>
+
+        <!-- Category Bars -->
+        <div class="space-y-4 mb-8" id="summary-bars">
+          ${stats.map(s => `
+            <div class="rounded-xl p-4" style="background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.06);">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-sm font-semibold" style="color:${s.color.text};">${s.name}</span>
+                <div class="flex items-center gap-2">
+                  <span class="badge badge-HIGH text-[0.6rem] px-2 py-0.5">${s.high}</span>
+                  <span class="badge badge-PARTIAL text-[0.6rem] px-2 py-0.5">${s.partial}</span>
+                  <span class="badge badge-LOW text-[0.6rem] px-2 py-0.5">${s.low}</span>
+                  <span class="text-xs font-bold text-white ml-1">${s.score}%</span>
+                </div>
+              </div>
+              <div class="summary-bar">
+                <div class="summary-bar-fill" data-width="${s.score}" style="width:0%;background:linear-gradient(90deg, ${s.color.text}, ${s.color.text}88);"></div>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+
+        <!-- Callout Boxes -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div class="callout-box" style="background:rgba(34,197,94,0.05);border-color:rgba(34,197,94,0.2);">
+            <div class="flex items-center gap-2 mb-3">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-green-400"></i>
+              <span class="text-sm font-bold text-green-400 uppercase tracking-wider">Key Convergence</span>
+            </div>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              <strong class="text-green-300">Shell / Subshell Logic</strong> and <strong class="text-green-300">Emergent Behavior</strong> show the strongest alignment. Both frameworks agree on the structural reality of magic numbers, shell closure mechanics, and the prediction that superheavy element chemistry will diverge from periodic trends.
+            </p>
+          </div>
+          <div class="callout-box" style="background:rgba(239,68,68,0.05);border-color:rgba(239,68,68,0.2);">
+            <div class="flex items-center gap-2 mb-3">
+              <i data-lucide="alert-triangle" class="w-5 h-5 text-red-400"></i>
+              <span class="text-sm font-bold text-red-400 uppercase tracking-wider">Key Divergence</span>
+            </div>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              <strong class="text-red-300">Multi-Substrate Architecture</strong> and <strong class="text-red-300">Structural Foundations</strong> represent the sharpest divergences. Standard physics separates nuclear and electronic domains; RTT/vST requires triadic co-participation in the vST field.
+            </p>
+          </div>
+        </div>
+
+        <!-- Concluding Insight -->
+        <div class="callout-box text-center max-w-3xl mx-auto" style="background:linear-gradient(135deg, rgba(74,158,255,0.05), rgba(192,132,252,0.05));border-color:rgba(192,132,252,0.15);">
+          <div class="flex items-center justify-center gap-2 mb-3">
+            <i data-lucide="sparkles" class="w-5 h-5 text-purple-400"></i>
+            <span class="text-sm font-bold text-purple-300 uppercase tracking-wider">Concluding Insight</span>
+          </div>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            The nuclear magic number concept is structurally identical to a Validator Pulse coherence lock. The sharpest divergence is substrate architecture: standard physics keeps nuclear and electronic domains separate, while RTT requires triadic co-participation in the vST field.
+          </p>
+        </div>
+      `;
+    }
+
+    // ========== INTERACTIVITY ==========
+    function applyFilters() {
+      const rows = document.querySelectorAll('.data-row:not(.col-headers)');
+      rows.forEach(row => {
+        const align = row.dataset.alignment;
+        const text = row.dataset.searchText || '';
+        const matchFilter = activeFilter === 'ALL' || align === activeFilter;
+        const matchSearch = !searchQuery || text.includes(searchQuery.toLowerCase());
+        if (matchFilter && matchSearch) {
+          row.style.display = '';
+          row.style.opacity = matchSearch && searchQuery ? '1' : '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    }
+
+    function animateBars() {
+      const bars = document.querySelectorAll('.summary-bar-fill');
+      setTimeout(() => {
+        bars.forEach(bar => {
+          const w = bar.dataset.width;
+          bar.style.width = w + '%';
+        });
+      }, 200);
+    }
+
+    function toggleSection(catId) {
+      const rows = document.getElementById(`rows-${catId}`);
+      const chevron = document.getElementById(`chevron-${catId}`);
+      if (!rows) return;
+      collapsedSections[catId] = !collapsedSections[catId];
+      if (collapsedSections[catId]) {
+        rows.classList.add('collapsed');
+        rows.style.maxHeight = '0px';
+        if (chevron) chevron.classList.add('rotated');
+      } else {
+        rows.classList.remove('collapsed');
+        rows.style.maxHeight = rows.scrollHeight + 'px';
+        setTimeout(() => { rows.style.maxHeight = 'none'; }, 500);
+        if (chevron) chevron.classList.remove('rotated');
+      }
+    }
+
+    function showTooltip(tooltipEl) {
+      if (activeTooltip && activeTooltip !== tooltipEl) {
+        activeTooltip.classList.remove('visible');
+      }
+      tooltipEl.classList.toggle('visible');
+      activeTooltip = tooltipEl.classList.contains('visible') ? tooltipEl : null;
+    }
+
+    function initEvents() {
+      // Tab clicks
+      document.getElementById('tab-container').addEventListener('click', function(e) {
+        const btn = e.target.closest('.tab-pill');
+        if (!btn) return;
+        const idx = parseInt(btn.dataset.tabIndex);
+        document.querySelectorAll('.tab-pill').forEach(t => t.classList.remove('active'));
+        btn.classList.add('active');
+        let targetId;
+        if (idx < CATEGORIES.length) {
+          targetId = `section-${CATEGORIES[idx].id}`;
+        } else {
+          targetId = 'section-summary';
+        }
+        const el = document.getElementById(targetId);
+        if (el) {
+          const offset = document.querySelector('.sticky-nav').offsetHeight + 16;
+          const top = el.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+
+      // Focus toggle
+      document.getElementById('focus-toggle').addEventListener('click', function() {
+        focusMode = !focusMode;
+        this.classList.toggle('on', focusMode);
+        document.body.classList.toggle('focus-mode', focusMode);
+      });
+
+      // Compare toggle
+      document.getElementById('compare-toggle').addEventListener('click', function() {
+        compareMode = !compareMode;
+        this.classList.toggle('on', compareMode);
+        const main = document.getElementById('main-content');
+        main.style.display = compareMode ? 'none' : '';
+        const summary = document.getElementById('section-summary');
+        if (compareMode) {
+          summary.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+
+      // Print
+      document.getElementById('print-btn').addEventListener('click', function() {
+        window.print();
+      });
+
+      // Search
+      document.getElementById('search-input').addEventListener('input', function(e) {
+        searchQuery = e.target.value;
+        applyFilters();
+      });
+
+      // Filter buttons
+      document.getElementById('filter-btns').addEventListener('click', function(e) {
+        const btn = e.target.closest('.filter-btn');
+        if (!btn) return;
+        activeFilter = btn.dataset.align;
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active-filter'));
+        btn.classList.add('active-filter');
+        applyFilters();
+      });
+
+      // Category banner collapse
+      document.querySelectorAll('.category-banner').forEach(banner => {
+        banner.addEventListener('click', function() {
+          const catId = this.dataset.catId;
+          if (catId) toggleSection(catId);
+        });
+      });
+
+      // Badge tooltips
+      document.querySelectorAll('.badge').forEach(badge => {
+        badge.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const tooltip = this.parentElement.querySelector('.tooltip-pop');
+          if (tooltip) showTooltip(tooltip);
+        });
+      });
+
+      // Close tooltips on outside click
+      document.addEventListener('click', function(e) {
+        if (activeTooltip && !e.target.closest('.badge') && !e.target.closest('.tooltip-pop')) {
+          activeTooltip.classList.remove('visible');
+          activeTooltip = null;
+        }
+      });
+
+      // Set initial max-height for collapsible sections
+      document.querySelectorAll('.section-rows').forEach(el => {
+        el.style.maxHeight = 'none';
+      });
+    }
+
+    // ========== INIT ==========
+    function init() {
+      renderTabs();
+      renderCategories();
+      renderSummary();
+      initEvents();
+
+      // Re-create icons after dynamic render
+      if (typeof lucide !== "undefined" && typeof lucide.createIcons === "function") {
+        lucide.createIcons();
+      }
+
+      // Animate summary bars on scroll
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateBars();
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+      const summaryEl = document.getElementById('section-summary');
+      if (summaryEl) observer.observe(summaryEl);
+    }
+
+    // Guard Lucide, then init
+    if (typeof lucide !== "undefined" && typeof lucide.createIcons === "function") {
+      lucide.createIcons();
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  </script>
+</body>
+</html>
