@@ -1,4 +1,4 @@
-<img width="1194" height="672" alt="ai_drift_calibration_module" src="https://github.com/user-attachments/assets/d4b4ea30-10b6-4277-afb8-f668d9c1509b" />
+<img width="1194" height="672" alt="ai_drift_calibration_module_" src="https://github.com/user-attachments/assets/0c82f764-ec83-4585-9010-f5a5544c3fc3" />
 
 # AI Drift Calibration — Operating Regimes 
 
