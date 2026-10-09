@@ -1,3 +1,5 @@
+<img width="1024" height="1024" alt="Atmosphere_module" src="https://github.com/user-attachments/assets/6b345a41-ce6b-4c81-ae0a-71622519a2fc" />
+
 ## ⭐ The atmosphere is not “air.”  
 It’s a **resonance field**.
 
