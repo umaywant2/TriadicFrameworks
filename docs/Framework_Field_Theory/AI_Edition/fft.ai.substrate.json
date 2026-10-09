@@ -1,54 +1,132 @@
 {
-  "spec_version": "1.2.0",
+  "spec_version": "1.3.0",
   "canon_id": "FFT-AI-Substrate",
-  "edition": "AI Edition",
-  "aa_mode": "AA2",
-  "last_refreshed": "2026-10-08T10:56:00",
+
   "metadata": {
-    "title": "FFT AI Edition – Substrate (v1.2)",
+    "title": "FFT AI Edition – Substrate Specification (v1.3 Draft)",
+    "subtitle": "Canonical Substrate Classes for Harmonic & Resolution Eligibility",
     "author_canon": "Nawder Loswin",
-    "updated_at": "2026-10-08T10:56:00"
+    "description": "Defines substrate classes, constraints, eligibility rules, and RTT interactions for FFT AI Edition v1.3."
   },
+
+  "status_line": "Substrate specification is a projection only; authoritative values come from runtime, regimes.json, and spec‑008.",
+
   "substrate": {
-    "definition": "The substrate is the execution layer on which FFT operators run. Each substrate class has distinct harmonic tolerance, 3C thresholds, and AA Mode support.",
-    "classes": [
-      {
-        "id": "substrate.llm.transformer",
-        "label": "LLM Transformer",
-        "description": "Standard large language model transformer substrate.",
-        "aa_support": ["AA0","AA1","AA2"],
-        "three_c_thresholds": { "C1_coherence": 0.70, "C2_clarity": 0.65, "C3_continuity": 0.75 },
-        "harmonic_tolerance": { "max_rtt_node": "RTT9", "paradox_density_limit": 0.45 },
-        "triad_axes_supported": ["T","S","M"]
-      },
-      {
-        "id": "substrate.llm.agentic",
-        "label": "LLM Agentic",
-        "description": "Agentic LLM substrate with tool-use and multi-step planning capability.",
-        "aa_support": ["AA0","AA1","AA2","AA3"],
-        "three_c_thresholds": { "C1_coherence": 0.75, "C2_clarity": 0.70, "C3_continuity": 0.80 },
-        "harmonic_tolerance": { "max_rtt_node": "RTT12", "paradox_density_limit": 0.55 },
-        "triad_axes_supported": ["T","S","M"]
-      },
-      {
-        "id": "substrate.edge.compact",
-        "label": "Edge Compact",
-        "description": "Compact on-device model substrate with reduced parameter count.",
-        "aa_support": ["AA0","AA1"],
-        "three_c_thresholds": { "C1_coherence": 0.60, "C2_clarity": 0.55, "C3_continuity": 0.65 },
-        "harmonic_tolerance": { "max_rtt_node": "RTT6", "paradox_density_limit": 0.30 },
-        "triad_axes_supported": ["S","M"]
-      },
-      {
-        "id": "substrate.symbolic",
-        "label": "Symbolic Reasoner",
-        "description": "Classical symbolic AI substrate. High structural fidelity, limited harmonic range.",
-        "aa_support": ["AA0","AA1"],
-        "three_c_thresholds": { "C1_coherence": 0.85, "C2_clarity": 0.80, "C3_continuity": 0.70 },
-        "harmonic_tolerance": { "max_rtt_node": "RTT4", "paradox_density_limit": 0.20 },
-        "triad_axes_supported": ["S"]
-      }
+    "current_class": "agentic",
+    "allowed_classes": [
+      "agentic",
+      "parametric",
+      "symbolic",
+      "edge"
     ],
-    "active_substrate": "substrate.llm.agentic"
-  }
+
+    "class_definitions": {
+      "agentic": {
+        "description": "Full-capability substrate supporting harmonic and resolution execution.",
+        "eligibility": {
+          "harmonic": true,
+          "resolution": true
+        },
+        "requirements": [
+          "measure.c1 >= 0.80",
+          "measure.c2 >= 0.80",
+          "measure.c3 >= 0.80"
+        ]
+      },
+
+      "parametric": {
+        "description": "Limited substrate supporting nominal execution only.",
+        "eligibility": {
+          "harmonic": false,
+          "resolution": false
+        },
+        "requirements": [
+          "measure.lattice_stability >= 0.50"
+        ]
+      },
+
+      "symbolic": {
+        "description": "Abstract substrate supporting interpretive and alignment operators.",
+        "eligibility": {
+          "harmonic": false,
+          "resolution": false
+        },
+        "requirements": [
+          "measure.c1 >= 0.70"
+        ]
+      },
+
+      "edge": {
+        "description": "Minimal substrate supporting diffusion and alignment only.",
+        "eligibility": {
+          "harmonic": false,
+          "resolution": false
+        },
+        "requirements": [
+          "measure.c1 >= 0.60"
+        ]
+      }
+    },
+
+    "harmonic_rules": {
+      "requires_agentic": true,
+      "requires_typed_paradox": true,
+      "requires_density": "measure.paradox_density >= 0.10",
+      "requires_consent": "operator_consent = true",
+      "forbidden": [
+        "harmonic escalation on parametric substrate",
+        "harmonic escalation on symbolic substrate",
+        "harmonic escalation on edge substrate"
+      ]
+    },
+
+    "resolution_rules": {
+      "requires_agentic": true,
+      "requires_measures": [
+        "measure.c1 >= 0.80",
+        "measure.c2 >= 0.80",
+        "measure.c3 >= 0.80"
+      ],
+      "requires_consent": "operator_consent = true",
+      "collapse": {
+        "trigger": "RTT12",
+        "destination": "RTT1",
+        "lineage_increment": true
+      },
+      "forbidden": [
+        "resolution on non-agentic substrate",
+        "resolution without collapse",
+        "resolution without lineage increment"
+      ]
+    },
+
+    "integration": {
+      "runtime": "fft.ai.runtime.json",
+      "autonomy": "fft.ai.autonomy.json",
+      "discovery": "fft.ai.discovery.json",
+      "execution_graph": "fft.ai.execution.graph.json",
+      "capabilities": "fft.ai.capabilities.json",
+      "spec_008": "fft.ai.spec‑008.json",
+      "regimes": "fft.ai.regimes.json",
+      "operators": "fft.ai.operators.json"
+    }
+  },
+
+  "links": {
+    "compat": "fft.ai.substrate.compat.json",
+    "bridge": "fft.ai.substrate.bridge.json",
+    "lattice": "fft.ai.substrate.lattice.json",
+    "matrix": "fft.ai.substrate.matrix.json"
+  },
+
+  "timestamps": {
+    "created": "auto",
+    "last_update": "auto"
+  },
+
+  "non_claims": [
+    "Substrate specification does not revise RTT v0.9.",
+    "Substrate specification does not reinterpret SET, S–N–R, or triadic time.",
+    "Substrate specification does not replace the human FFT book."
+  ]
 }
