@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Inverted_Star_Book2_AI_Edition_" src="https://github.com/user-attachments/assets/f6454c94-fba0-4af2-b39a-f4083037b194" />
 
 - [`module.json`](module.json) — Agentic module schema role assignments
 
