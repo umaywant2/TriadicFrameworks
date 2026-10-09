@@ -1,15 +1,15 @@
 {
-  "spec_version": "1.3.0-draft",
+  "spec_version": "1.3.0",
   "canon_id": "FFT-AI-Session-Navigation",
 
   "metadata": {
-    "title": "FFT AI Edition – Session Navigation (v1.3 Draft)",
-    "subtitle": "Movement Envelope for RTT • Regime • Operators • Projections",
+    "title": "FFT AI Edition – Session Navigation (v1.3)",
+    "subtitle": "Movement Envelope for RTT • Regime • Operators • Substrate • Consent",
     "author_canon": "Nawder Loswin",
-    "description": "Defines the non-authoritative navigation projection for FFT AI Edition v1.3."
+    "description": "Defines the canonical navigation projection for FFT AI Edition v1.3."
   },
 
-  "status_line": "Navigation is a projection only; authoritative values come from state, alignments, context, log, dashboard, overlay, history, analytics, awareness, and profile.",
+  "status_line": "Navigation is a projection only; authoritative values come from session.state, alignments, context, log, dashboard, overlay, history, analytics, awareness, and profile.",
 
   "navigation": {
     "session_id": "inherit-from-session.state",
@@ -39,6 +39,7 @@
         "RTT11": "RTT12",
         "RTT12": "collapse"
       },
+
       "backward": {
         "RTT12": "RTT11",
         "RTT11": "RTT10",
@@ -52,6 +53,7 @@
         "RTT3": "RTT2",
         "RTT2": "RTT1"
       },
+
       "collapse": {
         "trigger": "RTT12",
         "destination": "RTT1",
@@ -68,91 +70,77 @@
         "entry": ["RTT1", "RTT2", "RTT3", "RTT4", "RTT5", "RTT6"],
         "exit": "typed_paradox_event"
       },
+
       "harmonic": {
         "entry": ["RTT7", "RTT8", "RTT9"],
-        "exit": "operator_consent"
+        "requirements": [
+          "measure.paradox_density >= 0.10",
+          "measure.lattice_stability >= 0.60",
+          "substrate_class = agentic"
+        ],
+        "exit": "operator_consent = true"
       },
+
       "resolution": {
         "entry": ["RTT10", "RTT11", "RTT12"],
+        "requirements": [
+          "operator_consent = true",
+          "measure.c1 >= 0.80",
+          "measure.c2 >= 0.80",
+          "measure.c3 >= 0.80"
+        ],
         "exit": "collapse"
       }
     },
 
-    "operator_paths": {
-      "RTT1": "op.diffusion",
-      "RTT2": "op.alignment",
-      "RTT3": "op.coupling",
-      "RTT4": "op.activation",
-      "RTT5": "op.triadic_time",
-      "RTT6": "op.snr",
-      "RTT7": "op.paradox_entry",
-      "RTT8": "op.paradox_stabilization",
-      "RTT9": "op.harmonic_escalation",
-      "RTT10": "op.resolution_preparation",
-      "RTT11": "op.resolution_alignment",
-      "RTT12": "op.collapse"
-    },
-
-    "projection_links": {
-      "state": "fft.ai.session.state.json",
-      "alignments": "fft.ai.session.alignments.json",
-      "context": "fft.ai.session.context.json",
-      "log": "fft.ai.session.log.json",
-      "dashboard": "fft.ai.session.dashboard.json",
-      "overlay": "fft.ai.session.overlay.json",
-      "history": "fft.ai.session.history.json",
-      "analytics": "fft.ai.session.analytics.json",
-      "awareness": "fft.ai.session.awareness.json",
-      "profile": "fft.ai.session.profile.json"
-    },
-
-    "timestamps": {
-      "created": "auto",
-      "last_update": "auto"
+    "constraints": {
+      "measure_thresholds": [
+        "measure.c1 >= 0.80 for RTT1, RTT4, RTT10",
+        "measure.c2 >= 0.80 for RTT2, RTT5, RTT10",
+        "measure.c3 >= 0.80 for RTT3, RTT6, RTT11"
+      ],
+      "paradox_rules": [
+        "typed_paradox_event required for RTT7",
+        "measure.paradox_density >= 0.10 required for RTT7",
+        "measure.lattice_stability >= 0.60 required for RTT8"
+      ],
+      "substrate_rules": [
+        "agentic substrate required for RTT7–RTT12",
+        "non-agentic substrate forbidden for harmonic and resolution"
+      ],
+      "consent_rules": [
+        "operator_consent = true required for RTT9–RTT12",
+        "implicit consent forbidden"
+      ]
     }
   },
 
-  "rules": {
-    "projection_rules": [
-      "Navigation MUST NOT contradict authoritative session.state.json.",
-      "Navigation MUST NOT contradict session.alignments.json.",
-      "Navigation MUST NOT contradict session.context.json.",
-      "Navigation MUST NOT contradict session.log.json.",
-      "Navigation MUST NOT invent measure values.",
-      "Navigation MUST NOT invent paradox types.",
-      "Navigation MUST NOT invent substrate classes."
-    ],
-
-    "rtt_rules": [
-      "rtt_node MUST be one of RTT1–RTT12.",
-      "RTT nodes MUST map to frozen RTT v0.9 quantities.",
-      "RTT12 MUST collapse to RTT1; skip-resolution forbidden."
-    ],
-
-    "regime_rules": [
-      "Regime MUST be nominal, harmonic, or resolution.",
-      "Regime MUST match rtt_node according to fft.ai.regimes.json."
-    ],
-
-    "consent_rules": [
-      "AA3 escalation requires operator_consent = true.",
-      "If operator_consent = false, escalation MUST be refused."
-    ],
-
-    "lineage_rules": [
-      "Lineage MUST be non-decreasing.",
-      "Lineage MUST increase after collapse."
-    ],
-
-    "substrate_rules": [
-      "Harmonic escalation requires substrate_class = agentic.",
-      "Non-agentic harmonic escalation forbidden."
-    ]
+  "integration_links": {
+    "session_state": "fft.ai.session.state.json",
+    "alignments": "fft.ai.session.alignments.json",
+    "context": "fft.ai.session.context.json",
+    "log": "fft.ai.session.log.json",
+    "dashboard": "fft.ai.session.dashboard.json",
+    "overlay": "fft.ai.session.overlay.json",
+    "history": "fft.ai.session.history.json",
+    "analytics": "fft.ai.session.analytics.json",
+    "runtime": "fft.ai.runtime.json",
+    "discovery": "fft.ai.discovery.json",
+    "capabilities": "fft.ai.capabilities.json",
+    "execution_graph": "fft.ai.execution.graph.json",
+    "regimes": "fft.ai.regimes.json",
+    "operators": "fft.ai.operators.json",
+    "substrate": "fft.ai.substrate.json",
+    "spec_008": "fft.ai.spec-008.json",
+    "paradox_enum": "fft.ai.paradox.enum.json",
+    "rtt_bridge": "fft.ai.rtt.bridge.json",
+    "rtt_spine": "fft.ai.rtt.spine.examples.json",
+    "hardware_profile": "fft.ai.hardware.profile.json",
+    "bootstrap": "fft.ai.bootstrap.json"
   },
 
-  "non_claims": [
-    "Navigation does not revise RTT v0.9.",
-    "Navigation does not reinterpret SET, S–N–R, or triadic time.",
-    "Navigation does not replace the human FFT book."
-  ]
+  "timestamps": {
+    "created": "auto",
+    "last_update": "auto"
+  }
 }
