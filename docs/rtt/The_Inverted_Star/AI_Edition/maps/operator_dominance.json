@@ -1,1 +1,39 @@
-. 
+{
+  "map": "operator_dominance",
+  "module": "rtt.inverted_star.ai",
+  "version": "2.0-draft",
+
+  "operators": [
+    "Δ",
+    "Ω",
+    "∇",
+    "Σ",
+    "Rₓ",
+    "Φ"
+  ],
+
+  "dominance_cycle": [
+    "Δ",
+    "Ω",
+    "∇",
+    "Σ"
+  ],
+
+  "phase_dominance": {
+    "rise": "Δ",
+    "saturation": "Δ",
+    "fracture": "Δ→Ω",
+    "inversion": "Ω",
+    "collapse": "∇",
+    "dissolution": "∇",
+    "silence": "Σ"
+  },
+
+  "cross_interactions": {
+    "fracture": ["Δ", "Ω", "Rₓ"],
+    "inversion": ["Ω", "Rₓ"],
+    "collapse": ["∇", "Rₓ"],
+    "dissolution": ["∇"],
+    "silence": ["Σ"]
+  }
+}
