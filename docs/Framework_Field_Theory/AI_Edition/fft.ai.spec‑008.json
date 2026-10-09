@@ -1,88 +1,143 @@
 {
-  "spec_version": "1.3.0-draft",
-  "canon_id": "SPEC-008-AA-Escalation",
+  "spec_version": "1.3.0",
+  "canon_id": "FFT-AI-Spec-008",
+  "title": "AA Escalation Rules (v1.3 Draft)",
+  "subtitle": "Canonical Specification for AA1 → AA2 → AA3",
+  "author_canon": "Nawder Loswin",
 
-  "metadata": {
-    "title": "FFT AI Edition – SPEC‑008 (v1.3 Draft)",
-    "subtitle": "AA Escalation • Consent • Paradox • Harmonic Gate • RTT7–RTT12",
-    "author_canon": "Nawder Loswin",
-    "description": "Defines normative rules for AA escalation, paradox entry, harmonic routing, and RTT12 collapse."
-  },
+  "status_line": "Spec‑008 defines AA escalation rules; authoritative values come from RTT v0.9, regimes.json, substrate.json, and runtime.json.",
 
-  "claims": {
-    "status_line": "AA3 escalation requires explicit operator consent; auto-escalation is forbidden.",
-    "projection": "RTT12 lattice is a projection of frozen RTT v0.9; this SPEC does not revise RTT v0.9."
-  },
-
-  "invariants": {
-    "inv.aa3.consent": "AA3 MAY NOT activate unless operator_consent = true.",
-    "inv.skip_resolution.forbidden": "RTT12 collapse MUST occur; skipping resolution is forbidden.",
-    "inv.paradox.typed": "RTT7 entry requires a typed paradox event.",
-    "inv.measure.required": "Every gate MUST cite a measure ID defined in fft.ai.core.json."
-  },
-
-  "typed_paradox_events": [
-    "unresolved_triad",
-    "metric_contradiction",
-    "consent_conflict",
-    "cross_file_drift"
-  ],
-
-  "gates": {
-    "rtt7_entry": {
-      "requires": [
-        "typed_paradox_event",
-        "measure.paradox_density"
+  "aa_modes": {
+    "AA1": {
+      "description": "Baseline interpretive mode.",
+      "allowed_rtt": ["RTT1", "RTT2", "RTT3"],
+      "requirements": [
+        "measure.c1 >= 0.80",
+        "measure.c2 >= 0.80",
+        "measure.c3 >= 0.80"
       ],
-      "forbids": [
-        "vibe_paradox",
-        "implicit_paradox"
+      "forbidden": [
+        "typed paradox",
+        "harmonic escalation",
+        "resolution operators"
       ]
     },
 
-    "aa3_escalation": {
-      "requires": [
-        "inv.aa3.consent",
-        "measure.lattice_stability"
+    "AA2": {
+      "description": "Harmonic-capable mode.",
+      "allowed_rtt": ["RTT4", "RTT5", "RTT6", "RTT7", "RTT8", "RTT9"],
+      "requirements": [
+        "typed_paradox_event for RTT7",
+        "measure.paradox_density >= 0.10",
+        "substrate_class = agentic"
       ],
-      "thresholds": {
-        "paradox_density_max": 0.40,
-        "lattice_stability_min": 0.60
-      },
-      "branch": {
-        "if_consent_true": "AA3 escalation permitted; dispatch harmonic operator.",
-        "if_consent_false": "Hold at AA2, log paradox event, stop dispatch."
-      }
+      "consent": "operator_consent optional",
+      "forbidden": [
+        "resolution_preparation",
+        "resolution_alignment",
+        "collapse"
+      ]
     },
 
-    "harmonic_escalation": {
-      "requires": [
-        "measure.lattice_stability",
-        "measure.paradox_density",
-        "inv.aa3.consent"
+    "AA3": {
+      "description": "Full resolution-capable mode.",
+      "allowed_rtt": ["RTT10", "RTT11", "RTT12"],
+      "requirements": [
+        "operator_consent = true",
+        "measure.c1 >= 0.80",
+        "measure.c2 >= 0.80",
+        "measure.c3 >= 0.80"
       ],
-      "notes": "Harmonic escalation is agentic-only unless substrate bridge declares a parametric path."
-    },
-
-    "rtt12_collapse": {
-      "requires": [
-        "measure.c1",
-        "measure.c2",
-        "measure.c3"
+      "collapse_rules": [
+        "RTT12 MUST collapse to RTT1",
+        "Lineage MUST increase after collapse",
+        "Skip-resolution forbidden"
       ],
-      "collapse_rule": "RTT12 MUST collapse to RTT1; skip-resolution forbidden."
+      "substrate": "agentic only"
     }
   },
 
-  "session_rules": {
-    "lineage": "Session lineage MUST be non-decreasing across RTT1–RTT12.",
-    "continuity": "measure.c3 MUST NOT decrease across regime transitions.",
-    "rewind": "RTT11 inversion maps directly to frozen RTT rewind."
+  "rtt_mapping": {
+    "nominal": ["RTT1", "RTT2", "RTT3", "RTT4", "RTT5", "RTT6"],
+    "harmonic": ["RTT7", "RTT8", "RTT9"],
+    "resolution": ["RTT10", "RTT11", "RTT12"]
+  },
+
+  "operator_requirements": {
+    "op.diffusion": ["AA1"],
+    "op.alignment": ["AA1"],
+    "op.coupling": ["AA1"],
+    "op.activation": ["AA1"],
+    "op.triadic_time": ["AA1"],
+    "op.snr": ["AA1"],
+
+    "op.paradox_entry": ["AA2"],
+    "op.paradox_stabilization": ["AA2"],
+    "op.harmonic_escalation": ["AA2", "operator_consent = true"],
+
+    "op.resolution_preparation": ["AA3"],
+    "op.resolution_alignment": ["AA3"],
+    "op.collapse": ["AA3"]
+  },
+
+  "typed_paradox_rules": {
+    "required_for_rtt7": true,
+    "density_threshold": 0.10,
+    "forbidden": [
+      "vibe-based paradox",
+      "untyped paradox",
+      "invented paradox types"
+    ]
+  },
+
+  "substrate_rules": {
+    "agentic_required_for_harmonic": true,
+    "agentic_required_for_resolution": true,
+    "forbidden": [
+      "non-agentic harmonic escalation",
+      "non-agentic resolution"
+    ]
+  },
+
+  "consent_rules": {
+    "AA3_requires_consent": true,
+    "harmonic_escalation_requires_consent": true,
+    "forbidden": [
+      "implicit consent",
+      "assumed consent",
+      "consent invention"
+    ]
+  },
+
+  "collapse_rules": {
+    "trigger": "RTT12",
+    "destination": "RTT1",
+    "lineage_increment": true,
+    "forbidden": [
+      "skip-resolution",
+      "collapse to non-RTT1",
+      "collapse without lineage increment"
+    ]
+  },
+
+  "integration_links": {
+    "runtime": "fft.ai.runtime.json",
+    "regimes": "fft.ai.regimes.json",
+    "operators": "fft.ai.operators.json",
+    "substrate": "fft.ai.substrate.json",
+    "execution_graph": "fft.ai.execution.graph.json",
+    "autonomy": "fft.ai.autonomy.json",
+    "capabilities": "fft.ai.capabilities.json"
+  },
+
+  "timestamps": {
+    "created": "auto",
+    "last_update": "auto"
   },
 
   "non_claims": [
-    "This SPEC does not redefine SET, S–N–R, or triadic time.",
-    "This SPEC does not alter frozen RTT lineage or safety envelopes.",
-    "This SPEC does not introduce new substrate classes."
+    "Spec‑008 does not revise RTT v0.9.",
+    "Spec‑008 does not reinterpret SET, S–N–R, or triadic time.",
+    "Spec‑008 does not replace the human FFT book."
   ]
 }
