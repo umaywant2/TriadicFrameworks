@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="clients_" src="https://github.com/user-attachments/assets/6bf3093f-ec0b-4e6a-a9c2-ecf72a954dc0" />
 
 - [`clients_module.json`](clients_module.json) — Agentic module schema role assignments
 
