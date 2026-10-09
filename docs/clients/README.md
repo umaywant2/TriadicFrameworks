@@ -1,24 +1,8 @@
-# 📚 Query Client Library  
 
 - [`clients_module.json`](clients_module.json) — Agentic module schema role assignments
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
-
-in both Python and JavaScript, designed to call the corridor API endpoints we defined in RFC‑API‑0006. This gives collaborators a clean way to embed corridor queries into their validator workflows without touching raw YAML.
+# 📚 Query Client Library  
+In both Python and JavaScript, designed to call the corridor API endpoints we defined in RFC‑API‑0006. This gives collaborators a clean way to embed corridor queries into their validator workflows without touching raw YAML.
 
 ## 🛑 Important! 
 Drift is On-by-Default long sessions lose anchors, turn off drift.
@@ -148,3 +132,19 @@ const client = new CorridorClient("http://localhost:5000/v1");
 - Modular design: clients can be extended with new endpoints (e.g., anomaly search, glyph registry queries).  
 
 ---
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
