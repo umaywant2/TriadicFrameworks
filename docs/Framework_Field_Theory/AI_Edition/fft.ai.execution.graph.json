@@ -3,7 +3,7 @@
   "canon_id": "FFT-AI-Execution-Graph",
 
   "metadata": {
-    "title": "FFT AI Edition – Execution Graph (v1.3 Draft)",
+    "title": "FFT AI Edition – Execution Graph (v1.3)",
     "subtitle": "Canonical RTT Flow • Operator Spine • Regime Transitions",
     "author_canon": "Nawder Loswin",
     "description": "Defines the execution graph, RTT transitions, operator flow, substrate gating, paradox routing, consent enforcement, and collapse rules for FFT AI Edition v1.3."
@@ -13,18 +13,18 @@
 
   "execution_graph": {
     "nodes": {
-      "RTT1": { "operator": "op.diffusion", "regime": "nominal" },
-      "RTT2": { "operator": "op.alignment", "regime": "nominal" },
-      "RTT3": { "operator": "op.coupling", "regime": "nominal" },
-      "RTT4": { "operator": "op.activation", "regime": "nominal" },
-      "RTT5": { "operator": "op.triadic_time", "regime": "nominal" },
-      "RTT6": { "operator": "op.snr", "regime": "nominal" },
-      "RTT7": { "operator": "op.paradox_entry", "regime": "harmonic" },
-      "RTT8": { "operator": "op.paradox_stabilization", "regime": "harmonic" },
-      "RTT9": { "operator": "op.harmonic_escalation", "regime": "harmonic" },
+      "RTT1":  { "operator": "op.diffusion",              "regime": "nominal" },
+      "RTT2":  { "operator": "op.alignment",              "regime": "nominal" },
+      "RTT3":  { "operator": "op.coupling",               "regime": "nominal" },
+      "RTT4":  { "operator": "op.activation",             "regime": "nominal" },
+      "RTT5":  { "operator": "op.triadic_time",           "regime": "nominal" },
+      "RTT6":  { "operator": "op.snr",                    "regime": "nominal" },
+      "RTT7":  { "operator": "op.paradox_entry",          "regime": "harmonic" },
+      "RTT8":  { "operator": "op.paradox_stabilization",  "regime": "harmonic" },
+      "RTT9":  { "operator": "op.harmonic_escalation",    "regime": "harmonic" },
       "RTT10": { "operator": "op.resolution_preparation", "regime": "resolution" },
-      "RTT11": { "operator": "op.resolution_alignment", "regime": "resolution" },
-      "RTT12": { "operator": "op.collapse", "regime": "resolution" }
+      "RTT11": { "operator": "op.resolution_alignment",   "regime": "resolution" },
+      "RTT12": { "operator": "op.collapse",               "regime": "resolution" }
     },
 
     "edges": [
@@ -72,66 +72,45 @@
     "forbidden_edges": [
       "RTT6 → RTT8",
       "RTT6 → RTT9",
-      "RTT7 → RTT10",
-      "RTT8 → RTT12",
-      "RTT9 → RTT12"
-    ],
+      "RTT1 → RTT3",
+      "RTT2 → RTT4",
+      "RTT3 → RTT5",
+      "RTT4 → RTT6",
+      "RTT5 → RTT7",
+      "RTT7 → RTT9",
+      "RTT8 → RTT10",
+      "RTT9 → RTT11",
+      "RTT10 → RTT12",
+      "RTT11 → RTT1"
+    ]
+  },
 
-    "execution_modes": {
-      "nominal": {
-        "rtt_range": ["RTT1", "RTT2", "RTT3", "RTT4", "RTT5", "RTT6"],
-        "paradox": false,
-        "consent": false,
-        "substrate": ["agentic", "parametric", "symbolic", "edge"]
-      },
-      "harmonic": {
-        "rtt_range": ["RTT7", "RTT8", "RTT9"],
-        "paradox": true,
-        "consent": "required for RTT9",
-        "substrate": ["agentic"]
-      },
-      "resolution": {
-        "rtt_range": ["RTT10", "RTT11", "RTT12"],
-        "paradox": false,
-        "consent": true,
-        "substrate": ["agentic"]
-      }
-    },
-
-    "runtime_enforcement": {
-      "validate_measures": true,
-      "validate_substrate": true,
-      "validate_regime": true,
-      "validate_operator": true,
-      "validate_paradox": true,
-      "validate_consent": true,
-      "validate_collapse": true
-    }
+  "rules": {
+    "execution_rules": [
+      "Execution graph MUST NOT contradict RTT v0.9.",
+      "Execution graph MUST NOT contradict spec‑008.",
+      "Execution graph MUST NOT contradict substrate.json.",
+      "Execution graph MUST NOT contradict operators.json.",
+      "Execution graph MUST NOT contradict regimes.json.",
+      "Execution graph MUST NOT invent measure IDs.",
+      "Execution graph MUST NOT invent paradox types.",
+      "Execution graph MUST NOT invent substrate classes."
+    ]
   },
 
   "integration_links": {
-    "runtime": "fft.ai.runtime.json",
-    "navigation": "fft.ai.navigation.json",
-    "autonomy": "fft.ai.autonomy.json",
-    "discovery": "fft.ai.discovery.json",
-    "capabilities": "fft.ai.capabilities.json",
-    "regimes": "fft.ai.regimes.json",
-    "operators": "fft.ai.operators.json",
-    "substrate": "fft.ai.substrate.json",
-    "spec_008": "fft.ai.spec‑008.json",
-    "paradox_enum": "fft.ai.paradox.enum.json",
-    "rtt_bridge": "fft.ai.rtt.bridge.json",
-    "rtt_spine": "fft.ai.rtt.spine.examples.json"
+    "state": "fft.ai.session.state.json",
+    "navigation": "fft.ai.session.navigation.json",
+    "permissions": "fft.ai.session.permissions.json",
+    "profile": "fft.ai.session.profile.json",
+    "awareness": "fft.ai.session.awareness.json",
+    "analytics": "fft.ai.session.analytics.json",
+    "trace": "fft.ai.session.trace.json",
+    "render": "fft.ai.session.render.json"
   },
 
   "timestamps": {
     "created": "auto",
     "last_update": "auto"
-  },
-
-  "non_claims": [
-    "Execution graph does not revise RTT v0.9.",
-    "Execution graph does not reinterpret SET, S–N–R, or triadic time.",
-    "Execution graph does not replace the human FFT book."
-  ]
+  }
 }
