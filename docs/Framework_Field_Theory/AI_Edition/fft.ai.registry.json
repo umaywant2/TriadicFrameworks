@@ -3,91 +3,168 @@
   "canon_id": "FFT-AI-Registry",
 
   "metadata": {
-    "title": "FFT AI Edition – Registry (v1.3 Draft)",
-    "subtitle": "Canonical Registry of All Modules in AI_Edition",
+    "title": "FFT AI Edition – Registry (v1.3)",
+    "subtitle": "Canonical Metadata Registry for All FFT AI Edition Modules",
     "author_canon": "Nawder Loswin",
-    "description": "Defines the non-authoritative registry projection for FFT AI Edition v1.3."
+    "description": "Defines the canonical registry, metadata, categories, and integration map for FFT AI Edition v1.3."
   },
 
-  "status_line": "Registry is a projection only; authoritative values come from manifest, index, and module specifications.",
+  "status_line": "Registry MUST list all modules and MUST match manifest and index.",
 
   "registry": {
-    "total_modules": 57,
+    "total_modules": 63,
 
-    "modules": [
-      { "name": "fft.ai.autonomy.json", "role": "autonomy", "version": "1.3" },
-      { "name": "fft.ai.bootstrap.json", "role": "runtime", "version": "1.3" },
-      { "name": "fft.ai.capabilities.json", "role": "capabilities", "version": "1.3" },
-      { "name": "fft.ai.core.json", "role": "core", "version": "1.3" },
-      { "name": "fft.ai.core_v1_2_.json", "role": "core_legacy", "version": "1.2" },
-      { "name": "fft.ai.discovery.json", "role": "discovery", "version": "1.3" },
-      { "name": "fft.ai.execution.graph.json", "role": "execution_graph", "version": "1.3" },
-      { "name": "fft.ai.hardware.profile.json", "role": "hardware", "version": "1.3" },
-      { "name": "fft.ai.index.json", "role": "index", "version": "1.3" },
-      { "name": "fft.ai.integrations.json", "role": "integrations", "version": "1.3" },
-      { "name": "fft.ai.manifest.json", "role": "manifest", "version": "1.3.0" },
-      { "name": "fft.ai.navigation.json", "role": "navigation", "version": "1.3" },
-      { "name": "fft.ai.operators.json", "role": "operators", "version": "1.3" },
-      { "name": "fft.ai.overview.json", "role": "overview", "version": "1.3" },
-      { "name": "fft.ai.paradox.enum.json", "role": "paradox_enum", "version": "1.3" },
-      { "name": "fft.ai.reader.json", "role": "reader", "version": "1.3" },
-      { "name": "fft.ai.readme.json", "role": "readme", "version": "1.2" },
-      { "name": "fft.ai.regimes.json", "role": "regimes", "version": "1.3" },
-      { "name": "fft.ai.registry.json", "role": "registry", "version": "1.3" },
-      { "name": "fft.ai.rtt.bridge.json", "role": "rtt_bridge", "version": "1.3" },
-      { "name": "fft.ai.rtt.engine.prompts.json", "role": "rtt_prompts", "version": "1.2" },
-      { "name": "fft.ai.rtt.spine.examples.json", "role": "rtt_examples", "version": "1.2" },
-      { "name": "fft.ai.runtime.json", "role": "runtime", "version": "1.3" },
-      { "name": "fft.ai.session.alignments.json", "role": "session_alignments", "version": "1.3" },
-      { "name": "fft.ai.session.analytics.json", "role": "session_analytics", "version": "1.3" },
-      { "name": "fft.ai.session.awareness.json", "role": "session_awareness", "version": "1.3" },
-      { "name": "fft.ai.session.context.json", "role": "session_context", "version": "1.3" },
-      { "name": "fft.ai.session.dashboard.json", "role": "session_dashboard", "version": "1.3" },
-      { "name": "fft.ai.session.history.json", "role": "session_history", "version": "1.3" },
-      { "name": "fft.ai.session.log.json", "role": "session_log", "version": "1.3" },
-      { "name": "fft.ai.session.navigation.json", "role": "session_navigation", "version": "1.3" },
-      { "name": "fft.ai.session.overlay.json", "role": "session_overlay", "version": "1.3" },
-      { "name": "fft.ai.session.profile.json", "role": "session_profile", "version": "1.3" },
-      { "name": "fft.ai.session.state.json", "role": "session_state", "version": "1.3" },
-      { "name": "fft.ai.session.trace.json", "role": "session_trace", "version": "1.3" },
-      { "name": "fft.ai.session.ui.json", "role": "session_ui", "version": "1.3" },
-      { "name": "fft.ai.spec.json", "role": "spec", "version": "1.3" },
-      { "name": "fft.ai.spec-008.json", "role": "spec_rules", "version": "1.3" },
-      { "name": "fft.ai.substrate.bridge.json", "role": "substrate_bridge", "version": "1.2" },
-      { "name": "fft.ai.substrate.compat.json", "role": "substrate_compat", "version": "1.2" },
-      { "name": "fft.ai.substrate.json", "role": "substrate", "version": "1.2" },
-      { "name": "fft.ai.substrate.lattice.json", "role": "substrate_lattice", "version": "1.2" },
-      { "name": "fft.ai.substrate.matrix.json", "role": "substrate_matrix", "version": "1.2" },
-      { "name": "fft.core.json", "role": "core_legacy", "version": "1.2" },
-      { "name": "fft.examples.json", "role": "examples", "version": "1.2" },
-      { "name": "fft.invariant.json", "role": "invariant", "version": "1.2" },
-      { "name": "fft.metadata.json", "role": "metadata", "version": "1.3.0-draft" },
-      { "name": "fft.operator.example.json", "role": "operator_example", "version": "1.3" },
-      { "name": "fft.operator.port.json", "role": "operator_port", "version": "1.2" },
-      { "name": "fft.operators.json", "role": "operators_legacy", "version": "1.2" },
-      { "name": "fft.regimes.json", "role": "regimes_legacy", "version": "1.2" },
-      { "name": "fft.structures.json", "role": "structures", "version": "1.2" },
-      { "name": "fft.validation.json", "role": "validation", "version": "1.3" },
-      { "name": "ep.harmonic_escalation.json", "role": "prompt", "version": "1.3" },
-      { "name": "capture.md", "role": "capture", "version": "1.0" },
-      { "name": "index.html", "role": "html", "version": "1.2" }
+    "categories": {
+      "core": [
+        "fft.ai.core.json",
+        "fft.ai.core_v1_2_.json",
+        "fft.core.json",
+        "fft.metadata.json",
+        "fft.invariant.json",
+        "fft.structures.json",
+        "fft.validation.json"
+      ],
+
+      "specifications": [
+        "fft.ai.spec.json",
+        "fft.ai.spec-008.json",
+        "fft.ai.manifest.json",
+        "fft.ai.index.json",
+        "fft.ai.readme.json"
+      ],
+
+      "substrate": [
+        "fft.ai.substrate.json",
+        "fft.ai.substrate.compat.json",
+        "fft.ai.substrate.bridge.json",
+        "fft.ai.substrate.lattice.json",
+        "fft.ai.substrate.matrix.json"
+      ],
+
+      "operators": [
+        "fft.ai.operators.json",
+        "fft.operator.example.json",
+        "fft.operator.port.json"
+      ],
+
+      "regimes": [
+        "fft.ai.regimes.json",
+        "fft.regimes.json"
+      ],
+
+      "rtt": [
+        "fft.ai.rtt.bridge.json",
+        "fft.ai.rtt.spine.examples.json",
+        "fft.ai.rtt.engine.prompts.json",
+        "fft.ai.paradox.enum.json"
+      ],
+
+      "runtime": [
+        "fft.ai.runtime.json",
+        "fft.ai.hardware.profile.json",
+        "fft.ai.bootstrap.json",
+        "fft.ai.integrations.json",
+        "fft.ai.discovery.json",
+        "fft.ai.execution.graph.json",
+        "fft.ai.capabilities.json",
+        "fft.ai.reader.json",
+        "fft.ai.overview.json",
+        "fft.ai.registry.json"
+      ],
+
+      "session": [
+        "fft.ai.session.state.json",
+        "fft.ai.session.state.refresh.json",
+        "fft.ai.session.context.json",
+        "fft.ai.session.alignments.json",
+        "fft.ai.session.log.json",
+        "fft.ai.session.trace.json",
+        "fft.ai.session.dashboard.json",
+        "fft.ai.session.overlay.json",
+        "fft.ai.session.history.json",
+        "fft.ai.session.ui.json",
+        "fft.ai.session.profile.json",
+        "fft.ai.session.analytics.json",
+        "fft.ai.session.awareness.json",
+        "fft.ai.session.navigation.json",
+        "fft.ai.session.permissions.json",
+        "fft.ai.session.render.json"
+      ],
+
+      "examples": [
+        "fft.examples.json"
+      ]
+    },
+
+    "module_metadata": {
+      "fft.ai.core.json": {
+        "spec_version": "1.3.0",
+        "category": "core",
+        "description": "Core measurement kernel for FFT AI Edition."
+      },
+      "fft.ai.core_v1_2_.json": {
+        "spec_version": "1.2.0",
+        "category": "core",
+        "description": "Legacy core measurement kernel preserved for compatibility."
+      },
+      "fft.ai.spec.json": {
+        "spec_version": "1.3.0",
+        "category": "specifications",
+        "description": "Primary specification for FFT AI Edition."
+      },
+      "fft.ai.spec-008.json": {
+        "spec_version": "1.3.0",
+        "category": "specifications",
+        "description": "Spec‑008: Canonical RTT, paradox, substrate, and regime rules."
+      },
+      "fft.ai.session.state.json": {
+        "spec_version": "1.3.0",
+        "category": "session",
+        "description": "Authoritative session state envelope."
+      },
+      "fft.ai.session.state.refresh.json": {
+        "spec_version": "1.3.0",
+        "category": "session",
+        "description": "Live trace binding for session state synchronization."
+      },
+      "fft.ai.session.render.json": {
+        "spec_version": "1.3.0",
+        "category": "session",
+        "description": "Unified presentation layer for FFT AI Edition."
+      }
+    }
+  },
+
+  "rules": {
+    "registry_rules": [
+      "Registry MUST list all modules.",
+      "Registry MUST NOT invent module names.",
+      "Registry MUST NOT omit session-layer modules.",
+      "Registry MUST match fft.ai.manifest.json.",
+      "Registry MUST match fft.ai.index.json.",
+      "Registry MUST match fft.ai.spec-008.json."
+    ],
+
+    "load_rules": [
+      "Core MUST load first.",
+      "Runtime MUST load before session-layer.",
+      "Render MUST load last."
     ]
   },
 
-  "links": {
+  "integration": {
     "manifest": "fft.ai.manifest.json",
     "index": "fft.ai.index.json",
-    "overview": "fft.ai.overview.json"
+    "spec": "fft.ai.spec.json",
+    "spec_008": "fft.ai.spec-008.json",
+    "runtime": "fft.ai.runtime.json",
+    "session_state": "fft.ai.session.state.json",
+    "session_trace": "fft.ai.session.trace.json",
+    "session_render": "fft.ai.session.render.json"
   },
 
   "timestamps": {
-    "created": "auto",
-    "last_update": "auto"
-  },
-
-  "non_claims": [
-    "Registry does not revise RTT v0.9.",
-    "Registry does not reinterpret SET, S–N–R, or triadic time.",
-    "Registry does not replace the human FFT book."
-  ]
+    "created": "2025-01-01T00:00:00",
+    "last_update": "2026-10-09T08:41:00"
+  }
 }
