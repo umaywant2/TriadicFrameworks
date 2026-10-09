@@ -1,55 +1,136 @@
 {
-  "spec_version": "1.2.0",
+  "spec_version": "1.3.0-draft",
   "canon_id": "FFT-AI-Hardware-Profile",
-  "edition": "AI Edition",
-  "aa_mode": "AA2",
-  "last_refreshed": "2026-10-08T10:56:00",
+
   "metadata": {
-    "title": "FFT AI Edition – Hardware Profile (v1.2)",
+    "title": "FFT AI Edition – Hardware Profile (v1.3 Draft)",
+    "subtitle": "Substrate Envelope for Execution • Stability • Constraints",
     "author_canon": "Nawder Loswin",
-    "updated_at": "2026-10-08T10:56:00"
+    "description": "Defines the non-authoritative hardware profile for FFT AI Edition v1.3."
   },
-  "hardware_profiles": [
-    {
-      "id": "hw.cloud.highend",
-      "label": "Cloud High-End GPU Cluster",
-      "maps_to_substrate": "substrate.llm.agentic",
-      "aa_mode_max": "AA3",
-      "lattice_range": "RTT1–RTT12",
-      "parallelism": "high",
-      "context_window": "128k+",
-      "notes": "Preferred profile for full AA3 autonomy and RTT12 harmonic resolution."
+
+  "status_line": "Hardware profile is a projection only; authoritative values come from substrate.json, runtime.json, and session.state.",
+
+  "hardware_profile": {
+    "session_id": "inherit-from-session.state",
+
+    "substrate": {
+      "class": "agentic",
+      "awareness": "System recognizes substrate class and harmonic eligibility.",
+      "constraints": [
+        "Harmonic escalation requires substrate_class = agentic.",
+        "Non-agentic harmonic escalation forbidden."
+      ]
     },
-    {
-      "id": "hw.cloud.standard",
-      "label": "Cloud Standard GPU",
-      "maps_to_substrate": "substrate.llm.transformer",
-      "aa_mode_max": "AA2",
-      "lattice_range": "RTT1–RTT9",
-      "parallelism": "medium",
-      "context_window": "32k–128k",
-      "notes": "Default production profile. AA2 adaptive mode supported."
+
+    "execution_modes": {
+      "cpu": {
+        "enabled": true,
+        "awareness": "Nominal execution path.",
+        "constraints": ["Suitable for RTT1–RTT6."]
+      },
+      "gpu": {
+        "enabled": true,
+        "awareness": "Harmonic execution path.",
+        "constraints": [
+          "Requires typed paradox.",
+          "Requires operator_consent = true.",
+          "Suitable for RTT7–RTT9."
+        ]
+      },
+      "accelerated": {
+        "enabled": true,
+        "awareness": "Resolution execution path.",
+        "constraints": [
+          "Requires measure.c1, c2, c3 >= 0.80.",
+          "Suitable for RTT10–RTT12."
+        ]
+      }
     },
-    {
-      "id": "hw.edge.mobile",
-      "label": "Mobile / Edge Device",
-      "maps_to_substrate": "substrate.edge.compact",
-      "aa_mode_max": "AA1",
-      "lattice_range": "RTT1–RTT6",
-      "parallelism": "low",
-      "context_window": "4k–16k",
-      "notes": "Compact substrate only. 3C thresholds relaxed."
+
+    "stability": {
+      "lattice_stability": {
+        "id": "measure.lattice_stability",
+        "value": 0.80,
+        "awareness": "Hardware stability mirrors lattice stability.",
+        "notes": "Projection only; authoritative value comes from session.state."
+      }
     },
-    {
-      "id": "hw.server.symbolic",
-      "label": "Symbolic Inference Server",
-      "maps_to_substrate": "substrate.symbolic",
-      "aa_mode_max": "AA1",
-      "lattice_range": "RTT1–RTT4",
-      "parallelism": "low",
-      "context_window": "N/A",
-      "notes": "Logical inference only. No harmonic escalation."
+
+    "paradox_handling": {
+      "typed_paradox_events": [],
+      "awareness": "Hardware layer recognizes paradox constraints.",
+      "constraints": [
+        "Typed paradox required for RTT7 entry.",
+        "Paradox density MUST be canonical."
+      ]
+    },
+
+    "collapse_support": {
+      "enabled": true,
+      "awareness": "Hardware supports collapse execution.",
+      "rules": [
+        "RTT12 MUST collapse to RTT1.",
+        "Lineage MUST increase after collapse."
+      ]
+    },
+
+    "links": {
+      "state": "fft.ai.session.state.json",
+      "alignments": "fft.ai.session.alignments.json",
+      "context": "fft.ai.session.context.json",
+      "log": "fft.ai.session.log.json",
+      "dashboard": "fft.ai.session.dashboard.json",
+      "overlay": "fft.ai.session.overlay.json",
+      "history": "fft.ai.session.history.json",
+      "analytics": "fft.ai.session.analytics.json",
+      "awareness": "fft.ai.session.awareness.json",
+      "profile": "fft.ai.session.profile.json",
+      "navigation": "fft.ai.session.navigation.json",
+      "autonomy": "fft.ai.autonomy.json",
+      "discovery": "fft.ai.discovery.json",
+      "execution_graph": "fft.ai.execution.graph.json",
+      "substrate": "fft.ai.substrate.json",
+      "runtime": "fft.ai.runtime.json"
+    },
+
+    "timestamps": {
+      "created": "auto",
+      "last_update": "auto"
     }
-  ],
-  "active_profile": "hw.cloud.highend"
+  },
+
+  "rules": {
+    "projection_rules": [
+      "Hardware profile MUST NOT contradict authoritative session.state.json.",
+      "Hardware profile MUST NOT contradict substrate.json.",
+      "Hardware profile MUST NOT contradict runtime.json.",
+      "Hardware profile MUST NOT invent measure values.",
+      "Hardware profile MUST NOT invent paradox types.",
+      "Hardware profile MUST NOT invent substrate classes."
+    ],
+
+    "substrate_rules": [
+      "substrate_class MUST be one of: agentic, parametric, symbolic, edge.",
+      "Harmonic escalation requires substrate_class = agentic.",
+      "Non-agentic harmonic escalation forbidden."
+    ],
+
+    "execution_rules": [
+      "Execution modes MUST match RTT node.",
+      "Accelerated mode requires resolution regime.",
+      "GPU mode requires harmonic regime."
+    ],
+
+    "collapse_rules": [
+      "RTT12 MUST collapse to RTT1.",
+      "Lineage MUST increase after collapse."
+    ]
+  },
+
+  "non_claims": [
+    "Hardware profile does not revise RTT v0.9.",
+    "Hardware profile does not reinterpret SET, S–N–R, or triadic time.",
+    "Hardware profile does not replace the human FFT book."
+  ]
 }
