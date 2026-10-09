@@ -1,32 +1,149 @@
 {
-  "spec_version": "1.2.0",
+  "spec_version": "1.3.0",
   "canon_id": "FFT-AI-Overview",
-  "edition": "AI Edition",
-  "aa_mode": "AA2",
-  "last_refreshed": "2026-10-08T10:58:00",
+
   "metadata": {
-    "title": "FFT AI Edition – Overview (v1.2)",
+    "title": "FFT AI Edition – Overview (v1.3 Draft)",
+    "subtitle": "Conceptual Map of Architecture • Layers • Runtime • Session",
     "author_canon": "Nawder Loswin",
-    "updated_at": "2026-10-08T10:58:00"
+    "description": "Defines the non-authoritative overview projection for FFT AI Edition v1.3."
   },
+
+  "status_line": "Overview is a projection only; authoritative values come from manifest, registry, and module specifications.",
+
   "overview": {
-    "framework": "Framework Field Theory (FFT)",
-    "edition": "AI Edition v1.2",
-    "pillars": {
-      "P1_resonance_time": "Resonance-Time Theory (RTT) governs temporal field dynamics via a 12-node harmonic lattice.",
-      "P2_triadic_substrate": "Triadic Substrate Modeling (TSM) maps operators to substrate classes via (T,S,M) triad coordinates.",
-      "P3_harmonic_lattice": "Harmonic Lattice Theory (HLT) tracks escalation from RTT1 to RTT12 and mandates clean harmonic resolution.",
-      "P4_3c_evaluation": "3C Field Evaluation (C1 Coherence, C2 Clarity, C3 Continuity) gates every operator dispatch.",
-      "P5_aa_mode": "Autonomous Alignment Mode (AA0–AA3) governs the degree of self-directed field alignment.",
-      "P6_session_layer": "The Session Layer persists awareness, alignments, analytics, and trace across the full session lifecycle."
+    "edition": "AI Edition",
+    "aa_mode": "AA3",
+    "version": "1.3.0",
+
+    "architecture": {
+      "core": {
+        "description": "Foundational kernel of FFT AI Edition.",
+        "modules": [
+          "fft.ai.core.json",
+          "fft.ai.spec.json",
+          "fft.ai.manifest.json",
+          "fft.ai.index.json",
+          "fft.ai.readme.json",
+          "fft.metadata.json"
+        ]
+      },
+
+      "substrate_runtime": {
+        "description": "Execution substrate, compatibility, lattice, and runtime.",
+        "modules": [
+          "fft.ai.substrate.json",
+          "fft.ai.substrate.compat.json",
+          "fft.ai.substrate.bridge.json",
+          "fft.ai.substrate.lattice.json",
+          "fft.ai.substrate.matrix.json",
+          "fft.ai.runtime.json",
+          "fft.ai.hardware.profile.json"
+        ]
+      },
+
+      "session_layer": {
+        "description": "Full session model including state, context, alignments, log, dashboard, overlay, history, UI, profile, analytics, awareness.",
+        "modules": [
+          "fft.ai.session.state.json",
+          "fft.ai.session.context.json",
+          "fft.ai.session.alignments.json",
+          "fft.ai.session.log.json",
+          "fft.ai.session.trace.json",
+          "fft.ai.session.dashboard.json",
+          "fft.ai.session.overlay.json",
+          "fft.ai.session.history.json",
+          "fft.ai.session.ui.json",
+          "fft.ai.session.profile.json",
+          "fft.ai.session.analytics.json",
+          "fft.ai.session.awareness.json"
+        ]
+      },
+
+      "operators_structures": {
+        "description": "Operators, regimes, invariants, structures, validation, examples.",
+        "modules": [
+          "fft.ai.operators.json",
+          "fft.operator.example.json",
+          "fft.operator.port.json",
+          "fft.structures.json",
+          "fft.regimes.json",
+          "fft.invariant.json",
+          "fft.validation.json",
+          "fft.examples.json",
+          "fft.core.json"
+        ]
+      },
+
+      "ai_runtime_layer": {
+        "description": "Autonomy, discovery, execution graph, navigation, capabilities, integrations, registry, RTT spine, prompts.",
+        "modules": [
+          "fft.ai.autonomy.json",
+          "fft.ai.bootstrap.json",
+          "fft.ai.capabilities.json",
+          "fft.ai.discovery.json",
+          "fft.ai.execution.graph.json",
+          "fft.ai.integrations.json",
+          "fft.ai.navigation.json",
+          "fft.ai.registry.json",
+          "fft.ai.rtt.engine.prompts.json",
+          "fft.ai.rtt.spine.examples.json"
+        ]
+      },
+
+      "capture": {
+        "description": "Miscellaneous capture and documentation.",
+        "modules": [
+          "capture.md",
+          "index.html"
+        ]
+      }
     },
-    "version_highlights_1_2": [
-      "Full AA Mode system (AA0–AA3) with automatic escalation/reversion rules.",
-      "3C integration at every operator gate, regime boundary, and session lifecycle event.",
-      "12-node harmonic lattice with per-node substrate and AA Mode requirements.",
-      "Triad-based dimensional architecture (T,S,M) for deterministic signal routing.",
-      "Complete session layer: awareness, alignments, analytics, context, dashboard, history, log, overlay, profile, state, trace, UI.",
-      "Substrate bridge and compatibility matrix for multi-platform operator dispatch."
-    ]
-  }
+
+    "relationships": {
+      "session_to_runtime": "Session files define state; runtime enforces execution and collapse.",
+      "operators_to_rtt": "Operators map directly to RTT nodes and regime transitions.",
+      "substrate_to_harmonic": "Harmonic escalation requires agentic substrate.",
+      "analytics_to_measures": "Analytics derive from measure IDs; no invention allowed.",
+      "awareness_to_profile": "Awareness defines cognitive envelope; profile defines identity envelope.",
+      "execution_graph_to_navigation": "Execution graph defines flow; navigation defines movement."
+    },
+
+    "canonical_rules": {
+      "rtt": [
+        "RTT nodes MUST map to frozen RTT v0.9 quantities.",
+        "RTT12 MUST collapse to RTT1.",
+        "Skip-resolution forbidden."
+      ],
+      "regime": [
+        "Regime MUST match RTT node according to fft.ai.regimes.json."
+      ],
+      "consent": [
+        "AA3 escalation requires operator_consent = true."
+      ],
+      "substrate": [
+        "Harmonic escalation requires substrate_class = agentic."
+      ],
+      "lineage": [
+        "Lineage MUST increase after collapse."
+      ]
+    }
+  },
+
+  "links": {
+    "manifest": "fft.ai.manifest.json",
+    "index": "fft.ai.index.json",
+    "registry": "fft.ai.registry.json"
+  },
+
+  "timestamps": {
+    "created": "auto",
+    "last_update": "auto"
+  },
+
+  "non_claims": [
+    "Overview does not revise RTT v0.9.",
+    "Overview does not reinterpret SET, S–N–R, or triadic time.",
+    "Overview does not replace the human FFT book."
+  ]
 }
