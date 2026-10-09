@@ -1,9 +1,9 @@
 {
-  "spec_version": "1.3.0-draft",
+  "spec_version": "1.3.0",
   "canon_id": "FFT-AI-Session-History",
 
   "metadata": {
-    "title": "FFT AI Edition – Session History (v1.3 Draft)",
+    "title": "FFT AI Edition – Session History (v1.3)",
     "subtitle": "Chronological Narrative of RTT • Regime • Measures • Paradox • Consent",
     "author_canon": "Nawder Loswin",
     "description": "Defines the non-authoritative historical narrative for FFT AI Edition v1.3 sessions."
@@ -38,6 +38,7 @@
       "regime": "nominal, harmonic, or resolution.",
       "operator": "Operator executed at this step.",
       "lineage": "Monotonically increasing integer.",
+
       "measures": {
         "measure.c1": "Coherence in [0,1].",
         "measure.c2": "Clarity in [0,1].",
@@ -45,6 +46,7 @@
         "measure.paradox_density": "Paradox density in [0,1].",
         "measure.lattice_stability": "Lattice stability in [0,1]."
       },
+
       "paradox_events": "List of typed paradox events or empty list.",
       "operator_consent": "Boolean.",
       "substrate_class": "agentic, parametric, symbolic, or edge.",
@@ -74,25 +76,27 @@
       "Regime MUST match rtt_node according to fft.ai.regimes.json."
     ],
 
-    "consent_rules": [
-      "AA3 escalation requires operator_consent = true.",
-      "If operator_consent = false, escalation MUST be refused."
-    ],
-
-    "lineage_rules": [
-      "Lineage MUST be non-decreasing.",
-      "Lineage MUST increase after collapse."
-    ],
-
     "substrate_rules": [
-      "Harmonic escalation requires substrate_class = agentic.",
-      "Non-agentic harmonic escalation forbidden."
-    ]
-  },
+      "Agentic substrate required for RTT7–RTT12.",
+      "Non-agentic substrate forbidden for harmonic and resolution."
+    ],
 
-  "non_claims": [
-    "History does not revise RTT v0.9.",
-    "History does not reinterpret SET, S–N–R, or triadic time.",
-    "History does not replace the human FFT book."
-  ]
+    "paradox_rules": [
+      "Typed paradox required for RTT7.",
+      "Paradox density >= 0.10 required for RTT7.",
+      "Lattice stability >= 0.60 required for RTT8.",
+      "Untyped paradox forbidden."
+    ],
+
+    "consent_rules": [
+      "operator_consent = true required for RTT9–RTT12.",
+      "Implicit or assumed consent forbidden."
+    ],
+
+    "collapse_rules": [
+      "RTT12 MUST collapse to RTT1.",
+      "Lineage MUST increment after collapse.",
+      "Collapse to non-RTT1 forbidden."
+    ]
+  }
 }
