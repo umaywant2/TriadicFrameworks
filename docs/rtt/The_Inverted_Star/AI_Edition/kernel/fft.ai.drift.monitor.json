@@ -1,1 +1,21 @@
-. 
+{
+  "kernel": "fft.ai.drift.monitor",
+  "version": "1.33-p1",
+
+  "drift": {
+    "bounded": true,
+    "costs": {
+      "Diffusion": 0.05,
+      "Alignment": 0.10,
+      "Coupling": 0.12,
+      "ParadoxResolver": 0.20,
+      "Stabilization": 0.03,
+      "Reset": 0.00
+    },
+    "threshold_sequence": 0.35
+  },
+
+  "invariants": {
+    "must_not_invent_drift_costs": true
+  }
+}
