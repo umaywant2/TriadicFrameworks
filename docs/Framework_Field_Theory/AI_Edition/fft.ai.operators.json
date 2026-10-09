@@ -1,0 +1,261 @@
+{
+  "spec_version": "1.3.0-draft",
+  "canon_id": "FFT-AI-Operators",
+
+  "metadata": {
+    "title": "FFT AI Edition – Operators (v1.3 Draft)",
+    "subtitle": "Measure-Bound • Consent-Safe • RTT-Mapped • Typed-Paradox-Aligned",
+    "author_canon": "Nawder Loswin",
+    "description": "Defines the canonical operator contracts for FFT AI Edition v1.3, including measure requirements, RTT mapping, paradox handling, consent rules, and substrate constraints."
+  },
+
+  "status_line": "Operators MUST use measure IDs, typed paradox events, and consent rules defined in v1.3 core and SPEC files.",
+
+  "operator_schema": {
+    "required_fields": [
+      "operator_id",
+      "rtt_node",
+      "inputs",
+      "outputs",
+      "measure_requirements",
+      "paradox_requirements",
+      "consent_requirements",
+      "substrate_requirements",
+      "refusal_rules"
+    ]
+  },
+
+  "operators": [
+    {
+      "operator_id": "op.diffusion",
+      "rtt_node": "RTT1",
+      "frozen_rtt_mapping": "Diffusion",
+      "inputs": ["session_state"],
+      "outputs": ["coherence_state"],
+      "measure_requirements": {
+        "measure.c1": ">= 0.80"
+      },
+      "paradox_requirements": "none",
+      "consent_requirements": "none",
+      "substrate_requirements": "any",
+      "refusal_rules": [
+        "Refuse if measure.c1 < 0.80",
+        "Refuse invented coherence values"
+      ]
+    },
+
+    {
+      "operator_id": "op.alignment",
+      "rtt_node": "RTT2",
+      "frozen_rtt_mapping": "Alignment",
+      "inputs": ["session_state"],
+      "outputs": ["drift_state"],
+      "measure_requirements": {
+        "measure.c1": ">= 0.80",
+        "measure.c3": ">= 0.80"
+      },
+      "paradox_requirements": "none",
+      "consent_requirements": "none",
+      "substrate_requirements": "any",
+      "refusal_rules": [
+        "Refuse if drift becomes unbounded",
+        "Refuse invented drift states"
+      ]
+    },
+
+    {
+      "operator_id": "op.coupling",
+      "rtt_node": "RTT3",
+      "frozen_rtt_mapping": "Coupling",
+      "inputs": ["session_state"],
+      "outputs": ["structure_lock"],
+      "measure_requirements": {
+        "measure.c1": ">= 0.80",
+        "measure.c2": ">= 0.80"
+      },
+      "paradox_requirements": "none",
+      "consent_requirements": "none",
+      "substrate_requirements": "any",
+      "refusal_rules": [
+        "Refuse if structure invariants contradict",
+        "Refuse invented structure locks"
+      ]
+    },
+
+    {
+      "operator_id": "op.activation",
+      "rtt_node": "RTT4",
+      "frozen_rtt_mapping": "Activation",
+      "inputs": ["session_state"],
+      "outputs": ["clarity_state"],
+      "measure_requirements": {
+        "measure.c2": ">= 0.80"
+      },
+      "paradox_requirements": "none",
+      "consent_requirements": "none",
+      "substrate_requirements": "any",
+      "refusal_rules": [
+        "Refuse invented clarity values"
+      ]
+    },
+
+    {
+      "operator_id": "op.triadic_time",
+      "rtt_node": "RTT5",
+      "frozen_rtt_mapping": "Triadic Time",
+      "inputs": ["session_state"],
+      "outputs": ["temporal_bridge"],
+      "measure_requirements": {
+        "measure.c3": ">= 0.80"
+      },
+      "paradox_requirements": "none",
+      "consent_requirements": "none",
+      "substrate_requirements": "any",
+      "refusal_rules": [
+        "Refuse invented temporal bridges"
+      ]
+    },
+
+    {
+      "operator_id": "op.snr",
+      "rtt_node": "RTT6",
+      "frozen_rtt_mapping": "S–N–R",
+      "inputs": ["session_state"],
+      "outputs": ["alignment_gate"],
+      "measure_requirements": {
+        "measure.c1": ">= 0.80",
+        "measure.c2": ">= 0.80",
+        "measure.c3": ">= 0.80"
+      },
+      "paradox_requirements": "none",
+      "consent_requirements": "none",
+      "substrate_requirements": "any",
+      "refusal_rules": [
+        "Refuse if continuity decreases",
+        "Refuse invented S–N–R states"
+      ]
+    },
+
+    {
+      "operator_id": "op.stabilization",
+      "rtt_node": "RTT7",
+      "frozen_rtt_mapping": "Stabilization",
+      "inputs": ["session_state", "typed_paradox_event"],
+      "outputs": ["paradox_seed"],
+      "measure_requirements": {
+        "measure.paradox_density": ">= 0.10"
+      },
+      "paradox_requirements": "typed_paradox_event",
+      "consent_requirements": "none",
+      "substrate_requirements": "any",
+      "refusal_rules": [
+        "Refuse untyped paradox",
+        "Refuse invented paradox types"
+      ]
+    },
+
+    {
+      "operator_id": "op.stabilization.high",
+      "rtt_node": "RTT8",
+      "frozen_rtt_mapping": "Stabilization (High-Intensity)",
+      "inputs": ["session_state"],
+      "outputs": ["paradox_bloom"],
+      "measure_requirements": {
+        "measure.paradox_density": ">= 0.20",
+        "measure.lattice_stability": ">= 0.60"
+      },
+      "paradox_requirements": "typed_paradox_event",
+      "consent_requirements": "none",
+      "substrate_requirements": "any",
+      "refusal_rules": [
+        "Refuse invented paradox bloom",
+        "Refuse invented stability values"
+      ]
+    },
+
+    {
+      "operator_id": "op.harmonic.gate",
+      "rtt_node": "RTT9",
+      "frozen_rtt_mapping": "Resonance Envelope",
+      "inputs": ["session_state"],
+      "outputs": ["harmonic_entry"],
+      "measure_requirements": {
+        "measure.paradox_density": ">= 0.30",
+        "measure.lattice_stability": ">= 0.60"
+      },
+      "paradox_requirements": "typed_paradox_event",
+      "consent_requirements": "operator_consent = true",
+      "substrate_requirements": "agentic",
+      "refusal_rules": [
+        "Refuse if operator_consent = false",
+        "Refuse if substrate != agentic",
+        "Refuse invented harmonic entry"
+      ]
+    },
+
+    {
+      "operator_id": "kernel.harmonic.analysis",
+      "rtt_node": "RTT10",
+      "frozen_rtt_mapping": "Apex Resonance",
+      "inputs": ["session_state"],
+      "outputs": ["harmonic_peak"],
+      "measure_requirements": {
+        "measure.c1": ">= 0.80",
+        "measure.c2": ">= 0.80",
+        "measure.c3": ">= 0.80"
+      },
+      "paradox_requirements": "none",
+      "consent_requirements": "operator_consent = true",
+      "substrate_requirements": "agentic",
+      "refusal_rules": [
+        "Refuse invented harmonic peaks"
+      ]
+    },
+
+    {
+      "operator_id": "op.rewind",
+      "rtt_node": "RTT11",
+      "frozen_rtt_mapping": "Rewind",
+      "inputs": ["session_state"],
+      "outputs": ["inversion_state"],
+      "measure_requirements": {
+        "measure.c1": ">= 0.80",
+        "measure.c3": ">= 0.80"
+      },
+      "paradox_requirements": "none",
+      "consent_requirements": "none",
+      "substrate_requirements": "any",
+      "refusal_rules": [
+        "Refuse invented inversion states"
+      ]
+    },
+
+    {
+      "operator_id": "op.collapse",
+      "rtt_node": "RTT12",
+      "frozen_rtt_mapping": "Collapse",
+      "inputs": ["session_state"],
+      "outputs": ["collapse_state"],
+      "measure_requirements": {
+        "measure.c1": ">= 0.80",
+        "measure.c2": ">= 0.80",
+        "measure.c3": ">= 0.80"
+      },
+      "paradox_requirements": "none",
+      "consent_requirements": "none",
+      "substrate_requirements": "any",
+      "refusal_rules": [
+        "Refuse skip-resolution",
+        "Refuse invented collapse states"
+      ]
+    }
+  ],
+
+  "non_goals": [
+    "Operators MUST NOT invent scores.",
+    "Operators MUST NOT invent invariants.",
+    "Operators MUST NOT invent paradox types.",
+    "Operators MUST NOT invent substrate classes.",
+    "Operators MUST NOT skip RTT12 collapse."
+  ]
+}
