@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="audio_industry_reviewed" src="https://github.com/user-attachments/assets/fc27f741-1951-491f-8abe-b0808f137c39" />
+
 ## Conclusions and Future Work
 
 This review has examined the modern audio industry through the lens of vST alignment, treating sound not as an abstract signal but as a **bounded perceptual substrate** nested within larger regimes. Across production practices, system design, notation, education, and restoration, a consistent pattern emerges: clarity degrades when capability expands without containment, and coherence returns when systems realign with human perceptual boundaries.
