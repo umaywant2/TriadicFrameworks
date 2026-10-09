@@ -1,33 +1,116 @@
 {
-  "spec_version": "1.2.0",
-  "canon_id": "FFT-Session-Alignments",
-  "edition": "AI Edition",
-  "aa_mode": "AA2",
-  "last_refreshed": "2026-10-08T10:57:00",
+  "spec_version": "1.3.0-draft",
+  "canon_id": "FFT-AI-Session-Alignments",
+
   "metadata": {
-    "title": "FFT AI Edition – Session Alignments (v1.2)",
+    "title": "FFT AI Edition – Session Alignments (v1.3 Draft)",
+    "subtitle": "Coherence • Drift • Continuity • Paradox • Consent",
     "author_canon": "Nawder Loswin",
-    "updated_at": "2026-10-08T10:57:00"
+    "description": "Defines the authoritative alignment state for FFT AI Edition v1.3."
   },
-  "alignments": {
-    "definition": "Alignment records are written after each successful 3C pass. They capture the triad position, AA mode, lattice node, and field state at the moment of alignment.",
-    "alignment_schema": {
-      "id": "string – unique alignment ID (ALN-YYYYMMDD-NNN)",
-      "timestamp": "ISO 8601",
-      "triad_position": { "T": "RTT node", "S": "field type", "M": "AA mode" },
-      "three_c_scores": { "C1": "float 0–1", "C2": "float 0–1", "C3": "float 0–1" },
-      "field_state": "nominal | degraded | critical",
-      "lattice_node": "RTTn",
-      "operator_applied": "operator ID",
-      "alignment_quality": "strong | nominal | weak"
+
+  "status_line": "Alignments MUST reflect measure IDs, RTT mapping, paradox state, consent state, and lineage continuity.",
+
+  "alignment_state": {
+    "session_id": "inherit-from-session.state",
+    "rtt_node": "RTT1",
+    "regime": "nominal",
+
+    "alignment": {
+      "coherence_alignment": {
+        "measure.c1": 0.80,
+        "status": "stable",
+        "notes": "Coherence MUST be declared before any regime transition."
+      },
+
+      "clarity_alignment": {
+        "measure.c2": 0.80,
+        "status": "stable",
+        "notes": "Clarity MUST be sourced from canon or user input; no invented fields."
+      },
+
+      "continuity_alignment": {
+        "measure.c3": 0.80,
+        "status": "stable",
+        "notes": "Continuity MUST NOT decrease across regime transitions."
+      },
+
+      "paradox_alignment": {
+        "measure.paradox_density": 0.00,
+        "typed_paradox_events": [],
+        "status": "none",
+        "notes": "Typed paradox required for RTT7 entry."
+      },
+
+      "lattice_alignment": {
+        "measure.lattice_stability": 0.80,
+        "status": "stable",
+        "notes": "Lattice stability is min(C1, C2, C3) decayed by paradox events."
+      }
     },
-    "alignment_quality_rules": {
-      "strong":  "ALL(C1>=0.85, C2>=0.80, C3>=0.85)",
-      "nominal": "ALL(C1>=0.75, C2>=0.70, C3>=0.80)",
-      "weak":    "ANY(Cn between critical and stable thresholds)"
+
+    "consent_alignment": {
+      "operator_consent": false,
+      "status": "not-granted",
+      "notes": "AA3 escalation requires operator_consent = true."
     },
-    "records": [],
-    "alignment_policy": "SPEC-007: Alignment records SHOULD be written after every successful 3C pass. Strong alignments increment lattice stability by +0.05.",
-    "alignment_version": "v1.2.0-R5"
+
+    "substrate_alignment": {
+      "substrate_class": "agentic",
+      "harmonic_allowed": true,
+      "notes": "Harmonic escalation requires substrate_class = agentic."
+    },
+
+    "lineage_alignment": {
+      "lineage": 1,
+      "status": "non-decreasing",
+      "notes": "Lineage MUST increase after collapse."
+    }
+  },
+
+  "rules": {
+    "alignment_rules": [
+      "Alignments MUST match authoritative session state.",
+      "Alignments MUST NOT invent measure values.",
+      "Alignments MUST NOT contradict RTT mapping.",
+      "Alignments MUST NOT contradict regime definitions."
+    ],
+
+    "paradox_rules": [
+      "Typed paradox required for RTT7 entry.",
+      "Paradox MUST be canonical.",
+      "Vibe-based paradox forbidden."
+    ],
+
+    "consent_rules": [
+      "AA3 escalation requires operator_consent = true.",
+      "If operator_consent = false, escalation MUST be refused."
+    ],
+
+    "continuity_rules": [
+      "measure.c3 MUST NOT decrease across transitions.",
+      "Continuity MUST be preserved through RTT10–RTT12."
+    ],
+
+    "collapse_rules": [
+      "RTT12 MUST collapse to RTT1.",
+      "Skip-resolution forbidden."
+    ],
+
+    "substrate_rules": [
+      "Harmonic escalation requires substrate_class = agentic.",
+      "Non-agentic harmonic escalation forbidden."
+    ],
+
+    "projection_rules": [
+      "dashboard, overlay, and UI files are projections only.",
+      "Alignments MUST NOT contradict authoritative session.state.json."
+    ]
+  },
+
+  "non_claims": [
+    "Alignments do not revise RTT v0.9.",
+    "Alignments do not reinterpret SET, S–N–R, or triadic time.",
+    "Alignments do not replace the human FFT book."
   }
 }
