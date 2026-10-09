@@ -2192,11 +2192,175 @@ Section 11 is the final chamber of the Light module — but it is the first cham
 
 ---
 
-If you want, we can now create:
+I'll create the `index.md` module summary for the Light module of TriadicFrameworks right away, synthesizing all 11 sections into a cohesive document.
 
-### **/docs/Light/index.md — The Module Summary**
+Here's your completed `index.md` — ready to drop into `TriadicFrameworks/docs/Light/`. Since `.md` files can't be exported directly, copy the full content below:
 
-or  
-### begin the first unified field module that follows Light.
+---
 
-Just tell me which door you want to open next.
+```markdown
+# Light Module — Index & Summary
+**TriadicFrameworks | `/docs/Light/index.md`**
+*Module Version: 1.0 | Last Updated: 2026-10-09*
+
+---
+
+## Overview
+
+The **Light Module** is one of the three foundational pillars of the TriadicFrameworks system. It defines the theoretical basis, operational protocols, and forward-integration pathways for light as a structural and regulatory agent across biological, synthetic, and stellar domains. Light is treated not merely as an environmental parameter but as an **active substrate**—a medium that encodes information, drives gradient formation, and governs regime transitions at every scale from subcellular to galactic.
+
+This module spans eleven sections, progressing from historical and classificatory foundations through advanced engineering and speculative futures. Together, they constitute a complete operational language for reasoning about light within the Triadic system.
+
+---
+
+## Purpose
+
+The Light Module serves four primary functions within TriadicFrameworks:
+
+1. **Classification** — Establishing a rigorous taxonomy of light regimes, spectral identities, and epoch boundaries that can interoperate with the Gradient and Substrate modules.
+2. **Mechanistic Grounding** — Providing the physical and biological laws (Spectral Fingerprint Theory, Biospheric Scaling Law, Gradient–Light Coupling) that underpin all downstream applications.
+3. **Engineering Specification** — Defining how light environments are designed, tested, and safely deployed across biological and synthetic substrates.
+4. **System Integration** — Bridging the Light Module to the broader TriadicFrameworks architecture through regime transition logic, field applications, and future gradient systems.
+
+---
+
+## Section Map
+
+### § 1 — Light Regime Epochs
+Establishes the historical and chronological framework for categorizing light environments across deep time. Defines **epoch boundaries** based on shifts in spectral composition, intensity thresholds, and biospheric response. Introduces the concept of *regime memory*—the persistence of light-epoch signatures in substrate and organism. Foundational vocabulary for all downstream sections.
+
+> **Key concepts:** Epoch boundary conditions, regime memory, spectral periodicity, photon flux baselines.
+
+---
+
+### § 2 — Spectral Fingerprint Theory
+Formalizes the principle that every light environment possesses a unique, reproducible spectral signature—its **fingerprint**—that encodes information about source, medium, and interaction history. Develops the mathematics of fingerprint decomposition and establishes criteria for fingerprint fidelity and drift. Directly informs substrate engineering and stellar mapping.
+
+> **Key concepts:** Fingerprint decomposition, spectral fidelity index, signature drift, chrono-spectral encoding.
+
+---
+
+### § 3 — Biospheric Scaling Law
+Derives the quantitative relationship between light regime parameters and biospheric response magnitude. Shows that biospheric scaling is non-linear and regime-dependent, with critical thresholds producing discontinuous transitions. Establishes the **scaling coefficient matrix** used throughout the module to predict system-level behavior.
+
+> **Key concepts:** Scaling coefficient matrix, non-linear response curves, critical thresholds, discontinuous biospheric transitions.
+
+---
+
+### § 4 — Gradient–Light Coupling
+Defines the formal coupling between light fields and gradient architectures—the mechanism by which photon flux generates, sustains, or collapses gradient structures. Introduces **coupling tensors** and establishes the conditions for stable, resonant, and pathological coupling states. This section is the primary bridge between the Light Module and the Gradient Module.
+
+> **Key concepts:** Coupling tensors, stable vs. resonant coupling, gradient saturation, photon-gradient feedback loops.
+
+---
+
+### § 5 — Light Substrate Engineering
+Specifies design principles for constructing substrates that interact predictably with target light regimes. Covers material selection, spectral tuning, layering architectures, and dynamic substrate reconfiguration. Introduces the **substrate response envelope** as the primary engineering deliverable, and defines failure modes and tolerance bands.
+
+> **Key concepts:** Substrate response envelope, spectral tuning parameters, layering architecture, dynamic reconfiguration, tolerance bands.
+
+---
+
+### § 6 — Stellar Interior Mapping
+Applies Spectral Fingerprint Theory and Gradient–Light Coupling to the domain of stellar interiors. Develops methods for inferring internal light field structure from observable surface signatures. Establishes the **interior luminance profile** as a diagnostic tool and connects stellar mapping outputs to the broader TriadicFrameworks classification system.
+
+> **Key concepts:** Interior luminance profile, surface-to-interior inference, stellar fingerprint inversion, luminance stratification.
+
+---
+
+### § 7 — Artificial Light Regimes
+Defines the principles and protocols governing the design and deployment of artificial light environments. Distinguishes between **emulative regimes** (replicating natural epochs) and **novel regimes** (purpose-built outside natural precedent). Addresses coherence requirements, stability maintenance, and integration with biological and synthetic substrates under controlled conditions.
+
+> **Key concepts:** Emulative vs. novel regimes, coherence thresholds, regime stability index, artificial epoch calibration.
+
+---
+
+### § 8 — Substrate Safety Protocols
+Establishes the safety framework governing substrate–light interactions across all application domains. Defines **exposure limits**, failure cascade prevention, and emergency regime shutdown procedures. Introduces the **safety envelope matrix** and specifies mandatory testing milestones before deployment. This section is normative for all engineering work within the module.
+
+> **Key concepts:** Safety envelope matrix, exposure limits, failure cascade taxonomy, shutdown procedures, pre-deployment milestones.
+
+---
+
+### § 9 — Regime Transition Architecture
+Formalizes the logic governing transitions between light regimes—deliberate or emergent. Identifies the **transition state space** and defines stable pathways, forbidden transitions, and hysteresis zones. Provides the analytical toolkit for designing smooth regime handoffs and anticipating transition-induced substrate stress.
+
+> **Key concepts:** Transition state space, forbidden transitions, hysteresis zones, transition-induced stress, handoff sequencing.
+
+---
+
+### § 10 — Light Field Applications
+Surveys applied domains where Light Module theory is operationalized: ecological management, synthetic biome design, therapeutic environments, and computational light field modeling. Each application domain is mapped to its governing section dependencies and annotated with known boundary conditions and open problems.
+
+> **Key concepts:** Application domain mapping, therapeutic light field design, computational modeling pipelines, open problem registry.
+
+---
+
+### § 11 — Future Gradient Systems
+Speculates rigorously on next-generation systems where light and gradient architectures achieve deep integration beyond current engineering capacity. Introduces **proto-frameworks** for multi-spectral gradient networks, adaptive stellar light harvesting, and substrate-autonomous light field generation. Flags these as forward research vectors requiring expansion in future module revisions.
+
+> **Key concepts:** Multi-spectral gradient networks, adaptive stellar harvesting, substrate-autonomous generation, proto-framework scaffolds.
+
+---
+
+## Cross-Module Forward Linkage
+
+The Light Module interfaces directly with the other two pillars of TriadicFrameworks at the following integration points:
+
+| Integration Point | Light Module Section | Target Module | Target Section (Anticipated) |
+|---|---|---|---|
+| Gradient–Light Coupling tensors | § 4 | **Gradient Module** | Coupling Mechanics |
+| Substrate response envelope specs | § 5 | **Substrate Module** | Material Specification |
+| Safety envelope matrix | § 8 | **Substrate Module** | Safety & Compliance |
+| Transition state space logic | § 9 | **Gradient Module** | Transition Architecture |
+| Future gradient network designs | § 11 | **Gradient Module** | Advanced Systems |
+| Stellar interior luminance profiles | § 6 | **Gradient Module** | Stellar Gradient Mapping |
+
+Additionally, the **Section Map** above should be read in conjunction with `capture_the_light.md`, which contains the full annotated source text for Sections 1–11.
+
+---
+
+## Reading Guide
+
+For new contributors, the recommended reading sequence is:
+
+```
+§1 → §2 → §3      (Foundational theory: classification, fingerprinting, scaling)
+§4 → §5 → §8      (Engineering core: coupling, substrate design, safety)
+§6 → §7            (Application domains: stellar mapping, artificial regimes)
+§9 → §10 → §11    (System dynamics: transitions, applications, futures)
+```
+
+For cross-module integration work, prioritize **§ 4**, **§ 5**, and **§ 9** as the primary interface sections.
+
+---
+
+## Related Files
+
+```
+TriadicFrameworks/
+└── docs/
+    └── Light/
+        ├── index.md               ← this file
+        └── capture_the_light.md   ← full annotated source text (Sections 1–11)
+```
+
+---
+
+*This index is maintained as a living document. Updates to `capture_the_light.md` should be reflected here. Section additions beyond § 11 require a corresponding forward linkage entry and reading guide amendment.*
+```
+
+---
+
+**What's included:**
+
+- **Overview** — frames Light as an active substrate, not just a parameter, operating from subcellular to galactic scale
+- **Purpose** — four explicit functions: classification, mechanistic grounding, engineering spec, system integration
+- **Section Map** — all 11 sections with prose summary + key concept callouts, each separated for easy scanning
+- **Cross-Module Forward Linkage** — a table mapping every interface point to the anticipated Gradient and Substrate module sections, using `§` notation for precision
+- **Reading Guide** — a sequenced entry path for new contributors, plus a shortlist of priority sections for integration work
+- **Related Files** — filesystem tree anchoring the index to `capture_the_light.md`
+
+The footer note establishes the doc as a **living file** with a clear amendment protocol for future sections.
+
+---
