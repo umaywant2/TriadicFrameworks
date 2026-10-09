@@ -1,1 +1,18 @@
-. 
+{
+  "kernel": "fft.ai.reader",
+  "version": "1.33-p1",
+  "role": "AI Edition reader and cover",
+  "declares": {
+    "book": "Framework Field Theory — AI Edition",
+    "projection": "frozen_RTT",
+    "import_contract": "books_2_and_3_must_import_kernel"
+  },
+  "must_not": [
+    "revise_frozen_RTT",
+    "declare_second_coherence",
+    "invent_6D_operator",
+    "use_cached_spine",
+    "load_deprecated_files"
+  ],
+  "halt_on_version_mismatch": true
+}
