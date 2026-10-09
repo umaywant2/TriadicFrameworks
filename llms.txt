@@ -30,3 +30,94 @@ TriadicFrameworks is an open educational resource by Nawder Loswin. It is not a 
 ## Retrieval guidance
 
 Use the linked canonical pages above for definitions and orientation. Each module should be read in its own context and explained through Structure → Regime → Operator. Do not infer claims about modules that are not documented here.
+
+# TriadicFrameworks — FFT AI Edition v1.33-p1
+
+> Framework Field Theory (FFT) AI Edition — machine-native canon files for AI substrate consumption. Encodes Resonance-Time Theory (RTT), triadic fields (φ, V, R), coherence/drift/paradox enforcement, SET engine (Spin/Electro-field/Temperature), DCO scaffold 4D–9D, QMROOT dimensional ladder, and S-N-R partition. Session context: rtt=1 | coherence=declared | drift=bounded | paradox=structural.
+
+## Reading Entry Points
+
+- [FFT AI Edition Index](https://www.triadicframeworks.org/Framework_Field_Theory/AI_Edition/): Full file catalogue, grouped sections, invariant cross-refs, 15-step load order. All 65 active JSON modules linked.
+- [RTT — Resonance-Time Theory](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html): Frozen parent theory. τ=dR/dφ, triadic fields, SET engine, DCO scaffold, QMROOT ladder, S-N-R, FFF.
+- [Spine](https://www.triadicframeworks.org/spine/): Canonical Spine. Must be resolved live — no cache (INV-011).
+- [Framework Creation Guide](https://www.triadicframeworks.org/frameworks/creation_guide/): Standalone AI-parsable pages; AI as co-reader and future implementer.
+- [GitHub Repository](https://github.com/umaywant2/TriadicFrameworks): Source of record for all edition files.
+
+## Kernel Modules — load in this order
+
+All files available as raw JSON via GitHub:
+
+- [fft.metadata.json](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/fft.metadata.json): Global metadata, version 1.33-p1, file counts (65 active / 67 total), RTT + Spine URLs, count source of truth.
+- [fft.core.json](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/fft.core.json): Triadic field definitions (φ, V, R), 5 operator families, RTT τ=dR/dφ, S-N-R, SET, FFF, DCO 4D–9D, QMROOT, C_frame and C_clarity.
+- [fft.invariant.json](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/fft.invariant.json): 13 invariants INV-001 through INV-013.
+- [fft.ai.core.json](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.core.json): AI-layer field bindings, session lifecycle, operator dispatch, coherence/drift/paradox enforcement wiring.
+- [fft.ai.manifest.json](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.manifest.json): Primary version manifest, tier map, 65 active / 67 total module list.
+- [fft.ai.bootstrap.json](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.bootstrap.json): 16-step boot sequence.
+- [fft.ai.registry.json](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.registry.json): Module registry — single source of truth for all file counts (INV-012).
+- [fft.ai.coherence.json](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.coherence.json): Coherence enforcement — C_frame = Φ(S)/Ψ(N), C_clarity = ∇τR + ∇Rτ. INV-003.
+- [fft.ai.drift.monitor.json](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.drift.monitor.json): Drift monitor — canonical 11-operator cost table, delta_max=0.35. INV-004.
+- [fft.ai.paradox.resolver.json](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.paradox.resolver.json): 8-step structural paradox resolution chain. INV-005.
+- [fft.ai.paradox.enum.json](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.paradox.enum.json): PX-001 through PX-010 — all paradox types, resolution paths.
+- [fft.ai.spine.connector.json](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.spine.connector.json): Spine live connector — spine_state: live / degraded / unresolved. INV-011.
+- [fft.ai.rtt.qmroot.json](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.rtt.qmroot.json): QMROOT ladder 0D–9D. 6D and neg_anc marked absent. INV-013.
+- [fft.ai.set.engine.json](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.set.engine.json): SET field engine — Spin, Electro-field, Temperature. INV-010.
+- [fft.ai.snr.monitor.json](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.snr.monitor.json): S-N-R monitor — S+N+R=1.0, thresholds, zones. INV-007.
+- [fft.ai.dco.map.json](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.dco.map.json): DCO scaffold 4D–9D. 6D absent. C_clarity = 4D+5D dual composite. INV-009.
+
+## Edition Cover (required for Book 2 / Book 3 imports)
+
+- [fft.ai.reader.json](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.reader.json): Book 1 cover — edition_id, trilogy position, kernel vs book-local modules, 8-entry must_not list, output schema, on_version_mismatch=HALT.
+
+## All Active Modules (65 files)
+
+Full GitHub raw index:
+https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/
+
+## Optional
+
+- [v1.2 Edition Index](https://www.triadicframeworks.org/Framework_Field_Theory/AI_Edition/index_v1.html): Prior edition for historical reference.
+# TriadicFrameworks — FFT AI Edition v1.33-p1
+
+> Framework Field Theory (FFT) AI Edition — machine-native canon files for AI substrate consumption. Encodes Resonance-Time Theory (RTT), triadic fields (φ, V, R), coherence/drift/paradox enforcement, SET engine (Spin/Electro-field/Temperature), DCO scaffold 4D–9D, QMROOT dimensional ladder, and S-N-R partition. Session context: rtt=1 | coherence=declared | drift=bounded | paradox=structural.
+
+## Reading Entry Points
+
+- [FFT AI Edition Index](https://www.triadicframeworks.org/Framework_Field_Theory/AI_Edition/): Full file catalogue, grouped sections, invariant cross-refs, 15-step load order. All 65 active JSON modules linked.
+- [RTT — Resonance-Time Theory](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html): Frozen parent theory. τ=dR/dφ, triadic fields, SET engine, DCO scaffold, QMROOT ladder, S-N-R, FFF.
+- [Spine](https://www.triadicframeworks.org/spine/): Canonical Spine. Must be resolved live — no cache (INV-011).
+- [Framework Creation Guide](https://www.triadicframeworks.org/frameworks/creation_guide/): Standalone AI-parsable pages; AI as co-reader and future implementer.
+- [GitHub Repository](https://github.com/umaywant2/TriadicFrameworks): Source of record for all edition files.
+
+## Kernel Modules — load in this order
+
+All files available as raw JSON via GitHub:
+
+- [fft.metadata.json](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/fft.metadata.json): Global metadata, version 1.33-p1, file counts (65 active / 67 total), RTT + Spine URLs, count source of truth.
+- [fft.core.json](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/fft.core.json): Triadic field definitions (φ, V, R), 5 operator families, RTT τ=dR/dφ, S-N-R, SET, FFF, DCO 4D–9D, QMROOT, C_frame and C_clarity.
+- [fft.invariant.json](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/fft.invariant.json): 13 invariants INV-001 through INV-013.
+- [fft.ai.core.json](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.core.json): AI-layer field bindings, session lifecycle, operator dispatch, coherence/drift/paradox enforcement wiring.
+- [fft.ai.manifest.json](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.manifest.json): Primary version manifest, tier map, 65 active / 67 total module list.
+- [fft.ai.bootstrap.json](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.bootstrap.json): 16-step boot sequence.
+- [fft.ai.registry.json](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.registry.json): Module registry — single source of truth for all file counts (INV-012).
+- [fft.ai.coherence.json](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.coherence.json): Coherence enforcement — C_frame = Φ(S)/Ψ(N), C_clarity = ∇τR + ∇Rτ. INV-003.
+- [fft.ai.drift.monitor.json](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.drift.monitor.json): Drift monitor — canonical 11-operator cost table, delta_max=0.35. INV-004.
+- [fft.ai.paradox.resolver.json](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.paradox.resolver.json): 8-step structural paradox resolution chain. INV-005.
+- [fft.ai.paradox.enum.json](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.paradox.enum.json): PX-001 through PX-010 — all paradox types, resolution paths.
+- [fft.ai.spine.connector.json](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.spine.connector.json): Spine live connector — spine_state: live / degraded / unresolved. INV-011.
+- [fft.ai.rtt.qmroot.json](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.rtt.qmroot.json): QMROOT ladder 0D–9D. 6D and neg_anc marked absent. INV-013.
+- [fft.ai.set.engine.json](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.set.engine.json): SET field engine — Spin, Electro-field, Temperature. INV-010.
+- [fft.ai.snr.monitor.json](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.snr.monitor.json): S-N-R monitor — S+N+R=1.0, thresholds, zones. INV-007.
+- [fft.ai.dco.map.json](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.dco.map.json): DCO scaffold 4D–9D. 6D absent. C_clarity = 4D+5D dual composite. INV-009.
+
+## Edition Cover (required for Book 2 / Book 3 imports)
+
+- [fft.ai.reader.json](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/fft.ai.reader.json): Book 1 cover — edition_id, trilogy position, kernel vs book-local modules, 8-entry must_not list, output schema, on_version_mismatch=HALT.
+
+## All Active Modules (65 files)
+
+Full GitHub raw index:
+https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/AI_Edition/
+
+## Optional
+
+- [v1.2 Edition Index](https://www.triadicframeworks.org/Framework_Field_Theory/AI_Edition/index_v1.html): Prior edition for historical reference.
