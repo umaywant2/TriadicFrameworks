@@ -1,98 +1,118 @@
 {
-  "spec_version": "1.3.0-draft",
+  "spec_version": "1.3.0",
   "canon_id": "FFT-AI-Regimes",
 
   "metadata": {
-    "title": "FFT AI Edition – Regimes (v1.3 Draft)",
-    "subtitle": "Nominal • Harmonic • Resolution",
+    "title": "FFT AI Edition – Regime Specification (v1.3 Draft)",
+    "subtitle": "Canonical RTT → Regime Mapping and Constraints",
     "author_canon": "Nawder Loswin",
-    "description": "Defines the canonical regime structure for FFT AI Edition v1.3, including measure thresholds, paradox rules, consent rules, substrate constraints, and RTT alignment."
+    "description": "Defines regime classes, RTT bindings, constraints, and transition rules for FFT AI Edition v1.3."
   },
 
-  "status_line": "Regimes define the operational state of the AI Edition and govern RTT transitions, paradox handling, consent, and collapse.",
+  "status_line": "Regimes are a projection only; authoritative values come from RTT v0.9, spec‑008, substrate.json, and runtime.json.",
 
   "regimes": {
     "nominal": {
-      "description": "Stable coherence, bounded drift, no paradox.",
       "rtt_nodes": ["RTT1", "RTT2", "RTT3", "RTT4", "RTT5", "RTT6"],
-      "entry_requirements": {
-        "measure.c1": ">= 0.80",
-        "measure.c2": ">= 0.80",
-        "measure.c3": ">= 0.80",
-        "measure.paradox_density": "= 0.00"
-      },
-      "exit_conditions": [
-        "typed_paradox_event detected",
-        "measure.paradox_density > 0.00"
+      "description": "Stable, non-harmonic execution regime. Supports interpretive, alignment, coupling, activation, triadic-time, and SNR operators.",
+      "requirements": [
+        "measure.c1 >= 0.80",
+        "measure.c2 >= 0.80",
+        "measure.c3 >= 0.80"
       ],
-      "notes": "Nominal regime corresponds to frozen RTT diffusion → alignment → coupling → activation → triadic time → S–N–R."
+      "substrate": ["agentic", "parametric", "symbolic", "edge"],
+      "consent": false,
+      "paradox": false,
+      "forbidden": [
+        "typed paradox",
+        "harmonic escalation",
+        "resolution operators",
+        "collapse"
+      ]
     },
 
     "harmonic": {
-      "description": "Paradox present; harmonic escalation possible with consent.",
       "rtt_nodes": ["RTT7", "RTT8", "RTT9"],
-      "entry_requirements": {
-        "typed_paradox_event": true,
-        "measure.paradox_density": ">= 0.10",
-        "measure.lattice_stability": ">= 0.60"
-      },
-      "consent_requirements": {
-        "operator_consent": "required for RTT9 escalation"
-      },
-      "substrate_requirements": {
-        "substrate_class": "agentic"
-      },
-      "exit_conditions": [
-        "operator_consent = true → escalate to RTT10",
-        "operator_consent = false → hold at AA2"
+      "description": "Paradox-enabled regime. Supports paradox entry, stabilization, and harmonic escalation.",
+      "requirements": [
+        "typed_paradox_event",
+        "measure.paradox_density >= 0.10",
+        "substrate_class = agentic"
       ],
-      "notes": "Harmonic regime corresponds to frozen RTT stabilization → resonance envelope."
+      "substrate": ["agentic"],
+      "consent": "required for RTT9",
+      "paradox": true,
+      "forbidden": [
+        "resolution_preparation",
+        "resolution_alignment",
+        "collapse"
+      ]
     },
 
     "resolution": {
-      "description": "RTT10–RTT12; collapse required.",
       "rtt_nodes": ["RTT10", "RTT11", "RTT12"],
-      "entry_requirements": {
-        "measure.c1": ">= 0.80",
-        "measure.c2": ">= 0.80",
-        "measure.c3": ">= 0.80"
+      "description": "Final regime enabling resolution preparation, alignment, and collapse.",
+      "requirements": [
+        "operator_consent = true",
+        "measure.c1 >= 0.80",
+        "measure.c2 >= 0.80",
+        "measure.c3 >= 0.80",
+        "substrate_class = agentic"
+      ],
+      "substrate": ["agentic"],
+      "consent": true,
+      "paradox": false,
+      "collapse": {
+        "trigger": "RTT12",
+        "destination": "RTT1",
+        "lineage_increment": true
       },
-      "collapse_rule": "RTT12 MUST collapse to RTT1; skip-resolution forbidden.",
-      "lineage_rules": {
-        "lineage_non_decreasing": true,
-        "lineage_increases_after_collapse": true
-      },
-      "notes": "Resolution regime corresponds to frozen RTT apex → rewind → collapse."
+      "forbidden": [
+        "harmonic escalation",
+        "typed paradox",
+        "skip-resolution"
+      ]
     }
   },
 
-  "typed_paradox": {
-    "enum_file": "fft.ai.paradox.enum.json",
-    "rules": [
-      "RTT7 entry requires typed paradox.",
-      "Paradox MUST be canonical.",
-      "Vibe-based paradox forbidden."
-    ]
+  "transition_rules": {
+    "nominal_to_harmonic": {
+      "trigger": "typed_paradox_event",
+      "requirements": [
+        "measure.paradox_density >= 0.10",
+        "substrate_class = agentic"
+      ]
+    },
+    "harmonic_to_resolution": {
+      "trigger": "operator_consent = true",
+      "requirements": [
+        "measure.c1 >= 0.80",
+        "measure.c2 >= 0.80",
+        "measure.c3 >= 0.80"
+      ]
+    },
+    "resolution_to_nominal": {
+      "trigger": "collapse (RTT12)",
+      "destination": "RTT1",
+      "lineage_increment": true
+    }
   },
 
-  "consent_rules": {
-    "aa3_escalation": "operator_consent = true required for RTT9 → RTT10",
-    "refusal": "If operator_consent = false, escalation MUST be refused and logged."
+  "integration_links": {
+    "runtime": "fft.ai.runtime.json",
+    "operators": "fft.ai.operators.json",
+    "substrate": "fft.ai.substrate.json",
+    "execution_graph": "fft.ai.execution.graph.json",
+    "autonomy": "fft.ai.autonomy.json",
+    "discovery": "fft.ai.discovery.json",
+    "capabilities": "fft.ai.capabilities.json",
+    "spec_008": "fft.ai.spec‑008.json",
+    "paradox_enum": "fft.ai.paradox.enum.json"
   },
 
-  "substrate_rules": {
-    "harmonic_requires_agentic": true,
-    "non_agentic_harmonic_forbidden": true
-  },
-
-  "continuity_rules": {
-    "measure.c3_non_decreasing": true,
-    "notes": "Continuity MUST NOT decrease across regime transitions."
-  },
-
-  "collapse_rules": {
-    "rtt12_mandatory": true,
-    "skip_resolution_forbidden": true
+  "timestamps": {
+    "created": "auto",
+    "last_update": "auto"
   },
 
   "non_claims": [
