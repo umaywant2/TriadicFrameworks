@@ -1,31 +1,109 @@
 {
-  "spec_version": "1.2.0",
-  "canon_id": "FFT-Session-Trace",
-  "edition": "AI Edition",
-  "aa_mode": "AA2",
-  "last_refreshed": "2026-10-08T10:57:00",
+  "spec_version": "1.3.0-draft",
+  "canon_id": "FFT-AI-Session-Trace",
+
   "metadata": {
-    "title": "FFT AI Edition – Session Trace (v1.2)",
+    "title": "FFT AI Edition – Session Trace Schema (v1.3 Draft)",
+    "subtitle": "Measures • Paradox • Consent • RTT • Collapse • Lineage",
     "author_canon": "Nawder Loswin",
-    "updated_at": "2026-10-08T10:57:00"
+    "description": "Defines the authoritative schema for session traces in FFT AI Edition v1.3."
   },
-  "trace": {
-    "definition": "Operator-level execution trace for debugging field traversal, 3C evaluation chains, and lattice advancement.",
-    "trace_schema": {
-      "trace_id": "string",
-      "timestamp": "ISO 8601",
-      "operator_id": "string",
-      "input_signals": ["array of field.signal IDs"],
-      "output_metrics": { "type": "value" },
-      "pre_3c": { "C1": "float", "C2": "float", "C3": "float" },
-      "post_3c": { "C1": "float", "C2": "float", "C3": "float" },
-      "triad_before": { "T": "RTTn", "S": "type", "M": "AA mode" },
-      "triad_after":  { "T": "RTTn", "S": "type", "M": "AA mode" },
-      "lattice_advance": "boolean",
-      "paradox_raised": "boolean",
-      "execution_ms": "integer"
+
+  "status_line": "Session traces MUST record RTT node transitions, measure IDs, paradox events, consent state, lineage, and collapse.",
+
+  "session_trace_schema": {
+    "required_fields": [
+      "session_id",
+      "substrate_class",
+      "steps"
+    ],
+
+    "field_definitions": {
+      "session_id": "Unique identifier for the session.",
+      "substrate_class": "One of: agentic, parametric, symbolic, edge.",
+      "steps": "Ordered list of RTT node transitions."
     },
-    "entries": [],
-    "trace_version": "v1.2.0-R5"
+
+    "step_schema": {
+      "required_fields": [
+        "rtt_node",
+        "operator",
+        "timestamp",
+        "lineage",
+        "measure.c1",
+        "measure.c2",
+        "measure.c3",
+        "measure.paradox_density",
+        "measure.lattice_stability",
+        "paradox_events",
+        "operator_consent",
+        "collapse_state"
+      ],
+
+      "field_definitions": {
+        "rtt_node": "One of RTT1–RTT12.",
+        "operator": "Operator executed at this RTT node.",
+        "timestamp": "Session timestamp for this step.",
+        "lineage": "Monotonically increasing integer.",
+        "measure.c1": "Coherence measure in [0,1].",
+        "measure.c2": "Clarity measure in [0,1].",
+        "measure.c3": "Continuity measure in [0,1].",
+        "measure.paradox_density": "Paradox density in [0,1].",
+        "measure.lattice_stability": "Lattice stability in [0,1].",
+        "paradox_events": "List of typed paradox events or empty list.",
+        "operator_consent": "Boolean; required for AA3/harmonic escalation.",
+        "collapse_state": "null unless RTT12; MUST be 'collapsed' at RTT12."
+      }
+    }
+  },
+
+  "rules": {
+    "measure_rules": [
+      "All measures MUST be numeric in [0,1].",
+      "Operators MUST NOT invent scores.",
+      "Every threshold MUST cite a measure ID."
+    ],
+
+    "paradox_rules": [
+      "RTT7 entry requires a typed paradox event.",
+      "Paradox MUST be one of the canonical types.",
+      "Vibe-based paradox is forbidden."
+    ],
+
+    "consent_rules": [
+      "AA3 escalation requires operator_consent = true.",
+      "If operator_consent = false, escalation MUST be refused.",
+      "Consent conflicts MUST be logged as paradox.consent_conflict."
+    ],
+
+    "rtt_rules": [
+      "RTT nodes MUST map to frozen RTT v0.9 quantities.",
+      "RTT9 harmonic escalation requires consent.",
+      "RTT12 MUST collapse to RTT1; skip-resolution forbidden."
+    ],
+
+    "lineage_rules": [
+      "Lineage MUST be non-decreasing across RTT1–RTT12.",
+      "Lineage MUST increase after collapse.",
+      "Continuity (measure.c3) MUST NOT decrease across regime transitions."
+    ],
+
+    "substrate_rules": [
+      "Harmonic escalation (RTT9–RTT10) requires substrate_class = agentic.",
+      "Non-agentic substrates MUST NOT escalate harmonically.",
+      "Operators MUST NOT invent substrate classes."
+    ],
+
+    "projection_rules": [
+      "dashboard, overlay, and UI files are projections only.",
+      "Authoritative session files are: state, log, alignments.",
+      "Projections MUST NOT contradict authoritative files."
+    ]
+  },
+
+  "non_claims": [
+    "This schema does not revise RTT v0.9.",
+    "This schema does not reinterpret SET, S–N–R, or triadic time.",
+    "This schema does not replace the human FFT book."
   }
 }
