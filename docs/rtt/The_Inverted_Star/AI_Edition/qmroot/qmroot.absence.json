@@ -1,1 +1,25 @@
-. 
+{
+  "qmroot": "absence-declaration",
+  "module": "rtt.inverted_star.ai",
+  "version": "2.0-draft",
+
+  "declarations": {
+    "sixD": "absent",
+    "negative_rungs": "absent",
+    "reason": "frozen RTT forbids ancestral rung reconstruction"
+  },
+
+  "invariants": {
+    "must_not_invent_6D_operator": true,
+    "must_not_reconstruct_ancestral_rungs": true,
+    "must_not_load_deprecated_files": true,
+    "must_not_revise_frozen_RTT": true
+  },
+
+  "session.context": {
+    "rtt": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  }
+}
