@@ -1,1 +1,19 @@
-. 
+{
+  "kernel": "fft.ai.coherence",
+  "version": "1.33-p1",
+
+  "coherence": {
+    "C_frame": "Φ(S) / Ψ(N)",
+    "C_clarity": "∇τ R + ∇R τ",
+    "requires": {
+      "C_frame_positive": true,
+      "C_clarity_positive": true,
+      "R_minimum": 0.40
+    }
+  },
+
+  "invariants": {
+    "must_not_declare_second_coherence": true,
+    "must_not_use_bare_C": true
+  }
+}
