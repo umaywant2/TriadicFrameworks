@@ -1,1 +1,21 @@
-. 
+{
+  "kernel": "fft.ai.paradox.enum",
+  "version": "1.33-p1",
+
+  "paradox": {
+    "PX_001": "structural",
+    "PX_002": "structural",
+    "PX_003": "reserved_for_v1.34",
+    "PX_004": "structural",
+    "PX_005": "structural",
+    "PX_006": "structural",
+    "PX_007": "structural",
+    "PX_008": "structural",
+    "PX_009": "structural",
+    "PX_010": "structural"
+  },
+
+  "invariants": {
+    "must_not_suppress_PX_001_through_PX_010": true
+  }
+}
