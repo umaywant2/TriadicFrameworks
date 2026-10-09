@@ -1,4 +1,6 @@
-### *AlphaFold Substrate Alignments*  
+<img width="1024" height="1024" alt="rtt_alphafold_image" src="https://github.com/user-attachments/assets/dc1edd57-4351-4b4e-a59f-1b760e55c2be" />
+
+## *AlphaFold Substrate Alignments*  
 ### *Alignment Principles*
 
 This document defines the core principles used to align the Resonance Substrate Model (RSM) with AlphaFold‑class protein‑folding inference systems. These principles establish how substrate primitives, dimensional cores, and resonance‑time regimes map onto the latent‑space structures and folding‑coherence signals produced by biological inference engines.
