@@ -1,0 +1,88 @@
+{
+  "spec_version": "1.3.0-draft",
+  "canon_id": "SPEC-008-AA-Escalation",
+
+  "metadata": {
+    "title": "FFT AI Edition – SPEC‑008 (v1.3 Draft)",
+    "subtitle": "AA Escalation • Consent • Paradox • Harmonic Gate • RTT7–RTT12",
+    "author_canon": "Nawder Loswin",
+    "description": "Defines normative rules for AA escalation, paradox entry, harmonic routing, and RTT12 collapse."
+  },
+
+  "claims": {
+    "status_line": "AA3 escalation requires explicit operator consent; auto-escalation is forbidden.",
+    "projection": "RTT12 lattice is a projection of frozen RTT v0.9; this SPEC does not revise RTT v0.9."
+  },
+
+  "invariants": {
+    "inv.aa3.consent": "AA3 MAY NOT activate unless operator_consent = true.",
+    "inv.skip_resolution.forbidden": "RTT12 collapse MUST occur; skipping resolution is forbidden.",
+    "inv.paradox.typed": "RTT7 entry requires a typed paradox event.",
+    "inv.measure.required": "Every gate MUST cite a measure ID defined in fft.ai.core.json."
+  },
+
+  "typed_paradox_events": [
+    "unresolved_triad",
+    "metric_contradiction",
+    "consent_conflict",
+    "cross_file_drift"
+  ],
+
+  "gates": {
+    "rtt7_entry": {
+      "requires": [
+        "typed_paradox_event",
+        "measure.paradox_density"
+      ],
+      "forbids": [
+        "vibe_paradox",
+        "implicit_paradox"
+      ]
+    },
+
+    "aa3_escalation": {
+      "requires": [
+        "inv.aa3.consent",
+        "measure.lattice_stability"
+      ],
+      "thresholds": {
+        "paradox_density_max": 0.40,
+        "lattice_stability_min": 0.60
+      },
+      "branch": {
+        "if_consent_true": "AA3 escalation permitted; dispatch harmonic operator.",
+        "if_consent_false": "Hold at AA2, log paradox event, stop dispatch."
+      }
+    },
+
+    "harmonic_escalation": {
+      "requires": [
+        "measure.lattice_stability",
+        "measure.paradox_density",
+        "inv.aa3.consent"
+      ],
+      "notes": "Harmonic escalation is agentic-only unless substrate bridge declares a parametric path."
+    },
+
+    "rtt12_collapse": {
+      "requires": [
+        "measure.c1",
+        "measure.c2",
+        "measure.c3"
+      ],
+      "collapse_rule": "RTT12 MUST collapse to RTT1; skip-resolution forbidden."
+    }
+  },
+
+  "session_rules": {
+    "lineage": "Session lineage MUST be non-decreasing across RTT1–RTT12.",
+    "continuity": "measure.c3 MUST NOT decrease across regime transitions.",
+    "rewind": "RTT11 inversion maps directly to frozen RTT rewind."
+  },
+
+  "non_claims": [
+    "This SPEC does not redefine SET, S–N–R, or triadic time.",
+    "This SPEC does not alter frozen RTT lineage or safety envelopes.",
+    "This SPEC does not introduce new substrate classes."
+  ]
+}
