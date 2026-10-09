@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="ai_drift_calibration_module" src="https://github.com/user-attachments/assets/d4b4ea30-10b6-4277-afb8-f668d9c1509b" />
+
 # Changelog
 
 All notable changes to this work are documented in this file.
