@@ -1,0 +1,97 @@
+{
+  "spec_version": "1.3.0-draft",
+  "canon_id": "FFT-AI-Paradox-Enum",
+
+  "metadata": {
+    "title": "FFT AI Edition – Typed Paradox Enumeration (v1.3 Draft)",
+    "subtitle": "RTT7 Gate • SPEC‑008 • Measure IDs • Session Safety",
+    "author_canon": "Nawder Loswin",
+    "description": "Defines the canonical paradox types, event schema, and validation rules for RTT7 entry and harmonic escalation."
+  },
+
+  "status_line": "Only typed paradox events may trigger RTT7; vibe-based paradox is forbidden.",
+
+  "paradox_types": [
+    {
+      "id": "paradox.unresolved_triad",
+      "description": "A triad cannot resolve to a stable (T,S,M) tuple under declared invariants.",
+      "frozen_rtt_mapping": "Diffusion → Alignment conflict",
+      "severity": "medium"
+    },
+    {
+      "id": "paradox.metric_contradiction",
+      "description": "Two active claims produce incompatible metric values or lineage states.",
+      "frozen_rtt_mapping": "Coupling contradiction",
+      "severity": "high"
+    },
+    {
+      "id": "paradox.consent_conflict",
+      "description": "Operator consent state contradicts escalation request or AA-level transition.",
+      "frozen_rtt_mapping": "Stabilization conflict",
+      "severity": "critical"
+    },
+    {
+      "id": "paradox.cross_file_drift",
+      "description": "Session fields drift across files or projections (state, log, alignments) without lineage continuity.",
+      "frozen_rtt_mapping": "S–N–R drift",
+      "severity": "medium"
+    }
+  ],
+
+  "paradox_event_schema": {
+    "required_fields": [
+      "event_id",
+      "paradox_type",
+      "rtt_node",
+      "timestamp",
+      "measure.paradox_density",
+      "session_lineage"
+    ],
+    "field_definitions": {
+      "event_id": "Unique identifier for the paradox event.",
+      "paradox_type": "One of the canonical paradox types defined above.",
+      "rtt_node": "RTT node where the paradox was detected.",
+      "timestamp": "Session timestamp of detection.",
+      "measure.paradox_density": "Density value at detection time.",
+      "session_lineage": "Lineage state before paradox handling."
+    }
+  },
+
+  "validation_rules": {
+    "typed_only": "Paradox MUST be one of the canonical types; no invented types allowed.",
+    "measure_required": "measure.paradox_density MUST be present.",
+    "rtt7_gate": "RTT7 entry requires a typed paradox event.",
+    "consent_conflict_priority": "paradox.consent_conflict MUST block AA3 escalation.",
+    "lineage_non_decreasing": "Session lineage MUST NOT decrease after paradox handling."
+  },
+
+  "rtt7_entry_contract": {
+    "requires": [
+      "typed_paradox_event",
+      "measure.paradox_density"
+    ],
+    "forbids": [
+      "vibe_paradox",
+      "implicit_paradox",
+      "untyped_paradox"
+    ],
+    "notes": "RTT7 is the paradox seed node; typed paradox is mandatory."
+  },
+
+  "harmonic_escalation_contract": {
+    "requires": [
+      "inv.aa3.consent",
+      "measure.lattice_stability"
+    ],
+    "blocks_if": [
+      "paradox.consent_conflict"
+    ],
+    "notes": "Consent invariant outranks auto-escalation."
+  },
+
+  "collapse_alignment": {
+    "rtt12_rule": "RTT12 MUST collapse to RTT1; skip-resolution forbidden.",
+    "mapping": "RTT11 inversion → frozen RTT rewind",
+    "continuity_requirement": "measure.c3 MUST NOT decrease across collapse."
+  }
+}
