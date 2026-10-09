@@ -1,0 +1,80 @@
+{
+  "module": {
+    "name": "docs-book",
+    "category": "documentation",
+    "summary": "Long-form narrative exposition of the TriadicFrameworks canon.",
+    "purpose": "Provides the structured, reader-oriented Book that explains the canon, architecture, and conceptual journey.",
+    "version": "1.0.0",
+    "audience": "Readers, contributors, educators, and newcomers to TriadicFrameworks."
+  },
+
+  "roles": {
+    "engine": [],
+    "profile": [],
+    "signature": [],
+    "diagnostic": [],
+    "map": ["registry.md"],
+    "example": [],
+    "extension": [],
+    "index": ["index.md"],
+    "reference": ["glossary.md", "canon.md"],
+    "template": []
+  },
+
+  "analyzer_layers": {
+    "operator": ["sessions.md"],
+    "dimensional": [],
+    "regime": ["part-i.md", "part-ii.md", "part-iii.md"],
+    "drift": [],
+    "coherence": [],
+    "cross-cutting": ["changelog.md"]
+  },
+
+  "files": {
+    "index.md": {
+      "role": "index",
+      "layer": "cross-cutting",
+      "purpose": "Front door for the TriadicFrameworks Book; provides orientation and reading paths."
+    },
+    "canon.md": {
+      "role": "reference",
+      "layer": "operator",
+      "purpose": "Defines the five commitments of the TriadicFrameworks canon."
+    },
+    "part-i.md": {
+      "role": "regime",
+      "layer": "regime",
+      "purpose": "Introduces the conceptual landscape and motivations behind TriadicFrameworks."
+    },
+    "part-ii.md": {
+      "role": "regime",
+      "layer": "regime",
+      "purpose": "Explains the core architecture, operators, and structural grammar."
+    },
+    "part-iii.md": {
+      "role": "regime",
+      "layer": "regime",
+      "purpose": "Shows how the framework is applied, extended, and mastered."
+    },
+    "sessions.md": {
+      "role": "reference",
+      "layer": "operator",
+      "purpose": "Explains session grammar, usage patterns, and adaptation guidelines."
+    },
+    "registry.md": {
+      "role": "map",
+      "layer": "cross-cutting",
+      "purpose": "Narrative explanation of the module registry and how readers interpret module categories."
+    },
+    "glossary.md": {
+      "role": "reference",
+      "layer": "cross-cutting",
+      "purpose": "Definitions of key terms used throughout the Book."
+    },
+    "changelog.md": {
+      "role": "cross-cutting",
+      "layer": "cross-cutting",
+      "purpose": "Revision history for the Book."
+    }
+  }
+}
