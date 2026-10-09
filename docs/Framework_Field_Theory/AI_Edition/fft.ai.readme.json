@@ -1,37 +1,154 @@
 {
-  "spec_version": "1.2.0",
+  "spec_version": "1.3.0",
   "canon_id": "FFT-AI-Readme",
-  "edition": "AI Edition",
-  "aa_mode": "AA2",
-  "last_refreshed": "2026-10-08T10:55:00",
+
   "metadata": {
-    "title": "FFT AI Edition – README (v1.2)",
+    "title": "FFT AI Edition – Readme (v1.3 Draft)",
+    "subtitle": "Human-Facing Overview of Architecture, Layers, and Canon",
     "author_canon": "Nawder Loswin",
-    "updated_at": "2026-10-08T10:55:00"
+    "description": "Defines the non-authoritative readme projection for FFT AI Edition v1.3."
   },
-  "overview": {
-    "name": "Framework Field Theory – AI Edition",
-    "version": "1.2.0",
-    "description": "The FFT AI Edition is the machine-native implementation of Framework Field Theory, encoding Resonance-Time Theory (RTT), Triadic Substrate Modeling, harmonic lattice traversal, and 3C field evaluation for AI substrate consumption.",
-    "primary_author": "Nawder Loswin",
-    "canonical_repository": "https://github.com/umaywant2/TriadicFrameworks",
-    "path": "docs/Framework_Field_Theory/AI_Edition"
+
+  "status_line": "Readme is a projection only; authoritative values come from manifest, registry, and specifications.",
+
+  "readme": {
+    "edition": "AI Edition",
+    "version": "1.3.0",
+    "aa_mode": "AA3",
+
+    "summary": {
+      "description": "FFT AI Edition v1.3 is the fully modular, session-driven, substrate-aware architecture for AI execution of Framework Field Theory. It provides a complete runtime spine, session model, operator system, RTT mapping, regime logic, paradox handling, substrate constraints, and collapse rules.",
+      "highlights": [
+        "Full RTT v0.9 mapping",
+        "Complete session suite (state → awareness)",
+        "Execution graph + autonomy + discovery",
+        "Substrate + runtime + hardware profile",
+        "Operators + regimes + invariants",
+        "Manifest + index + registry alignment",
+        "AA3 escalation rules"
+      ]
+    },
+
+    "architecture_layers": {
+      "core": {
+        "description": "Foundational kernel and specification of FFT AI Edition.",
+        "modules": [
+          "fft.ai.core.json",
+          "fft.ai.spec.json",
+          "fft.ai.manifest.json",
+          "fft.ai.index.json",
+          "fft.ai.overview.json",
+          "fft.metadata.json"
+        ]
+      },
+
+      "substrate_runtime": {
+        "description": "Execution substrate, compatibility, lattice, matrix, and runtime engine.",
+        "modules": [
+          "fft.ai.substrate.json",
+          "fft.ai.substrate.compat.json",
+          "fft.ai.substrate.bridge.json",
+          "fft.ai.substrate.lattice.json",
+          "fft.ai.substrate.matrix.json",
+          "fft.ai.runtime.json",
+          "fft.ai.hardware.profile.json"
+        ]
+      },
+
+      "session": {
+        "description": "Complete session model including state, context, alignments, log, dashboard, overlay, history, UI, profile, analytics, awareness.",
+        "modules": [
+          "fft.ai.session.state.json",
+          "fft.ai.session.context.json",
+          "fft.ai.session.alignments.json",
+          "fft.ai.session.log.json",
+          "fft.ai.session.trace.json",
+          "fft.ai.session.dashboard.json",
+          "fft.ai.session.overlay.json",
+          "fft.ai.session.history.json",
+          "fft.ai.session.ui.json",
+          "fft.ai.session.profile.json",
+          "fft.ai.session.analytics.json",
+          "fft.ai.session.awareness.json"
+        ]
+      },
+
+      "operators_structures": {
+        "description": "Operators, regimes, invariants, structures, validation, examples.",
+        "modules": [
+          "fft.ai.operators.json",
+          "fft.operator.example.json",
+          "fft.operator.port.json",
+          "fft.structures.json",
+          "fft.regimes.json",
+          "fft.invariant.json",
+          "fft.validation.json",
+          "fft.examples.json",
+          "fft.core.json"
+        ]
+      },
+
+      "ai_runtime": {
+        "description": "Autonomy, discovery, execution graph, navigation, capabilities, integrations, registry, RTT spine, prompts.",
+        "modules": [
+          "fft.ai.autonomy.json",
+          "fft.ai.bootstrap.json",
+          "fft.ai.capabilities.json",
+          "fft.ai.discovery.json",
+          "fft.ai.execution.graph.json",
+          "fft.ai.integrations.json",
+          "fft.ai.navigation.json",
+          "fft.ai.registry.json",
+          "fft.ai.rtt.engine.prompts.json",
+          "fft.ai.rtt.spine.examples.json"
+        ]
+      },
+
+      "capture": {
+        "description": "Miscellaneous capture and documentation.",
+        "modules": [
+          "capture.md",
+          "index.html"
+        ]
+      }
+    },
+
+    "canonical_rules": {
+      "rtt": [
+        "RTT nodes MUST map to frozen RTT v0.9 quantities.",
+        "RTT12 MUST collapse to RTT1.",
+        "Skip-resolution forbidden."
+      ],
+      "regime": [
+        "Regime MUST match RTT node according to fft.ai.regimes.json."
+      ],
+      "consent": [
+        "AA3 escalation requires operator_consent = true."
+      ],
+      "substrate": [
+        "Harmonic escalation requires substrate_class = agentic."
+      ],
+      "lineage": [
+        "Lineage MUST increase after collapse."
+      ]
+    },
+
+    "links": {
+      "manifest": "fft.ai.manifest.json",
+      "index": "fft.ai.index.json",
+      "registry": "fft.ai.registry.json",
+      "spec": "fft.ai.spec.json"
+    }
   },
-  "key_features_v1_2": [
-    "AA Mode (AA0–AA3): Autonomous Alignment escalation system",
-    "3C Integration: Coherence, Clarity, Continuity evaluated at every regime boundary",
-    "Harmonic Lattice: 12-node RTT traversal graph (RTT1–RTT12) with escalation and resolution paths",
-    "Triad Architecture: (T,S,M) coordinate system for field signal resolution",
-    "Substrate Compatibility: Multi-platform operator dispatch with bridge layer",
-    "Session Layer: Full awareness, alignments, overlay, trace, and dashboard support",
-    "Execution Graph: Dependency-resolved operator dispatch with 3C gating"
-  ],
-  "quickstart": {
-    "step_1": "Load fft.ai.bootstrap.json to initialize session context and AA Mode.",
-    "step_2": "Verify substrate via fft.ai.substrate.compat.json.",
-    "step_3": "Instantiate session state via fft.ai.session.state.json.",
-    "step_4": "Run 3C evaluation via fft.ai.core.json op.3c.evaluator.",
-    "step_5": "Dispatch operators through fft.ai.execution.graph.json."
+
+  "timestamps": {
+    "created": "auto",
+    "last_update": "auto"
   },
-  "license": "Proprietary – TriadicFrameworks Canon. All rights reserved."
+
+  "non_claims": [
+    "Readme does not revise RTT v0.9.",
+    "Readme does not reinterpret SET, S–N–R, or triadic time.",
+    "Readme does not replace the human FFT book."
+  ]
 }
