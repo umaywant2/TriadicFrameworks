@@ -1,161 +1,153 @@
 {
-  "spec_version": "1.3.0-draft",
+  "spec_version": "1.3.0",
   "canon_id": "FFT-AI-Index",
 
   "metadata": {
-    "title": "FFT AI Edition – Index (v1.3 Draft)",
-    "subtitle": "Canonical Map of All Modules in AI_Edition",
+    "title": "FFT AI Edition – Index (v1.3)",
+    "subtitle": "Root Registry for All FFT AI Edition Modules",
     "author_canon": "Nawder Loswin",
-    "description": "Defines the non-authoritative index projection for FFT AI Edition v1.3."
+    "description": "Defines the canonical index and load order for FFT AI Edition v1.3."
   },
 
-  "status_line": "Index is a projection only; authoritative values come from module manifests and registry.",
+  "status_line": "Index is the root registry; all modules MUST appear here.",
 
   "index": {
-    "session": [
-      "fft.ai.session.state.json",
-      "fft.ai.session.context.json",
-      "fft.ai.session.alignments.json",
-      "fft.ai.session.log.json",
-      "fft.ai.session.trace.json",
-      "fft.ai.session.dashboard.json",
-      "fft.ai.session.overlay.json",
-      "fft.ai.session.history.json",
-      "fft.ai.session.ui.json",
-      "fft.ai.session.profile.json",
-      "fft.ai.session.analytics.json",
-      "fft.ai.session.awareness.json"
+    "session_id": "inherit-from-session.state",
+
+    "modules": {
+      "core": [
+        "fft.ai.core.json",
+        "fft.ai.core_v1_2_.json",
+        "fft.core.json",
+        "fft.invariant.json",
+        "fft.structures.json",
+        "fft.metadata.json"
+      ],
+
+      "specifications": [
+        "fft.ai.spec.json",
+        "fft.ai.spec-008.json",
+        "fft.ai.manifest.json",
+        "fft.validation.json"
+      ],
+
+      "substrate": [
+        "fft.ai.substrate.json",
+        "fft.ai.substrate.bridge.json",
+        "fft.ai.substrate.compat.json",
+        "fft.ai.substrate.lattice.json",
+        "fft.ai.substrate.matrix.json"
+      ],
+
+      "operators": [
+        "fft.ai.operators.json",
+        "fft.operator.example.json",
+        "fft.operator.port.json"
+      ],
+
+      "regimes": [
+        "fft.ai.regimes.json",
+        "fft.regimes.json"
+      ],
+
+      "rtt": [
+        "fft.ai.rtt.bridge.json",
+        "fft.ai.rtt.spine.examples.json",
+        "fft.ai.rtt.engine.prompts.json"
+      ],
+
+      "runtime": [
+        "fft.ai.runtime.json",
+        "fft.ai.hardware.profile.json",
+        "fft.ai.bootstrap.json",
+        "fft.ai.integrations.json",
+        "fft.ai.discovery.json",
+        "fft.ai.execution.graph.json",
+        "fft.ai.capabilities.json",
+        "fft.ai.reader.json",
+        "fft.ai.overview.json",
+        "fft.ai.registry.json"
+      ],
+
+      "session": [
+        "fft.ai.session.state.json",
+        "fft.ai.session.state.refresh.json",
+        "fft.ai.session.context.json",
+        "fft.ai.session.alignments.json",
+        "fft.ai.session.log.json",
+        "fft.ai.session.history.json",
+        "fft.ai.session.navigation.json",
+        "fft.ai.session.permissions.json",
+        "fft.ai.session.profile.json",
+        "fft.ai.session.awareness.json",
+        "fft.ai.session.analytics.json",
+        "fft.ai.session.dashboard.json",
+        "fft.ai.session.overlay.json",
+        "fft.ai.session.ui.json",
+        "fft.ai.session.trace.json",
+        "fft.ai.session.render.json"
+      ],
+
+      "examples": [
+        "fft.examples.json"
+      ],
+
+      "edition": [
+        "fft.ai.index.json",
+        "fft.ai.readme.json"
+      ]
+    },
+
+    "load_order": [
+      "core",
+      "specifications",
+      "substrate",
+      "operators",
+      "regimes",
+      "rtt",
+      "runtime",
+      "session",
+      "examples",
+      "edition"
     ],
 
-    "runtime": [
-      "fft.ai.runtime.json",
-      "fft.ai.bootstrap.json"
-    ],
-
-    "operators": [
-      "fft.ai.operators.json",
-      "fft.ai.operator.example.json",
-      "fft.ai.operator.port.json",
-      "fft.ai.rtt.engine.prompts.json"
-    ],
-
-    "regimes": [
-      "fft.ai.regimes.json",
-      "fft.regimes.json"
-    ],
-
-    "substrate": [
-      "fft.ai.substrate.json",
-      "fft.ai.substrate.bridge.json",
-      "fft.ai.substrate.compat.json",
-      "fft.ai.substrate.lattice.json",
-      "fft.ai.substrate.matrix.json"
-    ],
-
-    "rtt": [
-      "fft.ai.rtt.bridge.json",
-      "fft.ai.rtt.spine.examples.json"
-    ],
-
-    "core": [
-      "fft.ai.core.json",
-      "fft.ai.core_v1_2_.json",
-      "fft.core.json"
-    ],
-
-    "discovery": [
-      "fft.ai.discovery.json"
-    ],
-
-    "autonomy": [
-      "fft.ai.autonomy.json"
-    ],
-
-    "execution": [
-      "fft.ai.execution.graph.json"
-    ],
-
-    "hardware": [
-      "fft.ai.hardware.profile.json"
-    ],
-
-    "integrations": [
-      "fft.ai.integrations.json"
-    ],
-
-    "capabilities": [
-      "fft.ai.capabilities.json"
-    ],
-
-    "specifications": [
-      "fft.ai.spec.json",
-      "fft.ai.spec-008.json"
-    ],
-
-    "reader": [
-      "fft.ai.reader.json"
-    ],
-
-    "metadata": [
-      "fft.metadata.json",
-      "fft.ai.readme.json"
-    ],
-
-    "registry": [
-      "fft.ai.registry.json"
-    ],
-
-    "examples": [
-      "fft.examples.json"
-    ],
-
-    "invariants": [
-      "fft.invariant.json"
-    ],
-
-    "structures": [
-      "fft.structures.json"
-    ],
-
-    "validation": [
-      "fft.validation.json"
-    ],
-
-    "prompts": [
-      "ep.harmonic_escalation.json"
-    ],
-
-    "html": [
-      "index.html"
-    ],
-
-    "misc": [
-      "capture.md"
-    ]
+    "integration_map": {
+      "state": "fft.ai.session.state.json",
+      "context": "fft.ai.session.context.json",
+      "alignments": "fft.ai.session.alignments.json",
+      "log": "fft.ai.session.log.json",
+      "history": "fft.ai.session.history.json",
+      "analytics": "fft.ai.session.analytics.json",
+      "navigation": "fft.ai.session.navigation.json",
+      "permissions": "fft.ai.session.permissions.json",
+      "profile": "fft.ai.session.profile.json",
+      "awareness": "fft.ai.session.awareness.json",
+      "dashboard": "fft.ai.session.dashboard.json",
+      "overlay": "fft.ai.session.overlay.json",
+      "ui": "fft.ai.session.ui.json",
+      "trace": "fft.ai.session.trace.json",
+      "render": "fft.ai.session.render.json"
+    }
   },
 
-  "links": {
-    "registry": "fft.ai.registry.json",
-    "manifest": "fft.ai.manifest.json",
-    "overview": "fft.ai.overview.json"
+  "rules": {
+    "index_rules": [
+      "Index MUST list all modules.",
+      "Index MUST NOT invent module names.",
+      "Index MUST NOT omit session-layer modules.",
+      "Index MUST NOT contradict manifest.json.",
+      "Index MUST NOT contradict registry.json."
+    ],
+
+    "load_rules": [
+      "Load order MUST begin with core.",
+      "Session-layer MUST load after runtime.",
+      "Render MUST load last."
+    ]
   },
 
   "timestamps": {
     "created": "auto",
     "last_update": "auto"
-  },
-
-  "rules": {
-    "projection_rules": [
-      "Index MUST NOT contradict module registry.",
-      "Index MUST NOT invent modules.",
-      "Index MUST NOT contradict session.state.json."
-    ]
-  },
-
-  "non_claims": [
-    "Index does not revise RTT v0.9.",
-    "Index does not reinterpret SET, S–N–R, or triadic time.",
-    "Index does not replace the human FFT book."
-  ]
+  }
 }
