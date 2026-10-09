@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Atmosphere_module_" src="https://github.com/user-attachments/assets/87824660-2c8f-4a84-8e97-d8b1f2f6d165" />
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/atmosphere/module.json) — Agentic module schema role assignments
 
