@@ -1,4 +1,7 @@
-# ⭐ **README.md — The Inverted Star (AI Edition)**  
+
+- [`module.json`](module.json) — Agentic module schema role assignments
+
+# ⭐ **The Inverted Star (AI Edition)**  
 ### *Book 2 of the TriadicFrameworks AI Edition*
 
 ---
