@@ -3,7 +3,7 @@
   "canon_id": "FFT-AI-Bootstrap",
 
   "metadata": {
-    "title": "FFT AI Edition – Bootstrap (v1.3 Draft)",
+    "title": "FFT AI Edition – Bootstrap (v1.3)",
     "subtitle": "Canonical Initialization Sequence for RTT • Regimes • Operators • Runtime",
     "author_canon": "Nawder Loswin",
     "description": "Defines the initialization sequence, default runtime state, module loading order, and canonical boot envelope for FFT AI Edition v1.3."
@@ -26,6 +26,7 @@
 
     "load_order": [
       "fft.ai.session.state.json",
+      "fft.ai.session.state.refresh.json",
       "fft.ai.runtime.json",
       "fft.ai.navigation.json",
       "fft.ai.autonomy.json",
@@ -80,62 +81,65 @@
       },
       "step_8": {
         "action": "load_regimes",
-        "requirements": ["regimes.nominal.rtt_nodes includes RTT1"],
-        "notes": "Loads regime definitions."
+        "requirements": ["regimes.map.RTT1 = nominal"],
+        "notes": "Loads canonical regime mapping."
       },
       "step_9": {
         "action": "load_operators",
-        "requirements": ["operators.op.diffusion.rtt = RTT1"],
-        "notes": "Loads operator spine."
+        "requirements": ["operators.map.RTT1 = op.diffusion"],
+        "notes": "Loads canonical operator mapping."
       },
       "step_10": {
         "action": "load_substrate",
-        "requirements": ["substrate.agentic.eligibility.harmonic = true"],
-        "notes": "Loads substrate constraints."
+        "requirements": ["substrate.current.class = agentic"],
+        "notes": "Loads substrate gating rules."
       },
       "step_11": {
         "action": "load_paradox_enum",
-        "requirements": ["paradox_enum.typed_paradox_required = true"],
-        "notes": "Loads typed paradox categories."
+        "requirements": ["paradox.enum.typed != null"],
+        "notes": "Loads canonical paradox types."
       },
       "step_12": {
         "action": "load_spec_008",
-        "requirements": ["spec_008.aa_modes.AA1.allowed_rtt includes RTT1"],
-        "notes": "Loads AA escalation rules."
+        "requirements": ["spec_008.rtt_rules != null"],
+        "notes": "Loads canonical RTT, paradox, substrate, consent, collapse rules."
       },
       "step_13": {
         "action": "load_rtt_bridge",
-        "requirements": ["rtt_bridge.RTT1.operator = op.diffusion"],
-        "notes": "Loads RTT → operator → regime mapping."
+        "requirements": ["rtt.bridge.map != null"],
+        "notes": "Loads RTT bridge mapping."
       },
       "step_14": {
         "action": "load_rtt_spine",
-        "requirements": ["rtt_spine.RTT1.meaning != null"],
-        "notes": "Loads RTT semantic spine."
+        "requirements": ["rtt.spine.examples != null"],
+        "notes": "Loads RTT spine examples."
       },
       "step_15": {
         "action": "load_hardware_profile",
-        "requirements": ["hardware_profile.current_class = agentic"],
-        "notes": "Loads hardware substrate envelope."
+        "requirements": ["hardware.profile != null"],
+        "notes": "Loads hardware execution profile."
       }
-    },
-
-    "post_boot_validation": {
-      "rules": [
-        "rtt_node MUST equal RTT1",
-        "regime MUST equal nominal",
-        "operator MUST equal op.diffusion",
-        "substrate_class MUST equal agentic",
-        "operator_consent MUST equal false",
-        "lineage MUST equal 1"
-      ]
     }
   },
 
+  "rules": {
+    "bootstrap_rules": [
+      "Bootstrap MUST NOT contradict runtime.json.",
+      "Bootstrap MUST NOT contradict session.state.json.",
+      "Bootstrap MUST NOT contradict substrate.json.",
+      "Bootstrap MUST NOT contradict operators.json.",
+      "Bootstrap MUST NOT contradict regimes.json.",
+      "Bootstrap MUST NOT contradict spec‑008.json.",
+      "Bootstrap MUST NOT invent measure IDs.",
+      "Bootstrap MUST NOT invent paradox types.",
+      "Bootstrap MUST NOT invent substrate classes."
+    ]
+  },
+
   "integration_links": {
-    "session_state": "fft.ai.session.state.json",
+    "state": "fft.ai.session.state.json",
     "runtime": "fft.ai.runtime.json",
-    "navigation": "fft.ai.navigation.json",
+    "navigation": "fft.ai.session.navigation.json",
     "autonomy": "fft.ai.autonomy.json",
     "discovery": "fft.ai.discovery.json",
     "capabilities": "fft.ai.capabilities.json",
@@ -143,8 +147,8 @@
     "regimes": "fft.ai.regimes.json",
     "operators": "fft.ai.operators.json",
     "substrate": "fft.ai.substrate.json",
-    "spec_008": "fft.ai.spec-008.json",
     "paradox_enum": "fft.ai.paradox.enum.json",
+    "spec_008": "fft.ai.spec-008.json",
     "rtt_bridge": "fft.ai.rtt.bridge.json",
     "rtt_spine": "fft.ai.rtt.spine.examples.json",
     "hardware_profile": "fft.ai.hardware.profile.json"
@@ -153,11 +157,5 @@
   "timestamps": {
     "created": "auto",
     "last_update": "auto"
-  },
-
-  "non_claims": [
-    "Bootstrap does not revise RTT v0.9.",
-    "Bootstrap does not reinterpret SET, S–N–R, or triadic time.",
-    "Bootstrap does not replace the human FFT book."
-  ]
+  }
 }
