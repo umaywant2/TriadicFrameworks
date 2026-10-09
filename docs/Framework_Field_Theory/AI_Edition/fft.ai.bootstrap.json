@@ -1,27 +1,136 @@
 {
-  "spec_version": "1.2.0",
+  "spec_version": "1.3.0-draft",
   "canon_id": "FFT-AI-Bootstrap",
-  "edition": "AI Edition",
-  "aa_mode": "AA2",
-  "last_refreshed": "2026-10-08T10:58:00",
+
   "metadata": {
-    "title": "FFT AI Edition – Bootstrap Sequence (v1.2)",
+    "title": "FFT AI Edition – Bootstrap (v1.3 Draft)",
+    "subtitle": "Substrate • Measures • RTT • Regimes • Lineage",
     "author_canon": "Nawder Loswin",
-    "updated_at": "2026-10-08T10:58:00"
+    "description": "Defines the canonical bootstrap sequence for FFT AI Edition v1.3."
   },
-  "bootstrap": {
-    "sequence": [
-      { "step": 1, "id": "bs.declare_aa_mode",       "action": "Declare AA Mode. Default: AA2.",                                             "required": true  },
-      { "step": 2, "id": "bs.verify_substrate",       "action": "Verify substrate via fft.ai.substrate.compat.json.",                        "required": true  },
-      { "step": 3, "id": "bs.init_session_state",     "action": "Initialize fft.ai.session.state.json with session_id and phase=active.",    "required": true  },
-      { "step": 4, "id": "bs.establish_lattice",      "action": "Set harmonic lattice to RTT1. Record in session.state.lattice_node.",       "required": true  },
-      { "step": 5, "id": "bs.3c_baseline",            "action": "Run op.3c.evaluator to establish baseline C1/C2/C3 scores.",               "required": true  },
-      { "step": 6, "id": "bs.resolve_triad",          "action": "Resolve triad position (T=RTT1, S=field.signal, M=AA mode).",              "required": true  },
-      { "step": 7, "id": "bs.init_awareness",         "action": "Initialize fft.ai.session.awareness.json with layer snapshots.",            "required": true  },
-      { "step": 8, "id": "bs.init_operator_queue",    "action": "Load eligible operators from substrate compat matrix.",                    "required": true  },
-      { "step": 9, "id": "bs.log_bootstrap",          "action": "Write bootstrap event to fft.ai.session.log.json.",                        "required": true  },
-      { "step": 10,"id": "bs.ready",                  "action": "Set phase=operator_ready. System available for field signal dispatch.",     "required": true  }
+
+  "status_line": "Bootstrap MUST verify substrate, initialize measures, seed lineage, and enter RTT1 under nominal regime.",
+
+  "bootstrap_sequence": [
+    "verify_substrate",
+    "load_measure_kernel",
+    "initialize_session_state",
+    "initialize_rtt_lattice",
+    "enter_nominal_regime",
+    "seed_lineage",
+    "declare_coherence",
+    "bound_drift",
+    "prepare_paradox_table",
+    "prepare_consent_state"
+  ],
+
+  "verify_substrate": {
+    "allowed_classes": ["agentic", "parametric", "symbolic", "edge"],
+    "rules": [
+      "Substrate MUST be declared before any RTT transition.",
+      "Harmonic escalation requires substrate_class = agentic.",
+      "Non-agentic substrates MUST NOT escalate harmonically."
+    ]
+  },
+
+  "load_measure_kernel": {
+    "measure_ids": [
+      "measure.c1",
+      "measure.c2",
+      "measure.c3",
+      "measure.paradox_density",
+      "measure.lattice_stability"
     ],
-    "bootstrap_version": "v1.2.0-R5"
-  }
+    "rules": [
+      "All measures MUST initialize in [0.80, 0.95] for nominal entry.",
+      "Measures MUST NOT be invented.",
+      "Measures MUST be numeric."
+    ]
+  },
+
+  "initialize_session_state": {
+    "session_id": "auto-generated",
+    "substrate_class": "declared",
+    "lineage": 1,
+    "operator_consent": false,
+    "paradox_events": [],
+    "notes": "Session begins with no paradox and no consent."
+  },
+
+  "initialize_rtt_lattice": {
+    "start_node": "RTT1",
+    "mapping_file": "fft.ai.rtt.bridge.json",
+    "rules": [
+      "RTT1 MUST be the initial node.",
+      "RTT nodes MUST map to frozen RTT v0.9 quantities.",
+      "Skip-resolution forbidden."
+    ]
+  },
+
+  "enter_nominal_regime": {
+    "regime": "nominal",
+    "requirements": {
+      "measure.c1": ">= 0.80",
+      "measure.c2": ">= 0.80",
+      "measure.c3": ">= 0.80",
+      "measure.paradox_density": "= 0.00"
+    },
+    "notes": "Nominal regime corresponds to frozen RTT diffusion → alignment → coupling → activation → triadic time → S–N–R."
+  },
+
+  "seed_lineage": {
+    "initial_value": 1,
+    "rules": [
+      "Lineage MUST be non-decreasing.",
+      "Lineage MUST increase after collapse."
+    ]
+  },
+
+  "declare_coherence": {
+    "measure.c1": ">= 0.80",
+    "notes": "Coherence MUST be declared before any regime transition."
+  },
+
+  "bound_drift": {
+    "measure.c3": ">= 0.80",
+    "notes": "Drift MUST remain bounded for resonance-time stability."
+  },
+
+  "prepare_paradox_table": {
+    "typed_paradox_enum_file": "fft.ai.paradox.enum.json",
+    "rules": [
+      "Typed paradox required for RTT7 entry.",
+      "Vibe-based paradox forbidden."
+    ]
+  },
+
+  "prepare_consent_state": {
+    "operator_consent": false,
+    "rules": [
+      "AA3 escalation requires operator_consent = true.",
+      "Consent conflicts MUST be logged as paradox.consent_conflict."
+    ]
+  },
+
+  "projection_rules": {
+    "authoritative_files": [
+      "fft.ai.session.state.json",
+      "fft.ai.session.log.json",
+      "fft.ai.session.alignments.json"
+    ],
+    "projections": [
+      "fft.ai.session.dashboard.json",
+      "fft.ai.session.overlay.json",
+      "fft.ai.session.ui.json"
+    ],
+    "rules": [
+      "Projections MUST NOT contradict authoritative files."
+    ]
+  },
+
+  "non_claims": [
+    "Bootstrap does not revise RTT v0.9.",
+    "Bootstrap does not reinterpret SET, S–N–R, or triadic time.",
+    "Bootstrap does not replace the human FFT book."
+  ]
 }
