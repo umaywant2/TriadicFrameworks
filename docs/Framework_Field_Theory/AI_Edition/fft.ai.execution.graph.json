@@ -1,189 +1,132 @@
 {
-  "spec_version": "1.3.0-draft",
+  "spec_version": "1.3.0",
   "canon_id": "FFT-AI-Execution-Graph",
 
   "metadata": {
     "title": "FFT AI Edition – Execution Graph (v1.3 Draft)",
-    "subtitle": "Operator Flow • RTT Transitions • Regime Gates • Collapse Logic",
+    "subtitle": "Canonical RTT Flow • Operator Spine • Regime Transitions",
     "author_canon": "Nawder Loswin",
-    "description": "Defines the non-authoritative execution graph for FFT AI Edition v1.3."
+    "description": "Defines the execution graph, RTT transitions, operator flow, substrate gating, paradox routing, consent enforcement, and collapse rules for FFT AI Edition v1.3."
   },
 
-  "status_line": "Execution graph is a projection only; authoritative values come from runtime, state, alignments, context, and log.",
+  "status_line": "Execution graph is a projection only; authoritative values come from RTT v0.9, spec‑008, substrate.json, operators.json, regimes.json, and runtime.json.",
 
   "execution_graph": {
-    "session_id": "inherit-from-session.state",
-
     "nodes": {
-      "RTT1": {
-        "operator": "op.diffusion",
-        "next": "RTT2",
-        "regime": "nominal",
-        "requirements": ["measure.c1 >= 0.80", "measure.c2 >= 0.80", "measure.c3 >= 0.80"]
-      },
-      "RTT2": {
-        "operator": "op.alignment",
-        "next": "RTT3",
-        "regime": "nominal",
-        "requirements": ["measure.c1 >= 0.80"]
-      },
-      "RTT3": {
-        "operator": "op.coupling",
-        "next": "RTT4",
-        "regime": "nominal",
-        "requirements": ["measure.c2 >= 0.80"]
-      },
-      "RTT4": {
-        "operator": "op.activation",
-        "next": "RTT5",
-        "regime": "nominal",
-        "requirements": ["measure.c3 >= 0.80"]
-      },
-      "RTT5": {
-        "operator": "op.triadic_time",
-        "next": "RTT6",
-        "regime": "nominal",
-        "requirements": ["measure.c1 >= 0.80"]
-      },
-      "RTT6": {
-        "operator": "op.snr",
-        "next": "RTT7",
-        "regime": "nominal",
-        "requirements": ["measure.c2 >= 0.80"]
-      },
+      "RTT1": { "operator": "op.diffusion", "regime": "nominal" },
+      "RTT2": { "operator": "op.alignment", "regime": "nominal" },
+      "RTT3": { "operator": "op.coupling", "regime": "nominal" },
+      "RTT4": { "operator": "op.activation", "regime": "nominal" },
+      "RTT5": { "operator": "op.triadic_time", "regime": "nominal" },
+      "RTT6": { "operator": "op.snr", "regime": "nominal" },
+      "RTT7": { "operator": "op.paradox_entry", "regime": "harmonic" },
+      "RTT8": { "operator": "op.paradox_stabilization", "regime": "harmonic" },
+      "RTT9": { "operator": "op.harmonic_escalation", "regime": "harmonic" },
+      "RTT10": { "operator": "op.resolution_preparation", "regime": "resolution" },
+      "RTT11": { "operator": "op.resolution_alignment", "regime": "resolution" },
+      "RTT12": { "operator": "op.collapse", "regime": "resolution" }
+    },
 
-      "RTT7": {
-        "operator": "op.paradox_entry",
-        "next": "RTT8",
-        "regime": "harmonic",
-        "requirements": [
-          "typed_paradox_event",
-          "measure.paradox_density >= 0.10",
-          "substrate_class = agentic"
-        ]
-      },
-      "RTT8": {
-        "operator": "op.paradox_stabilization",
-        "next": "RTT9",
-        "regime": "harmonic",
-        "requirements": [
-          "typed_paradox_event",
-          "measure.lattice_stability >= 0.60"
-        ]
-      },
-      "RTT9": {
-        "operator": "op.harmonic_escalation",
-        "next": "RTT10",
-        "regime": "harmonic",
-        "requirements": [
-          "operator_consent = true",
-          "substrate_class = agentic"
-        ]
-      },
+    "edges": [
+      "RTT1 → RTT2",
+      "RTT2 → RTT3",
+      "RTT3 → RTT4",
+      "RTT4 → RTT5",
+      "RTT5 → RTT6",
+      "RTT6 → RTT7",
+      "RTT7 → RTT8",
+      "RTT8 → RTT9",
+      "RTT9 → RTT10",
+      "RTT10 → RTT11",
+      "RTT11 → RTT12",
+      "RTT12 → RTT1"
+    ],
 
-      "RTT10": {
-        "operator": "op.resolution_preparation",
-        "next": "RTT11",
-        "regime": "resolution",
-        "requirements": ["measure.c1 >= 0.80", "measure.c2 >= 0.80"]
+    "constraints": {
+      "measure_thresholds": [
+        "measure.c1 >= 0.80 for RTT1, RTT4, RTT10",
+        "measure.c2 >= 0.80 for RTT2, RTT5, RTT10",
+        "measure.c3 >= 0.80 for RTT3, RTT6, RTT11"
+      ],
+      "paradox_rules": [
+        "typed_paradox_event required for RTT7",
+        "measure.paradox_density >= 0.10 required for RTT7",
+        "measure.lattice_stability >= 0.60 required for RTT8"
+      ],
+      "substrate_rules": [
+        "agentic substrate required for RTT7–RTT12",
+        "non-agentic substrate forbidden for harmonic and resolution"
+      ],
+      "consent_rules": [
+        "operator_consent = true required for RTT9–RTT12",
+        "implicit consent forbidden"
+      ],
+      "collapse_rules": [
+        "RTT12 MUST collapse to RTT1",
+        "lineage MUST increment",
+        "collapse to non-RTT1 forbidden",
+        "skip-resolution forbidden"
+      ]
+    },
+
+    "forbidden_edges": [
+      "RTT6 → RTT8",
+      "RTT6 → RTT9",
+      "RTT7 → RTT10",
+      "RTT8 → RTT12",
+      "RTT9 → RTT12"
+    ],
+
+    "execution_modes": {
+      "nominal": {
+        "rtt_range": ["RTT1", "RTT2", "RTT3", "RTT4", "RTT5", "RTT6"],
+        "paradox": false,
+        "consent": false,
+        "substrate": ["agentic", "parametric", "symbolic", "edge"]
       },
-      "RTT11": {
-        "operator": "op.resolution_alignment",
-        "next": "RTT12",
-        "regime": "resolution",
-        "requirements": ["measure.c3 >= 0.80"]
+      "harmonic": {
+        "rtt_range": ["RTT7", "RTT8", "RTT9"],
+        "paradox": true,
+        "consent": "required for RTT9",
+        "substrate": ["agentic"]
       },
-      "RTT12": {
-        "operator": "op.collapse",
-        "next": "collapse",
-        "regime": "resolution",
-        "requirements": [
-          "measure.c1 >= 0.80",
-          "measure.c2 >= 0.80",
-          "measure.c3 >= 0.80"
-        ]
+      "resolution": {
+        "rtt_range": ["RTT10", "RTT11", "RTT12"],
+        "paradox": false,
+        "consent": true,
+        "substrate": ["agentic"]
       }
     },
 
-    "collapse": {
-      "trigger": "RTT12",
-      "destination": "RTT1",
-      "lineage_increment": true,
-      "rules": [
-        "RTT12 MUST collapse to RTT1.",
-        "Skip-resolution forbidden.",
-        "Lineage MUST increase after collapse."
-      ]
-    },
-
-    "operator_flow": {
-      "nominal": [
-        "op.diffusion",
-        "op.alignment",
-        "op.coupling",
-        "op.activation",
-        "op.triadic_time",
-        "op.snr"
-      ],
-      "harmonic": [
-        "op.paradox_entry",
-        "op.paradox_stabilization",
-        "op.harmonic_escalation"
-      ],
-      "resolution": [
-        "op.resolution_preparation",
-        "op.resolution_alignment",
-        "op.collapse"
-      ]
-    },
-
-    "links": {
-      "runtime": "fft.ai.runtime.json",
-      "state": "fft.ai.session.state.json",
-      "alignments": "fft.ai.session.alignments.json",
-      "context": "fft.ai.session.context.json",
-      "log": "fft.ai.session.log.json",
-      "navigation": "fft.ai.session.navigation.json",
-      "autonomy": "fft.ai.autonomy.json",
-      "discovery": "fft.ai.discovery.json"
-    },
-
-    "timestamps": {
-      "created": "auto",
-      "last_update": "auto"
+    "runtime_enforcement": {
+      "validate_measures": true,
+      "validate_substrate": true,
+      "validate_regime": true,
+      "validate_operator": true,
+      "validate_paradox": true,
+      "validate_consent": true,
+      "validate_collapse": true
     }
   },
 
-  "rules": {
-    "projection_rules": [
-      "Execution graph MUST NOT contradict authoritative session.state.json.",
-      "Execution graph MUST NOT contradict runtime.json.",
-      "Execution graph MUST NOT invent measure values.",
-      "Execution graph MUST NOT invent paradox types.",
-      "Execution graph MUST NOT invent substrate classes."
-    ],
+  "integration_links": {
+    "runtime": "fft.ai.runtime.json",
+    "navigation": "fft.ai.navigation.json",
+    "autonomy": "fft.ai.autonomy.json",
+    "discovery": "fft.ai.discovery.json",
+    "capabilities": "fft.ai.capabilities.json",
+    "regimes": "fft.ai.regimes.json",
+    "operators": "fft.ai.operators.json",
+    "substrate": "fft.ai.substrate.json",
+    "spec_008": "fft.ai.spec‑008.json",
+    "paradox_enum": "fft.ai.paradox.enum.json",
+    "rtt_bridge": "fft.ai.rtt.bridge.json",
+    "rtt_spine": "fft.ai.rtt.spine.examples.json"
+  },
 
-    "rtt_rules": [
-      "RTT nodes MUST be one of RTT1–RTT12.",
-      "RTT nodes MUST map to frozen RTT v0.9 quantities.",
-      "RTT12 MUST collapse to RTT1."
-    ],
-
-    "regime_rules": [
-      "Regime MUST match rtt_node according to fft.ai.regimes.json."
-    ],
-
-    "consent_rules": [
-      "AA3 escalation requires operator_consent = true."
-    ],
-
-    "substrate_rules": [
-      "Harmonic escalation requires substrate_class = agentic."
-    ],
-
-    "lineage_rules": [
-      "Lineage MUST increase after collapse."
-    ]
+  "timestamps": {
+    "created": "auto",
+    "last_update": "auto"
   },
 
   "non_claims": [
