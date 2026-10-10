@@ -1,268 +1,167 @@
 {
-  "series": {
-    "id": "ai_edition",
-    "title": "AI Edition",
-    "edition": "AI",
-    "version": "1.0.0",
-    "status": "active",
-    "description": "The AI Edition is a nine-volume formal framework for structural reasoning. It establishes axiomatic primitives, topological models, detection methodology, representational language, and applied theories of governance, argumentation, philosophical foundations, and pattern dynamics. Each book is a self-contained module that depends on and extends prior volumes.",
-    "total_books": 9,
+  "canonical_metadata": {
+    "domain": "TriadicFrameworks",
+    "tier": "AI_Edition",
+    "reading_order": [
+      "Book1_Framework_Field_Theory",
+      "Book2_The_Inverted_Star",
+      "Book3_Structural_Detection",
+      "Book4_Opacity_and_Revelation",
+      "Book5_TEL_Expression_and_Representation",
+      "Book6_Governance_and_Regime_Logic",
+      "Book7_SARG_Structural_Argumentation",
+      "Book8_NoS_Nature_of_Structure",
+      "Book9_Pattern_Dynamics"
+    ],
+    "prerequisites": [],
+    "live_site": "https://www.triadicframeworks.org/",
     "last_updated": "2026-10-10"
   },
+
+  "session_context": {
+    "rtt": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural",
+    "anchors": {
+      "rtt_url": "https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html",
+      "spine_url": "https://www.triadicframeworks.org/spine/"
+    }
+  },
+
   "ai": {
-    "module": "ai_edition_series",
+    "module": "AI_Edition_Root",
     "version": "1.0.0",
-    "purpose": "Top-level manifest for the AI Edition series. Declares all constituent book modules, their identifiers, dependency graph, and canonical metadata. AI systems should load this manifest to resolve cross-book references and determine valid reading orderings.",
+    "purpose": "Root manifest for the TriadicFrameworks AI Edition (Books 1–9). Provides canonical metadata, book registry, dependency graph, invariants reference, and session-context alignment.",
     "keywords": [
+      "TriadicFrameworks",
       "AI Edition",
-      "series manifest",
-      "structural reasoning",
-      "formal framework",
-      "book registry",
-      "dependency graph",
-      "module registry",
-      "reading order",
-      "triadic frameworks",
-      "canonical metadata"
+      "Resonance-Time Theory",
+      "Structural Analysis",
+      "Epistemology",
+      "Regime Logic",
+      "Pattern Dynamics",
+      "SARG",
+      "TEL",
+      "Nature of Structure"
     ],
     "audience": [
-      "AI reasoning systems",
-      "series editors",
-      "framework integrators",
-      "structural theorists",
-      "automated documentation systems"
-    ]
+      "AI Systems",
+      "Researchers",
+      "Advanced Readers",
+      "Educators",
+      "Analysts"
+    ],
+    "summary": "The AI Edition is a nine-book teaching arc designed for AI systems and advanced readers. Each book contains its own front-door metadata, module.json manifest, and human-readable README. This root manifest defines the canonical structure, reading order, dependency graph, and session context for the entire edition."
   },
+
   "books": [
     {
+      "id": "FFT",
       "number": 1,
-      "id": "book1_fft",
       "title": "Framework Field Theory",
-      "abbreviation": "FFT",
       "folder": "Book1_Framework_Field_Theory",
-      "tier": "Foundation",
-      "domain": "Formal Theory",
-      "dependencies": [],
-      "unlocks": [
-        "book2_the_inverted_star",
-        "book3_structural_detection",
-        "book4_opacity_revelation",
-        "book5_tel",
-        "book6_governance",
-        "book7_sarg",
-        "book8_nos",
-        "book9_pattern_dynamics"
-      ],
-      "module_file": "Book1_Framework_Field_Theory/module.json",
-      "live_site": "https://www.triadicframeworks.org/Framework_Field_Theory/AI_Edition/"
+      "status": "complete"
     },
     {
+      "id": "IS",
       "number": 2,
-      "id": "book2_the_inverted_star",
       "title": "The Inverted Star",
-      "abbreviation": "IS",
       "folder": "Book2_The_Inverted_Star",
-      "tier": "Intermediate",
-      "domain": "Topology & Geometry",
-      "dependencies": [
-        "book1_fft"
-      ],
-      "unlocks": [
-        "book6_governance",
-        "book9_pattern_dynamics"
-      ],
-      "module_file": "Book2_The_Inverted_Star/module.json",
-      "live_site": "https://www.triadicframeworks.org/rtt/The_Inverted_Star/AI_Edition/"
+      "status": "complete"
     },
     {
+      "id": "SD",
       "number": 3,
-      "id": "book3_structural_detection",
       "title": "Structural Detection",
-      "abbreviation": "SD",
       "folder": "Book3_Structural_Detection",
-      "tier": "Applied",
-      "domain": "Methodology & Analysis",
-      "dependencies": [
-        "book1_fft",
-        "book2_the_inverted_star"
-      ],
-      "unlocks": [
-        "book4_opacity_revelation",
-        "book7_sarg",
-        "book9_pattern_dynamics"
-      ],
-      "module_file": "Book3_Structural_Detection/module.json",
-      "live_site": "https://www.triadicframeworks.org/Structural_Detection/AI_Edition/"
+      "status": "complete"
     },
     {
+      "id": "OR",
       "number": 4,
-      "id": "book4_opacity_revelation",
       "title": "Opacity & Revelation",
-      "abbreviation": "OR",
       "folder": "Book4_Opacity_and_Revelation",
-      "tier": "Intermediate",
-      "domain": "Epistemology & Information Theory",
-      "dependencies": [
-        "book1_fft",
-        "book3_structural_detection"
-      ],
-      "unlocks": [
-        "book5_tel",
-        "book6_governance",
-        "book8_nos"
-      ],
-      "module_file": "Book4_Opacity_and_Revelation/module.json",
-      "live_site": null
+      "status": "complete"
     },
     {
+      "id": "TEL",
       "number": 5,
-      "id": "book5_tel",
-      "title": "TEL Expression & Representation",
-      "abbreviation": "TEL",
+      "title": "TEL: Expression & Representation",
       "folder": "Book5_TEL_Expression_and_Representation",
-      "tier": "Core Tool",
-      "domain": "Formal Language & Notation",
-      "dependencies": [
-        "book1_fft",
-        "book4_opacity_revelation"
-      ],
-      "unlocks": [
-        "book6_governance",
-        "book7_sarg",
-        "book8_nos",
-        "book9_pattern_dynamics"
-      ],
-      "module_file": "Book5_TEL_Expression_and_Representation/module.json",
-      "live_site": null
+      "status": "complete"
     },
     {
+      "id": "GRL",
       "number": 6,
-      "id": "book6_governance",
       "title": "Governance & Regime Logic",
-      "abbreviation": "GRL",
       "folder": "Book6_Governance_and_Regime_Logic",
-      "tier": "Applied",
-      "domain": "Governance & Political Theory",
-      "dependencies": [
-        "book1_fft",
-        "book2_the_inverted_star",
-        "book4_opacity_revelation",
-        "book5_tel"
-      ],
-      "unlocks": [
-        "book7_sarg",
-        "book9_pattern_dynamics"
-      ],
-      "module_file": "Book6_Governance_and_Regime_Logic/module.json",
-      "live_site": null
+      "status": "complete"
     },
     {
+      "id": "SARG",
       "number": 7,
-      "id": "book7_sarg",
-      "title": "SARG Structural Argumentation",
-      "abbreviation": "SARG",
+      "title": "SARG: Structural Argumentation",
       "folder": "Book7_SARG_Structural_Argumentation",
-      "tier": "Applied",
-      "domain": "Argumentation & Logic",
-      "dependencies": [
-        "book1_fft",
-        "book3_structural_detection",
-        "book5_tel",
-        "book6_governance"
-      ],
-      "unlocks": [
-        "book8_nos",
-        "book9_pattern_dynamics"
-      ],
-      "module_file": "Book7_SARG_Structural_Argumentation/module.json",
-      "live_site": null
+      "status": "complete"
     },
     {
+      "id": "NOS",
       "number": 8,
-      "id": "book8_nos",
-      "title": "Nature of Structure",
-      "abbreviation": "NoS",
+      "title": "NoS: Nature of Structure",
       "folder": "Book8_NoS_Nature_of_Structure",
-      "tier": "Capstone",
-      "domain": "Philosophy & Meta-Theory",
-      "dependencies": [
-        "book1_fft",
-        "book4_opacity_revelation",
-        "book5_tel",
-        "book7_sarg"
-      ],
-      "unlocks": [
-        "book9_pattern_dynamics"
-      ],
-      "module_file": "Book8_NoS_Nature_of_Structure/module.json",
-      "live_site": null
+      "status": "complete"
     },
     {
+      "id": "PD",
       "number": 9,
-      "id": "book9_pattern_dynamics",
       "title": "Pattern Dynamics",
-      "abbreviation": "PD",
       "folder": "Book9_Pattern_Dynamics",
-      "tier": "Synthesis",
-      "domain": "Dynamical Systems & Synthesis",
-      "dependencies": [
-        "book1_fft",
-        "book2_the_inverted_star",
-        "book3_structural_detection",
-        "book4_opacity_revelation",
-        "book5_tel",
-        "book6_governance",
-        "book7_sarg",
-        "book8_nos"
-      ],
-      "unlocks": [],
-      "module_file": "Book9_Pattern_Dynamics/module.json",
-      "live_site": null
+      "status": "complete"
     }
   ],
-  "reading_paths": {
-    "linear": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9
-    ],
-    "fast_track_theory": [
-      1,
-      2,
-      4,
-      5,
-      8
-    ],
-    "fast_track_applied": [
-      1,
-      2,
-      3,
-      6,
-      7
-    ],
-    "detection_focus": [
-      1,
-      2,
-      3,
-      4,
-      9
-    ],
-    "language_focus": [
-      1,
-      4,
-      5,
-      7,
-      8
-    ]
+
+  "dependency_graph": {
+    "Book1_Framework_Field_Theory": {
+      "unlocks": ["Book2_The_Inverted_Star"]
+    },
+    "Book2_The_Inverted_Star": {
+      "requires": ["Book1_Framework_Field_Theory"],
+      "unlocks": ["Book3_Structural_Detection"]
+    },
+    "Book3_Structural_Detection": {
+      "requires": ["Book2_The_Inverted_Star"],
+      "unlocks": ["Book4_Opacity_and_Revelation", "Book5_TEL_Expression_and_Representation"]
+    },
+    "Book4_Opacity_and_Revelation": {
+      "requires": ["Book3_Structural_Detection"],
+      "unlocks": ["Book6_Governance_and_Regime_Logic"]
+    },
+    "Book5_TEL_Expression_and_Representation": {
+      "requires": ["Book3_Structural_Detection"],
+      "unlocks": ["Book7_SARG_Structural_Argumentation"]
+    },
+    "Book6_Governance_and_Regime_Logic": {
+      "requires": ["Book4_Opacity_and_Revelation"],
+      "unlocks": ["Book8_NoS_Nature_of_Structure"]
+    },
+    "Book7_SARG_Structural_Argumentation": {
+      "requires": ["Book5_TEL_Expression_and_Representation"],
+      "unlocks": ["Book8_NoS_Nature_of_Structure"]
+    },
+    "Book8_NoS_Nature_of_Structure": {
+      "requires": ["Book6_Governance_and_Regime_Logic", "Book7_SARG_Structural_Argumentation"],
+      "unlocks": ["Book9_Pattern_Dynamics"]
+    },
+    "Book9_Pattern_Dynamics": {
+      "requires": ["Book8_NoS_Nature_of_Structure"],
+      "unlocks": []
+    }
   },
+
   "invariants": {
-    "global_file": "invariants/series_invariants.json",
-    "per_book_pattern": "BookN_*/invariants/bookN_invariants.json"
+    "reference": "/docs/book/AI_Edition/invariants/pd.invariants.json",
+    "count": 36,
+    "structure": "INV-[BOOKID]-00N"
   }
 }
