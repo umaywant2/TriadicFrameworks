@@ -1,0 +1,151 @@
+{
+  "map_id": "nos.causation_map",
+  "version": "8.0-draft",
+  "book": "book8_nos",
+  "series": "AI Edition",
+  "invariant": "INV-NOS-004",
+  "operator_binding": "NoS-Κ (CausationAudit)",
+  "session_context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural",
+  "qmroot_binding": {
+    "dimension": "0D",
+    "note": "6D absent; negative rungs absent; INV-013 = 0D only"
+  },
+  "phantom_entry_audit": {
+    "status": "clean",
+    "checked_at": "session-open",
+    "entries": []
+  },
+  "description": "Defines the structural model of causation, emergence, and abstraction consistency. In the AI Edition, causation is not a primitive — it is a structural relation subject to the same invariant constraints as all other relations. Emergence is the appearance of invariants in a structure S that are absent from its proper sub-structures. Abstraction consistency (INV-NOS-004) governs the downward and upward propagation of invariants between abstract and concrete structural levels.",
+
+  "structural_causation_model": {
+    "title": "Causation as Structural Relation",
+    "nos_thesis": "Causation, under the AI Edition's structural realist commitment, is not a primitive metaphysical force — it is a directed structural relation in the dependency graph of structures. What makes a relation causal, rather than merely associative, is the structural asymmetry and invariant-preservation conditions it satisfies.",
+    "formal": "cause(S_a, S_b) ⟺ (S_a → S_b) ∈ R_world ∧ ¬(S_b → S_a) ∈ R_world ∧ invariant_set(S_b) is partially determined by invariant_set(S_a)",
+    "components": {
+      "directed_asymmetry": "Causal relations are asymmetric structural dependencies: S_a → S_b means S_a is in the dependency position, S_b in the dependent position. Structural causation does not admit symmetric cause-effect pairs.",
+      "invariant_determination": "S_a causally contributes to S_b if some invariants of S_b are not satisfiable without S_a's contribution to the relational configuration. This is a structural — not counterfactual — criterion.",
+      "tel_encoding": "T[CAUSAL_REL]: (S_a → S_b) ⊢ C[ASYMMETRY]: ¬(S_b → S_a)"
+    },
+    "causation_types": [
+      {
+        "id": "CT-001",
+        "label": "Constitutive Causation",
+        "description": "S_a causally constitutes S_b: S_b's relational configuration includes S_a as a structural component. The causal relation is one of structural participation — S_a is part of what S_b is.",
+        "formal": "constitutive_cause(S_a, S_b) ⟺ S_a ∈ sub(S_b) ∧ remove(S_b, S_a) violates invariant_set(S_b)",
+        "cross_book": "SARG: Evidence nodes constitutively cause the support relation they ground (INV-SARG-002). Remove the Evidence node and the warrant relation loses its grounding — the argument's invariant set is violated."
+      },
+      {
+        "id": "CT-002",
+        "label": "Enabling Causation",
+        "description": "S_a enables S_b without being a component of S_b. S_a's existence or state is a precondition for S_b's invariant set to be satisfiable, but S_a is not inside S_b.",
+        "formal": "enabling_cause(S_a, S_b) ⟺ S_a ∉ sub(S_b) ∧ ¬satisfiable(invariant_set(S_b)) without S_a in the structural context",
+        "cross_book": "GRL: Book 1 FFT kernel is an enabling cause of GRL regimes. The regime's invariants are not satisfiable without the FFT primitive definitions — yet FFT is not part of the regime tuple R = ⟨N_R, E_R, C_R, S_R, α_R, λ_R⟩."
+      },
+      {
+        "id": "CT-003",
+        "label": "Transformative Causation",
+        "description": "S_a causes a transformation T that produces S_b from an earlier structure S_0. The causal relation is mediated by the transformation event. S_a is the transformation trigger.",
+        "formal": "transformative_cause(S_a, S_0, S_b) ⟺ S_a triggers T ∧ transform(S_0, T) = S_b ∧ ¬(T triggered without S_a)",
+        "cross_book": "OR: An observer's increase in δ (detection capacity) is a transformative cause of the revelation state change in OR-Ρ. The transformation from opaque to revealed is triggered by the observer's capacity change, not by any change in the structure S itself (INV-OR-003 preserved)."
+      }
+    ]
+  },
+
+  "emergence_model": {
+    "title": "Structural Emergence",
+    "nos_definition": "Emergence occurs when a structure S has invariants in its invariant_set(S) that are not present in the invariant sets of any of its proper sub-structures. Emergent invariants are not hidden in the parts — they arise from the relational configuration that assembles the parts into S.",
+    "formal": "emergent(inv, S) ⟺ inv ∈ invariant_set(S) ∧ ∀s_i ∈ proper_sub(S): inv ∉ invariant_set(s_i)",
+    "emergence_levels": [
+      {
+        "id": "EL-001",
+        "label": "Weak Emergence",
+        "description": "Emergent invariants of S are in principle derivable from the invariant sets of S's sub-structures and the relational configuration that joins them — but the derivation requires complete knowledge of the full configuration. They are not practically predictable from sub-structure analysis alone.",
+        "nos_status": "Compatible with structural realism. Weak emergence is a function of relational complexity, not of any ontological novelty.",
+        "example": "The regime validity invariant (INV-GRL-001) is weakly emergent from the enforcement relations E_R connecting regime nodes to governed structures. No individual node in N_R satisfies INV-GRL-001 alone — it requires the full configuration."
+      },
+      {
+        "id": "EL-002",
+        "label": "Strong Emergence",
+        "description": "Emergent invariants of S are not derivable from the invariant sets of S's sub-structures and their relational configuration, even in principle. Strong emergence implies genuine ontological novelty at the level of S.",
+        "nos_status": "Formally compatible with INV-NOS-004 but constitutes the 'genuine novelty' case: the emergent invariant of S is not present in the abstract structure that S instantiates, triggering the upward revision requirement of INV-NOS-004.",
+        "example": "If a governance regime produces a stable legitimacy condition (INV-GRL-004) that cannot be derived from the authority decay model (INV-GRL-002) and constraint enforcement model (INV-GRL-003) — this would be strong emergence requiring GRL abstract revision."
+      },
+      {
+        "id": "EL-003",
+        "label": "Phantom Emergence",
+        "description": "Apparent emergence arising from incomplete invariant specification of sub-structures. The invariant appears emergent because sub-structure invariant sets were not fully declared — not because the invariant is genuinely novel.",
+        "nos_status": "Not genuine emergence. Phantom emergence is a modeling error. NoS-Κ (CausationAudit) is responsible for detecting phantom emergence by auditing sub-structure invariant completeness.",
+        "detection": "If adding a sub-structure invariant that was previously undeclared dissolves the apparent emergent property, it was phantom emergence. If the property persists even with complete sub-structure invariant declarations, it is genuine (weak or strong) emergence."
+      }
+    ]
+  },
+
+  "abstraction_consistency_mechanics": {
+    "title": "INV-NOS-004 Mechanics — Abstract to Instance",
+    "invariant": "INV-NOS-004",
+    "formal": "instance(S_instance, S_abstract) ⟹ invariant_set(S_abstract) ⊆ invariant_set(S_instance)",
+    "evaluation_procedure": [
+      "Step 1: Declare S_abstract with its complete invariant_set(S_abstract)",
+      "Step 2: Declare S_instance as a claimed instance of S_abstract",
+      "Step 3: Enumerate invariant_set(S_instance) using NoS-Κ",
+      "Step 4: Check: invariant_set(S_abstract) ⊆ invariant_set(S_instance)",
+      "Step 5: If ⊆ holds AND invariant_set(S_instance) = invariant_set(S_abstract): valid instance, no novelty",
+      "Step 6: If ⊆ holds AND invariant_set(S_instance) ⊃ invariant_set(S_abstract): valid instance with genuine novelty — flag for S_abstract upward revision",
+      "Step 7: If ⊆ fails: S_instance is not a valid instance — classify as modeling error or distinct structure"
+    ],
+    "outcome_types": [
+      {
+        "id": "AC-OUT-001",
+        "label": "Consistent Instance",
+        "condition": "invariant_set(S_abstract) ⊆ invariant_set(S_instance)",
+        "description": "S_instance is a valid instantiation. All abstract invariants hold in the instance. If S_instance has additional invariants, they are genuine novelty and should be examined for upward propagation.",
+        "action": "Accept instance. If novel invariants present, initiate NoS-Σ upward revision protocol."
+      },
+      {
+        "id": "AC-OUT-002",
+        "label": "Modeling Error",
+        "condition": "∃inv ∈ invariant_set(S_abstract): inv ∉ invariant_set(S_instance) AND S_instance was intended to instantiate S_abstract",
+        "description": "The claimed instance violates at least one abstract invariant. This is a modeling error: either S_abstract was misapplied or S_instance was incorrectly formulated.",
+        "action": "Do not accept instance. Return to SARG (Book 7) for argument reconstruction or to TEL (Book 5) for re-encoding. Identify the violated invariant and trace the modeling error."
+      },
+      {
+        "id": "AC-OUT-003",
+        "label": "Genuine Novelty",
+        "condition": "invariant_set(S_abstract) ⊂ invariant_set(S_instance) (strict superset)",
+        "description": "S_instance carries invariants absent from S_abstract. This is not a violation — it is the discovery of structural properties not anticipated by the abstract form. Upward revision of S_abstract is warranted.",
+        "action": "Accept instance. Flag novel invariants. Initiate upward revision: propose addition of novel invariants to S_abstract, subject to coherence checking against all other declared instances of S_abstract."
+      }
+    ],
+
+    "upward_revision_protocol": {
+      "title": "Upward Revision under Genuine Novelty",
+      "description": "When an instance S_instance exhibits genuine novelty (AC-OUT-003), the novel invariants must be evaluated for inclusion in S_abstract. This is not automatic — novel invariants must be coherent with all existing instances.",
+      "steps": [
+        "Step 1: Identify the set of novel invariants: novel_invs = invariant_set(S_instance) \\ invariant_set(S_abstract)",
+        "Step 2: Retrieve all declared instances of S_abstract: {S_i : instance(S_i, S_abstract)}",
+        "Step 3: For each inv ∈ novel_invs: check that ∀S_i: inv ∈ invariant_set(S_i). If any S_i fails: the novel invariant is instance-specific, not abstract-level.",
+        "Step 4: For each universally satisfied novel_inv: propose addition to invariant_set(S_abstract)",
+        "Step 5: Apply INV-NOS-003 check: does adding novel_inv to S_abstract change the identity of S_abstract? If invariant_set changes but no prior instance is invalidated: abstract identity is preserved (the abstract structure gained a property, not lost one).",
+        "Step 6: Record revision in the session catalogue with provenance: which instance triggered the revision."
+      ],
+      "constraint": "Upward revision is blocked if any existing declared instance would fail the proposed novel invariant. The novel invariant would then be a distinguishing feature of S_instance relative to S_abstract, not a universal abstract property."
+    }
+  },
+
+  "nos_self_application": {
+    "title": "INV-NOS-004 Applied to the AI Edition Itself",
+    "description": "The AI Edition is an abstract structure. Each book is a declared instance. INV-NOS-004 demands that every book satisfy the invariants declared at the series level (AI_Edition_module.json). Book 8 applies this self-referentially: it uses NoS-Κ to audit the series for abstraction consistency.",
+    "series_abstract": {
+      "id": "ai_edition_series",
+      "declared_series_invariants": [
+        "Every book must have a unique book_id with no path dashes",
+        "Every book must declare session_context = rtt=1 | coherence=declared | drift=bounded | paradox=structural",
+        "Every book must have qmroot_binding at 0D",
+        "Dependency graph must be acyclic",
+        "Folder naming must use underscores, not dashes",
+        "Repo owner is umaywant2 — no other owner identifiers in canonical paths"
+      ]
+    },
+    "self_application_note": "Any file in the AI Edition that violates a series-level invariant is, under INV-NOS-004, either a modeling error (must be corrected) or a genuine novelty (the series abstract must be revised). Drift — detected throughout the session history — is the manifestation of AC-OUT-002 (Modeling Error) at the series level. Book 8's role as capstone is to name this formally: drift is not aesthetic; it is an abstraction consistency violation."
+  }
+}

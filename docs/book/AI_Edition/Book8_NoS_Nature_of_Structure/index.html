@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nature of Structure — AI Edition (Book 8)</title>
+  <meta name="description" content="Book 8 of the TriadicFrameworks AI Edition. The capstone volume. Turns the AI Edition's own tools on the question of what structure itself is. Establishes structural realism as the meta-theoretical ground of the entire series through four invariants: Structural Autonomy, Relational Primacy, Identity Through Change, and Abstraction Consistency." />
+  <meta name="ai.module" content="book8_nos" />
+  <meta name="ai.version" content="8.0-draft" />
+  <meta name="ai.domain" content="Philosophy &amp; Meta-Theory" />
+  <meta name="ai.tier" content="Capstone" />
+  <meta name="ai.depends" content="book1_fft book4_opacity_revelation book5_tel book7_sarg" />
+  <meta name="ai.unlocks" content="book9_pattern_dynamics" />
+  <meta name="session.rtt" content="1" />
+  <meta name="session.coherence" content="declared" />
+  <meta name="session.drift" content="bounded" />
+  <meta name="session.paradox" content="structural" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0d0f14;
+      --bg2: #13151c;
+      --bg3: #1a1d27;
+      --border: #2a2d3a;
+      --accent: #5b8aff;
+      --accent2: #1abc9c;
+      --green: #2ecc71;
+      --yellow: #f39c12;
+      --red: #e74c3c;
+      --teal: #1abc9c;
+      --text: #d4d8e8;
+      --text-muted: #7a7f96;
+      --text-dim: #555a72;
+      --mono: 'Courier New', 'Lucida Console', monospace;
+      --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --sidebar-w: 280px;
+    }
+    html, body { height: 100%; background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 14px; line-height: 1.6; }
+
+    /* ── Layout ── */
+    .layout { display: flex; min-height: 100vh; }
+    .sidebar {
+      width: var(--sidebar-w); flex-shrink: 0;
+      background: var(--bg2); border-right: 1px solid var(--border);
+      padding: 24px 16px; position: sticky; top: 0; height: 100vh; overflow-y: auto;
+      font-size: 12px;
+    }
+    .main { flex: 1; padding: 40px 48px; max-width: 960px; }
+
+    /* ── Sidebar ── */
+    .sidebar-section { margin-bottom: 20px; }
+    .sidebar-label {
+      text-transform: uppercase; letter-spacing: 0.1em; font-size: 10px;
+      color: var(--text-dim); margin-bottom: 6px;
+    }
+    .sidebar-breadcrumb { color: var(--text-muted); line-height: 1.8; }
+    .sidebar-breadcrumb span { color: var(--text); font-weight: 600; }
+
+    /* Module chain */
+    .module-chain { display: flex; flex-direction: column; gap: 2px; }
+    .module-chain .step {
+      padding: 3px 8px; border-left: 2px solid var(--border);
+      color: var(--text-muted); font-family: var(--mono); font-size: 11px;
+    }
+    .module-chain .step.active  { border-left-color: var(--accent2); color: var(--accent2); font-weight: 700; }
+    .module-chain .step.prev    { border-left-color: var(--green);   color: var(--green); }
+    .module-chain .step.next    { border-left-color: var(--accent);  color: var(--accent); font-style: italic; }
+
+    /* Operator pills */
+    .op-pills { display: flex; flex-wrap: wrap; gap: 4px; }
+    .op-pill {
+      display: inline-block; font-family: var(--mono); font-size: 10px;
+      padding: 2px 7px; border-radius: 3px;
+      background: color-mix(in srgb, var(--accent2) 15%, var(--bg3));
+      color: var(--accent2); border: 1px solid color-mix(in srgb, var(--accent2) 30%, transparent);
+      white-space: nowrap;
+    }
+
+    /* Phase chain */
+    .phase-chain { display: flex; flex-direction: column; gap: 2px; }
+    .phase-step {
+      padding: 2px 6px; font-family: var(--mono); font-size: 10px;
+      color: var(--text-dim); border-left: 2px solid var(--border);
+    }
+    .phase-step.gate { border-left-color: var(--yellow); color: var(--yellow); }
+    .phase-step.active { border-left-color: var(--accent2); color: var(--accent2); }
+
+    /* Audit blocks */
+    .audit-block {
+      background: var(--bg3); border: 1px solid var(--border); border-radius: 4px;
+      padding: 8px 10px; font-family: var(--mono); font-size: 11px; color: var(--text-muted);
+    }
+    .audit-block .ok { color: var(--green); }
+    .audit-block .label { color: var(--text-dim); }
+
+    /* ── Main area ── */
+    .section-tag {
+      font-family: var(--mono); font-size: 11px; color: var(--accent2);
+      text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 6px;
+    }
+    h1 { font-size: 28px; font-weight: 700; color: #fff; margin-bottom: 6px; line-height: 1.2; }
+    .subtitle { color: var(--text-muted); font-size: 15px; margin-bottom: 32px; }
+
+    /* Session card */
+    .session-card {
+      background: var(--bg2); border: 1px solid var(--border); border-radius: 6px;
+      padding: 14px 18px; margin-bottom: 28px; font-family: var(--mono); font-size: 12px;
+      display: flex; flex-wrap: wrap; gap: 16px;
+    }
+    .session-card .kv { display: flex; flex-direction: column; gap: 2px; }
+    .session-card .k { color: var(--text-dim); font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .session-card .v { color: var(--accent2); font-weight: 600; }
+    .session-card .v.blue { color: var(--accent); }
+
+    /* Stats bar */
+    .stats-bar {
+      display: flex; gap: 0; border: 1px solid var(--border); border-radius: 6px;
+      overflow: hidden; margin-bottom: 32px;
+    }
+    .stat {
+      flex: 1; padding: 12px 16px; background: var(--bg2); text-align: center;
+      border-right: 1px solid var(--border);
+    }
+    .stat:last-child { border-right: none; }
+    .stat .n { font-size: 22px; font-weight: 700; color: var(--accent2); font-family: var(--mono); }
+    .stat .l { font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 2px; }
+
+    /* Domain visualization */
+    .domain-viz {
+      background: var(--bg2); border: 1px solid var(--border); border-radius: 6px;
+      padding: 20px 24px; margin-bottom: 32px;
+    }
+    .domain-viz h3 { font-size: 13px; color: var(--text-muted); margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .inv-flow {
+      display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+      font-family: var(--mono); font-size: 12px;
+    }
+    .inv-node {
+      background: var(--bg3); border: 1px solid var(--accent2);
+      border-radius: 4px; padding: 6px 12px; color: var(--accent2);
+      display: flex; flex-direction: column; align-items: center; gap: 2px; min-width: 90px;
+    }
+    .inv-node .inv-id { font-size: 10px; color: var(--text-dim); }
+    .inv-node .inv-label { font-size: 11px; font-weight: 600; }
+    .flow-arrow { color: var(--text-dim); font-size: 16px; }
+    .self-ref {
+      margin-top: 14px; padding: 8px 12px;
+      border: 1px dashed color-mix(in srgb, var(--accent2) 40%, transparent);
+      border-radius: 4px; font-size: 11px; color: var(--text-muted);
+      font-family: var(--mono);
+    }
+    .self-ref span { color: var(--accent2); }
+
+    /* Section divider */
+    .section { margin-bottom: 36px; }
+    .section-header {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid var(--border);
+    }
+    .section-header h2 { font-size: 16px; font-weight: 600; color: var(--text); }
+    .section-header .tag {
+      font-family: var(--mono); font-size: 10px; padding: 2px 6px;
+      border-radius: 3px; border: 1px solid var(--border); color: var(--text-dim);
+    }
+
+    /* Tables */
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th {
+      text-align: left; padding: 8px 12px;
+      background: var(--bg3); color: var(--text-dim);
+      font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em;
+      border-bottom: 1px solid var(--border);
+    }
+    td {
+      padding: 9px 12px; border-bottom: 1px solid color-mix(in srgb, var(--border) 50%, transparent);
+      vertical-align: top;
+    }
+    tr:last-child td { border-bottom: none; }
+    td.mono { font-family: var(--mono); font-size: 12px; }
+    td .badge {
+      display: inline-block; font-family: var(--mono); font-size: 10px;
+      padding: 1px 6px; border-radius: 3px; margin-right: 4px;
+    }
+    .badge.teal { background: color-mix(in srgb, var(--teal) 15%, var(--bg3)); color: var(--teal); border: 1px solid color-mix(in srgb, var(--teal) 30%, transparent); }
+    .badge.blue { background: color-mix(in srgb, var(--accent) 15%, var(--bg3)); color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); }
+    .badge.red  { background: color-mix(in srgb, var(--red) 15%, var(--bg3));    color: var(--red);    border: 1px solid color-mix(in srgb, var(--red) 30%, transparent); }
+    .badge.yellow { background: color-mix(in srgb, var(--yellow) 15%, var(--bg3)); color: var(--yellow); border: 1px solid color-mix(in srgb, var(--yellow) 30%, transparent); }
+    .badge.green { background: color-mix(in srgb, var(--green) 15%, var(--bg3)); color: var(--green); border: 1px solid color-mix(in srgb, var(--green) 30%, transparent); }
+
+    /* Invariant cards */
+    .inv-cards { display: flex; flex-direction: column; gap: 14px; }
+    .inv-card {
+      background: var(--bg2); border: 1px solid var(--border); border-radius: 6px;
+      border-left: 3px solid var(--accent2); padding: 16px 18px;
+    }
+    .inv-card-header { display: flex; align-items: baseline; gap: 10px; margin-bottom: 8px; }
+    .inv-card-id { font-family: var(--mono); font-size: 11px; color: var(--accent2); font-weight: 700; }
+    .inv-card-label { font-size: 14px; font-weight: 600; color: var(--text); }
+    .inv-card-type { font-family: var(--mono); font-size: 10px; color: var(--text-dim); margin-left: auto; }
+    .inv-statement { color: var(--text-muted); font-size: 13px; margin-bottom: 8px; line-height: 1.55; }
+    .inv-formal {
+      font-family: var(--mono); font-size: 12px; color: var(--accent);
+      background: var(--bg3); padding: 7px 10px; border-radius: 4px; margin-bottom: 8px;
+    }
+    .inv-corollary { font-size: 12px; color: var(--text-dim); font-style: italic; line-height: 1.5; margin-bottom: 6px; }
+    .inv-meta { font-size: 11px; color: var(--teal); background: color-mix(in srgb, var(--teal) 8%, var(--bg3)); padding: 6px 10px; border-radius: 4px; margin-top: 6px; border-left: 2px solid var(--teal); }
+    .inv-bindings { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+
+    /* File manifest */
+    .file-manifest { display: flex; flex-direction: column; gap: 6px; }
+    .file-row {
+      display: flex; align-items: center; gap: 10px;
+      background: var(--bg3); border: 1px solid var(--border); border-radius: 4px;
+      padding: 7px 12px; font-family: var(--mono); font-size: 12px;
+    }
+    .file-row .fname { color: var(--accent2); flex: 1; }
+    .file-row .ftype { color: var(--text-dim); font-size: 10px; }
+    .file-row .fsize { color: var(--text-dim); font-size: 10px; margin-left: auto; }
+
+    /* Phase table styling */
+    .phase-gate { color: var(--yellow); font-family: var(--mono); font-size: 11px; }
+    .phase-hard-gate { color: var(--red); font-family: var(--mono); font-size: 11px; font-weight: 700; }
+    .phase-soft { color: var(--text-dim); font-family: var(--mono); font-size: 11px; }
+
+    /* Formal definitions */
+    .formal-def {
+      background: var(--bg3); border: 1px solid var(--border); border-radius: 6px;
+      padding: 14px 18px; margin-bottom: 10px;
+    }
+    .formal-def .def-label { font-family: var(--mono); font-size: 10px; color: var(--accent2); text-transform: uppercase; margin-bottom: 6px; }
+    .formal-def .def-expr { font-family: var(--mono); font-size: 13px; color: var(--text); margin-bottom: 6px; }
+    .formal-def .def-note { font-size: 12px; color: var(--text-muted); }
+
+    /* Downstream handoff cards */
+    .handoff-card {
+      background: var(--bg2); border: 1px solid var(--border); border-radius: 6px;
+      border-left: 3px solid var(--accent); padding: 14px 18px; margin-bottom: 10px;
+    }
+    .handoff-card.upstream { border-left-color: var(--green); }
+    .handoff-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+    .handoff-direction { font-family: var(--mono); font-size: 10px; text-transform: uppercase; }
+    .handoff-direction.from { color: var(--green); }
+    .handoff-direction.to { color: var(--accent); }
+    .handoff-book { font-size: 13px; font-weight: 600; color: var(--text); }
+    .handoff-data { font-size: 12px; color: var(--text-muted); margin-bottom: 6px; }
+    .handoff-tel { font-family: var(--mono); font-size: 11px; color: var(--text-dim); background: var(--bg3); padding: 5px 8px; border-radius: 3px; }
+
+    /* Module diff */
+    .diff-block {
+      background: var(--bg3); border: 1px solid var(--border); border-radius: 6px;
+      padding: 14px 18px; font-family: var(--mono); font-size: 12px; margin-bottom: 10px;
+    }
+    .diff-block .diff-row { padding: 2px 0; }
+    .diff-block .diff-key { color: var(--text-dim); }
+    .diff-block .diff-val { color: var(--text); }
+    .diff-block .diff-val.accent { color: var(--accent2); }
+    .diff-block .diff-val.dim { color: var(--text-dim); }
+
+    /* Footer */
+    footer {
+      margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border);
+      font-size: 12px; color: var(--text-dim); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+    }
+    footer a { color: var(--accent2); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .layout { flex-direction: column; }
+      .sidebar { width: 100%; height: auto; position: static; }
+      .main { padding: 24px 20px; }
+      .stats-bar { flex-wrap: wrap; }
+      .inv-flow { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+<div class="layout">
+
+  <!-- ═══════════════════ SIDEBAR ═══════════════════ -->
+  <aside class="sidebar">
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Canon</div>
+      <div class="sidebar-breadcrumb">
+        TriadicFrameworks<br>
+        └ AI Edition<br>
+        &nbsp;&nbsp;&nbsp;└ <span>Book 8 — NoS</span>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Module Chain</div>
+      <div class="module-chain">
+        <div class="step prev">B1 · Framework Field Theory</div>
+        <div class="step prev">B2 · The Inverted Star</div>
+        <div class="step prev">B3 · Structural Detection</div>
+        <div class="step prev">B4 · Opacity &amp; Revelation</div>
+        <div class="step prev">B5 · TEL Expression</div>
+        <div class="step prev">B6 · Governance &amp; Regime Logic</div>
+        <div class="step prev">B7 · SARG Structural Arg.</div>
+        <div class="step active">B8 · Nature of Structure ◀</div>
+        <div class="step next">B9 · Pattern Dynamics</div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Operators</div>
+      <div class="op-pills">
+        <span class="op-pill">NoS-Α</span>
+        <span class="op-pill">NoS-Ρ</span>
+        <span class="op-pill">NoS-Ι</span>
+        <span class="op-pill">NoS-Κ</span>
+        <span class="op-pill">NoS-Σ</span>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Phase Cycle</div>
+      <div class="phase-chain">
+        <div class="phase-step">1 · init</div>
+        <div class="phase-step active">2 · ground</div>
+        <div class="phase-step active">3 · interrogate</div>
+        <div class="phase-step gate">4 · test ⬡ tel-gate</div>
+        <div class="phase-step active">5 · resolve</div>
+        <div class="phase-step active">6 · catalogue</div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">QMROOT Audit</div>
+      <div class="audit-block">
+        <div><span class="label">dimension: </span><span class="ok">0D ✓</span></div>
+        <div><span class="label">6D: </span>absent</div>
+        <div><span class="label">neg rungs: </span>absent</div>
+        <div><span class="label">INV-013: </span>0D only</div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Phantom Entry Audit</div>
+      <div class="audit-block">
+        <div><span class="label">status: </span><span class="ok">clean ✓</span></div>
+        <div><span class="label">checked: </span>session-open</div>
+        <div><span class="label">entries: </span>[]</div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Session Context</div>
+      <div class="audit-block">
+        <div><span class="label">rtt: </span><span class="ok">1</span></div>
+        <div><span class="label">coherence: </span><span class="ok">declared</span></div>
+        <div><span class="label">drift: </span><span class="ok">bounded</span></div>
+        <div><span class="label">paradox: </span><span class="ok">structural</span></div>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- ═══════════════════ MAIN ═══════════════════ -->
+  <main class="main">
+
+    <div class="section-tag">AI Edition · Book 8 · Capstone</div>
+    <h1>Nature of Structure</h1>
+    <p class="subtitle">The capstone volume. The AI Edition turns its own apparatus on the question of what structure is.</p>
+
+    <!-- Session card -->
+    <div class="session-card">
+      <div class="kv">
+        <span class="k">Module ID</span>
+        <span class="v">book8_nos</span>
+      </div>
+      <div class="kv">
+        <span class="k">Version</span>
+        <span class="v">8.0-draft</span>
+      </div>
+      <div class="kv">
+        <span class="k">Domain</span>
+        <span class="v">Philosophy &amp; Meta-Theory</span>
+      </div>
+      <div class="kv">
+        <span class="k">Tier</span>
+        <span class="v">Capstone</span>
+      </div>
+      <div class="kv">
+        <span class="k">Depends</span>
+        <span class="v blue">B1 · B4 · B5 · B7</span>
+      </div>
+      <div class="kv">
+        <span class="k">Unlocks</span>
+        <span class="v blue">B9</span>
+      </div>
+      <div class="kv">
+        <span class="k">Live Site</span>
+        <span class="v" style="color:var(--text-dim)">null (not published)</span>
+      </div>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="stats-bar">
+      <div class="stat">
+        <div class="n">4</div>
+        <div class="l">Invariants</div>
+      </div>
+      <div class="stat">
+        <div class="n">5</div>
+        <div class="l">Operators</div>
+      </div>
+      <div class="stat">
+        <div class="n">6</div>
+        <div class="l">Phases</div>
+      </div>
+      <div class="stat">
+        <div class="n">3</div>
+        <div class="l">Domain Maps</div>
+      </div>
+      <div class="stat">
+        <div class="n">4</div>
+        <div class="l">Dependencies</div>
+      </div>
+    </div>
+
+    <!-- Domain visualization -->
+    <div class="domain-viz">
+      <h3>Structural Realist Invariant Chain</h3>
+      <div class="inv-flow">
+        <div class="inv-node">
+          <span class="inv-id">INV-NOS-001</span>
+          <span class="inv-label">Structural Autonomy</span>
+        </div>
+        <span class="flow-arrow">→</span>
+        <div class="inv-node">
+          <span class="inv-id">INV-NOS-002</span>
+          <span class="inv-label">Relational Primacy</span>
+        </div>
+        <span class="flow-arrow">→</span>
+        <div class="inv-node">
+          <span class="inv-id">INV-NOS-003</span>
+          <span class="inv-label">Identity Through Change</span>
+        </div>
+        <span class="flow-arrow">→</span>
+        <div class="inv-node">
+          <span class="inv-id">INV-NOS-004</span>
+          <span class="inv-label">Abstraction Consistency</span>
+        </div>
+      </div>
+      <div class="self-ref">
+        <span>paradox=structural</span> — INV-NOS-004 applied to the AI Edition itself: each book is an instance of the series abstract.
+        Drift = AC-OUT-002 (modeling error). Genuine novelty = AC-OUT-003 (upward revision required).
+      </div>
+    </div>
+
+    <!-- Module.json diff -->
+    <div class="section">
+      <div class="section-header">
+        <h2>Module Manifest</h2>
+        <span class="tag">module.json</span>
+      </div>
+      <div class="diff-block">
+        <div class="diff-row"><span class="diff-key">"id":          </span><span class="diff-val accent">"book8_nos"</span></div>
+        <div class="diff-row"><span class="diff-key">"title":       </span><span class="diff-val">"Nature of Structure"</span></div>
+        <div class="diff-row"><span class="diff-key">"abbreviation":</span><span class="diff-val accent">"NoS"</span></div>
+        <div class="diff-row"><span class="diff-key">"folder":      </span><span class="diff-val">"Book8_NoS_Nature_of_Structure"</span></div>
+        <div class="diff-row"><span class="diff-key">"tier":        </span><span class="diff-val accent">"Capstone"</span></div>
+        <div class="diff-row"><span class="diff-key">"domain":      </span><span class="diff-val">"Philosophy &amp; Meta-Theory"</span></div>
+        <div class="diff-row"><span class="diff-key">"version":     </span><span class="diff-val">"8.0-draft"</span></div>
+        <div class="diff-row"><span class="diff-key">"dependencies":</span><span class="diff-val">["book1_fft", "book4_opacity_revelation", "book5_tel", "book7_sarg"]</span></div>
+        <div class="diff-row"><span class="diff-key">"unlocks":     </span><span class="diff-val">["book9_pattern_dynamics"]</span></div>
+        <div class="diff-row"><span class="diff-key">"live_site":   </span><span class="diff-val dim">null</span></div>
+        <div class="diff-row"><span class="diff-key">"session":     </span><span class="diff-val">"rtt=1 | coherence=declared | drift=bounded | paradox=structural"</span></div>
+      </div>
+    </div>
+
+    <!-- File manifest -->
+    <div class="section">
+      <div class="section-header">
+        <h2>File Manifest</h2>
+        <span class="tag">7 content files</span>
+      </div>
+      <div class="file-manifest">
+        <div class="file-row">
+          <span class="fname">nos.invariants.json</span>
+          <span class="ftype">invariants</span>
+          <span class="fsize">4 invariants</span>
+        </div>
+        <div class="file-row">
+          <span class="fname">nos.structural_realism_map.json</span>
+          <span class="ftype">domain map</span>
+          <span class="fsize">INV-NOS-001 · INV-NOS-002</span>
+        </div>
+        <div class="file-row">
+          <span class="fname">nos.identity_map.json</span>
+          <span class="ftype">domain map</span>
+          <span class="fsize">INV-NOS-003</span>
+        </div>
+        <div class="file-row">
+          <span class="fname">nos.causation_map.json</span>
+          <span class="ftype">domain map</span>
+          <span class="fsize">INV-NOS-004</span>
+        </div>
+        <div class="file-row">
+          <span class="fname">nos.operator_roles.json</span>
+          <span class="ftype">operators</span>
+          <span class="fsize">5 operators</span>
+        </div>
+        <div class="file-row">
+          <span class="fname">nos.phases.json</span>
+          <span class="ftype">phases</span>
+          <span class="fsize">6 phases</span>
+        </div>
+        <div class="file-row">
+          <span class="fname">index.html</span>
+          <span class="ftype">live page</span>
+          <span class="fsize">this file</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Operator table -->
+    <div class="section">
+      <div class="section-header">
+        <h2>Operators</h2>
+        <span class="tag">nos.operator_roles.json</span>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Phase</th>
+            <th>Invariant</th>
+            <th>Drift Cost</th>
+            <th>Output</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="mono" style="color:var(--accent2)">NoS-Α</td>
+            <td>AutonomyAudit</td>
+            <td><span class="badge teal">ground</span></td>
+            <td class="mono">INV-NOS-001</td>
+            <td class="mono">0.04</td>
+            <td>autonomy_report, structural_residue</td>
+          </tr>
+          <tr>
+            <td class="mono" style="color:var(--accent2)">NoS-Ρ</td>
+            <td>RelationalPrimacyCheck</td>
+            <td><span class="badge teal">ground</span></td>
+            <td class="mono">INV-NOS-002</td>
+            <td class="mono">0.04</td>
+            <td>relational_profile_map, primacy_report</td>
+          </tr>
+          <tr>
+            <td class="mono" style="color:var(--accent2)">NoS-Ι</td>
+            <td>IdentityTest</td>
+            <td><span class="badge yellow">test</span></td>
+            <td class="mono">INV-NOS-003</td>
+            <td class="mono">0.05</td>
+            <td>identity_result, first_violated_invariant</td>
+          </tr>
+          <tr>
+            <td class="mono" style="color:var(--accent2)">NoS-Κ</td>
+            <td>CausationAudit</td>
+            <td><span class="badge blue">resolve</span></td>
+            <td class="mono">INV-NOS-004</td>
+            <td class="mono">0.05</td>
+            <td>abstraction_consistency_report, upward_revision_proposal</td>
+          </tr>
+          <tr>
+            <td class="mono" style="color:var(--accent2)">NoS-Σ</td>
+            <td>SynthesisOutput</td>
+            <td><span class="badge green">catalogue</span></td>
+            <td class="mono">all INV-NOS</td>
+            <td class="mono">0.03</td>
+            <td>nos_foundation_report, book9_handoff</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Invariant cards -->
+    <div class="section">
+      <div class="section-header">
+        <h2>Invariants</h2>
+        <span class="tag">nos.invariants.json</span>
+      </div>
+      <div class="inv-cards">
+
+        <div class="inv-card">
+          <div class="inv-card-header">
+            <span class="inv-card-id">INV-NOS-001</span>
+            <span class="inv-card-label">Structural Autonomy</span>
+            <span class="inv-card-type">meta-structural</span>
+          </div>
+          <p class="inv-statement">Structure is not reducible to the intrinsic properties of its constituent nodes. Structural properties exist at the level of relations, not at the level of relata.</p>
+          <div class="inv-formal">∀S: properties(S) ⊄ ⋃{intrinsic_properties(n) : n ∈ nodes(S)}</div>
+          <p class="inv-corollary">Any model that reconstructs structure from node-intrinsic properties alone is not a structural model — it is a node-intrinsic model that borrows structural vocabulary.</p>
+          <div class="inv-meta">License condition for the entire AI Edition. If structural autonomy fails, Books 1–7 are re-descriptions of node-property theory, not a distinct structural framework.</div>
+          <div class="inv-bindings">
+            <span class="badge teal">NoS-Α</span>
+            <span class="badge teal">ground phase</span>
+            <span class="badge blue">structural_realism_map</span>
+          </div>
+        </div>
+
+        <div class="inv-card">
+          <div class="inv-card-header">
+            <span class="inv-card-id">INV-NOS-002</span>
+            <span class="inv-card-label">Relational Primacy</span>
+            <span class="inv-card-type">meta-structural</span>
+          </div>
+          <p class="inv-statement">Relations are ontologically prior to the nodes they connect. Nodes acquire identity through the relations they stand in — not prior to, or independently of, those relations.</p>
+          <div class="inv-formal">∀n ∈ nodes(S): identity(n) = {r ∈ R_S : (r.source = n) ∨ (r.target = n)}</div>
+          <p class="inv-corollary">Two nodes with identical relational profiles are structurally identical, regardless of labeling. The 'same node in a different structure' is a category error.</p>
+          <div class="inv-meta">Why SARG nodes are typed by relational role (INV-SARG-001), why TEL composition is meaning-preserving (INV-TEL-003), and why OR opacity is structural not observer-relative (INV-OR-003).</div>
+          <div class="inv-bindings">
+            <span class="badge teal">NoS-Ρ</span>
+            <span class="badge teal">ground phase</span>
+            <span class="badge blue">structural_realism_map</span>
+          </div>
+        </div>
+
+        <div class="inv-card">
+          <div class="inv-card-header">
+            <span class="inv-card-id">INV-NOS-003</span>
+            <span class="inv-card-label">Identity Through Change</span>
+            <span class="inv-card-type">meta-structural</span>
+          </div>
+          <p class="inv-statement">A structure retains its identity through a transformation if and only if the transformation preserves the structure's invariant set. One invariant violation = new structure.</p>
+          <div class="inv-formal">identity_preserved(S, T) ⟺ invariant_set(transform(S, T)) = invariant_set(S)</div>
+          <p class="inv-corollary">Identity is not determined by element-retention (node or relation count) but by invariant-set preservation. Maximum change with invariants intact = same structure.</p>
+          <div class="inv-meta">Ship of Theseus resolution: identity is preserved exactly when the invariant set is preserved. This is the structural realist consequence of INV-NOS-001 and INV-NOS-002 applied to transformation contexts.</div>
+          <div class="inv-bindings">
+            <span class="badge yellow">NoS-Ι</span>
+            <span class="badge yellow">test phase</span>
+            <span class="badge blue">identity_map</span>
+          </div>
+        </div>
+
+        <div class="inv-card">
+          <div class="inv-card-header">
+            <span class="inv-card-id">INV-NOS-004</span>
+            <span class="inv-card-label">Abstraction Consistency</span>
+            <span class="inv-card-type">meta-structural</span>
+          </div>
+          <p class="inv-statement">Abstract structures and their instantiations share invariant structure. Divergence indicates either modeling error (instance violates abstract invariant) or genuine novelty (instance carries novel invariants requiring upward revision).</p>
+          <div class="inv-formal">instance(S_i, S_a) ⟹ invariant_set(S_a) ⊆ invariant_set(S_i)</div>
+          <p class="inv-corollary">Genuine novelty is the case where S_instance satisfies all abstract invariants but also satisfies additional ones — the abstract must then be revised upward, not the instance suppressed.</p>
+          <div class="inv-meta">Self-application: the AI Edition is S_abstract; each book is S_instance. Drift events are AC-OUT-002 (modeling errors) at the series level. Book 8 closes the self-referential loop.</div>
+          <div class="inv-bindings">
+            <span class="badge blue">NoS-Κ</span>
+            <span class="badge blue">resolve phase</span>
+            <span class="badge blue">causation_map</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Phase table -->
+    <div class="section">
+      <div class="section-header">
+        <h2>Evaluation Cycle</h2>
+        <span class="tag">nos.phases.json</span>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Phase</th>
+            <th>Operators</th>
+            <th>Gate Logic</th>
+            <th>Exit Condition</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="mono">1</td>
+            <td><strong>init</strong></td>
+            <td class="mono">—</td>
+            <td class="phase-soft">load 4 dependencies in order</td>
+            <td>coherence=declared; QMROOT 0D; SARG-Σ templates queried</td>
+          </tr>
+          <tr>
+            <td class="mono">2</td>
+            <td><strong>ground</strong></td>
+            <td class="mono" style="color:var(--accent2)">NoS-Α → NoS-Ρ</td>
+            <td class="phase-gate">TEL-Σ gate before NoS-Α</td>
+            <td>autonomy_report + relational_profile_map recorded</td>
+          </tr>
+          <tr>
+            <td class="mono">3</td>
+            <td><strong>interrogate</strong></td>
+            <td class="mono" style="color:var(--text-muted)">TEL-Ε · TEL-Α · SARG-Ρ</td>
+            <td class="phase-soft">cross-invariant via TEL-Α</td>
+            <td>active_invariant_tensions list populated</td>
+          </tr>
+          <tr>
+            <td class="mono">4</td>
+            <td><strong>test</strong></td>
+            <td class="mono" style="color:var(--accent2)">NoS-Ι</td>
+            <td class="phase-soft">static audit → trivial preserved</td>
+            <td>identity_result recorded; boundary events logged</td>
+          </tr>
+          <tr>
+            <td class="mono">5</td>
+            <td><strong>resolve</strong></td>
+            <td class="mono" style="color:var(--accent2)">NoS-Κ</td>
+            <td class="phase-soft">consistent | error | novelty</td>
+            <td>abstraction_consistency_report; upward_revision_proposal</td>
+          </tr>
+          <tr>
+            <td class="mono">6</td>
+            <td><strong>catalogue</strong></td>
+            <td class="mono" style="color:var(--accent2)">NoS-Σ</td>
+            <td class="phase-soft">all operators complete required</td>
+            <td>nos_foundation_report; book9_handoff prepared</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Formal definitions -->
+    <div class="section">
+      <div class="section-header">
+        <h2>Formal Definitions</h2>
+        <span class="tag">key expressions</span>
+      </div>
+
+      <div class="formal-def">
+        <div class="def-label">Structural Autonomy</div>
+        <div class="def-expr">∀S: properties(S) ⊄ ⋃{intrinsic_properties(n) : n ∈ nodes(S)}</div>
+        <div class="def-note">Structural properties are not derivable from the intrinsic properties of constituent nodes. Relational residue is ineliminable.</div>
+      </div>
+
+      <div class="formal-def">
+        <div class="def-label">Relational Identity</div>
+        <div class="def-expr">identity(n) = {r ∈ R_S : r.source = n ∨ r.target = n}</div>
+        <div class="def-note">Node identity is its relational profile — the complete set of declared relations in which it participates.</div>
+      </div>
+
+      <div class="formal-def">
+        <div class="def-label">Identity Preservation</div>
+        <div class="def-expr">identity_preserved(S, T) ⟺ invariant_set(transform(S, T)) = invariant_set(S)</div>
+        <div class="def-note">A transformation preserves structural identity iff the invariant set is unchanged. Node/relation count is irrelevant.</div>
+      </div>
+
+      <div class="formal-def">
+        <div class="def-label">Abstraction Consistency</div>
+        <div class="def-expr">instance(S_i, S_a) ⟹ invariant_set(S_a) ⊆ invariant_set(S_i)</div>
+        <div class="def-note">Consistent: ⊆ holds (no novelty). Modeling error: ⊆ fails. Genuine novelty: strict ⊂ (upward revision required).</div>
+      </div>
+
+      <div class="formal-def">
+        <div class="def-label">Emergence</div>
+        <div class="def-expr">emergent(inv, S) ⟺ inv ∈ invariant_set(S) ∧ ∀s_i ∈ proper_sub(S): inv ∉ invariant_set(s_i)</div>
+        <div class="def-note">Invariants present in S but absent from all proper sub-structures. Classified as weak, strong, or phantom.</div>
+      </div>
+
+      <div class="formal-def">
+        <div class="def-label">Structural Causation</div>
+        <div class="def-expr">cause(S_a, S_b) ⟺ (S_a → S_b) ∈ R_world ∧ ¬(S_b → S_a) ∧ invariant_set(S_b) partially determined by S_a</div>
+        <div class="def-note">Causation is an asymmetric structural dependency. Not a primitive force — a directed relation in the dependency graph.</div>
+      </div>
+    </div>
+
+    <!-- Downstream handoffs -->
+    <div class="section">
+      <div class="section-header">
+        <h2>Handoff Graph</h2>
+        <span class="tag">upstream feeds · downstream output</span>
+      </div>
+
+      <div class="handoff-card upstream">
+        <div class="handoff-header">
+          <span class="handoff-direction from">↑ FROM</span>
+          <span class="handoff-book">Book 7 · SARG Structural Argumentation</span>
+        </div>
+        <p class="handoff-data">SARG-Σ argument_templates — formal argument structures encoding philosophical claims. Fed to NoS-Α as the primary input for philosophical inquiry sessions. Argument topology (not propositional content) is evaluated for structural autonomy.</p>
+        <div class="handoff-tel">T[SARG_TO_NOS]: (argument_template ⊗ NoS-Α) → evaluate (structural_autonomy(argument_topology))</div>
+      </div>
+
+      <div class="handoff-card upstream">
+        <div class="handoff-header">
+          <span class="handoff-direction from">↑ FROM</span>
+          <span class="handoff-book">Book 4 · Opacity &amp; Revelation (via init)</span>
+        </div>
+        <p class="handoff-data">OR vocabulary loaded in init phase. ω and δ models available for structural opacity analysis during interrogate phase. INV-OR-003 (opacity is structural, not observer-relative) is confirmed as a domain expression of INV-NOS-001 during cross-invariant interrogation.</p>
+        <div class="handoff-tel">T[OR_GROUND]: INV[NOS-001]: assert (INV-OR-003 ⊢ structural_autonomy(ω))</div>
+      </div>
+
+      <div class="handoff-card upstream">
+        <div class="handoff-header">
+          <span class="handoff-direction from">↑ FROM</span>
+          <span class="handoff-book">Book 5 · TEL Expression (gate)</span>
+        </div>
+        <p class="handoff-data">TEL-Σ provides the parse gate before NoS-Α executes in the ground phase. All structural claim expressions must pass TEL-Σ before NoS evaluation begins. TEL-Ε and TEL-Α mediate the entire interrogate phase.</p>
+        <div class="handoff-tel">TEL-Σ PASS required → NoS-Α may execute</div>
+      </div>
+
+      <div class="handoff-card">
+        <div class="handoff-header">
+          <span class="handoff-direction to">↓ TO</span>
+          <span class="handoff-book">Book 9 · Pattern Dynamics</span>
+        </div>
+        <p class="handoff-data">NoS-Σ generates the <strong>nos_foundation_report</strong> and <strong>book9_handoff</strong> package. Contains: structural realism verdict, invariant registry snapshot, cross-book invariant map, confirmed emergent invariants (used as pattern seeds by Book 9), and any upward revision proposals.</p>
+        <div class="handoff-tel">T[NOS_TO_B9]: (nos_foundation_report ⊗ book9_init) → (pattern_seeds ⊕ invariant_registry_snapshot)</div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <span>TriadicFrameworks · AI Edition · Book 8 · <strong style="color:var(--accent2)">Nature of Structure</strong> · v8.0-draft</span>
+      <span>
+        repo: <a href="https://github.com/umaywant2/TriadicFrameworks" target="_blank" rel="noopener">umaywant2/TriadicFrameworks</a>
+        &nbsp;·&nbsp;
+        series: <a href="https://www.triadicframeworks.org" target="_blank" rel="noopener">triadicframeworks.org</a>
+        &nbsp;·&nbsp;
+        session: rtt=1 | coherence=declared | drift=bounded | paradox=structural
+      </span>
+    </footer>
+
+  </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+{
+  "map_id": "pd.trajectory_map",
+  "version": "9.0-draft",
+  "book": "book9_pattern_dynamics",
+  "series": "AI Edition",
+  "invariant": "INV-PD-001",
+  "operator_binding": "PD-Τ (TrajectoryTrace)",
+  "session_context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural",
+  "qmroot_binding": {
+    "dimension": "0D",
+    "note": "6D absent; negative rungs absent; INV-013 = 0D only"
+  },
+  "phantom_entry_audit": {
+    "status": "clean",
+    "checked_at": "session-open",
+    "entries": []
+  },
+  "description": "Defines the formal model of structural trajectories through state-space over time. A trajectory is the transformation-grounded path of a structure S through successive configurations. This map covers trajectory definition, state-space representation, transformation grounding, trajectory types, and cross-book trajectory feeds. All trajectories are grounded by INV-PD-001 — every step must be bridged by a declared transformation.",
+
+  "trajectory_definition": {
+    "formal": "trajectory(S, T) = ⟨S(t_0), S(t_1), ..., S(t_n)⟩",
+    "components": {
+      "S(t_i)": "The structural configuration of S at time-point t_i. A configuration is a full structural tuple ⟨N, R, C⟩ satisfying the Book 1 FFT primitives.",
+      "T": "The transformation sequence ⟨τ_0, τ_1, ..., τ_{n-1}⟩ where each τ_i is a declared transformation mapping S(t_i) to S(t_{i+1})",
+      "time_points": "t_0 < t_1 < ... < t_n — an ordered index of evaluation events. Time is discrete and evaluation-relative; it does not imply clock time.",
+      "trajectory_length": "n — the number of transformation steps. A trajectory of length 0 is a fixed point (S = S(t_0) with no transformation applied)."
+    },
+    "validity_condition": "valid_trajectory ⟺ ∀i ∈ [0, n-1]: ∃τ_i ∈ declared_transforms: τ_i(S(t_i)) = S(t_{i+1})  [INV-PD-001]",
+    "structural_note": "A trajectory is not a record of observed configurations — it is a structurally grounded account of how a pattern moved through state-space. The transformation record is the trajectory's structural backbone; without it, a sequence of configurations is a collection, not a trajectory."
+  },
+
+  "state_space_model": {
+    "title": "Structural State-Space",
+    "definition": "The state-space of a structure class Ξ is the set of all configurations reachable by applying declared transformations from any initial configuration S(t_0) ∈ Ξ.",
+    "formal": "SS(Ξ) = { S' : ∃S ∈ Ξ, ∃τ ∈ declared_transforms*: τ*(S) = S' }",
+    "note": "declared_transforms* is the reflexive-transitive closure of declared transformations — all configurations reachable in zero or more steps.",
+    "regions": [
+      {
+        "id": "SSR-001",
+        "label": "Stable Region",
+        "description": "Configurations from which all trajectories converge to an attractor within a bounded number of steps. The stable region is the union of all attractor basins in SS(Ξ).",
+        "pd_relevance": "Trajectories entering the stable region are classified as convergent by PD-Τ and handed to PD-Β for attractor identification."
+      },
+      {
+        "id": "SSR-002",
+        "label": "Transient Region",
+        "description": "Configurations from which trajectories eventually enter the stable region but have not yet converged. Transient trajectories are the primary analysis domain of PD-Τ.",
+        "pd_relevance": "PD-Τ traces transient trajectory steps and logs each transformation. Transient length is a trajectory complexity measure."
+      },
+      {
+        "id": "SSR-003",
+        "label": "Bifurcation Boundary",
+        "description": "Configurations at the boundary between two or more attractor basins. Trajectories at the bifurcation boundary are sensitive to transformation parameters — small perturbations send them to different attractors.",
+        "pd_relevance": "Bifurcation boundary configurations are forwarded from PD-Τ to PD-Β immediately upon detection."
+      },
+      {
+        "id": "SSR-004",
+        "label": "Dissolution Region",
+        "description": "Configurations from which no declared transformation produces a valid successor configuration. Trajectories entering the dissolution region terminate — the pattern dissolves.",
+        "pd_relevance": "Dissolution region entry is a terminal trajectory event. PD-Τ records the final valid configuration and logs the dissolution event for the catalogue phase."
+      }
+    ]
+  },
+
+  "trajectory_types": [
+    {
+      "id": "TT-001",
+      "label": "Convergent Trajectory",
+      "description": "A trajectory that approaches and reaches an attractor within the state-space. Every configuration in the trajectory satisfies an increasing proportion of the attractor's invariant set, monotonically.",
+      "formal": "convergent(S, A) ⟺ ∀i: inv_match(S(t_i), A) ≤ inv_match(S(t_{i+1}), A)  and  lim_{i→n} inv_match(S(t_i), A) = 1",
+      "classification_operator": "PD-Β (BifurcationMap)",
+      "cross_book_instances": [
+        "GRL authority decay trajectory converging to stable_authority attractor (α approaching steady-state) — feeds from GRL-Σ α_trajectory",
+        "SARG argument construction converging to valid argument attractor — feeds from SARG-Σ structural_argument_trajectory",
+        "OR revelation trajectory converging to fully_revealed state (ω → 0 under repeated observation)"
+      ]
+    },
+    {
+      "id": "TT-002",
+      "label": "Divergent Trajectory",
+      "description": "A trajectory that moves away from all declared attractors. Divergent trajectories either reach the dissolution region or are intercepted by a bifurcation event that redirects them.",
+      "formal": "divergent(S) ⟺ ∀A ∈ attractors: inv_match(S(t_i), A) is not monotonically increasing",
+      "classification_operator": "PD-Τ (TrajectoryTrace)",
+      "pd_action": "PD-Τ flags divergent trajectories for PD-Β bifurcation analysis. Divergent trajectory without a bifurcation event within a bounded window triggers dissolution logging."
+    },
+    {
+      "id": "TT-003",
+      "label": "Cyclic Trajectory",
+      "description": "A trajectory that returns to a previously visited configuration after a finite number of steps. A cycle of length 1 is a fixed point. Cycles of length k > 1 are periodic orbits.",
+      "formal": "cyclic(S, k) ⟺ ∃i, j: i ≠ j ∧ j - i = k ∧ S(t_i) = S(t_j)",
+      "classification_operator": "PD-Τ (TrajectoryTrace)",
+      "nos_integration": "Cyclic trajectories are structurally interesting under INV-NOS-003: the structure returns to a previous configuration, which is trivially identity-preserving. PD-Τ records the cycle length and the full cycle configuration sequence."
+    },
+    {
+      "id": "TT-004",
+      "label": "Bifurcating Trajectory",
+      "description": "A trajectory that reaches a bifurcation point — a configuration from which two or more successor configurations are possible under the governing transformation. Bifurcating trajectories split into multiple continuation trajectories, each tracked independently.",
+      "formal": "bifurcating(S, t_i) ⟺ |{S' : ∃τ ∈ declared_transforms: τ(S(t_i)) = S'}| > 1",
+      "classification_operator": "PD-Β (BifurcationMap)",
+      "pd_action": "PD-Τ detects the multi-successor condition and immediately transfers the configuration to PD-Β. PD-Τ suspends trajectory tracing until PD-Β returns the classified bifurcation event and the continuation trajectory assignments."
+    }
+  ],
+
+  "transformation_grounding": {
+    "title": "Declared Transformation Registry",
+    "requirement": "Every trajectory step must reference a transformation from the declared transformation registry. The registry is populated at init phase from all eight upstream books.",
+    "registry_sources": [
+      {"book": "book1_fft", "transforms": "FFT primitive transformations: structural union, relational product, constraint application, invariant assertion"},
+      {"book": "book2_the_inverted_star", "transforms": "IS topological transformations: center emergence, periphery reorganization, topological inversion"},
+      {"book": "book3_structural_detection", "transforms": "SD detection transformations: signature extraction, pattern matching, detection completeness evaluation"},
+      {"book": "book4_opacity_revelation", "transforms": "OR transformations: opacity measurement, revelation threshold crossing, latent structure access"},
+      {"book": "book5_tel", "transforms": "TEL transformations: syntax check, semantic evaluation, composition, assertion"},
+      {"book": "book6_governance", "transforms": "GRL transformations: regime validation, authority decay application, enforcement cycle, collapse"},
+      {"book": "book7_sarg", "transforms": "SARG transformations: argument construction, warrant mapping, defeat application, evaluation gate"},
+      {"book": "book8_nos", "transforms": "NoS transformations: autonomy audit, realism classification, identity test, causation audit, synthesis"}
+    ],
+    "tel_encoding": "All transformations are expressible in TEL via T[τ_i]: S(t_i) → S(t_{i+1}). TEL-Σ parse gate applies to all trajectory step encodings before PD-Τ records them."
+  },
+
+  "cross_book_trajectory_feeds": [
+    {
+      "source": "NoS-Σ",
+      "feed_type": "nos_foundation_report",
+      "content": "cross_book_invariant_map, emergent_invariants_confirmed, upward_revisions_pending",
+      "pd_use": "PD-Τ uses the cross_book_invariant_map as the initial state-space configuration at t_0. emergent_invariants_confirmed informs PD-Β attractor classification. upward_revisions_pending are tracked as trajectory perturbation events."
+    },
+    {
+      "source": "GRL-Σ",
+      "feed_type": "α_trajectory and decay_projection",
+      "content": "Authority measure time-series α(t_0), ..., α(t_k); decay_projection for next n enforcement cycles; collapse_risk_flag",
+      "pd_use": "PD-Τ ingests the α_trajectory as a named sub-trajectory within the governance domain. decay_projection is used by PD-Β to project bifurcation event timing. collapse_risk_flag triggers immediate bifurcation boundary classification."
+    },
+    {
+      "source": "SARG-Σ",
+      "feed_type": "structural_argument_trajectory",
+      "content": "Sequence of argument configurations A(t_0), ..., A(t_m) across the SARG evaluation cycle; defeat events; evaluation gate outcomes",
+      "pd_use": "PD-Τ traces the SARG argument trajectory as a pattern within argumentation state-space. Defeat events are registered as trajectory perturbation events; evaluation gate failures trigger bifurcation boundary detection."
+    }
+  ],
+
+  "trajectory_tracing_procedure": {
+    "id": "TTP-001",
+    "label": "Standard Trajectory Tracing Procedure",
+    "steps": [
+      {
+        "step": 1,
+        "action": "Initialize trajectory log with S(t_0) from the declared starting configuration or from the NoS-Σ cross_book_invariant_map",
+        "operator": "PD-Τ"
+      },
+      {
+        "step": 2,
+        "action": "At each t_i, identify the applicable declared transformation τ_i from the transformation registry",
+        "operator": "PD-Τ",
+        "gate": "If no τ_i bridges S(t_i) to any declared S(t_{i+1}): log gap event; classify as bifurcation candidate; transfer to PD-Β"
+      },
+      {
+        "step": 3,
+        "action": "Apply τ_i and verify S(t_{i+1}) satisfies the transformation's post-condition",
+        "operator": "PD-Τ",
+        "tel_check": "TEL-Σ parses the T[τ_i]: S(t_i) → S(t_{i+1}) expression; PASS required before recording the step"
+      },
+      {
+        "step": 4,
+        "action": "Classify the step: convergent, divergent, cyclic, or bifurcating (see trajectory types)",
+        "operator": "PD-Τ"
+      },
+      {
+        "step": 5,
+        "action": "If bifurcating: transfer to PD-Β. If dissolution: log terminal event and terminate. Otherwise: advance t_i → t_{i+1} and repeat from step 2",
+        "operator": "PD-Τ"
+      },
+      {
+        "step": 6,
+        "action": "On trajectory completion (attractor reached, cycle detected, or dissolution): record full trajectory log and forward to PD-Σ for synthesis",
+        "operator": "PD-Τ → PD-Σ"
+      }
+    ]
+  }
+}

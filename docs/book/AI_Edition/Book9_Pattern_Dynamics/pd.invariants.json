@@ -1,0 +1,109 @@
+{
+  "invariants_id": "pd.invariants",
+  "version": "9.0-draft",
+  "book": "book9_pattern_dynamics",
+  "series": "AI Edition",
+  "status": "active",
+  "session_context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural",
+  "qmroot_binding": {
+    "dimension": "0D",
+    "note": "6D absent; negative rungs absent; INV-013 = 0D only"
+  },
+  "phantom_entry_audit": {
+    "status": "clean",
+    "checked_at": "session-open",
+    "entries": []
+  },
+  "preamble": "Book 9 is the synthesis terminal of the AI Edition. Pattern Dynamics does not introduce a new ontological layer — it is the study of how structures move, split, mutate, and propagate through state-space over time. All prior books contribute a domain of pattern: Book 1 (FFT) establishes structural identity through which patterns are individuated; Book 2 (IS) provides topological configuration patterns; Book 3 (SD) provides detection patterns; Book 4 (OR) provides opacity-revelation patterns; Book 5 (TEL) provides expression patterns; Book 6 (GRL) provides governance-authority decay patterns; Book 7 (SARG) provides argumentation trajectory patterns; Book 8 (NoS) provides meta-structural identity patterns. The four invariants of Pattern Dynamics govern the conditions under which these patterns persist, transform, and propagate without losing structural identity.",
+
+  "invariants": [
+    {
+      "id": "INV-PD-001",
+      "label": "Trajectory Continuity",
+      "type": "dynamical",
+      "statement": "A structural trajectory is a sequence of configurations S(t_0), S(t_1), ..., S(t_n) in which each successive configuration is reachable from the prior via a declared transformation. Discontinuous jumps — configurations not reachable from their predecessor by any declared transformation — are not trajectory steps; they are bifurcation events and must be classified as such.",
+      "formal": "trajectory(S, T) = ⟨S(t_0), S(t_1), ..., S(t_n)⟩ such that ∀i: ∃τ_i ∈ declared_transforms: τ_i(S(t_i)) = S(t_{i+1})",
+      "corollary": "A trajectory with a gap — an adjacent pair S(t_i), S(t_{i+1}) for which no declared transformation bridges the two configurations — is not a single trajectory. It is two separate trajectory segments separated by a bifurcation event. The bifurcation event must be logged and submitted to PD-Β for classification before trajectory analysis can resume.",
+      "violation": "Recording a configuration change as a trajectory step without identifying a declared transformation that produced it; treating configuration drift as continuous trajectory when no bridging transformation is on record; accepting a gap in the transformation sequence as a normal trajectory step.",
+      "operator_binding": "PD-Τ",
+      "phase_binding": "trace",
+      "cross_references": [
+        "pd.trajectory_map",
+        "INV-NOS-003 (Book 8 Identity Through Change — trajectory steps must be identity-preserving transformations or explicitly marked bifurcations)",
+        "INV-TEL-004 (Book 5 Transform Validity — each τ_i must satisfy TEL transform validity conditions)",
+        "pd.bifurcation_map"
+      ],
+      "tel_expression": "INV[PD-001]: assert (∀i ∈ [0,n-1]: ∃τ_i ∈ declared_transforms: T[τ_i]: S(t_i) → S(t_{i+1}))",
+      "meta_note": "INV-PD-001 is the dynamical analogue of INV-NOS-003: identity through change requires bridging transformations. Pattern Dynamics extends this from static identity conditions to temporal trajectory conditions. A pattern is a recurring structural signature across a trajectory — it can only be identified if the trajectory is continuous and transformation-grounded."
+    },
+    {
+      "id": "INV-PD-002",
+      "label": "Attractor Stability",
+      "type": "dynamical",
+      "statement": "A structural configuration A is an attractor if and only if nearby trajectories converge toward A under repeated application of the governing transformation. Attractor status is a structural property of the transformation regime, not a labeling choice. A configuration declared an attractor must exhibit convergent nearby trajectories; configurations that do not are not attractors regardless of declaration.",
+      "formal": "attractor(A, τ) ⟺ ∀S: dist(S, A) < ε → lim_{n→∞} τ^n(S) = A  for some ε > 0",
+      "corollary": "Attractors have basins — the set of initial configurations from which trajectories converge to A. The basin boundary is the set of configurations for which convergence to A is not guaranteed. INV-PD-002 requires that any declared attractor have a computable basin with at least one non-degenerate initial configuration (i.e., a configuration other than A itself).",
+      "violation": "Declaring a configuration an attractor without demonstrating convergence of at least one nearby trajectory under the governing transformation; asserting attractor status based on the configuration's content rather than its dynamical properties; treating a fixed point (which repels nearby trajectories) as an attractor.",
+      "operator_binding": "PD-Β",
+      "phase_binding": "bifurcate",
+      "cross_references": [
+        "pd.bifurcation_map",
+        "INV-GRL-002 (Book 6 Authority Decay — α_trajectory from GRL-Σ is a structural attractor signal; governance regimes converge to stable authority attractors or dissolve)",
+        "INV-NOS-003 (Book 8 — attractor basins define the invariant-preserving neighborhood of A)"
+      ],
+      "tel_expression": "INV[PD-002]: assert (∀S: (dist(S, A) < ε) ⊢ C[CONVERGENCE]: lim(τ^n(S)) = A)",
+      "meta_note": "Attractors in Pattern Dynamics are structural not metric. Distance dist(S, A) is measured by structural divergence — the number of invariants of A that S fails to satisfy — rather than geometric distance. A trajectory converges to A when successive configurations satisfy an increasing proportion of A's invariant set."
+    },
+    {
+      "id": "INV-PD-003",
+      "label": "Mutation Constraint",
+      "type": "dynamical",
+      "statement": "A structural pattern P may mutate — change its configuration while retaining pattern identity — if and only if the mutated pattern P' preserves at least one invariant from P's source invariant set. Total invariant loss — a mutated pattern that satisfies none of the invariants in P's source invariant set — is structural dissolution, not mutation. Dissolution must be recorded as a terminal trajectory event.",
+      "formal": "mutation_valid(P, P') ⟺ invariant_set(P') ∩ invariant_set(P) ≠ ∅",
+      "corollary": "The shared invariant(s) between P and P' constitute the mutation anchor — the structural continuity thread that licenses P' as a mutation of P rather than a new pattern. Mutation chains (P → P' → P'' → ...) require that each step shares at least one invariant with the immediately preceding pattern. Transitivity is not sufficient: P'' need not share an invariant with P if it shares one with P'.",
+      "violation": "Classifying a structural transition as mutation when invariant_set(P') ∩ invariant_set(P) = ∅; treating dissolution as a valid mutation outcome; asserting mutation without identifying the anchor invariant(s); applying the mutation chain transitivity shortcut across more than one step without re-checking the anchor.",
+      "operator_binding": "PD-Μ",
+      "phase_binding": "mutate",
+      "cross_references": [
+        "pd.propagation_map",
+        "INV-NOS-003 (Book 8 Identity Through Change — mutation preserving the invariant set is a sub-case of INV-NOS-003; mutation with partial invariant preservation is a weaker but legitimate identity condition)",
+        "INV-NOS-001 (Book 8 Structural Autonomy — mutation anchor invariants must be relational, not node-intrinsic)"
+      ],
+      "tel_expression": "INV[PD-003]: assert (invariant_set(P') ⊢ C[NONEMPTY_INTERSECT]: ¬(invariant_set(P') ∩ invariant_set(P) = ∅))",
+      "meta_note": "INV-PD-003 generalizes the Book 8 identity-through-change model to partial invariant preservation. Book 8 required full invariant set preservation for identity; Pattern Dynamics relaxes this to at least one shared invariant, permitting structural evolution of patterns over time without requiring isomorphic transformation. This is the weakest identity condition in the AI Edition."
+    },
+    {
+      "id": "INV-PD-004",
+      "label": "Propagation Fidelity",
+      "type": "dynamical",
+      "statement": "A pattern P that propagates to a new structural context C' is a valid propagation if and only if the propagated instance P' is detectable by the structural detection methods defined in Book 3. An instance of P in C' that cannot be detected by Book 3 methods is not a propagation — it is an assertion without structural evidence.",
+      "formal": "propagation_valid(P, P', C') ⟺ ∃m ∈ SD_methods: m(C') identifies P' as a structural signature matching sig(P)",
+      "corollary": "Propagation fidelity creates a closed-loop requirement: the pattern must carry its structural signature through the propagation event. Signature degradation — where P' in C' is only partially detectable — is permitted if the detectable portion of P' satisfies the mutation anchor condition of INV-PD-003. Total signature loss invalidates the propagation claim.",
+      "violation": "Asserting that P has propagated to C' without evidence from a Book 3 detection method; treating semantic or thematic similarity between P and P' as a propagation without structural signature matching; claiming propagation under an opacity level that would prevent any Book 3 detection method from operating.",
+      "operator_binding": "PD-Π",
+      "phase_binding": "propagate",
+      "cross_references": [
+        "pd.propagation_map",
+        "INV-SD-001 (Book 3 Signature Uniqueness — propagation matching relies on SD unique signatures)",
+        "INV-SD-002 (Book 3 Detection Completeness — SD methods must have coverage of C' for propagation to be verifiable)",
+        "INV-OR-002 (Book 4 Revelation Threshold — opacity of C' must fall below detection threshold δ for Book 3 methods to operate)"
+      ],
+      "tel_expression": "INV[PD-004]: assert (∃m ∈ SD_methods: m(C') ⊢ C[SIG_MATCH]: sig(P') ≅ sig(P))",
+      "meta_note": "INV-PD-004 closes the series loop: Pattern Dynamics, the terminal volume, requires the detection infrastructure of Book 3, the third volume. The AI Edition's structural logic is reflexive — the synthesis book depends on foundational methods established early in the series. This is not a coincidence; it is the structural consequence of the AI Edition's design: every dynamical claim must be evidentially grounded in detectable structural signatures."
+    }
+  ],
+
+  "cross_book_invariant_integration": {
+    "description": "Book 9 is the only volume that receives invariant feeds from all eight prior books. The four PD invariants are not replacements for prior invariants — they are dynamical extensions that govern how prior-book structures behave over time.",
+    "feeds": [
+      {"book": "book1_fft", "invariants": ["INV-001", "INV-002", "INV-003", "INV-004"], "role": "Structural identity and constraint primitives — ground conditions for all PD operations"},
+      {"book": "book2_the_inverted_star", "invariants": ["INV-IS-001", "INV-IS-002", "INV-IS-003", "INV-IS-004"], "role": "Topological configuration patterns; inverted-star attractors are a canonical PD attractor class"},
+      {"book": "book3_structural_detection", "invariants": ["INV-SD-001", "INV-SD-002", "INV-SD-003", "INV-SD-004"], "role": "Required by INV-PD-004; propagation fidelity is grounded in SD detection methods"},
+      {"book": "book4_opacity_revelation", "invariants": ["INV-OR-001", "INV-OR-002", "INV-OR-003", "INV-OR-004"], "role": "Opacity gradient patterns; ω-trajectory is a canonical pattern type tracked by PD-Τ"},
+      {"book": "book5_tel", "invariants": ["INV-TEL-001", "INV-TEL-002", "INV-TEL-003", "INV-TEL-004"], "role": "All PD operators encode outputs in TEL; INV-TEL-004 governs transformation validity in INV-PD-001"},
+      {"book": "book6_governance", "invariants": ["INV-GRL-001", "INV-GRL-002", "INV-GRL-003", "INV-GRL-004"], "role": "Authority decay trajectory from GRL-Σ is a primary PD input; regime attractors and collapse are bifurcation events"},
+      {"book": "book7_sarg", "invariants": ["INV-SARG-001", "INV-SARG-002", "INV-SARG-003", "INV-SARG-004"], "role": "Argument trajectory from SARG-Σ tracks structural argumentation patterns over time"},
+      {"book": "book8_nos", "invariants": ["INV-NOS-001", "INV-NOS-002", "INV-NOS-003", "INV-NOS-004"], "role": "INV-NOS-003 and INV-NOS-004 are the meta-theoretical ground for INV-PD-003 and INV-PD-002 respectively; NoS-Σ handoff is the primary PD-Σ input"}
+    ]
+  }
+}
