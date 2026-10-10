@@ -1,0 +1,55 @@
+{
+  "map": "operator_roles",
+  "module": "sd.structural_detection.ai",
+  "version": "3.0-draft",
+
+  "operators": [
+    "SD-Σd",
+    "SD-Γ",
+    "SD-Λ",
+    "SD-Ξ",
+    "SD-Π"
+  ],
+
+  "roles": {
+    "SD-Σd": {
+      "layer": "surface-deep",
+      "alignment": "structural",
+      "role": "signal presence detection",
+      "phases": ["init", "scan", "confirm"],
+      "outputs": ["signal_fields", "boundary_candidates", "motif_candidates"]
+    },
+
+    "SD-Γ": {
+      "layer": "mid-deep",
+      "alignment": "R",
+      "role": "geometry probe and anomaly detection",
+      "phases": ["scan", "probe", "confirm"],
+      "outputs": ["anomaly_map", "geometry_probe_fields"]
+    },
+
+    "SD-Λ": {
+      "layer": "deep-mid",
+      "alignment": "R",
+      "role": "lattice scan for structural consistency",
+      "phases": ["probe", "filter", "confirm"],
+      "outputs": ["consistency_report", "lattice_scan_fields"]
+    },
+
+    "SD-Ξ": {
+      "layer": "surface",
+      "alignment": "N",
+      "role": "noise gating and false-positive suppression",
+      "phases": ["filter", "confirm"],
+      "outputs": ["noise_gate_fields", "filtered_signal_fields"]
+    },
+
+    "SD-Π": {
+      "layer": "surface-deep",
+      "alignment": "structural",
+      "role": "pattern indexing and structural cataloguing",
+      "phases": ["confirm", "catalogue"],
+      "outputs": ["pattern_index", "structural_catalogue"]
+    }
+  }
+}
