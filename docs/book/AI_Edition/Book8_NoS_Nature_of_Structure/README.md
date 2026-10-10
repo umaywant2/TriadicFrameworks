@@ -1,3 +1,6 @@
+
+- [`module.json`](module.json) — Agentic module schema role assignments
+
 # Book 8 — Nature of Structure (NoS)
 ### AI Edition · Book 8 of 9
 
