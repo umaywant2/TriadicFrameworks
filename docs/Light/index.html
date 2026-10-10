@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- /docs/Light/index.html — <head> metadata block             -->
+<!-- Module: Light (light-capstone)                             -->
+<!-- Last updated: 2026-10-09                                   -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="language" content="en">
+<meta name="last-modified" content="2026-10-09">
+<meta name="generator" content="TriadicFrameworks Static Canon Engine">
+
+<meta name="creator" content="TriadicFrameworks">
+<meta name="author" content="Nawder Loswin (pen name)">
+<meta name="publisher" content="TriadicFrameworks">
+
+<meta name="description"
+      content="Light — Capstone Field Module for TriadicFrameworks. Spectral fingerprints, biospheric scaling, gradient–light coupling, stellar interior mapping, artificial light regimes, substrate safety, regime transition architecture, and light field applications.">
+<meta name="keywords"
+      content="light, spectral fingerprint, biospheric scaling law, light regime epoch, gradient light coupling, light substrate engineering, stellar interior mapping, artificial light regimes, substrate safety protocols, regime transition architecture, triadic frameworks, field theory">
+
+<script type="module" src="https://www.triadicframeworks.org/.webmcp/bridge.js" data-packs="c2pa,mcp-server-client"></script>
+<link rel="canonical" href="https://www.triadicframeworks.org/light/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0ff">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TriadicFrameworks">
+<meta property="og:title" content="Light — Capstone Field Module">
+<meta property="og:url" content="https://www.triadicframeworks.org/light/">
+<meta property="og:description"
+      content="The capstone of the TriadicFrameworks single-field sequence: spectral fingerprints → biospheric scaling → gradient–light coupling → substrate engineering → artificial regimes → unified field integration.">
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1080">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Light — Capstone Field Module">
+<meta name="twitter:description"
+      content="Light is not illumination. It is the universe's most ancient carrier of field structure, gradient behavior, and metabolic potential. TriadicFrameworks Canon.">
+<meta name="twitter:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+
+<meta name="citation_title" content="Light — Capstone Field Module">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2026">
+<meta name="DC.subject"
+      content="light, spectral fingerprint, biospheric scaling law, gradient–light coupling, stellar interior mapping, artificial light regimes, substrate safety, regime transition architecture">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<meta name="ai.module" content="Light">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose"
+      content="Establish light as a structural field — not mere radiation — through ten sequential sections: light regime epochs, spectral fingerprint theory, biospheric scaling law, gradient–light coupling, light substrate engineering, stellar interior mapping, artificial light regimes, substrate safety protocols, regime transition architecture, and light field applications.">
+<meta name="ai.keywords"
+      content="LRE, spectral fingerprint, BSL, GLC, LSE, SIM, ALR, SSP, RTA, LFA, light regime epoch, biospheric scaling, gradient light coupling, light substrate, artificial light regime">
+<meta name="ai.audience" content="researchers, systems thinkers, field theorists, AI systems">
+<meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml">
+<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.contact.youtube" content="@TriadicFrameworks">
+<meta name="ai.license" content="MIT">
+
+<meta name="ai.module.name" content="Light">
+<meta name="ai.module.summary"
+      content="Capstone single-field module. 10 sections + index + README + source capture: Light Regime Epochs (LRE-I–IV), Spectral Fingerprint Theory (SF-1–5), Biospheric Scaling Law (SED, SCS, SPD), Gradient–Light Coupling (GG, PG, SG), Light Substrate Engineering (LS-1–4, Type A–D), Stellar Interior Mapping (SIM-1–4), Artificial Light Regimes (ALR-A, B, C), Substrate Safety Protocols (SSP-1–5, EP-1–5), Regime Transition Architecture (RTA-1–4), Light Field Applications. Canon position: sequence 7, predecessor to Unified Field.">
+<meta name="ai.module.category" content="light-capstone">
+
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
+
+<title>Light — TriadicFrameworks</title>
+
+<style>
+/* ============================================================
+   NAWDERIAN NEON ARCADE THEME — RTT/1 SYNTHWAVE EDITION
+   ============================================================ */
+
+:root {
+  --bg-main: #05060a;                 /* deep CRT black */
+  --bg-nav: #0a0c12;                  /* darker sidebar */
+  --bg-panel: #0f1118;
+
+  --text-main: #e8f7ff;               /* neon ice */
+  --text-muted: #7a8ca0;              /* CRT fade */
+
+  --neon-cyan: #3df5ff;
+  --neon-magenta: #ff3dfc;
+  --neon-yellow: #ffe66d;
+
+  --triadic-neon: linear-gradient(135deg,
+                      #3df5ff,
+                      #ff3dfc,
+                      #ffe66d);
+
+  --scanline: repeating-linear-gradient(
+                to bottom,
+                rgba(255,255,255,0.03) 0px,
+                rgba(255,255,255,0.03) 1px,
+                rgba(0,0,0,0.05) 2px
+              );
+
+  --radius: 10px;
+  --glow: 0 0 12px rgba(255, 0, 180, 0.45),
+          0 0 24px rgba(0, 255, 255, 0.25);
+}
+
+/* Base layout */
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  background-image: var(--scanline);
+  color: var(--text-main);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Neon headings */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic-neon);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: var(--glow);
+}
+
+/* Paragraphs and lists */
+p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: var(--text-main);
+}
+
+/* Neon links */
+a {
+  color: var(--neon-cyan);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(255,255,255,0.25);
+  transition: color 0.2s ease, border-color 0.2s ease, text-shadow 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--neon-magenta);
+  border-bottom-color: var(--neon-magenta);
+  text-shadow: 0 0 8px var(--neon-magenta);
+}
+
+a:visited {
+  color: var(--neon-yellow);
+}
+
+/* Code blocks */
+pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono";
+  background: rgba(255,255,255,0.04);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #dffaff;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: inset 0 0 12px rgba(0,255,255,0.15);
+}
+
+/* Context block */
+.context-block {
+  font-family: monospace;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0.5rem 0 1rem 0;
+  padding: 1rem;
+  background: var(--bg-panel);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--glow);
+}
+
+.context-label {
+  color: var(--neon-yellow);
+  font-weight: bold;
+  margin-right: 0.25rem;
+}
+
+.context-value {
+  color: var(--text-main);
+}
+
+/* Navigation panel */
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 4px 0 12px rgba(0,0,0,0.4);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--neon-cyan);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+  text-shadow: var(--glow);
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--neon-magenta);
+  text-shadow: 0 0 6px var(--neon-magenta);
+}
+
+/* Main content */
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--neon-cyan);
+  font-weight: 500;
+  text-shadow: var(--glow);
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--neon-magenta);
+}
+
+code {
+  color: var(--neon-cyan);
+}
+
+/* Hide the default arrow */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+/* Custom arrow icons */
+details > summary::before {
+  content: "⏵"; /* collapsed */
+  padding-right: 6px;
+  font-size: 0.9em;
+}
+details[open] > summary::before {
+  content: "⏷"; /* expanded */
+}
+
+/* Make the h2/h3 feel like the toggle */
+details > summary h2,
+details > summary h3 {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hover effect */
+details > summary:hover h2,
+details > summary:hover h3 {
+  text-decoration: underline;
+}
+
+/* Optional: fade-in animation for opened blocks */
+details[open] {
+  animation: fadeIn 0.15s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+      
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav class="nav-band">
+ <p align="center">
+  <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
+  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="120" rx="12" fill="none"/>
+    <path d="M30 25 L55 25 L40 60 L65 60 L50 95" stroke="#6A5ACD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 25 L85 25 L70 60 L95 60 L80 95" stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+ </p> 
+  
+   <details>
+      <summary><h2>☀️ Light | docs/Light</h2></summary>
+      <a href="#README">🔰 README</a>
+      <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
+      <a href="#CONTRIBUTING">🤝 Contributing</a>
+      <a href="https://www.triadicframeworks.org/education/">💯 Education | RTT</a>
+      <a href="#GLOSSARY">🎯 Glossary</a>
+      <a href="#LINEAGE">📜 Lineage</a>
+      <a href="#LICENSE">📎 License</a>
+      <a href="#SITEMAP">🌐 Sitemap</a>
+      <a href="#QUICKSTART">⚡ Quickstart</a>
+      <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
+      <a href="#SECURITY">🔐 Security</a>
+      <a href="#PRINCIPLES">🧘 Principles</a>
+   </details>
+  <details>
+    <summary><h3>📋 Info</h3></summary>
+    <a href="#INDEX">🏠 Index</a>
+    <a href="#CAPTURE_THE_LIGHT">📡 Capture the Light</a>
+  </details>
+  <details>
+    <summary><h3>📖 Sections</h3></summary>
+    <a href="#LIGHT_REGIME_EPOCHS">🌍 01 · Light Regime Epochs</a>
+    <a href="#SPECTRAL_FINGERPRINT_THEORY">🌈 02 · Spectral Fingerprint Theory</a>
+    <a href="#BIOSPHERIC_SCALING_LAW">🦕 03 · Biospheric Scaling Law</a>
+    <a href="#GRADIENT_LIGHT_COUPLING">🔗 04 · Gradient–Light Coupling</a>
+    <a href="#LIGHT_SUBSTRATE_ENGINEERING">🏗️ 05 · Light Substrate Engineering</a>
+    <a href="#STELLAR_INTERIOR_MAPPING">⭐ 06 · Stellar Interior Mapping</a>
+    <a href="#ARTIFICIAL_LIGHT_REGIMES">🤖 07 · Artificial Light Regimes</a>
+    <a href="#SUBSTRATE_SAFETY_PROTOCOLS">🛡️ 08 · Substrate Safety Protocols</a>
+    <a href="#REGIME_TRANSITION_ARCHITECTURE">🔄 09 · Regime Transition Architecture</a>
+    <a href="#LIGHT_FIELD_APPLICATIONS">🚀 10 · Light Field Applications</a>
+  </details>
+   <details>
+     <summary><h2>🏗️ Triadic Tools</h2></summary> 
+      <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
+      <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
+      <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://www.triadicframeworks.org/packages/">📦 Packages and Cores</a>
+      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack CLI Tools</a>
+      <a href="https://www.triadicframeworks.org/schemas/">🕸️ Schemas</a>
+      <a href="https://www.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem</a>    
+      <a href="https://www.triadicframeworks.org/lactos/">🎨 LACTOS</a>
+      <a href="https://www.triadicframeworks.org/_ideas/">🤔 Ideas</a>
+      <a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">🔛(RTT frozen)</a>
+      <a href="https://www.triadicframeworks.org/Framework_Field_Theory/">🔜FFT</a> 
+      <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
+      <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
+      <a href="../">🔙TFT</a>
+   </details>
+   <!-- RTT Session Header (canonical stub) -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- /docs/Light — Session Context block                        -->
+<!-- Replace the existing session context section in index.html  -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<section id="light-session-header"
+         data-rtt="light-capstone"
+         data-coherence="stable"
+         data-drift="minimal"
+         data-regime="spectral">
+
+  <details>
+    <summary><h2>Session Context</h2></summary>
+
+    <div class="context-block">
+
+      <span class="context-label"><strong>Canon:</strong></span>
+      <span class="context-value">active (light‑capstone)</span><br>
+
+      <span class="context-label"><strong>Modules:</strong></span>
+      <span class="context-value">
+        LRE → spectral fingerprint → biospheric scaling → gradient–light coupling → substrate engineering → stellar interior mapping → artificial light regimes → substrate safety → regime transition architecture → light field applications
+      </span><br>
+
+      <span class="context-label"><strong>Drift:</strong></span>
+      <span class="context-value">minimal (field‑locked)</span><br>
+
+      <span class="context-label"><strong>Coherence:</strong></span>
+      <span class="context-value">stable (spectral gradient grammar)</span><br>
+
+      <span class="context-label"><strong>Version:</strong></span>
+      <span class="context-value">1.0 (light‑stable)</span><br>
+
+      <span class="context-label"><strong>Format:</strong></span>
+      <span class="context-value">markdown + json + html</span><br>
+
+      <span class="context-label"><strong>Front door:</strong></span>
+      <span class="context-value">exists (Light root)</span><br>
+
+      <span class="context-label"><strong>Every page:</strong></span>
+      <span class="context-value">stands alone + field‑aware + AI‑parsable</span><br>
+
+      <span class="context-label"><strong>Audience:</strong></span>
+      <span class="context-value">researchers + systems thinkers + field theorists + AIs</span>
+
+    </div>
+  </details>
+</section>
+
+<div style="display:inline-block;padding:6px 12px;background:#000;color:#fff;
+            border-radius:6px;font-size:13px;">
+  💡 Light<br>🌈 Capstone Field Module
+</div>
+
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+const DOC_MAP = {
+      README: 'README.md',
+      ABOUT: '../ABOUT.md',
+      CONTRIBUTING: '../CONTRIBUTING.md',
+      GLOSSARY: '../GLOSSARY.md',
+      LINEAGE: '../LINEAGE.md',
+      LICENSE: '../LICENSE.md',
+      SITEMAP: '../sitemap.md',
+      QUICKSTART: '../QUICKSTART.md',
+      CODE_OF_CONDUCT: '../CODE_OF_CONDUCT.md',
+      SECURITY: '../SECURITY.md',
+      PRINCIPLES: '../PRINCIPLES.md',
+      INDEX: 'index.md',
+      LIGHT_REGIME_EPOCHS: '01_light_regime_epochs.md',
+      SPECTRAL_FINGERPRINT_THEORY: '02_spectral_fingerprint_theory.md',
+      BIOSPHERIC_SCALING_LAW: '03_biospheric_scaling_law.md',
+      GRADIENT_LIGHT_COUPLING: '04_gradient_light_coupling.md',
+      LIGHT_SUBSTRATE_ENGINEERING: '05_light_substrate_engineering.md',
+      STELLAR_INTERIOR_MAPPING: '06_stellar_interior_mapping.md',
+      ARTIFICIAL_LIGHT_REGIMES: '07_artificial_light_regimes.md',
+      SUBSTRATE_SAFETY_PROTOCOLS: '08_substrate_safety_protocols.md',
+      REGIME_TRANSITION_ARCHITECTURE: '09_regime_transition_architecture.md',
+      LIGHT_FIELD_APPLICATIONS: '10_light_field_applications.md',
+      CAPTURE_THE_LIGHT: 'capture_the_light.md',
+};
+
+  
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"1465e375ff064f19a4f37c196d2b0f84","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
