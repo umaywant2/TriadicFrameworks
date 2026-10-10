@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="book_7_SARG_Structural_Argumentation_" src="https://github.com/user-attachments/assets/fd92a94b-bdb7-4755-9826-17958f1217b1" />
 
 - [`module.json`](module.json) — Agentic module schema role assignments
 
