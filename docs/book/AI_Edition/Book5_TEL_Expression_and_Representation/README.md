@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="book5_TEL_Expression_and_Representation_" src="https://github.com/user-attachments/assets/5d7df4cb-28ac-44c4-ab90-29a98c9edcf9" />
 
 - [`module.json`](module.json) — Agentic module schema role assignments
 
