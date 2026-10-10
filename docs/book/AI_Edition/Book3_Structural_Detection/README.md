@@ -1,3 +1,6 @@
+
+- [`module.json`](module.json) — Agentic module schema role assignments
+
 # Book 3 — Structural Detection (AI Edition)
 
 This folder contains **Book 3 of the TriadicFrameworks AI Edition**, based on the Structural Detection domain.
