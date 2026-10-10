@@ -84,6 +84,27 @@
         .check-list { list-style: none; }
         .check-list li { padding: 3px 0; color: var(--text-muted); }
         .check-list li::before { content: '✓ '; color: var(--green); font-weight: 700; }
+    .contents {
+        margin-top: 40px;
+    }
+    .contents h2 {
+        font-size: 20px;
+        margin-bottom: 12px;
+        color: var(--accent);
+        font-weight: 600;
+    }
+    .contents-list {
+        list-style: none;
+        padding-left: 0;
+        font-size: 14px;
+    }
+    .contents-list li {
+        margin: 6px 0;
+    }
+    .contents-list a {
+        color: var(--accent2);
+        font-family: var(--mono);
+    }
     </style>
 </head>
 
@@ -122,6 +143,30 @@
             <h1>Opacity & Revelation — AI Edition (Book 4)</h1>
             <p>This page presents the canonical metadata, session context, and structural framing for Book 4 of the TriadicFrameworks AI Edition.</p>
         </main>
+
+    <section class="contents">
+    <h2>Contents</h2>
+    <ul class="contents-list">
+        <li><a href="README.md">README.md</a></li>
+        <li><a href="module.json">module.json</a></li>
+        <!-- Additional book-specific JSON maps -->
+    </ul>
+    </section>
+
+<section class="contents">
+    <h2>Contents</h2>
+    <ul class="contents-list">
+        <li><a href="README.md">README.md</a></li>
+        <li><a href="module.json">module.json</a></li>
+        <li><a href="opacity_revelation.invariants.json">opacity_revelation.invariants.json</a></li>
+        <li><a href="or.latent_structure_map.json">or.latent_structure_map.json</a></li>
+        <li><a href="or.opacity_gradient_map.json">or.opacity_gradient_map.json</a></li>
+        <li><a href="or.operator_roles.json">or.operator_roles.json</a></li>
+        <li><a href="or.phases.json">or.phases.json</a></li>
+        <li><a href="or.revelation_threshold_map.json">or.revelation_threshold_map.json</a></li>
+    </ul>
+</section>
+
     </div>
 </body>
 </html>
