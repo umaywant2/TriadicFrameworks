@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="book_3_Structural_Detection_" src="https://github.com/user-attachments/assets/f14d4b39-9977-4740-936b-1ccbe6dac6e5" />
 
 - [`module.json`](module.json) — Agentic module schema role assignments
 
