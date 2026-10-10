@@ -1,3 +1,6 @@
+
+- [`module.json`](module.json) — Agentic module schema role assignments
+
 # Book 4 — Opacity & Revelation
 ### AI Edition · Book 4 of 9
 
