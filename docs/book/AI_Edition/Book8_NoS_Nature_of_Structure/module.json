@@ -1,66 +1,79 @@
 {
   "book": {
-    "id": "book8_nos",
+    "id": "NOS",
     "number": 8,
-    "title": "Nature of Structure",
+    "title": "NoS: Nature of Structure",
     "abbreviation": "NoS",
     "series": "AI Edition",
     "edition": "AI",
     "version": "1.0.0",
     "status": "active"
   },
+
+  "session_context": {
+    "rtt": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural",
+    "anchors": {
+      "rtt_url": "https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html",
+      "spine_url": "https://www.triadicframeworks.org/spine/"
+    }
+  },
+
   "ai": {
-    "module": "book8_nos",
+    "module": "book8_nos_nature_of_structure",
     "version": "1.0.0",
-    "purpose": "Provide a deep philosophical and formal account of what structure is, why structure exists, and how structural reality relates to other ontological categories. Serves as the reflective meta-theoretical capstone of the AI Edition, interrogating the foundations laid in Book 1 from a higher-order vantage point.",
+    "purpose": "Define the ontology of structure — what structure is, how structure exists, how structure persists, and how structure behaves under transformation. Introduces ontological primitives, structural existence conditions, persistence rules, collapse conditions, and the ontology of pattern formation. NoS is the ontological core of the TriadicFrameworks canon.",
     "keywords": [
-      "nature of structure",
       "ontology",
-      "meta-theory",
-      "structural realism",
-      "formal philosophy",
-      "existence",
-      "structural causation",
-      "emergence",
-      "abstraction",
-      "foundational inquiry"
+      "nature of structure",
+      "structural existence",
+      "persistence",
+      "collapse",
+      "structural ontology",
+      "pattern ontology",
+      "structural primitives",
+      "existence conditions",
+      "ontological grammar"
     ],
     "audience": [
       "AI reasoning systems",
-      "philosophers of science",
-      "structural realists",
-      "formal ontologists",
-      "meta-theorists"
+      "ontologists",
+      "epistemologists",
+      "systems theorists",
+      "advanced researchers"
     ],
-    "summary": "Book 8 turns the AI Edition's formal tools on themselves. Having built a comprehensive framework for structural analysis across domains, this book asks: what is structure as such? It engages the philosophical literature on structural realism, emergence, and abstraction while maintaining formal precision. Key questions include: Are structures discovered or constructed? Can structure exist without instantiation? What is the relationship between structural identity and change? The book offers argued positions on each question, expressed in TEL where applicable.",
-    "dependencies": [
-      "book1_fft",
-      "book4_opacity_revelation",
-      "book5_tel",
-      "book7_sarg"
+    "summary": "Book 8 formalizes the ontology of structure. It defines structural existence conditions, persistence rules, collapse conditions, and the ontology of pattern formation. NoS integrates governance logic (Book 6) and structural argumentation (Book 7) to produce the ontological layer required for the synthesis in Book 9."
+  },
+
+  "dependencies": {
+    "requires": [
+      "Book6_Governance_and_Regime_Logic",
+      "Book7_SARG_Structural_Argumentation"
     ],
     "unlocks": [
-      "book9_pattern_dynamics"
+      "Book9_Pattern_Dynamics"
     ]
   },
+
   "invariants": {
+    "file": "invariants/book8_invariants.json",
     "references": [
-      "INV-NOS-001: Structural Autonomy \u2014 structure is not reducible to the intrinsic properties of its constituent nodes",
-      "INV-NOS-002: Relational Primacy \u2014 relations are ontologically prior to the nodes they connect, not derivative from them",
-      "INV-NOS-003: Identity Through Change \u2014 a structure retains identity through transformations that preserve its invariant set",
-      "INV-NOS-004: Abstraction Consistency \u2014 abstract structures and their instantiations share invariant structure; divergence indicates either modeling error or genuine novelty"
-    ],
-    "file": "invariants/book8_invariants.json"
+      "INV-NOS-001: Existence Condition — a structure exists only if its primitive relations satisfy the declared ontological constraints.",
+      "INV-NOS-002: Persistence Rule — structural persistence requires stability of primitive relations under all valid transformations.",
+      "INV-NOS-003: Collapse Condition — structural collapse occurs when coherence falls below the ontological threshold.",
+      "INV-NOS-004: Ontological Closure — ontological operations must remain closed under the canonical ontology grammar."
+    ]
   },
+
   "canonical_metadata": {
-    "domain": "Philosophy & Meta-Theory",
-    "tier": "Capstone",
+    "domain": "TriadicFrameworks",
+    "tier": "Ontology",
     "reading_order": 8,
     "prerequisite_books": [
-      1,
-      4,
-      5,
-      7
+      "Book6_Governance_and_Regime_Logic",
+      "Book7_SARG_Structural_Argumentation"
     ],
     "live_site": null,
     "last_updated": "2026-10-10"
