@@ -12,7 +12,7 @@
   "ai": {
     "module": "book6_governance",
     "version": "1.0.0",
-    "purpose": "Model governance as a structural phenomenon. Defines regimes as formal constraint-enforcement structures and develops regime logic — the rules by which regimes acquire, maintain, and lose structural authority. Applies AI Edition primitives to political, organizational, and computational governance systems.",
+    "purpose": "Model governance as a structural phenomenon. Defines regimes as formal constraint-enforcement structures and develops regime logic \u2014 the rules by which regimes acquire, maintain, and lose structural authority. Applies AI Edition primitives to political, organizational, and computational governance systems.",
     "keywords": [
       "governance",
       "regime logic",
@@ -32,10 +32,10 @@
       "policy analysts",
       "systems governance researchers"
     ],
-    "summary": "Book 6 develops a formal structural theory of governance. A regime is defined as a constraint-enforcement structure — a system of nodes, relations, and invariants whose function is to regulate other structures. Regime logic specifies the conditions under which regimes form, stabilize, and dissolve. The book draws on the Inverted Star topology (Book 2), detection methods (Book 3), and opacity properties (Book 4) to analyze real-world governance phenomena with structural precision.",
+    "summary": "Book 6 develops a formal structural theory of governance. A regime is defined as a constraint-enforcement structure \u2014 a system of nodes, relations, and invariants whose function is to regulate other structures. Regime logic specifies the conditions under which regimes form, stabilize, and dissolve. The book draws on the Inverted Star topology (Book 2), detection methods (Book 3), and opacity properties (Book 4) to analyze real-world governance phenomena with structural precision.",
     "dependencies": [
       "book1_fft",
-      "book2_inverted_star",
+      "book2_the_inverted_star",
       "book4_opacity_revelation",
       "book5_tel"
     ],
@@ -46,10 +46,10 @@
   },
   "invariants": {
     "references": [
-      "INV-GRL-001: Regime Validity — a regime is valid only if it can enforce at least one constraint on at least one governed structure",
-      "INV-GRL-002: Authority Decay — regime authority diminishes monotonically if enforcement actions produce no observable compliance response",
-      "INV-GRL-003: Regime Closure — a regime cannot govern itself without introducing a meta-regime or producing structural paradox",
-      "INV-GRL-004: Constraint Legitimacy — governed structures may challenge regime constraints only through declared structural channels, not by unilateral violation"
+      "INV-GRL-001: Regime Validity \u2014 a regime is valid only if it can enforce at least one constraint on at least one governed structure",
+      "INV-GRL-002: Authority Decay \u2014 regime authority diminishes monotonically if enforcement actions produce no observable compliance response",
+      "INV-GRL-003: Regime Closure \u2014 a regime cannot govern itself without introducing a meta-regime or producing structural paradox",
+      "INV-GRL-004: Constraint Legitimacy \u2014 governed structures may challenge regime constraints only through declared structural channels, not by unilateral violation"
     ],
     "file": "invariants/book6_invariants.json"
   },
@@ -57,9 +57,13 @@
     "domain": "Governance & Political Theory",
     "tier": "Applied",
     "reading_order": 6,
-    "prerequisite_books": [1, 2, 4, 5],
-    "live_site": "https://acwilson734.github.io/ai-edition/book6",
+    "prerequisite_books": [
+      1,
+      2,
+      4,
+      5
+    ],
+    "live_site": null,
     "last_updated": "2026-10-10"
   }
 }
-
