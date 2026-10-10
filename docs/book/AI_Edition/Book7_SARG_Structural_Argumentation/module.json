@@ -1,1 +1,65 @@
+{
+  "book": {
+    "id": "book7_sarg",
+    "number": 7,
+    "title": "SARG Structural Argumentation",
+    "abbreviation": "SARG",
+    "series": "AI Edition",
+    "edition": "AI",
+    "version": "1.0.0",
+    "status": "active"
+  },
+  "ai": {
+    "module": "book7_sarg",
+    "version": "1.0.0",
+    "purpose": "Define SARG (Structural Argumentation) as a formal framework for constructing, evaluating, and defeating arguments using structural properties rather than purely logical or rhetorical criteria. Arguments are modeled as structures whose validity is determined by constraint satisfaction and invariant preservation.",
+    "keywords": [
+      "SARG",
+      "structural argumentation",
+      "argument structure",
+      "formal argumentation",
+      "constraint satisfaction",
+      "argument validity",
+      "defeating conditions",
+      "claim structure",
+      "evidence structure",
+      "reasoning framework"
+    ],
+    "audience": [
+      "AI reasoning systems",
+      "argumentation theorists",
+      "legal theorists",
+      "philosophers of logic",
+      "debate researchers"
+    ],
+    "summary": "Book 7 introduces SARG as a structural account of argumentation. Rather than treating arguments as sequences of propositions, SARG models them as structured objects with nodes (claims, evidence, warrants), relations (support, contradiction, qualification), and constraints (validity conditions). An argument is sound if and only if it satisfies its declared structural constraints and does not violate any governing invariants. The book provides a complete formal specification of SARG, including argument construction, evaluation procedures, and defeat conditions.",
+    "dependencies": [
+      "book1_fft",
+      "book3_structural_detection",
+      "book5_tel",
+      "book6_governance"
+    ],
+    "unlocks": [
+      "book8_nos",
+      "book9_pattern_dynamics"
+    ]
+  },
+  "invariants": {
+    "references": [
+      "INV-SARG-001: Argument Integrity — every argument node must be reachable from the argument's root claim via declared relations",
+      "INV-SARG-002: Warrant Necessity — every claim-evidence pair requires at least one explicit warrant relation",
+      "INV-SARG-003: Defeat Completeness — a defeat of an argument must target at least one structural component, not merely a surface-level assertion",
+      "INV-SARG-004: Reflexive Prohibition — an argument cannot provide structural support for its own root claim without passing through an independent evidentiary node"
+    ],
+    "file": "invariants/book7_invariants.json"
+  },
+  "canonical_metadata": {
+    "domain": "Argumentation & Logic",
+    "tier": "Applied",
+    "reading_order": 7,
+    "prerequisite_books": [1, 3, 5, 6],
+    "live_site": "https://acwilson734.github.io/ai-edition/book7",
+    "last_updated": "2026-10-10"
+  }
+}
 
