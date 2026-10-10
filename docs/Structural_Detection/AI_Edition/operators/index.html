@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book 3 – Structural Detection (AI Edition) · Operator Index</title>
+  <style>
+    /* ── Reset & Base ───────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg-base:        #0b0e14;
+      --bg-panel:       #111622;
+      --bg-card:        #161d2e;
+      --bg-hover:       #1c2540;
+      --border:         #1e2d50;
+      --border-accent:  #2d4a8a;
+      --accent-primary: #4d8ef0;
+      --accent-glow:    #3a72d6;
+      --accent-gold:    #e2b84a;
+      --accent-green:   #3dd68c;
+      --accent-red:     #f05d6b;
+      --accent-purple:  #9b6cf5;
+      --text-primary:   #dce6f8;
+      --text-secondary: #8899bb;
+      --text-muted:     #4a5872;
+      --text-label:     #aabbd8;
+      --tag-bg:         #1a2745;
+      --radius:         8px;
+      --radius-lg:      14px;
+      --font-mono:      'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+      --font-sans:      'Inter', 'Segoe UI', system-ui, sans-serif;
+      --transition:     150ms ease;
+    }
+
+    html { font-size: 15px; scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg-base);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+
+    /* ── Layout Shell ──────────────────────────────────────────────── */
+    .shell {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    /* ── Top Bar ────────────────────────────────────────────────────── */
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 36px;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .topbar-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .topbar-logo {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--accent-primary);
+      background: var(--tag-bg);
+      border: 1px solid var(--border-accent);
+      border-radius: 6px;
+      padding: 5px 10px;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+    .topbar-crumb {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .topbar-crumb span { color: var(--text-secondary); }
+    .topbar-crumb .sep { color: var(--text-muted); }
+    .topbar-right {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .session-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--accent-green);
+      display: inline-block;
+      box-shadow: 0 0 6px var(--accent-green);
+      margin-right: 5px;
+    }
+    .session-id {
+      color: var(--accent-green);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+    }
+
+    /* ── Hero Header ────────────────────────────────────────────────── */
+    .hero {
+      background: linear-gradient(135deg, #0d1525 0%, #111e38 50%, #0b1420 100%);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-lg);
+      padding: 40px 44px;
+      margin-bottom: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 80% 30%, rgba(77,142,240,0.07) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 10% 80%, rgba(155,108,245,0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: 'SD';
+      position: absolute;
+      right: 36px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: var(--font-mono);
+      font-size: 6.5rem;
+      font-weight: 800;
+      color: rgba(77,142,240,0.04);
+      letter-spacing: -0.05em;
+      user-select: none;
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      padding: 3px 9px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+    .badge-ai {
+      background: rgba(77,142,240,0.15);
+      border: 1px solid rgba(77,142,240,0.4);
+      color: var(--accent-primary);
+    }
+    .badge-book {
+      background: rgba(226,184,74,0.12);
+      border: 1px solid rgba(226,184,74,0.35);
+      color: var(--accent-gold);
+    }
+    .badge-index {
+      background: rgba(61,214,140,0.10);
+      border: 1px solid rgba(61,214,140,0.3);
+      color: var(--accent-green);
+    }
+    .hero-title {
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    .hero-title em {
+      font-style: normal;
+      color: var(--accent-primary);
+    }
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      margin-bottom: 26px;
+    }
+    .hero-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 12px;
+      max-width: 640px;
+    }
+    .hero-meta-item {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 11px 14px;
+    }
+    .hero-meta-label {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 4px;
+    }
+    .hero-meta-value {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: var(--text-label);
+    }
+    .hero-meta-value.accent { color: var(--accent-primary); }
+    .hero-meta-value.gold { color: var(--accent-gold); }
+    .hero-meta-value.green { color: var(--accent-green); }
+
+    /* ── Section Wrappers ───────────────────────────────────────────── */
+    .section { margin-bottom: 42px; }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .section-icon {
+      width: 30px; height: 30px;
+      border-radius: 7px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+    .icon-blue  { background: rgba(77,142,240,0.15);  color: var(--accent-primary); border: 1px solid rgba(77,142,240,0.25); }
+    .icon-gold  { background: rgba(226,184,74,0.12);  color: var(--accent-gold);    border: 1px solid rgba(226,184,74,0.25); }
+    .icon-green { background: rgba(61,214,140,0.10);  color: var(--accent-green);   border: 1px solid rgba(61,214,140,0.22); }
+    .icon-purple{ background: rgba(155,108,245,0.12); color: var(--accent-purple);  border: 1px solid rgba(155,108,245,0.25); }
+
+    .section-title {
+      font-size: 1.02rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .section-title small {
+      font-weight: 400;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-left: 6px;
+    }
+    .section-rule {
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ── Operator Table ─────────────────────────────────────────────── */
+    .op-table-wrap {
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+    .op-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .op-table thead tr {
+      background: rgba(77,142,240,0.06);
+      border-bottom: 1px solid var(--border-accent);
+    }
+    .op-table thead th {
+      padding: 12px 18px;
+      text-align: left;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+    .op-table tbody tr {
+      border-bottom: 1px solid var(--border);
+      transition: background var(--transition);
+      cursor: pointer;
+    }
+    .op-table tbody tr:last-child { border-bottom: none; }
+    .op-table tbody tr:hover { background: var(--bg-hover); }
+    .op-table td {
+      padding: 16px 18px;
+      vertical-align: top;
+    }
+
+    .op-id-cell {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .op-rank-badge {
+      width: 26px; height: 26px;
+      border-radius: 6px;
+      background: var(--tag-bg);
+      border: 1px solid var(--border-accent);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+    .op-symbol {
+      font-family: var(--font-mono);
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--accent-primary);
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
+    .op-name {
+      font-weight: 600;
+      font-size: 0.92rem;
+      color: var(--text-primary);
+      margin-bottom: 3px;
+    }
+    .op-class-tag {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .tag-structural { background: rgba(77,142,240,0.12); color: var(--accent-primary); border: 1px solid rgba(77,142,240,0.3); }
+    .tag-geometric  { background: rgba(155,108,245,0.12); color: var(--accent-purple);  border: 1px solid rgba(155,108,245,0.3); }
+    .tag-logic      { background: rgba(226,184,74,0.12);  color: var(--accent-gold);    border: 1px solid rgba(226,184,74,0.3); }
+    .tag-spectral   { background: rgba(61,214,140,0.10);  color: var(--accent-green);   border: 1px solid rgba(61,214,140,0.25); }
+    .tag-product    { background: rgba(240,93,107,0.10);  color: var(--accent-red);      border: 1px solid rgba(240,93,107,0.25); }
+
+    .op-desc {
+      font-size: 0.84rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+    .op-domain {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+    .op-domain code {
+      color: var(--text-secondary);
+      background: rgba(255,255,255,0.04);
+      border-radius: 3px;
+      padding: 1px 5px;
+    }
+    .op-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--accent-primary);
+      text-decoration: none;
+      background: rgba(77,142,240,0.08);
+      border: 1px solid rgba(77,142,240,0.22);
+      border-radius: 5px;
+      padding: 4px 10px;
+      transition: background var(--transition), border-color var(--transition);
+      white-space: nowrap;
+    }
+    .op-link:hover {
+      background: rgba(77,142,240,0.16);
+      border-color: var(--accent-primary);
+      color: #7fb4ff;
+    }
+    .op-link svg { flex-shrink: 0; }
+
+    .op-status-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 5px;
+    }
+    .status-active   { background: var(--accent-green); box-shadow: 0 0 5px var(--accent-green); }
+    .status-draft    { background: var(--accent-gold);  box-shadow: 0 0 5px var(--accent-gold); }
+    .status-pending  { background: var(--text-muted); }
+    .status-label {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text-secondary);
+    }
+
+    /* ── Session Context Panel ──────────────────────────────────────── */
+    .session-panel {
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 22px 26px;
+    }
+    .session-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 14px;
+    }
+    .session-field {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .session-field-label {
+      font-family: var(--font-mono);
+      font-size: 0.63rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+    }
+    .session-field-value {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--text-label);
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 5px 10px;
+    }
+    .session-field-value.live { color: var(--accent-green); }
+    .session-field-value.path-val { color: var(--accent-primary); word-break: break-all; }
+
+    /* ── Module Identity ────────────────────────────────────────────── */
+    .module-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    @media (max-width: 640px) { .module-grid { grid-template-columns: 1fr; } }
+
+    .module-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 20px 22px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color var(--transition);
+    }
+    .module-card:hover { border-color: var(--border-accent); }
+    .module-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+    }
+    .module-card.blue::before  { background: linear-gradient(90deg, var(--accent-primary), transparent); }
+    .module-card.gold::before  { background: linear-gradient(90deg, var(--accent-gold), transparent); }
+    .module-card.green::before { background: linear-gradient(90deg, var(--accent-green), transparent); }
+    .module-card.purple::before{ background: linear-gradient(90deg, var(--accent-purple), transparent); }
+
+    .module-card-label {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+    .module-card-value {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.4;
+    }
+    .module-card-sub {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      margin-top: 4px;
+    }
+    .module-card code {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--accent-primary);
+      background: rgba(77,142,240,0.07);
+      border-radius: 3px;
+      padding: 1px 5px;
+    }
+
+    /* ── AI Capability Tags ─────────────────────────────────────────── */
+    .tags-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .cap-tag {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      padding: 4px 11px;
+      border-radius: 20px;
+      letter-spacing: 0.04em;
+    }
+    .cap-tag.blue   { background: rgba(77,142,240,0.1);  color: #7fb4ff; border: 1px solid rgba(77,142,240,0.25); }
+    .cap-tag.green  { background: rgba(61,214,140,0.08); color: #5ee8a8; border: 1px solid rgba(61,214,140,0.22); }
+    .cap-tag.purple { background: rgba(155,108,245,0.1); color: #b898ff; border: 1px solid rgba(155,108,245,0.25); }
+    .cap-tag.gold   { background: rgba(226,184,74,0.1);  color: #f0ca6b; border: 1px solid rgba(226,184,74,0.25); }
+    .cap-tag.red    { background: rgba(240,93,107,0.08); color: #f07a84; border: 1px solid rgba(240,93,107,0.22); }
+
+    /* ── Footer ─────────────────────────────────────────────────────── */
+    .footer {
+      margin-top: 60px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .footer-left {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+    .footer-right {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+    .footer-right span { color: var(--text-secondary); }
+
+    /* ── Responsive ─────────────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .op-table thead th:nth-child(4),
+      .op-table td:nth-child(4) { display: none; }
+      .hero-title { font-size: 1.5rem; }
+      .hero { padding: 26px 22px; }
+      .shell { padding: 0 14px 60px; }
+    }
+    @media (max-width: 520px) {
+      .op-table thead th:nth-child(3),
+      .op-table td:nth-child(3) { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="shell">
+
+  <!-- ── Top Bar ─────────────────────────────────────────────────── -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <div class="topbar-logo">AI-ED · v3.0</div>
+      <div class="topbar-crumb">
+        <span>docs</span>
+        <span class="sep">/</span>
+        <span>Structural_Detection</span>
+        <span class="sep">/</span>
+        <span>AI_Edition</span>
+        <span class="sep">/</span>
+        <span>operators</span>
+        <span class="sep">/</span>
+        <span style="color:var(--accent-primary)">index.html</span>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <span><span class="session-dot"></span><span class="session-id">SESSION LIVE</span></span>
+      <span>2026-10-10 · 05:45 EDT</span>
+    </div>
+  </header>
+
+  <!-- ── Hero ───────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-eyebrow">
+      <span class="badge badge-book">Book 3</span>
+      <span class="badge badge-ai">⚡ AI Edition</span>
+      <span class="badge badge-index">Operator Index</span>
+    </div>
+    <h1 class="hero-title">Structural Detection<br><em>Operator Reference</em></h1>
+    <p class="hero-subtitle">Complete index of SD-series operators — detection primitives, structural transforms, and AI-augmented analysis modules.</p>
+    <div class="hero-meta-grid">
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Series Prefix</div>
+        <div class="hero-meta-value accent">SD‑ (Structural Detection)</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Operator Count</div>
+        <div class="hero-meta-value green">5 Registered</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Edition</div>
+        <div class="hero-meta-value gold">AI Edition · 3rd</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Index Revision</div>
+        <div class="hero-meta-value">2026-10-10</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Module Identity ────────────────────────────────────────── -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-icon icon-gold">◈</div>
+      <div class="section-title">Module Identity</div>
+      <div class="section-rule"></div>
+    </div>
+    <div class="module-grid">
+      <div class="module-card blue">
+        <div class="module-card-label">Module Namespace</div>
+        <div class="module-card-value">Structural Detection</div>
+        <div class="module-card-sub">Core detection operator family · SD-series</div>
+      </div>
+      <div class="module-card gold">
+        <div class="module-card-label">Edition &amp; Volume</div>
+        <div class="module-card-value">AI Edition · Book 3</div>
+        <div class="module-card-sub">AI-augmented structural analysis pipeline</div>
+      </div>
+      <div class="module-card green">
+        <div class="module-card-label">Root Directory</div>
+        <div class="module-card-value"><code>docs/Structural_Detection/AI_Edition/operators/</code></div>
+      </div>
+      <div class="module-card purple">
+        <div class="module-card-label">AI Capabilities</div>
+        <div class="module-card-sub" style="margin-top:8px;">
+          <div class="tags-wrap">
+            <span class="cap-tag blue">Pattern Recognition</span>
+            <span class="cap-tag green">Anomaly Detection</span>
+            <span class="cap-tag purple">Spectral Analysis</span>
+            <span class="cap-tag gold">Tensor Ops</span>
+            <span class="cap-tag red">Boundary Inference</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Operator Table ─────────────────────────────────────────── -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-icon icon-blue">⊞</div>
+      <div class="section-title">Operator Registry <small>· 5 operators · SD-series</small></div>
+      <div class="section-rule"></div>
+    </div>
+    <div class="op-table-wrap">
+      <table class="op-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Operator ID &amp; Symbol</th>
+            <th>Name &amp; Classification</th>
+            <th>Description</th>
+            <th>Domain / File</th>
+            <th>Status</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <!-- SD-Σd -->
+          <tr onclick="location.href='SD-Sigma-d.html'">
+            <td><div class="op-rank-badge">01</div></td>
+            <td>
+              <div class="op-id-cell">
+                <div>
+                  <div class="op-symbol">SD‑Σd</div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="op-name">Summation-Delta Detector</div>
+              <span class="op-class-tag tag-structural">Structural</span>
+            </td>
+            <td>
+              <div class="op-desc">Cumulative structural delta accumulation operator. Aggregates differential signals across detection layers to identify sustained deviation patterns within a structural field.</div>
+            </td>
+            <td>
+              <div class="op-domain">
+                <code>SD-Sigma-d.html</code>
+              </div>
+            </td>
+            <td>
+              <span class="op-status-dot status-active"></span>
+              <span class="status-label">Active</span>
+            </td>
+            <td><a class="op-link" href="SD-Sigma-d.html" onclick="event.stopPropagation()"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Open</a></td>
+          </tr>
+
+          <!-- SD-Γ -->
+          <tr onclick="location.href='SD-Gamma.html'">
+            <td><div class="op-rank-badge">02</div></td>
+            <td>
+              <div class="op-id-cell">
+                <div>
+                  <div class="op-symbol">SD‑Γ</div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="op-name">Gamma Structural Operator</div>
+              <span class="op-class-tag tag-geometric">Geometric</span>
+            </td>
+            <td>
+              <div class="op-desc">Applies gamma-curve transformations to structural detection maps. Enhances contrast sensitivity in transition zones and edge-proximate regions for improved curvature detection.</div>
+            </td>
+            <td>
+              <div class="op-domain">
+                <code>SD-Gamma.html</code>
+              </div>
+            </td>
+            <td>
+              <span class="op-status-dot status-active"></span>
+              <span class="status-label">Active</span>
+            </td>
+            <td><a class="op-link" href="SD-Gamma.html" onclick="event.stopPropagation()"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Open</a></td>
+          </tr>
+
+          <!-- SD-Λ -->
+          <tr onclick="location.href='SD-Lambda.html'">
+            <td><div class="op-rank-badge">03</div></td>
+            <td>
+              <div class="op-id-cell">
+                <div>
+                  <div class="op-symbol">SD‑Λ</div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="op-name">Lambda Logic Operator</div>
+              <span class="op-class-tag tag-logic">Logic</span>
+            </td>
+            <td>
+              <div class="op-desc">Functional lambda-composition operator for conditional structural detection rules. Enables higher-order operator chaining and context-sensitive branching within the SD pipeline.</div>
+            </td>
+            <td>
+              <div class="op-domain">
+                <code>SD-Lambda.html</code>
+              </div>
+            </td>
+            <td>
+              <span class="op-status-dot status-active"></span>
+              <span class="status-label">Active</span>
+            </td>
+            <td><a class="op-link" href="SD-Lambda.html" onclick="event.stopPropagation()"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Open</a></td>
+          </tr>
+
+          <!-- SD-Ξ -->
+          <tr onclick="location.href='SD-Xi.html'">
+            <td><div class="op-rank-badge">04</div></td>
+            <td>
+              <div class="op-id-cell">
+                <div>
+                  <div class="op-symbol">SD‑Ξ</div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="op-name">Xi Spectral Operator</div>
+              <span class="op-class-tag tag-spectral">Spectral</span>
+            </td>
+            <td>
+              <div class="op-desc">Multi-band spectral decomposition operator. Resolves structural features across discrete frequency domains, enabling cross-layer interference mapping and harmonic signature extraction.</div>
+            </td>
+            <td>
+              <div class="op-domain">
+                <code>SD-Xi.html</code>
+              </div>
+            </td>
+            <td>
+              <span class="op-status-dot status-active"></span>
+              <span class="status-label">Active</span>
+            </td>
+            <td><a class="op-link" href="SD-Xi.html" onclick="event.stopPropagation()"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Open</a></td>
+          </tr>
+
+          <!-- SD-Π -->
+          <tr onclick="location.href='SD-Pi.html'">
+            <td><div class="op-rank-badge">05</div></td>
+            <td>
+              <div class="op-id-cell">
+                <div>
+                  <div class="op-symbol">SD‑Π</div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="op-name">Pi Product Operator</div>
+              <span class="op-class-tag tag-product">Product</span>
+            </td>
+            <td>
+              <div class="op-desc">Structural product-space operator implementing cyclic boundary detection. Computes closed-form tensor products over detection manifolds for topology-aware structural inference.</div>
+            </td>
+            <td>
+              <div class="op-domain">
+                <code>SD-Pi.html</code>
+              </div>
+            </td>
+            <td>
+              <span class="op-status-dot status-active"></span>
+              <span class="status-label">Active</span>
+            </td>
+            <td><a class="op-link" href="SD-Pi.html" onclick="event.stopPropagation()"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Open</a></td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ── Session Context ────────────────────────────────────────── -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-icon icon-green">◎</div>
+      <div class="section-title">Session Context</div>
+      <div class="section-rule"></div>
+    </div>
+    <div class="session-panel">
+      <div class="session-grid">
+        <div class="session-field">
+          <div class="session-field-label">Session Status</div>
+          <div class="session-field-value live">⬤ LIVE</div>
+        </div>
+        <div class="session-field">
+          <div class="session-field-label">Timestamp</div>
+          <div class="session-field-value">2026-10-10 · 05:45 EDT</div>
+        </div>
+        <div class="session-field">
+          <div class="session-field-label">Edition Context</div>
+          <div class="session-field-value">AI Edition · Book 3</div>
+        </div>
+        <div class="session-field">
+          <div class="session-field-label">Active Operators</div>
+          <div class="session-field-value live">5 / 5</div>
+        </div>
+        <div class="session-field">
+          <div class="session-field-label">Root Path</div>
+          <div class="session-field-value path-val">docs/Structural_Detection/AI_Edition/operators/</div>
+        </div>
+        <div class="session-field">
+          <div class="session-field-label">Index File</div>
+          <div class="session-field-value path-val">index.html</div>
+        </div>
+        <div class="session-field">
+          <div class="session-field-label">Operator Series</div>
+          <div class="session-field-value">SD‑Σd · SD‑Γ · SD‑Λ · SD‑Ξ · SD‑Π</div>
+        </div>
+        <div class="session-field">
+          <div class="session-field-label">Series Prefix</div>
+          <div class="session-field-value">SD‑ (Structural Detection)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-left">
+      Book 3 – Structural Detection (AI Edition) · Operator Index · Generated 2026-10-10
+    </div>
+    <div class="footer-right">
+      <span>docs/Structural_Detection/AI_Edition/operators/index.html</span>
+    </div>
+  </footer>
+
+</div><!-- /shell -->
+</body>
+</html>
