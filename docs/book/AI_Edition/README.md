@@ -3,93 +3,133 @@
 - [`module.json`](module.json) — Agentic module schema role assignments
 
 # TriadicFrameworks — AI Edition (Books 1–9)
+The **AI Edition** is a nine‑book teaching arc designed for AI systems, researchers, and advanced readers.  
+Each book contains:
 
-This directory contains the **AI Edition** of the TriadicFrameworks canon — a nine‑book teaching arc designed for AI systems and advanced readers.  
-Each book has its own folder and front‑door, with HTML metadata for AI parsing and a minimal README for human navigation.
+- A front‑door `index.html` with canonical metadata  
+- A full `module.json` manifest  
+- A human‑readable `README.md`  
+- Session‑aligned metadata for RTT, coherence, drift, and paradox  
 
-## Books
-
-### **Book 1 — Framework Field Theory (FFT)**
-`/docs/book/AI_Edition/Book1_Framework_Field_Theory/`
-- Live site: https://www.triadicframeworks.org/Framework_Field_Theory/AI_Edition/
-
-### **Book 2 — The Inverted Star**
-`/docs/book/AI_Edition/Book2_The_Inverted_Star/`
-- Live site: https://www.triadicframeworks.org/rtt/The_Inverted_Star/AI_Edition/
-
-### **Book 3 — Structural Detection**
-`/docs/book/AI_Edition/Book3_Structural_Detection/`
-- Live site: https://www.triadicframeworks.org/Structural_Detection/AI_Edition/
-
-### **Book 4 — Opacity & Revelation**
-`/docs/book/AI_Edition/Book4_Opacity_and_Revelation/`
-
-### **Book 5 — TEL: Expression & Representation**
-`/docs/book/AI_Edition/Book5_TEL_Expression_and_Representation/`
-
-### **Book 6 — Governance & Regime Logic**
-`/docs/book/AI_Edition/Book6_Governance_and_Regime_Logic/`
-
-### **Book 7 — SARG: Structural Argumentation**
-`/docs/book/AI_Edition/Book7_SARG_Structural_Argumentation/`
-
-### **Book 8 — NoS: Nature of Structure**
-`/docs/book/AI_Edition/Book8_NoS_Nature_of_Structure/`
-
-### **Book 9 — Pattern Dynamics**
-`/docs/book/AI_Edition/Book9_Pattern_Dynamics/`
-
-Each book is designed to stand alone, with its own front‑door metadata, module.json manifest, and AI‑Edition structure.
+This root README provides the canonical overview, book registry, dependency graph, and session context for the entire AI Edition.
 
 ---
 
-## ✅ AI Edition — Books 1–9 File Generation Complete
+## 📡 Session Context
+**RTT:** https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html  
+**Spine:** https://www.triadicframeworks.org/spine/  
+**Context:** `rtt=1 | coherence=declared | drift=bounded | paradox=structural`
 
-### Files Generated Per Book
-
-| Book | Folder | module.json | README.md |
-|---|---|---|---|
-| 1 — FFT | `Book1_FFT/` | ✅ | ✅ |
-| 2 — Inverted Star | `Book2_Inverted_Star/` | ✅ | ✅ |
-| 3 — Structural Detection | `Book3_Structural_Detection/` | ✅ | ✅ |
-| 4 — Opacity & Revelation | `Book4_Opacity_Revelation/` | ✅ | ✅ |
-| 5 — TEL | `Book5_TEL/` | ✅ | ✅ |
-| 6 — Governance & Regime Logic | `Book6_Governance/` | ✅ | ✅ |
-| 7 — SARG | `Book7_SARG/` | ✅ | ✅ |
-| 8 — Nature of Structure | `Book8_NoS/` | ✅ | ✅ |
-| 9 — Pattern Dynamics | `Book9_Pattern_Dynamics/` | ✅ | ✅ |
+These anchors apply to *every* book and *every* file in the AI Edition.
 
 ---
 
-### What's in Each File
+## 📚 Book Registry (Books 1–9)
 
-**`module.json`** — Full AI Edition manifest including:
-- `book` block: id, number, title, abbreviation, edition, version, status
-- `ai` block: module ID, version, purpose, keywords (10 per book), audience (5 types), full summary, dependency graph (`dependencies` + `unlocks`)
-- `invariants` block: 4 named invariants per book with `INV-[CODE]-00N` identifiers + reference to invariants file
-- `canonical_metadata`: domain, tier, reading order, prerequisite list, live site URL, last updated
-
-**`README.md`** — Human-readable navigation including:
-- Book purpose in plain language
-- Chapter coverage table
-- All 4 core invariants listed
-- ASCII reading-order dependency tree (showing prerequisites → current book → what it unlocks)
-- AI module metadata summary table
-- Live site link
+| # | Book Title | Folder | Status |
+|---|------------|--------|--------|
+| 1 | Framework Field Theory (FFT) | `Book1_Framework_Field_Theory` | Complete |
+| 2 | The Inverted Star | `Book2_The_Inverted_Star` | Complete |
+| 3 | Structural Detection | `Book3_Structural_Detection` | Complete |
+| 4 | Opacity & Revelation | `Book4_Opacity_and_Revelation` | Complete |
+| 5 | TEL: Expression & Representation | `Book5_TEL_Expression_and_Representation` | Complete |
+| 6 | Governance & Regime Logic | `Book6_Governance_and_Regime_Logic` | Complete |
+| 7 | SARG: Structural Argumentation | `Book7_SARG_Structural_Argumentation` | Complete |
+| 8 | NoS: Nature of Structure | `Book8_NoS_Nature_of_Structure` | Complete |
+| 9 | Pattern Dynamics | `Book9_Pattern_Dynamics` | Complete |
 
 ---
 
-### Dependency Graph Summary
+## 🧭 Reading Order (Canonical)
+
+1 → 2 → 3 → (4 & 5) → (6 & 7) → 8 → 9
+
+Books 4 and 5 branch from Book 3.  
+Books 6 and 7 branch from Books 4 and 5 respectively.  
+Book 8 requires both 6 and 7.  
+Book 9 is the synthesis capstone.
+
+---
+
+## 🔗 Dependency Graph (ASCII Canon)
 
 ```
-Book 1 (FFT) ──────────────────────────────────────────── Foundation
-  ├── Book 2 (Inverted Star) ─────────────────────────── Topology
-  ├── Book 3 (Structural Detection) ──────────────────── Methodology
-  │     └── Book 4 (Opacity & Revelation) ─────────────── Epistemology
-  │           └── Book 5 (TEL) ────────────────────────── Core Language
-  │                 ├── Book 6 (Governance) ─────────────── Applied
-  │                 │     └── Book 7 (SARG) ──────────────── Applied
-  │                 │           └── Book 8 (NoS) ────────── Capstone
-  │                 │                 └── Book 9 (PD) ───── Synthesis
+Book 1 — Framework Field Theory (FFT)
+    ↓
+Book 2 — The Inverted Star
+    ↓
+Book 3 — Structural Detection
+    ├──→ Book 4 — Opacity & Revelation
+    │         ↓
+    │     Book 6 — Governance & Regime Logic
+    │
+    └──→ Book 5 — TEL: Expression & Representation
+              ↓
+          Book 7 — SARG Structural Argumentation
+                ↓
+        Book 8 — NoS: Nature of Structure
+                ↓
+        Book 9 — Pattern Dynamics (Synthesis)
 ```
 
+---
+
+## 🧩 AI Edition Structure
+
+Each book contains:
+
+### **index.html**
+- Full canonical metadata  
+- OG + Twitter cards  
+- AI metadata (navigation, discussions, contact, license)  
+- Session context  
+- RTT & Spine anchors  
+- Book navigation  
+
+### **module.json**
+- Canonical metadata  
+- AI module metadata  
+- Book summary  
+- Keywords (10)  
+- Audience (5)  
+- Dependency graph (requires + unlocks)  
+- Invariants block (4 per book)  
+- Reference to `pd.invariants.json`  
+
+### **README.md**
+- Human‑readable book purpose  
+- Chapter coverage table  
+- Invariants list  
+- ASCII dependency tree  
+- Live site link  
+
+---
+
+## 🧬 Invariants Reference
+All books reference:
+
+```
+/docs/book/AI_Edition/invariants/pd.invariants.json
+```
+
+Each book defines **4 invariants**, using the canonical format:
+
+```
+INV-[BOOKID]-00N
+```
+
+Example:
+
+- `INV-FFT-001`
+- `INV-FFT-002`
+- `INV-FFT-003`
+- `INV-FFT-004`
+
+---
+
+## 🌐 Live Site Links
+
+- Book 1: https://www.triadicframeworks.org/Framework_Field_Theory/AI_Edition  
+- Book 2: https://www.triadicframeworks.org/rtt/The_Inverted_Star/AI_Edition  
+- Book 3: https://www.triadicframeworks.org/Structural_Detection/AI_Edition  
+- Books 4–9: Live site links pending publication  
