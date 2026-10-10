@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="book_6_Governance_and_Regime_Logic_" src="https://github.com/user-attachments/assets/35c683aa-9fdf-4745-a036-7e2e2db3eb7f" />
 
 - [`module.json`](module.json) — Agentic module schema role assignments
 
