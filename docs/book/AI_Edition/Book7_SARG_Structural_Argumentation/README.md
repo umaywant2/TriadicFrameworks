@@ -1,3 +1,6 @@
+
+- [`module.json`](module.json) — Agentic module schema role assignments
+
 # Book 7 — SARG Structural Argumentation
 ### AI Edition · Book 7 of 9
 
