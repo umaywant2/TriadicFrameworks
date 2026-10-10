@@ -1,3 +1,6 @@
+
+- [`module.json`](module.json) — Agentic module schema role assignments
+
 # Light
 ### TriadicFrameworks Canon · Capstone Field Module
 
