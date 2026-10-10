@@ -12,7 +12,7 @@
   "ai": {
     "module": "book4_opacity_revelation",
     "version": "1.0.0",
-    "purpose": "Formalize the structural properties of opacity and revelation — the degree to which a structure conceals or exposes its internal configuration to external observers or interacting systems. Develops a gradient model of structural transparency and establishes conditions under which hidden structure becomes detectable.",
+    "purpose": "Formalize the structural properties of opacity and revelation \u2014 the degree to which a structure conceals or exposes its internal configuration to external observers or interacting systems. Develops a gradient model of structural transparency and establishes conditions under which hidden structure becomes detectable.",
     "keywords": [
       "opacity",
       "revelation",
@@ -32,7 +32,7 @@
       "epistemologists",
       "structural analysts"
     ],
-    "summary": "Book 4 introduces the Opacity–Revelation spectrum as a first-class structural property. Structures are not simply opaque or transparent — they occupy positions along a continuously parameterized gradient. The book defines the formal conditions under which opacity breaks down, revelation occurs, and latent structure becomes accessible. It integrates with Book 3's detection methodology to characterize what is detectable and what remains structurally hidden.",
+    "summary": "Book 4 introduces the Opacity\u2013Revelation spectrum as a first-class structural property. Structures are not simply opaque or transparent \u2014 they occupy positions along a continuously parameterized gradient. The book defines the formal conditions under which opacity breaks down, revelation occurs, and latent structure becomes accessible. It integrates with Book 3's detection methodology to characterize what is detectable and what remains structurally hidden.",
     "dependencies": [
       "book1_fft",
       "book3_structural_detection"
@@ -45,10 +45,10 @@
   },
   "invariants": {
     "references": [
-      "INV-OR-001: Opacity Gradient — opacity is a continuous parameter in [0,1]; binary opacity assignments are special cases",
-      "INV-OR-002: Revelation Threshold — revelation occurs when an observer's detection capacity exceeds the structure's opacity value",
-      "INV-OR-003: Opacity Persistence — a structure's opacity is a property of its configuration, not of any observer's state",
-      "INV-OR-004: Partial Revelation — revelation may be partial; not all sub-structures of a system need reveal simultaneously"
+      "INV-OR-001: Opacity Gradient \u2014 opacity is a continuous parameter in [0,1]; binary opacity assignments are special cases",
+      "INV-OR-002: Revelation Threshold \u2014 revelation occurs when an observer's detection capacity exceeds the structure's opacity value",
+      "INV-OR-003: Opacity Persistence \u2014 a structure's opacity is a property of its configuration, not of any observer's state",
+      "INV-OR-004: Partial Revelation \u2014 revelation may be partial; not all sub-structures of a system need reveal simultaneously"
     ],
     "file": "invariants/book4_invariants.json"
   },
@@ -56,9 +56,11 @@
     "domain": "Epistemology & Information Theory",
     "tier": "Intermediate",
     "reading_order": 4,
-    "prerequisite_books": [1, 3],
-    "live_site": "https://acwilson734.github.io/ai-edition/book4",
+    "prerequisite_books": [
+      1,
+      3
+    ],
+    "live_site": null,
     "last_updated": "2026-10-10"
   }
 }
-
