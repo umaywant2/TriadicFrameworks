@@ -1,0 +1,135 @@
+{
+  "id": "light",
+  "title": "Light",
+  "subtitle": "Capstone Field Module",
+  "version": "1.0.0",
+  "status": "complete",
+  "canon_position": {
+    "sequence": 7,
+    "type": "single-field",
+    "role": "capstone",
+    "predecessor": [
+      "gravity",
+      "pressure",
+      "arrival-substrate",
+      "inverted-star",
+      "atmosphere",
+      "regime-transition-arc"
+    ],
+    "successor": "unified-field"
+  },
+  "path": "docs/Light",
+  "entry_point": "docs/Light/index.md",
+  "readme": "docs/Light/README.md",
+  "source_capture": "docs/Light/capture_the_light.md",
+  "sections": [
+    {
+      "id": "01",
+      "slug": "light_regime_epochs",
+      "title": "Light Regime Epochs",
+      "subtitle": "The Spectral History of Life",
+      "file": "docs/Light/01_light_regime_epochs.md",
+      "status": "complete",
+      "key_concepts": ["LRE-I", "LRE-II", "LRE-III", "LRE-IV", "metabolic ceiling", "spectral gradient"]
+    },
+    {
+      "id": "02",
+      "slug": "spectral_fingerprint_theory",
+      "title": "Spectral Fingerprint Theory",
+      "subtitle": "The Grammar of Ancient Light",
+      "file": "docs/Light/02_spectral_fingerprint_theory.md",
+      "status": "complete",
+      "key_concepts": ["SF-1", "SF-2", "SF-3", "SF-4", "SF-5", "spectral fingerprint", "fingerprint detection"]
+    },
+    {
+      "id": "03",
+      "slug": "biospheric_scaling_law",
+      "title": "Biospheric Scaling Law",
+      "subtitle": "Why Light Determines Organism Size",
+      "file": "docs/Light/03_biospheric_scaling_law.md",
+      "status": "complete",
+      "key_concepts": ["BSL", "SED", "SCS", "SPD", "gigantism", "miniaturization prediction"]
+    },
+    {
+      "id": "04",
+      "slug": "gradient_light_coupling",
+      "title": "Gradient–Light Coupling",
+      "subtitle": "The Gravity → Pressure → Light Triad",
+      "file": "docs/Light/04_gradient_light_coupling.md",
+      "status": "complete",
+      "key_concepts": ["GLC", "GG", "PG", "SG", "coupling matrix", "spectral translation efficiency"]
+    },
+    {
+      "id": "05",
+      "slug": "light_substrate_engineering",
+      "title": "Light Substrate Engineering",
+      "subtitle": "Building Controlled Spectral Fields",
+      "file": "docs/Light/05_light_substrate_engineering.md",
+      "status": "complete",
+      "key_concepts": ["LS-1", "LS-2", "LS-3", "LS-4", "Type A", "Type B", "Type C", "Type D"]
+    },
+    {
+      "id": "06",
+      "slug": "stellar_interior_mapping",
+      "title": "Stellar Interior Mapping",
+      "subtitle": "Why the Sun's Light Changes",
+      "file": "docs/Light/06_stellar_interior_mapping.md",
+      "status": "complete",
+      "key_concepts": ["SIM-1", "SIM-2", "SIM-3", "SIM-4", "core gradient", "radiative zone", "convection zone"]
+    },
+    {
+      "id": "07",
+      "slug": "artificial_light_regimes",
+      "title": "Artificial Light Regimes",
+      "subtitle": "Programmable Spectral Environments",
+      "file": "docs/Light/07_artificial_light_regimes.md",
+      "status": "complete",
+      "key_concepts": ["ALR-A", "ALR-B", "ALR-C", "FRM", "ARM", "TRM", "MRM"]
+    },
+    {
+      "id": "08",
+      "slug": "substrate_safety_protocols",
+      "title": "Substrate Safety Protocols",
+      "subtitle": "Engineering Safety Architecture",
+      "file": "docs/Light/08_substrate_safety_protocols.md",
+      "status": "complete",
+      "key_concepts": ["SSP-1", "SSP-2", "SSP-3", "SSP-4", "SSP-5", "EP-1", "EP-2", "EP-3", "EP-4", "EP-5"]
+    },
+    {
+      "id": "09",
+      "slug": "regime_transition_architecture",
+      "title": "Regime Transition Architecture",
+      "subtitle": "Safe Transitions Between Regimes",
+      "file": "docs/Light/09_regime_transition_architecture.md",
+      "status": "complete",
+      "key_concepts": ["RTA-1", "RTA-2", "RTA-3", "RTA-4", "arc rate", "gradient space", "MRM coordination"]
+    },
+    {
+      "id": "10",
+      "slug": "light_field_applications",
+      "title": "Light Field Applications",
+      "subtitle": "Integration with Future Field Systems",
+      "file": "docs/Light/10_light_field_applications.md",
+      "status": "complete",
+      "key_concepts": ["biosphere reconstruction", "off-world habitat", "evolutionary research", "unified field integration", "spectral diagnostic layer"]
+    }
+  ],
+  "core_definitions": {
+    "LRE": "Light Regime Epoch — a period in planetary history with a stable, distinct spectral gradient setting a metabolic ceiling for life",
+    "SF": "Spectral Fingerprint — the complete structural identity of a light regime",
+    "BSL": "Biospheric Scaling Law — the maximum scale of life is determined by the spectral fingerprint of its parent star",
+    "GLC": "Gradient–Light Coupling — the structural interaction between gravity, pressure, and spectral gradients",
+    "LS": "Light Substrate — a controlled field environment capable of generating and sustaining a specific spectral fingerprint",
+    "ALR": "Artificial Light Regime — a programmable spectral environment",
+    "SSP": "Substrate Safety Protocol — structural safeguard ensuring substrates remain stable under all operational conditions",
+    "RTA": "Regime Transition Architecture — structured pathways for shifting between spectral fingerprints safely"
+  },
+  "forward_linkage": {
+    "unified_field": "docs/UnifiedField/index.md",
+    "light_field_vector": "∇F_𝕃(t)",
+    "rtt": "docs/RTT/index.md",
+    "future_fields": ["information-field", "threshold-field"]
+  },
+  "created": "2026-10-09",
+  "authors": ["TriadicFrameworks"]
+}
