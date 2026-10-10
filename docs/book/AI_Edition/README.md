@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="book_AI_Edition_" src="https://github.com/user-attachments/assets/a8531cf3-9081-4be6-8881-9cc1f2b14547" />
 
 - [`module.json`](module.json) — Agentic module schema role assignments
 
