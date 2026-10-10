@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Light_" src="https://github.com/user-attachments/assets/4d6ee46b-7e0d-47a4-a60c-e0a326676d93" />
 
 - [`module.json`](module.json) — Agentic module schema role assignments
 
