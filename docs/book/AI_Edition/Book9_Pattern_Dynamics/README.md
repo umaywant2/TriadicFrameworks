@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="book_9_Pattern_Dynamics_" src="https://github.com/user-attachments/assets/813598b7-8cac-4c40-8c08-93e7b0020d98" />
 
 - [`module.json`](module.json) — Agentic module schema role assignments
 
