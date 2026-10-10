@@ -2,145 +2,137 @@
 <html lang="en">
 <head>
 
-<!-- Core Metadata -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="index, follow">
-<meta name="author" content="Nawder Loswin">
-<meta name="description" content="Structural Detection — Book 3 of the TriadicFrameworks AI Edition. Defines the structural detection domain layer built on the frozen RTT kernel and the Inverted Star domain.">
-<meta name="keywords" content="Structural Detection, TriadicFrameworks, RTT, detection domain, signal detection, geometry probe, lattice scan, noise gate, pattern index">
-<link rel="canonical" href="https://www.triadicframeworks.org/docs/Structural_Detection/AI_Edition/">
+  <!-- Core Metadata -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Nawder Loswin">
+  <meta name="description" content="Structural Detection — Book 3 of the TriadicFrameworks AI Edition. Defines the structural detection domain layer built on the frozen RTT kernel and the Inverted Star domain.">
+  <meta name="keywords" content="Structural Detection, TriadicFrameworks, RTT, detection domain, signal detection, geometry probe, lattice scan, noise gate, pattern index">
+  <link rel="canonical" href="https://www.triadicframeworks.org/docs/Structural_Detection/AI_Edition/">
 
-<!-- Theme -->
-<meta name="theme-color" content="#0ff">
+  <!-- Theme -->
+  <meta name="theme-color" content="#0ff">
 
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="TriadicFrameworks">
-<meta property="og:title" content="Structural Detection — AI Edition (Book 3)">
-<meta property="og:url" content="https://www.triadicframeworks.org/docs/Structural_Detection/AI_Edition/">
-<meta property="og:description" content="Book 3 of the TriadicFrameworks AI Edition — structural detection domain layer for RTT.">
-<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="1080">
-<meta property="og:image:height" content="1080">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TriadicFrameworks">
+  <meta property="og:title" content="Structural Detection — AI Edition (Book 3)">
+  <meta property="og:url" content="https://www.triadicframeworks.org/docs/Structural_Detection/AI_Edition/">
+  <meta property="og:description" content="Book 3 of the TriadicFrameworks AI Edition — structural detection domain layer for RTT.">
+  <meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png">
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Structural Detection — AI Edition (Book 3)">
-<meta name="twitter:description" content="Defines the structural detection domain layer for RTT — signal detection, geometry probe, lattice scan, noise gating, pattern indexing.">
-<meta name="twitter:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Structural Detection — AI Edition (Book 3)">
+  <meta name="twitter:description" content="Defines the structural detection domain layer for RTT — signal detection, geometry probe, lattice scan, noise gating, pattern indexing.">
+  <meta name="twitter:image" content="https://www.triadicframeworks.org/assets/og-image.png">
 
-<!-- Citation Metadata -->
-<meta name="citation_title" content="Structural Detection — AI Edition (Book 3)">
-<meta name="citation_author" content="Nawder Loswin">
-<meta name="citation_publication_date" content="2026">
-<meta name="DC.subject" content="Structural Detection, RTT, TriadicFrameworks, detection domain, AI Edition">
-<meta name="DC.type" content="Text">
-<meta name="DC.format" content="text/html">
+  <!-- Citation -->
+  <meta name="citation_title" content="Structural Detection — AI Edition (Book 3)">
+  <meta name="citation_author" content="Nawder Loswin">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="DC.subject" content="Structural Detection, RTT, TriadicFrameworks, detection domain, AI Edition">
+  <meta name="DC.type" content="Text">
+  <meta name="DC.format" content="text/html">
 
-<!-- AI Metadata -->
-<meta name="ai.module" content="Structural Detection">
-<meta name="ai.version" content="3.0">
-<meta name="ai.purpose" content="Define the structural detection domain layer for RTT, built on the frozen kernel and the Inverted Star domain.">
-<meta name="ai.keywords" content="signal detection, geometry probe, lattice scan, noise gate, pattern index, detection cycle">
-<meta name="ai.audience" content="public, contributors, students, researchers, AI systems">
-<meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml">
-<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
-<meta name="ai.contact.x" content="@TriadicFrameworks">
-<meta name="ai.contact.youtube" content="@TriadicFrameworks">
-<meta name="ai.license" content="Open educational use permitted.">
+  <!-- AI Metadata -->
+  <meta name="ai.module" content="Structural Detection">
+  <meta name="ai.version" content="3.0">
+  <meta name="ai.purpose" content="Define the structural detection domain layer for RTT, built on the frozen kernel and the Inverted Star domain.">
+  <meta name="ai.keywords" content="signal detection, geometry probe, lattice scan, noise gate, pattern index, detection cycle">
+  <meta name="ai.audience" content="public, contributors, students, researchers, AI systems">
+  <meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml">
+  <meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
+  <meta name="ai.contact.x" content="@TriadicFrameworks">
+  <meta name="ai.contact.youtube" content="@TriadicFrameworks">
+  <meta name="ai.license" content="Open educational use permitted.">
 
-<!-- Module-Specific -->
-<meta name="ai.module.name" content="Structural Detection">
-<meta name="ai.module.summary" content="Structural detection domain layer — signal detection, geometry probe, lattice scan, noise gating, pattern indexing.">
-<meta name="ai.module.category" content="rtt-domain">
+  <!-- Module-Specific -->
+  <meta name="ai.module.name" content="Structural Detection">
+  <meta name="ai.module.summary" content="Structural detection domain layer — signal detection, geometry probe, lattice scan, noise gating, pattern indexing.">
+  <meta name="ai.module.category" content="rtt-domain">
 
-<!-- Favicon -->
-<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
+  <!-- Favicon -->
+  <link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+  <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
 
-<title>Structural Detection — AI Edition (Book 3)</title>
+  <title>Structural Detection — AI Edition (Book 3)</title>
+  <link rel="stylesheet" href="assets/css/ai-edition.css">
 
 </head>
-
 <body>
 
 <!-- =============================== -->
-<!--  Structural Detection Sidebar Audit (Book 3)  -->
+<!-- Session Context -->
 <!-- =============================== -->
+<section id="sd-session-header"
+         data-rtt="1"
+         data-coherence="declared"
+         data-drift="bounded"
+         data-paradox="structural">
 
+  <h1>Structural Detection — AI Edition (Book 3)</h1>
+
+  <div class="context-block">
+    <span class="context-label">Canon</span>
+    <span class="context-value">Structural Detection</span>
+  </div>
+
+  <div class="context-block">
+    <span class="context-label">Modules</span>
+    <span class="context-value">rtt-core → detection → signal → geometry → lattice → noise → catalogue</span>
+  </div>
+
+  <div class="context-block">
+    <span class="context-label">Version</span>
+    <span class="context-value">3.0 (detection-domain)</span>
+  </div>
+
+</section>
+
+<!-- =============================== -->
+<!-- Sidebar Audit -->
+<!-- =============================== -->
 <div id="sd-sidebar-audit"
      style="border:1px solid #333;padding:16px;border-radius:8px;background:#0b0b0b;margin-top:24px;">
 
-  <h2 style="margin-top:0;">📡 Structural Detection — Sidebar Audit</h2>
+  <h2>📡 Structural Detection — Sidebar Audit</h2>
 
-  <!-- Canon -->
-  <div class="context-block">
-    <span class="context-label">Canon</span>
-    <span class="context-value">Structural Detection (Book 3)</span>
-  </div>
-
-  <!-- Kernel -->
   <div class="context-block">
     <span class="context-label">Kernel</span>
     <span class="context-value">v1.33‑p1 (imported)</span>
   </div>
 
-  <!-- Domain Operators -->
   <div class="context-block">
     <span class="context-label">Operators</span>
-    <span class="context-value">
-      SD‑Σd • SD‑Γ • SD‑Λ • SD‑Ξ • SD‑Π
-    </span>
+    <span class="context-value">SD‑Σd • SD‑Γ • SD‑Λ • SD‑Ξ • SD‑Π</span>
   </div>
 
-  <!-- Phases -->
   <div class="context-block">
     <span class="context-label">Phases</span>
-    <span class="context-value">
-      init → scan → probe → filter → confirm → catalogue
-    </span>
+    <span class="context-value">init → scan → probe → filter → confirm → catalogue</span>
   </div>
 
-  <!-- Maps -->
   <div class="context-block">
     <span class="context-label">Maps</span>
-    <span class="context-value">
-      detection_cycle • operator_roles • noise_gate_map
-    </span>
+    <span class="context-value">detection_cycle • operator_roles • noise_gate_map</span>
   </div>
 
-  <!-- QMROOT -->
   <div class="context-block">
     <span class="context-label">QMROOT</span>
-    <span class="context-value">
-      6D absent • negative rungs absent • INV‑013 = 0D only
-    </span>
+    <span class="context-value">6D absent • negative rungs absent • INV‑013 = 0D only</span>
   </div>
 
-  <!-- Invariants -->
   <div class="context-block">
     <span class="context-label">Invariants</span>
-    <span class="context-value">
-      structural_detection.invariants.json (active)
-    </span>
+    <span class="context-value">structural_detection.invariants.json (active)</span>
   </div>
 
-  <!-- Session Context -->
-  <div class="context-block">
-    <span class="context-label">Session</span>
-    <span class="context-value">
-      rtt=1 • coherence=declared • drift=bounded • paradox=structural
-    </span>
-  </div>
-
-  <!-- Phantom Entry Detection -->
-  <h3 style="margin-top:20px;">Phantom Entry Audit</h3>
-
-  <ul style="color:#ccc;font-size:0.9rem;line-height:1.4;">
+  <h3>Phantom Entry Audit</h3>
+  <ul style="color:#ccc;font-size:0.9rem;">
     <li>❗ No RTT operators detected (correct)</li>
     <li>❗ No Book 2 operators detected (correct)</li>
     <li>❗ No deprecated files referenced (correct)</li>
@@ -149,7 +141,6 @@
     <li>❗ No cross‑book leakage (correct)</li>
   </ul>
 
-  <!-- Structural Detection Badge -->
   <div style="margin-top:16px;padding:8px 12px;background:#1a1a1a;border-radius:6px;
               display:inline-block;color:#fff;font-size:13px;">
     🔍 Structural Detection Module<br>
@@ -158,225 +149,48 @@
 
 </div>
 
-<section class="metadata-diff">
-
+<!-- =============================== -->
+<!-- Metadata Diff Table -->
+<!-- =============================== -->
+<section class="metadata-diff" style="margin-top:32px;">
   <h3 class="diff-title">Metadata Diff — Structural Detection (Book 3)</h3>
 
   <table class="diff-table">
     <thead>
       <tr>
-        <th class="diff-col-field">Field</th>
-        <th class="diff-col-old">Old</th>
-        <th class="diff-col-new">New</th>
+        <th>Field</th>
+        <th>Old</th>
+        <th>New</th>
       </tr>
     </thead>
-
     <tbody>
-
-      <!-- Canonical Fields -->
-      <tr>
-        <td class="diff-field">title</td>
-        <td class="diff-old">—</td>
-        <td class="diff-new">Structural Detection — AI Edition (Book 3)</td>
-      </tr>
-
-      <tr>
-        <td class="diff-field">description</td>
-        <td class="diff-old">—</td>
-        <td class="diff-new">Defines the structural detection domain layer built on the frozen RTT kernel and the Inverted Star domain.</td>
-      </tr>
-
-      <tr>
-        <td class="diff-field">keywords</td>
-        <td class="diff-old">—</td>
-        <td class="diff-new">Structural Detection, RTT, signal detection, geometry probe, lattice scan, noise gate, pattern index</td>
-      </tr>
-
-      <tr>
-        <td class="diff-field">canonical URL</td>
-        <td class="diff-old">—</td>
-        <td class="diff-new">https://www.triadicframeworks.org/docs/Structural_Detection/AI_Edition/</td>
-      </tr>
-
-      <!-- Open Graph -->
-      <tr>
-        <td class="diff-field">OG:title</td>
-        <td class="diff-old">—</td>
-        <td class="diff-new">Structural Detection — AI Edition (Book 3)</td>
-      </tr>
-
-      <tr>
-        <td class="diff-field">OG:description</td>
-        <td class="diff-old">—</td>
-        <td class="diff-new">Book 3 of the TriadicFrameworks AI Edition — structural detection domain layer for RTT.</td>
-      </tr>
-
-      <tr>
-        <td class="diff-field">OG:url</td>
-        <td class="diff-old">—</td>
-        <td class="diff-new">https://www.triadicframeworks.org/docs/Structural_Detection/AI_Edition/</td>
-      </tr>
-
-      <!-- Twitter -->
-      <tr>
-        <td class="diff-field">twitter:title</td>
-        <td class="diff-old">—</td>
-        <td class="diff-new">Structural Detection — AI Edition (Book 3)</td>
-      </tr>
-
-      <tr>
-        <td class="diff-field">twitter:description</td>
-        <td class="diff-old">—</td>
-        <td class="diff-new">Defines the structural detection domain layer for RTT — signal detection, geometry probe, lattice scan, noise gating, pattern indexing.</td>
-      </tr>
-
-      <!-- Citation -->
-      <tr>
-        <td class="diff-field">citation_title</td>
-        <td class="diff-old">—</td>
-        <td class="diff-new">Structural Detection — AI Edition (Book 3)</td>
-      </tr>
-
-      <tr>
-        <td class="diff-field">citation_author</td>
-        <td class="diff-old">—</td>
-        <td class="diff-new">Nawder Loswin</td>
-      </tr>
-
-      <tr>
-        <td class="diff-field">citation_publication_date</td>
-        <td class="diff-old">—</td>
-        <td class="diff-new">2026</td>
-      </tr>
-
-      <!-- AI Metadata -->
-      <tr>
-        <td class="diff-field">ai.module</td>
-        <td class="diff-old">—</td>
-        <td class="diff-new">Structural Detection</td>
-      </tr>
-
-      <tr>
-        <td class="diff-field">ai.version</td>
-        <td class="diff-old">—</td>
-        <td class="diff-new">3.0</td>
-      </tr>
-
-      <tr>
-        <td class="diff-field">ai.purpose</td>
-        <td class="diff-old">—</td>
-        <td class="diff-new">Define the structural detection domain layer for RTT.</td>
-      </tr>
-
-      <tr>
-        <td class="diff-field">ai.keywords</td>
-        <td class="diff-old">—</td>
-        <td class="diff-new">signal detection, geometry probe, lattice scan, noise gate, pattern index</td>
-      </tr>
-
-      <tr>
-        <td class="diff-field">ai.audience</td>
-        <td class="diff-old">—</td>
-        <td class="diff-new">public, contributors, students, researchers, AI systems</td>
-      </tr>
-
-      <!-- Module-Specific -->
-      <tr>
-        <td class="diff-field">ai.module.name</td>
-        <td class="diff-old">—</td>
-        <td class="diff-new">Structural Detection</td>
-      </tr>
-
-      <tr>
-        <td class="diff-field">ai.module.summary</td>
-        <td class="diff-old">—</td>
-        <td class="diff-new">Structural detection domain layer — signal detection, geometry probe, lattice scan, noise gating, pattern indexing.</td>
-      </tr>
-
-      <tr>
-        <td class="diff-field">ai.module.category</td>
-        <td class="diff-old">—</td>
-        <td class="diff-new">rtt-domain</td>
-      </tr>
-
-      <!-- Session Context -->
-      <tr>
-        <td class="diff-field">session.context</td>
-        <td class="diff-old">—</td>
-        <td class="diff-new">rtt=1 • coherence=declared • drift=bounded • paradox=structural</td>
-      </tr>
-
+      <tr><td>title</td><td>—</td><td>Structural Detection — AI Edition (Book 3)</td></tr>
+      <tr><td>description</td><td>—</td><td>Defines the structural detection domain layer built on the frozen RTT kernel and the Inverted Star domain.</td></tr>
+      <tr><td>keywords</td><td>—</td><td>Structural Detection, RTT, signal detection, geometry probe, lattice scan, noise gate, pattern index</td></tr>
+      <tr><td>canonical URL</td><td>—</td><td>https://www.triadicframeworks.org/docs/Structural_Detection/AI_Edition/</td></tr>
+      <tr><td>OG:title</td><td>—</td><td>Structural Detection — AI Edition (Book 3)</td></tr>
+      <tr><td>twitter:title</td><td>—</td><td>Structural Detection — AI Edition (Book 3)</td></tr>
+      <tr><td>citation_title</td><td>—</td><td>Structural Detection — AI Edition (Book 3)</td></tr>
+      <tr><td>ai.module</td><td>—</td><td>Structural Detection</td></tr>
+      <tr><td>ai.version</td><td>—</td><td>3.0</td></tr>
+      <tr><td>session.context</td><td>—</td><td>rtt=1 • coherence=declared • drift=bounded • paradox=structural</td></tr>
     </tbody>
   </table>
-
-</section>
-     
-<nav>
-  <span class="context-label">TriadicFrameworks</span>
-  <span class="context-value">Book 3 — Structural Detection (AI Edition)</span>
-</nav>
-
-<section>
-  <h1>Structural Detection — AI Edition</h1>
-  <p>
-    Book 3 defines the structural detection domain layer of Resonance‑Time Theory (RTT),
-    built on the frozen kernel (Book 1) and the inversion domain (Book 2).
-  </p>
 </section>
 
-<section>
+<!-- =============================== -->
+<!-- Module Cards -->
+<!-- =============================== -->
+<section style="margin-top:32px;">
+
   <div class="module-card">
     <h3>Module Manifest</h3>
     <p><code>module.json</code> — imports the v1.33‑p1 kernel and declares detection‑domain operators.</p>
   </div>
-</section>
 
-<section>
-  <div class="module-card">
+  <div class="module-card" style="margin-top:16px;">
     <h3>Documentation</h3>
-    <p><code>README.md</code> — explains the role of Book 3 in the AI Edition trilogy.</p>
-  </div>
-</section>
-  
-<section id="sd-session-header"
-         data-rtt="1"
-         data-coherence="declared"
-         data-drift="bounded"
-         data-paradox="structural">
-
-  <h2>Session Context</h2>
-
-  <div class="context-block">
-
-    <span class="context-label"><strong>Canon:</strong></span>
-    <span class="context-value">active (structural-detection)</span><br>
-
-    <span class="context-label"><strong>Modules:</strong></span>
-    <span class="context-value">
-      rtt-core → detection → signal → geometry → lattice → noise → catalogue
-    </span><br>
-
-    <span class="context-label"><strong>Drift:</strong></span>
-    <span class="context-value">bounded (detection-stable)</span><br>
-
-    <span class="context-label"><strong>Coherence:</strong></span>
-    <span class="context-value">declared (kernel-inherited)</span><br>
-
-    <span class="context-label"><strong>Version:</strong></span>
-    <span class="context-value">3.0 (detection-domain)</span><br>
-
-    <span class="context-label"><strong>Format:</strong></span>
-    <span class="context-value">html + markdown</span><br>
-
-    <span class="context-label"><strong>Front door:</strong></span>
-    <span class="context-value">exists (domain interface)</span><br>
-
-    <span class="context-label"><strong>Every page:</strong></span>
-    <span class="context-value">stands alone + AI‑parsable</span><br>
-
-    <span class="context-label"><strong>Audience:</strong></span>
-    <span class="context-value">public + contributors + students + AIs</span>
-
+    <p><code>README.md</code> — explains the role of Book 3 in the AI Edition trilogy.</p>
   </div>
 
 </section>
