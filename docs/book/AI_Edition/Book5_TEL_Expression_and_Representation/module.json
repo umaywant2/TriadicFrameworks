@@ -1,1 +1,65 @@
+{
+  "book": {
+    "id": "book5_tel",
+    "number": 5,
+    "title": "TEL Expression & Representation",
+    "abbreviation": "TEL",
+    "series": "AI Edition",
+    "edition": "AI",
+    "version": "1.0.0",
+    "status": "active"
+  },
+  "ai": {
+    "module": "book5_tel",
+    "version": "1.0.0",
+    "purpose": "Define TEL (Transformational Expression Language) as the formal notation system for the AI Edition. Specifies syntax, semantics, and evaluation rules for expressing structural configurations, transformations, constraints, and invariants in a machine-readable and human-interpretable form.",
+    "keywords": [
+      "TEL",
+      "transformational expression language",
+      "formal notation",
+      "syntax",
+      "semantics",
+      "expression",
+      "representation",
+      "machine-readable",
+      "language specification",
+      "structural encoding"
+    ],
+    "audience": [
+      "AI reasoning systems",
+      "formal linguists",
+      "software engineers",
+      "ontology engineers",
+      "structural theorists"
+    ],
+    "summary": "Book 5 defines TEL, the canonical language for encoding and communicating the structural concepts of the AI Edition. TEL provides a unified, unambiguous notation for structures, transformations, constraints, and invariant assertions. The book covers full syntax specifications, evaluation semantics, composition rules, and worked translation examples from natural language structural descriptions to TEL expressions.",
+    "dependencies": [
+      "book1_fft",
+      "book4_opacity_revelation"
+    ],
+    "unlocks": [
+      "book6_governance",
+      "book7_sarg",
+      "book8_nos",
+      "book9_pattern_dynamics"
+    ]
+  },
+  "invariants": {
+    "references": [
+      "INV-TEL-001: Expression Completeness — any structure expressible in AI Edition terms is expressible in TEL",
+      "INV-TEL-002: Semantic Stability — a TEL expression has exactly one structural interpretation under canonical evaluation rules",
+      "INV-TEL-003: Compositionality — the meaning of a TEL expression is a function of the meanings of its sub-expressions",
+      "INV-TEL-004: Transformation Fidelity — a TEL-encoded transformation produces a structurally valid output if the input is structurally valid"
+    ],
+    "file": "invariants/book5_invariants.json"
+  },
+  "canonical_metadata": {
+    "domain": "Formal Language & Notation",
+    "tier": "Core Tool",
+    "reading_order": 5,
+    "prerequisite_books": [1, 4],
+    "live_site": "https://acwilson734.github.io/ai-edition/book5",
+    "last_updated": "2026-10-10"
+  }
+}
 
