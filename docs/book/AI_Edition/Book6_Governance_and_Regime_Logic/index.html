@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Governance &amp; Regime Logic — AI Edition (Book 6)</title>
+  <meta name="description" content="Book 6 of the TriadicFrameworks AI Edition. Models governance as a structural phenomenon. Defines regimes as formal constraint-enforcement structures and develops regime logic — the rules by which regimes acquire, maintain, and lose structural authority." />
+  <meta name="ai.module" content="book6_governance" />
+  <meta name="ai.version" content="6.0-draft" />
+  <meta name="ai.domain" content="Governance &amp; Political Theory" />
+  <meta name="ai.tier" content="Applied" />
+  <meta name="ai.depends" content="book1_fft book2_the_inverted_star book4_opacity_revelation book5_tel" />
+  <meta name="ai.unlocks" content="book7_sarg book9_pattern_dynamics" />
+  <meta name="session.rtt" content="1" />
+  <meta name="session.coherence" content="declared" />
+  <meta name="session.drift" content="bounded" />
+  <meta name="session.paradox" content="structural" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0d0f14;
+      --bg2: #13151c;
+      --bg3: #1a1d27;
+      --border: #2a2d3a;
+      --accent: #5b8aff;
+      --accent2: #e67e22;
+      --green: #2ecc71;
+      --yellow: #f39c12;
+      --red: #e74c3c;
+      --teal: #1abc9c;
+      --text: #d4d8e8;
+      --text-muted: #7a7f96;
+      --text-dim: #555a72;
+      --mono: 'Courier New', 'Lucida Console', monospace;
+      --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --sidebar-w: 280px;
+    }
+    html, body { height: 100%; background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 14px; line-height: 1.6; }
+
+    /* ── Layout ── */
+    .layout { display: flex; min-height: 100vh; }
+    .sidebar {
+      width: var(--sidebar-w); flex-shrink: 0;
+      background: var(--bg2); border-right: 1px solid var(--border);
+      padding: 24px 16px; position: sticky; top: 0; height: 100vh; overflow-y: auto;
+      font-size: 12px;
+    }
+    .main { flex: 1; padding: 40px 48px; max-width: 960px; }
+
+    /* ── Sidebar ── */
+    .sidebar-section { margin-bottom: 20px; }
+    .sidebar-label {
+      text-transform: uppercase; letter-spacing: 0.1em; font-size: 10px;
+      color: var(--text-dim); margin-bottom: 6px;
+    }
+    .sidebar-breadcrumb { color: var(--text-muted); line-height: 1.8; }
+    .sidebar-breadcrumb span { color: var(--text); font-weight: 600; }
+    .module-chain { display: flex; flex-direction: column; gap: 2px; }
+    .module-chain .step {
+      padding: 3px 8px; border-left: 2px solid var(--border);
+      color: var(--text-muted); font-family: var(--mono); font-size: 11px;
+    }
+    .module-chain .step.active { border-left-color: var(--accent2); color: var(--accent2); font-weight: 700; }
+    .module-chain .step.prev { border-left-color: var(--green); color: var(--green); }
+    .module-chain .step.next { border-left-color: var(--text-dim); color: var(--text-dim); }
+    .op-pill {
+      display: inline-block; font-family: var(--mono); font-size: 11px;
+      background: var(--bg3); border: 1px solid var(--border);
+      border-radius: 4px; padding: 2px 7px; margin: 2px 2px 2px 0;
+      color: var(--accent2);
+    }
+    .phase-tag {
+      display: inline-block; font-family: var(--mono); font-size: 10px;
+      background: rgba(230,126,34,0.10); border: 1px solid rgba(230,126,34,0.25);
+      border-radius: 3px; padding: 1px 6px; margin: 2px 2px 2px 0;
+      color: var(--accent2);
+    }
+    .audit-row { display: flex; justify-content: space-between; margin-bottom: 3px; color: var(--text-muted); }
+    .audit-ok { color: var(--green); font-weight: 700; }
+    .audit-fail { color: var(--red); font-weight: 700; }
+
+    /* ── Main headings ── */
+    h1 { font-size: 26px; font-weight: 700; color: var(--text); letter-spacing: -0.5px; margin-bottom: 4px; }
+    h2 { font-size: 16px; font-weight: 600; color: var(--accent2); margin: 36px 0 14px; letter-spacing: 0.02em; text-transform: uppercase; font-size: 12px; }
+    h3 { font-size: 14px; font-weight: 600; color: var(--text); margin: 18px 0 8px; }
+
+    /* ── Session card ── */
+    .session-card {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-left: 3px solid var(--accent2); border-radius: 6px;
+      padding: 14px 18px; margin-bottom: 28px; font-family: var(--mono); font-size: 12px;
+      display: flex; flex-wrap: wrap; gap: 14px 28px;
+    }
+    .session-field { display: flex; flex-direction: column; gap: 2px; }
+    .session-key { color: var(--text-dim); font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .session-val { color: var(--accent2); font-weight: 700; }
+
+    /* ── Stats bar ── */
+    .stats-bar {
+      display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px;
+    }
+    .stat-box {
+      background: var(--bg2); border: 1px solid var(--border); border-radius: 6px;
+      padding: 12px 18px; min-width: 120px; flex: 1;
+    }
+    .stat-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); margin-bottom: 4px; }
+    .stat-val { font-size: 22px; font-weight: 700; color: var(--accent2); font-family: var(--mono); }
+    .stat-sub { font-size: 10px; color: var(--text-muted); margin-top: 2px; }
+
+    /* ── Domain viz ── */
+    .domain-viz {
+      background: var(--bg2); border: 1px solid var(--border); border-radius: 6px;
+      padding: 18px 20px; margin-bottom: 28px; font-family: var(--mono); font-size: 12px;
+    }
+    .domain-viz-title { color: var(--accent2); font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; }
+    .dep-chain { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+    .dep-node {
+      padding: 4px 10px; border-radius: 4px; font-size: 11px; font-weight: 600;
+    }
+    .dep-node.kernel { background: rgba(91,138,255,0.15); border: 1px solid rgba(91,138,255,0.4); color: var(--accent); }
+    .dep-node.intermediate { background: rgba(46,204,113,0.12); border: 1px solid rgba(46,204,113,0.35); color: var(--green); }
+    .dep-node.active { background: rgba(230,126,34,0.15); border: 1px solid rgba(230,126,34,0.45); color: var(--accent2); }
+    .dep-node.unlock { background: rgba(100,100,120,0.18); border: 1px solid rgba(100,100,120,0.35); color: var(--text-muted); }
+    .dep-arrow { color: var(--text-dim); font-size: 13px; }
+    .dep-note { color: var(--text-muted); font-size: 10px; margin-top: 8px; }
+
+    /* ── Tables ── */
+    table { width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 12px; }
+    thead th {
+      background: var(--bg3); color: var(--text-muted); text-align: left;
+      padding: 8px 12px; border-bottom: 1px solid var(--border);
+      text-transform: uppercase; letter-spacing: 0.07em; font-size: 10px; font-weight: 600;
+    }
+    tbody tr { border-bottom: 1px solid rgba(42,45,58,0.5); }
+    tbody tr:hover { background: rgba(255,255,255,0.02); }
+    tbody td { padding: 9px 12px; color: var(--text); vertical-align: top; }
+    tbody td:first-child { font-family: var(--mono); color: var(--accent2); font-weight: 600; }
+    .tag-inv { font-family: var(--mono); font-size: 10px; background: rgba(230,126,34,0.12); border: 1px solid rgba(230,126,34,0.25); border-radius: 3px; padding: 1px 5px; color: var(--accent2); }
+    .tag-phase { font-family: var(--mono); font-size: 10px; background: rgba(91,138,255,0.12); border: 1px solid rgba(91,138,255,0.25); border-radius: 3px; padding: 1px 5px; color: var(--accent); }
+    .badge { display: inline-block; font-size: 10px; border-radius: 3px; padding: 1px 6px; font-weight: 600; }
+    .badge-green { background: rgba(46,204,113,0.12); color: var(--green); border: 1px solid rgba(46,204,113,0.3); }
+    .badge-yellow { background: rgba(243,156,18,0.12); color: var(--yellow); border: 1px solid rgba(243,156,18,0.3); }
+    .badge-muted { background: var(--bg3); color: var(--text-muted); border: 1px solid var(--border); }
+
+    /* ── File manifest ── */
+    .file-manifest { display: flex; flex-direction: column; gap: 4px; margin-bottom: 24px; }
+    .file-row {
+      display: flex; align-items: center; gap: 10px;
+      background: var(--bg2); border: 1px solid var(--border); border-radius: 4px;
+      padding: 8px 14px; font-family: var(--mono); font-size: 12px;
+    }
+    .file-icon { color: var(--text-dim); font-size: 11px; min-width: 14px; }
+    .file-name { color: var(--text); flex: 1; }
+    .file-desc { color: var(--text-muted); font-size: 11px; }
+    .file-status { font-size: 10px; font-weight: 700; }
+    .file-status.ok { color: var(--green); }
+
+    /* ── Module diff card ── */
+    .diff-card {
+      background: var(--bg2); border: 1px solid var(--border); border-radius: 6px;
+      padding: 16px 18px; margin-bottom: 28px; font-family: var(--mono); font-size: 11px;
+    }
+    .diff-line { display: flex; gap: 10px; margin-bottom: 2px; }
+    .diff-key { color: var(--text-dim); min-width: 140px; }
+    .diff-val { color: var(--text-muted); }
+    .diff-val.hl { color: var(--accent2); }
+    .diff-val.dep { color: var(--accent); }
+
+    /* ── Formal block ── */
+    .formal-block {
+      background: var(--bg3); border-left: 2px solid var(--accent2);
+      border-radius: 0 4px 4px 0; padding: 10px 14px; margin: 6px 0 10px;
+      font-family: var(--mono); font-size: 12px; color: var(--teal);
+    }
+
+    /* ── Footer ── */
+    .footer {
+      margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--border);
+      font-size: 12px; color: var(--text-dim);
+    }
+    .footer-handoff { display: flex; gap: 16px; margin-top: 12px; flex-wrap: wrap; }
+    .handoff-node {
+      background: var(--bg2); border: 1px solid var(--border); border-radius: 5px;
+      padding: 10px 16px; font-family: var(--mono); font-size: 11px;
+    }
+    .handoff-label { color: var(--text-dim); font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+    .handoff-id { color: var(--accent2); font-weight: 700; font-size: 12px; }
+    .handoff-desc { color: var(--text-muted); font-size: 10px; margin-top: 2px; }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .layout { flex-direction: column; }
+      .sidebar { width: 100%; height: auto; position: static; }
+      .main { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+<div class="layout">
+
+  <!-- ── SIDEBAR ── -->
+  <aside class="sidebar">
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Canon</div>
+      <div class="sidebar-breadcrumb">
+        TriadicFrameworks<br>
+        &nbsp;└ AI Edition<br>
+        &nbsp;&nbsp;&nbsp;└ <span>Book 6 — GRL</span>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Module Chain</div>
+      <div class="module-chain">
+        <div class="step prev">1 · FFT · Foundation</div>
+        <div class="step prev">2 · IS · Inverted Star</div>
+        <div class="step prev">3 · SD · Detection</div>
+        <div class="step prev">4 · OR · Opacity</div>
+        <div class="step prev">5 · TEL · Expression</div>
+        <div class="step active">6 · GRL · Governance ◀</div>
+        <div class="step next">7 · SARG · Argumentation</div>
+        <div class="step next">8 · NoS · Nature</div>
+        <div class="step next">9 · PD · Dynamics</div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Operators</div>
+      <span class="op-pill">GRL-Ρ RegimeCheck</span>
+      <span class="op-pill">GRL-Α AuthorityDecay</span>
+      <span class="op-pill">GRL-Κ ClosureGuard</span>
+      <span class="op-pill">GRL-Λ LegitimacyCheck</span>
+      <span class="op-pill">GRL-Σ RegimeSynthesis</span>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Phases</div>
+      <span class="phase-tag">init</span>
+      <span class="phase-tag">validate</span>
+      <span class="phase-tag">measure</span>
+      <span class="phase-tag">decay</span>
+      <span class="phase-tag">enforce</span>
+      <span class="phase-tag">catalogue</span>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">QMROOT Audit</div>
+      <div class="audit-row"><span>6D rungs</span><span class="audit-ok">ABSENT ✓</span></div>
+      <div class="audit-row"><span>Negative rungs</span><span class="audit-ok">ABSENT ✓</span></div>
+      <div class="audit-row"><span>INV-013</span><span class="audit-ok">0D only ✓</span></div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Phantom Entry Audit</div>
+      <div class="audit-row"><span>no_rtt_ops</span><span class="audit-ok">✓</span></div>
+      <div class="audit-row"><span>no_book2_ops</span><span class="audit-ok">✓</span></div>
+      <div class="audit-row"><span>no_deprecated_files</span><span class="audit-ok">✓</span></div>
+      <div class="audit-row"><span>no_cached_spine</span><span class="audit-ok">✓</span></div>
+      <div class="audit-row"><span>no_6D_rung_artifacts</span><span class="audit-ok">✓</span></div>
+      <div class="audit-row"><span>no_cross_book_leakage</span><span class="audit-ok">✓</span></div>
+    </div>
+
+  </aside>
+
+  <!-- ── MAIN ── -->
+  <main class="main">
+
+    <!-- Header -->
+    <div style="margin-bottom: 6px;">
+      <span style="font-size: 11px; font-family: var(--mono); color: var(--text-dim);">AI EDITION · BOOK 6 · APPLIED TIER</span>
+    </div>
+    <h1>Governance &amp; Regime Logic</h1>
+    <p style="color: var(--text-muted); margin-bottom: 24px; font-size: 13px;">
+      Formal structural theory of governance. Regimes as constraint-enforcement structures. Authority acquisition, maintenance, and decay.
+    </p>
+
+    <!-- Session Card -->
+    <div class="session-card">
+      <div class="session-field">
+        <span class="session-key">rtt</span>
+        <span class="session-val">1</span>
+      </div>
+      <div class="session-field">
+        <span class="session-key">coherence</span>
+        <span class="session-val">declared</span>
+      </div>
+      <div class="session-field">
+        <span class="session-key">drift</span>
+        <span class="session-val">bounded</span>
+      </div>
+      <div class="session-field">
+        <span class="session-key">paradox</span>
+        <span class="session-val">structural</span>
+      </div>
+      <div class="session-field">
+        <span class="session-key">module</span>
+        <span class="session-val">book6_governance</span>
+      </div>
+      <div class="session-field">
+        <span class="session-key">version</span>
+        <span class="session-val">6.0-draft</span>
+      </div>
+    </div>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+      <div class="stat-box">
+        <div class="stat-label">Invariants</div>
+        <div class="stat-val">4</div>
+        <div class="stat-sub">INV-GRL-001–004</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-label">Operators</div>
+        <div class="stat-val">5</div>
+        <div class="stat-sub">GRL-Ρ Α Κ Λ Σ</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-label">Phases</div>
+        <div class="stat-val">6</div>
+        <div class="stat-sub">init→catalogue</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-label">Dependencies</div>
+        <div class="stat-val">4</div>
+        <div class="stat-sub">FFT · IS · OR · TEL</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-label">Unlocks</div>
+        <div class="stat-val">2</div>
+        <div class="stat-sub">SARG · PD</div>
+      </div>
+    </div>
+
+    <!-- Domain Visualization -->
+    <h2>Dependency Chain</h2>
+    <div class="domain-viz">
+      <div class="domain-viz-title">Module Dependency Graph — Book 6 position</div>
+      <div class="dep-chain">
+        <span class="dep-node kernel">FFT · Book 1</span>
+        <span class="dep-arrow">→</span>
+        <span class="dep-node intermediate">IS · Book 2</span>
+        <span class="dep-arrow">→</span>
+        <span class="dep-node intermediate">OR · Book 4</span>
+        <span class="dep-arrow">→</span>
+        <span class="dep-node intermediate">TEL · Book 5</span>
+        <span class="dep-arrow">→</span>
+        <span class="dep-node active">GRL · Book 6 ◀</span>
+        <span class="dep-arrow">→</span>
+        <span class="dep-node unlock">SARG · Book 7</span>
+      </div>
+      <div class="dep-chain" style="margin-top:4px;">
+        <span style="min-width:388px;"></span>
+        <span class="dep-arrow" style="transform:rotate(90deg); display:inline-block;">→</span>
+        <span class="dep-node unlock" style="margin-left:24px;">PD · Book 9</span>
+      </div>
+      <div class="dep-note">Book 6 has the highest dependency count in the AI Edition (4 modules). All four must be loaded before any GRL operator executes.</div>
+    </div>
+
+    <!-- Module.json Diff -->
+    <h2>Module Specification</h2>
+    <div class="diff-card">
+      <div class="diff-line"><span class="diff-key">id</span><span class="diff-val hl">book6_governance</span></div>
+      <div class="diff-line"><span class="diff-key">title</span><span class="diff-val hl">Governance &amp; Regime Logic</span></div>
+      <div class="diff-line"><span class="diff-key">abbreviation</span><span class="diff-val hl">GRL</span></div>
+      <div class="diff-line"><span class="diff-key">domain</span><span class="diff-val">Governance &amp; Political Theory</span></div>
+      <div class="diff-line"><span class="diff-key">tier</span><span class="diff-val">Applied</span></div>
+      <div class="diff-line"><span class="diff-key">version</span><span class="diff-val">6.0-draft</span></div>
+      <div class="diff-line"><span class="diff-key">dependencies</span><span class="diff-val dep">book1_fft, book2_the_inverted_star, book4_opacity_revelation, book5_tel</span></div>
+      <div class="diff-line"><span class="diff-key">unlocks</span><span class="diff-val">book7_sarg, book9_pattern_dynamics</span></div>
+      <div class="diff-line"><span class="diff-key">live_site</span><span class="diff-val">null (not yet published)</span></div>
+      <div class="diff-line"><span class="diff-key">series</span><span class="diff-val">AI Edition</span></div>
+    </div>
+
+    <!-- File Manifest -->
+    <h2>File Manifest</h2>
+    <div class="file-manifest">
+      <div class="file-row">
+        <span class="file-icon">⚙</span>
+        <span class="file-name">module.json</span>
+        <span class="file-desc">Canonical module metadata, dependency graph, invariant references</span>
+        <span class="file-status ok">DEPLOYED</span>
+      </div>
+      <div class="file-row">
+        <span class="file-icon">📄</span>
+        <span class="file-name">README.md</span>
+        <span class="file-desc">Human-readable book overview and navigation</span>
+        <span class="file-status ok">DEPLOYED</span>
+      </div>
+      <div class="file-row">
+        <span class="file-icon">⚖</span>
+        <span class="file-name">grl.invariants.json</span>
+        <span class="file-desc">All 4 GRL invariants — formal statements, corollaries, operator/phase bindings</span>
+        <span class="file-status ok">DRAFT</span>
+      </div>
+      <div class="file-row">
+        <span class="file-icon">🗺</span>
+        <span class="file-name">grl.regime_map.json</span>
+        <span class="file-desc">Regime as formal tuple R = ⟨N,E,C,S,α,λ⟩ — topology variants, lifecycle, validity</span>
+        <span class="file-status ok">DRAFT</span>
+      </div>
+      <div class="file-row">
+        <span class="file-icon">📉</span>
+        <span class="file-name">grl.authority_map.json</span>
+        <span class="file-desc">Authority α model — decay function d(α,n), stages, compliance model, recovery</span>
+        <span class="file-status ok">DRAFT</span>
+      </div>
+      <div class="file-row">
+        <span class="file-icon">⚡</span>
+        <span class="file-name">grl.constraint_enforcement_map.json</span>
+        <span class="file-desc">Constraint legitimacy — declared channels, violation types, enforcement cycle</span>
+        <span class="file-status ok">DRAFT</span>
+      </div>
+      <div class="file-row">
+        <span class="file-icon">🔧</span>
+        <span class="file-name">grl.operator_roles.json</span>
+        <span class="file-desc">5 GRL operators — roles, inputs, outputs, bindings, phase assignments</span>
+        <span class="file-status ok">DRAFT</span>
+      </div>
+      <div class="file-row">
+        <span class="file-icon">⏱</span>
+        <span class="file-name">grl.phases.json</span>
+        <span class="file-desc">6-phase evaluation cycle — entry/exit conditions, gate logic, handoffs</span>
+        <span class="file-status ok">DRAFT</span>
+      </div>
+      <div class="file-row">
+        <span class="file-icon">🌐</span>
+        <span class="file-name">index.html</span>
+        <span class="file-desc">This page — live-site module overview and structural reference</span>
+        <span class="file-status ok">DRAFT</span>
+      </div>
+    </div>
+
+    <!-- Operator Table -->
+    <h2>Operator Reference</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Symbol</th>
+          <th>Name</th>
+          <th>Role</th>
+          <th>Invariant</th>
+          <th>Phase</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>GRL-Ρ</td>
+          <td>RegimeCheck</td>
+          <td>Validates regime R against INV-GRL-001 — confirms at least one active enforcement relation</td>
+          <td><span class="tag-inv">INV-GRL-001</span></td>
+          <td><span class="tag-phase">validate</span></td>
+        </tr>
+        <tr>
+          <td>GRL-Α</td>
+          <td>AuthorityDecay</td>
+          <td>Measures α ∈ [0,1]; applies d(α,n) = α·(1-λ)^n when compliance not observed</td>
+          <td><span class="tag-inv">INV-GRL-002</span></td>
+          <td><span class="tag-phase">measure</span> <span class="tag-phase">decay</span></td>
+        </tr>
+        <tr>
+          <td>GRL-Κ</td>
+          <td>ClosureGuard</td>
+          <td>Guards against self-governance paradox; checks for meta-regime declaration per INV-GRL-003</td>
+          <td><span class="tag-inv">INV-GRL-003</span></td>
+          <td><span class="tag-phase">validate</span></td>
+        </tr>
+        <tr>
+          <td>GRL-Λ</td>
+          <td>LegitimacyCheck</td>
+          <td>Audits constraint challenges; classifies as legitimate, void, or violation per INV-GRL-004</td>
+          <td><span class="tag-inv">INV-GRL-004</span></td>
+          <td><span class="tag-phase">enforce</span></td>
+        </tr>
+        <tr>
+          <td>GRL-Σ</td>
+          <td>RegimeSynthesis</td>
+          <td>Aggregates all operator outputs into regime_status_report; prepares downstream handoffs</td>
+          <td><span class="tag-inv">INV-GRL-001–004</span></td>
+          <td><span class="tag-phase">catalogue</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Invariants Table -->
+    <h2>Invariant Catalogue</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Label</th>
+          <th>Formal Statement</th>
+          <th>Operator</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>INV-GRL-001</td>
+          <td>Regime Validity</td>
+          <td>
+            valid(R) ⟺ ∃C ∈ C_R, ∃S ∈ S_R: enforces(R, C, S)
+            <br><span style="color:var(--text-muted);font-size:11px;">A regime is valid only if it can enforce at least one constraint on at least one governed structure</span>
+          </td>
+          <td><span class="op-pill" style="font-size:10px;">GRL-Ρ</span></td>
+        </tr>
+        <tr>
+          <td>INV-GRL-002</td>
+          <td>Authority Decay</td>
+          <td>
+            ¬compliance_observed(R, n) → α(n+1) &lt; α(n)<br>
+            d(α,n) = α · (1 − λ)^n
+            <br><span style="color:var(--text-muted);font-size:11px;">Authority diminishes monotonically without compliance response</span>
+          </td>
+          <td><span class="op-pill" style="font-size:10px;">GRL-Α</span></td>
+        </tr>
+        <tr>
+          <td>INV-GRL-003</td>
+          <td>Regime Closure</td>
+          <td>
+            ¬∃R: R ∈ governed(R) [without meta-regime M]
+            <br><span style="color:var(--text-muted);font-size:11px;">A regime cannot govern itself without introducing a meta-regime or producing structural paradox</span>
+          </td>
+          <td><span class="op-pill" style="font-size:10px;">GRL-Κ</span></td>
+        </tr>
+        <tr>
+          <td>INV-GRL-004</td>
+          <td>Constraint Legitimacy</td>
+          <td>
+            challenge_legitimate(S,C,R) ⟺ challenge_path(S,C,R) ⊆ declared_channels(R)
+            <br><span style="color:var(--text-muted);font-size:11px;">Challenges only through declared structural channels, not by unilateral violation</span>
+          </td>
+          <td><span class="op-pill" style="font-size:10px;">GRL-Λ</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Phase Table -->
+    <h2>Phase Sequence</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Phase</th>
+          <th>Active Operators</th>
+          <th>Gate Logic</th>
+          <th>Skip?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="color:var(--text-muted);">P-GRL-1</td>
+          <td><span class="tag-phase">init</span></td>
+          <td style="color:var(--text-muted);font-style:italic;">none</td>
+          <td>Load FFT, IS, OR, TEL; assert session context; QMROOT 0D</td>
+          <td><span class="badge badge-muted">NO</span></td>
+        </tr>
+        <tr>
+          <td style="color:var(--text-muted);">P-GRL-2</td>
+          <td><span class="tag-phase">validate</span></td>
+          <td><span class="op-pill" style="font-size:10px;">GRL-Ρ</span> <span class="op-pill" style="font-size:10px;">GRL-Κ</span></td>
+          <td>regime_valid=false → halt; closure_valid=false → halt; both pass → measure</td>
+          <td><span class="badge badge-muted">NO (hard gate)</span></td>
+        </tr>
+        <tr>
+          <td style="color:var(--text-muted);">P-GRL-3</td>
+          <td><span class="tag-phase">measure</span></td>
+          <td><span class="op-pill" style="font-size:10px;">GRL-Α</span></td>
+          <td>Establish α_current baseline; assign authority_stage; formation-phase: α_unmeasured</td>
+          <td><span class="badge badge-yellow">formation only</span></td>
+        </tr>
+        <tr>
+          <td style="color:var(--text-muted);">P-GRL-4</td>
+          <td><span class="tag-phase">decay</span></td>
+          <td><span class="op-pill" style="font-size:10px;">GRL-Α</span></td>
+          <td>Apply d(α,n); compliance observed → no decay; pre_collapse → collapse_risk_flag</td>
+          <td><span class="badge badge-yellow">formation only</span></td>
+        </tr>
+        <tr>
+          <td style="color:var(--text-muted);">P-GRL-5</td>
+          <td><span class="tag-phase">enforce</span></td>
+          <td><span class="op-pill" style="font-size:10px;">GRL-Λ</span></td>
+          <td>Classify each challenge event; record enforcement events; forward compliance observations</td>
+          <td><span class="badge badge-green">null cycle OK</span></td>
+        </tr>
+        <tr>
+          <td style="color:var(--text-muted);">P-GRL-6</td>
+          <td><span class="tag-phase">catalogue</span></td>
+          <td><span class="op-pill" style="font-size:10px;">GRL-Σ</span></td>
+          <td>Produce regime_status_report; prepare downstream handoffs; close session</td>
+          <td><span class="badge badge-muted">NO (always runs)</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Cross-Book Integrations -->
+    <h2>Cross-Book Integrations</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Book</th>
+          <th>Domain</th>
+          <th>Integration Point</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Book 2 · IS</td>
+          <td>Inverted Star</td>
+          <td>RT-002 topology — leaderless/distributed regimes modeled using INV-IS-001–004; peripheral enforcement nodes; emergent authority per INV-IS-004</td>
+        </tr>
+        <tr>
+          <td>Book 4 · OR</td>
+          <td>Opacity &amp; Revelation</td>
+          <td>Opaque regimes (RT-004) carry ω(C_R) &gt; 0; covert constraints; authority decay as "inverse revelation" — declining α increases effective regime opacity from governed-structure perspective</td>
+        </tr>
+        <tr>
+          <td>Book 5 · TEL</td>
+          <td>TEL Expression</td>
+          <td>Constraints encoded as C[ID] expressions; enforcement actions as INV[GRL-001]: assert (R ⊢ C[active_enforcement]); regime transformations as T[ID] expressions</td>
+        </tr>
+        <tr>
+          <td>Book 7 · SARG</td>
+          <td>Argumentation</td>
+          <td>Downstream: regime_status_report provides argument seed for legitimacy argumentation; enforcement record grounds SARG warrant nodes</td>
+        </tr>
+        <tr>
+          <td>Book 9 · PD</td>
+          <td>Pattern Dynamics</td>
+          <td>Downstream: α trajectory and decay_projection feed regime trajectory analysis; collapse events as bifurcation points; attractor basin analysis of stable regime states</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Formal Definitions -->
+    <h2>Core Formal Definitions</h2>
+    <h3>Regime Tuple</h3>
+    <div class="formal-block">R = ⟨N_R, E_R, C_R, S_R, α_R, λ_R⟩<br>
+N_R = node set of the regime<br>
+E_R = enforcement relation set<br>
+C_R = constraint set (regime enforces)<br>
+S_R = governed structure set<br>
+α_R ∈ [0,1] = initial authority measure<br>
+λ_R ∈ (0,1) = authority decay rate</div>
+
+    <h3>Authority Decay Function</h3>
+    <div class="formal-block">d(α, n) = α · (1 − λ_R)^n<br>
+where n = number of enforcement cycles without observed compliance<br>
+Monotonically decreasing; approaches 0 asymptotically; no natural recovery</div>
+
+    <h3>Constraint Legitimacy</h3>
+    <div class="formal-block">challenge_legitimate(S, C, R) ⟺ challenge_path(S, C, R) ⊆ declared_channels(R)<br>
+declared_channels(R) ∈ { formal_objection, appeal, renegotiation, exit }</div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div style="margin-bottom:8px;">
+        TriadicFrameworks AI Edition · Book 6 · Governance &amp; Regime Logic · v6.0-draft<br>
+        Session: rtt=1 | coherence=declared | drift=bounded | paradox=structural
+      </div>
+      <div style="color: var(--text-dim); font-size:11px; margin-bottom: 12px;">
+        Downstream handoffs on GRL-Σ (RegimeSynthesis) completion:
+      </div>
+      <div class="footer-handoff">
+        <div class="handoff-node">
+          <div class="handoff-label">Unlocks →</div>
+          <div class="handoff-id">book7_sarg</div>
+          <div class="handoff-desc">SARG Structural Argumentation<br>Regime legitimacy → argument structure</div>
+        </div>
+        <div class="handoff-node">
+          <div class="handoff-label">Unlocks →</div>
+          <div class="handoff-id">book9_pattern_dynamics</div>
+          <div class="handoff-desc">Pattern Dynamics<br>α trajectory → regime attractor analysis</div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>
