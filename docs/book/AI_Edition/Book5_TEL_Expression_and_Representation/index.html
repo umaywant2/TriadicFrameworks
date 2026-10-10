@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TEL Expression &amp; Representation — AI Edition (Book 5)</title>
+  <meta name="description" content="Book 5 of the TriadicFrameworks AI Edition. Defines TEL (Transformational Expression Language) as the canonical formal notation system for encoding AI Edition structures, transformations, constraints, and invariant assertions." />
+  <meta name="ai.module" content="book5_tel" />
+  <meta name="ai.version" content="5.0-draft" />
+  <meta name="ai.domain" content="Formal Language &amp; Notation" />
+  <meta name="ai.tier" content="Core Tool" />
+  <meta name="ai.depends" content="book1_fft, book4_opacity_revelation" />
+  <meta name="ai.unlocks" content="book6_governance, book7_sarg, book8_nos, book9_pattern_dynamics" />
+  <meta name="session.rtt" content="1" />
+  <meta name="session.coherence" content="declared" />
+  <meta name="session.drift" content="bounded" />
+  <meta name="session.paradox" content="structural" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0d0f14;
+      --bg2: #13151c;
+      --bg3: #1a1d27;
+      --border: #2a2d3a;
+      --accent: #5b8aff;
+      --accent2: #a78bfa;
+      --green: #2ecc71;
+      --yellow: #f39c12;
+      --red: #e74c3c;
+      --teal: #1abc9c;
+      --text: #d4d8e8;
+      --text-muted: #7a7f96;
+      --text-dim: #555a72;
+      --mono: 'Courier New', 'Lucida Console', monospace;
+      --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --sidebar-w: 280px;
+    }
+    html, body { height: 100%; background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 14px; line-height: 1.6; }
+
+    /* ── Layout ── */
+    .layout { display: flex; min-height: 100vh; }
+    .sidebar {
+      width: var(--sidebar-w); flex-shrink: 0;
+      background: var(--bg2); border-right: 1px solid var(--border);
+      padding: 24px 16px; position: sticky; top: 0; height: 100vh; overflow-y: auto;
+      font-size: 12px;
+    }
+    .main { flex: 1; padding: 40px 48px; max-width: 960px; }
+
+    /* ── Sidebar ── */
+    .sidebar-section { margin-bottom: 20px; }
+    .sidebar-label {
+      text-transform: uppercase; letter-spacing: 0.1em; font-size: 10px;
+      color: var(--text-dim); margin-bottom: 6px;
+    }
+    .sidebar-breadcrumb { color: var(--text-muted); line-height: 1.8; }
+    .sidebar-breadcrumb span { color: var(--text); font-weight: 600; }
+    .module-chain { display: flex; flex-direction: column; gap: 2px; }
+    .module-chain .step {
+      padding: 3px 8px; border-left: 2px solid var(--border);
+      color: var(--text-muted); font-family: var(--mono); font-size: 11px;
+    }
+    .module-chain .step.active { border-left-color: var(--accent); color: var(--accent); }
+    .module-chain .step.prev { border-left-color: var(--green); color: var(--green); }
+    .module-chain .step.next { border-left-color: var(--text-dim); color: var(--text-dim); }
+    .op-pill {
+      display: inline-block; font-family: var(--mono); font-size: 11px;
+      padding: 2px 7px; border-radius: 12px; margin: 2px;
+      background: var(--bg3); border: 1px solid var(--border); color: var(--accent2);
+    }
+    .phase-chain { display: flex; flex-wrap: wrap; gap: 4px; }
+    .phase-pill {
+      font-family: var(--mono); font-size: 10px; padding: 2px 6px;
+      border-radius: 3px; background: var(--bg3); border: 1px solid var(--border);
+      color: var(--text-muted);
+    }
+    .phase-pill.gate { border-color: var(--yellow); color: var(--yellow); }
+    .qm-row { display: flex; justify-content: space-between; margin-bottom: 3px; }
+    .qm-label { color: var(--text-muted); }
+    .qm-val.ok { color: var(--green); }
+    .qm-val.warn { color: var(--yellow); }
+    .checklist-item { display: flex; align-items: flex-start; gap: 6px; margin-bottom: 4px; }
+    .checklist-item .ck { color: var(--green); flex-shrink: 0; }
+    .checklist-item .ck.x { color: var(--red); }
+    .checklist-item .cl { color: var(--text-muted); font-size: 11px; }
+
+    /* ── Main sections ── */
+    .section { margin-bottom: 40px; }
+    h1 { font-size: 26px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+    h2 { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 14px;
+         border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+    h3 { font-size: 13px; font-weight: 600; color: var(--accent); margin-bottom: 8px; }
+
+    .session-card {
+      background: var(--bg2); border: 1px solid var(--border); border-radius: 6px;
+      padding: 16px 20px; margin-bottom: 28px; font-family: var(--mono); font-size: 12px;
+      color: var(--text-muted);
+    }
+    .session-card .sc-row { display: flex; gap: 32px; flex-wrap: wrap; }
+    .session-card .sc-item { display: flex; flex-direction: column; gap: 2px; }
+    .session-card .sc-key { font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); }
+    .session-card .sc-val { color: var(--accent); font-weight: 600; }
+    .session-card .sc-val.green { color: var(--green); }
+
+    .stats-bar { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 32px; }
+    .stat-box {
+      flex: 1; min-width: 110px; background: var(--bg2); border: 1px solid var(--border);
+      border-radius: 6px; padding: 14px 16px;
+    }
+    .stat-box .sb-val { font-size: 22px; font-weight: 700; color: var(--accent); }
+    .stat-box .sb-label { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+
+    /* ── TEL Syntax Tree Visualization ── */
+    .tel-vis { background: var(--bg2); border: 1px solid var(--border); border-radius: 6px; padding: 20px; margin-bottom: 28px; }
+    .tel-vis-title { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); margin-bottom: 14px; }
+    .tel-tree { font-family: var(--mono); font-size: 12px; line-height: 1.9; }
+    .tel-tree .tn-root { color: var(--accent); font-weight: 700; }
+    .tel-tree .tn-compound { color: var(--accent2); padding-left: 20px; }
+    .tel-tree .tn-transform { color: var(--teal); padding-left: 40px; }
+    .tel-tree .tn-atom { color: var(--green); padding-left: 60px; }
+    .tel-tree .tn-op { color: var(--yellow); margin: 0 6px; }
+    .tel-tree .tn-constraint { color: var(--red); padding-left: 40px; }
+    .tel-expr-bar { margin-top: 16px; border-top: 1px solid var(--border); padding-top: 14px; }
+    .expr-example {
+      font-family: var(--mono); font-size: 12px; background: var(--bg3);
+      border: 1px solid var(--border); border-radius: 4px; padding: 10px 14px;
+      color: var(--text); margin-bottom: 8px; line-height: 1.7;
+    }
+    .expr-example .ex-label { font-size: 10px; color: var(--text-dim); margin-bottom: 4px; }
+    .expr-example .ex-tel { color: var(--accent); }
+    .expr-example .ex-read { color: var(--text-muted); font-size: 11px; margin-top: 3px; }
+
+    /* ── Eval Flow Visualization ── */
+    .eval-flow { display: flex; align-items: center; gap: 0; margin-bottom: 28px; flex-wrap: wrap; }
+    .eval-node {
+      display: flex; flex-direction: column; align-items: center;
+      background: var(--bg2); border: 1px solid var(--border); border-radius: 6px;
+      padding: 10px 14px; min-width: 80px; text-align: center;
+    }
+    .eval-node.gate { border-color: var(--yellow); }
+    .eval-node.skip { border-color: var(--text-dim); opacity: 0.6; }
+    .eval-node .en-op { font-family: var(--mono); font-size: 13px; color: var(--accent2); font-weight: 700; }
+    .eval-node .en-label { font-size: 10px; color: var(--text-muted); margin-top: 2px; }
+    .eval-node .en-phase { font-size: 9px; color: var(--text-dim); margin-top: 1px; }
+    .eval-arrow { color: var(--text-dim); font-size: 18px; padding: 0 4px; }
+    .eval-arrow.gate { color: var(--yellow); }
+
+    /* ── Tables ── */
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--border); color: var(--text-dim); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; }
+    td { padding: 9px 12px; border-bottom: 1px solid var(--border); color: var(--text-muted); vertical-align: top; }
+    tr:last-child td { border-bottom: none; }
+    td.mono { font-family: var(--mono); font-size: 12px; color: var(--accent); }
+    td.bright { color: var(--text); }
+    td.green { color: var(--green); }
+    td.yellow { color: var(--yellow); }
+
+    /* ── Diff table ── */
+    .diff-table td.added { color: var(--green); }
+    .diff-table td.changed { color: var(--yellow); }
+    .diff-table td.same { color: var(--text-dim); }
+
+    /* ── File manifest ── */
+    .file-row { display: flex; align-items: baseline; gap: 12px; padding: 7px 0; border-bottom: 1px solid var(--border); }
+    .file-row:last-child { border-bottom: none; }
+    .file-name { font-family: var(--mono); font-size: 12px; color: var(--accent); flex: 1; }
+    .file-desc { color: var(--text-muted); font-size: 12px; flex: 2; }
+    .file-status { font-size: 11px; padding: 1px 7px; border-radius: 10px; background: var(--bg3); }
+    .file-status.draft { color: var(--yellow); border: 1px solid var(--yellow); }
+    .file-status.active { color: var(--green); border: 1px solid var(--green); }
+
+    /* ── Footer card ── */
+    .footer-card {
+      background: var(--bg2); border: 1px solid var(--border); border-radius: 6px;
+      padding: 20px 24px; margin-top: 48px;
+    }
+    .downstream-grid { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 12px; }
+    .ds-item {
+      flex: 1; min-width: 160px; background: var(--bg3); border: 1px solid var(--border);
+      border-radius: 5px; padding: 12px 14px;
+    }
+    .ds-item .ds-id { font-family: var(--mono); font-size: 11px; color: var(--accent); margin-bottom: 4px; }
+    .ds-item .ds-label { font-size: 12px; color: var(--text); margin-bottom: 4px; }
+    .ds-item .ds-desc { font-size: 11px; color: var(--text-muted); }
+
+    @media (max-width: 768px) {
+      .layout { flex-direction: column; }
+      .sidebar { width: 100%; height: auto; position: static; }
+      .main { padding: 24px 20px; }
+      .eval-flow { gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+<div class="layout">
+
+  <!-- ══ SIDEBAR ══ -->
+  <aside class="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-label">Canon Breadcrumb</div>
+      <div class="sidebar-breadcrumb">
+        TriadicFrameworks<br>
+        └ AI Edition<br>
+        &nbsp;&nbsp;&nbsp;└ <span>Book 5 — TEL</span>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Module Chain</div>
+      <div class="module-chain">
+        <div class="step prev">book1_fft ✓</div>
+        <div class="step prev">book2_the_inverted_star ✓</div>
+        <div class="step prev">book3_structural_detection ✓</div>
+        <div class="step prev">book4_opacity_revelation ✓</div>
+        <div class="step active">book5_tel ← active</div>
+        <div class="step next">book6_governance</div>
+        <div class="step next">book7_sarg</div>
+        <div class="step next">book8_nos</div>
+        <div class="step next">book9_pattern_dynamics</div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">TEL Operators</div>
+      <span class="op-pill">TEL-Σ</span>
+      <span class="op-pill">TEL-Ε</span>
+      <span class="op-pill">TEL-Κ</span>
+      <span class="op-pill">TEL-Τ</span>
+      <span class="op-pill">TEL-Α</span>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Phase Chain</div>
+      <div class="phase-chain">
+        <span class="phase-pill">init</span>
+        <span class="phase-pill gate">parse ⚑</span>
+        <span class="phase-pill">evaluate</span>
+        <span class="phase-pill">compose</span>
+        <span class="phase-pill">transform</span>
+        <span class="phase-pill">assert</span>
+      </div>
+      <div style="margin-top:6px; font-size:10px; color: var(--text-dim);">⚑ = hard gate (FAIL halts session)</div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">QMROOT Audit</div>
+      <div class="qm-row"><span class="qm-label">6D</span><span class="qm-val ok">absent ✓</span></div>
+      <div class="qm-row"><span class="qm-label">Neg. rungs</span><span class="qm-val ok">absent ✓</span></div>
+      <div class="qm-row"><span class="qm-label">INV-013</span><span class="qm-val ok">0D only ✓</span></div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Phantom Entry Audit</div>
+      <div class="checklist-item"><span class="ck">✓</span><span class="cl">session_context declared</span></div>
+      <div class="checklist-item"><span class="ck">✓</span><span class="cl">coherence=declared</span></div>
+      <div class="checklist-item"><span class="ck">✓</span><span class="cl">drift=bounded</span></div>
+      <div class="checklist-item"><span class="ck">✓</span><span class="cl">paradox=structural</span></div>
+      <div class="checklist-item"><span class="ck">✓</span><span class="cl">rtt=1</span></div>
+      <div class="checklist-item"><span class="ck">✓</span><span class="cl">book1_fft loaded</span></div>
+      <div class="checklist-item"><span class="ck">✓</span><span class="cl">book4_or loaded</span></div>
+      <div class="checklist-item"><span class="ck">✓</span><span class="cl">no acwilson734 references</span></div>
+      <div class="checklist-item"><span class="ck">✓</span><span class="cl">underscore paths only</span></div>
+    </div>
+  </aside>
+
+  <!-- ══ MAIN ══ -->
+  <main class="main">
+    <div class="section">
+      <h1>TEL Expression &amp; Representation</h1>
+      <div style="color:var(--text-muted); font-size:13px; margin-bottom:20px;">
+        AI Edition · Book 5 · <span style="font-family:var(--mono); color:var(--accent)">book5_tel</span> · v5.0-draft · Core Tool
+      </div>
+
+      <!-- Session Card -->
+      <div class="session-card">
+        <div class="sc-row">
+          <div class="sc-item">
+            <span class="sc-key">rtt</span>
+            <span class="sc-val">1</span>
+          </div>
+          <div class="sc-item">
+            <span class="sc-key">coherence</span>
+            <span class="sc-val green">declared</span>
+          </div>
+          <div class="sc-item">
+            <span class="sc-key">drift</span>
+            <span class="sc-val green">bounded</span>
+          </div>
+          <div class="sc-item">
+            <span class="sc-key">paradox</span>
+            <span class="sc-val">structural</span>
+          </div>
+          <div class="sc-item">
+            <span class="sc-key">domain</span>
+            <span class="sc-val">Formal Language &amp; Notation</span>
+          </div>
+          <div class="sc-item">
+            <span class="sc-key">tier</span>
+            <span class="sc-val">Core Tool</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Bar -->
+      <div class="stats-bar">
+        <div class="stat-box">
+          <div class="sb-val">4</div>
+          <div class="sb-label">Invariants</div>
+        </div>
+        <div class="stat-box">
+          <div class="sb-val">5</div>
+          <div class="sb-label">Operators</div>
+        </div>
+        <div class="stat-box">
+          <div class="sb-val">6</div>
+          <div class="sb-label">Phases</div>
+        </div>
+        <div class="stat-box">
+          <div class="sb-val">5</div>
+          <div class="sb-label">Compose Ops</div>
+        </div>
+        <div class="stat-box">
+          <div class="sb-val">4</div>
+          <div class="sb-label">Unlocks</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEL Syntax Tree Visualization -->
+    <div class="section">
+      <h2>TEL Expression Structure</h2>
+      <div class="tel-vis">
+        <div class="tel-vis-title">Parse Tree — Sample Compound Expression</div>
+        <div class="tel-tree">
+          <div class="tn-root">&lt;tel_expression&gt;</div>
+          <div class="tn-compound">└ &lt;compound&gt; — INV[INV-TEL-002]: assert (…)</div>
+          <div class="tn-transform">&nbsp;&nbsp;&nbsp;└ &lt;invariant_expr&gt; — INV[INV-TEL-002]</div>
+          <div class="tn-compound">&nbsp;&nbsp;&nbsp;└ &lt;compound&gt; — ( STRUCT_A <span class="tn-op">→</span> STRUCT_B )</div>
+          <div class="tn-atom">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├ &lt;atom&gt; — STRUCT_A</div>
+          <div class="tn-atom">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &lt;atom&gt; — STRUCT_B</div>
+        </div>
+        <div class="tel-expr-bar">
+          <div class="expr-example">
+            <div class="ex-label">EX-SYN-001 — Relational Union</div>
+            <div class="ex-tel">(STRUCT_A ⊕ STRUCT_B)</div>
+            <div class="ex-read">→ Relational union: combined node &amp; relation set with closure applied</div>
+          </div>
+          <div class="expr-example">
+            <div class="ex-label">EX-SYN-003 — Named Transformation</div>
+            <div class="ex-tel">T[OPACITY_SHIFT]: (STRUCT_A) → (STRUCT_A ⊗ OR_OMEGA)</div>
+            <div class="ex-read">→ Transformation mapping structure A to its relational product with OR-Ω (Book 4 opacity operator)</div>
+          </div>
+          <div class="expr-example">
+            <div class="ex-label">EX-SYN-004 — Invariant Assertion</div>
+            <div class="ex-tel">INV[INV-TEL-002]: assert (EXPR_X ⊥ EXPR_Y)</div>
+            <div class="ex-read">→ Assert under INV-TEL-002 that expressions X and Y are structurally disjoint</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Evaluation Flow -->
+    <div class="section">
+      <h2>TEL Evaluation Flow</h2>
+      <div class="eval-flow">
+        <div class="eval-node">
+          <span class="en-op">init</span>
+          <span class="en-label">Load FFT + OR</span>
+          <span class="en-phase">P-TEL-1</span>
+        </div>
+        <div class="eval-arrow gate">→⚑</div>
+        <div class="eval-node gate">
+          <span class="en-op">TEL-Σ</span>
+          <span class="en-label">SyntaxCheck</span>
+          <span class="en-phase">parse · P-TEL-2</span>
+        </div>
+        <div class="eval-arrow">→</div>
+        <div class="eval-node">
+          <span class="en-op">TEL-Ε</span>
+          <span class="en-label">Evaluate</span>
+          <span class="en-phase">evaluate · P-TEL-3</span>
+        </div>
+        <div class="eval-arrow">→</div>
+        <div class="eval-node skip">
+          <span class="en-op">TEL-Κ</span>
+          <span class="en-label">Compose</span>
+          <span class="en-phase">compose · P-TEL-4</span>
+        </div>
+        <div class="eval-arrow">→</div>
+        <div class="eval-node skip">
+          <span class="en-op">TEL-Τ</span>
+          <span class="en-label">Transform</span>
+          <span class="en-phase">transform · P-TEL-5</span>
+        </div>
+        <div class="eval-arrow">→</div>
+        <div class="eval-node skip">
+          <span class="en-op">TEL-Α</span>
+          <span class="en-label">Assert</span>
+          <span class="en-phase">assert · P-TEL-6</span>
+        </div>
+      </div>
+      <div style="font-size:11px; color:var(--text-dim); margin-top:4px;">Dimmed nodes are soft-skip (skipped if no matching expressions in session). ⚑ = hard gate.</div>
+    </div>
+
+    <!-- module.json Diff Table -->
+    <div class="section">
+      <h2>module.json — Key Fields</h2>
+      <table class="diff-table">
+        <thead>
+          <tr><th>Field</th><th>Value</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="mono">book.id</td><td class="bright">book5_tel</td><td class="added">✓ canonical</td></tr>
+          <tr><td class="mono">book.title</td><td class="bright">TEL Expression &amp; Representation</td><td class="added">✓ canonical</td></tr>
+          <tr><td class="mono">ai.module</td><td class="bright">book5_tel</td><td class="added">✓ set</td></tr>
+          <tr><td class="mono">ai.domain</td><td class="bright">Formal Language &amp; Notation</td><td class="added">✓ set</td></tr>
+          <tr><td class="mono">ai.tier</td><td class="bright">Core Tool</td><td class="added">✓ set</td></tr>
+          <tr><td class="mono">dependencies</td><td class="bright">book1_fft, book4_opacity_revelation</td><td class="added">✓ set</td></tr>
+          <tr><td class="mono">unlocks</td><td class="bright">book6_governance, book7_sarg, book8_nos, book9_pattern_dynamics</td><td class="added">✓ set</td></tr>
+          <tr><td class="mono">live_site</td><td class="bright">null</td><td class="changed">pending publication</td></tr>
+          <tr><td class="mono">version</td><td class="bright">1.0.0</td><td class="same">module · content layer: 5.0-draft</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- File Manifest -->
+    <div class="section">
+      <h2>Content Layer — File Manifest</h2>
+      <div>
+        <div class="file-row">
+          <span class="file-name">module.json</span>
+          <span class="file-desc">Canonical module manifest — AI metadata, dependencies, invariant references</span>
+          <span class="file-status active">deployed</span>
+        </div>
+        <div class="file-row">
+          <span class="file-name">README.md</span>
+          <span class="file-desc">Human-readable book overview and navigation</span>
+          <span class="file-status active">deployed</span>
+        </div>
+        <div class="file-row">
+          <span class="file-name">index.html</span>
+          <span class="file-desc">Live-site structured page — this file</span>
+          <span class="file-status draft">draft</span>
+        </div>
+        <div class="file-row">
+          <span class="file-name">tel.invariants.json</span>
+          <span class="file-desc">INV-TEL-001 through INV-TEL-004 with formal notation, operator bindings, qmroot_binding</span>
+          <span class="file-status draft">draft</span>
+        </div>
+        <div class="file-row">
+          <span class="file-name">tel.syntax_map.json</span>
+          <span class="file-desc">TEL grammar — production rules, token table, well-formedness rules, worked examples</span>
+          <span class="file-status draft">draft</span>
+        </div>
+        <div class="file-row">
+          <span class="file-name">tel.semantics_map.json</span>
+          <span class="file-desc">Canonical evaluation rules — denotational model, eval function, fault taxonomy</span>
+          <span class="file-status draft">draft</span>
+        </div>
+        <div class="file-row">
+          <span class="file-name">tel.composition_map.json</span>
+          <span class="file-desc">Composition model — binary / transform / constraint / invariant composition types, ordering rules</span>
+          <span class="file-status draft">draft</span>
+        </div>
+        <div class="file-row">
+          <span class="file-name">tel.operator_roles.json</span>
+          <span class="file-desc">5 TEL operators (TEL-Σ, TEL-Ε, TEL-Κ, TEL-Τ, TEL-Α) with full specs and downstream bindings</span>
+          <span class="file-status draft">draft</span>
+        </div>
+        <div class="file-row">
+          <span class="file-name">tel.phases.json</span>
+          <span class="file-desc">6-phase evaluation cycle — entry/exit/skip conditions, gate logic, downstream handoffs</span>
+          <span class="file-status draft">draft</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Operator Table -->
+    <div class="section">
+      <h2>TEL Operator Family</h2>
+      <table>
+        <thead>
+          <tr><th>ID</th><th>Name</th><th>Role</th><th>Invariant</th><th>Phase</th><th>Drift Cost</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="mono">TEL-Σ</td>
+            <td class="bright">SyntaxCheck</td>
+            <td>Validate expression against canonical grammar. PASS/FAIL + parse_tree.</td>
+            <td class="mono">INV-TEL-001</td>
+            <td>parse</td>
+            <td class="green">0.03</td>
+          </tr>
+          <tr>
+            <td class="mono">TEL-Ε</td>
+            <td class="bright">Evaluate</td>
+            <td>Apply canonical eval rules to parse_tree. Assign structural denotations.</td>
+            <td class="mono">INV-TEL-002</td>
+            <td>evaluate</td>
+            <td class="yellow">0.05</td>
+          </tr>
+          <tr>
+            <td class="mono">TEL-Κ</td>
+            <td class="bright">Compose</td>
+            <td>Audit composition sites for INV-TEL-003 compliance. Verify ordering rules.</td>
+            <td class="mono">INV-TEL-003</td>
+            <td>compose</td>
+            <td class="green">0.04</td>
+          </tr>
+          <tr>
+            <td class="mono">TEL-Τ</td>
+            <td class="bright">Transform</td>
+            <td>Encode and apply T[ID] transformations. Verify INV-TEL-004 fidelity.</td>
+            <td class="mono">INV-TEL-004</td>
+            <td>transform</td>
+            <td class="yellow">0.06</td>
+          </tr>
+          <tr>
+            <td class="mono">TEL-Α</td>
+            <td class="bright">Assert</td>
+            <td>Evaluate INV[…] and ⊢ assertion sites. Produce session audit report.</td>
+            <td class="mono">All 4 INVs</td>
+            <td>assert</td>
+            <td class="green">0.04</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Invariants Table -->
+    <div class="section">
+      <h2>Book 5 Invariants</h2>
+      <table>
+        <thead>
+          <tr><th>ID</th><th>Label</th><th>Formal</th><th>Operator</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="mono">INV-TEL-001</td>
+            <td class="bright">Expression Completeness</td>
+            <td style="font-family:var(--mono); font-size:11px;">∀S ∈ AI_Edition_structures: ∃e ∈ TEL_expressions: eval(e) = S</td>
+            <td class="mono">TEL-Σ</td>
+          </tr>
+          <tr>
+            <td class="mono">INV-TEL-002</td>
+            <td class="bright">Semantic Stability</td>
+            <td style="font-family:var(--mono); font-size:11px;">∀e ∈ TEL_expressions: |{S : eval(e) = S}| = 1</td>
+            <td class="mono">TEL-Ε</td>
+          </tr>
+          <tr>
+            <td class="mono">INV-TEL-003</td>
+            <td class="bright">Compositionality</td>
+            <td style="font-family:var(--mono); font-size:11px;">∀e = compose(e₁,…,eₙ,R): eval(e) = R(eval(e₁),…,eval(eₙ))</td>
+            <td class="mono">TEL-Κ</td>
+          </tr>
+          <tr>
+            <td class="mono">INV-TEL-004</td>
+            <td class="bright">Transformation Fidelity</td>
+            <td style="font-family:var(--mono); font-size:11px;">valid(S) ∧ applicable(T,S) → valid(T(S))</td>
+            <td class="mono">TEL-Τ</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Phase Table -->
+    <div class="section">
+      <h2>Evaluation Cycle Phases</h2>
+      <table>
+        <thead>
+          <tr><th>#</th><th>Phase</th><th>Active Operators</th><th>Entry Condition</th><th>Skip</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="mono">P-TEL-1</td>
+            <td class="bright">init</td>
+            <td class="mono">—</td>
+            <td>Session open</td>
+            <td class="text-dim">—</td>
+          </tr>
+          <tr>
+            <td class="mono">P-TEL-2</td>
+            <td class="bright" style="color:var(--yellow);">parse ⚑</td>
+            <td class="mono">TEL-Σ</td>
+            <td>init complete; expression string E provided</td>
+            <td class="text-dim">—</td>
+          </tr>
+          <tr>
+            <td class="mono">P-TEL-3</td>
+            <td class="bright">evaluate</td>
+            <td class="mono">TEL-Ε</td>
+            <td>TEL-Σ PASS; module registry loaded</td>
+            <td class="text-dim">—</td>
+          </tr>
+          <tr>
+            <td class="mono">P-TEL-4</td>
+            <td class="bright">compose</td>
+            <td class="mono">TEL-Κ</td>
+            <td>P-TEL-3 complete; compound expressions present</td>
+            <td>if pure atom input</td>
+          </tr>
+          <tr>
+            <td class="mono">P-TEL-5</td>
+            <td class="bright">transform</td>
+            <td class="mono">TEL-Τ</td>
+            <td>P-TEL-4 complete; T[ID] declarations present</td>
+            <td>if no T[ID] in session</td>
+          </tr>
+          <tr>
+            <td class="mono">P-TEL-6</td>
+            <td class="bright">assert</td>
+            <td class="mono">TEL-Α</td>
+            <td>P-TEL-5 complete; INV[…] or ⊢ sites present</td>
+            <td>if no assertions in session</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Compose Ops Table -->
+    <div class="section">
+      <h2>Composition Operator Reference</h2>
+      <table>
+        <thead>
+          <tr><th>Symbol</th><th>Label</th><th>Semantics</th><th>Rule</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="mono">⊕</td><td class="bright">relational_union</td><td>Combined node &amp; relation set, closure applied, duplicates merged</td><td class="mono">SEM-004</td></tr>
+          <tr><td class="mono">⊗</td><td class="bright">relational_product</td><td>Cross-application of relations across shared constraint scope</td><td class="mono">SEM-005</td></tr>
+          <tr><td class="mono">→</td><td class="bright">directed_dependency</td><td>Asymmetric dependency edge from left to right in dep. graph</td><td class="mono">SEM-006</td></tr>
+          <tr><td class="mono">⊢</td><td class="bright">constraint_assertion</td><td>Left structure checked against right constraint predicate</td><td class="mono">SEM-007</td></tr>
+          <tr><td class="mono">⊥</td><td class="bright">disjointness</td><td>Predicate: ⊤ if no shared relational elements, ⊥ otherwise</td><td class="mono">SEM-008</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Footer Card -->
+    <div class="footer-card">
+      <h3>Downstream Handoffs — TEL unlocks</h3>
+      <div class="downstream-grid">
+        <div class="ds-item">
+          <div class="ds-id">book6_governance</div>
+          <div class="ds-label">Governance &amp; Regime Logic</div>
+          <div class="ds-desc">Regime constraint enforcement transformations encoded as TEL-Τ expressions. Regime formation and dissolution sequences expressed in TEL.</div>
+        </div>
+        <div class="ds-item">
+          <div class="ds-id">book7_sarg</div>
+          <div class="ds-label">SARG Structural Argumentation</div>
+          <div class="ds-desc">Argument structure construction and defeat conditions encoded as TEL compound expressions. Warrant relations expressed as TEL → dependencies.</div>
+        </div>
+        <div class="ds-item">
+          <div class="ds-id">book8_nos</div>
+          <div class="ds-label">Nature of Structure</div>
+          <div class="ds-desc">Philosophical positions on structural identity expressed in TEL where applicable. INV-NOS-003 identity-through-change analysis uses TEL-Τ sequences.</div>
+        </div>
+        <div class="ds-item">
+          <div class="ds-id">book9_pattern_dynamics</div>
+          <div class="ds-label">Pattern Dynamics</div>
+          <div class="ds-desc">Bifurcation events, pattern mutation, and trajectory encoding modelled as TEL-Τ sequence chains with TEL-Α assertion checkpoints.</div>
+        </div>
+      </div>
+      <div style="margin-top:16px; font-size:11px; color:var(--text-dim);">
+        Book 5 is the notation backbone of the entire AI Edition from Book 6 onward. All formal structural claims in downstream books require a corresponding TEL encoding to be fully valid under the AI Edition specification.
+      </div>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>

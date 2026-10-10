@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Opacity &amp; Revelation — AI Edition (Book 4)</title>
+  <meta name="description" content="Book 4 of the TriadicFrameworks AI Edition. Formalizes the structural properties of opacity and revelation as a continuously parameterized gradient. Defines conditions for opacity breakdown, revelation, and latent structure accessibility." />
+  <meta name="ai.module" content="book4_opacity_revelation" />
+  <meta name="ai.version" content="4.0-draft" />
+  <meta name="ai.domain" content="Epistemology &amp; Information Theory" />
+  <meta name="ai.tier" content="Intermediate" />
+  <meta name="ai.depends" content="book1_fft, book3_structural_detection" />
+  <meta name="ai.unlocks" content="book5_tel, book6_governance, book8_nos" />
+  <meta name="session.rtt" content="1" />
+  <meta name="session.coherence" content="declared" />
+  <meta name="session.drift" content="bounded" />
+  <meta name="session.paradox" content="structural" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0d0f14;
+      --bg2: #13151c;
+      --bg3: #1a1d27;
+      --border: #2a2d3a;
+      --accent: #5b8aff;
+      --accent2: #9b59b6;
+      --green: #2ecc71;
+      --yellow: #f39c12;
+      --red: #e74c3c;
+      --text: #d4d8e8;
+      --text-muted: #7a7f96;
+      --text-dim: #555a72;
+      --mono: 'Courier New', 'Lucida Console', monospace;
+      --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --sidebar-w: 280px;
+    }
+    html, body { height: 100%; background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 14px; line-height: 1.6; }
+
+    /* ── Layout ── */
+    .layout { display: flex; min-height: 100vh; }
+    .sidebar {
+      width: var(--sidebar-w); flex-shrink: 0;
+      background: var(--bg2); border-right: 1px solid var(--border);
+      padding: 24px 16px; position: sticky; top: 0; height: 100vh; overflow-y: auto;
+      font-size: 12px;
+    }
+    .main { flex: 1; padding: 40px 48px; max-width: 960px; }
+
+    /* ── Sidebar ── */
+    .sidebar-section { margin-bottom: 20px; }
+    .sidebar-label {
+      text-transform: uppercase; letter-spacing: 0.1em; font-size: 10px;
+      color: var(--text-dim); margin-bottom: 6px;
+    }
+    .sidebar-breadcrumb { color: var(--text-muted); line-height: 1.8; }
+    .sidebar-breadcrumb span { color: var(--text); font-weight: 600; }
+    .module-chain { display: flex; flex-direction: column; gap: 2px; }
+    .module-chain .step {
+      padding: 3px 8px; border-left: 2px solid var(--border);
+      color: var(--text-muted); font-family: var(--mono); font-size: 11px;
+    }
+    .module-chain .step.active { border-left-color: var(--accent); color: var(--accent); }
+    .module-chain .step.prev { border-left-color: var(--green); color: var(--green); }
+    .op-pill {
+      display: inline-block; font-family: var(--mono); font-size: 11px;
+      background: rgba(91,138,255,0.12); border: 1px solid rgba(91,138,255,0.3);
+      color: var(--accent); border-radius: 4px; padding: 2px 6px; margin: 2px 2px 0 0;
+    }
+    .phase-chain { font-family: var(--mono); font-size: 11px; color: var(--text-muted); line-height: 2; }
+    .phase-chain .ph { color: var(--accent); font-weight: 600; }
+    .phase-chain .arr { color: var(--text-dim); }
+    .check-list { list-style: none; }
+    .check-list li { padding: 3px 0; color: var(--text-muted); }
+    .check-list li::before { content: '✓ '; color: var(--green); font-weight: 700; }
+    .sidebar-kv { display: flex; justify-content: space-between; padding: 2px 0; }
+    .sidebar-kv .k { color: var(--text-dim); }
+    .sidebar-kv .v { color: var(--accent); font-family: var(--mono); font-size: 11px; }
+    .inv-ref { font-family: var(--mono); font-size: 11px; color: var(--green); padding: 1px 0; }
+
+    /* ── Header ── */
+    .page-header { margin-bottom: 40px; }
+    .page-header .eyebrow {
+      font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em;
+      color: var(--accent); font-family: var(--mono); margin-bottom: 8px;
+    }
+    .page-header h1 {
+      font-size: 28px; font-weight: 700; color: #fff; letter-spacing: -0.02em; margin-bottom: 6px;
+    }
+    .page-header .subtitle { color: var(--text-muted); font-size: 15px; }
+    .version-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(91,138,255,0.1); border: 1px solid rgba(91,138,255,0.25);
+      border-radius: 20px; padding: 4px 12px; font-size: 12px;
+      font-family: var(--mono); color: var(--accent); margin-top: 12px;
+    }
+
+    /* ── Session Card ── */
+    .session-card {
+      background: var(--bg3); border: 1px solid var(--border);
+      border-left: 3px solid var(--accent); border-radius: 6px;
+      padding: 16px 20px; margin-bottom: 32px;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(140px,1fr)); gap: 12px;
+    }
+    .session-item .label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); margin-bottom: 2px; }
+    .session-item .value { font-family: var(--mono); font-size: 12px; color: var(--text); }
+    .session-item .value.ok { color: var(--green); }
+    .session-item .value.accent { color: var(--accent); }
+
+    /* ── Stats Bar ── */
+    .stats-bar {
+      display: flex; gap: 0; margin-bottom: 36px;
+      border: 1px solid var(--border); border-radius: 6px; overflow: hidden;
+    }
+    .stat-cell {
+      flex: 1; padding: 14px 16px; text-align: center;
+      border-right: 1px solid var(--border); background: var(--bg2);
+    }
+    .stat-cell:last-child { border-right: none; }
+    .stat-cell .num { font-size: 22px; font-weight: 700; color: var(--accent); font-family: var(--mono); }
+    .stat-cell .lbl { font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); margin-top: 2px; }
+
+    /* ── Section Headers ── */
+    .section-title {
+      font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em;
+      color: var(--text-dim); font-family: var(--mono);
+      border-bottom: 1px solid var(--border); padding-bottom: 6px; margin-bottom: 20px; margin-top: 40px;
+    }
+    .section-title:first-of-type { margin-top: 0; }
+
+    /* ── Diff Table ── */
+    .diff-table { width: 100%; border-collapse: collapse; margin-bottom: 32px; font-size: 13px; }
+    .diff-table th {
+      text-align: left; padding: 8px 12px;
+      background: var(--bg3); border: 1px solid var(--border);
+      font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim);
+    }
+    .diff-table td {
+      padding: 7px 12px; border: 1px solid var(--border);
+      font-family: var(--mono); font-size: 12px; vertical-align: top;
+    }
+    .diff-table tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+    .diff-table td.key { color: var(--text-muted); width: 30%; }
+    .diff-table td.old { color: var(--text-dim); text-decoration: line-through; width: 30%; }
+    .diff-table td.new { color: var(--accent); width: 40%; }
+    .diff-table td.new.green { color: var(--green); }
+
+    /* ── File Manifest ── */
+    .file-group { margin-bottom: 28px; }
+    .file-group-title {
+      font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--text-muted); padding: 6px 10px;
+      background: var(--bg3); border: 1px solid var(--border);
+      border-bottom: none; border-radius: 4px 4px 0 0;
+    }
+    .file-table { width: 100%; border-collapse: collapse; }
+    .file-table td {
+      padding: 8px 12px; border: 1px solid var(--border);
+      font-size: 12px; vertical-align: top;
+    }
+    .file-table tr:nth-child(even) td { background: rgba(255,255,255,0.015); }
+    .file-table td.fname { font-family: var(--mono); color: var(--accent); width: 32%; }
+    .file-table td.fname a { color: inherit; text-decoration: none; }
+    .file-table td.fname a:hover { text-decoration: underline; }
+    .file-table td.fdesc { color: var(--text-muted); }
+    .file-table td.ftag {
+      width: 14%; font-family: var(--mono); font-size: 11px; color: var(--green);
+      text-align: center;
+    }
+    .tag-exist { color: var(--text-dim); }
+    .tag-new { color: var(--green); font-weight: 700; }
+
+    /* ── Operators Table ── */
+    .op-table { width: 100%; border-collapse: collapse; margin-bottom: 28px; font-size: 12px; }
+    .op-table th {
+      padding: 8px 10px; background: var(--bg3); border: 1px solid var(--border);
+      text-align: left; font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim);
+    }
+    .op-table td { padding: 8px 10px; border: 1px solid var(--border); vertical-align: top; }
+    .op-table tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+    .op-table td.op-id { font-family: var(--mono); color: var(--accent); font-size: 13px; white-space: nowrap; }
+    .op-table td.op-name { color: var(--text); }
+    .op-table td.op-role { color: var(--text-muted); }
+    .op-table td.op-inv { font-family: var(--mono); color: var(--green); font-size: 11px; }
+
+    /* ── Invariants Table ── */
+    .inv-table { width: 100%; border-collapse: collapse; margin-bottom: 28px; font-size: 12px; }
+    .inv-table th {
+      padding: 8px 10px; background: var(--bg3); border: 1px solid var(--border);
+      text-align: left; font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim);
+    }
+    .inv-table td { padding: 8px 10px; border: 1px solid var(--border); vertical-align: top; }
+    .inv-table tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+    .inv-table td.inv-id { font-family: var(--mono); color: var(--green); white-space: nowrap; }
+    .inv-table td.inv-type { font-family: var(--mono); font-size: 11px; color: var(--text-dim); }
+    .inv-table td.inv-stmt { color: var(--text-muted); }
+    .inv-table td.inv-formal { font-family: var(--mono); font-size: 11px; color: var(--accent2); }
+
+    /* ── Phase Table ── */
+    .phase-table { width: 100%; border-collapse: collapse; margin-bottom: 28px; font-size: 12px; }
+    .phase-table th {
+      padding: 8px 10px; background: var(--bg3); border: 1px solid var(--border);
+      text-align: left; font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim);
+    }
+    .phase-table td { padding: 8px 10px; border: 1px solid var(--border); vertical-align: top; }
+    .phase-table tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+    .phase-table td.ph-id { font-family: var(--mono); color: var(--accent); white-space: nowrap; }
+    .phase-table td.ph-ops { font-family: var(--mono); font-size: 11px; color: var(--green); }
+    .phase-table td.ph-desc { color: var(--text-muted); }
+
+    /* ── Footer card ── */
+    .footer-card {
+      background: var(--bg3); border: 1px solid var(--border); border-radius: 6px;
+      padding: 20px 24px; margin-top: 48px; font-size: 12px;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(160px,1fr)); gap: 16px;
+    }
+    .footer-section .fc-label {
+      font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--text-dim); margin-bottom: 6px;
+    }
+    .footer-section .fc-value { font-family: var(--mono); color: var(--text-muted); line-height: 1.8; }
+    .footer-section .fc-value .hi { color: var(--accent); }
+    .footer-section .fc-value .gr { color: var(--green); }
+
+    .footer-note {
+      text-align: center; padding: 16px; color: var(--text-dim); font-size: 11px;
+      border-top: 1px solid var(--border); margin-top: 24px; font-family: var(--mono);
+    }
+
+    /* ── Gradient Viz ── */
+    .gradient-bar {
+      height: 32px; border-radius: 4px; margin: 12px 0 6px;
+      background: linear-gradient(to right, #2ecc71 0%, #5b8aff 50%, #e74c3c 100%);
+      position: relative; border: 1px solid var(--border);
+    }
+    .gradient-labels { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 11px; color: var(--text-muted); }
+    .gradient-zones { display: flex; gap: 4px; margin-top: 8px; }
+    .gz {
+      flex: 1; padding: 4px 6px; border-radius: 3px; font-size: 10px;
+      text-align: center; font-family: var(--mono); border: 1px solid var(--border);
+    }
+    .gz-1 { background: rgba(46,204,113,0.1); color: var(--green); }
+    .gz-2 { background: rgba(91,138,255,0.1); color: var(--accent); }
+    .gz-3 { background: rgba(155,89,182,0.1); color: var(--accent2); }
+    .gz-4 { background: rgba(231,76,60,0.1); color: var(--red); }
+
+    /* ── Responsive ── */
+    @media (max-width: 800px) {
+      .layout { flex-direction: column; }
+      .sidebar { width: 100%; height: auto; position: static; }
+      .main { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+<div class="layout">
+
+  <!-- ═══════════════ SIDEBAR ═══════════════ -->
+  <aside class="sidebar" aria-label="Book 4 navigation sidebar">
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Canon</div>
+      <div class="sidebar-breadcrumb">
+        TriadicFrameworks<br>
+        AI Edition<br>
+        <span>Opacity &amp; Revelation</span>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Module Chain</div>
+      <div class="module-chain">
+        <div class="step prev">fft-core (Book 1)</div>
+        <div class="step prev">detection (Book 3)</div>
+        <div class="step active">opacity</div>
+        <div class="step">gradient</div>
+        <div class="step">threshold</div>
+        <div class="step">revelation</div>
+        <div class="step">latent</div>
+        <div class="step">catalogue</div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Version</div>
+      <div class="sidebar-kv"><span class="k">Book</span><span class="v">4.0-draft</span></div>
+      <div class="sidebar-kv"><span class="k">Domain</span><span class="v">OR</span></div>
+      <div class="sidebar-kv"><span class="k">Kernel</span><span class="v">v1.33-p1 (imported)</span></div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Operators</div>
+      <div>
+        <span class="op-pill">OR-Ω</span>
+        <span class="op-pill">OR-Δ</span>
+        <span class="op-pill">OR-Ρ</span>
+        <span class="op-pill">OR-Λ</span>
+        <span class="op-pill">OR-Π</span>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Phases</div>
+      <div class="phase-chain">
+        <span class="ph">init</span><span class="arr"> → </span>
+        <span class="ph">measure</span><span class="arr"> → </span>
+        <span class="ph">threshold</span><br>
+        <span class="arr">→ </span>
+        <span class="ph">probe</span><span class="arr"> → </span>
+        <span class="ph">reveal</span><span class="arr"> → </span>
+        <span class="ph">catalogue</span>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Maps</div>
+      <div class="inv-ref">or.opacity_gradient_map</div>
+      <div class="inv-ref">or.revelation_threshold_map</div>
+      <div class="inv-ref">or.latent_structure_map</div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">QMROOT</div>
+      <div class="sidebar-kv"><span class="k">6D</span><span class="v" style="color:var(--text-dim)">absent</span></div>
+      <div class="sidebar-kv"><span class="k">negative rungs</span><span class="v" style="color:var(--text-dim)">absent</span></div>
+      <div class="sidebar-kv"><span class="k">INV-013</span><span class="v">0D only</span></div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Invariants</div>
+      <div class="inv-ref">opacity_revelation.invariants.json</div>
+      <div style="color:var(--green);font-size:11px;margin-top:4px;">● active</div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Phantom Entry Audit</div>
+      <ul class="check-list">
+        <li>No RTT ops</li>
+        <li>No Book 2 ops</li>
+        <li>No deprecated files</li>
+        <li>No cached spine</li>
+        <li>No 6D / rung artifacts</li>
+        <li>No cross-book leakage</li>
+      </ul>
+    </div>
+
+  </aside>
+
+  <!-- ═══════════════ MAIN ═══════════════ -->
+  <main class="main">
+
+    <!-- Header -->
+    <div class="page-header">
+      <div class="eyebrow">TriadicFrameworks · AI Edition · Book 4</div>
+      <h1>Opacity &amp; Revelation</h1>
+      <p class="subtitle">Formalizes structural transparency as a continuously parameterized gradient — defines when concealment breaks down, revelation occurs, and latent structure becomes accessible.</p>
+      <div class="version-badge">
+        <span>v4.0-draft</span>
+        <span style="color:var(--text-dim)">|</span>
+        <span>OR domain</span>
+        <span style="color:var(--text-dim)">|</span>
+        <span style="color:var(--green)">active</span>
+      </div>
+    </div>
+
+    <!-- Session Card -->
+    <div class="session-card" aria-label="Session context">
+      <div class="session-item">
+        <div class="label">RTT</div>
+        <div class="value ok">rtt = 1</div>
+      </div>
+      <div class="session-item">
+        <div class="label">Coherence</div>
+        <div class="value ok">declared</div>
+      </div>
+      <div class="session-item">
+        <div class="label">Drift</div>
+        <div class="value ok">bounded</div>
+      </div>
+      <div class="session-item">
+        <div class="label">Paradox</div>
+        <div class="value accent">structural</div>
+      </div>
+      <div class="session-item">
+        <div class="label">Edition</div>
+        <div class="value accent">AI</div>
+      </div>
+      <div class="session-item">
+        <div class="label">Author</div>
+        <div class="value">Nawder</div>
+      </div>
+      <div class="session-item">
+        <div class="label">Date</div>
+        <div class="value">2026-10-10</div>
+      </div>
+    </div>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+      <div class="stat-cell"><div class="num">7</div><div class="lbl">Content Files</div></div>
+      <div class="stat-cell"><div class="num">4</div><div class="lbl">Invariants</div></div>
+      <div class="stat-cell"><div class="num">5</div><div class="lbl">Operators</div></div>
+      <div class="stat-cell"><div class="num">6</div><div class="lbl">Phases</div></div>
+      <div class="stat-cell"><div class="num">3</div><div class="lbl">Maps</div></div>
+    </div>
+
+    <!-- ── Opacity Gradient Visualization ── -->
+    <div class="section-title">§ Opacity–Revelation Spectrum (INV-OR-001)</div>
+    <div class="gradient-bar" aria-label="Opacity gradient from 0 (transparent) to 1 (opaque)"></div>
+    <div class="gradient-labels"><span>ω = 0 (fully transparent)</span><span>ω = 0.5</span><span>ω = 1 (fully opaque)</span></div>
+    <div class="gradient-zones">
+      <div class="gz gz-1">OZ-1<br>0.00–0.25<br>High Transparency</div>
+      <div class="gz gz-2">OZ-2<br>0.25–0.50<br>Partial Opacity</div>
+      <div class="gz gz-3">OZ-3<br>0.50–0.75<br>Partial Concealment</div>
+      <div class="gz gz-4">OZ-4<br>0.75–1.00<br>High Opacity</div>
+    </div>
+
+    <!-- ── module.json Diff ── -->
+    <div class="section-title">§ module.json — Field Additions (v4.0-draft)</div>
+    <table class="diff-table" aria-label="module.json field diff">
+      <thead>
+        <tr><th>Field</th><th>Previous Value</th><th>New Value</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="key">ai.module</td><td class="old">—</td><td class="new">book4_opacity_revelation</td></tr>
+        <tr><td class="key">ai.domain</td><td class="old">—</td><td class="new">Epistemology &amp; Information Theory</td></tr>
+        <tr><td class="key">operators.domain</td><td class="old">—</td><td class="new green">OR-Ω · OR-Δ · OR-Ρ · OR-Λ · OR-Π</td></tr>
+        <tr><td class="key">phases</td><td class="old">—</td><td class="new green">init → measure → threshold → probe → reveal → catalogue</td></tr>
+        <tr><td class="key">maps</td><td class="old">—</td><td class="new green">opacity_gradient · revelation_threshold · latent_structure</td></tr>
+        <tr><td class="key">invariants.file</td><td class="old">—</td><td class="new green">opacity_revelation.invariants.json</td></tr>
+        <tr><td class="key">qmroot.6D</td><td class="old">—</td><td class="new">absent</td></tr>
+        <tr><td class="key">qmroot.negative_rungs</td><td class="old">—</td><td class="new">absent</td></tr>
+        <tr><td class="key">qmroot.INV-013</td><td class="old">—</td><td class="new">0D only</td></tr>
+        <tr><td class="key">canonical_metadata.live_site</td><td class="old">null</td><td class="new">pending deployment</td></tr>
+        <tr><td class="key">book3_binding.SD-Σd</td><td class="old">—</td><td class="new green">feeds OR-Δ (DetectionCapacity) δ estimation</td></tr>
+        <tr><td class="key">unlocks</td><td class="old">—</td><td class="new">book5_tel · book6_governance · book8_nos</td></tr>
+      </tbody>
+    </table>
+
+    <!-- ── File Manifest ── -->
+    <div class="section-title">§ File Manifest — Book 4 Content Layer</div>
+
+    <div class="file-group">
+      <div class="file-group-title">Scaffolding Layer (pre-existing)</div>
+      <table class="file-table">
+        <tbody>
+          <tr>
+            <td class="fname"><a href="module.json">module.json</a></td>
+            <td class="fdesc">Canonical AI module manifest. Declares id, dependencies, unlocks, invariants reference, purpose, summary, keywords, audience.</td>
+            <td class="ftag tag-exist">DEPLOYED</td>
+          </tr>
+          <tr>
+            <td class="fname"><a href="README.md">README.md</a></td>
+            <td class="fdesc">Human-readable navigation, book purpose, reading order, and link to live site when available.</td>
+            <td class="ftag tag-exist">DEPLOYED</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="file-group">
+      <div class="file-group-title">Content Layer (v4.0-draft)</div>
+      <table class="file-table">
+        <tbody>
+          <tr>
+            <td class="fname"><a href="index.html">index.html</a></td>
+            <td class="fdesc">Live-site page. Full AI-parsable domain manifest. Session card, stats bar, gradient visualization, operators, phases, invariants, file manifest, footer. <em>This file.</em></td>
+            <td class="ftag tag-new">NEW</td>
+          </tr>
+          <tr>
+            <td class="fname"><a href="opacity_revelation.invariants.json">opacity_revelation.invariants.json</a></td>
+            <td class="fdesc">Formal invariants file. INV-OR-001 through INV-OR-004. Includes formal statements, corollaries, violation conditions, operator and phase bindings, QMROOT trace, and phantom entry audit.</td>
+            <td class="ftag tag-new">NEW</td>
+          </tr>
+          <tr>
+            <td class="fname"><a href="or.opacity_gradient_map.json">or.opacity_gradient_map.json</a></td>
+            <td class="fdesc">Opacity gradient model. Defines ω ∈ [0,1], zone taxonomy (OZ-1 through OZ-4), opacity source taxonomy, assignment procedure. Binds to INV-OR-001 and OR-Ω.</td>
+            <td class="ftag tag-new">NEW</td>
+          </tr>
+          <tr>
+            <td class="fname"><a href="or.revelation_threshold_map.json">or.revelation_threshold_map.json</a></td>
+            <td class="fdesc">Revelation threshold model. Formal revelation condition (reveal(S,O) ⟺ δ &gt; ω). Revelation states, conservatism principle, observer capacity model, 5 failure modes, threshold audit checklist. Binds to INV-OR-002 and OR-Ρ.</td>
+            <td class="ftag tag-new">NEW</td>
+          </tr>
+          <tr>
+            <td class="fname"><a href="or.latent_structure_map.json">or.latent_structure_map.json</a></td>
+            <td class="fdesc">Latent structure model. Defines S_latent and S_access partition. Partial revelation mechanics. Latent accessibility pathways. Structural shadow taxonomy (ST-001–003). OR-Λ procedure spec. Binds to INV-OR-004.</td>
+            <td class="ftag tag-new">NEW</td>
+          </tr>
+          <tr>
+            <td class="fname"><a href="or.operator_roles.json">or.operator_roles.json</a></td>
+            <td class="fdesc">Full operator role map for OR-Ω, OR-Δ, OR-Ρ, OR-Λ, OR-Π. Inputs, outputs, invariant bindings, phase assignments, drift costs, downstream bindings, must-not list. Sequence: OR-Ω → OR-Δ → OR-Ρ → OR-Λ → OR-Π.</td>
+            <td class="ftag tag-new">NEW</td>
+          </tr>
+          <tr>
+            <td class="fname"><a href="or.phases.json">or.phases.json</a></td>
+            <td class="fdesc">Six-phase evaluation cycle spec (init, measure, threshold, probe, reveal, catalogue). Each phase has entry/exit conditions, active operators, skip conditions, and downstream handoffs.</td>
+            <td class="ftag tag-new">NEW</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ── Operators ── -->
+    <div class="section-title">§ Domain Operators — OR Family</div>
+    <table class="op-table" aria-label="Book 4 operator definitions">
+      <thead>
+        <tr>
+          <th style="width:10%">ID</th>
+          <th style="width:20%">Name</th>
+          <th style="width:38%">Role</th>
+          <th style="width:12%">Input → Output</th>
+          <th style="width:20%">Invariant</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="op-id">OR-Ω</td>
+          <td class="op-name">OpacityGradient</td>
+          <td class="op-role">Assigns or reads opacity ω ∈ [0,1] for structure S. Primary entry operator; runs before all others.</td>
+          <td class="op-role">S → ω(S)</td>
+          <td class="op-inv">INV-OR-001<br>INV-OR-003</td>
+        </tr>
+        <tr>
+          <td class="op-id">OR-Δ</td>
+          <td class="op-name">DetectionCapacity</td>
+          <td class="op-role">Declares observer detection capacity δ ∈ [0,1]. Grounded in Book 3 SD-Σd output; applies context adjustment.</td>
+          <td class="op-role">O,C → δ(O,C)</td>
+          <td class="op-inv">INV-OR-002</td>
+        </tr>
+        <tr>
+          <td class="op-id">OR-Ρ</td>
+          <td class="op-name">RevelationCheck</td>
+          <td class="op-role">Gate operator. Evaluates δ &gt; ω. Returns revelation_state ∈ {opaque, threshold, revealed}. Threshold → opaque by conservatism.</td>
+          <td class="op-role">δ,ω → state</td>
+          <td class="op-inv">INV-OR-002</td>
+        </tr>
+        <tr>
+          <td class="op-id">OR-Λ</td>
+          <td class="op-name">LatentProbe</td>
+          <td class="op-role">Classifies sub(S) into S_latent and S_access. Detects structural shadows. Highest drift cost — runs only after OR-Ρ.</td>
+          <td class="op-role">S,δ → S_latent, S_access, shadows</td>
+          <td class="op-inv">INV-OR-004</td>
+        </tr>
+        <tr>
+          <td class="op-id">OR-Π</td>
+          <td class="op-name">PartialIndex</td>
+          <td class="op-role">Synthesis operator. Builds revelation_map {s_i → state_i} across all sub-structures. Output feeds Books 5, 6, and 8.</td>
+          <td class="op-role">S_latent, S_access → revelation_map</td>
+          <td class="op-inv">INV-OR-004</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:11px;color:var(--text-dim);font-family:var(--mono);margin-bottom:28px;">
+      Sequence: <span style="color:var(--accent)">OR-Ω → OR-Δ → OR-Ρ → OR-Λ → OR-Π</span>
+    </p>
+
+    <!-- ── Invariants ── -->
+    <div class="section-title">§ Invariants — INV-OR-001 through INV-OR-004</div>
+    <table class="inv-table" aria-label="Book 4 invariants">
+      <thead>
+        <tr>
+          <th style="width:14%">ID</th>
+          <th style="width:16%">Label</th>
+          <th style="width:8%">Type</th>
+          <th style="width:35%">Statement</th>
+          <th style="width:27%">Formal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="inv-id">INV-OR-001</td>
+          <td>Opacity Gradient</td>
+          <td class="inv-type">structural</td>
+          <td class="inv-stmt">Opacity is a continuous parameter ω ∈ [0,1]. Binary assignments are special endpoint cases.</td>
+          <td class="inv-formal">∀S: ω(S) ∈ [0,1]</td>
+        </tr>
+        <tr>
+          <td class="inv-id">INV-OR-002</td>
+          <td>Revelation Threshold</td>
+          <td class="inv-type">structural</td>
+          <td class="inv-stmt">Revelation occurs iff δ(O) strictly exceeds ω(S). At the boundary δ = ω, the structure is opaque.</td>
+          <td class="inv-formal">reveal(S,O) ⟺ δ(O) &gt; ω(S)</td>
+        </tr>
+        <tr>
+          <td class="inv-id">INV-OR-003</td>
+          <td>Opacity Persistence</td>
+          <td class="inv-type">structural</td>
+          <td class="inv-stmt">ω(S) is a property of S's configuration. Observation does not change ω.</td>
+          <td class="inv-formal">ω(S) invariant under change of O</td>
+        </tr>
+        <tr>
+          <td class="inv-id">INV-OR-004</td>
+          <td>Partial Revelation</td>
+          <td class="inv-type">structural</td>
+          <td class="inv-stmt">Revelation may be partial. Each sub-structure s_i is evaluated independently against δ.</td>
+          <td class="inv-formal">∃s_i,s_j ∈ sub(S): reveal(s_i,O) ∧ ¬reveal(s_j,O)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- ── Phases ── -->
+    <div class="section-title">§ Evaluation Phases</div>
+    <table class="phase-table" aria-label="Book 4 phases">
+      <thead>
+        <tr>
+          <th style="width:10%">Phase</th>
+          <th style="width:12%">Label</th>
+          <th style="width:20%">Active Ops</th>
+          <th style="width:58%">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ph-id">P-OR-1</td>
+          <td>init</td>
+          <td class="ph-ops">—</td>
+          <td class="ph-desc">Import Book 1 kernel + Book 3 SD domain. Assert session context. Verify QMROOT = 0D. No OR operators active.</td>
+        </tr>
+        <tr>
+          <td class="ph-id">P-OR-2</td>
+          <td>measure</td>
+          <td class="ph-ops">OR-Ω · OR-Δ</td>
+          <td class="ph-desc">Assign structural opacity ω via OR-Ω. Declare observer capacity δ via OR-Δ (SD-Σd substrate). Both must complete before threshold.</td>
+        </tr>
+        <tr>
+          <td class="ph-id">P-OR-3</td>
+          <td>threshold</td>
+          <td class="ph-ops">OR-Ρ</td>
+          <td class="ph-desc">Gate: evaluate δ &gt; ω. Assign revelation_state. If revealed → jump to reveal. If opaque/threshold → proceed to probe.</td>
+        </tr>
+        <tr>
+          <td class="ph-id">P-OR-4</td>
+          <td>probe</td>
+          <td class="ph-ops">OR-Λ</td>
+          <td class="ph-desc">Classify sub(S) into S_latent and S_access. Detect structural shadows. Skip if revelation_state = revealed.</td>
+        </tr>
+        <tr>
+          <td class="ph-id">P-OR-5</td>
+          <td>reveal</td>
+          <td class="ph-ops">OR-Π</td>
+          <td class="ph-desc">Build revelation_map {s_i → state_i}. Set partial_revelation_flag when 0 &lt; |S_access| &lt; |sub(S)|.</td>
+        </tr>
+        <tr>
+          <td class="ph-id">P-OR-6</td>
+          <td>catalogue</td>
+          <td class="ph-ops">OR-Π</td>
+          <td class="ph-desc">Record revelation_map, ω, δ, state to session log. Flag shadows for Book 3 re-investigation. Emit downstream to Books 5, 6, 8.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- ── Footer Card ── -->
+    <div class="footer-card" aria-label="Book 4 session context footer">
+      <div class="footer-section">
+        <div class="fc-label">Session Context</div>
+        <div class="fc-value">
+          <span class="hi">rtt</span> = 1<br>
+          <span class="hi">coherence</span> = declared<br>
+          <span class="hi">drift</span> = bounded<br>
+          <span class="hi">paradox</span> = structural
+        </div>
+      </div>
+      <div class="footer-section">
+        <div class="fc-label">Operators</div>
+        <div class="fc-value">
+          <span class="hi">OR-Ω</span> OpacityGradient<br>
+          <span class="hi">OR-Δ</span> DetectionCapacity<br>
+          <span class="hi">OR-Ρ</span> RevelationCheck<br>
+          <span class="hi">OR-Λ</span> LatentProbe<br>
+          <span class="hi">OR-Π</span> PartialIndex
+        </div>
+      </div>
+      <div class="footer-section">
+        <div class="fc-label">Phases</div>
+        <div class="fc-value">
+          <span class="gr">init</span> → <span class="gr">measure</span><br>
+          → <span class="gr">threshold</span> → <span class="gr">probe</span><br>
+          → <span class="gr">reveal</span> → <span class="gr">catalogue</span>
+        </div>
+      </div>
+      <div class="footer-section">
+        <div class="fc-label">Maps</div>
+        <div class="fc-value">
+          or.opacity_gradient_map<br>
+          or.revelation_threshold_map<br>
+          or.latent_structure_map
+        </div>
+      </div>
+      <div class="footer-section">
+        <div class="fc-label">QMROOT</div>
+        <div class="fc-value">
+          6D: <span style="color:var(--text-dim)">absent</span><br>
+          neg rungs: <span style="color:var(--text-dim)">absent</span><br>
+          INV-013: <span class="gr">0D only</span>
+        </div>
+      </div>
+      <div class="footer-section">
+        <div class="fc-label">Invariants</div>
+        <div class="fc-value">
+          <span class="gr">INV-OR-001</span> Opacity Gradient<br>
+          <span class="gr">INV-OR-002</span> Revelation Threshold<br>
+          <span class="gr">INV-OR-003</span> Opacity Persistence<br>
+          <span class="gr">INV-OR-004</span> Partial Revelation
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-note">
+      Book 4 · AI Edition · book4_opacity_revelation · v4.0-draft · author: Nawder · 2026-10-10<br>
+      Repo: github.com/umaywant2/TriadicFrameworks · Spine: triadicframeworks.org/spine/ · Every page stands alone and is fully AI-parsable.
+    </div>
+
+  </main>
+</div>
+</body>
+</html>

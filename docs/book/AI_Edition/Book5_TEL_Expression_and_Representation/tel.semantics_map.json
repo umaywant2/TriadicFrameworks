@@ -1,0 +1,119 @@
+{
+  "map_id": "tel.semantics_map",
+  "version": "5.0-draft",
+  "book": "book5_tel",
+  "series": "AI Edition",
+  "invariant": "INV-TEL-002",
+  "operator_binding": "TEL-Ε (Evaluate)",
+  "description": "Defines the canonical semantic evaluation rules for TEL expressions. Every well-formed TEL expression (passing TEL-Σ SyntaxCheck) has exactly one structural interpretation under these rules. Ambiguity is a parse failure, not a semantic feature.",
+  "evaluation_model": {
+    "style": "denotational",
+    "evaluation_function": "eval : TEL_expressions → AI_Edition_structures",
+    "canonical_context": "AI Edition module registry, active book invariant set, session context (rtt=1 | coherence=declared | drift=bounded | paradox=structural)",
+    "determinism_guarantee": "INV-TEL-002 — every well-formed expression maps to exactly one structural denotation under eval"
+  },
+  "evaluation_rules": [
+    {
+      "rule_id": "SEM-001",
+      "production": "atom → identifier",
+      "eval": "eval(identifier) = registry_lookup(identifier)",
+      "note": "Looks up the structural entity declared in the active AI Edition module registry. If not found, evaluation halts with an UnresolvedIdentifier fault — not a default or fallback value."
+    },
+    {
+      "rule_id": "SEM-002",
+      "production": "atom → literal",
+      "eval": "eval(literal) = literal_value",
+      "note": "Numeric, boolean, or string literals evaluate to their own intrinsic values. Booleans ⊤ and ⊥ evaluate to structural truth/falsity tokens."
+    },
+    {
+      "rule_id": "SEM-003",
+      "production": "atom → symbol_ref #ID",
+      "eval": "eval(#ID) = scope_lookup(ID)",
+      "note": "Resolves to the structural value most recently bound to ID in the current evaluation scope. Unbound reference is a scope fault, not a default."
+    },
+    {
+      "rule_id": "SEM-004",
+      "production": "compound → (e1 ⊕ e2)",
+      "eval": "eval(e1 ⊕ e2) = structural_union(eval(e1), eval(e2))",
+      "note": "Structural union: the combined node and relation set of both operands, with relational closure applied. Duplicate nodes merge; duplicate relations are deduplicated."
+    },
+    {
+      "rule_id": "SEM-005",
+      "production": "compound → (e1 ⊗ e2)",
+      "eval": "eval(e1 ⊗ e2) = relational_product(eval(e1), eval(e2))",
+      "note": "Relational product: every relation in eval(e1) is applied across every element of eval(e2) within shared constraint scope. Produces a new structural configuration, not a set of pairs."
+    },
+    {
+      "rule_id": "SEM-006",
+      "production": "compound → (e1 → e2)",
+      "eval": "eval(e1 → e2) = directed_dependency(eval(e1), eval(e2))",
+      "note": "Directed structural dependency: eval(e1) depends on eval(e2). In the dependency graph, an edge is added from eval(e1) to eval(e2). This is asymmetric — eval(e2) does not depend on eval(e1) under this rule."
+    },
+    {
+      "rule_id": "SEM-007",
+      "production": "compound → (e1 ⊢ e2)",
+      "eval": "eval(e1 ⊢ e2) = constraint_check(eval(e1), eval(e2))",
+      "note": "Constraint assertion: evaluates e1 and checks it satisfies the constraint denoted by e2. Returns the structural denotation of e1 if satisfied; halts with ConstraintViolation fault if not."
+    },
+    {
+      "rule_id": "SEM-008",
+      "production": "compound → (e1 ⊥ e2)",
+      "eval": "eval(e1 ⊥ e2) = disjointness_check(eval(e1), eval(e2))",
+      "note": "Structural disjointness: returns ⊤ if eval(e1) and eval(e2) share no relational elements; returns ⊥ otherwise. Pure predicate — does not produce a new structural configuration."
+    },
+    {
+      "rule_id": "SEM-009",
+      "production": "transform_expr → T[ID]: e1 → e2",
+      "eval": "eval(T[ID]: e1 → e2) = declare_transformation(ID, eval(e1), eval(e2))",
+      "note": "Declares a named transformation in scope. Does not execute the transformation — execution occurs when the transformation is referenced via a symbol_ref in a subsequent expression. INV-TEL-004 is evaluated at application time."
+    },
+    {
+      "rule_id": "SEM-010",
+      "production": "constraint_expr → C[ID]: e",
+      "eval": "eval(C[ID]: e) = declare_constraint(ID, eval(e))",
+      "note": "Declares a named constraint in scope. The constraint body eval(e) is stored as a structural predicate. Applied by ⊢ operator in compound expressions."
+    },
+    {
+      "rule_id": "SEM-011",
+      "production": "invariant_expr → INV[ID]: assert e",
+      "eval": "eval(INV[ID]: assert e) = invariant_check(ID, eval(e))",
+      "note": "Evaluates e and checks the result satisfies the invariant identified by ID in the active book's invariants file. If the check fails, the evaluation session is flagged with an InvariantViolation record."
+    }
+  ],
+  "evaluation_fault_taxonomy": [
+    {
+      "fault_id": "EF-001",
+      "label": "UnresolvedIdentifier",
+      "trigger": "eval(identifier) where identifier not in module registry",
+      "action": "Halt evaluation. Record fault. Do not substitute a default value."
+    },
+    {
+      "fault_id": "EF-002",
+      "label": "ScopeFault",
+      "trigger": "eval(#ID) where ID has not been bound in current scope",
+      "action": "Halt evaluation. Record fault. Do not propagate undefined symbol."
+    },
+    {
+      "fault_id": "EF-003",
+      "label": "ConstraintViolation",
+      "trigger": "constraint_check returns false",
+      "action": "Halt evaluation of the ⊢ expression. Record which constraint was violated and by which structural denotation."
+    },
+    {
+      "fault_id": "EF-004",
+      "label": "InvariantViolation",
+      "trigger": "invariant_check returns false",
+      "action": "Flag evaluation session. Record violation. Session may continue but all downstream results are marked with InvariantViolation flag."
+    },
+    {
+      "fault_id": "EF-005",
+      "label": "TransformationFidelityFault",
+      "trigger": "Application of T[ID] to a valid structure produces an invalid structure",
+      "action": "Halt transformation application. Record EF-005 against the transformation declaration. INV-TEL-004 is violated — the transformation encoding must be revised."
+    }
+  ],
+  "book4_binding": {
+    "note": "TEL semantics for opacity expressions use Book 4 OR operators as structural vocabulary. OR-Ω, OR-Δ, OR-Ρ, OR-Λ, OR-Π are valid identifiers in TEL expressions when Book 4 is in the active module registry.",
+    "example": "INV[INV-OR-002]: assert (OR_RHO ⊢ C[REVELATION_THRESHOLD])"
+  }
+}
