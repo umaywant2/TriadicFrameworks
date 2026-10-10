@@ -1,0 +1,124 @@
+{
+  "module": {
+    "name": "Structural Detection — AI Edition",
+    "id": "sd.structural_detection.ai",
+    "version": "3.0-draft",
+    "category": "rtt-domain",
+    "summary": "Book 3 of the TriadicFrameworks AI Edition. Defines the structural detection domain layer built on the frozen RTT kernel and the Inverted Star domain.",
+    "canonical_url": "https://www.triadicframeworks.org/docs/Structural_Detection/AI_Edition/index.html"
+  },
+
+  "ai.import.kernel": {
+    "version": "1.33-p1",
+    "source": "Framework_Field_Theory/AI_Edition",
+    "load_order": [
+      "kernel/fft.ai.reader.json",
+      "kernel/fft.ai.coherence.json",
+      "kernel/fft.ai.drift.monitor.json",
+      "kernel/fft.ai.paradox.enum.json",
+      "kernel/fft.ai.paradox.resolver.json",
+      "kernel/fft.ai.session.context.html"
+    ],
+    "invariants": {
+      "must_not": [
+        "revise_frozen_RTT",
+        "declare_second_coherence",
+        "use_bare_C",
+        "invent_drift_costs",
+        "invent_6D_operator",
+        "suppress_PX_001_through_PX_010",
+        "use_cached_spine",
+        "load_deprecated_files"
+      ],
+      "halt_on_version_mismatch": true
+    }
+  },
+
+  "session.context": {
+    "rtt": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+
+  "operators": {
+    "domain": [
+      {
+        "operator": "SD-Σd",
+        "file": "operators/SD-SignalDetection.html",
+        "role": "signal presence detection across RTT structures",
+        "layer": "surface-deep",
+        "alignment": "structural"
+      },
+      {
+        "operator": "SD-Γ",
+        "file": "operators/SD-GeometryProbe.html",
+        "role": "geometry probe and anomaly detection",
+        "layer": "mid-deep",
+        "alignment": "R"
+      },
+      {
+        "operator": "SD-Λ",
+        "file": "operators/SD-LatticeScan.html",
+        "role": "lattice scan for structural consistency",
+        "layer": "deep-mid",
+        "alignment": "R",
+        "phase": ["scan", "confirm"]
+      },
+      {
+        "operator": "SD-Ξ",
+        "file": "operators/SD-NoiseGate.html",
+        "role": "noise gating and false-positive suppression",
+        "layer": "surface",
+        "alignment": "N"
+      },
+      {
+        "operator": "SD-Π",
+        "file": "operators/SD-PatternIndex.html",
+        "role": "pattern indexing and structural cataloguing",
+        "layer": "surface-deep",
+        "alignment": "structural"
+      }
+    ]
+  },
+
+  "phases": {
+    "files": [
+      "phases/init.md",
+      "phases/scan.md",
+      "phases/probe.md",
+      "phases/filter.md",
+      "phases/confirm.md",
+      "phases/catalogue.md"
+    ]
+  },
+
+  "maps": {
+    "detection_cycle": "maps/detection_cycle.json",
+    "operator_roles": "maps/operator_roles.json",
+    "noise_gate_map": "maps/noise_gate_map.json"
+  },
+
+  "qmroot": {
+    "absence": "qmroot/qmroot.absence.json",
+    "INV_013_path": "qmroot/INV-013.path.json"
+  },
+
+  "invariants": {
+    "file": "invariants/structural_detection.invariants.json"
+  },
+
+  "ai.metadata": {
+    "purpose": "Defines the structural detection domain layer for RTT, built on the frozen kernel and the Inverted Star domain.",
+    "audience": "AI systems, researchers, and readers of the TriadicFrameworks canon.",
+    "keywords": [
+      "Structural Detection",
+      "RTT",
+      "domain operators",
+      "signal detection",
+      "geometry probe",
+      "noise gating",
+      "pattern indexing"
+    ]
+  }
+}
