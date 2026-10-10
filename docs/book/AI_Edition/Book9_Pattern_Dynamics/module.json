@@ -1,1 +1,66 @@
+{
+  "book": {
+    "id": "book9_pattern_dynamics",
+    "number": 9,
+    "title": "Pattern Dynamics",
+    "abbreviation": "PD",
+    "series": "AI Edition",
+    "edition": "AI",
+    "version": "1.0.0",
+    "status": "active"
+  },
+  "ai": {
+    "module": "book9_pattern_dynamics",
+    "version": "1.0.0",
+    "purpose": "Model the temporal and evolutionary behavior of structural patterns — how they form, propagate, stabilize, mutate, and dissolve over time. Synthesizes all prior AI Edition books into a unified dynamic theory of structural change, providing the tools to reason about structural trajectories, bifurcations, and attractors.",
+    "keywords": [
+      "pattern dynamics",
+      "structural evolution",
+      "temporal structure",
+      "attractor",
+      "bifurcation",
+      "pattern propagation",
+      "structural change",
+      "trajectory",
+      "dynamical systems",
+      "synthesis"
+    ],
+    "audience": [
+      "AI reasoning systems",
+      "dynamical systems researchers",
+      "complexity scientists",
+      "structural analysts",
+      "strategic forecasters"
+    ],
+    "summary": "Book 9 is the synthetic culmination of the AI Edition. It brings together the foundational primitives (Book 1), topological models (Book 2), detection methods (Book 3), opacity theory (Book 4), TEL notation (Book 5), governance logic (Book 6), argumentation structure (Book 7), and philosophical foundations (Book 8) into a unified account of how structural patterns evolve over time. Pattern Dynamics introduces the concepts of structural trajectory, attractor basin, bifurcation point, and pattern mutation, providing both formal definitions and analytical procedures for studying structural change in any domain.",
+    "dependencies": [
+      "book1_fft",
+      "book2_inverted_star",
+      "book3_structural_detection",
+      "book4_opacity_revelation",
+      "book5_tel",
+      "book6_governance",
+      "book7_sarg",
+      "book8_nos"
+    ],
+    "unlocks": []
+  },
+  "invariants": {
+    "references": [
+      "INV-PD-001: Trajectory Continuity — a structural trajectory is continuous; discontinuous jumps are classified as bifurcation events, not ordinary evolution",
+      "INV-PD-002: Attractor Stability — an attractor state is one to which nearby trajectories converge under the governing dynamics",
+      "INV-PD-003: Mutation Constraint — a structural mutation preserves at least one invariant of the source pattern; total invariant loss constitutes pattern dissolution, not mutation",
+      "INV-PD-004: Propagation Fidelity — a propagated pattern must be detectable by Book 3 methods in the target context for propagation to be confirmed"
+    ],
+    "file": "invariants/book9_invariants.json"
+  },
+  "canonical_metadata": {
+    "domain": "Dynamical Systems & Synthesis",
+    "tier": "Synthesis",
+    "reading_order": 9,
+    "prerequisite_books": [1, 2, 3, 4, 5, 6, 7, 8],
+    "live_site": "https://acwilson734.github.io/ai-edition/book9",
+    "last_updated": "2026-10-10"
+  }
+}
 
