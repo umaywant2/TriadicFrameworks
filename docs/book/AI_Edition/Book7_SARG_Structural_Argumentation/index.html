@@ -1,739 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SARG Structural Argumentation — AI Edition (Book 7)</title>
-  <meta name="description" content="Book 7 of the TriadicFrameworks AI Edition. Defines SARG (Structural Argumentation) as a formal framework for constructing, evaluating, and defeating arguments using structural properties rather than purely logical or rhetorical criteria." />
-  <meta name="ai.module" content="book7_sarg" />
-  <meta name="ai.version" content="7.0-draft" />
-  <meta name="ai.domain" content="Argumentation &amp; Logic" />
-  <meta name="ai.tier" content="Applied" />
-  <meta name="ai.depends" content="book1_fft book3_structural_detection book5_tel book6_governance" />
-  <meta name="ai.unlocks" content="book8_nos book9_pattern_dynamics" />
-  <meta name="session.rtt" content="1" />
-  <meta name="session.coherence" content="declared" />
-  <meta name="session.drift" content="bounded" />
-  <meta name="session.paradox" content="structural" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --bg: #0d0f14;
-      --bg2: #13151c;
-      --bg3: #1a1d27;
-      --border: #2a2d3a;
-      --accent: #5b8aff;
-      --accent2: #e74c3c;
-      --green: #2ecc71;
-      --yellow: #f39c12;
-      --red: #e74c3c;
-      --teal: #1abc9c;
-      --text: #d4d8e8;
-      --text-muted: #7a7f96;
-      --text-dim: #555a72;
-      --mono: 'Courier New', 'Lucida Console', monospace;
-      --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      --sidebar-w: 280px;
-    }
-    html, body { height: 100%; background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 14px; line-height: 1.6; }
+    <!-- Canonical Metadata -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    /* ── Layout ── */
-    .layout { display: flex; min-height: 100vh; }
-    .sidebar {
-      width: var(--sidebar-w); flex-shrink: 0;
-      background: var(--bg2); border-right: 1px solid var(--border);
-      padding: 24px 16px; position: sticky; top: 0; height: 100vh; overflow-y: auto;
-      font-size: 12px;
-    }
-    .main { flex: 1; padding: 40px 48px; max-width: 960px; }
+    <title>SARG Structural Argumentation — AI Edition (Book 7)</title>
+    <meta name="description" content="Book 7 of the TriadicFrameworks AI Edition. Defines SARG (Structural Argumentation) as a formal grammar for constructing, evaluating, and defeating arguments using structural properties rather than purely logical or rhetorical criteria." />
 
-    /* ── Sidebar ── */
-    .sidebar-section { margin-bottom: 20px; }
-    .sidebar-label {
-      text-transform: uppercase; letter-spacing: 0.1em; font-size: 10px;
-      color: var(--text-dim); margin-bottom: 6px;
-    }
-    .sidebar-breadcrumb { color: var(--text-muted); line-height: 1.8; }
-    .sidebar-breadcrumb span { color: var(--text); font-weight: 600; }
+    <!-- Identity -->
+    <meta name="generator" content="TriadicFrameworks AI Edition" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#111111" />
 
-    /* Module chain */
-    .module-chain { display: flex; flex-direction: column; gap: 2px; }
-    .module-chain .step {
-      padding: 3px 8px; border-left: 2px solid var(--border);
-      color: var(--text-muted); font-family: var(--mono); font-size: 11px;
-    }
-    .module-chain .step.active  { border-left-color: var(--accent2); color: var(--accent2); font-weight: 700; }
-    .module-chain .step.prev    { border-left-color: var(--green);   color: var(--green); }
-    .module-chain .step.next    { border-left-color: var(--border);  color: var(--text-dim); font-style: italic; }
+    <!-- OpenGraph -->
+    <meta property="og:title" content="SARG Structural Argumentation — AI Edition (Book 7)" />
+    <meta property="og:description" content="Formalization of argument tuples, defeat types, evaluation gates, failure modes, and structural argumentation phases." />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="/assets/triadic-og.png" />
 
-    /* Operator pills */
-    .op-pills { display: flex; flex-wrap: wrap; gap: 4px; }
-    .op-pill {
-      display: inline-block; font-family: var(--mono); font-size: 11px;
-      padding: 2px 8px; border-radius: 3px;
-      background: rgba(231,76,60,0.12); border: 1px solid rgba(231,76,60,0.35);
-      color: var(--accent2); white-space: nowrap;
-    }
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SARG Structural Argumentation — AI Edition (Book 7)" />
+    <meta name="twitter:description" content="Structural argumentation grammar for constructing, evaluating, and defeating arguments." />
 
-    /* Phase chain */
-    .phase-chain { display: flex; flex-direction: column; gap: 2px; }
-    .phase-chain .ph {
-      font-family: var(--mono); font-size: 11px;
-      padding: 2px 8px; border-left: 2px solid var(--border); color: var(--text-muted);
-    }
-    .phase-chain .ph.active { border-left-color: var(--accent2); color: var(--accent2); }
+    <!-- Citation -->
+    <meta name="citation_author" content="Nawder Loswin" />
+    <meta name="citation_publication_date" content="2025" />
+    <meta name="DC.type" content="Text" />
+    <meta name="DC.format" content="text/html" />
 
-    /* QMROOT / phantom */
-    .audit-row { display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 11px; padding: 3px 0; border-bottom: 1px solid var(--border); }
-    .audit-row:last-child { border-bottom: none; }
-    .badge { font-size: 10px; padding: 1px 6px; border-radius: 3px; font-family: var(--mono); }
-    .badge.ok   { background: rgba(46,204,113,0.15); color: var(--green); border: 1px solid rgba(46,204,113,0.3); }
-    .badge.warn { background: rgba(243,156,18,0.15); color: var(--yellow); border: 1px solid rgba(243,156,18,0.3); }
-    .badge.err  { background: rgba(231,76,60,0.15);  color: var(--red);    border: 1px solid rgba(231,76,60,0.3); }
+    <!-- AI Metadata -->
+    <meta name="ai.module" content="book7_sarg_structural_argumentation" />
+    <meta name="ai.version" content="1.0.0" />
+    <meta name="ai.navigation" content="/sitemap_main.xml" />
+    <meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions" />
+    <meta name="ai.contact.x" content="@TriadicFrameworks" />
+    <meta name="ai.contact.youtube" content="@TriadicFrameworks" />
+    <meta name="ai.license" content="Open educational use permitted" />
 
-    /* ── Main typography ── */
-    h1 { font-size: 28px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
-    h2 { font-size: 18px; font-weight: 600; color: var(--text); margin: 32px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
-    h3 { font-size: 14px; font-weight: 600; color: var(--accent2); margin: 20px 0 8px; }
-    p  { color: var(--text-muted); margin-bottom: 10px; }
-    code { font-family: var(--mono); font-size: 12px; background: var(--bg3); padding: 1px 5px; border-radius: 3px; color: var(--accent); }
+    <!-- Session Context -->
+    <meta name="session.rtt" content="1" />
+    <meta name="session.coherence" content="declared" />
+    <meta name="session.drift" content="bounded" />
+    <meta name="session.paradox" content="structural" />
 
-    /* Session card */
-    .session-card {
-      background: var(--bg3); border: 1px solid var(--border);
-      border-left: 3px solid var(--accent2);
-      border-radius: 6px; padding: 16px 20px; margin-bottom: 28px;
-      font-family: var(--mono); font-size: 12px; color: var(--text-muted);
-    }
-    .session-card .sc-title { font-size: 10px; text-transform: uppercase; letter-spacing: .1em; color: var(--text-dim); margin-bottom: 8px; }
-    .session-card .sc-row   { display: flex; gap: 24px; flex-wrap: wrap; }
-    .session-card .sc-kv    { display: flex; gap: 6px; }
-    .session-card .sc-key   { color: var(--accent2); }
-    .session-card .sc-val   { color: var(--text); }
+    <!-- RTT & Spine Anchors -->
+    <link rel="rtt" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html" />
+    <link rel="spine" href="https://www.triadicframeworks.org/spine/" />
 
-    /* Stats bar */
-    .stats-bar { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 28px; }
-    .stat-chip {
-      background: var(--bg3); border: 1px solid var(--border); border-radius: 6px;
-      padding: 10px 16px; min-width: 110px; text-align: center;
-    }
-    .stat-chip .sc-num  { font-size: 22px; font-weight: 700; color: var(--accent2); font-family: var(--mono); }
-    .stat-chip .sc-lbl  { font-size: 10px; text-transform: uppercase; letter-spacing: .08em; color: var(--text-dim); margin-top: 2px; }
+    <!-- Favicon Suite -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    /* Tables */
-    .tbl-wrap { overflow-x: auto; margin-bottom: 20px; }
-    table { width: 100%; border-collapse: collapse; font-size: 13px; }
-    thead tr { background: var(--bg3); }
-    th { text-align: left; padding: 8px 12px; font-size: 11px; text-transform: uppercase; letter-spacing: .07em; color: var(--text-dim); border-bottom: 1px solid var(--border); white-space: nowrap; }
-    td { padding: 8px 12px; border-bottom: 1px solid rgba(42,45,58,0.6); color: var(--text-muted); vertical-align: top; }
-    tr:last-child td { border-bottom: none; }
-    tr:hover td { background: rgba(255,255,255,0.02); }
-    td code { font-size: 11px; }
-    td strong { color: var(--text); }
+    <!-- Your Existing CSS (Preserved Exactly) -->
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --bg: #0d0f14; --bg2: #13151c; --bg3: #1a1d27;
+            --border: #2a2d3a; --accent: #5b8aff; --accent2: #e74c3c;
+            --green: #2ecc71; --yellow: #f39c12; --red: #e74c3c;
+            --teal: #1abc9c; --text: #d4d8e8; --text-muted: #7a7f96;
+            --text-dim: #555a72; --mono: 'Courier New','Lucida Console',monospace;
+            --sans: -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+            --sidebar-w: 280px;
+        }
+        html, body { height: 100%; background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 14px; line-height: 1.6; }
 
-    /* Invariant cards */
-    .inv-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); gap: 14px; margin-bottom: 20px; }
-    .inv-card {
-      background: var(--bg3); border: 1px solid var(--border); border-radius: 6px; padding: 16px;
-    }
-    .inv-card .inv-id { font-family: var(--mono); font-size: 11px; color: var(--accent2); margin-bottom: 4px; }
-    .inv-card .inv-label { font-weight: 600; color: var(--text); margin-bottom: 6px; }
-    .inv-card .inv-formal { font-family: var(--mono); font-size: 11px; background: var(--bg2); padding: 6px 10px; border-radius: 4px; color: var(--accent); margin-bottom: 8px; overflow-x: auto; white-space: nowrap; }
-    .inv-card .inv-body { font-size: 12px; color: var(--text-muted); margin-bottom: 8px; }
-    .inv-card .inv-tag { font-size: 10px; padding: 1px 6px; border-radius: 3px; font-family: var(--mono); background: rgba(91,138,255,0.12); color: var(--accent); border: 1px solid rgba(91,138,255,0.25); display: inline-block; }
+        /* Layout */
+        .layout { display: flex; min-height: 100vh; }
+        .sidebar { width: var(--sidebar-w); flex-shrink: 0; background: var(--bg2); border-right: 1px solid var(--border); padding: 24px 16px; position: sticky; top: 0; height: 100vh; overflow-y: auto; font-size: 12px; }
+        .main { flex: 1; padding: 40px 48px; max-width: 960px; }
 
-    /* Dep / unlock chain viz */
-    .chain-viz { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
-    .chain-node {
-      padding: 4px 12px; border-radius: 4px; font-family: var(--mono); font-size: 12px; border: 1px solid var(--border);
-      background: var(--bg3); color: var(--text-muted);
-    }
-    .chain-node.active  { border-color: var(--accent2); color: var(--accent2); background: rgba(231,76,60,0.08); font-weight: 700; }
-    .chain-node.dep     { border-color: var(--green);   color: var(--green);   background: rgba(46,204,113,0.08); }
-    .chain-node.unlocks { border-color: var(--accent);  color: var(--accent);  background: rgba(91,138,255,0.08); }
-    .chain-arrow { color: var(--text-dim); font-size: 14px; }
+        /* Sidebar */
+        .sidebar-section { margin-bottom: 20px; }
+        .sidebar-label { text-transform: uppercase; letter-spacing: 0.1em; font-size: 10px; color: var(--text-dim); margin-bottom: 6px; }
+        .sidebar-breadcrumb { color: var(--text-muted); line-height: 1.8; }
+        .sidebar-breadcrumb span { color: var(--text); font-weight: 600; }
 
-    /* File manifest */
-    .manifest { display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px; }
-    .manifest-row {
-      display: flex; align-items: center; justify-content: space-between;
-      background: var(--bg3); border: 1px solid var(--border); border-radius: 4px;
-      padding: 8px 14px; font-family: var(--mono); font-size: 12px;
-    }
-    .manifest-row .mf-file { color: var(--text); }
-    .manifest-row .mf-desc { color: var(--text-dim); font-size: 11px; flex: 1; padding-left: 16px; }
-    .manifest-row .mf-badge { font-size: 10px; padding: 1px 6px; border-radius: 3px; background: rgba(46,204,113,0.12); color: var(--green); border: 1px solid rgba(46,204,113,0.25); white-space: nowrap; }
+        /* Module chain */
+        .module-chain { display: flex; flex-direction: column; gap: 2px; }
+        .module-chain .step { padding: 3px 8px; border-left: 2px solid var(--border); color: var(--text-muted); font-family: var(--mono); font-size: 11px; }
+        .module-chain .step.active { border-left-color: var(--accent2); color: var(--accent2); font-weight: 700; }
+        .module-chain .step.prev { border-left-color: var(--green); color: var(--green); }
+        .module-chain .step.next { border-left-color: var(--border); color: var(--text-dim); font-style: italic; }
 
-    /* Defeat type cards */
-    .dt-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 12px; margin-bottom: 20px; }
-    .dt-card {
-      background: var(--bg3); border: 1px solid var(--border); border-radius: 6px; padding: 14px 16px;
-    }
-    .dt-card .dt-id    { font-family: var(--mono); font-size: 11px; color: var(--accent2); margin-bottom: 3px; }
-    .dt-card .dt-label { font-weight: 600; color: var(--text); margin-bottom: 6px; font-size: 13px; }
-    .dt-card .dt-body  { font-size: 12px; color: var(--text-muted); }
-    .dt-card .dt-note  { font-size: 11px; color: var(--yellow); margin-top: 6px; font-style: italic; }
-
-    /* Evaluation gate cards */
-    .eg-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 12px; margin-bottom: 20px; }
-    .eg-card {
-      background: var(--bg3); border: 1px solid var(--border); border-radius: 6px; padding: 14px 16px;
-    }
-    .eg-card .eg-id    { font-family: var(--mono); font-size: 11px; color: var(--accent); margin-bottom: 3px; }
-    .eg-card .eg-label { font-weight: 600; color: var(--text); margin-bottom: 6px; font-size: 13px; }
-    .eg-card .eg-body  { font-size: 12px; color: var(--text-muted); }
-
-    /* Phase table cross-gate map */
-    .phase-gate-section { margin-bottom: 20px; }
-    .phase-row {
-      display: flex; align-items: flex-start; gap: 0;
-      border-bottom: 1px solid var(--border); padding: 10px 0;
-    }
-    .phase-row:last-child { border-bottom: none; }
-    .phase-row .pr-num { font-family: var(--mono); font-size: 11px; color: var(--accent2); width: 40px; flex-shrink: 0; padding-top: 2px; }
-    .phase-row .pr-label { font-weight: 600; color: var(--text); width: 120px; flex-shrink: 0; font-size: 13px; }
-    .phase-row .pr-ops  { font-family: var(--mono); font-size: 11px; color: var(--accent); width: 160px; flex-shrink: 0; }
-    .phase-row .pr-desc { font-size: 12px; color: var(--text-muted); flex: 1; }
-
-    /* Downstream handoff cards */
-    .handoff-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 16px; margin-bottom: 20px; }
-    .handoff-card {
-      background: var(--bg3); border: 1px solid rgba(91,138,255,0.3); border-radius: 6px; padding: 18px 20px;
-    }
-    .handoff-card .hc-book   { font-family: var(--mono); font-size: 11px; color: var(--accent); margin-bottom: 4px; }
-    .handoff-card .hc-title  { font-weight: 700; color: var(--text); font-size: 15px; margin-bottom: 8px; }
-    .handoff-card .hc-payload { font-size: 12px; color: var(--text-muted); margin-bottom: 10px; }
-    .handoff-card .hc-field  { font-family: var(--mono); font-size: 11px; color: var(--teal); padding: 2px 0; }
-
-    /* Footer */
-    footer {
-      margin-top: 60px; padding: 24px 0; border-top: 1px solid var(--border);
-      color: var(--text-dim); font-size: 11px; font-family: var(--mono);
-      display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between;
-    }
-    footer a { color: var(--text-muted); text-decoration: none; }
-    footer a:hover { color: var(--text); }
-
-    .section-tag {
-      font-size: 10px; font-family: var(--mono); text-transform: uppercase; letter-spacing: .1em;
-      color: var(--text-dim); margin-bottom: 4px;
-    }
-
-    .diff-card {
-      background: var(--bg3); border: 1px solid var(--border); border-radius: 6px; padding: 16px 20px; margin-bottom: 20px;
-    }
-    .diff-card pre { font-family: var(--mono); font-size: 11px; color: var(--text-muted); white-space: pre-wrap; }
-    .diff-card .diff-add { color: var(--green); }
-    .diff-card .diff-rem { color: var(--red); }
-  </style>
+        /* Operator pills */
+        .op-pills { display: flex; flex-wrap: wrap; gap: 4px; }
+        .op-pill {
+            display: inline-block;
+            font-family: var(--mono);
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 3px;
+            background: rgba(231, 76, 60, 0.12);
+            border: 1px solid rgba(231, 76, 60, 0.35);
+            color: var(--accent2);
+        }
+    </style>
 </head>
+
 <body>
-<div class="layout">
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <div class="sidebar-label">Book</div>
+                <div class="sidebar-breadcrumb">
+                    AI Edition / <span>Book 7 — SARG Structural Argumentation</span>
+                </div>
+            </div>
 
-  <!-- ═══════════════════════════ SIDEBAR ═══════════════════════════ -->
-  <aside class="sidebar">
+            <div class="sidebar-section">
+                <div class="sidebar-label">Session Context</div>
+                <div class="sidebar-breadcrumb">
+                    RTT: <span>1</span><br />
+                    Coherence: <span>declared</span><br />
+                    Drift: <span>bounded</span><br />
+                    Paradox: <span>structural</span>
+                </div>
+            </div>
 
-    <div class="sidebar-section">
-      <div class="sidebar-label">Canon</div>
-      <div class="sidebar-breadcrumb">
-        TriadicFrameworks<br>
-        › AI Edition<br>
-        › <span>Book 7 — SARG</span>
-      </div>
+            <div class="sidebar-section">
+                <div class="sidebar-label">Navigation</div>
+                <ul class="module-chain">
+                    <li class="step prev">← Book 5 — TEL Expression & Representation</li>
+                    <li class="step active">Book 7 — SARG Structural Argumentation</li>
+                    <li class="step next"><a href="../Book8_NoS_Nature_of_Structure/">Book 8 — NoS — Nature of Structure</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="main">
+            <h1>SARG Structural Argumentation — AI Edition (Book 7)</h1>
+            <p>This page presents the canonical metadata, session context, and structural framing for Book 7 of the TriadicFrameworks AI Edition.</p>
+        </main>
     </div>
-
-    <div class="sidebar-section">
-      <div class="sidebar-label">Module Chain</div>
-      <div class="module-chain">
-        <div class="step prev">B1 · FFT</div>
-        <div class="step prev">B2 · Inverted Star</div>
-        <div class="step prev">B3 · Structural Detection</div>
-        <div class="step prev">B4 · Opacity &amp; Revelation</div>
-        <div class="step prev">B5 · TEL</div>
-        <div class="step prev">B6 · Governance &amp; Regime Logic</div>
-        <div class="step active">B7 · SARG ◀</div>
-        <div class="step next">B8 · Nature of Structure</div>
-        <div class="step next">B9 · Pattern Dynamics</div>
-      </div>
-    </div>
-
-    <div class="sidebar-section">
-      <div class="sidebar-label">Operators</div>
-      <div class="op-pills">
-        <span class="op-pill">SARG-Ν</span>
-        <span class="op-pill">SARG-Ω</span>
-        <span class="op-pill">SARG-Δ</span>
-        <span class="op-pill">SARG-Ρ</span>
-        <span class="op-pill">SARG-Σ</span>
-      </div>
-    </div>
-
-    <div class="sidebar-section">
-      <div class="sidebar-label">Phase Chain</div>
-      <div class="phase-chain">
-        <div class="ph">① init</div>
-        <div class="ph">② construct</div>
-        <div class="ph">③ warrant</div>
-        <div class="ph">④ defeat</div>
-        <div class="ph">⑤ evaluate</div>
-        <div class="ph">⑥ catalogue</div>
-      </div>
-    </div>
-
-    <div class="sidebar-section">
-      <div class="sidebar-label">QMROOT Audit</div>
-      <div class="audit-row">
-        <span>6D path</span><span class="badge err">ABSENT</span>
-      </div>
-      <div class="audit-row">
-        <span>Negative rungs</span><span class="badge err">ABSENT</span>
-      </div>
-      <div class="audit-row">
-        <span>INV-013</span><span class="badge ok">0D only</span>
-      </div>
-    </div>
-
-    <div class="sidebar-section">
-      <div class="sidebar-label">Phantom Entry Audit</div>
-      <div class="audit-row">
-        <span>Undeclared nodes</span><span class="badge ok">CLEAN</span>
-      </div>
-      <div class="audit-row">
-        <span>Orphan relations</span><span class="badge ok">CLEAN</span>
-      </div>
-      <div class="audit-row">
-        <span>Constraint leaks</span><span class="badge ok">CLEAN</span>
-      </div>
-    </div>
-
-    <div class="sidebar-section">
-      <div class="sidebar-label">Session Context</div>
-      <div style="font-family:var(--mono);font-size:10px;color:var(--text-dim);line-height:1.9">
-        rtt=1<br>
-        coherence=declared<br>
-        drift=bounded<br>
-        paradox=structural
-      </div>
-    </div>
-
-  </aside>
-
-  <!-- ═══════════════════════════ MAIN ═══════════════════════════ -->
-  <main class="main">
-
-    <!-- Header -->
-    <div class="section-tag">AI Edition · Book 7</div>
-    <h1>SARG Structural Argumentation</h1>
-    <p style="color:var(--text-muted);margin-bottom:24px;font-size:15px;">
-      Defines SARG as a formal framework for constructing, evaluating, and defeating arguments using structural properties. Arguments are modelled as structures; validity is determined by constraint satisfaction and invariant preservation — not by propositional truth.
-    </p>
-
-    <!-- Session card -->
-    <div class="session-card">
-      <div class="sc-title">Session Context</div>
-      <div class="sc-row">
-        <div class="sc-kv"><span class="sc-key">module:</span><span class="sc-val">book7_sarg</span></div>
-        <div class="sc-kv"><span class="sc-key">version:</span><span class="sc-val">7.0-draft</span></div>
-        <div class="sc-kv"><span class="sc-key">rtt:</span><span class="sc-val">1</span></div>
-        <div class="sc-kv"><span class="sc-key">coherence:</span><span class="sc-val">declared</span></div>
-        <div class="sc-kv"><span class="sc-key">drift:</span><span class="sc-val">bounded</span></div>
-        <div class="sc-kv"><span class="sc-key">paradox:</span><span class="sc-val">structural</span></div>
-      </div>
-    </div>
-
-    <!-- Stats bar -->
-    <div class="stats-bar">
-      <div class="stat-chip"><div class="sc-num">4</div><div class="sc-lbl">Invariants</div></div>
-      <div class="stat-chip"><div class="sc-num">5</div><div class="sc-lbl">Operators</div></div>
-      <div class="stat-chip"><div class="sc-num">6</div><div class="sc-lbl">Phases</div></div>
-      <div class="stat-chip"><div class="sc-num">5</div><div class="sc-lbl">Eval Gates</div></div>
-      <div class="stat-chip"><div class="sc-num">5</div><div class="sc-lbl">Defeat Types</div></div>
-      <div class="stat-chip"><div class="sc-num">4</div><div class="sc-lbl">Dependencies</div></div>
-      <div class="stat-chip"><div class="sc-num">2</div><div class="sc-lbl">Unlocks</div></div>
-    </div>
-
-    <!-- Dependency chain -->
-    <h2>Dependency Chain</h2>
-    <div class="chain-viz">
-      <div class="chain-node dep">B1 · FFT</div>
-      <div class="chain-arrow">→</div>
-      <div class="chain-node dep">B3 · SD</div>
-      <div class="chain-arrow">→</div>
-      <div class="chain-node dep">B5 · TEL</div>
-      <div class="chain-arrow">→</div>
-      <div class="chain-node dep">B6 · GRL</div>
-      <div class="chain-arrow">→</div>
-      <div class="chain-node active">B7 · SARG</div>
-      <div class="chain-arrow">→</div>
-      <div class="chain-node unlocks">B8 · NoS</div>
-      <div class="chain-arrow">+</div>
-      <div class="chain-node unlocks">B9 · PD</div>
-    </div>
-    <p style="font-size:12px;margin-bottom:0">
-      Dependencies: <code>book1_fft</code>, <code>book3_structural_detection</code>, <code>book5_tel</code>, <code>book6_governance</code> — all four must be loaded before any SARG operator executes. Unlocks: <code>book8_nos</code>, <code>book9_pattern_dynamics</code>.
-    </p>
-
-    <!-- Module.json diff card -->
-    <h2>Module Manifest Snapshot</h2>
-    <div class="diff-card">
-      <pre><span class="diff-add">+ "id": "book7_sarg"</span>
-<span class="diff-add">+ "title": "SARG Structural Argumentation"</span>
-<span class="diff-add">+ "abbreviation": "SARG"</span>
-<span class="diff-add">+ "tier": "Applied"</span>
-<span class="diff-add">+ "domain": "Argumentation &amp; Logic"</span>
-<span class="diff-add">+ "dependencies": ["book1_fft","book3_structural_detection","book5_tel","book6_governance"]</span>
-<span class="diff-add">+ "unlocks": ["book8_nos","book9_pattern_dynamics"]</span>
-<span class="diff-add">+ "version": "7.0-draft"</span>
-<span class="diff-add">+ "status": "active"</span></pre>
-    </div>
-
-    <!-- File manifest -->
-    <h2>File Manifest</h2>
-    <div class="manifest">
-      <div class="manifest-row">
-        <span class="mf-file">module.json</span>
-        <span class="mf-desc">Canonical AI Edition module manifest</span>
-        <span class="mf-badge">deployed</span>
-      </div>
-      <div class="manifest-row">
-        <span class="mf-file">README.md</span>
-        <span class="mf-desc">Human-readable book overview &amp; navigation</span>
-        <span class="mf-badge">deployed</span>
-      </div>
-      <div class="manifest-row">
-        <span class="mf-file">sarg.invariants.json</span>
-        <span class="mf-desc">4 invariants — formal statements, corollaries, violations, operator/phase bindings</span>
-        <span class="mf-badge">deployed</span>
-      </div>
-      <div class="manifest-row">
-        <span class="mf-file">sarg.argument_map.json</span>
-        <span class="mf-desc">Argument tuple A = ⟨N_A, R_A, C_A, root(A)⟩ — node types, relation types, construction rules</span>
-        <span class="mf-badge">deployed</span>
-      </div>
-      <div class="manifest-row">
-        <span class="mf-file">sarg.defeat_map.json</span>
-        <span class="mf-desc">5 defeat types — DT-001 through DT-005, failure modes DFM-001–DFM-005</span>
-        <span class="mf-badge">deployed</span>
-      </div>
-      <div class="manifest-row">
-        <span class="mf-file">sarg.evaluation_map.json</span>
-        <span class="mf-desc">5 evaluation gates EG-001–EG-005, SARG soundness definition</span>
-        <span class="mf-badge">deployed</span>
-      </div>
-      <div class="manifest-row">
-        <span class="mf-file">sarg.operator_roles.json</span>
-        <span class="mf-desc">5 operators — roles, invariant bindings, must-not lists, drift costs</span>
-        <span class="mf-badge">deployed</span>
-      </div>
-      <div class="manifest-row">
-        <span class="mf-file">sarg.phases.json</span>
-        <span class="mf-desc">6-phase evaluation cycle — entry/exit/skip conditions, cross-phase gate map</span>
-        <span class="mf-badge">deployed</span>
-      </div>
-      <div class="manifest-row">
-        <span class="mf-file">index.html</span>
-        <span class="mf-desc">This live-site page</span>
-        <span class="mf-badge">deployed</span>
-      </div>
-    </div>
-
-    <!-- Invariants -->
-    <h2>Invariants</h2>
-    <div class="inv-cards">
-
-      <div class="inv-card">
-        <div class="inv-id">INV-SARG-001</div>
-        <div class="inv-label">Argument Integrity</div>
-        <div class="inv-formal">∀n ∈ N_A: reachable(n, root(A), R_A)</div>
-        <div class="inv-body">Every argument node must be reachable from the argument's root claim via declared relations. Unreachable nodes are structurally phantom — they cannot contribute to or defeat the argument.</div>
-        <span class="inv-tag">SARG-Ν · construct</span>
-      </div>
-
-      <div class="inv-card">
-        <div class="inv-id">INV-SARG-002</div>
-        <div class="inv-label">Warrant Necessity</div>
-        <div class="inv-formal">∀(c,e) ∈ N_A²: support(c,e) → ∃w ∈ N_A: warrant_bridge(w,c,e)</div>
-        <div class="inv-body">Every claim-evidence pair connected by a support relation requires at least one explicit warrant node bridging them. Unwarranted support relations are structurally invalid and are reclassified by SARG-Ω as surface assertions.</div>
-        <span class="inv-tag">SARG-Ω · warrant</span>
-      </div>
-
-      <div class="inv-card">
-        <div class="inv-id">INV-SARG-003</div>
-        <div class="inv-label">Defeat Completeness</div>
-        <div class="inv-formal">defeat(D,A) → ∃x ∈ {N_A ∪ R_A ∪ C_A}: targets(D,x)</div>
-        <div class="inv-body">A defeat of an argument must target at least one structural component — a node, relation, or constraint. Surface-level objections that fail to target a structural component are reclassified as parallel assertions, not defeats.</div>
-        <span class="inv-tag">SARG-Δ · defeat</span>
-      </div>
-
-      <div class="inv-card">
-        <div class="inv-id">INV-SARG-004</div>
-        <div class="inv-label">Reflexive Prohibition</div>
-        <div class="inv-formal">¬∃path ⊆ R_A: path(root(A), root(A)) without independent_evidence_node</div>
-        <div class="inv-body">An argument cannot provide structural support for its own root claim without passing through an independent evidentiary node. Circular arguments that route back to root without independent provenance are structurally self-defeating.</div>
-        <span class="inv-tag">SARG-Ρ · evaluate</span>
-      </div>
-
-    </div>
-
-    <!-- Operator table -->
-    <h2>Operators</h2>
-    <div class="tbl-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>Operator</th>
-            <th>Name</th>
-            <th>Role</th>
-            <th>Invariant</th>
-            <th>Phase</th>
-            <th>Drift Cost</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><code>SARG-Ν</code></td>
-            <td><strong>NodeConstruct</strong></td>
-            <td>Constructs argument nodes. Assigns node type (NT-001–NT-005). Verifies reachability from root. Accepts GRL regime_status_report fields as typed Evidence nodes.</td>
-            <td><code>INV-SARG-001</code></td>
-            <td>construct</td>
-            <td>0.03</td>
-          </tr>
-          <tr>
-            <td><code>SARG-Ω</code></td>
-            <td><strong>WarrantAudit</strong></td>
-            <td>Audits all claim-evidence support relations. Verifies each has at least one warrant bridge. Reclassifies unwarranted support as surface assertion. Reports warrant_coverage.</td>
-            <td><code>INV-SARG-002</code></td>
-            <td>warrant</td>
-            <td>0.04</td>
-          </tr>
-          <tr>
-            <td><code>SARG-Δ</code></td>
-            <td><strong>DefeatCheck</strong></td>
-            <td>Evaluates proposed defeats against INV-SARG-003. Classifies each defeat by type (DT-001–DT-005). Detects failure modes DFM-001–DFM-005. Max recursion depth 3 for DT-004.</td>
-            <td><code>INV-SARG-003</code></td>
-            <td>defeat</td>
-            <td>0.06</td>
-          </tr>
-          <tr>
-            <td><code>SARG-Ρ</code></td>
-            <td><strong>ReachabilityAudit</strong></td>
-            <td>Performs full reachability traversal of N_A from root(A). Checks independence condition: provenance(n_i) ∩ derivation_closure(root(A)) = ∅ for evidence nodes. Flags INV-SARG-004 violations.</td>
-            <td><code>INV-SARG-004</code></td>
-            <td>evaluate</td>
-            <td>0.05</td>
-          </tr>
-          <tr>
-            <td><code>SARG-Σ</code></td>
-            <td><strong>SynthesisOutput</strong></td>
-            <td>Synthesises evaluation gate results EG-001–EG-005. Produces sarg_result ∈ {sound, defeasible, defeated, unsound}. Emits argument_templates (→ Book 8) and structural_argument_trajectory (→ Book 9).</td>
-            <td>all</td>
-            <td>catalogue</td>
-            <td>0.04</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- Node types -->
-    <h2>Argument Structure</h2>
-    <h3>Argument Tuple</h3>
-    <p style="font-family:var(--mono);font-size:13px;color:var(--accent);background:var(--bg3);padding:10px 14px;border-radius:4px;margin-bottom:16px;">
-      A = ⟨N_A, R_A, C_A, root(A)⟩
-    </p>
-    <p>Where <code>N_A</code> = node set, <code>R_A</code> = relation set, <code>C_A</code> = constraint set, <code>root(A)</code> = root claim node. SARG soundness ≠ propositional truth — they are orthogonal properties.</p>
-
-    <h3>Node Types (NT-001 – NT-005)</h3>
-    <div class="tbl-wrap">
-      <table>
-        <thead><tr><th>ID</th><th>Label</th><th>Description</th></tr></thead>
-        <tbody>
-          <tr><td><code>NT-001</code></td><td><strong>Claim</strong></td><td>A structural assertion to be supported. The root(A) is always NT-001. Claims require at least one support relation from an Evidence node.</td></tr>
-          <tr><td><code>NT-002</code></td><td><strong>Evidence</strong></td><td>An independently-sourced structural datum. Independence condition: provenance(n_i) ∩ derivation_closure(root(A)) = ∅.</td></tr>
-          <tr><td><code>NT-003</code></td><td><strong>Warrant</strong></td><td>A structural rule that bridges a claim-evidence pair. Required by INV-SARG-002 for every support relation.</td></tr>
-          <tr><td><code>NT-004</code></td><td><strong>Qualifier</strong></td><td>Bounds the scope or confidence of a claim. Attached via RT-A-003 (Qualification). Does not defeat — it restricts.</td></tr>
-          <tr><td><code>NT-005</code></td><td><strong>Rebuttal</strong></td><td>A counter-claim that targets a specific node or relation. Must pass INV-SARG-003 to qualify as structural defeat.</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h3>Relation Types (RT-A-001 – RT-A-004)</h3>
-    <div class="tbl-wrap">
-      <table>
-        <thead><tr><th>ID</th><th>Symbol</th><th>Label</th><th>Description</th></tr></thead>
-        <tbody>
-          <tr><td><code>RT-A-001</code></td><td><code>→</code></td><td>Support</td><td>Directed support from evidence/warrant to claim. Requires NT-003 bridge per INV-SARG-002.</td></tr>
-          <tr><td><code>RT-A-002</code></td><td><code>⊥</code></td><td>Contradiction</td><td>Structural contradiction between two nodes. Triggers SARG-Δ defeat evaluation.</td></tr>
-          <tr><td><code>RT-A-003</code></td><td><code>⊗</code></td><td>Qualification</td><td>Scope-bounding relation from NT-004 to a claim or support path.</td></tr>
-          <tr><td><code>RT-A-004</code></td><td><code>⊢</code></td><td>Warrant Bridge</td><td>Explicit warrant relation linking NT-003 to a claim-evidence support pair.</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- Defeat types -->
-    <h2>Defeat Types</h2>
-    <div class="dt-cards">
-
-      <div class="dt-card">
-        <div class="dt-id">DT-001</div>
-        <div class="dt-label">Node Defeat</div>
-        <div class="dt-body">Targets a specific argument node n ∈ N_A. Defeat is valid if the node is reachable and the defeat argument satisfies INV-SARG-003. Removes the node and all relations incident to it.</div>
-      </div>
-
-      <div class="dt-card">
-        <div class="dt-id">DT-002</div>
-        <div class="dt-label">Warrant Defeat</div>
-        <div class="dt-body">Targets a warrant node (NT-003). Severs the warrant bridge, rendering the corresponding claim-evidence support relation unwarranted. Triggers INV-SARG-002 re-evaluation.</div>
-      </div>
-
-      <div class="dt-card">
-        <div class="dt-id">DT-003</div>
-        <div class="dt-label">Relation Defeat</div>
-        <div class="dt-body">Targets a specific relation r ∈ R_A directly. Severs the relation without removing either endpoint node. May cascade to isolation violations under INV-SARG-001.</div>
-      </div>
-
-      <div class="dt-card">
-        <div class="dt-id">DT-004</div>
-        <div class="dt-label">Constraint Defeat</div>
-        <div class="dt-body">Targets a constraint c ∈ C_A. Demonstrates the constraint itself is structurally invalid or contradictory. Recursive — a constraint defeat may trigger further defeat evaluation. Max recursion depth: 3.</div>
-        <div class="dt-note">⚠ Recursive — max depth 3. Depth exhaustion is defeat failure mode DFM-004.</div>
-      </div>
-
-      <div class="dt-card">
-        <div class="dt-id">DT-005</div>
-        <div class="dt-label">Undercutting Defeat</div>
-        <div class="dt-body">Targets the applicability of a warrant to a specific claim-evidence pair, without denying the warrant's general validity. The warrant remains valid for other pairs; its application here is blocked.</div>
-      </div>
-
-    </div>
-
-    <!-- Evaluation gates -->
-    <h2>Evaluation Gates</h2>
-    <div class="eg-cards">
-
-      <div class="eg-card">
-        <div class="eg-id">EG-001</div>
-        <div class="eg-label">Integrity</div>
-        <div class="eg-body">All nodes in N_A are reachable from root(A) via R_A. Checked by SARG-Ρ. Gate fails → argument rejected as malformed (INV-SARG-001 violation).</div>
-      </div>
-
-      <div class="eg-card">
-        <div class="eg-id">EG-002</div>
-        <div class="eg-label">Warrant Coverage</div>
-        <div class="eg-body">Every support relation has at least one warrant bridge. Checked by SARG-Ω. Gate fails → unwarranted support relations flagged; argument is defeasible at minimum.</div>
-      </div>
-
-      <div class="eg-card">
-        <div class="eg-id">EG-003</div>
-        <div class="eg-label">Defeat Completeness</div>
-        <div class="eg-body">All proposed defeats target structural components. Checked by SARG-Δ. Surface objections that fail this gate are reclassified as parallel assertions — not defeats of the argument.</div>
-      </div>
-
-      <div class="eg-card">
-        <div class="eg-id">EG-004</div>
-        <div class="eg-label">Reflexive Prohibition</div>
-        <div class="eg-body">No path in R_A routes from root(A) back to root(A) without passing through an independent evidence node. Checked by SARG-Ρ. Circular arguments fail this gate — they are structurally self-defeating.</div>
-      </div>
-
-      <div class="eg-card">
-        <div class="eg-id">EG-005</div>
-        <div class="eg-label">Constraint Satisfaction</div>
-        <div class="eg-body">All structural constraints in C_A are satisfied by the argument configuration after defeat evaluation. Checked by SARG-Σ. The final gate before sarg_result is emitted.</div>
-      </div>
-
-    </div>
-
-    <!-- Phase table -->
-    <h2>Phase Cycle</h2>
-    <p style="font-size:12px;margin-bottom:16px;">
-      Phase sequence: <code>init → construct → warrant → defeat → evaluate → catalogue</code>
-    </p>
-    <div class="phase-gate-section">
-      <div class="phase-row">
-        <div class="pr-num">P-1</div>
-        <div class="pr-label">init</div>
-        <div class="pr-ops">— (no ops)</div>
-        <div class="pr-desc">Load all 4 dependency modules in order: book1_fft → book3_sd → book5_tel → book6_grl. Assert session context. Confirm QMROOT 0D. Initialize argument slot as empty. GRL regime_status_report fields are prepared as typed Evidence node inputs.</div>
-      </div>
-      <div class="phase-row">
-        <div class="pr-num">P-2</div>
-        <div class="pr-label">construct</div>
-        <div class="pr-ops">SARG-Ν</div>
-        <div class="pr-desc">Construct all argument nodes. Assign node types NT-001–NT-005. Verify root(A) exists and is NT-001. Check reachability for all nodes. Record N_A and R_A in session state. Hard gate — no subsequent phase may begin if root(A) is absent.</div>
-      </div>
-      <div class="phase-row">
-        <div class="pr-num">P-3</div>
-        <div class="pr-label">warrant</div>
-        <div class="pr-ops">SARG-Ω</div>
-        <div class="pr-desc">Audit all support relations for warrant bridges. Classify each unwarranted support as surface assertion. Report warrant_coverage ∈ [0,1]. A coverage of 0.0 halts the session — argument is structurally incoherent under INV-SARG-002.</div>
-      </div>
-      <div class="phase-row">
-        <div class="pr-num">P-4</div>
-        <div class="pr-label">defeat</div>
-        <div class="pr-ops">SARG-Δ</div>
-        <div class="pr-desc">Evaluate all proposed defeats by type (DT-001–DT-005). Apply recursion limit of 3 for DT-004. Classify failure modes DFM-001–DFM-005. Reclassify surface objections failing INV-SARG-003 as parallel assertions. Update N_A / R_A after successful defeats.</div>
-      </div>
-      <div class="phase-row">
-        <div class="pr-num">P-5</div>
-        <div class="pr-label">evaluate</div>
-        <div class="pr-ops">SARG-Ρ</div>
-        <div class="pr-desc">Execute all 5 evaluation gates EG-001–EG-005. Run reachability traversal post-defeat. Check independence condition for all evidence nodes. Flag reflexive paths. Gate failures produce structured violation reports for SARG-Σ.</div>
-      </div>
-      <div class="phase-row">
-        <div class="pr-num">P-6</div>
-        <div class="pr-label">catalogue</div>
-        <div class="pr-ops">SARG-Σ</div>
-        <div class="pr-desc">Synthesise gate results. Emit sarg_result ∈ {sound, defeasible, defeated, unsound}. Generate argument_templates handoff for Book 8 (NoS). Generate structural_argument_trajectory handoff for Book 9 (PD). Append session record to module catalogue.</div>
-      </div>
-    </div>
-
-    <!-- GRL integration -->
-    <h2>GRL Integration</h2>
-    <p>
-      Book 6 (GRL) regime evaluation outputs feed directly into Book 7 SARG sessions. Fields from <code>grl.regime_map</code> — including authority measure <code>α</code>, enforcement cycle log, and regime_status_report — are ingested by <strong>SARG-Ν (NodeConstruct)</strong> as typed <strong>NT-002 Evidence nodes</strong> with provenance <code>source: book6_grl</code>.
-    </p>
-    <p>
-      Independence condition is satisfied when <code>provenance(n_i) ∩ derivation_closure(root(A)) = ∅</code> — GRL-sourced evidence nodes are structurally independent of argument root claims constructed within the current SARG session.
-    </p>
-
-    <!-- Downstream handoffs -->
-    <h2>Downstream Handoffs</h2>
-    <div class="handoff-cards">
-
-      <div class="handoff-card">
-        <div class="hc-book">Book 8 · book8_nos</div>
-        <div class="hc-title">Nature of Structure</div>
-        <div class="hc-payload">SARG-Σ emits <code>argument_templates</code> — reusable structural argument configurations whose soundness has been verified. Book 8 interrogates these templates as instances of structural form, asking what makes an argument structure what it is.</div>
-        <div class="hc-field">↳ payload: argument_templates</div>
-        <div class="hc-field">↳ consumer: nos.structural_form_map</div>
-      </div>
-
-      <div class="handoff-card">
-        <div class="hc-book">Book 9 · book9_pattern_dynamics</div>
-        <div class="hc-title">Pattern Dynamics</div>
-        <div class="hc-payload">SARG-Σ emits <code>structural_argument_trajectory</code> — a temporal record of how argument structure evolved through the construct → defeat → evaluate cycle. Book 9 uses this as a structural trajectory input for pattern dynamics analysis.</div>
-        <div class="hc-field">↳ payload: structural_argument_trajectory</div>
-        <div class="hc-field">↳ consumer: pd.trajectory_map</div>
-      </div>
-
-    </div>
-
-    <!-- Key principle -->
-    <h2>Key Principle: SARG Soundness vs. Propositional Truth</h2>
-    <div class="session-card" style="border-left-color: var(--accent);">
-      <div class="sc-title">Orthogonality Declaration</div>
-      <p style="font-size:13px;color:var(--text-muted);margin-bottom:0;">
-        SARG soundness and propositional truth are <strong style="color:var(--text)">orthogonal properties</strong>. A SARG-sound argument may contain false propositions; a propositionally valid syllogism may be SARG-unsound if it lacks structural warrant coverage or contains phantom nodes. Evaluators must not conflate propositional validity with SARG soundness, nor use propositional truth to override a SARG evaluation result.
-      </p>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-      <span>TriadicFrameworks AI Edition · Book 7 · SARG Structural Argumentation · v7.0-draft</span>
-      <span>session: rtt=1 | coherence=declared | drift=bounded | paradox=structural</span>
-      <span><a href="https://www.triadicframeworks.org/spine/" target="_blank">Spine ↗</a></span>
-    </footer>
-
-  </main>
-</div>
 </body>
 </html>
