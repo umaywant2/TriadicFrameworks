@@ -6,7 +6,7 @@ Run: python3 commit_readme.py
 
 import base64, json, urllib.request, urllib.error
 
-TOKEN  = "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"
+TOKEN  = "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"
 REPO   = "umaywant2/TriadicFrameworks"
 BRANCH = "main"
 PATH   = "docs/Light/README.md"
