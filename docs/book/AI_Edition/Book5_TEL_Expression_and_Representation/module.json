@@ -46,10 +46,10 @@
   },
   "invariants": {
     "references": [
-      "INV-TEL-001: Expression Completeness — any structure expressible in AI Edition terms is expressible in TEL",
-      "INV-TEL-002: Semantic Stability — a TEL expression has exactly one structural interpretation under canonical evaluation rules",
-      "INV-TEL-003: Compositionality — the meaning of a TEL expression is a function of the meanings of its sub-expressions",
-      "INV-TEL-004: Transformation Fidelity — a TEL-encoded transformation produces a structurally valid output if the input is structurally valid"
+      "INV-TEL-001: Expression Completeness \u2014 any structure expressible in AI Edition terms is expressible in TEL",
+      "INV-TEL-002: Semantic Stability \u2014 a TEL expression has exactly one structural interpretation under canonical evaluation rules",
+      "INV-TEL-003: Compositionality \u2014 the meaning of a TEL expression is a function of the meanings of its sub-expressions",
+      "INV-TEL-004: Transformation Fidelity \u2014 a TEL-encoded transformation produces a structurally valid output if the input is structurally valid"
     ],
     "file": "invariants/book5_invariants.json"
   },
@@ -57,9 +57,11 @@
     "domain": "Formal Language & Notation",
     "tier": "Core Tool",
     "reading_order": 5,
-    "prerequisite_books": [1, 4],
-    "live_site": "https://acwilson734.github.io/ai-edition/book5",
+    "prerequisite_books": [
+      1,
+      4
+    ],
+    "live_site": null,
     "last_updated": "2026-10-10"
   }
 }
-
