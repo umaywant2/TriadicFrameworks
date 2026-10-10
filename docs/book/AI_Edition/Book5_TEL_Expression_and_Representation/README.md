@@ -1,3 +1,6 @@
+
+- [`module.json`](module.json) — Agentic module schema role assignments
+
 # Book 5 — TEL Expression & Representation
 ### AI Edition · Book 5 of 9
 
