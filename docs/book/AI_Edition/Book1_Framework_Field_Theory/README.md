@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="book_1_Framework_Field_Theory_" src="https://github.com/user-attachments/assets/da4d1e6a-9d2d-4d8e-879c-70334d0aaa0d" />
 
 - [`module.json`](module.json) — Agentic module schema role assignments
 
