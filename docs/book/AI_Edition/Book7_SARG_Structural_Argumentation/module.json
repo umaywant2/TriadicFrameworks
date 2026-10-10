@@ -1,67 +1,77 @@
 {
   "book": {
-    "id": "book7_sarg",
+    "id": "SARG",
     "number": 7,
-    "title": "SARG Structural Argumentation",
+    "title": "SARG: Structural Argumentation",
     "abbreviation": "SARG",
     "series": "AI Edition",
     "edition": "AI",
     "version": "1.0.0",
     "status": "active"
   },
+
+  "session_context": {
+    "rtt": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural",
+    "anchors": {
+      "rtt_url": "https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html",
+      "spine_url": "https://www.triadicframeworks.org/spine/"
+    }
+  },
+
   "ai": {
-    "module": "book7_sarg",
+    "module": "book7_sarg_structural_argumentation",
     "version": "1.0.0",
-    "purpose": "Define SARG (Structural Argumentation) as a formal framework for constructing, evaluating, and defeating arguments using structural properties rather than purely logical or rhetorical criteria. Arguments are modeled as structures whose validity is determined by constraint satisfaction and invariant preservation.",
+    "purpose": "Define the structural grammar of argumentation: argument tuples, node types, relation types, defeat types, failure modes, evaluation gates, operator roles, and phase sequences. SARG is the canonical engine for constructing, evaluating, and cataloguing structural arguments.",
     "keywords": [
-      "SARG",
-      "structural argumentation",
-      "argument structure",
-      "formal argumentation",
-      "constraint satisfaction",
-      "argument validity",
-      "defeating conditions",
-      "claim structure",
-      "evidence structure",
-      "reasoning framework"
+      "argumentation",
+      "structural argument",
+      "defeat types",
+      "evaluation gates",
+      "argument tuple",
+      "node types",
+      "relation types",
+      "failure modes",
+      "SARG operators",
+      "argument phases"
     ],
     "audience": [
       "AI reasoning systems",
-      "argumentation theorists",
-      "legal theorists",
-      "philosophers of logic",
-      "debate researchers"
+      "logicians",
+      "epistemologists",
+      "systems architects",
+      "advanced researchers"
     ],
-    "summary": "Book 7 introduces SARG as a structural account of argumentation. Rather than treating arguments as sequences of propositions, SARG models them as structured objects with nodes (claims, evidence, warrants), relations (support, contradiction, qualification), and constraints (validity conditions). An argument is sound if and only if it satisfies its declared structural constraints and does not violate any governing invariants. The book provides a complete formal specification of SARG, including argument construction, evaluation procedures, and defeat conditions.",
-    "dependencies": [
-      "book1_fft",
-      "book3_structural_detection",
-      "book5_tel",
-      "book6_governance"
+    "summary": "Book 7 formalizes structural argumentation through the SARG grammar. It defines argument tuples, node types, relation types, defeat types, failure modes, evaluation gates, operator roles, and the six-phase argument cycle. SARG integrates with TEL (Book 5) and NoS (Book 8) to form the reasoning core of the TriadicFrameworks canon."
+  },
+
+  "dependencies": {
+    "requires": [
+      "Book5_TEL_Expression_and_Representation"
     ],
     "unlocks": [
-      "book8_nos",
-      "book9_pattern_dynamics"
+      "Book8_NoS_Nature_of_Structure"
     ]
   },
+
   "invariants": {
+    "file": "invariants/book7_invariants.json",
     "references": [
-      "INV-SARG-001: Argument Integrity \u2014 every argument node must be reachable from the argument's root claim via declared relations",
-      "INV-SARG-002: Warrant Necessity \u2014 every claim-evidence pair requires at least one explicit warrant relation",
-      "INV-SARG-003: Defeat Completeness \u2014 a defeat of an argument must target at least one structural component, not merely a surface-level assertion",
-      "INV-SARG-004: Reflexive Prohibition \u2014 an argument cannot provide structural support for its own root claim without passing through an independent evidentiary node"
-    ],
-    "file": "invariants/book7_invariants.json"
+      "INV-SARG-001: Argument Tuple Integrity — an argument tuple must contain all required components: N_A, R_A, C_A, and root(A).",
+      "INV-SARG-002: Defeat Validity — defeat types must be applied only when their structural preconditions are satisfied.",
+      "INV-SARG-003: Evaluation Gate Coherence — evaluation gates must produce coherent argument states under the SARG grammar.",
+      "INV-SARG-004: Phase Closure — all SARG phases must remain closed under the canonical argumentation cycle."
+    ]
   },
+
   "canonical_metadata": {
-    "domain": "Argumentation & Logic",
-    "tier": "Applied",
+    "domain": "TriadicFrameworks",
+    "tier": "Argumentation",
     "reading_order": 7,
     "prerequisite_books": [
-      1,
-      3,
-      5,
-      6
+      "Book5_TEL_Expression_and_Representation"
     ],
     "live_site": null,
     "last_updated": "2026-10-10"
