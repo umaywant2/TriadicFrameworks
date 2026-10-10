@@ -1,3 +1,6 @@
+
+- [`module.json`](module.json) — Agentic module schema role assignments
+
 # TriadicFrameworks — AI Edition (Books 1–9)
 
 This directory contains the **AI Edition** of the TriadicFrameworks canon — a nine‑book teaching arc designed for AI systems and advanced readers.  
