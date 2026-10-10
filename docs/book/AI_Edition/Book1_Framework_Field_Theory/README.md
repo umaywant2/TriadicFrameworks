@@ -1,3 +1,6 @@
+
+- [`module.json`](module.json) — Agentic module schema role assignments
+
 # Book 1 — Framework Field Theory (AI Edition)
 
 This folder contains **Book 1 of the TriadicFrameworks AI Edition**, based on the Framework Field Theory module.
