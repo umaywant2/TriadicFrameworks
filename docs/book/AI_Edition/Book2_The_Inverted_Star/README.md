@@ -1,3 +1,6 @@
+
+- [`module.json`](module.json) — Agentic module schema role assignments
+
 # Book 2 — The Inverted Star (AI Edition)
 
 This folder contains **Book 2 of the TriadicFrameworks AI Edition**, based on the Inverted Star domain.
