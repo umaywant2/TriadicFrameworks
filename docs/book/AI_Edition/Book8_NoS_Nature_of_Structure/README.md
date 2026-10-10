@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="book_8_NoS_Nature_of_Structure_" src="https://github.com/user-attachments/assets/60875337-7fc0-4b8d-bdc0-898fc1b6fba1" />
 
 - [`module.json`](module.json) — Agentic module schema role assignments
 
