@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SD-Γ — GeometryProbe (Structural Detection, AI Edition)</title>
+  <link rel="stylesheet" href="../assets/css/ai-edition.css">
+</head>
+<body>
+
+<section>
+  <h1>SD-Γ — GeometryProbe</h1>
+  <div class="context-block">
+    <span class="context-label">Book</span>
+    <span class="context-value">3 — Structural Detection (AI Edition)</span>
+  </div>
+  <div class="context-block">
+    <span class="context-label">Layer</span>
+    <span class="context-value">mid–deep</span>
+  </div>
+  <div class="context-block">
+    <span class="context-label">Role</span>
+    <span class="context-value">geometry probe and anomaly detection</span>
+  </div>
+</section>
+
+<section>
+  <h2>Operator JSON (AI-first)</h2>
+  <pre id="ai-operator">
+{
+  "operator": "SD-Γ",
+  "name": "GeometryProbe",
+  "module": "sd.structural_detection.ai",
+  "version": "3.0-draft",
+
+  "layer": "mid-deep",
+  "alignment": "R",
+
+  "role": "Probes structural geometry for anomalies, fractures, and drift deformation.",
+
+  "phases": [
+    "scan",
+    "probe",
+    "confirm"
+  ],
+
+  "inputs": {
+    "signal_fields": "from SD-Σd",
+    "geometry_model": "RTT/1 structural substrate",
+    "R_minimum": 0.40
+  },
+
+  "outputs": {
+    "anomaly_map": true,
+    "geometry_probe_fields": true
+  },
+
+  "constraints": {
+    "requires_R_ge_0_40": true,
+    "must_not_invent_6D_operator": true
+  }
+}
+  </pre>
+</section>
+
+</body>
+</html>
