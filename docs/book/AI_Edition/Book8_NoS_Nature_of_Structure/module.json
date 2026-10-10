@@ -45,10 +45,10 @@
   },
   "invariants": {
     "references": [
-      "INV-NOS-001: Structural Autonomy — structure is not reducible to the intrinsic properties of its constituent nodes",
-      "INV-NOS-002: Relational Primacy — relations are ontologically prior to the nodes they connect, not derivative from them",
-      "INV-NOS-003: Identity Through Change — a structure retains identity through transformations that preserve its invariant set",
-      "INV-NOS-004: Abstraction Consistency — abstract structures and their instantiations share invariant structure; divergence indicates either modeling error or genuine novelty"
+      "INV-NOS-001: Structural Autonomy \u2014 structure is not reducible to the intrinsic properties of its constituent nodes",
+      "INV-NOS-002: Relational Primacy \u2014 relations are ontologically prior to the nodes they connect, not derivative from them",
+      "INV-NOS-003: Identity Through Change \u2014 a structure retains identity through transformations that preserve its invariant set",
+      "INV-NOS-004: Abstraction Consistency \u2014 abstract structures and their instantiations share invariant structure; divergence indicates either modeling error or genuine novelty"
     ],
     "file": "invariants/book8_invariants.json"
   },
@@ -56,9 +56,13 @@
     "domain": "Philosophy & Meta-Theory",
     "tier": "Capstone",
     "reading_order": 8,
-    "prerequisite_books": [1, 4, 5, 7],
-    "live_site": "https://acwilson734.github.io/ai-edition/book8",
+    "prerequisite_books": [
+      1,
+      4,
+      5,
+      7
+    ],
+    "live_site": null,
     "last_updated": "2026-10-10"
   }
 }
-
