@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="book_4_Opacity_and_Revelation_" src="https://github.com/user-attachments/assets/74e0522b-2384-4f56-bd13-76b8afc268d7" />
 
 - [`module.json`](module.json) — Agentic module schema role assignments
 
