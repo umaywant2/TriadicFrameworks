@@ -1,3 +1,6 @@
+
+- [`module.json`](module.json) — Agentic module schema role assignments
+
 # Book 6 — Governance & Regime Logic
 ### AI Edition · Book 6 of 9
 
