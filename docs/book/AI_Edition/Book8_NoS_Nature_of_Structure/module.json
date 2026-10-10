@@ -1,1 +1,64 @@
+{
+  "book": {
+    "id": "book8_nos",
+    "number": 8,
+    "title": "Nature of Structure",
+    "abbreviation": "NoS",
+    "series": "AI Edition",
+    "edition": "AI",
+    "version": "1.0.0",
+    "status": "active"
+  },
+  "ai": {
+    "module": "book8_nos",
+    "version": "1.0.0",
+    "purpose": "Provide a deep philosophical and formal account of what structure is, why structure exists, and how structural reality relates to other ontological categories. Serves as the reflective meta-theoretical capstone of the AI Edition, interrogating the foundations laid in Book 1 from a higher-order vantage point.",
+    "keywords": [
+      "nature of structure",
+      "ontology",
+      "meta-theory",
+      "structural realism",
+      "formal philosophy",
+      "existence",
+      "structural causation",
+      "emergence",
+      "abstraction",
+      "foundational inquiry"
+    ],
+    "audience": [
+      "AI reasoning systems",
+      "philosophers of science",
+      "structural realists",
+      "formal ontologists",
+      "meta-theorists"
+    ],
+    "summary": "Book 8 turns the AI Edition's formal tools on themselves. Having built a comprehensive framework for structural analysis across domains, this book asks: what is structure as such? It engages the philosophical literature on structural realism, emergence, and abstraction while maintaining formal precision. Key questions include: Are structures discovered or constructed? Can structure exist without instantiation? What is the relationship between structural identity and change? The book offers argued positions on each question, expressed in TEL where applicable.",
+    "dependencies": [
+      "book1_fft",
+      "book4_opacity_revelation",
+      "book5_tel",
+      "book7_sarg"
+    ],
+    "unlocks": [
+      "book9_pattern_dynamics"
+    ]
+  },
+  "invariants": {
+    "references": [
+      "INV-NOS-001: Structural Autonomy — structure is not reducible to the intrinsic properties of its constituent nodes",
+      "INV-NOS-002: Relational Primacy — relations are ontologically prior to the nodes they connect, not derivative from them",
+      "INV-NOS-003: Identity Through Change — a structure retains identity through transformations that preserve its invariant set",
+      "INV-NOS-004: Abstraction Consistency — abstract structures and their instantiations share invariant structure; divergence indicates either modeling error or genuine novelty"
+    ],
+    "file": "invariants/book8_invariants.json"
+  },
+  "canonical_metadata": {
+    "domain": "Philosophy & Meta-Theory",
+    "tier": "Capstone",
+    "reading_order": 8,
+    "prerequisite_books": [1, 4, 5, 7],
+    "live_site": "https://acwilson734.github.io/ai-edition/book8",
+    "last_updated": "2026-10-10"
+  }
+}
 
