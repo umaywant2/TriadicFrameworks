@@ -1,6 +1,6 @@
 {
   "book": {
-    "id": "book3_structural_detection",
+    "id": "SD",
     "number": 3,
     "title": "Structural Detection",
     "abbreviation": "SD",
@@ -9,58 +9,73 @@
     "version": "1.0.0",
     "status": "active"
   },
+
+  "session_context": {
+    "rtt": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural",
+    "anchors": {
+      "rtt_url": "https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html",
+      "spine_url": "https://www.triadicframeworks.org/spine/"
+    }
+  },
+
   "ai": {
     "module": "book3_structural_detection",
     "version": "1.0.0",
-    "purpose": "Provide a systematic methodology for identifying, isolating, and classifying structural patterns within complex systems. Introduces detection heuristics, structural signatures, and algorithmic procedures for recognizing when a given system exhibits known structural archetypes defined in the AI Edition.",
+    "purpose": "Define the detection grammar used to identify, classify, and validate structural patterns across any domain. Introduces detection operators, signal pathways, coherence thresholds, and structural signatures. Serves as the analytical engine for all downstream books.",
     "keywords": [
       "structural detection",
+      "signal pathways",
+      "coherence thresholds",
       "pattern recognition",
-      "classification",
       "structural signatures",
-      "heuristics",
-      "detection algorithms",
-      "archetype matching",
-      "system identification",
-      "diagnostic methods",
-      "structural analysis"
+      "detection operators",
+      "structural analysis",
+      "triadic detection",
+      "canonical detection grammar",
+      "structural classification"
     ],
     "audience": [
       "AI reasoning systems",
-      "data scientists",
-      "systems analysts",
-      "diagnostic engineers",
-      "structural researchers"
+      "pattern analysts",
+      "systems architects",
+      "researchers",
+      "structural theorists"
     ],
-    "summary": "Book 3 operationalizes the theoretical constructs of Books 1 and 2 by providing concrete detection methods. It defines structural signatures \u2014 minimal fingerprints that uniquely identify a structural archetype \u2014 and develops heuristic and algorithmic procedures for applying them to real-world and formal systems alike. The book includes worked examples, edge-case handling, and a taxonomy of detection failure modes.",
-    "dependencies": [
-      "book1_fft",
-      "book2_the_inverted_star"
+    "summary": "Book 3 introduces the detection grammar that allows AI systems to identify and classify structural patterns. It defines detection operators, coherence thresholds, and structural signatures. This book is the analytical core of the AI Edition, unlocking both Opacity & Revelation (Book 4) and TEL Expression & Representation (Book 5)."
+  },
+
+  "dependencies": {
+    "requires": [
+      "Book2_The_Inverted_Star"
     ],
     "unlocks": [
-      "book4_opacity_revelation",
-      "book7_sarg",
-      "book9_pattern_dynamics"
+      "Book4_Opacity_and_Revelation",
+      "Book5_TEL_Expression_and_Representation"
     ]
   },
+
   "invariants": {
+    "file": "invariants/book3_invariants.json",
     "references": [
-      "INV-SD-001: Signature Uniqueness \u2014 every structural archetype has at least one unique minimal signature",
-      "INV-SD-002: Detection Completeness \u2014 a valid detection procedure must be capable of returning a null result without false confirmation",
-      "INV-SD-003: Context Independence \u2014 structural signatures are invariant to surface-level semantic labeling",
-      "INV-SD-004: Hierarchical Detection Order \u2014 detection of compound structures must proceed from primitive to complex"
-    ],
-    "file": "invariants/book3_invariants.json"
+      "INV-SD-001: Detection Validity — detection operators must preserve all primitive identities defined in FFT and IS",
+      "INV-SD-002: Coherence Threshold — a structure is detectable only when its relational signature exceeds the declared coherence threshold",
+      "INV-SD-003: Signature Stability — structural signatures must remain stable under all valid inversion and transformation operators",
+      "INV-SD-004: Operator Closure — detection operators must remain closed under the canonical detection grammar"
+    ]
   },
+
   "canonical_metadata": {
-    "domain": "Methodology & Analysis",
-    "tier": "Applied",
+    "domain": "TriadicFrameworks",
+    "tier": "Detection",
     "reading_order": 3,
     "prerequisite_books": [
-      1,
-      2
+      "Book1_Framework_Field_Theory",
+      "Book2_The_Inverted_Star"
     ],
-    "live_site": "https://www.triadicframeworks.org/Structural_Detection/AI_Edition/",
+    "live_site": "https://www.triadicframeworks.org/Structural_Detection/AI_Edition",
     "last_updated": "2026-10-10"
   }
 }
