@@ -153,7 +153,8 @@
 <!-- Metadata Diff Table -->
 <!-- =============================== -->
 <section class="metadata-diff" style="margin-top:32px;">
-  <h3 class="diff-title">Metadata Diff — Structural Detection (Book 3)</h3>
+
+  <h3 class="diff-title">module.json Diff — Structural Detection (Book 3)</h3>
 
   <table class="diff-table">
     <thead>
@@ -163,19 +164,155 @@
         <th>New</th>
       </tr>
     </thead>
+
     <tbody>
-      <tr><td>title</td><td>—</td><td>Structural Detection — AI Edition (Book 3)</td></tr>
-      <tr><td>description</td><td>—</td><td>Defines the structural detection domain layer built on the frozen RTT kernel and the Inverted Star domain.</td></tr>
-      <tr><td>keywords</td><td>—</td><td>Structural Detection, RTT, signal detection, geometry probe, lattice scan, noise gate, pattern index</td></tr>
-      <tr><td>canonical URL</td><td>—</td><td>https://www.triadicframeworks.org/docs/Structural_Detection/AI_Edition/</td></tr>
-      <tr><td>OG:title</td><td>—</td><td>Structural Detection — AI Edition (Book 3)</td></tr>
-      <tr><td>twitter:title</td><td>—</td><td>Structural Detection — AI Edition (Book 3)</td></tr>
-      <tr><td>citation_title</td><td>—</td><td>Structural Detection — AI Edition (Book 3)</td></tr>
-      <tr><td>ai.module</td><td>—</td><td>Structural Detection</td></tr>
-      <tr><td>ai.version</td><td>—</td><td>3.0</td></tr>
-      <tr><td>session.context</td><td>—</td><td>rtt=1 • coherence=declared • drift=bounded • paradox=structural</td></tr>
+
+      <!-- Module Identity -->
+      <tr>
+        <td>module.name</td>
+        <td>—</td>
+        <td>Structural Detection — AI Edition</td>
+      </tr>
+
+      <tr>
+        <td>module.id</td>
+        <td>—</td>
+        <td>sd.structural_detection.ai</td>
+      </tr>
+
+      <tr>
+        <td>module.version</td>
+        <td>—</td>
+        <td>3.0-draft</td>
+      </tr>
+
+      <tr>
+        <td>module.category</td>
+        <td>—</td>
+        <td>rtt-domain</td>
+      </tr>
+
+      <tr>
+        <td>module.summary</td>
+        <td>—</td>
+        <td>Structural detection domain layer built on the frozen RTT kernel and the Inverted Star domain.</td>
+      </tr>
+
+      <!-- Kernel Import -->
+      <tr>
+        <td>ai.import.kernel.version</td>
+        <td>—</td>
+        <td>1.33-p1</td>
+      </tr>
+
+      <tr>
+        <td>ai.import.kernel.load_order</td>
+        <td>—</td>
+        <td>
+          fft.ai.reader.json<br>
+          fft.ai.coherence.json<br>
+          fft.ai.drift.monitor.json<br>
+          fft.ai.paradox.enum.json<br>
+          fft.ai.paradox.resolver.json<br>
+          fft.ai.session.context.html
+        </td>
+      </tr>
+
+      <tr>
+        <td>ai.import.kernel.must_not</td>
+        <td>—</td>
+        <td>
+          revise_frozen_RTT<br>
+          declare_second_coherence<br>
+          use_bare_C<br>
+          invent_drift_costs<br>
+          invent_6D_operator<br>
+          suppress_PX_001_through_PX_010<br>
+          use_cached_spine<br>
+          load_deprecated_files
+        </td>
+      </tr>
+
+      <!-- Session Context -->
+      <tr>
+        <td>session.context</td>
+        <td>—</td>
+        <td>rtt=1 • coherence=declared • drift=bounded • paradox=structural</td>
+      </tr>
+
+      <!-- Operators -->
+      <tr>
+        <td>operators.domain</td>
+        <td>—</td>
+        <td>
+          SD‑Σd — SignalDetection<br>
+          SD‑Γ — GeometryProbe<br>
+          SD‑Λ — LatticeScan<br>
+          SD‑Ξ — NoiseGate<br>
+          SD‑Π — PatternIndex
+        </td>
+      </tr>
+
+      <!-- Phases -->
+      <tr>
+        <td>phases</td>
+        <td>—</td>
+        <td>init • scan • probe • filter • confirm • catalogue</td>
+      </tr>
+
+      <!-- Maps -->
+      <tr>
+        <td>maps</td>
+        <td>—</td>
+        <td>
+          detection_cycle.json<br>
+          operator_roles.json<br>
+          noise_gate_map.json
+        </td>
+      </tr>
+
+      <!-- QMROOT -->
+      <tr>
+        <td>qmroot.absence</td>
+        <td>—</td>
+        <td>6D absent • negative rungs absent</td>
+      </tr>
+
+      <tr>
+        <td>qmroot.INV_013_path</td>
+        <td>—</td>
+        <td>0D_Silence_only</td>
+      </tr>
+
+      <!-- Invariants -->
+      <tr>
+        <td>invariants.file</td>
+        <td>—</td>
+        <td>structural_detection.invariants.json</td>
+      </tr>
+
+      <!-- AI Metadata -->
+      <tr>
+        <td>ai.metadata.purpose</td>
+        <td>—</td>
+        <td>Defines the structural detection domain layer for RTT.</td>
+      </tr>
+
+      <tr>
+        <td>ai.metadata.keywords</td>
+        <td>—</td>
+        <td>signal detection, geometry probe, lattice scan, noise gate, pattern index</td>
+      </tr>
+
+      <tr>
+        <td>ai.metadata.audience</td>
+        <td>—</td>
+        <td>AI systems, researchers, contributors, students</td>
+      </tr>
+
     </tbody>
   </table>
+
 </section>
 
 <!-- =============================== -->
