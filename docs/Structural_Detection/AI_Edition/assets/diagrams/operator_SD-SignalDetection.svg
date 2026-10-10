@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="480" height="260" viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill:#050505; }
+    .box { fill:#111; stroke:#666; stroke-width:1.5; }
+    .title { fill:#fff; font-family:system-ui,sans-serif; font-size:18px; font-weight:bold; }
+    .label { fill:#9cf; font-family:system-ui,sans-serif; font-size:13px; }
+    .text { fill:#ccc; font-family:system-ui,sans-serif; font-size:12px; }
+  </style>
+
+  <rect x="0" y="0" width="480" height="260" class="bg"/>
+
+  <text x="240" y="32" text-anchor="middle" class="title">
+    SD-Σd — SignalDetection
+  </text>
+
+  <rect x="60" y="60" width="360" height="150" rx="10" class="box"/>
+
+  <text x="80" y="90" class="label">Layer:</text>
+  <text x="190" y="90" class="text">surface–deep</text>
+
+  <text x="80" y="110" class="label">Alignment:</text>
+  <text x="210" y="110" class="text">structural</text>
+
+  <text x="80" y="130" class="label">Phases:</text>
+  <text x="260" y="130" class="text">init, scan, confirm</text>
+
+  <text x="80" y="155" class="label">Role:</text>
+  <text x="80" y="175" class="text">
+    Detects structural signals, motifs, and boundary candidates across substrates.
+  </text>
+
+  <text x="80" y="200" class="label">Outputs:</text>
+  <text x="260" y="200" class="text">
+    signal_fields • boundary_candidates • motif_candidates
+  </text>
+</svg>
