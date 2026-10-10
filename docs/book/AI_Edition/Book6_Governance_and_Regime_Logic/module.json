@@ -1,1 +1,65 @@
+{
+  "book": {
+    "id": "book6_governance",
+    "number": 6,
+    "title": "Governance & Regime Logic",
+    "abbreviation": "GRL",
+    "series": "AI Edition",
+    "edition": "AI",
+    "version": "1.0.0",
+    "status": "active"
+  },
+  "ai": {
+    "module": "book6_governance",
+    "version": "1.0.0",
+    "purpose": "Model governance as a structural phenomenon. Defines regimes as formal constraint-enforcement structures and develops regime logic — the rules by which regimes acquire, maintain, and lose structural authority. Applies AI Edition primitives to political, organizational, and computational governance systems.",
+    "keywords": [
+      "governance",
+      "regime logic",
+      "constraint enforcement",
+      "authority",
+      "structural power",
+      "regime formation",
+      "regime collapse",
+      "compliance",
+      "organizational structure",
+      "political structure"
+    ],
+    "audience": [
+      "AI reasoning systems",
+      "political scientists",
+      "organizational theorists",
+      "policy analysts",
+      "systems governance researchers"
+    ],
+    "summary": "Book 6 develops a formal structural theory of governance. A regime is defined as a constraint-enforcement structure — a system of nodes, relations, and invariants whose function is to regulate other structures. Regime logic specifies the conditions under which regimes form, stabilize, and dissolve. The book draws on the Inverted Star topology (Book 2), detection methods (Book 3), and opacity properties (Book 4) to analyze real-world governance phenomena with structural precision.",
+    "dependencies": [
+      "book1_fft",
+      "book2_inverted_star",
+      "book4_opacity_revelation",
+      "book5_tel"
+    ],
+    "unlocks": [
+      "book7_sarg",
+      "book9_pattern_dynamics"
+    ]
+  },
+  "invariants": {
+    "references": [
+      "INV-GRL-001: Regime Validity — a regime is valid only if it can enforce at least one constraint on at least one governed structure",
+      "INV-GRL-002: Authority Decay — regime authority diminishes monotonically if enforcement actions produce no observable compliance response",
+      "INV-GRL-003: Regime Closure — a regime cannot govern itself without introducing a meta-regime or producing structural paradox",
+      "INV-GRL-004: Constraint Legitimacy — governed structures may challenge regime constraints only through declared structural channels, not by unilateral violation"
+    ],
+    "file": "invariants/book6_invariants.json"
+  },
+  "canonical_metadata": {
+    "domain": "Governance & Political Theory",
+    "tier": "Applied",
+    "reading_order": 6,
+    "prerequisite_books": [1, 2, 4, 5],
+    "live_site": "https://acwilson734.github.io/ai-edition/book6",
+    "last_updated": "2026-10-10"
+  }
+}
 
