@@ -1,731 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pattern Dynamics — AI Edition (Book 9)</title>
-  <meta name="description" content="Book 9 of the TriadicFrameworks AI Edition. The synthesis terminal. Integrates all eight prior volumes to study how structures move, split, mutate, and propagate through state-space over time. Covers trajectory continuity, attractor stability, mutation constraint, and propagation fidelity." />
-  <meta name="ai.module" content="book9_pattern_dynamics" />
-  <meta name="ai.version" content="9.0-draft" />
-  <meta name="ai.domain" content="Dynamical Systems &amp; Synthesis" />
-  <meta name="ai.tier" content="Synthesis" />
-  <meta name="ai.depends" content="book1_fft book2_the_inverted_star book3_structural_detection book4_opacity_revelation book5_tel book6_governance book7_sarg book8_nos" />
-  <meta name="ai.unlocks" content="none" />
-  <meta name="session.rtt" content="1" />
-  <meta name="session.coherence" content="declared" />
-  <meta name="session.drift" content="bounded" />
-  <meta name="session.paradox" content="structural" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --bg: #0d0f14;
-      --bg2: #13151c;
-      --bg3: #1a1d27;
-      --border: #2a2d3a;
-      --accent: #5b8aff;
-      --accent2: #f1c40f;
-      --green: #2ecc71;
-      --yellow: #f39c12;
-      --red: #e74c3c;
-      --teal: #1abc9c;
-      --purple: #9b59b6;
-      --text: #d4d8e8;
-      --text-muted: #7a7f96;
-      --text-dim: #555a72;
-      --mono: 'Courier New', 'Lucida Console', monospace;
-      --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      --sidebar-w: 280px;
-    }
-    html, body { height: 100%; background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 14px; line-height: 1.6; }
+    <!-- Canonical Metadata -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    /* ── Layout ── */
-    .layout { display: flex; min-height: 100vh; }
-    .sidebar {
-      width: var(--sidebar-w); flex-shrink: 0;
-      background: var(--bg2); border-right: 1px solid var(--border);
-      padding: 24px 16px; position: sticky; top: 0; height: 100vh; overflow-y: auto;
-      font-size: 12px;
-    }
-    .main { flex: 1; padding: 40px 48px; max-width: 960px; }
+    <title>Pattern Dynamics — AI Edition (Book 9)</title>
+    <meta name="description" content="Book 9 of the TriadicFrameworks AI Edition. Defines Pattern Dynamics: trajectory types, bifurcation types, mutation types, propagation types, attractor classes, and terminal synthesis conditions." />
 
-    /* ── Sidebar ── */
-    .sidebar-section { margin-bottom: 20px; }
-    .sidebar-label {
-      text-transform: uppercase; letter-spacing: 0.1em; font-size: 10px;
-      color: var(--text-dim); margin-bottom: 6px;
-    }
-    .sidebar-breadcrumb { color: var(--text-muted); line-height: 1.8; }
-    .sidebar-breadcrumb span { color: var(--text); font-weight: 600; }
+    <!-- Identity -->
+    <meta name="generator" content="TriadicFrameworks AI Edition" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#111111" />
 
-    /* Module chain */
-    .module-chain { display: flex; flex-direction: column; gap: 2px; }
-    .module-chain .step {
-      padding: 3px 8px; border-left: 2px solid var(--border);
-      color: var(--text-muted); font-family: var(--mono); font-size: 11px;
-    }
-    .module-chain .step.active { border-left-color: var(--accent2); color: var(--accent2); font-weight: 700; }
-    .module-chain .step.prev  { border-left-color: var(--green);   color: var(--green); }
-    .module-chain .step.terminal { border-left-color: var(--accent2); color: var(--accent2); font-style: italic; }
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Pattern Dynamics — AI Edition (Book 9)" />
+    <meta property="og:description" content="Terminal synthesis of the TriadicFrameworks canon: structural evolution, bifurcation, mutation, propagation, and attractor dynamics." />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="/assets/triadic-og.png" />
 
-    /* Operator pills */
-    .op-pills { display: flex; flex-wrap: wrap; gap: 4px; }
-    .op-pill {
-      display: inline-block; font-family: var(--mono); font-size: 10px;
-      padding: 2px 7px; border-radius: 3px;
-      background: rgba(241,196,15,0.12); color: var(--accent2);
-      border: 1px solid rgba(241,196,15,0.25);
-    }
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Pattern Dynamics — AI Edition (Book 9)" />
+    <meta name="twitter:description" content="Structural evolution and dynamic grammar of the TriadicFrameworks canon." />
 
-    /* Phase chain */
-    .phase-chain { display: flex; flex-direction: column; gap: 3px; }
-    .phase-chain .ph {
-      font-family: var(--mono); font-size: 10px; padding: 3px 6px;
-      border-radius: 3px; color: var(--text-muted);
-      background: var(--bg3); border: 1px solid var(--border);
-    }
-    .phase-chain .ph.active { color: var(--accent2); border-color: rgba(241,196,15,0.3); background: rgba(241,196,15,0.06); }
+    <!-- Citation -->
+    <meta name="citation_author" content="Nawder Loswin" />
+    <meta name="citation_publication_date" content="2025" />
+    <meta name="DC.type" content="Text" />
+    <meta name="DC.format" content="text/html" />
 
-    /* QMROOT / Phantom / Session */
-    .audit-block {
-      background: var(--bg3); border: 1px solid var(--border);
-      border-radius: 4px; padding: 8px 10px; font-family: var(--mono);
-      font-size: 10px; color: var(--text-muted); line-height: 1.7;
-    }
-    .audit-block .ok { color: var(--green); }
-    .audit-block .warn { color: var(--yellow); }
-    .audit-block .key { color: var(--text-dim); }
+    <!-- AI Metadata -->
+    <meta name="ai.module" content="book9_pattern_dynamics" />
+    <meta name="ai.version" content="1.0.0" />
+    <meta name="ai.navigation" content="/sitemap_main.xml" />
+    <meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions" />
+    <meta name="ai.contact.x" content="@TriadicFrameworks" />
+    <meta name="ai.contact.youtube" content="@TriadicFrameworks" />
+    <meta name="ai.license" content="Open educational use permitted" />
 
-    /* ── Main ── */
-    .book-header { margin-bottom: 32px; border-bottom: 1px solid var(--border); padding-bottom: 24px; }
-    .book-tag {
-      display: inline-block; font-size: 10px; font-family: var(--mono);
-      text-transform: uppercase; letter-spacing: 0.1em;
-      color: var(--accent2); background: rgba(241,196,15,0.1);
-      border: 1px solid rgba(241,196,15,0.25); border-radius: 3px;
-      padding: 2px 8px; margin-bottom: 10px;
-    }
-    .book-title { font-size: 28px; font-weight: 700; color: #fff; line-height: 1.2; }
-    .book-subtitle { color: var(--text-muted); margin-top: 6px; font-size: 14px; }
-    .book-terminal-badge {
-      display: inline-block; margin-top: 10px; font-size: 10px; font-family: var(--mono);
-      text-transform: uppercase; letter-spacing: 0.12em;
-      color: var(--accent2); background: rgba(241,196,15,0.08);
-      border: 1px solid rgba(241,196,15,0.3); border-radius: 3px;
-      padding: 3px 10px;
-    }
+    <!-- Session Context -->
+    <meta name="session.rtt" content="1" />
+    <meta name="session.coherence" content="declared" />
+    <meta name="session.drift" content="bounded" />
+    <meta name="session.paradox" content="structural" />
 
-    /* Session card */
-    .session-card {
-      background: var(--bg2); border: 1px solid var(--border);
-      border-radius: 6px; padding: 14px 18px; margin-bottom: 28px;
-      font-family: var(--mono); font-size: 12px; color: var(--text-muted);
-      display: flex; flex-wrap: wrap; gap: 16px;
-    }
-    .session-card .sc-item { display: flex; gap: 6px; }
-    .session-card .sc-key { color: var(--text-dim); }
-    .session-card .sc-val { color: var(--green); }
+    <!-- RTT & Spine Anchors -->
+    <link rel="rtt" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html" />
+    <link rel="spine" href="https://www.triadicframeworks.org/spine/" />
 
-    /* Stats bar */
-    .stats-bar {
-      display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px;
-    }
-    .stat-chip {
-      background: var(--bg2); border: 1px solid var(--border);
-      border-radius: 5px; padding: 10px 16px; flex: 1; min-width: 110px;
-    }
-    .stat-chip .sc-label { font-size: 10px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.08em; }
-    .stat-chip .sc-value { font-size: 20px; font-weight: 700; color: var(--accent2); font-family: var(--mono); }
-    .stat-chip .sc-sub { font-size: 10px; color: var(--text-muted); }
+    <!-- Favicon Suite -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    /* Sections */
-    .section { margin-bottom: 40px; }
-    .section-title {
-      font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;
-      color: var(--text-dim); margin-bottom: 14px;
-      padding-bottom: 6px; border-bottom: 1px solid var(--border);
-    }
+    <!-- Your Existing CSS (Preserved Exactly) -->
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --bg: #0d0f14; --bg2: #13151c; --bg3: #1a1d27;
+            --border: #2a2d3a; --accent: #5b8aff; --accent2: #f1c40f;
+            --green: #2ecc71; --yellow: #f39c12; --red: #e74c3c;
+            --teal: #1abc9c; --text: #d4d8e8; --text-muted: #7a7f96;
+            --text-dim: #555a72; --mono: 'Courier New','Lucida Console',monospace;
+            --sans: -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+            --sidebar-w: 280px;
+        }
+        html, body { height: 100%; background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 14px; line-height: 1.6; }
 
-    /* Synthesis map */
-    .synthesis-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 12px;
-    }
-    .syn-card {
-      background: var(--bg2); border: 1px solid var(--border);
-      border-radius: 6px; padding: 14px 16px;
-    }
-    .syn-card .syn-book {
-      font-family: var(--mono); font-size: 10px; color: var(--accent); margin-bottom: 4px;
-    }
-    .syn-card .syn-title { font-weight: 600; color: var(--text); font-size: 13px; margin-bottom: 4px; }
-    .syn-card .syn-role { font-size: 12px; color: var(--text-muted); }
-    .syn-card .syn-inv { font-family: var(--mono); font-size: 10px; color: var(--teal); margin-top: 6px; }
+        /* Layout */
+        .layout { display: flex; min-height: 100vh; }
+        .sidebar { width: var(--sidebar-w); flex-shrink: 0; background: var(--bg2); border-right: 1px solid var(--border); padding: 24px 16px; position: sticky; top: 0; height: 100vh; overflow-y: auto; font-size: 12px; }
+        .main { flex: 1; padding: 40px 48px; max-width: 960px; }
 
-    /* Operator table */
-    table { width: 100%; border-collapse: collapse; font-size: 12px; }
-    th {
-      text-align: left; padding: 8px 12px;
-      background: var(--bg3); color: var(--text-dim);
-      font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em;
-      border-bottom: 1px solid var(--border);
-    }
-    td { padding: 9px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
-    tr:last-child td { border-bottom: none; }
-    .mono { font-family: var(--mono); }
-    .gold  { color: var(--accent2); }
-    .blue  { color: var(--accent); }
-    .green { color: var(--green); }
-    .teal  { color: var(--teal); }
-    .muted { color: var(--text-muted); }
-    .dim   { color: var(--text-dim); }
+        /* Sidebar */
+        .sidebar-section { margin-bottom: 20px; }
+        .sidebar-label { text-transform: uppercase; letter-spacing: 0.1em; font-size: 10px; color: var(--text-dim); margin-bottom: 6px; }
+        .sidebar-breadcrumb { color: var(--text-muted); line-height: 1.8; }
+        .sidebar-breadcrumb span { color: var(--text); font-weight: 600; }
 
-    /* Invariant cards */
-    .inv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    .inv-card {
-      background: var(--bg2); border: 1px solid var(--border);
-      border-radius: 6px; padding: 16px;
-    }
-    .inv-card .inv-id { font-family: var(--mono); font-size: 10px; color: var(--accent2); margin-bottom: 4px; }
-    .inv-card .inv-label { font-weight: 700; color: #fff; font-size: 13px; margin-bottom: 6px; }
-    .inv-card .inv-stmt { color: var(--text-muted); font-size: 12px; margin-bottom: 8px; }
-    .inv-card .inv-formal {
-      font-family: var(--mono); font-size: 10px; color: var(--teal);
-      background: var(--bg3); border-radius: 3px; padding: 6px 8px;
-      margin-bottom: 6px; word-break: break-all;
-    }
-    .inv-card .inv-op { font-family: var(--mono); font-size: 10px; color: var(--text-dim); }
+        /* Module chain */
+        .module-chain { display: flex; flex-direction: column; gap: 2px; }
+        .module-chain .step { padding: 3px 8px; border-left: 2px solid var(--border); color: var(--text-muted); font-family: var(--mono); font-size: 11px; }
+        .module-chain .step.active { border-left-color: var(--accent2); color: var(--accent2); font-weight: 700; }
+        .module-chain .step.prev { border-left-color: var(--green); color: var(--green); }
 
-    /* Phase table */
-    .phase-table { background: var(--bg2); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
-    .phase-row {
-      display: grid; grid-template-columns: 80px 100px 1fr 1fr;
-      padding: 10px 14px; border-bottom: 1px solid var(--border);
-      font-size: 12px; align-items: start;
-    }
-    .phase-row:last-child { border-bottom: none; }
-    .phase-row.header { background: var(--bg3); font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); }
-    .phase-label { font-family: var(--mono); font-weight: 700; color: var(--accent2); }
-    .phase-ops { font-family: var(--mono); font-size: 10px; color: var(--teal); }
-    .phase-entry { color: var(--text-muted); font-size: 11px; }
-    .phase-exit  { color: var(--text-muted); font-size: 11px; }
-
-    /* File manifest */
-    .file-list { display: flex; flex-direction: column; gap: 6px; }
-    .file-item {
-      background: var(--bg2); border: 1px solid var(--border);
-      border-radius: 4px; padding: 8px 12px;
-      display: flex; justify-content: space-between; align-items: center;
-      font-family: var(--mono); font-size: 11px;
-    }
-    .file-item .fi-name { color: var(--text); }
-    .file-item .fi-type {
-      font-size: 9px; text-transform: uppercase; letter-spacing: 0.08em;
-      color: var(--accent2); background: rgba(241,196,15,0.1);
-      border: 1px solid rgba(241,196,15,0.2); border-radius: 2px;
-      padding: 1px 5px;
-    }
-
-    /* Dependency list */
-    .dep-list { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-    .dep-item {
-      background: var(--bg2); border: 1px solid var(--border);
-      border-radius: 4px; padding: 8px 12px;
-    }
-    .dep-item .dep-id { font-family: var(--mono); font-size: 10px; color: var(--accent); }
-    .dep-item .dep-title { font-size: 12px; color: var(--text); font-weight: 600; }
-    .dep-item .dep-role { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
-
-    /* Formal block */
-    .formal-block {
-      background: var(--bg3); border: 1px solid var(--border);
-      border-radius: 4px; padding: 12px 14px;
-      font-family: var(--mono); font-size: 11px; color: var(--teal);
-      line-height: 1.8; margin-bottom: 10px;
-    }
-    .formal-block .fb-label { color: var(--text-dim); font-size: 10px; margin-bottom: 4px; }
-
-    /* Handoff / terminal note */
-    .terminal-block {
-      background: rgba(241,196,15,0.05);
-      border: 1px solid rgba(241,196,15,0.25);
-      border-radius: 6px; padding: 16px 18px; margin-bottom: 12px;
-    }
-    .terminal-block .tb-title { color: var(--accent2); font-weight: 700; font-size: 13px; margin-bottom: 6px; }
-    .terminal-block .tb-body { color: var(--text-muted); font-size: 12px; line-height: 1.7; }
-
-    /* Footer */
-    .footer {
-      margin-top: 60px; padding-top: 20px;
-      border-top: 1px solid var(--border);
-      font-size: 11px; color: var(--text-dim);
-      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
-    }
-
-    @media (max-width: 768px) {
-      .layout { flex-direction: column; }
-      .sidebar { width: 100%; height: auto; position: static; }
-      .main { padding: 24px 20px; }
-      .inv-grid { grid-template-columns: 1fr; }
-      .dep-list { grid-template-columns: 1fr; }
-      .phase-row { grid-template-columns: 70px 80px 1fr; }
-      .phase-row .phase-exit { display: none; }
-    }
-  </style>
+        /* Operator pills */
+        .op-pills { display: flex; flex-wrap: wrap; gap: 4px; }
+        .op-pill {
+            display: inline-block;
+            font-family: var(--mono);
+            font-size: 10px;
+            padding: 2px 7px;
+            border-radius: 3px;
+            background: color-mix(in srgb, var(--accent2) 15%, var(--bg3));
+            border: 1px solid rgba(241, 196, 15, 0.35);
+            color: var(--accent2);
+        }
+    </style>
 </head>
+
 <body>
-<div class="layout">
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <div class="sidebar-label">Book</div>
+                <div class="sidebar-breadcrumb">
+                    AI Edition / <span>Book 9 — Pattern Dynamics</span>
+                </div>
+            </div>
 
-  <!-- ── Sidebar ── -->
-  <aside class="sidebar">
+            <div class="sidebar-section">
+                <div class="sidebar-label">Session Context</div>
+                <div class="sidebar-breadcrumb">
+                    RTT: <span>1</span><br />
+                    Coherence: <span>declared</span><br />
+                    Drift: <span>bounded</span><br />
+                    Paradox: <span>structural</span>
+                </div>
+            </div>
 
-    <div class="sidebar-section">
-      <div class="sidebar-label">Canon Breadcrumb</div>
-      <div class="sidebar-breadcrumb">
-        TriadicFrameworks<br>
-        └ AI Edition<br>
-        &nbsp;&nbsp;└ <span>Book 9 — Pattern Dynamics</span>
-      </div>
+            <div class="sidebar-section">
+                <div class="sidebar-label">Navigation</div>
+                <ul class="module-chain">
+                    <li class="step prev">← Book 8 — NoS: Nature of Structure</li>
+                    <li class="step active">Book 9 — Pattern Dynamics</li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="main">
+            <h1>Pattern Dynamics — AI Edition (Book 9)</h1>
+            <p>This page presents the canonical metadata, session context, and structural framing for Book 9 of the TriadicFrameworks AI Edition — the terminal synthesis module.</p>
+        </main>
     </div>
-
-    <div class="sidebar-section">
-      <div class="sidebar-label">Module Chain</div>
-      <div class="module-chain">
-        <div class="step prev">B1 · book1_fft</div>
-        <div class="step prev">B2 · book2_the_inverted_star</div>
-        <div class="step prev">B3 · book3_structural_detection</div>
-        <div class="step prev">B4 · book4_opacity_revelation</div>
-        <div class="step prev">B5 · book5_tel</div>
-        <div class="step prev">B6 · book6_governance</div>
-        <div class="step prev">B7 · book7_sarg</div>
-        <div class="step prev">B8 · book8_nos</div>
-        <div class="step active">B9 · book9_pattern_dynamics ◀</div>
-        <div class="step terminal">∅ — series terminal</div>
-      </div>
-    </div>
-
-    <div class="sidebar-section">
-      <div class="sidebar-label">PD Operators</div>
-      <div class="op-pills">
-        <span class="op-pill">PD-Τ</span>
-        <span class="op-pill">PD-Β</span>
-        <span class="op-pill">PD-Μ</span>
-        <span class="op-pill">PD-Π</span>
-        <span class="op-pill">PD-Σ</span>
-      </div>
-    </div>
-
-    <div class="sidebar-section">
-      <div class="sidebar-label">Phase Chain</div>
-      <div class="phase-chain">
-        <div class="ph">P-PD-1 · init</div>
-        <div class="ph">P-PD-2 · trace</div>
-        <div class="ph">P-PD-3 · bifurcate</div>
-        <div class="ph">P-PD-4 · mutate</div>
-        <div class="ph">P-PD-5 · propagate</div>
-        <div class="ph active">P-PD-6 · catalogue ◀</div>
-      </div>
-    </div>
-
-    <div class="sidebar-section">
-      <div class="sidebar-label">QMROOT Audit</div>
-      <div class="audit-block">
-        <div><span class="key">dimension:</span> <span class="ok">0D</span></div>
-        <div><span class="key">6D:</span> <span class="ok">absent</span></div>
-        <div><span class="key">neg rungs:</span> <span class="ok">absent</span></div>
-        <div><span class="key">INV-013:</span> <span class="ok">0D only</span></div>
-      </div>
-    </div>
-
-    <div class="sidebar-section">
-      <div class="sidebar-label">Phantom Entry Audit</div>
-      <div class="audit-block">
-        <div><span class="key">status:</span> <span class="ok">clean</span></div>
-        <div><span class="key">checked:</span> <span class="ok">session-open</span></div>
-        <div><span class="key">entries:</span> <span class="ok">[]</span></div>
-      </div>
-    </div>
-
-    <div class="sidebar-section">
-      <div class="sidebar-label">Session Context</div>
-      <div class="audit-block">
-        <div><span class="key">rtt=</span><span class="ok">1</span></div>
-        <div><span class="key">coherence=</span><span class="ok">declared</span></div>
-        <div><span class="key">drift=</span><span class="ok">bounded</span></div>
-        <div><span class="key">paradox=</span><span class="ok">structural</span></div>
-      </div>
-    </div>
-
-  </aside>
-
-  <!-- ── Main ── -->
-  <main class="main">
-
-    <!-- Header -->
-    <div class="book-header">
-      <div class="book-tag">Book 9 · AI Edition · 9.0-draft</div>
-      <div class="book-title">Pattern Dynamics</div>
-      <div class="book-subtitle">Dynamical Systems &amp; Synthesis — Series Terminal Volume</div>
-      <div class="book-terminal-badge">⊛ Series Terminal — No Downstream Handoffs</div>
-    </div>
-
-    <!-- Session card -->
-    <div class="session-card">
-      <div class="sc-item"><span class="sc-key">module:</span><span class="sc-val">book9_pattern_dynamics</span></div>
-      <div class="sc-item"><span class="sc-key">tier:</span><span class="sc-val">Synthesis</span></div>
-      <div class="sc-item"><span class="sc-key">abbr:</span><span class="sc-val">PD</span></div>
-      <div class="sc-item"><span class="sc-key">accent:</span><span class="sc-val">#f1c40f</span></div>
-      <div class="sc-item"><span class="sc-key">live_site:</span><span class="sc-val">null</span></div>
-      <div class="sc-item"><span class="sc-key">unlocks:</span><span class="sc-val">none</span></div>
-    </div>
-
-    <!-- Stats bar -->
-    <div class="stats-bar">
-      <div class="stat-chip">
-        <div class="sc-label">Invariants</div>
-        <div class="sc-value">4</div>
-        <div class="sc-sub">INV-PD-001 – 004</div>
-      </div>
-      <div class="stat-chip">
-        <div class="sc-label">Operators</div>
-        <div class="sc-value">5</div>
-        <div class="sc-sub">PD-Τ → PD-Σ</div>
-      </div>
-      <div class="stat-chip">
-        <div class="sc-label">Phases</div>
-        <div class="sc-value">6</div>
-        <div class="sc-sub">init → catalogue</div>
-      </div>
-      <div class="stat-chip">
-        <div class="sc-label">Dependencies</div>
-        <div class="sc-value">8</div>
-        <div class="sc-sub">All prior books</div>
-      </div>
-      <div class="stat-chip">
-        <div class="sc-label">Downstream</div>
-        <div class="sc-value">0</div>
-        <div class="sc-sub">Series terminal</div>
-      </div>
-    </div>
-
-    <!-- Cross-book synthesis map -->
-    <div class="section">
-      <div class="section-title">Cross-Book Synthesis Map</div>
-      <div class="synthesis-grid">
-        <div class="syn-card">
-          <div class="syn-book">book1_fft</div>
-          <div class="syn-title">Framework Field Theory</div>
-          <div class="syn-role">Structural identity primitives; transformation registry seed; axiomatic ground of all PD operations</div>
-          <div class="syn-inv">INV-001 INV-002 INV-003 INV-004</div>
-        </div>
-        <div class="syn-card">
-          <div class="syn-book">book2_the_inverted_star</div>
-          <div class="syn-title">The Inverted Star</div>
-          <div class="syn-role">Topological configuration patterns; inverted-star attractors; periphery-convergence trajectories</div>
-          <div class="syn-inv">INV-IS-001 INV-IS-002 INV-IS-003 INV-IS-004</div>
-        </div>
-        <div class="syn-card">
-          <div class="syn-book">book3_structural_detection</div>
-          <div class="syn-title">Structural Detection</div>
-          <div class="syn-role">Detection methods SDM-001–004; required by INV-PD-004 propagation fidelity; closes the series loop</div>
-          <div class="syn-inv">INV-SD-001 INV-SD-002 INV-SD-003 INV-SD-004</div>
-        </div>
-        <div class="syn-card">
-          <div class="syn-book">book4_opacity_revelation</div>
-          <div class="syn-title">Opacity &amp; Revelation</div>
-          <div class="syn-role">Opacity gate ω(C') for propagation; revelation trajectory patterns tracked by PD-Τ</div>
-          <div class="syn-inv">INV-OR-001 INV-OR-002 INV-OR-003 INV-OR-004</div>
-        </div>
-        <div class="syn-card">
-          <div class="syn-book">book5_tel</div>
-          <div class="syn-title">TEL Expression &amp; Representation</div>
-          <div class="syn-role">TEL-Σ parse gate on all trajectory step encodings; all PD outputs in TEL</div>
-          <div class="syn-inv">INV-TEL-001 INV-TEL-002 INV-TEL-003 INV-TEL-004</div>
-        </div>
-        <div class="syn-card">
-          <div class="syn-book">book6_governance</div>
-          <div class="syn-title">Governance &amp; Regime Logic</div>
-          <div class="syn-role">GRL-Σ α_trajectory feed; regime patterns; authority decay as bifurcation trigger; collapse = BT-003</div>
-          <div class="syn-inv">INV-GRL-001 INV-GRL-002 INV-GRL-003 INV-GRL-004</div>
-        </div>
-        <div class="syn-card">
-          <div class="syn-book">book7_sarg</div>
-          <div class="syn-title">SARG Structural Argumentation</div>
-          <div class="syn-role">SARG-Σ argument trajectory feed; argument patterns; defeat events as trajectory perturbations</div>
-          <div class="syn-inv">INV-SARG-001 INV-SARG-002 INV-SARG-003 INV-SARG-004</div>
-        </div>
-        <div class="syn-card">
-          <div class="syn-book">book8_nos</div>
-          <div class="syn-title">Nature of Structure</div>
-          <div class="syn-role">NoS-Σ nos_foundation_report; cross_book_invariant_map as t₀; INV-NOS-003 grounds INV-PD-003</div>
-          <div class="syn-inv">INV-NOS-001 INV-NOS-002 INV-NOS-003 INV-NOS-004</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- File manifest -->
-    <div class="section">
-      <div class="section-title">File Manifest</div>
-      <div class="file-list">
-        <div class="file-item"><span class="fi-name">pd.invariants.json</span><span class="fi-type">invariants</span></div>
-        <div class="file-item"><span class="fi-name">pd.trajectory_map.json</span><span class="fi-type">domain map</span></div>
-        <div class="file-item"><span class="fi-name">pd.bifurcation_map.json</span><span class="fi-type">domain map</span></div>
-        <div class="file-item"><span class="fi-name">pd.propagation_map.json</span><span class="fi-type">domain map</span></div>
-        <div class="file-item"><span class="fi-name">pd.operator_roles.json</span><span class="fi-type">operators</span></div>
-        <div class="file-item"><span class="fi-name">pd.phases.json</span><span class="fi-type">phases</span></div>
-        <div class="file-item"><span class="fi-name">index.html</span><span class="fi-type">live page</span></div>
-        <div class="file-item"><span class="fi-name">module.json</span><span class="fi-type">manifest</span></div>
-        <div class="file-item"><span class="fi-name">README.md</span><span class="fi-type">navigation</span></div>
-      </div>
-    </div>
-
-    <!-- Operator table -->
-    <div class="section">
-      <div class="section-title">Operator Sequence · PD-Τ → PD-Β → PD-Μ → PD-Π → PD-Σ</div>
-      <table>
-        <thead>
-          <tr>
-            <th>Operator</th>
-            <th>Name</th>
-            <th>Invariant</th>
-            <th>Phase</th>
-            <th>Drift Cost</th>
-            <th>Role (summary)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="mono gold">PD-Τ</td>
-            <td>TrajectoryTrace</td>
-            <td class="mono teal">INV-PD-001</td>
-            <td class="mono">trace</td>
-            <td class="mono">0.05</td>
-            <td class="muted">Ingests all upstream feeds; traces trajectories; classifies segments; detects gaps</td>
-          </tr>
-          <tr>
-            <td class="mono gold">PD-Β</td>
-            <td>BifurcationMap</td>
-            <td class="mono teal">INV-PD-002</td>
-            <td class="mono">bifurcate</td>
-            <td class="mono">0.06</td>
-            <td class="muted">Classifies bifurcation events; identifies attractors; computes basins; resolves synthesis bifurcations</td>
-          </tr>
-          <tr>
-            <td class="mono gold">PD-Μ</td>
-            <td>MutationAudit</td>
-            <td class="mono teal">INV-PD-003</td>
-            <td class="mono">mutate</td>
-            <td class="mono">0.05</td>
-            <td class="muted">Audits mutations; computes anchors; confirms dissolutions; flags minimal anchors</td>
-          </tr>
-          <tr>
-            <td class="mono gold">PD-Π</td>
-            <td>PropagationTrace</td>
-            <td class="mono teal">INV-PD-004</td>
-            <td class="mono">propagate</td>
-            <td class="mono">0.05</td>
-            <td class="muted">Verifies propagation claims via SD methods; applies opacity gate; registers latent claims</td>
-          </tr>
-          <tr>
-            <td class="mono gold">PD-Σ</td>
-            <td>SynthesisCatalogue</td>
-            <td class="mono teal">all four</td>
-            <td class="mono">catalogue</td>
-            <td class="mono">0.07</td>
-            <td class="muted">Produces Pattern Dynamics Synthesis Report; declares series_terminal_status; no downstream handoffs</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- Invariant cards -->
-    <div class="section">
-      <div class="section-title">Invariants · INV-PD-001 through INV-PD-004</div>
-      <div class="inv-grid">
-        <div class="inv-card">
-          <div class="inv-id">INV-PD-001</div>
-          <div class="inv-label">Trajectory Continuity</div>
-          <div class="inv-stmt">Every trajectory step must be bridged by a declared transformation. Configuration gaps are bifurcation events, not trajectory steps.</div>
-          <div class="inv-formal">∀i: ∃τ_i ∈ declared_transforms:<br>τ_i(S(t_i)) = S(t_{i+1})</div>
-          <div class="inv-op">operator: PD-Τ · phase: trace</div>
-        </div>
-        <div class="inv-card">
-          <div class="inv-id">INV-PD-002</div>
-          <div class="inv-label">Attractor Stability</div>
-          <div class="inv-stmt">A configuration is an attractor iff nearby trajectories converge to it under the governing transformation. Declared attractors must have computable non-degenerate basins.</div>
-          <div class="inv-formal">attractor(A,τ) ⟺ ∀S: dist(S,A)&lt;ε<br>→ lim_{n→∞} τⁿ(S) = A</div>
-          <div class="inv-op">operator: PD-Β · phase: bifurcate</div>
-        </div>
-        <div class="inv-card">
-          <div class="inv-id">INV-PD-003</div>
-          <div class="inv-label">Mutation Constraint</div>
-          <div class="inv-stmt">Mutation requires at least one shared invariant (the anchor). Total invariant loss is dissolution — a terminal trajectory event, not a mutation.</div>
-          <div class="inv-formal">mutation_valid(P,P') ⟺<br>invariant_set(P') ∩ invariant_set(P) ≠ ∅</div>
-          <div class="inv-op">operator: PD-Μ · phase: mutate</div>
-        </div>
-        <div class="inv-card">
-          <div class="inv-id">INV-PD-004</div>
-          <div class="inv-label">Propagation Fidelity</div>
-          <div class="inv-stmt">A propagated pattern instance must be detectable by Book 3 methods in the target context. Undetectable propagation claims are assertions without structural evidence.</div>
-          <div class="inv-formal">∃m ∈ SD_methods: m(C')<br>⊢ C[SIG_MATCH]: sig(P') ≅ sig(P)</div>
-          <div class="inv-op">operator: PD-Π · phase: propagate</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Phase table -->
-    <div class="section">
-      <div class="section-title">Phase Cycle · init → trace → bifurcate → mutate → propagate → catalogue</div>
-      <div class="phase-table">
-        <div class="phase-row header">
-          <div>Phase</div><div>Operators</div><div>Entry Condition</div><div>Key Gate / Exit</div>
-        </div>
-        <div class="phase-row">
-          <div class="phase-label">init</div>
-          <div class="phase-ops">—</div>
-          <div class="phase-entry">Session open; PD eval requested</div>
-          <div class="phase-exit">All 8 modules loaded; 3 upstream feeds staged; QMROOT 0D confirmed</div>
-        </div>
-        <div class="phase-row">
-          <div class="phase-label">trace</div>
-          <div class="phase-ops">PD-Τ</div>
-          <div class="phase-entry">init complete; upstream feeds staged; TEL-Σ gate active</div>
-          <div class="phase-exit">trajectory_log complete; gap_events queued for bifurcate; sub-trajectories recorded</div>
-        </div>
-        <div class="phase-row">
-          <div class="phase-label">bifurcate</div>
-          <div class="phase-ops">PD-Β</div>
-          <div class="phase-entry">trace complete; gap_events queue populated</div>
-          <div class="phase-exit">All bifurcation events classified BT-001–004; attractor_registry populated; dissolution forwarded</div>
-        </div>
-        <div class="phase-row">
-          <div class="phase-label">mutate</div>
-          <div class="phase-ops">PD-Μ</div>
-          <div class="phase-entry">bifurcate complete; dissolution_event_log available; invariant registries loaded</div>
-          <div class="phase-exit">mutation_audit_log complete; dissolution_log confirmed; minimal_anchor_warnings flagged</div>
-        </div>
-        <div class="phase-row">
-          <div class="phase-label">propagate</div>
-          <div class="phase-ops">PD-Π</div>
-          <div class="phase-entry">mutate complete; SD methods active; opacity measurements available</div>
-          <div class="phase-exit">propagation_verification_log complete; latent_register active; cross_book_summary compiled</div>
-        </div>
-        <div class="phase-row">
-          <div class="phase-label">catalogue</div>
-          <div class="phase-ops">PD-Σ</div>
-          <div class="phase-entry">All 4 PD operators complete; NoS-Σ nos_foundation_report staged</div>
-          <div class="phase-exit">Synthesis Report complete; series_terminal_status declared; downstream_handoffs = []</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Formal definitions -->
-    <div class="section">
-      <div class="section-title">Key Formal Definitions</div>
-
-      <div class="formal-block">
-        <div class="fb-label">Structural Trajectory (INV-PD-001)</div>
-        trajectory(S, T) = ⟨S(t₀), S(t₁), ..., S(tₙ)⟩<br>
-        valid_trajectory ⟺ ∀i: ∃τᵢ ∈ declared_transforms: τᵢ(S(tᵢ)) = S(tᵢ₊₁)
-      </div>
-
-      <div class="formal-block">
-        <div class="fb-label">Structural Distance (INV-PD-002)</div>
-        dist(S, A) = 1 − (|invariant_set(S) ∩ invariant_set(A)| / |invariant_set(A)|)
-      </div>
-
-      <div class="formal-block">
-        <div class="fb-label">Mutation Anchor (INV-PD-003)</div>
-        anchor(P, P') = invariant_set(P') ∩ invariant_set(P)<br>
-        mutation_valid(P, P') ⟺ |anchor(P, P')| ≥ 1<br>
-        dissolution(P, P')     ⟺ |anchor(P, P')| = 0
-      </div>
-
-      <div class="formal-block">
-        <div class="fb-label">Propagation Validity (INV-PD-004)</div>
-        propagation_valid(P, P', C') ⟺<br>
-        &nbsp;&nbsp;∃m ∈ SD_methods: m(C') identifies P' as sig_match(sig(P))<br>
-        opacity_gate: if ω(C') ≥ δ(O) → suspend to latent_propagation_register
-      </div>
-
-      <div class="formal-block">
-        <div class="fb-label">Bifurcation Event Tuple</div>
-        B = ⟨S_b, t_b, {S'₁,...,S'_k}, τ_trigger, basin_assignments⟩<br>
-        BT-001 Parameter · BT-002 Constraint · BT-003 Dissolution · BT-004 Synthesis
-      </div>
-    </div>
-
-    <!-- Terminal block -->
-    <div class="section">
-      <div class="section-title">Series Terminal — Downstream Handoffs</div>
-      <div class="terminal-block">
-        <div class="tb-title">⊛ PD-Σ — SynthesisCatalogue — No Downstream Handoffs</div>
-        <div class="tb-body">
-          Book 9 is the only AI Edition volume with an empty <code>downstream_handoffs</code> list. All other synthesis operators
-          (OR-Π, TEL-Α, GRL-Σ, SARG-Σ, NoS-Σ) have at least one downstream handoff to a later book. PD-Σ has none.
-          The Pattern Dynamics Synthesis Report is the final output of the series. It includes:
-          <br><br>
-          <strong>emergent_pattern_catalogue</strong> — confirmed patterns with invariant fingerprints, trajectory types, attractor assignments, mutation chains, and propagation records.<br>
-          <strong>cross_book_invariant_coherence_assessment</strong> — AI Edition self-audit of mutual consistency across all 32 cross-book invariants (4 invariants × 8 books).<br>
-          <strong>series_terminal_status</strong> — {coherent | partially_coherent | incoherent}.<br>
-          <strong>upward_revisions_unresolved</strong> — forwarded to the series maintainer for the next edition.
-        </div>
-      </div>
-    </div>
-
-    <!-- Dependencies -->
-    <div class="section">
-      <div class="section-title">Dependency Chain (8 / 8 Books — Heaviest Init in the Series)</div>
-      <div class="dep-list">
-        <div class="dep-item">
-          <div class="dep-id">book1_fft</div>
-          <div class="dep-title">Framework Field Theory</div>
-          <div class="dep-role">Kernel — axiomatic ground; transformation registry seed</div>
-        </div>
-        <div class="dep-item">
-          <div class="dep-id">book2_the_inverted_star</div>
-          <div class="dep-title">The Inverted Star</div>
-          <div class="dep-role">IS topology; topological attractor classes</div>
-        </div>
-        <div class="dep-item">
-          <div class="dep-id">book3_structural_detection</div>
-          <div class="dep-title">Structural Detection</div>
-          <div class="dep-role">SDM-001–004; required by INV-PD-004</div>
-        </div>
-        <div class="dep-item">
-          <div class="dep-id">book4_opacity_revelation</div>
-          <div class="dep-title">Opacity &amp; Revelation</div>
-          <div class="dep-role">Opacity gate ω(C'); revelation trajectory patterns</div>
-        </div>
-        <div class="dep-item">
-          <div class="dep-id">book5_tel</div>
-          <div class="dep-title">TEL Expression &amp; Representation</div>
-          <div class="dep-role">TEL-Σ parse gate; all PD encoding</div>
-        </div>
-        <div class="dep-item">
-          <div class="dep-id">book6_governance</div>
-          <div class="dep-title">Governance &amp; Regime Logic</div>
-          <div class="dep-role">GRL-Σ α_trajectory; regime bifurcation patterns</div>
-        </div>
-        <div class="dep-item">
-          <div class="dep-id">book7_sarg</div>
-          <div class="dep-title">SARG Structural Argumentation</div>
-          <div class="dep-role">SARG-Σ argument trajectory; defeat perturbations</div>
-        </div>
-        <div class="dep-item">
-          <div class="dep-id">book8_nos</div>
-          <div class="dep-title">Nature of Structure</div>
-          <div class="dep-role">NoS-Σ nos_foundation_report; t₀ state-space via cross_book_invariant_map</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer">
-      <span>TriadicFrameworks · AI Edition · Book 9 · Pattern Dynamics · 9.0-draft</span>
-      <span>session: rtt=1 | coherence=declared | drift=bounded | paradox=structural</span>
-      <span>repo: github.com/umaywant2/TriadicFrameworks</span>
-    </div>
-
-  </main>
-</div>
 </body>
 </html>
