@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SD-Σd — SignalDetection (Structural Detection, AI Edition)</title>
+  <link rel="stylesheet" href="../assets/css/ai-edition.css">
+</head>
+<body>
+
+<section>
+  <h1>SD-Σd — SignalDetection</h1>
+  <div class="context-block">
+    <span class="context-label">Book</span>
+    <span class="context-value">3 — Structural Detection (AI Edition)</span>
+  </div>
+  <div class="context-block">
+    <span class="context-label">Layer</span>
+    <span class="context-value">surface–deep</span>
+  </div>
+  <div class="context-block">
+    <span class="context-label">Role</span>
+    <span class="context-value">structural signal presence detection across RTT structures</span>
+  </div>
+</section>
+
+<section>
+  <h2>Operator JSON (AI-first)</h2>
+  <pre id="ai-operator">
+{
+  "operator": "SD-Σd",
+  "name": "SignalDetection",
+  "module": "sd.structural_detection.ai",
+  "version": "3.0-draft",
+
+  "layer": "surface-deep",
+  "alignment": "structural",
+
+  "role": "Detects structural signals, motifs, and boundaries across any substrate surface.",
+
+  "phases": [
+    "init",
+    "scan",
+    "confirm"
+  ],
+
+  "inputs": {
+    "substrate": "text | code | logs | papers | pipelines | graphs",
+    "mode": "formal | emergent | chaotic | hybrid"
+  },
+
+  "outputs": {
+    "signal_fields": true,
+    "boundary_candidates": true,
+    "motif_candidates": true
+  },
+
+  "constraints": {
+    "requires_kernel_context": true,
+    "must_not_revise_RTT": true
+  }
+}
+  </pre>
+</section>
+
+</body>
+</html>
 
