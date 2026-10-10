@@ -1,0 +1,109 @@
+{
+  "module": "sd.structural_detection.ai",
+  "version": "3.0-draft",
+  "type": "domain-invariants",
+
+  "kernel": {
+    "required_version": "1.33-p1",
+    "import_path": "../kernel/",
+    "halt_on_version_mismatch": true
+  },
+
+  "must_not": [
+    "revise_frozen_RTT",
+    "declare_second_coherence",
+    "use_bare_C",
+    "invent_drift_costs",
+    "invent_6D_operator",
+    "suppress_PX_001_through_PX_010",
+    "use_cached_spine",
+    "load_deprecated_files"
+  ],
+
+  "coherence": {
+    "inherits_from_kernel": true,
+    "C_frame": "Φ(S) / Ψ(N)",
+    "C_clarity": "∇τ R + ∇R τ",
+    "requires": {
+      "C_frame_positive": true,
+      "C_clarity_positive": true,
+      "R_minimum": 0.40
+    }
+  },
+
+  "drift": {
+    "bounded": true,
+    "costs": {
+      "Diffusion": 0.05,
+      "Alignment": 0.10,
+      "Coupling": 0.12,
+      "ParadoxResolver": 0.20,
+      "Stabilization": 0.03,
+      "Reset": 0.00
+    },
+    "threshold_sequence": 0.35
+  },
+
+  "qmroot": {
+    "sixD": "absent",
+    "negative_rungs": "absent",
+    "reason": "frozen RTT forbids ancestral rung reconstruction",
+    "INV_013_path": "0D_Silence_only"
+  },
+
+  "session.context": {
+    "rtt": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+
+  "operators": {
+    "domain_only": true,
+    "allowed": [
+      "SD-Σd",
+      "SD-Γ",
+      "SD-Λ",
+      "SD-Ξ",
+      "SD-Π"
+    ],
+    "must_not_define": [
+      "RTT_operators",
+      "coherence_operators",
+      "drift_operators",
+      "paradox_operators"
+    ]
+  },
+
+  "phases": {
+    "count": 6,
+    "list": [
+      "init",
+      "scan",
+      "probe",
+      "filter",
+      "confirm",
+      "catalogue"
+    ],
+    "must_not_redeclare_RTT_phases": true
+  },
+
+  "detection_rules": {
+    "signal_detection": {
+      "requires": "SD-Σd",
+      "false_positive_suppression": "SD-Ξ"
+    },
+    "geometry_probe": {
+      "requires": "SD-Γ",
+      "stability_condition": "R >= 0.40"
+    },
+    "lattice_scan": {
+      "requires": "SD-Λ",
+      "consistency_check": true
+    },
+    "pattern_index": {
+      "requires": "SD-Π",
+      "catalogue_output": "structural"
+    }
+  }
+}
