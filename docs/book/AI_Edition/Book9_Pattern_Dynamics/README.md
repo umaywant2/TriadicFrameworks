@@ -1,3 +1,6 @@
+
+- [`module.json`](module.json) — Agentic module schema role assignments
+
 # Book 9 — Pattern Dynamics
 ### AI Edition · Book 9 of 9
 
