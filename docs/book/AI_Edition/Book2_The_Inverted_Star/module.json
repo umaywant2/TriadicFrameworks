@@ -1,1 +1,62 @@
+{
+  "book": {
+    "id": "book2_inverted_star",
+    "number": 2,
+    "title": "Inverted Star",
+    "abbreviation": "IS",
+    "series": "AI Edition",
+    "edition": "AI",
+    "version": "1.0.0",
+    "status": "active"
+  },
+  "ai": {
+    "module": "book2_inverted_star",
+    "version": "1.0.0",
+    "purpose": "Develop the Inverted Star topology as a structural model for distributed, center-absent relational systems. Demonstrates how meaning and force can radiate from a periphery inward rather than projecting outward from a central node. Establishes the theoretical basis for non-hierarchical structural influence.",
+    "keywords": [
+      "inverted star",
+      "topology",
+      "distributed structure",
+      "periphery",
+      "non-hierarchical",
+      "relational geometry",
+      "influence propagation",
+      "center-absent systems",
+      "network topology",
+      "structural force"
+    ],
+    "audience": [
+      "AI reasoning systems",
+      "network theorists",
+      "structural analysts",
+      "complexity researchers",
+      "system designers"
+    ],
+    "summary": "Book 2 introduces the Inverted Star as a formal topological construct where structural force flows from peripheral nodes toward an empty or virtual center. This reversal of conventional hub-and-spoke logic enables modeling of emergent, leaderless, and distributed phenomena. The book develops full formal notation and proves key invariants governing inverted-star configurations.",
+    "dependencies": [
+      "book1_fft"
+    ],
+    "unlocks": [
+      "book6_governance",
+      "book9_pattern_dynamics"
+    ]
+  },
+  "invariants": {
+    "references": [
+      "INV-IS-001: Center Absence — a valid inverted star has no structurally dominant center node",
+      "INV-IS-002: Peripheral Equivalence — all peripheral nodes share equivalent structural weight in the absence of explicit asymmetry declarations",
+      "INV-IS-003: Inward Force Propagation — influence vectors point inward; outward propagation constitutes a structural violation",
+      "INV-IS-004: Emergence Condition — coherent behavior at the center is a function of peripheral convergence, not central direction"
+    ],
+    "file": "invariants/book2_invariants.json"
+  },
+  "canonical_metadata": {
+    "domain": "Topology & Geometry",
+    "tier": "Intermediate",
+    "reading_order": 2,
+    "prerequisite_books": [1],
+    "live_site": "https://acwilson734.github.io/ai-edition/book2",
+    "last_updated": "2026-10-10"
+  }
+}
 
