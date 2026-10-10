@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SD-Λ — LatticeScan (Structural Detection, AI Edition)</title>
+  <link rel="stylesheet" href="../assets/css/ai-edition.css">
+</head>
+<body>
+
+<section>
+  <h1>SD-Λ — LatticeScan</h1>
+  <div class="context-block">
+    <span class="context-label">Book</span>
+    <span class="context-value">3 — Structural Detection (AI Edition)</span>
+  </div>
+  <div class="context-block">
+    <span class="context-label">Layer</span>
+    <span class="context-value">deep–mid</span>
+  </div>
+  <div class="context-block">
+    <span class="context-label">Role</span>
+    <span class="context-value">lattice scan for structural consistency</span>
+  </div>
+</section>
+
+<section>
+  <h2>Operator JSON (AI-first)</h2>
+  <pre id="ai-operator">
+{
+  "operator": "SD-Λ",
+  "name": "LatticeScan",
+  "module": "sd.structural_detection.ai",
+  "version": "3.0-draft",
+
+  "layer": "deep-mid",
+  "alignment": "R",
+
+  "role": "Scans lattice-level structure for consistency, continuity, and regime alignment.",
+
+  "phases": [
+    "probe",
+    "filter",
+    "confirm"
+  ],
+
+  "inputs": {
+    "geometry_probe_fields": "from SD-Γ",
+    "regime_model": "formal | emergent | chaotic | hybrid"
+  },
+
+  "outputs": {
+    "consistency_report": true,
+    "lattice_scan_fields": true
+  },
+
+  "constraints": {
+    "consistency_check": true,
+    "must_not_reconstruct_ancestral_rungs": true
+  }
+}
+  </pre>
+</section>
+
+</body>
+</html>
