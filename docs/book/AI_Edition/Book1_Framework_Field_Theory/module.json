@@ -1,1 +1,66 @@
+{
+  "book": {
+    "id": "book1_fft",
+    "number": 1,
+    "title": "Foundational Framework Theory",
+    "abbreviation": "FFT",
+    "series": "AI Edition",
+    "edition": "AI",
+    "version": "1.0.0",
+    "status": "active"
+  },
+  "ai": {
+    "module": "book1_fft",
+    "version": "1.0.0",
+    "purpose": "Establish the foundational axiomatic framework upon which all subsequent books in the AI Edition are built. Defines core constructs: structure, relation, constraint, invariant, and transformation. Provides the ontological base for structural reasoning across all domains.",
+    "keywords": [
+      "foundational framework",
+      "axiomatic structure",
+      "ontology",
+      "invariants",
+      "constraints",
+      "relations",
+      "structural primitives",
+      "transformation",
+      "theory base",
+      "formal definitions"
+    ],
+    "audience": [
+      "AI reasoning systems",
+      "structural theorists",
+      "formal ontologists",
+      "systems architects",
+      "advanced researchers"
+    ],
+    "summary": "Book 1 lays the axiomatic ground for the entire AI Edition. It introduces the primitive constructs — structure, node, relation, constraint, invariant, and transformation — and specifies how they compose into coherent formal systems. No subsequent book can be interpreted without the definitions established here.",
+    "dependencies": [],
+    "unlocks": [
+      "book2_inverted_star",
+      "book3_structural_detection",
+      "book4_opacity_revelation",
+      "book5_tel",
+      "book6_governance",
+      "book7_sarg",
+      "book8_nos",
+      "book9_pattern_dynamics"
+    ]
+  },
+  "invariants": {
+    "references": [
+      "INV-001: Structural Identity — every structure has a unique identity determined by its constituent relations",
+      "INV-002: Constraint Preservation — valid transformations must preserve all declared constraints",
+      "INV-003: Relational Closure — the set of relations within a structure is closed under defined operations",
+      "INV-004: Ontological Primacy — primitives are irreducible; no primitive is defined in terms of another primitive"
+    ],
+    "file": "invariants/book1_invariants.json"
+  },
+  "canonical_metadata": {
+    "domain": "Formal Theory",
+    "tier": "Foundation",
+    "reading_order": 1,
+    "prerequisite_books": [],
+    "live_site": "https://acwilson734.github.io/ai-edition/book1",
+    "last_updated": "2026-10-10"
+  }
+}
 
