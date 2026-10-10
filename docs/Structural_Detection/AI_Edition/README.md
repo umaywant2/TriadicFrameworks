@@ -1,3 +1,6 @@
+
+- [`module.json`](module.json) — Agentic module schema role assignments
+
 # Structural Detection — AI Edition
 **Book 3 of the TriadicFrameworks canon**
 
