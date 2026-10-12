@@ -55,105 +55,234 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
 <style>
-/* ------------------------------
-   GLOBAL RESET & BASE
---------------------------------*/
+/* ============================================================
+   NAWDERIAN NEON ARCADE THEME — RTT/1 SYNTHWAVE EDITION
+   ============================================================ */
+
+:root {
+  --bg-main: #05060a;                 /* deep CRT black */
+  --bg-nav: #0a0c12;                  /* darker sidebar */
+  --bg-panel: #0f1118;
+
+  --text-main: #e8f7ff;               /* neon ice */
+  --text-muted: #7a8ca0;              /* CRT fade */
+
+  --neon-cyan: #3df5ff;
+  --neon-magenta: #ff3dfc;
+  --neon-yellow: #ffe66d;
+
+  --triadic-neon: linear-gradient(135deg,
+                      #3df5ff,
+                      #ff3dfc,
+                      #ffe66d);
+
+  --scanline: repeating-linear-gradient(
+                to bottom,
+                rgba(255,255,255,0.03) 0px,
+                rgba(255,255,255,0.03) 1px,
+                rgba(0,0,0,0.05) 2px
+              );
+
+  --radius: 10px;
+  --glow: 0 0 12px rgba(255, 0, 180, 0.45),
+          0 0 24px rgba(0, 255, 255, 0.25);
+}
+
+/* Base layout */
+html { scroll-behavior: smooth; }
 body {
   margin: 0;
   padding: 0;
-  font-family: system-ui, sans-serif;
-  background: #0d0d0d;
-  color: #e6e6e6;
-  line-height: 1.6;
+  background: var(--bg-main);
+  background-image: var(--scanline);
+  color: var(--text-main);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* ------------------------------
-   HEADINGS (Your HTML uses raw h1/h2/h3)
---------------------------------*/
-h1 {
-  font-size: 2.4rem;
-  margin: 20px 0 10px;
+/* Neon headings */
+h1, h2, h3, h4 {
   font-weight: 700;
-  color: #fff;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic-neon);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: var(--glow);
 }
 
-h2 {
-  font-size: 1.8rem;
-  margin: 25px 0 10px;
-  font-weight: 600;
-  color: #ddd;
+/* Paragraphs and lists */
+p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: var(--text-main);
 }
 
-h3 {
-  font-size: 1.4rem;
-  margin: 20px 0 10px;
-  font-weight: 500;
-  color: #ccc;
-}
-
-/* ------------------------------
-   MAIN CONTENT WRAPPER
---------------------------------*/
-.main-content {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* ------------------------------
-   NAV MENU (fixed sidebar)
---------------------------------*/
-.nav-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 260px;
-  height: 100vh;
-  overflow-y: auto;
-  background: #111;
-  border-right: 1px solid #333;
-  padding: 20px;
-  z-index: 9999;
-}
-
-.nav-menu a {
-  display: block;
-  padding: 6px 0;
-  color: #ccc;
+/* Neon links */
+a {
+  color: var(--neon-cyan);
   text-decoration: none;
+  border-bottom: 1px dashed rgba(255,255,255,0.25);
+  transition: color 0.2s ease, border-color 0.2s ease, text-shadow 0.2s ease;
 }
 
-.nav-menu a:hover {
-  color: #fff;
+a:hover,
+a:focus {
+  color: var(--neon-magenta);
+  border-bottom-color: var(--neon-magenta);
+  text-shadow: 0 0 8px var(--neon-magenta);
 }
 
-/* Shift main content to the right */
-body {
-  margin-left: 260px;
+a:visited {
+  color: var(--neon-yellow);
 }
 
-/* ------------------------------
-   DATACENTER TABLE (your emoji grid)
---------------------------------*/
-.datacenter-table {
-  margin-top: 20px;
-  padding: 10px;
-  background: #1a1a1a;
-  border-radius: 8px;
+/* Code blocks */
+pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono";
+  background: rgba(255,255,255,0.04);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #dffaff;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: inset 0 0 12px rgba(0,255,255,0.15);
 }
 
-.datacenter-table div {
-  padding: 6px 0;
-  border-bottom: 1px solid #333;
+/* Context block */
+.context-block {
+  font-family: monospace;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0.5rem 0 1rem 0;
+  padding: 1rem;
+  background: var(--bg-panel);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--glow);
 }
 
-.datacenter-table div:last-child {
-  border-bottom: none;
+.context-label {
+  color: var(--neon-yellow);
+  font-weight: bold;
+  margin-right: 0.25rem;
 }
+
+.context-value {
+  color: var(--text-main);
+}
+
+/* Navigation panel */
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 4px 0 12px rgba(0,0,0,0.4);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--neon-cyan);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+  text-shadow: var(--glow);
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--neon-magenta);
+  text-shadow: 0 0 6px var(--neon-magenta);
+}
+
+/* Main content */
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--neon-cyan);
+  font-weight: 500;
+  text-shadow: var(--glow);
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--neon-magenta);
+}
+
+code {
+  color: var(--neon-cyan);
+}
+
+/* Hide the default arrow */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+/* Custom arrow icons */
+details > summary::before {
+  content: "⏵"; /* collapsed */
+  padding-right: 6px;
+  font-size: 0.9em;
+}
+details[open] > summary::before {
+  content: "⏷"; /* expanded */
+}
+
+/* Make the h2/h3 feel like the toggle */
+details > summary h2,
+details > summary h3 {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hover effect */
+details > summary:hover h2,
+details > summary:hover h3 {
+  text-decoration: underline;
+}
+
+/* Optional: fade-in animation for opened blocks */
+details[open] {
+  animation: fadeIn 0.15s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+      
 </style>
 
 <body class="bg-[#0d0d0d] text-[#e6e6e6] font-sans">
+   
+  <!-- Left Sidebar -->
+  <aside class="fixed top-0 left-0 w-64 h-full bg-[#111] border-r border-[#333] overflow-y-auto p-6">
+    <h2 class="text-xl font-bold mb-4">📡 RTT Datacenter Evaluator</h2>
 
+    <nav class="space-y-4">
+      
  <p align="center">
   <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
   <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -164,11 +293,6 @@ body {
   </svg>
  </p> 
 
-  <!-- Left Sidebar -->
-  <aside class="fixed top-0 left-0 w-64 h-full bg-[#111] border-r border-[#333] overflow-y-auto p-6">
-    <h2 class="text-xl font-bold mb-4">📡 RTT Datacenter Evaluator</h2>
-
-    <nav class="space-y-4">
       <div>
         <h3 class="text-sm uppercase tracking-wide text-gray-400 mb-2">Sections</h3>
         <ul class="space-y-1">
