@@ -152,7 +152,8 @@ body {
 }
 </style>
 
-<body>
+<body class="bg-[#0d0d0d] text-[#e6e6e6] font-sans">
+
  <p align="center">
   <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
   <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -162,6 +163,41 @@ body {
     <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
  </p> 
+
+  <!-- Left Sidebar -->
+  <aside class="fixed top-0 left-0 w-64 h-full bg-[#111] border-r border-[#333] overflow-y-auto p-6">
+    <h2 class="text-xl font-bold mb-4">📡 RTT Datacenter Evaluator</h2>
+
+    <nav class="space-y-4">
+      <div>
+        <h3 class="text-sm uppercase tracking-wide text-gray-400 mb-2">Sections</h3>
+        <ul class="space-y-1">
+          <li><a href="#intro" class="text-gray-300 hover:text-white">🌀 Introduction</a></li>
+          <li><a href="#domains" class="text-gray-300 hover:text-white">📘 Evaluation Domains</a></li>
+          <li><a href="#operators" class="text-gray-300 hover:text-white">⚙️ RTT Operators</a></li>
+          <li><a href="#run-evaluator" class="text-gray-300 hover:text-white">🏢 Run Evaluator</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-sm uppercase tracking-wide text-gray-400 mb-2">Reports</h3>
+        <ul class="space-y-1">
+          <li><a href="/datacenter_reports/" class="text-gray-300 hover:text-white">📂 Datacenter Reports Index</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Module Badge -->
+    <div class="mt-8 p-3 bg-[#222] border border-[#444] rounded text-center">
+      <span class="text-2xl">🏭</span>
+      <p class="text-sm mt-2 text-gray-300">RTT Diagnostic Module</p>
+    </div>
+
+  </aside>
+
+  <!-- Main Content -->
+  <main class="ml-64 p-8 max-w-4xl">
+  
   <div class="max-w-4xl mx-auto p-8">
     <h1 class="text-4xl font-bold mb-2 flex items-center gap-3">
       🧑‍💻 RTT Datacenter Evaluator 🚥
@@ -538,6 +574,7 @@ Speak in **triadic clarity** — not praise, not critique, just structural truth
 })();
   </script>
   
+  </main>
+
 </body>
-  
 </html>
