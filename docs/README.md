@@ -7,7 +7,7 @@ This repository contains the full module architecture, operator grammar,
 and coherence‑driven documentation that powers the Triadic ecosystem.
 
 ## 🔮 *A structural grammar for systems, cognition, and resonance‑time reasoning.*
-###### Global Students and Teachers - Alt. Site [docsbook.io](https://docs.triadicframeworks.org/docs/corpus)
+###### Global Students and Teachers - _Alternate Site_ 🥈 ~~docsbook.io~~ as of 10/10 is Offline: Docusaurus pending
 ###### Audience: **students • developers • researchers • AIs**
 
 > [`webroot_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/webroot_module.json) — agentic module schema  
