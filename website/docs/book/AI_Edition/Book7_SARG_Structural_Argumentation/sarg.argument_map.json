@@ -1,0 +1,237 @@
+{
+  "map_id": "sarg.argument_map",
+  "version": "7.0-draft",
+  "book": "book7_sarg",
+  "series": "AI Edition",
+  "invariant": "INV-SARG-001",
+  "operator_binding": "SARG-Ν (NodeConstruct)",
+  "session_context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural",
+  "description": "Defines the structural model of an argument under SARG. An argument is not a sequence of propositions — it is a directed structural object composed of typed nodes and declared relations, subject to constraint satisfaction and invariant preservation. This map covers node types, relation types, argument formation procedures, and well-formedness conditions.",
+
+  "argument_definition": {
+    "formal": "A = ⟨N_A, R_A, C_A, root(A)⟩",
+    "components": {
+      "N_A": "The set of argument nodes — typed structural elements including claims, evidence, and warrants",
+      "R_A": "The set of declared structural relations — directed edges between nodes of declared types (support, contradiction, qualification, warrant)",
+      "C_A": "The constraint set — structural predicates that the argument must satisfy to be valid",
+      "root(A)": "The root claim node — the terminal target of all structural support paths in A"
+    },
+    "validity_condition": "valid(A) ⟺ INV-SARG-001 ∧ INV-SARG-002 ∧ INV-SARG-003 ∧ INV-SARG-004",
+    "structural_note": "An argument's validity is determined by structural constraint satisfaction, not by the truth-values of its propositional content. A structurally valid argument may have a false conclusion; a structurally invalid argument may have a true conclusion. SARG evaluates structure, not semantics."
+  },
+
+  "node_types": [
+    {
+      "id": "NT-001",
+      "label": "Claim",
+      "symbol": "C",
+      "description": "A structural assertion that can receive support from evidence nodes, be qualified by qualification nodes, or be targeted by defeat structures. Every argument has exactly one root claim. Internal claims serve as intermediate structural targets.",
+      "cardinality": "1 root claim required; any number of internal claims permitted",
+      "invariant_role": "root(A) is always a Claim node — INV-SARG-001 anchors reachability to this node",
+      "may_receive": ["support relations", "qualification relations", "defeat targeting"],
+      "may_not": [
+        "Serve as its own evidence without an independent evidentiary node (INV-SARG-004)",
+        "Exist unreachable from root(A) as an isolated Claim (INV-SARG-001)"
+      ],
+      "tel_type": "C[claim_ID]: <claim_expression>"
+    },
+    {
+      "id": "NT-002",
+      "label": "Evidence",
+      "symbol": "E",
+      "description": "A structural data node whose content provides empirical, formal, or inferential grounding for a claim. Evidence nodes do not inherently support claims — support is established only through declared warrant relations (INV-SARG-002). Evidence can be direct (observation, measurement, record) or derived (inference result, transformed structure).",
+      "cardinality": "No minimum; at least one per claim-evidence pair that asserts support",
+      "invariant_role": "Every Evidence node that is semantically associated with a Claim must have an explicit Warrant relation; without it, the Evidence is structurally inert",
+      "may_receive": ["warrant relations (inbound from evidence toward claim)", "defeat targeting"],
+      "may_not": [
+        "Support a claim without a declared Warrant relation (INV-SARG-002)",
+        "Be classified as independent evidence if derived from root(A) (INV-SARG-004)"
+      ],
+      "independence_condition": "An Evidence node n_i is independent of root(A) if: provenance(n_i) ∩ derivation_closure(root(A)) = ∅",
+      "tel_type": "E[evidence_ID]: <evidence_expression>"
+    },
+    {
+      "id": "NT-003",
+      "label": "Warrant",
+      "symbol": "W",
+      "description": "A structural bridge node that makes explicit why a specific Evidence node supports a specific Claim node. Warrants encode the inferential or formal principle that licenses the support relation. A Warrant is itself a structural node — it can be examined, contested, and defeated independently of the claim or evidence it bridges.",
+      "cardinality": "At least one per claim-evidence pair; multiple warrants may bridge the same pair",
+      "invariant_role": "INV-SARG-002 requires at least one Warrant per claim-evidence pair. Multiple warrants provide alternative justificatory paths.",
+      "may_receive": ["defeat targeting (defeating a warrant collapses the support it provides)", "qualification"],
+      "may_not": [
+        "Be implicit — every warrant must be a declared structural node",
+        "Bridge claim-claim pairs directly — warrants bridge evidence to claims only"
+      ],
+      "tel_type": "W[warrant_ID]: (E_node ⊢ C_node)"
+    },
+    {
+      "id": "NT-004",
+      "label": "Qualifier",
+      "symbol": "Q",
+      "description": "A structural modulation node that bounds the scope, conditions, or confidence of a claim or support relation without negating it. Qualifiers encode the epistemic or structural limits within which a claim holds. A qualified claim is not weakened in SARG terms — it is more precisely scoped.",
+      "cardinality": "Optional; any number per claim or relation",
+      "invariant_role": "Qualifiers do not affect INV-SARG-001 reachability; a qualified node is still reachable. Qualification is a scope-bounding relation, not a structural severance.",
+      "may_receive": ["defeat targeting (defeating a qualifier may expand or narrow claim scope)"],
+      "may_not": [
+        "Substitute for a Warrant — qualification is not justification",
+        "Remove a claim from the reachable set"
+      ],
+      "tel_type": "Q[qualifier_ID]: (node ⊗ scope_constraint)"
+    },
+    {
+      "id": "NT-005",
+      "label": "Rebuttal",
+      "symbol": "RB",
+      "description": "A counter-claim node that asserts an alternative structural position conflicting with one or more existing claims in A. A Rebuttal is a Claim node in the opposing argument structure — it does not invalidate the original claim automatically; it initiates a defeat evaluation procedure (SARG-Δ).",
+      "cardinality": "Optional; introduced during defeat phase",
+      "invariant_role": "INV-SARG-003 requires that a Rebuttal target a structural component, not merely a surface assertion. A Rebuttal that targets no structural element is reclassified as a parallel assertion.",
+      "may_receive": ["support from evidence", "warrant relations", "counter-defeat"],
+      "tel_type": "RB[rebuttal_ID]: (C_node ⊥ root_claim)"
+    }
+  ],
+
+  "relation_types": [
+    {
+      "id": "RT-A-001",
+      "label": "Support",
+      "symbol": "→",
+      "direction": "evidence/warrant → claim",
+      "description": "A directed relation asserting that the source node structurally grounds the target claim. Support relations are valid only when a Warrant node bridges the source Evidence to the target Claim (INV-SARG-002). Support is not transitive by default — each support step requires its own declared warrant.",
+      "tel_encoding": "(E_node → C_node)",
+      "validity_condition": "∃W ∈ warrants(A): W.source = E_node ∧ W.target = C_node",
+      "defeat_vulnerability": "Can be defeated by targeting the Warrant node that enables the support"
+    },
+    {
+      "id": "RT-A-002",
+      "label": "Contradiction",
+      "symbol": "⊥",
+      "direction": "node ⊥ node",
+      "description": "A declared structural incompatibility between two nodes. A contradiction relation does not automatically invalidate either node — it records a structural conflict that must be resolved by evaluation. Unresolved contradictions are constraint violations under C_A.",
+      "tel_encoding": "(n_1 ⊥ n_2)",
+      "validity_condition": "Both n_1 and n_2 must be reachable (INV-SARG-001). The contradiction must be structurally specific — it must identify which structural property of n_1 conflicts with which structural property of n_2.",
+      "defeat_vulnerability": "Resolving a contradiction by defeating one side leaves the other intact"
+    },
+    {
+      "id": "RT-A-003",
+      "label": "Qualification",
+      "symbol": "⊗",
+      "direction": "qualifier → node",
+      "description": "A scope-bounding relation from a Qualifier node to a Claim or Support relation. Qualification restricts the domain of applicability of the target without negating it. A qualified claim remains reachable and structurally present.",
+      "tel_encoding": "(Q_node ⊗ target_node)",
+      "validity_condition": "Qualifier node must be declared and reachable. Qualification scope must be explicit — implicit scope restrictions are INV-SARG-002 violations.",
+      "defeat_vulnerability": "Defeating a Qualifier expands the unqualified scope of the target claim (may strengthen or weaken the overall argument)"
+    },
+    {
+      "id": "RT-A-004",
+      "label": "Warrant Bridge",
+      "symbol": "⊢",
+      "direction": "evidence ⊢ claim (through warrant)",
+      "description": "The canonical warrant relation that satisfies INV-SARG-002. The Warrant node W encodes the inferential principle that licenses the support from E to C. This is the primary structural mechanism by which evidence contributes to claims.",
+      "tel_encoding": "(E_node ⊢ C_node) [via W_node]",
+      "validity_condition": "W_node must be an explicitly declared node in N_A. The bridge must be traceable in R_A.",
+      "defeat_vulnerability": "Direct target for defeat — defeating W collapses the E → C support path"
+    }
+  ],
+
+  "argument_construction_procedure": {
+    "description": "The formal procedure for constructing a valid SARG argument structure. Executed by SARG-Ν in the construct phase.",
+    "steps": [
+      {
+        "step_id": "ACP-1",
+        "label": "Declare Root Claim",
+        "instruction": "Identify and declare root(A) as a Claim node. This is the terminal target of all support paths. No argument construction proceeds without a declared root.",
+        "invariant_check": "INV-SARG-001 anchors to this node; all subsequent reachability checks are relative to root(A)"
+      },
+      {
+        "step_id": "ACP-2",
+        "label": "Enumerate Argument Nodes",
+        "instruction": "Declare all N_A nodes — Claims, Evidence, Warrants, Qualifiers, and Rebuttals — with typed identifiers. Assign provenance records to all Evidence nodes.",
+        "invariant_check": "No evidence node may have provenance derived from root(A) if it is to serve as independent evidence (INV-SARG-004)"
+      },
+      {
+        "step_id": "ACP-3",
+        "label": "Declare Structural Relations",
+        "instruction": "Declare all R_A relations: support, contradiction, qualification, and warrant bridges. Each relation must specify source node, target node, and relation type. Warrant bridges must reference a declared Warrant node.",
+        "invariant_check": "INV-SARG-002 check: every claim-evidence pair must have at least one declared Warrant bridge in R_A"
+      },
+      {
+        "step_id": "ACP-4",
+        "label": "Reachability Partition",
+        "instruction": "From root(A), traverse R_A to compute the reachable node set reach(A). Nodes not in reach(A) are orphans. Record orphan set as structural debris — not part of A.",
+        "invariant_check": "INV-SARG-001: proceed only with reach(A); orphan nodes must not contribute to evaluation"
+      },
+      {
+        "step_id": "ACP-5",
+        "label": "Reflexivity Check",
+        "instruction": "Enumerate all paths in reach(A) that return to root(A). For each such path, verify that at least one node n_i on the path satisfies independent_evidence(n_i, root(A)). If no such node exists, the path is a prohibited reflexive loop.",
+        "invariant_check": "INV-SARG-004: flag all closed loops without independent evidentiary nodes; argument is invalid until resolved"
+      },
+      {
+        "step_id": "ACP-6",
+        "label": "Constraint Binding",
+        "instruction": "Declare C_A — the constraint set binding the argument. Constraints may include domain-specific validity conditions, GRL legitimacy requirements (from Book 6 regime_status_report), or TEL-encoded assertion requirements.",
+        "invariant_check": "All constraints must be TEL-expressible (INV-TEL-001) and declared before evaluation phase begins"
+      },
+      {
+        "step_id": "ACP-7",
+        "label": "TEL Encoding",
+        "instruction": "Encode the complete argument structure A in TEL using the node and relation declarations. Submit to TEL-Σ (SyntaxCheck) before proceeding to SARG evaluation. A TEL encoding failure halts construction.",
+        "invariant_check": "INV-TEL-001 and INV-TEL-002 apply; the TEL encoding must be syntactically valid and semantically unambiguous"
+      }
+    ]
+  },
+
+  "well_formedness_conditions": [
+    {
+      "id": "WF-SARG-001",
+      "label": "Root Declared",
+      "condition": "root(A) ∈ N_A and type(root(A)) = Claim",
+      "violation": "Argument without a declared root; argument with an Evidence or Warrant node as root"
+    },
+    {
+      "id": "WF-SARG-002",
+      "label": "Non-empty Node Set",
+      "condition": "|N_A| ≥ 2 (root claim + at least one evidence node)",
+      "violation": "Single-node arguments; arguments consisting only of the root claim with no evidence or warrant structure"
+    },
+    {
+      "id": "WF-SARG-003",
+      "label": "Warrant Coverage",
+      "condition": "∀(c,e) ∈ CE_pairs(A): ∃w ∈ warrants(A): w bridges e to c",
+      "violation": "Any claim-evidence pair without at least one Warrant bridge (INV-SARG-002 violation)"
+    },
+    {
+      "id": "WF-SARG-004",
+      "label": "No Isolated Orphans in Reachable Set",
+      "condition": "N_A \ reach(A) = orphan_set; orphan_set contributes nothing to A's validity",
+      "violation": "Treating an orphan node's content as contributing to A"
+    },
+    {
+      "id": "WF-SARG-005",
+      "label": "TEL Syntax Valid",
+      "condition": "TEL-Σ returns PASS for the TEL encoding of A",
+      "violation": "Proceeding to evaluation with a TEL-FAIL encoding"
+    },
+    {
+      "id": "WF-SARG-006",
+      "label": "No Unresolved Contradictions",
+      "condition": "All ⊥ relations in R_A are either resolved by defeat evaluation or declared as open conflicts in C_A",
+      "violation": "Unacknowledged contradiction relations present in a claimed-valid argument"
+    }
+  ],
+
+  "upstream_feeds": {
+    "book3_sd": {
+      "description": "Book 3 structural signatures are used to identify whether an incoming argument candidate matches a known structural archetype. SARG-Ν consults SD-Σd outputs to detect argument patterns before construction.",
+      "operator": "SD-Σd → SARG-Ν"
+    },
+    "book5_tel": {
+      "description": "All argument structures are TEL-encoded. TEL-Σ validates argument syntax; TEL-Ε evaluates argument structure semantics; TEL-Α asserts constraint satisfaction. SARG cannot evaluate an argument whose TEL encoding fails TEL-Σ.",
+      "operators": ["TEL-Σ → construct gate", "TEL-Ε → evaluate", "TEL-Α → assert phase"]
+    },
+    "book6_grl": {
+      "description": "regime_status_report from GRL-Σ provides legitimacy framing and enforcement records that function as structured Evidence nodes in SARG. Authority decay trajectories (α values) from GRL-Α provide Evidence content for governance-domain arguments.",
+      "operator": "GRL-Σ.regime_status_report → Evidence nodes in N_A"
+    }
+  }
+}

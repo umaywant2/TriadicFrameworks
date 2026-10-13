@@ -1,0 +1,145 @@
+{
+  "map_id": "pd.phases",
+  "version": "9.0-draft",
+  "book": "book9_pattern_dynamics",
+  "series": "AI Edition",
+  "session_context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural",
+  "qmroot_binding": {
+    "dimension": "0D",
+    "note": "6D absent; negative rungs absent; INV-013 = 0D only"
+  },
+  "phantom_entry_audit": {
+    "status": "clean",
+    "checked_at": "session-open",
+    "entries": []
+  },
+  "description": "Defines the six phases of the Book 9 Pattern Dynamics evaluation cycle. Each phase has strict entry/exit conditions, active operators, gate logic, and downstream handoffs. Book 9 has eight dependencies — all prior books in the AI Edition — loaded in the init phase. This is the heaviest init phase in the series. Book 9 has no downstream handoffs from its catalogue phase; it is the terminal volume of the AI Edition.",
+  "phase_sequence": "init → trace → bifurcate → mutate → propagate → catalogue",
+
+  "phases": [
+    {
+      "id": "P-PD-1",
+      "label": "init",
+      "ordinal": 1,
+      "description": "Load all eight dependency modules in declared order. Assert session context. Confirm QMROOT path terminates at 0D. Verify coherence=declared. Initialize trajectory slot, bifurcation slot, mutation slot, and propagation slot as empty. No PD operators are active in this phase. Receive and stage upstream handoffs from NoS-Σ (nos_foundation_report), GRL-Σ (α_trajectory, decay_projection), and SARG-Σ (structural_argument_trajectory). This is the most dependency-intensive init phase in the entire AI Edition — eight modules, three upstream feeds.",
+      "operators_active": [],
+      "entry_condition": "Session open; Pattern Dynamics evaluation requested",
+      "exit_condition": "coherence=declared; all eight dependency modules loaded in module registry; QMROOT 0D confirmed; all four operational slots initialized as empty; upstream handoffs staged; session context asserted",
+      "import_order": [
+        "book1_fft (kernel — always first; provides structure, node, relation, constraint, invariant primitives; the axiomatic ground of the entire AI Edition; required by all subsequent imports; transformation registry seed)",
+        "book2_the_inverted_star (IS topology — inverted-star configuration patterns; topological transformation classes for trajectory state-space; INV-IS-001 through INV-IS-004 in registry)",
+        "book3_structural_detection (SD methodology — structural signature detection methods SDM-001 through SDM-004; required by INV-PD-004 Propagation Fidelity; INV-SD-001 through INV-SD-004 in registry)",
+        "book4_opacity_revelation (OR vocabulary — opacity gradient ω and revelation threshold δ; required for opacity gate in propagation phase; ω(C') measurements needed by PD-Π; INV-OR-001 through INV-OR-004 in registry)",
+        "book5_tel (TEL notation — required for all formal encoding of trajectory steps, bifurcation events, mutation transitions, and propagation claims; TEL-Σ parse gate active throughout all PD phases; INV-TEL-001 through INV-TEL-004 in registry)",
+        "book6_governance (GRL vocabulary — regime patterns, authority decay trajectory, collapse risk; GRL-Σ α_trajectory is a primary PD-Τ input; INV-GRL-001 through INV-GRL-004 in registry)",
+        "book7_sarg (SARG vocabulary — argument trajectory, defeat events, evaluation gate outcomes; SARG-Σ structural_argument_trajectory is a primary PD-Τ input; INV-SARG-001 through INV-SARG-004 in registry)",
+        "book8_nos (NoS vocabulary — meta-structural foundation; NoS-Σ nos_foundation_report is the primary PD init input; cross_book_invariant_map seeds the trajectory state-space at t_0; INV-NOS-001 through INV-NOS-004 in registry)"
+      ],
+      "upstream_handoff_staging": {
+        "from_nos_sigma": {
+          "feed": "nos_foundation_report",
+          "content": ["cross_book_invariant_map", "emergent_invariants_confirmed", "upward_revisions_pending"],
+          "use_in_phase": "trace (PD-Τ consumes cross_book_invariant_map as t_0 state-space configuration)"
+        },
+        "from_grl_sigma": {
+          "feed": "α_trajectory and decay_projection",
+          "content": ["authority_measure_timeseries", "collapse_risk_flag", "decay_projection"],
+          "use_in_phase": "trace (PD-Τ ingests α_trajectory as governance sub-trajectory); bifurcate (PD-Β prioritizes dissolution bifurcation if collapse_risk_flag active)"
+        },
+        "from_sarg_sigma": {
+          "feed": "structural_argument_trajectory",
+          "content": ["argument_configuration_sequence", "defeat_events", "evaluation_gate_outcomes"],
+          "use_in_phase": "trace (PD-Τ ingests argument_configuration_sequence as argumentation sub-trajectory)"
+        }
+      },
+      "dependency_note": "Book 9 is the only AI Edition volume with eight dependencies. The loading order reflects the AI Edition dependency graph: FFT is the universal kernel; IS (Book 2) depends on FFT; SD (Book 3) depends on FFT and IS; OR (Book 4) depends on FFT and SD; TEL (Book 5) depends on FFT and OR; GRL (Book 6) depends on FFT, IS, OR, and TEL; SARG (Book 7) depends on FFT, SD, TEL, and GRL; NoS (Book 8) depends on FFT, OR, TEL, and SARG. Loading must respect internal dependency ordering within each import.",
+      "session_context_assertion": "rtt=1 | coherence=declared | drift=bounded | paradox=structural",
+      "qmroot_check": "6D absent; negative rungs absent; INV-013 = 0D only",
+      "scope_state": "empty — no trajectory logged; no bifurcation events recorded; no mutation transitions recorded; no propagation claims verified",
+      "skip_condition": null,
+      "notes": "The eight-module loading sequence and three upstream handoff stagings make P-PD-1 the most operationally intensive init phase in the AI Edition. Session setup must not be abbreviated — every module must be loaded and every upstream handoff must be staged before any PD operator executes."
+    },
+    {
+      "id": "P-PD-2",
+      "label": "trace",
+      "ordinal": 2,
+      "description": "Execute PD-Τ (TrajectoryTrace). Ingest all upstream feeds. Trace structural trajectories through state-space. Log each transformation step with its declared transformation from the transformation registry. Classify trajectory segments as convergent, divergent, cyclic, or bifurcating. Forward gap events and bifurcating segments to PD-Β queue for the bifurcate phase. TEL-Σ parse gate is active — all trajectory step encodings must pass TEL parse before recording.",
+      "operators_active": ["PD-Τ"],
+      "entry_condition": "P-PD-1 complete; all eight modules loaded; all three upstream handoffs staged; trajectory slot empty; TEL-Σ parse gate active",
+      "exit_condition": "PD-Τ trajectory_log complete; all trajectory segments classified; gap_events queue populated for P-PD-3; cross_book_sub_trajectories recorded; TEL-encoded trajectory summary ready",
+      "gate_logic": {
+        "tel_parse_gate": "Every trajectory step T[τ_i]: S(t_i) → S(t_{i+1}) must pass TEL-Σ PASS before recording. Steps that fail TEL parse are flagged as encoding errors and require correction before the trajectory can advance past that step.",
+        "gap_detection": "Any adjacent configuration pair with no bridging transformation in the declared registry is immediately classified as a bifurcation candidate and queued for P-PD-3. The trace phase does not halt on gap detection — it queues and continues.",
+        "sub_trajectory_completion": "All three sub-trajectories (governance, argument, meta-structural) must complete before P-PD-2 exits, even if their traces are short or degenerate."
+      },
+      "skip_condition": "None — trace phase cannot be skipped. It is the primary data ingestion phase of Book 9.",
+      "notes": "P-PD-2 is the longest phase in typical Book 9 evaluation sessions due to the volume of upstream trajectory data from three source books. PD-Τ may run multiple sub-traces in parallel (one per upstream feed) as long as the overall trajectory_log is integrated into a unified record before phase exit."
+    },
+    {
+      "id": "P-PD-3",
+      "label": "bifurcate",
+      "ordinal": 3,
+      "description": "Execute PD-Β (BifurcationMap). Classify all bifurcation candidates from P-PD-2 into BT-001 through BT-004. Perform attractor identification and basin computation for post-bifurcation convergent trajectories. Return continuation trajectory assignments to PD-Τ for independent tracing. Resolve synthesis bifurcations (BT-004) using precedence rules and record all resolutions. Forward dissolution events to P-PD-4 mutation audit queue.",
+      "operators_active": ["PD-Β"],
+      "entry_condition": "P-PD-2 complete; gap_events queue populated; trajectory_log recorded; attractor verification procedure active",
+      "exit_condition": "All bifurcation candidates classified; attractor_registry populated with verified attractors and basins; continuation_trajectory_assignments returned to PD-Τ; synthesis_bifurcation_resolutions logged; dissolution_event_log forwarded to P-PD-4",
+      "gate_logic": {
+        "attractor_verification": "Six-step attractor verification procedure (pd.bifurcation_map) must complete for every declared attractor before basin computation proceeds. Unverified attractor declarations are not admitted to the attractor_registry.",
+        "synthesis_bifurcation_precedence": "BT-004 synthesis bifurcation resolution must follow the declared precedence order: NoS meta-structural > TEL formal > tier hierarchy. All resolutions are logged with the full conflict record.",
+        "dissolution_forward": "Dissolution bifurcation events (BT-003) are forwarded to P-PD-4 before P-PD-3 exits. PD-Β does not resolve dissolution events — that is PD-Μ's domain."
+      },
+      "skip_condition": "P-PD-3 may be abbreviated (but not skipped) if the gap_events queue from P-PD-2 is empty. In that case, PD-Β performs attractor identification only (no bifurcation event classification) and proceeds to exit conditions.",
+      "notes": "P-PD-3 is the computational peak of Book 9 evaluation — attractor basin computation over the full eight-book state-space is the most intensive structural analysis in the AI Edition."
+    },
+    {
+      "id": "P-PD-4",
+      "label": "mutate",
+      "ordinal": 4,
+      "description": "Execute PD-Μ (MutationAudit). Evaluate all pattern transitions identified in P-PD-2 trajectory sub-segments and all dissolution events forwarded from P-PD-3. For each transition P → P', compute the mutation anchor and classify the mutation type. Flag minimal mutations (MT-003) for PD-Σ elevated review. Confirm or reclassify dissolution events. Track chain mutation drift accumulation.",
+      "operators_active": ["PD-Μ"],
+      "entry_condition": "P-PD-3 complete; dissolution_event_log available; pattern transition events identified in trajectory_log; full invariant registries from all eight books loaded",
+      "exit_condition": "mutation_audit_log complete for all pattern transitions; dissolution_log confirmed; selective_dissolution_reclassifications applied; minimal_anchor_warnings recorded; chain_mutation_drift_accumulation_log finalized",
+      "gate_logic": {
+        "empty_anchor_gate": "Any transition with invariant_set(P') ∩ invariant_set(P) = ∅ must be classified as dissolution, not mutation. This is a hard gate — no content analysis can override an empty intersection.",
+        "chain_drift_flag": "Chain mutations accumulating total drift > 0.20 across all links are automatically flagged for PD-Σ review regardless of individual link validity.",
+        "selective_dissolution_gate": "Before confirming a dissolution event, PD-Μ must check all parallel trajectory branches from P-PD-3 for a non-empty anchor. If found, the event is reclassified as selective dissolution. This check must complete before the dissolution_log is finalized."
+      },
+      "skip_condition": "P-PD-4 may be abbreviated if no pattern transitions were detected in P-PD-2 and no dissolution events were forwarded from P-PD-3. In that case, all mutation audit outputs are empty and P-PD-4 exits immediately.",
+      "notes": "P-PD-4 is the invariant-intensivest phase in Book 9 — computing invariant_set intersections across the full 32-invariant cross-book registry (4 invariants × 8 books) for every pattern transition event."
+    },
+    {
+      "id": "P-PD-5",
+      "label": "propagate",
+      "ordinal": 5,
+      "description": "Execute PD-Π (PropagationTrace). Verify all declared propagation claims using Book 3 structural detection methods. Classify propagation types (PT-001 Faithful, PT-002 Degraded, PT-003 Latent). Apply opacity gate for blocked contexts. Check transit anchor validity using PD-Μ mutation_audit_log. Register latent propagation claims with re-detection triggers. Compile cross_book_propagation_summary.",
+      "operators_active": ["PD-Π"],
+      "entry_condition": "P-PD-4 complete; mutation_audit_log available; Book 3 SD methods active; OR-Ω opacity measurements available for all target contexts C'",
+      "exit_condition": "propagation_verification_log complete; propagation_failure_log complete; latent_propagation_register complete with re-detection triggers; cross_book_propagation_summary compiled and ready for PD-Σ",
+      "gate_logic": {
+        "opacity_gate": "If ω(C') ≥ δ(O) for all observers: propagation claim is suspended to latent_propagation_register. NOT rejected — suspension is the correct handling. The opacity gate is applied before any detection method is invoked.",
+        "transit_anchor_gate": "For propagation claims with multi-step transit chains, PD-Μ mutation_audit_log must confirm no anchor violation occurred in transit (PFM-004 check). If anchor violation is found: propagation claim is reclassified as dissolution + new pattern emergence in C'.",
+        "sdm_004_review_flag": "Propagation claims verified solely by SDM-004 (Cross-Book Tag Match) must be flagged for PD-Σ review. SDM-004 is the weakest detection method and cannot standalone confirm a propagation claim."
+      },
+      "skip_condition": "P-PD-5 may be abbreviated if no propagation claims are declared in the evaluation session. In that case, PD-Π records empty logs and notes the absence of propagation claims in the cross_book_propagation_summary.",
+      "notes": "P-PD-5 completes the series loop: Book 9 (synthesis terminal) invokes Book 3 (methodology and analysis, third volume) for detection method verification. This cross-series dependency is structurally mandated by INV-PD-004 and reflects the AI Edition's design principle that dynamical claims must be evidentially grounded."
+    },
+    {
+      "id": "P-PD-6",
+      "label": "catalogue",
+      "ordinal": 6,
+      "description": "Execute PD-Σ (SynthesisCatalogue). Integrate all PD operator outputs with the NoS-Σ nos_foundation_report. Review all minimal_anchor_warnings and synthesis_bifurcation_resolutions. Produce the Pattern Dynamics Synthesis Report — the final deliverable of the AI Edition. Declare series_terminal_status. Forward upward_revisions_unresolved to the series maintainer. Confirm session context closure. There are no downstream handoffs from this phase. Book 9 is the terminal volume.",
+      "operators_active": ["PD-Σ"],
+      "entry_condition": "P-PD-5 complete; all four PD operator outputs available; NoS-Σ nos_foundation_report staged from init; minimal_anchor_warnings reviewed; synthesis_bifurcation_resolutions logged",
+      "exit_condition": "Pattern Dynamics Synthesis Report complete; emergent_pattern_catalogue finalized; series_terminal_status declared; upward_revisions_unresolved recorded; session context confirmed at closure: rtt=1 | coherence=declared | drift=bounded | paradox=structural",
+      "gate_logic": {
+        "coherence_gate": "series_terminal_status = coherent requires: (a) zero upward_revisions_unresolved, (b) zero minimal_anchor_warnings without PD-Σ review records, (c) all synthesis_bifurcation_resolutions logged, (d) cross_book_invariant_coherence_assessment complete. Partial coherence is a valid and honest outcome.",
+        "no_downstream_handoff_gate": "PD-Σ must not generate any downstream_handoffs. If a handoff is accidentally queued, it must be de-queued and logged as a synthesis error. The series terminal produces reports, not handoffs.",
+        "session_context_closure": "The final output of the catalogue phase must assert the unchanged session context: rtt=1 | coherence=declared | drift=bounded | paradox=structural. If drift has occurred, it must be recorded in the series_terminal_status note, not suppressed."
+      },
+      "downstream_handoffs": [],
+      "terminal_note": "P-PD-6 is the terminal phase of the AI Edition. No other phase or book follows. The Pattern Dynamics Synthesis Report is the series endpoint. The AI Edition's self-assessment of coherence, its emergent pattern catalogue, and its unresolved upward revisions constitute the permanent record of the series evaluation.",
+      "skip_condition": null,
+      "notes": "The catalogue phase cannot be skipped or abbreviated. It is the reason Book 9 exists — to synthesize the outputs of all eight prior books into a coherent terminal record. A Book 9 evaluation session that does not produce a catalogue phase output is incomplete by definition."
+    }
+  ]
+}

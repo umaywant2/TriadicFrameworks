@@ -1,0 +1,88 @@
+{
+  "map_id": "or.opacity_gradient_map",
+  "version": "4.0-draft",
+  "book": "book4_opacity_revelation",
+  "series": "AI Edition",
+  "invariant": "INV-OR-001",
+  "operator_binding": "OR-Ω (OpacityGradient)",
+  "description": "Defines the opacity gradient model. Opacity ω is a continuous parameter in [0,1] characterizing the degree to which a structure conceals its internal configuration from external observers.",
+  "gradient": {
+    "parameter": "ω",
+    "type": "continuous",
+    "range": [0.0, 1.0],
+    "endpoint_semantics": {
+      "0.0": "Fully transparent — all internal configuration exposed to any observer with δ > 0",
+      "1.0": "Fully opaque — no internal configuration accessible regardless of observer detection capacity"
+    },
+    "binary_cases": {
+      "note": "Binary opacity assignments are special cases of the continuous gradient, not a distinct model.",
+      "opaque": { "ω": 1.0, "label": "fully opaque" },
+      "transparent": { "ω": 0.0, "label": "fully transparent" }
+    }
+  },
+  "opacity_zones": [
+    {
+      "id": "OZ-1",
+      "label": "High Transparency",
+      "ω_range": [0.0, 0.25],
+      "description": "Most internal configuration accessible to observers with moderate detection capacity. Concealment is minimal or incidental.",
+      "typical_structures": ["open interfaces", "published schemas", "declared invariant sets"]
+    },
+    {
+      "id": "OZ-2",
+      "label": "Partial Opacity",
+      "ω_range": [0.25, 0.50],
+      "description": "Significant structure accessible but meaningful concealment present. Revelation requires deliberate detection effort.",
+      "typical_structures": ["abstracted APIs", "partial-disclosure architectures", "structured ambiguity zones"]
+    },
+    {
+      "id": "OZ-3",
+      "label": "Partial Concealment",
+      "ω_range": [0.50, 0.75],
+      "description": "More structure concealed than revealed under standard detection capacity. Elevated δ required for revelation.",
+      "typical_structures": ["deep encoding layers", "multi-level abstraction hierarchies", "context-restricted schemas"]
+    },
+    {
+      "id": "OZ-4",
+      "label": "High Opacity",
+      "ω_range": [0.75, 1.0],
+      "description": "Majority of internal configuration concealed. Revelation requires exceptional detection capacity or structural transformation.",
+      "typical_structures": ["encrypted configurations", "deeply nested or obfuscated structures", "structurally isolated subsystems"]
+    }
+  ],
+  "opacity_sources": [
+    {
+      "id": "OS-001",
+      "label": "Structural Complexity",
+      "description": "Internal configuration exceeds observer resolution — not deliberate concealment but emergent opacity from depth."
+    },
+    {
+      "id": "OS-002",
+      "label": "Deliberate Information Hiding",
+      "description": "Structure is explicitly configured to expose only a bounded interface while concealing internal relations."
+    },
+    {
+      "id": "OS-003",
+      "label": "Encoding Depth",
+      "description": "Internal configuration is nested multiple sub-structure levels deep; each level contributes additive opacity."
+    },
+    {
+      "id": "OS-004",
+      "label": "Interface Abstraction",
+      "description": "An abstraction layer is interposed between the observer and internal configuration, acting as an opacity surface."
+    },
+    {
+      "id": "OS-005",
+      "label": "Temporal Opacity",
+      "description": "Structure is visible only within narrow time windows; outside those windows ω approaches 1.0 regardless of δ."
+    }
+  ],
+  "assignment_procedure": [
+    "1. Identify the target structure S and enumerate its declared interfaces.",
+    "2. Assess the ratio of exposed to total internal configuration.",
+    "3. Assign ω ∈ [0,1] such that ω = 0 implies full exposure and ω = 1 implies complete concealment.",
+    "4. Record opacity source(s) from OS-001 through OS-005.",
+    "5. Confirm INV-OR-003: ω is a property of S, not of any observer. Record ω as fixed for this S configuration."
+  ],
+  "structural_note": "Opacity is a property of the structure's configuration (INV-OR-003). The same ω value holds regardless of which observer attempts detection. Observers with different δ may reach different revelation states, but ω itself does not change."
+}

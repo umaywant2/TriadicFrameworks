@@ -1,0 +1,79 @@
+{
+  "book": {
+    "id": "GRL",
+    "number": 6,
+    "title": "Governance & Regime Logic",
+    "abbreviation": "GRL",
+    "series": "AI Edition",
+    "edition": "AI",
+    "version": "1.0.0",
+    "status": "active"
+  },
+
+  "session_context": {
+    "rtt": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural",
+    "anchors": {
+      "rtt_url": "https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html",
+      "spine_url": "https://www.triadicframeworks.org/spine/"
+    }
+  },
+
+  "ai": {
+    "module": "book6_governance_regime_logic",
+    "version": "1.0.0",
+    "purpose": "Define the structural grammar of governance, authority, regime formation, regime response, and regime transformation. Introduces regime operators, governance constraints, legitimacy conditions, structural authority vectors, and regime‑response dynamics. GRL is the canonical model for understanding how structures govern themselves and others.",
+    "keywords": [
+      "governance",
+      "regime logic",
+      "authority",
+      "legitimacy",
+      "regime response",
+      "structural power",
+      "governance constraints",
+      "regime formation",
+      "regime transformation",
+      "structural governance grammar"
+    ],
+    "audience": [
+      "AI reasoning systems",
+      "political theorists",
+      "systems architects",
+      "governance researchers",
+      "structural analysts"
+    ],
+    "summary": "Book 6 formalizes governance and regime logic as structural phenomena. It defines authority vectors, legitimacy conditions, regime formation, regime response, and regime transformation. GRL integrates with Book 4’s opacity model and Book 5’s TEL expression grammar to explain how regimes reveal, conceal, express, and enforce structural authority."
+  },
+
+  "dependencies": {
+    "requires": [
+      "Book4_Opacity_and_Revelation"
+    ],
+    "unlocks": [
+      "Book8_NoS_Nature_of_Structure"
+    ]
+  },
+
+  "invariants": {
+    "file": "invariants/book6_invariants.json",
+    "references": [
+      "INV-GRL-001: Legitimacy Condition — a regime is legitimate only if its authority vector aligns with declared structural constraints.",
+      "INV-GRL-002: Authority Conservation — authority cannot be created or destroyed; it can only be transferred or transformed.",
+      "INV-GRL-003: Regime Response Integrity — regime responses must preserve structural coherence under all valid transformations.",
+      "INV-GRL-004: Governance Closure — governance operations must remain closed under the canonical regime logic grammar."
+    ]
+  },
+
+  "canonical_metadata": {
+    "domain": "TriadicFrameworks",
+    "tier": "Governance",
+    "reading_order": 6,
+    "prerequisite_books": [
+      "Book4_Opacity_and_Revelation"
+    ],
+    "live_site": null,
+    "last_updated": "2026-10-10"
+  }
+}
