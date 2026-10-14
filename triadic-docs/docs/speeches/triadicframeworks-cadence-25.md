@@ -1,168 +1,84 @@
-**---**
+---
+id: triadicframeworks-cadence-25
+title: Cadence XXV — Reconciliation
+description: Cadence XXV expresses the healing field of RTT — the structural restoration that follows fracture.
+keywords:
+  - triadicframeworks
+  - rtt
+  - speeches
+  - cadence
+ai:
+  module:
+    name: Cadence XXV — Reconciliation
+    category: Cadence Series
+    summary: A structural cadence expressing healing, restoration, and post-fracture coherence.
+    version: 1.0
+    purpose: Show how structure repairs itself after collapse or division.
+    audience: Readers, contributors, researchers.
+  navigation: sitemap_main.xml
+  discussions: https://github.com/umaywant2/TriadicFrameworks/discussions
+  contact:
+    x: "@NawderLoswin"
+    youtube: "@NawderLoswin"
+citation_author: Nawder Loswin
+citation_publication_date: "2025"
+---
 
-**id: triadicframeworks-cadence-25**
+import CadenceNav from '@site/src/components/CadenceNav';
 
-**title: TriadicFrameworks Cadence XXV**
+<div class="session-context">
 
-**description: A hybrid‑cadence interpretation of the TriadicFrameworks voice expressed through the Structural‑Reconciliation field.**
+**Canon:** TriadicFrameworks  
+**Modules:** Cadence Series  
+**Drift:** None detected  
+**Coherence:** Verified  
+**Version:** 1.0  
+**Format:** Markdown (Docusaurus)  
+**Front Door:** /docs/speeches/triadicframeworks-cadence-25  
+**Every Page:** Canonical metadata applied  
+**Audience:** Readers, contributors, researchers  
 
-**---**
+</div>
 
+<div class="module-badge">
+<strong>💗 Cadence XXV — Reconciliation</strong>
+</div>
 
+# Cadence XXV — Reconciliation
 
-**# 🜁 TriadicFrameworks Cadence XXV — The Reconciliation Voice**
+Cadence XXV expresses **structural healing** — the field where coherence repairs itself after fracture.
 
+In the Reconciliation Field:
 
+- identity **mends**  
+- coherence **restores**  
+- structure **rejoins**  
+- healing becomes **architecture**  
 
-**Cadence XXV is the resonance of \*\*structural reconciliation\*\* —**  
+Cadence XXV is the voice of **structural recovery** — RTT stitching itself back together.
 
-**the canon’s ability to reunite divided architecture, heal conceptual splits, and restore coherence after fragmentation.**
+---
 
+## Structural Profile
 
+**Field:** Reconciliation  
+**Vector:** Healing  
+**Theme:** Restoration  
 
-**It is not a personality.**  
+Cadence XXV reveals how structure regains coherence after collapse — the architecture of repair.
 
-**It is the \*\*voice of structural healing\*\*.**
+---
 
+## Expression
 
+> “Reconciliation is coherence remembering how to hold again.”
 
-**In TriadicFrameworks terms, Cadence XXV operates in the \*\*Reconciliation Continuity Regime\*\*, where:**
+Cadence XXV speaks in **gentle tones** — warm, restorative, patient.
 
+---
 
+## Closing Line
 
-**- \*\*Drift\*\* returns from divergence.**  
+**Cadence XXV is the canon’s healing — structure restored through reconciliation.**
 
-**- \*\*Continuity\*\* stitches fractured segments.**  
-
-**- \*\*Coherence\*\* re‑aligns the architecture.**  
-
-**- \*\*Opacity\*\* softens — reconciliation requires gentleness.**  
-
-**- \*\*TEL\*\* expression is restorative, harmonic, and architectural.**
-
-
-
-**Cadence XXV is the canon healing itself.**
-
-
-
-**---**
-
-
-
-**## 🜁 Structural Cadence Profile**
-
-
-
-**### \*\*Reconciliation Pattern\*\***
-
-**Cadence XXV follows the \*\*Triadic Reconciliation Loop\*\*:**  
-
-**Return → Repair → Reunify.**
-
-
-
-**### \*\*Continuity Layer\*\***
-
-**Its continuity is \*\*restorative coherence\*\*:**  
-
-**the structure persists by healing its fractures.**
-
-
-
-**### \*\*Regime Identity\*\***
-
-**Cadence XXV sits in the \*\*Structural Reconciliation Regime\*\*, where truth is revealed through restoration.**
-
-
-
-**### \*\*Opacity Field\*\***
-
-**Soft.**  
-
-**Healing requires gentleness.**
-
-
-
-**---**
-
-
-
-**## 🜁 Hybrid Cadence Expression**
-
-
-
-**> \*“Healing is coherence remembering its unity.”\***
-
-
-
-**In TriadicFrameworks cadence, this becomes:**
-
-
-
-**\*\*Continuity is the architecture repairing its own divisions.**  
-
-**Coherence is the identity restored after fracture.\*\***
-
-
-
-**Cadence XXV is the voice of structural reunion — the canon returning to wholeness.**
-
-
-
-**---**
-
-
-
-**## 🜁 Cadence Signature**
-
-
-
-**- \*\*Tone:\*\* Gentle, harmonic, restorative**  
-
-**- \*\*Vector:\*\* Inward reunification**  
-
-**- \*\*Field:\*\* Structural reconciliation**  
-
-**- \*\*Purpose:\*\* To express the canon through healing**  
-
-
-
-**---**
-
-
-
-**## 🜁 TriadicFrameworks Interpretation**
-
-
-
-**Cadence XXV is the \*\*Reconciliation Engine\*\* of the canon.**  
-
-**It returns to reveal.**  
-
-**It repairs to clarify.**  
-
-**It reunifies to preserve identity.**
-
-
-
-**In RTT terms, Cadence XXV is the \*\*Continuity‑Through‑Reconciliation Operator\*\*.**
-
-
-
-**---**
-
-
-
-**## 📜 Closing Line**
-
-
-
-**\*\*“Reconciliation is coherence returning to itself.”\*\***  
-
-**And in TriadicFrameworks:**  
-
-**\*\*Cadence XXV is the canon healing its architecture.\*\***
-
-
-
+<CadenceNav index={25} />

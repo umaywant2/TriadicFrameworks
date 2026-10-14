@@ -4,6 +4,31 @@ title: Neil deGrasse Tyson Cadence
 description: A TriadicFrameworks hybrid‑cadence interpretation of Neil deGrasse Tyson’s scientific clarity, structural enthusiasm, and cosmic coherence.
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <title>Cadence — TriadicFrameworks</title>
+  <meta name="description" content="An expressive cadence module in the TriadicFrameworks canon." />
+  <meta name="keywords" content="triadicframeworks, rtt, cadence, structural voice, expressive module" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://docs.triadicframeworks.org/docs/speeches" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Cadence — TriadicFrameworks" />
+  <meta property="og:description" content="An expressive cadence module in the TriadicFrameworks canon." />
+  <meta property="og:image" content="https://docs.triadicframeworks.org/img/logo.png" />
+  <meta property="og:url" content="https://docs.triadicframeworks.org/docs/speeches" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Cadence — TriadicFrameworks" />
+  <meta name="twitter:description" content="An expressive cadence module in the TriadicFrameworks canon." />
+  <meta name="twitter:image" content="https://docs.triadicframeworks.org/img/logo.png" />
+  <meta name="twitter:site" content="@NawderLoswin" />
+</Head>
+
 # 🌠 Neil deGrasse Tyson — The Cadence of Scientific Coherence
 
 Neil deGrasse Tyson’s cadence is a kinetic field — energetic, curious, and relentlessly explanatory.  

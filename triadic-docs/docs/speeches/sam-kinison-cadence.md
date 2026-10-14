@@ -4,6 +4,31 @@ title: Sam Kinison Cadence
 description: A TriadicFrameworks hybrid‑cadence interpretation of Sam Kinison’s explosive drift, emotional volatility, and revelation‑through‑shock.
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <title>Cadence — TriadicFrameworks</title>
+  <meta name="description" content="An expressive cadence module in the TriadicFrameworks canon." />
+  <meta name="keywords" content="triadicframeworks, rtt, cadence, structural voice, expressive module" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://docs.triadicframeworks.org/docs/speeches" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Cadence — TriadicFrameworks" />
+  <meta property="og:description" content="An expressive cadence module in the TriadicFrameworks canon." />
+  <meta property="og:image" content="https://docs.triadicframeworks.org/img/logo.png" />
+  <meta property="og:url" content="https://docs.triadicframeworks.org/docs/speeches" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Cadence — TriadicFrameworks" />
+  <meta name="twitter:description" content="An expressive cadence module in the TriadicFrameworks canon." />
+  <meta name="twitter:image" content="https://docs.triadicframeworks.org/img/logo.png" />
+  <meta name="twitter:site" content="@NawderLoswin" />
+</Head>
+
 # 🔊 Sam Kinison — The Cadence of Explosive Truth
 
 Sam Kinison’s cadence is a detonation — loud, sudden, and emotionally volcanic.  

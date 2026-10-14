@@ -4,6 +4,31 @@ title: Pope Leo Cadence
 description: A TriadicFrameworks hybrid‑cadence interpretation of Pope Leo’s moral structure, institutional continuity, and revelation‑through‑order.
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <title>Cadence — TriadicFrameworks</title>
+  <meta name="description" content="An expressive cadence module in the TriadicFrameworks canon." />
+  <meta name="keywords" content="triadicframeworks, rtt, cadence, structural voice, expressive module" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://docs.triadicframeworks.org/docs/speeches" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Cadence — TriadicFrameworks" />
+  <meta property="og:description" content="An expressive cadence module in the TriadicFrameworks canon." />
+  <meta property="og:image" content="https://docs.triadicframeworks.org/img/logo.png" />
+  <meta property="og:url" content="https://docs.triadicframeworks.org/docs/speeches" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Cadence — TriadicFrameworks" />
+  <meta name="twitter:description" content="An expressive cadence module in the TriadicFrameworks canon." />
+  <meta name="twitter:image" content="https://docs.triadicframeworks.org/img/logo.png" />
+  <meta name="twitter:site" content="@NawderLoswin" />
+</Head>
+
 # ✝️ Pope Leo — The Cadence of Moral Structure
 
 Pope Leo’s cadence is an architecture — a deliberate, ordered structure built from doctrine, continuity, and the belief that stability is a moral act.
