@@ -74,14 +74,15 @@ const config = {
     ],
   ],
 
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
-      colorMode: {
-        respectPrefersColorScheme: true,
-      },
+themeConfig: {
+  colorMode: {
+    defaultMode: 'dark',
+    respectPrefersColorScheme: true,
+  },
+  prism: {
+    theme: require('prism-react-renderer/themes/dracula'),
+  },
+},
 navbar: {
   title: 'TriadicFrameworks',
   logo: {
