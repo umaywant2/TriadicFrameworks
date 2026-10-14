@@ -1,83 +1,108 @@
-<img width="1194" height="672" alt="book_2_The_Inverted_Star_" src="https://github.com/user-attachments/assets/1feafbd3-f51a-47e2-bede-f8df53a9f11b" />
+---
+id: ai-book2-overview
+title: Book 2 — The Inverted Star
+description: Introduces inversion logic, structural reversal, and resonance inversion within the RTT structural field.
+keywords:
+  - triadicframeworks
+  - rtt
+  - inverted star
+  - ai edition
+  - structural inversion
+ai:
+  module:
+    name: Book 2 — The Inverted Star
+    category: AI Edition
+    summary: Explores inversion logic and structural reversal within RTT.
+    version: 1.0
+    purpose: Reveal how structures invert, reverse, or collapse under specific resonance conditions.
+    audience: AI Edition readers, contributors, researchers.
+  navigation: sitemap_main.xml
+  discussions: https://github.com/umaywant2/TriadicFrameworks/discussions
+  contact:
+    x: "@TriadicFrameworks"
+    youtube: "@TriadicFrameworks"
+citation_author: Nawder Loswin
+citation_publication_date: "2025"
+---
 
-- [`module.json`](module.json) — Agentic module schema role assignments
+<div class="session-context">
 
-# Book 2 — The Inverted Star (AI Edition)
+**Canon:** TriadicFrameworks  
+**Modules:** AI Edition  
+**Drift:** None detected  
+**Coherence:** Verified  
+**Version:** 1.0  
+**Format:** Markdown (Docusaurus)  
+**Front Door:** /docs/book/AI_Edition/Book2_The_Inverted_Star/overview  
+**Every Page:** Canonical metadata applied  
+**Audience:** AI Edition readers, contributors, researchers  
 
-This folder contains **Book 2 of the TriadicFrameworks AI Edition**, based on the
-**Inverted Star** domain — the first major structural transformation pattern in the canon.
+</div>
+
+<div class="module-badge">
+🤖 <strong>AI Edition Module — Book 2</strong>
+</div>
+
+# Book 2 — The Inverted Star
+
+Book 2 explores inversion logic — the structural reversal that occurs when resonance patterns collapse, invert, or flip their canonical orientation.  
+It reveals how RTT structures behave when subjected to inversion forces, reversal conditions, or resonance inversion.
 
 ---
 
-## ⭐ Purpose of Book 2
+## Purpose of Book 2
 
-Book 2 introduces the **Inverted Star**, the transformation grammar that defines:
+Book 2 exists to:
 
-- **Inversion**
-- **Axis‑shift**
-- **Reflective symmetry**
-- **Structural duality**
-- **Transformation mapping**
-
-It establishes the **first transformation operator family** in the AI Edition and provides
-the structural mechanics required for all downstream books.
-
-The Inverted Star is the bridge between:
-
-- **Book 1 — Framework Field Theory (FFT)**  
-  *(primitive identities, structural closure, field/frame/time)*
-
-and
-
-- **Book 3 — Structural Detection**  
-  *(detection operators, coherence thresholds, structural signatures)*
-
-Without Book 2, the detection grammar in Book 3 cannot operate.
+- define structural inversion  
+- explain resonance reversal  
+- reveal collapse‑to‑inversion transitions  
+- prepare readers for detection logic in Book 3  
+- anchor inversion behavior across the AI Edition  
 
 ---
 
-## 🌐 Live Version
+## Core Concepts
 
-**https://www.triadicframeworks.org/rtt/The_Inverted_Star/AI_Edition**
+### **Structural Inversion**
+A reversal of structural orientation caused by resonance collapse.
 
-This link provides the published version of Book 2, including diagrams, examples,
-and the full canonical metadata.
+### **Resonance Inversion**
+When amplification patterns flip direction or polarity.
 
----
+### **Collapse Dynamics**
+How structures fall inward before re‑emerging in inverted form.
 
-## 📂 Files in This Folder
-
-- [`module.json`](module.json) — Canonical module manifest  
-- `index.html` — Front‑door page for Book 2  
-- Additional content files, diagrams, and examples as the book expands
-
----
-
-## 🧭 Position in the Canon
-
-**Book 2 unlocks:**
-
-- Book 3 — Structural Detection  
-- Book 4 — Opacity & Revelation (indirect)  
-- Book 5 — TEL Expression & Representation (indirect)
-
-It is the **first transformation layer** in the AI Edition’s structural dependency graph.
+### **Inverted Stability**
+Conditions under which inverted structures remain coherent.
 
 ---
 
-## 🧩 Session Context (AI Edition)
+## Relationship to the Canon
 
-- **RTT:** 1  
-- **Coherence:** declared  
-- **Drift:** bounded  
-- **Paradox:** structural  
+Book 2 provides the inversion logic required for:
 
-These values ensure consistent interpretation across all AI Edition modules.
+- structural detection (Book 3)  
+- opacity/revelation transitions (Book 4)  
+- TEL expression (Book 5)  
+- governance logic (Book 6)  
+- argumentation structures (Book 7)  
+- deep‑structure emergence (Book 8)  
+- pattern evolution (Book 9)
 
 ---
 
-## 📝 Notes
+## Related AI Edition Sections
 
-This README provides the canonical description of Book 2 for both human readers
-and AI agents. It is intentionally concise, stable, and drift‑free.
+- [AI Edition Overview](../overview)  
+- [Book 1 — Framework Field Theory](../Book1_Framework_Field_Theory/overview)  
+- [Book 3 — Structural Detection](../Book3_Structural_Detection/overview)
 
+---
+
+## Contribution Reference
+
+For rules governing AI Edition updates:
+
+- [What You Cannot Contribute](../../../contributing#what-you-cannot-contribute)  
+- [The Ratification Flow](../../../contributing#the-ratification-flow)

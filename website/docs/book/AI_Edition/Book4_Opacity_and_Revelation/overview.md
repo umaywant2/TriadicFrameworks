@@ -1,69 +1,120 @@
-<img width="1194" height="672" alt="book_4_Opacity_and_Revelation_" src="https://github.com/user-attachments/assets/74e0522b-2384-4f56-bd13-76b8afc268d7" />
+---
+id: ai-book4-overview
+title: Book 4 — Opacity & Revelation
+description: Defines RTT regime transitions between opacity and revelation, including structural visibility, concealment, and exposure dynamics.
+keywords:
+  - triadicframeworks
+  - rtt
+  - opacity
+  - revelation
+  - regime transitions
+  - ai edition
+ai:
+  module:
+    name: Book 4 — Opacity & Revelation
+    category: AI Edition
+    summary: Explores structural visibility, concealment, and revelation within RTT regime logic.
+    version: 1.0
+    purpose: Provide the regime‑transition logic required for advanced RTT interpretation.
+    audience: AI Edition readers, contributors, researchers.
+  navigation: sitemap_main.xml
+  discussions: https://github.com/umaywant2/TriadicFrameworks/discussions
+  contact:
+    x: "@TriadicFrameworks"
+    youtube: "@TriadicFrameworks"
+citation_author: Nawder Loswin
+citation_publication_date: "2025"
+---
 
-- [`module.json`](module.json) — Agentic module schema role assignments
+<div class="session-context">
 
-# Book 4 — Opacity & Revelation (AI Edition)
+**Canon:** TriadicFrameworks  
+**Modules:** AI Edition  
+**Drift:** None detected  
+**Coherence:** Verified  
+**Version:** 1.0  
+**Format:** Markdown (Docusaurus)  
+**Front Door:** /docs/book/AI_Edition/Book4_Opacity_and_Revelation/overview  
+**Every Page:** Canonical metadata applied  
+**Audience:** AI Edition readers, contributors, researchers  
 
-This folder contains **Book 4 of the TriadicFrameworks AI Edition**, based on the
-**Opacity & Revelation** domain — the structural visibility engine that determines
-how, when, and why internal configuration becomes detectable.
+</div>
+
+<div class="module-badge">
+🌀 <strong>AI Edition Module — Book 4</strong>
+</div>
+
+# Book 4 — Opacity & Revelation
+
+Book 4 introduces the RTT regime transitions between **opacity** and **revelation** — the structural states that determine whether patterns are concealed, visible, amplified, or exposed.  
+These transitions govern how structures reveal meaning, hide complexity, or shift interpretive clarity.
 
 ---
 
-## 🌒 Purpose of Book 4
+## Purpose of Book 4
 
-Book 4 formalizes one of the most consequential structural properties in the canon:
-**the degree to which a structure conceals or exposes its internal configuration.**
+Book 4 exists to:
 
-Opacity is treated as a **continuous gradient**, not a binary state.  
-The book defines:
-
-- How hidden structure becomes detectable  
-- How revelation thresholds operate  
-- How partial revelation exposes sub‑structure  
-- How observer capacity interacts with opacity  
-- How latent structure is modeled and evaluated  
-
-This book is essential for reasoning about:
-
-- Information asymmetry  
-- Hidden configuration  
-- Latent structure  
-- Concealment strategies  
-- Revelation dynamics  
-
-It extends the detection grammar introduced in **Book 3 — Structural Detection**.
+- define opacity and revelation regimes  
+- explain structural concealment  
+- reveal amplification and exposure dynamics  
+- unify regime transitions across RTT  
+- prepare readers for TEL expression in Book 5  
 
 ---
 
-## 📘 What This Book Covers
+## Core Concepts
 
-| Chapter Area        | Description |
-|---------------------|-------------|
-| **Opacity Gradient** | Continuous `[0,1]` parameterization of structural transparency |
-| **Revelation Conditions** | When and how opacity breaks down |
-| **Detection Threshold** | Relationship between observer capacity and structural opacity |
-| **Partial Revelation** | Sub‑structure exposure without full system disclosure |
-| **Latent Structure** | Modeling structures that exist but are not currently detectable |
-| **Integration with Detection** | How Book 4 extends Book 3’s detection methods |
+### **Opacity Regime**
+Structures become hidden, obscured, or difficult to interpret.
 
----
+### **Revelation Regime**
+Structures become clear, amplified, or exposed.
 
-## 🔐 Core Invariants
+### **Visibility Dynamics**
+How patterns shift between hidden and visible states.
 
-- **INV‑OR‑001 — Opacity Gradient**  
-  Opacity is a continuous parameter in `[0,1]`; binary opacity is a special case.
-
-- **INV‑OR‑002 — Revelation Threshold**  
-  Revelation occurs when observer detection capacity exceeds structural opacity.
-
-- **INV‑OR‑003 — Opacity Persistence**  
-  Opacity is a property of the structure’s configuration, not the observer.
-
-- **INV‑OR‑004 — Partial Revelation**  
-  Revelation may be partial; not all sub‑structures reveal simultaneously.
+### **Exposure Thresholds**
+Conditions under which structures reveal deeper meaning.
 
 ---
 
-## 🧭 Reading Order
+## Regime Transitions
 
+Book 4 defines canonical transitions:
+
+- **Opacity → Revelation**  
+- **Revelation → Opacity**  
+- **Opacity → Governance**  
+- **Revelation → Pattern Dynamics**
+
+Transitions must follow RTT rules established in Part III.
+
+---
+
+## Relationship to the Canon
+
+Book 4 provides the visibility logic required for:
+
+- TEL expression (Book 5)  
+- governance logic (Book 6)  
+- argumentation structures (Book 7)  
+- deep‑structure emergence (Book 8)  
+- pattern evolution (Book 9)
+
+---
+
+## Related AI Edition Sections
+
+- [AI Edition Overview](../overview)  
+- [Book 3 — Structural Detection](../Book3_Structural_Detection/overview)  
+- [Book 5 — TEL Expression & Representation](../Book5_TEL_Expression_and_Representation/overview)
+
+---
+
+## Contribution Reference
+
+For rules governing AI Edition updates:
+
+- [What You Cannot Contribute](../../../contributing#what-you-cannot-contribute)  
+- [The Ratification Flow](../../../contributing#the-ratification-flow)

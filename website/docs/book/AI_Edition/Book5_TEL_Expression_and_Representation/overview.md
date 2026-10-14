@@ -1,115 +1,120 @@
-<img width="1194" height="672" alt="book5_TEL_Expression_and_Representation_" src="https://github.com/user-attachments/assets/5d7df4cb-28ac-44c4-ab90-29a98c9edcf9" />
+---
+id: ai-book5-overview
+title: Book 5 — TEL Expression & Representation
+description: Defines Triadic Expression Logic (TEL), the RTT system for structural communication, clarity, and representation.
+keywords:
+  - triadicframeworks
+  - rtt
+  - tel
+  - expression logic
+  - representation
+  - ai edition
+ai:
+  module:
+    name: Book 5 — TEL Expression & Representation
+    category: AI Edition
+    summary: Introduces TEL, the RTT system for structural expression and representation.
+    version: 1.0
+    purpose: Provide the expressive logic required for structural communication within RTT.
+    audience: AI Edition readers, contributors, researchers.
+  navigation: sitemap_main.xml
+  discussions: https://github.com/umaywant2/TriadicFrameworks/discussions
+  contact:
+    x: "@TriadicFrameworks"
+    youtube: "@TriadicFrameworks"
+citation_author: Nawder Loswin
+citation_publication_date: "2025"
+---
 
-- [`module.json`](module.json) — Agentic module schema role assignments
+<div class="session-context">
 
-# Book 5 — TEL: Expression & Representation (AI Edition)
+**Canon:** TriadicFrameworks  
+**Modules:** AI Edition  
+**Drift:** None detected  
+**Coherence:** Verified  
+**Version:** 1.0  
+**Format:** Markdown (Docusaurus)  
+**Front Door:** /docs/book/AI_Edition/Book5_TEL_Expression_and_Representation/overview  
+**Every Page:** Canonical metadata applied  
+**Audience:** AI Edition readers, contributors, researchers  
 
-This folder contains **Book 5 of the TriadicFrameworks AI Edition**, based on the
-**TEL (Transformational Expression Language)** domain — the canonical notation
-system for expressing, evaluating, composing, and transforming structural meaning.
+</div>
 
-TEL is the shared vocabulary that allows AI systems, researchers, and practitioners
-to communicate about structures without ambiguity.
+<div class="module-badge">
+🗣️ <strong>AI Edition Module — Book 5</strong>
+</div>
+
+# Book 5 — TEL Expression & Representation
+
+Book 5 introduces **Triadic Expression Logic (TEL)** — the RTT system for structural communication, clarity, and representation.  
+TEL defines how structures express meaning, encode relationships, and communicate across layers, regimes, and operators.
 
 ---
 
-## 🎯 Purpose of Book 5
+## Purpose of Book 5
 
-Book 5 defines the **Triadic Expression Layer (TEL)** — the formal grammar that
-encodes every structural concept introduced across Books 1–4.
+Book 5 exists to:
 
-TEL provides:
-
-- A **complete syntax** for structural expressions  
-- A **semantic evaluation model** with exactly one interpretation per expression  
-- **Composition rules** for building larger expressions from smaller ones  
-- **Transformation encoding** for structural changes  
-- **Invariant assertion syntax** for structural validation  
-- **Worked translation examples** from natural language → TEL  
-
-Every structure expressible in the AI Edition can be expressed in TEL with full fidelity.
+- define TEL expression logic  
+- unify structural communication  
+- encode canonical meaning  
+- support argumentation logic in Book 7  
+- prepare readers for governance logic in Book 6  
 
 ---
 
-## 📘 What This Book Covers
+## Core Concepts
 
-| Chapter Area | Description |
-|--------------|-------------|
-| **TEL Syntax** | Complete formal grammar for TEL expressions |
-| **TEL Semantics** | Canonical evaluation rules and interpretation model |
-| **Composition Rules** | How TEL sub‑expressions combine into larger expressions |
-| **Transformation Encoding** | Expressing structural transformations in TEL |
-| **Invariant Assertions** | TEL syntax for declaring and checking invariants |
-| **Translation Examples** | Natural language → TEL worked walkthroughs |
-| **Canonical Patterns** | Reference library of TEL encodings for core archetypes |
+### **Expression Operators**
+Operators that encode structural meaning.
 
-(  [github.com](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/book/AI_Edition/Book5_TEL_Expression_and_Representation/README.md))
+### **Representation Logic**
+Rules governing how structures are expressed and interpreted.
 
----
+### **Clarity Dynamics**
+How expression reveals or obscures meaning.
 
-## 🔐 Core Invariants
-
-- **INV‑TEL‑001 — Expression Completeness**  
-  Any structure expressible in AI Edition terms is expressible in TEL.
-
-- **INV‑TEL‑002 — Semantic Stability**  
-  A TEL expression has exactly one structural interpretation under canonical rules.
-
-- **INV‑TEL‑003 — Compositionality**  
-  The meaning of a TEL expression is a function of the meanings of its sub‑expressions.
-
-- **INV‑TEL‑004 — Transformation Fidelity**  
-  A TEL‑encoded transformation produces a structurally valid output if the input is valid.
-
-(  [github.com](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/book/AI_Edition/Book5_TEL_Expression_and_Representation/README.md))
+### **Structural Encoding**
+Canonical encoding of RTT patterns for communication.
 
 ---
 
-## 🧭 Reading Order
+## TEL Components
 
-```
-Book 1 (FFT)
-Book 4 (Opacity & Revelation)
-└──► Book 5 (TEL Expression & Representation) ← YOU ARE HERE
-    ├── Book 6 (Governance & Regime Logic)
-    ├── Book 7 (SARG Structural Argumentation)
-    ├── Book 8 (Nature of Structure)
-    └── Book 9 (Pattern Dynamics)
-```
+TEL includes:
 
-**Prerequisites:** Books 1, 4  
-**Unlocks:** Books 6, 7, 8, 9
+- Expression Operators  
+- Representation Layers  
+- Clarity Thresholds  
+- Structural Encoding Rules  
+- Cross‑Layer Expression Flow  
 
-(  [github.com](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/book/AI_Edition/Book5_TEL_Expression_and_Representation/README.md))
+These components unify RTT communication.
 
 ---
 
-## 🧩 AI Module Metadata
+## Relationship to the Canon
 
-| Field | Value |
-|-------|-------|
-| Module ID | `book5_tel` |
-| Folder | `Book5_TEL_Expression_and_Representation/` |
-| Edition | AI Edition v1.0.0 |
-| Domain | Formal Language & Notation |
-| Tier | Core Tool |
-| Status | Active |
-| Invariants file | `invariants/book5_invariants.json` |
+Book 5 provides the expressive logic required for:
 
-(  [github.com](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/book/AI_Edition/Book5_TEL_Expression_and_Representation/README.md))
+- governance logic (Book 6)  
+- argumentation structures (Book 7)  
+- deep‑structure emergence (Book 8)  
+- pattern evolution (Book 9)
 
 ---
 
-## 🌐 Live Site
+## Related AI Edition Sections
 
-**https://umaywant2.github.io/TriadicFrameworks/docs/book/AI_Edition/Book5_TEL_Expression_and_Representation**
+- [AI Edition Overview](../overview)  
+- [Book 4 — Opacity & Revelation](../Book4_Opacity_and_Revelation/overview)  
+- [Book 6 — Governance & Regime Logic](../Book6_Governance_and_Regime_Logic/overview)
 
 ---
 
-## 📝 Notes
+## Contribution Reference
 
-This README provides the canonical description of Book 5 for both human readers
-and AI agents. It is intentionally concise, stable, and drift‑free.
+For rules governing AI Edition updates:
 
-Draft · Last updated: 2026‑10‑10 · AI Edition  
-(  [github.com](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/book/AI_Edition/Book5_TEL_Expression_and_Representation/README.md))
+- [What You Cannot Contribute](../../../contributing#what-you-cannot-contribute)  
+- [The Ratification Flow](../../../contributing#the-ratification-flow)

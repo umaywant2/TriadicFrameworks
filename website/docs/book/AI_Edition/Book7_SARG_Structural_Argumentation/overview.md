@@ -1,132 +1,122 @@
-<img width="1194" height="672" alt="book_7_SARG_Structural_Argumentation_" src="https://github.com/user-attachments/assets/fd92a94b-bdb7-4755-9826-17958f1217b1" />
+---
+id: ai-book7-overview
+title: Book 7 — SARG Structural Argumentation
+description: Defines the SARG argumentation system, including reasoning operators, structural logic, and canonical argument flow.
+keywords:
+  - triadicframeworks
+  - rtt
+  - sarg
+  - structural argumentation
+  - reasoning operators
+  - ai edition
+ai:
+  module:
+    name: Book 7 — SARG Structural Argumentation
+    category: AI Edition
+    summary: Introduces SARG, the RTT system for structural reasoning and argumentation.
+    version: 1.0
+    purpose: Provide the argumentation logic required for canonical reasoning within RTT.
+    audience: AI Edition readers, contributors, researchers.
+  navigation: sitemap_main.xml
+  discussions: https://github.com/umaywant2/TriadicFrameworks/discussions
+  contact:
+    x: "@TriadicFrameworks"
+    youtube: "@TriadicFrameworks"
+citation_author: Nawder Loswin
+citation_publication_date: "2025"
+---
 
-- [`module.json`](module.json) — Agentic module schema role assignments
+<div class="session-context">
 
-# Book 7 — SARG: Structural Argumentation (AI Edition)
+**Canon:** TriadicFrameworks  
+**Modules:** AI Edition  
+**Drift:** None detected  
+**Coherence:** Verified  
+**Version:** 1.0  
+**Format:** Markdown (Docusaurus)  
+**Front Door:** /docs/book/AI_Edition/Book7_SARG_Structural_Argumentation/overview  
+**Every Page:** Canonical metadata applied  
+**Audience:** AI Edition readers, contributors, researchers  
 
-This folder contains **Book 7 of the TriadicFrameworks AI Edition**, based on the
-**SARG (Structural Argumentation)** domain — the structural grammar for constructing,
-evaluating, defeating, and cataloguing arguments.
+</div>
 
-SARG reframes argumentation as a **structural phenomenon**.  
-Arguments are treated as **structured objects** composed of:
+<div class="module-badge">
+⚖️ <strong>AI Edition Module — Book 7</strong>
+</div>
 
-- **Nodes** — claims, evidence, warrants  
-- **Relations** — support, contradiction, qualification  
-- **Constraints** — validity conditions, structural requirements  
-- **Invariants** — rules that must hold for an argument to be sound  
+# Book 7 — SARG Structural Argumentation
 
-An argument is sound *only if* it satisfies its declared structural constraints and
-preserves governing invariants.
+Book 7 introduces **SARG (Structural Argumentation)** — the RTT system for reasoning, logic, and argumentation.  
+SARG defines how structures argue, justify, challenge, and validate meaning within the RTT field.
 
-This makes argument evaluation **domain‑neutral**, **rigorous**, and **tractable** for
-both human analysts and AI reasoning systems.
+It is the canonical reasoning engine of the AI Edition.
 
 ---
 
-## 🎯 Purpose of Book 7
+## Purpose of Book 7
 
-Book 7 defines the **structural grammar of argumentation**, including:
+Book 7 exists to:
 
-- **Argument tuples**  
-- **Node types**  
-- **Relation types**  
-- **Defeat types**  
-- **Failure modes**  
-- **Evaluation gates**  
-- **Operator roles**  
-- **Phase sequences**  
-
-SARG provides the canonical method for:
-
-- Constructing arguments  
-- Evaluating argument integrity  
-- Identifying structural defects  
-- Applying defeat conditions  
-- Encoding arguments in TEL (Book 5)  
-- Integrating argumentation with governance logic (Book 6)  
+- define structural argumentation  
+- unify reasoning operators  
+- establish canonical argument flow  
+- support governance logic from Book 6  
+- prepare readers for deep‑structure emergence in Book 8  
 
 ---
 
-## 📘 What This Book Covers
+## Core Concepts
 
-| Chapter Area | Description |
-|--------------|-------------|
-| **Argument as Structure** | Claims, evidence, warrants as structural nodes |
-| **Relation Types** | Support, contradiction, qualification, auxiliary relations |
-| **Validity Conditions** | Structural constraints determining argument soundness |
-| **Defeat Conditions** | How to structurally defeat an argument vs. merely contest it |
-| **Argument Construction** | Step‑by‑step procedure for building SARG‑compliant arguments |
-| **Evaluation Procedures** | Systematic walkthrough for assessing argument integrity |
-| **TEL Integration** | Encoding SARG arguments in TEL (Book 5) |
-| **Governance Arguments** | Applying SARG to regime legitimacy claims (Book 6) |
+### **Argumentation Operators**
+Operators that structure reasoning, justification, and challenge.
 
-  [github.com](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/book/AI_Edition/Book7_SARG_Structural_Argumentation)
+### **Canonical Argument Flow**
+The sequence of reasoning steps required for coherent argumentation.
 
----
+### **Structural Logic**
+Rules governing how arguments behave within RTT.
 
-## 🔐 Core Invariants
-
-- **INV‑SARG‑001 — Argument Integrity**  
-  Every argument node must be reachable from the argument’s root claim via declared relations.
-
-- **INV‑SARG‑002 — Warrant Necessity**  
-  Every claim–evidence pair requires at least one explicit warrant relation.
-
-- **INV‑SARG‑003 — Defeat Completeness**  
-  A defeat must target at least one structural component, not merely a surface‑level assertion.
-
-- **INV‑SARG‑004 — Reflexive Prohibition**  
-  An argument cannot structurally support its own root claim without passing through an independent evidentiary node.
-
-  [github.com](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/book/AI_Edition/Book7_SARG_Structural_Argumentation)
+### **Justification Dynamics**
+How arguments support or challenge structural claims.
 
 ---
 
-## 🧭 Reading Order
+## SARG Components
 
-```
-Book 1 (FFT)
-Book 3 (Structural Detection)
-Book 5 (TEL Expression & Representation)
-Book 6 (Governance & Regime Logic)
-└──► Book 7 (SARG Structural Argumentation) ← YOU ARE HERE
-    ├── Book 8 (Nature of Structure)
-    └── Book 9 (Pattern Dynamics)
-```
+Book 7 introduces:
 
-**Prerequisites:** Books 1, 3, 5, 6  
-**Unlocks:** Books 8, 9
+- reasoning operators  
+- argumentation layers  
+- structural logic rules  
+- challenge‑response flow  
+- justification thresholds  
 
-  [github.com](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/book/AI_Edition/Book7_SARG_Structural_Argumentation)
+These components unify RTT reasoning.
 
 ---
 
-## 🧩 AI Module Metadata
+## Relationship to the Canon
 
-| Field | Value |
-|-------|-------|
-| Module ID | `book7_sarg` |
-| Folder | `Book7_SARG_Structural_Argumentation/` |
-| Edition | AI Edition v1.0.0 |
-| Domain | Argumentation & Logic |
-| Tier | Applied |
-| Status | Active |
-| Invariants file | `invariants/book7_invariants.json` |
+Book 7 provides argumentation logic required for:
 
-  [github.com](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/book/AI_Edition/Book7_SARG_Structural_Argumentation)
+- deep‑structure emergence (Book 8)  
+- pattern evolution (Book 9)  
+- governance logic (Book 6)  
+- TEL expression (Book 5)  
 
 ---
 
-## 🌐 Live Site
+## Related AI Edition Sections
 
-**https://umaywant2.github.io/TriadicFrameworks/docs/book/AI_Edition/Book7_SARG_Structural_Argumentation**
+- [AI Edition Overview](../overview)  
+- [Book 6 — Governance & Regime Logic](../Book6_Governance_and_Regime_Logic/overview)  
+- [Book 8 — NoS Nature of Structure](../Book8_NoS_Nature_of_Structure/overview)
 
 ---
 
-## 📝 Notes
+## Contribution Reference
 
-This README provides the canonical description of Book 7 for both human readers
-and AI agents. It is intentionally concise, stable, and drift‑free.
+For rules governing AI Edition updates:
 
-Draft · Last updated: 2026‑10‑10 · AI Edition  
+- [What You Cannot Contribute](../../../contributing#what-you-cannot-contribute)  
+- [The Ratification Flow](../../../contributing#the-ratification-flow)

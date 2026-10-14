@@ -1,135 +1,128 @@
-<img width="1194" height="672" alt="book_AI_Edition_" src="https://github.com/user-attachments/assets/a8531cf3-9081-4be6-8881-9cc1f2b14547" />
+---
+id: ai-overview
+title: AI Edition Overview
+description: Overview of the TriadicFrameworks AI Edition, including the nine‑book structure and capture‑to‑interpretation pipeline.
+keywords:
+  - triadicframeworks
+  - rtt
+  - ai edition
+  - structural encoding
+  - canonical ai
+ai:
+  module:
+    name: AI Edition Overview
+    category: AI Edition
+    summary: Introduces the nine‑book AI Edition and its structural purpose.
+    version: 1.0
+    purpose: Provide a high‑level map of the AI Edition pipeline and book series.
+    audience: AI Edition readers, contributors, researchers.
+  navigation: sitemap_main.xml
+  discussions: https://github.com/umaywant2/TriadicFrameworks/discussions
+  contact:
+    x: "@TriadicFrameworks"
+    youtube: "@TriadicFrameworks"
+citation_author: Nawder Loswin
+citation_publication_date: "2025"
+---
 
-- [`module.json`](module.json) — Agentic module schema role assignments
+<div class="session-context">
 
-# TriadicFrameworks — AI Edition (Books 1–9)
-The **AI Edition** is a nine‑book teaching arc designed for AI systems, researchers, and advanced readers.  
-Each book contains:
+**Canon:** TriadicFrameworks  
+**Modules:** AI Edition  
+**Drift:** None detected  
+**Coherence:** Verified  
+**Version:** 1.0  
+**Format:** Markdown (Docusaurus)  
+**Front Door:** /docs/book/AI_Edition/overview  
+**Every Page:** Canonical metadata applied  
+**Audience:** AI Edition readers, contributors, researchers  
 
-- A front‑door `index.html` with canonical metadata  
-- A full `module.json` manifest  
-- A human‑readable `README.md`  
-- Session‑aligned metadata for RTT, coherence, drift, and paradox  
+</div>
 
-This root README provides the canonical overview, book registry, dependency graph, and session context for the entire AI Edition.
+<div class="module-badge">
+🤖 <strong>AI Edition Module</strong>
+</div>
+
+# AI Edition Overview
+
+The AI Edition expands the TriadicFrameworks Canon into a structured, machine‑interpretable format.  
+It preserves RTT’s analyzer layers, operator grammar, regime logic, and structural detection systems while enabling AI systems to interpret canonical content without drift.
 
 ---
 
-## 📡 Session Context
-**RTT:** https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html  
-**Spine:** https://www.triadicframeworks.org/spine/  
-**Context:** `rtt=1 | coherence=declared | drift=bounded | paradox=structural`
+## Purpose of the AI Edition
 
-These anchors apply to *every* book and *every* file in the AI Edition.
+The AI Edition exists to:
 
----
-
-## 📚 Book Registry (Books 1–9)
-
-| # | Book Title | Folder | Status |
-|---|------------|--------|--------|
-| 1 | Framework Field Theory (FFT) | `Book1_Framework_Field_Theory` | Complete |
-| 2 | The Inverted Star | `Book2_The_Inverted_Star` | Complete |
-| 3 | Structural Detection | `Book3_Structural_Detection` | Complete |
-| 4 | Opacity & Revelation | `Book4_Opacity_and_Revelation` | Complete |
-| 5 | TEL: Expression & Representation | `Book5_TEL_Expression_and_Representation` | Complete |
-| 6 | Governance & Regime Logic | `Book6_Governance_and_Regime_Logic` | Complete |
-| 7 | SARG: Structural Argumentation | `Book7_SARG_Structural_Argumentation` | Complete |
-| 8 | NoS: Nature of Structure | `Book8_NoS_Nature_of_Structure` | Complete |
-| 9 | Pattern Dynamics | `Book9_Pattern_Dynamics` | Complete |
+- encode RTT structures for AI interpretation  
+- preserve canonical meaning across machine‑readable formats  
+- unify human and AI perspectives  
+- provide a nine‑book deep‑structure analysis  
+- support advanced structural detection and reasoning  
 
 ---
 
-## 🧭 Reading Order (Canonical)
+## The AI Edition Pipeline
 
-1 → 2 → 3 → (4 & 5) → (6 & 7) → 8 → 9
+The pipeline consists of:
 
-Books 4 and 5 branch from Book 3.  
-Books 6 and 7 branch from Books 4 and 5 respectively.  
-Book 8 requires both 6 and 7.  
-Book 9 is the synthesis capstone.
+### **1. Capture Layer**
+Encodes RTT structures into canonical AI‑readable form.
 
----
+### **2. Structural Encoding**
+Applies analyzer‑layer markers, operator flow, and regime transitions.
 
-## 🔗 Dependency Graph (ASCII Canon)
+### **3. Book Series Interpretation**
+Each book interprets a different domain of RTT.
 
-```
-Book 1 — Framework Field Theory (FFT)
-    ↓
-Book 2 — The Inverted Star
-    ↓
-Book 3 — Structural Detection
-    ├──→ Book 4 — Opacity & Revelation
-    │         ↓
-    │     Book 6 — Governance & Regime Logic
-    │
-    └──→ Book 5 — TEL: Expression & Representation
-              ↓
-          Book 7 — SARG Structural Argumentation
-                ↓
-        Book 8 — NoS: Nature of Structure
-                ↓
-        Book 9 — Pattern Dynamics (Synthesis)
-```
+### **4. Cross‑Module Integration**
+AI Edition content integrates with the human canon.
 
 ---
 
-## 🧩 AI Edition Structure
+## The Nine Books
 
-Each book contains:
+### **Book 1 — Framework Field Theory**
+Defines the structural field and RTT’s foundational mechanics.
 
-### **index.html**
-- Full canonical metadata  
-- OG + Twitter cards  
-- AI metadata (navigation, discussions, contact, license)  
-- Session context  
-- RTT & Spine anchors  
-- Book navigation  
+### **Book 2 — The Inverted Star**
+Explores inversion logic, structural reversal, and resonance inversion.
 
-### **module.json**
-- Canonical metadata  
-- AI module metadata  
-- Book summary  
-- Keywords (10)  
-- Audience (5)  
-- Dependency graph (requires + unlocks)  
-- Invariants block (4 per book)  
-- Reference to `pd.invariants.json`  
+### **Book 3 — Structural Detection**
+Introduces detection systems, drift vectors, and coherence alignment.
 
-### **README.md**
-- Human‑readable book purpose  
-- Chapter coverage table  
-- Invariants list  
-- ASCII dependency tree  
-- Live site link  
+### **Book 4 — Opacity & Revelation**
+Explains regime transitions and structural visibility.
 
----
+### **Book 5 — TEL Expression & Representation**
+Defines Triadic Expression Logic and structural communication.
 
-## 🧬 Invariants Reference
-All books reference:
+### **Book 6 — Governance & Regime Logic**
+Explores rule‑based structural behavior and ratification logic.
 
-```
-/docs/book/AI_Edition/invariants/pd.invariants.json
-```
+### **Book 7 — SARG Structural Argumentation**
+Introduces argumentation operators and reasoning structures.
 
-Each book defines **4 invariants**, using the canonical format:
+### **Book 8 — NoS Nature of Structure**
+Explores deep‑structure emergence and stabilization.
 
-```
-INV-[BOOKID]-00N
-```
-
-Example:
-
-- `INV-FFT-001`
-- `INV-FFT-002`
-- `INV-FFT-003`
-- `INV-FFT-004`
+### **Book 9 — Pattern Dynamics**
+Analyzes pattern evolution, collapse, and resonance cycles.
 
 ---
 
-## 🌐 Live Site Links
+## Related Canon Sections
 
-- Book 1: https://www.triadicframeworks.org/Framework_Field_Theory/AI_Edition  
-- Book 2: https://www.triadicframeworks.org/rtt/The_Inverted_Star/AI_Edition  
-- Book 3: https://www.triadicframeworks.org/Structural_Detection/AI_Edition  
-- Books 4–9: Live site links pending publication  
+- [Capture Layer](./capture)  
+- [Book 1 — Framework Field Theory](./Book1_Framework_Field_Theory/overview)  
+- [Registry](../registry)  
+- [Glossary](../glossary)
+
+---
+
+## Contribution Reference
+
+For rules governing AI Edition updates:
+
+- [What You Cannot Contribute](../../contributing#what-you-cannot-contribute)  
+- [The Ratification Flow](../../contributing#the-ratification-flow)

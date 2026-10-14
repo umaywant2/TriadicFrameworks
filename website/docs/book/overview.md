@@ -1,70 +1,119 @@
-<img width="1194" height="672" alt="the_book_" src="https://github.com/user-attachments/assets/a1e76733-300b-42f9-b665-97bca7d3d1ea" />
+---
+id: book-overview
+title: Canon Overview
+description: High‑level overview of the TriadicFrameworks Canon and its structural domains.
+keywords:
+  - triadicframeworks
+  - rtt
+  - canon overview
+  - structural theory
+  - analyzer layers
+ai:
+  module:
+    name: Canon Overview
+    category: Foundational Theory
+    summary: Introduces the RTT structural canon and its major components.
+    version: 1.0
+    purpose: Provide a high‑level map of the canon for new readers and contributors.
+    audience: Contributors, researchers, AI Edition readers.
+  navigation: sitemap_main.xml
+  discussions: https://github.com/umaywant2/TriadicFrameworks/discussions
+  contact:
+    x: "@TriadicFrameworks"
+    youtube: "@TriadicFrameworks"
+citation_author: Nawder Loswin
+citation_publication_date: "2025"
+---
 
-- [`module.json`](module.json) — Agentic module schema role assignments
+<div class="session-context">
 
-# TriadicFrameworks Book — Folder Overview
+**Canon:** TriadicFrameworks  
+**Modules:** Foundational Theory  
+**Drift:** None detected  
+**Coherence:** Verified  
+**Version:** 1.0  
+**Format:** Markdown (Docusaurus)  
+**Front Door:** /docs/book/overview  
+**Every Page:** Canonical metadata applied  
+**Audience:** Contributors, researchers, AI Edition readers  
 
-The **TriadicFrameworks Book** is the long‑form, reader‑oriented exposition of the canon. While the main website provides module‑level reference documentation, this folder contains the narrative, pedagogical, and conceptual journey designed to introduce newcomers to the TriadicFrameworks worldview and guide them through its structure with clarity and intention.
+</div>
 
-This `README.md` explains the purpose of the folder, how the files relate to one another, and how the Book fits into the broader TriadicFrameworks documentation ecosystem.
+<div class="module-badge">
+📘 <strong>Foundational Theory Module</strong>
+</div>
+
+# Canon Overview
+
+The TriadicFrameworks Canon is the structured body of Resonance‑Time Theory (RTT).  
+It defines the relationships between operators, analyzer layers, regimes, engines, and structural maps.
+
+This overview introduces the major domains of the canon and how they interconnect.
 
 ---
 
-## Purpose of the Book
+## Canon Structure
 
-The Book exists to provide:
+The canon is organized into:
 
-- **A guided introduction** to the canon’s commitments, architecture, and philosophical grounding.  
-- **A structured reading path** that orients newcomers before they engage with the full module registry.  
-- **A narrative explanation** of the TriadicFrameworks session grammar, operator layers, and conceptual lineage.  
-- **A durable reference** for educators, contributors, and readers who want a cohesive, long‑form explanation rather than module‑level fragments.
+- **Foundational Theory**  
+- **Analyzer Layers**  
+- **Operators & Grammars**  
+- **Regime Logic**  
+- **Diagnostic Engines**  
+- **Structural Detection**  
+- **TEL Expression & Representation**  
+- **Governance & Ratification**  
+- **Pattern Dynamics & NoS**  
 
-The Book is not a replacement for the module documentation; it is the *interpretive layer* that helps readers understand why the modules exist and how they interrelate.
-
----
-
-## Folder Contents
-
-This directory contains the full Book manuscript, organized into canonical sections:
-
-- **index.md** — The official front door for the TriadicFrameworks Book. Provides orientation, reading paths, and the three‑part journey.
-- **canon.md** — A concise articulation of the five commitments that define the TriadicFrameworks canon.
-- **part-i.md** — *Orient to TriadicFrameworks.* Introduces the reader to the conceptual landscape and foundational motivations.
-- **part-ii.md** — *Core Structure.* Explains the architecture, operators, regimes, and the logic underlying the canon.
-- **part-iii.md** — *Application and Mastery.* Shows how the framework is used, adapted, and extended in real contexts.
-- **sessions.md** — A deeper dive into session grammar, usage patterns, and adaptation guidelines.
-- **registry.md** — A narrative explanation of the module registry and how readers should interpret module categories.
-- **glossary.md** — Definitions of key terms used throughout the Book.
-- **changelog.md** — Revision history for the Book.
-
-Each file contributes to the reader’s progression from orientation → structure → application.
+Each domain contributes to the whole without contradicting foundational RTT principles.
 
 ---
 
-## Relationship to the Canon
+## Navigation
 
-The Book is part of the TriadicFrameworks documentation triad:
+Key pages include:
 
-1. **The Canon** — The commitments, rules, and structural grammar.  
-2. **The Modules** — The operational, domain‑specific implementations.  
-3. **The Book** — The narrative explanation that ties everything together.
-
-Readers should begin here, then move to the module registry once they understand the conceptual terrain.
-
----
-
-## Contribution Guidelines
-
-If you are contributing to the Book:
-
-- Maintain **narrative clarity**; this folder is for readers, not operators.  
-- Preserve **canonical terminology** and avoid redefining core concepts.  
-- Keep **session grammar references accurate** and consistent with the main documentation.  
-- Update **changelog.md** for any substantive changes.  
-- Ensure **index.md** remains the stable front door.
+- [Canon](./canon)  
+- [Glossary](./glossary)  
+- [Registry](./registry)  
+- [Modules](./modules)  
+- [Sessions](./sessions)  
+- [Session Grammar](./session-grammar)  
+- [Changelog](./changelog)
 
 ---
 
-## Status
+## AI Edition
 
-This folder is actively maintained as part of the ongoing TriadicFrameworks documentation refresh. All files here are considered canonical components of the Book and should be updated with care.
+The AI Edition expands the canon into nine books:
+
+- Book 1 — Framework Field Theory  
+- Book 2 — The Inverted Star  
+- Book 3 — Structural Detection  
+- Book 4 — Opacity & Revelation  
+- Book 5 — TEL Expression & Representation  
+- Book 6 — Governance & Regime Logic  
+- Book 7 — SARG Structural Argumentation  
+- Book 8 — NoS Nature of Structure  
+- Book 9 — Pattern Dynamics  
+
+---
+
+## Contribution Reference
+
+For rules governing contributions:
+
+- [What You Cannot Contribute](../contributing#what-you-cannot-contribute)  
+- [The Ratification Flow](../contributing#the-ratification-flow)
+
+---
+
+## Purpose of This Page
+
+This overview exists to:
+
+- orient readers within the canon  
+- provide a structural map  
+- unify navigation across modules  
+- support both human and AI Edition readers  

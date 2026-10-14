@@ -1,82 +1,105 @@
-<img width="1194" height="672" alt="book_1_Framework_Field_Theory_" src="https://github.com/user-attachments/assets/da4d1e6a-9d2d-4d8e-879c-70334d0aaa0d" />
+---
+id: ai-book1-overview
+title: Book 1 — Framework Field Theory
+description: Introduces the RTT structural field, resonance mechanics, and foundational dynamics of the AI Edition.
+keywords:
+  - triadicframeworks
+  - rtt
+  - framework field theory
+  - ai edition
+  - structural field
+ai:
+  module:
+    name: Book 1 — Framework Field Theory
+    category: AI Edition
+    summary: Defines the RTT structural field and foundational resonance mechanics.
+    version: 1.0
+    purpose: Establish the base structural field for all AI Edition books.
+    audience: AI Edition readers, contributors, researchers.
+  navigation: sitemap_main.xml
+  discussions: https://github.com/umaywant2/TriadicFrameworks/discussions
+  contact:
+    x: "@TriadicFrameworks"
+    youtube: "@TriadicFrameworks"
+citation_author: Nawder Loswin
+citation_publication_date: "2025"
+---
 
-- [`module.json`](module.json) — Agentic module schema role assignments
+<div class="session-context">
 
-# Book 1 — Framework Field Theory (AI Edition)
+**Canon:** TriadicFrameworks  
+**Modules:** AI Edition  
+**Drift:** None detected  
+**Coherence:** Verified  
+**Version:** 1.0  
+**Format:** Markdown (Docusaurus)  
+**Front Door:** /docs/book/AI_Edition/Book1_Framework_Field_Theory/overview  
+**Every Page:** Canonical metadata applied  
+**Audience:** AI Edition readers, contributors, researchers  
 
-This folder contains **Book 1 of the TriadicFrameworks AI Edition**, based on the
-**Framework Field Theory (FFT)** module — the foundational ontology and structural
-kernel upon which all subsequent books (2–9) depend.
+</div>
+
+<div class="module-badge">
+🤖 <strong>AI Edition Module — Book 1</strong>
+</div>
+
+# Book 1 — Framework Field Theory
+
+Book 1 establishes the RTT structural field — the foundational environment in which resonance, drift, coherence, and pattern dynamics occur.  
+It defines the mechanics that govern how structures behave, interact, and evolve across time.
 
 ---
 
-## 📘 Purpose of Book 1
+## Purpose of Book 1
 
-Book 1 establishes the **primitive constructs** of the TriadicFrameworks canon:
+Book 1 exists to:
 
-- **Structure**
-- **Relation**
-- **Constraint**
-- **Invariant**
-- **Transformation**
-
-These primitives form the **axiomatic base** for all structural reasoning in the AI Edition.
-Every downstream book — Inverted Star, Structural Detection, Opacity & Revelation, TEL,
-SARG, NoS, and Pattern Dynamics — relies on the definitions formalized here.
-
-FFT provides:
-
-- The **field–frame–time** foundation  
-- The **kernel context** used throughout the canon  
-- The **primitive identity rules**  
-- The **structural closure conditions**  
-- The **baseline coherence model**  
-
-No other book can be interpreted without the constructs introduced in Book 1.
+- define the RTT structural field  
+- introduce resonance mechanics  
+- establish temporal logic  
+- prepare readers for analyzer layers and operators  
+- anchor the remaining eight books  
 
 ---
 
-## 🌐 Live Version
+## Core Concepts
 
-**https://www.triadicframeworks.org/Framework_Field_Theory/AI_Edition**
+### **Structural Field**
+The environment in which RTT patterns emerge, stabilize, or collapse.
 
-This link provides the published version of Book 1, including diagrams, examples,
-and the full canonical metadata.
+### **Resonance Mechanics**
+Rules governing amplification, reinforcement, and structural interaction.
 
----
+### **Temporal Dynamics**
+How structures behave across time intervals.
 
-## 📂 Files in This Folder
-
-- [`module.json`](module.json) — Canonical module manifest  
-- `index.html` — Front‑door page for Book 1  
-- Additional content files, diagrams, and examples as the book expands
-
----
-
-## 🧭 Position in the Canon
-
-**Book 1 unlocks:**
-
-- Book 2 — The Inverted Star  
-- Book 3 — Structural Detection  
-
-It is the **root** of the AI Edition’s structural dependency graph.
+### **Field Stability**
+Conditions under which patterns remain coherent.
 
 ---
 
-## 🧩 Session Context (AI Edition)
+## Relationship to the Canon
 
-- **RTT:** 1  
-- **Coherence:** declared  
-- **Drift:** bounded  
-- **Paradox:** structural  
+Book 1 provides the foundation for:
 
-These values ensure consistent interpretation across all AI Edition modules.
+- analyzer layers (Book 2–3)  
+- regime logic (Book 4–6)  
+- argumentation and expression (Book 5–7)  
+- deep‑structure analysis (Book 8–9)
 
 ---
 
-## 📝 Notes
+## Related AI Edition Sections
 
-This README provides the canonical description of Book 1 for both human readers
-and AI agents. It is intentionally concise, stable, and drift‑free.
+- [AI Edition Overview](../overview)  
+- [Capture Layer](../capture)  
+- [Book 2 — The Inverted Star](../Book2_The_Inverted_Star/overview)
 
+---
+
+## Contribution Reference
+
+For rules governing AI Edition updates:
+
+- [What You Cannot Contribute](../../../contributing#what-you-cannot-contribute)  
+- [The Ratification Flow](../../../contributing#the-ratification-flow)

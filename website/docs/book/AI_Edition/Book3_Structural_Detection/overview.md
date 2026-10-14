@@ -1,90 +1,121 @@
-<img width="1194" height="672" alt="book_3_Structural_Detection_" src="https://github.com/user-attachments/assets/f14d4b39-9977-4740-936b-1ccbe6dac6e5" />
+---
+id: ai-book3-overview
+title: Book 3 — Structural Detection
+description: Introduces RTT detection systems, drift vectors, coherence alignment, and pattern identification.
+keywords:
+  - triadicframeworks
+  - rtt
+  - structural detection
+  - ai edition
+  - drift vectors
+ai:
+  module:
+    name: Book 3 — Structural Detection
+    category: AI Edition
+    summary: Defines RTT detection systems and the logic used to identify drift, coherence, and structural patterns.
+    version: 1.0
+    purpose: Provide the detection logic required for advanced RTT interpretation.
+    audience: AI Edition readers, contributors, researchers.
+  navigation: sitemap_main.xml
+  discussions: https://github.com/umaywant2/TriadicFrameworks/discussions
+  contact:
+    x: "@TriadicFrameworks"
+    youtube: "@TriadicFrameworks"
+citation_author: Nawder Loswin
+citation_publication_date: "2025"
+---
 
-- [`module.json`](module.json) — Agentic module schema role assignments
+<div class="session-context">
 
-# Book 3 — Structural Detection (AI Edition)
+**Canon:** TriadicFrameworks  
+**Modules:** AI Edition  
+**Drift:** None detected  
+**Coherence:** Verified  
+**Version:** 1.0  
+**Format:** Markdown (Docusaurus)  
+**Front Door:** /docs/book/AI_Edition/Book3_Structural_Detection/overview  
+**Every Page:** Canonical metadata applied  
+**Audience:** AI Edition readers, contributors, researchers  
 
-This folder contains **Book 3 of the TriadicFrameworks AI Edition**, based on the
-**Structural Detection** domain — the analytical engine that identifies, classifies,
-and validates structural patterns across any domain.
+</div>
+
+<div class="module-badge">
+🤖 <strong>AI Edition Module — Book 3</strong>
+</div>
+
+# Book 3 — Structural Detection
+
+Book 3 introduces the detection systems used to identify drift, coherence, resonance patterns, and structural evolution within RTT.  
+It provides the analytical machinery required to interpret structural behavior across time.
 
 ---
 
-## 🔍 Purpose of Book 3
+## Purpose of Book 3
 
-Book 3 introduces the **detection grammar**, defining:
+Book 3 exists to:
 
-- **Signal detection**
-- **Geometry probing**
-- **Lattice scanning**
-- **Noise gating**
-- **Pattern indexing**
-- **Detection operators**
-- **Coherence thresholds**
-- **Structural signatures**
-
-These constructs form the **core analytical layer** of the AI Edition.  
-Book 3 is the first book where structures become *detectable*, *classifiable*, and
-*measurable*.
-
-It is the bridge between:
-
-- **Book 2 — The Inverted Star**  
-  *(structural inversion, axis‑shift, duality)*
-
-and
-
-- **Book 4 — Opacity & Revelation**  
-  *(visibility, concealment, revelation thresholds)*
-
-Without Book 3, the Opacity–Revelation gradient cannot be evaluated.
+- define RTT detection systems  
+- reveal drift vectors  
+- validate coherence alignment  
+- identify resonance patterns  
+- prepare readers for regime transitions in Book 4  
 
 ---
 
-## 🌐 Live Version
+## Core Concepts
 
-**https://www.triadicframeworks.org/Structural_Detection/AI_Edition**  
+### **Drift Vectors**
+Directional deviations from canonical logic.
 
+### **Coherence Alignment**
+The degree to which structures remain aligned with RTT rules.
 
-This link provides the published version of Book 3, including diagrams, examples,
-and the full canonical metadata.
+### **Pattern Identification**
+Detection of emergent, stabilizing, or collapsing patterns.
 
----
-
-## 📂 Files in This Folder
-
-- [`module.json`](module.json) — Canonical module manifest  
-- `index.html` — Front‑door page for Book 3  
-- Additional content files, diagrams, and examples as the book expands
+### **Temporal Detection**
+How patterns evolve across time intervals.
 
 ---
 
-## 🧭 Position in the Canon
+## Detection Systems
 
-**Book 3 unlocks:**
+Book 3 introduces:
 
-- Book 4 — Opacity & Revelation  
-- Book 5 — TEL Expression & Representation  
-- Book 7 — SARG Structural Argumentation (indirect)  
-- Book 8 — NoS — Nature of Structure (indirect)
+- Drift Engine  
+- Coherence Engine  
+- Pattern Detection Engine  
+- Resonance Detection Operators  
+- Temporal Detection Operators  
 
-It is the **analytical engine** of the AI Edition’s structural dependency graph.
-
----
-
-## 🧩 Session Context (AI Edition)
-
-- **RTT:** 1  
-- **Coherence:** declared  
-- **Drift:** bounded  
-- **Paradox:** structural  
-
-These values ensure consistent interpretation across all AI Edition modules.
+These systems form the backbone of RTT structural analysis.
 
 ---
 
-## 📝 Notes
+## Relationship to the Canon
 
-This README provides the canonical description of Book 3 for both human readers
-and AI agents. It is intentionally concise, stable, and drift‑free.
+Book 3 provides the detection logic required for:
 
+- regime transitions (Book 4)  
+- TEL expression (Book 5)  
+- governance logic (Book 6)  
+- argumentation structures (Book 7)  
+- deep‑structure emergence (Book 8)  
+- pattern evolution (Book 9)
+
+---
+
+## Related AI Edition Sections
+
+- [AI Edition Overview](../overview)  
+- [Book 2 — The Inverted Star](../Book2_The_Inverted_Star/overview)  
+- [Book 4 — Opacity & Revelation](../Book4_Opacity_and_Revelation/overview)
+
+---
+
+## Contribution Reference
+
+For rules governing AI Edition updates:
+
+- [What You Cannot Contribute](../../../contributing#what-you-cannot-contribute)  
+- [The Ratification Flow](../../../contributing#the-ratification-flow)

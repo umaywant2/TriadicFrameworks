@@ -1,112 +1,121 @@
-<img width="1194" height="672" alt="book_6_Governance_and_Regime_Logic_" src="https://github.com/user-attachments/assets/35c683aa-9fdf-4745-a036-7e2e2db3eb7f" />
+---
+id: ai-book6-overview
+title: Book 6 — Governance & Regime Logic
+description: Defines RTT governance structures, rule‑based behavior, and regime logic across structural environments.
+keywords:
+  - triadicframeworks
+  - rtt
+  - governance
+  - regime logic
+  - ai edition
+ai:
+  module:
+    name: Book 6 — Governance & Regime Logic
+    category: AI Edition
+    summary: Explores rule‑based structural behavior and regime governance within RTT.
+    version: 1.0
+    purpose: Provide the governance logic required for structural regulation and canonical consistency.
+    audience: AI Edition readers, contributors, researchers.
+  navigation: sitemap_main.xml
+  discussions: https://github.com/umaywant2/TriadicFrameworks/discussions
+  contact:
+    x: "@TriadicFrameworks"
+    youtube: "@TriadicFrameworks"
+citation_author: Nawder Loswin
+citation_publication_date: "2025"
+---
 
-- [`module.json`](module.json) — Agentic module schema role assignments
+<div class="session-context">
 
-# Book 6 — Governance & Regime Logic (AI Edition)
+**Canon:** TriadicFrameworks  
+**Modules:** AI Edition  
+**Drift:** None detected  
+**Coherence:** Verified  
+**Version:** 1.0  
+**Format:** Markdown (Docusaurus)  
+**Front Door:** /docs/book/AI_Edition/Book6_Governance_and_Regime_Logic/overview  
+**Every Page:** Canonical metadata applied  
+**Audience:** AI Edition readers, contributors, researchers  
 
-This folder contains **Book 6 of the TriadicFrameworks AI Edition**, based on the
-**Governance & Regime Logic (GRL)** domain — the structural model of governance,
-authority, constraint enforcement, regime formation, stability, decay, and collapse.
+</div>
 
-Governance is treated here **not as a sociological or normative concept**, but as a
-**structural phenomenon**: a regime is a constraint‑enforcement structure, and its
-authority is a measurable structural property.
+<div class="module-badge">
+🛡️ <strong>AI Edition Module — Book 6</strong>
+</div>
+
+# Book 6 — Governance & Regime Logic
+
+Book 6 introduces the governance structures that regulate RTT behavior.  
+It defines rule‑based structural logic, regime governance, and the canonical mechanisms that maintain coherence across the RTT field.
+
+Governance determines *how* structures behave under rules, constraints, and ratification logic.
 
 ---
 
-## 🎯 Purpose of Book 6
+## Purpose of Book 6
 
-Book 6 applies the full structural toolkit of the AI Edition to the phenomenon of
-governance across:
+Book 6 exists to:
 
-- political systems  
-- organizations  
-- computational architectures  
-
-It answers structural questions such as:
-
-- When does a regime’s authority decay?  
-- What structural conditions cause regime collapse?  
-- How can governance be modeled without legitimacy claims?  
-- What makes a regime structurally valid?  
-- How do hidden constraints affect governance stability?  
-
-GRL is the **first book** in the canon where governance is modeled purely through
-structural mechanics.
+- define RTT governance rules  
+- unify regime logic  
+- regulate structural transitions  
+- maintain canonical consistency  
+- prepare readers for argumentation logic in Book 7  
 
 ---
 
-## 📘 What This Book Covers
+## Core Concepts
 
-| Chapter Area | Description |
-|--------------|-------------|
-| **Regime Definition** | Formal specification of a regime as a constraint‑enforcement structure |
-| **Authority as Structure** | Authority encoded relationally, not normatively |
-| **Regime Formation** | Structural conditions sufficient for regime emergence |
-| **Stability & Decay** | How authority evolves under enforcement feedback |
-| **Regime Collapse** | Structural conditions sufficient for regime dissolution |
-| **Inverted Star Regimes** | Leaderless governance via Book 2 topology |
-| **Opacity in Governance** | Hidden constraints and covert enforcement (via Book 4) |
-| **Cross‑Domain Application** | Political, organizational, and computational governance |
+### **Governance Regime**
+A rule‑based structural environment that enforces canonical behavior.
 
----
+### **Regime Logic**
+Rules governing transitions between opacity, revelation, stability, and pattern dynamics.
 
-## 🔐 Core Invariants
+### **Structural Regulation**
+Mechanisms that maintain coherence and prevent drift.
 
-- **INV‑GRL‑001 — Regime Validity**  
-  A regime is valid only if it can enforce at least one constraint on at least one governed structure.
-
-- **INV‑GRL‑002 — Authority Decay**  
-  Regime authority diminishes monotonically if enforcement actions produce no observable compliance response.
-
-- **INV‑GRL‑003 — Regime Closure**  
-  A regime cannot govern itself without introducing a meta‑regime or producing structural paradox.
-
-- **INV‑GRL‑004 — Constraint Legitimacy**  
-  Governed structures may challenge regime constraints only through declared structural channels, not unilateral violation.
+### **Ratification Logic**
+The process by which structural changes are validated.
 
 ---
 
-## 🧭 Reading Order
+## Governance Components
 
-```
-Book 1 (FFT)
-Book 2 (Inverted Star)
-Book 4 (Opacity & Revelation)
-Book 5 (TEL Expression & Representation)
-└──► Book 6 (Governance & Regime Logic) ← YOU ARE HERE
-    ├── Book 7 (SARG Structural Argumentation)
-    └── Book 9 (Pattern Dynamics)
-```
+Book 6 introduces:
 
-**Prerequisites:** Books 1, 2, 4, 5  
-**Unlocks:** Books 7, 9
+- governance operators  
+- rule‑based regime transitions  
+- structural regulation thresholds  
+- ratification flow mechanics  
+- coherence enforcement systems  
+
+These components ensure structural stability.
 
 ---
 
-## 🧩 AI Module Metadata
+## Relationship to the Canon
 
-| Field | Value |
-|-------|-------|
-| Module ID | `book6_governance` |
-| Folder | `Book6_Governance_and_Regime_Logic/` |
-| Edition | AI Edition v1.0.0 |
-| Domain | Structural Governance |
-| Tier | Advanced |
-| Status | Active |
-| Invariants file | `invariants/book6_invariants.json` |
+Book 6 provides governance logic required for:
+
+- argumentation structures (Book 7)  
+- deep‑structure emergence (Book 8)  
+- pattern evolution (Book 9)  
+- canonical ratification (Contributing.md)  
 
 ---
 
-## 🌐 Live Site
+## Related AI Edition Sections
 
-**https://umaywant2.github.io/TriadicFrameworks/docs/book/AI_Edition/Book6_Governance_and_Regime_Logic**
+- [AI Edition Overview](../overview)  
+- [Book 5 — TEL Expression & Representation](../Book5_TEL_Expression_and_Representation/overview)  
+- [Book 7 — SARG Structural Argumentation](../Book7_SARG_Structural_Argumentation/overview)
 
 ---
 
-## 📝 Notes
+## Contribution Reference
 
-This README provides the canonical description of Book 6 for both human readers
-and AI agents. It is intentionally concise, stable, and drift‑free.
+For rules governing AI Edition updates:
 
-Draft · Last updated: 2026‑10‑10 · AI Edition  
+- [What You Cannot Contribute](../../../contributing#what-you-cannot-contribute)  
+- [The Ratification Flow](../../../contributing#the-ratification-flow)
