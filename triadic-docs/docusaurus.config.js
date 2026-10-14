@@ -60,8 +60,9 @@ const config = {
         src: 'img/triadic-logo.svg',
       },
       items: [
-        { to: '/docs/book/overview', label: 'Canon', position: 'left' },
-        { to: '/docs/speeches/overview', label: 'Speeches', position: 'left' },
+  
+        { to: '/docs/book/book-overview', label: 'Canon', position: 'left' },
+        { to: '/docs/speeches/speeches-overview', label: 'Speeches', position: 'left' },
         { to: '/docs/contributing', label: 'Contributing', position: 'right' },
         { href: 'https://www.triadicframeworks.org', label: 'Main Site', position: 'right' },
       ],
@@ -81,7 +82,7 @@ const config = {
         {
           title: 'Speeches',
           items: [
-            { label: 'Overview', to: '/docs/speeches/overview' },
+            { label: 'Overview', to: '/docs/speeches/speeches-overview' },
             { label: 'Cadences', to: '/docs/speeches/speeches-index' },
           ],
         },
