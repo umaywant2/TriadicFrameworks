@@ -59,8 +59,7 @@ const config = {
         alt: 'Triadic Docs Logo',
         src: 'img/triadic-logo.svg',
       },
-      items: [
-  
+      items: [  
         { to: '/docs/book/book-overview', label: 'Canon', position: 'left' },
         { to: '/docs/speeches/speeches-overview', label: 'Speeches', position: 'left' },
         { to: '/docs/contributing', label: 'Contributing', position: 'right' },
