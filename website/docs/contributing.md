@@ -2,7 +2,15 @@
 
 
 
-**Placeholder page. Content coming soon.**
+**## What You Cannot Contribute**
+
+**Placeholder text.**
+
+
+
+**## The Ratification Flow**
+
+**Placeholder text.**
 
 
 

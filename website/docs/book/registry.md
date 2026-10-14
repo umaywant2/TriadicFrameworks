@@ -3,6 +3,9 @@
 > **The authoritative index of all TriadicFrameworks modules.**
 > 118 active modules across 12 primary groups. Use this as a reference, not a read-through.
 
+## Index Suite
+Placeholder text.
+
 ---
 
 ## How to Use This Registry
