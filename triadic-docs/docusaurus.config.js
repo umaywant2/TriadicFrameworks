@@ -1,40 +1,27 @@
 // @ts-check
-// `@type` JSDoc annotations allow editor autocompletion and type checking
-// (when paired with `@ts-check`).
-// There are various equivalent ways to declare your Docusaurus config.
-// See: https://docusaurus.io/docs/api/docusaurus-config
+// Docusaurus config using CommonJS (Node 20/24 compatible)
 
-import {themes as prismThemes} from 'prism-react-renderer';
-
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+const prismThemes = require('prism-react-renderer').themes;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Triadic-docs',
+  tagline: 'TriadicFrameworks Documentation',
   favicon: 'img/favicon.ico',
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: true,
   },
 
-  // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  url: 'https://docs.triadicframeworks.org',
   baseUrl: '/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'TriadicFrameworks',
+  projectName: 'triadic-docs',
 
   onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -43,125 +30,72 @@ const config = {
   presets: [
     [
       'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      {
         docs: {
-          sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          sidebarPath: require.resolve('./sidebars.js'),
+          editUrl: null,
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false,
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: require.resolve('./src/css/custom.css'),
         },
-      }),
+      },
     ],
   ],
 
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
-      colorMode: {
-        respectPrefersColorScheme: true,
+  themeConfig: {
+    colorMode: {
+      defaultMode: 'dark',
+      respectPrefersColorScheme: true,
+    },
+
+    navbar: {
+      title: 'Triadic-docs',
+      logo: {
+        alt: 'Triadic Docs Logo',
+        src: 'img/triadic-logo.svg',
       },
-navbar: {
-  title: 'Triadic-docs',
-  logo: {
-    alt: 'Triadic Docs Logo',
-    src: 'img/triadic-logo.svg',
+      items: [
+        { to: '/docs/book/overview', label: 'Canon', position: 'left' },
+        { to: '/docs/speeches/overview', label: 'Speeches', position: 'left' },
+        { to: '/docs/contributing', label: 'Contributing', position: 'right' },
+        { href: 'https://www.triadicframeworks.org', label: 'Main Site', position: 'right' },
+      ],
+    },
+
+    footer: {
+      style: 'dark',
+      links: [
+        {
+          title: 'Canon',
+          items: [
+            { label: 'Overview', to: '/docs/book/overview' },
+            { label: 'Glossary', to: '/docs/book/glossary' },
+            { label: 'Registry', to: '/docs/book/registry' },
+          ],
+        },
+        {
+          title: 'Speeches',
+          items: [
+            { label: 'Overview', to: '/docs/speeches/overview' },
+            { label: 'Cadences', to: '/docs/speeches/speeches-index' },
+          ],
+        },
+        {
+          title: 'Community',
+          items: [
+            { label: 'Contributing', to: '/docs/contributing' },
+            { label: 'GitHub', href: 'https://github.com/umaywant2/TriadicFrameworks' },
+          ],
+        },
+      ],
+      copyright: `© ${new Date().getFullYear()} TriadicFrameworks — RTT Canon`,
+    },
+
+    prism: {
+      theme: prismThemes.dracula,
+    },
   },
-},
-  items: [
-    {
-      to: '/docs/book/book-overview',
-      label: 'Book',
-      position: 'left',
-    },
-    {
-      to: '/docs/book/AI_Edition/ai-overview',
-      label: 'AI Edition',
-      position: 'left',
-    },
-    {
-      to: '/docs/speeches/speeches-overview',
-      label: 'Speeches',
-      position: 'left',
-    },
-    {
-      to: '/docs/speeches/cadence-constellation-map',
-      label: 'Cadence Series',
-      position: 'left',
-    },
-  ],
-},
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-      },
-      prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
-      },
-    }),
 };
 
-export default config;
+module.exports = config;
