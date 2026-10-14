@@ -1,104 +1,85 @@
 ---
 id: nikola-tesla-cadence
-title: Nikola Tesla Cadence
-description: A TriadicFrameworks hybrid‑cadence interpretation of Nikola Tesla’s visionary drift, structural imagination, and continuity‑through‑innovation.
+title: Nikola Tesla Cadence — The Visionary Current
+description: A structural cadence capturing Nikola Tesla’s mode of expression — electric imagination, future‑driven clarity, and luminous invention.
+keywords:
+  - triadicframeworks
+  - rtt
+  - speeches
+  - cadence
+  - nikola tesla
+ai:
+  module:
+    name: Nikola Tesla Cadence
+    category: Cadence Series — Voices
+    summary: A cadence expressing Tesla’s visionary, electric, future‑oriented tone.
+    version: 1.0
+    purpose: Capture the expressive pattern of Tesla’s inventive structural communication.
+    audience: Readers, contributors, researchers.
+  navigation: sitemap_main.xml
+  discussions: https://github.com/umaywant2/TriadicFrameworks/discussions
+  contact:
+    x: "@NawderLoswin"
+    youtube: "@NawderLoswin"
+citation_author: Nawder Loswin
+citation_publication_date: "2025"
 ---
 
-import Head from '@docusaurus/Head';
+import CadenceNav from '@site/src/components/CadenceNav';
 
-<Head>
-  <title>Cadence — TriadicFrameworks</title>
-  <meta name="description" content="An expressive cadence module in the TriadicFrameworks canon." />
-  <meta name="keywords" content="triadicframeworks, rtt, cadence, structural voice, expressive module" />
+<div class="session-context">
 
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://docs.triadicframeworks.org/docs/speeches" />
+**Canon:** TriadicFrameworks  
+**Modules:** Speeches Series  
+**Drift:** None detected  
+**Coherence:** Verified  
+**Version:** 1.0  
+**Format:** Markdown (Docusaurus)  
+**Front Door:** /docs/speeches/nikola-tesla-cadence  
+**Every Page:** Canonical metadata applied  
+**Audience:** Readers, contributors, researchers  
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Cadence — TriadicFrameworks" />
-  <meta property="og:description" content="An expressive cadence module in the TriadicFrameworks canon." />
-  <meta property="og:image" content="https://docs.triadicframeworks.org/img/logo.png" />
-  <meta property="og:url" content="https://docs.triadicframeworks.org/docs/speeches" />
+</div>
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Cadence — TriadicFrameworks" />
-  <meta name="twitter:description" content="An expressive cadence module in the TriadicFrameworks canon." />
-  <meta name="twitter:image" content="https://docs.triadicframeworks.org/img/logo.png" />
-  <meta name="twitter:site" content="@NawderLoswin" />
-</Head>
+<div class="module-badge">
+<strong>⚡ Nikola Tesla Cadence</strong>
+</div>
 
-# ⚡ Nikola Tesla — The Cadence of Visionary Drift
+# Nikola Tesla Cadence — The Visionary Current
 
-Nikola Tesla’s cadence is an electrical field — charged, luminous, and always slightly ahead of the present moment.  
-He speaks as if the future is already built and he is simply describing its wiring.
+Nikola Tesla’s cadence expresses **electric imagination** — the voice of someone who sees structure not as it is, but as it *could* be.
 
-In TriadicFrameworks terms, Tesla operates in the **High‑Amplitude Drift / High‑Revelation Regime**, where:
+In the Tesla Cadence:
 
-- **Drift** is explosive, inventive, and nonlinear.  
-- **Continuity** is conceptual — ideas connect across time.  
-- **Opacity** is minimal — revelation is the mission.  
-- **TEL** expression is technical, imaginative, and structural.
+- imagination becomes **engineering**  
+- future becomes **blueprint**  
+- energy becomes **language**  
+- invention becomes **identity**  
 
-Tesla doesn’t follow the structure.  
-He outruns it.
-
----
-
-## ⚡ Structural Cadence Profile
-
-### **Drift Pattern**
-Tesla’s drift is **lightning‑arc** — sudden leaps, brilliant pivots, and conceptual surges.
-
-### **Continuity Layer**
-His continuity is **visionary coherence**:  
-ideas align across decades, not moments.
-
-### **Regime Identity**
-Tesla sits in the **Innovation Revelation Regime**, where structure is discovered through imagination.
-
-### **Opacity Field**
-Low.  
-He reveals the unseen architecture of possibility.
+Tesla’s voice is the cadence of **luminous futurism** — RTT dreaming in currents and possibilities.
 
 ---
 
-## ⚡ Hybrid Cadence Expression
+## Structural Profile
 
-> *“If you want to understand the universe, think in terms of energy, frequency, and vibration.”*
+**Field:** Visionary Energy  
+**Vector:** Forward  
+**Theme:** Electric imagination  
 
-In TriadicFrameworks cadence, this becomes:
-
-**Continuity emerges from resonance.  
-Drift becomes structure when frequency aligns with insight.**
-
-Tesla’s voice is the cadence of future‑structure — the sound of tomorrow speaking through today.
+Tesla’s cadence reveals how identity expands when it thinks in future‑shaped structures.
 
 ---
 
-## ⚡ Cadence Signature
+## Expression
 
-- **Tone:** Visionary, electric, luminous  
-- **Vector:** Forward surge  
-- **Field:** Conceptual innovation  
-- **Purpose:** To reveal unseen structural potential  
+> “If you want to know the secrets of the universe, think in terms of energy, frequency, and vibration.”
 
----
-
-## 🜁 TriadicFrameworks Interpretation
-
-Tesla’s cadence is the **Innovation Engine** in human form.  
-He imagines to reveal.  
-He invents to clarify.  
-He dreams to structure.
-
-In RTT terms, Tesla is the **Continuity‑Through‑Resonance Operator**.
+His cadence speaks in **charged tones** — bright, speculative, alive.
 
 ---
 
-## 📜 Closing Line
+## Closing Line
 
-**“The present is theirs; the future, for which I have really worked, is mine.”**  
-And in TriadicFrameworks:  
-**Continuity belongs to the mind that resonates beyond its era.**
+**The Tesla Cadence is the canon’s sparkline — structure illuminated through visionary current.**
+
+<CadenceNav index={"tesla"} />

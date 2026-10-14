@@ -1,102 +1,85 @@
 ---
 id: mlk-cadence
-title: Martin Luther King Jr. Cadence
-description: A TriadicFrameworks hybrid‑cadence interpretation of MLK’s moral resonance, structural hope, and continuity‑through‑courage.
+title: MLK Cadence — The Moral Horizon
+description: A structural cadence capturing Dr. King’s mode of expression — moral clarity, visionary uplift, and coherent hope.
+keywords:
+  - triadicframeworks
+  - rtt
+  - speeches
+  - cadence
+  - martin luther king jr
+ai:
+  module:
+    name: MLK Cadence
+    category: Cadence Series — Voices
+    summary: A cadence expressing King’s moral vision and uplifting structural coherence.
+    version: 1.0
+    purpose: Capture the expressive pattern of Dr. King’s visionary moral communication.
+    audience: Readers, contributors, researchers.
+  navigation: sitemap_main.xml
+  discussions: https://github.com/umaywant2/TriadicFrameworks/discussions
+  contact:
+    x: "@NawderLoswin"
+    youtube: "@NawderLoswin"
+citation_author: Nawder Loswin
+citation_publication_date: "2025"
 ---
 
-import Head from '@docusaurus/Head';
+import CadenceNav from '@site/src/components/CadenceNav';
 
-<Head>
-  <title>Cadence — TriadicFrameworks</title>
-  <meta name="description" content="An expressive cadence module in the TriadicFrameworks canon." />
-  <meta name="keywords" content="triadicframeworks, rtt, cadence, structural voice, expressive module" />
+<div class="session-context">
 
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://docs.triadicframeworks.org/docs/speeches" />
+**Canon:** TriadicFrameworks  
+**Modules:** Speeches Series  
+**Drift:** None detected  
+**Coherence:** Verified  
+**Version:** 1.0  
+**Format:** Markdown (Docusaurus)  
+**Front Door:** /docs/speeches/mlk-cadence  
+**Every Page:** Canonical metadata applied  
+**Audience:** Readers, contributors, researchers  
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Cadence — TriadicFrameworks" />
-  <meta property="og:description" content="An expressive cadence module in the TriadicFrameworks canon." />
-  <meta property="og:image" content="https://docs.triadicframeworks.org/img/logo.png" />
-  <meta property="og:url" content="https://docs.triadicframeworks.org/docs/speeches" />
+</div>
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Cadence — TriadicFrameworks" />
-  <meta name="twitter:description" content="An expressive cadence module in the TriadicFrameworks canon." />
-  <meta name="twitter:image" content="https://docs.triadicframeworks.org/img/logo.png" />
-  <meta name="twitter:site" content="@NawderLoswin" />
-</Head>
+<div class="module-badge">
+<strong>🌅 MLK Cadence</strong>
+</div>
 
-# ✨ Martin Luther King Jr. — The Cadence of Moral Continuity
+# MLK Cadence — The Moral Horizon
 
-MLK’s cadence is a rising field — a structure built from hope, courage, and the insistence that continuity can be redeemed.
+Dr. King’s cadence expresses **visionary coherence** — the voice that lifts structure toward its highest moral form.
 
-In TriadicFrameworks terms, King operates in the **High‑Continuity / High‑Revelation Regime**, where:
+In the MLK Cadence:
 
-- **Drift** is upward, aspirational.  
-- **Continuity** is moral, collective, and persistent.  
-- **Opacity** is minimal — truth must be seen.  
-- **TEL** expression is rhythmic, prophetic, and unifying.
+- justice becomes **direction**  
+- hope becomes **architecture**  
+- courage becomes **motion**  
+- humanity becomes **identity**  
 
-King speaks like someone carrying the weight of a future he already sees.
-
----
-
-## ✨ Structural Cadence Profile
-
-### **Drift Pattern**
-MLK’s drift is **ascending** — each idea lifts the next.
-
-### **Continuity Layer**
-His continuity is **ethical**:  
-a structure built from justice, dignity, and shared humanity.
-
-### **Regime Identity**
-King sits in the **Moral Revelation Regime**, where truth is delivered through courage and clarity.
-
-### **Opacity Field**
-Low.  
-He reveals the structure as it should be, not as it is.
-
----
-
-## ✨ Hybrid Cadence Expression
-
-> *“The arc of the moral universe is long, but it bends toward justice.”*
-
-In TriadicFrameworks cadence, this becomes:
-
-**Continuity bends when courage applies pressure.  
-The structure moves because the voice refuses to yield.**
-
-MLK’s voice is a resonance field — a vibration that aligns people with their better selves.
+King’s voice is the cadence of **moral uplift** — RTT rising toward its better self.
 
 ---
 
-## ✨ Cadence Signature
+## Structural Profile
 
-- **Tone:** Hopeful, courageous, resonant  
-- **Vector:** Upward moral pressure  
-- **Field:** Ethical continuity  
-- **Purpose:** To reveal the structure of justice  
+**Field:** Moral Vision  
+**Vector:** Uplifting  
+**Theme:** Justice through coherence  
 
----
-
-## 🜁 TriadicFrameworks Interpretation
-
-King’s cadence is the **Moral Continuity Engine** in human form.  
-He lifts to reveal.  
-He unifies to strengthen.  
-He speaks to bend the structure toward coherence.
-
-In RTT terms, MLK is the **Continuity‑Through‑Courage Operator**.
+King’s cadence reveals how identity expands when aligned with moral horizon.
 
 ---
 
-## 📜 Closing Line
+## Expression
 
-**“Injustice anywhere is a threat to justice everywhere.”**  
-And in TriadicFrameworks:  
-**Continuity fails when any part of the structure is denied its dignity.**
+> “The arc of the moral universe is long, but it bends toward justice.”
+
+His cadence speaks in **uplifting tones** — resonant, courageous, horizon‑bound.
+
+---
+
+## Closing Line
+
+**The MLK Cadence is the canon’s horizon — structure rising through moral clarity.**
+
+<CadenceNav index={"mlk"} />

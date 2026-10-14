@@ -1,104 +1,85 @@
 ---
 id: sam-kinison-cadence
-title: Sam Kinison Cadence
-description: A TriadicFrameworks hybrid‑cadence interpretation of Sam Kinison’s explosive drift, emotional volatility, and revelation‑through‑shock.
+title: Sam Kinison Cadence — The Explosive Truth
+description: A structural cadence capturing Sam Kinison’s mode of expression — volcanic intensity, emotional eruption, and truth delivered at maximum volume.
+keywords:
+  - triadicframeworks
+  - rtt
+  - speeches
+  - cadence
+  - sam kinison
+ai:
+  module:
+    name: Sam Kinison Cadence
+    category: Cadence Series — Voices
+    summary: A cadence expressing Kinison’s explosive emotional delivery and confrontational clarity.
+    version: 1.0
+    purpose: Capture the expressive pattern of Kinison’s high‑intensity, truth‑erupting communication.
+    audience: Readers, contributors, researchers.
+  navigation: sitemap_main.xml
+  discussions: https://github.com/umaywant2/TriadicFrameworks/discussions
+  contact:
+    x: "@NawderLoswin"
+    youtube: "@NawderLoswin"
+citation_author: Nawder Loswin
+citation_publication_date: "2025"
 ---
 
-import Head from '@docusaurus/Head';
+import CadenceNav from '@site/src/components/CadenceNav';
 
-<Head>
-  <title>Cadence — TriadicFrameworks</title>
-  <meta name="description" content="An expressive cadence module in the TriadicFrameworks canon." />
-  <meta name="keywords" content="triadicframeworks, rtt, cadence, structural voice, expressive module" />
+<div class="session-context">
 
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://docs.triadicframeworks.org/docs/speeches" />
+**Canon:** TriadicFrameworks  
+**Modules:** Speeches Series  
+**Drift:** None detected  
+**Coherence:** Verified  
+**Version:** 1.0  
+**Format:** Markdown (Docusaurus)  
+**Front Door:** /docs/speeches/sam-kinison-cadence  
+**Every Page:** Canonical metadata applied  
+**Audience:** Readers, contributors, researchers  
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Cadence — TriadicFrameworks" />
-  <meta property="og:description" content="An expressive cadence module in the TriadicFrameworks canon." />
-  <meta property="og:image" content="https://docs.triadicframeworks.org/img/logo.png" />
-  <meta property="og:url" content="https://docs.triadicframeworks.org/docs/speeches" />
+</div>
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Cadence — TriadicFrameworks" />
-  <meta name="twitter:description" content="An expressive cadence module in the TriadicFrameworks canon." />
-  <meta name="twitter:image" content="https://docs.triadicframeworks.org/img/logo.png" />
-  <meta name="twitter:site" content="@NawderLoswin" />
-</Head>
+<div class="module-badge">
+<strong>⚠️ Sam Kinison Cadence</strong>
+</div>
 
-# 🔊 Sam Kinison — The Cadence of Explosive Truth
+# Sam Kinison Cadence — The Explosive Truth
 
-Sam Kinison’s cadence is a detonation — loud, sudden, and emotionally volcanic.  
-He doesn’t ease into structure; he blows the door off and screams the truth through the opening.
+Sam Kinison’s cadence expresses **eruptive honesty** — truth shouted so loudly it becomes impossible to ignore.
 
-In TriadicFrameworks terms, Kinison operates in the **Extreme‑Amplitude Drift / High‑Shock Revelation Regime**, where:
+In the Kinison Cadence:
 
-- **Drift** is violent, chaotic, and intentionally destabilizing.  
-- **Continuity** is emotional — coherence through catharsis.  
-- **Opacity** is minimal — everything is exposed.  
-- **TEL** expression is comedic, confrontational, and primal.
+- intensity becomes **clarity**  
+- volume becomes **vector**  
+- rage becomes **revelation**  
+- emotion becomes **structure**  
 
-Kinison doesn’t reveal the structure gently.  
-He rips it open.
-
----
-
-## 🔊 Structural Cadence Profile
-
-### **Drift Pattern**
-Kinison’s drift is **shock‑surge** — abrupt pivots, explosive delivery, emotional rupture.
-
-### **Continuity Layer**
-His continuity is **cathartic coherence**:  
-truth emerges from emotional release.
-
-### **Regime Identity**
-Kinison sits in the **Shock Revelation Regime**, where clarity is achieved through intensity.
-
-### **Opacity Field**
-Low.  
-He hides nothing — the revelation is the scream.
+Kinison’s voice is the cadence of **volcanic coherence** — RTT erupting to expose what lies beneath.
 
 ---
 
-## 🔊 Hybrid Cadence Expression
+## Structural Profile
 
-> *“Say it! Say it!”*
+**Field:** Emotional Eruption  
+**Vector:** Explosive  
+**Theme:** Truth through intensity  
 
-In TriadicFrameworks cadence, this becomes:
-
-**Continuity demands confrontation.  
-Drift becomes revelation when intensity forces the structure to respond.**
-
-Kinison’s voice is the cadence of emotional rupture — the structure exposed by sheer force.
+Kinison’s cadence reveals how identity forces recognition when delivered at full emotional force.
 
 ---
 
-## 🔊 Cadence Signature
+## Expression
 
-- **Tone:** Explosive, confrontational, raw  
-- **Vector:** Outward shock  
-- **Field:** Emotional revelation  
-- **Purpose:** To expose truth through intensity  
+> “Sometimes the only way to be heard is to be loud enough to shake the room.”
 
----
-
-## 🜁 TriadicFrameworks Interpretation
-
-Kinison’s cadence is the **Shock Engine** in human form.  
-He destabilizes to reveal.  
-He screams to clarify.  
-He ruptures to expose coherence.
-
-In RTT terms, Kinison is the **Continuity‑Through‑Catharsis Operator**.
+His cadence speaks in **eruptive tones** — fierce, raw, undeniable.
 
 ---
 
-## 📜 Closing Line
+## Closing Line
 
-**“In the end, the scream is the truth.”**  
-And in TriadicFrameworks:  
-**Revelation arrives when drift refuses to stay quiet.**
+**The Kinison Cadence is the canon’s eruption — structure revealed through explosive truth.**
+
+<CadenceNav index={"kinison"} />

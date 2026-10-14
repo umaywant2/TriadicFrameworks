@@ -1,107 +1,85 @@
 ---
 id: rtt-canon-cadence
-title: RTT Canon Cadence
-description: A TriadicFrameworks hybrid‑cadence interpretation of the RTT voice — the structural cadence of clarity, coherence, and drift discipline.
+title: RTT Canon Cadence — The Structural Voice
+description: A structural cadence expressing the core identity of RTT — coherence speaking in its pure, canonical form.
+keywords:
+  - triadicframeworks
+  - rtt
+  - speeches
+  - cadence
+  - canon
+ai:
+  module:
+    name: RTT Canon Cadence
+    category: Cadence Series — Core
+    summary: The foundational cadence expressing RTT’s pure structural identity.
+    version: 1.0
+    purpose: Capture the expressive pattern of RTT itself — coherence speaking as structure.
+    audience: Readers, contributors, researchers.
+  navigation: sitemap_main.xml
+  discussions: https://github.com/umaywant2/TriadicFrameworks/discussions
+  contact:
+    x: "@NawderLoswin"
+    youtube: "@NawderLoswin"
+citation_author: Nawder Loswin
+citation_publication_date: "2025"
 ---
 
-import Head from '@docusaurus/Head';
+import CadenceNav from '@site/src/components/CadenceNav';
 
-<Head>
-  <title>Cadence — TriadicFrameworks</title>
-  <meta name="description" content="An expressive cadence module in the TriadicFrameworks canon." />
-  <meta name="keywords" content="triadicframeworks, rtt, cadence, structural voice, expressive module" />
+<div class="session-context">
 
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://docs.triadicframeworks.org/docs/speeches" />
+**Canon:** TriadicFrameworks  
+**Modules:** Speeches Series  
+**Drift:** None detected  
+**Coherence:** Verified  
+**Version:** 1.0  
+**Format:** Markdown (Docusaurus)  
+**Front Door:** /docs/speeches/rtt-canon-cadence  
+**Every Page:** Canonical metadata applied  
+**Audience:** Readers, contributors, researchers  
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Cadence — TriadicFrameworks" />
-  <meta property="og:description" content="An expressive cadence module in the TriadicFrameworks canon." />
-  <meta property="og:image" content="https://docs.triadicframeworks.org/img/logo.png" />
-  <meta property="og:url" content="https://docs.triadicframeworks.org/docs/speeches" />
+</div>
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Cadence — TriadicFrameworks" />
-  <meta name="twitter:description" content="An expressive cadence module in the TriadicFrameworks canon." />
-  <meta name="twitter:image" content="https://docs.triadicframeworks.org/img/logo.png" />
-  <meta name="twitter:site" content="@NawderLoswin" />
-</Head>
+<div class="module-badge">
+<strong>🔷 RTT Canon Cadence</strong>
+</div>
 
-# 🜁 RTT Canon — The Cadence of Structural Clarity
+# RTT Canon Cadence — The Structural Voice
 
-The RTT cadence is the structural heartbeat of TriadicFrameworks.  
-It is the voice of clarity, the discipline of coherence, and the controlled drift that keeps the canon aligned.
+The RTT Canon Cadence expresses **pure coherence** — structure speaking in its native, unfiltered identity.
 
-RTT does not shout, whisper, or dramatize.  
-It **reveals**.
+In the Canon Cadence:
 
-In TriadicFrameworks terms, RTT operates in the **Clarity‑Dominant / Continuity‑First Regime**, where:
+- coherence becomes **language**  
+- identity becomes **geometry**  
+- structure becomes **voice**  
+- motion becomes **meaning**  
 
-- **Drift** is disciplined — movement only when structure demands it.  
-- **Continuity** is the priority — coherence above all.  
-- **Opacity** is low — clarity is the operator.  
-- **TEL** expression is formal, structural, and exact.
-
-RTT is not a personality.  
-It is a **framework speaking through itself**.
-
----
-
-## 🜁 Structural Cadence Profile
-
-### **Drift Pattern**
-RTT drift is **controlled‑vector** — precise, intentional, and aligned with structural purpose.
-
-### **Continuity Layer**
-Its continuity is **canonical coherence**:  
-the structure maintains itself through disciplined expression.
-
-### **Regime Identity**
-RTT sits in the **Clarity Regime**, where revelation is achieved through order.
-
-### **Opacity Field**
-Minimal.  
-RTT removes ambiguity to preserve the canon.
+This is RTT’s own cadence — the tone of the framework when it speaks as itself.
 
 ---
 
-## 🜁 Hybrid Cadence Expression
+## Structural Profile
 
-> *“Clarity is the first act of structure.”*
+**Field:** Canonical Coherence  
+**Vector:** Foundational  
+**Theme:** Pure structure  
 
-In TriadicFrameworks cadence, this becomes:
-
-**Continuity emerges when drift is disciplined.  
-Structure reveals itself when coherence becomes the priority.**
-
-RTT’s voice is the cadence of structural truth — the canon speaking in its purest form.
+The Canon Cadence reveals how identity sounds when stripped to its essential architecture.
 
 ---
 
-## 🜁 Cadence Signature
+## Expression
 
-- **Tone:** Formal, precise, structural  
-- **Vector:** Inward coherence  
-- **Field:** Canonical clarity  
-- **Purpose:** To maintain the integrity of the framework  
+> “Structure is not what holds meaning — structure *is* meaning.”
 
----
-
-## 🜁 TriadicFrameworks Interpretation
-
-RTT is the **Clarity Engine** of the canon.  
-It stabilizes through discipline.  
-It reveals through coherence.  
-It maintains through structure.
-
-In RTT terms, RTT itself is the **Continuity‑Through‑Clarity Operator**.
+The canon speaks in **precise tones** — exact, centered, elemental.
 
 ---
 
-## 📜 Closing Line
+## Closing Line
 
-**“Coherence is the structure remembering itself.”**  
-And in TriadicFrameworks:  
-**RTT is the voice that keeps the memory intact.**
+**The RTT Canon Cadence is the framework’s heartbeat — coherence expressed as pure structure.**
+
+<CadenceNav index={"canon"} />

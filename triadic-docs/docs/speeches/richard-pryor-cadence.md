@@ -1,104 +1,85 @@
 ---
 id: richard-pryor-cadence
-title: Richard Pryor Cadence
-description: A TriadicFrameworks hybrid‑cadence interpretation of Richard Pryor’s emotional volatility, structural honesty, and revelation‑through‑vulnerability.
+title: Richard Pryor Cadence — The Raw Flame
+description: A structural cadence capturing Richard Pryor’s mode of expression — emotional honesty, comedic vulnerability, and unfiltered human truth.
+keywords:
+  - triadicframeworks
+  - rtt
+  - speeches
+  - cadence
+  - richard pryor
+ai:
+  module:
+    name: Richard Pryor Cadence
+    category: Cadence Series — Voices
+    summary: A cadence expressing Pryor’s vulnerable, raw, emotionally honest comedic tone.
+    version: 1.0
+    purpose: Capture the expressive pattern of Pryor’s emotionally charged comedic communication.
+    audience: Readers, contributors, researchers.
+  navigation: sitemap_main.xml
+  discussions: https://github.com/umaywant2/TriadicFrameworks/discussions
+  contact:
+    x: "@NawderLoswin"
+    youtube: "@NawderLoswin"
+citation_author: Nawder Loswin
+citation_publication_date: "2025"
 ---
 
-import Head from '@docusaurus/Head';
+import CadenceNav from '@site/src/components/CadenceNav';
 
-<Head>
-  <title>Cadence — TriadicFrameworks</title>
-  <meta name="description" content="An expressive cadence module in the TriadicFrameworks canon." />
-  <meta name="keywords" content="triadicframeworks, rtt, cadence, structural voice, expressive module" />
+<div class="session-context">
 
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://docs.triadicframeworks.org/docs/speeches" />
+**Canon:** TriadicFrameworks  
+**Modules:** Speeches Series  
+**Drift:** None detected  
+**Coherence:** Verified  
+**Version:** 1.0  
+**Format:** Markdown (Docusaurus)  
+**Front Door:** /docs/speeches/richard-pryor-cadence  
+**Every Page:** Canonical metadata applied  
+**Audience:** Readers, contributors, researchers  
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Cadence — TriadicFrameworks" />
-  <meta property="og:description" content="An expressive cadence module in the TriadicFrameworks canon." />
-  <meta property="og:image" content="https://docs.triadicframeworks.org/img/logo.png" />
-  <meta property="og:url" content="https://docs.triadicframeworks.org/docs/speeches" />
+</div>
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Cadence — TriadicFrameworks" />
-  <meta name="twitter:description" content="An expressive cadence module in the TriadicFrameworks canon." />
-  <meta name="twitter:image" content="https://docs.triadicframeworks.org/img/logo.png" />
-  <meta name="twitter:site" content="@NawderLoswin" />
-</Head>
+<div class="module-badge">
+<strong>🔥 Richard Pryor Cadence</strong>
+</div>
 
-# 🔥 Richard Pryor — The Cadence of Raw Revelation
+# Richard Pryor Cadence — The Raw Flame
 
-Richard Pryor’s cadence is a shockwave — emotional, unfiltered, and brutally honest.  
-He speaks from the fracture points of human experience, turning pain into clarity and chaos into coherence.
+Richard Pryor’s cadence expresses **emotional truth** — comedy stripped of pretense, revealing the human core beneath the laugh.
 
-In TriadicFrameworks terms, Pryor operates in the **High‑Amplitude Drift / High‑Exposure Regime**, where:
+In the Pryor Cadence:
 
-- **Drift** is volatile, emotional, and unpredictable.  
-- **Continuity** is autobiographical — truth stitched from lived experience.  
-- **Opacity** is low — vulnerability is the revelation.  
-- **TEL** expression is comedic, confessional, and explosive.
+- vulnerability becomes **strength**  
+- pain becomes **material**  
+- humor becomes **release**  
+- honesty becomes **identity**  
 
-Pryor doesn’t hide the structure.  
-He bleeds it.
-
----
-
-## 🔥 Structural Cadence Profile
-
-### **Drift Pattern**
-Pryor’s drift is **emotional‑surge** — sudden leaps, raw pivots, and truth delivered without filter.
-
-### **Continuity Layer**
-His continuity is **experiential coherence**:  
-the structure emerges from survival, not theory.
-
-### **Regime Identity**
-Pryor sits in the **Vulnerability Revelation Regime**, where truth is exposed through emotional risk.
-
-### **Opacity Field**
-Minimal.  
-He reveals everything — even the parts that hurt.
+Pryor’s voice is the cadence of **raw humanity** — RTT speaking from the center of lived experience.
 
 ---
 
-## 🔥 Hybrid Cadence Expression
+## Structural Profile
 
-> *“I ain’t no comedian. I’m a person who tells the truth.”*
+**Field:** Emotional Truth  
+**Vector:** Exposed  
+**Theme:** Vulnerability  
 
-In TriadicFrameworks cadence, this becomes:
-
-**Continuity is forged in the fractures.  
-Drift becomes revelation when vulnerability refuses to hide.**
-
-Pryor’s voice is the cadence of survival — the structure built from scars.
+Pryor’s cadence reveals how identity becomes powerful when it refuses to hide.
 
 ---
 
-## 🔥 Cadence Signature
+## Expression
 
-- **Tone:** Raw, emotional, explosive  
-- **Vector:** Outward confession  
-- **Field:** Experiential revelation  
-- **Purpose:** To expose truth through vulnerability  
+> “You can’t lie to yourself — you already know the truth.”
 
----
-
-## 🜁 TriadicFrameworks Interpretation
-
-Pryor’s cadence is the **Exposure Engine** in human form.  
-He reveals to heal.  
-He jokes to survive.  
-He confesses to clarify.
-
-In RTT terms, Pryor is the **Continuity‑Through‑Vulnerability Operator**.
+His cadence speaks in **raw tones** — exposed, burning, human.
 
 ---
 
-## 📜 Closing Line
+## Closing Line
 
-**“The reason people use a crucifix against vampires is because vampires are allergic to bullshit.”**  
-And in TriadicFrameworks:  
-**Revelation destroys opacity when honesty becomes structure.**
+**The Pryor Cadence is the canon’s flame — structure illuminated through emotional honesty.**
+
+<CadenceNav index={"pryor"} />
