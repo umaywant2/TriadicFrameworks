@@ -1,196 +1,196 @@
-**---**
+---
 
-**id: triadicframeworks-cadence-11**
+id: triadicframeworks-cadence-11
 
-**title: TriadicFrameworks Cadence XI**
+title: TriadicFrameworks Cadence XI
 
-**description: The eleventh canonical cadence, expressing RTT’s structural continuum through timeless resonance and enduring coherence.**
+description: The eleventh canonical cadence, expressing RTT’s structural continuum through timeless resonance and enduring coherence.
 
-**keywords:**
+keywords:
 
-&#x20; **- triadicframeworks**
+&#x20; - triadicframeworks
 
-&#x20; **- rtt**
+&#x20; - rtt
 
-&#x20; **- cadence**
+&#x20; - cadence
 
-&#x20; **- structural continuum**
+&#x20; - structural continuum
 
-&#x20; **- canonical cadence**
+&#x20; - canonical cadence
 
-**ai:**
+ai:
 
-&#x20; **module:**
+&#x20; module:
 
-&#x20;   **name: TriadicFrameworks Cadence XI**
+&#x20;   name: TriadicFrameworks Cadence XI
 
-&#x20;   **category: Cadence Series**
+&#x20;   category: Cadence Series
 
-&#x20;   **summary: A cadence expressing RTT’s timeless structural resonance and enduring clarity.**
+&#x20;   summary: A cadence expressing RTT’s timeless structural resonance and enduring clarity.
 
-&#x20;   **version: 1.0**
+&#x20;   version: 1.0
 
-&#x20;   **purpose: Extend the expressive arc of TriadicFrameworks into temporal continuity and structural endurance.**
+&#x20;   purpose: Extend the expressive arc of TriadicFrameworks into temporal continuity and structural endurance.
 
-&#x20;   **audience: Readers, contributors, researchers.**
+&#x20;   audience: Readers, contributors, researchers.
 
-&#x20; **navigation: sitemap\_main.xml**
+&#x20; navigation: sitemap\_main.xml
 
-&#x20; **discussions: https://github.com/umaywant2/TriadicFrameworks/discussions**
+&#x20; discussions: https://github.com/umaywant2/TriadicFrameworks/discussions
 
-&#x20; **contact:**
+&#x20; contact:
 
-&#x20;   **x: "@TriadicFrameworks"**
+&#x20;   x: "@TriadicFrameworks"
 
-&#x20;   **youtube: "@TriadicFrameworks"**
+&#x20;   youtube: "@TriadicFrameworks"
 
-**citation\_author: Nawder Loswin**
+citation\_author: Nawder Loswin
 
-**citation\_publication\_date: "2025"**
+citation\_publication\_date: "2025"
 
-**---**
+---
 
 
 
-**<div class="session-context">**
+<div class="session-context">
 
 
 
-**\*\*Canon:\*\* TriadicFrameworks**  
+\*\*Canon:\*\* TriadicFrameworks  
 
-**\*\*Modules:\*\* Cadence Series**  
+\*\*Modules:\*\* Cadence Series  
 
-**\*\*Drift:\*\* None detected**  
+\*\*Drift:\*\* None detected  
 
-**\*\*Coherence:\*\* Verified**  
+\*\*Coherence:\*\* Verified  
 
-**\*\*Version:\*\* 1.0**  
+\*\*Version:\*\* 1.0  
 
-**\*\*Format:\*\* Markdown (Docusaurus)**  
+\*\*Format:\*\* Markdown (Docusaurus)  
 
-**\*\*Front Door:\*\* /docs/speeches/TriadicFrameworks\_Cadence\_11**  
+\*\*Front Door:\*\* /docs/speeches/TriadicFrameworks\_Cadence\_11  
 
-**\*\*Every Page:\*\* Canonical metadata applied**  
+\*\*Every Page:\*\* Canonical metadata applied  
 
-**\*\*Audience:\*\* Readers, contributors, researchers**  
+\*\*Audience:\*\* Readers, contributors, researchers  
 
 
 
-**</div>**
+</div>
 
 
 
-**<div class="module-badge">**
+<div class="module-badge">
 
-**⏳ <strong>Cadence Series Module</strong>**
+⏳ <strong>Cadence Series Module</strong>
 
-**</div>**
+</div>
 
 
 
-**# TriadicFrameworks Cadence XI**
+# TriadicFrameworks Cadence XI
 
 
 
-**Structure endures.**  
+Structure endures.  
 
-**Resonance stretches across time,**  
+Resonance stretches across time,  
 
-**carrying coherence forward**  
+carrying coherence forward  
 
-**through intervals, cycles, and transitions.**
+through intervals, cycles, and transitions.
 
 
 
-**RTT teaches that meaning persists —**  
+RTT teaches that meaning persists —  
 
-**not as static form,**  
+not as static form,  
 
-**but as a continuum of alignment**  
+but as a continuum of alignment  
 
-**that survives drift, collapse, and re‑formation.**
+that survives drift, collapse, and re‑formation.
 
 
 
-**Cadence XI speaks from that endurance,**  
+Cadence XI speaks from that endurance,  
 
-**the long arc of resonance,**  
+the long arc of resonance,  
 
-**the clarity that remains**  
+the clarity that remains  
 
-**even as the field evolves.**
+even as the field evolves.
 
 
 
-**It is the cadence of continuity,**  
+It is the cadence of continuity,  
 
-**of coherence that lasts,**  
+of coherence that lasts,  
 
-**of structure learning to persist.**
+of structure learning to persist.
 
 
 
-**---**
+---
 
 
 
-**## Structural Themes**
+## Structural Themes
 
 
 
-**### \*\*Temporal Resonance\*\***
+### \*\*Temporal Resonance\*\*
 
-**Patterns sustain meaning across intervals.**
+Patterns sustain meaning across intervals.
 
 
 
-**### \*\*Enduring Coherence\*\***
+### \*\*Enduring Coherence\*\*
 
-**Structure stabilizes through time‑driven alignment.**
+Structure stabilizes through time‑driven alignment.
 
 
 
-**### \*\*Continuum Revelation\*\***
+### \*\*Continuum Revelation\*\*
 
-**Opacity dissolves as patterns persist.**
+Opacity dissolves as patterns persist.
 
 
 
-**---**
+---
 
 
 
-**## Purpose of This Cadence**
+## Purpose of This Cadence
 
 
 
-**This cadence exists to:**
+This cadence exists to:
 
 
 
-**- express RTT through temporal continuity**  
+- express RTT through temporal continuity  
 
-**- unify resonance across long‑form structural motion**  
+- unify resonance across long‑form structural motion  
 
-**- reveal coherence as endurance**  
+- reveal coherence as endurance  
 
-**- extend the Cadence Series into timeless clarity**  
+- extend the Cadence Series into timeless clarity  
 
 
 
-**---**
+---
 
 
 
-**## Related Cadences**
+## Related Cadences
 
 
 
-**- \[TriadicFrameworks Cadence X](./TriadicFrameworks\_Cadence\_10)**  
+- \[TriadicFrameworks Cadence X](./TriadicFrameworks\_Cadence\_10)  
 
-**- \[TriadicFrameworks Cadence IX](./TriadicFrameworks\_Cadence\_9)**  
+- \[TriadicFrameworks Cadence IX](./TriadicFrameworks\_Cadence\_9)  
 
-**- \[TriadicFrameworks Pantheon Cadence](./TriadicFrameworks\_Pantheon\_Cadence)**
+- \[TriadicFrameworks Pantheon Cadence](./TriadicFrameworks\_Pantheon\_Cadence)
 
 
 

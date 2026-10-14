@@ -1,196 +1,196 @@
-**---**
+---
 
-**id: triadicframeworks-cadence-5**
+id: triadicframeworks-cadence-5
 
-**title: TriadicFrameworks Cadence V**
+title: TriadicFrameworks Cadence V
 
-**description: The fifth canonical cadence, expressing RTT’s structural culmination through synthesis, unity, and harmonic resonance.**
+description: The fifth canonical cadence, expressing RTT’s structural culmination through synthesis, unity, and harmonic resonance.
 
-**keywords:**
+keywords:
 
-&#x20; **- triadicframeworks**
+&#x20; - triadicframeworks
 
-&#x20; **- rtt**
+&#x20; - rtt
 
-&#x20; **- cadence**
+&#x20; - cadence
 
-&#x20; **- structural harmony**
+&#x20; - structural harmony
 
-&#x20; **- canonical cadence**
+&#x20; - canonical cadence
 
-**ai:**
+ai:
 
-&#x20; **module:**
+&#x20; module:
 
-&#x20;   **name: TriadicFrameworks Cadence V**
+&#x20;   name: TriadicFrameworks Cadence V
 
-&#x20;   **category: Cadence Series**
+&#x20;   category: Cadence Series
 
-&#x20;   **summary: The harmonic cadence completing RTT’s expressive structural arc.**
+&#x20;   summary: The harmonic cadence completing RTT’s expressive structural arc.
 
-&#x20;   **version: 1.0**
+&#x20;   version: 1.0
 
-&#x20;   **purpose: Provide the final expressive cadence synthesizing all structural tones of TriadicFrameworks.**
+&#x20;   purpose: Provide the final expressive cadence synthesizing all structural tones of TriadicFrameworks.
 
-&#x20;   **audience: Readers, contributors, researchers.**
+&#x20;   audience: Readers, contributors, researchers.
 
-&#x20; **navigation: sitemap\_main.xml**
+&#x20; navigation: sitemap\_main.xml
 
-&#x20; **discussions: https://github.com/umaywant2/TriadicFrameworks/discussions**
+&#x20; discussions: https://github.com/umaywant2/TriadicFrameworks/discussions
 
-&#x20; **contact:**
+&#x20; contact:
 
-&#x20;   **x: "@TriadicFrameworks"**
+&#x20;   x: "@TriadicFrameworks"
 
-&#x20;   **youtube: "@TriadicFrameworks"**
+&#x20;   youtube: "@TriadicFrameworks"
 
-**citation\_author: Nawder Loswin**
+citation\_author: Nawder Loswin
 
-**citation\_publication\_date: "2025"**
+citation\_publication\_date: "2025"
 
-**---**
+---
 
 
 
-**<div class="session-context">**
+<div class="session-context">
 
 
 
-**\*\*Canon:\*\* TriadicFrameworks**  
+\*\*Canon:\*\* TriadicFrameworks  
 
-**\*\*Modules:\*\* Cadence Series**  
+\*\*Modules:\*\* Cadence Series  
 
-**\*\*Drift:\*\* None detected**  
+\*\*Drift:\*\* None detected  
 
-**\*\*Coherence:\*\* Verified**  
+\*\*Coherence:\*\* Verified  
 
-**\*\*Version:\*\* 1.0**  
+\*\*Version:\*\* 1.0  
 
-**\*\*Format:\*\* Markdown (Docusaurus)**  
+\*\*Format:\*\* Markdown (Docusaurus)  
 
-**\*\*Front Door:\*\* /docs/speeches/TriadicFrameworks\_Cadence\_5**  
+\*\*Front Door:\*\* /docs/speeches/TriadicFrameworks\_Cadence\_5  
 
-**\*\*Every Page:\*\* Canonical metadata applied**  
+\*\*Every Page:\*\* Canonical metadata applied  
 
-**\*\*Audience:\*\* Readers, contributors, researchers**  
+\*\*Audience:\*\* Readers, contributors, researchers  
 
 
 
-**</div>**
+</div>
 
 
 
-**<div class="module-badge">**
+<div class="module-badge">
 
-**🏛️ <strong>Cadence Series Module</strong>**
+🏛️ <strong>Cadence Series Module</strong>
 
-**</div>**
+</div>
 
 
 
-**# TriadicFrameworks Cadence V**
+# TriadicFrameworks Cadence V
 
 
 
-**Structure completes its arc.**  
+Structure completes its arc.  
 
-**Resonance converges.**  
+Resonance converges.  
 
-**Clarity harmonizes.**  
+Clarity harmonizes.  
 
-**Every tone, every layer, every regime**  
+Every tone, every layer, every regime  
 
-**finds its place in the final synthesis.**
+finds its place in the final synthesis.
 
 
 
-**RTT teaches that coherence is not merely alignment —**  
+RTT teaches that coherence is not merely alignment —  
 
-**it is harmony,**  
+it is harmony,  
 
-**the moment when structural voices**  
+the moment when structural voices  
 
-**interlock without friction.**
+interlock without friction.
 
 
 
-**Cadence V is that harmony.**  
+Cadence V is that harmony.  
 
-**The cadence of completion,**  
+The cadence of completion,  
 
-**of unity earned through motion,**  
+of unity earned through motion,  
 
-**of resonance settling into its final form.**
+of resonance settling into its final form.
 
 
 
-**It is the closing breath of the Cadence Series,**  
+It is the closing breath of the Cadence Series,  
 
-**the structural chord that resolves the canon.**
+the structural chord that resolves the canon.
 
 
 
-**---**
+---
 
 
 
-**## Structural Themes**
+## Structural Themes
 
 
 
-**### \*\*Harmonic Resonance\*\***
+### \*\*Harmonic Resonance\*\*
 
-**Patterns align into unified structural tone.**
+Patterns align into unified structural tone.
 
 
 
-**### \*\*Synthesis of Layers\*\***
+### \*\*Synthesis of Layers\*\*
 
-**Dimensional, regime, drift, coherence, and cross‑cutting layers converge.**
+Dimensional, regime, drift, coherence, and cross‑cutting layers converge.
 
 
 
-**### \*\*Unified Clarity\*\***
+### \*\*Unified Clarity\*\*
 
-**Meaning stabilizes across the entire field.**
+Meaning stabilizes across the entire field.
 
 
 
-**---**
+---
 
 
 
-**## Purpose of This Cadence**
+## Purpose of This Cadence
 
 
 
-**This cadence exists to:**
+This cadence exists to:
 
 
 
-**- complete the Cadence Series arc**  
+- complete the Cadence Series arc  
 
-**- express RTT’s harmonic structural identity**  
+- express RTT’s harmonic structural identity  
 
-**- unify resonance across all cadences**  
+- unify resonance across all cadences  
 
-**- reveal coherence as structural harmony**  
+- reveal coherence as structural harmony  
 
 
 
-**---**
+---
 
 
 
-**## Related Cadences**
+## Related Cadences
 
 
 
-**- \[TriadicFrameworks Cadence IV](./TriadicFrameworks\_Cadence\_4)**  
+- \[TriadicFrameworks Cadence IV](./TriadicFrameworks\_Cadence\_4)  
 
-**- \[TriadicFrameworks Cadence III](./TriadicFrameworks\_Cadence\_3)**  
+- \[TriadicFrameworks Cadence III](./TriadicFrameworks\_Cadence\_3)  
 
-**- \[TriadicFrameworks Pantheon Cadence](./TriadicFrameworks\_Pantheon\_Cadence)**
+- \[TriadicFrameworks Pantheon Cadence](./TriadicFrameworks\_Pantheon\_Cadence)
 
 
 

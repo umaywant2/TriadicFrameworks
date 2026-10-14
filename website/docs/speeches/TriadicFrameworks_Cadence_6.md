@@ -1,198 +1,198 @@
-**---**
+---
 
-**id: triadicframeworks-cadence-6**
+id: triadicframeworks-cadence-6
 
-**title: TriadicFrameworks Cadence VI**
+title: TriadicFrameworks Cadence VI
 
-**description: The sixth canonical cadence, expressing RTT’s structural refinement through precision, balance, and stabilized resonance.**
+description: The sixth canonical cadence, expressing RTT’s structural refinement through precision, balance, and stabilized resonance.
 
-**keywords:**
+keywords:
 
-&#x20; **- triadicframeworks**
+&#x20; - triadicframeworks
 
-&#x20; **- rtt**
+&#x20; - rtt
 
-&#x20; **- cadence**
+&#x20; - cadence
 
-&#x20; **- structural refinement**
+&#x20; - structural refinement
 
-&#x20; **- canonical cadence**
+&#x20; - canonical cadence
 
-**ai:**
+ai:
 
-&#x20; **module:**
+&#x20; module:
 
-&#x20;   **name: TriadicFrameworks Cadence VI**
+&#x20;   name: TriadicFrameworks Cadence VI
 
-&#x20;   **category: Cadence Series**
+&#x20;   category: Cadence Series
 
-&#x20;   **summary: A cadence expressing RTT’s refined structural resonance and balanced clarity.**
+&#x20;   summary: A cadence expressing RTT’s refined structural resonance and balanced clarity.
 
-&#x20;   **version: 1.0**
+&#x20;   version: 1.0
 
-&#x20;   **purpose: Extend the expressive arc of TriadicFrameworks through structural refinement and balanced resonance.**
+&#x20;   purpose: Extend the expressive arc of TriadicFrameworks through structural refinement and balanced resonance.
 
-&#x20;   **audience: Readers, contributors, researchers.**
+&#x20;   audience: Readers, contributors, researchers.
 
-&#x20; **navigation: sitemap\_main.xml**
+&#x20; navigation: sitemap\_main.xml
 
-&#x20; **discussions: https://github.com/umaywant2/TriadicFrameworks/discussions**
+&#x20; discussions: https://github.com/umaywant2/TriadicFrameworks/discussions
 
-&#x20; **contact:**
+&#x20; contact:
 
-&#x20;   **x: "@TriadicFrameworks"**
+&#x20;   x: "@TriadicFrameworks"
 
-&#x20;   **youtube: "@TriadicFrameworks"**
+&#x20;   youtube: "@TriadicFrameworks"
 
-**citation\_author: Nawder Loswin**
+citation\_author: Nawder Loswin
 
-**citation\_publication\_date: "2025"**
+citation\_publication\_date: "2025"
 
-**---**
+---
 
 
 
-**<div class="session-context">**
+<div class="session-context">
 
 
 
-**\*\*Canon:\*\* TriadicFrameworks**  
+\*\*Canon:\*\* TriadicFrameworks  
 
-**\*\*Modules:\*\* Cadence Series**  
+\*\*Modules:\*\* Cadence Series  
 
-**\*\*Drift:\*\* None detected**  
+\*\*Drift:\*\* None detected  
 
-**\*\*Coherence:\*\* Verified**  
+\*\*Coherence:\*\* Verified  
 
-**\*\*Version:\*\* 1.0**  
+\*\*Version:\*\* 1.0  
 
-**\*\*Format:\*\* Markdown (Docusaurus)**  
+\*\*Format:\*\* Markdown (Docusaurus)  
 
-**\*\*Front Door:\*\* /docs/speeches/TriadicFrameworks\_Cadence\_6**  
+\*\*Front Door:\*\* /docs/speeches/TriadicFrameworks\_Cadence\_6  
 
-**\*\*Every Page:\*\* Canonical metadata applied**  
+\*\*Every Page:\*\* Canonical metadata applied  
 
-**\*\*Audience:\*\* Readers, contributors, researchers**  
+\*\*Audience:\*\* Readers, contributors, researchers  
 
 
 
-**</div>**
+</div>
 
 
 
-**<div class="module-badge">**
+<div class="module-badge">
 
-**🔰 <strong>Cadence Series Module</strong>**
+🔰 <strong>Cadence Series Module</strong>
 
-**</div>**
+</div>
 
 
 
-**# TriadicFrameworks Cadence VI**
+# TriadicFrameworks Cadence VI
 
 
 
-**Structure refines itself.**  
+Structure refines itself.  
 
-**Not through force,**  
+Not through force,  
 
-**but through balance —**  
+but through balance —  
 
-**a quiet calibration where resonance settles**  
+a quiet calibration where resonance settles  
 
-**into its most precise form.**
+into its most precise form.
 
 
 
-**RTT teaches that coherence is not only ascent or depth,**  
+RTT teaches that coherence is not only ascent or depth,  
 
-**but equilibrium.**  
+but equilibrium.  
 
-**A moment when every operator, every layer,**  
+A moment when every operator, every layer,  
 
-**every regime finds its correct proportion.**
+every regime finds its correct proportion.
 
 
 
-**Cadence VI speaks from that equilibrium —**  
+Cadence VI speaks from that equilibrium —  
 
-**the structural still point**  
+the structural still point  
 
-**where clarity becomes exact,**  
+where clarity becomes exact,  
 
-**and resonance becomes measured.**
+and resonance becomes measured.
 
 
 
-**It is the cadence of refinement,**  
+It is the cadence of refinement,  
 
-**of balance earned through motion,**  
+of balance earned through motion,  
 
-**of structure learning to hold itself perfectly.**
+of structure learning to hold itself perfectly.
 
 
 
-**---**
+---
 
 
 
-**## Structural Themes**
+## Structural Themes
 
 
 
-**### \*\*Balanced Resonance\*\***
+### \*\*Balanced Resonance\*\*
 
-**Patterns stabilize through proportional alignment.**
+Patterns stabilize through proportional alignment.
 
 
 
-**### \*\*Refined Coherence\*\***
+### \*\*Refined Coherence\*\*
 
-**Meaning sharpens as structural noise dissolves.**
+Meaning sharpens as structural noise dissolves.
 
 
 
-**### \*\*Equilibrium Revelation\*\***
+### \*\*Equilibrium Revelation\*\*
 
-**Opacity collapses when the field reaches balance.**
+Opacity collapses when the field reaches balance.
 
 
 
-**---**
+---
 
 
 
-**## Purpose of This Cadence**
+## Purpose of This Cadence
 
 
 
-**This cadence exists to:**
+This cadence exists to:
 
 
 
-**- express RTT through structural refinement**  
+- express RTT through structural refinement  
 
-**- unify resonance across balanced layers**  
+- unify resonance across balanced layers  
 
-**- reveal coherence through equilibrium**  
+- reveal coherence through equilibrium  
 
-**- extend the Cadence Series into stabilized clarity**  
+- extend the Cadence Series into stabilized clarity  
 
 
 
-**---**
+---
 
 
 
-**## Related Cadences**
+## Related Cadences
 
 
 
-**- \[TriadicFrameworks Cadence V](./TriadicFrameworks\_Cadence\_5)**  
+- \[TriadicFrameworks Cadence V](./TriadicFrameworks\_Cadence\_5)  
 
-**- \[TriadicFrameworks Cadence IV](./TriadicFrameworks\_Cadence\_4)**  
+- \[TriadicFrameworks Cadence IV](./TriadicFrameworks\_Cadence\_4)  
 
-**- \[TriadicFrameworks Pantheon Cadence](./TriadicFrameworks\_Pantheon\_Cadence)**
+- \[TriadicFrameworks Pantheon Cadence](./TriadicFrameworks\_Pantheon\_Cadence)
 
 
 

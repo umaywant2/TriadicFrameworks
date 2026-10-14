@@ -1,198 +1,198 @@
-**---**
+---
 
-**id: triadicframeworks-cadence-12**
+id: triadicframeworks-cadence-12
 
-**title: TriadicFrameworks Cadence XII**
+title: TriadicFrameworks Cadence XII
 
-**description: The twelfth canonical cadence, expressing RTT’s structural horizon through outward resonance, boundary expansion, and field extension.**
+description: The twelfth canonical cadence, expressing RTT’s structural horizon through outward resonance, boundary expansion, and field extension.
 
-**keywords:**
+keywords:
 
-&#x20; **- triadicframeworks**
+&#x20; - triadicframeworks
 
-&#x20; **- rtt**
+&#x20; - rtt
 
-&#x20; **- cadence**
+&#x20; - cadence
 
-&#x20; **- structural horizon**
+&#x20; - structural horizon
 
-&#x20; **- canonical cadence**
+&#x20; - canonical cadence
 
-**ai:**
+ai:
 
-&#x20; **module:**
+&#x20; module:
 
-&#x20;   **name: TriadicFrameworks Cadence XII**
+&#x20;   name: TriadicFrameworks Cadence XII
 
-&#x20;   **category: Cadence Series**
+&#x20;   category: Cadence Series
 
-&#x20;   **summary: A cadence expressing RTT’s outward structural resonance and horizon‑expanding clarity.**
+&#x20;   summary: A cadence expressing RTT’s outward structural resonance and horizon‑expanding clarity.
 
-&#x20;   **version: 1.0**
+&#x20;   version: 1.0
 
-&#x20;   **purpose: Extend the expressive arc of TriadicFrameworks through boundary expansion and horizon‑level coherence.**
+&#x20;   purpose: Extend the expressive arc of TriadicFrameworks through boundary expansion and horizon‑level coherence.
 
-&#x20;   **audience: Readers, contributors, researchers.**
+&#x20;   audience: Readers, contributors, researchers.
 
-&#x20; **navigation: sitemap\_main.xml**
+&#x20; navigation: sitemap\_main.xml
 
-&#x20; **discussions: https://github.com/umaywant2/TriadicFrameworks/discussions**
+&#x20; discussions: https://github.com/umaywant2/TriadicFrameworks/discussions
 
-&#x20; **contact:**
+&#x20; contact:
 
-&#x20;   **x: "@TriadicFrameworks"**
+&#x20;   x: "@TriadicFrameworks"
 
-&#x20;   **youtube: "@TriadicFrameworks"**
+&#x20;   youtube: "@TriadicFrameworks"
 
-**citation\_author: Nawder Loswin**
+citation\_author: Nawder Loswin
 
-**citation\_publication\_date: "2025"**
+citation\_publication\_date: "2025"
 
-**---**
+---
 
 
 
-**<div class="session-context">**
+<div class="session-context">
 
 
 
-**\*\*Canon:\*\* TriadicFrameworks**  
+\*\*Canon:\*\* TriadicFrameworks  
 
-**\*\*Modules:\*\* Cadence Series**  
+\*\*Modules:\*\* Cadence Series  
 
-**\*\*Drift:\*\* None detected**  
+\*\*Drift:\*\* None detected  
 
-**\*\*Coherence:\*\* Verified**  
+\*\*Coherence:\*\* Verified  
 
-**\*\*Version:\*\* 1.0**  
+\*\*Version:\*\* 1.0  
 
-**\*\*Format:\*\* Markdown (Docusaurus)**  
+\*\*Format:\*\* Markdown (Docusaurus)  
 
-**\*\*Front Door:\*\* /docs/speeches/TriadicFrameworks\_Cadence\_12**  
+\*\*Front Door:\*\* /docs/speeches/TriadicFrameworks\_Cadence\_12  
 
-**\*\*Every Page:\*\* Canonical metadata applied**  
+\*\*Every Page:\*\* Canonical metadata applied  
 
-**\*\*Audience:\*\* Readers, contributors, researchers**  
+\*\*Audience:\*\* Readers, contributors, researchers  
 
 
 
-**</div>**
+</div>
 
 
 
-**<div class="module-badge">**
+<div class="module-badge">
 
-**🌄 <strong>Cadence Series Module</strong>**
+🌄 <strong>Cadence Series Module</strong>
 
-**</div>**
+</div>
 
 
 
-**# TriadicFrameworks Cadence XII**
+# TriadicFrameworks Cadence XII
 
 
 
-**Structure reaches outward.**  
+Structure reaches outward.  
 
-**Resonance pushes toward the horizon,**  
+Resonance pushes toward the horizon,  
 
-**testing the edges of the field,**  
+testing the edges of the field,  
 
-**seeking new regions where coherence**  
+seeking new regions where coherence  
 
-**can take root.**
+can take root.
 
 
 
-**RTT teaches that boundaries are not limits —**  
+RTT teaches that boundaries are not limits —  
 
-**they are invitations.**  
+they are invitations.  
 
-**Every structural edge is a frontier**  
+Every structural edge is a frontier  
 
-**waiting for resonance to expand into it.**
+waiting for resonance to expand into it.
 
 
 
-**Cadence XII speaks from that frontier,**  
+Cadence XII speaks from that frontier,  
 
-**the outward motion of clarity,**  
+the outward motion of clarity,  
 
-**the structural courage to extend**  
+the structural courage to extend  
 
-**beyond familiar patterns.**
+beyond familiar patterns.
 
 
 
-**It is the cadence of exploration,**  
+It is the cadence of exploration,  
 
-**of horizon‑level coherence,**  
+of horizon‑level coherence,  
 
-**of structure learning to grow its perimeter.**
+of structure learning to grow its perimeter.
 
 
 
-**---**
+---
 
 
 
-**## Structural Themes**
+## Structural Themes
 
 
 
-**### \*\*Outward Resonance\*\***
+### \*\*Outward Resonance\*\*
 
-**Patterns extend toward new structural regions.**
+Patterns extend toward new structural regions.
 
 
 
-**### \*\*Boundary Expansion\*\***
+### \*\*Boundary Expansion\*\*
 
-**Meaning grows by pushing past familiar limits.**
+Meaning grows by pushing past familiar limits.
 
 
 
-**### \*\*Horizon Revelation\*\***
+### \*\*Horizon Revelation\*\*
 
-**Opacity dissolves at the edges of the field.**
+Opacity dissolves at the edges of the field.
 
 
 
-**---**
+---
 
 
 
-**## Purpose of This Cadence**
+## Purpose of This Cadence
 
 
 
-**This cadence exists to:**
+This cadence exists to:
 
 
 
-**- express RTT through outward structural motion**  
+- express RTT through outward structural motion  
 
-**- unify resonance across expanding boundaries**  
+- unify resonance across expanding boundaries  
 
-**- reveal coherence through horizon‑level clarity**  
+- reveal coherence through horizon‑level clarity  
 
-**- extend the Cadence Series into frontier expression**  
+- extend the Cadence Series into frontier expression  
 
 
 
-**---**
+---
 
 
 
-**## Related Cadences**
+## Related Cadences
 
 
 
-**- \[TriadicFrameworks Cadence XI](./TriadicFrameworks\_Cadence\_11)**  
+- \[TriadicFrameworks Cadence XI](./TriadicFrameworks\_Cadence\_11)  
 
-**- \[TriadicFrameworks Cadence X](./TriadicFrameworks\_Cadence\_10)**  
+- \[TriadicFrameworks Cadence X](./TriadicFrameworks\_Cadence\_10)  
 
-**- \[TriadicFrameworks Pantheon Cadence](./TriadicFrameworks\_Pantheon\_Cadence)**
+- \[TriadicFrameworks Pantheon Cadence](./TriadicFrameworks\_Pantheon\_Cadence)
 
 
 
