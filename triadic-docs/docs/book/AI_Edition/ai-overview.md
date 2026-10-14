@@ -113,7 +113,7 @@ Analyzes pattern evolution, collapse, and resonance cycles.
 
 ## Related Canon Sections
 
-- [Capture Layer](./capture)  
+- [Capture Layer](./ai-capture)  
 - [Book 1 — Framework Field Theory](./Book1_Framework_Field_Theory/ai-book1-overview)  
 - [Registry](../registry)  
 - [Glossary](../glossary)

@@ -92,7 +92,7 @@ Book 1 provides the foundation for:
 ## Related AI Edition Sections
 
 - [AI Edition Overview](../ai-overview)  
-- [Capture Layer](../capture)  
+- [Capture Layer](../ai-capture)  
 - [Book 2 — The Inverted Star](../Book2_The_Inverted_Star/ai-book2-overview)
 
 ---

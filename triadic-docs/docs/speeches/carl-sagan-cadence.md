@@ -84,6 +84,6 @@ This cadence exists to:
 ## Related Cadences
 
 - [RTT Canon Cadence](./rtt-canon-cadence)  
-- [Stephen Hawking Cadence](./Stephen_Hawking_Cadence)  
+- [Stephen Hawking Cadence](./stephen-hawking-cadence)  
 - [Neil deGrasse Tyson Cadence](./neil-degrasse-tyson-cadence)
 
