@@ -83,10 +83,10 @@ const config = {
         respectPrefersColorScheme: true,
       },
 navbar: {
-  title: 'My Site',
+  title: 'Triadic-docs',
   logo: {
-    alt: 'My Site Logo',
-    src: 'img/logo.svg',
+    alt: 'Triadic Docs Logo',
+    src: 'img/triadic-logo.svg',
   },
   items: [
     {
