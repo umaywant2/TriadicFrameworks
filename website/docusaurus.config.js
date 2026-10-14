@@ -14,7 +14,7 @@ const config = {
   },
 
   url: 'https://your-docusaurus-site.example.com',
-  baseUrl: '/',
+  baseUrl: 'website/src/pages/index.js',
 
   organizationName: 'facebook',
   projectName: 'docusaurus',
