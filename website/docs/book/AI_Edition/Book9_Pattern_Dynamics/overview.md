@@ -20,8 +20,8 @@ ai:
   navigation: sitemap_main.xml
   discussions: https://github.com/umaywant2/TriadicFrameworks/discussions
   contact:
-    x: "@TriadicFrameworks"
-    youtube: "@TriadicFrameworks"
+    x: "@NawderLoswin"
+    youtube: "@NawderLoswin"
 citation_author: Nawder Loswin
 citation_publication_date: "2025"
 ---

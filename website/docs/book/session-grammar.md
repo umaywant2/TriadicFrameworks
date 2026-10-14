@@ -1,256 +1,143 @@
-**---**
+---
+id: session-grammar
+title: Session Grammar
 
-**id: session-grammar**
+description: Defines the structural grammar used to interpret RTT sessions, including operators, layers, and canonical flow.
 
-**title: Session Grammar**
+keywords:
+ - triadicframeworks
+ - rtt
+ - session grammar
+ - structural grammar
+ - operators
 
-**description: Defines the structural grammar used to interpret RTT sessions, including operators, layers, and canonical flow.**
+ai:
 
-**keywords:**
+ module:
+   name: Session Grammar
+   category: Structural Detection
+   summary: Defines the grammar used to interpret RTT sessions and structural flow.
+   version: 1.0
+   purpose: Provide a unified grammar for analyzing RTT sessions.
+   audience: Contributors, researchers, AI Edition readers.
+ navigation: sitemap_main.xml
 
-&#x20; **- triadicframeworks**
+ discussions: https://github.com/umaywant2/TriadicFrameworks/discussions
 
-&#x20; **- rtt**
+ contact:
+   x: "@NawderLoswin"
+   youtube: "@NawderLoswin"
+citation_author: Nawder Loswin
+citation_publication_date: "2025"
+---
 
-&#x20; **- session grammar**
+<div class="session-context">
 
-&#x20; **- structural grammar**
+**Canon:** TriadicFrameworks  
+**Modules:** Structural Detection  
+**Drift:** None detected  
+**Coherence:** Verified  
+**Version:** 1.0  
+**Format:** Markdown (Docusaurus)  
+**Front Door:** /docs/book/session-grammar  
+**Every Page:** Canonical metadata applied  
+**Audience:** Contributors, researchers, AI Edition readers  
 
-&#x20; **- operators**
+</div>
 
-**ai:**
+<div class="module-badge">
 
-&#x20; **module:**
+🔍 <strong>Structural Detection Module</strong>
 
-&#x20;   **name: Session Grammar**
+</div>
 
-&#x20;   **category: Structural Detection**
+# Session Grammar
 
-&#x20;   **summary: Defines the grammar used to interpret RTT sessions and structural flow.**
+Session Grammar defines the structural rules used to interpret RTT sessions.  
 
-&#x20;   **version: 1.0**
+It provides the canonical flow for operators, analyzer layers, and regime transitions.
 
-&#x20;   **purpose: Provide a unified grammar for analyzing RTT sessions.**
+---
 
-&#x20;   **audience: Contributors, researchers, AI Edition readers.**
+## Purpose of Session Grammar
 
-&#x20; **navigation: sitemap\_main.xml**
+Session Grammar exists to:
 
-&#x20; **discussions: https://github.com/umaywant2/TriadicFrameworks/discussions**
+- unify session interpretation  
+- define operator sequencing  
+- establish analyzer‑layer flow  
+- support structural detection  
+- anchor session‑based modules  
 
-&#x20; **contact:**
+---
 
-&#x20;   **x: "@TriadicFrameworks"**
+## Core Grammar Components
 
-&#x20;   **youtube: "@TriadicFrameworks"**
+### **Operator Flow**
 
-**citation\_author: Nawder Loswin**
+Operators must follow canonical sequencing:
 
-**citation\_publication\_date: "2025"**
+1. Detection  
+2. Resonance  
+3. Transformation  
+4. Expression (TEL)  
+5. Argumentation (SARG)
 
-**---**
+### **Analyzer Layer Flow**
 
+Sessions progress through:
 
+1. Dimensional Layer  
+2. Regime Layer  
+3. Drift Layer  
+4. Coherence Layer  
+5. Cross‑Cutting Layer  
 
-**<div class="session-context">**
+### **Regime Transitions**
 
+Sessions may shift between:
 
+- Opacity  
+- Revelation  
+- Governance  
+- Pattern Dynamics  
 
-**\*\*Canon:\*\* TriadicFrameworks**  
+Transitions must follow canonical rules.
 
-**\*\*Modules:\*\* Structural Detection**  
+---
 
-**\*\*Drift:\*\* None detected**  
+## Session Types
 
-**\*\*Coherence:\*\* Verified**  
+### **Structural Sessions**
 
-**\*\*Version:\*\* 1.0**  
+Focused on pattern detection and resonance.
 
-**\*\*Format:\*\* Markdown (Docusaurus)**  
+### **Diagnostic Sessions**
 
-**\*\*Front Door:\*\* /docs/book/session-grammar**  
+Focused on drift and coherence.
 
-**\*\*Every Page:\*\* Canonical metadata applied**  
+### **Expression Sessions**
 
-**\*\*Audience:\*\* Contributors, researchers, AI Edition readers**  
+Focused on TEL representation.
 
+### **Argumentation Sessions**
 
+Focused on SARG logic and reasoning.
 
-**</div>**
+---
 
+## Related Canon Sections
 
+- [Sessions](./sessions)  
+- [Modules](./modules)  
+- [Glossary](./glossary)  
+- [Canon](./canon)
 
-**<div class="module-badge">**
+---
 
-**🔍 <strong>Structural Detection Module</strong>**
+## Contribution Reference
 
-**</div>**
+For rules governing session‑grammar updates:
 
-
-
-**# Session Grammar**
-
-
-
-**Session Grammar defines the structural rules used to interpret RTT sessions.**  
-
-**It provides the canonical flow for operators, analyzer layers, and regime transitions.**
-
-
-
-**---**
-
-
-
-**## Purpose of Session Grammar**
-
-
-
-**Session Grammar exists to:**
-
-
-
-**- unify session interpretation**  
-
-**- define operator sequencing**  
-
-**- establish analyzer‑layer flow**  
-
-**- support structural detection**  
-
-**- anchor session‑based modules**  
-
-
-
-**---**
-
-
-
-**## Core Grammar Components**
-
-
-
-**### \*\*Operator Flow\*\***
-
-**Operators must follow canonical sequencing:**
-
-
-
-**1. Detection**  
-
-**2. Resonance**  
-
-**3. Transformation**  
-
-**4. Expression (TEL)**  
-
-**5. Argumentation (SARG)**
-
-
-
-**### \*\*Analyzer Layer Flow\*\***
-
-**Sessions progress through:**
-
-
-
-**1. Dimensional Layer**  
-
-**2. Regime Layer**  
-
-**3. Drift Layer**  
-
-**4. Coherence Layer**  
-
-**5. Cross‑Cutting Layer**  
-
-
-
-**### \*\*Regime Transitions\*\***
-
-**Sessions may shift between:**
-
-
-
-**- Opacity**  
-
-**- Revelation**  
-
-**- Governance**  
-
-**- Pattern Dynamics**  
-
-
-
-**Transitions must follow canonical rules.**
-
-
-
-**---**
-
-
-
-**## Session Types**
-
-
-
-**### \*\*Structural Sessions\*\***
-
-**Focused on pattern detection and resonance.**
-
-
-
-**### \*\*Diagnostic Sessions\*\***
-
-**Focused on drift and coherence.**
-
-
-
-**### \*\*Expression Sessions\*\***
-
-**Focused on TEL representation.**
-
-
-
-**### \*\*Argumentation Sessions\*\***
-
-**Focused on SARG logic and reasoning.**
-
-
-
-**---**
-
-
-
-**## Related Canon Sections**
-
-
-
-**- \[Sessions](./sessions)**  
-
-**- \[Modules](./modules)**  
-
-**- \[Glossary](./glossary)**  
-
-**- \[Canon](./canon)**
-
-
-
-**---**
-
-
-
-**## Contribution Reference**
-
-
-
-**For rules governing session‑grammar updates:**
-
-
-
-**- \[What You Cannot Contribute](../contributing#what-you-cannot-contribute)**  
-
-**- \[The Ratification Flow](../contributing#the-ratification-flow)**
-
-
-
+- [What You Cannot Contribute](../contributing#what-you-cannot-contribute)  
+- [The Ratification Flow](../contributing#the-ratification-flow)
