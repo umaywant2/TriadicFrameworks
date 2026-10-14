@@ -901,7 +901,7 @@ The system is now available to you in full. Parts I, II, and III together consti
 
 The work begins now.
 
-→ [Return to Book Index](./index)
+→ [Return to Book Index](./overview)
 → [Browse the Module Registry](./registry)
 → [Explore the Canonical Session Library](./sessions)
 

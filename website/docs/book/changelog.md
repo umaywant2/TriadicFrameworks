@@ -57,7 +57,7 @@ Every entry follows this structure:
 
 ### Added
 
-**`/docs/book/index.md`** — Book index and front door.
+**`/docs/book/overview.md`** — Book index and front door.
 The canonical entry point for the TriadicFrameworks Book. Establishes the five-step Start Here path, states all five canon commitments at introductory depth, defines the four-file module architecture, specifies the nine session grammar fields, introduces the three-part reader journey (Orient, Navigate, Apply), explains how the book is maintained, and provides the system Quick Reference glossary.
 
 **`/docs/book/part-i.md`** — Part I: Orient (Chapters 1–6).
@@ -113,7 +113,7 @@ The following are planned for near-term releases. They are not commitments — t
 
 ---
 
-→ [Return to Book Index](./index)
+→ [Return to Book Index](./overview)
 → [Contributing Guidelines](../contributing)
 → [Module Registry](./registry)
 

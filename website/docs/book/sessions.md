@@ -1466,7 +1466,7 @@ Every module referenced in this library appears in the [Module Registry](./regis
 
 ---
 
-→ [Return to Book Index](./index)
+→ [Return to Book Index](./overview)
 → [Browse the Module Registry](./registry)
 → [Contributing Guidelines](../contributing)
 

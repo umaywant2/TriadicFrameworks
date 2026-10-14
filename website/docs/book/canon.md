@@ -358,7 +358,7 @@ The canon applies to every session equally, without exception.
 
 ---
 
-→ [Return to Book Index](./index)
+→ [Return to Book Index](./overview)
 → [Module Registry](./registry)
 → [Part I — Orient](./part-i)
 

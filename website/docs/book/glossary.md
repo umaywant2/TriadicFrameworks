@@ -1,7 +1,7 @@
 # Glossary
 
 > **The authoritative definition of every term in the TriadicFrameworks system.**
-> This glossary expands the Quick Reference in the [Book Index](./index).
+> This glossary expands the Quick Reference in the [Book Index](./overview).
 > Definitions here are precise — not introductory summaries. When a term is used
 > in a module, session, or book section, its meaning is exactly what is stated here.
 
@@ -883,7 +883,7 @@ See → *Nawder Loswin*. The pen name is the public-facing authorial identity fo
 
 ---
 
-→ [Return to Book Index](./index)
+→ [Return to Book Index](./overview)
 → [Module Registry](./registry)
 → [Canon](./canon)
 

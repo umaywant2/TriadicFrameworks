@@ -442,7 +442,7 @@ All 118 modules, sorted alphabetically by ID, with label and group.
 
 ---
 
-→ [Return to Book Index](./index)
+→ [Return to Book Index](./overview)
 → [Browse the Canonical Session Library](./sessions)
 → [Contributing Guidelines](../contributing)
 
