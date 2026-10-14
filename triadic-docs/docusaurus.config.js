@@ -82,35 +82,35 @@ const config = {
       colorMode: {
         respectPrefersColorScheme: true,
       },
-      navbar: {
-        title: 'My Site',
-        logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
-        },
-        items: [
-          {
-          to: '/docs/book/book-overview',
-          label: 'Book',
-          position: 'left',
-        },
-        {
-          to: '/docs/book/AI_Edition/ai-overview',
-          label: 'AI Edition',
-          position: 'left',
-        },
-        {
-          to: '/docs/speeches/speeches-overview',
-          label: 'Speeches',
-          position: 'left',
-        },
-        {
-          to: '/docs/speeches/triadicframeworks-cadence',
-          label: 'Cadence Series',
-          position: 'left',
-        },
-        ],
-      },
+navbar: {
+  title: 'My Site',
+  logo: {
+    alt: 'My Site Logo',
+    src: 'img/logo.svg',
+  },
+  items: [
+    {
+      to: '/docs/book/book-overview',
+      label: 'Book',
+      position: 'left',
+    },
+    {
+      to: '/docs/book/AI_Edition/ai-overview',
+      label: 'AI Edition',
+      position: 'left',
+    },
+    {
+      to: '/docs/speeches/speeches-overview',
+      label: 'Speeches',
+      position: 'left',
+    },
+    {
+      to: '/docs/speeches/cadence-constellation-map',
+      label: 'Cadence Series',
+      position: 'left',
+    },
+  ],
+},
       footer: {
         style: 'dark',
         links: [
