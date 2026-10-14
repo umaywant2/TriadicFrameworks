@@ -90,17 +90,25 @@ const config = {
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Tutorial',
-          },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
+          to: '/docs/book/book-overview',
+          label: 'Book',
+          position: 'left',
+        },
+        {
+          to: '/docs/book/AI_Edition/ai-overview',
+          label: 'AI Edition',
+          position: 'left',
+        },
+        {
+          to: '/docs/speeches/speeches-overview',
+          label: 'Speeches',
+          position: 'left',
+        },
+        {
+          to: '/docs/speeches/triadicframeworks-cadence',
+          label: 'Cadence Series',
+          position: 'left',
+        },
         ],
       },
       footer: {
