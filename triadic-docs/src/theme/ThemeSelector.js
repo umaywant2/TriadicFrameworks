@@ -3,7 +3,7 @@ import {useColorMode} from '@docusaurus/theme-common';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 
 export default function ThemeSelector() {
-  // Prevent SSR from running this component
+  // Prevent SSR entirely
   if (!ExecutionEnvironment.canUseDOM) {
     return null;
   }
@@ -19,9 +19,6 @@ export default function ThemeSelector() {
     const oddMode = (date % 2 === 1);
 
     const useWeekendRule = true;
-
-    const themeA = weekendMode || oddMode;
-    const themeB = !themeA;
 
     if (useWeekendRule) {
       setColorMode(weekendMode ? 'dark' : 'light');
