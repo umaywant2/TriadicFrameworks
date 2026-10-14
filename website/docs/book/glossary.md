@@ -1,64 +1,31 @@
 # Glossary of Canonical Terms
 
-This glossary defines key terms used throughout TriadicFrameworks.  
-It provides contributors and readers with a shared vocabulary aligned with RTT’s structural grammar.
+This glossary defines key terms used throughout TriadicFrameworks.
 
 ---
 
 ## Analyzer Layer
-
-A hierarchical classification system that determines how a module processes structure, resonance, or regime logic.
+A hierarchical classification system used to interpret structural behavior.
 
 ---
 
 ## Operator
-
-A symbolic or functional unit that performs a transformation, detection, or expression within RTT.
+A functional or symbolic unit that performs a transformation or detection.
 
 ---
 
 ## Regime
-
-A structural environment or condition in which operators and analyzer layers behave differently.
+A structural environment in which operators behave differently.
 
 ---
 
 ## Drift
-
-A deviation from canonical logic detected by the Drift Engine.
+Deviation from canonical logic detected by the Drift Engine.
 
 ---
 
 ## Coherence
-
-The degree to which a module or concept aligns with the canon’s structural rules.
-
----
-
-## Module.json
-
-The metadata file that defines:
-
-- module purpose  
-- analyzer layer  
-- operators  
-- category  
-- audience  
-- canonical metadata  
-
-It is required for all modules.
-
----
-
-## Canonical Metadata
-
-Metadata that ensures consistency across modules, including:
-
-- title  
-- description  
-- keywords  
-- ai.module fields  
-- sitemap integration  
+Alignment with canonical structural rules.
 
 ---
 
@@ -68,36 +35,24 @@ For rules governing contributions, see:
 
 - [The Ratification Flow](../contributing#the-ratification-flow)
 
-This anchor is now valid and points to the correct section.
+This anchor now resolves correctly.
 
 ---
 
 ## Index Suite
-
-A set of canonical index pages that provide:
-
-- module listings  
-- analyzer‑layer maps  
-- regime references  
-- cross‑module navigation  
-
-Referenced by `/docs/book/registry`.
+A set of canonical index pages referenced by the registry.
 
 ---
 
 ## Structural Detection
-
-The process of identifying patterns, resonance, or drift using RTT operators and analyzer layers.
+The process of identifying resonance, drift, or pattern dynamics.
 
 ---
 
 ## TEL Expression
-
-Triadic Expression Logic — the system governing representation, clarity, and structural communication.
+Triadic Expression Logic — the system governing representation and clarity.
 
 ---
 
 ## NoS (Nature of Structure)
-
-A deep‑structure analysis domain that explains how patterns emerge, stabilize, and evolve.
-
+A deep‑structure analysis domain explaining how patterns emerge and evolve.

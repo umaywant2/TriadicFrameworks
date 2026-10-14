@@ -42,7 +42,7 @@
 
 
 
-**## What You \*Can\* Contribute**
+**# What You \*Can\* Contribute**
 
 
 
@@ -160,7 +160,7 @@
 
 
 
-**## What You \*Cannot\* Contribute**
+**# What You \*Cannot\* Contribute**
 
 
 
@@ -248,7 +248,7 @@
 
 
 
-**## The Ratification Flow**
+**# The Ratification Flow**
 
 
 
