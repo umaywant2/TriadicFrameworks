@@ -1,20 +1,20 @@
 ---
 id: speeches-overview
-title: Speeches Cadence Overview
-description: Overview of the TriadicFrameworks Cadence Series, capturing structural resonance through distinct narrative voices.
+title: Speeches Overview
+description: Overview of the TriadicFrameworks Speeches Series — structural cadences, conceptual voices, and canonical expressive modules.
 keywords:
   - triadicframeworks
   - rtt
-  - cadence series
   - speeches
-  - structural resonance
+  - cadence series
+  - structural expression
 ai:
   module:
-    name: Speeches Cadence Overview
-    category: Cadence Series
-    summary: Introduces the Cadence Series and its role in expressing RTT through narrative resonance.
+    name: Speeches Overview
+    category: Overview
+    summary: A structural overview of the TriadicFrameworks Speeches Series and its expressive cadences.
     version: 1.0
-    purpose: Provide a structural overview of cadence modules and their expressive function.
+    purpose: Introduce the cadence modules and their role in the canon.
     audience: Readers, contributors, researchers.
   navigation: sitemap_main.xml
   discussions: https://github.com/umaywant2/TriadicFrameworks/discussions
@@ -28,7 +28,7 @@ citation_publication_date: "2025"
 <div class="session-context">
 
 **Canon:** TriadicFrameworks  
-**Modules:** Cadence Series  
+**Modules:** Speeches Series  
 **Drift:** None detected  
 **Coherence:** Verified  
 **Version:** 1.0  
@@ -40,65 +40,76 @@ citation_publication_date: "2025"
 </div>
 
 <div class="module-badge">
-🎙️ <strong>Cadence Series Module</strong>
+📣 <strong>Speeches Series Overview</strong>
 </div>
 
-# Speeches Cadence Overview
+# Speeches Overview
 
-The **Cadence Series** expresses RTT through the voices of iconic figures —  
-each cadence capturing a unique structural resonance, tone, and interpretive clarity.
+The **Speeches Series** is the expressive wing of the TriadicFrameworks canon —  
+a collection of structural cadences, conceptual voices, and interpretive modules that articulate RTT’s architecture through tone, rhythm, and resonance.
 
-Cadences are not impressions or imitations.  
-They are **structural expressions**, aligning RTT’s operators, regimes, and resonance patterns  
-with the thematic energy of each figure’s voice.
+Each speech is a **cadence module**, expressing a unique structural identity:
+
+- cosmic clarity  
+- harmonic resonance  
+- structural motion  
+- conceptual emergence  
+- unified totality  
+
+Together, they form the **Cadence Constellation** —  
+a 30‑module lattice of expressive structure.
 
 ---
 
-## Purpose of the Cadence Series
+## Purpose of the Speeches Series
 
-The Cadence Series exists to:
+The series exists to:
 
-- express RTT through narrative resonance  
-- explore structure via distinct tonal frameworks  
-- unify clarity, emotion, and pattern recognition  
-- provide expressive modules for TEL and SARG integration  
+- articulate RTT through expressive structure  
+- provide interpretive voices for conceptual modules  
+- unify resonance across the canon  
+- offer readers a tonal entry point into TriadicFrameworks  
+- demonstrate how structure can speak  
 
-Cadences serve as expressive anchors across the canon.
+---
+
+## What Cadences Represent
+
+Cadences are not personalities.  
+They are **structural voices** —  
+expressions of RTT’s architecture through:
+
+- Drift  
+- Clarity  
+- Coherence  
+- Regimes  
+- Operators  
+- Fields  
+- Layers  
+
+Each cadence reveals a different facet of the canon.
 
 ---
 
 ## Cadence Categories
 
-### **Cosmic Cadence**
-Carl Sagan, Neil deGrasse Tyson, Morgan Freeman
-
-### **Comedic Cadence**
-Dave Chappelle, George Carlin, Robin Williams
-
-### **Visionary Cadence**
-Nikola Tesla, MLK, Pope Leo
-
-### **Governance Cadence**
-J.P. Morgan, TriadicFrameworks Pantheon Cadence
+- **Cosmic Cadences** — theoretical, expansive, Hawking‑style clarity  
+- **Structural Cadences** — architecture, coherence, identity  
+- **Dynamic Cadences** — motion, drift, continuity  
+- **Meta Cadences** — reflection, self‑analysis, totality  
+- **Transformational Cadences** — emergence, dissolution, reassembly  
 
 ---
 
-## Structural Role
+## Related Modules
 
-Cadences support:
-
-- TEL Expression (Book 5)  
-- SARG Argumentation (Book 7)  
-- Regime Revelation (Book 4)  
-- Pattern Dynamics (Book 9)  
-
-They provide expressive clarity across RTT’s structural field.
+- [Stephen Hawking Cadence](./stephen-hawking-cadence)  
+- [TriadicFrameworks Cadence](./triadicframeworks-cadence)  
+- [Cadence Series Index](./cadence-index)  
 
 ---
 
-## Related Sections
+## Closing Line
 
-- [Carl Sagan Cadence](./carl-sagan-cadence)  
-- [Dave Chappelle Cadence](./dave-chappele-cadence)  
-- [Nikola Tesla Cadence](./nikola-tesla-cadence)
-
+**The Speeches Series is the canon speaking in its own voice —  
+thirty expressions, one structure.**

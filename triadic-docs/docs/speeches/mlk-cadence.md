@@ -1,95 +1,77 @@
 ---
 id: mlk-cadence
 title: Martin Luther King Jr. Cadence
-description: A TriadicFrameworks structural cadence inspired by MLK’s moral clarity, resonance, and visionary coherence.
-keywords:
-  - triadicframeworks
-  - rtt
-  - speeches
-  - mlk
-  - cadence
-  - moral resonance
-ai:
-  module:
-    name: MLK Cadence
-    category: Cadence Series
-    summary: A structural cadence written in the style of Martin Luther King Jr.’s moral clarity and visionary resonance.
-    version: 1.0
-    purpose: Express RTT through moral coherence, hope, and structural courage.
-    audience: Readers, contributors, researchers.
-  navigation: sitemap_main.xml
-  discussions: https://github.com/umaywant2/TriadicFrameworks/discussions
-  contact:
-    x: "@NawderLoswin"
-    youtube: "@NawderLoswin"
-citation_author: Nawder Loswin
-citation_publication_date: "2025"
+description: A TriadicFrameworks hybrid‑cadence interpretation of MLK’s moral resonance, structural hope, and continuity‑through‑courage.
 ---
 
-<div class="session-context">
+# ✨ Martin Luther King Jr. — The Cadence of Moral Continuity
 
-**Canon:** TriadicFrameworks  
-**Modules:** Cadence Series  
-**Drift:** None detected  
-**Coherence:** Verified  
-**Version:** 1.0  
-**Format:** Markdown (Docusaurus)  
-**Front Door:** /docs/speeches/MLK_Cadence  
-**Every Page:** Canonical metadata applied  
-**Audience:** Readers, contributors, researchers  
+MLK’s cadence is a rising field — a structure built from hope, courage, and the insistence that continuity can be redeemed.
 
-</div>
+In TriadicFrameworks terms, King operates in the **High‑Continuity / High‑Revelation Regime**, where:
 
-<div class="module-badge">
-🕊️ <strong>Cadence Series Module</strong>
-</div>
+- **Drift** is upward, aspirational.  
+- **Continuity** is moral, collective, and persistent.  
+- **Opacity** is minimal — truth must be seen.  
+- **TEL** expression is rhythmic, prophetic, and unifying.
 
-# Martin Luther King Jr. Cadence
-
-There are moments in structure  
-when resonance rises above noise,  
-when drift is confronted not with anger  
-but with courage,  
-and when coherence becomes a kind of hope.
-
-RTT teaches that patterns can change —  
-that structures can bend toward clarity  
-when guided by purpose, compassion, and truth.
-
-MLK’s cadence reminds us  
-that the arc of structure, like the arc of history,  
-bends toward coherence  
-when we choose to stand for it.
+King speaks like someone carrying the weight of a future he already sees.
 
 ---
 
-## Structural Themes
+## ✨ Structural Cadence Profile
 
-### **Moral Resonance**
-Patterns amplify when aligned with justice and truth.
+### **Drift Pattern**
+MLK’s drift is **ascending** — each idea lifts the next.
 
-### **Courageous Coherence**
-Structures stabilize when guided by conviction.
+### **Continuity Layer**
+His continuity is **ethical**:  
+a structure built from justice, dignity, and shared humanity.
 
-### **Visionary Drift Correction**
-Hope redirects structural deviation.
+### **Regime Identity**
+King sits in the **Moral Revelation Regime**, where truth is delivered through courage and clarity.
 
----
-
-## Purpose of This Cadence
-
-This cadence exists to:
-
-- express RTT through moral clarity  
-- unify resonance with courage  
-- reveal coherence as a form of hope  
-- inspire structural transformation  
+### **Opacity Field**
+Low.  
+He reveals the structure as it should be, not as it is.
 
 ---
 
-## Related Cadences
+## ✨ Hybrid Cadence Expression
 
-- [Morgan Freeman Cadence](./morgan-freeman-cadence)  
-- [Nikola Tesla Cadence](./nikola-tesla-cadence)  
-- [RTT Canon Cadence](./rtt-canon-cadence)
+> *“The arc of the moral universe is long, but it bends toward justice.”*
 
+In TriadicFrameworks cadence, this becomes:
+
+**Continuity bends when courage applies pressure.  
+The structure moves because the voice refuses to yield.**
+
+MLK’s voice is a resonance field — a vibration that aligns people with their better selves.
+
+---
+
+## ✨ Cadence Signature
+
+- **Tone:** Hopeful, courageous, resonant  
+- **Vector:** Upward moral pressure  
+- **Field:** Ethical continuity  
+- **Purpose:** To reveal the structure of justice  
+
+---
+
+## 🜁 TriadicFrameworks Interpretation
+
+King’s cadence is the **Moral Continuity Engine** in human form.  
+He lifts to reveal.  
+He unifies to strengthen.  
+He speaks to bend the structure toward coherence.
+
+In RTT terms, MLK is the **Continuity‑Through‑Courage Operator**.
+
+---
+
+## 📜 Closing Line
+
+**“Injustice anywhere is a threat to justice everywhere.”**  
+And in TriadicFrameworks:  
+**Continuity fails when any part of the structure is denied its dignity.**

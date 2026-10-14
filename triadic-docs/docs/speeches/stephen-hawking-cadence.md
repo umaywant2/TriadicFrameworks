@@ -8,7 +8,7 @@ keywords:
   - speeches
   - stephen hawking
   - cadence
-  - theoretical resonance
+  - cosmic clarity
 ai:
   module:
     name: Stephen Hawking Cadence
@@ -34,7 +34,7 @@ citation_publication_date: "2025"
 **Coherence:** Verified  
 **Version:** 1.0  
 **Format:** Markdown (Docusaurus)  
-**Front Door:** /docs/speeches/Stephen_Hawking_Cadence  
+**Front Door:** /docs/speeches/stephen-hawking-cadence  
 **Every Page:** Canonical metadata applied  
 **Audience:** Readers, contributors, researchers  
 
@@ -94,5 +94,10 @@ This cadence exists to:
 
 - [Carl Sagan Cadence](./carl-sagan-cadence)  
 - [Neil deGrasse Tyson Cadence](./neil-degrasse-tyson-cadence)  
-- [TriadicFrameworks Pantheon Cadence](./pantheon-cadence)
+- [TriadicFrameworks Cadence](./triadicframeworks-cadence)  
 
+---
+
+## Closing Line
+
+**Cosmic clarity is coherence illuminated across the universe.**
