@@ -1,20 +1,19 @@
 ---
 id: speeches-overview
 title: Speeches Overview
-description: Overview of the TriadicFrameworks Speeches Series — structural cadences, conceptual voices, and canonical expressive modules.
+description: Overview of the TriadicFrameworks Speeches Series — a collection of cadences, voices, and structural expressions.
 keywords:
   - triadicframeworks
   - rtt
   - speeches
-  - cadence series
-  - structural expression
+  - overview
 ai:
   module:
     name: Speeches Overview
-    category: Overview
-    summary: A structural overview of the TriadicFrameworks Speeches Series and its expressive cadences.
+    category: Speeches Series — Structural
+    summary: A high-level overview of all speech modules and cadence expressions.
     version: 1.0
-    purpose: Introduce the cadence modules and their role in the canon.
+    purpose: Provide orientation for the Speeches Series and its structural purpose.
     audience: Readers, contributors, researchers.
   navigation: sitemap_main.xml
   discussions: https://github.com/umaywant2/TriadicFrameworks/discussions
@@ -24,31 +23,6 @@ ai:
 citation_author: Nawder Loswin
 citation_publication_date: "2025"
 ---
-
-import Head from '@docusaurus/Head';
-
-<Head>
-  <title>Cadence — TriadicFrameworks</title>
-  <meta name="description" content="An expressive cadence module in the TriadicFrameworks canon." />
-  <meta name="keywords" content="triadicframeworks, rtt, cadence, structural voice, expressive module" />
-
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://docs.triadicframeworks.org/docs/speeches" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Cadence — TriadicFrameworks" />
-  <meta property="og:description" content="An expressive cadence module in the TriadicFrameworks canon." />
-  <meta property="og:image" content="https://docs.triadicframeworks.org/img/logo.png" />
-  <meta property="og:url" content="https://docs.triadicframeworks.org/docs/speeches" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Cadence — TriadicFrameworks" />
-  <meta name="twitter:description" content="An expressive cadence module in the TriadicFrameworks canon." />
-  <meta name="twitter:image" content="https://docs.triadicframeworks.org/img/logo.png" />
-  <meta name="twitter:site" content="@NawderLoswin" />
-</Head>
 
 <div class="session-context">
 
@@ -65,76 +39,34 @@ import Head from '@docusaurus/Head';
 </div>
 
 <div class="module-badge">
-📣 <strong>Speeches Series Overview</strong>
+<strong>🗣️ Speeches Overview</strong>
 </div>
 
 # Speeches Overview
 
-The **Speeches Series** is the expressive wing of the TriadicFrameworks canon —  
-a collection of structural cadences, conceptual voices, and interpretive modules that articulate RTT’s architecture through tone, rhythm, and resonance.
+The Speeches Series contains **cadences** — structured voices expressing identity through motion, clarity, and thematic resonance.
 
-Each speech is a **cadence module**, expressing a unique structural identity:
+The series includes:
 
-- cosmic clarity  
-- harmonic resonance  
-- structural motion  
-- conceptual emergence  
-- unified totality  
+- **Cosmic Cadences**  
+- **Cultural Cadences**  
+- **Canonical Cadence**  
+- **Archetypal Cadences**  
+- **Innovation & Structural Cadences**  
 
-Together, they form the **Cadence Constellation** —  
-a 30‑module lattice of expressive structure.
+Each speech module expresses a **distinct structural voice**, contributing to the broader RTT canon.
 
 ---
 
-## Purpose of the Speeches Series
+## Purpose of the Series
 
-The series exists to:
-
-- articulate RTT through expressive structure  
-- provide interpretive voices for conceptual modules  
-- unify resonance across the canon  
-- offer readers a tonal entry point into TriadicFrameworks  
-- demonstrate how structure can speak  
-
----
-
-## What Cadences Represent
-
-Cadences are not personalities.  
-They are **structural voices** —  
-expressions of RTT’s architecture through:
-
-- Drift  
-- Clarity  
-- Coherence  
-- Regimes  
-- Operators  
-- Fields  
-- Layers  
-
-Each cadence reveals a different facet of the canon.
-
----
-
-## Cadence Categories
-
-- **Cosmic Cadences** — theoretical, expansive, Hawking‑style clarity  
-- **Structural Cadences** — architecture, coherence, identity  
-- **Dynamic Cadences** — motion, drift, continuity  
-- **Meta Cadences** — reflection, self‑analysis, totality  
-- **Transformational Cadences** — emergence, dissolution, reassembly  
-
----
-
-## Related Modules
-
-- [Stephen Hawking Cadence](./stephen-hawking-cadence)  
-- [TriadicFrameworks Cadence](./triadicframeworks-cadence)  
-- [Cadence Constellation Map](./cadence-constellation-map)
+- Provide expressive modules for teaching RTT  
+- Capture structural voices across domains  
+- Offer narrative pathways into coherence  
+- Support module cross‑linking and navigation  
 
 ---
 
 ## Closing Line
 
-**The Speeches Series is the canon speaking in its own voice —  
-thirty expressions, one structure.**
+**The Speeches Series is the canon’s chorus — structure expressed through many voices.**

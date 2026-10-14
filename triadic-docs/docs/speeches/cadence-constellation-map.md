@@ -1,20 +1,19 @@
 ---
 id: cadence-constellation-map
 title: Cadence Constellation Map
-description: Structural map of the TriadicFrameworks Cadence Constellation — all 30 expressive modules arranged by category and structural field.
+description: A structural overview of the Cadence Series — mapping cosmic, cultural, and canonical cadences into a unified constellation.
 keywords:
   - triadicframeworks
   - rtt
-  - cadence constellation
-  - structural map
-  - expressive modules
+  - cadence
+  - constellation
 ai:
   module:
     name: Cadence Constellation Map
-    category: Map
-    summary: A structural map of all 30 cadence modules arranged by category and expressive field.
+    category: Cadence Series — Structural
+    summary: A map of all cadences arranged by field, vector, and thematic identity.
     version: 1.0
-    purpose: Provide a visual and conceptual map of the cadence lattice.
+    purpose: Provide a visual and conceptual overview of the entire cadence lattice.
     audience: Readers, contributors, researchers.
   navigation: sitemap_main.xml
   discussions: https://github.com/umaywant2/TriadicFrameworks/discussions
@@ -25,30 +24,7 @@ citation_author: Nawder Loswin
 citation_publication_date: "2025"
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <title>Cadence — TriadicFrameworks</title>
-  <meta name="description" content="An expressive cadence module in the TriadicFrameworks canon." />
-  <meta name="keywords" content="triadicframeworks, rtt, cadence, structural voice, expressive module" />
-
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://docs.triadicframeworks.org/docs/speeches" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Cadence — TriadicFrameworks" />
-  <meta property="og:description" content="An expressive cadence module in the TriadicFrameworks canon." />
-  <meta property="og:image" content="https://docs.triadicframeworks.org/img/logo.png" />
-  <meta property="og:url" content="https://docs.triadicframeworks.org/docs/speeches" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Cadence — TriadicFrameworks" />
-  <meta name="twitter:description" content="An expressive cadence module in the TriadicFrameworks canon." />
-  <meta name="twitter:image" content="https://docs.triadicframeworks.org/img/logo.png" />
-  <meta name="twitter:site" content="@NawderLoswin" />
-</Head>
+import CadenceNav from '@site/src/components/CadenceNav';
 
 <div class="session-context">
 
@@ -65,89 +41,37 @@ import Head from '@docusaurus/Head';
 </div>
 
 <div class="module-badge">
-<strong>✨ Cadence Constellation Map</strong>
+<strong>🌌 Cadence Constellation Map</strong>
 </div>
 
 # Cadence Constellation Map
 
-The **Cadence Constellation** is the structural star‑field of the TriadicFrameworks canon —  
-a 30‑module lattice of expressive voices arranged by:
+The Cadence Constellation organizes all cadences — cosmic, cultural, canonical, and archetypal — into a unified structural field.
 
-- structural field  
-- continuity regime  
-- expressive vector  
-- conceptual category  
+Cadences form **clusters**, each representing a coherent domain:
 
-This map provides a **structural overview** of how each cadence fits into the canon’s architecture.
+- **Cosmic Cadences** — universal motion, identity, tension, harmony  
+- **Cultural Cadences** — voices of humanity, comedy, philosophy, leadership  
+- **Canonical Cadences** — RTT’s own structural voice  
+- **Archetypal Cadences** — Pantheon, multi‑voice resonance  
 
----
-
-## 🌌 Cosmic Cadences (1–5)
-
-| Cadence | Field | Vector | Theme |
-|--------|--------|--------|--------|
-| I | Cosmic Clarity | Upward | Universal resonance |
-| II | Cosmic Drift | Expansive | Structural motion |
-| III | Cosmic Coherence | Stabilizing | Harmonic identity |
-| IV | Structural Cycle | Rhythmic | Recursion |
-| V | Meta‑Structural | Reflective | Self‑analysis |
+Each cluster is a **star group** in the constellation — distinct, but part of one structural sky.
 
 ---
 
-## 🏛 Structural Cadences (6–11)
+## Constellation Structure
 
-| Cadence | Field | Vector | Theme |
-|--------|--------|--------|--------|
-| VI | Threshold | Compression | Pressure |
-| VII | Expansion | Outward | Growth |
-| VIII | Synthesis | Integrative | Convergence |
-| IX | Meta‑Regime | Generative | Invention |
-| X | Field Dynamics | Spatial | Structural physics |
-| XI | Harmonic Stack | Layered | Resonance |
+**North:** Cosmic Cadences  
+**South:** Cultural Cadences  
+**East:** Canon Cadence  
+**West:** Archetypal Cadences  
 
----
-
-## 🔄 Dynamic Cadences (12–17)
-
-| Cadence | Field | Vector | Theme |
-|--------|--------|--------|--------|
-| XII | Memory | Archival | Preservation |
-| XIII | Transmission | Projective | Communication |
-| XIV | Emergence | Forming | Genesis |
-| XV | Governance | Stabilizing | Order |
-| XVI | Boundary | Containment | Limits |
-| XVII | Permission | Adaptive | Authorization |
-
----
-
-## 🧠 Meta Cadences (18–23)
-
-| Cadence | Field | Vector | Theme |
-|--------|--------|--------|--------|
-| XVIII | Translation | Contextual | Adaptation |
-| XIX | Reflective Motion | Dynamic | Self‑aware drift |
-| XX | Inversion | Reversal | Hidden geometry |
-| XXI | Paradox | Dual | Contradiction |
-| XXII | Stress Resonance | Tense | Endurance |
-| XXIII | Phase Shift | Transitional | Metamorphosis |
-
----
-
-## 🔧 Transformational Cadences (24–30)
-
-| Cadence | Field | Vector | Theme |
-|--------|--------|--------|--------|
-| XXIV | Fracture | Collapse | Breaking |
-| XXV | Reconciliation | Healing | Restoration |
-| XXVI | Echo | Recursive | Reverberation |
-| XXVII | Reverse Projection | Backward | Origin tracing |
-| XXVIII | Dissolution | Release | Decay |
-| XXIX | Reassembly | Constructive | Recomposition |
-| XXX | Totality | Omni‑directional | Wholeness |
+This map provides orientation for navigating the entire Cadence Series.
 
 ---
 
 ## Closing Line
 
-**The Cadence Constellation is the canon’s sky —  
-thirty stars, one structure.**
+**The Cadence Constellation is the canon’s sky — structure arranged as stars of identity.**
+
+<CadenceNav index={"map"} />
