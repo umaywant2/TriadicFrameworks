@@ -88,6 +88,7 @@ navbar: {
     alt: 'Triadic Docs Logo',
     src: 'img/triadic-logo.svg',
   },
+},
   items: [
     {
       to: '/docs/book/book-overview',
