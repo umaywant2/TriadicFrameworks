@@ -1,0 +1,97 @@
+{
+  "map_id": "grl.regime_map",
+  "version": "6.0-draft",
+  "book": "book6_governance",
+  "series": "AI Edition",
+  "invariant": "INV-GRL-001",
+  "operator_binding": "GRL-Ρ (RegimeCheck)",
+  "description": "Defines the formal structural model of a regime. A regime is a constraint-enforcement structure — a system of nodes, relations, and invariants whose function is to regulate other structures. This map covers regime definition, formation conditions, stability properties, and dissolution conditions.",
+  "regime_definition": {
+    "formal": "R = ⟨N_R, E_R, C_R, S_R, α_R, λ_R⟩",
+    "components": {
+      "N_R": "Regime nodes — the structural elements that compose the regime's internal configuration",
+      "E_R": "Enforcement relations — directed edges from regime nodes to governed structures expressing constraint-application authority",
+      "C_R": "Constraint set — the set of constraints the regime is declared to enforce",
+      "S_R": "Governed set — the set of external structures subject to regime enforcement",
+      "α_R": "Authority measure ∈ [0,1] — current structural authority level (decays per INV-GRL-002)",
+      "λ_R": "Decay rate ∈ (0,1) — regime-specific authority decay rate per non-compliant enforcement cycle"
+    },
+    "validity_condition": "valid(R) ⟺ ∃C ∈ C_R, ∃S ∈ S_R: enforces(R, C, S)  [INV-GRL-001]",
+    "structural_note": "A regime is not a normative concept. It does not require legitimacy, democratic mandate, or ethical grounding to be structurally valid. Validity is determined solely by the capacity to enforce at least one constraint on at least one governed structure."
+  },
+  "regime_topology_variants": [
+    {
+      "id": "RT-001",
+      "label": "Hierarchical Regime",
+      "description": "A single authority node at the top of the enforcement hierarchy, with enforcement relations flowing downward through intermediate nodes to governed structures. Classic hub-and-spoke governance pattern.",
+      "book2_relation": "Complement of the Inverted Star topology — authority flows outward from center, not inward from periphery.",
+      "authority_concentration": "High — single point of authority failure",
+      "decay_vulnerability": "High — central node non-compliance or incapacity immediately triggers INV-GRL-002"
+    },
+    {
+      "id": "RT-002",
+      "label": "Inverted-Star Regime",
+      "description": "Peripheral enforcement nodes with a virtual or emergent center. No single dominant authority node. Enforcement coherence arises from peripheral convergence. Draws on Book 2 Inverted Star topology.",
+      "book2_relation": "Direct application of INV-IS-001 through INV-IS-004 to the governance domain.",
+      "authority_concentration": "Distributed — no single point of failure",
+      "decay_vulnerability": "Lower — requires widespread peripheral non-compliance to trigger systemic decay"
+    },
+    {
+      "id": "RT-003",
+      "label": "Layered Regime",
+      "description": "Multiple nested regimes, each governing the one below it. Requires explicit meta-regime declarations per INV-GRL-003.",
+      "book2_relation": "Each layer may be independently hierarchical or inverted-star in topology.",
+      "authority_concentration": "Distributed across layers",
+      "decay_vulnerability": "Layer-isolated — decay in one layer does not automatically propagate upward without explicit cross-layer enforcement relations"
+    },
+    {
+      "id": "RT-004",
+      "label": "Opaque Regime",
+      "description": "A regime whose internal constraint set C_R or enforcement relations E_R are partially concealed from governed structures. Opacity ω(R) > 0 under Book 4 model.",
+      "book4_relation": "Regime opacity is formally measured using INV-OR-001 through INV-OR-004. High-opacity regimes may have high structural authority but low observed compliance due to governed structures being unable to detect constraint boundaries.",
+      "authority_concentration": "Variable",
+      "decay_vulnerability": "Counter-intuitive: high opacity may slow decay by preventing governed structures from identifying non-enforcement events"
+    }
+  ],
+  "regime_lifecycle": {
+    "formation": {
+      "description": "A regime forms when a configuration of nodes acquires the structural capacity to enforce at least one constraint on at least one governed structure.",
+      "formation_conditions": [
+        "FC-001: At least one enforcement relation E_R is established from a regime node to a governed structure",
+        "FC-002: At least one constraint C is declared in C_R",
+        "FC-003: The governed structure S is reachable from the regime via the enforcement relation",
+        "FC-004: The initial authority measure α_R is declared and ≥ α_min (minimum viable authority threshold)"
+      ],
+      "formation_operator": "GRL-Ρ validates FC-001 through FC-004 at regime initialization"
+    },
+    "stability": {
+      "description": "A regime is stable when its authority measure α_R is above α_min and it observes compliance responses across its enforcement cycles.",
+      "stability_condition": "α_R(t) ≥ α_min  ∧  compliance_rate(R, t) > 0",
+      "stability_threat_types": [
+        "ST-001: Authority decay (INV-GRL-002) — monotonic α reduction from non-compliant enforcement cycles",
+        "ST-002: Governed-set attrition — governed structures successfully exit, reducing S_R",
+        "ST-003: Constraint set erosion — enforced constraints are successfully renegotiated away, reducing C_R",
+        "ST-004: Enforcement relation failure — E_R edges are severed by structural changes in the governed domain"
+      ]
+    },
+    "collapse": {
+      "description": "A regime collapses when its structural capacity to enforce any constraint on any governed structure is eliminated. Collapse is distinct from decay — it is a threshold event, not a gradient.",
+      "collapse_conditions": [
+        "CC-001: α_R falls below α_min (authority floor breach) AND no compliance response is received in the subsequent cycle",
+        "CC-002: C_R = ∅ (constraint set is empty — no constraints remain to enforce)",
+        "CC-003: S_R = ∅ (governed set is empty — all structures have exited or been dissolved)",
+        "CC-004: All E_R enforcement relations are severed simultaneously"
+      ],
+      "collapse_note": "Collapse triggers a structural event that must be recorded in the session log. A collapsed regime's declarations carry no structural authority. Any subsequent governance must be exercised by a newly formed regime.",
+      "collapse_operator": "GRL-Α monitors for collapse conditions at each decay cycle"
+    }
+  },
+  "regime_validity_check_procedure": [
+    "Step 1: Load regime configuration R = ⟨N_R, E_R, C_R, S_R, α_R, λ_R⟩",
+    "Step 2: Verify C_R ≠ ∅ — regime must have at least one declared constraint",
+    "Step 3: Verify S_R ≠ ∅ — regime must have at least one governed structure",
+    "Step 4: Verify ∃C ∈ C_R, ∃S ∈ S_R: enforces(R, C, S) — at least one active enforcement relation exists",
+    "Step 5: Run GRL-Κ (ClosureGuard) — verify R ∉ S_R (regime does not govern itself)",
+    "Step 6: Record validity result. If FAIL on any step: classify as nominal_regime; authority declarations are non-binding."
+  ]
+}

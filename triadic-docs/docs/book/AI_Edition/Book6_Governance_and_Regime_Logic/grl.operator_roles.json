@@ -1,0 +1,158 @@
+{
+  "map_id": "grl.operator_roles",
+  "version": "6.0-draft",
+  "book": "book6_governance",
+  "series": "AI Edition",
+  "description": "Defines the five Book 6 (GRL) operators, their roles, invariant bindings, phase assignments, drift costs, and sequence within the governance-regime evaluation cycle.",
+  "operators": [
+    {
+      "id": "GRL-Ρ",
+      "name": "RegimeCheck",
+      "symbol": "GRL-Ρ",
+      "role": "Validates a regime R against INV-GRL-001. Confirms that at least one constraint C ∈ C_R is actively enforced on at least one governed structure S ∈ S_R. Returns regime_valid ∈ {true, false}.",
+      "input": "Regime tuple R = ⟨N_R, E_R, C_R, S_R, α_R, λ_R⟩",
+      "output": "regime_valid ∈ {true, false}; if false: violation_report with which condition failed (empty C_R, empty S_R, or no active enforcement relation in E_R)",
+      "invariant_binding": "INV-GRL-001",
+      "phase_assignment": ["validate"],
+      "drift_cost": 0.04,
+      "map_reference": "grl.regime_map",
+      "preconditions": [
+        "Regime R has been loaded with all six tuple components",
+        "Book 1 FFT kernel is active in module registry",
+        "QMROOT 0D confirmed from init phase"
+      ],
+      "postconditions": [
+        "regime_valid is recorded in session state",
+        "If false: violation_report is available for GRL-Σ",
+        "If true: proceed to GRL-Κ (ClosureGuard) in same validate phase"
+      ],
+      "must_not": [
+        "Assert regime validity without confirming at least one active enforcement relation",
+        "Accept an empty C_R or empty S_R as a valid regime configuration",
+        "Proceed to measure phase if regime_valid = false without explicit override declaration"
+      ],
+      "notes": "First active operator in every GRL evaluation session. No other GRL operator may produce meaningful output before GRL-Ρ completes. A regime_valid = false result halts evaluation unless the session is explicitly marked as a formation-phase analysis (pre-validation regime study).",
+      "qmroot_binding": "0D only — no 6D or negative rungs"
+    },
+    {
+      "id": "GRL-Α",
+      "name": "AuthorityDecay",
+      "symbol": "GRL-Α",
+      "role": "Measures the current authority level α ∈ [0,1] of regime R. Tracks compliance observations per enforcement cycle and applies the decay function d(α, n) = α · (1 - λ_R)^n when compliance is not observed. Reports authority stage and collapse risk.",
+      "input": "Regime tuple R (α_R, λ_R fields); enforcement cycle log (compliance_observed per cycle); cycle count n without compliance",
+      "output": "α_current ∈ [0,1]; authority_stage ∈ {stable, erosion, fragile, pre_collapse}; decay_projection for next n cycles; collapse_risk_flag",
+      "invariant_binding": "INV-GRL-002",
+      "phase_assignment": ["measure", "decay"],
+      "drift_cost": 0.06,
+      "map_reference": "grl.authority_map",
+      "preconditions": [
+        "GRL-Ρ has returned regime_valid = true",
+        "α_R initial value declared in regime configuration",
+        "λ_R decay rate declared in regime configuration",
+        "Enforcement cycle log available"
+      ],
+      "postconditions": [
+        "α_current recorded and available to GRL-Σ",
+        "authority_stage recorded in session state",
+        "If authority_stage = pre_collapse: collapse_risk_flag raised for GRL-Σ attention",
+        "decay_projection available for downstream handoff to book9_pattern_dynamics"
+      ],
+      "must_not": [
+        "Assign α > 1.0 or α < 0.0",
+        "Apply recovery of α without a recorded compliance event",
+        "Suppress collapse_risk_flag when authority_stage = pre_collapse",
+        "Allow λ_R = 0 (no decay regime) without explicit meta-regime declaration justifying it"
+      ],
+      "notes": "GRL-Α operates in two sub-phases: measure (initial α assessment at cycle start) and decay (applying d(α,n) if no compliance observed this cycle). Both sub-phases are always run — there is no skip condition for decay if the regime is in a non-compliant cycle.",
+      "qmroot_binding": "0D only"
+    },
+    {
+      "id": "GRL-Κ",
+      "name": "ClosureGuard",
+      "symbol": "GRL-Κ",
+      "role": "Guards against regime self-governance paradox. Checks that no regime R is present in its own governed-set S_R without a declared meta-regime M. If self-governance is detected without a meta-regime declaration, halts evaluation and records structural_paradox.",
+      "input": "Regime tuple R (N_R, E_R, S_R fields); meta-regime declaration if present",
+      "output": "closure_valid ∈ {true, false, meta_regime_declared}; if false: structural_paradox record",
+      "invariant_binding": "INV-GRL-003",
+      "phase_assignment": ["validate"],
+      "drift_cost": 0.03,
+      "map_reference": "grl.regime_map",
+      "preconditions": [
+        "Regime tuple R is loaded",
+        "GRL-Ρ has returned regime_valid = true (ClosureGuard runs alongside RegimeCheck in validate phase)"
+      ],
+      "postconditions": [
+        "closure_valid is recorded",
+        "If closure_valid = meta_regime_declared: meta-regime M is recorded in session state; evaluation proceeds with meta-regime context",
+        "If closure_valid = false: structural_paradox is recorded; evaluation halts"
+      ],
+      "must_not": [
+        "Allow evaluation to proceed past validate phase when closure_valid = false",
+        "Accept a claimed meta-regime declaration that is not structurally present in the module registry",
+        "Treat terminal authority declarations (regime with no higher meta-regime) as structural paradoxes — terminal authority is a valid special case"
+      ],
+      "notes": "Runs in parallel with GRL-Ρ in the validate phase. Both must complete before the measure phase begins. A terminal authority regime (one that declares itself the highest level with no meta-regime above it) must explicitly declare terminal_authority = true in its configuration; GRL-Κ accepts this and records it.",
+      "qmroot_binding": "0D only"
+    },
+    {
+      "id": "GRL-Λ",
+      "name": "LegitimacyCheck",
+      "symbol": "GRL-Λ",
+      "role": "Audits constraint challenges from governed structures. Determines whether each challenge follows a path within declared_channels(R). Classifies challenges as legitimate or violation events. Records enforcement events per cycle.",
+      "input": "Challenge events from governed structures (S, C, challenge_path); declared_channels(R) from regime configuration",
+      "output": "For each challenge event: legitimacy_status ∈ {legitimate, void, violation}; enforcement_record; channel_usage_report",
+      "invariant_binding": "INV-GRL-004",
+      "phase_assignment": ["enforce"],
+      "drift_cost": 0.05,
+      "map_reference": "grl.constraint_enforcement_map",
+      "preconditions": [
+        "validate phase complete (GRL-Ρ and GRL-Κ have returned)",
+        "measure and decay phases complete (GRL-Α has run)",
+        "Enforcement cycle is active",
+        "declared_channels(R) is populated in regime configuration"
+      ],
+      "postconditions": [
+        "All challenge events from current cycle classified",
+        "legitimacy records appended to enforcement log",
+        "Violation events flagged for inclusion in GRL-Σ status report",
+        "Compliance observations forwarded to GRL-Α for next cycle's authority calculation"
+      ],
+      "must_not": [
+        "Classify a challenge as legitimate when its path includes any step outside declared_channels(R)",
+        "Classify unilateral constraint violation as a challenge",
+        "Allow claimed challenge legitimacy from undeclared review authorities (INV-GRL-003 cross-check required)",
+        "Suppress violation records even when α_current is very low"
+      ],
+      "notes": "GRL-Λ is the enforcement record keeper. Its outputs feed GRL-Α (compliance observations affect authority decay) and GRL-Σ (violations and legitimate challenges are included in the regime status report). In opaque regimes (ω(C_R) > 0), GRL-Λ annotates enforcement records with the constraint opacity level at the time of the challenge.",
+      "qmroot_binding": "0D only"
+    },
+    {
+      "id": "GRL-Σ",
+      "name": "RegimeSynthesis",
+      "symbol": "GRL-Σ",
+      "role": "Synthesizes all operator outputs into a complete regime status report. Aggregates validity findings (GRL-Ρ), closure findings (GRL-Κ), authority state (GRL-Α), and enforcement records (GRL-Λ). Produces the downstream handoff package for book7_sarg and book9_pattern_dynamics.",
+      "input": "regime_valid (GRL-Ρ), closure_valid (GRL-Κ), α_current + authority_stage + decay_projection (GRL-Α), enforcement_record + legitimacy classifications (GRL-Λ)",
+      "output": "regime_status_report: { regime_id, validity_status, closure_status, α_current, authority_stage, enforcement_summary, violation_count, legitimate_challenge_count, collapse_risk, tel_encoding, downstream_handoffs }",
+      "invariant_binding": "INV-GRL-001 through INV-GRL-004 (synthesis operator)",
+      "phase_assignment": ["catalogue"],
+      "drift_cost": 0.03,
+      "map_reference": "grl.regime_map",
+      "preconditions": [
+        "All prior operators (GRL-Ρ, GRL-Κ, GRL-Α, GRL-Λ) have completed their phases",
+        "All operator outputs are available in session state"
+      ],
+      "postconditions": [
+        "regime_status_report is complete and available for export",
+        "Downstream handoff package prepared: book7_sarg receives argument seed (regime legitimacy framing); book9_pattern_dynamics receives α trajectory and decay projection",
+        "Session is formally closed upon GRL-Σ completion"
+      ],
+      "must_not": [
+        "Suppress any operator finding — all findings must appear in the status report",
+        "Mark a regime as stable when collapse_risk_flag is raised",
+        "Generate downstream handoffs before all five phases are complete"
+      ],
+      "tel_synthesis_note": "The regime_status_report's enforcement summary is encoded as a TEL constraint assertion for downstream consumption: INV[GRL-001]: assert (R ⊢ C[active_enforcement]) — this binding ensures the report is machine-readable by book7_sarg's SARG operators.",
+      "qmroot_binding": "0D only"
+    }
+  ]
+}

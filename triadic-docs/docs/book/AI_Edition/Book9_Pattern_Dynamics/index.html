@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Canonical Metadata -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Pattern Dynamics — AI Edition (Book 9)</title>
+    <meta name="description" content="Book 9 of the TriadicFrameworks AI Edition. Defines Pattern Dynamics: trajectory types, bifurcation types, mutation types, propagation types, attractor classes, and terminal synthesis conditions." />
+
+    <!-- Identity -->
+    <meta name="generator" content="TriadicFrameworks AI Edition" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#111111" />
+
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Pattern Dynamics — AI Edition (Book 9)" />
+    <meta property="og:description" content="Terminal synthesis of the TriadicFrameworks canon: structural evolution, bifurcation, mutation, propagation, and attractor dynamics." />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="/assets/triadic-og.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Pattern Dynamics — AI Edition (Book 9)" />
+    <meta name="twitter:description" content="Structural evolution and dynamic grammar of the TriadicFrameworks canon." />
+
+    <!-- Citation -->
+    <meta name="citation_author" content="Nawder Loswin" />
+    <meta name="citation_publication_date" content="2025" />
+    <meta name="DC.type" content="Text" />
+    <meta name="DC.format" content="text/html" />
+
+    <!-- AI Metadata -->
+    <meta name="ai.module" content="book9_pattern_dynamics" />
+    <meta name="ai.version" content="1.0.0" />
+    <meta name="ai.navigation" content="/sitemap_main.xml" />
+    <meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions" />
+    <meta name="ai.contact.x" content="@TriadicFrameworks" />
+    <meta name="ai.contact.youtube" content="@TriadicFrameworks" />
+    <meta name="ai.license" content="Open educational use permitted" />
+
+    <!-- Session Context -->
+    <meta name="session.rtt" content="1" />
+    <meta name="session.coherence" content="declared" />
+    <meta name="session.drift" content="bounded" />
+    <meta name="session.paradox" content="structural" />
+
+    <!-- RTT & Spine Anchors -->
+    <link rel="rtt" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html" />
+    <link rel="spine" href="https://www.triadicframeworks.org/spine/" />
+
+    <!-- Favicon Suite -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Your Existing CSS (Preserved Exactly) -->
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --bg: #0d0f14; --bg2: #13151c; --bg3: #1a1d27;
+            --border: #2a2d3a; --accent: #5b8aff; --accent2: #f1c40f;
+            --green: #2ecc71; --yellow: #f39c12; --red: #e74c3c;
+            --teal: #1abc9c; --text: #d4d8e8; --text-muted: #7a7f96;
+            --text-dim: #555a72; --mono: 'Courier New','Lucida Console',monospace;
+            --sans: -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+            --sidebar-w: 280px;
+        }
+        html, body { height: 100%; background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 14px; line-height: 1.6; }
+
+        /* Layout */
+        .layout { display: flex; min-height: 100vh; }
+        .sidebar { width: var(--sidebar-w); flex-shrink: 0; background: var(--bg2); border-right: 1px solid var(--border); padding: 24px 16px; position: sticky; top: 0; height: 100vh; overflow-y: auto; font-size: 12px; }
+        .main { flex: 1; padding: 40px 48px; max-width: 960px; }
+
+        /* Sidebar */
+        .sidebar-section { margin-bottom: 20px; }
+        .sidebar-label { text-transform: uppercase; letter-spacing: 0.1em; font-size: 10px; color: var(--text-dim); margin-bottom: 6px; }
+        .sidebar-breadcrumb { color: var(--text-muted); line-height: 1.8; }
+        .sidebar-breadcrumb span { color: var(--text); font-weight: 600; }
+
+        /* Module chain */
+        .module-chain { display: flex; flex-direction: column; gap: 2px; }
+        .module-chain .step { padding: 3px 8px; border-left: 2px solid var(--border); color: var(--text-muted); font-family: var(--mono); font-size: 11px; }
+        .module-chain .step.active { border-left-color: var(--accent2); color: var(--accent2); font-weight: 700; }
+        .module-chain .step.prev { border-left-color: var(--green); color: var(--green); }
+
+        /* Operator pills */
+        .op-pills { display: flex; flex-wrap: wrap; gap: 4px; }
+        .op-pill {
+            display: inline-block;
+            font-family: var(--mono);
+            font-size: 10px;
+            padding: 2px 7px;
+            border-radius: 3px;
+            background: color-mix(in srgb, var(--accent2) 15%, var(--bg3));
+            border: 1px solid rgba(241, 196, 15, 0.35);
+            color: var(--accent2);
+        }
+    .contents {
+        margin-top: 40px;
+    }
+    .contents h2 {
+        font-size: 20px;
+        margin-bottom: 12px;
+        color: var(--accent);
+        font-weight: 600;
+    }
+    .contents-list {
+        list-style: none;
+        padding-left: 0;
+        font-size: 14px;
+    }
+    .contents-list li {
+        margin: 6px 0;
+    }
+    .contents-list a {
+        color: var(--accent2);
+        font-family: var(--mono);
+    }
+    </style>
+</head>
+
+<body>
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <div class="sidebar-label">Book</div>
+                <div class="sidebar-breadcrumb">
+                    AI Edition / <span>Book 9 — Pattern Dynamics</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-label">Session Context</div>
+                <div class="sidebar-breadcrumb">
+                    RTT: <span>1</span><br />
+                    Coherence: <span>declared</span><br />
+                    Drift: <span>bounded</span><br />
+                    Paradox: <span>structural</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-label">Navigation</div>
+                <ul class="module-chain">
+                    <li class="step prev">← Book 8 — NoS: Nature of Structure</li>
+                    <li class="step active">Book 9 — Pattern Dynamics</li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="main">
+            <h1>Pattern Dynamics — AI Edition (Book 9)</h1>
+            <p>This page presents the canonical metadata, session context, and structural framing for Book 9 of the TriadicFrameworks AI Edition — the terminal synthesis module.</p>
+
+<section class="contents">
+    <h2>Contents</h2>
+    <ul class="contents-list">
+        <li><a href="README.md">README.md</a></li>
+        <li><a href="module.json">module.json</a></li>
+        <!-- Additional book-specific JSON maps -->
+    </ul>
+</section>
+
+<section class="contents">
+    <h2>Contents</h2>
+    <ul class="contents-list">
+        <li><a href="README.md">README.md</a></li>
+        <li><a href="module.json">module.json</a></li>
+        <li><a href="pd.bifurcation_map.json">pd.bifurcation_map.json</a></li>
+        <li><a href="pd.invariants.json">pd.invariants.json</a></li>
+        <li><a href="pd.operator_roles.json">pd.operator_roles.json</a></li>
+        <li><a href="pd.phases.json">pd.phases.json</a></li>
+        <li><a href="pd.propagation_map.json">pd.propagation_map.json</a></li>
+        <li><a href="pd.trajectory_map.json">pd.trajectory_map.json</a></li>
+    </ul>
+</section>
+            
+        </main>
+    </div>
+</body>
+</html>

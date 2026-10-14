@@ -1,0 +1,185 @@
+{
+  "map_id": "sarg.defeat_map",
+  "version": "7.0-draft",
+  "book": "book7_sarg",
+  "series": "AI Edition",
+  "invariant": "INV-SARG-003",
+  "operator_binding": "SARG-Δ (DefeatCheck)",
+  "session_context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural",
+  "description": "Defines the structural model of argument defeat under SARG. Defeat is not refutation in the classical sense — it is the identification of a structural component within an argument whose removal or revision collapses the argument's constraint satisfaction. A defeat must be structurally targeted and formally completable. Untargeted objections are reclassified as parallel assertions.",
+
+  "defeat_definition": {
+    "formal": "D = ⟨A_target, T_D, O_D, C_D, outcome_D⟩",
+    "components": {
+      "A_target": "The argument being defeated",
+      "T_D": "The structural target of the defeat — a specific node, declared relation, or constraint binding in A_target",
+      "O_D": "The defeat operation — the structural action applied to T_D (removal, revision, suspension)",
+      "C_D": "The defeat constraint — the structural condition that D must satisfy to be classified as a completed defeat",
+      "outcome_D": "The post-defeat state of A_target — valid, invalid, or partially suspended"
+    },
+    "defeat_condition": "defeat_complete(D) ⟺ T_D ∈ (nodes(A) ∪ R_A ∪ C_A) ∧ O_D(T_D) disrupts constraint_satisfaction(A)",
+    "structural_note": "Defeat is not destruction. A completed defeat may leave A_target partially intact — collapsing specific support paths without invalidating the entire argument structure. Partial defeat is the common case. Total argument collapse requires defeat of every path to root(A)."
+  },
+
+  "defeat_types": [
+    {
+      "id": "DT-001",
+      "label": "Node Defeat",
+      "target_type": "Node (Claim, Evidence, Warrant, or Qualifier)",
+      "description": "Defeats a specific node in N_A by demonstrating that the node fails its own declared structural constraints or carries a provenance violation. Node defeat removes the node from the effective argument structure — all relations incident on the defeated node are suspended.",
+      "structural_effect": "All support paths passing through T_D are suspended. If T_D is a Warrant node, the claim-evidence pair it bridged loses its INV-SARG-002 coverage until a replacement Warrant is declared.",
+      "invariant_check": "INV-SARG-001: reachability must be re-evaluated after Node Defeat — some nodes may become orphans following the removal",
+      "defeat_procedure": [
+        "Identify the target node T_D by its declared identifier",
+        "Demonstrate the structural constraint violation or provenance failure in T_D",
+        "Record all relations incident on T_D",
+        "Suspend T_D and all incident relations",
+        "Recompute reach(A) to detect new orphan nodes",
+        "Record outcome_D: which support paths collapsed"
+      ],
+      "tel_encoding": "T[DEFEAT_NODE]: (T_D ⊥ constraint(T_D))",
+      "completeness_check": "SARG-Δ must confirm at least one support path collapsed; if no path collapses, the node defeat had no structural effect and is reclassified as a parallel assertion"
+    },
+    {
+      "id": "DT-002",
+      "label": "Warrant Defeat",
+      "target_type": "Warrant Node (specifically)",
+      "description": "The highest-impact Node Defeat variant — targeting the Warrant node that bridges an Evidence node to a Claim node. Warrant defeat collapses the inferential license of a specific E→C support path. If the defeated warrant is the only warrant for a claim-evidence pair, the pair loses INV-SARG-002 coverage and the support path is fully suspended.",
+      "structural_effect": "The E→C support path that depended on the defeated Warrant is suspended. If multiple Warrants existed for the same pair, the remaining ones maintain coverage.",
+      "invariant_check": "INV-SARG-002: after Warrant Defeat, check whether any CE pairs now have zero warrant coverage. If so, those pairs are in INV-SARG-002 violation — the argument is invalid in that region.",
+      "defeat_procedure": [
+        "Identify Warrant node W_D bridging E_node to C_node",
+        "Demonstrate that the inferential principle in W_D is structurally invalid, inapplicable, or internally inconsistent",
+        "Suspend W_D",
+        "Check remaining Warrants for the same CE pair — if none remain, record INV-SARG-002 violation",
+        "Record outcome_D"
+      ],
+      "tel_encoding": "T[DEFEAT_WARRANT]: (W_D ⊥ validity_condition(W_D))",
+      "completeness_check": "Warrant Defeat is complete only when the warrant's invalidity is demonstrated structurally — not merely asserted"
+    },
+    {
+      "id": "DT-003",
+      "label": "Relation Defeat",
+      "target_type": "Declared Relation in R_A",
+      "description": "Targets a specific declared structural relation in R_A — a support arrow, contradiction, or qualification link — rather than the nodes it connects. Relation defeat severs the structural connection without removing either node. Both nodes remain in N_A and may participate in other relations.",
+      "structural_effect": "The severed relation is removed from R_A. Nodes that were connected only through this relation may become structurally isolated with respect to each other. Reachability is not always disrupted — alternative paths may remain.",
+      "invariant_check": "INV-SARG-001: check whether any node's sole path to root(A) passed through the defeated relation. If so, that node joins the orphan set.",
+      "defeat_procedure": [
+        "Identify the target relation r_D ∈ R_A by its type and endpoint nodes",
+        "Demonstrate the structural condition that makes this relation invalid or inapplicable",
+        "Remove r_D from R_A",
+        "Recompute reachability — identify new orphans",
+        "Record outcome_D"
+      ],
+      "tel_encoding": "T[DEFEAT_RELATION]: (r_D.source ⊥ r_D.target) [via declared_relation_ID]",
+      "completeness_check": "The defeat must identify a specific relation by its endpoint nodes and type — defeating 'the support relations generally' is not a Relation Defeat"
+    },
+    {
+      "id": "DT-004",
+      "label": "Constraint Defeat",
+      "target_type": "Declared constraint in C_A",
+      "description": "Challenges the applicability or validity of a constraint in C_A to the argument A. Constraint defeat does not remove the constraint from the domain — it argues that the constraint does not bind A in the current structural context. If the constraint defeat succeeds, A's validity is re-evaluated under the reduced constraint set.",
+      "structural_effect": "The challenged constraint is suspended from C_A. Argument validity is re-evaluated against the remaining constraints. If A satisfied all other constraints, the argument may become valid post-defeat.",
+      "invariant_check": "A constraint defeat requires a structural argument for why the constraint is inapplicable — it cannot be a bare assertion. The inapplicability argument is itself a SARG argument and is subject to the same invariant requirements.",
+      "defeat_procedure": [
+        "Identify constraint C_D ∈ C_A targeted for defeat",
+        "Construct a SARG argument A_meta demonstrating that C_D is inapplicable to A in the current structural context",
+        "If A_meta is valid under SARG: suspend C_D from C_A",
+        "Re-evaluate A against C_A \\ {C_D}",
+        "Record outcome_D"
+      ],
+      "tel_encoding": "T[DEFEAT_CONSTRAINT]: (A ⊥ applicability(C_D))",
+      "completeness_check": "The meta-argument A_meta must itself satisfy all four SARG invariants. A constraint defeat is recursive — it is itself a SARG evaluation."
+    },
+    {
+      "id": "DT-005",
+      "label": "Undercutting Defeat",
+      "target_type": "Warrant node and its inferential principle",
+      "description": "A specialized defeat that does not deny the evidence or the claim, but challenges the inferential principle encoded in a Warrant — specifically the general applicability of the warrant in the domain of discourse. Undercutting defeat is the formal SARG representation of 'your evidence does not connect to your conclusion in this context.'",
+      "structural_effect": "The Warrant's inferential license is restricted to a scope that excludes the current argument context. The E→C support path is effectively severed for this argument while the Warrant node may remain valid in other contexts.",
+      "invariant_check": "INV-SARG-002 implications are the same as DT-002: if no other Warrant covers the CE pair, the pair enters INV-SARG-002 violation.",
+      "tel_encoding": "T[UNDERCUT]: (W_D ⊗ scope_restriction) → (W_D.applicability ⊥ context(A))",
+      "completeness_check": "Must explicitly declare the scope restriction that makes W_D inapplicable — not merely assert inapplicability"
+    }
+  ],
+
+  "defeat_completeness_verification": {
+    "description": "SARG-Δ performs defeat completeness verification after every defeat attempt. INV-SARG-003 requires that a defeat target at least one structural component. This procedure confirms completeness.",
+    "steps": [
+      {
+        "step_id": "DCV-1",
+        "label": "Target Identification Check",
+        "instruction": "Confirm that D.T_D ∈ (nodes(A) ∪ R_A ∪ C_A). If T_D is undefined, not declared, or refers to a surface assertion rather than a structural component, D is reclassified as a parallel assertion. Record reclassification.",
+        "invariant_check": "INV-SARG-003"
+      },
+      {
+        "step_id": "DCV-2",
+        "label": "Structural Effect Confirmation",
+        "instruction": "Confirm that O_D(T_D) produces at least one structural change in A: a node removal, a relation severance, an orphan creation, or a constraint suspension. If the operation produces no structural change, D is incomplete.",
+        "invariant_check": "INV-SARG-003 — a defeat with no structural effect is not a defeat"
+      },
+      {
+        "step_id": "DCV-3",
+        "label": "Constraint Satisfaction Re-evaluation",
+        "instruction": "After applying O_D, re-evaluate A's constraint satisfaction under C_A (minus any suspended constraints). Determine outcome_D ∈ {valid, invalid, partially_suspended}.",
+        "invariant_check": "INV-SARG-001, INV-SARG-002, INV-SARG-004 must all be re-checked after structural modification"
+      },
+      {
+        "step_id": "DCV-4",
+        "label": "Defeat Record Finalization",
+        "instruction": "Record D with all fields populated: A_target, T_D, O_D, C_D, outcome_D. An incomplete defeat record is a session fault — it must not be referenced in downstream SARG-Σ outputs.",
+        "invariant_check": "All defeat records fed to downstream books (NoS, PD) must be complete defeat records"
+      }
+    ]
+  },
+
+  "parallel_assertion_reclassification": {
+    "definition": "A parallel assertion is an objection, counter-claim, or challenge that does not meet INV-SARG-003 completeness requirements. It is a valid independent claim but is not a structural defeat of A.",
+    "triggers": [
+      "No structural target identified in A",
+      "Target identified but O_D produces no structural change in A",
+      "Target is a surface-level assertion rather than a structural component",
+      "Defeat record missing required fields"
+    ],
+    "handling": "Record as PA[parallel_assertion_ID] in the session defeat log. PA entries do not modify A's validity status. They may initiate a new SARG argument construction cycle.",
+    "tel_encoding": "PA[pa_ID]: (claim_expression ⊥ root(A)) [no structural target]"
+  },
+
+  "defeat_failure_modes": [
+    {
+      "id": "DFM-001",
+      "label": "Surface Objection Misclassified as Defeat",
+      "description": "A rhetorical or semantic objection to phrasing, tone, or surface content is recorded as a structural defeat. No structural target is identified.",
+      "detection": "DCV-1 returns target = undefined or target ∉ (N_A ∪ R_A ∪ C_A)",
+      "resolution": "Reclassify as parallel assertion"
+    },
+    {
+      "id": "DFM-002",
+      "label": "Incomplete Warrant Defeat",
+      "description": "A Warrant is identified as the defeat target but the inferential invalidity is asserted rather than demonstrated structurally.",
+      "detection": "DCV-2 returns no structural change — the Warrant node remains effective despite the defeat claim",
+      "resolution": "Require structural demonstration of warrant invalidity; reclassify as incomplete defeat pending demonstration"
+    },
+    {
+      "id": "DFM-003",
+      "label": "Ghost Defeat",
+      "description": "A defeat is recorded against a node or relation that does not exist in A_target. The defeat target is fabricated or confused with an element of a different argument.",
+      "detection": "T_D ∉ (N_A ∪ R_A ∪ C_A) confirmed by node/relation inventory check",
+      "resolution": "Discard defeat record; log as DFM-003 ghost defeat; no effect on A"
+    },
+    {
+      "id": "DFM-004",
+      "label": "Reflexive Defeat",
+      "description": "A defeat structure is constructed that itself violates INV-SARG-004 — the defeat argument circularly supports its own conclusion without independent evidence.",
+      "detection": "Defeat argument A_defeat fails INV-SARG-004 check",
+      "resolution": "Defeat is invalid — a structurally invalid defeat argument cannot defeat a structurally valid target argument"
+    },
+    {
+      "id": "DFM-005",
+      "label": "Scope Exhaustion",
+      "description": "Multiple partial defeats are recorded that collectively target all paths to root(A), but no single defeat produced total argument collapse. The cumulative effect collapses the argument, but the session does not recognize the aggregate.",
+      "detection": "Post-defeat reachability check shows reach(A) = ∅ or no valid support path to root(A) remains",
+      "resolution": "Record total collapse as outcome_D = invalid, attributing the result to the cumulative defeat set"
+    }
+  ]
+}

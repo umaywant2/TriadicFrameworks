@@ -1,0 +1,106 @@
+{
+  "map_id": "or.operator_roles",
+  "version": "4.0-draft",
+  "book": "book4_opacity_revelation",
+  "series": "AI Edition",
+  "description": "Defines the five Book 4 (OR) operators, their roles, bindings, and sequence within the opacity-revelation evaluation cycle.",
+  "operators": [
+    {
+      "id": "OR-Ω",
+      "name": "OpacityGradient",
+      "symbol": "OR-Ω",
+      "role": "Measures or assigns the opacity gradient value ω ∈ [0,1] for a target structure.",
+      "input": "Structure S",
+      "output": "ω(S) ∈ [0,1]",
+      "invariant_binding": "INV-OR-001",
+      "invariant_binding_2": "INV-OR-003",
+      "phase_assignment": ["measure"],
+      "drift_cost": 0.04,
+      "map_reference": "or.opacity_gradient_map",
+      "notes": "Primary entry operator for any OR evaluation. Must always run before OR-Ρ. ω(S) is a property of S's configuration, not of any observer. Sets the ω value used by all downstream operators."
+    },
+    {
+      "id": "OR-Δ",
+      "name": "DetectionCapacity",
+      "symbol": "OR-Δ",
+      "role": "Declares the observer detection capacity δ ∈ [0,1] for the current observer O in the current context.",
+      "input": "Observer O, Context C",
+      "output": "δ(O, C) ∈ [0,1]",
+      "invariant_binding": "INV-OR-002",
+      "phase_assignment": ["measure"],
+      "drift_cost": 0.04,
+      "book3_binding": {
+        "operator": "SD-Σd (SignalDetection)",
+        "role": "SD-Σd output is the primary substrate for δ estimation in OR context. OR-Δ applies context adjustment on top of the SD-Σd result."
+      },
+      "notes": "Observer-dependent. δ may vary for the same observer across different contexts. Must be declared and recorded before OR-Ρ executes. δ is not a property of S."
+    },
+    {
+      "id": "OR-Ρ",
+      "name": "RevelationCheck",
+      "symbol": "OR-Ρ",
+      "role": "Gate operator. Evaluates the revelation condition: δ(O) > ω(S). Returns revelation_state.",
+      "input": "δ(O) from OR-Δ, ω(S) from OR-Ω",
+      "output": "revelation_state ∈ {opaque, threshold, revealed}",
+      "invariant_binding": "INV-OR-002",
+      "phase_assignment": ["threshold"],
+      "drift_cost": 0.06,
+      "map_reference": "or.revelation_threshold_map",
+      "gate_logic": {
+        "revealed": "δ(O) > ω(S) — proceed to reveal phase",
+        "threshold": "δ(O) = ω(S) — assign opaque; record threshold event",
+        "opaque": "δ(O) < ω(S) — proceed to probe phase"
+      },
+      "preconditions": ["OR-Ω has run and ω(S) is recorded", "OR-Δ has run and δ(O) is recorded"],
+      "notes": "Core gating operator. Violation: invoking OR-Ρ before OR-Ω or OR-Δ complete. Threshold case (δ=ω) must always resolve to opaque — conservatism principle."
+    },
+    {
+      "id": "OR-Λ",
+      "name": "LatentProbe",
+      "symbol": "OR-Λ",
+      "role": "Probes the latent sub-structure set: identifies all s_i ∈ sub(S) for which ω(s_i) ≥ δ(O). Detects structural shadows.",
+      "input": "Structure S with sub-structure opacity assignments, δ(O)",
+      "output": "S_latent: { s_i : ω(s_i) ≥ δ }, S_access: { s_i : ω(s_i) < δ }, shadow_set",
+      "invariant_binding": "INV-OR-004",
+      "phase_assignment": ["probe"],
+      "drift_cost": 0.08,
+      "map_reference": "or.latent_structure_map",
+      "preconditions": ["OR-Ρ has run and revelation_state is recorded"],
+      "skip_condition": "Skip when revelation_state = revealed and sub(S) = ∅ (atomic structure, fully revealed)",
+      "notes": "Highest drift cost in the operator set. Produces the latent set and shadow set that feed PartialIndex. Structural shadows are detectable via SD-Σd and SD-Γ with OR-context adjustment."
+    },
+    {
+      "id": "OR-Π",
+      "name": "PartialIndex",
+      "symbol": "OR-Π",
+      "role": "Synthesis operator. Indexes the full partial revelation state: builds revelation_map { s_i → state_i } across all sub-structures of S.",
+      "input": "S_latent, S_access, shadow_set from OR-Λ; δ(O)",
+      "output": "revelation_map: { s_i → state_i } where state_i ∈ {revealed, opaque, shadow}",
+      "invariant_binding": "INV-OR-004",
+      "phase_assignment": ["reveal", "catalogue"],
+      "drift_cost": 0.06,
+      "downstream_bindings": [
+        "Book 5 (TEL): revelation_map feeds TEL encoding of OR-qualified structures",
+        "Book 6 (Governance): opacity profiles from revelation_map feed regime opacity analysis",
+        "Book 8 (NoS): opacity as a structural-ontological property analysed via this output"
+      ],
+      "notes": "Final operator in the OR cycle. Output is the canonical opacity-revelation state of S relative to O. Must not be called until OR-Λ has produced S_latent and S_access."
+    }
+  ],
+  "operator_sequence": "OR-Ω → OR-Δ → OR-Ρ → OR-Λ → OR-Π",
+  "sequence_summary": "Assign structural opacity, declare observer capacity, gate on revelation threshold, probe latent sub-structures, index partial revelation state.",
+  "must_not": [
+    "invoke OR-Ρ before OR-Ω has completed",
+    "invoke OR-Ρ before OR-Δ has completed",
+    "treat the threshold case (δ=ω) as revealed",
+    "assign ω as a property of any observer",
+    "fabricate δ without SD-Σd grounding from Book 3",
+    "suppress latent structure without OR-Λ result",
+    "declare full revelation without checking all s_i individually"
+  ],
+  "qmroot_binding": {
+    "6D": "absent",
+    "negative_rungs": "absent",
+    "INV-013": "0D only — all operators trace to 0D Silence Seed via Book 1 kernel"
+  }
+}

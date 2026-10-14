@@ -1,0 +1,269 @@
+{
+  "map_id": "pd.operator_roles",
+  "version": "9.0-draft",
+  "book": "book9_pattern_dynamics",
+  "series": "AI Edition",
+  "session_context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural",
+  "qmroot_binding": {
+    "dimension": "0D",
+    "note": "6D absent; negative rungs absent; INV-013 = 0D only"
+  },
+  "phantom_entry_audit": {
+    "status": "clean",
+    "checked_at": "session-open",
+    "entries": []
+  },
+  "description": "Defines the five Book 9 (Pattern Dynamics) operators, their roles, invariant bindings, phase assignments, drift costs, sequence, and downstream handoffs. PD operators are synthesis operators — they integrate outputs from all eight prior books into a unified dynamical analysis. Each operator corresponds to a primary PD invariant, with PD-Σ as the terminal synthesis operator. Book 9 has no downstream handoffs; it is the series terminal.",
+  "operator_sequence": "PD-Τ → PD-Β → PD-Μ → PD-Π → PD-Σ",
+
+  "operators": [
+    {
+      "id": "PD-Τ",
+      "name": "TrajectoryTrace",
+      "symbol": "PD-Τ",
+      "role": "Traces structural trajectories through state-space over time. Consumes upstream trajectory feeds from NoS-Σ (cross_book_invariant_map), GRL-Σ (α_trajectory, decay_projection), and SARG-Σ (structural_argument_trajectory). Logs each transformation step with the applicable declared transformation from the transformation registry. Detects trajectory types (convergent, divergent, cyclic, bifurcating) and flags discontinuous gaps for PD-Β. PD-Τ is the primary data ingestion operator of Book 9 — it converts upstream book outputs into a unified trajectory record.",
+      "input": [
+        "NoS-Σ nos_foundation_report: cross_book_invariant_map, emergent_invariants_confirmed, upward_revisions_pending",
+        "GRL-Σ α_trajectory and decay_projection: authority measure time-series and collapse risk flag",
+        "SARG-Σ structural_argument_trajectory: argument configuration sequence across SARG evaluation cycle",
+        "Transformation registry: all declared transformations from Books 1–8 loaded in init phase",
+        "Session context: rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+      ],
+      "output": [
+        "trajectory_log: full ordered sequence of ⟨S(t_i), τ_i, S(t_{i+1})⟩ triples",
+        "trajectory_type_classifications: {convergent | divergent | cyclic | bifurcating} per trajectory segment",
+        "gap_events: list of discontinuous jumps with time-points and configuration descriptions",
+        "cross_book_sub_trajectories: named sub-trajectory records for each upstream feed (governance_trajectory, argument_trajectory, meta_structural_trajectory)",
+        "TEL-encoded trajectory summary for PD-Σ synthesis"
+      ],
+      "invariant_binding": "INV-PD-001",
+      "phase_assignment": ["trace"],
+      "drift_cost": 0.05,
+      "map_reference": "pd.trajectory_map",
+      "preconditions": [
+        "init phase complete; all eight dependency modules loaded in declared order",
+        "QMROOT 0D confirmed from init phase",
+        "NoS-Σ nos_foundation_report available from Book 8 upstream handoff",
+        "GRL-Σ α_trajectory available from Book 6 upstream handoff",
+        "SARG-Σ structural_argument_trajectory available from Book 7 upstream handoff",
+        "Transformation registry fully populated from all eight upstream books",
+        "TEL-Σ parse gate active — all trajectory step encodings must pass TEL parse before recording"
+      ],
+      "postconditions": [
+        "trajectory_log fully recorded in session state",
+        "All gap events flagged and forwarded to PD-Β for bifurcation classification",
+        "trajectory_type_classifications recorded for each segment",
+        "Cross-book sub-trajectories available for PD-Β attractor analysis",
+        "TEL-encoded trajectory summary ready for PD-Σ input"
+      ],
+      "must_not": [
+        "Record a trajectory step without identifying the bridging transformation τ_i from the declared transformation registry",
+        "Classify a configuration gap as a normal trajectory step — all gaps must be forwarded to PD-Β",
+        "Accept an upstream feed narrative description as a trajectory configuration without converting it to a formal structural tuple ⟨N, R, C⟩",
+        "Proceed to PD-Β handoff without completing the full transformation-grounded trajectory log",
+        "Apply transitivity across bifurcation events — each continuation trajectory after a bifurcation is an independent trace"
+      ],
+      "downstream_handoffs": [
+        {"recipient": "PD-Β", "content": "gap_events and bifurcating trajectory segments for bifurcation classification"},
+        {"recipient": "PD-Σ", "content": "trajectory_log and trajectory_type_classifications for synthesis reporting"}
+      ],
+      "qmroot_binding": "0D only — no 6D or negative rungs"
+    },
+    {
+      "id": "PD-Β",
+      "name": "BifurcationMap",
+      "symbol": "PD-Β",
+      "role": "Classifies bifurcation events received from PD-Τ. Identifies the bifurcation type (BT-001 Parameter, BT-002 Constraint, BT-003 Dissolution, BT-004 Synthesis) and the trigger condition. Performs attractor identification and basin computation for convergent post-bifurcation trajectories. Assigns each continuation trajectory to an attractor basin and returns the basin assignments to PD-Τ for continuation tracing. When collapse_risk_flag is active from GRL-Σ, PD-Β prioritizes dissolution bifurcation analysis for the governance sub-trajectory.",
+      "input": [
+        "gap_events and bifurcating segments from PD-Τ",
+        "GRL-Σ collapse_risk_flag and decay_projection for governance bifurcation priority",
+        "NoS-Σ emergent_invariants_confirmed for attractor invariant-set computation",
+        "State-space model from pd.bifurcation_map (SSR-001 through SSR-004)",
+        "Full transformation registry for successor configuration enumeration"
+      ],
+      "output": [
+        "bifurcation_event_log: classified bifurcation events ⟨S_b, t_b, type, trigger, basin_assignments⟩",
+        "attractor_registry: identified attractors with invariant_set, basin_boundary, convergence_step_count, and type (AT-001/002/003)",
+        "continuation_trajectory_assignments: mapping from each successor S'_i to its basin and PD-Τ continuation trace",
+        "synthesis_bifurcation_resolutions: precedence decisions for BT-004 events (recorded for PD-Σ audit)",
+        "dissolution_event_log: terminal dissolution events forwarded to PD-Μ for mutation-anchor check"
+      ],
+      "invariant_binding": "INV-PD-002",
+      "phase_assignment": ["bifurcate"],
+      "drift_cost": 0.06,
+      "map_reference": "pd.bifurcation_map",
+      "preconditions": [
+        "PD-Τ has forwarded at least one gap_event or bifurcating segment",
+        "QMROOT 0D confirmed from init phase",
+        "State-space model (SSR-001 through SSR-004) loaded from pd.bifurcation_map",
+        "Attractor verification procedure (six-step procedure in pd.bifurcation_map) is active",
+        "GRL-Σ collapse_risk_flag status known"
+      ],
+      "postconditions": [
+        "All gap_events are classified as one of BT-001 through BT-004 or as INV-PD-001 trajectory integrity failures",
+        "All identified attractors have verified basins with at least one non-degenerate initial configuration",
+        "Continuation trajectory assignments returned to PD-Τ for independent tracing",
+        "synthesis_bifurcation_resolutions available for PD-Σ audit",
+        "dissolution_event_log forwarded to PD-Μ"
+      ],
+      "must_not": [
+        "Declare a configuration an attractor without completing the six-step attractor verification procedure",
+        "Apply the BT-004 synthesis bifurcation precedence rules without logging the full conflict and resolution",
+        "Classify a dissolution bifurcation as a mutation event — dissolution forwarding to PD-Μ is required before any reclassification",
+        "Return continuation trajectory assignments to PD-Τ before all bifurcation types are identified for the current event",
+        "Treat a single fixed point as having a non-degenerate basin if the only trajectory converging to it is from itself"
+      ],
+      "downstream_handoffs": [
+        {"recipient": "PD-Τ", "content": "continuation_trajectory_assignments for independent tracing of post-bifurcation trajectories"},
+        {"recipient": "PD-Μ", "content": "dissolution_event_log for mutation-anchor evaluation"},
+        {"recipient": "PD-Σ", "content": "bifurcation_event_log and attractor_registry for synthesis reporting"}
+      ],
+      "qmroot_binding": "0D only — no 6D or negative rungs"
+    },
+    {
+      "id": "PD-Μ",
+      "name": "MutationAudit",
+      "symbol": "PD-Μ",
+      "role": "Audits structural pattern mutations against INV-PD-003. Receives dissolution events from PD-Β and pattern transition events from PD-Τ trajectory sub-segments. For each transition P → P', identifies the mutation anchor anchor(P, P') = invariant_set(P') ∩ invariant_set(P). Classifies the mutation type (MT-001 Conservative, MT-002 Standard, MT-003 Minimal, MT-004 Chain). Flags minimal mutations for PD-Σ elevated review. Records dissolution events when the anchor is empty. Evaluates cross-branch selective dissolution reclassification when parallel trajectory branches are present.",
+      "input": [
+        "dissolution_event_log from PD-Β",
+        "Pattern transition events from PD-Τ: pairs ⟨P, P'⟩ at each trajectory step where a pattern configuration change is detected",
+        "Invariant registries from all eight upstream books: required for computing invariant_set(P) and invariant_set(P') across the full cross-book invariant set",
+        "Parallel trajectory branch records from PD-Β: required for cross-branch selective dissolution reclassification"
+      ],
+      "output": [
+        "mutation_audit_log: classified mutation events with anchor, mutation type, and drift cost modifier",
+        "dissolution_log: confirmed dissolution events with full invariant_set comparison showing empty intersection",
+        "selective_dissolution_reclassifications: events reclassified from dissolution to cross-branch mutation",
+        "minimal_anchor_warnings: MT-003 events flagged for PD-Σ elevated review",
+        "chain_mutation_drift_accumulation_log: cumulative drift for MT-004 chain events, with flags when total drift > 0.20"
+      ],
+      "invariant_binding": "INV-PD-003",
+      "phase_assignment": ["mutate"],
+      "drift_cost": 0.05,
+      "map_reference": "pd.propagation_map",
+      "preconditions": [
+        "PD-Β has forwarded dissolution_event_log",
+        "PD-Τ has identified pattern transition events in trajectory sub-segments",
+        "Full invariant registries from all eight upstream books are loaded",
+        "QMROOT 0D confirmed from init phase"
+      ],
+      "postconditions": [
+        "Every pattern transition P → P' has a recorded mutation_audit entry with anchor and classification",
+        "All confirmed dissolution events are in dissolution_log",
+        "selective_dissolution_reclassifications available for PD-Π — some dissolution events may become cross-branch mutations",
+        "Minimal anchor warnings forwarded to PD-Σ",
+        "Chain mutation drift accumulations tracked and flagged if exceeding threshold"
+      ],
+      "must_not": [
+        "Classify a transition as mutation without computing the full invariant_set intersection — empty intersection is dissolution, not mutation",
+        "Apply transitivity in chain mutation anchor computation: P'' must share an anchor with P', not necessarily with P",
+        "Accept node-intrinsic property sharing as an invariant anchor — anchors must be relational per INV-NOS-001",
+        "Reclassify a dissolution as selective dissolution without confirmed evidence from a parallel trajectory branch with a non-empty anchor to P",
+        "Suppress minimal anchor warnings — all MT-003 events must be flagged regardless of content"
+      ],
+      "downstream_handoffs": [
+        {"recipient": "PD-Π", "content": "mutation_audit_log and selective_dissolution_reclassifications — PD-Π uses mutation audit to verify propagation transit validity"},
+        {"recipient": "PD-Σ", "content": "mutation_audit_log, dissolution_log, and minimal_anchor_warnings for synthesis reporting"}
+      ],
+      "qmroot_binding": "0D only — no 6D or negative rungs"
+    },
+    {
+      "id": "PD-Π",
+      "name": "PropagationTrace",
+      "symbol": "PD-Π",
+      "role": "Verifies pattern propagation claims against INV-PD-004. For each claimed propagation of pattern P to context C', applies the appropriate Book 3 structural detection method to verify that the propagated instance P' carries a detectable structural signature matching sig(P). Classifies propagation type (PT-001 Faithful, PT-002 Degraded, PT-003 Latent). Identifies propagation failure modes (PFM-001 through PFM-004). Manages latent propagation suspension and re-detection triggers. Consults mutation_audit_log from PD-Μ to verify transit validity (PFM-004 anchor violation in transit check).",
+      "input": [
+        "Propagation claims: declared assertions that pattern P has propagated to context C'",
+        "mutation_audit_log from PD-Μ: required for PFM-004 transit anchor violation check",
+        "selective_dissolution_reclassifications from PD-Μ: propagation claims involving reclassified events",
+        "Book 3 structural detection methods (SDM-001 through SDM-004) from loaded SD module",
+        "OR-Ω opacity measurements: ω(C') values required for opacity gate evaluation",
+        "sig(P) computation from pd.propagation_map signature model"
+      ],
+      "output": [
+        "propagation_verification_log: classified propagation events with type (PT-001/002/003), detection method used, and signature match evidence",
+        "propagation_failure_log: classified failure events with failure mode (PFM-001 through PFM-004) and supporting analysis",
+        "latent_propagation_register: suspended propagation claims awaiting opacity reduction, with re-detection trigger conditions",
+        "cross_book_propagation_summary: summary of verified propagations per upstream book source (Regime, Argument, Meta-Structural)"
+      ],
+      "invariant_binding": "INV-PD-004",
+      "phase_assignment": ["propagate"],
+      "drift_cost": 0.05,
+      "map_reference": "pd.propagation_map",
+      "preconditions": [
+        "PD-Μ has completed mutation_audit_log and selective_dissolution_reclassifications",
+        "Book 3 SD module loaded and detection methods SDM-001 through SDM-004 available",
+        "OR-Ω opacity measurements available for all target contexts C'",
+        "QMROOT 0D confirmed from init phase"
+      ],
+      "postconditions": [
+        "Every propagation claim has a recorded propagation_verification_log entry or propagation_failure_log entry",
+        "All latent propagation claims are in the latent_propagation_register with re-detection trigger conditions",
+        "cross_book_propagation_summary compiled for PD-Σ synthesis input",
+        "PFM-004 anchor-in-transit violation check complete for all propagation claims with multi-step transit"
+      ],
+      "must_not": [
+        "Accept semantic or thematic similarity between P and P' as a propagation — structural signature matching via an SD method is mandatory",
+        "Verify a propagation claim when ω(C') ≥ δ(O) — opacity blocking requires suspension to latent_propagation_register, not rejection",
+        "Bypass the PFM-004 transit mutation-anchor check for any propagation involving a chain of transformations",
+        "Use SDM-004 (Cross-Book Tag Match) as the sole detection method without flagging the claim for PD-Σ review",
+        "Close the latent_propagation_register without recording re-detection trigger conditions for each suspended claim"
+      ],
+      "downstream_handoffs": [
+        {"recipient": "PD-Σ", "content": "propagation_verification_log, propagation_failure_log, latent_propagation_register, and cross_book_propagation_summary for synthesis reporting"}
+      ],
+      "qmroot_binding": "0D only — no 6D or negative rungs"
+    },
+    {
+      "id": "PD-Σ",
+      "name": "SynthesisCatalogue",
+      "symbol": "PD-Σ",
+      "role": "Terminal synthesis operator of Book 9 and the AI Edition. Integrates all PD operator outputs (trajectory_log, bifurcation_event_log, attractor_registry, mutation_audit_log, propagation_verification_log) with the upstream NoS-Σ nos_foundation_report to produce the Pattern Dynamics Synthesis Report — the final deliverable of the AI Edition. Reviews all minimal_anchor_warnings and synthesis_bifurcation_resolutions. Produces the emergent_pattern_catalogue: the set of patterns confirmed by the full series evaluation. Records all upward_revisions_pending from NoS-Σ that were not resolved during the PD evaluation cycle. This is the only operator in the AI Edition with no downstream handoff — it is the terminal node of the entire series dependency graph.",
+      "input": [
+        "trajectory_log and trajectory_type_classifications from PD-Τ",
+        "bifurcation_event_log and attractor_registry from PD-Β",
+        "mutation_audit_log, dissolution_log, selective_dissolution_reclassifications, minimal_anchor_warnings from PD-Μ",
+        "propagation_verification_log, propagation_failure_log, latent_propagation_register, cross_book_propagation_summary from PD-Π",
+        "NoS-Σ nos_foundation_report: cross_book_invariant_map, emergent_invariants_confirmed, upward_revisions_pending",
+        "Session context: rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+      ],
+      "output": [
+        "Pattern Dynamics Synthesis Report: the terminal deliverable of the AI Edition",
+        "emergent_pattern_catalogue: confirmed patterns with invariant fingerprints, trajectory types, attractor assignments, mutation chains, and propagation records",
+        "cross_book_invariant_coherence_assessment: evaluation of whether the AI Edition's cross-book invariant set is mutually consistent",
+        "upward_revisions_unresolved: invariants flagged by NoS-Σ for upward revision that remain unresolved after PD evaluation — forwarded to the series maintainer for the next edition",
+        "series_terminal_status: {coherent | partially_coherent | incoherent} — the AI Edition's self-assessed structural integrity"
+      ],
+      "invariant_binding": "INV-PD-001, INV-PD-002, INV-PD-003, INV-PD-004 (synthesis over all four)",
+      "phase_assignment": ["catalogue"],
+      "drift_cost": 0.07,
+      "map_reference": "pd.trajectory_map, pd.bifurcation_map, pd.propagation_map",
+      "preconditions": [
+        "PD-Τ, PD-Β, PD-Μ, and PD-Π have all completed their phase outputs",
+        "NoS-Σ nos_foundation_report is available",
+        "All minimal_anchor_warnings have been reviewed",
+        "All synthesis_bifurcation_resolutions have been logged",
+        "QMROOT 0D confirmed from init phase",
+        "Latent propagation register reviewed — all suspended claims noted"
+      ],
+      "postconditions": [
+        "Pattern Dynamics Synthesis Report completed and recorded",
+        "emergent_pattern_catalogue finalized with all confirmed patterns",
+        "series_terminal_status declared",
+        "upward_revisions_unresolved forwarded to series maintainer",
+        "Session context assertions confirmed at closure: rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+      ],
+      "must_not": [
+        "Declare series_terminal_status = coherent if any upward_revisions_unresolved remain — partial coherence must be accurately reported",
+        "Suppress or elide minimal_anchor_warnings from the synthesis report — all flagged mutations must be recorded in the catalogue",
+        "Omit the cross_book_invariant_coherence_assessment — the AI Edition's self-audit is a mandatory synthesis output",
+        "Generate a downstream handoff — Book 9 is the series terminal; there is no recipient for any handoff",
+        "Assert session context closure without confirming all four PD operators have completed their postconditions"
+      ],
+      "downstream_handoffs": [],
+      "series_terminal_note": "PD-Σ is the only operator in the AI Edition with an empty downstream_handoffs list. All other synthesis operators (OR-Π, TEL-Α, GRL-Σ, SARG-Σ, NoS-Σ) have at least one downstream handoff to a later book. PD-Σ has none. The Pattern Dynamics Synthesis Report is the final output of the series.",
+      "qmroot_binding": "0D only — no 6D or negative rungs"
+    }
+  ]
+}
