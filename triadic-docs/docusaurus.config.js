@@ -73,7 +73,7 @@ const config = {
         {
           title: 'Canon',
           items: [
-            { label: 'Overview', to: '/docs/book/overview' },
+            { label: 'Overview', to: '/docs/book/book-overview' },
             { label: 'Glossary', to: '/docs/book/glossary' },
             { label: 'Registry', to: '/docs/book/registry' },
           ],
