@@ -94,6 +94,7 @@ This cadence exists to:
 
 ## Related Cadences
 
-- [RTT Canon Cadence](./RTT_Canon_Cadence)  
-- [MLK Cadence](./MLK_Cadence)  
-- [Nikola Tesla Cadence](./Nikola_Tesla_Cadence)
+- [RTT Canon Cadence](./rtt-canon-cadence)  
+- [MLK Cadence](./mlk-cadence)  
+- [Nikola Tesla Cadence](./nikola-tesla-cadence)
+

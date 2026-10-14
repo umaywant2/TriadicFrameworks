@@ -33,7 +33,7 @@ citation_publication_date: "2025"
 **Coherence:** Verified  
 **Version:** 1.0  
 **Format:** Markdown (Docusaurus)  
-**Front Door:** /docs/book/AI_Edition/Book2_The_Inverted_Star/overview  
+**Front Door:** /docs/book/AI_Edition/Book2_The_Inverted_Star/ai-book2-overview  
 **Every Page:** Canonical metadata applied  
 **Audience:** AI Edition readers, contributors, researchers  
 
@@ -94,9 +94,9 @@ Book 2 provides the inversion logic required for:
 
 ## Related AI Edition Sections
 
-- [AI Edition Overview](../overview)  
-- [Book 1 — Framework Field Theory](../Book1_Framework_Field_Theory/overview)  
-- [Book 3 — Structural Detection](../Book3_Structural_Detection/overview)
+- [AI Edition Overview](../ai-overview)  
+- [Book 1 — Framework Field Theory](../Book1_Framework_Field_Theory/ai-book1-overview)  
+- [Book 3 — Structural Detection](../Book3_Structural_Detection/ai-book3-overview)
 
 ---
 
@@ -106,3 +106,4 @@ For rules governing AI Edition updates:
 
 - [What You Cannot Contribute](../../../contributing#what-you-cannot-contribute)  
 - [The Ratification Flow](../../../contributing#the-ratification-flow)
+

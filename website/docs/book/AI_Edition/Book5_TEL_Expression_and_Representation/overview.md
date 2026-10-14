@@ -34,7 +34,7 @@ citation_publication_date: "2025"
 **Coherence:** Verified  
 **Version:** 1.0  
 **Format:** Markdown (Docusaurus)  
-**Front Door:** /docs/book/AI_Edition/Book5_TEL_Expression_and_Representation/overview  
+**Front Door:** /docs/book/AI_Edition/Book5_TEL_Expression_and_Representation/ai-book5-overview  
 **Every Page:** Canonical metadata applied  
 **Audience:** AI Edition readers, contributors, researchers  
 
@@ -106,9 +106,9 @@ Book 5 provides the expressive logic required for:
 
 ## Related AI Edition Sections
 
-- [AI Edition Overview](../overview)  
-- [Book 4 — Opacity & Revelation](../Book4_Opacity_and_Revelation/overview)  
-- [Book 6 — Governance & Regime Logic](../Book6_Governance_and_Regime_Logic/overview)
+- [AI Edition Overview](../ai-overview)  
+- [Book 4 — Opacity & Revelation](../Book4_Opacity_and_Revelation/ai-book4-overview)  
+- [Book 6 — Governance & Regime Logic](../Book6_Governance_and_Regime_Logic/ai-book6-overview)
 
 ---
 
@@ -118,3 +118,4 @@ For rules governing AI Edition updates:
 
 - [What You Cannot Contribute](../../../contributing#what-you-cannot-contribute)  
 - [The Ratification Flow](../../../contributing#the-ratification-flow)
+

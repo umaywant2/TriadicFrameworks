@@ -34,7 +34,7 @@ citation_publication_date: "2025"
 **Coherence:** Verified  
 **Version:** 1.0  
 **Format:** Markdown (Docusaurus)  
-**Front Door:** /docs/book/AI_Edition/Book9_Pattern_Dynamics/overview  
+**Front Door:** /docs/book/AI_Edition/Book9_Pattern_Dynamics/ai-book9-overview  
 **Every Page:** Canonical metadata applied  
 **Audience:** AI Edition readers, contributors, researchers  
 
@@ -113,8 +113,8 @@ It completes the nine‑book AI Edition.
 
 ## Related AI Edition Sections
 
-- [AI Edition Overview](../overview)  
-- [Book 8 — Nature of Structure](../Book8_NoS_Nature_of_Structure/overview)
+- [AI Edition Overview](../ai-overview)  
+- [Book 8 — Nature of Structure](../Book8_NoS_Nature_of_Structure/ai-book8-overview)
 
 ---
 
@@ -124,3 +124,4 @@ For rules governing AI Edition updates:
 
 - [What You Cannot Contribute](../../../contributing#what-you-cannot-contribute)  
 - [The Ratification Flow](../../../contributing#the-ratification-flow)
+

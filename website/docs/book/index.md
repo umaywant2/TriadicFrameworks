@@ -51,7 +51,7 @@ This index provides the primary navigation map for the RTT structural field.
 
 ## Core Canon Sections
 
-- **Overview** — `/docs/book/overview`  
+- **Overview** — `/docs/book/book-overview`  
 - **Canon Definition** — `/docs/book/canon`  
 - **Glossary** — `/docs/book/glossary`  
 - **Registry** — `/docs/book/registry`  

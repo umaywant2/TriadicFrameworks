@@ -89,6 +89,7 @@ This cadence exists to:
 
 ## Related Cadences
 
-- [MLK Cadence](./MLK_Cadence)  
-- [Neil deGrasse Tyson Cadence](./Neil_deGrasse_Tyson_Cadence)  
-- [TriadicFrameworks Pantheon Cadence](./TriadicFrameworks_Pantheon_Cadence)
+- [MLK Cadence](./mlk-cadence)  
+- [Neil deGrasse Tyson Cadence](./neil-degrasse-tyson-cadence)  
+- [TriadicFrameworks Pantheon Cadence](./pantheon-cadence)
+

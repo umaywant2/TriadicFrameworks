@@ -33,7 +33,7 @@ citation_publication_date: "2025"
 **Coherence:** Verified  
 **Version:** 1.0  
 **Format:** Markdown (Docusaurus)  
-**Front Door:** /docs/book/AI_Edition/Book6_Governance_and_Regime_Logic/overview  
+**Front Door:** /docs/book/AI_Edition/Book6_Governance_and_Regime_Logic/ai-book6-overview  
 **Every Page:** Canonical metadata applied  
 **Audience:** AI Edition readers, contributors, researchers  
 
@@ -107,9 +107,9 @@ Book 6 provides governance logic required for:
 
 ## Related AI Edition Sections
 
-- [AI Edition Overview](../overview)  
-- [Book 5 — TEL Expression & Representation](../Book5_TEL_Expression_and_Representation/overview)  
-- [Book 7 — SARG Structural Argumentation](../Book7_SARG_Structural_Argumentation/overview)
+- [AI Edition Overview](../ai-overview)  
+- [Book 5 — TEL Expression & Representation](../Book5_TEL_Expression_and_Representation/ai-book5-overview)  
+- [Book 7 — SARG Structural Argumentation](../Book7_SARG_Structural_Argumentation/ai-book7-overview)
 
 ---
 
@@ -119,3 +119,4 @@ For rules governing AI Edition updates:
 
 - [What You Cannot Contribute](../../../contributing#what-you-cannot-contribute)  
 - [The Ratification Flow](../../../contributing#the-ratification-flow)
+

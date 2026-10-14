@@ -90,6 +90,7 @@ This cadence exists to:
 
 ## Related Cadences
 
-- [Richard Pryor Cadence](./Richard_Pryor_Cadence)  
-- [George Carlin Cadence](./George_Carlin_Cadence)  
-- [TriadicFrameworks Pantheon Cadence](./TriadicFrameworks_Pantheon_Cadence)
+- [Richard Pryor Cadence](./richard-pryor-cadence)  
+- [George Carlin Cadence](./george-carlin-cadence)  
+- [TriadicFrameworks Pantheon Cadence](./pantheon-cadence)
+

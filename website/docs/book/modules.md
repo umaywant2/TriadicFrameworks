@@ -96,7 +96,7 @@ Modules define the functional, analytical, and structural components of RTT.
 
 ## AI Edition Modules
 
-See `/docs/book/AI_Edition/overview` for the full nine‑book structure.
+See `/docs/book/AI_Edition/ai-overview` for the full nine‑book structure.
 
 ---
 

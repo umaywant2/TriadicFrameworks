@@ -91,6 +91,7 @@ This cadence exists to:
 
 ## Related Cadences
 
-- [Carl Sagan Cadence](./Carl_Sagan_Cadence)  
-- [Morgan Freeman Cadence](./Morgan_Freeman_Cadence)  
-- [TriadicFrameworks Pantheon Cadence](./TriadicFrameworks_Pantheon_Cadence)
+- [Carl Sagan Cadence](./carl-sagan-cadence)  
+- [Morgan Freeman Cadence](./morgan-freeman-cadence)  
+- [TriadicFrameworks Pantheon Cadence](./pantheon-cadence)
+

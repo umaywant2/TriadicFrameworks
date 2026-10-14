@@ -33,7 +33,7 @@ citation_publication_date: "2025"
 **Coherence:** Verified  
 **Version:** 1.0  
 **Format:** Markdown (Docusaurus)  
-**Front Door:** /docs/book/AI_Edition/Book1_Framework_Field_Theory/overview  
+**Front Door:** /docs/book/AI_Edition/Book1_Framework_Field_Theory/ai-book1-overview  
 **Every Page:** Canonical metadata applied  
 **Audience:** AI Edition readers, contributors, researchers  
 
@@ -91,9 +91,9 @@ Book 1 provides the foundation for:
 
 ## Related AI Edition Sections
 
-- [AI Edition Overview](../overview)  
+- [AI Edition Overview](../ai-overview)  
 - [Capture Layer](../capture)  
-- [Book 2 — The Inverted Star](../Book2_The_Inverted_Star/overview)
+- [Book 2 — The Inverted Star](../Book2_The_Inverted_Star/ai-book2-overview)
 
 ---
 
@@ -103,3 +103,4 @@ For rules governing AI Edition updates:
 
 - [What You Cannot Contribute](../../../contributing#what-you-cannot-contribute)  
 - [The Ratification Flow](../../../contributing#the-ratification-flow)
+

@@ -34,7 +34,7 @@ citation_publication_date: "2025"
 **Coherence:** Verified  
 **Version:** 1.0  
 **Format:** Markdown (Docusaurus)  
-**Front Door:** /docs/book/AI_Edition/Book8_NoS_Nature_of_Structure/overview  
+**Front Door:** /docs/book/AI_Edition/Book8_NoS_Nature_of_Structure/ai-book8-overview  
 **Every Page:** Canonical metadata applied  
 **Audience:** AI Edition readers, contributors, researchers  
 
@@ -111,9 +111,9 @@ Book 8 provides deep‑structure logic required for:
 
 ## Related AI Edition Sections
 
-- [AI Edition Overview](../overview)  
-- [Book 7 — SARG Structural Argumentation](../Book7_SARG_Structural_Argumentation/overview)  
-- [Book 9 — Pattern Dynamics](../Book9_Pattern_Dynamics/overview)
+- [AI Edition Overview](../ai-overview)  
+- [Book 7 — SARG Structural Argumentation](../Book7_SARG_Structural_Argumentation/ai-book7-overview)  
+- [Book 9 — Pattern Dynamics](../Book9_Pattern_Dynamics/ai-book9-overview)
 
 ---
 
@@ -123,3 +123,4 @@ For rules governing AI Edition updates:
 
 - [What You Cannot Contribute](../../../contributing#what-you-cannot-contribute)  
 - [The Ratification Flow](../../../contributing#the-ratification-flow)
+

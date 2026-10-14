@@ -33,7 +33,7 @@ citation_publication_date: "2025"
 **Coherence:** Verified  
 **Version:** 1.0  
 **Format:** Markdown (Docusaurus)  
-**Front Door:** /docs/book/overview  
+**Front Door:** /docs/book/book-overview  
 **Every Page:** Canonical metadata applied  
 **Audience:** Contributors, researchers, AI Edition readers  
 
@@ -93,3 +93,4 @@ Planned enhancements include:
 - module.json registry automation  
 - multilingual i18n expansion  
 - canonical metadata diff tables  
+

@@ -34,7 +34,7 @@ citation_publication_date: "2025"
 **Coherence:** Verified  
 **Version:** 1.0  
 **Format:** Markdown (Docusaurus)  
-**Front Door:** /docs/book/AI_Edition/Book7_SARG_Structural_Argumentation/overview  
+**Front Door:** /docs/book/AI_Edition/Book7_SARG_Structural_Argumentation/ai-book7-overview  
 **Every Page:** Canonical metadata applied  
 **Audience:** AI Edition readers, contributors, researchers  
 
@@ -108,9 +108,9 @@ Book 7 provides argumentation logic required for:
 
 ## Related AI Edition Sections
 
-- [AI Edition Overview](../overview)  
-- [Book 6 — Governance & Regime Logic](../Book6_Governance_and_Regime_Logic/overview)  
-- [Book 8 — NoS Nature of Structure](../Book8_NoS_Nature_of_Structure/overview)
+- [AI Edition Overview](../ai-overview)  
+- [Book 6 — Governance & Regime Logic](../Book6_Governance_and_Regime_Logic/ai-book6-overview)  
+- [Book 8 — NoS Nature of Structure](../Book8_NoS_Nature_of_Structure/ai-book8-overview)
 
 ---
 
@@ -120,3 +120,4 @@ For rules governing AI Edition updates:
 
 - [What You Cannot Contribute](../../../contributing#what-you-cannot-contribute)  
 - [The Ratification Flow](../../../contributing#the-ratification-flow)
+

@@ -33,7 +33,7 @@ citation_publication_date: "2025"
 **Coherence:** Verified  
 **Version:** 1.0  
 **Format:** Markdown (Docusaurus)  
-**Front Door:** /docs/speeches/overview  
+**Front Door:** /docs/speeches/speeches-overview  
 **Every Page:** Canonical metadata applied  
 **Audience:** Readers, contributors, researchers  
 
@@ -98,6 +98,7 @@ They provide expressive clarity across RTT’s structural field.
 
 ## Related Sections
 
-- [Carl Sagan Cadence](./Carl_Sagan_Cadence)  
-- [Dave Chappelle Cadence](./Dave_Chappele_Cadence)  
-- [Nikola Tesla Cadence](./Nikola_Tesla_Cadence)
+- [Carl Sagan Cadence](./carl-sagan-cadence)  
+- [Dave Chappelle Cadence](./dave-chappele-cadence)  
+- [Nikola Tesla Cadence](./nikola-tesla-cadence)
+

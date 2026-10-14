@@ -92,6 +92,7 @@ This cadence exists to:
 
 ## Related Cadences
 
-- [Carl Sagan Cadence](./Carl_Sagan_Cadence)  
-- [Neil deGrasse Tyson Cadence](./Neil_deGrasse_Tyson_Cadence)  
-- [TriadicFrameworks Pantheon Cadence](./TriadicFrameworks_Pantheon_Cadence)
+- [Carl Sagan Cadence](./carl-sagan-cadence)  
+- [Neil deGrasse Tyson Cadence](./neil-degrasse-tyson-cadence)  
+- [TriadicFrameworks Pantheon Cadence](./pantheon-cadence)
+

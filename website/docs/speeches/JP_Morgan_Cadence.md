@@ -88,6 +88,7 @@ This cadence exists to:
 
 ## Related Cadences
 
-- [Pope Leo Cadence](./Pope_Leo_Cadence)  
-- [RTT Canon Cadence](./RTT_Canon_Cadence)  
-- [TriadicFrameworks Pantheon Cadence](./TriadicFrameworks_Pantheon_Cadence)
+- [Pope Leo Cadence](./pope-leo-cadence)  
+- [RTT Canon Cadence](./rtt-canon-cadence)  
+- [TriadicFrameworks Pantheon Cadence](./pantheon-cadence)
+

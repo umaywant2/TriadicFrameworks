@@ -34,7 +34,7 @@ citation_publication_date: "2025"
 **Coherence:** Verified  
 **Version:** 1.0  
 **Format:** Markdown (Docusaurus)  
-**Front Door:** /docs/book/AI_Edition/Book4_Opacity_and_Revelation/overview  
+**Front Door:** /docs/book/AI_Edition/Book4_Opacity_and_Revelation/ai-book4-overview  
 **Every Page:** Canonical metadata applied  
 **Audience:** AI Edition readers, contributors, researchers  
 
@@ -106,9 +106,9 @@ Book 4 provides the visibility logic required for:
 
 ## Related AI Edition Sections
 
-- [AI Edition Overview](../overview)  
-- [Book 3 — Structural Detection](../Book3_Structural_Detection/overview)  
-- [Book 5 — TEL Expression & Representation](../Book5_TEL_Expression_and_Representation/overview)
+- [AI Edition Overview](../ai-overview)  
+- [Book 3 — Structural Detection](../Book3_Structural_Detection/ai-book3-overview)  
+- [Book 5 — TEL Expression & Representation](../Book5_TEL_Expression_and_Representation/ai-book5-overview)
 
 ---
 
@@ -118,3 +118,4 @@ For rules governing AI Edition updates:
 
 - [What You Cannot Contribute](../../../contributing#what-you-cannot-contribute)  
 - [The Ratification Flow](../../../contributing#the-ratification-flow)
+

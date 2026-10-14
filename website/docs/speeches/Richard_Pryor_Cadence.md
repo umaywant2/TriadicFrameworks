@@ -89,6 +89,7 @@ This cadence exists to:
 
 ## Related Cadences
 
-- [Dave Chappelle Cadence](./Dave_Chappele_Cadence)  
-- [George Carlin Cadence](./George_Carlin_Cadence)  
-- [Robin Williams Cadence](./Robin_Williams_Cadence)
+- [Dave Chappelle Cadence](./dave-chappele-cadence)  
+- [George Carlin Cadence](./george-carlin-cadence)  
+- [Robin Williams Cadence](./robin-williams-cadence)
+

@@ -87,6 +87,7 @@ This cadence exists to:
 
 ## Related Cadences
 
-- [George Carlin Cadence](./George_Carlin_Cadence)  
-- [Richard Pryor Cadence](./Richard_Pryor_Cadence)  
-- [Robin Williams Cadence](./Robin_Williams_Cadence)
+- [George Carlin Cadence](./george-carlin-cadence)  
+- [Richard Pryor Cadence](./richard-pryor-cadence)  
+- [Robin Williams Cadence](./robin-williams-cadence)
+

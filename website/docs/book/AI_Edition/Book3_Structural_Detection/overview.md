@@ -33,7 +33,7 @@ citation_publication_date: "2025"
 **Coherence:** Verified  
 **Version:** 1.0  
 **Format:** Markdown (Docusaurus)  
-**Front Door:** /docs/book/AI_Edition/Book3_Structural_Detection/overview  
+**Front Door:** /docs/book/AI_Edition/Book3_Structural_Detection/ai-book3-overview  
 **Every Page:** Canonical metadata applied  
 **Audience:** AI Edition readers, contributors, researchers  
 
@@ -107,9 +107,9 @@ Book 3 provides the detection logic required for:
 
 ## Related AI Edition Sections
 
-- [AI Edition Overview](../overview)  
-- [Book 2 — The Inverted Star](../Book2_The_Inverted_Star/overview)  
-- [Book 4 — Opacity & Revelation](../Book4_Opacity_and_Revelation/overview)
+- [AI Edition Overview](../ai-overview)  
+- [Book 2 — The Inverted Star](../Book2_The_Inverted_Star/ai-book2-overview)  
+- [Book 4 — Opacity & Revelation](../Book4_Opacity_and_Revelation/ai-book4-overview)
 
 ---
 
@@ -119,3 +119,4 @@ For rules governing AI Edition updates:
 
 - [What You Cannot Contribute](../../../contributing#what-you-cannot-contribute)  
 - [The Ratification Flow](../../../contributing#the-ratification-flow)
+

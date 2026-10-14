@@ -33,7 +33,7 @@ citation_publication_date: "2025"
 **Coherence:** Verified  
 **Version:** 1.0  
 **Format:** Markdown (Docusaurus)  
-**Front Door:** /docs/book/AI_Edition/overview  
+**Front Door:** /docs/book/AI_Edition/ai-overview  
 **Every Page:** Canonical metadata applied  
 **Audience:** AI Edition readers, contributors, researchers  
 
@@ -114,7 +114,7 @@ Analyzes pattern evolution, collapse, and resonance cycles.
 ## Related Canon Sections
 
 - [Capture Layer](./capture)  
-- [Book 1 — Framework Field Theory](./Book1_Framework_Field_Theory/overview)  
+- [Book 1 — Framework Field Theory](./Book1_Framework_Field_Theory/ai-book1-overview)  
 - [Registry](../registry)  
 - [Glossary](../glossary)
 
@@ -126,3 +126,4 @@ For rules governing AI Edition updates:
 
 - [What You Cannot Contribute](../../contributing#what-you-cannot-contribute)  
 - [The Ratification Flow](../../contributing#the-ratification-flow)
+

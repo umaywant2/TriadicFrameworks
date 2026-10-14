@@ -90,6 +90,7 @@ This cadence exists to:
 
 ## Related Cadences
 
-- [J.P. Morgan Cadence](./JP_Morgan_Cadence)  
-- [MLK Cadence](./MLK_Cadence)  
-- [TriadicFrameworks Pantheon Cadence](./TriadicFrameworks_Pantheon_Cadence)
+- [J.P. Morgan Cadence](./jp-morgan-cadence)  
+- [MLK Cadence](./mlk-cadence)  
+- [TriadicFrameworks Pantheon Cadence](./pantheon-cadence)
+

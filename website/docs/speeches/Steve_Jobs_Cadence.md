@@ -95,6 +95,7 @@ This cadence exists to:
 
 ## Related Cadences
 
-- [Nikola Tesla Cadence](./Nikola_Tesla_Cadence)  
+- [Nikola Tesla Cadence](./nikola-tesla-cadence)  
 - [TriadicFrameworks Cadence](./TriadicFrameworks_Cadence)  
-- [TriadicFrameworks Pantheon Cadence](./TriadicFrameworks_Pantheon_Cadence)
+- [TriadicFrameworks Pantheon Cadence](./pantheon-cadence)
+

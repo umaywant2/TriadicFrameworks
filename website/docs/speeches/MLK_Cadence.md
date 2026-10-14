@@ -89,6 +89,7 @@ This cadence exists to:
 
 ## Related Cadences
 
-- [Morgan Freeman Cadence](./Morgan_Freeman_Cadence)  
-- [Nikola Tesla Cadence](./Nikola_Tesla_Cadence)  
-- [RTT Canon Cadence](./RTT_Canon_Cadence)
+- [Morgan Freeman Cadence](./morgan-freeman-cadence)  
+- [Nikola Tesla Cadence](./nikola-tesla-cadence)  
+- [RTT Canon Cadence](./rtt-canon-cadence)
+

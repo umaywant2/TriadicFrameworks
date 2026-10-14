@@ -33,7 +33,7 @@ citation_publication_date: "2025"
 **Coherence:** Verified  
 **Version:** 1.0  
 **Format:** Markdown (Docusaurus)  
-**Front Door:** /docs/book/overview  
+**Front Door:** /docs/book/book-overview  
 **Every Page:** Canonical metadata applied  
 **Audience:** Contributors, researchers, AI Edition readers  
 
@@ -117,3 +117,4 @@ This overview exists to:
 - provide a structural map  
 - unify navigation across modules  
 - support both human and AI Edition readers  
+

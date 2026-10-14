@@ -33,7 +33,7 @@ citation_publication_date: "2025"
 **Coherence:** Verified  
 **Version:** 1.0  
 **Format:** Markdown (Docusaurus)  
-**Front Door:** /docs/book/overview  
+**Front Door:** /docs/book/book-overview  
 **Every Page:** Canonical metadata applied  
 **Audience:** Contributors, researchers, AI Edition readers  
 
@@ -110,3 +110,4 @@ Triadic Expression Logic — the system governing representation, clarity, and s
 
 ## NoS (Nature of Structure)
 A deep‑structure analysis domain that explains how patterns emerge, stabilize, and evolve.
+
