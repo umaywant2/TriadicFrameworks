@@ -1,0 +1,97 @@
+# 🌌 **ignition-cascade.json**  
+### *Planetary ignition cascade atlas — waves, arcs, chains, webs, clusters, harmonics, anomalies*
+
+```json
+{
+  "cascade": "planetary-ignition",
+  "version": "1.0",
+  "generated": "YYYY-MM-DD",
+
+  "waves": [
+    {
+      "wave_id": "string",
+      "timestamp": "YYYY-MM-DD",
+      "countries": ["string"],
+      "harmonics": ["string"],
+      "phase": "in-phase | out-of-phase | mixed",
+      "severity": "low | medium | high | critical"
+    }
+  ],
+
+  "arcs": [
+    {
+      "arc_id": "string",
+      "origin": "string",
+      "targets": ["string"],
+      "vector": "string",
+      "envelope": "string",
+      "epoch": "string"
+    }
+  ],
+
+  "chains": [
+    {
+      "chain_id": "string",
+      "sequence": ["string"],
+      "trigger": "string",
+      "threshold": "string"
+    }
+  ],
+
+  "webs": [
+    {
+      "web_id": "string",
+      "nodes": ["string"],
+      "edges": [
+        {
+          "source": "string",
+          "target": "string",
+          "weight": 0.0,
+          "mode": "coherence | drift | stability | resonance"
+        }
+      ]
+    }
+  ],
+
+  "clusters": [
+    {
+      "name": "string",
+      "countries": ["string"],
+      "shared_harmonics": ["string"],
+      "shared_phase": "in-phase | out-of-phase | mixed",
+      "shared_vectors": ["string"]
+    }
+  ],
+
+  "anomalies": [
+    {
+      "timestamp": "YYYY-MM-DD",
+      "country": "string",
+      "description": "string",
+      "severity": "low | medium | high | critical"
+    }
+  ],
+
+  "output": {
+    "ignition_cascade": "./ignition-cascade.json"
+  },
+
+  "meta": {
+    "notes": "Planetary ignition cascade atlas including waves, arcs, chains, webs, clusters, harmonics, and anomalies."
+  }
+}
+```
+
+---
+
+## ⭐ Canon alignment  
+This matches the ignition cascade renderer we built earlier:
+
+- **Waves**  
+- **Arcs**  
+- **Chains**  
+- **Webs**  
+- **Clusters**  
+- **Anomalies**  
+- **Silent‑release compatible**  
+- **Ready for commit**  
