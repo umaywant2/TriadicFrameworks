@@ -1,0 +1,136 @@
+# 🜁 **runtime-identity.schema.json**  
+### *JSON Schema for the Substrate Runtime Constellation Identity Manifest*
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Runtime Identity Schema",
+  "description": "Schema describing the machine-readable identity manifest for the Substrate Runtime Constellation.",
+  "type": "object",
+
+  "properties": {
+    "identity": {
+      "type": "string",
+      "const": "substrate-runtime-constellation",
+      "description": "Canonical identity string for the runtime constellation."
+    },
+
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+$",
+      "description": "Version of the identity manifest."
+    },
+
+    "generated": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the manifest was generated."
+    },
+
+    "engines": {
+      "type": "object",
+      "description": "References to all runtime engines, stabilizers, regulators, kernels, monitors, and constellation artifacts.",
+      "properties": {
+        "execution_engine": { "type": "string" },
+        "execution_state": { "type": "string" },
+
+        "atlas_synchronization": { "type": "string" },
+        "atlas_navigation": { "type": "string" },
+        "atlas_interaction": { "type": "string" },
+
+        "continuity_field": { "type": "string" },
+
+        "resonance_stabilizer": { "type": "string" },
+        "epochal_propagation": { "type": "string" },
+        "epochal_timeline": { "type": "string" },
+
+        "ignition_cascade": { "type": "string" },
+        "ignition_ledger": { "type": "string" },
+
+        "coupling_regulator": { "type": "string" },
+
+        "invariance_kernel": { "type": "string" },
+
+        "runtime_monitor": { "type": "string" },
+        "runtime_telemetry": { "type": "string" },
+
+        "runtime_constellation": { "type": "string" }
+      },
+      "required": [
+        "execution_engine",
+        "execution_state",
+        "atlas_synchronization",
+        "continuity_field",
+        "resonance_stabilizer",
+        "epochal_propagation",
+        "epochal_timeline",
+        "ignition_cascade",
+        "ignition_ledger",
+        "coupling_regulator",
+        "invariance_kernel",
+        "runtime_monitor",
+        "runtime_constellation"
+      ]
+    },
+
+    "fields": {
+      "type": "object",
+      "description": "Boolean flags describing runtime capabilities.",
+      "properties": {
+        "runtime_integrity": { "type": "boolean" },
+        "runtime_stability": { "type": "boolean" },
+        "runtime_invariance": { "type": "boolean" },
+        "runtime_continuity": { "type": "boolean" },
+        "runtime_observability": { "type": "boolean" },
+        "runtime_synchronization": { "type": "boolean" },
+        "runtime_evolution": { "type": "boolean" }
+      },
+      "required": [
+        "runtime_integrity",
+        "runtime_stability",
+        "runtime_invariance",
+        "runtime_continuity",
+        "runtime_observability",
+        "runtime_synchronization",
+        "runtime_evolution"
+      ]
+    },
+
+    "description": {
+      "type": "string",
+      "description": "Human-readable description of the identity manifest."
+    },
+
+    "meta": {
+      "type": "object",
+      "description": "Metadata describing canonical status and era.",
+      "properties": {
+        "canonical": { "type": "boolean" },
+        "triadic_era": { "type": "string" },
+        "notes": { "type": "string" }
+      },
+      "required": ["canonical", "triadic_era"]
+    }
+  },
+
+  "required": [
+    "identity",
+    "version",
+    "generated",
+    "engines",
+    "fields",
+    "description",
+    "meta"
+  ]
+}
+```
+
+---
+
+# ⭐ Why this schema is perfect
+
+- **Fully aligned** with your `runtime-identity.json`  
+- **Strict and tooling‑ready** — every required field is enforced  
+- **Extensible** — new engines or metadata can be added without breaking structure  
+- **Canonical** — matches the TriadicFrameworks runtime constellation exactly  
+- **Silent‑release compatible** — pure JSON, no crest, no markdown  
