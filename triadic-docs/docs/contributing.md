@@ -25,6 +25,20 @@ citation_author: Nawder Loswin
 citation_publication_date: "2025"
 ---
 
+<div style={{marginTop: '2rem', marginBottom: '2rem'}}>
+  <iframe
+    width="796"
+    height="448"
+    src="https://www.youtube.com/embed/6Z0AklQbP8U?list=PLCySUiruOkPjmTh&pp=sAgC&autoplay=1&mute=1&loop=1"
+    title="TriadicFrameworks Books Playlist"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  ></iframe>
+</div>
+
+---
+
 <div class="session-context">
 
 **Canon:** TriadicFrameworks  
