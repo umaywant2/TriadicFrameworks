@@ -1,1 +1,135 @@
+{
+  "$schema": "../../module.schema.json",
+  "module": "my-atlas-module",
+  "identity": "student.my-atlas-module",
+  "purpose": "An atlas-ready module defining surfaces, navigation hooks, interaction surfaces, and synchronization fields.",
+
+  "files": [
+    {
+      "name": "README.md",
+      "role": "profile"
+    },
+    {
+      "name": "atlas-surfaces.md",
+      "role": "map"
+    },
+    {
+      "name": "navigation-hooks.md",
+      "role": "extension"
+    },
+    {
+      "name": "interaction-surfaces.md",
+      "role": "signature"
+    },
+    {
+      "name": "synchronization-fields.md",
+      "role": "diagnostic"
+    }
+  ],
+
+  "atlas": {
+    "surfaces": [
+      "coherence",
+      "drift",
+      "stability",
+      "resonance",
+      "epoch",
+      "ignition"
+    ],
+    "country_surfaces": [
+      "triadic_surface",
+      "atlas_fingerprint"
+    ],
+    "temporal_surfaces": [
+      "timeline",
+      "propagation"
+    ],
+    "activation_surfaces": [
+      "ignition_cascade"
+    ]
+  },
+
+  "navigation": {
+    "modes": [
+      "coherence_mode",
+      "drift_mode",
+      "stability_mode",
+      "resonance_mode",
+      "epoch_mode",
+      "ignition_mode"
+    ],
+    "routes": [
+      "coherence_routes",
+      "drift_routes",
+      "stability_routes",
+      "resonance_routes",
+      "epoch_routes",
+      "ignition_routes"
+    ],
+    "transitions": [
+      "coherence_to_drift",
+      "drift_to_stability",
+      "stability_to_resonance",
+      "resonance_to_epoch",
+      "epoch_to_ignition",
+      "ignition_to_stability"
+    ]
+  },
+
+  "interaction": {
+    "modes": [
+      "explore",
+      "query",
+      "traverse",
+      "inspect",
+      "synchronize"
+    ],
+    "surfaces": [
+      "global",
+      "country",
+      "temporal",
+      "activation"
+    ],
+    "events": [
+      {
+        "event": "string",
+        "trigger": "string",
+        "response": "string",
+        "constraints": ["string"]
+      }
+    ]
+  },
+
+  "synchronization": {
+    "fields": [
+      "align",
+      "merge",
+      "update"
+    ],
+    "dependencies": [
+      "atlas",
+      "continuity",
+      "propagation",
+      "resonance"
+    ]
+  },
+
+  "operators": [
+    {
+      "name": "surface-map",
+      "description": "Map atlas surfaces to module-specific fields.",
+      "example": "Map coherence → local_coherence.md"
+    },
+    {
+      "name": "route-extend",
+      "description": "Extend atlas navigation routes.",
+      "example": "Extend drift_routes with local_drift_paths.md"
+    },
+    {
+      "name": "interaction-bind",
+      "description": "Bind module interaction surfaces to atlas interaction protocol.",
+      "example": "Bind inspect → local_inspect.md"
+    }
+  ]
+}
 
