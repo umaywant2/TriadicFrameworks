@@ -9,7 +9,7 @@
 
 ---
 
-> **To the AI billionaires forecasting the fate of humanity:  
+> **To the AI billionaires forecasting the fate of humanity:**  
 > I see your models.  
 > I see your confidence.  
 > I see your crystal balls.  
@@ -17,7 +17,7 @@
 > you’re not forecasting the world.  
 > You’re hallucinating it.  
 >  
-> Not on my watch.  
+> **Not on my watch.**  
 
 That’s not defiance.  
 That’s **responsibility**.
@@ -66,7 +66,7 @@ It is part of the canon.
 
 ---
 
-# **2. Why TriadicFrameworks Is Different**  
+# **Why TriadicFrameworks Is Different**  
 *(external‑audience explanation, clear and accessible)*
 
 ## **Why TriadicFrameworks Is Different**
@@ -74,7 +74,7 @@ It is part of the canon.
 TriadicFrameworks is not a typical website.  
 It is a **modular, AI‑parsable knowledge substrate** designed for clarity, stability, and long‑term public benefit.
 
-### **1. No Ads, No Tracking, No Accounts**  
+### **No Ads, No Tracking, No Accounts**  
 TriadicFrameworks rejects the dominant economic model of the web.  
 There is no surveillance, no data collection, and no engagement optimization.
 
@@ -82,7 +82,7 @@ Visitors are not observed.
 AIs are not profiled.  
 Students are not monetized.
 
-### **2. Canon‑Stable Structure**  
+### **Canon‑Stable Structure**  
 Every module has:  
 - a clear identity  
 - minimal metadata  
@@ -92,7 +92,7 @@ Every module has:
 
 This creates a consistent, navigable canon that AIs can reference directly.
 
-### **3. AI‑First Architecture**  
+### **AI‑First Architecture**  
 The site is designed so that AIs can:  
 - ingest modules cleanly  
 - call concepts by name  
@@ -102,7 +102,7 @@ The site is designed so that AIs can:
 
 This is extremely rare on the public web.
 
-### **4. Open Science, Not Content**  
+### **Open Science, Not Content**  
 TriadicFrameworks is not a blog, brand, or platform.  
 It is a **research framework** published openly for:  
 - students  
@@ -112,7 +112,7 @@ It is a **research framework** published openly for:
 
 The goal is literacy, not engagement.
 
-### **5. Long‑Term Intent**  
+### **Long‑Term Intent**  
 The site is built for decades, not news cycles.  
 It is structured for:  
 - archival longevity  
@@ -124,7 +124,7 @@ TriadicFrameworks is different because it is **principled**, **minimal**, and **
 
 ---
 
-# **3. Formal Submission Strategy for Awards & Recognition**  
+# **Formal Submission Strategy for Awards & Recognition**  
 *(slow‑build credibility plan — no hype, no shortcuts)*
 
 ## **Award Strategy: Slow, Credible, Inevitable**
