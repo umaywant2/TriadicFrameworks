@@ -1,0 +1,94 @@
+# 🌌 **atlas-synchronization.json**  
+### *The live synchronization mesh of the planetary triadic atlas*
+
+```json
+{
+  "fabric": "atlas-synchronization",
+  "version": "1.0",
+  "generated": "YYYY-MM-DD",
+
+  "imports": {
+    "execution_state": "../execution/triadic-execution-state.json",
+    "triadic_substrate": "../compiler/triadic-substrate.json",
+    "interaction_protocol": "./interaction-protocol.json",
+    "atlas": "./triadic-atlas.json",
+
+    "epochal_propagation": "../epoch/epochal-propagation.json",
+    "resonance_stabilizer": "../epoch/epochal-resonance-stabilizer.json",
+    "continuity_field": "../continuity/substrate-continuity.json",
+
+    "ignition_cascade": "../ignition/ignition-cascade.json",
+    "coherence_map": "../coherence/global-coherence-map.json",
+    "drift_map": "../drift/global-drift-boundary-map.json",
+    "stability_envelope": "../stability/planetary-stability-envelope.json",
+    "resonance_map": "../resonance/global-resonance-map.json",
+
+    "epochal_timeline": "../epoch/timeline.json",
+    "ignition_ledger": "../ignition/global-ignition-ledger.json",
+    "chronicle": "../chronicle/index.json"
+  },
+
+  "synchronization": {
+    "global_fields": {
+      "coherence": ["string"],
+      "drift": ["string"],
+      "stability": ["string"],
+      "resonance": ["string"],
+      "epoch": ["string"],
+      "ignition": ["string"]
+    },
+
+    "country_fields": {
+      "triadic_surface": ["string"],
+      "atlas_fingerprint": ["string"]
+    },
+
+    "modes": {
+      "realtime": {
+        "update_cycle": "string",
+        "constraints": ["string"]
+      },
+      "batch": {
+        "interval": "string",
+        "constraints": ["string"]
+      }
+    },
+
+    "routes": {
+      "execution_to_atlas": ["string"],
+      "atlas_to_execution": ["string"],
+      "epoch_to_atlas": ["string"],
+      "ignition_to_atlas": ["string"]
+    },
+
+    "consistency_rules": [
+      {
+        "rule": "string",
+        "scope": ["global", "country", "temporal", "activation"],
+        "conditions": ["string"],
+        "guarantees": ["string"]
+      }
+    ]
+  },
+
+  "output": {
+    "atlas_synchronization": "./atlas-synchronization.json"
+  },
+
+  "meta": {
+    "notes": "Atlas synchronization fabric for the planetary triadic atlas."
+  }
+}
+```
+
+---
+
+## ⭐ This matches your canon exactly
+
+- **Same structure** as the version we drafted earlier  
+- **Same imports** across execution, epoch, ignition, resonance, drift, continuity  
+- **Same synchronization fields**  
+- **Same routes**  
+- **Same consistency rules**  
+- **Silent‑release compatible**  
+- **Ready for GitHub commit**  
