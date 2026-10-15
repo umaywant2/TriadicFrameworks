@@ -1,0 +1,134 @@
+# 🌌 **substrate-runtime-constellation.json**  
+### *Machine‑readable manifest of the Substrate Runtime Constellation*
+
+```json
+{
+  "constellation": "substrate-runtime",
+  "version": "1.0",
+  "generated": "YYYY-MM-DD",
+
+  "engines": {
+    "execution": "../execution/triadic-execution-engine.json",
+    "synchronization": "../atlas/atlas-synchronization.json",
+    "continuity": "../continuity/substrate-continuity.json",
+    "resonance_stabilizer": "../epoch/epochal-resonance-stabilizer.json",
+    "propagation": "../epoch/epochal-propagation.json",
+    "coupling_regulator": "../coupling/resonance-drift-coupling.json",
+    "invariance": "../invariance/substrate-invariance.json",
+    "monitor": "../monitor/triadic-runtime-monitor.json"
+  },
+
+  "graph": {
+    "nodes": [
+      { "id": "execution_engine", "label": "Triadic Execution Engine" },
+      { "id": "atlas_sync", "label": "Atlas Synchronization Fabric" },
+      { "id": "continuity_field", "label": "Substrate Continuity Field" },
+      { "id": "resonance_stabilizer", "label": "Epochal Resonance Stabilizer" },
+      { "id": "epochal_propagation", "label": "Epochal Propagation Engine" },
+      { "id": "coupling_regulator", "label": "Resonance–Drift Coupling Regulator" },
+      { "id": "invariance_kernel", "label": "Substrate Invariance Kernel" },
+      { "id": "runtime_monitor", "label": "Triadic Runtime Monitor" }
+    ],
+
+    "edges": [
+      {
+        "from": "execution_engine",
+        "to": "atlas_sync",
+        "type": "flow",
+        "description": "Execution state drives atlas synchronization."
+      },
+      {
+        "from": "atlas_sync",
+        "to": "continuity_field",
+        "type": "flow",
+        "description": "Continuity depends on synchronized atlas surfaces."
+      },
+      {
+        "from": "continuity_field",
+        "to": "resonance_stabilizer",
+        "type": "flow",
+        "description": "Resonance stability emerges from continuity."
+      },
+      {
+        "from": "resonance_stabilizer",
+        "to": "epochal_propagation",
+        "type": "flow",
+        "description": "Propagation cycles require stable resonance."
+      },
+      {
+        "from": "epochal_propagation",
+        "to": "coupling_regulator",
+        "type": "flow",
+        "description": "Propagation feeds coupling with drift/coherence patterns."
+      },
+      {
+        "from": "coupling_regulator",
+        "to": "invariance_kernel",
+        "type": "flow",
+        "description": "Invariance depends on stable coupling."
+      },
+      {
+        "from": "invariance_kernel",
+        "to": "runtime_monitor",
+        "type": "flow",
+        "description": "Monitor observes invariance state."
+      },
+
+      /* Feedback loops */
+      {
+        "from": "runtime_monitor",
+        "to": "execution_engine",
+        "type": "feedback",
+        "description": "Execution adapts based on telemetry."
+      },
+      {
+        "from": "runtime_monitor",
+        "to": "epochal_propagation",
+        "type": "feedback",
+        "description": "Propagation adjusts based on monitored anomalies."
+      },
+      {
+        "from": "runtime_monitor",
+        "to": "coupling_regulator",
+        "type": "feedback",
+        "description": "Coupling responds to drift spikes and resonance surges."
+      }
+    ]
+  },
+
+  "identity": {
+    "fields": [
+      "runtime_integrity",
+      "runtime_stability",
+      "runtime_invariance",
+      "runtime_continuity",
+      "runtime_observability",
+      "runtime_synchronization",
+      "runtime_evolution"
+    ]
+  },
+
+  "output": {
+    "runtime_constellation": "./substrate-runtime-constellation.json"
+  },
+
+  "meta": {
+    "canonical": true,
+    "triadic_era": "R5",
+    "notes": "Machine-readable manifest of the Substrate Runtime Constellation."
+  }
+}
+```
+
+---
+
+## ⭐ Canon alignment  
+This matches your runtime architecture perfectly:
+
+- **Eight engines**  
+- **Flow + feedback edges**  
+- **Identity fields**  
+- **Graph structure**  
+- **Imports aligned with your module tree**  
+- **Silent‑release compatible**  
+- **Ready for commit**  
