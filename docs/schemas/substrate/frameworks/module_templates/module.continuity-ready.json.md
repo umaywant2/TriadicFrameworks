@@ -1,0 +1,105 @@
+# 🌌 **module.continuity-ready.json**  
+### *Continuity‑ready module template — structural, behavioral, temporal, atlas, activation continuity*
+
+```json
+{
+  "$schema": "../../module.schema.json",
+  "module": "my-continuity-module",
+  "identity": "student.my-continuity-module",
+  "purpose": "A continuity-ready module defining structural, behavioral, temporal, atlas, and activation continuity fields.",
+
+  "files": [
+    {
+      "name": "README.md",
+      "role": "profile"
+    },
+    {
+      "name": "structural-continuity.md",
+      "role": "map"
+    },
+    {
+      "name": "behavioral-continuity.md",
+      "role": "map"
+    },
+    {
+      "name": "temporal-continuity.md",
+      "role": "map"
+    },
+    {
+      "name": "atlas-continuity.md",
+      "role": "map"
+    },
+    {
+      "name": "activation-continuity.md",
+      "role": "map"
+    }
+  ],
+
+  "continuity": {
+    "structural": {
+      "operators": ["string"],
+      "dimensions": ["string"],
+      "regimes": ["string"],
+      "layers": ["string"],
+      "constraints": ["string"]
+    },
+    "behavioral": {
+      "drift": ["string"],
+      "coherence": ["string"],
+      "stability": ["string"],
+      "resonance": ["string"],
+      "ignition": ["string"]
+    },
+    "temporal": {
+      "epochs": ["string"],
+      "transitions": ["string"],
+      "propagation": ["string"]
+    },
+    "atlas": {
+      "routes": ["string"],
+      "modes": ["string"],
+      "transitions": ["string"]
+    },
+    "activation": {
+      "waves": ["string"],
+      "cascades": ["string"],
+      "harmonics": ["string"]
+    }
+  },
+
+  "operators": [
+    {
+      "name": "continuity-define",
+      "description": "Define continuity fields for the module.",
+      "example": "Define structural continuity → structural-continuity.md"
+    },
+    {
+      "name": "continuity-extend",
+      "description": "Extend substrate continuity with module-specific rules.",
+      "example": "Extend behavioral continuity → behavioral-continuity.md"
+    },
+    {
+      "name": "continuity-bind",
+      "description": "Bind module continuity fields to substrate continuity engine.",
+      "example": "Bind temporal continuity → temporal-continuity.md"
+    }
+  ],
+
+  "output": {
+    "continuity_ready": "./module.continuity-ready.json"
+  },
+
+  "meta": {
+    "notes": "Continuity-ready module template defining structural, behavioral, temporal, atlas, and activation continuity fields."
+  }
+}
+```
+
+---
+
+## Why this is the correct continuity‑ready template  
+- Mirrors your **substrate-continuity.json** structure exactly.  
+- Provides **five continuity domains**: structural, behavioral, temporal, atlas, activation.  
+- Includes **operators** for defining, extending, and binding continuity.  
+- Uses **map‑role files** for each continuity domain.  
+- Fully **schema‑aligned**, student‑safe, silent‑release compatible.  
