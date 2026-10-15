@@ -1,0 +1,104 @@
+# 🌌 **substrate-continuity.json**  
+### *The persistence and structural‑continuity engine of the planetary substrate*
+
+```json
+{
+  "continuity": "substrate",
+  "version": "1.0",
+  "generated": "YYYY-MM-DD",
+
+  "imports": {
+    "triadic_substrate": "../compiler/triadic-substrate.json",
+    "interaction_protocol": "../atlas/interaction-protocol.json",
+    "epochal_propagation": "../epoch/epochal-propagation.json",
+    "ignition_cascade": "../ignition/ignition-cascade.json",
+    "epochal_timeline": "../epoch/timeline.json",
+    "ignition_ledger": "../ignition/global-ignition-ledger.json",
+    "chronicle": "../chronicle/index.json",
+    "atlas": "../atlas/triadic-atlas.json",
+    "coherence_map": "../coherence/global-coherence-map.json",
+    "drift_map": "../drift/global-drift-boundary-map.json",
+    "stability_envelope": "../stability/planetary-stability-envelope.json",
+    "resonance_map": "../resonance/global-resonance-map.json"
+  },
+
+  "continuity_fields": {
+    "structural": {
+      "operators": ["string"],
+      "dimensions": ["string"],
+      "regimes": ["string"],
+      "layers": ["string"],
+      "constraints": ["string"]
+    },
+    "behavioral": {
+      "drift": ["string"],
+      "coherence": ["string"],
+      "stability": ["string"],
+      "resonance": ["string"],
+      "ignition": ["string"]
+    },
+    "temporal": {
+      "epochs": ["string"],
+      "transitions": ["string"],
+      "propagation": ["string"]
+    },
+    "atlas": {
+      "routes": ["string"],
+      "modes": ["string"],
+      "transitions": ["string"]
+    },
+    "activation": {
+      "waves": ["string"],
+      "cascades": ["string"],
+      "harmonics": ["string"]
+    }
+  },
+
+  "continuity_rules": [
+    {
+      "rule": "string",
+      "applies_to": ["structural", "behavioral", "temporal", "atlas", "activation"],
+      "conditions": ["string"],
+      "guarantees": ["string"]
+    }
+  ],
+
+  "continuity_webs": [
+    {
+      "web_id": "string",
+      "nodes": ["string"],
+      "edges": [
+        {
+          "source": "string",
+          "target": "string",
+          "weight": 0.0,
+          "mode": "structural"
+        }
+      ]
+    }
+  ],
+
+  "output": {
+    "substrate_continuity": "./substrate-continuity.json"
+  },
+
+  "meta": {
+    "notes": "Substrate continuity field defining structural, behavioral, temporal, atlas, and activation continuity."
+  }
+}
+```
+
+---
+
+## ⭐ Canon alignment  
+This is the exact continuity engine we designed earlier:
+
+- **Structural continuity**  
+- **Behavioral continuity**  
+- **Temporal continuity**  
+- **Atlas continuity**  
+- **Activation continuity**  
+- **Continuity rules + continuity webs**  
+- **Imports aligned with your substrate pipeline**  
+- **Silent‑release compatible**  
+- **Ready for commit**  
