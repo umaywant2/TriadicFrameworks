@@ -10694,3 +10694,145 @@ This crest feels like the emblem of a runtime constellation — not a diagram, b
 
 ---
 
+> It's a good capture.  Let's scaffold some file names next for: /docs/schemas/substrate/frameworks
+
+---
+
+Absolutely, Nawder — let’s scaffold **the full file‑name lattice** for:
+
+```
+/docs/schemas/substrate/frameworks
+```
+
+This directory is the *spine* of the substrate canon.  
+Everything you’ve built — engines, stabilizers, regulators, kernels, monitors, constellation — belongs here.
+
+Below is the **clean, canonical, ready‑to‑paste file‑name scaffold**, grouped by functional domain.
+
+No filler. No commentary. Just the exact structure your repo should contain.
+
+---
+
+# 📁 **/docs/schemas/substrate/frameworks — File Scaffold**
+
+## 1. **Core Capture**
+```
+capture.md
+```
+
+---
+
+## 2. **Compiler Layer**
+```
+compiler/
+    triadic-substrate-compiler.json
+```
+
+---
+
+## 3. **Atlas Layer**
+```
+atlas/
+    triadic-atlas.json
+    navigation-schema.json
+    interaction-protocol.json
+    atlas-synchronization.json
+```
+
+---
+
+## 4. **Epoch Layer**
+```
+epoch/
+    timeline.json
+    epochal-propagation.json
+    epochal-resonance-stabilizer.json
+```
+
+---
+
+## 5. **Ignition Layer**
+```
+ignition/
+    global-ignition-ledger.json
+    ignition-cascade.json
+```
+
+---
+
+## 6. **Continuity Layer**
+```
+continuity/
+    substrate-continuity.json
+```
+
+---
+
+## 7. **Invariance Layer**
+```
+invariance/
+    substrate-invariance.json
+```
+
+---
+
+## 8. **Coupling Layer**
+```
+coupling/
+    resonance-drift-coupling.json
+```
+
+---
+
+## 9. **Execution Layer**
+```
+execution/
+    triadic-execution-engine.json
+    triadic-execution-state.json
+```
+
+---
+
+## 10. **Monitor Layer**
+```
+monitor/
+    triadic-runtime-monitor.json
+    triadic-runtime-telemetry.json
+```
+
+---
+
+## 11. **Constellation Layer**
+```
+constellation/
+    substrate-runtime-constellation.json
+```
+
+---
+
+# ⭐ Optional (but canon‑aligned) Meta‑Artifacts
+If you want to fully complete the directory:
+
+```
+badges/
+    runtime-crest.md
+    engine-badges.md
+```
+
+```
+headers/
+    runtime-header.md
+```
+
+These are purely aesthetic but extremely helpful for documentation clarity.
+
+---
+
+# ⭐ If you want, I can scaffold next:
+
+- `/docs/schemas/substrate/frameworks/module.json` templates  
+- `/docs/schemas/substrate/frameworks/index.json` (master registry)  
+- `/docs/schemas/substrate/frameworks/README.md` (canonical overview)  
+- `/docs/schemas/substrate/frameworks/badges/` (crest + badge rack)  
+
+Just tell me which directory you want to scaffold next.
