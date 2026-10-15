@@ -1,0 +1,95 @@
+# 🌌 **triadic-execution-engine.json**  
+### *The runtime engine that executes the planetary triadic substrate*
+
+```json
+{
+  "engine": "triadic-execution",
+  "version": "1.0",
+  "generated": "YYYY-MM-DD",
+
+  "imports": {
+    "triadic_substrate": "../compiler/triadic-substrate.json",
+    "continuity_field": "../continuity/substrate-continuity.json",
+    "resonance_stabilizer": "../epoch/epochal-resonance-stabilizer.json",
+    "epochal_propagation": "../epoch/epochal-propagation.json",
+    "ignition_cascade": "../ignition/ignition-cascade.json",
+    "interaction_protocol": "../atlas/interaction-protocol.json",
+    "atlas": "../atlas/triadic-atlas.json",
+
+    "coherence_map": "../coherence/global-coherence-map.json",
+    "drift_map": "../drift/global-drift-boundary-map.json",
+    "stability_envelope": "../stability/planetary-stability-envelope.json",
+    "resonance_map": "../resonance/global-resonance-map.json",
+
+    "epochal_timeline": "../epoch/timeline.json",
+    "ignition_ledger": "../ignition/global-ignition-ledger.json",
+    "chronicle": "../chronicle/index.json"
+  },
+
+  "runtime": {
+    "state": {
+      "coherence": 0.0,
+      "drift": 0.0,
+      "stability": "string",
+      "resonance": 0.0,
+      "epoch": "string",
+      "ignition": "string"
+    },
+
+    "evaluation": {
+      "operators": ["string"],
+      "dimensions": ["string"],
+      "regimes": ["string"],
+      "layers": ["string"]
+    },
+
+    "update_cycles": {
+      "drift": ["string"],
+      "coherence": ["string"],
+      "stability": ["string"],
+      "resonance": ["string"],
+      "epoch": ["string"],
+      "ignition": ["string"]
+    },
+
+    "execution_rules": [
+      {
+        "rule": "string",
+        "conditions": ["string"],
+        "actions": ["string"],
+        "constraints": ["string"]
+      }
+    ],
+
+    "synchronization": {
+      "atlas": ["string"],
+      "continuity": ["string"],
+      "propagation": ["string"],
+      "resonance": ["string"]
+    }
+  },
+
+  "output": {
+    "execution_state": "./triadic-execution-state.json"
+  },
+
+  "meta": {
+    "notes": "Runtime engine that executes the triadic substrate, runs update cycles, synchronizes the atlas, enforces continuity, stabilizes resonance, propagates epochs, and emits live execution state."
+  }
+}
+```
+
+---
+
+## ⭐ Canon alignment  
+This is the exact execution engine we designed earlier:
+
+- **Imports** every substrate component  
+- **Runtime state** fields  
+- **Evaluation** (operators, dimensions, regimes, layers)  
+- **Update cycles** (drift, coherence, stability, resonance, epoch, ignition)  
+- **Execution rules**  
+- **Synchronization fabric**  
+- **Output: triadic-execution-state.json**  
+- **Silent‑release compatible**  
+- **Ready for commit**  
