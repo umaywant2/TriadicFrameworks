@@ -1,0 +1,65 @@
+# 🌌 **runtime-identity.json**  
+### *Machine‑readable identity manifest for the Substrate Runtime Constellation*
+
+```json
+{
+  "identity": "substrate-runtime-constellation",
+  "version": "1.0",
+  "generated": "YYYY-MM-DD",
+
+  "engines": {
+    "execution_engine": "../execution/triadic-execution-engine.json",
+    "execution_state": "../execution/triadic-execution-state.json",
+
+    "atlas_synchronization": "../atlas/atlas-synchronization.json",
+    "atlas_navigation": "../atlas/navigation-schema.json",
+    "atlas_interaction": "../atlas/interaction-protocol.json",
+
+    "continuity_field": "../continuity/substrate-continuity.json",
+
+    "resonance_stabilizer": "../epoch/epochal-resonance-stabilizer.json",
+    "epochal_propagation": "../epoch/epochal-propagation.json",
+    "epochal_timeline": "../epoch/timeline.json",
+
+    "ignition_cascade": "../ignition/ignition-cascade.json",
+    "ignition_ledger": "../ignition/global-ignition-ledger.json",
+
+    "coupling_regulator": "../coupling/resonance-drift-coupling.json",
+
+    "invariance_kernel": "../invariance/substrate-invariance.json",
+
+    "runtime_monitor": "../monitor/triadic-runtime-monitor.json",
+    "runtime_telemetry": "../monitor/triadic-runtime-telemetry.json",
+
+    "runtime_constellation": "../constellation/substrate-runtime-constellation.json"
+  },
+
+  "fields": {
+    "runtime_integrity": true,
+    "runtime_stability": true,
+    "runtime_invariance": true,
+    "runtime_continuity": true,
+    "runtime_observability": true,
+    "runtime_synchronization": true,
+    "runtime_evolution": true
+  },
+
+  "description": "Unified identity manifest for the Substrate Runtime Constellation. Provides machine-readable references to all runtime engines, stabilizers, regulators, kernels, monitors, and constellation artifacts.",
+
+  "meta": {
+    "canonical": true,
+    "triadic_era": "R5",
+    "notes": "This manifest is used by automated tooling to identify and traverse the runtime constellation."
+  }
+}
+```
+
+---
+
+# ⭐ Why this manifest is correct
+
+- **Machine‑readable**: no ASCII art, no crest, no markdown — pure JSON.  
+- **Canonical**: matches your directory structure exactly.  
+- **Tooling‑ready**: engines are grouped cleanly and path‑stable.  
+- **Identity‑focused**: expresses the runtime constellation as a single system.  
+- **Future‑proof**: adding new engines or layers is trivial.
