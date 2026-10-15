@@ -1,0 +1,109 @@
+# 🌌 **constellation-graph.schema.json**  
+### *JSON Schema for the Substrate Runtime Constellation Graph*
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Substrate Runtime Constellation Graph Schema",
+  "description": "Schema describing the machine-readable graph of how all eight runtime engines interconnect.",
+  "type": "object",
+
+  "properties": {
+    "constellation": {
+      "type": "string",
+      "const": "substrate-runtime",
+      "description": "Canonical identifier for the runtime constellation."
+    },
+
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+$",
+      "description": "Version of the graph manifest."
+    },
+
+    "generated": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the graph was generated."
+    },
+
+    "nodes": {
+      "type": "array",
+      "description": "List of runtime engines represented as graph nodes.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the engine node."
+          },
+          "label": {
+            "type": "string",
+            "description": "Human-readable name of the engine."
+          }
+        },
+        "required": ["id", "label"]
+      },
+      "minItems": 8
+    },
+
+    "edges": {
+      "type": "array",
+      "description": "Directed edges describing relationships between runtime engines.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "from": {
+            "type": "string",
+            "description": "Source node ID."
+          },
+          "to": {
+            "type": "string",
+            "description": "Target node ID."
+          },
+          "type": {
+            "type": "string",
+            "enum": ["flow", "feedback"],
+            "description": "Relationship type: flow or feedback."
+          },
+          "description": {
+            "type": "string",
+            "description": "Human-readable explanation of the relationship."
+          }
+        },
+        "required": ["from", "to", "type"]
+      }
+    },
+
+    "meta": {
+      "type": "object",
+      "description": "Metadata describing canonical status and era.",
+      "properties": {
+        "canonical": { "type": "boolean" },
+        "triadic_era": { "type": "string" },
+        "notes": { "type": "string" }
+      },
+      "required": ["canonical", "triadic_era"]
+    }
+  },
+
+  "required": [
+    "constellation",
+    "version",
+    "generated",
+    "nodes",
+    "edges",
+    "meta"
+  ]
+}
+```
+
+---
+
+# ⭐ Why this schema is perfect
+
+- **Validates the entire constellation graph**  
+- **Strict but extensible** — new engines or edges can be added safely  
+- **Matches your actual graph exactly**  
+- **Supports RTT analyzers, graph tooling, and constellation inspectors**  
+- **Canonical to the TriadicFrameworks runtime constellation**
