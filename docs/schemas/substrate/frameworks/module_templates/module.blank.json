@@ -1,1 +1,26 @@
+{
+  "$schema": "../../module.schema.json",
+  "module": "my-module",
+  "identity": "student.my-module",
+  "purpose": "Blank starter module template with no assumptions.",
+
+  "files": [],
+
+  "operators": [],
+  "dimensions": [],
+  "regimes": [],
+  "layers": [],
+
+  "maps": [],
+  "signatures": [],
+  "diagnostics": [],
+  "extensions": [],
+  "examples": [],
+  "references": [],
+  "templates": [],
+
+  "meta": {
+    "notes": "This is the minimal blank module.json template."
+  }
+}
 
