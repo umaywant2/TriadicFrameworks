@@ -1,0 +1,49 @@
+{
+  "identity": "substrate-runtime-hooks",
+  "version": "1.0",
+  "generated": "YYYY-MM-DD",
+
+  "hooks": {
+    "execution": {
+      "cycle_start": "Triggered at the beginning of a runtime cycle.",
+      "cycle_end": "Triggered at the end of a runtime cycle.",
+      "state_update": "Execution state updated.",
+      "ignition_trigger": "Ignition event detected."
+    },
+
+    "atlas": {
+      "sync_event": "Atlas synchronization event.",
+      "navigation_event": "Atlas navigation event.",
+      "interaction_event": "Atlas interaction protocol event."
+    },
+
+    "epoch": {
+      "epoch_transition": "Epoch transition detected.",
+      "resonance_shift": "Resonance magnitude/phase shift.",
+      "propagation_cycle": "Epochal propagation cycle executed."
+    },
+
+    "coupling": {
+      "drift_spike": "Drift magnitude spike detected.",
+      "resonance_surge": "Resonance surge detected.",
+      "coupling_instability": "Coupling instability detected."
+    },
+
+    "invariance": {
+      "invariance_break": "Invariance violation detected.",
+      "invariance_restore": "Invariance restored."
+    },
+
+    "monitor": {
+      "telemetry_packet": "Telemetry packet emitted.",
+      "anomaly_alert": "Runtime anomaly detected.",
+      "cycle_report": "Cycle report generated."
+    }
+  },
+
+  "meta": {
+    "canonical": true,
+    "triadic_era": "R5",
+    "notes": "Registry of all runtime hooks exposed by the Substrate Runtime Constellation for analyzers, engines, and RTT modules."
+  }
+}
