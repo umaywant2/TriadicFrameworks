@@ -29,7 +29,7 @@ citation_publication_date: "2025"
   <iframe
     width="796"
     height="448"
-    src="https://www.youtube.com/embed/6Z0AklQbP8U?list=PLCySUiruOkPjmTh&pp=sAgC&autoplay=1&mute=1&loop=1"
+    src="https://www.youtube.com/embed/6Z0AklQbP8U?list=PLCySUiruOkPjmThQqnfe3AfaiPo4Kw41K&pp=sAgC&autoplay=1&mute=1&loop=1"
     title="TriadicFrameworks Books Playlist"
     frameBorder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
