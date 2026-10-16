@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_protocol_header_full_matrix_" src="https://github.com/user-attachments/assets/23364562-3804-4349-ad71-91bbd07301e4" />
+
 # **protocol_header_full_matrix.md**  
 ### *TriadicFrameworks — Protocol Header Module*  
 ### *Phase 3E — Full Multilingual Header Matrix (Canonical)*
