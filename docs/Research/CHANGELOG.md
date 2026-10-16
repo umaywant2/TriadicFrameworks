@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Changelog_" src="https://github.com/user-attachments/assets/2fa369d3-c59e-4f4d-a37c-35959cc37394" />
+
 # Changelog — `/docs/Research/`
 
 > Research module — original RTT research articles, SEO interpreter tools, and dimensional analysis methods.
