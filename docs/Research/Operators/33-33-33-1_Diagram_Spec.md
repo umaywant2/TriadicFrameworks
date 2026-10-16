@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="33_33_33_1_Diagram_Specification_" src="https://github.com/user-attachments/assets/edd1d001-d7e2-446b-87da-6c76cc75ecd4" />
+
 # Diagram Specification — Supconsciousness 33‑33‑33‑1 Operator
 
 ## Canvas
