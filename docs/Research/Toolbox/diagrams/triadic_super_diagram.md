@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Toolbox_diagrams_triadic_super_" src="https://github.com/user-attachments/assets/7709bd65-d62f-4ddb-8600-302b79bf6b40" />
+
 # Triadic Super‑Diagram — Research Toolbox
 
 **Module:** Research Toolbox  
