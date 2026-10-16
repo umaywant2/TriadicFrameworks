@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_hold_planet9_profile_" src="https://github.com/user-attachments/assets/d9e787cf-8f9e-4783-bb06-55c110fb529c" />
+
 # 📐 Profile — Planet 9 Orbital Parameter Dimensions
 
 **Role:** profile | **Layer:** dimensional | **Module:** planet9 | **Version:** 1.0
