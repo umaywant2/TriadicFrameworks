@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Toolbox_diagrams_four_source_substrate_" src="https://github.com/user-attachments/assets/862e2845-3146-4811-9bb9-25d5eeddfd4b" />
+
 # Four‑Source Substrate — Diagram Notes
 
 **Module:** Research Toolbox  
