@@ -1,4 +1,4 @@
-<img width="1194" height="672" alt="education_awareness_The_Standard_Models_Arithmetic_Error_In_RTT_Terms_" src="https://github.com/user-attachments/assets/67d6e9aa-c3c6-4f11-8ff0-424ae943d3bc" />
+<img width="1194" height="672" alt="education_awareness_Light_Speed_" src="https://github.com/user-attachments/assets/bf00e56c-3c59-45d5-87e0-84ec3720b8a4" />
 
 # 🌌 **Regime Awareness and the Standard Model: A Gentle Clarification**
 Modern physics is astonishingly successful within its **local validity envelope**.  
