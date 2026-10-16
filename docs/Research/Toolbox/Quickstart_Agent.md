@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_Toolbox_Quickstart_Agent_" src="https://github.com/user-attachments/assets/edeac1a9-9608-4614-886d-df521b406ee5" />
 
 **Agent Edition — Four‑Source Substrate → RTT/1 → RTT/2 → RTT/3**  
 **For AI systems operating inside TriadicFrameworks**
