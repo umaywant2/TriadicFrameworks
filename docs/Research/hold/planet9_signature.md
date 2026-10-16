@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_hold_planet9_signature_" src="https://github.com/user-attachments/assets/bd07cdf7-cd9c-4829-bc31-2745d27b48a5" />
+
 # 🔭 Signature — Planet 9 Observational Regime Expressions
 
 **Role:** signature | **Layer:** regime | **Module:** planet9 | **Version:** 1.0
