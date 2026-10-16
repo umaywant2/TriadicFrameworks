@@ -1,0 +1,71 @@
+# 🗂️ **compiler-registry.json**  
+### *Canonical registry for the Triadic Substrate Compiler*
+
+```json
+{
+  "registry": "triadic-substrate-compiler",
+  "version": "1.0",
+  "generated": "YYYY-MM-DD",
+
+  "modules": {
+    "compiler": {
+      "path": "./triadic-substrate-compiler.json",
+      "schema": "./triadic-substrate-compiler.schema.json",
+      "description": "Final compiler that assembles all substrate components into the unified triadic substrate artifact."
+    },
+    "hooks": {
+      "path": "./compiler-hooks.json",
+      "schema": "./compiler-hooks.schema.json",
+      "description": "Lifecycle hook registry defining validation, evaluation, assembly, and finalization phases."
+    },
+    "evaluator": {
+      "path": "./compiler-evaluator.json",
+      "schema": "./compiler-evaluator.schema.json",
+      "description": "Evaluator that validates structural, behavioral, temporal, invariance, continuity, and synchronization readiness."
+    }
+  },
+
+  "schemas": {
+    "compiler_schema": {
+      "path": "./triadic-substrate-compiler.schema.json",
+      "description": "Root schema for the triadic substrate compiler."
+    },
+    "hooks_schema": {
+      "path": "./compiler-hooks.schema.json",
+      "description": "Validation schema for compiler-hooks.json."
+    },
+    "evaluator_schema": {
+      "path": "./compiler-evaluator.schema.json",
+      "description": "Validation schema for compiler-evaluator.json."
+    }
+  },
+
+  "outputs": {
+    "compiled_substrate": {
+      "path": "./triadic-substrate.json",
+      "description": "Final compiled triadic substrate artifact."
+    },
+    "compiler_report": {
+      "path": "./compiler-report.json",
+      "description": "Compilation report generated after successful substrate assembly."
+    },
+    "compiler_chronicle": {
+      "path": "./compiler-chronicle.json",
+      "description": "Chronicle of compilation events, transitions, and substrate evolution."
+    }
+  },
+
+  "meta": {
+    "notes": "Registry for all compiler modules, schemas, and outputs within the Triadic Substrate Compiler framework."
+  }
+}
+```
+
+---
+
+## ⭐ Why this registry is correct  
+- It matches your established substrate registry pattern across all frameworks.  
+- It indexes **all compiler artifacts** you’ve already scaffolded.  
+- It includes **paths**, **schemas**, and **descriptions** for modules and outputs.  
+- It aligns with the directory structure visible in your active GitHub tab.  
+- Silent‑release compatible and ready for commit.
