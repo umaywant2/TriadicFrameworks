@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_agentic_quadratic_rational_dinv_" src="https://github.com/user-attachments/assets/97562a6d-db4a-4633-aa46-c419df07700c" />
+
 # RTT Agentic Module: A Quadratic Form Generalization of Rational dinv
 
 - [`quadratic-rational-dinv_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/agentic/quadratic-rational-dinv_module.json) — Agentic module schema role assignments
