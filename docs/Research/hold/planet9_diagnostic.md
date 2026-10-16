@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_hold_planet9_diagnostic_" src="https://github.com/user-attachments/assets/5918d01b-50f6-4291-a707-6d84a39fbe4c" />
+
 # 🩺 Diagnostic — Planet 9 Survey Coverage & Drift Assessment
 
 **Role:** diagnostic | **Layer:** drift | **Module:** planet9 | **Version:** 1.0
