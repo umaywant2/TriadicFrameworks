@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_protocol_header_index_" src="https://github.com/user-attachments/assets/f2eefbda-07c7-4e5d-893f-29d6ca98753b" />
+
 # **protocol_header_index.md**  
 ### *TriadicFrameworks — Research / Protocol Header Module*  
 ### *Canonical Index*
