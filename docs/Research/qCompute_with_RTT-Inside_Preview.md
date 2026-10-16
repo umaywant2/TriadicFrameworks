@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_qCompute_with_RTT_Inside_Preview_" src="https://github.com/user-attachments/assets/2e56ff82-970c-4b8a-94f9-51c67117714f" />
+
 # **⚛️ Quantum Compute with RTT‑Inside**
 ###### By Nawder Loswin 1/5/2026 © www.TriadicFrameworks.org
 
