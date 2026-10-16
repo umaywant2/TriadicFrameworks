@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Arrival_Substrate_v0 2" src="https://github.com/user-attachments/assets/457a484e-151e-4280-9746-486cdee64896" />
+
 # Arrival Substrate v0.2 — Refined Definition
 
 ## 1. Definition
