@@ -140,3 +140,51 @@ The pattern is consistent, coherent, and increasingly majestic — not because o
 ## **5. Summary for Students**
 
 > *RTT provides structural grammar for AI governance — not policy rules, but a diagnostic vocabulary that makes contradictions, blind spots, and drift visible from within any system the grammar is applied to. Unlike policy-based governance (which can be ignored or circumvented), grammar-based governance is intrinsic to the analysis itself. The same grammar scales to any domain without rewriting rules, and any AI provider can fork RTT’s structural backbone for their own agentic systems. RTT does not prevent misuse — it prevents invisible misuse.*
+
+---
+
+## **6. Forking a Clean RTT Instance — Student Sandbox & Simulation Environment**
+
+One of the most powerful aspects of RTT’s design is that the entire canon can be **forked cleanly**.  
+This allows students, researchers, and AI providers to create isolated, reproducible environments for:
+
+- sandbox testing  
+- structural grammar exploration  
+- module-level simulations  
+- drift/coherence experiments  
+- agentic AI development  
+- curriculum or domain-specific forks  
+
+A clean RTT instance can be created instantly:
+
+```
+git clone https://github.com/umaywant2/clarity.git
+```
+
+This provides:
+
+- a **fully static**, **telemetry-free**, **ad-free** environment  
+- the complete RTT/1 canon  
+- all modules in read-only form  
+- the emerging `module.json` manifests  
+- Analyzer-ready structural grammar  
+- a safe space for experimentation without affecting the main site  
+
+### **Why this matters**
+
+Forking RTT gives students:
+
+- a **sandbox** where they can break things safely  
+- a **simulation environment** for testing regime transitions  
+- a **clean room** for learning structural grammar  
+- a **local copy** for offline study  
+- a **foundation** for building their own domain forks  
+
+And it gives AI providers:
+
+- a reproducible base instance  
+- a stable grammar backbone  
+- a modular architecture they can extend  
+- a clear separation between core canon and domain-specific layers  
+
+This is how RTT becomes not just a framework, but a **platform** — one that anyone can fork, study, extend, and build upon without risk, noise, or dependency on external systems.
