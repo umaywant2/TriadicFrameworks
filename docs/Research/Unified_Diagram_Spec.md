@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Unified_Diagram_Spec_" src="https://github.com/user-attachments/assets/68ecf002-c94a-4920-9e5e-9f3554376b90" />
+
 # Unified Diagram Specification — Replicators, Transporters, CTs
 
 ## Canvas
