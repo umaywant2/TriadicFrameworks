@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Dreams_vs_Imagination_" src="https://github.com/user-attachments/assets/a8a05d26-af3a-47aa-94f9-1498d8852b7f" />
+
 # **RTT Capture — Dreams vs. Imagination (Consciousness Regime Mapping)**  
 *(Paste‑ready, minimal, canon‑aligned)*
 
