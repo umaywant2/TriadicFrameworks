@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Toolbox_LINEAGE_cross_model_lineage_matrix_" src="https://github.com/user-attachments/assets/0c0912e4-1fe6-4629-94b9-37ead2cd9d14" />
+
 # Cross‑Module Lineage Matrix  
 **Axes:** RTT • TEL • SARG • IE • MSM • GSM  
 **Focus Entries:** Forecast vs Actuals • Social Security Proto‑Fund
