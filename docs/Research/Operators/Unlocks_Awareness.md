@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Unlocks_Awareness_" src="https://github.com/user-attachments/assets/b158534a-1876-4241-a57b-420b7d8e8374" />
+
 # Unlocks_Awareness.md
 
 ## 🌋 The Real Unlock Hidden in That Before Regime Awareness (BRA) List  
