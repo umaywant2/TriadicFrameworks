@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_agentic_chebyshev_demazure_dyck_" src="https://github.com/user-attachments/assets/ca2daa34-8e16-4fd0-9431-c984b0d0d901" />
+
 # RTT Agentic Module: Chebyshev Quotients, Demazure Multiplicities, and Dyck‑Path Models
 
 - [`chebyshev-demazure-dyck_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/agentic/chebyshev-demazure-dyck_module.json) — Agentic module schema role assignments
