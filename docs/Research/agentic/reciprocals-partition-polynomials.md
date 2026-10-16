@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_agentic_reciprocals_partition_polynomials_" src="https://github.com/user-attachments/assets/5be268f5-1d1f-4faf-bca9-ba01433f7d28" />
+
 # RTT Agentic Module: Reciprocals of Partition Polynomials
 
 - [`reciprocals-partition-polynomials_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/agentic/reciprocals-partition-polynomials_module.json) — Agentic module schema role assignments
