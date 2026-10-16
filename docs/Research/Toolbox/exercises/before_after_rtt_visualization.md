@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Toolbox_excercises_Befor_After_RTT_Visualization_" src="https://github.com/user-attachments/assets/6ca7226e-4e0e-4866-b608-db7d196f00b5" />
+
 # Before/After RTT — Visualization Exercise
 
 **Module:** Research Toolbox  
