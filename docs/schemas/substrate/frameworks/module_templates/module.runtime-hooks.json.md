@@ -1,0 +1,110 @@
+# 🌠 **module.runtime-hooks.json**  
+### *Module‑level runtime hooks — execution, atlas, epoch, coupling, invariance, monitor*
+
+```json
+{
+  "$schema": "../../module.schema.json",
+  "module": "my-runtime-hooks-module",
+  "identity": "student.my-runtime-hooks-module",
+  "purpose": "Defines module-level runtime hooks for execution, atlas, epoch, coupling, invariance, and monitor engines.",
+
+  "files": [
+    {
+      "name": "README.md",
+      "role": "profile"
+    },
+    {
+      "name": "execution-hooks.md",
+      "role": "extension"
+    },
+    {
+      "name": "atlas-hooks.md",
+      "role": "extension"
+    },
+    {
+      "name": "epoch-hooks.md",
+      "role": "extension"
+    },
+    {
+      "name": "coupling-hooks.md",
+      "role": "extension"
+    },
+    {
+      "name": "invariance-hooks.md",
+      "role": "extension"
+    },
+    {
+      "name": "monitor-hooks.md",
+      "role": "extension"
+    }
+  ],
+
+  "runtime_hooks": {
+    "execution": {
+      "cycle_start": ["string"],
+      "cycle_end": ["string"],
+      "state_update": ["string"],
+      "ignition_trigger": ["string"]
+    },
+    "atlas": {
+      "sync_event": ["string"],
+      "navigation_event": ["string"],
+      "interaction_event": ["string"]
+    },
+    "epoch": {
+      "epoch_transition": ["string"],
+      "resonance_shift": ["string"],
+      "propagation_cycle": ["string"]
+    },
+    "coupling": {
+      "drift_spike": ["string"],
+      "resonance_surge": ["string"],
+      "coupling_instability": ["string"]
+    },
+    "invariance": {
+      "invariance_break": ["string"],
+      "invariance_restore": ["string"]
+    },
+    "monitor": {
+      "telemetry_packet": ["string"],
+      "anomaly_alert": ["string"],
+      "cycle_report": ["string"]
+    }
+  },
+
+  "operators": [
+    {
+      "name": "hook-define",
+      "description": "Define runtime hooks for the module.",
+      "example": "Define execution hooks → execution-hooks.md"
+    },
+    {
+      "name": "hook-extend",
+      "description": "Extend substrate runtime hooks with module-specific behavior.",
+      "example": "Extend epoch hooks → epoch-hooks.md"
+    },
+    {
+      "name": "hook-bind",
+      "description": "Bind module hooks to substrate runtime engines.",
+      "example": "Bind monitor hooks → monitor-hooks.md"
+    }
+  ],
+
+  "output": {
+    "runtime_hooks": "./module.runtime-hooks.json"
+  },
+
+  "meta": {
+    "notes": "Module-level runtime hooks for execution, atlas, epoch, coupling, invariance, and monitor engines."
+  }
+}
+```
+
+---
+
+## Why this is the correct runtime‑hooks template  
+- Mirrors your **substrate runtime‑hooks registry** exactly.  
+- Provides module‑level hook declarations for all six runtime engines.  
+- Uses **extension‑role files** for each hook surface.  
+- Includes **operators** for define / extend / bind.  
+- Fully **schema‑aligned**, silent‑release compatible, and ready for commit.
