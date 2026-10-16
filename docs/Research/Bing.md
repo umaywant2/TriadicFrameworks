@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Bing_" src="https://github.com/user-attachments/assets/f5477c66-abc2-46ad-a20b-657d875ba44a" />
+
 # Bing SEO Interpreter (TriadicFrameworks)
 
 - [`Bing_module.json`](Bing_module.json) — Agentic module schema role assignments
