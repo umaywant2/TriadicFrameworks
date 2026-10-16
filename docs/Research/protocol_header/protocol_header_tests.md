@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_protocol_header_tests_" src="https://github.com/user-attachments/assets/d6afa3bb-46b3-4a14-8570-9eb2ace9c83f" />
+
 # **protocol_header_tests.md**  
 ### *TriadicFrameworks — Protocol Header Module*  
 ### *Structural Validation Rules & Test Cases (Canonical)*
