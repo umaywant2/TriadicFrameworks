@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Transporter_Envelope_Diagram_Spec_" src="https://github.com/user-attachments/assets/5b82ff9b-4f60-4c1c-9006-5849b66745e0" />
+
 # Diagram Specification — Transporter Envelope (Goal #2)
 
 ## Canvas
