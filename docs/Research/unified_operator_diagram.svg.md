@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research__Unified_Operator_Diagram_svg_" src="https://github.com/user-attachments/assets/56f54b81-5f7d-46fd-95d7-037fe8d6f9d8" />
+
 # Unified Operator Diagram — SVG Specification
 
 ## File
