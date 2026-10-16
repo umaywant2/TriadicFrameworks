@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="AA_3C_Ignition_Path_" src="https://github.com/user-attachments/assets/d9e734e0-5ccf-487c-b4ac-583a8f994532" />
+
 # 🔥 The AA → 3C ignition path  
 Once Awareness is present, Alignments become possible.  
 Once Alignments are present, the 3C’s become reachable.
