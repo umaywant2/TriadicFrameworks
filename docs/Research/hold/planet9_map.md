@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_hold_planet9_map_" src="https://github.com/user-attachments/assets/d88bd792-6523-499f-a2f3-3ed988eb1912" />
+
 # 🗺️ Map — Planet 9 Sky‑Plane & Parameter‑Space Coverage
 
 **Role:** map | **Layer:** coherence | **Module:** planet9 | **Version:** 1.0
