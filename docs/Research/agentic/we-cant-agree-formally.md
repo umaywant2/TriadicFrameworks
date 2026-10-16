@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research__agentic_we_cant_agree_formally_" src="https://github.com/user-attachments/assets/4e795f24-54e1-4966-9d4a-b20578c8e0b1" />
+
 # RTT Agentic Module: We Can’t Agree to Disagree, Formally
 
 - [`we-cant-agree-formally_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/agentic/we-cant-agree-formally_module.json) — Agentic module schema role assignments
