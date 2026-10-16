@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="ICL_Fleet_Hierarchy_" src="https://github.com/user-attachments/assets/a3425b01-ff37-44e7-9cfa-f2a2fef782c4" />
+
 # Fleet Hierarchy Diagram — ICL v2.0.0
 
 *(TriadicFrameworks Intelligence Class Ladder · 33-33-33-1 Supconsciousness Operator)*
