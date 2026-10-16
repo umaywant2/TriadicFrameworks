@@ -1,0 +1,139 @@
+# 📡 **triadic-runtime-monitor.json**  
+### *Canonical substrate‑level runtime monitor schema*
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Triadic Runtime Monitor",
+  "type": "object",
+
+  "properties": {
+    "monitor": {
+      "type": "string",
+      "const": "triadic-runtime"
+    },
+
+    "version": {
+      "type": "string"
+    },
+
+    "generated": {
+      "type": "string",
+      "description": "ISO date of generation"
+    },
+
+    "imports": {
+      "type": "object",
+      "properties": {
+        "execution_state": { "type": "string" },
+        "coupling_regulator": { "type": "string" },
+        "invariance_kernel": { "type": "string" },
+        "synchronization_fabric": { "type": "string" },
+        "continuity_field": { "type": "string" },
+        "resonance_stabilizer": { "type": "string" },
+        "epochal_propagation": { "type": "string" },
+        "ignition_cascade": { "type": "string" },
+        "coherence_map": { "type": "string" },
+        "drift_map": { "type": "string" },
+        "stability_envelope": { "type": "string" },
+        "resonance_map": { "type": "string" },
+        "epochal_timeline": { "type": "string" },
+        "ignition_ledger": { "type": "string" },
+        "chronicle": { "type": "string" }
+      }
+    },
+
+    "telemetry": {
+      "type": "object",
+      "properties": {
+        "state_snapshot": {
+          "type": "object",
+          "properties": {
+            "coherence": { "type": "number" },
+            "drift": { "type": "number" },
+            "stability": { "type": "string" },
+            "resonance": { "type": "number" },
+            "epoch": { "type": "string" },
+            "ignition": { "type": "string" }
+          }
+        },
+
+        "cycles": {
+          "type": "object",
+          "properties": {
+            "drift_cycle": { "type": "array", "items": { "type": "string" } },
+            "coherence_cycle": { "type": "array", "items": { "type": "string" } },
+            "stability_cycle": { "type": "array", "items": { "type": "string" } },
+            "resonance_cycle": { "type": "array", "items": { "type": "string" } },
+            "epoch_cycle": { "type": "array", "items": { "type": "string" } },
+            "ignition_cycle": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+
+        "coupling": {
+          "type": "object",
+          "properties": {
+            "strength": { "type": "number" },
+            "phase": {
+              "type": "string",
+              "enum": ["in-phase", "out-of-phase", "mixed"]
+            },
+            "magnitude_state": { "type": "string" }
+          }
+        }
+      }
+    },
+
+    "alerts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "threshold",
+              "invariance_break",
+              "continuity_risk",
+              "resonance_surge",
+              "drift_spike"
+            ]
+          },
+          "timestamp": { "type": "string" },
+          "description": { "type": "string" },
+          "severity": {
+            "type": "string",
+            "enum": ["low", "medium", "high", "critical"]
+          }
+        },
+        "required": ["type", "timestamp", "severity"]
+      }
+    },
+
+    "output": {
+      "type": "object",
+      "properties": {
+        "runtime_telemetry": { "type": "string" }
+      }
+    },
+
+    "meta": {
+      "type": "object",
+      "properties": {
+        "notes": { "type": "string" }
+      }
+    }
+  },
+
+  "required": ["monitor", "version", "generated", "telemetry", "alerts", "output"]
+}
+```
+
+---
+
+## ⭐ Why this schema is correct
+- It matches the **Triadic Runtime Monitor** structure you and I formalized.  
+- It includes **telemetry**, **cycles**, **coupling**, **alerts**, **output**, and **meta**.  
+- It includes the full **imports block** for all substrate engines.  
+- It is fully **Draft 2020‑12 JSON Schema** compliant.  
+- It is ready to paste directly into your GitHub editor.
