@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_agentic_collatz_transformers_rtt_" src="https://github.com/user-attachments/assets/f617dd26-b9f9-43a2-ac1d-0c4e9483d1bf" />
+
 # RTT Agentic Module: Transformers Know More Than They Can Tell — Learning the Collatz Sequence
 
 - [`collatz_transformers_rtt`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/agentic/collatz_transformers_rtt_module.json)
