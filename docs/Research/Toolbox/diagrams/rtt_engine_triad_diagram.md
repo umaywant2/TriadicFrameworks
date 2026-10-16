@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Toolbox_diagrams_rtt_engine_triad_" src="https://github.com/user-attachments/assets/04a279f3-d3a9-4a9d-b258-c1d322861af1" />
+
 # RTT Engine Triad — Diagram Notes
 
 **Module:** Research Toolbox  
