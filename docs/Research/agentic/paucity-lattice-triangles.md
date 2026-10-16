@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_agentic_paucity_lattice_triangles_" src="https://github.com/user-attachments/assets/183c52f7-a5b7-452e-989d-9f514ab79b44" />
+
 # RTT Agentic Module: On the Paucity of Lattice Triangles
 
 - [`paucity-lattice-triangles_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/agentic/paucity-lattice-triangles_module.json) — Agentic module schema role assignments
