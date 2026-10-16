@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="DPU_Operator_Algebra_" src="https://github.com/user-attachments/assets/f7a6fb4d-61fb-42cc-a1e9-2411d786c563" />
+
 # DPU‑Ready Operator Algebra (v0.1)
 
 ## 1. State Space
