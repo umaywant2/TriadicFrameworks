@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_DuckDuckGo_" src="https://github.com/user-attachments/assets/a9632814-a2b7-469f-a4eb-cf13e6150348" />
+
 # DuckDuckGo SEO Interpreter (TriadicFrameworks)
 
 - [`DuckDuckGo_module.json`](DuckDuckGo_module.json) — Agentic module schema role assignments
