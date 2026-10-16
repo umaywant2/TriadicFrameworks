@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Toolbox_Glyph_Animation_Spec_" src="https://github.com/user-attachments/assets/59e8f45f-7ee3-4f85-ab45-0fa742fb0542" />
+
 # Research Toolbox Glyph — Animation Spec
 
 **Glyph:** `research_toolbox_glyph_animated.svg`  
