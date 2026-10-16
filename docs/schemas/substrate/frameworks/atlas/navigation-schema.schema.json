@@ -1,1 +1,105 @@
-.   
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Triadic Atlas Navigation Schema",
+  "type": "object",
+
+  "properties": {
+    "modes": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z0-9_-]+$": {
+          "type": "object",
+          "properties": {
+            "entry": { "type": "string" },
+            "routes": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "transitions": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          },
+          "required": ["entry", "routes", "transitions"]
+        }
+      }
+    },
+
+    "layers": {
+      "type": "object",
+      "properties": {
+        "global": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "country": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["global", "country"]
+    },
+
+    "routes": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z0-9_-]+$": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+
+    "transitions": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z0-9_-]+$": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+
+    "queries": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z0-9_-]+$": {
+          "type": "object",
+          "properties": {
+            "fields": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "filters": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          },
+          "required": ["fields"]
+        }
+      }
+    },
+
+    "output": {
+      "type": "object",
+      "properties": {
+        "navigation_schema": { "type": "string" }
+      }
+    },
+
+    "meta": {
+      "type": "object",
+      "properties": {
+        "notes": { "type": "string" }
+      }
+    }
+  },
+
+  "required": [
+    "modes",
+    "layers",
+    "routes",
+    "transitions",
+    "queries"
+  ]
+}
