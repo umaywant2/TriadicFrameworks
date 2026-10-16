@@ -1,1 +1,80 @@
-.   
+{
+  "compiler": "triadic-substrate",
+  "version": "1.0",
+  "generated": "YYYY-MM-DD",
+
+  "hooks": {
+    "pre_validation": [
+      "load-universals",
+      "load-dimensions",
+      "load-regimes",
+      "load-layers"
+    ],
+
+    "validation": [
+      "validate-universals",
+      "validate-dimensions",
+      "validate-regimes",
+      "validate-layers",
+      "validate-atlas-surfaces",
+      "validate-atlas-navigation",
+      "validate-atlas-fingerprint",
+      "validate-atlas-interaction",
+      "validate-atlas-synchronization",
+      "validate-continuity",
+      "validate-invariance"
+    ],
+
+    "pre_evaluation": [
+      "load-coherence-map",
+      "load-drift-boundary-map",
+      "load-stability-envelope",
+      "load-resonance-map",
+      "load-epochal-timeline",
+      "load-ignition-ledger"
+    ],
+
+    "evaluation": [
+      "evaluate-structural",
+      "evaluate-behavioral",
+      "evaluate-temporal",
+      "evaluate-invariance",
+      "evaluate-continuity",
+      "evaluate-synchronization"
+    ],
+
+    "pre_compile": [
+      "assemble-atlas-surfaces",
+      "assemble-atlas-navigation",
+      "assemble-atlas-fingerprint",
+      "assemble-atlas-interaction",
+      "assemble-atlas-consistency",
+      "assemble-atlas-synchronization"
+    ],
+
+    "compile": [
+      "merge-validated-components",
+      "merge-evaluator-results",
+      "merge-atlas-components",
+      "merge-continuity",
+      "merge-invariance",
+      "merge-ignition",
+      "merge-epoch",
+      "finalize-substrate"
+    ],
+
+    "post_compile": [
+      "write-triadic-substrate",
+      "write-compiler-report",
+      "write-compiler-chronicle"
+    ]
+  },
+
+  "output": {
+    "compiler_hooks": "./compiler-hooks.json"
+  },
+
+  "meta": {
+    "notes": "Lifecycle hook registry for the Triadic Substrate Compiler, defining validation, evaluation, assembly, and finalization phases."
+  }
+}
