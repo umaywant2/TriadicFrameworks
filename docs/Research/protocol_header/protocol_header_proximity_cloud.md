@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_protocol_header_proximity_cloud_" src="https://github.com/user-attachments/assets/e19857d2-5f58-4f57-bfe4-6461e685f2d3" />
+
 # protocol_header_proximity_cloud.md  
 ### TriadicFrameworks — Protocol Header Module  
 ### Phase 1 — Proximity Grammar Expansion (Canonical)
