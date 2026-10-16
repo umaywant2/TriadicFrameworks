@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_hold_planet9_engine_" src="https://github.com/user-attachments/assets/91496657-6b24-4aa3-8c51-b84b80fb657a" />
+
 # 🔩 Engine — Planet 9 Gravitational Clustering Operator
 
 **Role:** engine | **Layer:** operator | **Module:** planet9 | **Version:** 1.0
