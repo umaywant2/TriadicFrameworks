@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Artificial_General_Intelligence_" src="https://github.com/user-attachments/assets/937d5ffc-3263-46dc-b403-8158473ec371" />
+
 # **AGI.md — Artificial General Intelligence**  
 *(Research Module)*
 
