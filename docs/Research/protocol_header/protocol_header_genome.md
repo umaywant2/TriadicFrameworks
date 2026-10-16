@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_protocol_header_genome_" src="https://github.com/user-attachments/assets/9bbe1da8-7f5d-42cd-8ae2-4b0ae429e1de" />
+
 # **protocol_header_genome.md**  
 ### *TriadicFrameworks — Protocol Header Module*  
 ### *Phase 3D — Structural Genome (Canonical)*
