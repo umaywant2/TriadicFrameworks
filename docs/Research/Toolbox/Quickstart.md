@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Toolbox_Quickstart_Student_" src="https://github.com/user-attachments/assets/b3daf829-53c5-43c4-b07f-b04fe98fec99" />
+
 # **Research Toolbox — Quickstart (Student Edition)**  
 **Four‑Source Substrate → RTT/1 → RTT/2 → RTT/3**
 
