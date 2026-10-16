@@ -1,4 +1,4 @@
-![Intelligence_Class_Ladder](https://github.com/user-attachments/assets/5ca1e1b2-aab5-48e3-8fef-8f734e49aef2)
+<img width="1194" height="672" alt="ICL_Research_Index_" src="https://github.com/user-attachments/assets/02f40ea2-5a1a-4ac4-989a-2d1dbaeb448a" />
 
 # Intelligence Class Ladder — Research Index
 *(ICL v2.0.0 · TriadicFrameworks Research Division)*
@@ -152,5 +152,7 @@ The apex. Intelligence operating in the unseen structural layer — recursive se
 | `ASI` | ❌ Retired | Abbreviation collision between Specialized (bottom) and Superintelligence (top) |
 
 ---
+
+![Intelligence_Class_Ladder](https://github.com/user-attachments/assets/5ca1e1b2-aab5-48e3-8fef-8f734e49aef2)
 
 *TriadicFrameworks Research Division · ICL v2.0.0 · 2026‑08‑30*
