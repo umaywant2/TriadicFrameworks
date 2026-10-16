@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Toolbox_diagrams_TEL_Echo_Map_" src="https://github.com/user-attachments/assets/3c3e6bc3-1ba3-4b47-8d7c-cd366fd84f84" />
+
 # TEL Echo Map — Diagram Notes
 
 **Module:** Research Toolbox  
