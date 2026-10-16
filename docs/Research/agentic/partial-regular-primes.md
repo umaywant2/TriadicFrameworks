@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_agentic_partial_regular_primes_" src="https://github.com/user-attachments/assets/636a3bee-d8f2-49fd-8b37-b74d2b2dba91" />
+
 # RTT Agentic Module: Almost All Primes Are Partially Regular
 
 - [`partial-regular-primes_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/agentic/partial-regular-primes_module.json) — Agentic module schema role assignments
