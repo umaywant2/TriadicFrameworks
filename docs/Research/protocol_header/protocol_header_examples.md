@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_protocol_header_examples_" src="https://github.com/user-attachments/assets/ce26f508-44af-4006-9af5-0a773d437554" />
+
 # **protocol_header_examples.md**  
 ### *TriadicFrameworks — Protocol Header Module*  
 ### *Canonical Examples*
