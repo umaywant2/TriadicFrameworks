@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Cross_Goal_Operator_Matrix_" src="https://github.com/user-attachments/assets/4cc26272-548e-4ec4-93ef-adcc07d1e460" />
+
 # Cross‑Goal Operator Matrix (Goals #1 and #3)
 
 ## Summary
