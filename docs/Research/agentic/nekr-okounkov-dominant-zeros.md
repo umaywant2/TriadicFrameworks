@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_agentic_nekr_okounkov_dominant_zeros_" src="https://github.com/user-attachments/assets/285ffcda-4d84-4626-970c-b7469fe649b9" />
+
 # RTT Agentic Module: Dominant Zeros of Nekrasov–Okounkov Polynomials
 
 - [`nekr-okounkov-dominant-zeros_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/agentic/nekr-okounkov-dominant-zeros_module.json) — Agentic module schema role assignments
