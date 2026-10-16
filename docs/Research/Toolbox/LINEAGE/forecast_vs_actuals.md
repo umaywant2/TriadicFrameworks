@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Toolbox_LINEAGE_forecast_vs_actuals_" src="https://github.com/user-attachments/assets/e5fdaffb-eeee-4841-9dd2-408e6f01f5bd" />
+
 # LINEAGE — Forecast vs Actuals  
 **Module:** Research Toolbox  
 **Pattern Class:** Temporal Divergence → Regime Clarification → Coherence Reset  
