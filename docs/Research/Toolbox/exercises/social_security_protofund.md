@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Toolbox_excercises_social_security_protofund_" src="https://github.com/user-attachments/assets/51a60f03-9e58-464c-a386-4176042918e7" />
+
 # Social Security as a Proto‑Fund — Research Toolbox Exercise
 
 **Module:** Research Toolbox  
