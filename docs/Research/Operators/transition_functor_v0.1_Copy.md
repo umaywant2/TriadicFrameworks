@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Transition_Functor_v0 1_Copy_" src="https://github.com/user-attachments/assets/7a282ca5-cd2d-4875-a442-c788085d2feb" />
+
 # Transition Functor v0.1 — Substrate‑Safe Transitions
 
 ## 1. Categories
