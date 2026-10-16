@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Transporter_Envelope_v0 3_v0 4_" src="https://github.com/user-attachments/assets/04cffa22-a3ac-4631-884e-3102a5e1e0e9" />
+
 # Transporter Envelope — Operator Specification (Goal #2)
 
 ## Purpose
