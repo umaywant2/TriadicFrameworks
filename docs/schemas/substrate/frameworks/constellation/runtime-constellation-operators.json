@@ -1,1 +1,116 @@
-.   
+{
+  "identity": "substrate-runtime-constellation-operators",
+  "version": "1.0",
+  "generated": "YYYY-MM-DD",
+
+  "operators": {
+    "lumen": {
+      "structure_extract": {
+        "opcode": "LUMEN/STRUCTURE/EXTRACT",
+        "description": "Extracts structural fields from execution, atlas, continuity, and invariance."
+      },
+      "influence_field": {
+        "opcode": "LUMEN/INFLUENCE/FIELD",
+        "description": "Maps influence fields across epochs, coupling, and resonance."
+      },
+      "pressure_gradient": {
+        "opcode": "LUMEN/PRESSURE/GRADIENT",
+        "description": "Evaluates pressure gradients in drift, coherence, and stability."
+      },
+      "continuity_anchor": {
+        "opcode": "LUMEN/CONTINUITY/ANCHOR",
+        "description": "Identifies continuity anchors in long‑arc substrate behavior."
+      }
+    },
+
+    "hephaestus": {
+      "regime_local": {
+        "opcode": "HEPH/REGIME/LOCAL",
+        "description": "Classifies local regime (shape, liberties, cuts, anchors)."
+      },
+      "regime_structural": {
+        "opcode": "HEPH/REGIME/STRUCTURAL",
+        "description": "Classifies structural regime (influence, pressure, direction of play)."
+      },
+      "regime_continuity": {
+        "opcode": "HEPH/REGIME/CONTINUITY",
+        "description": "Classifies continuity regime (long‑arc identity, epochal continuity)."
+      },
+      "regime_map": {
+        "opcode": "HEPH/REGIME/MAP",
+        "description": "Produces regime maps across engines and epochs."
+      }
+    },
+
+    "aurion": {
+      "topology_graph": {
+        "opcode": "AURION/TOPOLOGY/GRAPH",
+        "description": "Builds topology graphs from constellation‑map.json."
+      },
+      "ancestry_trail": {
+        "opcode": "AURION/ANCESTRY/TRAIL",
+        "description": "Traces ancestry of runtime states across epochs and ignition."
+      },
+      "projection_loss": {
+        "opcode": "AURION/PROJECTION/LOSS",
+        "description": "Detects projection‑loss between atlas, execution, and continuity."
+      },
+      "collapse_detect": {
+        "opcode": "AURION/COLLAPSE/DETECT",
+        "description": "Detects collapse events in drift, resonance, or invariance."
+      }
+    },
+
+    "harmonia": {
+      "triadic_blend": {
+        "opcode": "HARMONIA/TRIADIC/BLEND",
+        "description": "Blends drift, coherence, stability into a unified triadic score."
+      },
+      "resonance_score": {
+        "opcode": "HARMONIA/RESONANCE/SCORE",
+        "description": "Scores resonance quality across epochs and coupling."
+      },
+      "continuity_weight": {
+        "opcode": "HARMONIA/CONTINUITY/WEIGHT",
+        "description": "Weights continuity vs drift/coherence in long‑arc evaluation."
+      },
+      "invariance_seal": {
+        "opcode": "HARMONIA/INVARIANCE/SEAL",
+        "description": "Seals invariance decisions based on triadic synthesis."
+      }
+    },
+
+    "constellation": {
+      "execution_trace": {
+        "opcode": "CONST/EXECUTION/TRACE",
+        "description": "Traces execution cycles using runtime-hooks.json."
+      },
+      "atlas_synctrace": {
+        "opcode": "CONST/ATLAS/SYNCTRACE",
+        "description": "Traces atlas synchronization events."
+      },
+      "epoch_profile": {
+        "opcode": "CONST/EPOCH/PROFILE",
+        "description": "Builds epoch profiles from epoch transitions and propagation cycles."
+      },
+      "coupling_profile": {
+        "opcode": "CONST/COUPLING/PROFILE",
+        "description": "Profiles coupling behavior from drift spikes, resonance surges, and instabilities."
+      },
+      "invariance_watch": {
+        "opcode": "CONST/INVARIANCE/WATCH",
+        "description": "Watches invariance break and restore events."
+      },
+      "monitor_telemetry": {
+        "opcode": "CONST/MONITOR/TELEMETRY",
+        "description": "Aggregates telemetry packets, anomaly alerts, and cycle reports."
+      }
+    }
+  },
+
+  "meta": {
+    "triadic_era": "R5",
+    "canonical": true,
+    "notes": "Machine-readable operator registry for the Substrate Runtime Constellation."
+  }
+}
