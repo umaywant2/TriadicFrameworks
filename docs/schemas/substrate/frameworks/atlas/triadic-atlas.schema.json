@@ -1,1 +1,169 @@
-.   
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Triadic Atlas Root Schema",
+  "type": "object",
+
+  "properties": {
+    "atlas": {
+      "type": "string",
+      "const": "triadic-atlas"
+    },
+
+    "version": {
+      "type": "string"
+    },
+
+    "generated": {
+      "type": "string",
+      "description": "ISO date of generation"
+    },
+
+    "imports": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z0-9_-]+$": { "type": "string" }
+      }
+    },
+
+    "surfaces": {
+      "type": "object",
+      "properties": {
+        "global": {
+          "type": "object",
+          "properties": {
+            "coherence": { "type": "array", "items": { "type": "string" } },
+            "drift": { "type": "array", "items": { "type": "string" } },
+            "stability": { "type": "array", "items": { "type": "string" } },
+            "resonance": { "type": "array", "items": { "type": "string" } },
+            "epoch": { "type": "array", "items": { "type": "string" } },
+            "ignition": { "type": "array", "items": { "type": "string" } }
+          },
+          "required": [
+            "coherence",
+            "drift",
+            "stability",
+            "resonance",
+            "epoch",
+            "ignition"
+          ]
+        },
+
+        "country": {
+          "type": "object",
+          "properties": {
+            "triadic_surface": { "type": "array", "items": { "type": "string" } },
+            "atlas_fingerprint": { "type": "array", "items": { "type": "string" } }
+          },
+          "required": ["triadic_surface", "atlas_fingerprint"]
+        },
+
+        "temporal": {
+          "type": "object",
+          "properties": {
+            "timeline": { "type": "array", "items": { "type": "string" } },
+            "propagation": { "type": "array", "items": { "type": "string" } }
+          },
+          "required": ["timeline", "propagation"]
+        },
+
+        "activation": {
+          "type": "object",
+          "properties": {
+            "ignition_cascade": { "type": "array", "items": { "type": "string" } }
+          },
+          "required": ["ignition_cascade"]
+        }
+      },
+      "required": ["global", "country", "temporal", "activation"]
+    },
+
+    "layers": {
+      "type": "object",
+      "properties": {
+        "structural": { "type": "array", "items": { "type": "string" } },
+        "continuity": { "type": "array", "items": { "type": "string" } },
+        "epochal": { "type": "array", "items": { "type": "string" } },
+        "harmonic": { "type": "array", "items": { "type": "string" } },
+        "invariance": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": [
+        "structural",
+        "continuity",
+        "epochal",
+        "harmonic",
+        "invariance"
+      ]
+    },
+
+    "routes": {
+      "type": "object",
+      "properties": {
+        "global_routes": { "type": "array", "items": { "type": "string" } },
+        "country_routes": { "type": "array", "items": { "type": "string" } },
+        "temporal_routes": { "type": "array", "items": { "type": "string" } },
+        "activation_routes": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": [
+        "global_routes",
+        "country_routes",
+        "temporal_routes",
+        "activation_routes"
+      ]
+    },
+
+    "consistency": {
+      "type": "object",
+      "properties": {
+        "rules": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "rule": { "type": "string" },
+              "scope": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": ["global", "country", "temporal", "activation"]
+                }
+              },
+              "conditions": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "guarantees": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            },
+            "required": ["rule", "scope"]
+          }
+        }
+      },
+      "required": ["rules"]
+    },
+
+    "output": {
+      "type": "object",
+      "properties": {
+        "triadic_atlas": { "type": "string" }
+      }
+    },
+
+    "meta": {
+      "type": "object",
+      "properties": {
+        "notes": { "type": "string" }
+      }
+    }
+  },
+
+  "required": [
+    "atlas",
+    "version",
+    "surfaces",
+    "layers",
+    "routes",
+    "consistency"
+  ]
+}
