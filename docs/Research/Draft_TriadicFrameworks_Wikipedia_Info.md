@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Wikipedia_Triadicframeworks_Draft_" src="https://github.com/user-attachments/assets/47a33163-0769-43bb-88f9-20e7f039c2aa" />
+
 # TriadicFrameworks Wikipedia Article - Pending/TBD
 
 ## Why the Wikipedia article will look “unhumble”
