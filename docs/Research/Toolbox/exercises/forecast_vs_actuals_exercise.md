@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Toolbox_Forecast_vs_Actuals_" src="https://github.com/user-attachments/assets/1900c17e-d3af-4227-8425-0357687183c0" />
+
 # Forecast vs Actuals — Research Toolbox Exercise
 
 **Module:** Research Toolbox  
