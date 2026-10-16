@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Unified_Operators_Grammar_" src="https://github.com/user-attachments/assets/dd5ac22f-b5e2-44f8-90f6-ded06b08fbfa" />
+
 # Unified Operator Grammar v1.0  
 ## TriadicFrameworks — Canonical Operator Grammar
 
