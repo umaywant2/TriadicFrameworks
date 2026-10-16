@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Domain_Forking_and_New_Goverance_Through_Grammar_Not_Policy_" src="https://github.com/user-attachments/assets/83791a1e-46aa-4b22-83f2-85a010b50ab5" />
+
 # Domain Forking and New - Governance Through Grammar (Not Policy)
 ###### Full context for Student awareness.
 
