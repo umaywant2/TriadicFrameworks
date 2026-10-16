@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_agentic_andrews_dhar_partitions_" src="https://github.com/user-attachments/assets/51cc7ed4-1504-4fcb-b72f-cc30550f680a" />
+
 # RTT Agentic Module: A Problem of Andrews and Dhar on Partitions
 
 - [`andrews-dhar-partitions_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/agentic/andrews-dhar-partitions_module.json) — Agentic module schema role assignments
