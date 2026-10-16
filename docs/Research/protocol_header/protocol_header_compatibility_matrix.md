@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_protocol_header_compatibility_matrix_" src="https://github.com/user-attachments/assets/fe6f672c-4144-48d5-ac15-c528fdccfb3d" />
+
 # **protocol_header_compatibility_matrix.md**  
 ### *TriadicFrameworks — Protocol Header Module*  
 ### *Phase 2 — Compatibility Matrix (Canonical)*
