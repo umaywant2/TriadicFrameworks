@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_protocol_header_alleles_" src="https://github.com/user-attachments/assets/e2eaa214-27ab-4469-847c-3e468c62ffeb" />
+
 # **protocol_header_alleles.md**  
 ### *TriadicFrameworks — Protocol Header Module*  
 ### *Perfect‑Substitution Alleles (Canonical)*
