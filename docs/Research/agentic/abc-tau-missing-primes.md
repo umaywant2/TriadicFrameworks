@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_agentic_abc_tau_missing_primes_" src="https://github.com/user-attachments/assets/03cc608f-5329-4ce2-b510-12e73ca6f79c" />
+
 # RTT Agentic Module: ABC Implies That Ramanujan’s Tau Function Misses Almost All Primes
 
 - [`abc-tau-missing-primes_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/agentic/abc-tau-missing-primes_module.json) — Agentic module schema role assignments
