@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Toolbox_excercises_social_security_protofund_student_worksheet_" src="https://github.com/user-attachments/assets/82edcb37-a568-4a68-829a-08df733d7ce9" />
+
 # **Social Security as a Proto‑Fund — Student Worksheet**  
 **Research Toolbox (RTT/1–3 • S1–S4 • Multi‑Module Integration)**
 
