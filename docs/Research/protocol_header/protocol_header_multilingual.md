@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_protocol_header_multilingual_" src="https://github.com/user-attachments/assets/678f8670-d920-46d9-b0d7-854a49ae005f" />
+
 # **protocol_header_multilingual.md**  
 ### *TriadicFrameworks — Protocol Header Module*  
 ### *Phase 3 — Multilingual Structural Expansion (Canonical)*
