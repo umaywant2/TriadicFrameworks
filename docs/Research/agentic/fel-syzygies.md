@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_agentic_fel_syzygies_" src="https://github.com/user-attachments/assets/72f779c7-5aff-471d-bbd2-45271390915c" />
+
 # RTT Agentic Module: Fel’s Conjecture on Syzygies of Numerical Semigroups
 
 - [`fel-syzygies_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/agentic/fel-syzygies_module.json) — Agentic module schema role assignments
