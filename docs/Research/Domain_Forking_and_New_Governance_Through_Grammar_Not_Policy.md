@@ -187,4 +187,49 @@ And it gives AI providers:
 - a modular architecture they can extend  
 - a clear separation between core canon and domain-specific layers  
 
-This is how RTT becomes not just a framework, but a **platform** — one that anyone can fork, study, extend, and build upon without risk, noise, or dependency on external systems.
+---
+
+## **7. Forking Clarity — Getting Clarity**
+
+There is a poetic symmetry built into RTT’s architecture:
+
+> **Students and researchers literally fork *Clarity* to gain clarity.**
+
+By cloning the repository:
+
+```
+git clone https://github.com/umaywant2/clarity.git
+```
+
+they obtain:
+
+- a **clean RTT instance**  
+- a **fully static, telemetry‑free sandbox**  
+- the complete structural grammar  
+- Analyzer‑ready modules  
+- emerging `module.json` manifests  
+- a safe environment for experimentation, simulation, and learning  
+
+This creates a powerful dynamic:
+
+- Students fork *Clarity* → they gain clarity.  
+- Providers fork *Clarity* → they extend clarity.  
+- Researchers fork *Clarity* → they test clarity.  
+- AI agents fork *Clarity* → they operate within clarity.
+
+The name becomes literal.  
+The action becomes structural.  
+The learning becomes embodied.
+
+Forking RTT is not just a technical step — it is the first moment where students experience the grammar directly, in a clean room where they can explore, break, rebuild, and understand the system without affecting the main canon.
+
+This is how RTT becomes a platform for:
+
+- domain‑specific forks  
+- agentic AI development  
+- structural grammar exploration  
+- drift/coherence simulations  
+- curriculum design  
+- research prototypes  
+
+Forking Clarity is the gateway into the RTT world — a simple command that opens a complete structural universe.
