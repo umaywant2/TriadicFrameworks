@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_protocol_header_loci_" src="https://github.com/user-attachments/assets/119a341d-fd84-4026-a810-2a9f87257038" />
+
 # **protocol_header_loci.md**  
 ### *TriadicFrameworks — Protocol Header Module*  
 ### *Locus Definitions (Canonical)*
