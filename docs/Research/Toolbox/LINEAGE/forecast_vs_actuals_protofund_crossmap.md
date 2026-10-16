@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Toolbox_LINEAGE_forecast_vs_actuals_crossmap_" src="https://github.com/user-attachments/assets/8a0d35f1-a6db-44cc-8d0b-811c512eef63" />
+
 # LINEAGE Cross‑Map — Forecast vs Actuals ↔ Social Security Proto‑Fund
 
 **Modules:** Research Toolbox • Inverted Economics • Proto‑Fund Lineage  
