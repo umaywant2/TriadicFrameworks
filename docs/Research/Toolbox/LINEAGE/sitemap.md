@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Toolbox_LINEAGE_sitemap_" src="https://github.com/user-attachments/assets/35e91587-1304-4d73-8ff4-954e53aba5c6" />
+
 # Research Toolbox — LINEAGE Sitemap
 
 **Scope:** Research Toolbox lineage entries, cross‑maps, and tightly‑bound diagrams.
