@@ -2,10 +2,10 @@
   "module": {
     "name": "Research",
     "category": "canon.research",
-    "version": "3.0.0",
-    "summary": "The Research module contains all RTT/1-aligned research artifacts, operator-level documents, applied RTT analyses, substrate studies, cosmology reviews, transporters, diagrams, lineage maps, and experimental exercises.",
-    "purpose": "Provide a unified, AI-discoverable index of all research documents within TriadicFrameworks, enabling operator-level navigation, continuity-kernel propagation, and cross-module reasoning.",
-    "audience": "Researchers, operators, AI agents, and contributors working within the TriadicFrameworks canon."
+    "version": "3.1.0",
+    "summary": "RTT/1-aligned research archive containing operator-level documents, continuity-kernel artifacts, substrate studies, cosmology analyses, transporters, lineage maps, clarity equations, and experimental exercises.",
+    "purpose": "Provide a unified, AI-discoverable index of all research documents within TriadicFrameworks, enabling operator-level navigation, continuity propagation, clarity-equation referencing, and cross-module reasoning.",
+    "audience": "Researchers, engineers, educators, AI systems, and contributors working within the TriadicFrameworks canon."
   },
 
   "files": {
@@ -22,21 +22,23 @@
 
     "PLANET9_CLUSTER": [
       "Planet9.md",
-      "planet9_profile.md",
-      "planet9_map.md",
-      "planet9_engine.md",
-      "planet9_signature.md",
-      "planet9_diagnostic.md",
+      "hold/planet9_profile.md",
+      "hold/planet9_map.md",
+      "hold/planet9_engine.md",
+      "hold/planet9_signature.md",
+      "hold/planet9_diagnostic.md",
       "assets/planet9_hero.png"
     ],
 
     "CORE_RESONANCE_AND_MATH": [
-      "Origin_of_Resonance_Math.md",
+      "hold/Origin_of_Resonance_Math.md",
       "Resonance_Triadic_Aligned_Overview.md",
       "Triadic_Time_Near_Misses.md",
-      "Quantum_Lens_Layer_Triadic_Protocols_for_Resonance_Scanning.md",
-      "Quantum_Energy_Banks_and_Corridor‑Based_Energy_System_Analysis.md",
-      "Bells_Theorem_meets_Resonance-Time_Theory.md"
+      "hold/Quantum_Lens_Layer_Triadic_Protocols_for_Resonance_Scanning.md",
+      "hold/Quantum_Energy_Banks_and_Corridor‑Based_Energy_System_Analysis.md",
+      "Bells_Theorem_meets_Resonance-Time_Theory.md",
+      "Regime_Aware_Vortex_Math.md",
+      "Vibrational_Stone_Cutting.md"
     ],
 
     "SUBSTRATES_TRANSPORTERS_SPACESHIPS": [
@@ -47,7 +49,8 @@
       "Transporter_Integration_Map.md",
       "Spaceships_Aligned_With_RTT.md",
       "Spaceships_Aligned_With_RTT_Capture.md",
-      "Full_Substrate_Game_GDD.md"
+      "Full_Substrate_Game_GDD.md",
+      "Substrate_Communications.md"
     ],
 
     "OPERATORS_AND_GRAMMARS": [
@@ -63,15 +66,17 @@
       "Unified_Operator_Grammar_v1.0.md",
       "Unified_Operator_Grammar_v1.1.md",
       "TSR_Cut_Over_Protocol_RTT_Canonical_Form.md",
-      "TSR_Cut_Over_Protocol_RTT_Operator_Grammar_Table.md"
+      "TSR_Cut_Over_Protocol_RTT_Operator_Grammar_Table.md",
+      "The_AA_3C_ignition_path.md"
     ],
 
     "FACILITIES_INFRASTRUCTURE": [
       "RTT_Facilities_Playbook.md",
       "RTT_Above‑Ground_Electrical_Re-design_Initiative.md",
-      "Power_Supplies_Mobile_Sensors_and_Enhanced_BMS_using_RTT-Inside.md",
+      "hold/Power_Supplies_Mobile_Sensors_and_Enhanced_BMS_using_RTT-Inside.md",
       "Course_Correction_Needed_for_GPU_NPU_TOPS.md",
-      "Supercomputers_Are_Already_Triadic_They_Just_Dont_Know_It.md"
+      "hold/Supercomputers_Are_Already_Triadic_They_Just_Dont_Know_It.md",
+      "How_RTT_Applies_to_a_Standard_Power_Transformer.md"
     ],
 
     "EXPERIMENTS_EVALUATIONS_EXERCISES": [
@@ -91,14 +96,15 @@
       "Black_Holes_as_Resonance_Reservoirs.md",
       "European_Spallation_Source_needs_TriadicFrameworksTech.md",
       "JWST-RTT_Triadic_Core_Primitive_as_a_QA_Layer.md",
-      "biorhythm_single_pass_eval.md"
+      "biorhythm_single_pass_eval.md",
+      "Autonomous_Robotic_Fish_for_Great_Lakes_Restoration.md"
     ],
 
     "IMAGINATION_DREAMS_SUPCONSCIOUSNESS": [
       "Dreams_vs_Imagination.md",
-      "Imagination_Excercising.md",
+      "hold/Imagination_Excercising.md",
       "Supconsciousness_Operator_and_the_33-33-33-1_Model.md",
-      "Thoughts_in_the_Two_Thirds.md"
+      "hold/Thoughts_in_the_Two_Thirds.md"
     ],
 
     "LINEAGE_MAPS": [
@@ -112,6 +118,8 @@
     ],
 
     "DIAGRAMS_GLYPHS": [
+      "Unified_Diagram_Spec.md",
+      "unified_operator_diagram.svg.md",
       "diagrams/four_source_substrate_diagram.md",
       "diagrams/mode_opacity_chain.md",
       "diagrams/rtt_engine_triad_diagram.md",
@@ -146,7 +154,8 @@
       "dpu_operator_algebra",
       "transition_functor",
       "transporter_envelope",
-      "unified_operator_grammar"
+      "unified_operator_grammar",
+      "aa_3c_ignition_path"
     ],
     "regimes": [
       "continuity_kernel_v2.0",
