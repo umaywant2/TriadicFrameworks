@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_protocol_header_capture_" src="https://github.com/user-attachments/assets/fc1c2d03-df9f-430a-9142-65a567b9bbad" />
+
 # **protocol_header_capture.md**  
 ### *TriadicFrameworks — Protocol Header Module*  
 ### *Original Capture (Reference Artifact)*
