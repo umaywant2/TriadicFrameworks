@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_agentic_thakur_power_sums_" src="https://github.com/user-attachments/assets/78008afc-cec2-4703-8a81-d2f85c1c0ac9" />
+
 # RTT Agentic Module: Thakur’s Hypotheses on Power Sums over F_q[t]
 
 - [`thakur-power-sums_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/agentic/thakur-power-sums_module.json) — Agentic module schema role assignments
