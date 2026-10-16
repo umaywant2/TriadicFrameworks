@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Toolbox_excercises_operational_health_check_" src="https://github.com/user-attachments/assets/7b269278-18c4-4028-8644-011efc72a5fe" />
+
 # Triadic Operational Health Check — Diagram Exercise
 
 **Module:** Research Toolbox  
