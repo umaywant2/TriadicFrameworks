@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_agentic_parity_k_differentials_" src="https://github.com/user-attachments/assets/7f0d2ec6-35b4-45d0-81bf-56ccd6ed65ec" />
+
 # RTT Agentic Module: Parity of k-Differentials in Genus Zero and One
 
 - [`parity-k-differentials_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/agentic/parity-k-differentials_module.json) — Agentic module schema role assignments
