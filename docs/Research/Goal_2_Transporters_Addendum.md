@@ -1,4 +1,6 @@
-## Goal #2 — Transporters (Continuity Addendum)
+<img width="1194" height="672" alt="Research_Goal_2_Transporters_Addendum_" src="https://github.com/user-attachments/assets/449b6a5a-edf6-411b-a4c9-309aa80e8244" />
+
+# Goal #2 — Transporters (Continuity Addendum)
 
 ### Status: Structurally Unlocked (Months 6–8)
 
