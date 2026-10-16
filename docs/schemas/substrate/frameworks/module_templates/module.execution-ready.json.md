@@ -1,0 +1,97 @@
+# ⚙️ **module.execution-ready.json**  
+### *Execution‑ready module template — evaluation, update cycles, synchronization, runtime hooks*
+
+```json
+{
+  "$schema": "../../module.schema.json",
+  "module": "my-execution-module",
+  "identity": "student.my-execution-module",
+  "purpose": "An execution-ready module defining evaluation operators, update cycles, synchronization fields, and runtime hooks.",
+
+  "files": [
+    {
+      "name": "README.md",
+      "role": "profile"
+    },
+    {
+      "name": "evaluation-operators.md",
+      "role": "signature"
+    },
+    {
+      "name": "update-cycles.md",
+      "role": "diagnostic"
+    },
+    {
+      "name": "runtime-hooks.md",
+      "role": "extension"
+    },
+    {
+      "name": "synchronization-fields.md",
+      "role": "map"
+    }
+  ],
+
+  "execution": {
+    "evaluation": {
+      "operators": ["string"],
+      "dimensions": ["string"],
+      "regimes": ["string"],
+      "layers": ["string"]
+    },
+    "update_cycles": {
+      "drift": ["string"],
+      "coherence": ["string"],
+      "stability": ["string"],
+      "resonance": ["string"],
+      "epoch": ["string"],
+      "ignition": ["string"]
+    },
+    "runtime_hooks": {
+      "pre_execution": ["string"],
+      "post_execution": ["string"],
+      "error_handlers": ["string"]
+    },
+    "synchronization": {
+      "atlas": ["string"],
+      "continuity": ["string"],
+      "propagation": ["string"],
+      "resonance": ["string"]
+    }
+  },
+
+  "operators": [
+    {
+      "name": "execution-define",
+      "description": "Define execution fields for the module.",
+      "example": "Define evaluation operators → evaluation-operators.md"
+    },
+    {
+      "name": "execution-extend",
+      "description": "Extend substrate execution rules with module-specific behavior.",
+      "example": "Extend update cycles → update-cycles.md"
+    },
+    {
+      "name": "execution-bind",
+      "description": "Bind module execution fields to the Triadic Execution Engine.",
+      "example": "Bind runtime hooks → runtime-hooks.md"
+    }
+  ],
+
+  "output": {
+    "execution_ready": "./module.execution-ready.json"
+  },
+
+  "meta": {
+    "notes": "Execution-ready module template defining evaluation, update cycles, synchronization, and runtime hooks."
+  }
+}
+```
+
+---
+
+## Why this is the correct execution‑ready template  
+- Mirrors your **triadic-execution-engine.json** structure exactly.  
+- Provides **evaluation**, **update cycles**, **runtime hooks**, and **synchronization** fields.  
+- Includes **operators** for define / extend / bind.  
+- Uses **signature**, **diagnostic**, **extension**, and **map** roles appropriately.  
+- Fully **schema‑aligned**, silent‑release compatible, and ready for commit.
