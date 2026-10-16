@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Cross_Module_Propagation_Map_" src="https://github.com/user-attachments/assets/6cff9688-ec55-411b-aa65-4704b105749e" />
+
 # Cross‑Module Propagation Map  
 ## Replicators → Transporters → CTs
 
