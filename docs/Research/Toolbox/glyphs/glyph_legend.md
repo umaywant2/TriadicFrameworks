@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Toolbox_Glyph_Legend_" src="https://github.com/user-attachments/assets/faa06218-08b6-42fa-af12-0c376ec394b0" />
+
 # Research Toolbox Glyph — Legend
 
 **Glyphs:**
