@@ -1,10 +1,10 @@
-# **/docs/Research/Toolbox/Quickstart_Agent.md**  
+
 **Agent Edition — Four‑Source Substrate → RTT/1 → RTT/2 → RTT/3**  
 **For AI systems operating inside TriadicFrameworks**
 
 ---
 
-# **Purpose**
+## **Purpose**
 This Quickstart teaches AI agents how to:
 
 - construct the **four‑source substrate**  
@@ -18,7 +18,7 @@ This is the **canonical agent workflow** for all Research Toolbox tasks.
 
 ---
 
-# **1. Build the Four‑Source Substrate**
+## **1. Build the Four‑Source Substrate**
 
 Every agent query begins with four sources:
 
@@ -50,7 +50,7 @@ This produces the **12‑layer coherence substrate**:
 
 ---
 
-# **2. Run RTT/1 — Temporal Operators**
+## **2. Run RTT/1 — Temporal Operators**
 
 RTT/1 answers:
 
@@ -74,7 +74,7 @@ RTT/1 is descriptive, not predictive.**
 
 ---
 
-# **3. Run RTT/2 — Regime Literacy**
+## **3. Run RTT/2 — Regime Literacy**
 
 RTT/2 answers:
 
@@ -102,7 +102,7 @@ RTT/2 prevents:
 
 ---
 
-# **4. Run RTT/3 — Coherence Layers**
+## **4. Run RTT/3 — Coherence Layers**
 
 RTT/3 answers:
 
@@ -132,7 +132,7 @@ Only describe the alignment.**
 
 ---
 
-# **5. Cross‑Module Integration (Agent Rules)**
+## **5. Cross‑Module Integration (Agent Rules)**
 
 Agents may integrate:
 
@@ -160,7 +160,7 @@ Agents may integrate:
 
 ---
 
-# **6. Output Format (Agent Safety)**
+## **6. Output Format (Agent Safety)**
 
 Agents must:
 
@@ -187,7 +187,7 @@ Agents must:
 
 ---
 
-# **7. Full Agent Workflow**
+## **7. Full Agent Workflow**
 
 ```
 1. substrate = stack(S1, S2, S3, S4)
@@ -202,7 +202,7 @@ This is the **canonical triadic research flow**.
 
 ---
 
-# **8. Minimal Agent Example**
+## **8. Minimal Agent Example**
 
 ```
 User: “Why do these sources disagree?”
@@ -229,7 +229,7 @@ No political stance.**
 
 ---
 
-# **9. Agent Guardrails**
+## **9. Agent Guardrails**
 
 Agents must:
 
@@ -251,7 +251,7 @@ Agents must not:
 
 ---
 
-# **10. You Are Now Research‑Ready (Agent Edition)**
+## **10. You Are Now Research‑Ready (Agent Edition)**
 
 You can now:
 
