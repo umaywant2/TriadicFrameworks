@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Toolbox_diagrams_mode_opacity_chain_" src="https://github.com/user-attachments/assets/d03ca836-ab2e-4be0-b613-3d5cb0216385" />
+
 # Mode → Opacity Chain — Diagram Notes
 
 **Module:** Research Toolbox  
