@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="ICL_Migration_" src="https://github.com/user-attachments/assets/c2f84ddd-31ad-4165-a521-72f2787d7b44" />
+
 # Migration Guide: ICL v1.x → v2.0.0
 
 *TriadicFrameworks Intelligence Class Ladder — Breaking Change Reference*
