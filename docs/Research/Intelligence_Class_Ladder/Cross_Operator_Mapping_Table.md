@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="ICL_Cross_Operator_Map_" src="https://github.com/user-attachments/assets/8c6d4edf-0085-4268-a0cd-1f495859a7e8" />
+
 # Cross-Operator Mapping Table — TriadicFrameworks Intelligence Class Ladder
 
 **Version:** 2.0.0  
