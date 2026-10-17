@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_universal_resonance_substrate_" src="https://github.com/user-attachments/assets/09cfb77a-f1ae-455b-a3d9-552f6b080230" />
+
 # **universal_resonance_substrate.schema.json**
 
 This schema is designed to be:
