@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_substrate_frameworks_index_json_" src="https://github.com/user-attachments/assets/ffb27508-2fac-473c-919d-3385db7bb6ed" />
+
 # 📁 **/docs/schemas/substrate/frameworks/index.json**  
 ### *Master registry for the Substrate Frameworks constellation*
 
