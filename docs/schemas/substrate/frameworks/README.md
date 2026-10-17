@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="schemas_substrate_frameworks_" src="https://github.com/user-attachments/assets/2aaf21f4-e335-4e2e-b5b7-7f8064dee330" />
 
 - [`module.json`](module.json) — Agentic module schema role assignments
 
