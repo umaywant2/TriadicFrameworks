@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_universe_as_operator_" src="https://github.com/user-attachments/assets/c32fd1c8-abe5-46d2-bcca-982d116e9222" />
+
 # Universe as Operator | Schemas
 
 ## RTT schema: 0D→1D→2D→3D operator–resonance model
