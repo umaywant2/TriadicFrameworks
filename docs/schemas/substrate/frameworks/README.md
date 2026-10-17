@@ -1,3 +1,6 @@
+
+- [`module.json`](module.json) — Agentic module schema role assignments
+
 # 🌌 **Substrate Frameworks**  
 ### *Canonical Overview of the TriadicFrameworks Runtime Constellation*  
   [github.com](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/schemas/substrate/frameworks)
