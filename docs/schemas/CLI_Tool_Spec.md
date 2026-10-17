@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_CLI_Tool_Spec_" src="https://github.com/user-attachments/assets/eb6edd49-1a8c-4eff-a561-a0af09d9c9d8" />
+
 # 🛠️ **2. CLI Tool Spec — `rtt-schema`**  
 *A command‑line validator for the entire schema universe.*
 
