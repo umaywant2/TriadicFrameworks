@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="datacenter_reports_utils_RTT_map_Re_Use_vs_New_Build_" src="https://github.com/user-attachments/assets/b6f2112e-93dd-4864-b79e-639497f2a2dc" />
+
 ## RTT map: reuse vs new build (datacenters)
 
 You’re basically asking: *what does RTT say about reusing existing structures (malls, factories, bases) vs building new datacenters on fresh ground?* Let’s treat this as a field object and walk it through the triad.
