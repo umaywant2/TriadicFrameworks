@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_Tightened_RTTcode_" src="https://github.com/user-attachments/assets/e2ebce7f-5b85-4892-b771-52337d3daae2" />
+
 # 🔧 Tightened RTTcode Schema (experiment IDs, seeds, lineage)
 Below is a drop‑in upgrade to the RTTcode v1.0 schema.
 
