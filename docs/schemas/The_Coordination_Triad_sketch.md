@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_The_Coordination_Triad_sketch_" src="https://github.com/user-attachments/assets/c4873aa4-7621-464c-bd3d-d1fa619a133e" />
+
 # 🌌 **1. Repos stop being folders — they become *resonance fields***  
 Right now, a GitHub repo is:
 
