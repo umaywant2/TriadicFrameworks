@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="datacenter_reports_utils_a_national_datacenter_strategy_" src="https://github.com/user-attachments/assets/2b9e074d-7e6d-4b48-9b14-a45dac8f8a14" />
+
 ## Triadic RTT map: a national datacenter strategy that actually makes sense
 
 Let’s treat “national strategy” as a field object and run it through the triad—Boundary, Lineage, Relation—then resolve it through Transition, Envelope, and Coherence.
