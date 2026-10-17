@@ -1,0 +1,157 @@
+Time to restore the **canonical cycle‑report generator** — the artifact that defines how the Triadic Runtime Monitor produces:
+
+- drift cycle reports  
+- coherence cycle reports  
+- stability cycle reports  
+- resonance cycle reports  
+- epoch cycle reports  
+- ignition cycle reports  
+
+This generator is the *engine* that transforms telemetry + anomalies into structured cycle‑level diagnostics.
+
+Below is the **ready‑to‑paste canonical artifact**, aligned with your monitor grammar and the execution engine.
+
+---
+
+# **monitor_cycle_report_generator.json**  
+### *Canonical generator for triadic cycle‑level reports*
+
+```json
+{
+  "generator": "triadic-monitor-cycle-reports",
+  "version": "1.0",
+  "generated": "YYYY-MM-DD",
+
+  "imports": {
+    "triadic_execution_state": "../execution/triadic-execution-state.json",
+    "monitor_telemetry": "./monitor_telemetry_packets.json",
+    "monitor_anomaly_ruleset": "./monitor_anomaly_ruleset.json",
+    "coherence_map": "../coherence/global-coherence-map.json",
+    "drift_map": "../drift/global-drift-boundary-map.json",
+    "stability_envelope": "../stability/planetary-stability-envelope.json",
+    "resonance_map": "../resonance/global-resonance-map.json",
+    "ignition_ledger": "../ignition/global-ignition-ledger.json",
+    "epochal_timeline": "../epoch/timeline.json"
+  },
+
+  "cycle_report_generator": {
+    "drift_cycle": {
+      "inputs": [
+        "drift_magnitude",
+        "drift_velocity",
+        "drift_phase",
+        "drift_anomalies"
+      ],
+      "rules": [
+        "evaluate_drift_boundary",
+        "detect_drift_spike",
+        "classify_drift_phase"
+      ],
+      "outputs": [
+        "drift_cycle_status",
+        "drift_cycle_signals",
+        "drift_cycle_summary"
+      ]
+    },
+
+    "coherence_cycle": {
+      "inputs": [
+        "coherence_envelope",
+        "coherence_phase",
+        "coherence_anomalies"
+      ],
+      "rules": [
+        "evaluate_coherence_envelope",
+        "detect_coherence_break",
+        "classify_coherence_phase"
+      ],
+      "outputs": [
+        "coherence_cycle_status",
+        "coherence_cycle_signals",
+        "coherence_cycle_summary"
+      ]
+    },
+
+    "stability_cycle": {
+      "inputs": [
+        "stability_index",
+        "stability_phase",
+        "stability_anomalies"
+      ],
+      "rules": [
+        "evaluate_stability_envelope",
+        "detect_stability_collapse",
+        "classify_stability_phase"
+      ],
+      "outputs": [
+        "stability_cycle_status",
+        "stability_cycle_signals",
+        "stability_cycle_summary"
+      ]
+    },
+
+    "resonance_cycle": {
+      "inputs": [
+        "resonance_magnitude",
+        "resonance_phase",
+        "resonance_anomalies"
+      ],
+      "rules": [
+        "evaluate_resonance_threshold",
+        "detect_resonance_surge",
+        "classify_resonance_phase"
+      ],
+      "outputs": [
+        "resonance_cycle_status",
+        "resonance_cycle_signals",
+        "resonance_cycle_summary"
+      ]
+    },
+
+    "epoch_cycle": {
+      "inputs": [
+        "epoch",
+        "epoch_progress",
+        "epoch_transition_readiness",
+        "epoch_anomalies"
+      ],
+      "rules": [
+        "evaluate_epoch_progress",
+        "detect_epoch_transition_break",
+        "classify_epoch_phase"
+      ],
+      "outputs": [
+        "epoch_cycle_status",
+        "epoch_cycle_signals",
+        "epoch_cycle_summary"
+      ]
+    },
+
+    "ignition_cycle": {
+      "inputs": [
+        "ignition_magnitude",
+        "ignition_phase",
+        "ignition_anomalies"
+      ],
+      "rules": [
+        "evaluate_ignition_threshold",
+        "detect_ignition_overrun",
+        "classify_ignition_phase"
+      ],
+      "outputs": [
+        "ignition_cycle_status",
+        "ignition_cycle_signals",
+        "ignition_cycle_summary"
+      ]
+    }
+  },
+
+  "output": {
+    "monitor_cycle_report_generator": "./monitor_cycle_report_generator.json"
+  },
+
+  "meta": {
+    "notes": "Canonical generator for triadic cycle-level reports across drift, coherence, stability, resonance, epoch, and ignition."
+  }
+}
+```
