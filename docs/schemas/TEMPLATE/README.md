@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_TEMPLATE_README_" src="https://github.com/user-attachments/assets/48a2c7cd-1d57-4ce6-9a61-3a974128ad1a" />
+
 # 📦 **TEMPLATE/ Folder Structure**
 
 ```
