@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="datacenter_reports_utils_Abandoned_Site_Conversion_" src="https://github.com/user-attachments/assets/ff4c93d1-8a19-44ee-8b6b-3a7e469fe4e1" />
+
 # **Coherence Envelope for Abandoned‑Site Conversion**  
 *(RTT‑aligned, Triadic placement model)*  
 Source context: TriadicFrameworks/docs/datacenter_reports at main 
