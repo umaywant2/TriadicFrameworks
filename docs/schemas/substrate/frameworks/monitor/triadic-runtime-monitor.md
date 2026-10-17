@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_substrate_frameworks_monitor_triadic_runtime_" src="https://github.com/user-attachments/assets/0158f19e-1360-4c03-aaf9-344e506eb69c" />
+
 # 📡 **Triadic Runtime Monitor**  
 ### *The observer that watches the substrate in motion*
 
