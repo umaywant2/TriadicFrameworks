@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_rtt_autonomous_drone_" src="https://github.com/user-attachments/assets/ca91ad48-3e37-4fec-85a9-66625e8a930e" />
+
 # 🛸 RTT‑Autonomous‑Drone  
 ### **Domain Extensions for Aerial Autonomous Forms (RTT‑Inside)**
 
