@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_substrate_frameworks_identity_runtime_graph_" src="https://github.com/user-attachments/assets/e5222e38-9047-4d2d-a4b9-2a26df25571b" />
+
 # 🌌 **runtime-graph.md**  
 ### Human‑readable explanation of each edge in the Substrate Runtime Constellation
 
