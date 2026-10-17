@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="datacenter_reports_utils_Community_Structural_Petition_Form_" src="https://github.com/user-attachments/assets/fbc91996-2124-402a-885a-313af67c1367" />
+
 # **Community Petition Form: Prioritize Reuse of Existing Facilities for Datacenters**
 
 **Purpose:**  
