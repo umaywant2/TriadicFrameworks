@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="datacenter_reports_utils_tensor_registry_" src="https://github.com/user-attachments/assets/708dbe9e-1f4d-435f-a044-f6b5059c899d" />
+
 # Datacenter Reports — Tensor Registry  
 
 - [`tensor_export.schema.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/datacenter_reports/schemas/tensor_export.schema.json) — Agentic module schema role assignments
