@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_SCHEMA_BROWSER_SPEC_" src="https://github.com/user-attachments/assets/442d28da-2e35-4e83-9db2-ab1e83a974f8" />
+
 # Schema Full UI design spec
 
 # 1. product overview
