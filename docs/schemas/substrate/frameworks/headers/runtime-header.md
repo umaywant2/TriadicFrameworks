@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_substrate_frameworks_headers_runtime_" src="https://github.com/user-attachments/assets/de1cd47a-8eae-4e0c-a540-a45766cc0d0b" />
+
 # 🜁 **TriadicFrameworks — Runtime Header**  
 ### *Crest for all runtime engines in the Substrate Runtime Constellation*
 
