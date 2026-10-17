@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_Validation_Pipeline_" src="https://github.com/user-attachments/assets/0f6fb32b-1ea6-4ced-988a-4f79574d2023" />
+
 # 🌌 Universe‑Class Schema Validation Pipeline  
 ### *Automated CI · Deterministic Validation · Reviewer‑Ready*
 
