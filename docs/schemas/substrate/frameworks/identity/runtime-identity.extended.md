@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_substrate_frameworks_identity_runtime_identity_extended_" src="https://github.com/user-attachments/assets/92a6f5fa-5339-4af2-8dda-8de8b58b5e7c" />
+
 # 🜁 **TriadicFrameworks — Runtime Identity (Extended Edition)**  
 ### *Unified identity block with RTT operators, analyzer layers, and substrate hooks*
 
