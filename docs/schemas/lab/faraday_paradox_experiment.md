@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_lab_faraday_paradox_experiment_" src="https://github.com/user-attachments/assets/7e567362-2b4d-4023-beb3-877ce9445425" />
+
 # Faraday Paradox Experiment (RTT‑Aware Protocol)
 
 ## Overview
