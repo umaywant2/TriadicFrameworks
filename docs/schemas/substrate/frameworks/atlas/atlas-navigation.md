@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_substrate_frameworks_atlas_navigation_" src="https://github.com/user-attachments/assets/14f29ce6-a3c6-431a-9c74-c355b2e1a302" />
+
 # 🧭 **Triadic Atlas — Navigation Guide**  
 ### *Human‑readable documentation for atlas-navigation.json*
 
