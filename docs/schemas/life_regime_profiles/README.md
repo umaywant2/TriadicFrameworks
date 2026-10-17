@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_life_regime_profiles_" src="https://github.com/user-attachments/assets/8b9f43fd-a806-4957-a4ca-ab96f59c74bf" />
+
 # 🔶 **JSON Schema for Lifecycle Regime Profiles**
 
 This schema defines the structure for any entity’s lifecycle regime map.
