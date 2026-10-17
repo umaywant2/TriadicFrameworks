@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_rtt_autonomous_" src="https://github.com/user-attachments/assets/4bd856b8-e018-4a98-b994-8eb009c6dcf9" />
+
 # 🤖 RTT‑Autonomous  
 ### **Core Schemas for Autonomous Forms (RTT‑Inside)**
 
