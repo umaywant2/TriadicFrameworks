@@ -6,7 +6,7 @@
 # 🌐 Site‑Map | TriadicFrameworks  
 *Structural, harmonic, and substrate‑aligned overview*
 
-_Alternate Site_ 🥈 ~~docsbook.io~~ as of 10/10 Offline: Docusaurus pending
+_Alternate Site_ 🥈 [Docusaurus online](https://docs.triadicframeworks.org) more pending
 
 _Inventory refresh: **2026-09-02** · **410** public URLs_
 
