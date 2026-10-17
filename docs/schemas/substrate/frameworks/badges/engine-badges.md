@@ -1,3 +1,7 @@
+
+## engine-badges.md
+
+```
 <div align="center">
 
 # 🜁 TRIADICFRAMEWORKS — ENGINE BADGE RACK  
@@ -58,4 +62,4 @@ Observes cycles, coupling, anomalies, telemetry.
 Unifies all runtime engines into one system.
 
 </div>
-
+```
