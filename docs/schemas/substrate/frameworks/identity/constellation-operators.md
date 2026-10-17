@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_substrate_frameworks_identity_constellation_operators_" src="https://github.com/user-attachments/assets/4e23a2ee-57ef-41ee-9284-888ada94c7d1" />
+
 # 🌌 **constellation-operators.md**  
 ### Full operator index for the Substrate Runtime Constellation
 
