@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_rtt_autonomous_fish_" src="https://github.com/user-attachments/assets/bde0f17e-8d40-4e7e-9596-7b7dc75f1947" />
+
 # 🐟 RTT‑Autonomous‑Fish  
 ### **Aquatic Extensions for Autonomous Forms (RTT‑Inside)**
 
