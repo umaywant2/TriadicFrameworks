@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_rtt_core_" src="https://github.com/user-attachments/assets/fd96e223-6a85-4a72-99a9-80c47524ff14" />
+
 # 📘 **RTT‑Core Schema Set (v1)**
 ### *Resonance Structural Awareness Dimensional Interface — Core Specification*
 
