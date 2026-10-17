@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_substrate_frameworks_Use_Examples_walkthrough_" src="https://github.com/user-attachments/assets/1d772c1c-789d-4237-ae8b-01f4cd6c10bf" />
+
 # 📘 **Use_Examples.walkthrough.md**  
 ### *Step‑by‑step walkthrough of the Triadic Substrate Usage Examples*
 
