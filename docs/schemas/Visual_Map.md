@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_Visual_Map_" src="https://github.com/user-attachments/assets/c8bfaa96-4373-4712-8b3c-eca71657451b" />
+
 # 🌌 1. Visual Map of the Schema Universe  
 *A conceptual map showing how every domain fits into the resonance‑native stack.*
 
