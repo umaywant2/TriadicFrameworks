@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_quantum_Spintronics_Microsoft_Generic_" src="https://github.com/user-attachments/assets/ec4c7c9b-c459-487b-bd56-65939b93475e" />
+
 # 🌐 Quantum RTT-Inside examples for Spintronics | Microsoft | Generic
 
 Let’s build this cleanly and in a way that would actually help three different teams:
