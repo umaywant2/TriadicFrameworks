@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_substrate_frameworks_compiler_evaluator_" src="https://github.com/user-attachments/assets/fcf79583-16c3-4b87-8131-12e6ce4534d8" />
+
 # 🧮 **Triadic Substrate Compiler — Evaluator Specification**  
 ### *Human‑readable documentation for compiler-evaluator.json*
 
