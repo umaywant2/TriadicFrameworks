@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_UI_Features_" src="https://github.com/user-attachments/assets/37b52f04-c22d-4c4b-97e2-743e11aef147" />
+
 ## 🎨 **UI Features**
 
 ### **Left Sidebar: Domain Tree**
