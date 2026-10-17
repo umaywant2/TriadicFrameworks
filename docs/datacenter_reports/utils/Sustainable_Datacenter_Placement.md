@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="datacenter_reports_utils_Sustainable_Datacenter_Placement_" src="https://github.com/user-attachments/assets/37a4bc1e-faa5-45a7-ac0f-383cd449ba93" />
+
 ## **Triadic Model for Sustainable Datacenter Placement**  
 *(RTT‑aligned, field‑native, coherence‑first)*
 
