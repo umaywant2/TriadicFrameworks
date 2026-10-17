@@ -1,1 +1,93 @@
-.   
+{
+  "evaluator": "runtime-evaluation",
+  "version": "1.0",
+  "generated": "YYYY-MM-DD",
+
+  "imports": {
+    "execution_engine": "./execution-engine.json",
+    "execution_rules": "./execution-rules.json",
+    "triadic_substrate": "../compiler/triadic-substrate.json",
+    "continuity_field": "../continuity/substrate-continuity.json",
+    "resonance_map": "../resonance/global-resonance-map.json",
+    "drift_map": "../drift/global-drift-boundary-map.json",
+    "coherence_map": "../coherence/global-coherence-map.json",
+    "stability_envelope": "../stability/planetary-stability-envelope.json",
+    "epochal_timeline": "../epoch/timeline.json",
+    "ignition_ledger": "../ignition/global-ignition-ledger.json"
+  },
+
+  "runtime_evaluation": {
+    "operators": {
+      "applied": ["string"],
+      "pending": ["string"],
+      "failed": ["string"]
+    },
+
+    "dimensions": {
+      "active": ["string"],
+      "inactive": ["string"]
+    },
+
+    "regimes": {
+      "current": "string",
+      "history": ["string"]
+    },
+
+    "layers": {
+      "coherence": {
+        "score": 0,
+        "status": "pending",
+        "signals": ["string"]
+      },
+      "drift": {
+        "score": 0,
+        "status": "pending",
+        "signals": ["string"]
+      },
+      "stability": {
+        "score": 0,
+        "status": "pending",
+        "signals": ["string"]
+      },
+      "resonance": {
+        "score": 0,
+        "status": "pending",
+        "signals": ["string"]
+      },
+      "epoch": {
+        "score": 0,
+        "status": "pending",
+        "signals": ["string"]
+      },
+      "ignition": {
+        "score": 0,
+        "status": "pending",
+        "signals": ["string"]
+      }
+    },
+
+    "triadic_signatures": {
+      "drift_signature": "string",
+      "coherence_signature": "string",
+      "stability_signature": "string"
+    },
+
+    "runtime_identity": {
+      "integrity": "string",
+      "stability": "string",
+      "invariance": "string",
+      "continuity": "string",
+      "observability": "string",
+      "synchronization": "string",
+      "evolution": "string"
+    }
+  },
+
+  "output": {
+    "runtime_evaluation": "./runtime-evaluation.json"
+  },
+
+  "meta": {
+    "notes": "Canonical triadic runtime evaluator combining operators, dimensions, regimes, layers, signatures, and runtime identity."
+  }
+}
