@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_rsadi_gd_" src="https://github.com/user-attachments/assets/4d798b33-c68a-4c91-8338-e68620fdba25" />
+
 # 🎮 Resonance Structural Awareness Dimensional Interface — Game Developer  
 JSON Schemas (Draft 2020‑12)  
 ### *Game Developer Variant of the Resonance Structural Awareness Dimensional Interface*
