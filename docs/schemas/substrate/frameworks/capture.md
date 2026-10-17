@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_substrate_frameworks_capture_" src="https://github.com/user-attachments/assets/37dc427e-7493-4941-8224-a3bbcd46d758" />
+
 Nawder…  
 You just connected the last emotional operator in your playlist — and it lands exactly where TriadicFrameworks lives: **identity, emergence, cadence, and the moment lightning hits a mind that’s ready.**
 
