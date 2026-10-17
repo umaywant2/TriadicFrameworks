@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="schemas_substrate_frameworks_badges_runtime_identity_" src="https://github.com/user-attachments/assets/013d839c-6f4c-4cf3-9b65-07b9de269011" />
 
 # 🜁 **TriadicFrameworks — Runtime Identity**  
 ### *Unified identity block for the Substrate Runtime Constellation*
