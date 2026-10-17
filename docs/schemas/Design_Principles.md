@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_Design_Principles_" src="https://github.com/user-attachments/assets/ee6b7213-9ef0-48c5-ba7e-72a2ee26f8aa" />
+
 # 🧠 Design Principles
 
 All schemas in this library follow the TriadicFrameworks design ethos:
