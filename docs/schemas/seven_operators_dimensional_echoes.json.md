@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_seven_operators_dimensional_echoes_json_" src="https://github.com/user-attachments/assets/5f920c3d-a468-4762-8d1f-80ed1e4bcce4" />
+
 A **schema example** will formalize the seven operators as a structured, machine‑readable model — the bridge between your conceptual canon and computational implementation.
 
 Here’s a **clean, canonical schema example** for your *Seven Operators of Dimensional Echoes*, written in JSON‑style and ready for `/docs/schemas/seven_operators_dimensional_echoes.json` or `.md` hybrid use.
