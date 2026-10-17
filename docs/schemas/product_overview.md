@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_product_overview_" src="https://github.com/user-attachments/assets/6c24b69d-7d53-41e7-be7e-69da9e2c6827" />
+
 # 1. product overview
 
 **name:** triadicframeworks schema browser  
