@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_micro_core_" src="https://github.com/user-attachments/assets/680ffce6-b5f0-4e23-b806-5d9e410105a0" />
+
 Below is a clean, practical way to **log MRT‑1 runs into your existing MRT JSON schemas**, producing artifacts that can live in:
 
 ```
