@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_Directory_Overview_" src="https://github.com/user-attachments/assets/68d9143e-07dd-4948-a175-a064172f589b" />
+
 # 🗂️ Directory Overview
 Folder level access: [🗂️](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/schemas)
 
