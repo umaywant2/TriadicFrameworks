@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_rtt_coal_" src="https://github.com/user-attachments/assets/9242403a-0bf3-4c15-a653-15a2bf0c12de" />
+
 # 📦 **Folder Structure for Coal‑Specific Schemas**
 [RFC-052 RSADI Coal Industry Extension to RSADI Core](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-052-RSADI-Coal_Industry_Extension_to_RSADI_Core.md)
 
