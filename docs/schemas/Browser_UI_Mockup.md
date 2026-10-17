@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_Browser_UI_Mockup_" src="https://github.com/user-attachments/assets/b7ee004c-38e7-4ac7-9833-07e77a37a389" />
+
 # 🌌 **1. Schema Browser UI Mockup**  
 *A clean, modern interface for exploring the TriadicFrameworks schema universe.*
 
