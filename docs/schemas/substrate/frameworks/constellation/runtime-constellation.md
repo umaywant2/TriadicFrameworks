@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_substrate_frameworks_constellation_runtime_" src="https://github.com/user-attachments/assets/36a43f18-8f68-4eaf-afe9-ae80cf865144" />
+
 # 🌌 **Substrate Runtime Constellation**  
 ### *Unified runtime system of the planetary triadic substrate*
 
