@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_substrate_frameworks_identity_constellation_map_" src="https://github.com/user-attachments/assets/20a0646f-f468-47d4-b975-470bcbda8434" />
+
 # 🌌 **constellation-map.md**  
 ### *Visual map of how all eight runtime engines interconnect*
 
