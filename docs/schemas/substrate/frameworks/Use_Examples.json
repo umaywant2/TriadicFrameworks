@@ -1,1 +1,184 @@
+{
+  "registry": "triadic-substrate-use-examples",
+  "version": "1.0",
+  "generated": "YYYY-MM-DD",
+
+  "examples": [
+    {
+      "id": "atlas.resolve-route",
+      "category": "atlas",
+      "description": "Resolve a navigation route using the atlas interaction protocol.",
+      "inputs": {
+        "request": "resolve-route",
+        "route": "route-A",
+        "atlas": "./atlas/triadic-atlas.json"
+      },
+      "outputs": [
+        "route_vectors_evaluated",
+        "navigation_schema_validated",
+        "atlas_synchronization_confirmed"
+      ]
+    },
+
+    {
+      "id": "ignition.trigger-wave",
+      "category": "ignition",
+      "description": "Trigger an ignition wave and evaluate cascade propagation.",
+      "inputs": {
+        "action": "ignite",
+        "wave_id": "wave-01",
+        "harmonics": ["primary"],
+        "cascade": "./ignition/ignition-cascade.json"
+      },
+      "outputs": [
+        "harmonics_aligned",
+        "cascade_routes_evaluated",
+        "ignition_anomalies_monitored",
+        "ledger_updated"
+      ]
+    },
+
+    {
+      "id": "epoch.advance",
+      "category": "epoch",
+      "description": "Advance epoch propagation and validate transition readiness.",
+      "inputs": {
+        "action": "advance-epoch",
+        "epoch": "E3",
+        "timeline": "./epoch/epochal-timeline.json"
+      },
+      "outputs": [
+        "epoch_rules_applied",
+        "stability_profiles_checked",
+        "resonance_phase_validated",
+        "transition_readiness_updated"
+      ]
+    },
+
+    {
+      "id": "continuity.evaluate",
+      "category": "continuity",
+      "description": "Evaluate substrate continuity across all domains.",
+      "inputs": {
+        "evaluate": "continuity",
+        "field": "./continuity/substrate-continuity.json"
+      },
+      "outputs": [
+        "structural_continuity_validated",
+        "behavioral_continuity_checked",
+        "temporal_continuity_aligned",
+        "atlas_continuity_synchronized",
+        "activation_continuity_confirmed"
+      ]
+    },
+
+    {
+      "id": "invariance.evaluate",
+      "category": "invariance",
+      "description": "Evaluate invariance across structural, behavioral, temporal, atlas, and activation domains.",
+      "inputs": {
+        "evaluate": "invariance",
+        "kernel": "./invariance/substrate-invariance.json"
+      },
+      "outputs": [
+        "structural_invariance_rules_applied",
+        "behavioral_invariance_breaks_detected",
+        "temporal_invariance_validated",
+        "atlas_invariance_checked",
+        "activation_invariance_confirmed"
+      ]
+    },
+
+    {
+      "id": "execution.evaluate-runtime",
+      "category": "execution",
+      "description": "Evaluate runtime state using execution rules and runtime evaluators.",
+      "inputs": {
+        "evaluate": "runtime",
+        "state": "./execution/triadic-execution-state.json"
+      },
+      "outputs": [
+        "execution_rules_applied",
+        "runtime_operators_invoked",
+        "engine_schema_validated",
+        "constellation_hooks_triggered"
+      ]
+    },
+
+    {
+      "id": "monitor.ingest-telemetry",
+      "category": "monitor",
+      "description": "Ingest telemetry packet and generate cycle reports.",
+      "inputs": {
+        "ingest": "telemetry",
+        "packet": "./monitor/triadic-runtime-telemetry.example.json"
+      },
+      "outputs": [
+        "telemetry_validated",
+        "anomalies_evaluated",
+        "cycle_reports_generated",
+        "monitor_output_synthesized"
+      ]
+    },
+
+    {
+      "id": "module.create-ignition-ready",
+      "category": "modules",
+      "description": "Create a new ignition-ready module using the canonical template.",
+      "inputs": {
+        "module": "new-module",
+        "template": "./module_templates/module.ignition-ready.json"
+      },
+      "outputs": [
+        "ignition_roles_assigned",
+        "harmonics_mapped",
+        "cascade_routes_linked",
+        "ignition_anomalies_registered"
+      ]
+    },
+
+    {
+      "id": "constellation.register-module",
+      "category": "constellation",
+      "description": "Register a module into the runtime constellation.",
+      "inputs": {
+        "register": "module",
+        "module": "new-module",
+        "constellation": "./constellation/substrate-runtime-constellation.json"
+      },
+      "outputs": [
+        "constellation_operators_evaluated",
+        "graph_nodes_updated",
+        "hooks_validated",
+        "identity_signatures_updated"
+      ]
+    },
+
+    {
+      "id": "substrate.full-cycle",
+      "category": "substrate",
+      "description": "Perform a full substrate cycle across all major frameworks.",
+      "inputs": {
+        "cycle": "full",
+        "steps": [
+          "resolve-route",
+          "ignite",
+          "advance-epoch",
+          "evaluate-continuity",
+          "evaluate-invariance",
+          "evaluate-runtime",
+          "ingest-telemetry"
+        ]
+      },
+      "outputs": [
+        "atlas_ignition_epoch_continuity_invariance_execution_monitor_complete",
+        "final_runtime_monitor_report_emitted"
+      ]
+    }
+  ],
+
+  "meta": {
+    "notes": "Machine-readable registry of usage examples for the Triadic Substrate Frameworks."
+  }
+}
 
