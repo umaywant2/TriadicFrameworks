@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_Cross_Domain_Dependency_Graph_" src="https://github.com/user-attachments/assets/8cb649df-e713-403e-9e29-017e663ba80c" />
+
 # 🔗 2. Cross‑Domain Dependency Graph  
 *Shows how schemas depend on or extend each other.*
 
