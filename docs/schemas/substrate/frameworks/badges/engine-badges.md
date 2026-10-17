@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="schemas_substrate_frameworks_badges_engine_" src="https://github.com/user-attachments/assets/1466f5a6-6b7c-479d-a004-15697bbcb667" />
 
 ## engine-badges.md
 
