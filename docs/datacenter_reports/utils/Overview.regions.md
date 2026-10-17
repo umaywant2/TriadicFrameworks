@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="datacenter_reports_utils_Overview_regions_" src="https://github.com/user-attachments/assets/9379d9a2-71e3-4ea8-9478-27e07543d5da" />
+
 # Datacenter Reports — Regional Overview
 
 Non-interpretive regional slices of the Overview table.
