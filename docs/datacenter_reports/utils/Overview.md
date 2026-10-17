@@ -1,4 +1,6 @@
----
+<img width="1194" height="672" alt="datacenter_reports_utils_Overview_" src="https://github.com/user-attachments/assets/d8562741-193a-4ff2-b9fc-b147c1cf5fe2" />
+
+```
 module: Datacenter Reports
 view: Overview
 mode: Drift-Bounded
@@ -22,7 +24,7 @@ triadic_alignment:
   field: TRI
 resonance_field: RES
 interpretation: "Non-interpretive structural map; indices encode presence, not performance."
----
+```
 
 # 📊 Datacenter Reports — Structural Overview  
 **Mode:** Drift‑Bounded  
