@@ -3,81 +3,94 @@
 
 ```json
 {
-  "cascade": "planetary-ignition",
+  "cascade": "ignition",
   "version": "1.0",
   "generated": "YYYY-MM-DD",
 
-  "waves": [
-    {
-      "wave_id": "string",
-      "timestamp": "YYYY-MM-DD",
-      "countries": ["string"],
-      "harmonics": ["string"],
-      "phase": "in-phase | out-of-phase | mixed",
-      "severity": "low | medium | high | critical"
-    }
-  ],
+  "imports": {
+    "ignition_ledger": "./global-ignition-ledger.json",
+    "triadic_atlas": "../atlas/triadic-atlas.json",
+    "coherence_map": "../coherence/global-coherence-map.json",
+    "drift_map": "../drift/global-drift-boundary-map.json",
+    "stability_envelope": "../stability/planetary-stability-envelope.json",
+    "resonance_map": "../resonance/global-resonance-map.json",
+    "epochal_timeline": "../epoch/timeline.json",
+    "triadic_surfaces": "../render/"
+  },
 
-  "arcs": [
-    {
-      "arc_id": "string",
-      "origin": "string",
-      "targets": ["string"],
-      "vector": "string",
-      "envelope": "string",
-      "epoch": "string"
-    }
-  ],
+  "ignition_cascade": {
+    "waves": [
+      {
+        "wave_id": "string",
+        "timestamp": "YYYY-MM-DD",
+        "countries": ["string"],
+        "harmonics": ["string"],
+        "phase": "in-phase | out-of-phase | mixed",
+        "severity": "low | medium | high | critical"
+      }
+    ],
 
-  "chains": [
-    {
-      "chain_id": "string",
-      "sequence": ["string"],
-      "trigger": "string",
-      "threshold": "string"
-    }
-  ],
+    "arcs": [
+      {
+        "arc_id": "string",
+        "origin": "string",
+        "targets": ["string"],
+        "vector": "string",
+        "envelope": "string",
+        "epoch": "string"
+      }
+    ],
 
-  "webs": [
-    {
-      "web_id": "string",
-      "nodes": ["string"],
-      "edges": [
-        {
-          "source": "string",
-          "target": "string",
-          "weight": 0.0,
-          "mode": "coherence | drift | stability | resonance"
-        }
-      ]
-    }
-  ],
+    "chains": [
+      {
+        "chain_id": "string",
+        "sequence": ["string"],
+        "trigger": "string",
+        "threshold": "string"
+      }
+    ],
 
-  "clusters": [
-    {
-      "name": "string",
-      "countries": ["string"],
-      "shared_harmonics": ["string"],
-      "shared_phase": "in-phase | out-of-phase | mixed",
-      "shared_vectors": ["string"]
-    }
-  ],
+    "webs": [
+      {
+        "web_id": "string",
+        "nodes": ["string"],
+        "edges": [
+          {
+            "source": "string",
+            "target": "string",
+            "weight": 0.0,
+            "mode": "coherence | drift | stability | resonance | ignition"
+          }
+        ]
+      }
+    ],
 
-  "anomalies": [
-    {
-      "timestamp": "YYYY-MM-DD",
-      "country": "string",
-      "description": "string",
-      "severity": "low | medium | high | critical"
-    }
-  ],
+    "clusters": [
+      {
+        "name": "string",
+        "countries": ["string"],
+        "shared_harmonics": ["string"],
+        "shared_phase": "in-phase | out-of-phase | mixed",
+        "shared_vectors": ["string"]
+      }
+    ],
+
+    "anomalies": [
+      {
+        "timestamp": "YYYY-MM-DD",
+        "country": "string",
+        "description": "string",
+        "severity": "low | medium | high | critical"
+      }
+    ]
+  },
 
   "output": {
     "ignition_cascade": "./ignition-cascade.json"
   },
 
   "meta": {
-    "notes": "Planetary ignition cascade atlas including waves, arcs, chains, webs, clusters, harmonics, and anomalies."
+    "notes": "Planetary ignition cascade atlas: waves, arcs, chains, webs, clusters, harmonics, anomalies, and propagation routes."
   }
 }
 ```
