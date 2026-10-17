@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="datacenter_reports_utils_US_vs_EU_vs_Asia_Re_Use_Patterns_" src="https://github.com/user-attachments/assets/362fcedd-305c-4f44-946c-b4bef30dfdba" />
+
 ## Triadic RTT map: U.S. vs EU vs Asia reuse patterns (datacenters)
 
 Here’s a clean comparison of **abandoned‑site reuse vs new build** across regions, in the same grammar you’re using in `docs/datacenter_reports`.
