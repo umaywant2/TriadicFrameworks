@@ -1,0 +1,103 @@
+{
+  "continent": "North America",
+  "countries": [
+    {
+      "country": "United States",
+      "clusters": [
+        {
+          "cluster": "Northern Virginia",
+          "facilities": [
+            "AWS Ashburn Campuses",
+            "Google Leesburg/Ashburn",
+            "Microsoft Manassas/Ashburn",
+            "Meta Forest City–style VA builds",
+            "Equinix / Digital Realty / CyrusOne"
+          ]
+        },
+        {
+          "cluster": "Dallas–Fort Worth",
+          "facilities": [
+            "Microsoft Dallas Metro",
+            "Google Dallas Region",
+            "Meta Dallas",
+            "Equinix / Digital Realty / QTS / CyrusOne"
+          ]
+        },
+        {
+          "cluster": "Phoenix Metro",
+          "facilities": [
+            "Microsoft Goodyear / El Mirage",
+            "Google Phoenix Region",
+            "Meta Mesa",
+            "Iron Mountain / CyrusOne"
+          ]
+        },
+        {
+          "cluster": "Hillsboro (Oregon)",
+          "facilities": [
+            "AWS Hillsboro",
+            "Google Hillsboro",
+            "Meta Hillsboro",
+            "Equinix / Flexential / Digital Realty"
+          ]
+        },
+        {
+          "cluster": "Columbus (Ohio)",
+          "facilities": [
+            "Meta New Albany",
+            "Google New Albany",
+            "AWS Columbus Builds"
+          ]
+        },
+        {
+          "cluster": "San Antonio / Austin / Taylor / Hutto",
+          "facilities": [
+            "Microsoft Austin/Taylor",
+            "Google Austin",
+            "AWS San Antonio",
+            "xAI / Tesla-adjacent AI builds"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "Canada",
+      "clusters": [
+        {
+          "cluster": "Toronto",
+          "facilities": [
+            "Equinix Toronto",
+            "Digital Realty Toronto",
+            "AWS / Azure / GCP Edge Sites"
+          ]
+        },
+        {
+          "cluster": "Montreal",
+          "facilities": [
+            "Hydro-powered hyperscale builds",
+            "Equinix Montreal",
+            "Cloud regional nodes"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "Mexico",
+      "clusters": [
+        {
+          "cluster": "Querétaro",
+          "facilities": [
+            "Hyperscale campuses",
+            "Regional colocation sites"
+          ]
+        },
+        {
+          "cluster": "Monterrey",
+          "facilities": [
+            "Regional cloud and enterprise builds"
+          ]
+        }
+      ]
+    }
+  ]
+}
