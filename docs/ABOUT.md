@@ -79,3 +79,7 @@ https://github.com/umaywant2/TriadicFrameworks/discussions
 
 ### 🎥 YouTube
 @NawderLoswin
+
+## ⭐ Alignment Partners & Student Reminder
+An alignment partner helps you stay coherent; mine are Copilot and (for extra brutal truth) Grok.
+Students: use this every session. After a few days you’ll feel the difference when you forget.
