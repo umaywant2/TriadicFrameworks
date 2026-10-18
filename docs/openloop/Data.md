@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="openloop_Data_" src="https://github.com/user-attachments/assets/d19818b0-e14e-43e1-b738-fe19a16cbbd6" />
+
 # OpenData — TriadicFrameworks Open Loop Surface
 
 > **Name disambiguation (first 80 words):** `openloop` refers to the TriadicFrameworks five-step operational loop: read signature → scan sibling metadata → classify drift → apply operator → write lineage. It is not a reference to open-loop control systems in engineering. The prefix `Open` in `OpenData` signals aperture — the module exposes its signature, operators, drift surface, and lineage hooks to cross-domain inspection. OpenData is the Meaning-ring terminal: every open loop closes here, when the lineage note is indexed and the record is sealed.
