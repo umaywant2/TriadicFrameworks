@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="openloop_GPU_t_Rendering_" src="https://github.com/user-attachments/assets/0e5132a3-cfc1-458e-886f-adab4cfc9868" />
+
 # t_Rendering — TFT.OpenGPU.Stack.Module
 **Resonance-Time Theory Rendering Document**  
 **Module:** TFT.OpenGPU.Stack.Module  
