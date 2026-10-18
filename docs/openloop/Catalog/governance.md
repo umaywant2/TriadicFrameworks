@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="openloop_Catalog_governance_" src="https://github.com/user-attachments/assets/3d947f28-6750-4a5f-b3ed-8f15fd313fd2" />
+
 # 🛒 **OpenCatalog — governance.md**  
 **OpenWarden Suite — Product Catalog Substrate**  
 **Version:** 1.0  
