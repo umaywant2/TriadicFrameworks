@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="openloop_GPU_operators_" src="https://github.com/user-attachments/assets/5ed96d80-a768-4e10-a7a7-af4cf4979691" />
+
 # operators — TFT.OpenGPU.Stack.Module
 **Operator Registry for TFT.OpenGPU.Stack.Module**  
 **RTT:** 1  
