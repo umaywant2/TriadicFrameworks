@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="openloop_Stream_operators_" src="https://github.com/user-attachments/assets/6daab1c6-7bc8-4a99-8feb-799b292f7860" />
+
 # 🌊 **OpenStream — operators.md**  
 **OpenWarden Suite — Streaming Substrate**  
 **Analyzer Layer:** flow‑structural  
