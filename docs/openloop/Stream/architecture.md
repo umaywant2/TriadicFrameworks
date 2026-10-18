@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="openloop_Stream_architecture_" src="https://github.com/user-attachments/assets/c3c36dcd-bc66-465a-b8bb-71b6eafb6bcd" />
+
 # 🌊 **OpenStream — architecture.md**  
 **OpenWarden Suite — Streaming Substrate**  
 **Analyzer Layer:** flow‑structural  
