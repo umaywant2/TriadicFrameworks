@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="openloop_Catalog_operators_" src="https://github.com/user-attachments/assets/d66ab4cd-0aca-4aa2-8baa-5cf4be85b670" />
+
 # 🛒 **OpenCatalog — operators.md**  
 **OpenWarden Suite — Product Catalog Substrate**  
 **Analyzer Layer:** structural  
