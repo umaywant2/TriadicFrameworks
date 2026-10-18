@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="openloop_Risk_" src="https://github.com/user-attachments/assets/9bb8f507-d4aa-416a-863a-013c884f8465" />
+
 # OpenRisk — TriadicFrameworks Open Loop Surface
 
 > **Name disambiguation (first 80 words):** `openloop` refers to the TriadicFrameworks five-step operational loop: read signature → scan sibling metadata → classify drift → apply operator → write lineage. It is not a reference to open-loop control systems in engineering. The prefix `Open` in `OpenRisk` signals aperture — the module exposes its signature, operators, drift surface, and lineage hooks to cross-domain inspection. OpenRisk is the classification layer that gates all cross-domain operations when coherence falls below any module's declared floor.
