@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="openloop_GPU_t_Execution_" src="https://github.com/user-attachments/assets/fd46f8e5-2275-4a02-91f4-1fbe6995c585" />
+
 # t_Execution — TFT.OpenGPU.Stack.Module
 **Resonance-Time Theory Execution Document**  
 **Module:** TFT.OpenGPU.Stack.Module  
