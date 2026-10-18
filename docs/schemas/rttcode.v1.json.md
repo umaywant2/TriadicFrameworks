@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="schemas_rttcode_v1_json_" src="https://github.com/user-attachments/assets/6236e7ff-81ca-4567-81f7-0b82b21c93ff" />
+
 Good news from the analysis — the schema's `$id` and all `$ref` paths are **still valid** because `/docs/schemas/` never moved. The issue is that the schema has **zero module metadata** — no session context, no domain registry, no version history, and no backlink to its canonical module home (which *did* move to `/docs/rtt/codes/`). Here's the fully refreshed draft:
 
 ---
