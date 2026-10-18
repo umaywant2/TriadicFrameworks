@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="openloop_GPU_t_Substrate_" src="https://github.com/user-attachments/assets/6466fd57-6c8c-4841-b621-9374d7dfdeec" />
+
 # t_Substrate — TFT.OpenGPU.Stack.Module
 **Resonance-Time Theory Substrate Document**  
 **Module:** TFT.OpenGPU.Stack.Module  
