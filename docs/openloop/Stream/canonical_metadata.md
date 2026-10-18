@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="openloop_Stream_canonical_metadata_" src="https://github.com/user-attachments/assets/21ca2a8a-7a53-4a50-bfbd-a7991505ec38" />
+
 # 🌊 **OpenStream — canonical_metadata.md**  
 **OpenWarden Suite — Streaming Substrate**  
 **Analyzer Layer:** flow‑structural  
