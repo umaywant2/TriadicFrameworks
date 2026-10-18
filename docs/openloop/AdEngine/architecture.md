@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="openloop_AdEngine_architecture_" src="https://github.com/user-attachments/assets/646da3e7-bee3-4e41-9cee-b573637d1a75" />
+
 # 📢 **OpenAdEngine — architecture.md**  
 **OpenWarden Suite — Contextual Advertising Substrate**  
 **Analyzer Layer:** semantic  
