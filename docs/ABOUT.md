@@ -75,7 +75,7 @@ Most learning resources teach facts, procedures, or domain-specific models. Tria
 https://github.com/umaywant2/TriadicFrameworks/discussions
 
 ### 🕊️ X (Twitter)
-@NawderLoswin
+[@NawderLoswin](https://ngntipkolamrenang.twstalker.com/NawderLoswin)
 
 ### 🎥 YouTube
 @NawderLoswin
