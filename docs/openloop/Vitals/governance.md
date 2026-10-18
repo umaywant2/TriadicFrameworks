@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="openloop_Vitals_canonical_metadata_" src="https://github.com/user-attachments/assets/7be3ee9c-57d7-4bb6-aa16-0e80b5f02769" />
+
 # 🫀 **OpenVitals — governance.md**  
 **OpenWarden Suite — Health & Physiological Signal Substrate**  
 **Analyzer Layer:** dimensional  
