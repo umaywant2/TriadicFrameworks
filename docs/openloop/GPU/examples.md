@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="openloop_GPU_examples_" src="https://github.com/user-attachments/assets/f2aa5c23-87bf-45b9-b12b-fffa4371db3c" />
+
 # examples — TFT.OpenGPU.Stack.Module
 **Example Scenarios for TFT.OpenGPU.Stack.Module**  
 **RTT:** 1  
