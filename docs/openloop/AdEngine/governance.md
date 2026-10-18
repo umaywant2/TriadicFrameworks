@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="openloop_AdEngine_governance_" src="https://github.com/user-attachments/assets/07852f01-10a6-4373-acd1-9db34fc31ca6" />
+
 # 📢 **OpenAdEngine — governance.md**  
 **OpenWarden Suite — Contextual Advertising Substrate**  
 **Version:** 1.0  
