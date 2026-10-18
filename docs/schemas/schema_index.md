@@ -1,4 +1,4 @@
-<img width="682" height="682" alt="rtt_schemas" src="https://github.com/user-attachments/assets/8f35dba9-e3bf-462e-aafc-b64d238ec530" />
+<img width="1194" height="672" alt="schemas_schema_index_" src="https://github.com/user-attachments/assets/9b288dcc-e80a-47c8-a6b1-e701d40c5520" />
 
 # 📚 RTTcode Schema Index
 
@@ -33,3 +33,5 @@ Canonical, versioned schemas for RTTcode packets and their constituent blocks.
 - **RTT Manifest**  
   Path: `docs/schemas/manifest.json`  
   Description: Single source of truth for schema locations, versions, and validation settings.
+
+<img width="682" height="682" alt="rtt_schemas" src="https://github.com/user-attachments/assets/8f35dba9-e3bf-462e-aafc-b64d238ec530" />
