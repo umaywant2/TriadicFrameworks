@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="openloop_Catalog_canonical_metadata_" src="https://github.com/user-attachments/assets/b590fa9f-4a3d-41df-a07c-e4d619b6f92e" />
+
 # 🛒 **OpenCatalog — canonical_metadata.md**  
 **OpenWarden Suite — Product Catalog Substrate**  
 **Analyzer Layer:** structural  
