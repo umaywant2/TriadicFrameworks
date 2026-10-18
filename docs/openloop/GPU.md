@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="openloop_GPU_" src="https://github.com/user-attachments/assets/9075a4ef-e5b9-49fd-aea0-702387185785" />
+
 # OpenGPU — TriadicFrameworks Open Loop Surface
 
 > **Name disambiguation (first 80 words):** `openloop` refers to the TriadicFrameworks five-step operational loop: read signature → scan sibling metadata → classify drift → apply operator → write lineage. It is not a reference to open-loop control systems in engineering. The prefix `Open` in `OpenGPU` signals aperture — the module exposes its signature, operators, drift surface, and lineage hooks to cross-domain inspection. OpenGPU is the Motion-ring execution substrate: it schedules and partitions parallel workloads only after Trust and Risk clearance is confirmed.
