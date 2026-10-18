@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="openloop_IAM_" src="https://github.com/user-attachments/assets/5e0ab71d-5c0f-4076-8991-e60a7c47047c" />
+
 # OpenIAM — TriadicFrameworks Open Loop Surface
 
 > **Name disambiguation (first 80 words):** `openloop` refers to the TriadicFrameworks five-step operational loop: read signature → scan sibling metadata → classify drift → apply operator → write lineage. It is not a reference to open-loop control systems in engineering. The prefix `Open` in `OpenIAM` signals aperture — the module exposes its signature, operators, drift surface, and lineage hooks to cross-domain inspection. OpenIAM is the Trust-ring anchor for the entire suite. No cross-domain operation proceeds without a VERIFY pass here first.
