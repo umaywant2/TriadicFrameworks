@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="openloop_Geo_" src="https://github.com/user-attachments/assets/f452422c-94d3-45ba-9e04-abfa66c81dc5" />
+
 # OpenGeo — TriadicFrameworks Open Loop Surface
 
 > **Name disambiguation (first 80 words):** `openloop` refers to the TriadicFrameworks five-step operational loop: read signature → scan sibling metadata → classify drift → apply operator → write lineage. It is not a reference to open-loop control systems in engineering. The prefix `Open` in `OpenGeo` signals aperture — the module exposes its signature, operators, drift surface, and lineage hooks to cross-domain inspection. OpenGeo is the Motion-ring grounding surface: it anchors every cross-domain operation in spatial and temporal coordinates before processing begins.
