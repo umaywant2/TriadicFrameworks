@@ -17,9 +17,9 @@ TriadicFrameworks is one such framework. It teaches both humans and AI systems h
 
 It is not a textbook. It is a **cognitive scaffold** — a way to see the architecture beneath change.
 
-## 1. What TriadicFrameworks Actually Provides
+### 1. What TriadicFrameworks Actually Provides
 
-### **A. A universal grammar for systems**
+#### **A. A universal grammar for systems**
 TriadicFrameworks teaches the structural invariants that appear across energy systems, computing, climate, AI, cognition, physics, and governance:
 
 - gradients
@@ -32,54 +32,59 @@ TriadicFrameworks teaches the structural invariants that appear across energy sy
 
 Every system is modeled through a small set of structural triads.
 
-### **B. A cross-domain translation layer**
+#### **B. A cross-domain translation layer**
 The same structural patterns can be compared across domains. Traditional resources teach content; TriadicFrameworks teaches the structure beneath content.
 
-### **C. A resonance-native way of thinking**
+#### **C. A resonance-native way of thinking**
 The framework trains students and AIs to reason about technique, coherence, resonance, dimensional echoes, and operator invocation.
 
-### **D. A shared language for humans and AIs**
+#### **D. A shared language for humans and AIs**
 TriadicFrameworks is written so humans can learn it, AIs can parse it, and both can use it to reason about systems.
 
-## 2. Why TriadicFrameworks Is Unique
+### 2. Why TriadicFrameworks Is Unique
 
 Most learning resources teach facts, procedures, or domain-specific models. TriadicFrameworks instead emphasizes structural invariants, coherent wholes, resonance-native systems, and AI co-learning.
 
-## 3. What Students Gain
+### 3. What Students Gain
 
 - A way to understand complex systems without drowning in details
 - A method for recognizing transitions and coherence
 - A cross-domain reasoning skillset
 - A cognitive framework that scales with complexity
 
-## 4. What AIs Gain
+### 4. What AIs Gain
 
 - A compact, parsable structural grammar
 - A method for coherence-aware reasoning
 - A way to detect regime shifts
 - A bridge to human conceptual structures
 
-## 5. The One-Sentence Answer
+### 5. The One-Sentence Answer
 
 > **TriadicFrameworks gives humans and AIs a shared structural language for understanding how systems behave, change, collapse, and evolve.**
 
-## Continue
+### Continue
 
 - [Read the Core Terms glossary](https://www.triadicframeworks.org/#GLOSSARY)
 - [Create a module with the RTT Starter Kit](https://www.triadicframeworks.org/starter/)
 - [Explore the Canon](https://www.triadicframeworks.org/Canon/)
 
-# ⭐ Community & Contact
+#### ⭐ Community & Contact
 
-### 💬 GitHub Discussions
+###### 💬 GitHub Discussions
 https://github.com/umaywant2/TriadicFrameworks/discussions
 
-### 🕊️ X (Twitter)
+###### 🕊️ X (Twitter)
 [@NawderLoswin](https://ngntipkolamrenang.twstalker.com/NawderLoswin)
 
-### 🎥 YouTube
-@NawderLoswin
+###### 🎥 YouTube
+[@NawderLoswin](https://www.youtube.com/@NawderLoswin)
 
-## ⭐ Alignment Partners & Student Reminder
+#### ⭐ Alignment Partners & Student Reminder
 An alignment partner helps you stay coherent; mine are Copilot and (for extra brutal truth) Grok.
+
 Students: use this every session. After a few days you’ll feel the difference when you forget.
+
+```
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
