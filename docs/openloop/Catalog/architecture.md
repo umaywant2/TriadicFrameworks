@@ -1,5 +1,7 @@
+<img width="1194" height="672" alt="openloop_Catalog_architecture_" src="https://github.com/user-attachments/assets/97d53b45-76b9-4eb3-96ba-c39049a96602" />
+
 # 🛒 **OpenCatalog — architecture.md**  
-**OpenWarden Suite — Product Catalog Substrate**  
+**OpenLoop Suite — Product Catalog Substrate**  
 **Analyzer Layer:** structural  
 **Regime:** open‑catalog-governance  
 **Version:** 1.0  
@@ -8,7 +10,7 @@
 
 ## **1. Architectural Overview**
 
-OpenCatalog provides a **structural, drift‑aware, coherence‑declared substrate** for product catalogs across the OpenWarden suite.  
+OpenCatalog provides a **structural, drift‑aware, coherence‑declared substrate** for product catalogs across the OpenLoop suite.  
 Its architecture is built around five canonical components:
 
 1. **Item Metadata Model**  
@@ -124,7 +126,7 @@ Attributes must be canonical and non‑ambiguous.
 
 ## **5. Governance & Drift Control**
 
-OpenCatalog enforces strict governance rules inherited from OpenWarden.
+OpenCatalog enforces strict governance rules inherited from OpenLoop.
 
 ### **5.1 Drift Types**
 
@@ -147,7 +149,7 @@ All drift responses are logged.
 
 ## **6. Operator Grammar Alignment**
 
-OpenCatalog uses the OpenWarden operator grammar:
+OpenCatalog uses the OpenLoop operator grammar:
 
 - **extend** — add structural detail  
 - **condense** — simplify hierarchy  
