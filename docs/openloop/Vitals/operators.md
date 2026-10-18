@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="openloop_Vitals_operators_" src="https://github.com/user-attachments/assets/1ed35b0e-f38c-4bfb-b385-c6c1ffc32eab" />
+
 # 🫀 **OpenVitals — operators.md**  
 **OpenWarden Suite — Health & Physiological Signal Substrate**  
 **Analyzer Layer:** dimensional  
