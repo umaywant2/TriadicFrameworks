@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="openloop_AdEngine_canonical_metadata_" src="https://github.com/user-attachments/assets/10ee4ccd-678d-4858-bcc4-2ed8eecfee96" />
+
 # 📢 **OpenAdEngine — canonical_metadata.md**  
 **OpenWarden Suite — Contextual Advertising Substrate**  
 **Version:** 1.0  
