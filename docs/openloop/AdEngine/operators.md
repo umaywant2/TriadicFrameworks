@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="openloop_AdEngine_operators_" src="https://github.com/user-attachments/assets/f5f3fd4d-a164-49e2-b496-4778329d73bd" />
+
 # 📢 **OpenAdEngine — operators.md**  
 **OpenWarden Suite — Contextual Advertising Substrate**  
 **Version:** 1.0  
