@@ -1,3 +1,6 @@
+
+- [`rtt_global_list.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/datacenter_reports/rtt_global_list.json) — Agentic module schema role assignments
+
 # 🌐 **RTT Datacenter Global List + BRA Preface (Markdown Document)**  
 *(We can name it: `rtt_datacenter_global_list.md`)*
 
