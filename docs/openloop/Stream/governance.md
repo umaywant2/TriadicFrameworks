@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="openloop_Stream_governance_" src="https://github.com/user-attachments/assets/459b4ae3-c32f-4f71-b1d3-3f63d0090474" />
+
 # 🌊 **OpenStream — governance.md**  
 **OpenWarden Suite — Streaming Substrate**  
 **Analyzer Layer:** flow‑structural  
