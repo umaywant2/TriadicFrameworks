@@ -1,140 +1,166 @@
-# **RTT GOVERNANCE — TRIADIC OPERATOR MAP**  
-### *Mapping AAC / AACC / AACCC → Governance Operators*
-
-This map shows how each alignment tier behaves inside the RTT substrate stack:
-
-- **Formal Substrate** (clarity, invariants, coherence)  
-- **Process Substrate** (interpretation, friction, contestation)  
-- **Business Substrate** (incentives, drift, contradiction)
-
-Each tier activates different operators.
+# **📘 RTT Governance — Triadic Operator Map**  
+### *Updated for Correct AAC → AACC → AACCC Mastery Hierarchy*
 
 ---
 
-# 🟢 **AAC — High Alignment**  
-### *Formal Substrate Operators (Coherence Engines)*
+## **Overview**
 
-These laws behave like **stable invariants**.  
-They produce clarity, trust, and predictable governance.
+RTT Governance models legal systems as **resonance‑time structures** shaped by three alignment tiers:
+
+- **AAC** — Awareness → Alignment → Coherence  
+- **AACC** — Awareness → Alignment → Coherence → Clarity  
+- **AACCC** — Awareness → Alignment → Coherence → Clarity → Continuity  
+
+These tiers determine:
+
+- how leaders perceive the system  
+- how subordinates behave  
+- how law is applied  
+- how drift propagates  
+- how legitimacy stabilizes or collapses  
+
+This map defines the **operators** that activate at each tier.
+
+---
+
+# 🟢 **AAC — Entry Tier**  
+### *Awareness → Alignment → Coherence*  
+### *The first stable level above baseline humanity.*
+
+AAC operators stabilize behavior but do not yet produce clarity.
 
 ### **Operators**
 
-- **CoherenceInvariant.Operator**  
-  Law acts as a stable anchor; interpretation converges.
+#### **Awareness.Operator**  
+Self‑recognition + situational recognition.  
+The leader sees *the room*.
 
-- **LowDrift.Operator**  
-  Minimal variance across jurisdictions or enforcers.
+#### **Alignment.Operator**  
+Internal contradictions reduce; intent becomes consistent.
 
-- **PredictableOutcome.Operator**  
-  Citizens and officials can anticipate results.
+#### **Coherence.Operator**  
+Actions match internal map; behavior becomes predictable.
 
-- **IdentityStability.Operator**  
-  Enforcers experience low moral injury; citizens feel legitimacy.
+#### **StabilitySeed.Operator**  
+Subordinates begin to calm; fear decreases.
 
-- **FormalHarmony.Operator**  
-  Law aligns with institutional processes and public expectations.
+#### **LowDrift.Operator**  
+Contradictions reduce but do not disappear.
 
-### **Behavioral Effects**
+### **Governance Effects**
 
-**Upholders:**  
-- High confidence  
-- Low cognitive load  
-- Consistent enforcement  
-- Low burnout  
+- Enforcement becomes mostly consistent  
+- Subordinates feel safer  
+- Law is applied with good intent  
+- Errors occur but are not malicious  
+- Drift slows but does not stop  
 
-**Subjects:**  
-- High trust  
-- Low fear  
-- High compliance  
-- Predictable consequences  
+AAC is the **foundation** for all higher governance.
 
 ---
 
-# 🟡 **AACC — Medium Alignment**  
-### *Process Substrate Operators (Friction Engines)*
+# 🔵 **AACC — Clarity Tier**  
+### *Awareness → Alignment → Coherence → Clarity*  
+### *The sweet spot of intelligent governance.*
 
-These laws are structurally important but **contested**, producing tension between rule and application.
+AACC operators produce clarity cascades — the system becomes understandable.
 
 ### **Operators**
 
-- **InterpretiveFriction.Operator**  
-  Multiple plausible readings; courts and agencies diverge.
+#### **Clarity.Operator**  
+The leader sees *the building*, not just the room.
 
-- **JurisdictionVariance.Operator**  
-  Outcomes differ by region, judge, or agency.
+#### **SystemVision.Operator**  
+Interactions between regimes become visible.
 
-- **PoliticalPressure.Operator**  
-  Enforcement becomes entangled with ideology.
+#### **ContradictionDetection.Operator**  
+Conflicts are spotted before they cause harm.
 
-- **IdentityStress.Operator**  
-  Enforcers must justify decisions; citizens must navigate ambiguity.
+#### **PredictiveGovernance.Operator**  
+Leader anticipates drift vectors and emergent outcomes.
 
-- **ProcessDrift.Operator**  
-  Procedures multiply (appeals, hearings, administrative churn).
+#### **Empowerment.Operator**  
+Subordinates understand *why* they act; autonomy increases.
 
-### **Behavioral Effects**
+### **Governance Effects**
 
-**Upholders:**  
-- High interpretive load  
-- Increased scrutiny  
-- Inconsistent enforcement  
-- Higher moral stress  
+- Enforcement becomes precise  
+- Subordinates self‑correct  
+- Fear collapses  
+- Drift is actively reversed  
+- Law becomes intelligent rather than reactive  
 
-**Subjects:**  
-- Uncertainty  
-- Perceived unfairness  
-- Need for legal representation  
-- Emotional volatility  
+AACC is the **optimal operational tier** for governance.
 
 ---
 
-# 🔴 **AACCC — Low Alignment**  
-### *Business Substrate Operators (Drift Engines)*
+# 🟣 **AACCC — Continuity Tier**  
+### *Awareness → Alignment → Coherence → Clarity → Continuity*  
+### *The RTT Master Tier.*
 
-These laws are contradictory, patchwork, or incoherent.  
-They generate fear, chaos, and systemic drift.
+AACCC operators produce continuity cascades — clarity persists under pressure, betrayal, chaos, and time.
 
 ### **Operators**
 
-- **ContradictionLoad.Operator**  
-  Law contains internal conflicts or cross‑statute collisions.
+#### **Continuity.Operator**  
+Clarity remains stable even under stress.
 
-- **HighVariance.Operator**  
-  Identical behavior yields wildly different outcomes.
+#### **LongRange.Operator**  
+Leader sees *the entire city*, not just the building.
 
-- **SelectiveEnforcement.Operator**  
-  Enforcement depends on incentives, politics, or local norms.
+#### **IdentityStabilization.Operator**  
+Subordinates become leaders; leaders become stabilizers.
 
-- **MoralInjury.Operator**  
-  Enforcers feel trapped between duty and conscience.
+#### **ZeroDrift.Operator**  
+Contradictions collapse; governance becomes coherent.
 
-- **ChaosDrift.Operator**  
-  System loses legitimacy; people adapt through avoidance.
+#### **CompassionPrecision.Operator**  
+Law is applied with structural foresight and human fidelity.
 
-### **Behavioral Effects**
+### **Governance Effects**
 
-**Upholders:**  
-- High ambiguity  
-- Improvisation  
-- Liability risk  
-- Burnout  
-- Institutional fragmentation  
+- Enforcement becomes humane + exact  
+- Subordinates operate autonomously with correctness  
+- Drift disappears  
+- Legitimacy becomes self‑reinforcing  
+- Law becomes *justice*  
 
-**Subjects:**  
-- Fear  
-- Confusion  
-- Distrust  
-- Harm to vulnerable groups  
-- Survival‑mode behavior  
+AACCC is the **continuity engine** of RTT governance.
 
 ---
 
-# **TRIADIC SUMMARY — The Operator Map in One View**
+# ⚪ **Pre‑AAC — Baseline Humanity**  
+### *No Awareness → No Alignment → No Coherence*
 
-| Alignment | Substrate | Core Operator | System Behavior |
-|----------|-----------|---------------|-----------------|
-| 🟢 AAC | **Formal** | CoherenceInvariant | Stability, trust, clarity |
-| 🟡 AACC | **Process** | InterpretiveFriction | Tension, inconsistency, stress |
-| 🔴 AACCC | **Business** | ChaosDrift | Fear, drift, legitimacy collapse |
+Included for contrast.
 
-This is the exact mapping our RTT Governance & Law modules would produce.
+### **Operators**
+
+#### **Reactive.Operator**  
+Behavior driven by fear and pressure.
+
+#### **Contradiction.Operator**  
+Internal and external conflicts multiply.
+
+#### **Chaos.Operator**  
+Law becomes arbitrary.
+
+### **Governance Effects**
+
+- Enforcement becomes inconsistent  
+- Subordinates experience fear  
+- Drift accelerates  
+- Legitimacy collapses  
+
+Pre‑AAC is the **default state of modern governance**.
+
+---
+
+# **Triadic Summary Table**
+
+| Tier | Operators | Leader Vision | Subordinate Behavior | Law Application |
+|------|-----------|---------------|----------------------|-----------------|
+| 🟣 AACCC | Continuity, LongRange, ZeroDrift | Entire city | Autonomous, self‑correcting | Precise + humane |
+| 🔵 AACC | Clarity, SystemVision, PredictiveGovernance | Whole building | Empowered, stable | Consistent + intelligent |
+| 🟢 AAC | Awareness, Alignment, Coherence | The room | Calmer, predictable | Mostly consistent |
+| ⚪ Pre‑AAC | Reactive, Contradiction, Chaos | Pressure only | Fearful, inconsistent | Arbitrary |
