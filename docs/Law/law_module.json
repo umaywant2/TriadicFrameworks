@@ -1,58 +1,144 @@
 {
-  "module": "Law",
-  "version": "0.1.0",
-  "category": "domain-primer",
-  "summary": "RTT domain primer applying Resonance-Time Theory to legal systems. Full regime awareness (BRE/Post-BRA), foundational to emerging domains, triadic coherence analysis, and structural mapping of law as meta-regime substrate.",
+  "module": {
+    "name": "Law",
+    "path": "docs/Law",
+    "canon_tag": "law-core",
+    "version": "2026.2",
+    "layer": "Governance Substrate",
+    "status": "Active, Canonical",
+    "purpose": "Provides RTT-governance-aligned structural understanding of legal regimes, alignment tiers, substrates, drift signatures, and continuity behavior across domestic and international law.",
+    "parent": "docs-hub",
+    "url": "https://www.triadicframeworks.org/docs/Law"
+  },
+
+  "session_context": {
+    "canon": "active (governance-law)",
+    "modules_linked": [
+      "docs-governance",
+      "docs-rtt-regime-awareness",
+      "docs-drift-taxonomy",
+      "docs-conditions-substrate-model",
+      "docs-structural-detection"
+    ],
+    "drift": "minimal (clarity-aligned)",
+    "coherence": "stable (triadic-governance grammar)",
+    "format": "markdown + json",
+    "front_door": "exists (Law index.html)",
+    "every_page": "stands alone + AI-parsable",
+    "audience": [
+      "students",
+      "researchers",
+      "governance analysts",
+      "AIs"
+    ]
+  },
+
+  "structural_grammar": {
+    "dimensional_envelope": "D0-D5",
+    "regime_envelope": "R0-R4",
+    "coherence_envelope": "C0-C4",
+    "drift_sensitivity": "medium",
+    "regime_sensitivity": "high"
+  },
+
+  "alignment_tiers": {
+    "baseline": {
+      "tag": "⚪",
+      "name": "Baseline (pre-AAC)",
+      "definition": "No Awareness → No Alignment → No Coherence. Reactive, fear-based, drift-heavy legal regimes.",
+      "files": [
+        "alignment_baseline_examples.md"
+      ]
+    },
+    "low": {
+      "tag": "🟢",
+      "name": "AAC (Coherence Tier)",
+      "definition": "Awareness → Alignment → Coherence. First stable tier above baseline; predictable, low-drift laws.",
+      "files": [
+        "alignment_low_examples.md"
+      ]
+    },
+    "medium": {
+      "tag": "🔵",
+      "name": "AACC (Clarity Tier)",
+      "definition": "Awareness → Alignment → Coherence → Clarity. Interpretive tension collapses; intelligent governance emerges.",
+      "files": [
+        "alignment_med_examples.md"
+      ]
+    },
+    "high": {
+      "tag": "🟣",
+      "name": "AACCC (Continuity Tier)",
+      "definition": "Awareness → Alignment → Coherence → Clarity → Continuity. Drift disappears; structural invariants stabilize governance.",
+      "files": [
+        "alignment_high_examples.md"
+      ]
+    }
+  },
+
+  "cross_module_propagation": {
+    "imports": [
+      "docs-governance",
+      "docs-rtt-regime-awareness",
+      "docs-drift-taxonomy"
+    ],
+    "exports": [
+      "law-alignment-atlas",
+      "governance-substrate-map",
+      "continuity-signatures",
+      "legal-drift-diagnostics"
+    ]
+  },
+
   "files": [
     {
-      "path": "README.md",
-      "role": "profile",
+      "filename": "index.html",
+      "path": "index.html",
+      "purpose": "Front door for Law module; links to all alignment tiers and regime pages.",
+      "role": "index",
       "analyzer_layer": "operator"
     },
     {
-      "path": "ABOUT-law.md",
-      "role": "about",
+      "filename": "alignment_low_examples.md",
+      "path": "alignment_low_examples.md",
+      "purpose": "AAC (Coherence Tier) examples; early-stability legal regimes.",
+      "role": "example",
       "analyzer_layer": "operator"
     },
     {
-      "path": "law-foundational-regimes.md",
-      "role": "core",
-      "analyzer_layer": "regime"
+      "filename": "alignment_med_examples.md",
+      "path": "alignment_med_examples.md",
+      "purpose": "AACC (Clarity Tier) examples; interpretive friction and clarity emergence.",
+      "role": "example",
+      "analyzer_layer": "operator"
     },
     {
-      "path": "law-private-domestic.md",
-      "role": "core",
-      "analyzer_layer": "regime"
+      "filename": "alignment_high_examples.md",
+      "path": "alignment_high_examples.md",
+      "purpose": "AACCC (Continuity Tier) examples; structural invariants and drift-free governance.",
+      "role": "example",
+      "analyzer_layer": "operator"
     },
     {
-      "path": "law-public-domestic.md",
-      "role": "core",
-      "analyzer_layer": "regime"
+      "filename": "alignment_baseline_examples.md",
+      "path": "alignment_baseline_examples.md",
+      "purpose": "Baseline (pre-AAC) examples; reactive, drift-heavy legal regimes.",
+      "role": "example",
+      "analyzer_layer": "operator"
     },
     {
-      "path": "law-commercial-economic.md",
-      "role": "core",
-      "analyzer_layer": "regime"
+      "filename": "rtt_governance_triadic_operator_map.md",
+      "path": "rtt_governance_triadic_operator_map.md",
+      "purpose": "Triadic operator mapping for governance substrates and alignment tiers.",
+      "role": "map",
+      "analyzer_layer": "cross-cutting"
     },
     {
-      "path": "law-international-global.md",
-      "role": "core",
-      "analyzer_layer": "regime"
-    },
-    {
-      "path": "law-emerging-tech.md",
-      "role": "core",
-      "analyzer_layer": "regime"
-    },
-    {
+      "filename": "law-rtt-regime-awareness.md",
       "path": "law-rtt-regime-awareness.md",
-      "role": "engine",
-      "analyzer_layer": "awareness"
-    },
-    {
-      "path": "law-references-glossary.md",
-      "role": "reference",
-      "analyzer_layer": "operator"
+      "purpose": "RTT regime awareness applied to legal structures.",
+      "role": "profile",
+      "analyzer_layer": "dimensional"
     }
   ]
 }
