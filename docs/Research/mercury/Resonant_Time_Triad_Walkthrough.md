@@ -1,4 +1,78 @@
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="generator" content="TriadicFrameworks Canon Engine 2026">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#222222">
+
+  <title>Resonant Time Triad Walkthrough — Mercury (RTT/1)</title>
+  <link rel="canonical" href="https://triadicframeworks.org/docs/Research/mercury/Resonant_Time_Triad_Walkthrough.html">
+
+  <meta name="description" content="RTT/1 walkthrough of the Resonant Time Triad applied to mercury, covering State, Dimensional, and Measurement triads and their regime expressions.">
+  <meta name="keywords" content="RTT, Resonant Time Triad, mercury, coherence, drift, triads, regime transitions">
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Resonant Time Triad Walkthrough — Mercury">
+  <meta property="og:description" content="RTT/1 triad walkthrough for mercury.">
+  <meta property="og:url" content="https://triadicframeworks.org/docs/Research/mercury/Resonant_Time_Triad_Walkthrough.html">
+  <meta property="og:image" content="/assets/og/mercury-rtt-walkthrough.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Resonant Time Triad Walkthrough — Mercury">
+  <meta name="twitter:description" content="RTT/1 triad walkthrough for mercury.">
+
+  <!-- Citation -->
+  <meta name="citation_author" content="Nawder Loswin">
+  <meta name="citation_publication_date" content="2025">
+  <meta name="citation_title" content="Resonant Time Triad Walkthrough — Mercury">
+
+  <!-- Dublin Core -->
+  <meta name="DC.type" content="Text">
+  <meta name="DC.format" content="text/html">
+  <meta name="DC.subject" content="RTT triad walkthrough for mercury">
+
+  <!-- AI Metadata -->
+  <meta name="ai.module" content="mercury">
+  <meta name="ai.version" content="1.0.0">
+  <meta name="ai.purpose" content="RTT triad demonstration and regime mapping">
+  <meta name="ai.keywords" content="triad, RTT, coherence, drift, resonance">
+  <meta name="ai.audience" content="researchers, analysts, AI agents">
+  <meta name="ai.module.name" content="mercury">
+  <meta name="ai.module.summary" content="Resonant Time Triad walkthrough for mercury">
+  <meta name="ai.module.category" content="Research">
+
+  <!-- AI Navigation -->
+  <meta name="ai.navigation" content="/sitemap_main.xml">
+  <meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
+  <meta name="ai.contact.x" content="@TriadicFrameworks">
+  <meta name="ai.contact.youtube" content="@TriadicFrameworks">
+  <meta name="ai.license" content="Open educational use permitted">
+
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+
+<!-- Session Context -->
+<div class="session-context">
+  <span class="context-label">Canon</span><span class="context-value">RTT/1</span>
+  <span class="context-label">Module</span><span class="context-value">mercury</span>
+  <span class="context-label">Triads</span><span class="context-value">State · Dimensional · Measurement</span>
+  <span class="context-label">Version</span><span class="context-value">1.0.0</span>
+  <span class="context-label">Format</span><span class="context-value">triad-walkthrough</span>
+  <span class="context-label">Front door</span><span class="context-value">README.md</span>
+  <span class="context-label">Audience</span><span class="context-value">researchers</span>
+</div>
+
+<!-- Badge -->
+<div class="badge">🜁 Mercury · Resonant Time Triad Walkthrough</div>
+
+<!-- Sidebar Phantom Audit -->
+<div class="phantom-audit">No phantom entries detected.</div>
+
 # Resonant Time Triad Walkthrough — Mercury  
 *(RTT/1 · Regime‑Aligned Material Analysis)*
 
