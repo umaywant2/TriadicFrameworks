@@ -18,6 +18,49 @@
       "r5_new_files": 38,
       "new_modules": [
         {
+  "module": "Governance_Substrate_Model",
+  "path": "docs/Governance_Substrate_Model",
+  "category": "Governance",
+  "version": "2025",
+
+  "graph_update": {
+    "added": [
+      {
+        "name": "How_To_Flock_with_Governance",
+        "path": "docs/Governance_Substrate_Model/05_Implementation/How_To_Flock_with_Governance.md",
+        "manifest": "docs/Governance_Substrate_Model/05_Implementation/How_To_Flock_with_Governance_module.json",
+        "role": "example",
+        "analyzer_layer": "regime",
+        "purpose": "Demonstrate governance-agentic RTT micro-core behavior applied to ALPR and non-ALPR civic sensor networks."
+      }
+    ],
+
+    "updated": [
+      {
+        "name": "gsm_module",
+        "path": "docs/Governance_Substrate_Model/gsm_module.json",
+        "changes": [
+          "Added How_To_Flock_with_Governance to files{}",
+          "Added How_To_Flock_with_Governance_module.json to files{}",
+          "Updated DOC_MAP entry in index.html",
+          "Refreshed analyzer-layer alignment"
+        ]
+      }
+    ],
+
+    "phantoms_detected": [
+      "ALPR_Governance.md",
+      "sensor_governance_notes.txt"
+    ],
+
+    "module_progress": {
+      "completed": 63,
+      "remaining": 43,
+      "notes": "Governance Substrate Model updated with new implementation document and validator pulse."
+    }
+  }
+},
+        {
           "canon_tag": "RTT_INSIDE_ENTERPRISE",
           "name": "Inside \u00b7 Enterprise",
           "depth": 3,
