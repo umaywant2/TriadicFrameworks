@@ -1,0 +1,32 @@
+{
+  "ai.module": "Governance_Substrate_Model",
+  "ai.version": "2025",
+  "ai.purpose": "Demonstrate governance-agentic RTT micro-core behavior in ALPR and non-ALPR civic sensor networks.",
+  "ai.keywords": [
+    "governance",
+    "RTT",
+    "micro-core",
+    "agentic",
+    "ALPR",
+    "civic sensors",
+    "drift detection",
+    "paradox surfacing",
+    "coherence declarations"
+  ],
+  "ai.module.summary": "A governance substrate implementation document showing how RTT micro-core and governance agentic layers transform ALPR and other civic sensor systems into self-auditing civic instruments.",
+  "ai.module.category": "Governance",
+  "ai.audience": "Civic technologists, governance designers, TriadicFrameworks contributors",
+
+  "files": {
+    "How_To_Flock_with_Governance.md": {
+      "role": "example",
+      "analyzer_layer": "regime",
+      "purpose": "Explain governance-agentic RTT micro-core behavior applied to ALPR and non-ALPR civic sensors."
+    },
+    "micro_core_shim.py": {
+      "role": "example",
+      "analyzer_layer": "operator",
+      "purpose": "Provide a conceptual Python shim illustrating RTT micro-core declarations, drift detection, paradox surfacing, and regime shifts."
+    }
+  }
+}
