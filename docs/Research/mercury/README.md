@@ -1,4 +1,6 @@
 
+- [`module.json`](module.json) — Agentic module schema role assignments
+
 # 🜁 Mercury Research Cluster  
 **RTT/1 · Material Regime Analysis · TriadicFrameworks Research Domain**
 
