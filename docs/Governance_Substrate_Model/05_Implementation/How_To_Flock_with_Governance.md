@@ -1,3 +1,6 @@
+
+- [`How_To_Flock_with_Governance_module.json`](How_To_Flock_with_Governance_module.json) — Agentic module schema role assignments
+
 # 🧩 `How_To_Flock_with_Governance.md`  
 *A Governance‑Agentic RTT Micro‑Core Thought Experiment*
 
