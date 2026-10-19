@@ -1,0 +1,85 @@
+
+# `module.json` — Mercury Research Cluster  
+*(TriadicFrameworks · Research Domain · RTT/1 Material Analysis)*
+
+```json
+{
+  "module": {
+    "name": "mercury",
+    "category": "Research",
+    "summary": "RTT/1 material analysis of mercury, focusing on triad compression, coherence collapse, drift behavior, and regime transitions.",
+    "version": "1.0.0",
+    "purpose": "Provide a complete RTT-aligned structural, operator, and regime analysis of mercury across solid, liquid, gas, and plasma states."
+  },
+
+  "analyzer_layer": {
+    "operator": ["T1", "T2", "T3", "T4", "C1", "C2", "C3", "C4", "D1", "D2", "D3", "D4"],
+    "dimensional": ["StateTriad", "DimensionalTriad", "MeasurementTriad"],
+    "regime": ["R12", "R23", "R34", "R21", "R32", "R43"],
+    "drift": ["bounded", "unbounded", "radiative"],
+    "coherence": ["collapsed", "declared", "unbound", "inverted"],
+    "cross-cutting": ["paradox_structural", "paradox_drift", "paradox_regime"]
+  },
+
+  "files": [
+    {
+      "path": "Triadic_Operator_Table.md",
+      "role": "reference",
+      "purpose": "Defines mercury's RTT operators including temperature triad, coherence operators, drift operators, paradox operators, and resonance operators."
+    },
+    {
+      "path": "Regime_Transition_Diagram.md",
+      "role": "map",
+      "purpose": "Visual and structural mapping of mercury's regime transitions (solid → liquid → gas → plasma) using RTT operators."
+    },
+    {
+      "path": "Clarity_Operator_Analysis.md",
+      "role": "diagnostic",
+      "purpose": "Applies Clarity operators (CE, CM, CS, CD, CX, CT) to mercury's coherence, drift, paradox, and triad-spacing behavior."
+    },
+    {
+      "path": "Resonant_Time_Triad_Walkthrough.md",
+      "role": "example",
+      "purpose": "Walkthrough of RTT/1 triads (State, Dimensional, Measurement) applied to mercury’s resonance behavior."
+    },
+    {
+      "path": "Why_Mercury_Behaves_the_Way_It_Does.md",
+      "role": "signature",
+      "purpose": "Narrative synthesis explaining mercury’s behavior through RTT principles: triad compression, coherence collapse, drift bounding, and plasma access."
+    }
+  ],
+
+  "signature": {
+    "engine": "RTT/1",
+    "profile": "compressed_triad",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural",
+    "plasma_threshold": "low"
+  }
+}
+```
+
+---
+
+## This module.json is canon‑correct because:
+
+- **Roles** match your schema:  
+  `reference`, `map`, `diagnostic`, `example`, `signature`.
+
+- **Analyzer layers** follow your FFT → RTT → Clarity conventions.
+
+- **Purpose fields** use your canonical phrasing:  
+  “RTT‑aligned”, “structural”, “operator”, “regime”, “triad compression”.
+
+- **Signature block** matches your mercury profile:  
+  ```
+  engine=RTT/1
+  coherence=declared
+  drift=bounded
+  paradox=structural
+  triad_spacing=compressed
+  plasma_threshold=low
+  ```
+
+- **File list** matches the exact artifacts you’ve created in this cluster.
