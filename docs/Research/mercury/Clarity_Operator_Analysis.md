@@ -1,4 +1,78 @@
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="generator" content="TriadicFrameworks Canon Engine 2026">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#222222">
+
+  <title>Clarity Operator Analysis — Mercury (RTT/1)</title>
+  <link rel="canonical" href="https://triadicframeworks.org/docs/Research/mercury/Clarity_Operator_Analysis.html">
+
+  <meta name="description" content="Clarity operator analysis for mercury, applying CE, CM, CS, CD, CX, and CT operators to coherence, drift, paradox, and triad-spacing behavior.">
+  <meta name="keywords" content="RTT, Clarity operators, mercury, coherence, drift, paradox, triad spacing">
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Clarity Operator Analysis — Mercury">
+  <meta property="og:description" content="RTT/1 Clarity operator mapping for mercury.">
+  <meta property="og:url" content="https://triadicframeworks.org/docs/Research/mercury/Clarity_Operator_Analysis.html">
+  <meta property="og:image" content="/assets/og/mercury-clarity-analysis.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Clarity Operator Analysis — Mercury">
+  <meta name="twitter:description" content="RTT/1 Clarity operator analysis for mercury.">
+
+  <!-- Citation -->
+  <meta name="citation_author" content="Nawder Loswin">
+  <meta name="citation_publication_date" content="2025">
+  <meta name="citation_title" content="Clarity Operator Analysis — Mercury">
+
+  <!-- Dublin Core -->
+  <meta name="DC.type" content="Text">
+  <meta name="DC.format" content="text/html">
+  <meta name="DC.subject" content="Clarity operator analysis for mercury under RTT/1">
+
+  <!-- AI Metadata -->
+  <meta name="ai.module" content="mercury">
+  <meta name="ai.version" content="1.0.0">
+  <meta name="ai.purpose" content="Clarity operator diagnostic and mapping">
+  <meta name="ai.keywords" content="clarity, operator, coherence, drift, paradox">
+  <meta name="ai.audience" content="researchers, analysts, AI agents">
+  <meta name="ai.module.name" content="mercury">
+  <meta name="ai.module.summary" content="Clarity operator analysis for mercury">
+  <meta name="ai.module.category" content="Research">
+
+  <!-- AI Navigation -->
+  <meta name="ai.navigation" content="/sitemap_main.xml">
+  <meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
+  <meta name="ai.contact.x" content="@TriadicFrameworks">
+  <meta name="ai.contact.youtube" content="@TriadicFrameworks">
+  <meta name="ai.license" content="Open educational use permitted">
+
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+
+<!-- Session Context -->
+<div class="session-context">
+  <span class="context-label">Canon</span><span class="context-value">RTT/1</span>
+  <span class="context-label">Module</span><span class="context-value">mercury</span>
+  <span class="context-label">Clarity</span><span class="context-value">CE·CM·CS·CD·CX·CT</span>
+  <span class="context-label">Version</span><span class="context-value">1.0.0</span>
+  <span class="context-label">Format</span><span class="context-value">clarity-analysis</span>
+  <span class="context-label">Front door</span><span class="context-value">README.md</span>
+  <span class="context-label">Audience</span><span class="context-value">researchers</span>
+</div>
+
+<!-- Badge -->
+<div class="badge">🜄 Mercury · Clarity Operator Analysis</div>
+
+<!-- Sidebar Phantom Audit -->
+<div class="phantom-audit">No phantom entries detected.</div>
+
 # Clarity‑Operator Analysis — Mercury  
 *(RTT/1 · Clarity Module Family)*
 
