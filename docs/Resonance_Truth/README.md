@@ -1,4 +1,6 @@
 
+- [`module.json`](module.json) — Agentic module schema role assignments
+
 # 🜁 Resonance Truth  
 **RTT/1 · Semantic Resonance · Coherence · Drift · Paradox · SET Triad**
 
