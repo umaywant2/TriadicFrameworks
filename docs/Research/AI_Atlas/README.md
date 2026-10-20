@@ -1,4 +1,6 @@
 
+- [`module.json`](module.json) — Agentic module schema role assignments
+
 # **README.md**  
 ### *AI Atlas — Multi‑Dimensional Intelligence Mapping System*  
 ### *Root Module Overview*
