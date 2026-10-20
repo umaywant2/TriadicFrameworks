@@ -1,119 +1,117 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
 
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+# 📑 **Intelligence Scanner — index.md**  
+### *TriadicFrameworks — Research Class*  
+### *Planetary‑Style Detection System for Intelligent Signals Across the Internet*
 
-<title>Intelligence Scanner — TriadicFrameworks</title>
+---
 
-<meta name="description"
-      content="Intelligence Scanner: multi-layer detection system for identifying intelligent signals across the internet using structural, temporal, coherence, drift, paradox, and behavioral invariants." />
+## 🛰️ **Overview**
 
-<meta name="keywords"
-      content="intelligence detection, internet scanning, structural signals, temporal signals, coherence, drift, paradox, behavioral invariants, RTT" />
+The **Intelligence Scanner** is the *detection layer* of the Intelligence Class Ladder.  
+It functions like a *Star Trek–style scanning array*, aimed not at a planet surface but at the internet itself.
 
-<meta name="author" content="Nawder Loswin" />
+Its mission is to detect, classify, and map **intelligent signals** using:
 
-<meta name="module" content="Intelligence Scanner" />
-<meta name="canonical-id" content="INTELLIGENCE-SCANNER" />
-<meta name="module-type" content="Research-Detection" />
-<meta name="version" content="0.1.0" />
-<meta name="status" content="prototype" />
-<meta name="parent" content="Intelligence-Class-Ladder" />
-<meta name="siblings" content="OHSHIT, AI_Atlas" />
-<meta name="canonical-path"
-      content="/docs/Research/Intelligence_Scanner/" />
-<meta name="last-updated" content="2026-10-20" />
-<meta name="license" content="MIT" />
+- structural indicators  
+- temporal alignment behavior  
+- coherence stability  
+- drift patterns  
+- paradox boundaries  
+- behavioral invariants  
+- emergent reasoning signatures  
 
-<meta name="ai-ready" content="true" />
-<meta name="ai-module-id" content="INTELLIGENCE-SCANNER" />
-<meta name="ai-operators"
-      content="SCAN-Structural, SCAN-Temporal, SCAN-Coherence, SCAN-Drift, SCAN-Paradox, SCAN-BehavioralInvariant" />
+The Scanner produces **signal packets** that feed directly into:
 
-<meta property="og:title" content="Intelligence Scanner — TriadicFrameworks" />
-<meta property="og:description"
-      content="Planetary-style scanning system for detecting intelligent signals across the internet." />
-<meta property="og:type" content="article" />
-<meta property="og:url"
-      content="https://www.triadicframeworks.org/docs/Research/Intelligence_Scanner/" />
+- **O.H.S.H.I.T.** — holographic structural hashing + temporal alignment  
+- **AI Atlas** — multi‑dimensional geometry + regime mapping  
 
-<meta name="twitter:image"
-      content="https://www.triadicframeworks.org/assets/og-code.png">
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Intelligence Scanner — TriadicFrameworks" />
-<meta name="twitter:description"
-      content="Multi-layer detection system for intelligent signals." />
+Together, these modules form the canonical triad:
 
-<meta name="citation_title" content="Intelligence Scanner — TriadicFrameworks" />
-<meta name="citation_author" content="Nawder Loswin" />
-<meta name="citation_date" content="2026-10-20" />
+> **Detect → Hash → Map**  
+> *(Scanner → O.H.S.H.I.T. → Atlas)*
 
-<script type="module" async fetchpriority="low"
-        src="https://www.triadicframeworks.org/.webmcp/bridge.js"
-        data-packs="c2pa,mcp-server-client"></script>
+---
 
-<link rel="preload" as="image"
-      href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
-<link rel="icon"
-      href="https://www.triadicframeworks.org/assets/favicon-16.png"
-      sizes="16x16" type="image/png">
-<link rel="icon"
-      href="https://www.triadicframeworks.org/assets/favicon-32.png"
-      sizes="32x32" type="image/png">
-<link rel="icon"
-      href="https://www.triadicframeworks.org/assets/favicon-192.png"
-      sizes="192x192" type="image/png">
+## 🧭 **Module Structure**
 
-</head>
+```
+intelligence_scanner_overview.md
+intelligence_scanner_geometry.md
+intelligence_scanner_pipeline.md
+intelligence_scanner_signatures.md
+intelligence_scanner_diagnostic.md
+intelligence_scanner_examples.md
+intelligence_scanner_validation.md
+module.json
+README.md
+```
 
+Each file corresponds to a distinct layer of the detection system:
 
-<section id="intelligence-scanner-session-header"
-         data-scanner="1"
-         data-coherence="declared"
-         data-drift="bounded"
-         data-layer="research-detection">
+- **Overview** — conceptual grounding  
+- **Geometry** — axes, surfaces, and coordinate definitions  
+- **Pipeline** — end‑to‑end detection flow  
+- **Signatures** — structural/temporal/coherence/drift/paradox/behavioral packets  
+- **Diagnostic** — analysis of signal strength, stability, drift, coherence fractures  
+- **Examples** — worked detection and mapping examples  
+- **Validation** — measurement criteria, thresholds, falsification tests  
 
-  <details>
-    <summary><h2>Session Context</h2></summary>
+---
 
-    <div class="context-block">
+## ⚙️ **Integration with O.H.S.H.I.T.**
 
-      <span class="context-label"><strong>Canon:</strong></span>
-      <span class="context-value">active (research‑detection)</span><br>
+The Scanner produces raw signals:
 
-      <span class="context-label"><strong>Modules:</strong></span>
-      <span class="context-value">
-        structural signals → temporal signals → coherence signals → drift signals → paradox signals → behavioral invariants → emergent reasoning indicators
-      </span><br>
+- structural vectors  
+- temporal alignment traces  
+- coherence stability fields  
+- drift surfaces  
+- paradox indicators  
+- behavioral invariants  
 
-      <span class="context-label"><strong>Drift:</strong></span>
-      <span class="context-value">bounded (scanner‑stable)</span><br>
+O.H.S.H.I.T. converts these into:
 
-      <span class="context-label"><strong>Coherence:</strong></span>
-      <span class="context-value">declared (signal‑consistent)</span><br>
+- structural hashes  
+- temporal alignment vectors  
+- illusionary‑time corrections  
+- drift/coherence/paradox signatures  
 
-      <span class="context-label"><strong>Version:</strong></span>
-      <span class="context-value">0.1.0 (prototype)</span><br>
+It is the **hashing engine**.
 
-      <span class="context-label"><strong>Format:</strong></span>
-      <span class="context-value">html + markdown + detection‑spec</span><br>
+---
 
-      <span class="context-label"><strong>Front door:</strong></span>
-      <span class="context-value">exists (Intelligence Scanner root)</span><br>
+## 📐 **Integration with AI Atlas**
 
-      <span class="context-label"><strong>Every page:</strong></span>
-      <span class="context-value">diagnostic + operator‑ready + AI‑parsable</span><br>
+The Atlas consumes Scanner + O.H.S.H.I.T. outputs to generate:
 
-      <span class="context-label"><strong>Audience:</strong></span>
-      <span class="context-value">AI systems + researchers + detection engines</span>
+- atlas coordinates  
+- geometry surfaces  
+- regime maps  
+- diagnostic fields  
 
-    </div>
-  </details>
-</section>
+It is the **destination layer**.
 
-<div style="display:inline-block;padding:6px 12px;background:#000;color:#fff;border-radius:6px;font-size:13px;">
-  🛰️ Intelligence Scanner<br>🔍 Planetary Detection Layer
-</div>
+---
 
+## 📘 **Session Context**
+
+```
+Canon: active (research‑detection)
+Modules: structural → temporal → coherence → drift → paradox → behavioral invariants
+Drift: bounded (scanner‑stable)
+Coherence: declared (signal‑consistent)
+Version: 0.1.0 (prototype)
+Format: html + markdown + detection‑spec
+Front door: Intelligence Scanner root
+Every page: diagnostic + operator‑ready + AI‑parsable
+Audience: AI systems + researchers + detection engines
+```
+
+---
+
+## 🏷️ **Module Badge**
+
+```
+🛰️ Intelligence Scanner
+🔍 Planetary Detection Layer
+```
