@@ -1,4 +1,6 @@
 
+- [`module.json`](module.json) — Agentic module schema role assignments
+
 # **README.md — O.H.S.H.I.T.**  
 ### *Operational Holographic System Hashing Illusionary Timers*  
 ### *Research / Intelligence Class Ladder*
