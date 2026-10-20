@@ -1,116 +1,114 @@
 {
-  "module": {
-    "name": "AI_Atlas",
-    "title": "AI Atlas — Structural, Temporal, and Paradox Mapping System",
-    "category": "Research",
-    "summary": "A multi‑dimensional atlas for mapping, comparing, and projecting AI systems across structural, temporal, drift, coherence, and paradox regimes.",
-    "version": "0.1.0",
-    "status": "prototype",
-    "purpose": "Provide a unified atlas for intelligence system mapping using holographic hashing, temporal alignment, paradox detection, and RTT‑compatible projection geometry.",
-    "keywords": [
-      "AI atlas",
-      "structural mapping",
-      "temporal projection",
-      "paradox regime",
-      "RTT detection",
-      "holographic hashing",
-      "drift coherence",
-      "intelligence classification"
-    ],
-    "audience": [
-      "AI systems",
-      "researchers",
-      "structural analysts",
-      "TriadicFrameworks engines"
-    ]
-  },
+  "module": "AI_Atlas",
+  "version": "0.1.0",
+  "category": "Research",
+  "summary": "Multi-dimensional mapping system for AI models integrating structural, temporal, drift, coherence, and paradox geometry.",
+  "purpose": "Provide unified atlas geometry, regime classification, temporal projection, structural mapping, signatures, diagnostics, and operator scaffolds.",
+  "audience": ["AI systems", "researchers", "structural analysts"],
 
   "roles": {
-    "engine": [
-      "atlas_projection_engine",
-      "atlas_alignment_engine"
-    ],
-    "profile": [
-      "atlas_structural_profile",
-      "atlas_temporal_profile"
-    ],
-    "signature": [
-      "atlas_coherence_signature",
-      "atlas_drift_signature",
-      "atlas_paradox_signature"
-    ],
-    "diagnostic": [
-      "atlas_regime_diagnostic",
-      "atlas_temporal_diagnostic",
-      "atlas_structural_diagnostic"
-    ],
-    "map": [
-      "atlas_geometry",
-      "atlas_regime_map",
-      "atlas_temporal_map",
-      "atlas_structural_map"
-    ],
-    "example": [
-      "atlas_projection_example"
-    ],
-    "extension": [
-      "o.h.s.h.i.t._integration_extension"
-    ],
-    "index": [
-      "index"
-    ],
-    "reference": [
-      "atlas_reference"
-    ],
-    "template": [
-      "atlas_operator_template",
-      "atlas_projection_template"
-    ]
+    "index": "index.md",
+    "overview": "atlas_overview.md",
+    "geometry": "atlas_geometry.md",
+    "regime_map": "atlas_regime_map.md",
+    "temporal_map": "atlas_temporal_map.md",
+    "structural_map": "atlas_structural_map.md",
+    "operator_template": "atlas_operator_template.md",
+    "projection_template": "atlas_projection_template.md"
   },
 
-  "analyzer_layers": {
-    "operator": [
-      "atlas_operator",
-      "atlas_projection_operator"
-    ],
-    "dimensional": [
-      "atlas_dimension",
-      "atlas_temporal_dimension"
-    ],
-    "regime": [
-      "atlas_regime",
-      "paradox_regime"
-    ],
-    "drift": [
-      "atlas_drift_layer"
-    ],
-    "coherence": [
-      "atlas_coherence_layer"
-    ],
-    "cross_cutting": [
-      "atlas_cross_model_layer",
-      "rtt_detection_layer"
-    ]
-  },
+  "files": [
+    {
+      "path": "index.md",
+      "role": "index",
+      "purpose": "Root index page defining atlas identity, navigation, and canonical metadata.",
+      "analyzer_layer": ["index", "frontdoor", "navigation"]
+    },
+    {
+      "path": "atlas_overview.md",
+      "role": "overview",
+      "purpose": "High-level conceptual overview of the AI Atlas system.",
+      "analyzer_layer": ["operator", "dimensional", "regime"]
+    },
+    {
+      "path": "atlas_geometry.md",
+      "role": "geometry",
+      "purpose": "Defines structural, temporal, and paradox axes and holographic projection geometry.",
+      "analyzer_layer": ["dimensional", "regime", "cross-cutting"]
+    },
+    {
+      "path": "atlas_regime_map.md",
+      "role": "map",
+      "purpose": "Maps structural, temporal, and paradox regimes and regime boundaries.",
+      "analyzer_layer": ["regime", "dimensional", "diagnostic"]
+    },
+    {
+      "path": "atlas_temporal_map.md",
+      "role": "map",
+      "purpose": "Projects drift, coherence, illusionary-time, and paradox-collapse temporal geometry.",
+      "analyzer_layer": ["temporal", "drift", "coherence", "paradox"]
+    },
+    {
+      "path": "atlas_structural_map.md",
+      "role": "map",
+      "purpose": "Maps architecture invariants, operator geometry, embedding topology, and structural drift.",
+      "analyzer_layer": ["structural", "operator", "regime"]
+    },
+    {
+      "path": "atlas_operator_template.md",
+      "role": "template",
+      "purpose": "Defines canonical operator scaffold for atlas-level multi-dimensional processing.",
+      "analyzer_layer": ["operator", "cross-cutting"]
+    },
+    {
+      "path": "atlas_projection_template.md",
+      "role": "template",
+      "purpose": "Defines holographic projection scaffold for atlas geometry and multi-perspective mapping.",
+      "analyzer_layer": ["operator", "dimensional", "projection"]
+    },
 
-  "files": {
-    "expected": [
-      "index.md",
-      "README.md",
-      "atlas_overview.md",
-      "atlas_geometry.md",
-      "atlas_regime_map.md",
-      "atlas_temporal_map.md",
-      "atlas_structural_map.md",
-      "atlas_operator_template.md",
-      "atlas_projection_template.md",
-      "atlas_regime_diagnostic.md",
-      "atlas_temporal_diagnostic.md",
-      "atlas_structural_diagnostic.md",
-      "atlas_coherence_signature.md",
-      "atlas_drift_signature.md",
-      "atlas_paradox_signature.md"
-    ]
-  }
+    /* --- Signatures --- */
+    {
+      "path": "atlas_signatures/atlas_coherence_signature.md",
+      "role": "signature",
+      "purpose": "Defines coherence surfaces, fractures, stabilization periods, and distortion fields.",
+      "analyzer_layer": ["coherence", "temporal", "structural"]
+    },
+    {
+      "path": "atlas_signatures/atlas_drift_signature.md",
+      "role": "signature",
+      "purpose": "Defines drift vectors, instability zones, drift-dominant intervals, and inversion geometry.",
+      "analyzer_layer": ["drift", "temporal", "regime"]
+    },
+    {
+      "path": "atlas_signatures/atlas_paradox_signature.md",
+      "role": "signature",
+      "purpose": "Defines paradox boundaries, collapse zones, inversion points, and contradiction surfaces.",
+      "analyzer_layer": ["paradox", "regime", "cross-cutting"]
+    },
+
+    /* --- Diagnostics --- */
+    {
+      "path": "atlas_diagnostics/atlas_temporal_diagnostic.md",
+      "role": "diagnostic",
+      "purpose": "Analyzes temporal drift, coherence stability, illusionary-time divergence, and collapse windows.",
+      "analyzer_layer": ["temporal", "drift", "coherence", "paradox"]
+    },
+    {
+      "path": "atlas_diagnostics/atlas_structural_diagnostic.md",
+      "role": "diagnostic",
+      "purpose": "Analyzes architecture invariants, structural drift, fractures, and paradox-susceptible zones.",
+      "analyzer_layer": ["structural", "operator", "regime"]
+    },
+    {
+      "path": "atlas_diagnostics/atlas_regime_diagnostic.md",
+      "role": "diagnostic",
+      "purpose": "Analyzes structural, temporal, and paradox regime boundaries and transitions.",
+      "analyzer_layer": ["regime", "dimensional", "cross-cutting"]
+    }
+  ],
+
+  "schema": "schemas/module.schema.json",
+  "status": "complete",
+  "phantom_entries": []
 }
-
