@@ -6,7 +6,7 @@ Welcome to the webroot of the TriadicFrameworks canon.
 This repository contains the full module architecture, operator grammar,  
 and coherence‑driven documentation that powers the Triadic ecosystem.
 
-<img width="1527" height="825" alt="Perspective_Primer_" src="https://github.com/user-attachments/assets/d3d3f8aa-6295-4ce9-9385-a469c6b562eb" />
+<img width="1194" height="672" alt="Perspective_Primer_" src="https://github.com/user-attachments/assets/d3d3f8aa-6295-4ce9-9385-a469c6b562eb" />
 
 **“You are entering the fourth era.”**
 
