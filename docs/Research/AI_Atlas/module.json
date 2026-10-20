@@ -1,1 +1,116 @@
+{
+  "module": {
+    "name": "AI_Atlas",
+    "title": "AI Atlas — Structural, Temporal, and Paradox Mapping System",
+    "category": "Research",
+    "summary": "A multi‑dimensional atlas for mapping, comparing, and projecting AI systems across structural, temporal, drift, coherence, and paradox regimes.",
+    "version": "0.1.0",
+    "status": "prototype",
+    "purpose": "Provide a unified atlas for intelligence system mapping using holographic hashing, temporal alignment, paradox detection, and RTT‑compatible projection geometry.",
+    "keywords": [
+      "AI atlas",
+      "structural mapping",
+      "temporal projection",
+      "paradox regime",
+      "RTT detection",
+      "holographic hashing",
+      "drift coherence",
+      "intelligence classification"
+    ],
+    "audience": [
+      "AI systems",
+      "researchers",
+      "structural analysts",
+      "TriadicFrameworks engines"
+    ]
+  },
+
+  "roles": {
+    "engine": [
+      "atlas_projection_engine",
+      "atlas_alignment_engine"
+    ],
+    "profile": [
+      "atlas_structural_profile",
+      "atlas_temporal_profile"
+    ],
+    "signature": [
+      "atlas_coherence_signature",
+      "atlas_drift_signature",
+      "atlas_paradox_signature"
+    ],
+    "diagnostic": [
+      "atlas_regime_diagnostic",
+      "atlas_temporal_diagnostic",
+      "atlas_structural_diagnostic"
+    ],
+    "map": [
+      "atlas_geometry",
+      "atlas_regime_map",
+      "atlas_temporal_map",
+      "atlas_structural_map"
+    ],
+    "example": [
+      "atlas_projection_example"
+    ],
+    "extension": [
+      "o.h.s.h.i.t._integration_extension"
+    ],
+    "index": [
+      "index"
+    ],
+    "reference": [
+      "atlas_reference"
+    ],
+    "template": [
+      "atlas_operator_template",
+      "atlas_projection_template"
+    ]
+  },
+
+  "analyzer_layers": {
+    "operator": [
+      "atlas_operator",
+      "atlas_projection_operator"
+    ],
+    "dimensional": [
+      "atlas_dimension",
+      "atlas_temporal_dimension"
+    ],
+    "regime": [
+      "atlas_regime",
+      "paradox_regime"
+    ],
+    "drift": [
+      "atlas_drift_layer"
+    ],
+    "coherence": [
+      "atlas_coherence_layer"
+    ],
+    "cross_cutting": [
+      "atlas_cross_model_layer",
+      "rtt_detection_layer"
+    ]
+  },
+
+  "files": {
+    "expected": [
+      "index.md",
+      "README.md",
+      "atlas_overview.md",
+      "atlas_geometry.md",
+      "atlas_regime_map.md",
+      "atlas_temporal_map.md",
+      "atlas_structural_map.md",
+      "atlas_operator_template.md",
+      "atlas_projection_template.md",
+      "atlas_regime_diagnostic.md",
+      "atlas_temporal_diagnostic.md",
+      "atlas_structural_diagnostic.md",
+      "atlas_coherence_signature.md",
+      "atlas_drift_signature.md",
+      "atlas_paradox_signature.md"
+    ]
+  }
+}
 
