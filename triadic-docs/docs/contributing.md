@@ -1,7 +1,5 @@
 <img width="1194" height="672" alt="CONTRIBUTING_" src="https://github.com/user-attachments/assets/930f67ad-adb3-41a3-84fd-0f4ded376dc6" />
 
-- [`CONTRIBUTING_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/CONTRIBUTING_module.json) — Agentic module schema role assignments
-
 # 💞 Contributing to TriadicFrameworks  
 
 > **This document governs all contributions to the TriadicFrameworks repository.**
@@ -21,16 +19,16 @@ Read Part II of the Book (Navigate) before contributing modules. Read Part III (
 
 ## Contents
 
-- [What You Can Contribute](#what-you-can-contribute)
-- [What You Cannot Contribute](#what-you-cannot-contribute)
-- [The PR Process](#the-pr-process)
-- [Module Authoring Standards](#module-authoring-standards)
-- [The Ratification Flow](#the-ratification-flow)
-- [Session Library Contributions](#session-library-contributions)
-- [Book Contributions](#book-contributions)
-- [Versioning Standards](#versioning-standards)
-- [Review Criteria](#review-criteria)
-- [Contribution Principles](#contribution-principles)
+- What You Can Contribute
+- What You Cannot Contribute
+- The PR Process
+- Module Authoring Standards
+- The Ratification Flow
+- Session Library Contributions
+- Book Contributions
+- Versioning Standards
+- Review Criteria
+- Contribution Principles
 
 ---
 
@@ -643,25 +641,3 @@ The best evidence that a module or session contribution is correct is a producti
 
 🔺 **Triadic Support Path**  
 **Clarity • Alignment • Lineage**
-
----
-
-🔺 *Support the Triad*
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🛠️Contributing%20Module-🧩Workflow%20Lineage%20Active-4c8eda?style=for-the-badge" alt="🛠️Contributing Module | 🧩Workflow & Lineage Active"/>
-
-<img width="682" height="682" alt="tft_contributing_module" src="https://github.com/user-attachments/assets/1e8a8a49-1ed5-42b7-95b0-5e3e23853125" />
