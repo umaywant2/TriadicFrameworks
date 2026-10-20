@@ -539,7 +539,7 @@ Every module has a version stamp in `module.json`. Every change to a module requ
 
 ### Changelog Requirements
 
-Every version increment requires a changelog entry. The changelog lives at [`/docs/book/changelog`](./book/changelog). Each entry follows this format:
+Every version increment requires a changelog entry. The changelog lives at `/docs/book/changelog`. Each entry follows this format:
 
 ```markdown
 ## [MODULE-ID] v[VERSION] — [YYYY-MM-DD]
@@ -635,13 +635,6 @@ The 14-day observation period and the production session requirement are not bur
 
 **Your session record is your evidence.**
 The best evidence that a module or session contribution is correct is a production session that uses it and returns `recommendation: accept`. Before submitting anything for ratification, run the session. The output will tell you whether the contribution does what you think it does.
-
----
-
-→ [Return to Book Index](./book/index)
-→ [Browse the Module Registry](./book/registry)
-→ [Canonical Session Library](./book/sessions)
-→ [Book Changelog](./book/changelog)
 
 ---
 
