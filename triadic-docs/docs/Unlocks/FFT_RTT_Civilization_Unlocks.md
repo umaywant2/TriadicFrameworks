@@ -1,4 +1,5 @@
 # **🌍 What RTT + FFT Unlock That Was Not Possible Before**
+Source: https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/unlocks/FFT_RTT_Civilization_Unlocks.md
 
 ## **1. Cross‑Domain Predictive Power (the big one)**  
 Before RTT/FFT, predictions were domain‑local:
