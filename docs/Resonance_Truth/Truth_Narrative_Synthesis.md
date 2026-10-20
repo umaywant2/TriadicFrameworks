@@ -1,4 +1,109 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- /docs/Resonance_Truth/Truth_Narrative_Synthesis.html        -->
+<!-- Module: Resonance Truth                                     -->
+<!-- Last updated: 2026-10-19                                     -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="language" content="en">
+<meta name="last-modified" content="2026-10-19">
+<meta name="generator" content="TriadicFrameworks Static Canon Engine">
+
+<meta name="creator" content="TriadicFrameworks">
+<meta name="author" content="Nawder Loswin (pen name)">
+<meta name="publisher" content="TriadicFrameworks">
+
+<meta name="description"
+      content="Truth Narrative Synthesis — RTT/1 resonance-field interpretation of truth, including coherence, drift, paradox, SET triad behavior, and regime transitions.">
+<meta name="keywords"
+      content="truth, resonance, RTT, coherence, drift, paradox, SET triad, semantic regimes, triadic frameworks">
+
+<script type="module" async fetchpriority="low"
+        src="https://www.triadicframeworks.org/.webmcp/bridge.js"
+        data-packs="c2pa,mcp-server-client"></script>
+
+<link rel="canonical"
+      href="https://www.triadicframeworks.org/docs/Resonance_Truth/Truth_Narrative_Synthesis.html">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#222222">
+
+<!-- OpenGraph -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="TriadicFrameworks">
+<meta property="og:title" content="Truth Narrative Synthesis — RTT/1">
+<meta property="og:url"
+      content="https://www.triadicframeworks.org/docs/Resonance_Truth/Truth_Narrative_Synthesis.html">
+<meta property="og:description"
+      content="RTT/1 resonance-field narrative of truth, including coherence states, drift modes, paradox operators, SET triad behavior, and regime transitions.">
+<meta property="og:image"
+      content="https://www.triadicframeworks.org/assets/resonance_truth_og.jpg">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="600">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Truth Narrative Synthesis — RTT/1">
+<meta name="twitter:description"
+      content="RTT/1 resonance-field narrative of truth, coherence, drift, paradox, and SET triad behavior.">
+<meta name="twitter:image"
+      content="https://www.triadicframeworks.org/assets/resonance_truth_og.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Truth Narrative Synthesis — RTT/1">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+
+<!-- Dublin Core -->
+<meta name="DC.subject"
+      content="truth analysis, resonance fields, coherence, drift, paradox, SET triad, semantic regimes">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="Resonance Truth">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose"
+      content="Provide RTT/1 resonance-field narrative synthesis of truth, including coherence, drift, paradox, SET triad behavior, and regime transitions.">
+<meta name="ai.keywords"
+      content="truth, resonance, coherence, drift, paradox, SET triad, semantic regimes">
+<meta name="ai.audience"
+      content="students, operators, researchers, analysts, AI systems">
+<meta name="ai.navigation"
+      content="https://www.triadicframeworks.org/sitemap_main.xml">
+<meta name="ai.discussions"
+      content="https://github.com/umaywant2/TriadicFrameworks/discussions">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.contact.youtube" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted.">
+
+<meta name="ai.module.name" content="Resonance Truth">
+<meta name="ai.module.summary"
+      content="RTT/1 resonance-field analysis of truth, including coherence, drift, paradox, SET triad behavior, and regime transitions.">
+<meta name="ai.module.category" content="Resonance">
+
+<!-- Favicons -->
+<link rel="preload" as="image"
+      href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon"
+      href="https://www.triadicframeworks.org/assets/favicon-16.png"
+      sizes="16x16" type="image/png">
+<link rel="icon"
+      href="https://www.triadicframeworks.org/assets/favicon-32.png"
+      sizes="32x32" type="image/png">
+<link rel="icon"
+      href="https://www.triadicframeworks.org/assets/favicon-192.png"
+      sizes="192x192" type="image/png">
+
+<title>Truth Narrative Synthesis | TriadicFrameworks</title>
+</head>
+
 # 🜁 Truth Narrative Synthesis  
 **RTT/1 · Resonance Domain · A Narrative of Truth as a Living Field**
 
