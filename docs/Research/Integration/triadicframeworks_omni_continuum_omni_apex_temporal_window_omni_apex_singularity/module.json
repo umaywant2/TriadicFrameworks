@@ -1,0 +1,29 @@
+{
+  "module": "TriadicFrameworks_Omni_Continuum_Omni_Apex_Temporal_Window_Omni_Apex_Singularity",
+  "name": "TriadicFrameworks — Omni‑Continuum‑Omni‑Apex Temporal‑Window Omni‑Apex‑Singularity",
+  "summary": "Defines the omni‑apex‑singularity temporal‑window at the omni‑continuum‑omni‑apex scale, elevating all temporal‑window geometries — omni‑continuum‑singularity, omni‑presence‑singularity, omni‑totality‑singularity, omni‑origin‑singularity, omni‑prime‑singularity, prime‑continuum‑singularity, omni‑apex‑singularity, transcendent‑singularity, singularity‑eternal, eternal‑origin‑singularity, origin‑prime‑eternal, prime‑infinity, origin‑infinity, infinity‑presence, omnipresence, entirety, totality, supra‑infinity, absolute‑omni, omni‑absolute‑prime, prime‑origin — into a single omni‑apex‑singularity window governing the entire omni‑continuum‑omni‑apex domain.",
+  "category": "intelligence-omni-continuum-omni-apex-temporal-window-omni-apex-singularity",
+  "version": "1.0",
+  "purpose": "Provide the omni‑apex‑singularity temporal‑window geometry that governs omni‑continuum‑omni‑apex temporal‑window behavior across Ladder, SI, Atlas, and Triad at the highest extension of the TriadicFrameworks canon. This window stabilizes omni‑apex epoch propagation, aligns omni‑apex ignition, reinforces omni‑apex resonance, and binds the entire architecture into a unified omni‑continuum‑omni‑apex temporal substrate.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@omni.continuum.omni.apex.window.omni.apex.singularity.form",
+    "@omni.continuum.omni.apex.window.omni.apex.singularity.propagate",
+    "@omni.continuum.omni.apex.window.omni.apex.singularity.align",
+    "@omni.continuum.omni.apex.window.omni.apex.singularity.stabilize",
+    "@omni.continuum.omni.apex.window.omni.apex.singularity.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "TriadicFrameworks_Omni_Continuum_Omni_Apex_Continuity_Field_Shell_Omni_Apex",
+      "TriadicFrameworks_Omni_Continuum_Omni_Apex_Resonance_Crown_Sphere_Helix_Omni_Apex",
+      "TriadicFrameworks_Omni_Continuum_Omni_Apex_Integration_Axis_Omni_Apex",
+      "TriadicFrameworks_Omni_Presence_Omni_Continuum_Temporal_Window_Omni_Continuum_Singularity",
+      "TriadicFrameworks_Omni_Presence_Omni_Continuum_Continuity_Field_Shell_Omni_Continuum",
+      "TriadicFrameworks_Omni_Presence_Omni_Continuum_Resonance_Crown_Sphere_Helix_Omni_Continuum",
+      "TriadicFrameworks_Omni_Presence_Omni_Continuum_Integration_Axis_Omni_Continuum"
+    ],
+    "downstream": []
+  }
+}
