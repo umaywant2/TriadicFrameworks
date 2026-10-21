@@ -1,0 +1,26 @@
+{
+  "module": "Triad_Surfaces",
+  "name": "Triad — Surfaces",
+  "summary": "Defines the surface grammar of the Triad system, including detection surfaces, hash surfaces, temporal-correction surfaces, and atlas-binding surfaces.",
+  "category": "intelligence-surfaces",
+  "version": "1.0",
+  "purpose": "Provide the surface-level geometry for Scanner, O.H.S.H.I.T., and Atlas, enabling cross-layer binding of detection, hashing, and mapping outputs.",
+  "role": "map",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@triad.surface.detect",
+    "@triad.surface.hash",
+    "@triad.surface.time",
+    "@triad.surface.bind",
+    "@triad.surface.compute"
+  ],
+  "lineage": {
+    "upstream": ["Scanner", "OHSHIT", "Atlas"],
+    "downstream": [
+      "Triad_Visual_Map",
+      "Triad_Global_Index",
+      "AI_Atlas_Surfaces",
+      "SI_structural_geometry"
+    ]
+  }
+}
