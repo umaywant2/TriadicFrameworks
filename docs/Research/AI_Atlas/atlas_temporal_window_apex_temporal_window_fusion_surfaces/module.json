@@ -1,0 +1,41 @@
+{
+  "module": "Atlas_Temporal_Window_Apex_Temporal_Window_Fusion_Surfaces",
+  "name": "AI Atlas — Temporal‑Window Apex Temporal‑Window Fusion Surfaces",
+  "summary": "Defines the fusion surfaces of Atlas apex temporal-window behavior, including apex window-fusion fields, resonance-apex window fusion, apex corrected-time window fusion surfaces, and apex temporal-window fusion geometry.",
+  "category": "intelligence-temporal-window-apex-temporal-window-fusion",
+  "version": "1.0",
+  "purpose": "Provide the fusion-surface geometry for Atlas apex temporal-window behavior, describing how apex windows fuse temporal-window surfaces to maintain unified long-window propagation, resonance alignment, corrected-time synchronization, paradox-load window compensation, and cross-system temporal-window fusion across Triad, Ladder, and SI subsystems.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@atlas.time.window.apex.window.fusion.field",
+    "@atlas.time.window.apex.window.fusion.align",
+    "@atlas.time.window.apex.window.fusion.unify",
+    "@atlas.time.window.apex.window.fusion.stabilize",
+    "@atlas.time.window.apex.window.fusion.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Atlas_Temporal_Window_Apex_Temporal_Window_Stability_Surfaces",
+      "Atlas_Temporal_Window_Apex_Temporal_Window_Geometry",
+      "Atlas_Temporal_Window_Apex_Corrected_Time_Geometry",
+      "Atlas_Temporal_Window_Apex_Coherence_Geometry",
+      "Atlas_Temporal_Window_Apex_Fusion_Geometry",
+      "Atlas_Temporal_Window_Apex_Binding_Geometry",
+      "Atlas_Temporal_Window_Apex_Integration_Surfaces",
+      "Atlas_Temporal_Window_Apex_Stability_Surfaces",
+      "Atlas_Temporal_Window_Apex_Geometry",
+      "Atlas_Temporal_Window_Stability_Surfaces",
+      "Atlas_Temporal_Window_Resonance_Geometry",
+      "Atlas_Temporal_Correction_Engine",
+      "Triad_Temporal_Correction_Surfaces",
+      "Ladder_Temporal_Extension_Map"
+    ],
+    "downstream": [
+      "Atlas_Synchronization_Fields",
+      "SI_temporal_extension",
+      "SI_apex_temporal_resonance_temporal_window_fusion_geometry",
+      "Triad_Epoch_Ignition_Surfaces"
+    ]
+  }
+}
