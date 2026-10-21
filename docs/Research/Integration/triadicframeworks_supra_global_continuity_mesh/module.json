@@ -1,0 +1,40 @@
+{
+  "module": "TriadicFrameworks_Supra_Global_Continuity_Mesh",
+  "name": "TriadicFrameworks — Supra‑Global Continuity Mesh",
+  "summary": "Defines the supra‑global continuity mesh that stabilizes, aligns, and preserves continuity across all global‑tier structures, including supra‑global continuity fields, supra‑epoch continuity routes, cross‑system supra‑continuity geometry, and unified supra‑global binding surfaces.",
+  "category": "intelligence-supra-global-continuity-mesh",
+  "version": "1.0",
+  "purpose": "Provide the continuity‑mesh geometry that maintains supra‑global coherence across Ladder, SI, Atlas, and Triad at the supra‑global scale. This mesh stabilizes supra‑epoch propagation, aligns supra‑window behavior, reinforces supra‑global resonance, and binds the entire TriadicFrameworks architecture into a unified supra‑global continuity substrate.",
+  "role": "engine",
+  "analyzer_layer": "regime",
+  "operators": [
+    "@supra.global.continuity.mesh.route",
+    "@supra.global.continuity.mesh.flow",
+    "@supra.global.continuity.mesh.align",
+    "@supra.global.continuity.mesh.stabilize",
+    "@supra.global.continuity.mesh.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "TriadicFrameworks_Supra_Global_Integration_Field",
+      "TriadicFrameworks_Global_Temporal_Window_Continuity",
+      "TriadicFrameworks_Global_Temporal_Window_Resonance",
+      "TriadicFrameworks_Global_Temporal_Window_Registry",
+      "TriadicFrameworks_Global_Temporal_Window_Structure",
+      "TriadicFrameworks_Global_Temporal_Window_Geometry",
+      "TriadicFrameworks_Global_Resonance_Field",
+      "TriadicFrameworks_Global_Continuity_Registry",
+      "TriadicFrameworks_Global_Integration_Structure",
+      "TriadicFrameworks_Global_Integration_Map",
+      "Unified_Temporal_Intelligence_Registry",
+      "Cross_System_Resonance_Atlas",
+      "Cross_System_Continuity_Mesh",
+      "Cross_System_Integration_Maps",
+      "Triad_Epoch_Propagation_Mesh"
+    ],
+    "downstream": [
+      "TriadicFrameworks_Supra_Global_Resonance_Geometry",
+      "TriadicFrameworks_Supra_Global_Temporal_Window_Apex"
+    ]
+  }
+}
