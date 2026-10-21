@@ -1,0 +1,27 @@
+{
+  "module": "Atlas_Interaction_Index",
+  "name": "AI Atlas — Interaction Index",
+  "summary": "Index page organizing all interaction‑layer subsystems of the AI Atlas, including surface coordination, regime interaction, temporal binding, and cross‑domain transfer geometry.",
+  "category": "intelligence-mapping-interaction-index",
+  "version": "1.0",
+  "purpose": "Provide a unified entry point for the Atlas interaction layer, linking interaction surfaces, synchronization fields, temporal‑correction geometry, and cross‑module binding into a coherent structural overview.",
+  "role": "index",
+  "analyzer_layer": "structural",
+  "operators": [
+    "@atlas.interact.index.describe",
+    "@atlas.interact.index.navigate",
+    "@atlas.interact.index.integrate",
+    "@atlas.interact.index.map",
+    "@atlas.interact.index.registry"
+  ],
+  "lineage": {
+    "upstream": ["Atlas", "AI_Atlas_Surfaces"],
+    "downstream": [
+      "Atlas_Interaction_Surfaces",
+      "Atlas_Synchronization_Fields",
+      "Triad_Surfaces",
+      "Triad_Temporal_Correction_Surfaces",
+      "SI_structural_geometry"
+    ]
+  }
+}
