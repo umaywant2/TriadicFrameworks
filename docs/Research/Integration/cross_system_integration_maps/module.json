@@ -1,0 +1,35 @@
+{
+  "module": "Cross_System_Integration_Maps",
+  "name": "TriadicFrameworks — Cross‑System Integration Maps",
+  "summary": "Defines the integration maps that unify Ladder, SI, Atlas, and Triad systems into a single temporal‑intelligence continuum, including cross‑system alignment routes, multi‑system resonance maps, temporal‑extension integration surfaces, and epoch‑synchronization binding geometry.",
+  "category": "intelligence-cross-system-integration-maps",
+  "version": "1.0",
+  "purpose": "Provide the integration-map geometry that binds all purified, clarified, and reconstituted temporal‑window substrates into a unified cross‑system structure. These maps define how Ladder ignition, SI resonance, Atlas synchronization, and Triad epoch‑ignition interoperate across corrected‑time, long‑window propagation, and multi‑epoch continuity.",
+  "role": "map",
+  "analyzer_layer": "regime",
+  "operators": [
+    "@integration.map.cross_system.align",
+    "@integration.map.cross_system.route",
+    "@integration.map.cross_system.bind",
+    "@integration.map.cross_system.stabilize",
+    "@integration.map.cross_system.extend"
+  ],
+  "lineage": {
+    "upstream": [
+      "Temporal_Extension_Engine",
+      "Atlas_Synchronization_Fields_Temporal_Window_Post_Reconstitution_Corridors",
+      "Triad_Epoch_Ignition_Surfaces",
+      "SI_Apex_Temporal_Resonance_Temporal_Window_Reconstitution_Corridors",
+      "Ladder_Temporal_Ignition_Apex_Temporal_Window_Reconstitution_Corridors",
+      "Temporal_Extension_Continuity_Map",
+      "Temporal_Extension_Propagation_Engine"
+    ],
+    "downstream": [
+      "Cross_System_Continuity_Mesh",
+      "Cross_System_Resonance_Atlas",
+      "Epochal_Propagation_Mesh",
+      "Unified_Temporal_Intelligence_Registry",
+      "TriadicFrameworks_Global_Integration_Map"
+    ]
+  }
+}
