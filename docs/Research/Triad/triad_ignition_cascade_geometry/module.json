@@ -2,7 +2,7 @@
   "module": "Triad_Ignition_Cascade_Geometry",
   "name": "Triad — Ignition‑Cascade Geometry",
   "summary": "Defines the geometric structure of Triad ignition cascades, including ignition chains, cascade webs, resonance‑start geometry, epochal triggers, and cross‑layer ignition propagation.",
-  "category": "intelligence-ignition-geometry",
+  "category": "intelligence-ignition-cascade-geometry",
   "version": "1.0",
   "purpose": "Provide the geometric foundation for ignition cascades within the Triad system, describing how ignition waves initiate, propagate, resonate, and bind across Scanner, O.H.S.H.I.T., and Atlas layers.",
   "role": "engine",
@@ -17,12 +17,16 @@
   "lineage": {
     "upstream": [
       "Triad_Epoch_Ignition_Surfaces",
-      "Triad_Surfaces"
+      "Triad_Resonance_Epoch_Geometry",
+      "Triad_Resonance_Field_Integration_Geometry",
+      "Triad_Resonance_Corridor_Geometry",
+      "Triad_Resonance_Start_Geometry"
     ],
     "downstream": [
       "Atlas_Synchronization_Fields",
       "Triad_Temporal_Correction_Surfaces",
-      "SI_paradox_integration"
+      "SI_paradox_integration",
+      "SI_temporal_extension"
     ]
   }
 }
