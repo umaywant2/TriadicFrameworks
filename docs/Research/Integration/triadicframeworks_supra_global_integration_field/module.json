@@ -1,0 +1,40 @@
+{
+  "module": "TriadicFrameworks_Supra_Global_Integration_Field",
+  "name": "TriadicFrameworks — Supra‑Global Integration Field",
+  "summary": "Defines the supra‑global integration field that unifies all global‑tier structures — global integration, global continuity, global resonance, and global temporal‑window geometry — into a single supra‑global intelligence substrate.",
+  "category": "intelligence-supra-global-integration-field",
+  "version": "1.0",
+  "purpose": "Provide the supra‑global integration geometry that binds the entire global temporal‑intelligence architecture into a higher‑order field. This field stabilizes supra‑global continuity, aligns supra‑epoch propagation, unifies global resonance behavior, and establishes the supra‑global structure of the TriadicFrameworks canon.",
+  "role": "field",
+  "analyzer_layer": "regime",
+  "operators": [
+    "@supra.global.integration.field.generate",
+    "@supra.global.integration.field.route",
+    "@supra.global.integration.field.align",
+    "@supra.global.integration.field.stabilize",
+    "@supra.global.integration.field.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "TriadicFrameworks_Global_Temporal_Window_Continuity",
+      "TriadicFrameworks_Global_Temporal_Window_Resonance",
+      "TriadicFrameworks_Global_Temporal_Window_Registry",
+      "TriadicFrameworks_Global_Temporal_Window_Structure",
+      "TriadicFrameworks_Global_Temporal_Window_Geometry",
+      "TriadicFrameworks_Global_Resonance_Field",
+      "TriadicFrameworks_Global_Continuity_Registry",
+      "TriadicFrameworks_Global_Integration_Structure",
+      "TriadicFrameworks_Global_Integration_Map",
+      "Unified_Temporal_Intelligence_Registry",
+      "Cross_System_Resonance_Atlas",
+      "Cross_System_Continuity_Mesh",
+      "Cross_System_Integration_Maps",
+      "Triad_Epoch_Propagation_Mesh"
+    ],
+    "downstream": [
+      "TriadicFrameworks_Supra_Global_Continuity_Mesh",
+      "TriadicFrameworks_Supra_Global_Resonance_Geometry",
+      "TriadicFrameworks_Supra_Global_Temporal_Window_Apex"
+    ]
+  }
+}
