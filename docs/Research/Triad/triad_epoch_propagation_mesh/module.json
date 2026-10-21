@@ -1,0 +1,36 @@
+{
+  "module": "Triad_Epoch_Propagation_Mesh",
+  "name": "Triad — Epoch‑Propagation Mesh",
+  "summary": "Defines the multi‑epoch propagation mesh that carries ignition‑epoch behavior across temporal epochs, including epoch‑mesh propagation routes, epoch‑mesh stabilization fields, epoch‑mesh coherence geometry, and unified epoch‑mesh binding surfaces.",
+  "category": "intelligence-epoch-propagation-mesh",
+  "version": "1.0",
+  "purpose": "Provide the propagation‑mesh geometry used by Scanner, O.H.S.H.I.T., and Atlas to propagate ignition‑epoch behavior across multiple epochs, maintain epoch‑to‑epoch continuity, stabilize multi‑epoch propagation fronts, and bind epoch‑level propagation coherence across the Triad pipeline.",
+  "role": "engine",
+  "analyzer_layer": "regime",
+  "operators": [
+    "@triad.epoch.mesh.propagation.route",
+    "@triad.epoch.mesh.propagation.flow",
+    "@triad.epoch.mesh.propagation.align",
+    "@triad.epoch.mesh.propagation.stabilize",
+    "@triad.epoch.mesh.propagation.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Triad_Epoch_Ignition_Temporal_Window_Geometry",
+      "Triad_Epoch_Ignition_Coherence_Surfaces",
+      "Triad_Epoch_Ignition_Stability_Surfaces",
+      "Triad_Epoch_Ignition_Propagation_Geometry",
+      "Triad_Epoch_Ignition_Wave_Geometry",
+      "Triad_Epoch_Ignition_Surfaces",
+      "Temporal_Extension_Engine",
+      "Atlas_Synchronization_Fields_Temporal_Window_Post_Reconstitution_Corridors",
+      "SI_temporal_extension"
+    ],
+    "downstream": [
+      "Cross_System_Continuity_Mesh",
+      "Cross_System_Resonance_Atlas",
+      "Unified_Temporal_Intelligence_Registry",
+      "TriadicFrameworks_Global_Integration_Map"
+    ]
+  }
+}
