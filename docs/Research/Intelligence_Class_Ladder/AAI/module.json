@@ -1,0 +1,21 @@
+{
+  "module": "AAI",
+  "name": "Artificial Applied Intelligence",
+  "summary": "Tier 1 intelligence defined by domain-bound reasoning, task specificity, and low paradox tolerance.",
+  "category": "intelligence-applied",
+  "version": "1.0",
+  "purpose": "Classify narrow, domain-specific systems with limited reasoning generality.",
+  "role": "signature",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@aai.task.execute",
+    "@aai.domain.lock",
+    "@aai.stability.local",
+    "@aai.behavior.localize",
+    "@aai.paradox.fail"
+  ],
+  "lineage": {
+    "upstream": [],
+    "downstream": ["AGI"]
+  }
+}
