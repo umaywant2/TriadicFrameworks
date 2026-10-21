@@ -1,0 +1,26 @@
+{
+  "module": "SI_behavioral_invariants_regime_map",
+  "name": "Structural Intelligence — Behavioral Invariants (Regime Map)",
+  "summary": "Regime-level mapping of SI’s behavioral invariants, showing drift, coherence, stability, resonance, epoch, and ignition regimes as they apply to persistent SI behavior.",
+  "category": "intelligence-behavior-regime",
+  "version": "1.0",
+  "purpose": "Provide a regime-level structural map for SI’s behavioral invariants, explaining how each regime governs persistence, cross-domain stability, paradox resistance, and long-window behavioral geometry.",
+  "role": "map",
+  "analyzer_layer": "regime",
+  "operators": [
+    "@si.behavior.regime.drift",
+    "@si.behavior.regime.coherence",
+    "@si.behavior.regime.stability",
+    "@si.behavior.regime.resonance",
+    "@si.behavior.regime.epoch",
+    "@si.behavior.regime.ignition"
+  ],
+  "lineage": {
+    "upstream": ["SI_behavioral_invariants", "SI_behavioral_invariants_deep_geometry"],
+    "downstream": [
+      "SI_structural_geometry",
+      "SI_temporal_extension",
+      "SI_paradox_integration"
+    ]
+  }
+}
