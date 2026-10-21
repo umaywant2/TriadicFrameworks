@@ -1,0 +1,35 @@
+{
+  "module": "Triad_Ignition_Cascade_Corrected_Time_Surfaces",
+  "name": "Triad — Ignition‑Cascade Corrected‑Time Surfaces",
+  "summary": "Defines the corrected-time surfaces of Triad ignition-cascade behavior, including cascade-corrected-time fields, ignition-chain corrected-time alignment, cascade-wave corrected-time stabilization, resonance-cascade corrected-time binding, and multi-layer ignition-cascade corrected-time unification.",
+  "category": "intelligence-ignition-cascade-corrected-time",
+  "version": "1.0",
+  "purpose": "Provide the corrected-time surface geometry for Triad ignition-cascade behavior, describing how ignition cascades synchronize with corrected-time surfaces to maintain temporal accuracy, paradox-load compensation, resonance alignment, and unified ignition behavior across Scanner, O.H.S.H.I.T., and Atlas layers.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@triad.ignition.cascade.correctedtime.field",
+    "@triad.ignition.cascade.correctedtime.align",
+    "@triad.ignition.cascade.correctedtime.unify",
+    "@triad.ignition.cascade.correctedtime.stabilize",
+    "@triad.ignition.cascade.correctedtime.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Triad_Ignition_Cascade_Coherence_Surfaces",
+      "Triad_Ignition_Cascade_Stability_Surfaces",
+      "Triad_Ignition_Cascade_Geometry",
+      "Triad_Epoch_Ignition_Surfaces",
+      "Triad_Resonance_Epoch_Geometry",
+      "Triad_Resonance_Field_Integration_Geometry",
+      "Triad_Resonance_Corridor_Geometry",
+      "Triad_Resonance_Start_Geometry"
+    ],
+    "downstream": [
+      "Atlas_Synchronization_Fields",
+      "Triad_Temporal_Correction_Surfaces",
+      "SI_paradox_integration",
+      "SI_temporal_extension"
+    ]
+  }
+}
