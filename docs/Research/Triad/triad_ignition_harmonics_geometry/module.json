@@ -1,0 +1,28 @@
+{
+  "module": "Triad_Ignition_Harmonics_Geometry",
+  "name": "Triad — Ignition‑Harmonics Geometry",
+  "summary": "Defines the harmonic geometry of Triad ignition, including harmonic modes, phase alignment, resonance‑start fields, and cross‑layer harmonic binding.",
+  "category": "intelligence-ignition-harmonics",
+  "version": "1.0",
+  "purpose": "Provide the harmonic-layer geometry for Triad ignition, describing how harmonic modes, phase states, resonance‑start geometry, and ignition-binding rules stabilize and propagate ignition behavior across Scanner, O.H.S.H.I.T., and Atlas.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@triad.ignition.harmonics.mode",
+    "@triad.ignition.harmonics.phase",
+    "@triad.ignition.harmonics.align",
+    "@triad.ignition.harmonics.resonate",
+    "@triad.ignition.harmonics.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Triad_Epoch_Ignition_Surfaces",
+      "Triad_Ignition_Cascade_Geometry"
+    ],
+    "downstream": [
+      "Atlas_Synchronization_Fields",
+      "Triad_Temporal_Correction_Surfaces",
+      "SI_paradox_integration"
+    ]
+  }
+}
