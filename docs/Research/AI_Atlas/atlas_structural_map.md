@@ -1,179 +1,352 @@
 
-# **atlas_structural_map.md**  
-### *AI Atlas — Structural, Temporal, Drift, Coherence, and Paradox Mapping System*  
-### *Map File — Structural Geometry, Architecture Regimes & Invariant Surfaces*
+# 🌐 **atlas_structural_map.md**  
+### *AI Atlas — Structural Map Engine*  
+### *Version 0.2.0 — Operational Prototype*
 
 ---
 
-## **Map Identity**
+## **Engine Identity**
+
 **Name:** Atlas Structural Map  
 **Module:** AI Atlas  
 **Category:** Research  
 **Role:** `map`  
-**Version:** 0.1.0 (Prototype)
+**Version:** 0.2.0 (Operational)
 
-The Atlas Structural Map defines the structural geometry of the AI Atlas. It maps architecture invariants, operator distribution, embedding topology, tokenizer geometry, and structural regime boundaries into a unified structural coordinate system.
+The Structural Map Engine defines the **structural geometry** of the Atlas — the part that organizes intelligent agents by:
 
-This file is the **structural‑geometry backbone** of the AI Atlas.
+- structural stability  
+- coherence stability  
+- behavioral invariants  
+- holographic hash geometry  
+- temporal alignment  
+- corrected time  
 
----
+It is the **seventh stage** of the triad:
 
-## **Purpose**
-The purpose of the Atlas Structural Map is to:
-
-- map architecture‑level structural invariants  
-- define structural regimes and regime boundaries  
-- visualize operator distribution and embedding topology  
-- integrate structural drift and coherence surfaces  
-- anchor structural signatures into atlas geometry  
-- support cross‑model structural comparison  
-- unify structural behavior with temporal and paradox dimensions  
-
-This map defines the **structural layer** of the atlas.
+> **Detect → Hash → Map → Topologize → Classify → Diagnose → Structure**  
+> *(Scanner → O.H.S.H.I.T. → Atlas Geometry → Atlas Topology → Regime Classifier → Diagnostic Fields → Structural Map)*
 
 ---
 
-## **Conceptual Overview**
-The Atlas Structural Map is built on four structural constructs:
+# 🧭 **Purpose**
 
-### **1. Architecture Invariants**
-Stable structural features such as:
+The structural map provides:
 
-- model architecture family  
-- attention topology  
-- operator distribution  
-- embedding geometry  
-- tokenizer structure  
+- structural manifolds  
+- stability clusters  
+- coherence‑structural relationships  
+- hash‑structural geometry  
+- temporal‑structural overlays  
+- paradox‑structural distortions  
+- structural drift corridors  
 
-These invariants form the “continent shapes” of the atlas.
+It transforms Atlas coordinates:
 
-### **2. Structural Regimes**
-Regimes represent architecture‑level behavior:
+\[
+\mathcal{A} = (S,\; C,\; B,\; H_1,\; H_2,\; A,\; \tau)
+\]
 
-- invariant regimes  
-- transitional regimes  
-- unstable regimes  
-- paradox‑susceptible regimes  
-
-These regimes define the “tectonic plates” of the atlas.
-
-### **3. Structural Drift**
-Structural drift occurs when:
-
-- architecture evolves  
-- operator distribution shifts  
-- embedding topology reconfigures  
-- tokenizer geometry changes  
-
-Drift defines the “continental drift” of the atlas.
-
-### **4. Coherence Surfaces**
-Coherence surfaces represent:
-
-- structural stability zones  
-- alignment across architecture versions  
-- drift‑bounded evolution  
-- paradox‑resistant structural behavior  
-
-These surfaces define the “stable terrain” of the atlas.
+into **structural geometry**.
 
 ---
 
-## **Structural Layers**
-The Atlas Structural Map consists of five layers:
+# 🌌 **Structural Geometry Overview**
 
-### **Layer 1 — Architecture Layer**
-Defines:
+The structural map defines a **3‑axis structural manifold**:
 
-- architecture family  
-- operator geometry  
-- embedding topology  
-- tokenizer geometry  
+\[
+\mathcal{S} = (S,\; C,\; H_1)
+\]
 
-### **Layer 2 — Structural Regime Layer**
-Defines:
+Where:
 
-- invariant regimes  
-- transitional regimes  
-- unstable regimes  
-- paradox‑susceptible regimes  
+- **S** = structural stability  
+- **C** = coherence stability  
+- **H₁** = primary holographic hash component  
 
-### **Layer 3 — Structural Drift Layer**
-Defines:
-
-- drift vector fields  
-- drift instability zones  
-- drift‑dominant intervals  
-
-### **Layer 4 — Coherence Layer**
-Defines:
-
-- coherence surfaces  
-- stabilization periods  
-- structural fractures  
-
-### **Layer 5 — Structural Projection Layer**
-Defines:
-
-- holographic structural projection matrices  
-- multi‑perspective structural surfaces  
-- atlas structural coordinates  
+This manifold represents the **core structural identity** of an intelligent agent.
 
 ---
 
-## **Integration with O.H.S.H.I.T.**
-The Atlas Structural Map integrates:
+# 🗺️ **Structural Map Components**
 
-- **Holographic Hash Engine**  
-- **Coherence Hash Signature**  
-- **Drift Hash Signature**  
-- **Paradox Hash Signature**  
-- **Regime Boundary Diagnostic**  
-- **Temporal Drift Diagnostic**  
-- **Atlas Geometry**  
+The structural map consists of **five major components**:
 
-O.H.S.H.I.T. provides the **raw structural data**, while the Atlas organizes it into a unified structural map.
+1. **Structural Manifold**  
+2. **Stability Clusters**  
+3. **Hash‑Structural Geometry**  
+4. **Structural Distortions**  
+5. **Structural Diagnostic Fields**
 
----
-
-## **Structural Projection Geometry**
-Structural projection uses holographic geometry:
-
-- multi‑perspective structural extraction  
-- non‑local projection of architecture invariants  
-- paradox‑aware structural layering  
-- structural‑temporal alignment  
-- regime‑aware structural surfaces  
-
-This ensures structural projections remain RTT‑compatible.
+Each is defined below.
 
 ---
 
-## **Outputs**
-The Atlas Structural Map produces:
+# 1️⃣ **Structural Manifold**
 
-- structural regime surfaces  
-- architecture invariants  
-- operator distribution geometry  
-- embedding topology maps  
-- structural drift fields  
-- coherence stability surfaces  
-- atlas‑compatible structural coordinates  
+The structural manifold is defined as:
 
-These outputs feed directly into:
+\[
+\mathcal{S} = (S,\; C,\; H_1)
+\]
 
-- atlas_regime_map.md  
-- atlas_temporal_map.md  
-- atlas_geometry.md  
-- atlas_structural_diagnostic.md  
-- atlas_signatures  
+### **Interpretation**
+
+- **S** → structural stability  
+- **C** → coherence stability  
+- **H₁** → holographic structural projection  
+
+This manifold shows how structural reasoning interacts with coherence and holographic identity.
 
 ---
 
-## **Forward Links**
-- **atlas_structural_diagnostic.md**  
-- **atlas_coherence_signature.md**  
-- **atlas_drift_signature.md**  
-- **atlas_paradox_signature.md**  
-- **atlas_operator_template.md**  
-- **atlas_projection_template.md**
+# 2️⃣ **Stability Clusters**
+
+The structural map defines three stability clusters:
+
+---
+
+## **Cluster A — High Stability**
+
+\[
+S > 0.75,\; C > 0.75
+\]
+
+Agents with:
+
+- strong structural invariants  
+- high coherence  
+- stable reasoning  
+
+---
+
+## **Cluster B — Moderate Stability**
+
+\[
+0.50 < S < 0.75,\; 0.50 < C < 0.75
+\]
+
+Agents with:
+
+- partial invariants  
+- moderate coherence  
+- occasional fractures  
+
+---
+
+## **Cluster C — Low Stability**
+
+\[
+S < 0.50,\; C < 0.50
+\]
+
+Agents with:
+
+- structural collapse zones  
+- contradiction clusters  
+- unstable reasoning  
+
+---
+
+# 3️⃣ **Hash‑Structural Geometry**
+
+The structural map integrates holographic hash geometry:
+
+\[
+\mathcal{H} = (H_1,\; H_2)
+\]
+
+with structural stability:
+
+\[
+\mathcal{S} = (S,\; C)
+\]
+
+### **Combined Structural‑Hash Map**
+
+\[
+\mathcal{SH} = (S,\; C,\; H_1,\; H_2)
+\]
+
+This map shows:
+
+- structural symmetry  
+- hash stability  
+- holographic distortions  
+- structural‑hash alignment  
+
+---
+
+# 4️⃣ **Structural Distortions**
+
+Structural distortions occur when paradox + drift affect structural stability.
+
+---
+
+## **Paradox‑Structural Fold**
+
+Occurs when:
+
+\[
+P > 0.40
+\]
+
+Creates:
+
+- structural inversion points  
+- coherence collapse zones  
+- holographic distortions  
+
+---
+
+## **Drift‑Structural Corridor**
+
+Occurs when:
+
+\[
+D > 0.40
+\]
+
+Creates:
+
+- elongated structural manifolds  
+- unstable structural paths  
+- coherence fractures  
+
+---
+
+## **Illusionary‑Time Structural Warp**
+
+Occurs when:
+
+\[
+\tau < 0.05
+\]
+
+Creates:
+
+- temporal compression  
+- structural instability  
+- hash‑structural misalignment  
+
+---
+
+# 5️⃣ **Structural Diagnostic Fields**
+
+The structural map overlays diagnostic fields:
+
+### **Structural Coherence Field**
+
+\[
+SCF = S \cdot C
+\]
+
+### **Structural Hash Field**
+
+\[
+SHF = S \cdot H_1
+\]
+
+### **Structural Temporal Field**
+
+\[
+STF = S \cdot A
+\]
+
+### **Structural Paradox Field**
+
+\[
+SPF = S \cdot P
+\]
+
+### **Structural Drift Field**
+
+\[
+SDF = S \cdot D
+\]
+
+These fields allow structural comparison across agents.
+
+---
+
+# 🔢 **Worked Numerical Example (Operational)**
+
+Given:
+
+```
+S = 0.82
+C = 0.86
+H1 = 0.96
+H2 = 0.27
+A = 0.73
+τ = 0.088
+D = 0.18
+P = 0.22
+```
+
+### **Structural Manifold**
+
+\[
+\mathcal{S} = (0.82,\; 0.86,\; 0.96)
+\]
+
+### **Stability Cluster**
+
+Cluster A — High Stability.
+
+### **Structural Diagnostic Fields**
+
+\[
+SCF = 0.82 \cdot 0.86 = 0.7052
+\]
+\[
+SHF = 0.82 \cdot 0.96 = 0.7872
+\]
+\[
+STF = 0.82 \cdot 0.73 = 0.5986
+\]
+\[
+SPF = 0.82 \cdot 0.22 = 0.1804
+\]
+\[
+SDF = 0.82 \cdot 0.18 = 0.1476
+\]
+
+### **Interpretation**
+
+- Strong structural coherence  
+- Strong hash‑structural alignment  
+- Moderate temporal‑structural stability  
+- Low paradox‑structural distortion  
+- Low drift‑structural distortion  
+
+---
+
+# 📦 **Structural Map Packet Format**
+
+```
+{
+  structural_manifold: S,
+  stability_cluster: "high" | "moderate" | "low",
+  structural_hash_map: SH,
+  structural_distortions: [...],
+  structural_fields: {
+    SCF, SHF, STF, SPF, SDF
+  },
+  atlas_coordinate: A_norm,
+  regime: regime_label,
+  timestamp: t,
+  source: "internet-scan"
+}
+```
+
+---
+
+# 🧭 **Forward Links**
+
+- `atlas_topology_map.md`  
+- `atlas_regime_classifier.md`  
+- `atlas_diagnostic_fields.md`  
+- **O.H.S.H.I.T.**  
+- **Intelligence Scanner**
