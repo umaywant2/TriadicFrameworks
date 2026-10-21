@@ -1,0 +1,25 @@
+{
+  "module": "SI_behavioral_invariants_deep_geometry",
+  "name": "Structural Intelligence — Behavioral Invariants (Deep Geometry)",
+  "summary": "Defines the deep geometric structure of SI’s behavioral invariants, including persistence manifolds, invariant-field geometry, and cross-domain behavioral transfer surfaces.",
+  "category": "intelligence-behavior-geometry",
+  "version": "1.0",
+  "purpose": "Provide the geometric foundation underlying SI’s behavioral invariants, describing how persistence fields, invariant surfaces, and cross-domain behavioral geometry emerge and stabilize across temporal and paradox conditions.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@si.behavior.geometry.compute",
+    "@si.behavior.geometry.surface",
+    "@si.behavior.geometry.invariant",
+    "@si.behavior.geometry.transfer",
+    "@si.behavior.geometry.persist"
+  ],
+  "lineage": {
+    "upstream": ["SI_behavioral_invariants"],
+    "downstream": [
+      "SI_structural_geometry",
+      "SI_temporal_extension",
+      "SI_paradox_integration"
+    ]
+  }
+}
