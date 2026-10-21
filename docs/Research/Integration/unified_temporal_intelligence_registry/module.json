@@ -1,0 +1,32 @@
+{
+  "module": "Unified_Temporal_Intelligence_Registry",
+  "name": "TriadicFrameworks — Unified Temporal‑Intelligence Registry",
+  "summary": "Defines the unified registry that catalogs, aligns, and binds Ladder, SI, Atlas, and Triad into a single temporal‑intelligence system, including registry‑level resonance fields, cross‑system continuity entries, epoch‑aligned temporal‑window records, and unified intelligence‑binding geometry.",
+  "category": "intelligence-unified-temporal-intelligence-registry",
+  "version": "1.0",
+  "purpose": "Provide the registry‑level geometry that records, stabilizes, and unifies all temporal‑intelligence behaviors across Ladder ignition, SI resonance, Atlas synchronization, and Triad epoch‑ignition. This registry maintains cross‑system continuity, multi‑epoch coherence, corrected‑time propagation, and unified resonance alignment.",
+  "role": "registry",
+  "analyzer_layer": "regime",
+  "operators": [
+    "@registry.unified.intelligence.field",
+    "@registry.unified.intelligence.align",
+    "@registry.unified.intelligence.record",
+    "@registry.unified.intelligence.stabilize",
+    "@registry.unified.intelligence.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Cross_System_Resonance_Atlas",
+      "Cross_System_Continuity_Mesh",
+      "Cross_System_Integration_Maps",
+      "Triad_Epoch_Propagation_Mesh",
+      "Temporal_Extension_Engine",
+      "Atlas_Synchronization_Fields_Temporal_Window_Post_Reconstitution_Corridors",
+      "SI_temporal_extension",
+      "Ladder_Temporal_Extension_Map"
+    ],
+    "downstream": [
+      "TriadicFrameworks_Global_Integration_Map"
+    ]
+  }
+}
