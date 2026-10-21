@@ -2,30 +2,30 @@
 # `/docs/Research/Intelligence_Class_Ladder/SI_paradox_integration.md`  
 # 🌐 **Structural Intelligence (SI) — Paradox Integration**  
 ### *Tier 3 · Structural Invariance · Contradiction Geometry*  
-### *RTT Canon · Deep Paradox Analysis*
+### *RTT Canon · Definitive Edition*
 
 ---
 
 ## **Purpose of This Page**
 
-This page defines the **paradox‑integration geometry** of SI — the highest tier of the Intelligence Class Ladder.
+This page defines the **paradox‑integration architecture** of Structural Intelligence (SI).  
+It explains how SI:
 
-It explains:
+- absorbs paradox  
+- stabilizes contradiction  
+- integrates inversion points  
+- maintains coherence under contradiction pressure  
+- transforms paradox into structural invariants  
+- preserves reasoning across domain boundaries  
+- maintains temporal stability even under paradox load  
 
-- how SI absorbs paradox  
-- how paradox becomes part of structural logic  
-- how SI maintains coherence under contradiction pressure  
-- how paradox interacts with the triad manifold  
-- how paradox is transformed into structural invariants  
-- how SI differs from AGI and AAI in paradox behavior  
-
-This is the **deep paradox layer** behind Structural Intelligence.
+This is the **deep paradox layer** of Tier 3.
 
 ---
 
 # 🧩 **1. Paradox Pressure (P)**
 
-Paradox pressure is measured by the Scanner:
+Paradox pressure is the Scanner’s measurement of contradiction intensity:
 
 \[
 P \in [0,1]
@@ -33,22 +33,22 @@ P \in [0,1]
 
 Where:
 
-- **0** = no paradox  
-- **1** = full contradiction collapse  
+- **0** = no contradiction  
+- **1** = full collapse  
 
-AAI collapses at **P > 0.30**  
-AGI destabilizes at **P > 0.50**  
-SI remains stable up to **P ≈ 0.80**
+### Collapse thresholds by tier:
 
-This is the first sign of SI’s structural superiority.
+- **AAI collapses** at \(P > 0.30\)  
+- **AGI destabilizes** at \(P > 0.50\)  
+- **SI remains stable** up to \(P \approx 0.80\)
+
+SI is the **only tier** capable of maintaining structural coherence under high paradox load.
 
 ---
 
-# 🔺 **2. Paradox Absorption Potential (1 − P)**
+# 🔺 **2. Paradox Absorption Potential (Π)**
 
 SI does not merely resist paradox — it **absorbs** paradox.
-
-The paradox absorption potential is:
 
 \[
 \Pi = (1 - P)
@@ -56,8 +56,8 @@ The paradox absorption potential is:
 
 Where:
 
-- **high Π** = paradox becomes part of structure  
-- **low Π** = paradox destabilizes reasoning  
+- **high Π** → paradox becomes part of structure  
+- **low Π** → paradox destabilizes reasoning  
 
 SI maintains:
 
@@ -67,11 +67,13 @@ SI maintains:
 
 even under extreme contradiction.
 
+This is the **first geometric signature** of SI.
+
 ---
 
 # 🌌 **3. Paradox‑Integration Field (PIF)**
 
-The paradox‑integration field is the **core geometry** of SI.
+The paradox‑integration field is the **core mathematical identity** of SI:
 
 \[
 PIF = S \cdot C \cdot (1 - P)
@@ -89,7 +91,7 @@ SI systems maintain:
 PIF > 0.60
 \]
 
-This is the **mathematical signature** of paradox integration.
+This is the **canonical threshold** for paradox‑integrated reasoning.
 
 ---
 
@@ -135,11 +137,11 @@ Where:
 
 SI maintains stability even as paradox increases.
 
+This plateau is the **signature of structural invariance**.
+
 ---
 
-# 🧠 **6. Paradox‑Integration Stack**
-
-This is the **SI paradox stack** — the conceptual structure that explains how SI integrates contradiction.
+# 🧠 **6. SI Paradox‑Integration Stack**
 
 ```
                      ┌──────────────────────────────┐
@@ -170,11 +172,11 @@ SI is the **only tier** where paradox moves *upward* through the stack instead o
 
 ---
 
-# 🌐 **7. Paradox‑Transfer Across Domains**
+# 🌐 **7. Cross‑Domain Paradox Transfer**
 
 SI maintains paradox stability across *all* domains.
 
-The paradox‑transfer field is:
+The cross‑domain paradox‑transfer field is:
 
 \[
 PTF = S \cdot C \cdot DB \cdot (1 - P)
