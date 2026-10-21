@@ -198,7 +198,10 @@ Tier 1 · Domain‑Bound · Task‑Specific
 
 # 🔗 **Forward Links**
 
+# 🔗 Forward Links
+
 - `/AGI.md` — next Ladder tier  
-- `/ASI.md` — final Ladder tier  
+- `/SI.md` — final Ladder tier (Structural Intelligence)  
 - Triad Front Door  
-- Intelligence Class Ladder Index  
+- Intelligence Class Ladder Index
+
