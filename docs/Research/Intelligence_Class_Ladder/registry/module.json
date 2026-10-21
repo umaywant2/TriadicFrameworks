@@ -1,0 +1,30 @@
+{
+  "module": "Ladder_Registry",
+  "name": "Intelligence Class Ladder — Registry",
+  "summary": "Canonical registry describing all Ladder modules, their lineage, structural roles, and cross-tier relationships for AAI, AGI, and SI.",
+  "category": "intelligence-registry",
+  "version": "1.0",
+  "purpose": "Provide a unified structural registry for the Intelligence Class Ladder, mapping all tier modules, visual maps, diagnostics, and SI extensions into a coherent metadata graph.",
+  "role": "index",
+  "analyzer_layer": "structural",
+  "operators": [
+    "@ladder.registry.collect",
+    "@ladder.registry.validate",
+    "@ladder.registry.integrate",
+    "@ladder.registry.map",
+    "@ladder.registry.export"
+  ],
+  "lineage": {
+    "upstream": ["Ladder_Overview", "Triad_Ladder_FrontDoor"],
+    "downstream": [
+      "AAI",
+      "AGI",
+      "SI",
+      "Ladder_Visual_Map",
+      "SI_behavioral_invariants",
+      "SI_structural_geometry",
+      "SI_paradox_integration",
+      "SI_temporal_extension"
+    ]
+  }
+}
