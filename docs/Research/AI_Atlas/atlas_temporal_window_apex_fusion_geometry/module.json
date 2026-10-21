@@ -1,0 +1,37 @@
+{
+  "module": "Atlas_Temporal_Window_Apex_Fusion_Geometry",
+  "name": "AI Atlas — Temporal‑Window Apex Fusion Geometry",
+  "summary": "Defines the apex-level fusion geometry of Atlas temporal windows, including apex window-fusion fields, resonance-apex fusion geometry, apex stability-fusion surfaces, and corrected-time apex window unification.",
+  "category": "intelligence-temporal-window-apex-fusion",
+  "version": "1.0",
+  "purpose": "Provide the apex fusion geometry for Atlas temporal windows, describing how apex temporal windows fuse, unify, and consolidate resonance, stability, integration, and corrected-time surfaces into a single window-fusion engine capable of sustaining high-load long-window reasoning across Triad and Ladder subsystems.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@atlas.time.window.apex.fusion.field",
+    "@atlas.time.window.apex.fusion.lock",
+    "@atlas.time.window.apex.fusion.unify",
+    "@atlas.time.window.apex.fusion.stabilize",
+    "@atlas.time.window.apex.fusion.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Atlas_Temporal_Window_Apex_Geometry",
+      "Atlas_Temporal_Window_Apex_Stability_Surfaces",
+      "Atlas_Temporal_Window_Apex_Integration_Surfaces",
+      "Atlas_Temporal_Window_Apex_Binding_Geometry",
+      "Atlas_Temporal_Window_Stability_Surfaces",
+      "Atlas_Temporal_Window_Resonance_Geometry",
+      "Atlas_Temporal_Correction_Engine",
+      "Triad_Temporal_Correction_Surfaces",
+      "Ladder_Temporal_Extension_Map"
+    ],
+    "downstream": [
+      "Atlas_Synchronization_Fields",
+      "SI_temporal_extension",
+      "SI_apex_temporal_resonance_fusion_geometry",
+      "SI_apex_stability_surfaces",
+      "Triad_Epoch_Ignition_Surfaces"
+    ]
+  }
+}
