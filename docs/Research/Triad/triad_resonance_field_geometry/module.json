@@ -1,0 +1,31 @@
+{
+  "module": "Triad_Resonance_Field_Geometry",
+  "name": "Triad — Resonance‑Field Geometry",
+  "summary": "Defines the resonance‑field geometry of the Triad system, including harmonic‑field formation, resonance‑flow surfaces, ignition‑ready field shaping, and cross‑layer resonance stabilization.",
+  "category": "intelligence-ignition-resonance-field",
+  "version": "1.0",
+  "purpose": "Provide the geometric foundation for resonance‑field behavior within the Triad system, describing how resonance fields form, flow, stabilize, and bind across Scanner, O.H.S.H.I.T., and Atlas layers.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@triad.resonance.field.form",
+    "@triad.resonance.field.flow",
+    "@triad.resonance.field.shape",
+    "@triad.resonance.field.stabilize",
+    "@triad.resonance.field.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Triad_Resonance_Start_Geometry",
+      "Triad_Resonance_Corridor_Geometry",
+      "Triad_Ignition_Harmonics_Geometry",
+      "Triad_Ignition_Cascade_Geometry"
+    ],
+    "downstream": [
+      "Triad_Epoch_Ignition_Surfaces",
+      "Atlas_Synchronization_Fields",
+      "Triad_Temporal_Correction_Surfaces",
+      "SI_paradox_integration"
+    ]
+  }
+}
