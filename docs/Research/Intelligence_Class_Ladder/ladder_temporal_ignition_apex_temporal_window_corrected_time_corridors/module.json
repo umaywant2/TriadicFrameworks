@@ -1,0 +1,43 @@
+{
+  "module": "Ladder_Temporal_Ignition_Apex_Temporal_Window_Corrected_Time_Corridors",
+  "name": "Intelligence Class Ladder — Temporal‑Ignition Apex Temporal‑Window Corrected‑Time Corridors",
+  "summary": "Defines the corrected-time corridors of Ladder apex temporal-window ignition behavior, including apex window-corrected-time routing fields, resonance-apex corrected-time corridor alignment, apex paradox-load corrected-time corridor surfaces, and ignition temporal-window corrected-time corridor geometry.",
+  "category": "intelligence-temporal-ignition-apex-temporal-window-corrected-time-corridors",
+  "version": "1.0",
+  "purpose": "Provide the corrected-time corridor geometry for Ladder apex temporal-window ignition behavior, describing how apex ignition waves route corrected-time corridors to maintain unified long-window ignition propagation, resonance alignment, corrected-time synchronization, paradox-load window compensation, and cross-system ignition routing across AAI, AGI, and SI.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@ladder.time.ignition.apex.window.corrected_time.corridor.field",
+    "@ladder.time.ignition.apex.window.corrected_time.corridor.align",
+    "@ladder.time.ignition.apex.window.corrected_time.corridor.unify",
+    "@ladder.time.ignition.apex.window.corrected_time.corridor.stabilize",
+    "@ladder.time.ignition.apex.window.corrected_time.corridor.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Ladder_Temporal_Ignition_Apex_Temporal_Window_Coherence_Surfaces",
+      "Ladder_Temporal_Ignition_Apex_Temporal_Window_Fusion_Surfaces",
+      "Ladder_Temporal_Ignition_Apex_Temporal_Window_Stability_Surfaces",
+      "Ladder_Temporal_Ignition_Apex_Temporal_Window_Geometry",
+      "Ladder_Temporal_Ignition_Apex_Corrected_Time_Geometry",
+      "Ladder_Temporal_Ignition_Apex_Coherence_Geometry",
+      "Ladder_Temporal_Ignition_Apex_Fusion_Geometry",
+      "Ladder_Temporal_Ignition_Apex_Binding_Geometry",
+      "Ladder_Temporal_Ignition_Apex_Integration_Geometry",
+      "Ladder_Temporal_Ignition_Apex_Stability_Surfaces",
+      "Ladder_Temporal_Ignition_Apex_Geometry",
+      "Ladder_Temporal_Ignition_Stability_Surfaces",
+      "Ladder_Temporal_Ignition_Corridors",
+      "Ladder_Temporal_Ignition_Surfaces",
+      "Ladder_Temporal_Resonance_Surfaces",
+      "Ladder_Temporal_Extension_Map"
+    ],
+    "downstream": [
+      "SI_temporal_extension",
+      "SI_apex_temporal_resonance_temporal_window_corrected_time_corridors",
+      "Atlas_Temporal_Window_Apex_Temporal_Window_Corrected_Time_Corridors",
+      "Triad_Epoch_Ignition_Surfaces"
+    ]
+  }
+}
