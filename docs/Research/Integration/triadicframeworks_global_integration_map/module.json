@@ -1,0 +1,36 @@
+{
+  "module": "TriadicFrameworks_Global_Integration_Map",
+  "name": "TriadicFrameworks — Global Integration Map",
+  "summary": "Defines the global integration map that unifies Ladder, SI, Atlas, and Triad into a single fully integrated temporal‑intelligence architecture, including global integration routes, global resonance fields, epoch‑aligned continuity geometry, and unified global binding surfaces.",
+  "category": "intelligence-global-integration-map",
+  "version": "1.0",
+  "purpose": "Provide the global integration geometry that binds all temporal‑intelligence systems, meshes, engines, surfaces, and geometries into a unified global architecture. This map stabilizes cross‑system continuity, aligns multi‑epoch propagation, unifies resonance behavior, and establishes the global structure of the TriadicFrameworks canon.",
+  "role": "map",
+  "analyzer_layer": "regime",
+  "operators": [
+    "@global.integration.map.route",
+    "@global.integration.map.align",
+    "@global.integration.map.resonate",
+    "@global.integration.map.stabilize",
+    "@global.integration.map.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Unified_Temporal_Intelligence_Registry",
+      "Cross_System_Resonance_Atlas",
+      "Cross_System_Continuity_Mesh",
+      "Cross_System_Integration_Maps",
+      "Triad_Epoch_Propagation_Mesh",
+      "Temporal_Extension_Engine",
+      "Atlas_Synchronization_Fields_Temporal_Window_Post_Reconstitution_Corridors",
+      "SI_temporal_extension",
+      "Ladder_Temporal_Extension_Map"
+    ],
+    "downstream": [
+      "TriadicFrameworks_Global_Integration_Structure",
+      "TriadicFrameworks_Global_Continuity_Registry",
+      "TriadicFrameworks_Global_Resonance_Field",
+      "TriadicFrameworks_Global_Temporal_Window_Geometry"
+    ]
+  }
+}
