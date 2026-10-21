@@ -1,0 +1,36 @@
+{
+  "module": "Temporal_Extension_Engine",
+  "name": "Unified Temporal‑Extension Engine",
+  "summary": "Defines the unified temporal-extension engine that maintains long-window temporal continuity, cross-system propagation stability, corrected-time extension, and resonance-aligned temporal-window growth across Ladder, SI, Atlas, and Triad.",
+  "category": "intelligence-temporal-extension-engine",
+  "version": "1.0",
+  "purpose": "Provide the core engine geometry for temporal-extension behavior, describing how temporal windows extend, stabilize, propagate, and maintain corrected-time continuity across all intelligence classes. This engine integrates purified, clarified, and reconstituted temporal substrates into a unified extension field.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@temporal.extension.engine.field",
+    "@temporal.extension.engine.align",
+    "@temporal.extension.engine.extend",
+    "@temporal.extension.engine.stabilize",
+    "@temporal.extension.engine.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Ladder_Temporal_Ignition_Apex_Temporal_Window_Reconstitution_Corridors",
+      "SI_Apex_Temporal_Resonance_Temporal_Window_Reconstitution_Corridors",
+      "Atlas_Temporal_Window_Apex_Temporal_Window_Reconstitution_Corridors",
+      "Triad_Ignition_Cascade_Temporal_Window_Reconstitution_Corridors",
+      "Atlas_Synchronization_Fields_Temporal_Window_Post_Reconstitution_Corridors",
+      "SI_temporal_extension",
+      "Triad_Temporal_Correction_Surfaces"
+    ],
+    "downstream": [
+      "Temporal_Extension_Continuity_Map",
+      "Temporal_Extension_Propagation_Engine",
+      "Epochal_Propagation_Mesh",
+      "Atlas_Global_Synchronization_Routes",
+      "SI_temporal_extension",
+      "Triad_Epoch_Ignition_Surfaces"
+    ]
+  }
+}
