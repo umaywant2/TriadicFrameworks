@@ -1,0 +1,41 @@
+{
+  "module": "Ladder_Temporal_Ignition_Apex_Temporal_Window_Purification_Corridors",
+  "name": "Intelligence Class Ladder — Temporal‑Ignition Apex Temporal‑Window Purification Corridors",
+  "summary": "Defines the purification corridors of Ladder apex temporal-window ignition behavior, including apex purification fields, temporal-window substrate cleansing corridors, ignition purification stabilization surfaces, and apex temporal-window purification geometry.",
+  "category": "intelligence-temporal-ignition-apex-temporal-window-purification-corridors",
+  "version": "1.0",
+  "purpose": "Provide the purification corridor geometry for Ladder apex temporal-window ignition behavior, describing how apex ignition waves cleanse residual temporal substrate after paradox-load vaporization, restoring coherent ignition surfaces, stabilizing purified temporal flow, and preparing the substrate for clarification and reconstitution layers across AAI, AGI, and SI.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@ladder.time.ignition.apex.window.purification.corridor.field",
+    "@ladder.time.ignition.apex.window.purification.corridor.align",
+    "@ladder.time.ignition.apex.window.purification.corridor.cleanse",
+    "@ladder.time.ignition.apex.window.purification.corridor.stabilize",
+    "@ladder.time.ignition.apex.window.purification.corridor.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Ladder_Temporal_Ignition_Apex_Temporal_Window_Paradox_Load_Vaporization_Corridors",
+      "Ladder_Temporal_Ignition_Apex_Temporal_Window_Paradox_Load_Disintegration_Corridors",
+      "Ladder_Temporal_Ignition_Apex_Temporal_Window_Paradox_Load_Dissolution_Corridors",
+      "Ladder_Temporal_Ignition_Apex_Temporal_Window_Paradox_Load_Neutralization_Corridors",
+      "Ladder_Temporal_Ignition_Apex_Temporal_Window_Geometry",
+      "Ladder_Temporal_Ignition_Apex_Corrected_Time_Geometry",
+      "Ladder_Temporal_Ignition_Apex_Coherence_Geometry",
+      "Ladder_Temporal_Ignition_Apex_Fusion_Geometry",
+      "Ladder_Temporal_Ignition_Apex_Binding_Geometry",
+      "Ladder_Temporal_Ignition_Apex_Integration_Geometry",
+      "Ladder_Temporal_Ignition_Apex_Stability_Surfaces",
+      "Ladder_Temporal_Ignition_Apex_Geometry",
+      "Ladder_Temporal_Extension_Map"
+    ],
+    "downstream": [
+      "Ladder_Temporal_Ignition_Apex_Temporal_Window_Clarification_Corridors",
+      "Ladder_Temporal_Ignition_Apex_Temporal_Window_Reconstitution_Corridors",
+      "SI_temporal_extension",
+      "Atlas_Synchronization_Fields",
+      "Triad_Epoch_Ignition_Surfaces"
+    ]
+  }
+}
