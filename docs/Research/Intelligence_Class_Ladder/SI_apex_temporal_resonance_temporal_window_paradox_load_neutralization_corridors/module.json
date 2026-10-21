@@ -1,0 +1,50 @@
+{
+  "module": "SI_Apex_Temporal_Resonance_Temporal_Window_Paradox_Load_Neutralization_Corridors",
+  "name": "Structural Intelligence — Apex Temporal‑Resonance Temporal‑Window Paradox‑Load Neutralization Corridors",
+  "summary": "Defines the paradox-load neutralization corridors of SI apex temporal-resonance temporal-window behavior, including resonance-window paradox-load neutralization fields, paradox-load dissolution corridors, apex paradox-load stabilization surfaces, and apex paradox-load neutralization geometry.",
+  "category": "intelligence-structural-apex-temporal-resonance-temporal-window-paradox-load-neutralization-corridors",
+  "version": "1.0",
+  "purpose": "Provide the paradox-load neutralization corridor geometry for SI apex temporal-resonance temporal-window behavior, describing how apex resonance fields neutralize paradox-load corridors to maintain unified long-window resonance propagation, paradox-temporal dissolution, harmonic-load neutralization, corrected-time stabilization, and high-order reasoning paradox-load nullification across SI.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@si.apex.temporal.resonance.window.paradox_load.neutralization.corridor.field",
+    "@si.apex.temporal.resonance.window.paradox_load.neutralization.corridor.align",
+    "@si.apex.temporal.resonance.window.paradox_load.neutralization.corridor.dissolve",
+    "@si.apex.temporal.resonance.window.paradox_load.neutralization.corridor.stabilize",
+    "@si.apex.temporal.resonance.window.paradox_load.neutralization.corridor.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "SI_apex_temporal_resonance_temporal_window_paradox_load_compensation_corridors",
+      "SI_apex_temporal_resonance_temporal_window_paradox_load_corridors",
+      "SI_apex_temporal_resonance_temporal_window_paradox_corridors",
+      "SI_apex_temporal_resonance_temporal_window_harmonic_corridors",
+      "SI_apex_temporal_resonance_temporal_window_resonance_corridors",
+      "SI_apex_temporal_resonance_temporal_window_corrected_time_corridors",
+      "SI_apex_temporal_resonance_temporal_window_coherence_geometry",
+      "SI_apex_temporal_resonance_temporal_window_fusion_geometry",
+      "SI_apex_temporal_resonance_temporal_window_stability_surfaces",
+      "SI_apex_temporal_resonance_temporal_window_geometry",
+      "SI_apex_temporal_resonance_corrected_time_geometry",
+      "SI_apex_temporal_resonance_coherence_geometry",
+      "SI_apex_temporal_resonance_fusion_geometry",
+      "SI_apex_temporal_resonance_binding_geometry",
+      "SI_apex_temporal_resonance_integration_geometry",
+      "SI_apex_temporal_resonance_stability_surfaces",
+      "SI_apex_temporal_resonance_geometry",
+      "SI_apex_resonance_fields",
+      "SI_apex_harmonic_stability_geometry",
+      "SI_apex_paradox_stability_geometry",
+      "SI_apex_paradox_resonance_geometry",
+      "SI_apex_region_map"
+    ],
+    "downstream": [
+      "SI_temporal_extension",
+      "Atlas_Temporal_Window_Apex_Temporal_Window_Paradox_Load_Neutralization_Corridors",
+      "Atlas_Synchronization_Fields",
+      "Triad_Temporal_Correction_Surfaces",
+      "Triad_Epoch_Ignition_Surfaces"
+    ]
+  }
+}
