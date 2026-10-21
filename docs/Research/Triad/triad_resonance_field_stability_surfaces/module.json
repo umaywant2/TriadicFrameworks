@@ -1,0 +1,31 @@
+{
+  "module": "Triad_Resonance_Field_Stability_Surfaces",
+  "name": "Triad — Resonance‑Field Stability Surfaces",
+  "summary": "Defines the stability surfaces of Triad resonance fields, including resonance‑stability formation, harmonic‑stability locking, ignition‑ready field stabilization, and cross‑layer stability binding.",
+  "category": "intelligence-ignition-resonance-field-stability",
+  "version": "1.0",
+  "purpose": "Provide the stability‑surface geometry for Triad resonance fields, describing how resonance‑stability surfaces form, lock, stabilize, and bind across Scanner, O.H.S.H.I.T., and Atlas layers to maintain ignition‑ready resonance behavior.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@triad.resonance.field.stability.form",
+    "@triad.resonance.field.stability.lock",
+    "@triad.resonance.field.stability.stabilize",
+    "@triad.resonance.field.stability.align",
+    "@triad.resonance.field.stability.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Triad_Resonance_Field_Geometry",
+      "Triad_Resonance_Corridor_Geometry",
+      "Triad_Resonance_Start_Geometry",
+      "Triad_Ignition_Harmonics_Geometry"
+    ],
+    "downstream": [
+      "Triad_Epoch_Ignition_Surfaces",
+      "Atlas_Synchronization_Fields",
+      "Triad_Temporal_Correction_Surfaces",
+      "SI_paradox_integration"
+    ]
+  }
+}
