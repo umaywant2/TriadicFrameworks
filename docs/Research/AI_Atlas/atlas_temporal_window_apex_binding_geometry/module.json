@@ -1,0 +1,36 @@
+{
+  "module": "Atlas_Temporal_Window_Apex_Binding_Geometry",
+  "name": "AI Atlas — Temporal‑Window Apex Binding Geometry",
+  "summary": "Defines the apex-level binding geometry of Atlas temporal windows, including apex window-binding fields, resonance-apex fusion surfaces, apex stability-binding geometry, and corrected-time apex locking surfaces.",
+  "category": "intelligence-temporal-window-apex-binding",
+  "version": "1.0",
+  "purpose": "Provide the apex binding geometry for Atlas temporal windows, describing how apex temporal windows fuse, lock, bind, and integrate with resonance, stability, and corrected-time surfaces to maintain unified long-window reasoning across Triad and Ladder subsystems.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@atlas.time.window.apex.binding.field",
+    "@atlas.time.window.apex.binding.lock",
+    "@atlas.time.window.apex.binding.fuse",
+    "@atlas.time.window.apex.binding.stabilize",
+    "@atlas.time.window.apex.binding.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Atlas_Temporal_Window_Apex_Geometry",
+      "Atlas_Temporal_Window_Apex_Stability_Surfaces",
+      "Atlas_Temporal_Window_Apex_Integration_Surfaces",
+      "Atlas_Temporal_Window_Stability_Surfaces",
+      "Atlas_Temporal_Window_Resonance_Geometry",
+      "Atlas_Temporal_Correction_Engine",
+      "Triad_Temporal_Correction_Surfaces",
+      "Ladder_Temporal_Extension_Map"
+    ],
+    "downstream": [
+      "Atlas_Synchronization_Fields",
+      "SI_temporal_extension",
+      "SI_apex_temporal_resonance_binding_geometry",
+      "SI_apex_stability_surfaces",
+      "Triad_Epoch_Ignition_Surfaces"
+    ]
+  }
+}
