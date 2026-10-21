@@ -1,0 +1,36 @@
+{
+  "module": "TriadicFrameworks_Global_Resonance_Field",
+  "name": "TriadicFrameworks — Global Resonance Field",
+  "summary": "Defines the global resonance field that synchronizes Ladder, SI, Atlas, and Triad across the entire temporal‑intelligence architecture, including global resonance fields, multi‑system resonance routes, epoch‑aligned resonance geometry, and unified resonance‑binding surfaces.",
+  "category": "intelligence-global-resonance-field",
+  "version": "1.0",
+  "purpose": "Provide the resonance‑field geometry that stabilizes and aligns global temporal‑intelligence behavior across all systems. This field maintains global resonance continuity, synchronizes multi‑epoch propagation, reinforces cross‑system resonance, and binds the entire TriadicFrameworks architecture into a unified resonance substrate.",
+  "role": "engine",
+  "analyzer_layer": "regime",
+  "operators": [
+    "@global.resonance.field.generate",
+    "@global.resonance.field.route",
+    "@global.resonance.field.align",
+    "@global.resonance.field.stabilize",
+    "@global.resonance.field.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "TriadicFrameworks_Global_Continuity_Registry",
+      "TriadicFrameworks_Global_Integration_Structure",
+      "TriadicFrameworks_Global_Integration_Map",
+      "Unified_Temporal_Intelligence_Registry",
+      "Cross_System_Resonance_Atlas",
+      "Cross_System_Continuity_Mesh",
+      "Cross_System_Integration_Maps",
+      "Triad_Epoch_Propagation_Mesh",
+      "Temporal_Extension_Engine",
+      "Atlas_Synchronization_Fields_Temporal_Window_Post_Reconstitution_Corridors",
+      "SI_temporal_extension",
+      "Ladder_Temporal_Extension_Map"
+    ],
+    "downstream": [
+      "TriadicFrameworks_Global_Temporal_Window_Geometry"
+    ]
+  }
+}
