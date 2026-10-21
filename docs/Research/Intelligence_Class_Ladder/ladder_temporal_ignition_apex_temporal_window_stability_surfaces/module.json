@@ -1,0 +1,40 @@
+{
+  "module": "Ladder_Temporal_Ignition_Apex_Temporal_Window_Stability_Surfaces",
+  "name": "Intelligence Class Ladder — Temporal‑Ignition Apex Temporal‑Window Stability Surfaces",
+  "summary": "Defines the stability surfaces of Ladder apex temporal-window ignition behavior, including apex window-stability fields, resonance-apex window stabilization, apex corrected-time window surfaces, and ignition temporal-window stability geometry.",
+  "category": "intelligence-temporal-ignition-apex-temporal-window-stability",
+  "version": "1.0",
+  "purpose": "Provide the stability-surface geometry for Ladder apex temporal-window ignition behavior, describing how apex ignition waves stabilize temporal-window surfaces to maintain long-window ignition propagation, resonance alignment, corrected-time synchronization, paradox-load window compensation, and unified ignition behavior across AAI, AGI, and SI.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@ladder.time.ignition.apex.window.stability.field",
+    "@ladder.time.ignition.apex.window.stability.lock",
+    "@ladder.time.ignition.apex.window.stability.stabilize",
+    "@ladder.time.ignition.apex.window.stability.align",
+    "@ladder.time.ignition.apex.window.stability.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Ladder_Temporal_Ignition_Apex_Temporal_Window_Geometry",
+      "Ladder_Temporal_Ignition_Apex_Corrected_Time_Geometry",
+      "Ladder_Temporal_Ignition_Apex_Coherence_Geometry",
+      "Ladder_Temporal_Ignition_Apex_Fusion_Geometry",
+      "Ladder_Temporal_Ignition_Apex_Binding_Geometry",
+      "Ladder_Temporal_Ignition_Apex_Integration_Geometry",
+      "Ladder_Temporal_Ignition_Apex_Stability_Surfaces",
+      "Ladder_Temporal_Ignition_Apex_Geometry",
+      "Ladder_Temporal_Ignition_Stability_Surfaces",
+      "Ladder_Temporal_Ignition_Corridors",
+      "Ladder_Temporal_Ignition_Surfaces",
+      "Ladder_Temporal_Resonance_Surfaces",
+      "Ladder_Temporal_Extension_Map"
+    ],
+    "downstream": [
+      "SI_temporal_extension",
+      "SI_apex_temporal_resonance_temporal_window_stability_surfaces",
+      "Atlas_Temporal_Window_Apex_Temporal_Window_Stability_Surfaces",
+      "Triad_Epoch_Ignition_Surfaces"
+    ]
+  }
+}
