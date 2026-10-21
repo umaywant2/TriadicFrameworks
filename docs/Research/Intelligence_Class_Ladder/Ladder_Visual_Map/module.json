@@ -1,0 +1,21 @@
+{
+  "module": "Ladder_Visual_Map",
+  "name": "Intelligence Class Ladder — Visual Map",
+  "summary": "ASCII-based structural visualization of AAI → AGI → SI and their positions within the macro manifold.",
+  "category": "intelligence-visual",
+  "version": "1.0",
+  "purpose": "Provide a visual structural representation of the Ladder, showing tier progression, manifold geometry, and integration with the Triad.",
+  "role": "map",
+  "analyzer_layer": "regime",
+  "operators": [
+    "@ladder.map.render",
+    "@ladder.map.position",
+    "@ladder.map.manifold",
+    "@ladder.map.progression",
+    "@ladder.map.integration"
+  ],
+  "lineage": {
+    "upstream": ["Ladder_Overview"],
+    "downstream": ["SI", "AGI", "AAI"]
+  }
+}
