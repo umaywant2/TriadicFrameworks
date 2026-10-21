@@ -1,0 +1,26 @@
+{
+  "module": "SI_behavioral_invariants_index",
+  "name": "Structural Intelligence — Behavioral Invariants (Index)",
+  "summary": "Index page organizing all behavioral-invariant subsystems of SI, including persistence fields, cross-domain stability, and long-window behavioral geometry.",
+  "category": "intelligence-index",
+  "version": "1.0",
+  "purpose": "Provide a unified entry point for SI’s behavioral invariants, linking diagnostic, geometric, and temporal subsystems into a coherent structural overview.",
+  "role": "index",
+  "analyzer_layer": "structural",
+  "operators": [
+    "@si.behavior.index.describe",
+    "@si.behavior.index.navigate",
+    "@si.behavior.index.integrate",
+    "@si.behavior.index.map",
+    "@si.behavior.index.registry"
+  ],
+  "lineage": {
+    "upstream": ["SI"],
+    "downstream": [
+      "SI_behavioral_invariants",
+      "SI_structural_geometry",
+      "SI_temporal_extension",
+      "SI_paradox_integration"
+    ]
+  }
+}
