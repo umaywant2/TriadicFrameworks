@@ -1,0 +1,43 @@
+{
+  "module": "Triad_Ignition_Cascade_Temporal_Window_Reconstitution_Corridors",
+  "name": "Triad — Ignition‑Cascade Temporal‑Window Reconstitution Corridors",
+  "summary": "Defines the reconstitution corridors of Triad ignition-cascade temporal-window behavior, including cascade-window reconstitution fields, temporal-window substrate rebuilding corridors, ignition reconstitution stabilization surfaces, resonance-cascade reconstitution binding, and unified ignition-cascade temporal-window reconstitution geometry.",
+  "category": "intelligence-ignition-cascade-temporal-window-reconstitution-corridors",
+  "version": "1.0",
+  "purpose": "Provide the reconstitution corridor geometry for Triad ignition-cascade temporal-window behavior, describing how ignition cascades rebuild the clarified temporal substrate, restore full cascade-window coherence, reseat temporal flow channels, and finalize the substrate for stable long-window ignition across Scanner, O.H.S.H.I.T., and Atlas layers.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@triad.ignition.cascade.window.reconstitution.corridor.field",
+    "@triad.ignition.cascade.window.reconstitution.corridor.align",
+    "@triad.ignition.cascade.window.reconstitution.corridor.rebuild",
+    "@triad.ignition.cascade.window.reconstitution.corridor.stabilize",
+    "@triad.ignition.cascade.window.reconstitution.corridor.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Triad_Ignition_Cascade_Temporal_Window_Clarification_Corridors",
+      "Triad_Ignition_Cascade_Temporal_Window_Purification_Corridors",
+      "Triad_Ignition_Cascade_Temporal_Window_Paradox_Load_Vaporization_Corridors",
+      "Triad_Ignition_Cascade_Temporal_Window_Geometry",
+      "Triad_Ignition_Cascade_Corrected_Time_Surfaces",
+      "Triad_Ignition_Cascade_Coherence_Surfaces",
+      "Triad_Ignition_Cascade_Fusion_Surfaces",
+      "Triad_Ignition_Cascade_Binding_Geometry",
+      "Triad_Ignition_Cascade_Integration_Geometry",
+      "Triad_Ignition_Cascade_Stability_Surfaces",
+      "Triad_Ignition_Cascade_Geometry",
+      "Triad_Epoch_Ignition_Surfaces",
+      "Triad_Resonance_Epoch_Geometry",
+      "Triad_Resonance_Field_Integration_Geometry",
+      "Triad_Resonance_Corridor_Geometry",
+      "Triad_Resonance_Start_Geometry"
+    ],
+    "downstream": [
+      "Atlas_Synchronization_Fields",
+      "Triad_Temporal_Correction_Surfaces",
+      "SI_paradox_integration",
+      "SI_temporal_extension"
+    ]
+  }
+}
