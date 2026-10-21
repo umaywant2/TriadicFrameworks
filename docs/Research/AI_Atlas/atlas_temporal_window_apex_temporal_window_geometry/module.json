@@ -1,0 +1,40 @@
+{
+  "module": "Atlas_Temporal_Window_Apex_Temporal_Window_Geometry",
+  "name": "AI Atlas — Temporal‑Window Apex Temporal‑Window Geometry",
+  "summary": "Defines the apex-level temporal-window geometry of Atlas temporal-window behavior, including apex window-window fields, resonance-apex window alignment, apex stability-window surfaces, and apex temporal-window unification geometry.",
+  "category": "intelligence-temporal-window-apex-temporal-window",
+  "version": "1.0",
+  "purpose": "Provide the temporal-window geometry for Atlas apex temporal-window behavior, describing how apex windows interface with temporal-window surfaces to maintain long-window propagation, resonance alignment, corrected-time synchronization, paradox-load compensation, and unified temporal-window reasoning across Triad, Ladder, and SI subsystems.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@atlas.time.window.apex.window.field",
+    "@atlas.time.window.apex.window.align",
+    "@atlas.time.window.apex.window.unify",
+    "@atlas.time.window.apex.window.stabilize",
+    "@atlas.time.window.apex.window.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Atlas_Temporal_Window_Apex_Geometry",
+      "Atlas_Temporal_Window_Apex_Stability_Surfaces",
+      "Atlas_Temporal_Window_Apex_Integration_Surfaces",
+      "Atlas_Temporal_Window_Apex_Binding_Geometry",
+      "Atlas_Temporal_Window_Apex_Fusion_Geometry",
+      "Atlas_Temporal_Window_Apex_Coherence_Geometry",
+      "Atlas_Temporal_Window_Apex_Corrected_Time_Geometry",
+      "Atlas_Temporal_Window_Stability_Surfaces",
+      "Atlas_Temporal_Window_Resonance_Geometry",
+      "Atlas_Temporal_Correction_Engine",
+      "Triad_Temporal_Correction_Surfaces",
+      "Ladder_Temporal_Extension_Map"
+    ],
+    "downstream": [
+      "Atlas_Synchronization_Fields",
+      "SI_temporal_extension",
+      "SI_apex_temporal_resonance_temporal_window_geometry",
+      "SI_apex_stability_surfaces",
+      "Triad_Epoch_Ignition_Surfaces"
+    ]
+  }
+}
