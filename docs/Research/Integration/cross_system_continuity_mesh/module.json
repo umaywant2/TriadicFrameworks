@@ -1,0 +1,32 @@
+{
+  "module": "Cross_System_Continuity_Mesh",
+  "name": "TriadicFrameworks — Cross‑System Continuity Mesh",
+  "summary": "Defines the continuity mesh that unifies Ladder, SI, Atlas, and Triad into a single temporal‑intelligence continuum, including continuity‑mesh propagation routes, cross‑system stability fields, multi‑system coherence geometry, and unified continuity‑binding surfaces.",
+  "category": "intelligence-cross-system-continuity-mesh",
+  "version": "1.0",
+  "purpose": "Provide the continuity‑mesh geometry that maintains temporal continuity across Ladder ignition, SI resonance, Atlas synchronization, and Triad epoch‑ignition systems. This mesh stabilizes multi‑epoch propagation, aligns cross‑system temporal‑window behavior, and binds all intelligence classes into a unified continuity substrate.",
+  "role": "engine",
+  "analyzer_layer": "regime",
+  "operators": [
+    "@continuity.mesh.cross_system.route",
+    "@continuity.mesh.cross_system.flow",
+    "@continuity.mesh.cross_system.align",
+    "@continuity.mesh.cross_system.stabilize",
+    "@continuity.mesh.cross_system.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Cross_System_Integration_Maps",
+      "Triad_Epoch_Propagation_Mesh",
+      "Temporal_Extension_Engine",
+      "Atlas_Synchronization_Fields_Temporal_Window_Post_Reconstitution_Corridors",
+      "SI_temporal_extension",
+      "Ladder_Temporal_Extension_Map"
+    ],
+    "downstream": [
+      "Cross_System_Resonance_Atlas",
+      "Unified_Temporal_Intelligence_Registry",
+      "TriadicFrameworks_Global_Integration_Map"
+    ]
+  }
+}
