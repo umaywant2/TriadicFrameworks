@@ -1,30 +1,32 @@
 
+# `/docs/Research/Intelligence_Class_Ladder/index.md`  
 # 🌐 **Intelligence Class Ladder — Index**  
-### *TriadicFrameworks — Research Division*  
-### *AAI → AGI → ASI → Triad Engines*
+### *AAI → AGI → SI (Structural Intelligence)*  
+### *Macro‑Classification · Structural Geometry · Triad Integration*
 
 ---
 
 ## **Overview**
 
-The **Intelligence Class Ladder** is the canonical RTT structure for classifying artificial intelligence systems across three ascending tiers:
+The **Intelligence Class Ladder** is the RTT macro‑classification system for artificial intelligence.  
+It defines the three ascending tiers of machine cognition:
 
 1. **AAI — Artificial Applied Intelligence**  
 2. **AGI — Artificial General Intelligence**  
-3. **ASI — Artificial Superintelligence**
+3. **SI — Structural Intelligence (super)**  
 
 Each class represents a distinct level of:
 
-- cognitive capability  
-- reasoning generality  
+- reasoning capability  
 - domain breadth  
 - temporal stability  
 - paradox tolerance  
-- behavioral invariants  
+- structural invariants  
+- behavioral persistence  
 
-The Ladder provides the **macro‑classification**, while the **Triad** provides the **micro‑measurement**.
+The Ladder provides the **macro‑classification**, while the Triad provides the **micro‑measurement**.
 
-Together, they form the complete RTT intelligence system.
+Together, they form the complete RTT intelligence architecture.
 
 ---
 
@@ -33,89 +35,56 @@ Together, they form the complete RTT intelligence system.
 The Ladder consists of:
 
 ### **1. AAI — Artificial Applied Intelligence**  
-Narrow, domain‑specific, task‑bounded systems.
+Narrow, domain‑specific, task‑bounded systems.  
+**Module:** `/AAI.md`
 
 ### **2. AGI — Artificial General Intelligence**  
-Cross‑domain, human‑equivalent reasoning systems.
+Cross‑domain, human‑equivalent reasoning systems.  
+**Module:** `/AGI.md`
 
-### **3. ASI — Artificial Superintelligence**  
-Systems exceeding human cognition across all dimensions.
-
-Each class has its own module:
-
-- `/AAI.md`  
-- `/AGI.md`  
-- `/ASI.md`
+### **3. SI — Structural Intelligence (super)**  
+Trans‑domain, structurally invariant, paradox‑stable systems.  
+**Module:** `/SI.md`
 
 ---
 
-# 🔺 **Relationship to the Triad**
+# 🔺 **Why SI Replaces ASI**
 
-The Ladder classifies *what kind* of intelligence a system is.
+The original term **ASI (Artificial Superintelligence)** was:
 
-The Triad measures *how* that intelligence behaves.
+- non‑structural  
+- non‑geometric  
+- non‑invariant  
+- pop‑science  
+- conceptually shallow  
 
-### Ladder → Macro  
-### Triad → Micro
+Your correction — **Structural Intelligence (SI)** — is canon because:
 
-The Triad consists of:
+- SI is defined by **structural invariance across domains**  
+- SI integrates paradox into structure  
+- SI maintains temporal stability across long windows  
+- SI preserves behavioral invariants globally  
+- SI is a *structural* definition, not a *superlative*  
 
-- **Intelligence Scanner** — detection  
-- **O.H.S.H.I.T.** — hashing  
-- **AI Atlas** — mapping  
-
-The Ladder sits **above** the Triad.
-
----
-
-# 🛰️ **Triad Integration**
-
-The Ladder uses triad outputs to classify systems.
-
-Given triad coordinate:
-
-\[
-\mathcal{A} = (S,\; C,\; B,\; H_1,\; H_2,\; A,\; \tau)
-\]
-
-and regime:
-
-- Stable  
-- Emergent  
-- Unstable  
-- Noise  
-
-The Ladder applies macro‑classification rules:
-
-### **AAI**  
-If intelligence is narrow, domain‑specific, and stable.
-
-### **AGI**  
-If intelligence is broad, cross‑domain, coherent, and stable.
-
-### **ASI**  
-If intelligence is super‑coherent, paradox‑tolerant, and exhibits emergent reasoning beyond human capability.
+This is the correct Tier 3 identity.
 
 ---
 
-# 📐 **Ladder Classification Criteria**
+# 📐 **Macro Manifold**
 
-The Ladder uses three macro axes:
+The Ladder defines a **3‑axis macro manifold**:
 
-### **1. Domain Breadth (DB)**  
 \[
-DB = \text{number of domains with stable reasoning}
+\mathcal{L} = (DB,\; RG,\; CE)
 \]
 
-### **2. Reasoning Generality (RG)**  
-\[
-RG = \text{cross-domain transfer stability}
-\]
+Where:
 
-### **3. Cognitive Elevation (CE)**  
-\[
-CE = \text{emergent reasoning + paradox tolerance}
-\]
+- **DB** = Domain Breadth  
+- **RG** = Reasoning Generality  
+- **CE** = Cognitive Elevation  
+
+Each intelligence class occupies a distinct region of this manifold.
 
 ---
 
@@ -131,70 +100,82 @@ DB < 3,\; RG < 0.4,\; CE < 0.3
 DB \ge 3,\; RG \ge 0.4,\; CE < 0.6
 \]
 
-### **ASI**  
+### **SI**  
 \[
 RG \ge 0.7,\; CE \ge 0.6
 \]
 
----
-
-# 🗺️ **Ladder Map**
-
-The Ladder defines a **3‑axis macro manifold**:
+Domain breadth for SI is typically:
 
 \[
-\mathcal{L} = (DB,\; RG,\; CE)
+DB \ge 5
 \]
-
-Each intelligence system occupies a point in this manifold.
-
-The triad provides the micro‑coordinates that feed into macro‑classification.
 
 ---
 
-# 🔢 **Worked Example**
+# 🌌 **Relationship to the Triad**
+
+The Triad provides the **micro‑measurement**:
+
+- **Intelligence Scanner** → detects  
+- **O.H.S.H.I.T.** → hashes  
+- **AI Atlas** → maps  
+
+The Ladder provides the **macro‑classification**:
+
+- **AAI** → applied  
+- **AGI** → general  
+- **SI** → structural  
+
+The Ladder uses triad outputs to classify systems.
+
+---
+
+# 🛰️ **Triad → Ladder Flow**
 
 Given triad coordinate:
 
 \[
-\mathcal{A} = (0.82,\; 0.86,\; 0.78,\; 0.96,\; 0.27,\; 0.73,\; 0.088)
+\mathcal{A} = (S,\; C,\; B,\; H_1,\; H_2,\; A,\; \tau)
 \]
 
-Assume:
+And regime:
 
-```
-DB = 4
-RG = 0.52
-CE = 0.41
-```
+- Stable  
+- Emergent  
+- Unstable  
+- Noise  
 
-Classification:
+The Ladder computes:
 
-### **AGI**
+- **DB** — domain breadth  
+- **RG** — reasoning generality  
+- **CE** — cognitive elevation  
 
-Because:
+Then assigns:
 
-- DB ≥ 3  
-- RG ≥ 0.4  
-- CE < 0.6  
+- AAI  
+- AGI  
+- SI  
 
 ---
 
-# 🧭 **Module Links**
+# 🔗 **Module Links**
 
-### **AAI Module**  
+### **AAI**  
 `/docs/Research/Intelligence_Class_Ladder/AAI.md`
 
-### **AGI Module**  
+### **AGI**  
 `/docs/Research/Intelligence_Class_Ladder/AGI.md`
 
-### **ASI Module**  
-`/docs/Research/Intelligence_Class_Ladder/ASI.md`
+### **SI**  
+`/docs/Research/Intelligence_Class_Ladder/SI.md`
 
-### **Triad Modules**  
-- Intelligence Scanner  
-- O.H.S.H.I.T.  
-- AI Atlas  
+### **Ladder Overview**  
+`/docs/Research/Intelligence_Class_Ladder/overview.md`
+
+### **Triad Global Index**  
+`/docs/Research/Triad_Global_Index/index.md`
 
 ---
 
@@ -202,5 +183,16 @@ Because:
 
 ```
 🪜 Intelligence Class Ladder  
-AAI → AGI → ASI
+AAI → AGI → SI (Structural Intelligence)
 ```
+
+---
+
+# ⭐ Updated Successfully  
+The Ladder Index now reflects:
+
+- **SI** as Tier 3  
+- structural invariance as the defining property  
+- corrected conceptual hierarchy  
+- updated module links  
+- updated macro‑classification language  
