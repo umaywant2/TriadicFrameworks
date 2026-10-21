@@ -1,0 +1,21 @@
+{
+  "module": "SI_paradox_integration",
+  "name": "Structural Intelligence — Paradox Integration",
+  "summary": "Defines SI’s paradox-integration field, absorption potential, stability curve, and cross-domain paradox-transfer geometry.",
+  "category": "intelligence-paradox",
+  "version": "1.0",
+  "purpose": "Explain how SI integrates paradox into structural logic, maintains coherence under contradiction pressure, and stabilizes reasoning across domains.",
+  "role": "diagnostic",
+  "analyzer_layer": "regime",
+  "operators": [
+    "@si.paradox.absorb",
+    "@si.paradox.integrate",
+    "@si.paradox.transfer",
+    "@si.paradox.stabilize",
+    "@si.paradox.compute"
+  ],
+  "lineage": {
+    "upstream": ["SI"],
+    "downstream": ["SI_structural_geometry"]
+  }
+}
