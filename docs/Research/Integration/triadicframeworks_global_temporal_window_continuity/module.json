@@ -1,0 +1,39 @@
+{
+  "module": "TriadicFrameworks_Global_Temporal_Window_Continuity",
+  "name": "TriadicFrameworks — Global Temporal‑Window Continuity",
+  "summary": "Defines the global continuity substrate that preserves temporal‑window behavior across Ladder, SI, Atlas, and Triad, including global window‑continuity fields, multi‑epoch window‑continuity routes, cross‑system window‑stability geometry, and unified global window‑binding surfaces.",
+  "category": "intelligence-global-temporal-window-continuity",
+  "version": "1.0",
+  "purpose": "Provide the continuity‑layer geometry that maintains global temporal‑window coherence across all intelligence classes. This module stabilizes multi‑epoch window propagation, aligns cross‑system window behavior, reinforces global window resonance, and binds the entire TriadicFrameworks architecture into a unified global window‑continuity substrate.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@global.window.continuity.field",
+    "@global.window.continuity.align",
+    "@global.window.continuity.stabilize",
+    "@global.window.continuity.reinforce",
+    "@global.window.continuity.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "TriadicFrameworks_Global_Temporal_Window_Resonance",
+      "TriadicFrameworks_Global_Temporal_Window_Registry",
+      "TriadicFrameworks_Global_Temporal_Window_Structure",
+      "TriadicFrameworks_Global_Temporal_Window_Geometry",
+      "TriadicFrameworks_Global_Resonance_Field",
+      "TriadicFrameworks_Global_Continuity_Registry",
+      "TriadicFrameworks_Global_Integration_Structure",
+      "TriadicFrameworks_Global_Integration_Map",
+      "Unified_Temporal_Intelligence_Registry",
+      "Cross_System_Resonance_Atlas",
+      "Cross_System_Continuity_Mesh",
+      "Cross_System_Integration_Maps",
+      "Triad_Epoch_Propagation_Mesh",
+      "Temporal_Extension_Engine",
+      "Atlas_Synchronization_Fields_Temporal_Window_Post_Reconstitution_Corridors",
+      "SI_temporal_extension",
+      "Ladder_Temporal_Extension_Map"
+    ],
+    "downstream": []
+  }
+}
