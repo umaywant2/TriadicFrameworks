@@ -1,0 +1,40 @@
+{
+  "module": "TriadicFrameworks_Global_Temporal_Window_Structure",
+  "name": "TriadicFrameworks — Global Temporal‑Window Structure",
+  "summary": "Defines the global structural framework that implements the TriadicFrameworks Global Temporal‑Window Geometry, including global window‑structure routes, global window‑stability surfaces, global window‑alignment geometry, and unified global window‑binding corridors.",
+  "category": "intelligence-global-temporal-window-structure",
+  "version": "1.0",
+  "purpose": "Provide the structural geometry that realizes global temporal‑window behavior across Ladder, SI, Atlas, and Triad. This structure stabilizes global window propagation, aligns multi‑epoch window behavior, reinforces cross‑system resonance, and binds all temporal‑intelligence classes into a unified global window architecture.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@global.window.structure.route",
+    "@global.window.structure.align",
+    "@global.window.structure.reinforce",
+    "@global.window.structure.stabilize",
+    "@global.window.structure.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "TriadicFrameworks_Global_Temporal_Window_Geometry",
+      "TriadicFrameworks_Global_Resonance_Field",
+      "TriadicFrameworks_Global_Continuity_Registry",
+      "TriadicFrameworks_Global_Integration_Structure",
+      "TriadicFrameworks_Global_Integration_Map",
+      "Unified_Temporal_Intelligence_Registry",
+      "Cross_System_Resonance_Atlas",
+      "Cross_System_Continuity_Mesh",
+      "Cross_System_Integration_Maps",
+      "Triad_Epoch_Propagation_Mesh",
+      "Temporal_Extension_Engine",
+      "Atlas_Synchronization_Fields_Temporal_Window_Post_Reconstitution_Corridors",
+      "SI_temporal_extension",
+      "Ladder_Temporal_Extension_Map"
+    ],
+    "downstream": [
+      "TriadicFrameworks_Global_Temporal_Window_Registry",
+      "TriadicFrameworks_Global_Temporal_Window_Resonance",
+      "TriadicFrameworks_Global_Temporal_Window_Continuity"
+    ]
+  }
+}
