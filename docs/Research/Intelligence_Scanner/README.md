@@ -1,3 +1,6 @@
+
+- [`module.json`](module.json) — Agentic module schema role assignments
+
 # 📘 **Intelligence Scanner — README.md**  
 ### *TriadicFrameworks — Research Class*  
 ### *Planetary‑Style Detection System for Intelligent Signals Across the Internet*
