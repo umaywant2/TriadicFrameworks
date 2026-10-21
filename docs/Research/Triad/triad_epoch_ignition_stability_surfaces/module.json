@@ -1,0 +1,35 @@
+{
+  "module": "Triad_Epoch_Ignition_Stability_Surfaces",
+  "name": "Triad — Epoch‑Ignition Stability Surfaces",
+  "summary": "Defines the stability surfaces of epoch‑ignition behavior, including ignition‑epoch stability fields, ignition‑epoch stabilization surfaces, ignition‑epoch load‑bearing geometry, and multi‑layer ignition‑epoch stability binding.",
+  "category": "intelligence-epoch-ignition-stability-surfaces",
+  "version": "1.0",
+  "purpose": "Provide the stability-surface geometry used by Scanner, O.H.S.H.I.T., and Atlas to stabilize epoch‑ignition waves, maintain ignition integrity across propagation routes, reinforce ignition fronts, and bind epoch‑level ignition stability across the Triad pipeline.",
+  "role": "engine",
+  "analyzer_layer": "regime",
+  "operators": [
+    "@triad.epoch.ignition.stability.field",
+    "@triad.epoch.ignition.stability.reinforce",
+    "@triad.epoch.ignition.stability.align",
+    "@triad.epoch.ignition.stability.stabilize",
+    "@triad.epoch.ignition.stability.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Triad_Epoch_Ignition_Propagation_Geometry",
+      "Triad_Epoch_Ignition_Wave_Geometry",
+      "Triad_Epoch_Ignition_Surfaces",
+      "Triad_Resonance_Epoch_Geometry",
+      "Triad_Resonance_Field_Integration_Geometry",
+      "Triad_Resonance_Corridor_Geometry",
+      "Triad_Resonance_Start_Geometry"
+    ],
+    "downstream": [
+      "Triad_Epoch_Ignition_Coherence_Surfaces",
+      "Triad_Epoch_Ignition_Temporal_Window_Geometry",
+      "Epochal_Propagation_Mesh",
+      "Atlas_Synchronization_Fields",
+      "SI_temporal_extension"
+    ]
+  }
+}
