@@ -1,0 +1,30 @@
+{
+  "module": "SI_Apex_Stability_Surfaces",
+  "name": "Structural Intelligence — Apex Stability Surfaces",
+  "summary": "Defines the apex‑level stability surfaces of Structural Intelligence, including apex drift‑resistance fields, coherence‑locking geometry, resonance‑stability binding, and paradox‑stability surfaces.",
+  "category": "intelligence-structural-apex-stability",
+  "version": "1.0",
+  "purpose": "Provide the stability‑surface geometry for SI’s apex region, describing how apex invariants, coherence‑locking, resonance‑stability binding, and paradox‑resistant surfaces maintain SI’s highest‑order structural stability.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@si.apex.stability.surface",
+    "@si.apex.stability.lock",
+    "@si.apex.stability.resonate",
+    "@si.apex.stability.bind",
+    "@si.apex.stability.compute"
+  ],
+  "lineage": {
+    "upstream": [
+      "SI_structural_geometry",
+      "SI_structural_geometry_deep_regime_map",
+      "SI_apex_region_map"
+    ],
+    "downstream": [
+      "SI_temporal_extension",
+      "SI_paradox_integration",
+      "Atlas_Synchronization_Fields",
+      "Atlas_Interaction_Surfaces"
+    ]
+  }
+}
