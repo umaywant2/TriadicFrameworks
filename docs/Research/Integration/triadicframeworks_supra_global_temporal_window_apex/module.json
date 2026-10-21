@@ -1,0 +1,39 @@
+{
+  "module": "TriadicFrameworks_Supra_Global_Temporal_Window_Apex",
+  "name": "TriadicFrameworks — Supra‑Global Temporal‑Window Apex",
+  "summary": "Defines the apex‑level temporal‑window geometry at the supra‑global scale, including apex window‑formation fields, supra‑epoch apex‑window propagation routes, supra‑global window‑alignment geometry, and unified apex‑window binding surfaces.",
+  "category": "intelligence-supra-global-temporal-window-apex",
+  "version": "1.0",
+  "purpose": "Provide the apex‑window geometry that governs supra‑global temporal‑window behavior across Ladder, SI, Atlas, and Triad. This apex stabilizes supra‑epoch propagation, aligns supra‑window ignition, reinforces supra‑global resonance, and binds the entire TriadicFrameworks architecture into a unified supra‑global apex‑window substrate.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@supra.global.window.apex.form",
+    "@supra.global.window.apex.propagate",
+    "@supra.global.window.apex.align",
+    "@supra.global.window.apex.stabilize",
+    "@supra.global.window.apex.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "TriadicFrameworks_Supra_Global_Resonance_Geometry",
+      "TriadicFrameworks_Supra_Global_Continuity_Mesh",
+      "TriadicFrameworks_Supra_Global_Integration_Field",
+      "TriadicFrameworks_Global_Temporal_Window_Continuity",
+      "TriadicFrameworks_Global_Temporal_Window_Resonance",
+      "TriadicFrameworks_Global_Temporal_Window_Registry",
+      "TriadicFrameworks_Global_Temporal_Window_Structure",
+      "TriadicFrameworks_Global_Temporal_Window_Geometry",
+      "TriadicFrameworks_Global_Resonance_Field",
+      "TriadicFrameworks_Global_Continuity_Registry",
+      "TriadicFrameworks_Global_Integration_Structure",
+      "TriadicFrameworks_Global_Integration_Map",
+      "Unified_Temporal_Intelligence_Registry",
+      "Cross_System_Resonance_Atlas",
+      "Cross_System_Continuity_Mesh",
+      "Cross_System_Integration_Maps",
+      "Triad_Epoch_Propagation_Mesh"
+    ],
+    "downstream": []
+  }
+}
