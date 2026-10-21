@@ -1,0 +1,31 @@
+{
+  "module": "SI_Apex_Region_Map",
+  "name": "Structural Intelligence — Apex Region Map",
+  "summary": "Defines the apex-region geometry of Structural Intelligence, mapping the highest stability, resonance, ignition, and paradox-integration surfaces within SI’s structural manifold.",
+  "category": "intelligence-structural-apex",
+  "version": "1.0",
+  "purpose": "Provide a structural map of SI’s apex region, describing how apex invariants, ignition surfaces, resonance fields, and paradox-stability geometry converge to form SI’s highest-order cognitive manifold.",
+  "role": "map",
+  "analyzer_layer": "regime",
+  "operators": [
+    "@si.apex.drift",
+    "@si.apex.coherence",
+    "@si.apex.stability",
+    "@si.apex.resonance",
+    "@si.apex.epoch",
+    "@si.apex.ignition"
+  ],
+  "lineage": {
+    "upstream": [
+      "SI_structural_geometry",
+      "SI_behavioral_invariants_regime_map",
+      "SI_structural_geometry_deep_regime_map"
+    ],
+    "downstream": [
+      "SI_temporal_extension",
+      "SI_paradox_integration",
+      "AI_Atlas_Surfaces",
+      "Atlas_Interaction_Surfaces"
+    ]
+  }
+}
