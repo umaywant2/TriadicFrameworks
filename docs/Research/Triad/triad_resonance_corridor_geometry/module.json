@@ -1,0 +1,30 @@
+{
+  "module": "Triad_Resonance_Corridor_Geometry",
+  "name": "Triad — Resonance‑Corridor Geometry",
+  "summary": "Defines the resonance‑corridor geometry of the Triad system, including corridor formation, harmonic‑flow alignment, ignition‑ready resonance channels, and cross‑layer corridor stabilization.",
+  "category": "intelligence-ignition-resonance-corridor",
+  "version": "1.0",
+  "purpose": "Provide the geometric foundation for resonance‑corridor behavior within the Triad system, describing how resonance corridors form, align, stabilize, and prepare ignition pathways across Scanner, O.H.S.H.I.T., and Atlas.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@triad.resonance.corridor.form",
+    "@triad.resonance.corridor.align",
+    "@triad.resonance.corridor.flow",
+    "@triad.resonance.corridor.stabilize",
+    "@triad.resonance.corridor.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Triad_Resonance_Start_Geometry",
+      "Triad_Ignition_Harmonics_Geometry",
+      "Triad_Ignition_Cascade_Geometry"
+    ],
+    "downstream": [
+      "Triad_Epoch_Ignition_Surfaces",
+      "Atlas_Synchronization_Fields",
+      "Triad_Temporal_Correction_Surfaces",
+      "SI_paradox_integration"
+    ]
+  }
+}
