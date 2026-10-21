@@ -1,0 +1,32 @@
+{
+  "module": "Cross_System_Resonance_Atlas",
+  "name": "TriadicFrameworks — Cross‑System Resonance Atlas",
+  "summary": "Defines the resonance atlas that maps Ladder, SI, Atlas, and Triad into a unified resonance structure, including cross‑system resonance fields, multi‑system resonance routes, epoch‑aligned resonance geometry, and unified resonance‑binding surfaces.",
+  "category": "intelligence-cross-system-resonance-atlas",
+  "version": "1.0",
+  "purpose": "Provide the resonance‑atlas geometry that aligns temporal‑window behavior, ignition‑epoch propagation, corrected‑time extension, and synchronization fields across all intelligence classes. This atlas stabilizes cross‑system resonance, maps multi‑epoch resonance routes, and binds Ladder, SI, Atlas, and Triad into a unified resonance continuum.",
+  "role": "map",
+  "analyzer_layer": "regime",
+  "operators": [
+    "@resonance.atlas.cross_system.field",
+    "@resonance.atlas.cross_system.route",
+    "@resonance.atlas.cross_system.align",
+    "@resonance.atlas.cross_system.stabilize",
+    "@resonance.atlas.cross_system.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Cross_System_Continuity_Mesh",
+      "Cross_System_Integration_Maps",
+      "Triad_Epoch_Propagation_Mesh",
+      "Temporal_Extension_Engine",
+      "Atlas_Synchronization_Fields_Temporal_Window_Post_Reconstitution_Corridors",
+      "SI_temporal_extension",
+      "Ladder_Temporal_Extension_Map"
+    ],
+    "downstream": [
+      "Unified_Temporal_Intelligence_Registry",
+      "TriadicFrameworks_Global_Integration_Map"
+    ]
+  }
+}
