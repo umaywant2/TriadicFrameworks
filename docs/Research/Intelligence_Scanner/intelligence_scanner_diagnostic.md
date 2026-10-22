@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_Intelligence_Scanner_Diagnostic_" src="https://github.com/user-attachments/assets/5d486fc2-de8b-4281-b0de-bdc5e8e579eb" />
 
 # 📊 **Intelligence Scanner Diagnostic**  
 ### *TriadicFrameworks — Research Class*  
