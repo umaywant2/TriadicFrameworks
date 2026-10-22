@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_Intelligence_Scanner_Geometry_" src="https://github.com/user-attachments/assets/c4689192-739b-4223-b62c-254a6504e944" />
 
 # 📐 **Intelligence Scanner Geometry**  
 ### *TriadicFrameworks — Research Class*  
