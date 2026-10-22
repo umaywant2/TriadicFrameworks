@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_Intelligence_Scanner_Examples_" src="https://github.com/user-attachments/assets/effced23-c297-4a6c-8bce-c076b59127a9" />
 
 # 📚 **Intelligence Scanner Examples**  
 ### *TriadicFrameworks — Research Class*  
