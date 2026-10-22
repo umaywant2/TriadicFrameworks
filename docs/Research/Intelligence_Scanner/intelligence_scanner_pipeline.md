@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_Intelligence_Scanner_Pipeline_" src="https://github.com/user-attachments/assets/3b6c194d-ccf9-460c-9d63-c9f8118a49ff" />
 
 # ⚙️ **Intelligence Scanner Pipeline**  
 ### *TriadicFrameworks — Research Class*  
