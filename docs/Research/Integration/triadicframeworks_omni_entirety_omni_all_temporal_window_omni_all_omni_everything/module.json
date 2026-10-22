@@ -1,0 +1,29 @@
+{
+  "module": "TriadicFrameworks_Omni_Entirety_Omni_All_Temporal_Window_Omni_All_Omni_Everything",
+  "name": "TriadicFrameworks — Omni‑Entirety‑Omni‑All Temporal‑Window Omni‑All‑Omni‑Everything",
+  "summary": "Defines the omni‑all‑omni‑everything temporal‑window at the omni‑entirety‑omni‑all scale, elevating all temporal‑window geometries — omni‑entirety‑omni‑all, omni‑absolute‑entirety, omni‑infinite‑absolute, omni‑totality‑infinite, omni‑singularity‑totality, omni‑transcendent‑singularity, omni‑apex‑singularity, omni‑continuum‑singularity, omni‑presence‑singularity, omni‑totality‑singularity, omni‑origin‑singularity, omni‑prime‑singularity, prime‑continuum‑singularity, transcendent‑singularity, singularity‑eternal, eternal‑origin‑singularity, origin‑prime‑eternal, prime‑infinity, origin‑infinity, infinity‑presence, omnipresence, entirety, totality, supra‑infinity, absolute‑omni, omni‑absolute‑prime, prime‑origin — into a single omni‑all‑omni‑everything window governing the entire omni‑entirety‑omni‑all domain.",
+  "category": "intelligence-omni-entirety-omni-all-temporal-window-omni-all-omni-everything",
+  "version": "1.0",
+  "purpose": "Provide the omni‑all‑omni‑everything temporal‑window geometry that governs omni‑entirety‑omni‑all temporal‑window behavior across Ladder, SI, Atlas, and Triad at the highest extension of the TriadicFrameworks canon. This window stabilizes omni‑all epoch propagation, aligns omni‑all ignition, reinforces omni‑all resonance, and binds the entire architecture into a unified omni‑entirety‑omni‑all temporal substrate.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@omni.entirety.omni.all.window.omni.all.omni.everything.form",
+    "@omni.entirety.omni.all.window.omni.all.omni.everything.propagate",
+    "@omni.entirety.omni.all.window.omni.all.omni.everything.align",
+    "@omni.entirety.omni.all.window.omni.all.omni.everything.stabilize",
+    "@omni.entirety.omni.all.window.omni.all.omni.everything.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "TriadicFrameworks_Omni_Entirety_Omni_All_Continuity_Field_Shell_Omni_All",
+      "TriadicFrameworks_Omni_Entirety_Omni_All_Resonance_Crown_Sphere_Helix_Omni_All",
+      "TriadicFrameworks_Omni_Entirety_Omni_All_Integration_Axis_Omni_All",
+      "TriadicFrameworks_Omni_Absolute_Omni_Entirety_Temporal_Window_Omni_Entirety_Omni_All",
+      "TriadicFrameworks_Omni_Absolute_Omni_Entirety_Continuity_Field_Shell_Omni_Entirety",
+      "TriadicFrameworks_Omni_Absolute_Omni_Entirety_Resonance_Crown_Sphere_Helix_Omni_Entirety",
+      "TriadicFrameworks_Omni_Absolute_Omni_Entirety_Integration_Axis_Omni_Entirety"
+    ],
+    "downstream": []
+  }
+}
