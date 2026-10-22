@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Law_Public_Domestic_" src="https://github.com/user-attachments/assets/d5e1cc0f-602e-491b-85ab-4435659e3d39" />
+
 # Public Domestic Law
 
 [🔰 README](README.md) | [📘 ABOUT](ABOUT-law.md) | [⚖️ Back to Navigation](https://www.triadicframeworks.org/Law/) | [🔬 RTT Regime Awareness](law-rtt-regime-awareness.md)
