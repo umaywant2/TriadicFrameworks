@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_Intelligence_Scanner_" src="https://github.com/user-attachments/assets/d88d5766-5abb-434f-9ed0-eaac36068e92" />
 
 - [`module.json`](module.json) — Agentic module schema role assignments
 
