@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Law_International_and_Global_" src="https://github.com/user-attachments/assets/70c60a91-9581-422e-b7af-e8c94f25e5a6" />
+
 # International & Global Law
 
 [🔰 README](README.md) | [📘 ABOUT](ABOUT-law.md) | [⚖️ Back to Navigation](https://www.triadicframeworks.org/Law/) | [🔬 RTT Regime Awareness](law-rtt-regime-awareness.md)
