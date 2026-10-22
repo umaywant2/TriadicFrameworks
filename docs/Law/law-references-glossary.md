@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Law_References_and_Glossary_" src="https://github.com/user-attachments/assets/99b999a6-244f-46e1-9e08-8a9fb82190d0" />
+
 # References & Glossary
 
 [🔰 README](README.md) | [📘 ABOUT](ABOUT-law.md) | [⚖️ Back to Navigation](https://www.triadicframeworks.org/Law/)
