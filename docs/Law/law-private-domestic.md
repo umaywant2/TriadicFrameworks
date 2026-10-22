@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Law_Private_Domestic_" src="https://github.com/user-attachments/assets/2eca26fd-d22b-4d8d-b984-b44dfda7e848" />
+
 # Private Domestic Law
 
 [🔰 README](README.md) | [📘 ABOUT](ABOUT-law.md) | [⚖️ Back to Navigation](https://www.triadicframeworks.org/Law/) | [🔬 RTT Regime Awareness](law-rtt-regime-awareness.md)
