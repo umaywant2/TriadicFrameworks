@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_Intelligence_Scanner_Validation_" src="https://github.com/user-attachments/assets/9403896f-9dca-4cb1-a78d-fe3e5da037b0" />
 
 # 🧪 **Intelligence Scanner Validation**  
 ### *TriadicFrameworks — Research Class*  
