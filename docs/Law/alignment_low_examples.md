@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Law_AAC_Low_Alignment_" src="https://github.com/user-attachments/assets/4b19ea84-c185-4271-839b-a0eb69c638c3" />
+
 # ✅ **REFRESH 1 — `/docs/Law/alignment_low_examples.md`**  
 ### **Correct Tier: 🟢 AAC — Low Alignment (Coherence Tier)**  
 ### *Awareness → Alignment → Coherence*
