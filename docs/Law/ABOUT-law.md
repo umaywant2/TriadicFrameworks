@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Law_Module_RTT_Domain_Primer_" src="https://github.com/user-attachments/assets/9600c87a-05b3-449e-9baa-d1bdaaa1ca8a" />
+
 # ABOUT | Law Module
 
 [`about_law_module.json`](about_law_module.json) | [🔰 README](README.md) | [📘 Law Navigation](https://www.triadicframeworks.org/Law/) | [⚖️ Session Context](#law-session-header) | [🎯 Glossary](law-references-glossary.md)
