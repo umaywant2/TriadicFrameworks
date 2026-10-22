@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Law_RTT_Regime_Awareness_" src="https://github.com/user-attachments/assets/07a7c4ab-12f6-4eca-856a-81b5a8586eef" />
+
 # RTT Regime Awareness in Law
 
 [🔰 README](README.md) | [📘 ABOUT](ABOUT-law.md) | [⚖️ Back to Navigation](https://www.triadicframeworks.org/Law/)
