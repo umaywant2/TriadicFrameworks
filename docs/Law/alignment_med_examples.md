@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Law_AACC_Medium_Alignment_" src="https://github.com/user-attachments/assets/071e83e7-aca6-4fd6-a5c9-4e8144309d5a" />
+
 # 📘 **RTT Governance — Medium Alignment (AACC) Examples**  
 ### *Awareness → Alignment → Coherence → Clarity*  
 ### *The Clarity Tier — where governance becomes intelligent.*
