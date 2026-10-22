@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Law_Intelligence_Scanner_" src="https://github.com/user-attachments/assets/73eee639-fb42-4121-b953-acbb75cff989" />
 
 # 📑 **Intelligence Scanner — index.md**  
 ### *TriadicFrameworks — Research Class*  
