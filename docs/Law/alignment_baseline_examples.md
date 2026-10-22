@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Law_Baseline_Alignment_" src="https://github.com/user-attachments/assets/9652106b-f36b-44e8-8eec-b6e5b6f51c08" />
+
 # 📘 **RTT Governance — Baseline Alignment (pre‑AAC) Examples**  
 ### *No Awareness → No Alignment → No Coherence*  
 ### *The Origin Tier — where modern governance currently operates.*
