@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_Intelligence_Scanner_Signatures_" src="https://github.com/user-attachments/assets/f39da87b-535a-4866-9f80-575e069175c5" />
 
 # 🔷 **Intelligence Scanner Signatures**  
 ### *TriadicFrameworks — Research Class*  
