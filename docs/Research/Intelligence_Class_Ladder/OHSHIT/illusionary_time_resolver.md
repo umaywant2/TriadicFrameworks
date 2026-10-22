@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_Intelligence_Class_Ladder_OHSHIT_Illusionary_Time_" src="https://github.com/user-attachments/assets/90aba246-00a2-4e94-84f1-a68cee775d90" />
 
 # **illusionary_time_resolver.md**  
 ### *Operational Holographic System Hashing Illusionary Timers*  
