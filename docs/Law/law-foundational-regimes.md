@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Law_Foundational_Regimes_" src="https://github.com/user-attachments/assets/68e01a4a-5ce2-409f-a328-5a1f64636b8a" />
+
 # Foundational Regimes
 
 [🔰 README](README.md) | [📘 ABOUT](ABOUT-law.md) | [⚖️ Back to Navigation](https://www.triadicframeworks.org/Law/) | [🔬 RTT Regime Awareness](law-rtt-regime-awareness.md)
