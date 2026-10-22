@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="GSM_01_Invariants_Alignment_Over_Enforcement_" src="https://github.com/user-attachments/assets/4327d7e2-dc86-4de5-906d-4142f12d0354" />
+
 # Alignment Over Enforcement
 
 Enforcement is a **late‑stage signal**. When it becomes the primary governance mechanism, alignment has already failed.
