@@ -1,4 +1,6 @@
----
+<img width="1194" height="672" alt="Law_Domain_Primer_" src="https://github.com/user-attachments/assets/929467f3-4a69-47c8-ab44-1a61c79b168b" />
+
+<!-- ---
 title: "Law"
 description: "An RTT domain primer for legal systems — mapping jurisprudential regimes, legal domains, and emerging-tech frontiers through the structural grammar of TriadicFrameworks."
 stability: stable
@@ -8,7 +10,7 @@ rtt:
   coherence: declared
   drift: bounded
   paradox: structural
----
+--- -->
 
 > ```
 > rtt=1 | coherence=declared | drift=bounded | paradox=structural
