@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_Intelligence_Class_Ladder_OHSHIT_Index_" src="https://github.com/user-attachments/assets/3e740316-61e8-4a02-b0b7-f0555f2cda53" />
 
 # **index.md — O.H.S.H.I.T.**  
 ### *Operational Holographic System Hashing Illusionary Timers*  
