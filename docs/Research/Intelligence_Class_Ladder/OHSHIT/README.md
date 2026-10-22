@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_Intelligence_Class_Ladder_OHSHIT_" src="https://github.com/user-attachments/assets/46fa5a89-71e6-435c-afb3-01dba187c96f" />
 
 - [`module.json`](module.json) — Agentic module schema role assignments
 
