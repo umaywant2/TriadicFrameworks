@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_Intelligence_Class_Ladder_Atlas_Topology_" src="https://github.com/user-attachments/assets/b8824e22-38f6-47fb-bb94-010bf95b45e5" />
 
 # 🌐 **atlas_topology_map.md**  
 ### *AI Atlas — Topology, Surfaces, Regimes, and Structural Fields*  
