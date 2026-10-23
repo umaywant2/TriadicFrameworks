@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_CivRegimeStack_Civ_Mapped_to_the_Civilizational_Regime_Stack_" src="https://github.com/user-attachments/assets/10e96a91-5929-4784-9c86-cb8e393885f0" />
+
 # 🎮 Sid Meier’s *Civilization*  
 ## *Mapped to the Civilizational Regime Stack (RTT/vST)*
 
