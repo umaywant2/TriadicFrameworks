@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_Index_" src="https://github.com/user-attachments/assets/246c88d6-25ff-4d05-84b4-a44e0e7d89f8" />
+
 # 🧪 QnA Atlas | RTT
 
 [📚 INDEX — Atlas navigation](index.md)  
