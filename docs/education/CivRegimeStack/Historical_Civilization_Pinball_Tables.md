@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_CivRegimeStack_Historical_Civilization_Pinball_Tables_" src="https://github.com/user-attachments/assets/0f88b0a8-4a67-4a75-a7c3-0b2b774c24cc" />
+
 # 🎮 **Historical Civilization Pinball Tables**  
 ## *Mapping Civilizations to Regime Stack Variants*
 
