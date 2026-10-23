@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_physics_quantum_physics_intro_" src="https://github.com/user-attachments/assets/5d2ad863-4626-4c3d-a53c-4a83c878447f" />
+
 ### ⚛️ Quantum Physics — Intro
 
 **Scope** — Fundamental principles governing matter and energy at atomic and subatomic scales.
