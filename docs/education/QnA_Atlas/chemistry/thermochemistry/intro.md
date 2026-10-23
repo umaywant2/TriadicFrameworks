@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_chemistry_thermochemistry_intro_" src="https://github.com/user-attachments/assets/5d5963b4-cb00-46ef-8e51-3d60c661d6d8" />
+
 ### 🔥 Thermochemistry — Intro
 
 **Scope** — How energy changes accompany chemical reactions and physical processes.
