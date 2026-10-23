@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="datacenter_reports_Student_Leaf_Notes_Oasis_Apparatus_" src="https://github.com/user-attachments/assets/0b01ff72-4ce1-4774-812f-7f02661d4d89" />
+
 ## 🌿 **Student Leaf Note — Datacenter Oasis Apparatus**
 
 ### **Core Insight**
