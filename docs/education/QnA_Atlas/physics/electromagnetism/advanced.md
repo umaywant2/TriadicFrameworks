@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_physics_electromagnetism_advanced_" src="https://github.com/user-attachments/assets/1385646b-03e5-41cd-8498-3a200ad1f4e1" />
+
 ### ⚡ Electromagnetism — Advanced
 
 **Scope** — Unified field description, electromagnetic waves, and deep structural laws.
