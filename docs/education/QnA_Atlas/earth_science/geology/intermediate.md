@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_earth_science_geology_intermediate_" src="https://github.com/user-attachments/assets/fd1e434c-6bb0-44c9-a6a1-cba6e24616b1" />
+
 ### 🪨 Geology — Intermediate
 
 **Scope** — Plate tectonics, rock formation processes, and surface‑shaping mechanisms.
