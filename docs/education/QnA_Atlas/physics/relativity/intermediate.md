@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_physics_relativity_intermediate_" src="https://github.com/user-attachments/assets/9b2d0b9c-fc6b-48a4-8e21-54d0b936a136" />
+
 ### 🕰️ Relativity — Intermediate
 
 **Scope** — Special relativity, spacetime structure, and measurable relativistic effects.
