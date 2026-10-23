@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_chemistry_reactions_kinetics_intro_" src="https://github.com/user-attachments/assets/b50fa03f-a3f5-4e51-b3e2-f09d499570ec" />
+
 ### ⚡ Chemical Reactions & Kinetics — Intro
 
 **Scope** — What chemical reactions are, how fast they occur, and the basic factors that influence reaction rates.
