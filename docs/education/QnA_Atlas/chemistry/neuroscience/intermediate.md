@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_chemistry_neuroscience_intermediate_" src="https://github.com/user-attachments/assets/61243be9-cbc6-4f34-8599-cf97a22c38ca" />
+
 ### 🧠 Neuroscience — Intermediate
 
 **Scope** — Synaptic transmission, neural circuits, sensory and motor pathways, and basic neurophysiology.
