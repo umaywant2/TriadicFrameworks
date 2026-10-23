@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_medicine_pathology_intermediate_" src="https://github.com/user-attachments/assets/7fad66ea-bd65-4194-ac6f-2c087629da5e" />
+
 ### 🧪 Pathology — Intermediate
 
 **Scope** — Cellular injury, inflammation, tissue responses, and patterns of disease across organ systems.
