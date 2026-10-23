@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_physics_thermodynamics_advanced_" src="https://github.com/user-attachments/assets/5413fd8b-cbb8-4ad6-9b1c-be1e21a73aba" />
+
 ### 🔥 Thermodynamics — Advanced
 
 **Scope** — Entropy, irreversibility, statistical foundations, and links to information and cosmology.
