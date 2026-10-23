@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_medicine_pathology_intro_" src="https://github.com/user-attachments/assets/4a6af08b-d3ae-4033-a03d-46de2e4f815e" />
+
 ### 🧪 Pathology — Intro
 
 **Scope** — The study of disease: what goes wrong in the body, why it happens, and how structural and functional changes produce illness.
