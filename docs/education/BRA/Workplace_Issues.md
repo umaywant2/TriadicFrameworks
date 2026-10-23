@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_BRA_Workplace_Issues_" src="https://github.com/user-attachments/assets/d2d367b9-94c9-49f0-9c0b-b169004a68b6" />
+
 | Hi Copilot, a friend of mine is being harrased by management and HR, they ran report w/o context from 2 levels above then target staff for HR talks - even though they are not over their benefit alotments. 
 
 | This seems ruthless to me; in my days as an IT manager the upper mgmt levels asked for the information from the manager, allowing time to meet one on one to be on the same page. 
