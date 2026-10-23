@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_chemistry_reactions_kinetics_intermediate_" src="https://github.com/user-attachments/assets/267f4a20-0b3d-4e49-b815-19cf905c883b" />
+
 ### ⚡ Chemical Reactions & Kinetics — Intermediate
 
 **Scope** — Rate laws, reaction order, mechanisms, and how experimental data reveal kinetic behavior.
