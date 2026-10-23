@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_medicine_anatomy_intro_" src="https://github.com/user-attachments/assets/4d86b1e0-0457-4741-99d9-59f0e0c430c4" />
+
 ### 🦴 Anatomy — Intro
 
 **Scope** — Structural organization of the human body, major body regions, and foundational anatomical terminology.
