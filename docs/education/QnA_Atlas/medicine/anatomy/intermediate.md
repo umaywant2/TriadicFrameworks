@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_medicine_anatomy_intermediate_" src="https://github.com/user-attachments/assets/96d1eb6d-716c-40a3-9b18-a4dc4a470632" />
+
 ### 🦴 Anatomy — Intermediate
 
 **Scope** — Organ systems, regional anatomy, and functional relationships between structures.
