@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_medicine_immunology_advanced_" src="https://github.com/user-attachments/assets/4c77ca4e-9ffc-4ff4-8bea-e78e8dd03d30" />
+
 ### 🛡️ Immunology — Advanced
 
 **Scope** — Regulation of immune responses, tolerance, hypersensitivity, and clinical applications.
