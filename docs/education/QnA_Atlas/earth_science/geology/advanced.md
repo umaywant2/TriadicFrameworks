@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_earth_science_geology_advanced_" src="https://github.com/user-attachments/assets/a3747267-7c71-431b-812d-63d0f6ad6d9d" />
+
 ### 🪨 Geology — Advanced
 
 **Scope** — Earth’s internal structure, geochemical cycles, deep‑time reconstruction, and tectonic–climate interactions.
