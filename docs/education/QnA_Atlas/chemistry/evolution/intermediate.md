@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_chemistry_evolution_intermediate_" src="https://github.com/user-attachments/assets/3c3b21f1-00e7-4344-b08d-23faa226ff12" />
+
 ### 🧬 Evolution — Intermediate
 
 **Scope** — Population genetics basics, modes of selection, genetic drift, gene flow, and speciation mechanisms.
