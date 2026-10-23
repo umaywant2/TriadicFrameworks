@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_medicine_anatomy_advanced_" src="https://github.com/user-attachments/assets/7305824a-22d8-48fb-bcbe-8050818a8dc9" />
+
 ### 🦴 Anatomy — Advanced
 
 **Scope** — Detailed structural integration, developmental origins, and clinical correlations of anatomical systems.
