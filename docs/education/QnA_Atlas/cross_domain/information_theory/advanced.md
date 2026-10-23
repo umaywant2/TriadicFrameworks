@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_cross_domain_information_theory_advanced_" src="https://github.com/user-attachments/assets/1787048f-3d3d-4a38-9201-05f6f6c5efef" />
+
 ### 📡 Information Theory — Advanced
 
 **Scope** — Fundamental limits of communication, noisy channels, and cross‑domain applications of information measures.
