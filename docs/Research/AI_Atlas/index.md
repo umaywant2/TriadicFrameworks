@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_AI_Atlas_Inedex_" src="https://github.com/user-attachments/assets/6dc875ce-fee2-403c-8fc3-d062c8acf039" />
 
 # **/docs/Research/AI_Atlas/index.md**  
 ### *AI Atlas — Structural, Temporal, Drift, Coherence & Paradox Mapping System*  
