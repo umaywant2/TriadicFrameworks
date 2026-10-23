@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_chemistry_physiology_advanced_" src="https://github.com/user-attachments/assets/965f4df7-2f1c-4f68-ba92-262a7a5fbcda" />
+
 ### 💓 Physiology — Advanced
 
 **Scope** — Quantitative and systems-level physiology, control theory, and adaptive responses across scales.
