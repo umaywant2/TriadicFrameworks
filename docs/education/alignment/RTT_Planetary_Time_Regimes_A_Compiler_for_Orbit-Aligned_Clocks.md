@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_alignment_RTT_Planetary_Time_Regimes_A_Compiler_Orbit_Aligned_Clocks_" src="https://github.com/user-attachments/assets/0e1bc9e6-3c5a-42f0-83eb-562b376fc9ed" />
+
 ## 🜁 RTT Triad: Planetary Time Regimes
 
 **Substrate —** Orbital and rotational periods measured in a stable reference frame. These values are treated as invariants: the planet’s structural rhythm, independent of any narrative unit system.
