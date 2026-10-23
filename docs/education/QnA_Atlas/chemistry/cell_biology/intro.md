@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_chemistry_chemical_cell_biology_intro_" src="https://github.com/user-attachments/assets/c3cd3b65-534d-4a45-a56d-7102f794dd51" />
+
 ### 🧫 Cell Biology — Intro
 
 **Scope** — Basic cell structure, major organelles, and core cellular processes.
