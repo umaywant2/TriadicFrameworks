@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_chemistry_organic_chemistry_intermediate_" src="https://github.com/user-attachments/assets/1cac20a9-9931-4c95-87e8-43b1005bffb2" />
+
 ### 🧪 Organic Chemistry — Intermediate
 
 **Scope** — Structure–reactivity relationships, stereochemistry, reaction mechanisms, and common organic reactions.
