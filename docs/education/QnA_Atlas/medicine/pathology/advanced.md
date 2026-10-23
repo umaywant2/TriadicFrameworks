@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_medicine_pathology_advanced_" src="https://github.com/user-attachments/assets/b0be68f1-bc8c-466f-9b46-275b56ea7c3d" />
+
 ### 🧪 Pathology — Advanced
 
 **Scope** — Molecular pathology, neoplasia, systemic disease mechanisms, and clinicopathological correlation.
