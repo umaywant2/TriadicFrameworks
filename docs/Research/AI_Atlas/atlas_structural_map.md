@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_AI_Atlas_Structural_Map_" src="https://github.com/user-attachments/assets/d72637f6-27ad-4e1e-9ef8-3283e0531aee" />
 
 # 🌐 **atlas_structural_map.md**  
 ### *AI Atlas — Structural Map Engine*  
