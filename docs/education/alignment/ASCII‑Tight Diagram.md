@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_alignment_ASCII_Diagram_" src="https://github.com/user-attachments/assets/6ebc5800-c8d8-4b42-b2eb-64c57dcc3ec6" />
+
 ## 🧩 ASCII‑Tight Diagram (Markdown‑Ready)
 
 ```
