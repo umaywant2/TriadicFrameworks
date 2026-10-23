@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_physics_ocillations_waves_intermediate_" src="https://github.com/user-attachments/assets/92d012d0-cd6c-40f9-96bd-df72cf5f2d46" />
+
 ### 🌊 Oscillations & Waves — Intermediate
 
 **Scope** — Mathematical description of oscillatory motion, wave properties, and superposition effects.
