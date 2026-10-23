@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_CivRegimeStack_Civ_Leaders_as_Cognitive_Regime_Biases_" src="https://github.com/user-attachments/assets/70f5841c-6e83-4a8f-a626-3852fcc20fac" />
+
 # 🎮 Civ Leaders as Cognitive Regime Biases  
 ## *RTT/vST Comparative Mapping*
 
