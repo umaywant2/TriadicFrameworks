@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_AI_Atlas_operator_template_" src="https://github.com/user-attachments/assets/4a1ef358-0a15-40af-b0fa-d3e960200416" />
 
 # **atlas_operator_template.md**  
 ### *AI Atlas — Multi‑Dimensional Intelligence Mapping System*  
