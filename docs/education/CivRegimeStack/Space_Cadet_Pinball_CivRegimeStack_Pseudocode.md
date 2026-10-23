@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_CivRegimeStack_Space_Cadet_Pinball_CivRegimeStack_Pseudocode_" src="https://github.com/user-attachments/assets/3c7eb988-7e6e-45dc-aa41-99f5eb94109f" />
+
 ## 🎮 Space Cadet Pinball → Civilizational Regime Stack  
 ### *RTT/vST Game Theme (Pseudocode)*
 
