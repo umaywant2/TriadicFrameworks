@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_physics_quantum_physics_intermediate_" src="https://github.com/user-attachments/assets/dbedb521-348d-4ee3-979b-f88bb761860b" />
+
 ### ⚛️ Quantum Physics — Intermediate
 
 **Scope** — Mathematical structure of quantum theory, measurement, and canonical quantum systems.
