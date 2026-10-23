@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_physics_classical_mechanics_" src="https://github.com/user-attachments/assets/e872cc41-1f7a-43a2-9d09-33741d370500" />
+
 ### ⚙️ Classical Mechanics — Intro
 
 **Scope** — Motion of objects under forces, using Newton’s laws as the foundational framework.
