@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_CivRegimeStack_Civ_Leader_Selection_Worksheet_" src="https://github.com/user-attachments/assets/eae662f9-86a3-4f3e-9654-33d062c63757" />
+
 # 🎮 **Civ Leader Selection Worksheet**  
 ## *Learning Cognitive Regimes Through Play (RTT/vST)*
 
