@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_chemistry_chemical_bonding_intermediate_" src="https://github.com/user-attachments/assets/e4379335-0c7a-451c-85ca-790a5372f1bd" />
+
 # chemistry/chemical_bonding/intermediate.md
 
 ### 🔗 Chemical Bonding — Intermediate
