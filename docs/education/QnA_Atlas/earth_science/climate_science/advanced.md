@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_earth_science_climate_science_advanced_" src="https://github.com/user-attachments/assets/95fe5cd2-3d2f-4151-a511-6fba90de53c4" />
+
 ### 🌦️ Climate Science — Advanced
 
 **Scope** — Quantitative climate dynamics, paleoclimate evidence, climate modeling, and regime shifts in the Earth system.
