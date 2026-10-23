@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_chemistry_physiology_intro_" src="https://github.com/user-attachments/assets/34df2b8b-2ccf-4d15-a050-7e6b0e87a9cb" />
+
 ### 💓 Physiology — Intro
 
 **Scope** — How living systems function at the organ and organism level, emphasizing integration across cells, tissues, and systems.
