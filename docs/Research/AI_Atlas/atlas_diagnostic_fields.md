@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_AI_Atlas_Diagnostic_Fields_" src="https://github.com/user-attachments/assets/3c651df2-fe4d-4a0a-a647-73b331ba493e" />
 
 # 🌐 **atlas_diagnostic_fields.md**  
 ### *AI Atlas — Diagnostic Field Engine*  
