@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_Physics_thermodynamics_Intro_" src="https://github.com/user-attachments/assets/b599b944-e8a7-4936-8456-8a904b6ab1ff" />
+
 ### 🔥 Thermodynamics — Intro
 
 **Scope** — How energy, heat, and work govern physical processes and constrain what changes are possible.
