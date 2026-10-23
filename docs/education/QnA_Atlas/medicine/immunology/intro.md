@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_medicine_immunology_intro_" src="https://github.com/user-attachments/assets/8964b63c-12f8-4fe4-9726-2ab9f4ced8bf" />
+
 ### 🛡️ Immunology — Intro
 
 **Scope** — How the body defends itself against pathogens and distinguishes self from non‑self.
