@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_chemistry_chemical_bonding_intro_" src="https://github.com/user-attachments/assets/9261ddd7-f292-4fcc-a8ff-44a05260e24b" />
+
 # chemistry/chemical_bonding/intro.md
 
 ### 🔗 Chemical Bonding — Intro
