@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_chemistry_genetics_intermediate_" src="https://github.com/user-attachments/assets/38c0ffae-f79e-4125-b59f-25f2989ca4da" />
+
 ### 🧬 Genetics — Intermediate
 
 **Scope** — Mendelian inheritance, linkage, basic molecular techniques, and regulatory elements affecting gene expression.
