@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_physics_quantum_physics_advanced_" src="https://github.com/user-attachments/assets/6101a03b-4cd7-467a-877c-744e370d9775" />
+
 ### ⚛️ Quantum Physics — Advanced
 
 **Scope** — Conceptual foundations, entanglement, and connections to modern physics and information theory.
