@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_earth_science_climate_science_intro_" src="https://github.com/user-attachments/assets/5c74d036-91cf-42ee-9adf-dd14277aab25" />
+
 ### 🌦️ Climate Science — Intro
 
 **Scope** — What climate is, how it differs from weather, and the major components that shape Earth’s climate system.
