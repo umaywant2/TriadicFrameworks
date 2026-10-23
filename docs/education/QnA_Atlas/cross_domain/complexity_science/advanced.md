@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_cross_domain_complexity_science_advances_" src="https://github.com/user-attachments/assets/3c318194-f5dc-48c0-9f7f-03b3861ccccb" />
+
 ### 🌪️ Complexity Science — Advanced
 
 **Scope** — Mathematical and computational frameworks for complex systems, phase transitions, and cross‑domain applications.
