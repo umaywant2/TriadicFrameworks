@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="education_alignment_Captions_Notions_" src="https://github.com/user-attachments/assets/5ee21518-c314-4741-b5f4-dba60ff0bb0a" />
 
 ## One‑Sentence Captions
 
