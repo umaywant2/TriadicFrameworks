@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_physics_classical_mechanics_intermediate_" src="https://github.com/user-attachments/assets/c5007442-6f3f-4ae1-8a41-429fee9602d2" />
+
 ### ⚙️ Classical Mechanics — Intermediate
 
 **Scope** — Newtonian dynamics in multiple dimensions, work–energy methods, and momentum conservation.
