@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_cross_domain_information_theory_intermediate_" src="https://github.com/user-attachments/assets/d4459605-7e87-4940-ad97-e7707724e4bd" />
+
 ### 📡 Information Theory — Intermediate
 
 **Scope** — Quantitative measures of information, coding efficiency, and limits on reliable communication.
