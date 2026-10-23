@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_chemistry_genetics_advanced_" src="https://github.com/user-attachments/assets/a32f5086-7b02-427d-98db-4fed5d1495a2" />
+
 ### 🧬 Genetics — Advanced
 
 **Scope** — Population and quantitative genetics, epigenetics, genome editing concepts, and modern genomic analysis methods.
