@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_chemistry_evolution_advanced_" src="https://github.com/user-attachments/assets/9024341b-2b9b-41b1-9a5a-7e51d5db53f6" />
+
 ### 🧬 Evolution — Advanced
 
 **Scope** — Quantitative population genetics, molecular evolution, coalescent theory, adaptive landscapes, and evolutionary developmental biology (evo‑devo).
