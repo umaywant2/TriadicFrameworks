@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_CivRegimeStack_Guided_Walkthrough_for_Students_" src="https://github.com/user-attachments/assets/06e5e087-e3f3-4b56-b8e9-1b474a972163" />
+
 ## 🎓 **Guided Walkthrough for Students**  
 ### *How to Read and Use the Civilizational Regime Stack*
 
