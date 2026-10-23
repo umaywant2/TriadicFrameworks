@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_chemistry_reactions_kinetics_advanced_" src="https://github.com/user-attachments/assets/0a9fda7d-f495-445c-8b92-c169cca4cdc0" />
+
 ### ⚡ Chemical Reactions & Kinetics — Advanced
 
 **Scope** — Energy landscapes, transition state theory, catalysis, and quantitative modeling of reaction dynamics.
