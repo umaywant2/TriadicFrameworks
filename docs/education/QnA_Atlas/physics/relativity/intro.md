@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_physics_relativity_intro_" src="https://github.com/user-attachments/assets/3ceb8c38-cb10-4508-9dda-1eee0e52b5ee" />
+
 ### 🕰️ Relativity — Intro
 
 **Scope** — How measurements of space and time depend on motion and gravity, reshaping classical notions of simultaneity and distance.
