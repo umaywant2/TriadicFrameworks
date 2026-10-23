@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_cross_domain_systems_theory_intermediate_" src="https://github.com/user-attachments/assets/897f74d0-6b3e-4007-acba-340a8809c9d3" />
+
 ### 🧩 Systems Theory — Intermediate
 
 **Scope** — Feedback, control, hierarchy, and dynamic behavior in natural and engineered systems.
