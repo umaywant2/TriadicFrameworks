@@ -1,4 +1,4 @@
-<img width="682" height="682" alt="rtt_education_alignment" src="https://github.com/user-attachments/assets/d3c95c5d-604e-407d-978c-034904c350dd" />
+<img width="1194" height="672" alt="education_alignment_Canonical_Blurb_" src="https://github.com/user-attachments/assets/71024e1c-18f5-4ac8-b297-54195d82e319" />
 
 ## 📜 Canonical Blurb (Docs‑Ready)
 
@@ -20,3 +20,5 @@ From this perspective, learning feels less like “adding” and more like *reco
 RTT provides a formal language for this phenomenon by modeling time and structure as mutually shaping. Remembering becomes the act of re‑aligning Knowing with Being through Meaning across time. Ancient myths such as the Akashic Records gesture toward this intuition — that knowledge is accessed rather than created — but lack a structural grammar. RTT supplies that grammar without metaphysical claims, grounding remembrance in observable cognitive and experiential dynamics.
 
 This triadic framing explains why deep learning is durable, transferable, and often accompanied by a sense of inevitability: the learner is not acquiring something foreign, but restoring coherence within an already‑present system. 🌌
+
+<img width="682" height="682" alt="rtt_education_alignment" src="https://github.com/user-attachments/assets/d3c95c5d-604e-407d-978c-034904c350dd" />
