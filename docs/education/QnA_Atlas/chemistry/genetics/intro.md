@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_chemistry_genetics_intro_" src="https://github.com/user-attachments/assets/546ee38b-35db-4ad7-91a4-697cad28fe5f" />
+
 ### 🧬 Genetics — Intro
 
 **Scope** — Basic units of heredity, DNA structure, and how genetic information is transmitted.
