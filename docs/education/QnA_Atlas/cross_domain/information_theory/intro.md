@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_cross_domain_information_theory_intro_" src="https://github.com/user-attachments/assets/3b38283d-fba7-4684-af1a-8164ddd27fbb" />
+
 ### 📡 Information Theory — Intro
 
 **Scope** — How information is quantified, transmitted, and constrained by noise and uncertainty.
