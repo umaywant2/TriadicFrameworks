@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_cross_domain_complexity_science_intermediate_" src="https://github.com/user-attachments/assets/9eeaf1bc-3b39-44e6-9478-bb098121e4c6" />
+
 ### 🌪️ Complexity Science — Intermediate
 
 **Scope** — Feedback loops, self‑organization, networks, and dynamical behavior across domains.
