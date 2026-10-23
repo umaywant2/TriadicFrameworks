@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_alignment_Context_Examples_" src="https://github.com/user-attachments/assets/cae96d7f-f42c-42e7-96e8-4a3938b77e38" />
+
 ## 🧑‍💼 Executive Context  
 **Strategic, outcome‑oriented, confidence without mysticism**
 
