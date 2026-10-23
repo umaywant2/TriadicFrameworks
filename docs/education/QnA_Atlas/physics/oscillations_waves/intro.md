@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_physics_ocillations_waves_intro" src="https://github.com/user-attachments/assets/17c8617a-ddc3-430a-99e2-59650c431008" />
+
 ### 🌊 Oscillations & Waves — Intro
 
 **Scope** — Repetitive motion and the propagation of disturbances through space and matter.
