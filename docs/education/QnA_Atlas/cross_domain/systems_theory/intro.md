@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_cross_domain_systems_theory_intro_" src="https://github.com/user-attachments/assets/4ef67d57-bfc7-41dc-bf31-a7086ef59e63" />
+
 ### 🧩 Systems Theory — Intro
 
 **Scope** — Foundational ideas for understanding systems as interacting wholes rather than isolated parts.
