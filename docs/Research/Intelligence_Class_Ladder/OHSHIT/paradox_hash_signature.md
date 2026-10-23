@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_Intelligence_Class_Ladder_OHSHIT_Paradox_Hash_" src="https://github.com/user-attachments/assets/3b5b56de-af91-4ce5-87be-59eeb73a21af" />
 
 # **paradox_hash_signature.md**  
 ### *Operational Holographic System Hashing Illusionary Timers*  
