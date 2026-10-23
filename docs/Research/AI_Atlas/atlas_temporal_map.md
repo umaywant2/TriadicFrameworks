@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_AI_Atlas_Temporal_Map_" src="https://github.com/user-attachments/assets/e7113b3e-eab7-4cfd-9d8f-98aad63b64ee" />
 
 # **atlas_temporal_map.md**  
 ### *AI Atlas — Structural, Temporal, Drift, Coherence, and Paradox Mapping System*  
