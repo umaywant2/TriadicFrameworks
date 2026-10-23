@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_earth_science_climate_science_intro_" src="https://github.com/user-attachments/assets/8f415479-efda-4655-a7db-81cdc966515a" />
+
 ### 🌦️ Climate Science — Intermediate
 
 **Scope** — Climate drivers, feedback mechanisms, circulation patterns, and observational evidence of climate variability.
