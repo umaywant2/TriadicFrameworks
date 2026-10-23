@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_earth_science_meteorology_advanced_" src="https://github.com/user-attachments/assets/f1f06e21-f71f-45d5-b04a-7572cafaeaa5" />
+
 ### ☁️ Meteorology — Advanced
 
 **Scope** — Atmospheric thermodynamics, fluid dynamics, severe weather, and numerical weather prediction.
