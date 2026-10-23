@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_chemistry_evolution_intro_" src="https://github.com/user-attachments/assets/9b28e2b5-5f04-47b2-be3e-3087b6b98e91" />
+
 ### 🧬 Evolution — Intro
 
 **Scope** — Core principles of evolution: variation, inheritance, selection, and common descent.
