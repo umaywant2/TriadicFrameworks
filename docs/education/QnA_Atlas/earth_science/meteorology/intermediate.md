@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_earth_science_meteorology_intermediate_" src="https://github.com/user-attachments/assets/3728ac54-c4da-40c4-b817-ce31bb386473" />
+
 ### ☁️ Meteorology — Intermediate
 
 **Scope** — Atmospheric dynamics, cloud formation, weather systems, and forecasting fundamentals.
