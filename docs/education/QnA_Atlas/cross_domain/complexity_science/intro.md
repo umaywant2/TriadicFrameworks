@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_cross_domain_complexity_science_intro_" src="https://github.com/user-attachments/assets/63b05518-8dec-4e08-b2ad-409fb304200f" />
+
 ### 🌪️ Complexity Science — Intro
 
 **Scope** — How large‑scale patterns and behaviors emerge from simple interacting components.
