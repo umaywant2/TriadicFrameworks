@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_physics_electromagnetism_intro_" src="https://github.com/user-attachments/assets/759d135e-8a22-40ab-b795-c64284161ba0" />
+
 ### ⚡ Electromagnetism — Intro
 
 **Scope** — Electric charge, electric and magnetic fields, and the forces they exert on matter.
