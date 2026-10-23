@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_earth_science_meteorology_" src="https://github.com/user-attachments/assets/3d60a7b5-1f15-488a-ba9f-9646f7a2f580" />
+
 ### ☁️ Meteorology — Intro
 
 **Scope** — The study of the atmosphere, weather processes, and the factors that produce day‑to‑day weather patterns.
