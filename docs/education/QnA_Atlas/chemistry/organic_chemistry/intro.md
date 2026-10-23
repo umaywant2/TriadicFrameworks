@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_chemistry_organic_chemistry_intro_" src="https://github.com/user-attachments/assets/f6e2d123-a38b-4db6-847a-ed51c049ceb9" />
+
 ### 🧪 Organic Chemistry — Intro
 
 **Scope** — Carbon-based compounds, common functional groups, and why carbon forms such diverse molecular structures.
