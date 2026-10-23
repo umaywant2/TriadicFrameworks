@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_AI_Atlas_" src="https://github.com/user-attachments/assets/3f6ee34e-2262-47ee-8c25-b4134015001d" />
 
 - [`module.json`](module.json) — Agentic module schema role assignments
 
