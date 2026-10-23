@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_CivRegimeStack_Student_Worksheet_From_Gameplay_to_Regime_Analysis_" src="https://github.com/user-attachments/assets/76cdb4a7-07cd-420b-8ffc-6be277cb4514" />
+
 # 📘 **Student Worksheet: From Gameplay to Regime Analysis**
 
 ## Part I — Observe the Game
