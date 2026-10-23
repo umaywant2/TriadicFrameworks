@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_chemistry_neuroscience_advanced_" src="https://github.com/user-attachments/assets/9aa4786c-40f5-45c9-86a3-1a70cf2eacd0" />
+
 ### 🧠 Neuroscience — Advanced
 
 **Scope** — Cellular and molecular mechanisms of neural signaling, plasticity, network dynamics, and links between neural activity and cognition.
