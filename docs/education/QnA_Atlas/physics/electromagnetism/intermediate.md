@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_physics_electromagnetism_intermediate_" src="https://github.com/user-attachments/assets/170a1b4c-f419-4e3f-9c69-29660a6f166a" />
+
 ### ⚡ Electromagnetism — Intermediate
 
 **Scope** — Quantitative laws governing electric and magnetic fields, circuits, and energy transfer.
