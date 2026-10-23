@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_alignment_Kid‑Friendly_Version_" src="https://github.com/user-attachments/assets/d8acf846-e642-487d-ae59-45ede3219b3c" />
+
 ## 🌈 Kid‑Friendly Version  
 **Learning Is Remembering!**
 
