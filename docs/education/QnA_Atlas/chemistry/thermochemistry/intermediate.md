@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_chemistry_thermochemistry_intermediate_" src="https://github.com/user-attachments/assets/bc5d4e20-74fe-4fb4-b1a5-92298b8f1e60" />
+
 ### 🔥 Thermochemistry — Intermediate
 
 **Scope** — Quantitative treatment of heat, enthalpy changes, calorimetry, and Hess’s law.
