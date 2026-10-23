@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_chemistry_organic_chemistry_advanced_" src="https://github.com/user-attachments/assets/ad3d2697-9553-4738-8d2e-7c72ea372e52" />
+
 ### 🧪 Organic Chemistry — Advanced
 
 **Scope** — Electronic effects, advanced reaction mechanisms, pericyclic reactions, and modern synthetic strategies.
