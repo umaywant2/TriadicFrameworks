@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_physics_classical_mechanics_advanced_" src="https://github.com/user-attachments/assets/5da66cc5-c93f-4602-9fef-a0e2968c274e" />
+
 ### ⚙️ Classical Mechanics — Advanced
 
 **Scope** — Analytical mechanics, rotational dynamics, and deeper structural formulations of motion.
