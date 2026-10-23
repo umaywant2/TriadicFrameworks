@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_physics_cosmology_intro_" src="https://github.com/user-attachments/assets/f9154129-e8c0-4582-8753-8b4414fd0269" />
+
 ### 🌌 Cosmology — Intro
 
 **Scope** — The large‑scale structure, origin, and evolution of the universe as a whole.
