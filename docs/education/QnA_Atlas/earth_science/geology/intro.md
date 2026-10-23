@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_earth_science_geology_intro_" src="https://github.com/user-attachments/assets/19b7c1fb-004e-4045-abff-8c0b608bc3f6" />
+
 ### 🪨 Geology — Intro
 
 **Scope** — Earth materials, basic rock types, and the processes that shape the planet’s surface and interior.
