@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_chemistry_physiology_intermediate_" src="https://github.com/user-attachments/assets/1a9164f6-9197-48f8-8ff1-bac5403b03e4" />
+
 ### 💓 Physiology — Intermediate
 
 **Scope** — Mechanisms of system regulation, transport processes, and integration of neural and endocrine signaling.
