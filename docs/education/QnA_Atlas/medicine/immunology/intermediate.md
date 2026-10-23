@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_medicine_immunology_intermediate_" src="https://github.com/user-attachments/assets/5d53b836-e7d1-41b7-8fbd-58dbf976c2a0" />
+
 ### 🛡️ Immunology — Intermediate
 
 **Scope** — Cellular players, antigen recognition, and coordination between innate and adaptive responses.
