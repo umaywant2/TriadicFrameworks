@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_AI_Atlas_Regime_Classifier_" src="https://github.com/user-attachments/assets/1d87eff8-a4f3-47b8-a253-4518c54ea972" />
 
 # 🧭 **atlas_regime_classifier.md**  
 ### *AI Atlas — Regime Classification Engine*  
