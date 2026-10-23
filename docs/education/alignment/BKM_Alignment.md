@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_alignment_BKM_Alignment_" src="https://github.com/user-attachments/assets/11789a57-508a-4134-be8a-9193a6729dd2" />
+
 ## Why RTT Aligns Naturally with Triads  
 **Being · Knowing · Meaning**
 
