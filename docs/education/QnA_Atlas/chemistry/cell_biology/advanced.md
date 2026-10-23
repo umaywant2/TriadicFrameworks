@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_chemistry_chemical_cell_biology_advanced_" src="https://github.com/user-attachments/assets/ac89ca78-0c88-4b4d-8411-ecaa036cce4a" />
+
 ### 🧫 Cell Biology — Advanced
 
 **Scope** — Molecular regulation of signaling pathways, membrane biophysics, organelle biogenesis, and advanced cell cycle control.
