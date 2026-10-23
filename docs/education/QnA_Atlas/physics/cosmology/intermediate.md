@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_physics_cosmology_intermediate_" src="https://github.com/user-attachments/assets/7dcdd3bf-a8ba-4fc5-b090-3eb10ab7e7aa" />
+
 ### 🌌 Cosmology — Intermediate
 
 **Scope** — Observational evidence, cosmic history, and the standard model of cosmology.
