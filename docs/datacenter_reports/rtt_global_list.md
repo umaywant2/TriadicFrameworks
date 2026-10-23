@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="datacenter_reports_RTT_Global_List_" src="https://github.com/user-attachments/assets/ac20ee0e-6486-4bb7-a8ad-1c335110436c" />
 
 - [`rtt_global_list.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/datacenter_reports/rtt_global_list.json) — Agentic module schema role assignments
 
