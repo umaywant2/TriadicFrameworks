@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_AI_Atlas_Projection_Template_" src="https://github.com/user-attachments/assets/bb1d8f33-b30c-4926-9f45-fbe0c3679807" />
 
 # **atlas_projection_template.md**  
 ### *AI Atlas — Multi‑Dimensional Intelligence Mapping System*  
