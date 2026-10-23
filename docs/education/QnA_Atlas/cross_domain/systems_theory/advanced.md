@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_cross_domain_systems_theory_advanced_" src="https://github.com/user-attachments/assets/3072d707-dfc8-4611-b6db-f1e6a57fce6d" />
+
 ### 🧩 Systems Theory — Advanced
 
 **Scope** — Formal system models, nonlinear dynamics, resilience, and cross-domain applications of systems thinking.
