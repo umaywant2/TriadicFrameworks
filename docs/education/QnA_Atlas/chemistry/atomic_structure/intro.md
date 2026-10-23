@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_chemistry_chemical_atomic_structure_intro_" src="https://github.com/user-attachments/assets/31431a2b-4aef-4cf8-a4d2-d50615607cf1" />
+
 ### ⚛️ Atomic Structure — Intro
 
 **Scope** — Basic building blocks of atoms, simple models, and core vocabulary.
