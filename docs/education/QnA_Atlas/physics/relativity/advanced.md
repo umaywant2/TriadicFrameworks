@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_physics_relativity_advanced_" src="https://github.com/user-attachments/assets/dbe8da62-bb61-4898-986e-5eff2faafaee" />
+
 ### 🕰️ Relativity — Advanced
 
 **Scope** — General relativity, gravity as geometry, and relativistic effects in cosmology and astrophysics.
