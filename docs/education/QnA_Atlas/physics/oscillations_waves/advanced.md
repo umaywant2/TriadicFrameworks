@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_physics_ocillations_waves_advanced_" src="https://github.com/user-attachments/assets/4a6ceee3-39dd-49d0-9ead-d7ede09a4aaf" />
+
 ### 🌊 Oscillations & Waves — Advanced
 
 **Scope** — Energy flow, resonance, damping, and wave behavior across physical systems.
