@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_chemistry_chemical_bonding_advanced_" src="https://github.com/user-attachments/assets/b29bb13c-ef9d-4bb6-8723-272519062722" />
+
 # chemistry/chemical_bonding/advanced.md
 
 ### 🔗 Chemical Bonding — Advanced
