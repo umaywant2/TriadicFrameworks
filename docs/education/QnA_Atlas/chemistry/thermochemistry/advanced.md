@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_chemistry_thermochemistry_advanced_" src="https://github.com/user-attachments/assets/7b9c9392-6feb-4672-9ef5-f34d51cd3928" />
+
 ### 🔥 Thermochemistry — Advanced
 
 **Scope** — Thermodynamic state functions, temperature dependence, and links between enthalpy, entropy, and spontaneity.
