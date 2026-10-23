@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_chemistry_chemical_atomic_structure_advanced_" src="https://github.com/user-attachments/assets/30e28fdd-a078-41de-83af-1886ac24d903" />
+
 ### ⚛️ Atomic Structure — Advanced
 
 **Scope** — Quantum mechanical model, atomic orbitals, spectroscopy basics, and advanced periodic behavior.
