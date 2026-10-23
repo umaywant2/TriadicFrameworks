@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_chemistry_chemical_atomic_structure_intermediate_" src="https://github.com/user-attachments/assets/7d13fd09-86a4-4131-b325-7ad96cb7d869" />
+
 ### ⚛️ Atomic Structure — Intermediate
 
 **Scope** — Electron configurations, shells/subshells, periodic trends, and simple atomic models.
