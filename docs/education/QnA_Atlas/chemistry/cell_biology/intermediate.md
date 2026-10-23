@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_chemistry_chemical_cell_biology_intermediate_" src="https://github.com/user-attachments/assets/cddef0d8-9df8-4f2c-8aaa-061e83949056" />
+
 ### 🧫 Cell Biology — Intermediate
 
 **Scope** — Membrane dynamics, intracellular trafficking, cytoskeleton, cell cycle basics.
