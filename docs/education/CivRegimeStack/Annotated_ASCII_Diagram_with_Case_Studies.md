@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_CivRegimeStack__" src="https://github.com/user-attachments/assets/bbfef447-35b7-4c2e-82c3-c2e15968af34" />
+
 🧭 Civilizational Regime Stack (RTT/vST)
 Materials → Mind → Civilization
 (Annotated ASCII Diagram with Case Studies)
