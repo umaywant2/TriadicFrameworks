@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_physics_cosmology_advanced_" src="https://github.com/user-attachments/assets/001ea2eb-affe-4255-b263-ef1217ee8102" />
+
 ### 🌌 Cosmology — Advanced
 
 **Scope** — Theoretical frameworks, dark components, and unresolved questions about cosmic origin and fate.
