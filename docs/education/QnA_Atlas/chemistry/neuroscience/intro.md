@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_chemistry_neuroscience_intro_" src="https://github.com/user-attachments/assets/5c543012-82e6-48e1-b962-88995a29dd6b" />
+
 ### 🧠 Neuroscience — Intro
 
 **Scope** — Fundamental organization of the nervous system, basic neuron structure, and how electrical signals are generated and transmitted.
