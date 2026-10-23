@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_QnA_Atlas_thermodynamics_intermediate_" src="https://github.com/user-attachments/assets/f6c8e9e9-22c3-401c-8f4f-f1803db86c49" />
+
 ### 🔥 Thermodynamics — Intermediate
 
 **Scope** — Laws of thermodynamics, state variables, and quantitative energy accounting.
