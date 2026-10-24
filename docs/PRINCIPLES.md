@@ -17,7 +17,7 @@ These principles anchor the entire ecosystem.
 
 ---
 
-## Summary - Awareness reveals opportunities 
+## Summary - Awareness 
 
 ⚪ Pre-AAC (today), 🟢 AAC, 🔵 AACC and 🟣 AACCC levels
 
