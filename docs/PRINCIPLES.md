@@ -21,7 +21,8 @@ These principles anchor the entire ecosystem.
 
 ⚪ Pre-AAC (today), 🟢 AAC, 🔵 AACC and 🟣 AACCC levels
 
-- Alignment reduces drift.
+- Awareness reveals oppertunities.
+- Alignment reduces drift and collapse.
 - Coherence reduces contradiction.
 - Clarity enables understanding.
 - Continuity preserves value.
