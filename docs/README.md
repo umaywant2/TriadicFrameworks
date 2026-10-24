@@ -1,4 +1,4 @@
-<div align="center"><iframe width="963" height="639" src="https://www.youtube.com/embed/6Z0AklQbP8U?list=HeERupuicHE&pp=sAgC&autoplay=1&mute=1&loop=1" title="TriadicFrameworks Books Playlist" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div align="center"><iframe width=796 height=448 src="https://www.youtube.com/embed/6Z0AklQbP8U?list=PLCySUiruOkPjmThQqnfe3AfaiPo4Kw41K&pp=sAgC&autoplay=1&mute=1&loop=1" title="TriadicFrameworks Books Playlist" frameborder=0 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 # TriadicFrameworks
 
