@@ -26,9 +26,9 @@ These principles anchor the entire ecosystem.
 - Clarity enables understanding.
 - Continuity preserves value.
 
-🟢 AAC is about doing the right things.
-🔵 AACC is about understanding and communicating why they're right.
-🟣 AACCC is about ensuring they'll still be right tomorrow.
+- 🟢 AAC is about doing the right things.
+- 🔵 AACC is about understanding and communicating why they're right.
+- 🟣 AACCC is about ensuring they'll still be right tomorrow.
 
 The objective is not perfection.
 
