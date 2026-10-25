@@ -40,6 +40,12 @@ It was fun.
 
 The repository remains as a record of the journey.
 
+When the students are ready, the repo will be there.
+
+~3 GB of Triadic substrate research. Cross-domain. Multi-theory. Reviewed by multiple AIs. ~200 agentic AI module examples. Built by one dedicated individual.
+
+Public research cost: $0.
+
 If future readers discover something useful here, take it, improve it, and build something better.
 
 The objective was never ownership.
