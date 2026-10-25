@@ -42,7 +42,7 @@ The repository remains as a record of the journey.
 
 When the students are ready, the repo will be there.
 
-~3 GB of Triadic substrate research. Cross-domain. Multi-theory. Reviewed by multiple AIs. ~200 agentic AI module examples. Built by one dedicated individual.
+~3 GB of *triadic substrate* and shared grammar research. Cross-domain. Multi-theory. Reviewed by multiple AIs. ~200 agentic AI module examples. Built by one dedicated individual using Copilot.
 
 Public research cost: $0.
 
