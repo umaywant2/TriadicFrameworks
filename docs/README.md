@@ -59,4 +59,4 @@ Good luck.
 *TriadicFrameworks Archive*
 
 
-As an editorial opinion: the line "failed to produce any students, so we're done" is emotionally honest, but it reads harsher than what your body of work actually reflects. The version above conveys closure without sounding defeated, which tends to age better when future visitors inevitably stumble across it years later.
+As an editorial opinion: the line "failed to produce any students, so we're done" is emotionally honest, but it reads harsher than what the body of work actually reflects. The version above conveys closure without sounding defeated, which tends to age better when future visitors inevitably stumble across it years later.
