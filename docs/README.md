@@ -46,7 +46,7 @@ When the students are ready, the repo will be there.
 
 Public research cost: $0.
 
-If future readers discover something useful here, take it, improve it, and build something better.
+If future readers discover something useful here, take it, improve it (cite the lineage), and build something better.
 
 The objective was never ownership.
 
