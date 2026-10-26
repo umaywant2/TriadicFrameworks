@@ -54,7 +54,7 @@ The objective was understanding.
 
 Good luck.
 
-\- Andrew Wilson (Nawder Loswin)
+\- Nawder Loswin
 
 *TriadicFrameworks Archive*
 
