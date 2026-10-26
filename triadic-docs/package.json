@@ -42,7 +42,6 @@
   "engines": {
     "node": ">=20.0"
   },
-{
   "overrides": {
     "tinypool": "^0.8.0",
     "serialize-javascript": "^6.0.2",
@@ -50,5 +49,4 @@
     "uuid": "^9.0.1",
     "postcss-selector-parser": "^6.0.15"
   }
-},
 }
