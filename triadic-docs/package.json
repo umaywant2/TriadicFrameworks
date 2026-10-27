@@ -43,10 +43,17 @@
     "node": ">=20.0"
   },
   "overrides": {
-    "tinypool": "^0.8.0",
-    "serialize-javascript": "^6.0.2",
-    "braces": "^3.0.3",
-    "uuid": "^9.0.1",
-    "postcss-selector-parser": "^6.0.15"
+    "@docusaurus/core": {
+      "tinypool": "2.1.2"
+    },
+    "copy-webpack-plugin": {
+      "serialize-javascript": "7.1.4"
+    },
+    "css-minimizer-webpack-plugin": {
+      "serialize-javascript": "7.1.4"
+    },
+    "sockjs": {
+      "uuid": "11.1.1"
+    }
   }
 }
