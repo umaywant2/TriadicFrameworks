@@ -1,8 +1,8 @@
----
+<!-- ---
 status: generated
 version: "0.4"
 description: "AI Resonance Seed is the foundational TriadicFrameworks module for drift-bounded resonance architecture, validators, ontologies, and agent initialization."
----
+--- -->
 
 <img width="1194" height="672" alt="About the AI Resonance Seed module" src="https://github.com/user-attachments/assets/71120e77-626f-4b6d-8868-32dc6f7d687b" />
 
