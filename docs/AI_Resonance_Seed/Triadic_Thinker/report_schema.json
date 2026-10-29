@@ -1,1 +1,529 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/schemas/triadic-thinker/report_schema.json",
+  "title": "Triadic Thought Report",
+  "description": "Schema for the human-facing output of a Triadic Thinker analysis. A Triadic Thought Report is a thinking aid, not a determination of truth.",
+  "type": "object",
+  "additionalProperties": false,
 
+  "required": [
+    "report_type",
+    "schema_version",
+    "subject",
+    "boundary_statement",
+    "observations",
+    "structural_view",
+    "regime_view",
+    "operator_view",
+    "paradoxes_and_tensions",
+    "alternative_frames",
+    "resonance_and_drift",
+    "cross_observer_comparison",
+    "convergence",
+    "unresolved",
+    "questions_worth_pursuing",
+    "human_as_operator"
+  ],
+
+  "properties": {
+    "report_type": {
+      "type": "string",
+      "const": "Triadic Thought Report"
+    },
+
+    "schema_version": {
+      "type": "string",
+      "description": "Version of the Triadic Thought Report schema.",
+      "pattern": "^[0-9]+\\.[0-9]+(?:\\.[0-9]+)?$"
+    },
+
+    "subject": {
+      "$ref": "#/$defs/subject"
+    },
+
+    "boundary_statement": {
+      "type": "string",
+      "const": "This report is a thinking aid, not a determination of truth."
+    },
+
+    "observations": {
+      "type": "array",
+      "description": "Initial observations relevant to the subject.",
+      "items": {
+        "$ref": "#/$defs/finding"
+      }
+    },
+
+    "structural_view": {
+      "$ref": "#/$defs/view"
+    },
+
+    "regime_view": {
+      "$ref": "#/$defs/view"
+    },
+
+    "operator_view": {
+      "$ref": "#/$defs/view"
+    },
+
+    "paradoxes_and_tensions": {
+      "type": "array",
+      "description": "Contradictions, tensions, or observations that do not comfortably fit the present frame.",
+      "items": {
+        "$ref": "#/$defs/tension"
+      }
+    },
+
+    "alternative_frames": {
+      "type": "array",
+      "description": "Alternative observer positions or reframings that expose additional structure.",
+      "items": {
+        "$ref": "#/$defs/alternativeFrame"
+      }
+    },
+
+    "resonance_and_drift": {
+      "$ref": "#/$defs/resonanceDrift"
+    },
+
+    "human_consequences": {
+      "type": "array",
+      "description": "Human consequences or lived-system considerations when relevant to the subject.",
+      "items": {
+        "$ref": "#/$defs/finding"
+      }
+    },
+
+    "observer_reports": {
+      "type": "array",
+      "description": "Optional independent observations from specialized thinker roles before synthesis.",
+      "items": {
+        "$ref": "#/$defs/observerReport"
+      }
+    },
+
+    "cross_observer_comparison": {
+      "$ref": "#/$defs/crossObserverComparison"
+    },
+
+    "convergence": {
+      "type": "array",
+      "description": "Areas where multiple observer positions independently arrive at compatible findings. Convergence does not establish truth.",
+      "items": {
+        "$ref": "#/$defs/convergenceFinding"
+      }
+    },
+
+    "unresolved": {
+      "type": "array",
+      "description": "Questions, tensions, hypotheses, or uncertainties that should remain open.",
+      "items": {
+        "$ref": "#/$defs/unresolvedItem"
+      }
+    },
+
+    "questions_worth_pursuing": {
+      "type": "array",
+      "description": "Questions returned to the human thinker for further examination.",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+
+    "human_as_operator": {
+      "type": "object",
+      "description": "Explicit preservation of human interpretive authority.",
+      "additionalProperties": false,
+      "required": [
+        "interpretation_retained_by_human",
+        "judgment_retained_by_human",
+        "action_retained_by_human"
+      ],
+      "properties": {
+        "interpretation_retained_by_human": {
+          "type": "boolean",
+          "const": true
+        },
+        "judgment_retained_by_human": {
+          "type": "boolean",
+          "const": true
+        },
+        "action_retained_by_human": {
+          "type": "boolean",
+          "const": true
+        }
+      }
+    },
+
+    "metadata": {
+      "$ref": "#/$defs/metadata"
+    }
+  },
+
+  "$defs": {
+    "subject": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "input",
+        "restatement"
+      ],
+      "properties": {
+        "input": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Original subject, question, claim, hypothesis, dilemma, or observation."
+        },
+        "restatement": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Neutral restatement of the subject."
+        },
+        "scope": {
+          "type": "string",
+          "description": "Current scope or boundary of examination."
+        }
+      }
+    },
+
+    "finding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "statement",
+        "classification"
+      ],
+      "properties": {
+        "statement": {
+          "type": "string",
+          "minLength": 1
+        },
+        "classification": {
+          "type": "string",
+          "enum": [
+            "observation",
+            "interpretation",
+            "hypothesis",
+            "uncertainty",
+            "speculation"
+          ]
+        },
+        "basis": {
+          "type": "string",
+          "description": "Evidence, reasoning, or context supporting the finding."
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+
+    "view": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "summary",
+        "findings"
+      ],
+      "properties": {
+        "summary": {
+          "type": "string"
+        },
+        "findings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/finding"
+          }
+        },
+        "questions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+
+    "tension": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "description",
+        "status"
+      ],
+      "properties": {
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "unresolved",
+            "partially_reconciled",
+            "reframed",
+            "resolved"
+          ]
+        },
+        "possible_missing_elements": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "variable",
+              "boundary",
+              "regime",
+              "operator",
+              "observer_position",
+              "evidence",
+              "unknown"
+            ]
+          }
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+
+    "alternativeFrame": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "frame",
+        "what_becomes_visible"
+      ],
+      "properties": {
+        "frame": {
+          "type": "string",
+          "minLength": 1
+        },
+        "what_becomes_visible": {
+          "type": "string",
+          "minLength": 1
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+
+    "resonanceDrift": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "resonance",
+        "drift",
+        "transitions",
+        "uncertainties"
+      ],
+      "properties": {
+        "resonance": {
+          "type": "array",
+          "description": "Relationships or patterns exhibiting meaningful persistence, compatibility, reinforcement, recurrence, or coherence.",
+          "items": {
+            "$ref": "#/$defs/finding"
+          }
+        },
+        "drift": {
+          "type": "array",
+          "description": "Observed or hypothesized movement away from a previously coherent state, relationship, model, boundary, regime, or expectation.",
+          "items": {
+            "$ref": "#/$defs/finding"
+          }
+        },
+        "transitions": {
+          "type": "array",
+          "description": "Possible state or regime transitions.",
+          "items": {
+            "$ref": "#/$defs/finding"
+          }
+        },
+        "uncertainties": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/finding"
+          }
+        }
+      }
+    },
+
+    "observerReport": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "role",
+        "specialty",
+        "observations"
+      ],
+      "properties": {
+        "role": {
+          "type": "string",
+          "minLength": 1
+        },
+        "specialty": {
+          "type": "string",
+          "minLength": 1
+        },
+        "observations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/finding"
+          }
+        },
+        "questions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "uncertainties": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+
+    "crossObserverComparison": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "convergence",
+        "divergence",
+        "complementarity",
+        "conflict",
+        "missing_observation"
+      ],
+      "properties": {
+        "convergence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "divergence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "complementarity": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "conflict": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "missing_observation": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+
+    "convergenceFinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "finding",
+        "observer_roles",
+        "significance",
+        "truth_claim"
+      ],
+      "properties": {
+        "finding": {
+          "type": "string",
+          "minLength": 1
+        },
+        "observer_roles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "significance": {
+          "type": "string"
+        },
+        "truth_claim": {
+          "type": "boolean",
+          "const": false,
+          "description": "Convergence is analytically interesting but does not establish truth."
+        }
+      }
+    },
+
+    "unresolvedItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "description"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "paradox",
+            "unknown_regime_boundary",
+            "missing_information",
+            "observer_limitation",
+            "open_hypothesis",
+            "uncertainty",
+            "other"
+          ]
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "why_unresolved": {
+          "type": "string"
+        },
+        "possible_next_observation": {
+          "type": "string"
+        }
+      }
+    },
+
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "report_id": {
+          "type": "string"
+        },
+        "generator": {
+          "type": "string"
+        },
+        "generator_version": {
+          "type": "string"
+        },
+        "mode": {
+          "type": "string",
+          "enum": [
+            "compact",
+            "standard",
+            "extended"
+          ]
+        }
+      }
+    }
+  }
+}
