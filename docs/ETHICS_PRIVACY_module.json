@@ -37,6 +37,21 @@
     "drift_sensitivity": "medium",
     "regime_sensitivity": "medium"
   },
+  "agentic_ethics": {
+    "principle": "Capabilities that inherently destroy the conditions they are intended to protect are not ethically usable under RTT.",
+    "prohibited_capabilities": {
+      "nuclear_weapons": {
+        "use": "prohibited",
+        "classification": "deterrent_only",
+        "rationale": "Actual use contradicts the protective rationale of deterrence."
+      },
+      "biological_weapons": {
+        "use": "prohibited",
+        "classification": "non_usable",
+        "rationale": "Weaponized biological harm is incompatible with RTT ethics."
+      }
+    }
+  },
   "cross_module_propagation": {
     "imports": [
       "docs-hub",
@@ -46,14 +61,16 @@
       "privacy-posture",
       "ethical-stance",
       "non-extractive-commitment",
-      "ai-first-architecture-rationale"
+      "ai-first-architecture-rationale",
+      "agentic-ethics",
+      "prohibited-capabilities"
     ]
   },
   "files": [
     {
       "filename": "ETHICS_PRIVACY.md",
       "path": "ETHICS_PRIVACY.md",
-      "purpose": "Ethical profile declaring TriadicFrameworks as a surveillance-free, non-extractive knowledge substrate \u2014 no ads, no tracking, no accounts, no data retention.",
+      "purpose": "Ethical profile declaring TriadicFrameworks as a surveillance-free, non-extractive knowledge substrate — no ads, no tracking, no accounts, no data retention.",
       "role": "profile",
       "analyzer_layer": "cross-cutting"
     }
