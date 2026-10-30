@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_foundations_universe-as-operator_" src="https://github.com/user-attachments/assets/463d60c7-d062-4e86-bc50-393486d0484e" />
+
 # Universe as Operator
 
 > **What changes if the Universe is modeled not only as the space containing relationships, but as part of the relationship that makes those relationships possible?**
