@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_ignition_index_" src="https://github.com/user-attachments/assets/7bfb7d51-6b46-4347-a2de-aa9ebff5587a" />
+
 # Ignition
 
 > **Re-Ignition begins when something previously inaccessible becomes structurally salient again, but the flash of recognition is only the beginning of the investigation.**
