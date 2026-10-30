@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_Intelligence_Class_Ladder_AAI_" src="https://github.com/user-attachments/assets/3e51e92f-bc51-47b8-9fa6-8b4dbf5c50a6" />
 
 # 🧠 **AAI — Artificial Applied Intelligence**  
 ### *Intelligence Class Ladder · Tier 1*  
