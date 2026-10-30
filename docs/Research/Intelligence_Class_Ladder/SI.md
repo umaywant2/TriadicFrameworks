@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_Intelligence_Class_Ladder_SI_" src="https://github.com/user-attachments/assets/1fd7e3c7-0c84-4866-b8d9-316714fa1d95" />
 
 # ⭐ **Structural Intelligence (SI)**  
 ### *(super)*  
