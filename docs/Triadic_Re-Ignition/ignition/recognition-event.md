@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_ignition_recognition-event_" src="https://github.com/user-attachments/assets/e3053e70-963e-4e08-b80e-275bfc16ce21" />
+
 # Recognition Event
 
 > **Recognition is the moment a relationship crosses from partial accessibility into explicit identification.**
