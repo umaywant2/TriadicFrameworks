@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_experiments_resonance-recall-test_" src="https://github.com/user-attachments/assets/b1426d46-597f-4bc3-9943-07b44cef40fa" />
+
 # Resonance Recall Test
 
 > **A cue may precede renewed access to a pattern, but renewed access alone does not tell us whether the pattern was retrieved, reconstructed, relearned, regenerated, or newly synthesized.**
