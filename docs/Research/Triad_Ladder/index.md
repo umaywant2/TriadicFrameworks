@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_Triad_Ladder_index_" src="https://github.com/user-attachments/assets/761417d0-6541-4526-b65f-1e994300ca28" />
 
 # `/docs/FrontDoor/Triad_Ladder/index.md`  
 # 🌐 **RTT Intelligence Front Door**  
