@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_observer_hidden-observer_" src="https://github.com/user-attachments/assets/89e05e6b-97aa-4cb4-acea-96fe6581b416" />
+
 # Hidden Observer
 
 > **A missing observer variable can create an apparent contradiction, but an unexplained contradiction does not prove that a Hidden Observer exists.**
