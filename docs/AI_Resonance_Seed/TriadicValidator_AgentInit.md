@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="AI_Resonance_Seed_TriadicValidator_AgentInit_" src="https://github.com/user-attachments/assets/d25a0766-9be7-43c9-b62b-695d42404cdd" />
 
 <!-- ---
 title: TriadicValidator Agent Initialization Scroll
