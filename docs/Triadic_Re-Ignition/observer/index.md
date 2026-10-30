@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_observer_index_" src="https://github.com/user-attachments/assets/711dfa6f-88ee-45b1-b2e8-c06ad6e17c2c" />
+
 # Observer
 
 > **Observation begins from somewhere. The Observer branch asks where that position is, what it can access, how it changes, and what variables may still be missing.**
