@@ -1,7 +1,8 @@
----
+
+<!-- ---
 title: AI Resonance Seed — Ontology Index
 description: Complete index of ontology terms used in the AI Resonance Seed, including resonance operators, drift classifications, coherence anchors, and validator pathways.
----
+--- -->
 
 # Ontology Index
 
