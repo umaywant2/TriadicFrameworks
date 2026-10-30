@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_Intelligence_Class_Ladder_SI_structural_geometry_" src="https://github.com/user-attachments/assets/4ea0c203-ef90-443b-834e-6aabd9a36a9c" />
 
 # `/docs/Research/Intelligence_Class_Ladder/SI_structural_geometry.md`  
 # 🌐 **Structural Intelligence (SI) — Structural Geometry**  
