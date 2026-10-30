@@ -1,3 +1,6 @@
+
+- [`module.json`](module.json) — Agentic module schema role assignments
+
 # Triadic Re-Ignition
 
 Triadic Re-Ignition is an exploratory TriadicFrameworks module for examining the recovery, recognition, reintegration, and stabilization of patterns that appear dormant, obscured, fragmented, or previously inaccessible.
