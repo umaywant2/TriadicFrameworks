@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_time_apparent-multiple-timelines_" src="https://github.com/user-attachments/assets/ea7936d6-bd18-4cfd-97d5-a38ed38d79a3" />
+
 # Apparent Multiple Timelines
 
 > **Multiple temporal representations do not automatically require multiple underlying timelines. The location of the multiplicity must first be identified.**
