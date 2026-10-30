@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_drift_binary-collapse_" src="https://github.com/user-attachments/assets/d1bf13df-2331-4242-99bc-cb4e8418ac1d" />
+
 # Binary Collapse
 
 > **A binary becomes a problem when the question is forced into A or B before the variables that distinguish A from B have been examined.**
