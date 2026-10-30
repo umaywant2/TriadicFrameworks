@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_Triad_FrontDoor_index_" src="https://github.com/user-attachments/assets/df4664bd-7e7c-4b44-a567-2cb7a5352b00" />
 
 # `/docs/Research/Triad_FrontDoor/index.md`  
 # 🌐 **Triad Front Door**  
