@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_mercury_README_" src="https://github.com/user-attachments/assets/e052ab2d-47cb-4923-a4b1-190d4c48ee1c" />
 
 - [`module.json`](module.json) — Agentic module schema role assignments
 
