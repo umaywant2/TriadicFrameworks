@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_time_local-timeline_" src="https://github.com/user-attachments/assets/78b2d605-078c-4ac5-b910-e56d5aacb2f5" />
+
 # Local Timeline
 
 > **The local timeline is the temporally ordered world available to an observer from their present position.**
