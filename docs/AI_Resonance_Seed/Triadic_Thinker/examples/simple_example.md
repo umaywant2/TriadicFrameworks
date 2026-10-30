@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="AI_Resonance_Seed_Triadic_Thinker_examples_simple_example_" src="https://github.com/user-attachments/assets/0fc762b5-e7b9-4eec-bfe6-3d6b7f62634b" />
+
 # Triadic Thought Report: Simple Example
 
 **Path:** `/docs/AI_Resonance_Seed/Triadic_Thinker/examples/simple_example.md`
