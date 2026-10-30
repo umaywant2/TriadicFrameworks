@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_mercury_Cross_Material_Operator_Table_" src="https://github.com/user-attachments/assets/9192bb1b-0737-451b-b3a2-2dca39b0945e" />
 
 # 🜁 Cross‑Material Operator Table  
 **Mercury · Gallium · Cesium**  
