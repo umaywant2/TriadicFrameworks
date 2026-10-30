@@ -1,7 +1,8 @@
----
+
+<!-- ---
 title: How to Read This Ontology — AI Resonance Seed
 description: A concise guide explaining how to navigate and interpret the AI Resonance Seed ontology within TriadicFrameworks.
----
+--- -->
 
 # How to Read This Ontology
 
