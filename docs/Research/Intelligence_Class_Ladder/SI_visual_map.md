@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_Intelligence_Class_Ladder_SI_visual_map_" src="https://github.com/user-attachments/assets/7184e324-aa12-4a7f-8317-d61fc5960443" />
 
 # `/docs/Research/Intelligence_Class_Ladder/SI_visual_map.md`  
 # 🌐 **Structural Intelligence (SI) — Visual Map**  
