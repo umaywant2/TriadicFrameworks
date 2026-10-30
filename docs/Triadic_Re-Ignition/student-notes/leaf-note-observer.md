@@ -1,4 +1,4 @@
-<img width="1194" height="672" alt="Triadic_Re-Ignition_student-notes_leaf-note-local-time_" src="https://github.com/user-attachments/assets/7b16d6d6-9f80-4280-b86f-f9d2ccc12e40" />
+<img width="1194" height="672" alt="Triadic_Re-Ignition_student-notes_leaf-note-local-time_" src="https://github.com/user-attachments/assets/49f8adbd-42c8-49be-8eae-e01813ce047e" />
 
 # Student Leaf Note: Observer
 
