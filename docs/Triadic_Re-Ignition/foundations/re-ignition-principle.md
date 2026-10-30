@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_foundations_re-ignition-principle_" src="https://github.com/user-attachments/assets/7d2e6e4f-c1a9-4f48-8b1e-752cd452353b" />
+
 # Re-Ignition Principle
 
 > **A relationship that is not presently accessible may become accessible again. The return of access is an observation; what persisted, what changed, and how access returned remain questions for investigation.**
