@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_README_" src="https://github.com/user-attachments/assets/48eb9c6a-4a66-4c79-8152-83fc0e64bafe" />
 
 - [`module.json`](module.json) — Agentic module schema role assignments
 
