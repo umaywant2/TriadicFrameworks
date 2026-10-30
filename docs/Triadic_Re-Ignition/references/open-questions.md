@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_references_open-questions_" src="https://github.com/user-attachments/assets/4894178c-0e48-4da3-adca-53e87d8bf96d" />
+
 # Triadic Re-Ignition: Open Questions
 
 > **An open question preserves uncertainty without turning uncertainty into a conclusion.**
