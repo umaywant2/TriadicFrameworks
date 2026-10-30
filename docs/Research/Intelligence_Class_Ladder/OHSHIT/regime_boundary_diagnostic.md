@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_Intelligence_Class_Ladder_OHSHIT_regime_boundary_diagnostic_" src="https://github.com/user-attachments/assets/3b0830fa-a8d4-42a8-af9c-9169c2c914b8" />
 
 # **regime_boundary_diagnostic.md**  
 ### *Operational Holographic System Hashing Illusionary Timers*  
