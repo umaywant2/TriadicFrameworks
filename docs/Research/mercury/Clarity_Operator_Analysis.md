@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_mercury_Clarity_Operator_Analysis_" src="https://github.com/user-attachments/assets/571daa3f-3281-499a-a4e2-8abe5e4c923d" />
 
 <head>
   <meta charset="UTF-8">
