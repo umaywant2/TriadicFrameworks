@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_ignition_reintegration_" src="https://github.com/user-attachments/assets/e67e05da-378f-4133-9acb-62a130d30cab" />
+
 # Reintegration
 
 > **Recognition makes a relationship accessible. Reintegration determines where that relationship belongs now.**
