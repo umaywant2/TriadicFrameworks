@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_Triad_Global_Index_triad_visual_map_" src="https://github.com/user-attachments/assets/750d97a4-0c88-431f-80fe-85302721eae1" />
 
 # `/docs/Research/Triad_Global_Index/triad_visual_map.md`  
 # 🌐 **Triad Visual Map**  
