@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_experiments_observation-protocol_" src="https://github.com/user-attachments/assets/5fc0e7ab-64ce-4edb-81b8-04a46a9bb6c1" />
+
 # Observation Protocol
 
 > **Preserve what happened before deciding what it means.**
