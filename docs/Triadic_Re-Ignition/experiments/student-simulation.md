@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_experiments_student-simulation_" src="https://github.com/user-attachments/assets/42734d78-629f-4a96-8b74-36cbbdcd6821" />
+
 # Student Simulation: Triadic Re-Ignition
 
 > **The purpose of the simulation is not to teach students what conclusion to reach. It is to let them observe how conclusions change when observer, context, paradox, and representation are added back into the problem.**
