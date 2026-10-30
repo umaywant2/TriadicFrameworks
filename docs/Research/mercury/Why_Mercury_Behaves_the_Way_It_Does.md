@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_mercury_Why_Mercury_Behaves_the_Way_It_Does_" src="https://github.com/user-attachments/assets/ae60ae06-22c7-4d8d-a2a8-579618ca51ae" />
 
 <head>
   <meta charset="UTF-8">
