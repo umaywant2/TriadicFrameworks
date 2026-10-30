@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_references_RTT-crosswalk_" src="https://github.com/user-attachments/assets/3153e80b-650f-4580-8018-2e680940c480" />
+
 # Triadic Re-Ignition: RTT Crosswalk
 
 > **A crosswalk maps structural correspondence. It does not rewrite the source framework.**
