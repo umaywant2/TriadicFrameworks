@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="AI_Resonance_Seed_Triadic_Thinker_examples_paradox_example_" src="https://github.com/user-attachments/assets/e64b2d04-8081-429b-9703-a5aa710fb800" />
 
 # Triadic Thought Report: Paradox Example
 
