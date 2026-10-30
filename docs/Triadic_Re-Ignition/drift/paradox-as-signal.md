@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_drift_paradox-as-signal_" src="https://github.com/user-attachments/assets/04e0c2d0-7dac-40ea-b5b2-ab13c01d4c98" />
+
 # Paradox as Signal
 
 > **A paradox is not automatically an answer. It is a signal that the current model may deserve another look.**
