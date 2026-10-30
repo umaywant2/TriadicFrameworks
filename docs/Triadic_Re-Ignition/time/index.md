@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_time_index_" src="https://github.com/user-attachments/assets/77f9f9ec-5384-428c-9b63-a41ecc01983d" />
+
 # Time
 
 > **Time in Triadic Re-Ignition is examined as a layered relationship between physical sequence, local accessibility, structural correspondence, projection, and interpretation.**
