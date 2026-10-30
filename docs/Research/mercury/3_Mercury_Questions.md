@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_mercury_README_" src="https://github.com/user-attachments/assets/df20d771-ffe3-4554-94b5-379dd0d6fd12" />
 
 # 🜁 3 Mercury Questions  
 **RTT/1 · Research Domain · Mercury Cluster**
