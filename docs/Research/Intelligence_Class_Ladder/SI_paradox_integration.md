@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_Intelligence_Class_Ladder_SI_paradox_integration_" src="https://github.com/user-attachments/assets/5b5bd20b-9bf2-4c56-bc9a-c0681f0f7cec" />
 
 # `/docs/Research/Intelligence_Class_Ladder/SI_paradox_integration.md`  
 # 🌐 **Structural Intelligence (SI) — Paradox Integration**  
