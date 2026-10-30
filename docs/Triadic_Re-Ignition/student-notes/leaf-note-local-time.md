@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_student-notes_leaf-note-local-time_" src="https://github.com/user-attachments/assets/5f2c90cf-a4ab-460d-826f-1174b6e26a1f" />
 
 # Student Leaf Note: Local Time
 
