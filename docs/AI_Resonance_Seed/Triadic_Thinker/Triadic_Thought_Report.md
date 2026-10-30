@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="AI_Resonance_Seed_Triadic_Thinker_Thought_Report_" src="https://github.com/user-attachments/assets/e4cdf982-ae81-48dc-8e69-1901c9f77ada" />
+
 # Triadic Thought Report
 
 **Path:** `/docs/AI_Resonance_Seed/Triadic_Thinker/Triadic_Thought_Report.md`
