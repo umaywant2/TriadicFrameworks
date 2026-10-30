@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_mercury_Regime_Transition_Diagram_" src="https://github.com/user-attachments/assets/e58015d4-c87b-4afa-8e3d-0e965492f880" />
 
 <head>
   <meta charset="UTF-8">
