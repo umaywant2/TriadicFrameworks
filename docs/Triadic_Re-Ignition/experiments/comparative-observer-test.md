@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_experiments_comparative-observer-test_" src="https://github.com/user-attachments/assets/d6f03bd0-fef7-41a0-a5f8-03f213b72d1e" />
+
 # Comparative Observer Test
 
 > **When observers disagree, compare the conditions that produced the observations before deciding where the disagreement lives.**
