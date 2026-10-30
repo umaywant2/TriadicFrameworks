@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="AI_Resonance_Seed_Triadic_Thinker__README_" src="https://github.com/user-attachments/assets/fb00a324-2e9c-4c8e-8480-d7c3441f5997" />
+
 # Triadic Thinker
 
 **Path:** `/docs/AI_Resonance_Seed/Triadic_Thinker/`
