@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_time_resonance-time_" src="https://github.com/user-attachments/assets/27400c2b-1ee2-4f1b-8dec-2c80d305f63e" />
+
 # Resonance Time
 
 > **Chronological distance and structural distance are not necessarily the same thing.**
