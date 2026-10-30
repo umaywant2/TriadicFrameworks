@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_references_index_" src="https://github.com/user-attachments/assets/237f89b1-cb95-41b7-aef0-3655f82cb731" />
+
 # Triadic Re-Ignition: References
 
 > **References preserve lineage, vocabulary, boundaries, and unresolved questions so exploration can continue without losing track of what came from where.**
