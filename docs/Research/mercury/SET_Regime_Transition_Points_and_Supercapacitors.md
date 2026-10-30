@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_mercury_SET_Regime_Transition_Points_and_Supercapacitors_" src="https://github.com/user-attachments/assets/152c46da-b5ca-4617-83e1-eb3601c88527" />
 
 <head>
   <meta charset="UTF-8">
