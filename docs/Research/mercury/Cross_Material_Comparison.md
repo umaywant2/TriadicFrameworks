@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_mercury_Cross_Material_Comparison_" src="https://github.com/user-attachments/assets/ec02ad7d-12f9-428d-ae52-613cac06e69e" />
 
 # 🜁 Cross‑Material Comparison  
 **Mercury vs Gallium vs Cesium**  
