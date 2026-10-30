@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_Intelligence_Class_Ladder_OHSHIT_temporal_projection_map_" src="https://github.com/user-attachments/assets/cf143d79-b33e-4611-b0ed-60c597cdca84" />
 
 # **temporal_projection_map.md**  
 ### *Operational Holographic System Hashing Illusionary Timers*  
