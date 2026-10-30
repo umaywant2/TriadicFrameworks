@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_mercury_Triadic_Operator_Table_" src="https://github.com/user-attachments/assets/4c470915-ec72-4b00-a650-3e610ab3ed40" />
 
 <head>
   <meta charset="UTF-8">
