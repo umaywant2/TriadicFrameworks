@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="AI_Atlas_regime_diagnostic_" src="https://github.com/user-attachments/assets/298cd5a2-7104-4e40-a11d-a2426acdefc8" />
 
 # **atlas_regime_diagnostic.md**  
 ### *AI Atlas — Multi‑Dimensional Intelligence Mapping System*  
