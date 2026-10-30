@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_mercury_How_to_Study_Regime_Transition_Points_" src="https://github.com/user-attachments/assets/77338d78-7e67-46bd-93ad-300cbb92655b" />
 
 <head>
   <meta charset="UTF-8">
