@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_ignition_resonance-trigger_" src="https://github.com/user-attachments/assets/43233695-1daa-47cb-be2a-de09f7bee1aa" />
+
 # Resonance Trigger
 
 > **A trigger marks where renewed access begins to become observable. It does not, by itself, tell us why the transition occurred.**
