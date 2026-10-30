@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_time_physical_time_" src="https://github.com/user-attachments/assets/a800ecb1-14f6-4c74-93d5-eb13efa5ce76" />
+
 # Physical Time
 
 > **Physical time establishes measurable sequence and duration. Resonance-oriented models may add relationships to that sequence, but they do not erase it.**
