@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_Intelligence_Class_Ladder_ladder_visual_map_" src="https://github.com/user-attachments/assets/d12703e4-4b5a-414b-b260-9e1a36a2625d" />
 
 # `/docs/Research/Intelligence_Class_Ladder/ladder_visual_map.md`  
 # 🌐 **Intelligence Class Ladder — Visual Map**  
