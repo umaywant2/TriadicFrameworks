@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_observer_observer-transition_" src="https://github.com/user-attachments/assets/dad7c1b4-8828-46a9-908a-3bf4ac722358" />
+
 # Observer Transition
 
 > **When observation changes, the transition itself may contain more information than either endpoint.**
