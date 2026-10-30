@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_Triad_Global_Index_index_" src="https://github.com/user-attachments/assets/598ef23b-4afa-432d-8cbc-a6dee48b2d26" />
 
 # 🌐 **Triad Global Index**  
 ### *The Complete RTT Intelligence Measurement System*
