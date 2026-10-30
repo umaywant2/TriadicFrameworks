@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_Triad_Docs_index_" src="https://github.com/user-attachments/assets/a49208af-09ad-46d0-8db2-e8846039015f" />
 
 # `/docs/Research/Triad_Docs/index.md`  
 # 🌐 **Triad Documentation Hub**  
