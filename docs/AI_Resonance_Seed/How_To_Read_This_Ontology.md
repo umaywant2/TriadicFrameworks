@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="AI_Resonance_Seed_How_To_Read_This_Ontology_" src="https://github.com/user-attachments/assets/89dd9d5a-f13c-4ddf-a807-16c3463afee7" />
 
 <!-- ---
 title: How to Read This Ontology — AI Resonance Seed
