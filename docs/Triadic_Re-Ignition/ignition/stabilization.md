@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_ignition_stabilization_" src="https://github.com/user-attachments/assets/795db9c4-175a-4fb2-b45c-b14b1d97b5c1" />
+
 # Stabilization
 
 > **A relationship becomes useful for investigation when it can survive beyond the moment in which it was first recognized.**
