@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="AI_Atlas_drift_signature" src="https://github.com/user-attachments/assets/a8d75d68-5c92-4443-9450-6f6af45557f8" />
 
 # **atlas_drift_signature.md**  
 ### *AI Atlas — Multi‑Dimensional Intelligence Mapping System*  
