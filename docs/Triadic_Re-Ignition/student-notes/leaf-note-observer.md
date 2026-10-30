@@ -1,3 +1,4 @@
+
 # Student Leaf Note: Observer
 
 > **Before deciding that the world changed, ask whether your position, access, context, or representation changed.**
