@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_references_spine-crosswalk__" src="https://github.com/user-attachments/assets/f0841919-7bd8-40ba-a9a3-1153ce8656e9" />
+
 # Triadic Re-Ignition: Spine Crosswalk
 
 > **A crosswalk identifies structural correspondence. It does not silently convert an exploratory module into established canon.**
