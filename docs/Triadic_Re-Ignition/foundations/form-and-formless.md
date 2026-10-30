@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_foundations_form-and-formless_" src="https://github.com/user-attachments/assets/9ab7cd9d-97b2-40d8-b2cc-9506c14d4098" />
+
 # Form and Formless
 
 > **Form makes a relationship representable. Formless marks what the current representation has not yet resolved. Neither should be mistaken automatically for the complete underlying structure.**
