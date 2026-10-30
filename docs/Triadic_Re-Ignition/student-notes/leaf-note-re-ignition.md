@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_student-notes_leaf-note-re-ignition_" src="https://github.com/user-attachments/assets/75df80ff-14ab-40b0-a503-39f91f576ae6" />
+
 # Student Leaf Note: Re-Ignition
 
 > **Sometimes learning feels new. Sometimes it feels like recognizing something you almost already knew.**
