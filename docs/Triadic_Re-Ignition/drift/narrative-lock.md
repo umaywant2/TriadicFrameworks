@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_drift_narrative-lock_" src="https://github.com/user-attachments/assets/3eedd537-7861-46bb-9b76-373db5cef068" />
+
 # Narrative Lock
 
 > **A narrative becomes dangerous when new evidence is interpreted primarily by how well it protects the narrative.**
