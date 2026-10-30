@@ -1,4 +1,4 @@
-<img width="1194" height="672" alt="Triadic_Re-Ignition_references_spine-crosswalk_" src="https://github.com/user-attachments/assets/808f471b-414c-4cdc-ae04-b3c24c3c24b9" />
+<img width="1194" height="672" alt="Triadic_Re-Ignition_references_terminology_" src="https://github.com/user-attachments/assets/086abcc2-526a-4bed-a318-a4e377e6d4c2" />
 
 # Triadic Re-Ignition Terminology
 
