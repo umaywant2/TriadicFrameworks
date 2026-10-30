@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="AI_Resonance_Seed_Triadic_Thinker_tt_capture_" src="https://github.com/user-attachments/assets/c752b33f-6264-4eac-b9d2-2787ceda33f7" />
+
 # tt_capture.md
 
 > 
