@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_capture_" src="https://github.com/user-attachments/assets/e32cda94-9551-47ec-87cd-13b85280d2c9" />
+
 # Triadic Re-Ignition — Capture
 
 > **Capture the event before explaining the event. Preserve the first signal, the observer, the sequence, and the unknowns.**
