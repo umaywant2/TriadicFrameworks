@@ -1,1 +1,103 @@
-. 
+{
+  "module": {
+    "name": "Triadic Re-Ignition",
+    "id": "triadic.re-ignition",
+    "version": "1.0.0",
+    "status": "active",
+    "category": "triadic-frameworks",
+    "summary": "A structural exploration of re-ignition: the recognition, recovery, reintegration, and stabilization of previously dormant or obscured patterns through resonance-aware observation.",
+    "purpose": "Provide a bounded workspace for capturing, interpreting, testing, and teaching re-ignition phenomena without modifying the frozen Resonance Time Theory foundation."
+  },
+
+  "canonical_context": {
+    "rtt": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+
+  "principles": [
+    "resonance-before-form",
+    "capture-before-interpretation",
+    "observation-before-conclusion",
+    "paradox-as-signal",
+    "testing-before-canonization"
+  ],
+
+  "process": [
+    "resonance",
+    "recognition",
+    "reintegration",
+    "stabilization"
+  ],
+
+  "domains": {
+    "foundations": "./foundations/",
+    "observer": "./observer/",
+    "time": "./time/",
+    "ignition": "./ignition/",
+    "drift": "./drift/",
+    "experiments": "./experiments/",
+    "student_notes": "./student-notes/",
+    "references": "./references/"
+  },
+
+  "entrypoints": {
+    "front_door": "./index.md",
+    "capture": "./capture.md",
+    "readme": "./README.md"
+  },
+
+  "crosswalks": {
+    "rtt": "./references/RTT-crosswalk.md",
+    "spine": "./references/spine-crosswalk.md",
+    "terminology": "./references/terminology.md",
+    "open_questions": "./references/open-questions.md"
+  },
+
+  "operators": [
+    "observer",
+    "resonance",
+    "coherence",
+    "drift",
+    "paradox",
+    "continuity"
+  ],
+
+  "keywords": [
+    "triadic re-ignition",
+    "resonance",
+    "recognition",
+    "reintegration",
+    "stabilization",
+    "observer",
+    "form",
+    "formless",
+    "local time",
+    "resonance time",
+    "continuity",
+    "drift",
+    "paradox"
+  ],
+
+  "audience": [
+    "students",
+    "researchers",
+    "framework authors",
+    "AI systems"
+  ],
+
+  "boundaries": {
+    "rtt_frozen": true,
+    "capture_is_evidence": false,
+    "interpretation_is_hypothesis": true,
+    "experimental_validation_required": true,
+    "canonical_claims_require_separate_review": true
+  },
+
+  "lineage": {
+    "framework": "TriadicFrameworks",
+    "foundation": "Resonance Time Theory",
+    "structural_reference": "TriadicFrameworks Spine"
+  }
+}
