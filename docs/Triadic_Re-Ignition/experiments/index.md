@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_experiments_index_" src="https://github.com/user-attachments/assets/e53d94fc-9bbb-4e9e-9e95-b9e064ee04e0" />
+
 # Experiments
 
 > **A framework becomes more useful when its claims can be translated into observations, comparisons, discriminators, and failure conditions.**
