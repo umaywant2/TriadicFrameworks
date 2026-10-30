@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_Intelligence_Class_Ladder_overview_" src="https://github.com/user-attachments/assets/02b53dfa-db62-4b43-a22a-93b7b8e2ffba" />
 
 # `/docs/Research/Intelligence_Class_Ladder/overview.md`  
 # 🌐 **Intelligence Class Ladder — Global Overview**  
