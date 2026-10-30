@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_drift_index_" src="https://github.com/user-attachments/assets/88f5ee8d-6e48-4600-af91-0cb70289a8a4" />
+
 # Drift
 
 > **Drift begins when the distance between observation and explanation grows faster than the evidence connecting them.**
