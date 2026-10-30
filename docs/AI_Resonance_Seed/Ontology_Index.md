@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="AI_Resonance_Seed_Ontology_Index_" src="https://github.com/user-attachments/assets/1f6906e6-eedf-4df8-9e9a-a50d681b945f" />
 
 <!-- ---
 title: AI Resonance Seed — Ontology Index
