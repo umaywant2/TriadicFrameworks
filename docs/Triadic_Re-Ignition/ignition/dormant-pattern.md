@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_ignition_dormant-pattern_" src="https://github.com/user-attachments/assets/8275e142-cc35-4c24-a21d-2673a5c2902c" />
+
 # Dormant Pattern
 
 > **Something that is unavailable now may later become accessible, but renewed access does not by itself tell us what persisted in between.**
