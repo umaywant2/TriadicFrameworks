@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_student-notes_index_" src="https://github.com/user-attachments/assets/07e4da89-a388-4891-9ce1-eec4fb27b5e9" />
+
 # Triadic Re-Ignition: Student Notes
 
 > **Notice the flash. Preserve the observation. Separate what happened from what you think it means. Then investigate.**
