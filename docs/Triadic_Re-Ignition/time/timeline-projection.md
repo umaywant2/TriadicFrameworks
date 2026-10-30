@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_time_timeline-projection_" src="https://github.com/user-attachments/assets/7bffa088-368c-4c43-bcd6-f3638b726662" />
+
 # Timeline Projection
 
 > **A projected timeline is a representation available to an observer, not necessarily a complete description of the structure producing it.**
