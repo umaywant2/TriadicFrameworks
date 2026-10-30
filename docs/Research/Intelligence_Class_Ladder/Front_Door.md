@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_Intelligence_Class_Ladder_Front_Door_" src="https://github.com/user-attachments/assets/977a7309-f7d5-4284-a0eb-3e668d7ba3fa" />
 
 # 🌐 **Intelligence Class Ladder — Front Door**  
 ### *TriadicFrameworks · Research Division*  
