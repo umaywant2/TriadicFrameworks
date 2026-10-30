@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_observer_local-observer_" src="https://github.com/user-attachments/assets/9df7e011-efa3-4208-966c-317a68e69d58" />
+
 # Local Observer
 
 > **An observer does not need complete access to make valid observations. Locality means the observation begins from somewhere.**
