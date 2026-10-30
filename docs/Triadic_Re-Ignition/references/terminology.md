@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_references_spine-crosswalk_" src="https://github.com/user-attachments/assets/808f471b-414c-4cdc-ae04-b3c24c3c24b9" />
+
 # Triadic Re-Ignition Terminology
 
 > **Shared terminology reduces drift by making it clear which layer of a claim is being discussed.**
