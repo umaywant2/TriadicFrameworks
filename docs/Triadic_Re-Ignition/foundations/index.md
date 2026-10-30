@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_foundations_index_" src="https://github.com/user-attachments/assets/497e93ad-b18f-4ab1-93f7-c0c47060657f" />
+
 # Foundations
 
 > **Triadic Re-Ignition begins with renewed access, then asks what became detectable, how it became representable, and what broader relationships frame the transition.**
