@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_student-notes_leaf-note-form-formless_" src="https://github.com/user-attachments/assets/a7c45d76-6441-4780-95e1-f47f26758dd7" />
+
 # Student Leaf Note: Form and Formless
 
 > **A relationship may become noticeable before you have a stable form for describing it.**
