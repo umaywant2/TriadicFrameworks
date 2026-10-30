@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_foundations_resonance-before-form_" src="https://github.com/user-attachments/assets/efd75a4d-6277-4b84-960d-5684b935cae0" />
+
 # Resonance Before Form
 
 > **A relationship may become noticeable before the observer has a stable representation for describing what was noticed.**
