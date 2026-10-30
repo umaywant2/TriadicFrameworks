@@ -1,3 +1,4 @@
+
 # Triadic Thought Report: Paradox Example
 
 **Path:** `/docs/AI_Resonance_Seed/Triadic_Thinker/examples/paradox_example.md`
