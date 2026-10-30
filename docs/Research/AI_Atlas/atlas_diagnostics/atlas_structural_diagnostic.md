@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="AI_Atlas_diagnostics_structural_" src="https://github.com/user-attachments/assets/fbb5d333-af44-4825-a35c-a74b0639d135" />
 
 # **atlas_structural_diagnostic.md**  
 ### *AI Atlas — Multi‑Dimensional Intelligence Mapping System*  
