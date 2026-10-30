@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="AI_Atlas_diagnostics_temporal_" src="https://github.com/user-attachments/assets/333cef68-1501-43dc-b702-449c3bd86288" />
 
 # **atlas_temporal_diagnostic.md**  
 ### *AI Atlas — Multi‑Dimensional Intelligence Mapping System*  
