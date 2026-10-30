@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_observer_triadic-observer_" src="https://github.com/user-attachments/assets/3834b2df-a6b1-46f7-912a-8b7089510531" />
+
 # Triadic Observer
 
 > **When two observations appear incompatible, add the observer and the relationship before forcing a choice.**
