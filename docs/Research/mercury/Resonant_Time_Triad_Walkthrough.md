@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_mercury_Resonant_Time_Triad_Walkthrough_" src="https://github.com/user-attachments/assets/d954c021-d243-4435-98a6-4502e16f7563" />
 
 <head>
   <meta charset="UTF-8">
