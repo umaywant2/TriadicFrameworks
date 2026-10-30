@@ -1,3 +1,4 @@
+
 # Student Leaf Note: Local Time
 
 > **Your timeline is the temporal world available from where you are. Local does not mean unreal. It means observed from a bounded position.**
