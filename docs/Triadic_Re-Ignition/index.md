@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_index_" src="https://github.com/user-attachments/assets/03fc5c22-6ca5-4220-af0f-25cfa1383fef" />
+
 # Triadic Re-Ignition
 
 > **Resonance can precede recognition. Recognition can restore access to structure that was present before it became consciously available.**
