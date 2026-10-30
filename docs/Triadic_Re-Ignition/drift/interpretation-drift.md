@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Triadic_Re-Ignition_drift_interpretation-drift_" src="https://github.com/user-attachments/assets/ffb3bca0-9f37-474e-a875-56c8e5bd4318" />
 
 # Interpretation Drift
 
