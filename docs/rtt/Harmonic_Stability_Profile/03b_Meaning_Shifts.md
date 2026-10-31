@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Harmonic_Stability_Profile_03b_Meaning_Shifts_" src="https://github.com/user-attachments/assets/ce4acf21-8fbf-4677-a62d-9f4e719dfee3" />
+
 # 🎼 **Meaning Shifts**
 ### *Semantic Drift • Definition Drift • Interval Drift Precursors*
 
