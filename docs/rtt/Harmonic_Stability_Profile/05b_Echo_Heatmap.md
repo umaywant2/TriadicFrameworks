@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Harmonic_Stability_Profile_05b_Echo_Heatmap_" src="https://github.com/user-attachments/assets/bf28c1f7-ede1-4ca2-a8a2-fdc588e6abf6" />
+
 # 🎼 **Echo Heatmap**
 ### *Visualizing Echo Intensity Across Substrates, Families & Recursion Modes*
 
