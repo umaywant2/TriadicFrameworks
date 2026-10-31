@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Harmonic_Stability_Profile_03a_Overloaded_Concepts_" src="https://github.com/user-attachments/assets/2ff5e58e-b23b-4e9b-8248-e61c0ba1b291" />
+
 # 🎼 **Overloaded Concepts**
 ### *Excess Meaning • Excess Roles • Excess Symbolic Load*
 
