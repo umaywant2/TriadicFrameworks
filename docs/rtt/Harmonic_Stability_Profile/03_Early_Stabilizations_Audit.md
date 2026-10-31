@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Harmonic_Stability_Profile_03_Early_Stabilizations_Audit_" src="https://github.com/user-attachments/assets/586f3c3a-6508-438d-a92f-544cfc9a8171" />
+
 # 🎼 **03 — Early Stabilizations Audit**
 ### *Detecting Instability Before Drift Activates*
 
