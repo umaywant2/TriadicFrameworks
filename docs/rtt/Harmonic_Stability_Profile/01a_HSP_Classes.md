@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Harmonic_Stability_Profile_01a_HSP_Classes_" src="https://github.com/user-attachments/assets/0c71c8e4-ec36-40b6-a6b5-1a9428bdd4c0" />
+
 # 🎼 **HSP Stability Classes**
 ### *Stable • Semi‑Stable • Oscillating • Chaotic*
 
