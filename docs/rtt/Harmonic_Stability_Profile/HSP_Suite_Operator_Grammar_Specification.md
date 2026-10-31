@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Harmonic_Stability_Profile_HSP_Suite_Operator_Grammar_Specification_" src="https://github.com/user-attachments/assets/4707a0a3-3f03-4747-a3b0-e944aa4b74a9" />
+
 # HSP Suite — Canonical Operator Grammar Specification
 
 > *Formal Syntax • Composition Rules • Validation Grammar*
