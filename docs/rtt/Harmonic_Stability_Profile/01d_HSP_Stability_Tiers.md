@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Harmonic_Stability_Profile_01d_HSP_Stability_Tiers_" src="https://github.com/user-attachments/assets/edd9464c-5720-4975-8c72-e9ee1a163f03" />
+
 # 🎼 **HSP Stability Tiers**
 ### *Tier 1 — Canon-Stable • Tier 2 — Pressure • Tier 3 — Drift • Tier 4 — Critical*
 
