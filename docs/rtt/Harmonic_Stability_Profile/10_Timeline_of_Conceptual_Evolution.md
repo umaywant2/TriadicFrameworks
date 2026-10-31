@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Harmonic_Stability_Profile_10_Timeline_of_Conceptual_Evolution_" src="https://github.com/user-attachments/assets/e13b3e78-83ae-4f3b-9c2c-455ca3b0f09a" />
+
 # 🎼 **10 — Timeline of Conceptual Evolution**
 ### *Seven Phases of Conceptual Growth Across the Canon*
 
