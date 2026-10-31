@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Harmonic_Stability_Profile_06_Harmonic_Recursion_Detector_" src="https://github.com/user-attachments/assets/10cedc28-6e6c-4cdf-a6ab-fd58be59cec1" />
+
 # 🎼 **06 — Harmonic Recursion Detector**
 ### *Detecting Recursion Activation • Mode Shifts • Harmonic Progression*
 
