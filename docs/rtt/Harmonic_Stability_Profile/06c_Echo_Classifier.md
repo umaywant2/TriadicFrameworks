@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Harmonic_Stability_Profile_06c_Echo_Classifier_" src="https://github.com/user-attachments/assets/38bdaf60-f0d2-4703-b719-8fad2f92d017" />
+
 # 🎼 **06c — Echo Classifier**
 ### *Decision Tree • Echo Typing • Stability Assignment*
 
