@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Harmonic_Stability_Profile_01c_HSP_Corpus_Map_" src="https://github.com/user-attachments/assets/6af7b003-ef77-4113-8489-3561f81eaa3a" />
 
 # 🎼 **HSP Corpus Stability Map**
 ### *Global View of Stability, Drift, and Recursion Across the Canon*
