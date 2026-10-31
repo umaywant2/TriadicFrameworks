@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Harmonic_Stability_Profile_06a_Echo_Triggers_" src="https://github.com/user-attachments/assets/cfa8afcb-cbf3-493b-8847-69f3804ba4fc" />
+
 # 🎼 **06a — Echo Triggers**
 ### *Activation Conditions • Amplification Forces • Resonance Catalysts*
 
