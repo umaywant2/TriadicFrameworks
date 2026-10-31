@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Harmonic_Stability_Profile_02_Concept_Drift_Map_" src="https://github.com/user-attachments/assets/ac3271e7-b088-4e5e-a851-b8e31d9e9e7f" />
+
 # 🌀 **02 — Concept Drift Map**
 ### *Structural Drift • Dimensional Drift • Regime Drift • Projection Drift*
 
