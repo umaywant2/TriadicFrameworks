@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Harmonic_Stability_Profile_01_Harmonic_Stability_Profile_" src="https://github.com/user-attachments/assets/f339075e-66e3-4c77-86cb-4a3725037cfc" />
+
 # 🎼 **01 — Harmonic Stability Profile (HSP)**  
 ### *Definition • Classes • Metrics • Stability Logic*
 
