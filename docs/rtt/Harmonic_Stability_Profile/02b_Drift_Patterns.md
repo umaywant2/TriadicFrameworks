@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Harmonic_Stability_Profile_02b_Drift_Patterns_" src="https://github.com/user-attachments/assets/03571458-d18e-4dd3-afaa-a4e33e43ce33" />
+
 # 🌀 **Drift Patterns**
 ### *How Drift Forms, Evolves, and Propagates Across the Canon*
 
