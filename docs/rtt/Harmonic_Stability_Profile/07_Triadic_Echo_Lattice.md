@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Harmonic_Stability_Profile_07_Triadic_Echo_Lattice_" src="https://github.com/user-attachments/assets/e78d75ad-ff0a-49cd-ae15-caf8be4a9402" />
+
 # 🎼 **07 — Triadic Echo Lattice**
 ### *Harmonic Layers • Echo Families • Recursion Lines • Drift Pathways*
 
