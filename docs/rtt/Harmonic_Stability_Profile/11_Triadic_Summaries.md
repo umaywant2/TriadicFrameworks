@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Harmonic_Stability_Profile_11_Triadic_Summaries_" src="https://github.com/user-attachments/assets/1cba2da2-dbc6-4eb9-884a-3e5b04957fe5" />
+
 # 🎼 **11 — Triadic Summaries**
 ### *Echo • Recursion • Drift • Substrate • Stability (Triad Condensed)*
 
