@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Harmonic_Stability_Profile_04a_Echo_Families_" src="https://github.com/user-attachments/assets/d6f5984e-4a5a-480c-8e53-381bbedd55f8" />
+
 # 🎼 **Echo Families**
 ### *Six Canonical Families of Recurrence Across the Canon*
 
