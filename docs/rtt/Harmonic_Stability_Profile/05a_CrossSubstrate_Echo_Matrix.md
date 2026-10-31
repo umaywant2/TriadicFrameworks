@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Harmonic_Stability_Profile_05a_CrossSubstrate_Echo_Matrix_" src="https://github.com/user-attachments/assets/0b8c6eab-5951-4881-941d-19856e17ecf3" />
+
 # 🎼 **Cross‑Substrate Echo Matrix**
 ### *Mapping Echo Behavior Across Symbolic, Cognitive, Harmonic, Social & Atlas Substrates*
 
