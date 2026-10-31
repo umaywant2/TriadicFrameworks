@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Harmonic_Stability_Profile_06b_Echo_Signatures_" src="https://github.com/user-attachments/assets/072a727a-9b9c-435a-bdda-07ea5ee06e8c" />
+
 # 🎼 **06b — Echo Signatures**
 ### *Identifying Echo Behavior Across Harmonic, Structural, Substrate & Recursion Layers*
 
