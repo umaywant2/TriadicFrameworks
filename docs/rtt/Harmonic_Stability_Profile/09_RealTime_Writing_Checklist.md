@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Harmonic_Stability_Profile_09_RealTime_Writing_Checklist_" src="https://github.com/user-attachments/assets/cf88f785-51da-4169-81b1-bd616a97acaf" />
+
 # 🎼 **09 — Real‑Time Writing Checklist**
 ### *Live Drift Detection • Echo Monitoring • Recursion Control • Stability Integrity*
 
