@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Harmonic_Stability_Profile_00_DOCTYPE_Header_" src="https://github.com/user-attachments/assets/b61453bd-5f04-4d65-93f5-605715f22207" />
+
 # 🧩 **HSP DOCTYPE HEADER**
 
 This header defines the **canonical metadata** for the  
