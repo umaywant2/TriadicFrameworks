@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Harmonic_Stability_Profile_Operators_" src="https://github.com/user-attachments/assets/77e4005e-2e31-4eaf-acfd-e7ef18ab2df3" />
+
 # HSP Suite — Canonical Operator Reference
 
 > Harmonic Stability Profile • Echo Classifier • Substrate Flow • Triadic Echo Lattice
