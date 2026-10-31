@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Harmonic_Stability_Profile_HSP_Suite_Student_Cheat_Sheet_" src="https://github.com/user-attachments/assets/b5266d81-741a-45a9-acf7-60bba6c4f8fe" />
+
 # HSP Suite — Student Cheat Sheet
 
 > Quick-Reference for All Operator Families
