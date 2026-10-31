@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Harmonic_Stability_Profile_01b_HSP_Metrics_" src="https://github.com/user-attachments/assets/a2a57fb3-d027-44c0-82db-cf876480d687" />
+
 # 🎼 **HSP Stability Metrics**
 ### *Six RTT‑Native Measures of Harmonic Stability*
 
