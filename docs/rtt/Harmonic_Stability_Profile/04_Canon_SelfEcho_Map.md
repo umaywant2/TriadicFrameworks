@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Harmonic_Stability_Profile_04_Canon_SelfEcho_Map_" src="https://github.com/user-attachments/assets/fa67e99b-f468-4a2f-b0c1-eb4e6207c723" />
+
 # 🎼 **04 — Canon Self‑Echo Map**
 ### *Echo Families • Echo Clusters • Recursion Lines • Harmonic Recurrence*
 
