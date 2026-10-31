@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Harmonic_Stability_Profile_03c_MultiRole_Structures_" src="https://github.com/user-attachments/assets/667e4527-0a1a-4b7f-858f-9a6592c2359b" />
+
 # 🎼 **Multi‑Role Structures**
 ### *Operator Conflict • Governance Torsion • Pre‑Regime Drift (D3)*
 
