@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Harmonic_Stability_Profile_02c_Drift_Hotspots_" src="https://github.com/user-attachments/assets/25770081-70fa-442a-b106-e4798608e351" />
+
 # 🌀 **Drift Hotspots**
 ### *Where Drift Concentrates, Accelerates, and Becomes Dangerous*
 
