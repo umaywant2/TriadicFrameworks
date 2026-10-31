@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Harmonic_Stability_Profile_08_Substrate_Echo_Flow_Map_" src="https://github.com/user-attachments/assets/6f19a5fc-c86d-4b99-b789-1777b7f9688e" />
+
 # 🎼 **08 — Substrate Echo Flow Map**
 ### *Migration Paths • Echo Currents • Drift Channels • Recursion Flow Lines*
 
