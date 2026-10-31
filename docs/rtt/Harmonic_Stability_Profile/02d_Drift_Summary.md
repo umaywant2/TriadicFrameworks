@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Harmonic_Stability_Profile_02d_Drift_Summary_" src="https://github.com/user-attachments/assets/2277eb21-2b35-417d-a5ea-751cfb084f51" />
+
 # 🌀 **Drift Summary (D1–D4)**
 ### *Consolidated Overview of Drift Across the Canon*
 
