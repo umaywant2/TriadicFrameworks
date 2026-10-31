@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Harmonic_Stability_Profile_02a_Drift_Categories_" src="https://github.com/user-attachments/assets/515957f2-2a8a-4223-a42e-33ca6c45630d" />
+
 # 🌀 **Drift Categories (D1–D4)**
 ### *Structural • Dimensional • Regime • Projection*
 
