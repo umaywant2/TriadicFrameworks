@@ -1,0 +1,78 @@
+name: Build HTML Mirror
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "docs/**"
+      - "scripts/build_html_mirror.py"
+      - ".github/workflows/html-mirror.yml"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: html-mirror-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build-html-mirror:
+    name: Reconcile docs to HTML mirror
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Markdown renderer
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install markdown
+
+      - name: Build complete HTML mirror
+        run: |
+          python scripts/build_html_mirror.py --verbose
+
+      - name: Validate HTML mirror
+        run: |
+          python scripts/build_html_mirror.py --check
+
+      - name: Check for generated changes
+        id: changes
+        shell: bash
+        run: |
+          if [[ -n "$(git status --porcelain -- html/)" ]]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "HTML mirror contains changes:"
+            git status --short -- html/
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "HTML mirror is already synchronized."
+          fi
+
+      - name: Commit HTML mirror
+        if: steps.changes.outputs.changed == 'true'
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add --all html/
+
+          git commit \
+            -m "chore: rebuild HTML mirror"
+
+      - name: Push HTML mirror
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git push
