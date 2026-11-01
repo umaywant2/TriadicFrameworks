@@ -199,7 +199,7 @@ class BuildStats:
 # ---------------------------------------------------------------------------
 
 _FRONT_MATTER_RE = re.compile(
-    r"\\A---[ \\t]*\\r?\\n(.*?)\\r?\\n---[ \\t]*\\r?\\n?",
+    r"\A---[ \t]*\r?\n(.*?)\r?\n---[ \t]*\r?\n?",
     flags=re.DOTALL,
 )
 
@@ -257,7 +257,7 @@ def strip_front_matter(text: str) -> tuple[str, dict[str, str]]:
 
 # HTML attributes emitted by Markdown which commonly contain local paths.
 _HTML_URL_ATTR_RE = re.compile(
-    r'(?P<prefix>\\b(?:href|src)=")'
+    r'(?P<prefix>\b(?:href|src)=")'
     r'(?P<url>[^"]+)'
     r'(?P<suffix>")',
     flags=re.IGNORECASE,
@@ -372,11 +372,11 @@ def expected_html_files(sources: Iterable[Path]) -> set[Path]:
 # ---------------------------------------------------------------------------
 
 _ATX_HEADING_RE = re.compile(
-    r"^\\s{0,3}#{1,6}\\s+(.+?)\\s*#*\\s*$",
+    r"^\s{0,3}#{1,6}\s+(.+?)\s*#*\s*$",
     flags=re.MULTILINE,
 )
 
-_MARKDOWN_LINK_RE = re.compile(r"!?\\[([^\\]]+)\\]\\([^)]*\\)")
+_MARKDOWN_LINK_RE = re.compile(r"!?\[([^\]]+)\]\([^)]*\)")
 _MARKDOWN_INLINE_RE = re.compile(r"[*_`~]")
 
 
@@ -489,18 +489,14 @@ def write_if_changed(
         target.write_text(
             content,
             encoding="utf-8",
-            newline="\\n",
+            newline="\n",
         )
 
-    return "generated"
-
-
-# ---------------------------------------------------------------------------
+    return "generated---------------------------------------------------------
 # Orphan reconciliation
 # ---------------------------------------------------------------------------
 
-def discover_generated_html() -> list[Path]:
-    if not HTML_ROOT.exists():
+def discover_generated_html() -> listif not HTML_ROOT.exists():
         return []
 
     return sorted(
@@ -579,7 +575,10 @@ def validate_mirror(
 
     missing = sorted(
         expected - actual,
-        key=lambda path: path.as_posix().d(
+        key=lambda path: path.as_posix().lower(),
+    )
+
+    orphaned = sorted(
         actual - expected,
         key=lambda path: path.as_posix().lower(),
     )
