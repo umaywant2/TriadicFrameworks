@@ -119,7 +119,7 @@ It already captures:
 - the sense of inevitability and continuity
 
 ## 🔮 *A structural grammar for systems, cognition, and resonance‑time reasoning.*
-###### Global Students and Teachers - _Alternate Site_ 🥈 [Docusaurus online](https://docs.triadicframeworks.org) - more pending
+###### Global Students and Teachers - _Alternate Site_ 🥈 [HTML mirror online](https://docs.triadicframeworks.org) 
 ###### Audience: **students • developers • researchers • AIs**
 
 > [`webroot_module.json`](webroot_module.json) — agentic module schema  
