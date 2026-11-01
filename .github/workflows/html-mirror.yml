@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - "docs/**"
+      - "html/**"
       - "scripts/build_html_mirror.py"
       - ".github/workflows/html-mirror.yml"
 
@@ -47,17 +48,19 @@ jobs:
         run: |
           python scripts/build_html_mirror.py --check
 
-      - name: Check for generated changes
+      - name: Stage HTML mirror
         id: changes
         shell: bash
         run: |
-          if [[ -n "$(git status --porcelain -- html/)" ]]; then
-            echo "changed=true" >> "$GITHUB_OUTPUT"
-            echo "HTML mirror contains changes:"
-            git status --short -- html/
-          else
+          git add -A html/
+
+          if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "HTML mirror is already synchronized."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "HTML mirror contains staged changes:"
+            git status --short -- html/
           fi
 
       - name: Commit HTML mirror
@@ -67,12 +70,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add --all html/
-
-          git commit \
-            -m "chore: rebuild HTML mirror"
+          git commit -m "chore: rebuild HTML mirror"
 
       - name: Push HTML mirror
         if: steps.changes.outputs.changed == 'true'
+        shell: bash
         run: |
           git push
