@@ -30,6 +30,7 @@ from __future__ import annotations
 
 import argparse
 import html
+import os
 import re
 import sys
 from dataclasses import dataclass
@@ -58,6 +59,8 @@ REPO_ROOT = SCRIPT_DIR.parent
 
 DOCS_ROOT = REPO_ROOT / "docs"
 HTML_ROOT = REPO_ROOT / "html"
+SITEMAP_SOURCE = DOCS_ROOT / "sitemap.md"
+SITEMAP_TARGET = HTML_ROOT / "sitemap.html"
 
 
 # ---------------------------------------------------------------------------
@@ -171,6 +174,8 @@ HTML_TEMPLATE = """<!doctype html>
     <strong>Generated mirror.</strong>
     Canonical source:
     <code>{source_path}</code>
+    &middot;
+    <a href="{sitemap_href}">Sitemap</a>
   </aside>
 
   <main>
@@ -255,7 +260,6 @@ def strip_front_matter(text: str) -> tuple[str, dict[str, str]]:
 # Link rewriting
 # ---------------------------------------------------------------------------
 
-# HTML attributes emitted by Markdown which commonly contain local paths.
 _HTML_URL_ATTR_RE = re.compile(
     r'(?P<prefix>\b(?:href|src)=")'
     r'(?P<url>[^"]+)'
@@ -265,21 +269,7 @@ _HTML_URL_ATTR_RE = re.compile(
 
 
 def rewrite_markdown_url(url: str) -> str:
-    """
-    Convert an internal Markdown target to its mirrored HTML target.
-
-    Examples:
-        README.md
-            -> README.html
-
-        ../Law/index.md#section
-            -> ../Law/index.html#section
-
-        ./foo.md?x=1#bar
-            -> ./foo.html?x=1#bar
-
-    External URLs, anchors, mailto:, etc. are untouched.
-    """
+    """Convert an internal Markdown target to its mirrored HTML target."""
     if not url:
         return url
 
@@ -318,7 +308,6 @@ def rewrite_html_links(rendered_html: str) -> str:
     def replace(match: re.Match[str]) -> str:
         original = match.group("url")
         rewritten = rewrite_markdown_url(original)
-
         return match.group("prefix") + rewritten + match.group("suffix")
 
     return _HTML_URL_ATTR_RE.sub(replace, rendered_html)
@@ -327,6 +316,7 @@ def rewrite_html_links(rendered_html: str) -> str:
 # ---------------------------------------------------------------------------
 # Source discovery
 # ---------------------------------------------------------------------------
+
 
 def discover_markdown_files() -> list[Path]:
     """Return every Markdown source under /docs in deterministic order."""
@@ -393,6 +383,7 @@ def title_from_markdown(
 # Rendering
 # ---------------------------------------------------------------------------
 
+
 def render_markdown(source_text: str) -> str:
     md = markdown.Markdown(
         extensions=MARKDOWN_EXTENSIONS,
@@ -402,6 +393,12 @@ def render_markdown(source_text: str) -> str:
 
     rendered = md.convert(source_text)
     return rewrite_html_links(rendered)
+
+
+def sitemap_href_for_target(target: Path) -> str:
+    """Return a POSIX-style relative URL from target to /html/sitemap.html."""
+    relative = os.path.relpath(SITEMAP_TARGET, start=target.parent)
+    return Path(relative).as_posix()
 
 
 def build_document(source: Path) -> str:
@@ -414,13 +411,23 @@ def build_document(source: Path) -> str:
     title = title_from_markdown(markdown_body, metadata, source)
     rendered_body = render_markdown(markdown_body)
 
+    if source.resolve() == SITEMAP_SOURCE.resolve():
+        rendered_body = rendered_body.replace(
+            "www.triadicframeworks.org",
+            "docs.triadicframeworks.org",
+        )
+
     canonical_source = (
         Path("/docs") / source.relative_to(DOCS_ROOT)
     ).as_posix()
 
+    target = target_for_source(source)
+    sitemap_href = sitemap_href_for_target(target)
+
     return HTML_TEMPLATE.format(
         source_path=html.escape(canonical_source, quote=True),
         title=html.escape(title, quote=True),
+        sitemap_href=html.escape(sitemap_href, quote=True),
         body=rendered_body,
     )
 
@@ -428,6 +435,7 @@ def build_document(source: Path) -> str:
 # ---------------------------------------------------------------------------
 # File writing
 # ---------------------------------------------------------------------------
+
 
 def write_if_changed(
     target: Path,
@@ -469,6 +477,7 @@ def write_if_changed(
 # ---------------------------------------------------------------------------
 # Orphan reconciliation
 # ---------------------------------------------------------------------------
+
 
 def discover_generated_html() -> list[Path]:
     if not HTML_ROOT.exists():
@@ -530,13 +539,13 @@ def remove_empty_directories(root: Path) -> None:
         try:
             directory.rmdir()
         except OSError:
-            # Directory is not empty.
             pass
 
 
 # ---------------------------------------------------------------------------
 # Validation
 # ---------------------------------------------------------------------------
+
 
 def validate_mirror(
     sources: list[Path],
@@ -563,6 +572,7 @@ def validate_mirror(
 # ---------------------------------------------------------------------------
 # Build
 # ---------------------------------------------------------------------------
+
 
 def build(
     *,
@@ -655,8 +665,6 @@ def build(
             )
             return 1
 
-        # The check above compares generated content, but perform the
-        # structural invariant check too.
         missing, orphaned = validate_mirror(sources)
 
         if missing or orphaned:
@@ -675,7 +683,6 @@ def build(
         print("MIRROR STATUS: OK")
         return 0
 
-    # After a normal build, validate the physical tree.
     missing, orphaned = validate_mirror(sources)
 
     if missing or orphaned:
@@ -706,6 +713,7 @@ def build(
 # CLI
 # ---------------------------------------------------------------------------
 
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description=(
@@ -729,16 +737,4 @@ def parse_args() -> argparse.Namespace:
         help="Print each mirror operation.",
     )
 
-    return parser.parse_args()
-
-
-def main() -> int:
-    args = parse_args()
-    return build(
-        check=args.check,
-        verbose=args.verbose,
-    )
-
-
-if __name__ == "__main__":
-    raise SystemExit(main())
+    return parser.p
