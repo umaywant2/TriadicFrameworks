@@ -122,8 +122,8 @@ It already captures:
 ###### Global Students and Teachers - _Alternate Site_ 🥈 [Docusaurus online](https://docs.triadicframeworks.org) - more pending
 ###### Audience: **students • developers • researchers • AIs**
 
-> [`webroot_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/webroot_module.json) — agentic module schema  
-> [`spine/module_group.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/spine/module_graph.json) — 100+ AI module examples  
+> [`webroot_module.json`](webroot_module.json) — agentic module schema  
+> [`spine/module_group.json`](spine/module_graph.json) — 100+ AI module examples  
 
 A minimal, AI‑ready framework for understanding and building coherent systems.  
 TriadicFrameworks gives students, developers, researchers, and agents a shared substrate:  
