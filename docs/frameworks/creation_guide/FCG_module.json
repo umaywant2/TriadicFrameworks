@@ -105,7 +105,7 @@
       "purpose": "Capture document — verbatim source material and lineage root for the FCG module."
     },
     {
-      "path": "history.md",
+      "path": "history_m.md",
       "role": "reference",
       "analyzer_layer": "cross-cutting",
       "purpose": "FCG Core Layer 1 — evolution of frameworks, historical context, lineage."
@@ -117,7 +117,7 @@
       "purpose": "Standalone HTML renderer for history.md."
     },
     {
-      "path": "principles.md",
+      "path": "principles_m.md",
       "role": "engine",
       "analyzer_layer": "cross-cutting",
       "purpose": "FCG Core Layer 2 — universal rules and design principles for framework construction."
@@ -129,7 +129,7 @@
       "purpose": "Standalone HTML renderer for principles.md."
     },
     {
-      "path": "models.md",
+      "path": "models_m.md",
       "role": "engine",
       "analyzer_layer": "regime",
       "purpose": "FCG Core Layer 3 — internal structure, identity definition, structural model patterns."
@@ -141,7 +141,7 @@
       "purpose": "Standalone HTML renderer for models.md."
     },
     {
-      "path": "structure.md",
+      "path": "structure_m.md",
       "role": "engine",
       "analyzer_layer": "dimensional",
       "purpose": "FCG Core Layer 4 — framework backbone, structural components, dimensional layout."
@@ -153,7 +153,7 @@
       "purpose": "Standalone HTML renderer for structure.md."
     },
     {
-      "path": "operators.md",
+      "path": "operators_m.md",
       "role": "engine",
       "analyzer_layer": "operator",
       "purpose": "FCG Core Layer 5 — actions, transformations, operator definitions (FCG-Define through FCG-Validate)."
@@ -165,7 +165,7 @@
       "purpose": "Standalone HTML renderer for operators.md."
     },
     {
-      "path": "regimes.md",
+      "path": "regimes_m.md",
       "role": "engine",
       "analyzer_layer": "regime",
       "purpose": "FCG Core Layer 6 — coherent modes of operation, regime design, regime transitions."
@@ -177,7 +177,7 @@
       "purpose": "Standalone HTML renderer for regimes.md."
     },
     {
-      "path": "generator.md",
+      "path": "generator_m.md",
       "role": "engine",
       "analyzer_layer": "operator",
       "purpose": "FCG Core Layer 7 — procedural engine for generating complete frameworks."
