@@ -340,6 +340,9 @@ def target_for_source(source: Path) -> Path:
         docs/README.md -> html/index.html
         docs/index.md  -> html/repo-index.html
 
+    Nested index.md files avoid colliding with copied index.html files:
+        docs/<module>/index.md -> html/<module>/index_md.html
+
     All other Markdown sources preserve their relative path.
     """
     relative = source.relative_to(DOCS_ROOT)
@@ -349,6 +352,9 @@ def target_for_source(source: Path) -> Path:
 
     if relative == Path("index.md"):
         return HTML_ROOT / "repo-index.html"
+
+    if relative.name.lower() == "index.md":
+        return (HTML_ROOT / relative).with_name("index_md.html")
 
     return (HTML_ROOT / relative).with_suffix(".html")
 
