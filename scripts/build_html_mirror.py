@@ -392,7 +392,13 @@ def render_markdown(source_text: str) -> str:
     )
 
     rendered = md.convert(source_text)
-    return rewrite_html_links(rendered)
+    rendered = rewrite_html_links(rendered)
+    rendered = rendered.replace(
+        "www.triadicframeworks.org",
+        "docs.triadicframeworks.org",
+    )
+
+    return rendered
 
 
 def sitemap_href_for_target(target: Path) -> str:
