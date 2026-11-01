@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rfc/RFC_ALR_0027_Workflow_Execution_Alert_Protocol.md">
+  <title>📜 RFC‑ALR‑0027 — Workflow Execution Alert Protocol (WEAP)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rfc/RFC_ALR_0027_Workflow_Execution_Alert_Protocol.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rfc/RFC_ALR_0027_Workflow_Execution_Alert_Protocol.md</code>
+  </aside>
+
+  <main>
+<h1 id="rfcalr0027-workflow-execution-alert-protocol-weap">📜 <strong>RFC‑ALR‑0027 — Workflow Execution Alert Protocol (WEAP)</strong></h1>
+<h3 id="detection-routing-and-escalation-for-drift-faults-and-anomalies-in-corridor-validator-and-remix-workflows"><em>Detection, Routing, and Escalation for Drift, Faults, and Anomalies in Corridor, Validator, and Remix Workflows</em></h3>
+<p>RefId: turn0browsertab1</p>
+<p><strong>Title:</strong> Workflow Execution Alert Protocol<br>
+<strong>Status:</strong> Draft<br>
+<strong>Author:</strong> Nawder Loswin + Copilot<br>
+<strong>Date:</strong> 2026‑09‑06<br>
+<strong>Version:</strong> 0.1  </p>
+<hr>
+<h2 id="1-purpose">1. Purpose</h2>
+<p>The <strong>Workflow Execution Alert Protocol (WEAP)</strong> provides real‑time monitoring, routing, and escalation for <strong>workflow‑grade events</strong>, including:</p>
+<ul>
+<li>corridor‑validation workflow drift  </li>
+<li>validator‑workflow misalignment  </li>
+<li>batch orchestration faults  </li>
+<li>remix‑generation pipeline anomalies  </li>
+<li>workflow‑grade paradox vectors  </li>
+<li>Nullarium‑risk emotional‑phase coupling inside workflow engines  </li>
+</ul>
+<p>WEAP integrates directly with <strong>MCAOP (ALR‑0020)</strong> and forms the workflow‑safety layer of the Alert Canon.</p>
+<hr>
+<h2 id="2-workflow-event-types">2. Workflow Event Types</h2>
+<h3 id="execution-drift-events"><strong>Execution Drift Events</strong></h3>
+<ul>
+<li><strong>WorkflowDriftDetected:</strong> Workflow deviates from expected execution path.  </li>
+<li><strong>WorkflowDriftEscalated:</strong> Drift propagates into corridor or temporal layers.  </li>
+<li><strong>WorkflowDriftCritical:</strong> Drift exceeds Nullarium thresholds.</li>
+</ul>
+<h3 id="execution-fault-events"><strong>Execution Fault Events</strong></h3>
+<ul>
+<li><strong>ExecutionFault:</strong> Workflow step fails due to missing data, invalid state, or corridor‑grade interference.  </li>
+<li><strong>ExecutionFaultCascade:</strong> Fault propagates across multiple workflow steps.  </li>
+<li><strong>ExecutionFaultCollapse:</strong> Workflow collapses and halts.</li>
+</ul>
+<h3 id="batch-orchestration-events"><strong>Batch Orchestration Events</strong></h3>
+<ul>
+<li><strong>BatchStall:</strong> Batch process stalls due to drift or resource mismatch.  </li>
+<li><strong>BatchMisalignment:</strong> Batch execution misaligned with validator or corridor state.  </li>
+<li><strong>BatchRecovery:</strong> Batch successfully restored.</li>
+</ul>
+<h3 id="pipeline-events"><strong>Pipeline Events</strong></h3>
+<ul>
+<li><strong>PipelineAnomaly:</strong> Remix or corridor pipeline produces unexpected output.  </li>
+<li><strong>PipelineCorruption:</strong> Pipeline corrupted by paradox vectors or drift.  </li>
+<li><strong>PipelineReconciliation:</strong> Pipeline restored via validator‑grade reconciliation.</li>
+</ul>
+<h3 id="highrisk-events"><strong>High‑Risk Events</strong></h3>
+<ul>
+<li><strong>WorkflowParadoxVector:</strong> Paradox vector originates inside workflow engine.  </li>
+<li><strong>NullariumWorkflowCritical:</strong> Emotional‑phase misalignment at workflow layer.  </li>
+<li><strong>WorkflowCollapse:</strong> Workflow becomes non‑resonant and collapses.</li>
+</ul>
+<hr>
+<h2 id="3-delivery-channels">3. Delivery Channels</h2>
+<p>WEAP uses the MCAOP routing layer:</p>
+<ul>
+<li><strong>Dashboard Panels</strong> — Workflow Event Stream  </li>
+<li><strong>WebSocket Push</strong> — Real‑time workflow alerts  </li>
+<li><strong>Email Digest</strong> — Daily workflow‑event summaries  </li>
+<li><strong>CLI Hooks</strong> — For corridor engines, validator workflows, and batch orchestration  </li>
+<li><strong>Artifact‑Embedded Alerts</strong> — Workflow glyphs and scrolls may embed alert packets  </li>
+</ul>
+<hr>
+<h2 id="4-schema-file">4. Schema File</h2>
+<p><code>registry/alerts/workflow_execution_alert_schema.yml</code></p>
+<p>Defines:</p>
+<ul>
+<li>workflow event type  </li>
+<li>workflow ID  </li>
+<li>drift metrics  </li>
+<li>fault state  </li>
+<li>paradox vectors  </li>
+<li>Nullarium status  </li>
+<li>priority  </li>
+<li>routing map  </li>
+<li>escalation path  </li>
+</ul>
+<hr>
+<h2 id="5-pythonstyle-stub-file">5. Python‑Style Stub File</h2>
+<p><code>engine/workflow_execution_alerts.py</code></p>
+<p>Provides:</p>
+<ul>
+<li>workflow event listeners  </li>
+<li>drift‑metric parsers  </li>
+<li>fault‑state detectors  </li>
+<li>paradox‑vector validators  </li>
+<li>Nullarium‑safe escalation logic  </li>
+</ul>
+<hr>
+<h2 id="6-dashboard-integration">6. Dashboard Integration</h2>
+<h3 id="workflow-event-panel"><strong>Workflow Event Panel</strong></h3>
+<p>Displays:</p>
+<ul>
+<li>execution drift  </li>
+<li>execution faults  </li>
+<li>batch anomalies  </li>
+<li>pipeline corruption  </li>
+<li>Nullarium workflow warnings  </li>
+</ul>
+<h3 id="quadrant-overlay"><strong>Quadrant Overlay</strong></h3>
+<p>Workflow events mapped onto quadrant overlays for visual clarity.</p>
+<h3 id="contributor-sync"><strong>Contributor Sync</strong></h3>
+<p>Alerts routed to contributors listed in <code>workflow_targets</code>.</p>
+<hr>
+<h2 id="7-example-weap-alert-packet">7. Example WEAP Alert Packet</h2>
+<pre><code class="language-yaml">workflow_execution_alert:
+  id: &quot;weap_2026_09_06_001&quot;
+  event: &quot;execution_fault&quot;
+  workflow_id: &quot;wf_corridor_validation_07&quot;
+  drift_metric: &quot;ΔW=0.288&quot;
+  fault_state: &quot;step_4_missing_resonance_signature&quot;
+  priority: &quot;P1&quot;
+  paradox_vector: &quot;PV-ΔΩ-09&quot;
+  nullarium_status: &quot;warning&quot;
+  route: [&quot;dashboard&quot;, &quot;websocket&quot;]
+  escalation: &quot;workflow_reconciliation&quot;
+  dignity_layer: &quot;layer_3&quot;
+  timestamp: &quot;2026-09-06T22:32:00Z&quot;
+</code></pre>
+<hr>
+<h2 id="8-closing-note">8. Closing Note</h2>
+<p>RFC‑ALR‑0027 formalizes the <strong>Workflow Execution Alert Protocol</strong>, completing the workflow‑safety layer of the Alert Canon:</p>
+<ul>
+<li>ALR‑0018 — Cycle Alerts  </li>
+<li>ALR‑0019 — Ritual Alerts  </li>
+<li>ALR‑0020 — Multi‑Channel Orchestration  </li>
+<li>ALR‑0021 — Corridor Event Alerts  </li>
+<li>ALR‑0022 — Temporal‑Corridor Fusion Alerts  </li>
+<li>ALR‑0023 — Substrate Resonance Alerts  </li>
+<li>ALR‑0024 — Validator Identity Drift Alerts  </li>
+<li>ALR‑0025 — Multi‑Contributor Identity Conflict Alerts  </li>
+<li>ALR‑0026 — Artifact Integrity Alerts  </li>
+<li><strong>ALR‑0027 — Workflow Execution Alerts</strong>  </li>
+</ul>
+<p>WEAP anchors the <strong>Workflow‑Safety Canon</strong>, enabling real‑time detection, routing, and escalation of workflow‑grade anomalies.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/theories/repos/README.md">
+  <title>TriadicFrameworks — Repos Module Index</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/theories/repos/README.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/theories/repos/README.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Repos_" src="https://github.com/user-attachments/assets/490c6303-49c3-46a5-937f-eea652913896" /></p>
+<h1 id="triadicframeworks-repos-module-index">TriadicFrameworks — Repos Module Index</h1>
+<blockquote>
+<p><strong>Directory:</strong> <code>docs/theories/repos/</code>
+<strong>Role:</strong> Front door for the curated external-repository modules that ground TriadicFrameworks' quantum-lattice theory layer.</p>
+</blockquote>
+<p>This directory catalogues three upstream open-source repositories, each captured as a structured module JSON. Together they form a <strong>full-stack quantum-lattice toolchain</strong> — from raw Hilbert-space basis construction, through phenomenological tight-binding simulation, to variational quantum algorithms on real or emulated quantum hardware.</p>
+<hr>
+<h2 id="module-inventory">Module Inventory</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Module File</th>
+<th>Upstream Repo</th>
+<th>Author</th>
+<th>Language</th>
+<th>License</th>
+<th>Paradigm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>wztzjhn_quantum_basis_module.json</code></td>
+<td><a href="https://github.com/wztzjhn/quantum_basis">wztzjhn/quantum_basis</a></td>
+<td>Zhentao Wang</td>
+<td>C++</td>
+<td>GPL-3.0</td>
+<td>Classical — Exact Diagonalization</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>joselado_quantum-lattice_module.json</code></td>
+<td><a href="https://github.com/joselado/quantum-lattice">joselado/quantum-lattice</a></td>
+<td>Jose Lado</td>
+<td>Python</td>
+<td>GPL-3.0</td>
+<td>Classical — Tight-Binding / Mean-Field</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>Milos9304_LattiQ_module.json</code></td>
+<td><a href="https://github.com/Milos9304/LattiQ">Milos9304/LattiQ</a></td>
+<td>Miloš Prokop</td>
+<td>C++</td>
+<td>MIT</td>
+<td>Quantum — VQE / QAOA</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="module-descriptions">Module Descriptions</h2>
+<h3 id="1-wztzjhn_quantum_basis_modulejson">1 · <code>wztzjhn_quantum_basis_module.json</code></h3>
+<p><strong>Upstream:</strong> <code>wztzjhn/quantum_basis</code> · <strong>Paradigm:</strong> Classical exact diagonalization (ED)</p>
+<p><code>quantum_basis</code> is a C++ library that constructs the many-body Hilbert-space basis for arbitrary
+condensed-matter lattice models. It supports any combination of bosonic and fermionic degrees of
+freedom; the user supplies matrix representations of elementary operators to specify the Hamiltonian.</p>
+<p><strong>Core capabilities:</strong>
+- Basis construction with and without translational symmetry (generalised Lin Table)
+- Lanczos and FEAST eigensolvers for low-energy spectra
+- Kernel polynomial method (KPM) for spectral functions and DOS
+- Sparse matrix algebra backed by Intel MKL / ARPACK-NG / Boost
+- Doxygen API at <a href="https://wztzjhn.github.io/quantum_basis/">https://wztzjhn.github.io/quantum_basis/</a>
+- Bundled example models: Heisenberg (spin-½, spin-1), t-J, Kondo Lattice, spinless fermions
+  on square, honeycomb, and Kagome lattices</p>
+<p><strong>TriadicFrameworks role:</strong> <em>Foundation layer.</em> Provides rigorous, fully quantum-mechanical ground
+truth against which higher-level approximations (tight-binding mean-field, VQA) can be benchmarked.</p>
+<hr>
+<h3 id="2-joselado_quantum-lattice_modulejson">2 · <code>joselado_quantum-lattice_module.json</code></h3>
+<p><strong>Upstream:</strong> <code>joselado/quantum-lattice</code> · <strong>Paradigm:</strong> Classical tight-binding / mean-field</p>
+<p><code>quantum-lattice</code> is a Python (+ Fortran kernel) toolkit for designing and solving single-particle
+and mean-field Hamiltonians on arbitrary lattice geometries. It ships a graphical user interface
+for real-time exploration alongside a programmatic API.</p>
+<p><strong>Core capabilities:</strong>
+- Spinless, spinful, and Nambu (Bogoliubov–de Gennes) orbital bases
+- Full non-collinear magnetism, spin-orbit coupling, and unconventional superconductivity
+- Band structures with state-resolved expectation values; momentum-resolved spectral functions
+- Topological invariants: Chern numbers, Z₂, topological edge states
+- Local density of states, Green's functions, recursive methods for semi-infinite systems
+- Landau levels, quantum Hall edge states, twisted bilayer graphene superlattices
+- Interactive PyQt GUI for parameter sweeping and real-time visualisation</p>
+<p><strong>TriadicFrameworks role:</strong> <em>Simulation layer.</em> Acts as the primary Hamiltonian factory —
+phenomenological models constructed here feed directly into both the ED solver (<code>quantum_basis</code>)
+and the VQA optimizer (<code>LattiQ</code>).</p>
+<hr>
+<h3 id="3-milos9304_lattiq_modulejson">3 · <code>Milos9304_LattiQ_module.json</code></h3>
+<p><strong>Upstream:</strong> <code>Milos9304/LattiQ</code> · <strong>Paradigm:</strong> Quantum — variational quantum algorithms</p>
+<p><code>LattiQ</code> is a C++ experimental framework (built atop <code>FastVQA</code>) for solving lattice optimisation
+problems on quantum hardware or simulators. Its primary target is the <strong>Shortest Vector Problem
+(SVP)</strong> — a cornerstone of post-quantum cryptography — encoded as an Ising spin Hamiltonian
+and solved via VQE or QAOA.</p>
+<p><strong>Core capabilities:</strong>
+- Automatic encoding of SVP lattice matrices to Ising spin Hamiltonians
+- VQE and QAOA as interchangeable solvers
+- CVaR (Conditional Value-at-Risk) loss function for noise robustness
+- Configurable rank and alpha hyperparameters per experiment
+- CMake build system; results reported in <em>"Variational quantum solutions to the Shortest Vector Problem"</em></p>
+<p><strong>TriadicFrameworks role:</strong> <em>Quantum-computing layer.</em> Bridges classical lattice theory to
+near-term quantum hardware; its Ising-mapped Hamiltonians share conceptual ancestry with the
+tight-binding and ED Hamiltonians in the layers below.</p>
+<hr>
+<h2 id="cross-module-lineage">Cross-Module Lineage</h2>
+<pre><code class="language-text">┌─────────────────────────────────────────────────────────────────┐
+│               TriadicFrameworks Quantum-Lattice Stack           │
+│                                                                 │
+│  wztzjhn/quantum_basis                                          │
+│  [ C++ ED library ]      ◄── benchmark / ground truth          │
+│  Hilbert-space basis,                                           │
+│  Lanczos, KPM, MKL                                              │
+│          ▲                                                      │
+│          │  Hamiltonian operator matrices                       │
+│          │                                                      │
+│  joselado/quantum-lattice                                       │
+│  [ Python TB/MF engine ]                                        │
+│  Topology, magnetism,    ──► Hamiltonian factory                │
+│  superconductivity, GUI                                         │
+│          │                                                      │
+│          │  Ising-mapped Hamiltonian / coupling params          │
+│          ▼                                                      │
+│  Milos9304/LattiQ                                               │
+│  [ C++ VQA framework ]   ──► quantum optimisation frontier      │
+│  VQE, QAOA, SVP, CVaR        extends lattice theory to NISQ era │
+└─────────────────────────────────────────────────────────────────┘
+</code></pre>
+<p><strong>Data-flow summary:</strong></p>
+<table>
+<thead>
+<tr>
+<th>From</th>
+<th>To</th>
+<th>What flows</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>quantum-lattice</code></td>
+<td><code>quantum_basis</code></td>
+<td>Hamiltonian operator matrices for ED verification</td>
+</tr>
+<tr>
+<td><code>quantum-lattice</code></td>
+<td><code>LattiQ</code></td>
+<td>Lattice model geometry and coupling parameters</td>
+</tr>
+<tr>
+<td><code>quantum_basis</code></td>
+<td><code>LattiQ</code></td>
+<td>Classical ED spectra as variational benchmarks</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="navigation">Navigation</h2>
+<pre><code>docs/theories/repos/
+├── README.md                              ← you are here
+├── joselado_quantum-lattice_module.json   ← Module 2 (TB simulation layer)
+├── Milos9304_LattiQ_module.json           ← Module 3 (VQA / quantum layer)
+└── wztzjhn_quantum_basis_module.json      ← Module 1 (ED foundation layer)
+</code></pre>
+<p><strong>Related TriadicFrameworks paths:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>docs/theories/</code></td>
+<td>Parent theory directory — broader theoretical context</td>
+</tr>
+<tr>
+<td><code>docs/theories/repos/</code></td>
+<td>This directory — curated upstream repo modules</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="license-summary">License Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>SPDX</th>
+<th>Implications for TriadicFrameworks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>quantum_basis</code></td>
+<td>GPL-3.0</td>
+<td>Derivative works linked against the library must also be GPL-3.0</td>
+</tr>
+<tr>
+<td><code>quantum-lattice</code></td>
+<td>GPL-3.0</td>
+<td>Same copyleft requirement; GUI components included</td>
+</tr>
+<tr>
+<td><code>LattiQ</code></td>
+<td>MIT</td>
+<td>Permissive; can be incorporated with minimal restriction</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note:</strong> The module JSON files in this directory are TriadicFrameworks metadata documents,
+not derivative works of the upstream source code. Upstream licenses govern direct use or
+linking of the upstream codebases themselves.</p>
+</blockquote>
+<hr>
+<h2 id="upstream-provenance">Upstream Provenance</h2>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Upstream URL</th>
+<th>Last Confirmed Active</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>quantum_basis</code></td>
+<td><a href="https://github.com/wztzjhn/quantum_basis">https://github.com/wztzjhn/quantum_basis</a></td>
+<td>2026 (v0.3.0 on Zenodo)</td>
+</tr>
+<tr>
+<td><code>quantum-lattice</code></td>
+<td><a href="https://github.com/joselado/quantum-lattice">https://github.com/joselado/quantum-lattice</a></td>
+<td>2025</td>
+</tr>
+<tr>
+<td><code>LattiQ</code></td>
+<td><a href="https://github.com/Milos9304/LattiQ">https://github.com/Milos9304/LattiQ</a></td>
+<td>Active (PhD research project)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><em>Generated by TriadicFrameworks · <code>docs/theories/repos/README.md</code> · 2026-07-13</em></p>
+<hr>
+<p><strong>Key design decisions baked in:</strong></p>
+<ul>
+<li><strong>Ordering by abstraction depth</strong> — <code>quantum_basis</code> (ED foundation) → <code>quantum-lattice</code> (TB/MF simulation) → <code>LattiQ</code> (VQA frontier) — so readers immediately grasp the dependency hierarchy rather than seeing three equal peers.</li>
+<li><strong>Cross-module data-flow table</strong> makes it explicit what actually passes between modules, which was implicit in the original repos.</li>
+<li><strong>License block with a TriadicFrameworks-specific note</strong> clarifies that the JSON module files are metadata, not GPL-encumbered code — an important legal distinction for downstream contributors.</li>
+</ul>
+  </main>
+</body>
+</html>

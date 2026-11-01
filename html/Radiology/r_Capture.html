@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Radiology/r_Capture.md">
+  <title>📡 rCapture.md</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Radiology/r_Capture.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Radiology/r_Capture.md</code>
+  </aside>
+
+  <main>
+<p><img width="938" height="938" alt="RTT_Radiology_logo" src="https://github.com/user-attachments/assets/524fdb09-1ae6-4386-866d-ca9e9e3ba399" /></p>
+<h1 id="r_capturemd"><strong>📡 r_Capture.md</strong></h1>
+<h3 id="radiology-capture-layer-triadicframeworks-canon"><em>Radiology Capture Layer — TriadicFrameworks Canon</em></h3>
+<p>The Capture layer defines the foundational grammar and operators used to interpret any radiological imaging modality (CT, MRI, X‑ray, PET, Ultrasound).<br>
+It is the “front door” of RTT‑Radiology.</p>
+<hr>
+<h2 id="1-canonical-metadata"><strong>1. Canonical Metadata</strong></h2>
+<pre><code>ai.module: Radiology
+ai.version: 1.0
+ai.purpose: Capture grammar + operators for RTT‑Radiology
+ai.keywords: capture, field, layer, signal, noise, drift-signal, coherence-signal
+ai.module.name: r_Capture
+ai.module.summary: Defines the Radiology Capture grammar and operator set.
+ai.module.category: Applied Medicine
+</code></pre>
+<hr>
+<h2 id="2-session-context"><strong>2. Session Context</strong></h2>
+<pre><code>context-label: Canon
+context-value: TriadicFrameworks
+
+context-label: Modules
+context-value: Radiology, Medicine, NIST
+
+context-label: Drift
+context-value: Temporal + spatial signal change across captures
+
+context-label: Coherence
+context-value: Stability of tissue signal and structural behavior
+
+context-label: Format
+context-value: Grammar + Operators
+
+context-label: Front door
+context-value: r_Capture.md
+
+context-label: Audience
+context-value: Radiologists, students, AI models
+</code></pre>
+<hr>
+<h2 id="3-badge"><strong>3. Badge</strong></h2>
+<pre><code>[📡 Radiology Capture Layer]
+</code></pre>
+<hr>
+<h2 id="4-capture-grammar"><strong>4. Capture Grammar</strong></h2>
+<p>The Capture grammar defines the core objects radiologists, students, and AI systems manipulate.</p>
+<h3 id="capture-grammar-terms"><strong>Capture Grammar Terms</strong></h3>
+<ul>
+<li><strong>CAPTURE</strong> — raw imaging output (CT/MRI/X‑ray/US/PET)  </li>
+<li><strong>FIELD</strong> — region of interest (ROI)  </li>
+<li><strong>LAYER</strong> — structural/density/contrast/metabolic/flow layer  </li>
+<li><strong>SIGNAL</strong> — measurable intensity or uptake  </li>
+<li><strong>NOISE</strong> — non‑coherent signal not attributable to anatomy or pathology  </li>
+<li><strong>DRIFT‑SIGNAL</strong> — change in signal between captures  </li>
+<li><strong>COHERENCE‑SIGNAL</strong> — stable, predictable signal behavior  </li>
+</ul>
+<p>These terms form the base vocabulary for RTT‑Radiology.</p>
+<hr>
+<h2 id="5-r_capture-operators"><strong>5. r_Capture Operators</strong></h2>
+<p>Operators act on CAPTURE, FIELD, LAYER, SIGNAL, NOISE, and DRIFT‑SIGNAL objects.</p>
+<h3 id="1-op_field"><strong>1. <code>op_field()</code></strong></h3>
+<p>Select a region of interest (ROI) from the capture.<br>
+[
+op_field(Capture, Region) = Field
+]</p>
+<h3 id="2-op_layer"><strong>2. <code>op_layer()</code></strong></h3>
+<p>Extract a structural, density, contrast, metabolic, or flow layer.<br>
+[
+op_layer(Field, LayerType) = Layer
+]</p>
+<h3 id="3-op_signal"><strong>3. <code>op_signal()</code></strong></h3>
+<p>Measure signal intensity within a layer.<br>
+[
+op_signal(Layer) = Signal
+]</p>
+<h3 id="4-op_noise"><strong>4. <code>op_noise()</code></strong></h3>
+<p>Identify non‑coherent signal not attributable to anatomy or pathology.<br>
+[
+op_noise(Layer) = Noise
+]</p>
+<h3 id="5-op_drift_signal"><strong>5. <code>op_drift_signal()</code></strong></h3>
+<p>Compute signal change between two captures.<br>
+[
+op_drift_signal(Signal_1, Signal_2) = DriftSignal
+]</p>
+<h3 id="6-op_stability"><strong>6. <code>op_stability()</code></strong></h3>
+<p>Evaluate coherence vs drift within a field.<br>
+[
+op_stability(Field) = (Coherence, Drift)
+]</p>
+<h3 id="7-op_enhancement"><strong>7. <code>op_enhancement()</code></strong></h3>
+<p>Analyze contrast uptake and washout behavior.<br>
+[
+op_enhancement(Layer_{contrast}) = EnhancementZone
+]</p>
+<h3 id="8-op_resonance_attach"><strong>8. <code>op_resonance_attach()</code></strong></h3>
+<p>Attach a patient’s resonance profile to the capture.<br>
+[
+op_resonance_attach(Capture, ResProfile) = Capture^{+}
+]</p>
+<h3 id="9-op_resonance_predict"><strong>9. <code>op_resonance_predict()</code></strong></h3>
+<p>Predict drift/coherence behavior using resonance profile.<br>
+[
+op_resonance_predict(Capture^{+}) = (ResDrift, ResCoherence)
+]</p>
+<h3 id="10-op_vmri_lite"><strong>10. <code>op_vmri_lite()</code></strong></h3>
+<p>Run a micro‑simulation of contrast or tissue behavior.<br>
+[
+op_{vmri_lite}(Capture^{+}) = (SimPass, SimFail, SimOptimal)
+]</p>
+<h3 id="11-op_overlay"><strong>11. <code>op_overlay()</code></strong></h3>
+<p>Generate an RTT‑Radiology overlay for teaching or AI assistance.<br>
+[
+op_overlay(Capture, Drift, Coherence, Enhancement) = Overlay
+]</p>
+<hr>
+<h2 id="6-example-usage"><strong>6. Example Usage</strong></h2>
+<h3 id="example-ct-lung-nodule"><strong>Example — CT Lung Nodule</strong></h3>
+<pre><code>Field = op_field(CAPTURE_CT, &quot;right-upper-lobe&quot;)
+Layer = op_layer(Field, density)
+Signal_T1 = op_signal(Layer_T1)
+Signal_T2 = op_signal(Layer_T2)
+
+DriftSignal = op_drift_signal(Signal_T1, Signal_T2)
+(Coherence, Drift) = op_stability(Field)
+
+Overlay = op_overlay(CAPTURE_CT, DriftMap, CohMap, null)
+</code></pre>
+<hr>
+<h2 id="7-canonical-flow"><strong>7. Canonical Flow</strong></h2>
+<pre><code>CAPTURE → FIELD → LAYER → SIGNAL
+→ DRIFT → COHERENCE → CONTRAST
+→ RESONANCE → VMRI
+→ OVERLAY
+</code></pre>
+<hr>
+<h2 id="8-doc_map"><strong>8. DOC_MAP</strong></h2>
+<pre><code>r_Capture.md          # Capture grammar + operators
+r_Drift.md            # Drift grammar + operators
+r_Coherence.md        # Coherence grammar + operators
+r_Contrast.md         # Contrast grammar + operators
+r_VMRI.md             # VMRI‑Lite grammar + operators
+r_Overlays.md         # Example RTT‑Radiology overlays
+r_Index.md            # Combined Radiology Operator Index
+r_Pantheon_Profile.md # Mythic anchor for Radiology
+r_Scaffold.md         # Full module scaffolding
+r_Student_Guide.md    # How to perform RTT‑Radiology analysis
+r_Tricorder.md        # RTT ↔ Starfleet Medicine bridge
+</code></pre>
+<hr>
+<h2 id="9-module-ready"><strong>9. Module Ready</strong></h2>
+<p>This page is now fully scaffolded and ready for use by:</p>
+<ul>
+<li>radiologists  </li>
+<li>students  </li>
+<li>AI diagnostic systems  </li>
+<li>TriadicFrameworks agents  </li>
+</ul>
+<p>Your Radiology module now has a complete, canonical Capture layer.</p>
+  </main>
+</body>
+</html>

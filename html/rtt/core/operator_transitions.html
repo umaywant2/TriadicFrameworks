@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/core/operator_transitions.md">
+  <title>RTT Core: Operator Transitions</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/core/operator_transitions.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/core/operator_transitions.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="rtt_core_operator_transitions" src="https://github.com/user-attachments/assets/c12243be-ff0e-4af4-a20c-c179457febc2" /></p>
+<hr>
+<p>module_id: rtt.core.operator_transitions
+version: 1.0.0
+status: draft
+rtt: 1
+coherence: declared
+drift: bounded
+paradox: structural
+tags:
+  - operator-transitions
+  - rtt-core
+  - operator-grammar
+  - operator-sequences
+  - operator-behaviors
+  - regime-dynamics
+  - drift-envelope
+  - coherence-budget
+  - triadic-time</p>
+<hr>
+<h1 id="rtt-core-operator-transitions">RTT Core: Operator Transitions</h1>
+<h2 id="1-purpose-and-scope">1. Purpose and scope</h2>
+<p><strong>Goal:</strong><br>
+Define the <strong>transition mechanics</strong> between RTT operators, including:</p>
+<ul>
+<li>How operators hand off state, coherence, and drift  </li>
+<li>How regime constraints propagate across transitions  </li>
+<li>How triadic-time layers shift during operator changes  </li>
+<li>How transitions determine eligibility for validation  </li>
+<li>How collapse and residue formation are triggered  </li>
+</ul>
+<p>Operator Transitions describe the <em>glue</em> between operators — the rules that govern how one operator leads into the next.</p>
+<hr>
+<h2 id="2-what-is-an-operator-transition">2. What is an operator transition?</h2>
+<blockquote>
+<p>An operator transition is the structured movement of a branch<br>
+from one operator’s output state into the next operator’s input state,<br>
+under regime, drift, coherence, and readout constraints.</p>
+</blockquote>
+<p>Transitions are not optional — they are the backbone of RTT sequence validity.</p>
+<hr>
+<h2 id="3-transition-structure">3. Transition structure</h2>
+<p>A transition is defined as:</p>
+<p>[
+O_k(b_i) \Rightarrow O_{k+1}(b_i')
+]</p>
+<p>Where:</p>
+<ul>
+<li>(O_k) is the current operator  </li>
+<li>(O_{k+1}) is the next operator  </li>
+<li>(b_i') is the updated branch  </li>
+<li>Regime constraints must be satisfied  </li>
+<li>Drift and coherence must remain within envelope  </li>
+<li>Readout constraints must be respected  </li>
+</ul>
+<p>A transition is <strong>valid</strong> if:</p>
+<p>[
+b_i' \in \mathcal{R}(t_1, t_2, t_3)
+]</p>
+<p>Otherwise the branch collapses.</p>
+<hr>
+<h2 id="4-transition-types">4. Transition types</h2>
+<p>RTT defines four canonical transition types:</p>
+<ol>
+<li><strong>State Transition</strong>  </li>
+<li><strong>Coherence Transition</strong>  </li>
+<li><strong>Drift Transition</strong>  </li>
+<li><strong>Readout Transition</strong></li>
+</ol>
+<p>These transitions occur across triadic time.</p>
+<hr>
+<h2 id="5-state-transitions">5. State Transitions</h2>
+<h3 id="51-definition">5.1 Definition</h3>
+<p>State transitions modify representational content:</p>
+<p>[
+|\psi_i\rangle \rightarrow |\psi_i'\rangle
+]</p>
+<h3 id="52-causes">5.2 Causes</h3>
+<ul>
+<li>Extension  </li>
+<li>Regime shift  </li>
+<li>Boundary modulation  </li>
+<li>Arrival arc  </li>
+</ul>
+<h3 id="53-effects">5.3 Effects</h3>
+<ul>
+<li>Branch count may increase  </li>
+<li>Representational geometry may change  </li>
+<li>Regime eligibility may shift  </li>
+</ul>
+<hr>
+<h2 id="6-coherence-transitions">6. Coherence Transitions</h2>
+<h3 id="61-definition">6.1 Definition</h3>
+<p>Coherence transitions modify coherence weights:</p>
+<p>[
+c_i \rightarrow c_i'
+]</p>
+<h3 id="62-causes">6.2 Causes</h3>
+<ul>
+<li>Partition (extension)  </li>
+<li>Stabilization  </li>
+<li>Drift-induced decay  </li>
+<li>Coherence gating  </li>
+<li>Validation (consumption)  </li>
+</ul>
+<h3 id="63-effects">6.3 Effects</h3>
+<ul>
+<li>Eligibility may increase or decrease  </li>
+<li>Branch may enter or exit CMR  </li>
+<li>Collapse may become imminent  </li>
+</ul>
+<hr>
+<h2 id="7-drift-transitions">7. Drift Transitions</h2>
+<h3 id="71-definition">7.1 Definition</h3>
+<p>Drift transitions modify drift magnitude:</p>
+<p>[
+\Delta_i \rightarrow \Delta_i'
+]</p>
+<h3 id="72-causes">7.2 Causes</h3>
+<ul>
+<li>Extension  </li>
+<li>Drift operators  </li>
+<li>Regime inversion  </li>
+<li>Boundary modulation  </li>
+</ul>
+<h3 id="73-effects">7.3 Effects</h3>
+<ul>
+<li>Branch may approach drift boundary  </li>
+<li>Drift envelope may be exceeded  </li>
+<li>Collapse may occur  </li>
+</ul>
+<hr>
+<h2 id="8-readout-transitions">8. Readout Transitions</h2>
+<h3 id="81-definition">8.1 Definition</h3>
+<p>Readout transitions determine whether a branch becomes classical:</p>
+<p>[
+V(b_i) \rightarrow \text{classical}
+]</p>
+<h3 id="82-causes">8.2 Causes</h3>
+<ul>
+<li>Validator Pulse  </li>
+<li>Arrival continuity  </li>
+<li>Collapse of non-selected branches  </li>
+</ul>
+<h3 id="83-effects">8.3 Effects</h3>
+<ul>
+<li>Coherence consumed  </li>
+<li>Non-selected branches collapse  </li>
+<li>Classical information emerges  </li>
+</ul>
+<hr>
+<h2 id="9-transition-constraints">9. Transition constraints</h2>
+<p>Transitions must satisfy:</p>
+<h3 id="91-coherence-constraints">9.1 Coherence constraints</h3>
+<ul>
+<li>(c_i' \geq C_{\min})  </li>
+<li>Coherence cannot be negative  </li>
+<li>Coherence consumption must be final  </li>
+</ul>
+<h3 id="92-drift-constraints">9.2 Drift constraints</h3>
+<ul>
+<li>(\Delta_i' \leq \Delta_{\max})  </li>
+<li>Drift envelope must be respected  </li>
+<li>Drift spikes cause collapse  </li>
+</ul>
+<h3 id="93-regime-constraints">9.3 Regime constraints</h3>
+<p>Operators must remain inside:</p>
+<ul>
+<li>SRR  </li>
+<li>DBR  </li>
+<li>CMR  </li>
+<li>DVR  </li>
+<li>ECR  </li>
+</ul>
+<p>Violation → invalid transition.</p>
+<h3 id="94-readout-constraints">9.4 Readout constraints</h3>
+<p>Validator Pulse must occur:</p>
+<ul>
+<li>Inside SRR  </li>
+<li>With sufficient coherence  </li>
+<li>Before drift exceeds envelope  </li>
+</ul>
+<p>Violation → no classical outcome.</p>
+<hr>
+<h2 id="10-transition-chains">10. Transition chains</h2>
+<p>Transitions form chains:</p>
+<p>[
+O_1 \Rightarrow O_2 \Rightarrow O_3 \Rightarrow \cdots \Rightarrow O_n
+]</p>
+<p>A chain is valid if:</p>
+<p>[
+\forall k,\ O_k(b_i) \Rightarrow O_{k+1}(b_i') \text{ is valid}
+]</p>
+<p>Invalid transitions break the chain and cause collapse.</p>
+<hr>
+<h2 id="11-composite-transitions">11. Composite transitions</h2>
+<p>Composite transitions combine multiple transition types:</p>
+<h3 id="111-extension-composite">11.1 Extension Composite</h3>
+<ul>
+<li>State expansion  </li>
+<li>Coherence partition  </li>
+<li>Drift increase  </li>
+</ul>
+<h3 id="112-stabilization-composite">11.2 Stabilization Composite</h3>
+<ul>
+<li>Drift reduction  </li>
+<li>Coherence increase  </li>
+<li>Regime entry  </li>
+</ul>
+<h3 id="113-validation-composite">11.3 Validation Composite</h3>
+<ul>
+<li>Coherence consumption  </li>
+<li>Collapse of non-selected branches  </li>
+<li>Classical emergence  </li>
+</ul>
+<hr>
+<h2 id="12-example-quantum-cloning-alignment">12. Example: Quantum “cloning” alignment</h2>
+<p>The experiment uses:</p>
+<ol>
+<li><strong>State Transition:</strong> EXTEND creates two branches  </li>
+<li><strong>Drift Transition:</strong> DRIFT increases drift  </li>
+<li><strong>Coherence Transition:</strong> STABILIZE maintains coherence  </li>
+<li><strong>Readout Transition:</strong> VALIDATE selects one branch  </li>
+<li><strong>Collapse Transition:</strong> COLLAPSE removes the other branch  </li>
+</ol>
+<p>Operator Transitions explain:</p>
+<ul>
+<li>Why multi-branch representation is allowed  </li>
+<li>Why only one branch becomes classical  </li>
+<li>Why drift and coherence matter  </li>
+<li>Why no-cloning is not violated  </li>
+</ul>
+<hr>
+<h2 id="13-paradox-handling">13. Paradox handling</h2>
+<p>Operator Transitions prevent paradoxes by:</p>
+<ul>
+<li>Enforcing regime constraints  </li>
+<li>Managing drift and coherence evolution  </li>
+<li>Restricting readout timing  </li>
+<li>Collapsing non-selected branches  </li>
+</ul>
+<p>Thus:</p>
+<ul>
+<li>“Multiple branches exist” → state transition  </li>
+<li>“Only one is real” → readout transition  </li>
+<li>“Others disappear” → collapse transition  </li>
+<li>“No violation occurs” → regime constraints  </li>
+</ul>
+<hr>
+<h2 id="14-canon-integration-and-cross-links">14. Canon integration and cross-links</h2>
+<p><strong>Primary cross-links:</strong></p>
+<ul>
+<li><code>/docs/rtt/core/operator_grammar.md</code></li>
+<li><code>/docs/rtt/core/operator_index.md</code></li>
+<li><code>/docs/rtt/core/operator_families.md</code></li>
+<li><code>/docs/rtt/core/operator_behaviors.md</code></li>
+<li><code>/docs/rtt/core/operator_sequences.md</code></li>
+<li><code>/docs/rtt/core/regime_maps.md</code></li>
+<li><code>/docs/rtt/core/regime_maps_extended.md</code></li>
+<li><code>/docs/rtt/core/regime_geometry.md</code></li>
+<li><code>/docs/rtt/core/regime_topology.md</code></li>
+<li><code>/docs/rtt/core/regime_dynamics.md</code></li>
+<li><code>/docs/rtt/core/time_triads.md</code></li>
+<li><code>/docs/rtt/core/coherence_budget.md</code></li>
+<li><code>/docs/rtt/core/validator_pulse.md</code></li>
+<li><code>/docs/rtt/core/dimensional_drift_envelope.md</code></li>
+<li><code>/docs/rtt/core/alignment_quantum_cloning.md</code></li>
+</ul>
+<p><strong>Status:</strong><br>
+This module defines the transition mechanics between RTT operators.<br>
+Once transition diagrams are added, it can be promoted from <code>draft</code> to <code>stable</code>.</p>
+  </main>
+</body>
+</html>

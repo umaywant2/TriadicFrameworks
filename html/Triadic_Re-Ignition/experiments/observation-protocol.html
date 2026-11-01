@@ -1,0 +1,2296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Triadic_Re-Ignition/experiments/observation-protocol.md">
+  <title>Observation Protocol</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Triadic_Re-Ignition/experiments/observation-protocol.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Triadic_Re-Ignition/experiments/observation-protocol.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Triadic_Re-Ignition_experiments_observation-protocol_" src="https://github.com/user-attachments/assets/5fc0e7ab-64ce-4edb-81b8-04a46a9bb6c1" /></p>
+<h1 id="observation-protocol">Observation Protocol</h1>
+<blockquote>
+<p><strong>Preserve what happened before deciding what it means.</strong></p>
+</blockquote>
+<p>The Observation Protocol provides the baseline experimental method for Triadic Re-Ignition.</p>
+<p>Its purpose is to preserve an observation in a form that can later support:</p>
+<pre><code class="language-text">comparison
+
+observer analysis
+
+timeline reconstruction
+
+invariant detection
+
+alternative hypotheses
+
+experimental testing
+
+and revision
+</code></pre>
+<p>The core sequence is:</p>
+<pre><code class="language-text">OBSERVE
+   ↓
+CAPTURE
+   ↓
+ANCHOR
+   ↓
+LOCATE THE OBSERVER
+   ↓
+SEPARATE INTERPRETATION
+   ↓
+IDENTIFY INVARIANTS
+   ↓
+GENERATE ALTERNATIVES
+   ↓
+DEFINE DISCRIMINATORS
+   ↓
+TEST
+   ↓
+REVISE
+</code></pre>
+<p>The protocol does not require the observer to suppress interpretation.</p>
+<p>It requires interpretation to remain distinguishable from the observation that produced it.</p>
+<hr>
+<h2 id="context">Context</h2>
+<pre><code class="language-text">RTT: 1
+coherence: declared
+drift: bounded
+paradox: structural
+</code></pre>
+<p><strong>Module:</strong> Triadic Re-Ignition<br>
+<strong>Domain:</strong> Experiments<br>
+<strong>Artifact:</strong> Observation Protocol<br>
+<strong>Status:</strong> Exploratory baseline protocol</p>
+<hr>
+<h1 id="core-principle">Core Principle</h1>
+<p>The simplest distinction is:</p>
+<pre><code class="language-text">WHAT HAPPENED
+       ≠
+WHAT I THINK IT MEANS
+</code></pre>
+<p>Both matter.</p>
+<p>But they occupy different layers.</p>
+<p>A useful observation record therefore preserves:</p>
+<pre><code class="language-text">OBSERVATION
+     ↓
+What happened?
+
+INTERPRETATION
+     ↓
+What might it mean?
+
+HYPOTHESIS
+     ↓
+What could explain it?
+
+TEST
+     ↓
+What could distinguish
+the explanations?
+</code></pre>
+<p>This separation provides the foundation for later analysis.</p>
+<hr>
+<h1 id="why-capture-comes-first">Why Capture Comes First</h1>
+<p>Observation can be reorganized very quickly by interpretation.</p>
+<p>A possible sequence is:</p>
+<pre><code class="language-text">EVENT
+  ↓
+FIRST SIGNAL
+  ↓
+RECOGNITION
+  ↓
+INTERPRETATION
+  ↓
+STORY
+</code></pre>
+<p>After the story stabilizes, it may become difficult to remember:</p>
+<pre><code class="language-text">what appeared first
+</code></pre>
+<p>versus:</p>
+<pre><code class="language-text">what was added afterward
+</code></pre>
+<p>The protocol therefore prioritizes early capture.</p>
+<hr>
+<h1 id="capture-is-not-proof">Capture Is Not Proof</h1>
+<p>A captured observation is:</p>
+<pre><code class="language-text">a preserved report
+</code></pre>
+<p>It is not automatically:</p>
+<pre><code class="language-text">verified evidence
+
+causal evidence
+
+mechanistic evidence
+
+or proof of ontology
+</code></pre>
+<p>Therefore:</p>
+<pre><code class="language-text">CAPTURE
+    ≠
+VERIFICATION
+</code></pre>
+<p>Capture protects the observation from being lost.</p>
+<p>Later stages evaluate what the observation supports.</p>
+<hr>
+<h1 id="observation-categories">Observation Categories</h1>
+<p>An observation should identify its access channel where possible.</p>
+<p>Possible categories include:</p>
+<pre><code class="language-text">DIRECT OBSERVATION
+
+MEASUREMENT
+
+MEMORY REPORT
+
+EXTERNAL RECORD
+
+OTHER OBSERVER REPORT
+
+MODEL OUTPUT
+
+INFERENCE
+</code></pre>
+<p>These may provide different evidence properties.</p>
+<p>They should not automatically be treated as interchangeable.</p>
+<hr>
+<h1 id="direct-observation">Direct Observation</h1>
+<p>A direct observation records what the observer reports perceiving or detecting in the present interaction.</p>
+<p>Example structure:</p>
+<pre><code class="language-text">&quot;I observed X.&quot;
+</code></pre>
+<p>Then separately:</p>
+<pre><code class="language-text">&quot;I interpreted X as Y.&quot;
+</code></pre>
+<p>This preserves the difference between event and explanation.</p>
+<hr>
+<h1 id="measurement">Measurement</h1>
+<p>A measurement includes a defined instrument, scale, procedure, or recorded value.</p>
+<p>Capture:</p>
+<pre><code class="language-text">what was measured
+
+how it was represented
+
+what instrument or method was used
+
+what conditions were present
+</code></pre>
+<p>Do not silently replace:</p>
+<pre><code class="language-text">measured result
+</code></pre>
+<p>with:</p>
+<pre><code class="language-text">interpretation of measured result
+</code></pre>
+<hr>
+<h1 id="memory-report">Memory Report</h1>
+<p>A memory report should be labeled as memory.</p>
+<pre><code class="language-text">MEMORY REPORT
+
+&quot;I remember X.&quot;
+</code></pre>
+<p>This should remain distinguishable from:</p>
+<pre><code class="language-text">EXTERNAL RECORD
+
+&quot;Document Y records X.&quot;
+</code></pre>
+<p>Agreement between them may be informative.</p>
+<p>Disagreement may also be informative.</p>
+<hr>
+<h1 id="external-record">External Record</h1>
+<p>External records may include:</p>
+<pre><code class="language-text">documents
+
+notes
+
+recordings
+
+saved artifacts
+
+measurements
+
+previous responses
+
+logs
+</code></pre>
+<p>Preserve the original record when practical rather than relying only on later summary.</p>
+<hr>
+<h1 id="other-observer-report">Other Observer Report</h1>
+<p>If another observer supplies information, capture:</p>
+<pre><code class="language-text">what they reported
+
+when they reported it
+
+what they directly observed
+
+what they inferred
+</code></pre>
+<p>Do not silently convert another person's interpretation into direct observation.</p>
+<hr>
+<h1 id="model-output">Model Output</h1>
+<p>A model may produce:</p>
+<pre><code class="language-text">prediction
+
+classification
+
+simulation result
+
+generated representation
+</code></pre>
+<p>Model output should remain labeled as:</p>
+<pre><code class="language-text">MODEL OUTPUT
+</code></pre>
+<p>rather than:</p>
+<pre><code class="language-text">OBSERVED REALITY
+</code></pre>
+<p>unless external observation independently establishes correspondence.</p>
+<hr>
+<h1 id="inference">Inference</h1>
+<p>Inference is necessary.</p>
+<p>But it should be visible.</p>
+<pre><code class="language-text">OBSERVATION
+
+A
+</code></pre>
+<pre><code class="language-text">OBSERVATION
+
+B
+</code></pre>
+<pre><code class="language-text">INFERENCE
+
+A and B may be related.
+</code></pre>
+<p>Then:</p>
+<pre><code class="language-text">HYPOTHESIS
+
+Relationship R explains A and B.
+</code></pre>
+<p>This preserves the reasoning chain.</p>
+<hr>
+<h1 id="immediate-capture">Immediate Capture</h1>
+<p>When an observation appears significant, record the smallest useful sequence.</p>
+<pre><code class="language-text">WHAT HAPPENED?
+
+WHAT HAPPENED IMMEDIATELY BEFORE?
+
+WHAT DID I NOTICE FIRST?
+
+WHAT BECAME RECOGNIZABLE?
+
+WHAT DID I THINK IT MEANT?
+</code></pre>
+<p>Do not wait for a complete theory.</p>
+<p>Incomplete early capture may be more useful than polished retrospective narrative.</p>
+<hr>
+<h1 id="the-first-signal">The First Signal</h1>
+<p>Triadic Re-Ignition gives special attention to:</p>
+<pre><code class="language-text">FIRST SIGNAL
+</code></pre>
+<p>This may be:</p>
+<pre><code class="language-text">familiarity
+
+salience
+
+unexpected correspondence
+
+contradiction
+
+pattern recognition
+
+a question
+
+a representation failure
+</code></pre>
+<p>The first signal is not automatically meaningful.</p>
+<p>But preserving it helps reconstruct the event sequence.</p>
+<hr>
+<h1 id="observation-versus-recognition">Observation Versus Recognition</h1>
+<p>The observer may notice something before explicitly identifying it.</p>
+<pre><code class="language-text">OBSERVATION
+    ↓
+FIRST SIGNAL
+    ↓
+RESONANCE
+    ↓
+RECOGNITION
+</code></pre>
+<p>These stages may occur rapidly.</p>
+<p>The protocol should preserve their order when the observer can report it.</p>
+<hr>
+<h1 id="recognition-versus-explanation">Recognition Versus Explanation</h1>
+<p>A Recognition Event may be:</p>
+<pre><code class="language-text">&quot;There it is.&quot;
+</code></pre>
+<p>The explanation may follow:</p>
+<pre><code class="language-text">&quot;This must mean...&quot;
+</code></pre>
+<p>Therefore:</p>
+<pre><code class="language-text">RECOGNITION
+    ≠
+EXPLANATION
+</code></pre>
+<p>The protocol records both.</p>
+<p>It does not merge them.</p>
+<hr>
+<h1 id="temporal-anchor">Temporal Anchor</h1>
+<p>Every observation should be temporally anchored as precisely as the available evidence permits.</p>
+<p>Record:</p>
+<pre><code class="language-text">event order
+
+known timestamps
+
+relative sequence
+
+defined intervals
+</code></pre>
+<p>Do not invent precision that was not available.</p>
+<p>If exact timing is unknown:</p>
+<pre><code class="language-text">UNKNOWN
+</code></pre>
+<p>is valid.</p>
+<hr>
+<h1 id="event-sequence">Event Sequence</h1>
+<p>A minimal sequence may be:</p>
+<pre><code class="language-text">E₁
+ ↓
+E₂
+ ↓
+E₃
+ ↓
+OBSERVATION
+</code></pre>
+<p>For Re-Ignition:</p>
+<pre><code class="language-text">PRIOR STATE
+    ↓
+TRIGGER
+    ↓
+FIRST SIGNAL
+    ↓
+RECOGNITION
+    ↓
+INTERPRETATION
+</code></pre>
+<p>The sequence itself may later help distinguish competing explanations.</p>
+<hr>
+<h1 id="relative-timing">Relative Timing</h1>
+<p>When exact timing is unavailable, preserve relative order.</p>
+<p>For example:</p>
+<pre><code class="language-text">The cue appeared first.
+
+Recognition occurred afterward.
+
+The explanation came later.
+</code></pre>
+<p>This is more useful than assigning unsupported timestamps.</p>
+<hr>
+<h1 id="observer-location">Observer Location</h1>
+<p>Every observation occurs from a position.</p>
+<p>Record:</p>
+<pre><code class="language-text">observer
+
+physical position
+
+temporal position
+
+available information
+
+context
+
+representation
+
+relevant prior knowledge
+</code></pre>
+<p>Only variables relevant to the task need to be captured.</p>
+<p>The objective is not to profile the observer.</p>
+<p>It is to preserve observational conditions.</p>
+<hr>
+<h1 id="local-observer-record">Local Observer Record</h1>
+<p>A useful observer record is:</p>
+<pre><code class="language-text">OBSERVER
+
+Who or what observed?
+</code></pre>
+<pre><code class="language-text">POSITION
+
+From where?
+</code></pre>
+<pre><code class="language-text">ACCESS
+
+What information was available?
+</code></pre>
+<pre><code class="language-text">CONTEXT
+
+Under what conditions?
+</code></pre>
+<pre><code class="language-text">FORM
+
+How was the relationship represented?
+</code></pre>
+<p>This makes later comparison easier.</p>
+<hr>
+<h1 id="observer-state">Observer State</h1>
+<p>Observer state may include relevant variables such as:</p>
+<pre><code class="language-text">knowledge
+
+attention
+
+prior exposure
+
+memory access
+
+current context
+
+representation
+
+expectation
+</code></pre>
+<p>These should be recorded when relevant.</p>
+<p>They should not be inferred from unrelated personal characteristics.</p>
+<hr>
+<h1 id="observer-transition">Observer Transition</h1>
+<p>If observation changes:</p>
+<pre><code class="language-text">Observer State A
+        ↓
+Observation A
+</code></pre>
+<p>then:</p>
+<pre><code class="language-text">Observer State B
+        ↓
+Observation B
+</code></pre>
+<p>record:</p>
+<pre><code class="language-text">what changed between A and B
+</code></pre>
+<p>rather than assuming the external structure changed.</p>
+<hr>
+<h1 id="locality">Locality</h1>
+<p>The protocol treats observation as local.</p>
+<pre><code class="language-text">LOCAL
+    ≠
+FALSE
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">LOCAL
+    ≠
+COMPLETE
+</code></pre>
+<p>The observer reports what is accessible from the current position.</p>
+<p>Broader claims require additional evidence.</p>
+<hr>
+<h1 id="context_1">Context</h1>
+<p>Context can alter:</p>
+<pre><code class="language-text">attention
+
+interpretation
+
+access
+
+cue effectiveness
+
+representation
+
+measurement
+</code></pre>
+<p>Record relevant context before deciding whether it matters.</p>
+<p>Possible context variables include:</p>
+<pre><code class="language-text">task
+
+environment
+
+instructions
+
+available materials
+
+preceding events
+
+representation used
+</code></pre>
+<hr>
+<h1 id="representation">Representation</h1>
+<p>Record how the observation is being represented.</p>
+<p>Possible forms include:</p>
+<pre><code class="language-text">prose
+
+diagram
+
+timeline
+
+equation
+
+table
+
+category
+
+model
+
+image
+
+symbol
+</code></pre>
+<p>Representation matters because one form may expose relationships another form hides.</p>
+<hr>
+<h1 id="first-form">First Form</h1>
+<p>For Re-Ignition events, preserve the earliest usable representation where possible.</p>
+<pre><code class="language-text">FIRST SIGNAL
+    ↓
+RECOGNITION
+    ↓
+FIRST FORM
+</code></pre>
+<p>Later representations may be more refined.</p>
+<p>The differences between them may contain useful evidence about interpretation and reintegration.</p>
+<hr>
+<h1 id="alternative-form">Alternative Form</h1>
+<p>After preserving the first form, attempt another representation.</p>
+<pre><code class="language-text">FORM A
+   ↓
+FORM B
+</code></pre>
+<p>Then ask:</p>
+<pre><code class="language-text">What changed?
+
+What remained invariant?
+
+What disappeared?
+
+What became visible?
+</code></pre>
+<p>This can help distinguish structural relationships from representation-specific effects.</p>
+<hr>
+<h1 id="form-formless-boundary">Form / Formless Boundary</h1>
+<p>The protocol may record:</p>
+<pre><code class="language-text">WHAT IS CURRENTLY REPRESENTABLE
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">WHAT REMAINS UNRESOLVED
+</code></pre>
+<p>The unresolved side should not automatically be labeled:</p>
+<pre><code class="language-text">hidden structure
+</code></pre>
+<p>The appropriate status may simply be:</p>
+<pre><code class="language-text">UNKNOWN
+</code></pre>
+<hr>
+<h1 id="raw-observation-layer">Raw Observation Layer</h1>
+<p>The raw observation layer should contain the smallest practical description of what occurred.</p>
+<p>For example:</p>
+<pre><code class="language-text">&quot;After seeing diagram X,
+I recognized a similarity
+between A and B.&quot;
+</code></pre>
+<p>Avoid immediately adding:</p>
+<pre><code class="language-text">because
+
+therefore
+
+must mean
+
+proves
+
+shows the mechanism
+</code></pre>
+<p>Those belong downstream.</p>
+<hr>
+<h1 id="interpretation-layer">Interpretation Layer</h1>
+<p>Interpretation asks:</p>
+<pre><code class="language-text">What do I currently think
+the observation means?
+</code></pre>
+<p>The interpretation may be:</p>
+<pre><code class="language-text">strong
+
+weak
+
+tentative
+
+multiple
+
+or absent
+</code></pre>
+<p>A valid entry is:</p>
+<pre><code class="language-text">UNKNOWN
+</code></pre>
+<hr>
+<h1 id="hypothesis-layer">Hypothesis Layer</h1>
+<p>A hypothesis proposes an explanation.</p>
+<pre><code class="language-text">OBSERVATION
+     ↓
+INTERPRETATION
+     ↓
+HYPOTHESIS
+</code></pre>
+<p>Examples:</p>
+<pre><code class="language-text">H1
+memory retrieval
+
+H2
+reconstruction
+
+H3
+representation effect
+
+H4
+context effect
+
+H5
+new synthesis
+
+H6
+measurement error
+
+H7
+unknown
+</code></pre>
+<p>The set should fit the observation rather than being mechanically reused.</p>
+<hr>
+<h1 id="alternative-hypothesis">Alternative Hypothesis</h1>
+<p>Require at least one meaningful alternative when a preferred explanation exists.</p>
+<p>This prevents:</p>
+<pre><code class="language-text">first explanation
+      ↓
+only explanation
+      ↓
+certainty
+</code></pre>
+<p>The purpose is not to generate endless possibilities.</p>
+<p>It is to keep comparison alive.</p>
+<hr>
+<h1 id="minimum-claim-layer">Minimum-Claim Layer</h1>
+<p>After describing the observation, write the smallest statement clearly supported by it.</p>
+<p>Example experience:</p>
+<pre><code class="language-text">&quot;I accessed another timeline.&quot;
+</code></pre>
+<p>Minimum observational claim:</p>
+<pre><code class="language-text">&quot;I experienced a temporal
+representation that appeared
+inconsistent with my previous
+timeline model.&quot;
+</code></pre>
+<p>Then preserve:</p>
+<pre><code class="language-text">another timeline
+</code></pre>
+<p>as a hypothesis if relevant.</p>
+<hr>
+<h1 id="claim-ladder">Claim Ladder</h1>
+<p>Statements should be classified by level.</p>
+<pre><code class="language-text">LEVEL 1
+OBSERVATION
+</code></pre>
+<pre><code class="language-text">LEVEL 2
+RELATIONSHIP
+</code></pre>
+<pre><code class="language-text">LEVEL 3
+INTERPRETATION
+</code></pre>
+<pre><code class="language-text">LEVEL 4
+HYPOTHESIS
+</code></pre>
+<pre><code class="language-text">LEVEL 5
+MECHANISM
+</code></pre>
+<pre><code class="language-text">LEVEL 6
+GENERAL MECHANISM
+</code></pre>
+<pre><code class="language-text">LEVEL 7
+PHYSICAL PRINCIPLE
+</code></pre>
+<pre><code class="language-text">LEVEL 8
+ONTOLOGY
+</code></pre>
+<p>Not every investigation needs to climb the ladder.</p>
+<hr>
+<h1 id="claim-promotion">Claim Promotion</h1>
+<p>Movement upward should answer:</p>
+<pre><code class="language-text">What new evidence
+justifies the stronger claim?
+</code></pre>
+<p>If no new evidence exists:</p>
+<pre><code class="language-text">do not promote the claim
+</code></pre>
+<p>A useful observation remains useful even if mechanism remains unknown.</p>
+<hr>
+<h1 id="invariants">Invariants</h1>
+<p>When comparing observations, search for what remains stable.</p>
+<pre><code class="language-text">Observation A ──┐
+                ├── Invariant R?
+Observation B ──┘
+</code></pre>
+<p>Possible invariants include:</p>
+<pre><code class="language-text">event ordering
+
+measurement
+
+relationship
+
+function
+
+artifact
+
+transformation
+
+shared record
+
+representation feature
+</code></pre>
+<p>Invariants help locate the layer at which change actually occurred.</p>
+<hr>
+<h1 id="difference-mapping">Difference Mapping</h1>
+<p>Also record:</p>
+<pre><code class="language-text">what changed
+</code></pre>
+<p>For example:</p>
+<pre><code class="language-text">STATE A
+│
+├── invariant X
+├── invariant Y
+└── variable P
+
+STATE B
+│
+├── invariant X
+├── invariant Y
+└── variable Q
+</code></pre>
+<p>Then ask:</p>
+<pre><code class="language-text">What explains P → Q?
+</code></pre>
+<p>This produces a more precise research problem.</p>
+<hr>
+<h1 id="divergence-point">Divergence Point</h1>
+<p>When two observations or models differ, locate the first meaningful divergence.</p>
+<pre><code class="language-text">A → B → C → D
+        │
+        └── X → Y
+</code></pre>
+<p>Ask whether divergence occurs in:</p>
+<pre><code class="language-text">physical event
+
+memory
+
+record
+
+observer state
+
+context
+
+representation
+
+measurement
+
+interpretation
+</code></pre>
+<p>The divergence point often tells us where to investigate next.</p>
+<hr>
+<h1 id="paradox">Paradox</h1>
+<p>If two observations conflict:</p>
+<pre><code class="language-text">A ≠ B
+</code></pre>
+<p>preserve the contradiction before resolving it.</p>
+<pre><code class="language-text">A
++
+B
++
+OBSERVER / CONTEXT
+</code></pre>
+<p>Then ask:</p>
+<pre><code class="language-text">What remains invariant?
+
+What conditions differ?
+
+What assumptions differ?
+
+Could one observation be wrong?
+
+Could both be incomplete?
+</code></pre>
+<p>Paradox is treated as a signal.</p>
+<p>Not as proof of hidden structure.</p>
+<hr>
+<h1 id="paradox-record">Paradox Record</h1>
+<p>A useful paradox entry is:</p>
+<pre><code class="language-text">MODEL / OBSERVATION A:
+________________________________
+
+MODEL / OBSERVATION B:
+________________________________
+
+EXACT CONTRADICTION:
+________________________________
+
+SHARED INVARIANT:
+________________________________
+
+DIFFERING CONDITION:
+________________________________
+
+CURRENT STATUS:
+UNRESOLVED
+</code></pre>
+<p>This preserves the problem cleanly.</p>
+<hr>
+<h1 id="unknown">Unknown</h1>
+<p><code>UNKNOWN</code> is a first-class protocol state.</p>
+<p>Use it when:</p>
+<pre><code class="language-text">timing is unknown
+
+mechanism is unknown
+
+observer variable is unknown
+
+relationship is unclear
+
+evidence is insufficient
+
+or hypotheses remain tied
+</code></pre>
+<p>Do not fill unknown fields merely because the framework provides vocabulary.</p>
+<hr>
+<h1 id="missing-variable">Missing Variable</h1>
+<p>If the current model does not explain an observation:</p>
+<pre><code class="language-text">OBSERVATION
+      ↓
+MODEL FAILURE
+      ↓
+MISSING VARIABLE?
+</code></pre>
+<p>Classify candidate missing variables broadly.</p>
+<pre><code class="language-text">system
+
+observer
+
+context
+
+measurement
+
+representation
+
+time
+
+noise
+
+error
+
+unknown
+</code></pre>
+<p>Do not jump directly to Hidden Observer.</p>
+<hr>
+<h1 id="hidden-observer-boundary">Hidden Observer Boundary</h1>
+<p>A Hidden Observer hypothesis becomes relevant only when:</p>
+<pre><code class="language-text">there is reason to suspect
+a specific missing
+observer-related dependency
+</code></pre>
+<p>It does not mean:</p>
+<pre><code class="language-text">hidden person
+
+hidden intelligence
+
+or unseen agent
+</code></pre>
+<p>The preferred outcome is to identify the variable and remove its hidden status.</p>
+<hr>
+<h1 id="re-ignition-observation">Re-Ignition Observation</h1>
+<p>When the observation involves renewed access, map it cautiously.</p>
+<pre><code class="language-text">EARLIER ACCESS
+      ↓
+REDUCED ACCESS
+      ↓
+TRIGGER?
+      ↓
+RESONANCE?
+      ↓
+RECOGNITION?
+      ↓
+REINTEGRATION?
+      ↓
+STABILIZATION?
+</code></pre>
+<p>Use:</p>
+<pre><code class="language-text">UNKNOWN
+</code></pre>
+<p>for stages not established by evidence.</p>
+<p>Do not force the full sequence onto every event.</p>
+<hr>
+<h1 id="dormancy-check">Dormancy Check</h1>
+<p>Ask:</p>
+<pre><code class="language-text">Was the relationship
+previously accessible?
+</code></pre>
+<p>Then:</p>
+<pre><code class="language-text">Is there evidence that
+access later decreased?
+</code></pre>
+<p>Without both:</p>
+<pre><code class="language-text">Dormant Pattern
+    =
+not established
+</code></pre>
+<hr>
+<h1 id="trigger-check">Trigger Check</h1>
+<p>Ask:</p>
+<pre><code class="language-text">What happened immediately
+before renewed salience?
+</code></pre>
+<p>Then preserve:</p>
+<pre><code class="language-text">trigger
+    ≠
+cause
+</code></pre>
+<p>The candidate trigger may later prove irrelevant.</p>
+<hr>
+<h1 id="resonance-check">Resonance Check</h1>
+<p>Ask:</p>
+<pre><code class="language-text">What correspondence became salient?
+</code></pre>
+<p>Then specify:</p>
+<pre><code class="language-text">what exactly corresponds
+</code></pre>
+<p>If the relationship cannot yet be stated:</p>
+<pre><code class="language-text">candidate resonance
+</code></pre>
+<p>may remain provisional.</p>
+<hr>
+<h1 id="recognition-check">Recognition Check</h1>
+<p>Ask:</p>
+<pre><code class="language-text">What became explicitly identifiable?
+</code></pre>
+<p>Then preserve:</p>
+<pre><code class="language-text">recognition
+    ≠
+verification
+</code></pre>
+<p>Subjective confidence should be recorded separately from accuracy.</p>
+<hr>
+<h1 id="reintegration-check">Reintegration Check</h1>
+<p>Ask:</p>
+<pre><code class="language-text">How did the recognized relationship
+change the current model?
+</code></pre>
+<p>Possible outcomes include:</p>
+<pre><code class="language-text">direct fit
+
+current model revised
+
+recognized relationship revised
+
+both revised
+
+unresolved
+
+rejected
+</code></pre>
+<hr>
+<h1 id="stabilization-check">Stabilization Check</h1>
+<p>Ask:</p>
+<pre><code class="language-text">Can the relationship
+be revisited later?
+
+Does it survive another form?
+
+Another context?
+
+Another observer?
+
+Challenge?
+</code></pre>
+<p>Then preserve:</p>
+<pre><code class="language-text">stabilization
+    ≠
+truth
+</code></pre>
+<hr>
+<h1 id="local-time-observation">Local-Time Observation</h1>
+<p>For temporal events, separate several layers.</p>
+<pre><code class="language-text">PHYSICAL TIME
+
+What event sequence
+can be established?
+</code></pre>
+<pre><code class="language-text">LOCAL TIMELINE
+
+What chronology is accessible
+to the observer?
+</code></pre>
+<pre><code class="language-text">RESONANCE TIME
+
+What appears structurally related
+across chronological distance?
+</code></pre>
+<pre><code class="language-text">TIMELINE PROJECTION
+
+How might structure
+become this representation?
+</code></pre>
+<p>Do not merge these layers automatically.</p>
+<hr>
+<h1 id="timeline-revision">Timeline Revision</h1>
+<p>If recognition changes interpretation of earlier events:</p>
+<pre><code class="language-text">OLD TIMELINE MODEL
+        ↓
+RECOGNITION
+        ↓
+NEW TIMELINE MODEL
+</code></pre>
+<p>record:</p>
+<pre><code class="language-text">what remained physically invariant
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">what changed representationally
+</code></pre>
+<p>The permanent boundary is:</p>
+<pre><code class="language-text">timeline revision
+        ≠
+timeline alteration
+</code></pre>
+<hr>
+<h1 id="apparent-multiple-timelines">Apparent Multiple Timelines</h1>
+<p>If an observation is experienced as:</p>
+<pre><code class="language-text">&quot;another timeline&quot;
+</code></pre>
+<p>preserve that report.</p>
+<p>Then classify what is actually multiple.</p>
+<pre><code class="language-text">memory?
+
+possibility?
+
+representation?
+
+observer state?
+
+projection?
+
+physical record?
+
+physical timeline?
+
+unknown?
+</code></pre>
+<p>The protocol does not rule physical multiplicity in or out.</p>
+<p>It locates the current evidence level.</p>
+<hr>
+<h1 id="form-check">Form Check</h1>
+<p>For every important claim, ask:</p>
+<pre><code class="language-text">What form is carrying
+this interpretation?
+</code></pre>
+<p>Then:</p>
+<pre><code class="language-text">Can another form represent
+the same observation?
+</code></pre>
+<p>Cross-form comparison can reveal representation dependence.</p>
+<hr>
+<h1 id="formless-check">Formless Check</h1>
+<p>If something remains difficult to represent:</p>
+<pre><code class="language-text">FORMLESS
+</code></pre>
+<p>may be used as a module-local boundary term.</p>
+<p>But record:</p>
+<pre><code class="language-text">what exactly remains unresolved
+</code></pre>
+<p>rather than using Formless as the explanation.</p>
+<hr>
+<h1 id="universe-as-operator-check">Universe-as-Operator Check</h1>
+<p>If a model invokes:</p>
+<pre><code class="language-text">Universe as Operator
+</code></pre>
+<p>require:</p>
+<pre><code class="language-text">What broader condition
+is being represented?
+
+What does the operator act on?
+
+What transformation occurs?
+
+What remains invariant?
+
+Does the operator model add
+anything beyond ordinary
+boundary conditions?
+</code></pre>
+<p>Do not permit:</p>
+<pre><code class="language-text">operator
+</code></pre>
+<p>to silently become:</p>
+<pre><code class="language-text">agent
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">intent
+</code></pre>
+<hr>
+<h1 id="observation-protocol-phases">Observation Protocol Phases</h1>
+<p>The complete protocol can be divided into six phases.</p>
+<pre><code class="language-text">PHASE 1
+CAPTURE
+</code></pre>
+<pre><code class="language-text">PHASE 2
+ANCHOR
+</code></pre>
+<pre><code class="language-text">PHASE 3
+SEPARATE
+</code></pre>
+<pre><code class="language-text">PHASE 4
+COMPARE
+</code></pre>
+<pre><code class="language-text">PHASE 5
+TEST
+</code></pre>
+<pre><code class="language-text">PHASE 6
+REVISIT
+</code></pre>
+<p>Each phase has a different purpose.</p>
+<hr>
+<h1 id="phase-1-capture">Phase 1: Capture</h1>
+<p>Record:</p>
+<pre><code class="language-text">what happened
+
+what happened immediately before
+
+what appeared first
+
+what became recognizable
+
+what explanation appeared afterward
+</code></pre>
+<p>Preserve original wording where practical.</p>
+<hr>
+<h1 id="phase-2-anchor">Phase 2: Anchor</h1>
+<p>Record:</p>
+<pre><code class="language-text">event sequence
+
+time
+
+observer position
+
+context
+
+access channel
+
+representation
+
+external records
+</code></pre>
+<p>Use only the precision actually available.</p>
+<hr>
+<h1 id="phase-3-separate">Phase 3: Separate</h1>
+<p>Distinguish:</p>
+<pre><code class="language-text">observation
+
+memory
+
+measurement
+
+inference
+
+interpretation
+
+hypothesis
+
+mechanism
+
+ontology
+</code></pre>
+<p>This is the protocol's principal drift-control layer.</p>
+<hr>
+<h1 id="phase-4-compare">Phase 4: Compare</h1>
+<p>Compare:</p>
+<pre><code class="language-text">earlier versus later
+
+observer A versus observer B
+
+form A versus form B
+
+baseline versus post-trigger
+
+prediction versus observation
+
+model versus record
+</code></pre>
+<p>Search for:</p>
+<pre><code class="language-text">invariants
+
+differences
+
+divergence points
+</code></pre>
+<hr>
+<h1 id="phase-5-test">Phase 5: Test</h1>
+<p>Ask:</p>
+<pre><code class="language-text">What can be repeated?
+
+What can be measured?
+
+What can be controlled?
+
+What could discriminate
+between hypotheses?
+
+What result would weaken
+the preferred explanation?
+</code></pre>
+<p>Do not require every observation to become experimentally testable immediately.</p>
+<p>Operationalization may itself be the next research step.</p>
+<hr>
+<h1 id="phase-6-revisit">Phase 6: Revisit</h1>
+<p>Return after:</p>
+<pre><code class="language-text">more evidence
+
+another observation
+
+another representation
+
+another observer
+
+or a defined interval
+</code></pre>
+<p>Then ask:</p>
+<pre><code class="language-text">What still holds?
+
+What changed?
+
+What should be revised?
+
+What remains unknown?
+</code></pre>
+<p>Preserve the revision history.</p>
+<hr>
+<h1 id="observation-record">Observation Record</h1>
+<pre><code class="language-text">TRIADIC RE-IGNITION
+OBSERVATION RECORD
+
+OBSERVATION ID:
+________________________________
+
+DATE / TIME IF KNOWN:
+________________________________
+
+OBSERVER:
+________________________________
+
+OBSERVER POSITION:
+________________________________
+
+CONTEXT:
+________________________________
+
+ACCESS CHANNEL:
+________________________________
+
+
+PHASE 1 — RAW CAPTURE
+
+What happened?
+________________________________
+
+What happened immediately before?
+________________________________
+
+What did I notice first?
+________________________________
+
+What became recognizable?
+________________________________
+
+What explanation appeared afterward?
+________________________________
+
+
+PHASE 2 — ANCHOR
+
+Physical event sequence:
+________________________________
+
+Known timing:
+________________________________
+
+External record:
+________________________________
+
+Current representation:
+________________________________
+
+Available information:
+________________________________
+
+Unavailable information:
+________________________________
+
+
+PHASE 3 — CLAIM SEPARATION
+
+Direct observation:
+________________________________
+
+Memory report:
+________________________________
+
+Measurement:
+________________________________
+
+Inference:
+________________________________
+
+Interpretation:
+________________________________
+
+Preferred hypothesis:
+________________________________
+
+Mechanism claim:
+________________________________
+
+Ontological claim:
+________________________________
+
+
+PHASE 4 — COMPARISON
+
+Earlier state:
+________________________________
+
+Later state:
+________________________________
+
+Shared invariant:
+________________________________
+
+Changed component:
+________________________________
+
+Divergence point:
+________________________________
+
+Alternative representation:
+________________________________
+
+Alternative observer account:
+________________________________
+
+Unresolved paradox:
+________________________________
+
+
+PHASE 5 — HYPOTHESES
+
+H1:
+________________________________
+
+H2:
+________________________________
+
+H3:
+________________________________
+
+UNKNOWN:
+________________________________
+
+Preferred explanation:
+________________________________
+
+Why:
+________________________________
+
+
+PHASE 6 — TEST
+
+Possible discriminator:
+________________________________
+
+Failure condition:
+________________________________
+
+Possible control:
+________________________________
+
+Possible repetition:
+________________________________
+
+Independent check:
+________________________________
+
+
+RE-IGNITION MAPPING
+
+Earlier access:
+________________________________
+
+Reduced access:
+________________________________
+
+Candidate trigger:
+________________________________
+
+Resonance:
+________________________________
+
+Recognition event:
+________________________________
+
+Reintegration:
+________________________________
+
+Stabilization:
+________________________________
+
+
+TIME MAPPING
+
+Physical Time:
+________________________________
+
+Local Timeline:
+________________________________
+
+Resonance Time:
+________________________________
+
+Timeline Projection:
+________________________________
+
+
+FORM MAPPING
+
+Current form:
+________________________________
+
+What the form captures:
+________________________________
+
+What remains unresolved:
+________________________________
+
+Alternative form:
+________________________________
+
+Invariant across forms:
+________________________________
+
+
+FINAL STATUS
+
+Minimum supported claim:
+________________________________
+
+Current claim level:
+________________________________
+
+Current confidence:
+________________________________
+
+What remains unknown:
+________________________________
+
+Next observation / test:
+________________________________
+</code></pre>
+<hr>
+<h1 id="compact-observation-record">Compact Observation Record</h1>
+<p>For rapid capture, use:</p>
+<pre><code class="language-text">WHAT HAPPENED?
+________________________________
+
+WHAT HAPPENED FIRST?
+________________________________
+
+WHAT WAS THE TRIGGER?
+________________________________
+
+WHAT DID I NOTICE?
+________________________________
+
+WHAT DID I RECOGNIZE?
+________________________________
+
+WHAT DO I THINK IT MEANS?
+________________________________
+
+WHAT ELSE COULD EXPLAIN IT?
+________________________________
+
+WHAT REMAINED INVARIANT?
+________________________________
+
+WHAT CHANGED?
+________________________________
+
+WHAT CAN I CHECK?
+________________________________
+
+WHAT REMAINS UNKNOWN?
+________________________________
+</code></pre>
+<p>The compact form should be expandable into the full protocol later.</p>
+<hr>
+<h1 id="comparison-record">Comparison Record</h1>
+<p>When two observations conflict:</p>
+<pre><code class="language-text">OBSERVATION A:
+________________________________
+
+OBSERVATION B:
+________________________________
+
+EXACT DIFFERENCE:
+________________________________
+
+OBSERVER A:
+________________________________
+
+OBSERVER B:
+________________________________
+
+CONTEXT A:
+________________________________
+
+CONTEXT B:
+________________________________
+
+FORM A:
+________________________________
+
+FORM B:
+________________________________
+
+SHARED INVARIANT:
+________________________________
+
+FIRST DIVERGENCE:
+________________________________
+
+POSSIBLE MISSING VARIABLE:
+________________________________
+
+ALTERNATIVE EXPLANATION:
+________________________________
+
+DISCRIMINATOR:
+________________________________
+
+CURRENT STATUS:
+________________________________
+</code></pre>
+<hr>
+<h1 id="observation-status">Observation Status</h1>
+<p>An observation may be classified as:</p>
+<pre><code class="language-text">CAPTURED
+</code></pre>
+<pre><code class="language-text">ANCHORED
+</code></pre>
+<pre><code class="language-text">UNDER COMPARISON
+</code></pre>
+<pre><code class="language-text">OPERATIONALIZED
+</code></pre>
+<pre><code class="language-text">UNDER TEST
+</code></pre>
+<pre><code class="language-text">PARTIALLY SUPPORTED
+</code></pre>
+<pre><code class="language-text">REVISED
+</code></pre>
+<pre><code class="language-text">NOT SUPPORTED
+</code></pre>
+<pre><code class="language-text">UNRESOLVED
+</code></pre>
+<p>Status describes the investigation.</p>
+<p>It does not describe the observer's value or credibility.</p>
+<hr>
+<h1 id="evidence-status">Evidence Status</h1>
+<p>Individual claims may also use:</p>
+<pre><code class="language-text">OBSERVED
+</code></pre>
+<pre><code class="language-text">REPORTED
+</code></pre>
+<pre><code class="language-text">MEASURED
+</code></pre>
+<pre><code class="language-text">INFERRED
+</code></pre>
+<pre><code class="language-text">HYPOTHESIZED
+</code></pre>
+<pre><code class="language-text">SUPPORTED
+</code></pre>
+<pre><code class="language-text">NOT SUPPORTED
+</code></pre>
+<pre><code class="language-text">UNKNOWN
+</code></pre>
+<p>Do not convert these automatically into numerical probabilities unless the protocol defines how.</p>
+<hr>
+<h1 id="confidence">Confidence</h1>
+<p>Observer confidence may be recorded.</p>
+<p>Example:</p>
+<pre><code class="language-text">confidence:
+low / medium / high
+</code></pre>
+<p>or through a defined numeric scale.</p>
+<p>However:</p>
+<pre><code class="language-text">CONFIDENCE
+    ≠
+EVIDENCE STRENGTH
+</code></pre>
+<p>The scale should be specified if numerical ratings are used.</p>
+<hr>
+<h1 id="false-recognition">False Recognition</h1>
+<p>If later evidence indicates the original recognition was mistaken:</p>
+<pre><code class="language-text">DO NOT DELETE
+THE ORIGINAL RECORD
+</code></pre>
+<p>Instead preserve:</p>
+<pre><code class="language-text">ORIGINAL CAPTURE
+      ↓
+LATER CONTRADICTION
+      ↓
+REVISION
+</code></pre>
+<p>False recognition contains useful information about the transition.</p>
+<hr>
+<h1 id="failed-hypothesis">Failed Hypothesis</h1>
+<p>Likewise, if:</p>
+<pre><code class="language-text">H1
+</code></pre>
+<p>fails:</p>
+<pre><code class="language-text">preserve H1
+
+record why it failed
+
+record what evidence changed
+</code></pre>
+<p>Failed hypotheses improve the model when their failure conditions are visible.</p>
+<hr>
+<h1 id="revision-history">Revision History</h1>
+<p>A model may progress:</p>
+<pre><code class="language-text">v1
+ ↓
+new observation
+ ↓
+v2
+ ↓
+experiment
+ ↓
+v3
+</code></pre>
+<p>Preserve:</p>
+<pre><code class="language-text">what changed
+
+why it changed
+
+which invariants survived
+</code></pre>
+<p>Revision is expected.</p>
+<p>It is not an error state.</p>
+<hr>
+<h1 id="drift-checks">Drift Checks</h1>
+<p>Before promoting a claim, ask:</p>
+<pre><code class="language-text">Did observation become interpretation?
+
+Did interpretation become mechanism?
+
+Did mechanism become ontology?
+
+Did trigger become cause?
+
+Did recognition become verification?
+
+Did local become global?
+
+Did form become complete structure?
+
+Did unresolved become hidden reality?
+
+Did operator become agent?
+
+Did stability become truth?
+</code></pre>
+<p>If yes:</p>
+<pre><code class="language-text">return to the
+last supported layer
+</code></pre>
+<hr>
+<h1 id="anti-drift-ladder">Anti-Drift Ladder</h1>
+<p>Use:</p>
+<pre><code class="language-text">OBSERVATION
+    ↓
+RELATIONSHIP
+    ↓
+INTERPRETATION
+    ↓
+HYPOTHESIS
+    ↓
+TEST
+    ↓
+MECHANISM
+    ↓
+BROADER CLAIM
+</code></pre>
+<p>Each transition should be traceable.</p>
+<hr>
+<h1 id="observer-safety-check">Observer Safety Check</h1>
+<p>Observer-aware analysis should not become:</p>
+<pre><code class="language-text">profiling the observer
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">pathologizing disagreement
+</code></pre>
+<p>The protocol focuses on:</p>
+<pre><code class="language-text">conditions relevant
+to the observation
+</code></pre>
+<p>not unsupported assumptions about the observer's identity, motives, personality, or mental state.</p>
+<hr>
+<h1 id="personal-interpretation-boundary">Personal Interpretation Boundary</h1>
+<p>For self-observation:</p>
+<pre><code class="language-text">&quot;I experienced X.&quot;
+</code></pre>
+<p>is legitimate capture.</p>
+<p>Avoid automatically converting it into:</p>
+<pre><code class="language-text">&quot;This proves something
+is wrong with me.&quot;
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">&quot;This proves external reality
+changed.&quot;
+</code></pre>
+<p>The protocol preserves both observer and external explanations as hypotheses where relevant.</p>
+<hr>
+<h1 id="replication">Replication</h1>
+<p>Where possible, ask whether the observation can be repeated.</p>
+<pre><code class="language-text">Same observer?
+
+Different observer?
+
+Same context?
+
+Different context?
+
+Same representation?
+
+Different representation?
+</code></pre>
+<p>Replication conditions should be documented.</p>
+<hr>
+<h1 id="independence">Independence</h1>
+<p>Cross-observer agreement becomes more informative when observers are meaningfully independent.</p>
+<p>Ask:</p>
+<pre><code class="language-text">Did they see each other's answers?
+
+Did they share instructions?
+
+Did they share the same representation?
+
+Did they share prior expectations?
+</code></pre>
+<p>Agreement remains evidence.</p>
+<p>Its interpretation depends on conditions.</p>
+<hr>
+<h1 id="controls">Controls</h1>
+<p>Where experimental testing is possible, comparison conditions may include:</p>
+<pre><code class="language-text">baseline
+
+no-trigger condition
+
+alternative representation
+
+unrelated cue
+
+surface-similar cue
+
+different observer condition
+
+different context
+</code></pre>
+<p>Controls should match the specific hypothesis.</p>
+<p>There is no universal control condition for all Re-Ignition observations.</p>
+<hr>
+<h1 id="discriminator">Discriminator</h1>
+<p>A discriminator answers:</p>
+<pre><code class="language-text">What result would favor
+H1 over H2?
+</code></pre>
+<p>For example:</p>
+<pre><code class="language-text">H1
+representation change
+
+H2
+physical structure change
+</code></pre>
+<p>A useful discriminator might ask what:</p>
+<pre><code class="language-text">external measurement
+</code></pre>
+<p>should differ between the two.</p>
+<p>The exact discriminator depends on the hypothesis set.</p>
+<hr>
+<h1 id="failure-condition">Failure Condition</h1>
+<p>Every preferred model should attempt to answer:</p>
+<pre><code class="language-text">What would make this
+less likely?
+</code></pre>
+<p>A model without a meaningful failure condition may not yet be operational enough for testing.</p>
+<p>That is acceptable.</p>
+<p>Record:</p>
+<pre><code class="language-text">failure condition:
+not yet operationalized
+</code></pre>
+<p>rather than inventing one.</p>
+<hr>
+<h1 id="minimum-supported-claim">Minimum Supported Claim</h1>
+<p>At the end of every observation cycle, write:</p>
+<pre><code class="language-text">MINIMUM SUPPORTED CLAIM
+</code></pre>
+<p>This should be the smallest statement that:</p>
+<pre><code class="language-text">preserves the observation
+
+does not erase uncertainty
+
+does not assume mechanism
+
+and can survive current evidence
+</code></pre>
+<p>This field is one of the protocol's primary anti-drift tools.</p>
+<hr>
+<h1 id="example-claim-separation">Example Claim Separation</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">Experience:
+
+&quot;I suddenly remembered
+another timeline.&quot;
+</code></pre>
+<p>Possible protocol decomposition:</p>
+<pre><code class="language-text">OBSERVATION
+
+A temporal representation
+became newly accessible.
+</code></pre>
+<pre><code class="language-text">INTERPRETATION
+
+The representation feels like
+another history.
+</code></pre>
+<pre><code class="language-text">HYPOTHESIS 1
+
+Memory reconstruction.
+</code></pre>
+<pre><code class="language-text">HYPOTHESIS 2
+
+Representation change.
+</code></pre>
+<pre><code class="language-text">HYPOTHESIS 3
+
+Projection difference.
+</code></pre>
+<pre><code class="language-text">HYPOTHESIS 4
+
+Distinct physical timeline.
+</code></pre>
+<pre><code class="language-text">CURRENT STATUS
+
+Unresolved.
+</code></pre>
+<p>The protocol preserves the experience without forcing its ontology.</p>
+<hr>
+<h1 id="example-re-ignition-capture">Example Re-Ignition Capture</h1>
+<p>Suppose a student reports:</p>
+<pre><code class="language-text">&quot;I saw an old kind of problem
+and suddenly remembered
+how to solve it.&quot;
+</code></pre>
+<p>Record:</p>
+<pre><code class="language-text">EARLIER ACCESS
+
+Student previously demonstrated
+the method.
+</code></pre>
+<pre><code class="language-text">BASELINE
+
+Student initially could not
+produce the method.
+</code></pre>
+<pre><code class="language-text">TRIGGER
+
+Old problem format.
+</code></pre>
+<pre><code class="language-text">RECOGNITION
+
+Student identified the earlier
+problem-solving relationship.
+</code></pre>
+<pre><code class="language-text">MINIMUM CLAIM
+
+Exposure to the old problem format
+preceded renewed functional access.
+</code></pre>
+<p>Then test:</p>
+<pre><code class="language-text">Can the student solve
+a new problem without
+the original cue?
+</code></pre>
+<p>This helps distinguish immediate cue dependence from stabilization.</p>
+<hr>
+<h1 id="relationship-to-comparative-observer-test">Relationship to Comparative Observer Test</h1>
+<p>The Observation Protocol provides the record structure used by:</p>
+<pre><code class="language-text">./comparative-observer-test.md
+</code></pre>
+<p>That experiment focuses specifically on:</p>
+<pre><code class="language-text">differences across observers
+</code></pre>
+<p>while this protocol applies more broadly.</p>
+<hr>
+<h1 id="relationship-to-resonance-recall-test">Relationship to Resonance Recall Test</h1>
+<p>The Observation Protocol provides the claim-separation structure used by:</p>
+<pre><code class="language-text">./resonance-recall-test.md
+</code></pre>
+<p>The Resonance Recall Test adds:</p>
+<pre><code class="language-text">baseline
+
+cue conditions
+
+recognition
+
+recall
+
+reconstruction
+
+transfer
+
+delayed retest
+</code></pre>
+<hr>
+<h1 id="relationship-to-student-simulation">Relationship to Student Simulation</h1>
+<p>The Student Simulation adapts this protocol for educational reasoning exercises.</p>
+<pre><code class="language-text">FIRST PASS
+    ↓
+OBSERVER PASS
+    ↓
+TRIADIC PASS
+    ↓
+COMPARISON
+</code></pre>
+<p>The Observation Protocol supplies the discipline underlying those passes.</p>
+<hr>
+<h1 id="relationship-to-the-experiments-branch">Relationship to the Experiments Branch</h1>
+<p>The experiments layer can be organized as:</p>
+<pre><code class="language-text">OBSERVATION PROTOCOL
+      ↓
+How do we capture cleanly?
+
+COMPARATIVE OBSERVER TEST
+      ↓
+What changes across observers?
+
+RESONANCE RECALL TEST
+      ↓
+What changes after a cue?
+
+STUDENT SIMULATION
+      ↓
+What changes across
+reasoning regimes?
+</code></pre>
+<p>Together:</p>
+<pre><code class="language-text">CAPTURE
+  ↓
+COMPARE
+  ↓
+TRIGGER
+  ↓
+TEST
+  ↓
+TEACH
+</code></pre>
+<hr>
+<h1 id="research-questions">Research Questions</h1>
+<ol>
+<li>
+<p>How reliably can observation and interpretation be separated?</p>
+</li>
+<li>
+<p>How quickly does retrospective narrative alter event reports?</p>
+</li>
+<li>
+<p>Does immediate capture improve preservation of first-signal information?</p>
+</li>
+<li>
+<p>Which observer variables materially affect Re-Ignition reports?</p>
+</li>
+<li>
+<p>Can cross-form invariants distinguish structural relationships from representation effects?</p>
+</li>
+<li>
+<p>Can temporal anchoring reduce timeline-revision drift?</p>
+</li>
+<li>
+<p>Can independent observers reproduce the same invariant?</p>
+</li>
+<li>
+<p>Does the Minimum Supported Claim reduce overinterpretation?</p>
+</li>
+<li>
+<p>Does explicit <code>UNKNOWN</code> improve later revision?</p>
+</li>
+<li>
+<p>Can divergence-point analysis identify the layer where models separate?</p>
+</li>
+<li>
+<p>Does preserving failed hypotheses improve later reasoning?</p>
+</li>
+<li>
+<p>Can paradox preservation reduce premature binary collapse?</p>
+</li>
+<li>
+<p>What observation categories require domain-specific protocols?</p>
+</li>
+<li>
+<p>How should subjective resonance reports be compared with task performance?</p>
+</li>
+<li>
+<p>Can first-signal capture distinguish recognition from retrospective reconstruction?</p>
+</li>
+<li>
+<p>When does observer-state recording add useful discrimination?</p>
+</li>
+<li>
+<p>When does it add unnecessary complexity?</p>
+</li>
+<li>
+<p>Which parts of the protocol improve experimental reproducibility?</p>
+</li>
+<li>
+<p>Can the protocol be used effectively without Triadic terminology?</p>
+</li>
+<li>
+<p>What results would demonstrate that parts of the protocol should be removed or simplified?</p>
+</li>
+</ol>
+<hr>
+<h1 id="boundary-conditions">Boundary Conditions</h1>
+<p>The Observation Protocol does <strong>not by itself establish</strong>:</p>
+<pre><code class="language-text">the truth of an observation
+
+the accuracy of memory
+
+causation
+
+mechanism
+
+hidden structure
+
+a hidden observer
+
+Formless ontology
+
+timeline alteration
+
+multiple physical timelines
+
+Universe as Operator
+
+or any specific metaphysical claim
+</code></pre>
+<p>It also does not guarantee that introspective capture perfectly preserves an internal event.</p>
+<p>The minimum purpose is:</p>
+<blockquote>
+<p><strong>Preserve observations, access conditions, representations, interpretations, competing hypotheses, and uncertainty clearly enough that later comparison and testing remain possible.</strong></p>
+</blockquote>
+<hr>
+<h1 id="related-documents">Related Documents</h1>
+<ul>
+<li><code>./index.md</code></li>
+<li><code>./comparative-observer-test.md</code></li>
+<li><code>./resonance-recall-test.md</code></li>
+<li><code>./student-simulation.md</code></li>
+<li><code>../index.md</code></li>
+<li><code>../capture.md</code></li>
+<li><code>../foundations/index.md</code></li>
+<li><code>../foundations/re-ignition-principle.md</code></li>
+<li><code>../foundations/resonance-before-form.md</code></li>
+<li><code>../foundations/form-and-formless.md</code></li>
+<li><code>../foundations/universe-as-operator.md</code></li>
+<li><code>../observer/index.md</code></li>
+<li><code>../observer/local-observer.md</code></li>
+<li><code>../observer/triadic-observer.md</code></li>
+<li><code>../observer/observer-transition.md</code></li>
+<li><code>../observer/hidden-observer.md</code></li>
+<li><code>../time/index.md</code></li>
+<li><code>../time/physical-time.md</code></li>
+<li><code>../time/local-timeline.md</code></li>
+<li><code>../time/resonance-time.md</code></li>
+<li><code>../time/timeline-projection.md</code></li>
+<li><code>../time/apparent-multiple-timelines.md</code></li>
+<li><code>../ignition/index.md</code></li>
+<li><code>../drift/index.md</code></li>
+<li><code>../student-notes/index.md</code></li>
+<li><code>../references/terminology.md</code></li>
+<li><code>../references/open-questions.md</code></li>
+</ul>
+<hr>
+<h1 id="working-summary">Working Summary</h1>
+<p>The Observation Protocol begins with:</p>
+<pre><code class="language-text">SOMETHING HAPPENED
+</code></pre>
+<p>and refuses to let that become immediately:</p>
+<pre><code class="language-text">THEREFORE I KNOW WHY
+</code></pre>
+<p>Instead:</p>
+<pre><code class="language-text">OBSERVE
+   ↓
+CAPTURE
+   ↓
+ANCHOR
+   ↓
+LOCATE THE OBSERVER
+   ↓
+IDENTIFY THE FORM
+   ↓
+SEPARATE INTERPRETATION
+   ↓
+FIND INVARIANTS
+   ↓
+LOCATE DIVERGENCE
+   ↓
+PRESERVE PARADOX
+   ↓
+GENERATE ALTERNATIVES
+   ↓
+DEFINE DISCRIMINATORS
+   ↓
+TEST
+   ↓
+REVISIT
+   ↓
+REVISE
+</code></pre>
+<p>Its permanent guardrails are:</p>
+<pre><code class="language-text">CAPTURE
+    ≠
+PROOF
+</code></pre>
+<pre><code class="language-text">TRIGGER
+    ≠
+CAUSE
+</code></pre>
+<pre><code class="language-text">RESONANCE
+    ≠
+CAUSATION
+</code></pre>
+<pre><code class="language-text">RECOGNITION
+    ≠
+VERIFICATION
+</code></pre>
+<pre><code class="language-text">LOCAL
+    ≠
+GLOBAL
+</code></pre>
+<pre><code class="language-text">FORM
+    ≠
+COMPLETE STRUCTURE
+</code></pre>
+<pre><code class="language-text">FORMLESS
+    ≠
+HIDDEN REALITY PROVEN
+</code></pre>
+<pre><code class="language-text">STABILIZATION
+    ≠
+TRUTH
+</code></pre>
+<p>The guiding discipline is:</p>
+<blockquote>
+<p><strong>Capture before story.<br>
+Anchor before inference.<br>
+Locate the observer before assigning the difference.<br>
+Preserve the first form before revision changes it.<br>
+Search for invariants before choosing a mechanism.<br>
+Keep alternatives alive until a discriminator separates them.<br>
+Record unknown when unknown is the most accurate answer.</strong></p>
+</blockquote>
+<p>In its smallest form:</p>
+<pre><code class="language-text">WHAT HAPPENED?
+      ↓
+WHAT CHANGED?
+      ↓
+WHAT STAYED THE SAME?
+      ↓
+WHAT ELSE COULD EXPLAIN IT?
+      ↓
+WHAT CAN WE CHECK?
+</code></pre>
+<p>The protocol does not make the observation true.</p>
+<p><strong>It keeps the observation clean enough that truth can still be investigated.</strong></p>
+<p>Main writing choice: I made this the module’s experimental root protocol, rather than another experiment competing beside the others. comparative-observer-test.md, resonance-recall-test.md, and student-simulation.md can now all be understood as specialized extensions of this same sequence: capture → anchor → separate → compare → test → revisit.</p>
+  </main>
+</body>
+</html>

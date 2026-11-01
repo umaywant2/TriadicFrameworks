@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/facilities/design-system/onboarding-guide.md">
+  <title>🚀 RTT Facilities — Design System Onboarding Guide</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/facilities/design-system/onboarding-guide.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/facilities/design-system/onboarding-guide.md</code>
+  </aside>
+
+  <main>
+<h1 id="rtt-facilities-design-system-onboarding-guide">🚀 RTT Facilities — Design System Onboarding Guide</h1>
+<p><strong>How to Work Inside a Governed Design System</strong></p>
+<p>Welcome to the <strong>RTT Facilities Design System</strong>.</p>
+<p>This guide helps new contributors understand <strong>how to work inside the system</strong> without breaking meaning, governance, or trust.</p>
+<p>You do not need to read every document to get started —<br>
+but you <em>do</em> need to understand the principles below.</p>
+<hr>
+<h2 id="1-what-this-design-system-is">1. What This Design System Is</h2>
+<p>The RTT Facilities design system is:</p>
+<ul>
+<li>A <strong>governance surface</strong>, not a style guide  </li>
+<li>A shared language for infrastructure decision‑making  </li>
+<li>A system designed to scale across cities, domains, and decades  </li>
+</ul>
+<p>Design here exists to <strong>clarify risk, readiness, and accountability</strong>.</p>
+<hr>
+<h2 id="2-what-this-design-system-is-not">2. What This Design System Is Not</h2>
+<p>It is <strong>not</strong>:
+- A branding exercise<br>
+- A UI trend collection<br>
+- A playground for experimentation<br>
+- A place for one‑off visuals  </p>
+<p>Exploration happens <strong>outside</strong> the canonical system.</p>
+<hr>
+<h2 id="3-the-mental-model">3. The Mental Model</h2>
+<p>Before touching Figma or code, internalize this:</p>
+<blockquote>
+<p><strong>Design choices encode meaning.<br>
+Meaning affects decisions.<br>
+Decisions affect public trust.</strong></p>
+</blockquote>
+<p>That is why governance exists.</p>
+<hr>
+<h2 id="4-how-the-system-is-structured">4. How the System Is Structured</h2>
+<p>The design system is governed through five core artifacts:</p>
+<ol>
+<li><strong>Design Governance Charter</strong> — authority and principles  </li>
+<li><strong>Component Creation Checklist</strong> — when components are allowed  </li>
+<li><strong>Naming Convention</strong> — how meaning is encoded  </li>
+<li><strong>Component Proposal Form</strong> — how new components enter  </li>
+<li><strong>Figma Library Structure</strong> — where components live  </li>
+</ol>
+<p>If you are unsure what to do, start with the checklist.</p>
+<hr>
+<h2 id="5-your-first-rule-as-a-contributor">5. Your First Rule as a Contributor</h2>
+<p><strong>Do not create a new component until you are sure one is needed.</strong></p>
+<p>Most work involves:
+- Reusing existing components<br>
+- Applying variants correctly<br>
+- Improving documentation or usage clarity  </p>
+<p>New components are the <em>last</em> resort.</p>
+<hr>
+<h2 id="6-if-you-think-you-need-a-new-component">6. If You Think You Need a New Component</h2>
+<p>Follow this sequence:</p>
+<ol>
+<li>Review the existing component library  </li>
+<li>Complete the <strong>Component Proposal Form</strong>  </li>
+<li>Confirm naming using the <strong>Naming Convention</strong>  </li>
+<li>Validate schema alignment  </li>
+<li>Submit for steward review  </li>
+</ol>
+<p>Do <strong>not</strong> design first and justify later.</p>
+<hr>
+<h2 id="7-naming-is-not-optional">7. Naming Is Not Optional</h2>
+<p>Component names:
+- Encode function and governance intent<br>
+- Must survive redesigns and tooling changes<br>
+- Are frozen once approved  </p>
+<p>If you cannot name a component clearly, it is not ready to exist.</p>
+<hr>
+<h2 id="8-audience-awareness">8. Audience Awareness</h2>
+<p>Every component must declare its audience:</p>
+<ul>
+<li>Operator  </li>
+<li>Department leadership  </li>
+<li>City executive  </li>
+<li>Public / resident  </li>
+</ul>
+<p>Complexity is <strong>gated</strong>, not hidden.</p>
+<hr>
+<h2 id="9-accessibility-is-governance">9. Accessibility Is Governance</h2>
+<p>Accessibility is not a “nice to have.”</p>
+<p>If a component:
+- Relies on color alone<br>
+- Obscures meaning<br>
+- Creates cognitive overload  </p>
+<p>…it fails governance review.</p>
+<hr>
+<h2 id="10-stewardship-review">10. Stewardship &amp; Review</h2>
+<p>A <strong>Design System Steward</strong> exists to:
+- Preserve clarity<br>
+- Prevent duplication<br>
+- Maintain semantic integrity  </p>
+<p>Review is not gatekeeping —<br>
+it is how the system stays usable over time.</p>
+<hr>
+<h2 id="11-common-mistakes-to-avoid">11. Common Mistakes to Avoid</h2>
+<ul>
+<li>Creating components for one‑off layouts  </li>
+<li>Naming components after appearance  </li>
+<li>Encoding state in names  </li>
+<li>Introducing ad‑hoc metrics  </li>
+<li>Bypassing documentation  </li>
+</ul>
+<p>These are treated as governance risks.</p>
+<hr>
+<h2 id="12-what-success-looks-like">12. What Success Looks Like</h2>
+<p>When the system is working:
+- Contributors reuse instead of reinvent<br>
+- Dashboards explain themselves<br>
+- Governance state is visible<br>
+- Meaning survives turnover<br>
+- Trust accumulates quietly  </p>
+<hr>
+<h2 id="13-where-to-go-next">13. Where to Go Next</h2>
+<p>Depending on your role:</p>
+<ul>
+<li><strong>Designers</strong> → Review the Figma Library Structure  </li>
+<li><strong>Engineers</strong> → Review the Global Index Schema  </li>
+<li><strong>Reviewers</strong> → Review the Governance Charter  </li>
+<li><strong>New contributors</strong> → Start with the Checklist  </li>
+</ul>
+<hr>
+<h2 id="14-canonical-status">14. Canonical Status</h2>
+<p>This onboarding guide is <strong>canonical</strong>.</p>
+<p>All contributors should read it before working in the design system.</p>
+<hr>
+<h3 id="why-this-guide-matters">Why this guide matters</h3>
+<p>This document:
+- Reduces onboarding friction<br>
+- Prevents accidental drift<br>
+- Makes governance feel supportive, not heavy<br>
+- Turns a complex system into a calm workspace  </p>
+  </main>
+</body>
+</html>

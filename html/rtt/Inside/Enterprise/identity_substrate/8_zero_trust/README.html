@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Enterprise/identity_substrate/8_zero_trust/README.md">
+  <title>Zero‑Trust Identity Models (Layer 8)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Enterprise/identity_substrate/8_zero_trust/README.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Enterprise/identity_substrate/8_zero_trust/README.md</code>
+  </aside>
+
+  <main>
+<h1 id="zerotrust-identity-models-layer-8"><strong>Zero‑Trust Identity Models (Layer 8)</strong></h1>
+<h3 id="triadic-substrate-semantics-applied-to-policybounded-continuousverification-identity"><em>Triadic substrate semantics applied to policy‑bounded, continuous‑verification identity</em></h3>
+<hr>
+<h2 id="overview"><strong>Overview</strong></h2>
+<p>The <strong>Zero‑Trust Identity Models</strong> layer represents <strong>Layer 8</strong> of the RTT/Inside Enterprise Identity model.<br>
+It is the first <em>policy‑bounded</em> identity substrate — the layer where identity becomes:</p>
+<ul>
+<li>continuously verified  </li>
+<li>context‑aware  </li>
+<li>risk‑scored  </li>
+<li>boundary‑enforced  </li>
+<li>micro‑segmented  </li>
+<li>coherence‑restricted  </li>
+<li>substrate‑aware  </li>
+</ul>
+<p>Zero‑trust systems include:</p>
+<ul>
+<li>Conditional Access (Azure AD / Entra ID)  </li>
+<li>Okta Risk Engine  </li>
+<li>Google BeyondCorp  </li>
+<li>AWS Verified Access  </li>
+<li>Identity‑aware proxies  </li>
+<li>Micro‑segmentation platforms (Illumio, Zscaler, Netskope)  </li>
+<li>Policy engines (OPA, Styra, custom enterprise PDPs)  </li>
+</ul>
+<p>These systems define <em>how identity behaves under policy</em>, making Layer 8 ideal for demonstrating <strong>triadic policy roles</strong>, <strong>clarity envelopes</strong>, <strong>regime tagging</strong>, and <strong>coherence boundaries</strong> in continuous‑verification identity flows.</p>
+<hr>
+<h2 id="purpose"><strong>Purpose</strong></h2>
+<p>Layer 8 exists to:</p>
+<ul>
+<li>Show how RTT/Inside substrate metadata attaches to zero‑trust policy decisions  </li>
+<li>Demonstrate clarity, regime, triad roles, and coherence envelopes in continuous‑verification identity  </li>
+<li>Provide a working example of substrate‑aware identity in policy‑driven environments  </li>
+<li>Serve as the capstone layer above cloud identity (Layer 7)  </li>
+<li>Offer a minimal, operator‑safe demonstration of substrate‑aware zero‑trust metadata  </li>
+</ul>
+<p>Zero‑trust is the <strong>policy substrate</strong> — the layer where identity becomes continuously evaluated.</p>
+<hr>
+<h2 id="identity-characteristics"><strong>Identity Characteristics</strong></h2>
+<p>Zero‑trust systems provide:</p>
+<h3 id="1-policybound-identity"><strong>1. Policy‑Bound Identity</strong></h3>
+<p>Identity is evaluated through:</p>
+<ul>
+<li>device posture  </li>
+<li>session risk  </li>
+<li>location context  </li>
+<li>authentication strength  </li>
+<li>behavioral signals  </li>
+<li>continuous verification  </li>
+</ul>
+<p>This makes zero‑trust ideal for substrate metadata.</p>
+<h3 id="2-dynamic-trust-decisions"><strong>2. Dynamic Trust Decisions</strong></h3>
+<p>Zero‑trust engines enforce:</p>
+<ul>
+<li>allow  </li>
+<li>deny  </li>
+<li>step‑up authentication  </li>
+<li>conditional access  </li>
+<li>micro‑segmentation boundaries  </li>
+</ul>
+<p>These map naturally to <strong>coherence envelopes</strong> and <strong>regime tags</strong>.</p>
+<h3 id="3-contextual-identity"><strong>3. Contextual Identity</strong></h3>
+<p>Zero‑trust considers:</p>
+<ul>
+<li>user identity  </li>
+<li>device identity  </li>
+<li>network identity  </li>
+<li>application identity  </li>
+<li>workload identity  </li>
+</ul>
+<p>This maps directly to <strong>triad roles</strong> and <strong>clarity scores</strong>.</p>
+<hr>
+<h2 id="substrateaware-zerotrust-metadata"><strong>Substrate‑Aware Zero‑Trust Metadata</strong></h2>
+<p>Zero‑trust systems support custom policy metadata, enabling triadic semantics.</p>
+<h3 id="conditional-access-example"><strong>Conditional Access Example</strong></h3>
+<pre><code>{
+  &quot;identity&quot;: &quot;operator@enterprise.cloud&quot;,
+  &quot;policyDecision&quot;: &quot;allow&quot;,
+  &quot;triadicClarityScore&quot;: 0.95,
+  &quot;triadicRegimeTag&quot;: &quot;control&quot;,
+  &quot;triadicRole&quot;: &quot;A&quot;,
+  &quot;triadicCoherenceEnvelope&quot;: &quot;zero_trust&quot;
+}
+</code></pre>
+<h3 id="identityaware-proxy-example"><strong>Identity‑Aware Proxy Example</strong></h3>
+<pre><code>triadic:
+  clarity: 0.95
+  regime: control
+  role: A
+  coherence: zero_trust
+</code></pre>
+<h3 id="opa-open-policy-agent-example"><strong>OPA (Open Policy Agent) Example</strong></h3>
+<pre><code>triadic := {
+  &quot;clarity&quot;: 0.95,
+  &quot;regime&quot;: &quot;control&quot;,
+  &quot;role&quot;: &quot;A&quot;,
+  &quot;coherence&quot;: &quot;zero_trust&quot;
+}
+</code></pre>
+<p>These metadata fields are optional and non‑breaking.</p>
+<hr>
+<h2 id="example-substrateaware-zerotrust-decision"><strong>Example: Substrate‑Aware Zero‑Trust Decision</strong></h2>
+<pre><code>{
+  &quot;subject&quot;: &quot;operator&quot;,
+  &quot;resource&quot;: &quot;api-gateway&quot;,
+  &quot;decision&quot;: &quot;allow&quot;,
+
+  &quot;triadic&quot;: {
+    &quot;clarity&quot;: 0.95,
+    &quot;regime&quot;: &quot;control&quot;,
+    &quot;role&quot;: &quot;A&quot;,
+    &quot;coherence&quot;: &quot;zero_trust&quot;
+  },
+
+  &quot;context&quot;: {
+    &quot;device&quot;: &quot;trusted&quot;,
+    &quot;sessionRisk&quot;: &quot;low&quot;,
+    &quot;authStrength&quot;: &quot;strong&quot;
+  }
+}
+</code></pre>
+<p>This example shows how substrate metadata attaches to zero‑trust decisions without altering policy logic.</p>
+<hr>
+<h2 id="how-layer-8-connects-to-higher-layers"><strong>How Layer 8 Connects to Higher Layers</strong></h2>
+<p>Zero‑trust feeds directly into:</p>
+<ul>
+<li><strong>Cloud Directory (Layer 7)</strong> — cloud identity attributes inform policy  </li>
+<li><strong>Modern Identity (Layer 6)</strong> — claims become policy inputs  </li>
+<li><strong>Service Discovery (Layer 5)</strong> — zero‑trust gates service access  </li>
+<li><strong>Kerberos / AD (Layers 1–4)</strong> — hybrid identity influences risk scoring  </li>
+</ul>
+<p>Zero‑trust is the <strong>policy substrate</strong>.</p>
+<hr>
+<h2 id="teaching-notes"><strong>Teaching Notes</strong></h2>
+<p>Students and AIs should study Layer 8 because:</p>
+<ul>
+<li>It is the first policy‑bounded identity substrate  </li>
+<li>It demonstrates substrate semantics in continuous‑verification identity  </li>
+<li>It shows how clarity and regime tagging map to zero‑trust decisions  </li>
+<li>It completes the Identity Substrate Zero‑through‑Seven model  </li>
+<li>It provides a realistic example for the RFC substrate‑awareness model  </li>
+</ul>
+<p>Layer 8 is where identity becomes <strong>evaluated</strong>, <strong>bounded</strong>, and <strong>triadic‑aware</strong>.</p>
+<hr>
+<h2 id="status"><strong>Status</strong></h2>
+<p><strong>Experimental</strong> — stable enough for teaching and RFC anchoring, evolving as substrate semantics expand.</p>
+  </main>
+</body>
+</html>

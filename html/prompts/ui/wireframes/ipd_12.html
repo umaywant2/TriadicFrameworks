@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/prompts/ui/wireframes/ipd_12.md">
+  <title>TOP‑LEVEL LAYOUT</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/prompts/ui/wireframes/ipd_12.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/prompts/ui/wireframes/ipd_12.md</code>
+  </aside>
+
+  <main>
+<h1 id="toplevel-layout"><strong>TOP‑LEVEL LAYOUT</strong></h1>
+<pre><code>-
+┌──────────────────────────────────────────────────────────────┐
+│ Prompt Composer — IPD‑12 Mode                                │
+│ Engine: RTT‑IPD‑12  |  Regime: Mid → Deep                    │
+│ Drift Mode: ACTIVE                                           │
+└──────────────────────────────────────────────────────────────┘
+</code></pre>
+<hr>
+<h1 id="section-1-process-capture-panel"><strong>SECTION 1 — Process Capture Panel</strong></h1>
+<pre><code>-
+┌──────────────────────────────────────────────────────────────┐
+│ PROCESS CAPTURE                                              │
+│                                                              │
+│ [Process A]  (required)                                      │
+│   • Purpose                                                  │
+│   • Boundaries                                               │
+│   • Structural Layers                                        │
+│   • Operational Flow                                         │
+│   • Coherence Baseline                                       │
+│                                                              │
+│ [Process B]  (required)                                      │
+│   • Purpose                                                  │
+│   • Boundaries                                               │
+│   • Structural Layers                                        │
+│   • Operational Flow                                         │
+│   • Coherence Baseline                                       │
+│                                                              │
+│ [+ Add Process] (optional)                                   │
+└──────────────────────────────────────────────────────────────┘
+</code></pre>
+<p><strong>Unlock Logic:</strong><br>
+- IPD‑12 requires <strong>≥ 2 processes</strong><br>
+- Drift‑tensor unlocks when <strong>structural layers</strong> are provided<br>
+- Coherence alignment unlocks when <strong>coherence baselines</strong> exist  </p>
+<hr>
+<h1 id="section-2-operator-grammar-panel"><strong>SECTION 2 — Operator Grammar Panel</strong></h1>
+<pre><code>-
+┌───────────────────────────────────────────────────────────────┐
+│ OPERATORS (IPD‑12)                                            │
+│                                                               │
+│  [map_process()]        active when ≥1 process                │
+│  [compare_process()]    active when ≥2 processes              │
+│  [drift()]              active when capture complete          │
+│  [drift_tensor()]       active when layers defined            │
+│  [detect_divergence()]  active when drift baseline exists     │
+│  [align_coherence()]    active when coherence baseline exists │
+│  [cross_system()]       active when relationships defined     │
+│                                                               │
+│ Disabled Operators:                                           │
+│  substrate(), invert(), composite_regime()                    │
+│  (tooltip: “Requires RTT‑∞ or RTT/12 composite engine.”)      │
+└───────────────────────────────────────────────────────────────┘
+</code></pre>
+<hr>
+<h1 id="section-3-drift-analysis-panel"><strong>SECTION 3 — Drift Analysis Panel</strong></h1>
+<pre><code>-
+┌──────────────────────────────────────────────────────────────┐
+│ DRIFT ANALYSIS                                               │
+│                                                              │
+│ Divergence Points:                                           │
+│   [list auto‑generated from drift()]                         │
+│                                                              │
+│ Drift‑Tensor Visualization:                                  │
+│   ┌──────────────────────────────┐                           │
+│   │  Layer 1: geometric drift     │                          │
+│   │  Layer 2: operational drift   │                          │
+│   │  Layer 3: temporal drift      │                          │
+│   │  Layer 4: conceptual drift    │                          │
+│   └──────────────────────────────┘                           │
+│                                                              │
+│ Regime Shift Indicators:                                     │
+│   • craft → digital                                          │
+│   • manual → automated                                       │
+│   • interpretive → structural                                │
+└──────────────────────────────────────────────────────────────┘
+</code></pre>
+<p><strong>Unlock Logic:</strong><br>
+- Drift panel activates after <strong>drift()</strong> or <strong>drift_tensor()</strong> is used.</p>
+<hr>
+<h1 id="section-4-coherence-alignment-panel"><strong>SECTION 4 — Coherence Alignment Panel</strong></h1>
+<pre><code>-
+┌──────────────────────────────────────────────────────────────┐
+│ COHERENCE ALIGNMENT                                          │
+│                                                              │
+│ Coherence Anchors:                                           │
+│   • shared structure                                         │
+│   • shared constraints                                       │
+│   • shared operators                                         │
+│   • shared regime boundaries                                 │
+│                                                              │
+│ Restoration Points:                                          │
+│   • hybrid workflows                                         │
+│   • cross‑system tuning                                      │
+│   • alignment anchors                                        │
+│                                                              │
+│ Compatibility Map:                                           │
+│   ┌──────────────────────────────┐                           │
+│   │ Process A ↔ Process B         │                          │
+│   │   aligned: X                  │                          │
+│   │   misaligned: Y               │                          │
+│   └──────────────────────────────┘                           │
+└──────────────────────────────────────────────────────────────┘
+</code></pre>
+<p><strong>Unlock Logic:</strong><br>
+- Requires <strong>coherence baseline</strong> in both processes<br>
+- Requires <strong>align_coherence()</strong> operator activation  </p>
+<hr>
+<h1 id="section-5-crosssystem-mapping-canvas"><strong>SECTION 5 — Cross‑System Mapping Canvas</strong></h1>
+<pre><code>-
+┌──────────────────────────────────────────────────────────────┐
+│ CROSS‑SYSTEM MAPPING                                         │
+│                                                              │
+│ Graph View:                                                  │
+│   ┌──────────────────────────────────────────────────────┐   │
+│   │ Process A ───── shared operators ───── Process B     │   │
+│   │      │                     │               │         |   │
+│   │  constraints           boundaries        layers      |   │
+│   └──────────────────────────────────────────────────────┘   │
+│                                                              │
+│ Relationship Types:                                          │
+│   • structural                                               │
+│   • operational                                              │
+│   • temporal                                                 │
+│   • conceptual                                               │
+│                                                              │
+│ [cross_system()] operator drives this canvas.                │
+└──────────────────────────────────────────────────────────────┘
+</code></pre>
+<hr>
+<h1 id="section-6-stack-builder-ipd12"><strong>SECTION 6 — Stack Builder (IPD‑12)</strong></h1>
+<pre><code>-
+┌──────────────────────────────────────────────────────────────┐
+│ STACK BUILDER                                                │
+│                                                              │
+│ Required Modules:                                            │
+│   [✓] Drift Detection                                        │
+│   [✓] Process Mapping                                        │
+│   [✓] Coherence Alignment                                   │
+│                                                              │
+│ Recommended Modules:                                         │
+│   [ ] Drift‑Tensor                                           │
+│   [ ] Cross‑System Pack                                      │
+│   [ ] Deep Diagnostics                                       │
+│                                                              │
+│ Disabled Modules:                                            │
+│   substrate modules                                          │
+│   inversion modules                                          │
+│   composite multi‑regime modules                             │
+│   (tooltip: “Not compatible with IPD‑12 engine.”)            │
+└──────────────────────────────────────────────────────────────┘
+</code></pre>
+<hr>
+<h1 id="section-7-prompt-output-panel"><strong>SECTION 7 — Prompt Output Panel</strong></h1>
+<pre><code>-
+┌──────────────────────────────────────────────────────────────┐
+│ GENERATED PROMPT (IPD‑12)                                    │
+│                                                              │
+│ Includes:                                                    │
+│   • Session Context                                          │
+│   • Engine Block (RTT‑IPD‑12)                                │
+│   • Module Stack                                             │
+│   • Operator Grammar                                         │
+│   • Capture → Analyze → Drift → Coherence → Synthesis        │
+│   • Output Format                                            │
+│                                                              │
+│ [Generate Prompt]                                            │
+│                                                              │
+│ Error Conditions:                                            │
+│   “IPD‑12 requires ≥2 processes.”                            │
+│   “Structural layers required for drift‑tensor.”             │
+│   “Coherence baseline required for alignment.”               │
+└──────────────────────────────────────────────────────────────┘
+</code></pre>
+<hr>
+<h1 id="section-8-engine-boundary-panel"><strong>SECTION 8 — Engine Boundary Panel</strong></h1>
+<pre><code>-
+┌──────────────────────────────────────────────────────────────┐
+│ ENGINE BOUNDARIES                                            │
+│                                                              │
+│ IPD‑12 DOES NOT SUPPORT:                                     │
+│   • substrate grammar                                        │
+│   • inversion operators                                      │
+│   • composite multi‑regime blending                          │
+│   • substrate mapping                                        │
+│                                                              │
+│ IPD‑12 IS OPTIMIZED FOR:                                     │
+│   • drift mechanics                                          │
+│   • multi‑process analysis                                   │
+│   • coherence alignment                                      │
+│   • cross‑system mapping                                     │
+└──────────────────────────────────────────────────────────────┘
+</code></pre>
+<hr>
+<h1 id="section-9-teaching-mode-toggle-rtt1"><strong>SECTION 9 — Teaching Mode Toggle (RTT‑1)</strong></h1>
+<p>Because you declared:</p>
+<ul>
+<li><strong>rtt = 1</strong>  </li>
+<li><strong>coherence = declared</strong>  </li>
+<li><strong>drift = bounded</strong>  </li>
+<li><strong>paradox = structural</strong></li>
+</ul>
+<p>The UI includes a teaching toggle:</p>
+<pre><code>-
+┌───────────────────────────────────────────────────────────────┐
+│ TEACHING MODE                                                 │
+│                                                               │
+│ [RTT‑1 Teaching Mode]  (surface regime, simplified operators) │
+│                                                               │
+│ When active:                                                  │
+│   • operators simplified                                      │
+│   • drift bounded                                             │
+│   • coherence declared                                        │
+│   • paradox shown as tension only                             │
+└───────────────────────────────────────────────────────────────┘
+</code></pre>
+  </main>
+</body>
+</html>

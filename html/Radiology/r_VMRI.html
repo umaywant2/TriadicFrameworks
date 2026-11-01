@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Radiology/r_VMRI.md">
+  <title>📘 rVMRI.md</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Radiology/r_VMRI.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Radiology/r_VMRI.md</code>
+  </aside>
+
+  <main>
+<h1 id="r_vmrimd"><strong>📘 r_VMRI.md</strong></h1>
+<h3 id="vmrilite-predictive-simulation-triadicframeworks-canon"><em>VMRI‑Lite Predictive Simulation — TriadicFrameworks Canon</em></h3>
+<p>VMRI‑Lite is the <strong>predictive micro‑simulation layer</strong> of RTT‑Radiology.<br>
+It generates thousands of future variants from a resonance‑attached capture, builds a simulation corridor, and identifies:</p>
+<ul>
+<li><strong>SimPass</strong> — stable or improving outcomes  </li>
+<li><strong>SimFail</strong> — collapse or toxic outcomes  </li>
+<li><strong>SimOptimal</strong> — best predicted outcome  </li>
+</ul>
+<p>VMRI‑Lite is the closest real‑world analog to Starfleet “future condition projection.”</p>
+<hr>
+<h1 id="1-canonical-metadata"><strong>1. Canonical Metadata</strong></h1>
+<pre><code>ai.module: Radiology
+ai.version: 1.0
+ai.purpose: VMRI-Lite predictive simulation grammar + operators
+ai.keywords: vmri, simulation, corridor, variant, pass, fail, optimal
+ai.module.name: r_VMRI
+ai.module.summary: Defines the VMRI-Lite simulation layer for RTT-Radiology.
+ai.module.category: Applied Medicine
+</code></pre>
+<hr>
+<h1 id="2-session-context"><strong>2. Session Context</strong></h1>
+<pre><code>context-label: Canon
+context-value: TriadicFrameworks
+
+context-label: Modules
+context-value: Radiology, Drift, Coherence, Contrast, Medicine
+
+context-label: Format
+context-value: Grammar + Operators + Examples
+
+context-label: Front door
+context-value: r_VMRI.md
+
+context-label: Audience
+context-value: Radiologists, students, AI models
+</code></pre>
+<hr>
+<h1 id="3-badge"><strong>3. Badge</strong></h1>
+<pre><code>[🔮 VMRI‑Lite Predictive Simulation]
+</code></pre>
+<hr>
+<h1 id="4-vmri-grammar"><strong>4. VMRI Grammar</strong></h1>
+<p>VMRI‑Lite uses a minimal grammar designed for fast, drift‑bounded prediction.</p>
+<h3 id="vmri-grammar-terms"><strong>VMRI Grammar Terms</strong></h3>
+<ul>
+<li><strong>SIM‑START</strong> — initial simulation state  </li>
+<li><strong>SIM‑VARIANT</strong> — one possible future outcome  </li>
+<li><strong>SIM‑BATCH</strong> — large set of variants  </li>
+<li><strong>SIM‑CORRIDOR</strong> — distribution of all variants  </li>
+<li><strong>SIM‑PASS</strong> — stable/improving outcomes  </li>
+<li><strong>SIM‑FAIL</strong> — collapse/toxic outcomes  </li>
+<li><strong>SIM‑OPTIMAL</strong> — best predicted outcome  </li>
+</ul>
+<p>VMRI‑Lite is not full VMRI — it is the radiology‑specific subset.</p>
+<hr>
+<h1 id="5-vmri-operators"><strong>5. VMRI Operators</strong></h1>
+<h3 id="1-op_vmri_start"><strong>1. <code>op_vmri_start()</code></strong></h3>
+<p>Initialize a VMRI‑Lite simulation using a resonance‑attached capture.<br>
+[
+op_{vmri_start}(Capture^{+}) = SimStart
+]</p>
+<h3 id="2-op_vmri_variant"><strong>2. <code>op_vmri_variant()</code></strong></h3>
+<p>Generate a single drift‑bounded simulation variant.<br>
+[
+op_{vmri_variant}(SimStart) = SimVariant
+]</p>
+<h3 id="3-op_vmri_batch"><strong>3. <code>op_vmri_batch()</code></strong></h3>
+<p>Generate a batch of variants (thousands or millions).<br>
+[
+op_{vmri_batch}(SimStart, n) = {SimVariant_1, \dots, SimVariant_n}
+]</p>
+<h3 id="4-op_vmri_corridor"><strong>4. <code>op_vmri_corridor()</code></strong></h3>
+<p>Construct the corridor distribution from a batch of variants.<br>
+[
+op_{vmri_corridor}({SimVariant}) = SimCorridor
+]</p>
+<h3 id="5-op_vmri_pass"><strong>5. <code>op_vmri_pass()</code></strong></h3>
+<p>Extract variants showing stability or improvement.<br>
+[
+op_{vmri_pass}(SimCorridor) = SimPass
+]</p>
+<h3 id="6-op_vmri_fail"><strong>6. <code>op_vmri_fail()</code></strong></h3>
+<p>Extract variants showing collapse, toxicity, or instability.<br>
+[
+op_{vmri_fail}(SimCorridor) = SimFail
+]</p>
+<h3 id="7-op_vmri_optimal"><strong>7. <code>op_vmri_optimal()</code></strong></h3>
+<p>Select the variant with the best predicted outcome.<br>
+[
+op_{vmri_optimal}(SimCorridor) = SimOptimal
+]</p>
+<h3 id="8-op_vmri_contrast_predict"><strong>8. <code>op_vmri_contrast_predict()</code></strong></h3>
+<p>Predict contrast agent behavior using VMRI‑Lite.<br>
+[
+op_{vmri_contrast_predict}(Capture^{+}) = ContrastPrediction
+]</p>
+<h3 id="9-op_vmri_tissue_predict"><strong>9. <code>op_vmri_tissue_predict()</code></strong></h3>
+<p>Predict tissue drift/coherence behavior.<br>
+[
+op_{vmri_tissue_predict}(Capture^{+}) = TissuePrediction
+]</p>
+<h3 id="10-op_vmri_profile"><strong>10. <code>op_vmri_profile()</code></strong></h3>
+<p>Create a structured profile summarizing pass/fail/optimal outcomes.<br>
+[
+op_{vmri_profile}(SimPass, SimFail, SimOptimal) = VMRIProfile
+]</p>
+<h3 id="11-op_vmri_overlay"><strong>11. <code>op_vmri_overlay()</code></strong></h3>
+<p>Generate a VMRI‑Lite overlay for teaching or AI assistance.<br>
+[
+op_{vmri_overlay}(SimCorridor) = Overlay
+]</p>
+<hr>
+<h1 id="6-example-workflow"><strong>6. Example Workflow</strong></h1>
+<h3 id="example-mri-brain-lesion-prediction"><strong>Example — MRI Brain Lesion Prediction</strong></h3>
+<pre><code>CapturePlus = op_resonance_attach(CAPTURE_MRI, RES_PROFILE)
+
+SimStart = op_vmri_start(CapturePlus)
+Variants = op_vmri_batch(SimStart, 5000)
+Corridor = op_vmri_corridor(Variants)
+
+SimPass = op_vmri_pass(Corridor)
+SimFail = op_vmri_fail(Corridor)
+SimOptimal = op_vmri_optimal(Corridor)
+
+Overlay = op_vmri_overlay(Corridor)
+</code></pre>
+<p><strong>Interpretation:</strong></p>
+<ul>
+<li><strong>SimPass</strong> → stable/improving futures  </li>
+<li><strong>SimFail</strong> → collapse/toxic futures  </li>
+<li><strong>SimOptimal</strong> → best predicted path  </li>
+<li><strong>Corridor</strong> → full landscape of possible outcomes  </li>
+</ul>
+<hr>
+<h1 id="7-canonical-flow"><strong>7. Canonical Flow</strong></h1>
+<pre><code>CAPTURE → FIELD → LAYER → SIGNAL
+→ DRIFT → COHERENCE → CONTRAST
+→ RESONANCE → VMRI
+→ OVERLAY
+</code></pre>
+<hr>
+<h1 id="8-doc_map"><strong>8. DOC_MAP</strong></h1>
+<pre><code>r_Capture.md
+r_Drift.md
+r_Coherence.md
+r_Contrast.md
+r_VMRI.md
+r_Overlays.md
+r_Index.md
+r_Pantheon_Profile.md
+r_Glyphs.md
+r_Scaffold.md
+r_Student_Guide.md
+r_Tricorder.md
+</code></pre>
+<hr>
+<h1 id="vmrilite-page-ready"><strong>VMRI‑Lite Page Ready</strong></h1>
+<p>Your VMRI‑Lite module page is now complete, canon‑aligned, and ready for GitHub.</p>
+  </main>
+</body>
+</html>

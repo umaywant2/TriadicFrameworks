@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Cisco/operator_hooks.md">
+  <title>RTT‑Inside / Cisco — Operator Hooks (Base + Grid‑Scale)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Cisco/operator_hooks.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Cisco/operator_hooks.md</code>
+  </aside>
+
+  <main>
+<h1 id="rttinside-cisco-operator-hooks-base-gridscale">RTT‑Inside / Cisco — Operator Hooks (Base + Grid‑Scale)</h1>
+<h2 id="purpose">Purpose</h2>
+<p>Convert Cisco‑origin telemetry, configuration, management actions, and flow‑level
+behaviors into RTT‑style causal objects. Provides the causal spine for reasoning
+across routing, switching, wireless, SD‑WAN, controller fabrics, and grid‑scale clusters.</p>
+<p>This file defines:</p>
+<ul>
+<li>Base Cisco operator grammar (device‑level)</li>
+<li>Grid‑Scale Variant (cluster‑level, MRC/MCR)</li>
+<li>Regime‑aware extensions (DSRSP)</li>
+<li>Resonance Chamber routing hooks</li>
+<li>ROA compatibility for Internet3‑class substrates</li>
+</ul>
+<hr>
+<h1 id="1-base-cisco-operator-grammar"><strong>1. Base Cisco Operator Grammar</strong></h1>
+<h2 id="intent_cisco-declared-network-intent">INTENT_CISCO — Declared Network Intent</h2>
+<pre><code>INTENT_CISCO(source) → declared_intent
+</code></pre>
+<h2 id="tif_cisco-telemetry-interpretation-frame">TIF_CISCO — Telemetry Interpretation Frame</h2>
+<pre><code>TIF_CISCO(telemetry) → interpreted_signal
+</code></pre>
+<h2 id="man_cisco-management-plane-causality">MAN_CISCO — Management Plane Causality</h2>
+<pre><code>MAN_CISCO(action) → mgmt_causal_link
+</code></pre>
+<h2 id="fff_cisco-forwarding-fabric-flow">FFF_CISCO — Forwarding Fabric Flow</h2>
+<pre><code>FFF_CISCO(flow) → flow_causality
+</code></pre>
+<h2 id="cre_cisco-causal-resolution-engine">CRE_CISCO — Causal Resolution Engine</h2>
+<pre><code>CRE_CISCO(intent, signal, mgmt) → resolved_causality
+</code></pre>
+<h2 id="csl_cisco-causal-lineage-stitching">CSL_CISCO — Causal Lineage Stitching</h2>
+<pre><code>CSL_CISCO(events[]) → lineage_chain
+</code></pre>
+<h2 id="cet_cisco-causal-event-time">CET_CISCO — Causal Event Time</h2>
+<pre><code>CET_CISCO(event) → time_indexed_event
+</code></pre>
+<h2 id="rtt_cisco-final-causal-output">RTT_CISCO — Final Causal Output</h2>
+<pre><code>RTT_CISCO(chain) → causal_object
+</code></pre>
+<hr>
+<h1 id="2-gridscale-variant-mrcmcr"><strong>2. Grid‑Scale Variant (MRC/MCR)</strong></h1>
+<p>Used for large fabrics (10k–100k+ nodes), multi‑node coherence, and cluster‑scale stitching.</p>
+<h2 id="intent_cisco_g">INTENT_CISCO_G</h2>
+<pre><code>INTENT_CISCO_G(cluster_policy) → declared_intent
+</code></pre>
+<h2 id="tif_cisco_g">TIF_CISCO_G</h2>
+<pre><code>TIF_CISCO_G(cluster_telemetry) → interpreted_signal
+</code></pre>
+<h2 id="man_cisco_g">MAN_CISCO_G</h2>
+<pre><code>MAN_CISCO_G(cluster_action) → mgmt_causal_link
+</code></pre>
+<h2 id="fff_cisco_g">FFF_CISCO_G</h2>
+<pre><code>FFF_CISCO_G(cluster_flow) → flow_causality
+</code></pre>
+<h2 id="cre_cisco_g">CRE_CISCO_G</h2>
+<pre><code>CRE_CISCO_G(intent, signal, mgmt) → resolved_causality
+</code></pre>
+<h2 id="csl_cisco_g">CSL_CISCO_G</h2>
+<pre><code>CSL_CISCO_G(events[]) → lineage_chain
+</code></pre>
+<h2 id="cet_cisco_g">CET_CISCO_G</h2>
+<pre><code>CET_CISCO_G(event) → time_indexed_event
+</code></pre>
+<h2 id="rtt_cisco_g">RTT_CISCO_G</h2>
+<pre><code>RTT_CISCO_G(chain) → causal_object
+</code></pre>
+<hr>
+<h1 id="3-regimeaware-extensions-dsrsp"><strong>3. Regime‑Aware Extensions (DSRSP)</strong></h1>
+<p>Cisco flows often cross timing, optical, wireless, or orbital regimes.</p>
+<h2 id="dsrsp_aware_i2">DSRSP_AWARE_I2</h2>
+<pre><code>DSRSP_AWARE_I2(path, sensors) → substrate_signature
+</code></pre>
+<h2 id="harmonic_scan_i2">HARMONIC_SCAN_I2</h2>
+<pre><code>HARMONIC_SCAN_I2(flow, regime_profile) → harmonic_signature
+</code></pre>
+<h2 id="substrate_classify">SUBSTRATE_CLASSIFY</h2>
+<pre><code>SUBSTRATE_CLASSIFY(harmonic_signature, invariants) → tier_class
+</code></pre>
+<hr>
+<h1 id="4-resonance-chamber-hooks-tier2-sandbox"><strong>4. Resonance Chamber Hooks (Tier‑2 Sandbox)</strong></h1>
+<p>Used when flows exhibit unstable invariants, harmonics, or regime‑crossing distortions.</p>
+<h2 id="route_to_resonance_chamber">ROUTE_TO_RESONANCE_CHAMBER</h2>
+<pre><code>ROUTE_TO_RESONANCE_CHAMBER(flow, tier_class) → chamber_path
+</code></pre>
+<h2 id="sandbox_boundary_enforce">SANDBOX_BOUNDARY_ENFORCE</h2>
+<pre><code>SANDBOX_BOUNDARY_ENFORCE(chamber_state) → allowed_egress
+</code></pre>
+<hr>
+<h1 id="5-roa-compatibility-internet3-seed"><strong>5. ROA Compatibility (Internet3 Seed)</strong></h1>
+<p>The Regime Observer Agent uses Cisco‑origin signals to maintain substrate clarity.</p>
+<h2 id="roa_observe">ROA_OBSERVE</h2>
+<pre><code>ROA_OBSERVE(regimes, flux, invariants) → observation_state
+</code></pre>
+<h2 id="roa_diagnose">ROA_DIAGNOSE</h2>
+<pre><code>ROA_DIAGNOSE(observation_state, substrate_health) → diagnosis
+</code></pre>
+<h2 id="roa_decide">ROA_DECIDE</h2>
+<pre><code>ROA_DECIDE(diagnosis, policy) → action_class
+</code></pre>
+<h2 id="roa_act">ROA_ACT</h2>
+<pre><code>ROA_ACT(action_class, flows) → routed_state
+</code></pre>
+<hr>
+<h1 id="6-full-base-chain"><strong>6. Full Base Chain</strong></h1>
+<pre><code>INTENT_CISCO
+→ TIF_CISCO
+→ MAN_CISCO
+→ FFF_CISCO
+→ CRE_CISCO
+→ CSL_CISCO
+→ CET_CISCO
+→ RTT_CISCO
+</code></pre>
+<h1 id="7-full-gridscale-chain"><strong>7. Full Grid‑Scale Chain</strong></h1>
+<pre><code>INTENT_CISCO_G
+→ TIF_CISCO_G
+→ MAN_CISCO_G
+→ FFF_CISCO_G
+→ CRE_CISCO_G
+→ CSL_CISCO_G
+→ CET_CISCO_G
+→ RTT_CISCO_G
+</code></pre>
+<hr>
+<h1 id="end-of-file">End of File</h1>
+  </main>
+</body>
+</html>

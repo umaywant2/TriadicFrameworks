@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/openloop/Risk.md">
+  <title>OpenRisk — TriadicFrameworks Open Loop Surface</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/openloop/Risk.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/openloop/Risk.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="openloop_Risk_" src="https://github.com/user-attachments/assets/9bb8f507-d4aa-416a-863a-013c884f8465" /></p>
+<h1 id="openrisk-triadicframeworks-open-loop-surface">OpenRisk — TriadicFrameworks Open Loop Surface</h1>
+<blockquote>
+<p><strong>Name disambiguation (first 80 words):</strong> <code>openloop</code> refers to the TriadicFrameworks five-step operational loop: read signature → scan sibling metadata → classify drift → apply operator → write lineage. It is not a reference to open-loop control systems in engineering. The prefix <code>Open</code> in <code>OpenRisk</code> signals aperture — the module exposes its signature, operators, drift surface, and lineage hooks to cross-domain inspection. OpenRisk is the classification layer that gates all cross-domain operations when coherence falls below any module's declared floor.</p>
+</blockquote>
+<hr>
+<h2 id="1-identity">1 · Identity</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Module ID</td>
+<td><code>openloop/Risk</code></td>
+</tr>
+<tr>
+<td>Domain</td>
+<td>Risk Regime Classification</td>
+</tr>
+<tr>
+<td>Ring layer</td>
+<td>Trust → Meaning → Motion</td>
+</tr>
+<tr>
+<td>Canonical version</td>
+<td>1.0.0</td>
+</tr>
+<tr>
+<td>Coherence floor</td>
+<td>0.80 — declared operational floor; the module will not accept a cross-domain payload without a GATE or ESCALATE from OpenRisk itself if coherence falls below this value</td>
+</tr>
+<tr>
+<td>Primary verb</td>
+<td>CLASSIFY</td>
+</tr>
+<tr>
+<td>Author</td>
+<td>Nawder Loswin</td>
+</tr>
+<tr>
+<td>Audience</td>
+<td>AI agents, framework operators, risk stewards, integration architects</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="2-architecture">2 · Architecture</h2>
+<p>OpenRisk is the risk classification surface. It sits in the pipeline after OpenIAM (Trust cleared) and before OpenGeo/OpenLLM (Motion begins). Its job is to CLASSIFY the risk envelope of any cross-domain operation and issue a GATE decision.</p>
+<h3 id="21-signature-plane">2.1 Signature Plane</h3>
+<pre><code class="language-yaml">signature:
+  module: openloop/Risk
+  dimension_vector: [regime, severity, temporal]
+  regime: classification
+  coherence_threshold: 0.80
+  operator_affinity: [CLASSIFY, GATE, ESCALATE, ABSORB, PROPAGATE]
+  rings: [Trust, Meaning, Motion]
+</code></pre>
+<h3 id="22-metadata-plane">2.2 Metadata Plane</h3>
+<pre><code class="language-yaml">metadata:
+  title: &quot;OpenRisk — Risk Regime Classification Surface&quot;
+  category: openloop
+  domain: Risk
+  version: 1.0.0
+  status: active
+  drift_surface: true
+  lineage_hooks: true
+  last_reviewed: &quot;2026-09-27&quot;
+  canonical_url: &quot;https://www.triadicframeworks.org/docs/openloop/Risk&quot;
+</code></pre>
+<h3 id="23-risk-tier-definitions">2.3 Risk Tier Definitions</h3>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Label</th>
+<th>Severity Range</th>
+<th>Gate Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T0</td>
+<td>Low</td>
+<td>coherence ≥ 0.90</td>
+<td>PASS — no gate</td>
+</tr>
+<tr>
+<td>T1</td>
+<td>Moderate</td>
+<td>0.80 ≤ coherence &lt; 0.90</td>
+<td>ANNOTATE and proceed</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>High</td>
+<td>0.70 ≤ coherence &lt; 0.80</td>
+<td>GATE — operator required</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>Critical</td>
+<td>coherence &lt; 0.70</td>
+<td>ESCALATE — steward required</td>
+</tr>
+</tbody>
+</table>
+<h3 id="24-severity-formula">2.4 Severity Formula</h3>
+<pre><code>severity_score = 1.0 - coherence_current
+gate_tier      = T0 if severity_score &lt; 0.10
+               = T1 if 0.10 ≤ severity_score &lt; 0.20
+               = T2 if 0.20 ≤ severity_score &lt; 0.30
+               = T3 if severity_score ≥ 0.30
+</code></pre>
+<hr>
+<h2 id="3-canonical-metadata">3 · Canonical Metadata</h2>
+<pre><code class="language-html">&lt;!-- OpenRisk canonical head block --&gt;
+&lt;meta name=&quot;ai.module&quot;           content=&quot;openloop/Risk&quot; /&gt;
+&lt;meta name=&quot;ai.version&quot;          content=&quot;1.0.0&quot; /&gt;
+&lt;meta name=&quot;ai.purpose&quot;          content=&quot;Risk regime classification open-aperture surface&quot; /&gt;
+&lt;meta name=&quot;ai.module.name&quot;      content=&quot;OpenRisk&quot; /&gt;
+&lt;meta name=&quot;ai.module.summary&quot;   content=&quot;Classifies risk tier and severity for all cross-domain operations. Issues GATE or ESCALATE decisions before Motion operators execute.&quot; /&gt;
+&lt;meta name=&quot;ai.module.category&quot;  content=&quot;openloop&quot; /&gt;
+&lt;meta name=&quot;ai.audience&quot;         content=&quot;AI agents, framework operators, risk stewards&quot; /&gt;
+&lt;meta name=&quot;ai.canonical_url&quot;    content=&quot;https://www.triadicframeworks.org/docs/openloop/Risk&quot; /&gt;
+&lt;meta name=&quot;citation_author&quot;     content=&quot;Nawder Loswin&quot; /&gt;
+&lt;meta name=&quot;citation_publication_date&quot; content=&quot;2025&quot; /&gt;
+&lt;meta name=&quot;DC.type&quot;             content=&quot;Text&quot; /&gt;
+&lt;meta name=&quot;DC.format&quot;           content=&quot;text/html&quot; /&gt;
+&lt;meta name=&quot;ai.license&quot;          content=&quot;Open educational use permitted&quot; /&gt;
+</code></pre>
+<hr>
+<h2 id="4-governance">4 · Governance</h2>
+<h3 id="41-ownership">4.1 Ownership</h3>
+<p>OpenRisk is governed by the TriadicFrameworks canon steward. Risk tier thresholds are declared floors, not empirically measured values. Changes to tier boundaries require a MAJOR version increment and a lineage note.</p>
+<h3 id="42-change-protocol">4.2 Change Protocol</h3>
+<ol>
+<li>Author proposes threshold change in a lineage note.</li>
+<li>All sibling modules are re-evaluated against the new tier boundaries.</li>
+<li>Any module whose coherence falls into a new gate tier receives a GATE event.</li>
+<li>OpenData indexes the lineage note. Change takes effect.</li>
+</ol>
+<h3 id="43-versioning">4.3 Versioning</h3>
+<p><code>MAJOR.MINOR.PATCH</code>. A change to any tier boundary is MAJOR.</p>
+<hr>
+<h2 id="5-operators">5 · Operators</h2>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Grammar</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CLASSIFY</td>
+<td><code>CLASSIFY(operation, risk_tier)</code></td>
+<td>Assign a T0–T3 risk tier to a cross-domain operation</td>
+</tr>
+<tr>
+<td>GATE</td>
+<td><code>GATE(operation, tier, [required_operator])</code></td>
+<td>Block operation until required operator is applied</td>
+</tr>
+<tr>
+<td>ESCALATE</td>
+<td><code>ESCALATE(operation, steward, [context])</code></td>
+<td>Elevate T3 events to human steward</td>
+</tr>
+<tr>
+<td>ABSORB</td>
+<td><code>ABSORB(drift_event, risk_envelope)</code></td>
+<td>Contain a bounded drift event within the current tier</td>
+</tr>
+<tr>
+<td>PROPAGATE</td>
+<td><code>PROPAGATE(risk_classification, sibling_modules)</code></td>
+<td>Broadcast tier assignment to downstream surfaces</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="6-the-open-loop">6 · The Open Loop</h2>
+<pre><code>┌─────────────────────────────────────────────────────────────┐
+│                 Open Loop — OpenRisk Surface                │
+│                                                             │
+│  1. READ SIGNATURE                                          │
+│     Confirm dimension_vector [regime, severity, temporal],  │
+│     coherence_threshold 0.80.                               │
+│                                                             │
+│  2. SCAN SIBLING METADATA                                   │
+│     Read coherence_current from all sibling modules.        │
+│     Compute severity_score for each.                        │
+│                                                             │
+│  3. CLASSIFY DRIFT                                          │
+│       • REGIME_DRIFT    — regime mismatch cross-domain      │
+│       • SEVERITY_DRIFT  — tier boundary crossed             │
+│       • TEMPORAL_DRIFT  — classification stale              │
+│                                                             │
+│  4. APPLY OPERATOR                                          │
+│     CLASSIFY → GATE (if T2) → ESCALATE (if T3)             │
+│     ABSORB (if T1 and bounded) → PROPAGATE                  │
+│                                                             │
+│  5. WRITE LINEAGE                                           │
+│     Record tier assignment, gate decision, and resolution   │
+│     in lineage/Risk/&lt;timestamp&gt;.md.                         │
+│     Loop closed only when OpenData indexes the note.        │
+└─────────────────────────────────────────────────────────────┘
+</code></pre>
+<hr>
+<h2 id="7-the-three-rings">7 · The Three Rings</h2>
+<h3 id="ring-1-trust">Ring 1 · Trust</h3>
+<p>OpenRisk sits in the Trust ring as the classification gate. It validates that a cross-domain operation has an acceptable risk envelope before Motion begins.</p>
+<p><em>OpenRisk Trust markers:</em> coherence ≥ 0.80, tier assigned, GATE decision issued or waived.</p>
+<h3 id="ring-2-meaning">Ring 2 · Meaning</h3>
+<p>Risk classification produces a Meaning artifact: the tier label and severity score that sibling modules use to interpret their own drift events.</p>
+<p><em>OpenRisk Meaning markers:</em> PROPAGATE applied, sibling modules have current tier assignments.</p>
+<h3 id="ring-3-motion">Ring 3 · Motion</h3>
+<p>OpenRisk enters the Motion ring only to propagate classifications — not to execute. Motion operators GATE and PROPAGATE carry risk context downstream.</p>
+<p><em>OpenRisk Motion markers:</em> PROPAGATE dispatched, lineage note written and indexed.</p>
+<hr>
+<h2 id="8-drift-event-json-example">8 · Drift-Event JSON Example</h2>
+<pre><code class="language-json">{
+  &quot;drift_event&quot;: {
+    &quot;id&quot;: &quot;drift/Risk/2026-09-26-001&quot;,
+    &quot;detected_at&quot;: &quot;2026-09-26T05:45:00Z&quot;,
+    &quot;source_module&quot;: &quot;openloop/LLM&quot;,
+    &quot;target_module&quot;: &quot;openloop/Risk&quot;,
+    &quot;drift_type&quot;: &quot;REGIME_DRIFT&quot;,
+    &quot;severity&quot;: &quot;high&quot;,
+    &quot;description&quot;: &quot;LLM regime (generative) produced output with coherence 0.71, crossing Risk T2 gate threshold. CLASSIFY assigned T2. GATE issued.&quot;,
+    &quot;coherence_before&quot;: 0.82,
+    &quot;coherence_after&quot;: 0.71,
+    &quot;risk_tier&quot;: &quot;T2&quot;,
+    &quot;severity_score&quot;: 0.29,
+    &quot;operator_applied&quot;: &quot;CLASSIFY(LLM.output, T2) → GATE(LLM.output, T2, ALIGN)&quot;,
+    &quot;resolution_status&quot;: &quot;gated — awaiting ALIGN operator&quot;,
+    &quot;lineage_ref&quot;: &quot;lineage/Risk/2026-09-26-001.md&quot;
+  }
+}
+</code></pre>
+<hr>
+<h2 id="9-cross-references">9 · Cross-References</h2>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Relationship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>openloop/IAM</code></td>
+<td>Receives VERIFY PASS before CLASSIFY runs; ESCALATE routes to IAM steward</td>
+</tr>
+<tr>
+<td><code>openloop/LLM</code></td>
+<td>Primary classification target; generative outputs most frequently reach T1–T2</td>
+</tr>
+<tr>
+<td><code>openloop/Geo</code></td>
+<td>Temporal axis shared; ANCHOR provides recency context for severity scoring</td>
+</tr>
+<tr>
+<td><code>openloop/GPU</code></td>
+<td>Execution jobs gated at T2–T3 until risk cleared</td>
+</tr>
+<tr>
+<td><code>openloop/Data</code></td>
+<td>Lineage store; indexes every CLASSIFY and GATE event</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><em>TriadicFrameworks · Open Loop Suite · OpenRisk · v1.0.0 · Nawder Loswin · 2026</em></p>
+  </main>
+</body>
+</html>

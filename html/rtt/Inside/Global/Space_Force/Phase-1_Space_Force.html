@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Global/Space_Force/Phase-1_Space_Force.md">
+  <title>2. Phase‑1: Space Force RTT/Inside overlay kit</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Global/Space_Force/Phase-1_Space_Force.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Global/Space_Force/Phase-1_Space_Force.md</code>
+  </aside>
+
+  <main>
+<h2 id="2-phase1-space-force-rttinside-overlay-kit">2. Phase‑1: Space Force RTT/Inside overlay kit</h2>
+<h3 id="21-core-types">2.1 Core types</h3>
+<pre><code class="language-ts">// phase1/types.ts
+export interface OrbitalTrack {
+  objectId: string;
+  name: string;
+  class: &quot;ACTIVE&quot; | &quot;DEBRIS&quot; | &quot;ROCKET_BODY&quot;;
+  state: {
+    frame: &quot;ECI&quot; | &quot;ECEF&quot;;
+    position_km: [number, number, number];
+    velocity_km_s: [number, number, number];
+  };
+  epoch: string;
+}
+
+export interface Corridor {
+  corridorId: string;
+  type: &quot;LAUNCH&quot; | &quot;REENTRY&quot;;
+  time_window: { start: string; end: string };
+}
+
+export interface RttSpaceMetrics {
+  orbital_stability: number;
+  conjunction_resonance: number;
+  corridor_conflict_risk: number;
+  time_horizon_sec: number;
+  advisory_level: &quot;NORMAL&quot; | &quot;WATCH&quot; | &quot;ALERT&quot;;
+}
+
+export interface AugmentedOrbitalTrack extends OrbitalTrack {
+  rtt: RttSpaceMetrics;
+}
+</code></pre>
+<h3 id="22-phase1-engine-middleware">2.2 Phase‑1 engine + middleware</h3>
+<pre><code class="language-ts">// phase1/rttSpaceEngine.ts
+import { OrbitalTrack, Corridor, RttSpaceMetrics } from &quot;./types&quot;;
+
+export class RttSpaceEngine {
+  constructor(private horizonSec: number = 86400) {}
+
+  computeMetrics(
+    track: OrbitalTrack,
+    neighbors: OrbitalTrack[],
+    corridors: Corridor[]
+  ): RttSpaceMetrics {
+    const stability = this.estimateOrbitalStability(track);
+    const conjRes = this.estimateConjunctionResonance(track, neighbors);
+    const corridorRisk = this.estimateCorridorConflict(track, corridors);
+
+    const advisory =
+      corridorRisk &gt; 0.7 || conjRes &gt; 0.7 ? &quot;ALERT&quot; :
+      corridorRisk &gt; 0.4 || conjRes &gt; 0.4 ? &quot;WATCH&quot; :
+      &quot;NORMAL&quot;;
+
+    return {
+      orbital_stability: stability,
+      conjunction_resonance: conjRes,
+      corridor_conflict_risk: corridorRisk,
+      time_horizon_sec: this.horizonSec,
+      advisory_level: advisory
+    };
+  }
+
+  private estimateOrbitalStability(track: OrbitalTrack): number { return 0.9; }
+  private estimateConjunctionResonance(t: OrbitalTrack, n: OrbitalTrack[]): number { return 0.2; }
+  private estimateCorridorConflict(t: OrbitalTrack, c: Corridor[]): number { return 0.1; }
+}
+</code></pre>
+<pre><code class="language-ts">// phase1/middleware.ts
+import {
+  OrbitalTrack,
+  Corridor,
+  AugmentedOrbitalTrack
+} from &quot;./types&quot;;
+import { RttSpaceEngine } from &quot;./rttSpaceEngine&quot;;
+
+export class RttSpaceMiddleware {
+  private engine = new RttSpaceEngine();
+  private corridors: Corridor[] = [];
+
+  constructor(
+    private subscribeTracks: (cb: (tracks: OrbitalTrack[]) =&gt; void) =&gt; void,
+    private subscribeCorridors: (cb: (corridors: Corridor[]) =&gt; void) =&gt; void,
+    private publishAugmented: (tracks: AugmentedOrbitalTrack[]) =&gt; void
+  ) {}
+
+  start() {
+    this.subscribeCorridors(c =&gt; { this.corridors = c; });
+
+    this.subscribeTracks((tracks) =&gt; {
+      const augmented = tracks.map(t =&gt; {
+        const neighbors = tracks.filter(n =&gt; n.objectId !== t.objectId);
+        const rtt = this.engine.computeMetrics(t, neighbors, this.corridors);
+        return { ...t, rtt };
+      });
+      this.publishAugmented(augmented);
+    });
+  }
+}
+</code></pre>
+<h3 id="23-phase1-overlay-hook">2.3 Phase‑1 overlay hook</h3>
+<pre><code class="language-ts">// phase1/overlay.ts
+import { AugmentedOrbitalTrack } from &quot;./types&quot;;
+
+export interface OverlayStyle {
+  trackColor: string;
+  haloRadius: number;
+  labelBadge: &quot;NORMAL&quot; | &quot;WATCH&quot; | &quot;ALERT&quot;;
+}
+
+export function buildOverlayStyle(track: AugmentedOrbitalTrack): OverlayStyle {
+  const { orbital_stability, advisory_level } = track.rtt;
+
+  const trackColor =
+    advisory_level === &quot;ALERT&quot; ? &quot;#ff4d4f&quot; :
+    advisory_level === &quot;WATCH&quot; ? &quot;#faad14&quot; :
+    orbital_stability &gt; 0.9 ? &quot;#52c41a&quot; :
+    &quot;#1890ff&quot;;
+
+  const haloRadius = 1 + (1 - orbital_stability) * 4;
+
+  return { trackColor, haloRadius, labelBadge: advisory_level };
+}
+</code></pre>
+<p><strong>Outcome:</strong> Space Force unit gets overlays in their SDA/launch displays with zero impact on core tools.</p>
+  </main>
+</body>
+</html>

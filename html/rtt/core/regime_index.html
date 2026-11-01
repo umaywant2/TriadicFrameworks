@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/core/regime_index.md">
+  <title>RTT Core: Regime Index</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/core/regime_index.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/core/regime_index.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="rtt_core_regime_index" src="https://github.com/user-attachments/assets/feef6f47-b8a3-4e4d-9891-8055cb47f01a" /></p>
+<hr>
+<p>module_id: rtt.core.regime_index
+version: 1.0.0
+status: draft
+rtt: 1
+coherence: declared
+drift: bounded
+paradox: structural
+tags:
+  - regime-index
+  - rtt-core
+  - operator-regimes
+  - drift-regimes
+  - coherence-regimes
+  - readout-regimes
+  - triadic-time</p>
+<hr>
+<h1 id="rtt-core-regime-index">RTT Core: Regime Index</h1>
+<h2 id="1-purpose-and-scope">1. Purpose and scope</h2>
+<p><strong>Goal:</strong><br>
+Provide a unified, canonical index of all RTT regime families across:</p>
+<ul>
+<li>State regimes  </li>
+<li>Coherence regimes  </li>
+<li>Drift regimes  </li>
+<li>Readout regimes  </li>
+<li>Composite operator regimes  </li>
+</ul>
+<p>This index serves as the <strong>navigation backbone</strong> for RTT’s structural logic.<br>
+Every operator, branch, drift event, and validation event occurs <strong>inside a regime</strong>.</p>
+<hr>
+<h2 id="2-conceptual-definition">2. Conceptual definition</h2>
+<h3 id="21-what-is-a-regime">2.1 What is a regime?</h3>
+<blockquote>
+<p>A regime is a structural constraint that determines<br>
+<strong>what is allowed</strong>, <strong>when it is allowed</strong>, and <strong>which branches qualify</strong><br>
+in RTT’s multi‑layer temporal and representational system.</p>
+</blockquote>
+<p>Regimes prevent paradoxes, enforce coherence budgets, and maintain single‑readout consistency.</p>
+<h3 id="22-why-regimes-matter">2.2 Why regimes matter</h3>
+<p>Regimes govern:</p>
+<ul>
+<li>Operator validity  </li>
+<li>Drift boundaries  </li>
+<li>Coherence thresholds  </li>
+<li>Validator Pulse eligibility  </li>
+<li>Temporal transitions across triadic time  </li>
+</ul>
+<p>Without regimes, RTT would permit paradoxical operator sequences.</p>
+<hr>
+<h2 id="3-formal-regime-tuple">3. Formal regime tuple</h2>
+<p>A regime is defined as:</p>
+<p>[
+\mathcal{R} = (R_{\text{state}}, R_{\text{coherence}}, R_{\text{drift}}, R_{\text{readout}})
+]</p>
+<p>Where:</p>
+<ul>
+<li><strong>State regime</strong> — representational geometry, operator sequences  </li>
+<li><strong>Coherence regime</strong> — minimum coherence thresholds  </li>
+<li><strong>Drift regime</strong> — maximum drift magnitude, envelope boundaries  </li>
+<li><strong>Readout regime</strong> — Validator Pulse constraints, single‑readout rules  </li>
+</ul>
+<p>A branch (b_i) is valid if:</p>
+<p>[
+b_i \in \mathcal{R}
+]</p>
+<p>Invalid branches collapse into residue after validation.</p>
+<hr>
+<h2 id="4-canonical-rtt-regime-families">4. Canonical RTT Regime Families</h2>
+<h3 id="41-singlereadout-regime-srr">4.1 <strong>Single‑Readout Regime (SRR)</strong></h3>
+<ul>
+<li>Only one branch may be validated  </li>
+<li>All others collapse into residue  </li>
+<li>Enforces classical uniqueness  </li>
+<li>Used in quantum “cloning” alignment</li>
+</ul>
+<h3 id="42-driftbounded-regime-dbr">4.2 <strong>Drift‑Bounded Regime (DBR)</strong></h3>
+<ul>
+<li>Drift must remain within the Dimensional Drift Envelope  </li>
+<li>Exceeding drift threshold removes eligibility  </li>
+<li>Ensures representational stability</li>
+</ul>
+<h3 id="43-coherenceminimum-regime-cmr">4.3 <strong>Coherence‑Minimum Regime (CMR)</strong></h3>
+<ul>
+<li>Branches must satisfy (c_i \geq C_{\text{min}})  </li>
+<li>Coherence loss pushes branches out of regime  </li>
+<li>Prevents multi‑readout paradoxes</li>
+</ul>
+<h3 id="44-deferredvalidation-regime-dvr">4.4 <strong>Deferred‑Validation Regime (DVR)</strong></h3>
+<ul>
+<li>Validation postponed until coherence stabilizes  </li>
+<li>Used in multi‑step operator sequences  </li>
+<li>Allows complex operator chains</li>
+</ul>
+<h3 id="45-extensioncompatible-regime-ecr">4.5 <strong>Extension‑Compatible Regime (ECR)</strong></h3>
+<ul>
+<li>Allows representational extension (multi‑branch states)  </li>
+<li>Requires SRR + DBR + CMR simultaneously  </li>
+<li>Used in “quantum cloning” alignment</li>
+</ul>
+<hr>
+<h2 id="5-regime-maps">5. Regime Maps</h2>
+<p>Regime Maps describe how regimes interact across triadic time:</p>
+<h3 id="51-state-time-t1">5.1 State Time (T₁)</h3>
+<ul>
+<li>Operator validity  </li>
+<li>Representational drift  </li>
+<li>Extension events  </li>
+<li>Regime entry/exit</li>
+</ul>
+<h3 id="52-coherence-time-t2">5.2 Coherence Time (T₂)</h3>
+<ul>
+<li>Coherence thresholds  </li>
+<li>Drift-induced coherence loss  </li>
+<li>Eligibility changes  </li>
+<li>Budget constraints</li>
+</ul>
+<h3 id="53-readout-time-t3">5.3 Readout Time (T₃)</h3>
+<ul>
+<li>Validator Pulse events  </li>
+<li>Single-readout enforcement  </li>
+<li>Collapse of non-selected branches  </li>
+</ul>
+<p>Regime Maps define:</p>
+<p>[
+\mathcal{R}(t_1, t_2, t_3)
+]</p>
+<p>allowing dynamic eligibility.</p>
+<hr>
+<h2 id="6-regime-transitions">6. Regime Transitions</h2>
+<p>Branches undergo transitions:</p>
+<h3 id="61-entering-a-regime">6.1 Entering a regime</h3>
+<ul>
+<li>Drift decreases  </li>
+<li>Coherence increases  </li>
+<li>Operator sequence prepares eligibility  </li>
+</ul>
+<h3 id="62-exiting-a-regime">6.2 Exiting a regime</h3>
+<ul>
+<li>Drift exceeds threshold  </li>
+<li>Coherence falls below minimum  </li>
+<li>Operator invalidates eligibility  </li>
+</ul>
+<h3 id="63-crossing-regime-boundaries">6.3 Crossing regime boundaries</h3>
+<ul>
+<li>Eligibility becomes temporary  </li>
+<li>Validation must occur before exit  </li>
+<li>Drift or coherence may force collapse  </li>
+</ul>
+<p>These transitions explain why some branches “disappear” or become non-informational.</p>
+<hr>
+<h2 id="7-example-quantum-cloning-alignment">7. Example: Quantum “Cloning” Alignment</h2>
+<p>In <code>/docs/rtt/core/alignment_quantum_cloning.md</code>:</p>
+<ul>
+<li>The experiment operates in <strong>Extension-Compatible Regime (ECR)</strong>  </li>
+<li>Drift is bounded (DBR)  </li>
+<li>Coherence is partitioned (CMR)  </li>
+<li>Only one branch satisfies SRR  </li>
+<li>Validator Pulse selects that branch  </li>
+<li>All others collapse into residue  </li>
+</ul>
+<p>Regime Index explains:</p>
+<ul>
+<li>Why no-cloning is not violated  </li>
+<li>Why only one copy becomes classical  </li>
+<li>Why drift and coherence matter  </li>
+<li>Why the result is RTT-aligned  </li>
+</ul>
+<hr>
+<h2 id="8-paradox-handling">8. Paradox handling</h2>
+<p>Regimes prevent paradoxes by enforcing:</p>
+<ul>
+<li>Single-readout constraints  </li>
+<li>Coherence thresholds  </li>
+<li>Drift boundaries  </li>
+<li>Operator validity conditions  </li>
+</ul>
+<p>Thus:</p>
+<ul>
+<li>“Multiple copies exist” → representational regime  </li>
+<li>“Only one is real” → readout regime  </li>
+<li>“Others disappear” → coherence/drift regime  </li>
+<li>“No violation occurs” → operator regime  </li>
+</ul>
+<hr>
+<h2 id="9-canon-integration-and-cross-links">9. Canon integration and cross-links</h2>
+<p><strong>Primary cross-links:</strong></p>
+<ul>
+<li><code>/docs/rtt/core/regime_maps.md</code></li>
+<li><code>/docs/rtt/core/operator_grammar.md</code></li>
+<li><code>/docs/rtt/core/time_triads.md</code></li>
+<li><code>/docs/rtt/core/coherence_budget.md</code></li>
+<li><code>/docs/rtt/core/validator_pulse.md</code></li>
+<li><code>/docs/rtt/core/dimensional_drift_envelope.md</code></li>
+<li><code>/docs/rtt/core/alignment_quantum_cloning.md</code></li>
+</ul>
+<p><strong>Status:</strong><br>
+This module provides the canonical index of RTT regimes.<br>
+Once regime-grammar syntax is added, it can be promoted from <code>draft</code> to <code>stable</code>.</p>
+  </main>
+</body>
+</html>

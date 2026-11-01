@@ -1,0 +1,1764 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/3/GLOSSARY.md">
+  <title>GLOSSARY — RTT/3 · Integration–Emission Layer</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/3/GLOSSARY.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/3/GLOSSARY.md</code>
+  </aside>
+
+  <main>
+<h1 id="glossary-rtt3-integrationemission-layer">GLOSSARY — RTT/3 · Integration–Emission Layer</h1>
+<p><strong>TriadicFrameworks · Core RTT · Integration–Emission Layer</strong>
+<strong>Module path:</strong> <code>docs/rtt/3/</code>
+<strong>Session seed:</strong> <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code></p>
+<p>This is the <strong>single source of truth</strong> for every term native to RTT/3.
+All other documents in <code>docs/rtt/3/</code> and all downstream modules that
+reference RTT/3 vocabulary link here rather than re-defining terms inline.</p>
+<p>RTT/3 inherits the complete vocabularies of RTT/1 and RTT/2. Terms defined
+in <a href="../1/GLOSSARY.html"><code>../1/GLOSSARY.md</code></a> and <a href="../2/GLOSSARY.html"><code>../2/GLOSSARY.md</code></a>
+— including SNR, τ, C, DCO_n, Regime, Mode, MCL, Drift, CPV, FGT, CRM,
+D(t), Detection Mode, Detection Zone, and RTT2_DETECTION_PACKET — are not
+repeated here. They apply in full. Entries below are RTT/3-native or
+RTT/3-specific refinements of inherited terms.</p>
+<blockquote>
+<p><strong>Critical framing — enforced in every definition:</strong>
+RTT/3 is a structural integration and emission framework. It is NOT a
+physics claim, NOT a signal-processing system, and NOT a physical emitter.
+No definition here describes a physical mechanism or makes an empirical
+prediction.</p>
+<p><strong>Linking convention:</strong> Use <code>[term](./GLOSSARY.md#anchor)</code> where <code>anchor</code>
+is the lowercase hyphenated heading slug
+(e.g., <code>#triadic-integration-field-tif</code>, <code>#e_canont</code>, <code>#zone-x--inversion</code>).</p>
+</blockquote>
+<hr>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#c">C</a> · <a href="#d">D</a> · <a href="#e">E</a> · <a href="#f">F</a> · <a href="#i">I</a> · <a href="#m">M</a></li>
+<li><a href="#p">P</a> · <a href="#r">R</a> · <a href="#s">S</a> · <a href="#t">T</a> · <a href="#u">U</a> · <a href="#z">Z</a></li>
+<li><a href="#operator-symbols">Operator Symbols</a></li>
+<li><a href="#quick-reference-tables">Quick-Reference Tables</a></li>
+</ul>
+<hr>
+<h2 id="c">C</h2>
+<h3 id="c_flowt-continuity-flow">C_flow(t) — Continuity Flow</h3>
+<p><strong>Equation:</strong> <code>C_flow(t) = αI(t) + βE(t)</code> · <strong>Computed by:</strong>
+<a href="#class-n--continuity-navigator">Class N</a></p>
+<p>The scalar continuity flow across the
+<a href="#integrationemission-manifold">Integration–Emission Manifold</a> — the
+combined measure of how integration flow I(t) and emission flow E(t)
+are sustaining structural continuity at the TIF↔FFF boundary.</p>
+<p>C_flow(t) is the key input to both <a href="#continuity-stability-layer-csl">CSL</a>
+(which uses it to compute S(t)) and <a href="#class-v--stabilityrecovery-coordinator">Class V</a>
+(which monitors it for collapse precursors). A C_flow(t) approaching zero
+signals manifold continuity failure — the integration and emission flows
+have decoupled.</p>
+<h3 id="cav-collapse-absorption-vector">CAV — Collapse-Absorption Vector</h3>
+<p><strong>Construct:</strong> <a href="#collapse-recovery-engine-cre">CRE</a> · <strong>CRE vector 1 of 3</strong>
+<em>See also:</em> <a href="#rev--recovery-emission-vector-cre-context">REV (CRE)</a>,
+<a href="#csv--continuity-stabilization-vector">CSV</a></p>
+<p>The CRE vector that absorbs structural collapse load. CAV is activated
+first in any CRE sequence — collapse must be absorbed before recovery
+can begin. A CAV absorption event must be logged before
+<a href="#class-v--stabilityrecovery-coordinator">Class V</a> begins computing
+CR(t). Skipping CAV logging and proceeding directly to recovery emission
+is a boundary violation.</p>
+<h3 id="canon-scale-emission">Canon-Scale Emission</h3>
+<p>The structural emission produced at the final RTT/3 stage via the
+<a href="#canon-scale-emission-tensor-cet">CET</a> — an emission scaled to
+RTT/12's synthesis requirements by combining integration flow I(t),
+stability flow S(t), and regime identity R(t). "Canon-scale" means
+the emission has been validated against all upstream constructs
+(TIF, FFF, MANIFOLD, CRE, CSL) and is certified as the authoritative
+structural output of the RTT/3 module.</p>
+<blockquote>
+<p><strong>RTT/3 is NOT physics.</strong> Canon-scale emission is a structural
+classification, not a physical power output. The term "emission"
+refers to the outward projection of integrated structural form,
+not electromagnetic or acoustic emission.</p>
+</blockquote>
+<h3 id="canon-scale-emission-tensor-cet">Canon-Scale Emission Tensor (CET)</h3>
+<p><strong>Equation:</strong> <code>E_canon(t) = αI(t) + βS(t) + γR(t)</code>
+<strong>Tensor:</strong> <code>T_CET(i,j,k,m,r) = α·IEV_i + β·SEV_j + γ·REV_k + δ·RGEV_m + ε·R_r</code>
+<strong>Computed by:</strong> <a href="#class-o--output-compositor">Class O</a></p>
+<p>The sixth and final RTT/3 construct. CET aggregates the outputs of all
+upstream constructs into a single canon-validated emission scalar
+E_canon(t), then populates the canonical
+<a href="#rtt3_integration_emission_packet">RTT3_INTEGRATION_EMISSION_PACKET</a>.</p>
+<p><strong>Why CET and not direct I(t) forwarding:</strong>
+Passing I(t) directly to RTT/12 would give it integration data without
+stability context (S(t)) or regime grounding (R(t)). RTT/12 synthesis
+cannot responsibly weight an integration signal without knowing whether
+the source system was stable, recovering, or in flux. CET encodes all
+three in a single canon scalar — the minimum sufficient information for
+RTT/12 to proceed responsibly.</p>
+<p><strong>CET vectors:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>What it contributes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IEV</td>
+<td>Integration-Emission Vector</td>
+<td>The integration flow component of canon emission</td>
+</tr>
+<tr>
+<td>SEV</td>
+<td>Stability-Emission Vector</td>
+<td>The stability flow component</td>
+</tr>
+<tr>
+<td>REV</td>
+<td>Recovery-Emission Vector</td>
+<td>The recovery flow component (from CRE)</td>
+</tr>
+<tr>
+<td>RGEV</td>
+<td>Regime-Emission Vector</td>
+<td>The regime identity component</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>REV disambiguation:</strong> REV appears in both CRE and CET.
+In CRE: REV = Recovery-Emission Vector (how collapse energy is re-emitted
+after absorption). In CET: REV = Recovery-Emission Vector (how the
+CRE's recovery contribution enters the canon emission tensor).
+They share a name because they describe the same structural flow at
+different pipeline stages — CRE's REV <em>produces</em> the recovery signal;
+CET's REV <em>incorporates</em> it. Context always disambiguates.</p>
+</blockquote>
+<h3 id="cet">CET</h3>
+<p><em>See <a href="#canon-scale-emission-tensor-cet">Canon-Scale Emission Tensor</a>.</em></p>
+<h3 id="civ-continuity-integration-vector">CIV — Continuity-Integration Vector</h3>
+<p><strong>Construct:</strong> <a href="#triadic-integration-field-tif">TIF</a> · <strong>TIF vector 3 of 3</strong>
+<em>See also:</em> <a href="#div--drift-integration-vector">DIV</a>, <a href="#eiv--envelope-integration-vector">EIV</a></p>
+<p>The TIF integration vector that loads the continuity-fracture component
+C(t) from the RTT/2 CRM into the TIF's integration field. CIV is the
+structural bridge between RTT/2's measured continuity fracture and
+RTT/3's integration of that fracture into the unified field.</p>
+<h3 id="class-e-emission-engineer">Class E — Emission Engineer</h3>
+<p><strong>RTT/3 agent class 2 of 6</strong> · <em>See <a href="./AGENTS.html#class-e--emission-engineer">AGENTS.md</a></em></p>
+<p>The agent class that operates the <a href="#fusionfractureflow-emitter-fff">Fusion–Fracture–Flow Emitter (FFF)</a>,
+transforming integration flow I(t) into dynamic emission E(t). Class E
+is activated by receiving the TIF_INTEGRATION_PACKET from
+<a href="#class-i--integration-architect">Class I</a> and is responsible for
+managing fracture strain via <a href="#fmv--fracture-management-vector">FMV</a>.
+Class E must issue a fracture strain alert when FMV exceeds threshold
+and must never suppress that alert. Class E must never activate
+Inversion Emission mode.</p>
+<h3 id="class-g-integration-guardian">Class G — Integration Guardian</h3>
+<p><strong>RTT/3 agent class 6 of 6</strong> · <em>See <a href="./AGENTS.html#class-g--integration-guardian">AGENTS.md</a></em></p>
+<p>The agent class with unconditional interrupt authority over all other
+RTT/3 classes. Class G enforces all RTT/3 boundaries, co-signs Zone X
+packets before forwarding, mandates session restart when Inversion
+geometry persists after two correction cycles, and enforces the
+RTT-not-physics rule across all class outputs. No Class G HALT may be
+overridden by any other RTT/3 class.</p>
+<h3 id="class-i-integration-architect">Class I — Integration Architect</h3>
+<p><strong>RTT/3 agent class 1 of 6</strong> · <em>See <a href="./AGENTS.html#class-i--integration-architect">AGENTS.md</a></em></p>
+<p>The agent class that constructs and maintains the
+<a href="#triadic-integration-field-tif">Triadic Integration Field (TIF)</a>.
+Class I is always first in the RTT/3 pipeline — it performs the
+hard-prerequisite check for the <code>RTT2_DETECTION_PACKET</code> before loading
+any CRM components into the TIF integration vectors. Class I produces
+the <code>TIF_INTEGRATION_PACKET</code> that Class E and Class N depend on.</p>
+<h3 id="class-n-continuity-navigator">Class N — Continuity Navigator</h3>
+<p><strong>RTT/3 agent class 3 of 6</strong> · <em>See <a href="./AGENTS.html#class-n--continuity-navigator">AGENTS.md</a></em></p>
+<p>The agent class that maintains the
+<a href="#integrationemission-manifold">Integration–Emission Manifold</a>, ensuring
+structural continuity across the TIF↔FFF boundary. Class N requires
+both the TIF_INTEGRATION_PACKET and the FFF_EMITTER_PACKET before
+computing C_flow(t) and mapping the 6-axis manifold surface. Class N
+has read-only access to the FI and EM axis values — it may not modify
+them. Class N feeds C_flow(t) to <a href="#class-v--stabilityrecovery-coordinator">Class V</a>
+and the manifold state to <a href="#class-o--output-compositor">Class O</a>.</p>
+<h3 id="class-o-output-compositor">Class O — Output Compositor</h3>
+<p><strong>RTT/3 agent class 5 of 6</strong> · <em>See <a href="./AGENTS.html#class-o--output-compositor">AGENTS.md</a></em></p>
+<p>The terminal agent class that assembles all five intermediate packets
+into the canonical <a href="#rtt3_integration_emission_packet">RTT3_INTEGRATION_EMISSION_PACKET</a>
+via the <a href="#canon-scale-emission-tensor-cet">CET</a>. Class O may not
+compose the final packet until all five upstream packets are confirmed.
+It may not emit a packet containing a Zone X field without
+<a href="#class-g--integration-guardian">Class G</a> co-signature. It may not
+label E_canon(t) as a physical energy or power output.</p>
+<h3 id="class-v-stabilityrecovery-coordinator">Class V — Stability–Recovery Coordinator</h3>
+<p><strong>RTT/3 agent class 4 of 6</strong> · <em>See <a href="./AGENTS.html#class-v--stabilityrecovery-coordinator">AGENTS.md</a></em></p>
+<p>The agent class that operates both the
+<a href="#collapse-recovery-engine-cre">Collapse-Recovery Engine (CRE)</a> and the
+<a href="#continuity-stability-layer-csl">Continuity-Stability Layer (CSL)</a> as a
+unified stabilization pair. Class V is activated by fracture strain
+alerts from Class E or Zone D/X flags from Class N. It computes both
+CR(t) via CRE and S(t) via CSL, issues stabilization directives to
+Class I and Class E when needed, and delivers both stabilization packets
+to Class O. Class V must never suppress a detected collapse event.</p>
+<h3 id="collapse-recovery-engine-cre">Collapse-Recovery Engine (CRE)</h3>
+<p><strong>Equation:</strong> <code>CR(t) = αC(t) + βR(t) + γS(t)</code>
+<strong>Tensor:</strong> <code>T_CR(i,j,k,r) = α·CAV_i + β·REV_j + γ·CSV_k + δ·R_r</code>
+<strong>Operated by:</strong> <a href="#class-v--stabilityrecovery-coordinator">Class V</a>
+<strong>Posture:</strong> Reactive — event-triggered</p>
+<p>The fifth RTT/3 construct. CRE is the <strong>reactive</strong> stabilization engine —
+it activates only when a collapse event is detected (via fracture strain
+alert from Class E or Zone D/X flag from Class N). CRE absorbs the
+collapse through <a href="#cav--collapse-absorption-vector">CAV</a>, re-emits the
+absorbed energy as a structured recovery signal through
+<a href="#rev--recovery-emission-vector-cre-context">REV (CRE context)</a>, and
+stabilizes continuity through <a href="#csv--continuity-stabilization-vector">CSV</a>.</p>
+<p><strong>CRE sequence (mandatory order):</strong>
+1. Log collapse absorption state (CAV value recorded)
+2. Compute CR(t) = αC(t) + βR(t) + γS(t)
+3. Emit recovery signal via REV
+4. Issue stabilization directives to Class I and Class E
+5. Pass COLLAPSE_RECOVERY_ENGINE_PACKET to Class O</p>
+<blockquote>
+<p><strong>⚠ CRE ≠ CRM — critical disambiguation:</strong>
+RTT/2's <strong>Collapse-Reassembly Manifold (CRM)</strong> tracks structural
+displacement D(t) across a detection surface.
+RTT/3's <strong>Collapse-Recovery Engine (CRE)</strong> governs the absorption and
+re-emission of collapse energy within the integration-emission layer.
+They share terminology roots but are <strong>not interchangeable</strong>. Specifically:
+CR(t) ≠ D(t). See <a href="#crt--collapse-recovery-flow">CR(t) ≠ D(t)</a> for
+the full disambiguation.</p>
+</blockquote>
+<h3 id="continuity-stability-layer-csl">Continuity-Stability Layer (CSL)</h3>
+<p><strong>Equation:</strong> <code>S(t) = αI(t) + βE(t) + γC_flow(t)</code>
+<strong>Tensor:</strong> <code>T_CS(i,j,k,r) = α·ISV_i + β·ESV_j + γ·FSV_k + δ·R_r</code>
+<strong>Operated by:</strong> <a href="#class-v--stabilityrecovery-coordinator">Class V</a>
+<strong>Posture:</strong> Proactive — always active</p>
+<p>The fifth RTT/3 construct (paired with CRE as the dual stabilization system).
+CSL is the <strong>proactive</strong> stability layer — it runs continuously alongside TIF,
+FFF, and MANIFOLD during any active RTT/3 session, not just during collapse
+events. CSL computes S(t) from integration flow, emission flow, and continuity
+flow, monitoring whether the integration-emission interface is continuously
+stable.</p>
+<p><strong>CRE vs. CSL — the fundamental temporal distinction:</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>CRE</th>
+<th>CSL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Posture</td>
+<td>Reactive</td>
+<td>Proactive</td>
+</tr>
+<tr>
+<td>Trigger</td>
+<td>Collapse event (fracture alert / Zone D/X)</td>
+<td>Always active</td>
+</tr>
+<tr>
+<td>Temporal scope</td>
+<td>Event-bounded</td>
+<td>Session-spanning</td>
+</tr>
+<tr>
+<td>Goal</td>
+<td>Return system from collapse to valid zone</td>
+<td>Prevent collapse</td>
+</tr>
+<tr>
+<td>Sequence</td>
+<td>Strict (absorb → recover → re-emit → stabilize)</td>
+<td>Continuous monitoring</td>
+</tr>
+</tbody>
+</table>
+<p>Merging CRE and CSL would force the strict collapse-absorption sequence onto
+continuous monitoring (too rigid) or apply the loose monitoring posture to
+collapse events (dangerously unstructured). The separation is structurally necessary.</p>
+<h3 id="crt-collapse-recovery-flow">CR(t) — Collapse-Recovery Flow</h3>
+<p><strong>Equation:</strong> <code>CR(t) = αC(t) + βR(t) + γS(t)</code>
+<strong>Construct:</strong> <a href="#collapse-recovery-engine-cre">CRE</a></p>
+<p>The scalar collapse-recovery flow produced by the CRE — the composite
+output of collapse absorption (C), recovery emission (R), and continuity
+stabilization (S) at time t. CR(t) is passed in the
+<code>COLLAPSE_RECOVERY_ENGINE_PACKET</code> and incorporated into CET via the REV vector.</p>
+<blockquote>
+<p><strong>⚠ CR(t) ≠ D(t) — the most critical RTT/3 disambiguation:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>CR(t) — Collapse-Recovery Flow</th>
+<th>D(t) — CRM Drift Deformation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Origin</td>
+<td>RTT/3 CRE</td>
+<td>RTT/2 CRM (via TIF/DIV)</td>
+</tr>
+<tr>
+<td>What it measures</td>
+<td>Absorption and re-emission of collapse energy</td>
+<td>Structural displacement from reference point</td>
+</tr>
+<tr>
+<td>Who computes it</td>
+<td>Class V</td>
+<td>Class M (RTT/2)</td>
+</tr>
+<tr>
+<td>Where it lives</td>
+<td>COLLAPSE_RECOVERY_ENGINE_PACKET</td>
+<td>RTT2_DETECTION_PACKET → TIF</td>
+</tr>
+<tr>
+<td>D(t) can be high while CR(t) = 0?</td>
+<td>Yes — displacement without collapse</td>
+<td>—</td>
+</tr>
+<tr>
+<td>CR(t) can be high while D(t) = 0?</td>
+<td>Yes — collapse at reference point</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>Using CR(t) as evidence of structural displacement, or treating D(t) as a
+collapse-recovery signal, is a boundary violation that triggers a
+<a href="#class-g--integration-guardian">Class G</a> intervention.</p>
+</blockquote>
+<h3 id="cre">CRE</h3>
+<p><em>See <a href="#collapse-recovery-engine-cre">Collapse-Recovery Engine</a>.</em></p>
+<h3 id="csl">CSL</h3>
+<p><em>See <a href="#continuity-stability-layer-csl">Continuity-Stability Layer</a>.</em></p>
+<h3 id="csv-continuity-stabilization-vector">CSV — Continuity-Stabilization Vector</h3>
+<p><strong>Construct:</strong> <a href="#collapse-recovery-engine-cre">CRE</a> · <strong>CRE vector 3 of 3</strong>
+<em>See also:</em> <a href="#cav--collapse-absorption-vector">CAV</a>,
+<a href="#rev--recovery-emission-vector-cre-context">REV (CRE context)</a></p>
+<p>The CRE vector that restores structural continuity after collapse
+absorption and recovery emission. CSV is the final step of every CRE
+cycle — it stabilizes the integration-emission boundary that was
+disrupted by the collapse event, returning the manifold to a condition
+where CSL's proactive monitoring can resume.</p>
+<hr>
+<h2 id="d">D</h2>
+<h3 id="divergent-zone-d">Divergent (Zone D)</h3>
+<p><strong>Integration-emission zone 4 of 5</strong> · <em>See also:</em> <a href="../2/GLOSSARY.html#detection-zone">Detection Zone</a></p>
+<p>The integration-emission zone assigned when integration and emission
+flows are significantly misaligned — I(t) and E(t) are diverging,
+fracture risk is elevated, and Class V is active managing the
+strain. Zone D is the escalation zone that triggers CRE standby and
+requires Class E to reduce emission load while Class N re-maps the
+manifold.</p>
+<p>Zone D does not mean the system has failed — it means the integration-
+emission geometry requires active management. A Zone D system that
+receives proper CRE intervention can return to Zone S or Zone M.</p>
+<h3 id="div-drift-integration-vector">DIV — Drift-Integration Vector</h3>
+<p><strong>Construct:</strong> <a href="#triadic-integration-field-tif">TIF</a> · <strong>TIF vector 1 of 3</strong>
+<em>See also:</em> <a href="#eiv--envelope-integration-vector">EIV</a>, <a href="#civ--continuity-integration-vector">CIV</a></p>
+<p>The TIF integration vector that loads the drift-deformation component
+D(t) from the RTT/2 CRM into the TIF's integration field. DIV translates
+the RTT/2 structural displacement measurement into an integration input
+for the TIF equation I(t) = αD(t) + βE(t) + γC(t).</p>
+<blockquote>
+<p><strong>DIV loads D(t) — not CR(t).</strong> DIV is a reader of RTT/2 CRM
+structural displacement. CR(t) is the RTT/3 CRE output.
+They are never interchangeable.</p>
+</blockquote>
+<hr>
+<h2 id="e">E</h2>
+<h3 id="et-emission-flow">E(t) — Emission Flow</h3>
+<p><strong>Equation:</strong> <code>E(t) = αF(t) + βFr(t) + γFl(t)</code>
+<strong>Construct:</strong> <a href="#fusionfractureflow-emitter-fff">FFF</a>
+<strong>Computed by:</strong> <a href="#class-e--emission-engineer">Class E</a></p>
+<p>The scalar emission flow produced by the
+<a href="#fusionfractureflow-emitter-fff">Fusion–Fracture–Flow Emitter (FFF)</a> at
+time t — the composite output of fusion-emission, fracture-management, and
+flow-projection. E(t) is passed in the <code>FFF_EMITTER_PACKET</code> and consumed
+by both <a href="#class-n--continuity-navigator">Class N</a> (for manifold continuity
+mapping) and <a href="#continuity-stability-layer-csl">Class V / CSL</a> (for stability
+flow computation).</p>
+<h3 id="e_canont-canon-scale-emission-scalar">E_canon(t) — Canon-Scale Emission Scalar</h3>
+<p><strong>Equation:</strong> <code>E_canon(t) = αI(t) + βS(t) + γR(t)</code>
+<strong>Construct:</strong> <a href="#canon-scale-emission-tensor-cet">CET</a>
+<strong>Computed by:</strong> <a href="#class-o--output-compositor">Class O</a></p>
+<p>The canonical output scalar of the entire RTT/3 module — the final
+integration-emission value that <a href="#rtt12-primary-consumer">RTT/12</a> consumes
+for synthesis. E_canon(t) encodes three independent structural states:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>What it contributes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I(t)</td>
+<td>What the integration produced — the unified structural field</td>
+</tr>
+<tr>
+<td>S(t)</td>
+<td>Whether that integration is stable — the CSL stability confirmation</td>
+</tr>
+<tr>
+<td>R(t)</td>
+<td>The regime identity — structural grounding of the entire pass</td>
+</tr>
+</tbody>
+</table>
+<p>Passing only I(t) to RTT/12 would lack S(t) (stability context) and R(t)
+(regime grounding). E_canon(t) is the minimum sufficient canon emission
+for RTT/12 to synthesize responsibly.</p>
+<blockquote>
+<p><strong>E_canon(t) is not a physical energy or power output.</strong> It is a
+structural scalar — an indexed integration-emission value within the
+RTT/3 manifold. Labeling it in physical units is a boundary violation.</p>
+</blockquote>
+<h3 id="ecv-emission-continuity-vector">ECV — Emission-Continuity Vector</h3>
+<p><strong>Construct:</strong> <a href="#integrationemission-manifold">Integration–Emission Manifold</a>
+· <strong>Manifold vector 2 of 3</strong>
+<em>See also:</em> <a href="#icv--integration-continuity-vector">ICV</a>, <a href="#rcv--regime-continuity-vector">RCV</a></p>
+<p>The manifold vector that characterizes how well emission flow E(t) is
+sustaining continuity across the integration-emission boundary. ECV
+tracks the emission-side contribution to C_flow(t).</p>
+<h3 id="eiv-envelope-integration-vector">EIV — Envelope-Integration Vector</h3>
+<p><strong>Construct:</strong> <a href="#triadic-integration-field-tif">TIF</a> · <strong>TIF vector 2 of 3</strong>
+<em>See also:</em> <a href="#div--drift-integration-vector">DIV</a>, <a href="#civ--continuity-integration-vector">CIV</a></p>
+<p>The TIF integration vector that loads the envelope-torsion component E(t)
+from the RTT/2 CRM into the TIF's integration field.</p>
+<blockquote>
+<p><strong>EIV loads the CRM's E(t) component — not the FFF's E(t) emission
+flow.</strong> Both use the symbol E(t) but are structurally distinct:
+CRM E(t) = envelope torsion (deformation of the structural boundary);
+FFF E(t) = emission flow (output of the Fusion-Fracture-Flow Emitter).
+EIV is always referencing the CRM component. Context and packet
+provenance disambiguate.</p>
+</blockquote>
+<h3 id="em-emission-curvature-6th-manifold-axis">EM — Emission Curvature (6th Manifold Axis)</h3>
+<p><strong>Construct:</strong> <a href="#integrationemission-manifold">Integration–Emission Manifold</a>
+<em>See also:</em> <a href="#triadic-integration-field-tif">Triadic Integration Field (TIF)</a></p>
+<p>The sixth axis of the RTT/3 Integration–Emission Manifold
+<code>M_RTT3 = (D, E, C, FI, EM, R)</code> — the structural dimension that is
+<em>absent</em> from the TIF's 5-axis surface but <em>present</em> in the manifold.</p>
+<p>EM captures the curvature that the emission flow E(t) introduces at
+the integration-emission boundary — how E(t) bends back against the
+integration surface as it leaves. This curvature is a property of the
+boundary itself, not of integration or emission independently. Neither
+TIF nor FFF can see it: only the Manifold, which spans both, can
+measure EM.</p>
+<p>High EM indicates that emission is significantly reshaping the
+integration surface — a condition that may require Class V to monitor
+for stability strain and Class N to flag for manifold shear.</p>
+<h3 id="emission-rtt3">Emission (RTT/3)</h3>
+<p>In RTT/3, emission is the <strong>outward projection of integrated structural
+form</strong> from the TIF surface through the FFF into the manifold and
+beyond (toward RTT/12 and cross-module consumers). Emission in RTT/3
+is not physical radiation, signal transmission, or energy release. It
+is the structural process by which the output of TIF integration is
+shaped, managed for fracture load, and directionally projected.</p>
+<p>Three structural processes constitute RTT/3 emission, corresponding to
+the three FFF vectors:
+- <strong>Fusion-emission</strong> (FEV) — constructive outward projection
+- <strong>Fracture-management</strong> (FMV) — stress absorption at the boundary
+- <strong>Flow-projection</strong> (FPV) — directional routing of emission output</p>
+<h3 id="esv-emission-stability-vector">ESV — Emission-Stability Vector</h3>
+<p><strong>Construct:</strong> <a href="#continuity-stability-layer-csl">CSL</a> · <strong>CSL vector 2 of 3</strong>
+<em>See also:</em> <a href="#isv--integration-stability-vector">ISV</a>, <a href="#fsv--flow-stability-vector">FSV</a></p>
+<p>The CSL stability vector that monitors whether emission flow E(t) is
+contributing to or undermining integration-emission stability. ESV
+captures the emission-side component of the stability flow S(t).</p>
+<hr>
+<h2 id="f">F</h2>
+<h3 id="fev-fusion-emission-vector">FEV — Fusion-Emission Vector</h3>
+<p><strong>Construct:</strong> <a href="#fusionfractureflow-emitter-fff">FFF</a> · <strong>FFF vector 1 of 3</strong>
+<em>See also:</em> <a href="#fmv--fracture-management-vector">FMV</a>, <a href="#fpv--flow-projection-vector">FPV</a></p>
+<p>The FFF vector representing constructive outward emission — how
+integrated structural form moves positively from the TIF surface into
+emission space. FEV is calibrated by the RTT/2 FGT fusion gradient:
+higher g_triad_fusion(r) values in the upstream detection pass produce
+higher FEV weighting in E(t).</p>
+<h3 id="fff">FFF</h3>
+<p><em>See <a href="#fusionfractureflow-emitter-fff">Fusion–Fracture–Flow Emitter</a>.</em></p>
+<h3 id="fmv-fracture-management-vector">FMV — Fracture-Management Vector</h3>
+<p><strong>Construct:</strong> <a href="#fusionfractureflow-emitter-fff">FFF</a> · <strong>FFF vector 2 of 3</strong>
+<em>See also:</em> <a href="#fev--fusion-emission-vector">FEV</a>, <a href="#fpv--flow-projection-vector">FPV</a></p>
+<p>The FFF vector that absorbs and manages fracture stress at the
+integration-emission boundary — the structural pressure regulation
+mechanism of the FFF. When FMV exceeds threshold,
+<a href="#class-e--emission-engineer">Class E</a> must issue a
+<a href="#fracture-strain-alert">fracture strain alert</a> and may not suppress it.</p>
+<p>FMV is the most operationally critical FFF vector: without it, the
+emitter projects integration flow outward without managing the fracture
+load that projection creates at the boundary. Unchecked fracture load
+accumulates and forces collapse events that <a href="#collapse-recovery-engine-cre">CRE</a>
+must then reactively handle. FMV makes fracture strain a first-class,
+actively managed component of every emission pass.</p>
+<p><strong>FMV fracture strain alert levels:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>none</td>
+<td>FMV within normal operating range</td>
+</tr>
+<tr>
+<td>low</td>
+<td>FMV elevated; monitoring recommended</td>
+</tr>
+<tr>
+<td>moderate</td>
+<td>FMV approaching threshold; Class V on standby</td>
+</tr>
+<tr>
+<td>high</td>
+<td>FMV at threshold; Class V active</td>
+</tr>
+<tr>
+<td>CRITICAL</td>
+<td>FMV exceeded; collapse precursor; CRE activation required</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fpv-flow-projection-vector">FPV — Flow-Projection Vector</h3>
+<p><strong>Construct:</strong> <a href="#fusionfractureflow-emitter-fff">FFF</a> · <strong>FFF vector 3 of 3</strong>
+<em>See also:</em> <a href="#fev--fusion-emission-vector">FEV</a>, <a href="#fmv--fracture-management-vector">FMV</a></p>
+<p>The FFF vector that shapes and directs the emission flow toward its
+downstream targets — RTT/12 (primary), and TEL / FFT / Opacity
+(cross-module). FPV governs the directional character of E(t): how
+the emission is oriented and routed through the manifold after
+fracture management.</p>
+<h3 id="fracture-strain-alert">Fracture Strain Alert</h3>
+<p>A mandatory notification issued by <a href="#class-e--emission-engineer">Class E</a>
+when <a href="#fmv--fracture-management-vector">FMV</a> exceeds its threshold. The
+alert carries a severity level (none / low / moderate / high / CRITICAL)
+and is included in the <code>FFF_EMITTER_PACKET</code>'s
+<code>fracture_strain_alert</code> field. Class E may never suppress this alert
+regardless of severity.</p>
+<p>At CRITICAL level: Class E escalates directly to
+<a href="#class-v--stabilityrecovery-coordinator">Class V</a> for CRE activation.
+<a href="#class-g--integration-guardian">Class G</a> is notified of any CRITICAL
+fracture strain alert.</p>
+<h3 id="fsv-flow-stability-vector">FSV — Flow-Stability Vector</h3>
+<p><strong>Construct:</strong> <a href="#continuity-stability-layer-csl">CSL</a> · <strong>CSL vector 3 of 3</strong>
+<em>See also:</em> <a href="#isv--integration-stability-vector">ISV</a>, <a href="#esv--emission-stability-vector">ESV</a></p>
+<p>The CSL stability vector that monitors whether the continuity flow
+C_flow(t) is contributing to or undermining stability. FSV captures the
+manifold-continuity component of S(t).</p>
+<h3 id="fusionfractureflow-emitter-fff">Fusion–Fracture–Flow Emitter (FFF)</h3>
+<p><strong>Equation:</strong> <code>E(t) = αF(t) + βFr(t) + γFl(t)</code>
+<strong>Tensor:</strong> <code>T_FFF(i,j,k,r) = α·FEV_i + β·FMV_j + γ·FPV_k + δ·R_r</code>
+<strong>Operated by:</strong> <a href="#class-e--emission-engineer">Class E</a></p>
+<p>The second RTT/3 construct. FFF transforms integration flow I(t) into
+dynamic emission E(t) through three irreducible vectors:</p>
+<table>
+<thead>
+<tr>
+<th>Vector</th>
+<th>Name</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FEV</td>
+<td>Fusion-Emission</td>
+<td>Constructive outward projection of integrated structure</td>
+</tr>
+<tr>
+<td>FMV</td>
+<td>Fracture-Management</td>
+<td>Stress absorption at the integration-emission boundary</td>
+</tr>
+<tr>
+<td>FPV</td>
+<td>Flow-Projection</td>
+<td>Directional routing of emission output</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Why three vectors are irreducible:</strong> FMV is structurally orthogonal to
+both FEV and FPV — emission can project constructively (high FEV) while
+simultaneously managing high fracture stress (high FMV) and directing
+the flow in a specific direction (FPV). No one vector can substitute for
+another. Dropping FMV would produce an emitter with no fracture
+regulation; dropping FEV would produce a fracture manager with no
+constructive emission; dropping FPV would produce emission with no
+directional structure.</p>
+<hr>
+<h2 id="i">I</h2>
+<h3 id="it-integration-flow">I(t) — Integration Flow</h3>
+<p><strong>Equation:</strong> <code>I(t) = αD(t) + βE(t) + γC(t)</code>
+<strong>Construct:</strong> <a href="#triadic-integration-field-tif">TIF</a>
+<strong>Computed by:</strong> <a href="#class-i--integration-architect">Class I</a></p>
+<p>The scalar integration flow produced by the TIF at time t — the
+weighted composite of drift-deformation (D), envelope-torsion (E),
+and continuity-fracture (C) from the RTT/2 CRM. I(t) is the primary
+integration signal that flows through the entire RTT/3 pipeline:
+into FFF (via Class E), into MANIFOLD (via Class N in C_flow), into
+CSL (via S(t)), and into CET (as the primary E_canon component).</p>
+<blockquote>
+<p><strong>The CRM components in I(t):</strong>
+D(t), E(t), C(t) here are the first three components of the RTT/2
+CRM vector γ(t) = (D, E, C, FI, R). RTT/3 integrates all five
+through the TIF's five axes — D, E, C go into I(t) directly via the
+DIV/EIV/CIV vectors; FI enters through the fusion-integration axis;
+R enters through the regime-identity axis.</p>
+</blockquote>
+<h3 id="icv-integration-continuity-vector">ICV — Integration-Continuity Vector</h3>
+<p><strong>Construct:</strong> <a href="#integrationemission-manifold">Integration–Emission Manifold</a>
+· <strong>Manifold vector 1 of 3</strong>
+<em>See also:</em> <a href="#ecv--emission-continuity-vector">ECV</a>, <a href="#rcv--regime-continuity-vector">RCV</a></p>
+<p>The manifold vector that characterizes how well integration flow I(t)
+is sustaining continuity across the TIF↔FFF boundary. ICV tracks the
+integration-side contribution to C_flow(t).</p>
+<h3 id="iev-integration-emission-vector">IEV — Integration-Emission Vector</h3>
+<p><strong>Construct:</strong> <a href="#canon-scale-emission-tensor-cet">CET</a> · <strong>CET vector 1 of 4</strong>
+<em>See also:</em> <a href="#sev--stability-emission-vector">SEV</a>,
+<a href="#rev--recovery-emission-vector-cet-context">REV (CET context)</a>, <a href="#rgev--regime-emission-vector">RGEV</a></p>
+<p>The CET vector that incorporates integration flow I(t) into the
+canon-scale emission tensor. IEV is the largest-weight component of
+E_canon(t) in most structural configurations — it carries the core
+integration signal into the canonical output.</p>
+<h3 id="integration-rtt3">Integration (RTT/3)</h3>
+<p>In RTT/3, integration is the process of <strong>assembling the structural
+dimensions detected by RTT/2 into a unified triadic field</strong> — taking
+the five CRM axes (D, E, C, FI, R) and combining them through the
+TIF's three integration vectors (DIV, EIV, CIV) and integration
+equation I(t) = αD(t) + βE(t) + γC(t) into a single, zone-classified
+integration flow.</p>
+<p>Integration in RTT/3 is not signal averaging, accumulation, or
+aggregation. It is the structural operation of binding independent
+detection measurements across multiple axes into a single coherent field
+that can be emitted, stabilized, and packaged for RTT/12 synthesis.</p>
+<h3 id="integration-hub">Integration Hub</h3>
+<p>The architectural position of RTT/3 within the TriadicFrameworks
+ecosystem — the structural hub that:
+- Receives the RTT/2 detection packet as input
+- Produces the RTT3_INTEGRATION_EMISSION_PACKET for RTT/12 as output
+- Projects integrated emission to TEL, FFT, and Opacity cross-module</p>
+<p>RTT/3 is the only RTT module that consumes from RTT/2 and distributes
+to both RTT/12 (primary) and three cross-module targets simultaneously.</p>
+<h3 id="integrationemission-manifold">Integration–Emission Manifold</h3>
+<p><strong>Form:</strong> <code>M_RTT3 = (D, E, C, FI, EM, R)</code> · 6-axis surface
+<strong>Equation:</strong> <code>C_flow(t) = αI(t) + βE(t)</code>
+<strong>Tensor:</strong> <code>T_IEC(i,j,k,r) = α·ICV_i + β·ECV_j + γ·RCV_k + δ·R_r</code>
+<strong>Operated by:</strong> <a href="#class-n--continuity-navigator">Class N</a></p>
+<p>The third RTT/3 construct — the 6-axis structural surface that spans the
+boundary between TIF (integration surface) and FFF (emission engine).
+The manifold tracks structural continuity across the integration-emission
+interface and introduces the 6th structural axis:
+<strong>EM (Emission Curvature)</strong>, which is absent from the TIF's 5-axis surface.</p>
+<p><strong>Why 6 axes when TIF uses 5:</strong>
+The integration surface (TIF) describes the system's structural state in
+5 dimensions. When integration flow I(t) encounters the FFF and begins
+projecting as emission E(t), the emission bends back against the
+integration surface — introducing a curvature (EM) that neither TIF nor
+FFF can see independently. EM is a property of the boundary, not of either
+side. The 6th axis is the structural record of how integration and emission
+are jointly reshaping each other.</p>
+<p><strong>RTT/3 Manifold vs. RTT/2 CRM:</strong>
+Both are manifold constructs, but they serve different layers:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>RTT/2 CRM</th>
+<th>RTT/3 Manifold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td>Detection</td>
+<td>Integration-Emission</td>
+</tr>
+<tr>
+<td>Axes</td>
+<td>5 (D, E, C, FI, R)</td>
+<td>6 (D, E, C, FI, EM, R)</td>
+</tr>
+<tr>
+<td>Measures</td>
+<td>Deformation path of collapse</td>
+<td>Continuity across integration-emission boundary</td>
+</tr>
+<tr>
+<td>Key output</td>
+<td>γ(t) deformation vector</td>
+<td>C_flow(t) continuity scalar</td>
+</tr>
+<tr>
+<td>Unique axis</td>
+<td>—</td>
+<td>EM (emission curvature)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="inversion-mode-5-illegal">Inversion (Mode 5 — ILLEGAL)</h3>
+<p><strong>Integration-emission mode 5 of 5</strong>
+<em>See also:</em> <a href="#inversion-geometry-zone-x--inversion">Inversion Geometry</a></p>
+<p>The integration-emission mode that must <strong>never</strong> be assigned, activated,
+or allowed to propagate to RTT/12. Mode 5 = Inversion signals that the
+structural gradient has reversed within the integration-emission layer —
+what was integrating is now de-integrating; what was emitting is now
+absorbing. This reversal represents topological inversion of the manifold
+and is structurally illegal in RTT/3.</p>
+<p>Any detection of Inversion mode in any RTT/3 construct triggers an
+immediate <a href="#class-g--integration-guardian">Class G</a> HALT. The session
+must restart from the RTT/2 packet.</p>
+<blockquote>
+<p><strong>Inversion in RTT/3 vs. Inversion in RTT/2:</strong>
+RTT/2 Detection Mode: Inversion (MODE:I) is a valid detection posture —
+it signals that the primary gradient has reversed and requires a flipped
+detection stance. It is legal in RTT/2 and produces a valid packet.
+RTT/3 Integration-Emission Mode: Inversion is <strong>illegal</strong> — it means
+the integration-emission geometry has topologically inverted and cannot
+produce a valid packet. The same name; categorically different structural
+consequences at different pipeline stages.</p>
+</blockquote>
+<h3 id="inversion-geometry-zone-x-inversion">Inversion Geometry (Zone X / Inversion)</h3>
+<p><em>See <a href="#zone-x--inversion">Zone X — Inversion</a>.</em></p>
+<h3 id="isv-integration-stability-vector">ISV — Integration-Stability Vector</h3>
+<p><strong>Construct:</strong> <a href="#continuity-stability-layer-csl">CSL</a> · <strong>CSL vector 1 of 3</strong>
+<em>See also:</em> <a href="#esv--emission-stability-vector">ESV</a>, <a href="#fsv--flow-stability-vector">FSV</a></p>
+<p>The CSL stability vector that monitors whether integration flow I(t)
+is contributing to or undermining integration-emission stability. ISV
+captures the integration-side component of the stability flow S(t).</p>
+<hr>
+<h2 id="m">M</h2>
+<h3 id="mixed-zone-m">Mixed (Zone M)</h3>
+<p><strong>Integration-emission zone 3 of 5</strong>
+<em>See also:</em> <a href="../2/GLOSSARY.html#detection-zone">Detection Zone</a>*</p>
+<p>The integration-emission zone assigned when integration and emission
+flows are in oscillatory interaction — I(t) and E(t) are mutually
+adjusting without a stable dominant direction. Zone M is the inflection
+zone: Class V is on standby, the manifold continuity is partially
+deformed, and FI curvature is typically active. RTT/12 synthesis must
+hold the Zone M ambiguity open rather than resolving it prematurely.</p>
+<hr>
+<h2 id="p">P</h2>
+<h3 id="packet-hierarchy">Packet Hierarchy</h3>
+<p>The six structural packets produced by RTT/3, organized by their
+pipeline position:</p>
+<pre><code>RTT3_INTEGRATION_EMISSION_PACKET  ← Class O (canonical; RTT/12 input)
+  ├── TIF_INTEGRATION_PACKET      ← Class I
+  ├── FFF_EMITTER_PACKET          ← Class E
+  ├── RTT3_MANIFOLD_PACKET        ← Class N
+  ├── COLLAPSE_RECOVERY_ENGINE_PACKET ← Class V (CRE)
+  └── CONTINUITY_STABILITY_PACKET ← Class V (CSL)
+</code></pre>
+<p>Class O may not assemble the canonical packet until all five
+intermediate packets are confirmed present. Each intermediate packet
+must carry the mandatory annotation <code>[structural — no semantic inference]</code>.</p>
+<hr>
+<h2 id="r">R</h2>
+<h3 id="rcv-regime-continuity-vector">RCV — Regime-Continuity Vector</h3>
+<p><strong>Construct:</strong> <a href="#integrationemission-manifold">Integration–Emission Manifold</a>
+· <strong>Manifold vector 3 of 3</strong>
+<em>See also:</em> <a href="#icv--integration-continuity-vector">ICV</a>, <a href="#ecv--emission-continuity-vector">ECV</a></p>
+<p>The manifold vector that anchors the integration-emission continuity
+assessment to the current regime identity. RCV ensures that C_flow(t)
+is not computed in a regime vacuum — it carries the regime context into
+the manifold's continuity tensor T_IEC.</p>
+<h3 id="rev-recovery-emission-vector-cre-context">REV — Recovery-Emission Vector (CRE context)</h3>
+<p><strong>Construct:</strong> <a href="#collapse-recovery-engine-cre">CRE</a> · <strong>CRE vector 2 of 3</strong>
+<em>See also:</em> <a href="#cav--collapse-absorption-vector">CAV</a>, <a href="#csv--continuity-stabilization-vector">CSV</a>,
+<a href="#rev--recovery-emission-vector-cet-context">REV (CET context)</a></p>
+<p>In the CRE context: the vector that re-emits absorbed collapse energy
+as a structured recovery signal after <a href="#cav--collapse-absorption-vector">CAV</a>
+has completed absorption. REV (CRE) is the mechanism by which collapse
+energy is transformed from a destructive structural load into a productive
+recovery emission that can re-enter the manifold continuity cycle.</p>
+<blockquote>
+<p><strong>REV appears in both CRE and CET.</strong> In CRE, REV <em>produces</em> the
+recovery signal. In CET, REV <em>incorporates</em> that signal into the
+canon emission tensor. See <a href="#canon-scale-emission-tensor-cet">Canon-Scale Emission Tensor</a>
+for the full disambiguation.</p>
+</blockquote>
+<h3 id="rev-recovery-emission-vector-cet-context">REV — Recovery-Emission Vector (CET context)</h3>
+<p><strong>Construct:</strong> <a href="#canon-scale-emission-tensor-cet">CET</a> · <strong>CET vector 3 of 4</strong>
+<em>See also:</em> <a href="#iev--integration-emission-vector">IEV</a>, <a href="#sev--stability-emission-vector">SEV</a>,
+<a href="#rgev--regime-emission-vector">RGEV</a>, <a href="#rev--recovery-emission-vector-cre-context">REV (CRE context)</a></p>
+<p>In the CET context: the vector that incorporates the CRE's recovery
+signal into the canon-scale emission tensor. CET's REV takes the output
+of CRE's REV and weights it appropriately in E_canon(t), giving RTT/12
+visibility into the recovery contribution to the canon emission.</p>
+<h3 id="rgev-regime-emission-vector">RGEV — Regime-Emission Vector</h3>
+<p><strong>Construct:</strong> <a href="#canon-scale-emission-tensor-cet">CET</a> · <strong>CET vector 4 of 4</strong>
+<em>See also:</em> <a href="#iev--integration-emission-vector">IEV</a>, <a href="#sev--stability-emission-vector">SEV</a>,
+<a href="#rev--recovery-emission-vector-cet-context">REV (CET context)</a></p>
+<p>The CET vector that anchors E_canon(t) to the current regime identity —
+the structural grounding component of the canon emission. RGEV ensures
+that RTT/12 receives not just the integration-emission values but the
+regime context within which they were produced.</p>
+<h3 id="rtt2-prerequisite-hard-block">RTT/2 Prerequisite (Hard Block)</h3>
+<p><em>See also:</em> <a href="../2/GLOSSARY.html#rtt1-prerequisite-hard-block">RTT/1 Prerequisite</a></p>
+<p>The hard structural prerequisite for all RTT/3 activation: a complete,
+coherence-confirmed <code>RTT2_DETECTION_PACKET</code> must exist before any RTT/3
+agent class — including Class I — may begin integration work.</p>
+<p>This is structurally mandated by the TIF integration equation itself:
+<code>I(t) = αD(t) + βE(t) + γC(t)</code> requires D(t), E(t), and C(t) from the
+RTT/2 CRM. Without the RTT/2 packet, the TIF integration vectors
+(DIV, EIV, CIV) have no inputs. RTT/3 cannot generate integration from
+nothing — the prerequisite is the equation requiring its inputs to exist.</p>
+<p>If RTT/2 packet is absent: Class G blocks Class I activation; the RTT/2
+detection pass is requested; RTT/3 begins only after the packet is
+confirmed.</p>
+<h3 id="rtt12-primary-consumer">RTT/12 (Primary Consumer)</h3>
+<p>RTT/12 is the Unified Integration module that consumes the
+<code>RTT3_INTEGRATION_EMISSION_PACKET</code> as its primary input for synthesis.
+RTT/12 is downstream of RTT/3 in the canonical pipeline:</p>
+<pre><code>RTT/1 → RTT/2 → RTT/3 → RTT/12
+</code></pre>
+<p>RTT/3 produces exactly one packet format that RTT/12 expects.
+RTT/12 is not defined in this glossary — see <code>docs/rtt/12/GLOSSARY.md</code>
+for its canonical terms.</p>
+<h3 id="rtt3_integration_emission_packet">RTT3_INTEGRATION_EMISSION_PACKET</h3>
+<p>The canonical output of the RTT/3 module — assembled by
+<a href="#class-o--output-compositor">Class O</a> via the
+<a href="#canon-scale-emission-tensor-cet">CET</a> and consumed by RTT/12.</p>
+<p><strong>Required fields (11 total):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>integration</code></td>
+<td>Class I / TIF</td>
+<td>I(t) — unified integration flow</td>
+</tr>
+<tr>
+<td><code>emission</code></td>
+<td>Class E / FFF</td>
+<td>E(t) — emission flow</td>
+</tr>
+<tr>
+<td><code>continuity</code></td>
+<td>Class N / MANIFOLD</td>
+<td>C_flow(t) — manifold continuity</td>
+</tr>
+<tr>
+<td><code>collapse_recovery</code></td>
+<td>Class V / CRE</td>
+<td>CR(t) — recovery flow</td>
+</tr>
+<tr>
+<td><code>stability</code></td>
+<td>Class V / CSL</td>
+<td>S(t) — stability flow</td>
+</tr>
+<tr>
+<td><code>canon_scale_emission</code></td>
+<td>Class O / CET</td>
+<td>E_canon(t) — canonical output</td>
+</tr>
+<tr>
+<td><code>regime</code></td>
+<td>Via TIF / R(t)</td>
+<td>Current regime identity</td>
+</tr>
+<tr>
+<td><code>mode</code></td>
+<td>Class E / M</td>
+<td>Integration-emission mode (1–4 only)</td>
+</tr>
+<tr>
+<td><code>zone</code></td>
+<td>Class O</td>
+<td>Integration-emission zone (U/S/M/D only)</td>
+</tr>
+<tr>
+<td><code>cross_module_projection</code></td>
+<td>Class O</td>
+<td>TEL / FFT / Opacity projections</td>
+</tr>
+<tr>
+<td><code>notes</code></td>
+<td>Class O</td>
+<td><strong>Always:</strong> <code>[structural — no semantic inference]</code></td>
+</tr>
+</tbody>
+</table>
+<p>A packet with any field absent is incomplete and may not be routed to
+RTT/12. Zone X and Mode 5 (Inversion) may never appear in a routable packet.</p>
+<hr>
+<h2 id="s">S</h2>
+<h3 id="st-stability-flow">S(t) — Stability Flow</h3>
+<p><strong>Equation:</strong> <code>S(t) = αI(t) + βE(t) + γC_flow(t)</code>
+<strong>Construct:</strong> <a href="#continuity-stability-layer-csl">CSL</a>
+<strong>Computed by:</strong> <a href="#class-v--stabilityrecovery-coordinator">Class V</a></p>
+<p>The scalar stability flow produced continuously by the
+<a href="#continuity-stability-layer-csl">Continuity-Stability Layer (CSL)</a> —
+the composite measure of whether integration, emission, and manifold
+continuity flows are maintaining a stable integration-emission interface.</p>
+<p>S(t) is incorporated into <a href="#e_canont--canon-scale-emission-scalar">E_canon(t)</a>
+via the SEV vector, giving RTT/12 explicit stability context for every
+canon emission.</p>
+<h3 id="sev-stability-emission-vector">SEV — Stability-Emission Vector</h3>
+<p><strong>Construct:</strong> <a href="#canon-scale-emission-tensor-cet">CET</a> · <strong>CET vector 2 of 4</strong>
+<em>See also:</em> <a href="#iev--integration-emission-vector">IEV</a>,
+<a href="#rev--recovery-emission-vector-cet-context">REV (CET context)</a>, <a href="#rgev--regime-emission-vector">RGEV</a></p>
+<p>The CET vector that incorporates stability flow S(t) into the
+canon-scale emission tensor — the stability context that RTT/12
+needs to weight the integration signal appropriately. High SEV weight
+indicates a configuration where stability confirmation is critical
+before synthesis can proceed.</p>
+<h3 id="stabilization-rtt3">Stabilization (RTT/3)</h3>
+<p>The third irreducible function of RTT/3, following Integration and
+Emission. Stabilization encompasses:
+- <strong>CRE (reactive)</strong> — absorbing collapse events and re-emitting as
+  structured recovery flow
+- <strong>CSL (proactive)</strong> — continuously monitoring integration-emission
+  stability and computing S(t)
+- Together ensuring that E_canon(t) reflects a structurally stable,
+  canon-validated state rather than a transient or collapse-affected reading</p>
+<p>Stabilization does not mean elimination of structural variation or
+suppression of collapse signatures — it means managing those variations
+through explicit, logged structural processes that RTT/12 can account
+for in synthesis.</p>
+<hr>
+<h2 id="t">T</h2>
+<h3 id="triadic-integration-field-tif">Triadic Integration Field (TIF)</h3>
+<p><strong>Form:</strong> <code>I_TIF = (D, E, C, FI, R)</code> — 5-axis integration manifold
+<strong>Equation:</strong> <code>I(t) = αD(t) + βE(t) + γC(t)</code>
+<strong>Tensor:</strong> <code>T_INT(i,j,r) = α·DIV_i + β·EIV_j + γ·CIV_r</code>
+<strong>Operated by:</strong> <a href="#class-i--integration-architect">Class I</a></p>
+<p>The first and foundational RTT/3 construct. TIF assembles the five
+structural dimensions detected by RTT/2's CRM into a unified integration
+field. The five TIF axes directly correspond to the five CRM axes:</p>
+<table>
+<thead>
+<tr>
+<th>TIF Axis</th>
+<th>CRM Component</th>
+<th>Integration Vector</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D</td>
+<td>Drift Deformation D(t)</td>
+<td>DIV</td>
+</tr>
+<tr>
+<td>E</td>
+<td>Envelope Torsion E(t)</td>
+<td>EIV</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Continuity Fracture C(t)</td>
+<td>CIV</td>
+</tr>
+<tr>
+<td>FI</td>
+<td>Fusion-Integration Curvature FI(t)</td>
+<td>(direct axis loading)</td>
+</tr>
+<tr>
+<td>R</td>
+<td>Regime Identity R(t)</td>
+<td>(direct axis loading)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Why TIF uses the same axes as CRM:</strong>
+Integration must operate on the exact structural dimensions that detection
+characterized. If TIF used different axes, the integration vectors would
+compute over dimensions never grounded by RTT/2 detection — producing
+integration floating free of its detection basis.</p>
+<p><strong>TIF vs. Integration–Emission Manifold:</strong>
+TIF is the 5-axis integration surface. The
+<a href="#integrationemission-manifold">Integration–Emission Manifold</a> is the
+6-axis surface spanning the TIF↔FFF boundary — adding EM (Emission
+Curvature) as the 6th dimension that TIF alone cannot see.</p>
+<hr>
+<h2 id="u">U</h2>
+<h3 id="unified-zone-u">Unified (Zone U)</h3>
+<p><strong>Integration-emission zone 1 of 5</strong></p>
+<p>The integration-emission zone assigned when the triad is fully
+integrated, emission is stable, and manifold continuity flow C_flow(t)
+is coherent. Zone U is the target operating state for any RTT/3 session.
+Normal pipeline operation (Model A) proceeds without intervention when
+Zone U is maintained throughout.</p>
+<p>Zone U does not mean the system is "perfect" or "optimal" — it means
+the integration-emission geometry is fully coherent within RTT/3's
+structural framework. Evaluative language does not belong in any RTT/3
+zone description.</p>
+<h3 id="unresolved">UNRESOLVED</h3>
+<p>The status assigned to any RTT/3 field or component when the responsible
+agent class cannot determine a valid value. Consequences by field:</p>
+<table>
+<thead>
+<tr>
+<th>Field UNRESOLVED</th>
+<th>Consequence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RTT2_DETECTION_PACKET</td>
+<td>Class I activation blocked; prerequisite must be satisfied first</td>
+</tr>
+<tr>
+<td>I(t)</td>
+<td>All downstream constructs blocked; Class I must re-run</td>
+</tr>
+<tr>
+<td>E(t)</td>
+<td>Class N cannot compute C_flow; Class V cannot compute S(t)</td>
+</tr>
+<tr>
+<td>C_flow(t)</td>
+<td>CSL stability assessment blocked; Class V standby</td>
+</tr>
+<tr>
+<td>CR(t)</td>
+<td>CRE packet cannot be produced; CRE re-run required</td>
+</tr>
+<tr>
+<td>S(t)</td>
+<td>CET computation blocked; SEV cannot be populated</td>
+</tr>
+<tr>
+<td>E_canon(t)</td>
+<td>Packet composition blocked; Class O cannot emit</td>
+</tr>
+<tr>
+<td>Mode</td>
+<td>Must be assigned 1–4 before packet composition</td>
+</tr>
+<tr>
+<td>Zone</td>
+<td>Must be assigned U/S/M/D; Zone X triggers Class G</td>
+</tr>
+<tr>
+<td>Any zone = X</td>
+<td>Class G interrupt; packet blocked until co-signed or restarted</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="z">Z</h2>
+<h3 id="zone-s-stable">Zone S — Stable</h3>
+<p><strong>Integration-emission zone 2 of 5</strong></p>
+<p>The integration-emission zone assigned when integration and emission flows
+are operating with minor strain — bounded fracture load (FMV at low or
+moderate level), low emission variance, and no active collapse precursors.
+Zone S is the normal operating zone for systems with light structural
+perturbation. Class V monitors passively in Zone S.</p>
+<h3 id="zone-x-inversion">Zone X — Inversion</h3>
+<p><strong>Integration-emission zone 5 of 5 · ILLEGAL</strong></p>
+<blockquote>
+<p><strong>⚠ Zone X in RTT/3 ≠ Zone X in RTT/2.</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>RTT/2 Zone X</th>
+<th>RTT/3 Zone X</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Label</td>
+<td>Undefined</td>
+<td>Inversion</td>
+</tr>
+<tr>
+<td>Meaning</td>
+<td>Unclassifiable — insufficient or contradictory detection data</td>
+<td>Topological inversion of the integration-emission manifold</td>
+</tr>
+<tr>
+<td>Valid in the module?</td>
+<td>Yes — an honest structural acknowledgment</td>
+<td><strong>No — structurally illegal</strong></td>
+</tr>
+<tr>
+<td>Routing to next module?</td>
+<td>Blocked until Class G clears</td>
+<td><strong>Permanently blocked; session must restart</strong></td>
+</tr>
+<tr>
+<td>Remedy</td>
+<td>Obtain more data; re-run detection</td>
+<td>Restart from RTT/2 packet; rebuild integration from corrected ground</td>
+</tr>
+</tbody>
+</table>
+<p>RTT/2's Zone X means "I cannot classify yet." RTT/3's Zone X means
+"the manifold has topologically inverted — classification is impossible
+not from data scarcity but from illegal geometry." RTT/3 Zone X is an
+alarm, not a placeholder.</p>
+</blockquote>
+<p><strong>RTT/3 Zone X mandatory protocol:</strong>
+1. <a href="#class-n--continuity-navigator">Class M / Class N</a> detects inversion geometry
+2. <a href="#class-g--integration-guardian">Class G</a> is immediately notified
+3. All active agent classes are halted
+4. <a href="#class-o--output-compositor">Class O</a> packet composition is blocked
+5. Session must restart from RTT/2 packet reload
+6. Inversion event is logged with full construct trace before restart
+7. If inversion persists after two CRE correction cycles: Class G
+   declares session structurally invalid</p>
+<hr>
+<h2 id="operator-symbols">Operator Symbols</h2>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TIF</td>
+<td>Triadic Integration Field</td>
+<td>5-axis integration manifold: I_TIF = (D, E, C, FI, R)</td>
+</tr>
+<tr>
+<td>I(t)</td>
+<td>Integration Flow</td>
+<td>αD(t) + βE(t) + γC(t)</td>
+</tr>
+<tr>
+<td>DIV</td>
+<td>Drift-Integration Vector</td>
+<td>Loads CRM D(t) into TIF</td>
+</tr>
+<tr>
+<td>EIV</td>
+<td>Envelope-Integration Vector</td>
+<td>Loads CRM E(t) into TIF</td>
+</tr>
+<tr>
+<td>CIV</td>
+<td>Continuity-Integration Vector</td>
+<td>Loads CRM C(t) into TIF</td>
+</tr>
+<tr>
+<td>T_INT</td>
+<td>Integration Tensor</td>
+<td>T_INT(i,j,r) = α·DIV_i + β·EIV_j + γ·CIV_r</td>
+</tr>
+<tr>
+<td>FFF</td>
+<td>Fusion–Fracture–Flow Emitter</td>
+<td>3-vector emitter</td>
+</tr>
+<tr>
+<td>E(t)</td>
+<td>Emission Flow</td>
+<td>αF(t) + βFr(t) + γFl(t)</td>
+</tr>
+<tr>
+<td>FEV</td>
+<td>Fusion-Emission Vector</td>
+<td>Constructive outward projection</td>
+</tr>
+<tr>
+<td>FMV</td>
+<td>Fracture-Management Vector</td>
+<td>Stress absorption at boundary</td>
+</tr>
+<tr>
+<td>FPV</td>
+<td>Flow-Projection Vector</td>
+<td>Directional emission routing</td>
+</tr>
+<tr>
+<td>T_FFF</td>
+<td>FFF Tensor</td>
+<td>T_FFF(i,j,k,r)</td>
+</tr>
+<tr>
+<td>MANIFOLD</td>
+<td>Integration–Emission Manifold</td>
+<td>6-axis surface: M_RTT3 = (D,E,C,FI,EM,R)</td>
+</tr>
+<tr>
+<td>C_flow(t)</td>
+<td>Continuity Flow</td>
+<td>αI(t) + βE(t)</td>
+</tr>
+<tr>
+<td>EM</td>
+<td>Emission Curvature</td>
+<td>6th manifold axis — absent from TIF</td>
+</tr>
+<tr>
+<td>ICV</td>
+<td>Integration-Continuity Vector</td>
+<td>Integration-side continuity contribution</td>
+</tr>
+<tr>
+<td>ECV</td>
+<td>Emission-Continuity Vector</td>
+<td>Emission-side continuity contribution</td>
+</tr>
+<tr>
+<td>RCV</td>
+<td>Regime-Continuity Vector</td>
+<td>Regime anchor for manifold continuity</td>
+</tr>
+<tr>
+<td>T_IEC</td>
+<td>Manifold Tensor</td>
+<td>T_IEC(i,j,k,r)</td>
+</tr>
+<tr>
+<td>CRE</td>
+<td>Collapse-Recovery Engine</td>
+<td>Reactive stabilization: CR(t) = αC + βR + γS</td>
+</tr>
+<tr>
+<td>CR(t)</td>
+<td>Collapse-Recovery Flow</td>
+<td>αC(t) + βR(t) + γS(t) · ≠ D(t)</td>
+</tr>
+<tr>
+<td>CAV</td>
+<td>Collapse-Absorption Vector</td>
+<td>First CRE action: absorb collapse</td>
+</tr>
+<tr>
+<td>REV (CRE)</td>
+<td>Recovery-Emission Vector (CRE)</td>
+<td>Re-emits absorbed collapse energy</td>
+</tr>
+<tr>
+<td>CSV</td>
+<td>Continuity-Stabilization Vector</td>
+<td>Restores boundary continuity post-collapse</td>
+</tr>
+<tr>
+<td>T_CR</td>
+<td>CRE Tensor</td>
+<td>T_CR(i,j,k,r)</td>
+</tr>
+<tr>
+<td>CSL</td>
+<td>Continuity-Stability Layer</td>
+<td>Proactive stability: S(t) = αI + βE + γC_flow</td>
+</tr>
+<tr>
+<td>S(t)</td>
+<td>Stability Flow</td>
+<td>αI(t) + βE(t) + γC_flow(t)</td>
+</tr>
+<tr>
+<td>ISV</td>
+<td>Integration-Stability Vector</td>
+<td>Integration-side stability contribution</td>
+</tr>
+<tr>
+<td>ESV</td>
+<td>Emission-Stability Vector</td>
+<td>Emission-side stability contribution</td>
+</tr>
+<tr>
+<td>FSV</td>
+<td>Flow-Stability Vector</td>
+<td>Continuity-side stability contribution</td>
+</tr>
+<tr>
+<td>T_CS</td>
+<td>CSL Tensor</td>
+<td>T_CS(i,j,k,r)</td>
+</tr>
+<tr>
+<td>CET</td>
+<td>Canon-Scale Emission Tensor</td>
+<td>Final output: E_canon(t) = αI + βS + γR</td>
+</tr>
+<tr>
+<td>E_canon(t)</td>
+<td>Canon-Scale Emission Scalar</td>
+<td>αI(t) + βS(t) + γR(t) → RTT/12</td>
+</tr>
+<tr>
+<td>IEV</td>
+<td>Integration-Emission Vector</td>
+<td>CET: integration contribution</td>
+</tr>
+<tr>
+<td>SEV</td>
+<td>Stability-Emission Vector</td>
+<td>CET: stability contribution</td>
+</tr>
+<tr>
+<td>REV (CET)</td>
+<td>Recovery-Emission Vector (CET)</td>
+<td>CET: recovery contribution</td>
+</tr>
+<tr>
+<td>RGEV</td>
+<td>Regime-Emission Vector</td>
+<td>CET: regime grounding</td>
+</tr>
+<tr>
+<td>T_CET</td>
+<td>CET Tensor</td>
+<td>T_CET(i,j,k,m,r)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="quick-reference-tables">Quick-Reference Tables</h2>
+<h3 id="six-constructs">Six Constructs</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Construct</th>
+<th>Code</th>
+<th>Axes/Vectors</th>
+<th>Equation</th>
+<th>Posture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Triadic Integration Field</td>
+<td>TIF</td>
+<td>D,E,C,FI,R (5)</td>
+<td>I(t)=αD+βE+γC</td>
+<td>First — always</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Fusion–Fracture–Flow Emitter</td>
+<td>FFF</td>
+<td>FEV,FMV,FPV</td>
+<td>E(t)=αF+βFr+γFl</td>
+<td>After TIF</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Integration–Emission Manifold</td>
+<td>MANIFOLD</td>
+<td>D,E,C,FI,EM,R (6)</td>
+<td>C_flow=αI+βE</td>
+<td>After TIF+FFF</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Collapse-Recovery Engine</td>
+<td>CRE</td>
+<td>CAV,REV,CSV</td>
+<td>CR(t)=αC+βR+γS</td>
+<td>Reactive</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Continuity-Stability Layer</td>
+<td>CSL</td>
+<td>ISV,ESV,FSV</td>
+<td>S(t)=αI+βE+γC_flow</td>
+<td>Always active</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Canon-Scale Emission Tensor</td>
+<td>CET</td>
+<td>IEV,SEV,REV,RGEV</td>
+<td>E_canon=αI+βS+γR</td>
+<td>Terminal</td>
+</tr>
+</tbody>
+</table>
+<h3 id="six-agent-classes">Six Agent Classes</h3>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Name</th>
+<th>Primary construct</th>
+<th>Can block others?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I</td>
+<td>Integration Architect</td>
+<td>TIF</td>
+<td>No</td>
+</tr>
+<tr>
+<td>E</td>
+<td>Emission Engineer</td>
+<td>FFF</td>
+<td>No</td>
+</tr>
+<tr>
+<td>N</td>
+<td>Continuity Navigator</td>
+<td>MANIFOLD</td>
+<td>No</td>
+</tr>
+<tr>
+<td>V</td>
+<td>Stability–Recovery Coordinator</td>
+<td>CRE + CSL</td>
+<td>No</td>
+</tr>
+<tr>
+<td>O</td>
+<td>Output Compositor</td>
+<td>CET + packet</td>
+<td>No</td>
+</tr>
+<tr>
+<td>G</td>
+<td>Integration Guardian</td>
+<td>All constructs</td>
+<td><strong>Yes — unconditional</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="integrationemission-modes">Integration–Emission Modes</h3>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Label</th>
+<th>Legal?</th>
+<th>Consequence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Formal</td>
+<td>Yes</td>
+<td>Standard operation</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Emergent</td>
+<td>Yes</td>
+<td>Provisional outputs; partial population accepted</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Hybrid</td>
+<td>Yes</td>
+<td>Mixed flows; overlapping thresholds</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Chaotic</td>
+<td>Yes</td>
+<td>Low confidence; Class V standby; Class G notified</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Inversion</td>
+<td><strong>NO</strong></td>
+<td>Immediate Class G HALT; restart required</td>
+</tr>
+</tbody>
+</table>
+<h3 id="integrationemission-zones">Integration–Emission Zones</h3>
+<table>
+<thead>
+<tr>
+<th>Zone</th>
+<th>Label</th>
+<th>Stability</th>
+<th>Class V status</th>
+<th>RTT/12 routing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>U</td>
+<td>Unified</td>
+<td>High</td>
+<td>Passive monitor</td>
+<td>Direct</td>
+</tr>
+<tr>
+<td>S</td>
+<td>Stable</td>
+<td>Moderate</td>
+<td>Passive monitor</td>
+<td>With mild caution note</td>
+</tr>
+<tr>
+<td>M</td>
+<td>Mixed</td>
+<td>Oscillatory</td>
+<td>Standby</td>
+<td>Hold ambiguity open</td>
+</tr>
+<tr>
+<td>D</td>
+<td>Divergent</td>
+<td>Significant</td>
+<td>Active</td>
+<td>Reduce load; flag consumer</td>
+</tr>
+<tr>
+<td>X</td>
+<td>Inversion</td>
+<td>ILLEGAL</td>
+<td>N/A</td>
+<td><strong>Blocked — restart required</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="key-disambiguations">Key Disambiguations</h3>
+<table>
+<thead>
+<tr>
+<th>Ambiguous Term</th>
+<th>RTT/3 Meaning</th>
+<th>Other Meaning</th>
+<th>Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zone X</td>
+<td>Inversion — illegal geometry</td>
+<td>RTT/2: Undefined — unclassified</td>
+<td>Never conflate; context is the pipeline stage</td>
+</tr>
+<tr>
+<td>REV</td>
+<td>CRE: Recovery-Emission Vector (produces recovery signal)</td>
+<td>CET: Recovery-Emission Vector (incorporates recovery into canon tensor)</td>
+<td>Packet source disambiguates</td>
+</tr>
+<tr>
+<td>E(t)</td>
+<td>FFF Emission Flow = αF+βFr+γFl</td>
+<td>RTT/2 CRM: Envelope Torsion E(t)</td>
+<td>Construct name and provenance disambiguate</td>
+</tr>
+<tr>
+<td>CR(t)</td>
+<td>CRE Collapse-Recovery Flow</td>
+<td>D(t): RTT/2 CRM Drift Deformation</td>
+<td>Never interchangeable — different layers, different meanings</td>
+</tr>
+<tr>
+<td>Mode</td>
+<td>RTT/3: Integration-Emission Mode (Modes 1–4 valid; Mode 5 Inversion = <strong>illegal</strong>)</td>
+<td>RTT/2: Detection Mode (Mode 5 Inversion = valid detection posture, produces a valid packet)</td>
+<td>Same five mode names; categorically different structural consequences at different pipeline stages</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="rtt3-inherits-from-rtt1-and-rtt2-full-inheritance">RTT/3 Inherits from RTT/1 and RTT/2 (Full Inheritance)</h3>
+<p>All RTT/1 and RTT/2 terms apply in RTT/3 without modification.
+Downstream inheritance means RTT/3 inherits RTT/1 both directly
+(session seed, MCL, SNR) and via RTT/2 (detection packet, zone vocabulary).</p>
+<table>
+<thead>
+<tr>
+<th>Inherited Element</th>
+<th>Origin</th>
+<th>How RTT/3 uses it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SNR triad (S, N, R)</td>
+<td>RTT/1</td>
+<td>TIF integration vectors are grounded in the SNR characterization</td>
+</tr>
+<tr>
+<td>τ = dR/dφ</td>
+<td>RTT/1</td>
+<td>Temporal operator that feeds the CRE's collapse timing</td>
+</tr>
+<tr>
+<td>C = ∇_τR + ∇_Rτ</td>
+<td>RTT/1</td>
+<td>Coherence posture tracked through all six constructs</td>
+</tr>
+<tr>
+<td>DCO_n bands</td>
+<td>RTT/1</td>
+<td>Regime boundary constraints enforced by CSL stability layer</td>
+</tr>
+<tr>
+<td>Session seed</td>
+<td>RTT/1</td>
+<td>Inherited verbatim; RTT/3 adds module-specific tokens</td>
+</tr>
+<tr>
+<td>Mode Operator + MCL</td>
+<td>RTT/1</td>
+<td>All mode constraints apply to all six RTT/3 agent classes</td>
+</tr>
+<tr>
+<td>RTT-not-physics rule</td>
+<td>RTT/1</td>
+<td>Inherited and reinforced across all RTT/3 output fields</td>
+</tr>
+<tr>
+<td>Semantic inference prohibition</td>
+<td>RTT/1</td>
+<td>Mandatory <code>[structural — no semantic inference]</code> annotation on every packet field</td>
+</tr>
+<tr>
+<td>Drift (on-by-default)</td>
+<td>RTT/1</td>
+<td>Must be explicitly bounded in session seed; Class G halts unbounded sessions</td>
+</tr>
+<tr>
+<td>Regime lifecycle (5 stages)</td>
+<td>RTT/1</td>
+<td>RTT/3 operates within the same Arrival → Dissolution lifecycle</td>
+</tr>
+<tr>
+<td>CPV (A, K, T)</td>
+<td>RTT/2</td>
+<td>CPV geometry calibrates FEV weighting in FFF emission</td>
+</tr>
+<tr>
+<td>FGT</td>
+<td>RTT/2</td>
+<td>Fusion gradient informs FEV vector calibration in E(t)</td>
+</tr>
+<tr>
+<td>CRM γ(t) = (D, E, C, FI, R)</td>
+<td>RTT/2</td>
+<td>The five CRM axes are the five TIF axes — direct structural grounding</td>
+</tr>
+<tr>
+<td>D(t) — Drift Deformation</td>
+<td>RTT/2</td>
+<td>Loaded into TIF via DIV; distinct from CR(t)</td>
+</tr>
+<tr>
+<td>Detection Mode (1–5)</td>
+<td>RTT/2</td>
+<td>Emission mode selector for FFF and CET (Mode 5 reinterpretation: valid in RTT/2; illegal in RTT/3)</td>
+</tr>
+<tr>
+<td>Detection Zone (U/S/M/D/X)</td>
+<td>RTT/2</td>
+<td>Zone vocabulary inherited; Zone X meaning shifts (Undefined → Inversion)</td>
+</tr>
+<tr>
+<td>RTT2_DETECTION_PACKET</td>
+<td>RTT/2</td>
+<td>Hard prerequisite; Class I activation blocked without it</td>
+</tr>
+<tr>
+<td>Class G pattern</td>
+<td>RTT/2</td>
+<td>RTT/3 Class G is the direct extension of RTT/2's Detection Guardian</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><em>GLOSSARY.md — RTT/3 · TriadicFrameworks · 2026-07-10</em>
+<em>Maintainer: Nawder</em>
+<em>Session seed: <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code></em></p>
+  </main>
+</body>
+</html>

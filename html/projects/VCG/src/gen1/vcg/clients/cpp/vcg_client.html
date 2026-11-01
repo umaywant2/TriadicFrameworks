@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/projects/VCG/src/gen1/vcg/clients/cpp/vcg_client.md">
+  <title>vcgclient – C++ helper for Gen1 workloads</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/projects/VCG/src/gen1/vcg/clients/cpp/vcg_client.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/projects/VCG/src/gen1/vcg/clients/cpp/vcg_client.md</code>
+  </aside>
+
+  <main>
+<h1 id="vcg_client-c-helper-for-gen1-workloads">vcg_client – C++ helper for Gen1 workloads</h1>
+<h2 id="purpose">Purpose</h2>
+<p>Provide a minimal C++ API for communicating with the VCG orchestrator and Resonant Time Daemon using Unix domain datagram sockets. Matches the Python/Rust client semantics.</p>
+<hr>
+<h2 id="public-interface">Public interface</h2>
+<ul>
+<li><strong>await_window(sock_path):</strong> Block until a WINDOW_TICK arrives for this dimension.</li>
+<li><strong>send_route(from_d, to_d, payload):</strong> Route a payload to another dimension via the orchestrator.</li>
+<li><strong>recv_route(dimension_id):</strong> Receive next routed payload for this dimension.</li>
+</ul>
+<hr>
+<h3 id="header-file">Header file</h3>
+<pre><code class="language-cpp">// include/vcg_client.hpp
+#pragma once
+#include &lt;string&gt;
+#include &lt;optional&gt;
+#include &lt;nlohmann/json.hpp&gt;
+
+namespace vcg {
+
+struct Result {
+  bool ok;
+  std::string error;
+};
+
+Result await_window(const std::string&amp; sock_path);
+
+Result send_route(const std::string&amp; from_d,
+                  const std::string&amp; to_d,
+                  const std::string&amp; payload,
+                  const std::string&amp; route_sock = &quot;/run/vcg/vcg_route.sock&quot;);
+
+std::optional&lt;nlohmann::json&gt; recv_route(const std::string&amp; dimension_id);
+
+} // namespace vcg
+</code></pre>
+<h3 id="implementation">Implementation</h3>
+<pre><code class="language-cpp">// src/vcg_client.cpp
+#include &quot;vcg_client.hpp&quot;
+#include &lt;sys/socket.h&gt;
+#include &lt;sys/un.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;vector&gt;
+
+namespace vcg {
+
+static int connect_dgram(const std::string&amp; path, std::string&amp; err) {
+  int fd = ::socket(AF_UNIX, SOCK_DGRAM, 0);
+  if (fd &lt; 0) { err = &quot;socket() failed&quot;; return -1; }
+  sockaddr_un addr{};
+  addr.sun_family = AF_UNIX;
+  std::snprintf(addr.sun_path, sizeof(addr.sun_path), &quot;%s&quot;, path.c_str());
+  if (::connect(fd, reinterpret_cast&lt;sockaddr*&gt;(&amp;addr), sizeof(addr)) &lt; 0) {
+    err = &quot;connect() failed to &quot; + path; ::close(fd); return -1;
+  }
+  return fd;
+}
+
+Result await_window(const std::string&amp; sock_path) {
+  std::string err;
+  int fd = connect_dgram(sock_path, err);
+  if (fd &lt; 0) return {false, err};
+  std::vector&lt;char&gt; buf(65535);
+  for (;;) {
+    ssize_t n = ::recv(fd, buf.data(), buf.size(), 0);
+    if (n &lt;= 0) continue;
+    try {
+      auto msg = nlohmann::json::parse(std::string(buf.data(), n));
+      if (msg.contains(&quot;type&quot;) &amp;&amp; msg[&quot;type&quot;] == &quot;WINDOW_TICK&quot;) {
+        ::close(fd);
+        return {true, &quot;&quot;};
+      }
+    } catch (...) {}
+  }
+}
+
+Result send_route(const std::string&amp; from_d,
+                  const std::string&amp; to_d,
+                  const std::string&amp; payload,
+                  const std::string&amp; route_sock) {
+  std::string err;
+  int fd = connect_dgram(route_sock, err);
+  if (fd &lt; 0) return {false, err};
+  nlohmann::json msg = {
+    {&quot;type&quot;,&quot;VCG_ROUTE&quot;},
+    {&quot;from_d&quot;,from_d},
+    {&quot;to_d&quot;,to_d},
+    {&quot;payload&quot;,payload}
+  };
+  auto data = msg.dump();
+  ::send(fd, data.data(), data.size(), 0);
+  ::close(fd);
+  return {true, &quot;&quot;};
+}
+
+std::optional&lt;nlohmann::json&gt; recv_route(const std::string&amp; dimension_id) {
+  std::string sock = &quot;/run/vcg/&quot; + std::string{dimension_id};
+  for (auto&amp; c : sock) c = std::tolower(c);
+  sock += &quot;.sock&quot;;
+  std::string err;
+  int fd = connect_dgram(sock, err);
+  if (fd &lt; 0) return std::nullopt;
+  std::vector&lt;char&gt; buf(65535);
+  ssize_t n = ::recv(fd, buf.data(), buf.size(), 0);
+  ::close(fd);
+  if (n &lt;= 0) return std::nullopt;
+  try {
+    auto msg = nlohmann::json::parse(std::string(buf.data(), n));
+    if (msg.contains(&quot;type&quot;) &amp;&amp; msg[&quot;type&quot;] == &quot;VCG_ROUTE&quot; &amp;&amp; msg.contains(&quot;payload&quot;)) {
+      return nlohmann::json::parse(msg[&quot;payload&quot;].get&lt;std::string&gt;());
+    }
+  } catch (...) {}
+  return std::nullopt;
+}
+
+} // namespace vcg
+</code></pre>
+<h2 id="build-notes">Build notes</h2>
+<ul>
+<li><strong>Deps:</strong> nlohmann/json (single‑header), glibc, Linux UDS.</li>
+<li><strong>Compile:</strong> g++ -O2 -std=c++20 -Iinclude src/vcg_client.cpp -o libvcg_client.a (or build as a static lib).</li>
+<li><strong>Link:</strong> Add -lrt if your distro requires it for CLOCK_MONOTONIC_RAW usage elsewhere.</li>
+</ul>
+<hr>
+  </main>
+</body>
+</html>

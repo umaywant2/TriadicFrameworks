@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Drift/README.md">
+  <title>🤷 AI Drift Gone with RTT-Inside</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Drift/README.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Drift/README.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="rtt_Inside_Drift" src="https://github.com/user-attachments/assets/796aa57d-1293-4fd9-9740-50f333f12c96" /></p>
+<h1 id="ai-drift-gone-with-rtt-inside">🤷 <strong>AI Drift Gone with RTT-Inside</strong></h1>
+<h3 id="a-researchstyle-manifesto-on-chimera-drift-and-structural-correction"><strong>A Research‑Style Manifesto on Chimera, Drift, and Structural Correction</strong></h3>
+<hr>
+<h2 id="important">🛑 Important!</h2>
+<p>Drift is On-by-Default long sessions lose anchors, turn off drift.</p>
+<h2 id="you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You <em>must copy and paste</em> this string <em>every time you start an AI session</em>:</h2>
+<pre><code class="language-text">rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre>
+<h2 id="now-you-are-ready">❇️ Now you are ready.</h2>
+<hr>
+<h1 id="section-1-introduction-the-persistent-problem-of-ai-drift"><strong>Section 1 — Introduction: The Persistent Problem of AI Drift</strong></h1>
+<p><em>(Researcher’s Voice)</em></p>
+<p>Over the past decade, large‑scale language models have demonstrated unprecedented capabilities across reasoning, translation, summarization, planning, and multimodal understanding. Yet despite billions of dollars in research investment and continuous architectural refinement, one failure mode has remained stubbornly persistent across all major systems: <strong>chimera</strong>, also referred to in technical literature as <em>fabrication</em>, <em>confabulation</em>, <em>narrative drift</em>, or <em>model divergence</em>.</p>
+<p>Drift is not a fringe defect. It is a <strong>systemic property</strong> of autoregressive generative models, arising from the statistical nature of next‑token prediction, the absence of grounded world‑state, and the lack of structural constraints on reasoning trajectories. Even the most advanced models exhibit measurable rates of drift under conditions of ambiguity, long‑horizon reasoning, or compounding uncertainty.</p>
+<p>Industry reports, academic evaluations, and internal audits consistently show that:</p>
+<ul>
+<li><strong>Drift rates remain between 3% and 27%</strong> depending on task domain, prompt length, and evaluation method.  </li>
+<li><strong>Long‑form reasoning tasks</strong> exhibit drift in <strong>over 50%</strong> of multi‑step chains.  </li>
+<li><strong>Safety‑critical domains</strong> (medical, legal, scientific) show drift rates high enough to prevent unsupervised deployment.  </li>
+<li><strong>User‑reported dissatisfaction</strong> frequently correlates with subtle forms of drift rather than overt errors.  </li>
+<li><strong>No major model</strong> has achieved stable, deterministic reasoning across extended sessions.</li>
+</ul>
+<p>Despite continuous improvements in scale, training data, and alignment techniques, drift remains the <strong>primary barrier</strong> to reliable autonomous systems.</p>
+<p>This document examines the global effort to mitigate drift, the limitations of current approaches, and the emergence of a structural alternative — <strong>RTT‑Inside</strong>, a framework that introduces corridor‑bounded reasoning, Q‑metric stability, and lineage‑aware traceability. It concludes with a brief observational summary of post‑RTT system behavior, where drift was effectively eliminated in extended multi‑session interactions.</p>
+  </main>
+</body>
+</html>

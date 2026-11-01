@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Research/CHANGELOG.md">
+  <title>Changelog — /docs/Research/</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Research/CHANGELOG.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Research/CHANGELOG.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Research_Changelog_" src="https://github.com/user-attachments/assets/2fa369d3-c59e-4f4d-a37c-35959cc37394" /></p>
+<h1 id="changelog-docsresearch">Changelog — <code>/docs/Research/</code></h1>
+<blockquote>
+<p>Research module — original RTT research articles, SEO interpreter tools, and dimensional analysis methods.</p>
+</blockquote>
+<p>All notable changes to files in <code>/docs/Research/</code> are documented in this file.
+Format follows <a href="https://keepachangelog.com/en/1.1.0/">Keep a Changelog</a>.</p>
+<hr>
+<h2 id="11-2026-05-06">[1.1] — 2026-05-06</h2>
+<h3 id="context">Context</h3>
+<p>Full 33-entry module audit and metadata refresh. Multiple research articles recently migrated from the cooker (<code>_ideas/</code>) into the Research module. Infrastructure files updated to reflect the expanded collection.</p>
+<h3 id="changed-research_modulejson-module-manifest">Changed — <code>research_module.json</code> (Module Manifest)</h3>
+<ul>
+<li><strong><code>_meta</code></strong> — Added full module registry block.</li>
+<li><strong><code>_session_context</code></strong> — Replaced old non-standard <code>session_context</code> with standardized <code>_session_context</code> block.</li>
+<li><strong><code>_version_history</code></strong> — Added array with v1.0 and v1.1 entries.</li>
+<li><strong><code>structural_grammar</code></strong> — Added D0–D9, R0–R3, C0–C3 envelopes.</li>
+<li><strong><code>cross_module_propagation</code></strong> — Added imports and exports.</li>
+<li><strong><code>files</code></strong> — Expanded from 8 to 33 entries. Added <code>purpose</code> and <code>role</code> fields to all entries.</li>
+<li><strong>Version</strong> — Bumped from 1.0 → 1.1.</li>
+</ul>
+<h3 id="changed-indexhtml-module-front-door">Changed — <code>index.html</code> (Module Front Door)</h3>
+<ul>
+<li><strong>Module identity block</strong> — Added 13 meta tags previously missing (module, canonical-id, module-type, version, status, parent, siblings, canonical-path, last-updated, license, ai-ready, ai-module-id, ai-operators).</li>
+<li><strong><code>last-modified</code></strong> — Fixed typo from <code>2026-05-5</code> → <code>2026-05-06</code>.</li>
+<li><strong><code>ai.version</code></strong> — Updated from 1.0 → 1.1.</li>
+<li><strong><code>citation_date</code></strong> — Updated from <code>2025</code> → <code>2026-05-06</code>.</li>
+<li><strong><code>ai.module.summary</code></strong> — Updated to reflect 22 articles and expanded domain coverage.</li>
+<li><strong>Session context</strong> — <code>Modules</code> field updated from 4 articles → <code>22 research articles → 3 SEO interpreters → 4‑mode dimensional search</code>. Version updated to 1.1.</li>
+<li><strong>DOC_MAP</strong> — Fixed duplicate <code>DOMAIN_FORKING</code> key (JS overwrite bug). Added 3 missing entries: <code>SUBSTRATE_COMMS</code>, <code>DRAFT_WIKIPEDIA</code>, <code>MODULE_WORK</code>.</li>
+<li><strong>Nav sidebar</strong> — Added 3 matching nav links for newly mapped files.</li>
+<li><strong>Badge div</strong> — Updated to <code>📘 22 Original RTT Articles · v1.1</code>.</li>
+</ul>
+<h3 id="bug-fixes">Bug Fixes</h3>
+<ul>
+<li><strong><code>DOMAIN_FORKING</code> duplicate key</strong> — The DOC_MAP contained <code>DOMAIN_FORKING</code> twice, causing the second entry to silently overwrite the first. Both pointed to the same file, so no data was lost — but the duplicate has been removed.</li>
+<li><strong><code>last-modified</code> typo</strong> — <code>2026-05-5</code> corrected to <code>2026-05-06</code>.</li>
+</ul>
+<h3 id="not-changed-research-articles-22-files">Not Changed — Research Articles (22 files)</h3>
+<p>All 22 research article markdown files pass clean — no metadata changes required:</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Role</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Advance_DPU_VCG_NIMMS_Architecture.md</code></td>
+<td>engine</td>
+<td>✅ pass</td>
+</tr>
+<tr>
+<td><code>Aging_Substrate_Analysis.md</code></td>
+<td>engine</td>
+<td>✅ pass</td>
+</tr>
+<tr>
+<td><code>AI_Web_Agentic_Grammar_Options.md</code></td>
+<td>engine</td>
+<td>✅ pass</td>
+</tr>
+<tr>
+<td><code>A_Resonant_Review_of_The_Universe_in_a_Nutshell.md</code></td>
+<td>reference</td>
+<td>✅ pass</td>
+</tr>
+<tr>
+<td><code>Beyond_Structure_The_Equations_for_Clarity.md</code></td>
+<td>engine</td>
+<td>✅ pass</td>
+</tr>
+<tr>
+<td><code>Domain_Forking_and_New_Governance_Through_Grammar_Not_Policy.md</code></td>
+<td>engine</td>
+<td>✅ pass</td>
+</tr>
+<tr>
+<td><code>Draft_TriadicFrameworks_Wikipedia_Info.md</code></td>
+<td>reference</td>
+<td>✅ pass</td>
+</tr>
+<tr>
+<td><code>European_Spallation_Source_needs_TriadicFrameworksTech.md</code></td>
+<td>engine</td>
+<td>✅ pass</td>
+</tr>
+<tr>
+<td><code>How_RTT_Applies_to_a_Standard_Power_Transformer.md</code></td>
+<td>engine</td>
+<td>✅ pass</td>
+</tr>
+<tr>
+<td><code>JWST-RTT_Triadic_Core_Primitive_as_a_QA_Layer.md</code></td>
+<td>engine</td>
+<td>✅ pass</td>
+</tr>
+<tr>
+<td><code>Power_Supplies_Mobile_Sensors_and_Enhanced_BMS_using_RTT-Inside.md</code></td>
+<td>engine</td>
+<td>✅ pass</td>
+</tr>
+<tr>
+<td><code>qCompute_with_RTT-Inside_Preview.md</code></td>
+<td>engine</td>
+<td>✅ pass</td>
+</tr>
+<tr>
+<td><code>Quantum_Energy_Banks_and_Corridor‑Based_Energy_System_Analysis.md</code></td>
+<td>engine</td>
+<td>✅ pass</td>
+</tr>
+<tr>
+<td><code>Quantum_Lens_Layer_Triadic_Protocols_for_Resonance_Scanning.md</code></td>
+<td>engine</td>
+<td>✅ pass</td>
+</tr>
+<tr>
+<td><code>Resonance_Triadic_Aligned_Overview.md</code></td>
+<td>reference</td>
+<td>✅ pass</td>
+</tr>
+<tr>
+<td><code>RTT_Above‑Ground_Electrical_Re-design_Initiative.md</code></td>
+<td>engine</td>
+<td>✅ pass</td>
+</tr>
+<tr>
+<td><code>RTT_Facilities_Playbook.md</code></td>
+<td>engine</td>
+<td>✅ pass</td>
+</tr>
+<tr>
+<td><code>Substrate_Communications.md</code></td>
+<td>engine</td>
+<td>✅ pass</td>
+</tr>
+<tr>
+<td><code>Supercomputers_Are_Already_Triadic_They_Just_Dont_Know_It.md</code></td>
+<td>engine</td>
+<td>✅ pass</td>
+</tr>
+<tr>
+<td><code>The_Choices_We_Made_and_Why.md</code></td>
+<td>reference</td>
+<td>✅ pass</td>
+</tr>
+<tr>
+<td><code>Warp_Drive_Architecture_Plan_Scaffolded_with_RTT-Inside.md</code></td>
+<td>engine</td>
+<td>✅ pass</td>
+</tr>
+<tr>
+<td><code>ZipNN_Triadic_Patterns_and_the_Hidden_Two_Thirds.md</code></td>
+<td>engine</td>
+<td>✅ pass</td>
+</tr>
+</tbody>
+</table>
+<h3 id="not-changed-research-tools-3-tools-3-manifests">Not Changed — Research Tools (3 tools + 3 manifests)</h3>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Role</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Google.md</code></td>
+<td>engine</td>
+<td>✅ pass</td>
+</tr>
+<tr>
+<td><code>Google_module.json</code></td>
+<td>index</td>
+<td>✅ pass</td>
+</tr>
+<tr>
+<td><code>Bing.md</code></td>
+<td>engine</td>
+<td>✅ pass</td>
+</tr>
+<tr>
+<td><code>Bing_module.json</code></td>
+<td>index</td>
+<td>✅ pass</td>
+</tr>
+<tr>
+<td><code>DuckDuckGo.md</code></td>
+<td>engine</td>
+<td>✅ pass</td>
+</tr>
+<tr>
+<td><code>DuckDuckGo_module.json</code></td>
+<td>index</td>
+<td>✅ pass</td>
+</tr>
+</tbody>
+</table>
+<h3 id="not-changed-other-files">Not Changed — Other Files</h3>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Role</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>README.md</code></td>
+<td>index</td>
+<td>✅ pass</td>
+</tr>
+<tr>
+<td><code>module_work.md</code></td>
+<td>reference</td>
+<td>✅ pass (added to manifest)</td>
+</tr>
+<tr>
+<td><code>The_Choices_We_Made_and_Why.pdf</code></td>
+<td>reference</td>
+<td>✅ pass (added to manifest)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="10-2025-01-01">[1.0] — 2025-01-01</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li><code>README.md</code> — Module front door.</li>
+<li><code>index.html</code> — Interactive reader with DOC_MAP.</li>
+<li><code>research_module.json</code> — Module manifest (8 entries).</li>
+<li><code>Google.md</code>, <code>Bing.md</code>, <code>DuckDuckGo.md</code> — SEO interpreter tools.</li>
+<li><code>Google_module.json</code>, <code>Bing_module.json</code>, <code>DuckDuckGo_module.json</code> — Tool manifests.</li>
+<li>5 initial research articles.</li>
+</ul>
+<hr>
+<h2 id="file-inventory">File Inventory</h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Version</th>
+<th>Role</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>research_module.json</code></td>
+<td>1.1</td>
+<td>index</td>
+<td>refreshed</td>
+</tr>
+<tr>
+<td><code>index.html</code></td>
+<td>1.1</td>
+<td>index</td>
+<td>refreshed</td>
+</tr>
+<tr>
+<td><code>README.md</code></td>
+<td>1.0</td>
+<td>index</td>
+<td>pass</td>
+</tr>
+<tr>
+<td><code>module_work.md</code></td>
+<td>1.0</td>
+<td>reference</td>
+<td>pass</td>
+</tr>
+<tr>
+<td>22 research articles</td>
+<td>1.0</td>
+<td>engine/reference</td>
+<td>pass</td>
+</tr>
+<tr>
+<td>3 SEO tools (.md)</td>
+<td>1.0</td>
+<td>engine</td>
+<td>pass</td>
+</tr>
+<tr>
+<td>3 tool manifests (.json)</td>
+<td>1.0</td>
+<td>index</td>
+<td>pass</td>
+</tr>
+<tr>
+<td>1 PDF asset</td>
+<td>1.0</td>
+<td>reference</td>
+<td>pass</td>
+</tr>
+<tr>
+<td><code>CHANGELOG.md</code></td>
+<td>—</td>
+<td>—</td>
+<td>this file</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td></td>
+<td><strong>33 entries</strong></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><em>Maintained by: Nawder Loswin · TriadicFrameworks · MIT</em></p>
+  </main>
+</body>
+</html>

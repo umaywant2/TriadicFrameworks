@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/facilities/design-system/component-naming-convention.md">
+  <title>🏷️ RTT Facilities — Component Naming Convention</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/facilities/design-system/component-naming-convention.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/facilities/design-system/component-naming-convention.md</code>
+  </aside>
+
+  <main>
+<h1 id="rtt-facilities-component-naming-convention">🏷️ RTT Facilities — Component Naming Convention</h1>
+<p><strong>Semantic Clarity &amp; Design System Governance</strong></p>
+<p>This document defines the <strong>canonical naming convention</strong> for all components in the RTT Facilities design system.</p>
+<p>Its purpose is to ensure that component names:
+- Encode <strong>meaning</strong>, not appearance<br>
+- Remain stable across time and domains<br>
+- Are legible to designers, engineers, and governance reviewers<br>
+- Prevent semantic drift as the system scales  </p>
+<hr>
+<h2 id="1-naming-philosophy">1. Naming Philosophy</h2>
+<p>Component names must answer three questions:</p>
+<ol>
+<li><strong>What does this component do?</strong>  </li>
+<li><strong>What governance concept does it represent?</strong>  </li>
+<li><strong>Where does it belong in the system?</strong></li>
+</ol>
+<p>Names are <strong>contracts</strong>, not labels.</p>
+<hr>
+<h2 id="2-naming-structure">2. Naming Structure</h2>
+<p>All component names follow this structure:</p>
+<pre><code>[Domain] / [Category] / [Function] [Variant]
+</code></pre>
+<h3 id="example">Example</h3>
+<pre><code>Facilities / Corridor / RiskIndicator
+Facilities / Score / DriftTrend
+Facilities / Capital / ModernizationBadge
+</code></pre>
+<hr>
+<h2 id="3-domain-prefix">3. Domain Prefix</h2>
+<p>The <strong>Domain</strong> identifies the canonical ownership of the component.</p>
+<h3 id="approved-domains">Approved Domains</h3>
+<ul>
+<li><code>Facilities</code></li>
+<li><code>AGERI</code></li>
+<li><code>Dashboards</code></li>
+<li><code>CityFacing</code></li>
+</ul>
+<p>Domain prefixes are <strong>required</strong>.</p>
+<hr>
+<h2 id="4-category-layer">4. Category Layer</h2>
+<p>The <strong>Category</strong> describes the conceptual grouping.</p>
+<h3 id="common-categories">Common Categories</h3>
+<ul>
+<li><code>Corridor</code></li>
+<li><code>Score</code></li>
+<li><code>System</code></li>
+<li><code>Capital</code></li>
+<li><code>Audit</code></li>
+<li><code>Status</code></li>
+<li><code>Navigation</code></li>
+<li><code>Layout</code></li>
+<li><code>Control</code></li>
+</ul>
+<p>Categories reflect <strong>governance concepts</strong>, not UI patterns.</p>
+<hr>
+<h2 id="5-function-name">5. Function Name</h2>
+<p>The <strong>Function</strong> describes what the component <em>means</em>, not how it looks.</p>
+<h3 id="good-examples">Good Examples</h3>
+<ul>
+<li><code>RiskIndicator</code></li>
+<li><code>TrendArrow</code></li>
+<li><code>ClassificationBadge</code></li>
+<li><code>DependencyGraph</code></li>
+<li><code>InterventionTimeline</code></li>
+</ul>
+<h3 id="avoid">Avoid</h3>
+<ul>
+<li><code>RedBox</code></li>
+<li><code>BigCard</code></li>
+<li><code>FancyChart</code></li>
+<li><code>Widget</code></li>
+</ul>
+<p>If the name describes color or shape, it is wrong.</p>
+<hr>
+<h2 id="6-variant-suffixes">6. Variant Suffixes</h2>
+<p>Variants are appended <strong>only when necessary</strong>.</p>
+<h3 id="variant-format">Variant Format</h3>
+<pre><code>[Function] — [Variant]
+</code></pre>
+<h3 id="examples">Examples</h3>
+<pre><code>RiskIndicator — Compact
+RiskIndicator — Executive
+TrendArrow — Up
+TrendArrow — Down
+</code></pre>
+<p>Variants must not redefine meaning.</p>
+<hr>
+<h2 id="7-state-is-not-a-name">7. State Is Not a Name</h2>
+<p>Component <strong>state</strong> is never encoded in the name.</p>
+<p>❌ <code>RiskIndicatorError</code><br>
+❌ <code>ScoreWarningCard</code></p>
+<p>✅ State is handled via properties, not naming.</p>
+<hr>
+<h2 id="8-audience-gating">8. Audience Gating</h2>
+<p>If a component supports multiple audiences, the <strong>variant</strong> reflects this:</p>
+<pre><code>Facilities / Corridor / RiskIndicator — Operator
+Facilities / Corridor / RiskIndicator — Executive
+Facilities / Corridor / RiskIndicator — Public
+</code></pre>
+<p>Audience is never implied.</p>
+<hr>
+<h2 id="9-alignment-with-global-index-schema">9. Alignment with Global Index Schema</h2>
+<p>Every component name must map cleanly to schema concepts.</p>
+<p>Examples:
+- <code>Score / DriftTrend</code> → <code>scores.drift</code>
+- <code>Capital / ModernizationBadge</code> → <code>capital.modernization_cycle</code>
+- <code>Audit / StatusFlag</code> → <code>audit.follow_up_required</code></p>
+<p>If no schema mapping exists, the component should not exist.</p>
+<hr>
+<h2 id="10-figma-code-compatibility">10. Figma &amp; Code Compatibility</h2>
+<p>Names must be:
+- Slash‑delimited for Figma organization<br>
+- Stable for code references<br>
+- Free of special characters<br>
+- Singular, not plural  </p>
+<p>Avoid abbreviations unless canonical.</p>
+<hr>
+<h2 id="11-prohibited-naming-patterns">11. Prohibited Naming Patterns</h2>
+<p>Do <strong>not</strong> use:
+- Visual adjectives<br>
+- Temporary language (<code>New</code>, <code>V2</code>, <code>Test</code>)<br>
+- Implementation details<br>
+- Tool‑specific terms  </p>
+<p>Names must survive redesigns.</p>
+<hr>
+<h2 id="12-review-enforcement">12. Review &amp; Enforcement</h2>
+<p>All component names must be:
+- Reviewed for semantic clarity<br>
+- Approved by the design system steward<br>
+- Frozen once canonical  </p>
+<p>Renaming is treated as a <strong>breaking governance change</strong>.</p>
+<hr>
+<h2 id="13-canonical-status">13. Canonical Status</h2>
+<p>This naming convention is <strong>canonical</strong>.</p>
+<p>All RTT Facilities components must conform to it.</p>
+  </main>
+</body>
+</html>

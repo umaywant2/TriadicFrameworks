@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rfc/RFC_VER_0023_Signature_Verification_Service.md">
+  <title>RFC‑VER‑0023 — Signature Verification Service</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rfc/RFC_VER_0023_Signature_Verification_Service.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rfc/RFC_VER_0023_Signature_Verification_Service.md</code>
+  </aside>
+
+  <main>
+<h1 id="rfcver0023-signature-verification-service"><strong>RFC‑VER‑0023 — Signature Verification Service</strong></h1>
+<h3 id="validatorgrade-multicontributor-signature-authentication"><em>Validator‑Grade Multi‑Contributor Signature Authentication</em></h3>
+<p>RefId: turn0browsertab1</p>
+<p><strong>Title:</strong> Validator Service for Multi‑Contributor Signature Authentication<br>
+<strong>Status:</strong> Draft<br>
+<strong>Author:</strong> Nawder Loswin + Copilot<br>
+<strong>Date:</strong> 2025‑11‑12<br>
+<strong>Version:</strong> 0.1  </p>
+<hr>
+<h2 id="1-purpose"><strong>1. Purpose</strong></h2>
+<p>The <strong>Signature Verification Service (SVS)</strong> validates co‑signatures on remix scrolls against contributor registries.<br>
+It ensures:</p>
+<ul>
+<li>shared authorship is authentic  </li>
+<li>signatures are cryptographically valid  </li>
+<li>symbolic signatures match contributor identity  </li>
+<li>timestamps align with export windows  </li>
+<li>lineage integrity is preserved  </li>
+<li>validator‑grade reproducibility  </li>
+</ul>
+<p>SVS is a core component of the Remixathon validator cluster.</p>
+<hr>
+<h1 id="2-workflow-steps"><strong>2. Workflow Steps</strong></h1>
+<p>SVS follows a four‑stage verification pipeline.</p>
+<hr>
+<h2 id="21-signature-extraction"><strong>2.1 Signature Extraction</strong></h2>
+<p>Parse signatures from:</p>
+<pre><code>remix_scroll.signatures
+</code></pre>
+<p>Extract:</p>
+<ul>
+<li>contributor IDs  </li>
+<li>signature payloads  </li>
+<li>signature types (PGP, ECDSA, symbolic)  </li>
+<li>timestamp metadata  </li>
+</ul>
+<hr>
+<h2 id="22-registry-lookup"><strong>2.2 Registry Lookup</strong></h2>
+<p>Query the <strong>Contributor Registry</strong> for:</p>
+<ul>
+<li>public keys  </li>
+<li>symbolic signature references  </li>
+<li>contributor identity  </li>
+<li>contributor active status  </li>
+</ul>
+<p>Registry lookup ensures signatures map to valid contributors.</p>
+<hr>
+<h2 id="23-signature-validation"><strong>2.3 Signature Validation</strong></h2>
+<p>SVS performs three checks:</p>
+<h3 id="cryptographic-validation"><strong>Cryptographic Validation</strong></h3>
+<ul>
+<li>PGP  </li>
+<li>ECDSA  </li>
+<li>key‑pair match  </li>
+<li>payload integrity  </li>
+</ul>
+<h3 id="symbolic-validation"><strong>Symbolic Validation</strong></h3>
+<p>Glyph‑based validator signatures checked against:</p>
+<ul>
+<li>glyph library  </li>
+<li>contributor symbolic signature reference  </li>
+</ul>
+<h3 id="timestamp-validation"><strong>Timestamp Validation</strong></h3>
+<p>Signature timestamp must fall within the scroll’s export window.</p>
+<hr>
+<h2 id="24-verification-report"><strong>2.4 Verification Report</strong></h2>
+<p>SVS generates a validator‑grade report:</p>
+<ul>
+<li>pass/fail per contributor  </li>
+<li>overall authorship status  </li>
+<li>checksum  </li>
+<li>dignity‑layer badge:</li>
+</ul>
+<pre><code>&quot;authorship confirmed&quot;
+</code></pre>
+<p>Report is appended to scroll metadata.</p>
+<hr>
+<h1 id="3-schema-extension"><strong>3. Schema Extension</strong></h1>
+<p>File:  </p>
+<pre><code>registry/signatures/verification_schema.yml
+</code></pre>
+<p>Defines:</p>
+<ul>
+<li>contributor ID  </li>
+<li>signature type  </li>
+<li>validation status  </li>
+<li>timestamp  </li>
+<li>checksum  </li>
+<li>lineage linkage  </li>
+</ul>
+<hr>
+<h1 id="4-api-endpoints"><strong>4. API Endpoints</strong></h1>
+<h3 id="post-verifysignatures"><strong>POST /verify/signatures</strong></h3>
+<p>Submit scroll for signature verification.</p>
+<h3 id="get-verifyreportscroll_id"><strong>GET /verify/report/{scroll_id}</strong></h3>
+<p>Retrieve verification report.</p>
+<h3 id="get-verifycontributorid"><strong>GET /verify/contributor/{id}</strong></h3>
+<p>Check contributor signature status.</p>
+<hr>
+<h1 id="5-pythonstyle-stub"><strong>5. Python‑Style Stub</strong></h1>
+<p>File:  </p>
+<pre><code>api/signature_verification.py
+</code></pre>
+<pre><code class="language-python">def verify_signatures(scroll):
+    results = []
+    for sig in scroll[&quot;signatures&quot;]:
+        contributor = lookup_contributor(sig[&quot;id&quot;])
+        crypt_valid = verify_crypto(sig[&quot;payload&quot;], contributor[&quot;public_key&quot;])
+        symbolic_valid = verify_symbolic(sig[&quot;glyph&quot;], contributor[&quot;symbolic_signature&quot;])
+        timestamp_valid = verify_timestamp(sig[&quot;timestamp&quot;], scroll[&quot;export_window&quot;])
+
+        results.append({
+            &quot;id&quot;: sig[&quot;id&quot;],
+            &quot;cryptographic&quot;: crypt_valid,
+            &quot;symbolic&quot;: symbolic_valid,
+            &quot;timestamp&quot;: timestamp_valid,
+            &quot;status&quot;: crypt_valid and symbolic_valid and timestamp_valid
+        })
+
+    return {
+        &quot;scroll_id&quot;: scroll[&quot;id&quot;],
+        &quot;results&quot;: results,
+        &quot;overall_status&quot;: all(r[&quot;status&quot;] for r in results)
+    }
+</code></pre>
+<hr>
+<h1 id="6-dashboard-integration"><strong>6. Dashboard Integration</strong></h1>
+<h3 id="verification-panel"><strong>Verification Panel</strong></h3>
+<p>Contributors view signature validation results.</p>
+<h3 id="badge-display"><strong>Badge Display</strong></h3>
+<p>Scrolls marked:</p>
+<ul>
+<li><strong>authentic authorship</strong>  </li>
+<li><strong>partial authorship</strong>  </li>
+</ul>
+<h3 id="contributor-registry-link"><strong>Contributor Registry Link</strong></h3>
+<p>Click contributor ID → registry entry.</p>
+<h3 id="lineage-graph-overlay"><strong>Lineage Graph Overlay</strong></h3>
+<p>Nodes annotated with verification status.</p>
+<hr>
+<h1 id="7-validator-hooks"><strong>7. Validator Hooks</strong></h1>
+<h3 id="schema-compliance"><strong>Schema Compliance</strong></h3>
+<p>Reports must match <code>verification_schema.yml</code>.</p>
+<h3 id="checksum"><strong>Checksum</strong></h3>
+<p>Each report includes reproducibility checksum.</p>
+<h3 id="lineage-integrity"><strong>Lineage Integrity</strong></h3>
+<p>Verified co‑signatures preserved in ancestry index.</p>
+<h3 id="dignity-separation"><strong>Dignity Separation</strong></h3>
+<p>Authorship badges displayed distinctly from narratives.</p>
+<hr>
+<h1 id="8-concept-sketch-textual"><strong>8. Concept Sketch (Textual)</strong></h1>
+<pre><code>Verification Report: scroll-010
+ └─ Contributors:
+      - user42 (PGP)   → valid
+      - user17 (ECDSA) → valid
+ └─ Overall Status: authentic
+ └─ Badge: &quot;Shared Authorship Confirmed&quot;
+</code></pre>
+<p>SVS ensures co‑signatures are authentic, validated against contributor registries, and preserved as validator‑grade lineage.</p>
+  </main>
+</body>
+</html>

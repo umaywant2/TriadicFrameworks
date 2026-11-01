@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/prompts/ui/dependency-graph.md">
+  <title>UI Dependency Graph — TriadicFrameworks Prompts</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/prompts/ui/dependency-graph.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/prompts/ui/dependency-graph.md</code>
+  </aside>
+
+  <main>
+<h1 id="ui-dependency-graph-triadicframeworks-prompts">UI Dependency Graph — TriadicFrameworks Prompts</h1>
+<p>The UI Dependency Graph describes how TriadicFrameworks prompt artifacts depend on and
+unlock each other across the Prompts site: templates, stacks, engines, modules, and
+UI logic.<br>
+It is the structural map behind the interactive UI — showing which artifacts must be
+loaded, understood, or completed before others become available.</p>
+<p>This page is the front door for the UI dependency model.</p>
+<hr>
+<h2 id="purpose">Purpose</h2>
+<p>The UI Dependency Graph is used to:</p>
+<ul>
+<li>document dependencies between templates, stacks, engines, and modules  </li>
+<li>define unlock rules for the Prompts UI  </li>
+<li>show how teaching flows progress across RTT/1 → RTT∞  </li>
+<li>surface which artifacts are “prerequisites” for others  </li>
+<li>support spine visualizations and dependency overlays  </li>
+<li>maintain structural neutrality while exposing UI logic  </li>
+</ul>
+<p>It is the canonical reference for UI‑level relationships in the Prompts system.</p>
+<hr>
+<h2 id="graph-layers">Graph Layers</h2>
+<p>The dependency graph is organized into layers:</p>
+<ul>
+<li><strong>Templates Layer</strong> — capture, analyze, drift, coherence, operator, domain, substrate, teaching, research  </li>
+<li><strong>Stacks Layer</strong> — structural, diagnostic, operator, substrate, domain, teaching, research  </li>
+<li><strong>Engines Layer</strong> — RTT engines, IPD‑12, substrate‑aware engines  </li>
+<li><strong>Modules Layer</strong> — domain modules, applied modules, teaching modules, research modules  </li>
+<li><strong>UI Layer</strong> — unlock rules, flows, overlays, and visual affordances  </li>
+</ul>
+<p>Each layer exposes nodes and edges that define how prompts are used and sequenced.</p>
+<hr>
+<h2 id="node-types">Node Types</h2>
+<p>The graph uses several canonical node types:</p>
+<ul>
+<li><strong>Template Nodes</strong> — <code>p_Capture</code>, <code>p_Analyze</code>, <code>p_Drift</code>, <code>p_Coherence</code>, <code>p_Operator</code>, <code>p_Domain</code>, <code>p_Substrate</code>, <code>p_Teaching</code>, <code>p_Research</code>  </li>
+<li><strong>Stack Nodes</strong> — <code>structural-stack</code>, <code>diagnostic-stack</code>, <code>operator-stack</code>, <code>substrate-stack</code>, <code>domain-stack</code>, <code>teaching-stack</code>, <code>research-stack</code>  </li>
+<li><strong>Engine Nodes</strong> — RTT/1, RTT/2, RTT/3, RTT/12, RTT∞, IPD‑12  </li>
+<li><strong>Module Nodes</strong> — structural, substrate, domain, teaching, research, applied, examples  </li>
+<li><strong>UI Nodes</strong> — flows, unlock rules, overlays, dependency views, teaching packs  </li>
+</ul>
+<p>Each node type participates in dependency edges.</p>
+<hr>
+<h2 id="edge-types">Edge Types</h2>
+<p>Edges describe how nodes depend on or unlock each other:</p>
+<ul>
+<li><strong>Prerequisite Edges</strong> — one artifact must be understood or completed before another  </li>
+<li><strong>Unlock Edges</strong> — one artifact unlocks UI access to another  </li>
+<li><strong>Support Edges</strong> — one artifact provides scaffolding or context for another  </li>
+<li><strong>Synthesis Edges</strong> — one artifact aggregates or summarizes others  </li>
+<li><strong>Teaching Edges</strong> — one artifact is used to teach another  </li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li><code>p_Capture</code> → <code>p_Analyze</code> (prerequisite)  </li>
+<li><code>p_Analyze</code> → <code>p_Drift</code> (support)  </li>
+<li><code>p_Drift</code> → <code>p_Coherence</code> (support)  </li>
+<li><code>operator-stack</code> → <code>p_Operator</code> (support)  </li>
+<li><code>structural-stack</code> → <code>domain-stack</code> (prerequisite)  </li>
+<li><code>teaching-stack</code> → <code>p_Teaching</code> (support)  </li>
+<li>RTT/1 → RTT/2 → RTT/3 → RTT/12 → RTT∞ (prerequisite chain)  </li>
+</ul>
+<hr>
+<h2 id="ui-unlock-rules">UI Unlock Rules</h2>
+<p>The Prompts UI uses the dependency graph to:</p>
+<ul>
+<li><strong>Gate advanced artifacts</strong> behind foundational ones  </li>
+<li><strong>Sequence teaching flows</strong> (e.g., Capture → Analyze → Drift → Coherence → Synthesis)  </li>
+<li><strong>Highlight required stacks</strong> for specific engines or modules  </li>
+<li><strong>Drive overlays</strong> in the S3 Spine Visualizer  </li>
+<li><strong>Expose dependency views</strong> for templates, stacks, and modules  </li>
+</ul>
+<p>Unlock rules are defined in UI configuration files and reflected in this graph.</p>
+<hr>
+<h2 id="usage">Usage</h2>
+<p>The UI Dependency Graph is used in:</p>
+<ul>
+<li>Prompts site navigation  </li>
+<li>S3 Spine Visualizer overlays  </li>
+<li>Teaching packs and classroom flows  </li>
+<li>Module and stack documentation  </li>
+<li>Engine front‑doors (RTT, IPD‑12)  </li>
+<li>Research and applied workflows  </li>
+</ul>
+<p>It is the backbone of how the Prompts UI behaves.</p>
+<hr>
+<h2 id="crosslinks">Cross‑Links</h2>
+<h3 id="prompts-site">Prompts Site</h3>
+<p>https://www.triadicframeworks.org/prompts/ui/dependency-graph/</p>
+<h3 id="docsbook">Docsbook</h3>
+<p>https://docs.triadicframeworks.org/docs/</p>
+<h3 id="s3-spine-visualizer">S3 Spine Visualizer</h3>
+<p>https://www.triadicframeworks.org/spine</p>
+<h3 id="github-source">GitHub Source</h3>
+<p>https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/ui</p>
+<hr>
+<h2 id="related-files">Related Files</h2>
+<ul>
+<li><code>index.md</code> — UI front‑door  </li>
+<li><code>flows.md</code> — UI flows and sequences  </li>
+<li><code>unlock-rules.md</code> — UI unlock logic  </li>
+<li><code>overlays.md</code> — visual overlays and spine integration  </li>
+<li><code>../templates/index.md</code> — templates front‑door  </li>
+<li><code>../stacks/index.md</code> — stacks front‑door  </li>
+<li><code>../engines/index.md</code> — engines front‑door  </li>
+</ul>
+<hr>
+<h2 id="manifest">Manifest</h2>
+<p>See <code>module.json</code> for the full registry of UI modules, templates, stacks, engines,
+examples, and navigation structure.</p>
+  </main>
+</body>
+</html>

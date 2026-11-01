@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/atomic_clocks/whitepaper/02-triadic_decomposition.md">
+  <title>Triadic Decomposition of Atomic Clock Architectures</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/atomic_clocks/whitepaper/02-triadic_decomposition.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/atomic_clocks/whitepaper/02-triadic_decomposition.md</code>
+  </aside>
+
+  <main>
+<h1 id="triadic-decomposition-of-atomic-clock-architectures">Triadic Decomposition of Atomic Clock Architectures</h1>
+<p>All atomic clocks, regardless of implementation, share a common
+structural pattern. Each system can be decomposed into a triad:
+a resonant system (R), an interrogation system (I), and a feedback
+system (F). This decomposition is architecture‑agnostic and provides a
+unified substrate for comparing microwave, optical, ion‑trap, and maser
+clocks.</p>
+<h2 id="1-resonant-system-r">1. Resonant System (R)</h2>
+<p>The resonant system provides the invariant frequency anchor. It is the
+physical transition whose stability defines the clock’s fundamental
+timescale.</p>
+<p>Examples:
+- Cesium‑133 hyperfine transition<br>
+- Strontium optical lattice transition<br>
+- Ytterbium ion transition<br>
+- Hydrogen maser resonance  </p>
+<p>Role:
+- Supplies the reference frequency<br>
+- Encodes the resonance cycles that define time<br>
+- Determines the ultimate stability limit of the clock  </p>
+<h2 id="2-interrogation-system-i">2. Interrogation System (I)</h2>
+<p>The interrogation system extracts measurable information from the
+resonant system. It includes the apparatus used to probe, stabilize, and
+read out the resonance.</p>
+<p>Examples:
+- Ramsey interrogation sequences<br>
+- Laser stabilization and optical cavities<br>
+- Frequency combs<br>
+- Detection electronics  </p>
+<p>Role:
+- Converts resonance into measurable phase or frequency<br>
+- Maintains coherence during interrogation<br>
+- Couples the resonant system to the feedback loop  </p>
+<h2 id="3-feedback-system-f">3. Feedback System (F)</h2>
+<p>The feedback system stabilizes the clock output by correcting deviations
+detected during interrogation. It ensures long‑term coherence and
+suppresses drift.</p>
+<p>Examples:
+- Phase‑locked loops<br>
+- Servo controllers<br>
+- Drift compensation algorithms<br>
+- Frequency steering mechanisms  </p>
+<p>Role:
+- Maintains alignment between measured and target frequency<br>
+- Suppresses environmental and instrumental drift<br>
+- Produces the final clock signal  </p>
+<h2 id="triadic-form">Triadic Form</h2>
+<p>Clock = (R, I, F)</p>
+<p>This triadic form isolates the structural roles within any atomic clock.
+It clarifies where stability originates (R), how it is measured (I), and
+how it is maintained (F). The decomposition enables direct comparison
+across architectures and supports the resonance‑based invariants used in
+vST drift detection.</p>
+  </main>
+</body>
+</html>

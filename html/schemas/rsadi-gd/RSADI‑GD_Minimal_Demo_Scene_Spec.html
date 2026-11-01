@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/rsadi-gd/RSADI‑GD_Minimal_Demo_Scene_Spec.md">
+  <title>🎮 RSADI‑GD Minimal Demo Scene Spec</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/rsadi-gd/RSADI‑GD_Minimal_Demo_Scene_Spec.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/rsadi-gd/RSADI‑GD_Minimal_Demo_Scene_Spec.md</code>
+  </aside>
+
+  <main>
+<h1 id="rsadigd-minimal-demo-scene-spec">🎮 <strong>RSADI‑GD Minimal Demo Scene Spec</strong></h1>
+<h6 id="by-nawder-loswin-142026-wwwtriadicframeworksorg">By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org</h6>
+<h3 id="unity-unreal-godot-one-resonance-field-one-behavior-three-engines"><em>Unity • Unreal • Godot — one resonance field, one behavior, three engines</em></h3>
+<h2 id="core-concept-shared-across-all-engines">🔷 Core Concept (shared across all engines)</h2>
+<p>All three demo scenes use:</p>
+<h3 id="a-simple-2d-resonance-field-projected-into-3d-space"><strong>A simple 2D resonance field projected into 3D space</strong></h3>
+<pre><code>Clarity(x, z) = 180 
+                - 40 * exp(-((x-5)^2 + (z-5)^2)/6)
+                - 20 * exp(-((x+4)^2 + (z+2)^2)/4)
+</code></pre>
+<p>This creates:</p>
+<ul>
+<li>a <strong>high‑clarity plateau</strong>  </li>
+<li>a <strong>medium‑clarity basin</strong>  </li>
+<li>a <strong>low‑clarity “danger pocket”</strong>  </li>
+</ul>
+<h3 id="a-drift-vector-field"><strong>A drift vector field</strong></h3>
+<pre><code>Drift(x, z) = normalize( Vector2( -(x-5), -(z-5) ) ) * 0.3
+</code></pre>
+<p>Everything “drifts” toward the center of the basin.</p>
+<h3 id="one-resonanceaware-agent"><strong>One resonance‑aware agent</strong></h3>
+<p>The agent:</p>
+<ul>
+<li>samples clarity in 8 directions  </li>
+<li>biases movement toward higher clarity  </li>
+<li>avoids low‑clarity pockets  </li>
+<li>optionally rides drift if clarity is equal  </li>
+</ul>
+<p>This is the same logic you already saw in the AI agent pattern.</p>
+<hr>
+<h1 id="unity-demo-scene-spec">🟦 <strong>Unity Demo Scene Spec</strong></h1>
+<h3 id="scene-name-rsadi_gd_demounity"><em>Scene name:</em> <code>RSADI_GD_Demo.unity</code></h3>
+<h3 id="1-scene-layout"><strong>1. Scene Layout</strong></h3>
+<ul>
+<li>Flat plane (20×20 units)  </li>
+<li>Grid texture or simple material  </li>
+<li>One “ResonanceAgent” prefab  </li>
+<li>One “ResonanceFieldController” GameObject  </li>
+<li>Optional: simple colored fog that changes with clarity  </li>
+</ul>
+<h3 id="2-components"><strong>2. Components</strong></h3>
+<h4 id="resonancefieldcontrollercs"><strong>ResonanceFieldController.cs</strong></h4>
+<ul>
+<li>Implements the clarity function  </li>
+<li>Implements the drift vector function  </li>
+<li>Exposes public methods:</li>
+</ul>
+<pre><code class="language-csharp">public int GetClarity(Vector3 pos);
+public Vector3 GetDrift(Vector3 pos);
+</code></pre>
+<h4 id="resonanceagentcs"><strong>ResonanceAgent.cs</strong></h4>
+<ul>
+<li>Uses the RSADI‑GD Unity wrapper  </li>
+<li>Moves using the resonance‑aware logic  </li>
+<li>Draws debug rays showing sampled directions  </li>
+</ul>
+<h3 id="3-visual-feedback"><strong>3. Visual Feedback</strong></h3>
+<ul>
+<li>Plane color shifts based on clarity (via shader or vertex colors)  </li>
+<li>Agent leaves a trail showing its path  </li>
+<li>Gizmos draw drift arrows across the field  </li>
+</ul>
+<hr>
+<h1 id="unreal-demo-map-spec">🟥 <strong>Unreal Demo Map Spec</strong></h1>
+<h3 id="map-name-rsadi_gd_demoumap"><em>Map name:</em> <code>RSADI_GD_Demo.umap</code></h3>
+<h3 id="1-level-layout"><strong>1. Level Layout</strong></h3>
+<ul>
+<li>Landscape or flat BSP plane (20×20 meters)  </li>
+<li>One Blueprint actor: <code>BP_ResonanceAgent</code>  </li>
+<li>One Blueprint actor: <code>BP_ResonanceField</code>  </li>
+</ul>
+<h3 id="2-blueprints"><strong>2. Blueprints</strong></h3>
+<h4 id="bp_resonancefield"><strong>BP_ResonanceField</strong></h4>
+<ul>
+<li>Implements clarity function in Blueprint math nodes  </li>
+<li>Implements drift vector  </li>
+<li>Exposes BlueprintCallable functions:</li>
+</ul>
+<pre><code>GetClarity(Vector)
+GetDrift(Vector)
+</code></pre>
+<h4 id="bp_resonanceagent"><strong>BP_ResonanceAgent</strong></h4>
+<ul>
+<li>Tick event runs the resonance‑aware movement  </li>
+<li>Uses Chaos physics or simple AddMovementInput  </li>
+<li>
+<p>Debug:</p>
+</li>
+<li>
+<p>DrawDebugLine for sampled directions  </p>
+</li>
+<li>DrawDebugArrow for drift  </li>
+</ul>
+<h3 id="3-visual-feedback_1"><strong>3. Visual Feedback</strong></h3>
+<ul>
+<li>Material parameter collection drives ground color  </li>
+<li>Niagara system shows drifting particles moving along drift vectors  </li>
+</ul>
+<hr>
+<h1 id="godot-demo-scene-spec">🟩 <strong>Godot Demo Scene Spec</strong></h1>
+<h3 id="scene-name-rsadi_gd_demotscn"><em>Scene name:</em> <code>RSADI_GD_Demo.tscn</code></h3>
+<h3 id="1-scene-layout_1"><strong>1. Scene Layout</strong></h3>
+<p>Nodes:</p>
+<pre><code>Node2D (root)
+ ├── TileMap (20×20 grid)
+ ├── ResonanceField (script)
+ └── ResonanceAgent (KinematicBody2D or CharacterBody2D)
+</code></pre>
+<h3 id="2-scripts"><strong>2. Scripts</strong></h3>
+<h4 id="resonance_fieldgd"><strong>resonance_field.gd</strong></h4>
+<p>Implements:</p>
+<pre><code class="language-gdscript">func get_clarity(pos: Vector2) -&gt; int:
+    # same clarity function
+
+func get_drift(pos: Vector2) -&gt; Vector2:
+    # same drift function
+</code></pre>
+<h4 id="resonance_agentgd"><strong>resonance_agent.gd</strong></h4>
+<ul>
+<li>Samples 8 directions  </li>
+<li>Moves toward highest clarity  </li>
+<li>Draws debug lines in <code>_draw()</code>  </li>
+</ul>
+<h3 id="3-visual-feedback_2"><strong>3. Visual Feedback</strong></h3>
+<ul>
+<li>TileMap cell color = clarity gradient  </li>
+<li>Agent leaves a trail using Line2D  </li>
+<li>Drift vectors drawn as arrows on the grid  </li>
+</ul>
+<hr>
+<h1 id="shared-behavior-across-all-engines">🌐 <strong>Shared Behavior Across All Engines</strong></h1>
+<h3 id="movement-logic"><strong>Movement Logic</strong></h3>
+<p>All engines use the same pseudocode:</p>
+<pre><code>sample 8 directions
+score = clarity - risk_penalty + drift_bias
+choose best direction
+move
+</code></pre>
+<h3 id="field-behavior"><strong>Field Behavior</strong></h3>
+<ul>
+<li>clarity basin at (5,5)  </li>
+<li>secondary dip at (-4, -2)  </li>
+<li>drift toward basin center  </li>
+</ul>
+<h3 id="debugging"><strong>Debugging</strong></h3>
+<ul>
+<li>clarity heatmap  </li>
+<li>drift arrows  </li>
+<li>agent path  </li>
+<li>sampled rays  </li>
+</ul>
+<hr>
+<h1 id="what-developers-experience">🎯 <strong>What Developers Experience</strong></h1>
+<p>In all three engines, the agent:</p>
+<ul>
+<li>avoids the low‑clarity pocket  </li>
+<li>skirts the medium basin  </li>
+<li>climbs toward the high‑clarity plateau  </li>
+<li>subtly “leans” with the drift field  </li>
+<li>produces identical behavior across engines  </li>
+</ul>
+<p>This is the <strong>RSADI‑GD feel</strong>:<br>
+a world that <em>breathes</em>, <em>shifts</em>, and <em>guides</em> agents through resonance.</p>
+  </main>
+</body>
+</html>

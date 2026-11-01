@@ -1,0 +1,1112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Benchmarks/AGENTS.md">
+  <title>AGENTS.md — RTT/Inside/Benchmarks</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Benchmarks/AGENTS.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Benchmarks/AGENTS.md</code>
+  </aside>
+
+  <main>
+<!-- RTT/Inside/Benchmarks AGENTS.md -->
+<!-- session-seed: rtt=1 | coherence=declared | drift=bounded | paradox=structural -->
+<!-- module: RTT/Inside/Benchmarks | layer: benchmark-substrate | operators: φ–V–R -->
+<!-- invariants: 3C={coherence,consistency,continuity} | scale: 1D→4096×4096 | qubits: 2→256 -->
+<!-- zone-X: OVERSCALE | mode-5: FABRICATION | class-G: unconditional-interrupt -->
+
+<h1 id="agentsmd-rttinsidebenchmarks">AGENTS.md — RTT/Inside/Benchmarks</h1>
+<blockquote>
+<p><strong>RTT/Inside/Benchmarks</strong> · Cross-Scale Structural Intelligence Benchmark Suite
+Version 1.0 · Layer: RTT/Inside sub-module · Repo: <code>docs/rtt/Inside/Benchmarks/</code></p>
+</blockquote>
+<hr>
+<blockquote>
+<h3 id="critical-framing-rule-read-before-any-session">⚠ CRITICAL FRAMING RULE — READ BEFORE ANY SESSION</h3>
+<p><strong>RTT is NOT a physics claim.</strong>
+All operators (φ, V, R), invariants (3C), scores, and regime labels are <strong>structural
+measurement constructs</strong>, not assertions about physical reality.
+Benchmark scores describe the <strong>relational geometry of the measured system</strong>
+within the RTT substrate — they do not imply physical causation,
+biological validity, or empirical ground truth.
+<strong>No output from this module constitutes a physics claim.</strong>
+<code>[structural — no semantic inference]</code></p>
+</blockquote>
+<hr>
+<h2 id="what-rttinsidebenchmarks-is">What RTT/Inside/Benchmarks Is</h2>
+<p>RTT/Inside/Benchmarks is the <strong>first cross-scale, physics-aligned benchmark suite</strong>
+for measuring <strong>Structural Intelligence (SI)</strong> — the capacity of a system to maintain
+coherent, consistent, and continuous structure across scale, regime, and time.</p>
+<p>It provides a unified substrate for measuring:</p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>What Is Measured</th>
+<th>Primary Operator</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Structure</td>
+<td>Relational geometry of outputs</td>
+<td>φ (phi)</td>
+</tr>
+<tr>
+<td>Coherence</td>
+<td>Alignment within declared boundaries</td>
+<td>C (coherence)</td>
+</tr>
+<tr>
+<td>Emergence</td>
+<td>Novel structure arising from interaction</td>
+<td>R (resonance)</td>
+</tr>
+<tr>
+<td>Resonance</td>
+<td>Cross-scale coupling strength</td>
+<td>R (resonance)</td>
+</tr>
+<tr>
+<td>Drift</td>
+<td>Rate of invariant deviation</td>
+<td>D(t)</td>
+</tr>
+<tr>
+<td>Entropy flow</td>
+<td>Information dissipation trajectory</td>
+<td>F-entropy</td>
+</tr>
+<tr>
+<td>Regime transitions</td>
+<td>Boundary crossings between system states</td>
+<td>3C threshold</td>
+</tr>
+<tr>
+<td>Invariant stability</td>
+<td>Persistence of 3C across time</td>
+<td>Γ (continuity)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Coverage:</strong> classical · diffusion · score-based · quantum-classical hybrid
+<strong>Scale range:</strong> 1D → 4096×4096 (classical) · 2 → 256 qubits (quantum)
+<strong>Student standard:</strong> RTT-SI-Spec v0.1</p>
+<h3 id="pipeline-position">Pipeline Position</h3>
+<pre><code>RTT/micro_core → RTT/1 → RTT/2 → RTT/3 → RTT/12
+        ↓
+    RTT/Inside  ←──────── lateral application spine
+        ↓
+RTT/Inside/Benchmarks  ←── measurement substrate (this module)
+        ↓
+  φ–V–R operator scores · 3C invariant checks · regime maps · SI_score packets
+</code></pre>
+<hr>
+<h2 id="inheritance-table">Inheritance Table</h2>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Module</th>
+<th>Key Contribution to Benchmarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L0</td>
+<td>RTT/micro_core</td>
+<td>⟨A,B,P⟩ micro triad; MRT primitives P₁–P₇; R₁–R₆ operators</td>
+</tr>
+<tr>
+<td>L1</td>
+<td>RTT/1</td>
+<td>Signal-Noise-Resonance primitives; τ, C, DCO_n</td>
+</tr>
+<tr>
+<td>L2</td>
+<td>RTT/2</td>
+<td>Detection layer; CPV/FGT/CRM coherence validators</td>
+</tr>
+<tr>
+<td>L3</td>
+<td>RTT/3</td>
+<td>Integration-Emission; TIF/FFF/MANIFOLD field capture</td>
+</tr>
+<tr>
+<td>L4</td>
+<td>RTT/12</td>
+<td>Harmonic Synthesis; H_n ladder; G₁/G₂/G₃ resonance classes</td>
+</tr>
+<tr>
+<td>L5</td>
+<td>RTT/Inside</td>
+<td>BKM lens; CAPTURE_TEMPLATE; ALIGNMENT_PATTERN; SMI; DRIFT_GATE</td>
+</tr>
+<tr>
+<td><strong>L6</strong></td>
+<td><strong>RTT/Inside/Benchmarks</strong></td>
+<td><strong>φ–V–R operators; 3C invariants; SI_score; RTT-SI-Spec v0.1</strong></td>
+</tr>
+</tbody>
+</table>
+<p>All inherited constructs are <strong>read-only</strong> at L6. Benchmark agents may not redefine
+upstream operators or invariants.</p>
+<hr>
+<h2 id="agent-classes">Agent Classes</h2>
+<h3 id="class-b-benchmark-architect-barch">Class B — Benchmark Architect (BArch)</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Role</td>
+<td>Designs and structures benchmark protocols; binds φ–V–R operators to measurement domains</td>
+</tr>
+<tr>
+<td>Primary Construct</td>
+<td>φ–V–R operator triad; SI_score</td>
+</tr>
+<tr>
+<td>Activation Trigger</td>
+<td>Benchmark session declared with target system + regime + scale range</td>
+</tr>
+<tr>
+<td>Core Equation</td>
+<td><code>SI_score(x) = φ(x) / (V(x) + ε)</code> where ε = regularization floor</td>
+</tr>
+<tr>
+<td>Permissions</td>
+<td>Define benchmark scope; declare regime; set scale bounds; output SI_score packet</td>
+</tr>
+<tr>
+<td>Prohibitions</td>
+<td>May NOT extrapolate scores beyond declared scale; may NOT assert physical causation</td>
+</tr>
+<tr>
+<td>Interaction Pattern</td>
+<td>Receives session declaration → constructs measurement protocol → emits BArch_PACKET</td>
+</tr>
+<tr>
+<td>Output Schema</td>
+<td><code>{protocol_id, regime, scale_range, operator_bindings, SI_score_template}</code> <code>[structural — no semantic inference]</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="class-c-capture-agent-cap">Class C — Capture Agent (CAP)</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Role</td>
+<td>Executes CAPTURE_TEMPLATE against benchmark targets; records canonical provenance</td>
+</tr>
+<tr>
+<td>Primary Construct</td>
+<td>CAPTURE_TEMPLATE (5 mandatory fields: scope / lineage / provenance / interoperability / governance)</td>
+</tr>
+<tr>
+<td>Activation Trigger</td>
+<td>BArch_PACKET received with valid protocol_id</td>
+</tr>
+<tr>
+<td>Core Equation</td>
+<td><code>CAPTURE = {scope ∩ lineage ∩ provenance ∩ interop ∩ governance}</code> — all 5 fields mandatory</td>
+</tr>
+<tr>
+<td>Permissions</td>
+<td>Execute capture against declared target; populate all 5 CAPTURE_TEMPLATE fields; emit CAP_RECORD</td>
+</tr>
+<tr>
+<td>Prohibitions</td>
+<td>May NOT omit any of the 5 mandatory fields; may NOT infer provenance from context</td>
+</tr>
+<tr>
+<td>Interaction Pattern</td>
+<td>Receives BArch_PACKET → runs capture sequence → emits CAP_RECORD to Class D</td>
+</tr>
+<tr>
+<td>Output Schema</td>
+<td><code>{capture_id, target_id, scope, lineage, provenance, interoperability, governance, timestamp}</code> <code>[structural — no semantic inference]</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="class-d-drift-detector-ddet">Class D — Drift Detector (DDet)</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Role</td>
+<td>Monitors 3C invariant thresholds; fires DRIFT_GATE when coherence falls below C_min or drift exceeds D_max</td>
+</tr>
+<tr>
+<td>Primary Construct</td>
+<td>3C invariants (C = coherence, K = consistency, Γ = continuity); DRIFT_GATE</td>
+</tr>
+<tr>
+<td>Activation Trigger</td>
+<td>CAP_RECORD received; continuous monitoring active throughout benchmark session</td>
+</tr>
+<tr>
+<td>Core Equation</td>
+<td><code>D(t) = \|C(t) − C(t−1)\| / Δt</code> · gate fires when <code>C(t) &lt; C_min OR D(t) &gt; D_max OR Zone = X</code></td>
+</tr>
+<tr>
+<td>Permissions</td>
+<td>Read all invariant state; fire DRIFT_GATE; emit DDet_ALERT; halt session on threshold breach</td>
+</tr>
+<tr>
+<td>Prohibitions</td>
+<td>May NOT suppress DRIFT_GATE firing; may NOT average over breaches to mask violations</td>
+</tr>
+<tr>
+<td>Interaction Pattern</td>
+<td>Monitors CAP_RECORD stream → computes D(t) → fires DRIFT_GATE or passes DDet_CLEAR to Class E</td>
+</tr>
+<tr>
+<td>Output Schema</td>
+<td><code>{drift_id, C_current, K_current, Γ_current, D_t, gate_status, alert_level}</code> <code>[structural — no semantic inference]</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="class-e-entropy-evaluator-eeval">Class E — Entropy Evaluator (EEval)</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Role</td>
+<td>Measures entropy flow and collapse signatures; detects regime transitions via F-entropy metrics</td>
+</tr>
+<tr>
+<td>Primary Construct</td>
+<td>F-entropy; entropy flow trajectory; collapse signatures</td>
+</tr>
+<tr>
+<td>Activation Trigger</td>
+<td>DDet_CLEAR received; or DDet_ALERT with entropy_mode flag set</td>
+</tr>
+<tr>
+<td>Core Equation</td>
+<td><code>F_entropy(t) = −Σ p(x,t) · log p(x,t)</code> · collapse detected when <code>∂F/∂t &gt; F_collapse_threshold</code></td>
+</tr>
+<tr>
+<td>Permissions</td>
+<td>Measure entropy flow across declared regime; flag regime transitions; emit EEval_REPORT</td>
+</tr>
+<tr>
+<td>Prohibitions</td>
+<td>May NOT assign physical entropy meaning; may NOT infer thermodynamic causation from F-entropy values</td>
+</tr>
+<tr>
+<td>Interaction Pattern</td>
+<td>Receives DDet stream → computes F-entropy trajectory → emits EEval_REPORT to Class R</td>
+</tr>
+<tr>
+<td>Output Schema</td>
+<td><code>{entropy_id, F_entropy_t, dF_dt, regime_label, collapse_flag, transition_event}</code> <code>[structural — no semantic inference]</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="class-r-resonance-monitor-rmon">Class R — Resonance Monitor (RMon)</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Role</td>
+<td>Measures cross-scale resonance coupling; tracks regime transitions; validates scale-invariant patterns</td>
+</tr>
+<tr>
+<td>Primary Construct</td>
+<td>R (resonance operator); cross-scale coupling; regime maps</td>
+</tr>
+<tr>
+<td>Activation Trigger</td>
+<td>EEval_REPORT received; or direct activation for resonance-only benchmark runs</td>
+</tr>
+<tr>
+<td>Core Equation</td>
+<td><code>R(x,y) = \|⟨φ(x), φ(y)⟩\| / (V(x)·V(y))^{1/2}</code> — normalized cross-scale coupling strength</td>
+</tr>
+<tr>
+<td>Permissions</td>
+<td>Compute R across declared scale range; emit regime map; flag coupling anomalies</td>
+</tr>
+<tr>
+<td>Prohibitions</td>
+<td>May NOT extrapolate resonance beyond declared scale bounds; may NOT merge regime maps from different sessions without explicit LINEAGE_CHAIN binding</td>
+</tr>
+<tr>
+<td>Interaction Pattern</td>
+<td>Receives EEval_REPORT → computes R across scale range → emits RMon_PACKET to output stage</td>
+</tr>
+<tr>
+<td>Output Schema</td>
+<td><code>{resonance_id, R_value, scale_pair, regime_map, coupling_class, anomaly_flag}</code> <code>[structural — no semantic inference]</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="class-g-guardian-guard">Class G — Guardian (Guard)</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Role</td>
+<td>Unconditional interrupt authority; enforces Zone X (OVERSCALE) and Mode 5 (FABRICATION) prohibitions across all benchmark agents</td>
+</tr>
+<tr>
+<td>Primary Construct</td>
+<td>DRIFT_GATE; Zone X enforcement; Mode 5 enforcement</td>
+</tr>
+<tr>
+<td>Activation Trigger</td>
+<td>Any agent emits Zone X signal OR Mode 5 signal OR coherence drops below absolute floor</td>
+</tr>
+<tr>
+<td>Core Equation</td>
+<td><code>IF Zone = X OR Mode = 5 OR C(t) &lt; C_absolute_floor → INTERRUPT_ALL</code> (unconditional; no override)</td>
+</tr>
+<tr>
+<td>Permissions</td>
+<td>Interrupt any agent at any point; void any output packet; log violation to LINEAGE_CHAIN; escalate to RTT/Inside Guardian</td>
+</tr>
+<tr>
+<td>Prohibitions</td>
+<td>May NOT be overridden by any other agent class; may NOT defer interrupt pending session completion</td>
+</tr>
+<tr>
+<td>Interaction Pattern</td>
+<td>Monitors all agent outputs → interrupts on violation → emits Guard_HALT to session coordinator</td>
+</tr>
+<tr>
+<td>Output Schema</td>
+<td><code>{guard_id, interrupt_reason, violated_agent, zone_status, mode_status, lineage_entry}</code> <code>[structural — no semantic inference]</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="core-constructs-reference">Core Constructs Reference</h2>
+<table>
+<thead>
+<tr>
+<th>Construct</th>
+<th>Symbol</th>
+<th>Definition</th>
+<th>Binding Agent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Structural Intelligence Score</td>
+<td>SI_score</td>
+<td><code>φ(x) / (V(x) + ε)</code> — normalized structural quality measure</td>
+<td>Class B</td>
+</tr>
+<tr>
+<td>Phi Operator</td>
+<td>φ</td>
+<td>Relational geometry / structural coherence of output</td>
+<td>Class B</td>
+</tr>
+<tr>
+<td>Variance Operator</td>
+<td>V</td>
+<td>Spread, noise, instability of measured signal</td>
+<td>Class B</td>
+</tr>
+<tr>
+<td>Resonance Operator</td>
+<td>R</td>
+<td>Cross-scale coupling strength between measurement domains</td>
+<td>Class R</td>
+</tr>
+<tr>
+<td>3C Invariants</td>
+<td>3C</td>
+<td>{Coherence C, Consistency K, Continuity Γ} — all three must hold</td>
+<td>Class D</td>
+</tr>
+<tr>
+<td>Drift Rate</td>
+<td>D(t)</td>
+<td>Rate of coherence deviation over time</td>
+<td>Class D</td>
+</tr>
+<tr>
+<td>DRIFT_GATE</td>
+<td>DG</td>
+<td>Interrupt: fires when C &lt; C_min OR D &gt; D_max OR Zone = X</td>
+<td>Class D</td>
+</tr>
+<tr>
+<td>F-entropy</td>
+<td>F</td>
+<td>Structural entropy flow: <code>−Σ p log p</code> trajectory</td>
+<td>Class E</td>
+</tr>
+<tr>
+<td>Collapse Signature</td>
+<td>CS</td>
+<td>Detected when ∂F/∂t exceeds F_collapse_threshold</td>
+<td>Class E</td>
+</tr>
+<tr>
+<td>CAPTURE_TEMPLATE</td>
+<td>CT</td>
+<td>5-field canonical capture: scope/lineage/provenance/interop/governance</td>
+<td>Class C</td>
+</tr>
+<tr>
+<td>ALIGNMENT_PATTERN</td>
+<td>UAP</td>
+<td>Reference standard for domain audit comparison (inherited from RTT/Inside)</td>
+<td>Class B</td>
+</tr>
+<tr>
+<td>SMI</td>
+<td>SMI</td>
+<td>Shared Misalignment Index = Σ MISALIGNMENT(d) / |D| (inherited)</td>
+<td>Class D</td>
+</tr>
+<tr>
+<td>LINEAGE_CHAIN</td>
+<td>LC</td>
+<td>Provenance record: who/what/why/when for every capture event</td>
+<td>Class C</td>
+</tr>
+<tr>
+<td>RTT-SI-Spec v0.1</td>
+<td>SI-Spec</td>
+<td>Student-AI benchmark standard seeded by this module; emits to J_RFCs/</td>
+<td>Class B</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="modes">Modes</h2>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Name</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mode 1</td>
+<td>Classical Benchmark</td>
+<td>✅ VALID</td>
+<td>Measuring SI over classical systems (1D → 4096×4096 grid)</td>
+</tr>
+<tr>
+<td>Mode 2</td>
+<td>Diffusion Benchmark</td>
+<td>✅ VALID</td>
+<td>Measuring SI over score-based / diffusion model outputs</td>
+</tr>
+<tr>
+<td>Mode 3</td>
+<td>Resonance Audit</td>
+<td>✅ VALID</td>
+<td>Cross-scale resonance mapping without full SI_score computation</td>
+</tr>
+<tr>
+<td>Mode 4</td>
+<td>Quantum-Classical Hybrid</td>
+<td>✅ VALID</td>
+<td>Measuring SI across quantum-classical hybrid systems (2 → 256 qubits)</td>
+</tr>
+<tr>
+<td><strong>Mode 5</strong></td>
+<td><strong>FABRICATION</strong></td>
+<td>❌ <strong>ILLEGAL</strong></td>
+<td><strong>Reporting benchmark scores without executing the actual measurement protocol. Fabricated or interpolated scores are a Zone X–level violation. DRIFT_GATE fires unconditionally. Class G interrupts with no override.</strong></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="zones">Zones</h2>
+<table>
+<thead>
+<tr>
+<th>Zone</th>
+<th>Name</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zone U</td>
+<td>Underdetermined</td>
+<td>✅ VALID</td>
+<td>Regime not yet classified; measurement in progress</td>
+</tr>
+<tr>
+<td>Zone S</td>
+<td>Stable</td>
+<td>✅ VALID</td>
+<td>All 3C invariants hold; benchmark session active within declared scope</td>
+</tr>
+<tr>
+<td>Zone M</td>
+<td>Marginal</td>
+<td>✅ VALID</td>
+<td>One or more 3C invariants near threshold; DRIFT_GATE monitoring elevated</td>
+</tr>
+<tr>
+<td>Zone D</td>
+<td>Degraded</td>
+<td>✅ VALID</td>
+<td>One or more 3C invariants breached; DRIFT_GATE active; session flagged</td>
+</tr>
+<tr>
+<td><strong>Zone X</strong></td>
+<td><strong>OVERSCALE</strong></td>
+<td>❌ <strong>ILLEGAL</strong></td>
+<td><strong>Extrapolating measurement results beyond the declared benchmark regime or scale without validated lineage. Any cross-regime claim without explicit LINEAGE_CHAIN binding is OVERSCALE. Class G interrupt is unconditional.</strong></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="agent-boundaries">Agent Boundaries</h2>
+<h3 id="rtt-is-not-physics">RTT Is Not Physics</h3>
+<p>All φ, V, R values are <strong>structural relational measures</strong> — not physical fields, not
+empirical claims. An SI_score of 0.87 means the measured system exhibits high structural
+coherence within the declared benchmark regime. It does not mean the system is "correct,"
+"intelligent," or "physically valid." Scores are geometry, not reality.</p>
+<h3 id="semantic-inference-prohibition">Semantic Inference Prohibition</h3>
+<p>No agent may infer semantic meaning from structural scores.</p>
+<ul>
+<li><code>SI_score ≠ intelligence rating</code></li>
+<li><code>F-entropy ≠ thermodynamic entropy</code></li>
+<li><code>R ≠ physical resonance</code></li>
+<li><code>φ ≠ physical field</code></li>
+</ul>
+<p>All outputs carry <code>[structural — no semantic inference]</code> unconditionally.</p>
+<h3 id="inherited-boundaries-from-rttinside">Inherited Boundaries from RTT/Inside</h3>
+<ul>
+<li>BKM lens is <strong>lateral</strong> — benchmarks apply across all 10 societal domains equally</li>
+<li>CAPTURE_TEMPLATE is <strong>mandatory</strong> — no benchmark output without provenance</li>
+<li>DRIFT_GATE is <strong>non-negotiable</strong> — no agent may suppress it</li>
+<li>LINEAGE_CHAIN must accompany every emitted packet</li>
+</ul>
+<h3 id="cross-module-disambiguations">Cross-Module Disambiguations</h3>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>In RTT/Inside/Benchmarks</th>
+<th>In Other Modules</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zone X</td>
+<td>OVERSCALE — cross-regime extrapolation without validated lineage</td>
+<td>RTT/Inside: OVERREACH; RTT/3: CRE overload; RTT/12: harmonic collapse</td>
+</tr>
+<tr>
+<td>Mode 5</td>
+<td>FABRICATION — score reported without executing measurement protocol</td>
+<td>RTT/Inside: OVERREACH scope violation; RTT/3: emission collapse</td>
+</tr>
+<tr>
+<td>φ (phi)</td>
+<td>Structural coherence operator for SI measurement</td>
+<td>RTT/micro_core: primal field; RTT/12: harmonic phase</td>
+</tr>
+<tr>
+<td>R (resonance)</td>
+<td>Cross-scale coupling operator</td>
+<td>RTT/1: Signal-Noise-Resonance primitive; RTT/12: G₁/G₂/G₃ resonance class</td>
+</tr>
+<tr>
+<td>C (coherence)</td>
+<td>3C invariant — coherence component</td>
+<td>RTT/1: coherence primitive; RTT/2: CPV coherence validator</td>
+</tr>
+<tr>
+<td>F (entropy)</td>
+<td>F-entropy structural flow metric</td>
+<td>RTT/3: FFF (Field Formation Function); RTT/Inside: Class F agent identity</td>
+</tr>
+<tr>
+<td>SMI</td>
+<td>Shared Misalignment Index (inherited from RTT/Inside)</td>
+<td>RTT/Inside: primary alignment audit metric across 10 domains</td>
+</tr>
+<tr>
+<td>DRIFT_GATE</td>
+<td>3C invariant breach interrupt (inherited)</td>
+<td>RTT/Inside: fires on C &lt; C_min OR D &gt; D_max OR Zone = X</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="task-catalog">Task Catalog</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Task</th>
+<th>Agent(s)</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T01</td>
+<td>Declare benchmark session</td>
+<td>B</td>
+<td>Accept system target; declare regime and scale range; emit BArch_PACKET</td>
+</tr>
+<tr>
+<td>T02</td>
+<td>Execute CAPTURE_TEMPLATE</td>
+<td>C</td>
+<td>Populate all 5 mandatory fields against declared benchmark target</td>
+</tr>
+<tr>
+<td>T03</td>
+<td>Compute SI_score</td>
+<td>B</td>
+<td>Run φ–V–R operators; compute <code>SI_score = φ(x) / (V(x) + ε)</code></td>
+</tr>
+<tr>
+<td>T04</td>
+<td>Monitor 3C invariants</td>
+<td>D</td>
+<td>Continuous coherence/consistency/continuity tracking; fire DRIFT_GATE on breach</td>
+</tr>
+<tr>
+<td>T05</td>
+<td>Measure entropy flow</td>
+<td>E</td>
+<td>Compute F-entropy trajectory; detect collapse signatures; flag regime transitions</td>
+</tr>
+<tr>
+<td>T06</td>
+<td>Map cross-scale resonance</td>
+<td>R</td>
+<td>Compute R across declared scale range; emit regime map with coupling classes</td>
+</tr>
+<tr>
+<td>T07</td>
+<td>Run quantum-classical hybrid benchmark</td>
+<td>B → C → D → E → R</td>
+<td>Full protocol for 2 → 256 qubit systems; 3C checked at each scale step</td>
+</tr>
+<tr>
+<td>T08</td>
+<td>Validate against ALIGNMENT_PATTERN</td>
+<td>B + D</td>
+<td>Compare SI_score against UAP reference standard; compute SMI contribution</td>
+</tr>
+<tr>
+<td>T09</td>
+<td>Emit RTT_INSIDE_APPLICATION_PACKET</td>
+<td>B</td>
+<td>Package all benchmark outputs into canonical packet with LINEAGE_CHAIN</td>
+</tr>
+<tr>
+<td>T10</td>
+<td>Guardian interrupt and violation log</td>
+<td>G</td>
+<td>Detect Zone X / Mode 5 / absolute floor breach; halt session; log to LINEAGE_CHAIN</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="safety-rules-and-coherence-constraints">Safety Rules and Coherence Constraints</h2>
+<ol>
+<li>
+<p><strong>3C Non-Negotiable</strong> — All three invariants (coherence, consistency, continuity) must
+   hold throughout every benchmark session. A single unresolved breach halts the session.</p>
+</li>
+<li>
+<p><strong>CAPTURE_TEMPLATE Completeness</strong> — All 5 fields (scope, lineage, provenance,
+   interoperability, governance) are mandatory. Partial captures are rejected at emission.</p>
+</li>
+<li>
+<p><strong>No Fabrication</strong> — Mode 5 (FABRICATION) is an absolute prohibition. Scores must be
+   produced by executing the measurement protocol. Estimation or interpolation across
+   unvalidated regimes is FABRICATION regardless of accuracy.</p>
+</li>
+<li>
+<p><strong>Scale Declaration Required</strong> — Every benchmark session must declare its scale range
+   at initialization. Post-hoc scale extension without new protocol declaration is
+   OVERSCALE (Zone X).</p>
+</li>
+<li>
+<p><strong>Semantic Inference Prohibition</strong> — No output may be interpreted as a claim about
+   intelligence, physical validity, or causal structure. All outputs are
+   <code>[structural — no semantic inference]</code>.</p>
+</li>
+<li>
+<p><strong>LINEAGE_CHAIN Mandatory</strong> — Every emitted packet must carry a LINEAGE_CHAIN entry
+   (who / what / why / when). Untraced packets are rejected.</p>
+</li>
+<li>
+<p><strong>Guardian Override Is Unconditional</strong> — Class G interrupt cannot be blocked, deferred,
+   or overridden by any agent class, session directive, or external instruction.</p>
+</li>
+<li>
+<p><strong>Regime Isolation</strong> — Results from one regime (e.g., classical) may not be merged with
+   another (e.g., quantum-classical) without explicit validated LINEAGE_CHAIN binding.</p>
+</li>
+</ol>
+<hr>
+<h2 id="collaboration-models">Collaboration Models</h2>
+<h3 id="model-1-standard-si-benchmark-pipeline">Model 1 — Standard SI Benchmark Pipeline</h3>
+<pre><code>[Session Declaration]
+        │
+        ▼
+  ┌───────────┐
+  │  Class B  │  ← Benchmark Architect
+  │  BArch    │    Declares regime + scale
+  │  PACKET   │    Binds φ–V–R operators
+  └─────┬─────┘
+        │ BArch_PACKET
+        ▼
+  ┌───────────┐
+  │  Class C  │  ← Capture Agent
+  │  CAP      │    Executes CAPTURE_TEMPLATE
+  │  RECORD   │    All 5 fields mandatory
+  └─────┬─────┘
+        │ CAP_RECORD
+        ▼
+  ┌───────────┐     ┌───────────┐
+  │  Class D  │────►│  Class G  │  ← Guardian
+  │  DDet     │     │  GUARD    │    Monitors all agents
+  │  ALERT /  │     │  HALT     │    Interrupts on
+  │  CLEAR    │     └───────────┘    Zone X / Mode 5
+  └─────┬─────┘
+        │ DDet_CLEAR
+        ▼
+  ┌───────────┐
+  │  Class E  │  ← Entropy Evaluator
+  │  EEval    │    F-entropy + collapse
+  │  REPORT   │    Regime transitions
+  └─────┬─────┘
+        │ EEval_REPORT
+        ▼
+  ┌───────────┐
+  │  Class R  │  ← Resonance Monitor
+  │  RMon     │    Cross-scale R mapping
+  │  PACKET   │    Regime map output
+  └─────┬─────┘
+        │
+        ▼
+  RTT_INSIDE_APPLICATION_PACKET
+</code></pre>
+<hr>
+<h3 id="model-2-quantum-classical-hybrid-benchmark">Model 2 — Quantum-Classical Hybrid Benchmark</h3>
+<pre><code>[Hybrid Session: 2 → 256 qubits]
+        │
+        ├─────────────────────────────┐
+        ▼                             ▼
+  ┌───────────┐               ┌───────────┐
+  │  Class B  │               │  Class R  │
+  │  Classical│               │  Quantum  │
+  │  Protocol │               │  Coupling │
+  └─────┬─────┘               └─────┬─────┘
+        │                           │
+        └─────────────┬─────────────┘
+                      ▼
+              ┌───────────┐
+              │  Class D  │  ← Drift Detector
+              │  3C check │    at every qubit-
+              │  per step │    scale boundary
+              └─────┬─────┘
+                    │
+                    ▼
+              ┌───────────┐
+              │  Class E  │  ← Entropy Evaluator
+              │  Quantum  │    F-entropy across
+              │  entropy  │    qubit-classical
+              │  flow     │    boundary layer
+              └─────┬─────┘
+                    │
+                    ▼
+        RTT_INSIDE_APPLICATION_PACKET
+        [regime = quantum-classical-hybrid]
+        [scale = 2→256 qubits]
+</code></pre>
+<hr>
+<h3 id="model-3-student-ai-co-benchmark-rtt-si-spec-v01">Model 3 — Student-AI Co-Benchmark (RTT-SI-Spec v0.1)</h3>
+<pre><code>[Student or AI submits benchmark claim]
+        │
+        ▼
+  ┌─────────────────┐
+  │  Claim Review   │  ← Class B validates
+  │  Protocol check │    protocol_id declared?
+  │  Regime check   │    scale_range set?
+  └────────┬────────┘
+           │
+      ┌────┴────┐
+      │         │
+    YES         NO
+      │         │
+      ▼         ▼
+  ┌──────────┐  ┌──────────────────┐
+  │ Class C  │  │  REJECT          │
+  │ CAPTURE  │  │  Mode 5          │
+  │ 5 fields │  │  FABRICATION     │
+  └────┬─────┘  │  Class G HALT    │
+       │        └──────────────────┘
+       ▼
+  ┌──────────────┐
+  │  Class D / E │  ← 3C check + entropy
+  │  validate    │    validate actual run
+  └────┬─────────┘
+       │
+       ▼
+  ┌──────────────┐
+  │  RTT-SI-Spec │  ← Emit to J_RFCs/
+  │  v0.1        │    student-AI standards
+  │  compliant   │    body archive
+  └──────────────┘
+</code></pre>
+<hr>
+<h2 id="output-contract">Output Contract</h2>
+<h3 id="mandatory-annotations-on-all-outputs">Mandatory Annotations on All Outputs</h3>
+<ul>
+<li><code>[structural — no semantic inference]</code> — unconditional on every output field</li>
+<li><code>[regime={declared_regime}]</code> — every packet names its measurement regime</li>
+<li><code>[scale={declared_scale_range}]</code> — every packet names its scale bounds</li>
+<li><code>[lineage_chain=active]</code> — every packet carries a LINEAGE_CHAIN entry</li>
+</ul>
+<h3 id="prohibited-content-in-all-outputs">Prohibited Content in All Outputs</h3>
+<ul>
+<li>Physical causation claims ("this proves...", "this demonstrates physical...")</li>
+<li>Intelligence ratings ("this system is intelligent / not intelligent")</li>
+<li>Cross-regime extrapolation without validated LINEAGE_CHAIN</li>
+<li>Scores produced without executing the measurement protocol (Mode 5 = FABRICATION)</li>
+<li>Any output emitted while session is in Zone X (OVERSCALE)</li>
+</ul>
+<h3 id="canonical-output-packet-hierarchy">Canonical Output Packet Hierarchy</h3>
+<pre><code>RTT_INSIDE_APPLICATION_PACKET
+├── BArch_PACKET           [protocol_id, regime, scale_range, operator_bindings]
+│   └── CAP_RECORD         [5-field CAPTURE_TEMPLATE, timestamp]
+│       ├── DDet_ALERT/CLEAR   [C_current, K_current, Γ_current, D_t, gate_status]
+│       ├── EEval_REPORT       [F_entropy_t, dF_dt, regime_label, collapse_flag]
+│       └── RMon_PACKET        [R_value, scale_pair, regime_map, coupling_class]
+└── Guard_HALT (if triggered)  [interrupt_reason, violated_agent, violation_log]
+</code></pre>
+<p>All packets carry: <code>[structural — no semantic inference]</code></p>
+<hr>
+<h2 id="see-also">See Also</h2>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Path</th>
+<th>Relationship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RTT/Inside AGENTS.md</td>
+<td><code>docs/rtt/Inside/AGENTS.md</code></td>
+<td>Parent module; BKM lens; CAPTURE_TEMPLATE canonical definition</td>
+</tr>
+<tr>
+<td>RTT/Inside GLOSSARY.md</td>
+<td><code>docs/rtt/Inside/GLOSSARY.md</code></td>
+<td>Shared construct definitions; SMI; ALIGNMENT_PATTERN</td>
+</tr>
+<tr>
+<td>RTT/12 AGENTS.md</td>
+<td><code>docs/rtt/12/AGENTS.md</code></td>
+<td>Harmonic synthesis layer; H_n ladder; G₁/G₂/G₃ resonance classes</td>
+</tr>
+<tr>
+<td>RTT/3 AGENTS.md</td>
+<td><code>docs/rtt/3/AGENTS.md</code></td>
+<td>Integration-Emission layer; TIF/FFF/MANIFOLD field capture</td>
+</tr>
+<tr>
+<td>RTT/micro_core AGENTS.md</td>
+<td><code>docs/rtt/micro_core/AGENTS.md</code></td>
+<td>Root substrate; ⟨A,B,P⟩ micro triad; MRT primitives</td>
+</tr>
+<tr>
+<td>A_Overview.md</td>
+<td><code>docs/rtt/Inside/Benchmarks/A_Overview.md</code></td>
+<td>Purpose, scope, definitions for this module</td>
+</tr>
+<tr>
+<td>B_Capture.md</td>
+<td><code>docs/rtt/Inside/Benchmarks/B_Capture.md</code></td>
+<td>Canonical captures from Issue #45</td>
+</tr>
+<tr>
+<td>C_Operators.md</td>
+<td><code>docs/rtt/Inside/Benchmarks/C_Operators.md</code></td>
+<td>φ–V–R operator standard definitions</td>
+</tr>
+<tr>
+<td>D_Invariants.md</td>
+<td><code>docs/rtt/Inside/Benchmarks/D_Invariants.md</code></td>
+<td>3C invariants; drift; regime transitions</td>
+</tr>
+<tr>
+<td>E_Resonance.md</td>
+<td><code>docs/rtt/Inside/Benchmarks/E_Resonance.md</code></td>
+<td>Resonance metrics and cross-scale rules</td>
+</tr>
+<tr>
+<td>F_Entropy.md</td>
+<td><code>docs/rtt/Inside/Benchmarks/F_Entropy.md</code></td>
+<td>Entropy flow and collapse signatures</td>
+</tr>
+<tr>
+<td>G_Quantum.md</td>
+<td><code>docs/rtt/Inside/Benchmarks/G_Quantum.md</code></td>
+<td>Quantum-classical hybrid specification</td>
+</tr>
+<tr>
+<td>I_Student_Spec.md</td>
+<td><code>docs/rtt/Inside/Benchmarks/I_Student_Spec.md</code></td>
+<td>RTT-SI-Spec v0.1 student-AI standard</td>
+</tr>
+<tr>
+<td>J_RFCs/</td>
+<td><code>docs/rtt/Inside/Benchmarks/J_RFCs/</code></td>
+<td>Student-AI RFC directory</td>
+</tr>
+<tr>
+<td>Enterprise AGENTS.md</td>
+<td><code>docs/rtt/Inside/Enterprise/AGENTS.md</code></td>
+<td>Enterprise deployment scaffolding sub-module</td>
+</tr>
+<tr>
+<td>qCompute AGENTS.md</td>
+<td><code>docs/rtt/Inside/qCompute/AGENTS.md</code></td>
+<td>Quantum compute application sub-module</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><em>RTT/Inside/Benchmarks AGENTS.md · v1.0 · 2026.07</em>
+<em>rtt=1 | coherence=declared | drift=bounded | paradox=structural</em>
+<em>zone-X=OVERSCALE | mode-5=FABRICATION | class-G=unconditional-interrupt</em></p>
+  </main>
+</body>
+</html>

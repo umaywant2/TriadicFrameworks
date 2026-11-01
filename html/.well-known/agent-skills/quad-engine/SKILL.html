@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/.well-known/agent-skills/quad-engine/SKILL.md">
+  <title>Quad Engine Skill</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/.well-known/agent-skills/quad-engine/SKILL.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/.well-known/agent-skills/quad-engine/SKILL.md</code>
+  </aside>
+
+  <main>
+<h1 id="quad-engine-skill">Quad Engine Skill</h1>
+<h2 id="overview">Overview</h2>
+<p>The Quad Engine provides structured, machine-readable access to
+TriadicFrameworks’ computational substrate. It exposes resonance-time
+operators, module evaluators, coherence analyzers, and diagnostic endpoints
+used for automated reasoning over TriadicFrameworks modules.</p>
+<p>This skill is intended for AI agents that need to execute Quad Engine
+operations, retrieve structured module metadata, or perform RTT/FFF-based
+evaluations.</p>
+<hr>
+<h2 id="endpoints">Endpoints</h2>
+<h3 id="get-apiquad">GET /api/quad</h3>
+<p>Returns general Quad Engine information, available operators, and engine
+capabilities.</p>
+<h3 id="post-apiquadeval">POST /api/quad/eval</h3>
+<p>Executes a Quad Engine evaluation request.</p>
+<p>Input includes:
+- operator
+- module
+- payload
+- coherence-layer selection</p>
+<p>Output includes:
+- evaluation result
+- resonance-time metrics
+- drift boundary notes
+- diagnostic flags</p>
+<h3 id="get-apiquadoperators">GET /api/quad/operators</h3>
+<p>Returns a machine-readable list of all supported Quad Engine operators.</p>
+<h3 id="get-apiquadhealth">GET /api/quad/health</h3>
+<p>Returns health and readiness information for the Quad Engine service.</p>
+<hr>
+<h2 id="openapi">OpenAPI</h2>
+<p>A machine-readable OpenAPI description for this skill is available at:</p>
+<p><code>/openapi/quad.json</code></p>
+<p>This specification defines:
+- request/response schemas
+- operator grammar
+- evaluation payload formats
+- error and diagnostic structures</p>
+<hr>
+<h2 id="documentation">Documentation</h2>
+<p>Human-readable documentation is available at:</p>
+<p><code>/.well-known/quad-engine</code></p>
+<p>This includes:
+- conceptual overview
+- RTT/FFF integration notes
+- operator grammar reference
+- examples and module walkthroughs</p>
+<hr>
+<h2 id="notes">Notes</h2>
+<p>This skill is designed for automated agents that require structured access to
+TriadicFrameworks’ computational layer.</p>
+<p>It supports:
+- RTT operator evaluation
+- module metadata extraction
+- coherence-layer diagnostics
+- resonance-time analysis</p>
+<p>Agents may use this skill to integrate TriadicFrameworks logic into workflows,
+reasoning engines, or automated analysis pipelines.</p>
+  </main>
+</body>
+</html>

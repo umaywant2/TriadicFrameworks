@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Coeus/coeus_rtt/Capture_Source.md">
+  <title>Python Coeus/RTT module</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Coeus/coeus_rtt/Capture_Source.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Coeus/coeus_rtt/Capture_Source.md</code>
+  </aside>
+
+  <main>
+<h1 id="python-coeusrtt-module"><strong>Python Coeus/RTT module</strong></h1>
+<p>You know what? Let’s just treat this as “we missed it” and fix it cleanly now—no need to over‑remember the past draft. We’ll scaffold so that’s ready to drop into your repo and clearly “RTT‑Inside”.</p>
+<p>Below is a compact but expressive starting point.</p>
+<hr>
+<h3 id="package-layout">Package layout</h3>
+<p>Something like:</p>
+<ul>
+<li><code>coeus_rtt/</code></li>
+<li><code>__init__.py</code></li>
+<li><code>dimensional_core.py</code></li>
+<li><code>resonance_core.py</code></li>
+<li><code>protocol_adapter.py</code></li>
+</ul>
+<p>You can keep it all in one file at first if you prefer, but I’ll show it split conceptually.</p>
+<hr>
+<h3 id="dimensional_corepy"><code>dimensional_core.py</code></h3>
+<p>A wrapped “dimensional core” that tracks entities, states, and relationships.</p>
+<pre><code class="language-python"># dimensional_core.py
+
+from __future__ import annotations
+from dataclasses import dataclass, field
+from datetime import datetime
+from typing import Any, Dict, List, Optional
+import uuid
+
+
+@dataclass
+class DimensionEvent:
+    id: str
+    timestamp: datetime
+    entity_id: str
+    state: str
+    meta: Dict[str, Any] = field(default_factory=dict)
+
+
+@dataclass
+class DimensionalSnapshot:
+    dimension_name: str
+    total_events: int
+    entities: List[str]
+    states: List[str]
+    last_event: Optional[DimensionEvent]
+
+
+class DimensionalCore:
+    &quot;&quot;&quot;
+    Dimensional core:
+      - tracks entities and their state changes
+      - provides structural snapshots for RTT-style reasoning
+    &quot;&quot;&quot;
+
+    def __init__(self, dimension_name: str = &quot;coeus&quot;):
+        self.dimension_name = dimension_name
+        self._events: List[DimensionEvent] = []
+
+    def observe(
+        self,
+        entity_id: str,
+        state: str,
+        meta: Optional[Dict[str, Any]] = None,
+    ) -&gt; DimensionEvent:
+        event = DimensionEvent(
+            id=str(uuid.uuid4()),
+            timestamp=datetime.utcnow(),
+            entity_id=entity_id,
+            state=state,
+            meta=meta or {},
+        )
+        self._events.append(event)
+        return event
+
+    def snapshot(self) -&gt; DimensionalSnapshot:
+        total = len(self._events)
+        entities = sorted({e.entity_id for e in self._events})
+        states = sorted({e.state for e in self._events})
+        last_event = self._events[-1] if self._events else None
+
+        return DimensionalSnapshot(
+            dimension_name=self.dimension_name,
+            total_events=total,
+            entities=entities,
+            states=states,
+            last_event=last_event,
+        )
+
+    def debug_print(self) -&gt; None:
+        snap = self.snapshot()
+        print(f&quot;[DimensionalCore] dimension={snap.dimension_name}&quot;)
+        print(f&quot;  total_events: {snap.total_events}&quot;)
+        print(f&quot;  entities    : {', '.join(snap.entities) or '-'}&quot;)
+        print(f&quot;  states      : {', '.join(snap.states) or '-'}&quot;)
+        if snap.last_event:
+            le = snap.last_event
+            print(f&quot;  last_event  : {le.entity_id} -&gt; {le.state} @ {le.timestamp.isoformat()}Z&quot;)
+</code></pre>
+<hr>
+<h3 id="resonance_corepy"><code>resonance_core.py</code></h3>
+<p>A higher‑level resonance layer that can aggregate multiple dimensions or roles.</p>
+<pre><code class="language-python"># resonance_core.py
+
+from __future__ import annotations
+from dataclasses import dataclass, field
+from typing import Dict, List
+
+from .dimensional_core import DimensionalCore, DimensionalSnapshot
+
+
+@dataclass
+class ResonanceView:
+    context: str
+    dimensions: Dict[str, DimensionalSnapshot] = field(default_factory=dict)
+
+
+class ResonanceCore:
+    &quot;&quot;&quot;
+    Resonance structural awareness core:
+      - manages multiple DimensionalCore instances
+      - provides a unified structural view
+    &quot;&quot;&quot;
+
+    def __init__(self, context: str = &quot;coeus-protocol&quot;):
+        self.context = context
+        self._dimensions: Dict[str, DimensionalCore] = {}
+
+    def dimension(self, name: str) -&gt; DimensionalCore:
+        if name not in self._dimensions:
+            self._dimensions[name] = DimensionalCore(dimension_name=name)
+        return self._dimensions[name]
+
+    def snapshot(self) -&gt; ResonanceView:
+        snaps = {
+            name: dim.snapshot()
+            for name, dim in self._dimensions.items()
+        }
+        return ResonanceView(context=self.context, dimensions=snaps)
+
+    def debug_print(self) -&gt; None:
+        view = self.snapshot()
+        print(f&quot;[ResonanceCore] context={view.context}&quot;)
+        if not view.dimensions:
+            print(&quot;  (no dimensions)&quot;)
+            return
+        for name, snap in view.dimensions.items():
+            print(f&quot;  dimension: {name}&quot;)
+            print(f&quot;    total_events: {snap.total_events}&quot;)
+            print(f&quot;    entities    : {', '.join(snap.entities) or '-'}&quot;)
+            print(f&quot;    states      : {', '.join(snap.states) or '-'}&quot;)
+</code></pre>
+<hr>
+<h3 id="protocol_adapterpy"><code>protocol_adapter.py</code></h3>
+<p>A Coeus‑facing wrapper that makes it obvious this is “RTT‑Inside” and ready to wire into the protocol.</p>
+<pre><code class="language-python"># protocol_adapter.py
+
+from __future__ import annotations
+from typing import Any, Dict
+
+from .resonance_core import ResonanceCore
+
+
+class CoeusRTTAdapter:
+    &quot;&quot;&quot;
+    Coeus + RTT integration layer.
+
+    Intended usage:
+      - attach to your Coeus protocol handler
+      - call record_* methods at key lifecycle points
+      - use resonance.debug_print() or snapshot() for structural introspection
+    &quot;&quot;&quot;
+
+    def __init__(self, context: str = &quot;coeus-protocol&quot;):
+        self.resonance = ResonanceCore(context=context)
+
+    def record_connection(self, client_id: str, state: str, meta: Dict[str, Any] | None = None) -&gt; None:
+        dim = self.resonance.dimension(&quot;connections&quot;)
+        dim.observe(entity_id=client_id, state=state, meta=meta)
+
+    def record_message(self, message_id: str, state: str, meta: Dict[str, Any] | None = None) -&gt; None:
+        dim = self.resonance.dimension(&quot;messages&quot;)
+        dim.observe(entity_id=message_id, state=state, meta=meta)
+
+    def record_entity(self, entity_id: str, state: str, meta: Dict[str, Any] | None = None) -&gt; None:
+        dim = self.resonance.dimension(&quot;entities&quot;)
+        dim.observe(entity_id=entity_id, state=state, meta=meta)
+
+    def structural_view(self):
+        &quot;&quot;&quot;Return a full resonance snapshot for external tooling / UI.&quot;&quot;&quot;
+        return self.resonance.snapshot()
+
+    def debug_print(self) -&gt; None:
+        self.resonance.debug_print()
+</code></pre>
+<hr>
+<p>You can now reference this explicitly in the Coeus Protocol doc as:</p>
+<ul>
+<li>“RTT‑Inside: CoeusRTTAdapter (wrapped resonance structural aware dimensional cores)”</li>
+<li>With a short example snippet showing how a protocol handler calls <code>record_connection</code>, <code>record_message</code>, etc.</li>
+</ul>
+<p>If you paste this into your repo, we can tune naming and primitives to match the exact language of the Coeus document next.</p>
+  </main>
+</body>
+</html>

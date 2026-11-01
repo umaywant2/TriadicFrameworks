@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/AI_Resonance_Seed/ai_resonance_seed_module.graph.mermaid.md">
+  <title>ai_resonance_seed_module.graph.mermaid</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/AI_Resonance_Seed/ai_resonance_seed_module.graph.mermaid.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/AI_Resonance_Seed/ai_resonance_seed_module.graph.mermaid.md</code>
+  </aside>
+
+  <main>
+<p>graph TD</p>
+<pre><code>%% Orientation
+README["README.md"]
+PRIMER["primer.md"]
+HOWTO["how_to_read.md"]
+
+%% Substrate + Primitives
+SUBSTRATE["minimal_substrate.md"]
+INVARIANTS["invariants.yaml"]
+PRIMITIVES["resonance_time_primitives.yaml"]
+
+%% Schemas + Emitters
+SCHEMAS["schemas/"]
+EMITTERS["emitters/"]
+
+%% Validator + Lineage + Dashboards + Migration
+VALIDATOR["validator.md"]
+LINEAGE["lineage.md"]
+DASHBOARDS["dashboards/"]
+MIGRATION["migration.md"]
+
+%% Edges (Dependency Flow)
+README --&gt; PRIMER
+PRIMER --&gt; HOWTO
+HOWTO --&gt; SUBSTRATE
+SUBSTRATE --&gt; INVARIANTS
+INVARIANTS --&gt; PRIMITIVES
+PRIMITIVES --&gt; SCHEMAS
+SCHEMAS --&gt; EMITTERS
+EMITTERS --&gt; VALIDATOR
+VALIDATOR --&gt; LINEAGE
+LINEAGE --&gt; DASHBOARDS
+DASHBOARDS --&gt; MIGRATION
+</code></pre>
+  </main>
+</body>
+</html>

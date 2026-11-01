@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Governance_Substrate_Model/Analyzer/ARCHITECTURE_OVERVIEW.md">
+  <title>Governance Alignment Analyzer — Architecture Overview</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Governance_Substrate_Model/Analyzer/ARCHITECTURE_OVERVIEW.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Governance_Substrate_Model/Analyzer/ARCHITECTURE_OVERVIEW.md</code>
+  </aside>
+
+  <main>
+<h1 id="governance-alignment-analyzer-architecture-overview">Governance Alignment Analyzer — Architecture Overview</h1>
+<p><em>A structural interpretation engine built on the Governance Substrate Model (GSM)</em></p>
+<p>The Governance Alignment Analyzer is the interpretive layer of the Governance Substrate Model. It transforms natural‑language descriptions, historical profiles, and structural vectors into coherent positions inside the governance manifold, evaluates alignment with GSM invariants, detects drift, and identifies structural transitions.</p>
+<p>This document provides a high‑level architectural map of the Analyzer: its components, data flows, dependencies, and integration points.</p>
+<hr>
+<h2 id="core-purpose">Core Purpose</h2>
+<p>The Analyzer answers four structural questions:</p>
+<ul>
+<li>
+<p><strong>Where does a system sit in the manifold?</strong><br>
+  It converts descriptions into five‑axis vectors and locates them in structural space.</p>
+</li>
+<li>
+<p><strong>Is the system coherent with GSM invariants?</strong><br>
+  It evaluates alignment with behavioral invariants, awareness layers, and substrate rules.</p>
+</li>
+<li>
+<p><strong>How is the system drifting?</strong><br>
+  It computes drift vectors, identifies active cross‑axis forces, and detects early transitions.</p>
+</li>
+<li>
+<p><strong>Which basin or structural family does it belong to?</strong><br>
+  It determines the nearest equilibrium basin and evaluates transition pathways.</p>
+</li>
+</ul>
+<p>These capabilities make the Analyzer the “structural reasoning engine” of the GSM.</p>
+<hr>
+<h2 id="architectural-layers">Architectural Layers</h2>
+<p>The Analyzer is composed of six major layers. Each layer is modular and can be extended independently.</p>
+<h3 id="1-input-layer">1. Input Layer</h3>
+<p>Handles all incoming representations:</p>
+<ul>
+<li>natural‑language descriptions  </li>
+<li>structural vectors  </li>
+<li>historical profiles  </li>
+<li>reform proposals  </li>
+<li>simulation scenarios  </li>
+</ul>
+<p>This layer normalizes inputs into a consistent internal format.</p>
+<h3 id="2-structural-vectorizer">2. Structural Vectorizer</h3>
+<p>Maps normalized inputs into the five‑axis structural vector:</p>
+<ul>
+<li><strong>C</strong> — Centralization  </li>
+<li><strong>M</strong> — Method  </li>
+<li><strong>O</strong> — Oversight  </li>
+<li><strong>A</strong> — Access  </li>
+<li><strong>T</strong> — Timing  </li>
+</ul>
+<p>This is the Analyzer’s “coordinate generator.”</p>
+<h3 id="3-invariant-evaluation-layer">3. Invariant Evaluation Layer</h3>
+<p>Checks the vector against GSM invariants:</p>
+<ul>
+<li>behavioral invariants  </li>
+<li>awareness layers  </li>
+<li>absorptive structures  </li>
+<li>regime‑mode constraints  </li>
+<li>phase‑discipline rules  </li>
+</ul>
+<p>Outputs include alignment flags, warnings, and coherence notes.</p>
+<h3 id="4-crossaxis-physics-engine">4. Cross‑Axis Physics Engine</h3>
+<p>Applies structural forces defined in the governance physics module:</p>
+<ul>
+<li>centralization ↔ oversight  </li>
+<li>method ↔ access  </li>
+<li>oversight ↔ timing  </li>
+<li>method ↔ centralization  </li>
+<li>access ↔ oversight  </li>
+</ul>
+<p>This layer determines drift direction, compensatory movement, and structural tension.</p>
+<h3 id="5-basin-transition-layer">5. Basin &amp; Transition Layer</h3>
+<p>Uses the manifold, equilibrium basins, and transition graph to determine:</p>
+<ul>
+<li>nearest basin  </li>
+<li>basin stability  </li>
+<li>transition cost  </li>
+<li>structural coherence of movement  </li>
+<li>intermediate states  </li>
+<li>likely drift pathways  </li>
+</ul>
+<p>This layer is the Analyzer’s “structural geography engine.”</p>
+<h3 id="6-output-narrative-layer">6. Output &amp; Narrative Layer</h3>
+<p>Generates structured outputs:</p>
+<ul>
+<li>normalized vector  </li>
+<li>invariant alignment report  </li>
+<li>coherence score  </li>
+<li>drift vector  </li>
+<li>active forces  </li>
+<li>basin classification  </li>
+<li>transition pathway  </li>
+<li>explanatory narrative  </li>
+</ul>
+<p>These outputs feed into simulators, dashboards, and teaching tools.</p>
+<hr>
+<h2 id="data-flow-overview">Data Flow Overview</h2>
+<pre><code>Input → Vectorizer → Invariant Checker → Physics Engine → Basin Classifier → Drift/Transition Engine → Output
+</code></pre>
+<p>Each stage enriches the structural understanding of the system.</p>
+<hr>
+<h2 id="dependencies">Dependencies</h2>
+<p>The Analyzer depends on four GSM modules:</p>
+<ul>
+<li>
+<p><strong>governance_manifold.yaml</strong><br>
+  Defines the structural space and coordinate bounds.</p>
+</li>
+<li>
+<p><strong>governance_physics.yaml</strong><br>
+  Defines cross‑axis interaction rules and structural forces.</p>
+</li>
+<li>
+<p><strong>equilibrium_basins.yaml</strong><br>
+  Defines stable structural families and basin conditions.</p>
+</li>
+<li>
+<p><strong>transition_graph.yaml</strong><br>
+  Defines weighted transitions between basins.</p>
+</li>
+</ul>
+<p>These modules act as the Analyzer’s “laws of motion.”</p>
+<hr>
+<h2 id="integration-points">Integration Points</h2>
+<p>The Analyzer integrates with:</p>
+<ul>
+<li>
+<p><strong>Transition Simulator</strong><br>
+  For stepwise drift modeling.</p>
+</li>
+<li>
+<p><strong>Historical Profiles</strong><br>
+  For reconstructing structural evolution across eras.</p>
+</li>
+<li>
+<p><strong>Student Worksheets</strong><br>
+  For teaching structural literacy.</p>
+</li>
+<li>
+<p><strong>Developer Tools</strong><br>
+  For building governance‑aware applications.</p>
+</li>
+<li>
+<p><strong>Triadic Observer Layer</strong><br>
+  For history → now → future coherence.</p>
+</li>
+</ul>
+<hr>
+<h2 id="extensibility">Extensibility</h2>
+<p>The Analyzer is designed for extension:</p>
+<ul>
+<li>new invariants  </li>
+<li>new basin definitions  </li>
+<li>new transition pathways  </li>
+<li>new structural axes (if future GSM versions expand)  </li>
+<li>new adapters for domain‑specific governance systems  </li>
+</ul>
+<p>The architecture supports modular growth without breaking existing tools.</p>
+<hr>
+<h2 id="directory-structure">Directory Structure</h2>
+<pre><code>Analyzer/
+│
+├── README.md
+├── ARCHITECTURE_OVERVIEW.md   ← this file
+├── alignment_analyzer.md
+├── statement_mapping_rules.yaml
+├── invariant_check_rules.yaml
+├── coherence_scoring.yaml
+├── drift_detection.yaml
+├── regime_shift_detection.yaml
+├── analyzer_pipeline.yaml
+└── dynamic_cards_spec.md
+</code></pre>
+<hr>
+<h2 id="closing-note">Closing Note</h2>
+<p>This architecture is the backbone of the governance substrate science canon. It gives students, developers, and researchers a coherent, non‑ideological way to understand governance systems as structural objects that drift, stabilize, and interact inside a shared manifold.</p>
+  </main>
+</body>
+</html>

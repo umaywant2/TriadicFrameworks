@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/qCompute/qc_Drift.md">
+  <title>qCompute — Drift Engine</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/qCompute/qc_Drift.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/qCompute/qc_Drift.md</code>
+  </aside>
+
+  <main>
+<h1 id="qcompute-drift-engine">qCompute — Drift Engine</h1>
+<p><strong>File:</strong> qc_Drift.md<br>
+<strong>Layer:</strong> RTT‑Inside Compute Harness<br>
+<strong>Status:</strong> Canonical (2026)</p>
+<p>The Drift Engine computes and enforces <strong>structural drift</strong> for all qCompute sessions.</p>
+<p>Drift is a measure of <strong>structural instability</strong> introduced by operators, backends, and environment transitions.<br>
+It is deterministic, rule‑driven, and replay‑verifiable.</p>
+<p>qCompute computes <strong>structure</strong>, not amplitudes.</p>
+<hr>
+<h1 id="1-purpose">1. Purpose</h1>
+<p>The Drift Engine:</p>
+<ul>
+<li>computes predicted drift  </li>
+<li>computes measured drift  </li>
+<li>accumulates drift within a frame  </li>
+<li>enforces drift bounds  </li>
+<li>triggers frame closure on overflow  </li>
+<li>emits drift metadata for capture  </li>
+<li>verifies drift during replay  </li>
+</ul>
+<p>Drift ensures that structural computation remains <strong>stable</strong>, <strong>bounded</strong>, and <strong>governed</strong>.</p>
+<hr>
+<h1 id="2-drift-characteristics-by-tier">2. Drift Characteristics by Tier</h1>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Drift Level</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>r1</strong></td>
+<td>low</td>
+<td>primitive operators</td>
+</tr>
+<tr>
+<td><strong>r2</strong></td>
+<td>medium</td>
+<td>composite operators</td>
+</tr>
+<tr>
+<td><strong>r3</strong></td>
+<td>high</td>
+<td>pulse operators</td>
+</tr>
+<tr>
+<td><strong>measurement</strong></td>
+<td>reset</td>
+<td>forces new frame</td>
+</tr>
+<tr>
+<td><strong>meta</strong></td>
+<td>zero</td>
+<td>barrier, flush</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="3-environment-drift-bounds">3. Environment Drift Bounds</h1>
+<table>
+<thead>
+<tr>
+<th>Environment</th>
+<th>Drift Bound</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>sandbox</strong></td>
+<td>relaxed</td>
+<td>allows more accumulation</td>
+</tr>
+<tr>
+<td><strong>production</strong></td>
+<td>strict</td>
+<td>minimal tolerance</td>
+</tr>
+<tr>
+<td><strong>archive</strong></td>
+<td>immutable</td>
+<td>no operators allowed</td>
+</tr>
+</tbody>
+</table>
+<p>Drift bound is checked <strong>after every operator</strong>.</p>
+<hr>
+<h1 id="4-drift-accumulation-model">4. Drift Accumulation Model</h1>
+<p>Each operator contributes:</p>
+<pre><code>drift_predicted: &lt;float&gt;
+drift_measured: &lt;float&gt;
+drift_total: drift_prev + drift_measured
+</code></pre>
+<p>Drift accumulation is:</p>
+<ul>
+<li>monotonic within a frame  </li>
+<li>reset when a new frame opens  </li>
+<li>environment‑bounded  </li>
+</ul>
+<hr>
+<h1 id="5-drift-overflow">5. Drift Overflow</h1>
+<p>If:</p>
+<pre><code>drift_total &gt; drift_bound
+</code></pre>
+<p>Then:</p>
+<ol>
+<li>current frame closes  </li>
+<li>new frame opens  </li>
+<li>operator is routed into the new frame  </li>
+<li>drift resets to operator’s measured drift  </li>
+</ol>
+<p>Overflow is deterministic and replay‑verifiable.</p>
+<hr>
+<h1 id="6-frame-interaction">6. Frame Interaction</h1>
+<p>Drift interacts with frames as follows:</p>
+<ul>
+<li>r1: may reuse frame  </li>
+<li>r2: may reuse frame or escalate tier → new frame  </li>
+<li>r3: always opens new frame  </li>
+<li>measurement: always opens new frame  </li>
+<li>meta: always opens new frame  </li>
+</ul>
+<p>Drift overflow is an <strong>additional</strong> trigger for new frame creation.</p>
+<hr>
+<h1 id="7-routing-interaction">7. Routing Interaction</h1>
+<p>Router receives drift metadata:</p>
+<pre><code>routing:
+  backend: &quot;&lt;backend&gt;&quot;
+  reason: &quot;&lt;reason&gt;&quot;
+  frame_action: &quot;reuse&quot; | &quot;new&quot;
+</code></pre>
+<p>Drift Engine may override Router’s frame decision if overflow occurs.</p>
+<hr>
+<h1 id="8-capture-metadata">8. Capture Metadata</h1>
+<p>Each operator produces drift metadata:</p>
+<pre><code>drift:
+  predicted: &lt;float&gt;
+  measured: &lt;float&gt;
+  accumulated: &lt;float&gt;
+  overflow: true | false
+</code></pre>
+<p>Each frame produces a drift summary:</p>
+<pre><code>frame_drift:
+  total: &lt;float&gt;
+  max: &lt;float&gt;
+  environment_bound: &lt;float&gt;
+</code></pre>
+<p>All fields are required.</p>
+<hr>
+<h1 id="9-replay-verification">9. Replay Verification</h1>
+<p>Replay recomputes drift:</p>
+<ul>
+<li>predicted drift  </li>
+<li>measured drift  </li>
+<li>accumulated drift  </li>
+<li>overflow events  </li>
+<li>frame boundaries  </li>
+<li>environment bounds  </li>
+</ul>
+<p>Replay must confirm:</p>
+<ul>
+<li>drift never exceeds bound  </li>
+<li>overflow events match capture  </li>
+<li>frame boundaries match drift logic  </li>
+<li>drift summaries match operator accumulation  </li>
+</ul>
+<p>Replay is deterministic and read‑only.</p>
+<hr>
+<h1 id="10-invariants">10. Invariants</h1>
+<ol>
+<li>drift must not exceed environment bound  </li>
+<li>overflow must open a new frame  </li>
+<li>measurement resets drift  </li>
+<li>meta operators reset drift  </li>
+<li>r3 operators reset drift  </li>
+<li>drift accumulation must be monotonic within a frame  </li>
+<li>drift summaries must match operator accumulation  </li>
+<li>archive forbids all operators  </li>
+</ol>
+<hr>
+<h1 id="11-summary">11. Summary</h1>
+<p>The Drift Engine ensures:</p>
+<ul>
+<li>structural stability  </li>
+<li>deterministic accumulation  </li>
+<li>governed overflow  </li>
+<li>environment‑bounded execution  </li>
+<li>replay‑verifiable correctness  </li>
+</ul>
+<p>Drift is a <strong>first‑class structural signal</strong> in qCompute.</p>
+  </main>
+</body>
+</html>

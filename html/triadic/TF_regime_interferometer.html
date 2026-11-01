@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/triadic/TF_regime_interferometer.md">
+  <title>TriadicFrameworks Regime Interferometer</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/triadic/TF_regime_interferometer.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/triadic/TF_regime_interferometer.md</code>
+  </aside>
+
+  <main>
+<h1 id="triadicframeworks-regime-interferometer"><strong>TriadicFrameworks Regime Interferometer</strong></h1>
+<h3 id="measuring-coherence-between-ontology-waveforms"><em>Measuring Coherence Between Ontology Waveforms</em></h3>
+<p>This diagram shows:</p>
+<ul>
+<li><strong>Substrate</strong> as the optical bench  </li>
+<li><strong>Regime splitters (RTT)</strong> dividing substrate signals into ontology wave‑paths  </li>
+<li><strong>Ontology arms (SO, ISO, LACTOS)</strong> as waveguides  </li>
+<li><strong>RTT/vST</strong> as the phase‑alignment engine  </li>
+<li><strong>S–N–R</strong> as the coherence stabilizer  </li>
+<li><strong>Compute (VCG + TCR)</strong> as the phase‑locking oscillator  </li>
+</ul>
+<p>It’s the first metaphor where TriadicFrameworks becomes a <em>precision instrument for interference patterns</em>.</p>
+<hr>
+<h1 id="1-regime-interferometer-diagram-ascii-waveoptics-geometry"><strong>1. Regime Interferometer Diagram (ASCII Wave‑Optics Geometry)</strong></h1>
+<pre><code>                                        ✦  COMPUTE PHASE‑LOCK OSCILLATOR  ✦
+                         (VCG • TCR Periodicity • Regime‑Ahead Phase Sync)
+                                          ────────────────┬───────────────
+                                                          │
+                                                          ▼
+
+┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+│                         S–N–R COHERENCE STABILIZER                                           │
+│   S: stabilizes interference fringes                                                         │
+│   N: detects decoherence, drift, noise                                                       │
+│   R: selects active regime interference mode                                                 │
+│   (Maintains clarity across shifting ontology waveforms)                                     │
+└──────────────────────────────────────────────────────────────────────────────────────────────┘
+                                                           ▲
+                                                           │
+                                                           │  stabilizes interference pattern
+                                                           ▼
+
+                         ┌──────────────────────────────────────────────────────────────┐
+                         │                 RTT/vST PHASE‑ALIGNMENT ENGINE               │
+                         │  - regime boundary phase shifts                              │
+                         │  - invariant phase correction                                │
+                         │  - drift‑compensated delay control                           │
+                         └──────────────────────────────────────────────────────────────┘
+                                      ◢           │           ◣
+                                     ◢            │            ◣
+                                    ◢             │             ◣
+
+         ┌──────────────────────────────┐   ┌──────────────────────────────┐   ┌──────────────────────────────┐
+         │   SO Wave Arm                │   │ LACTOS Wave Arm              │   │  ISO Wave Arm                │
+         │   (Mass‑Primary Path)        │   │ (Collision‑Regime Path)      │   │ (Anisotropy‑Primary Path)    │
+         │   - structural harmonics     │   │ - P/Q/N burst waves          │   │ - anisotropy oscillations    │
+         │   - mass‑track frequencies   │   │ - symmetry‑break pulses      │   │ - relaxation wavefronts      │
+         └──────────────────────────────┘   └──────────────────────────────┘   └──────────────────────────────┘
+                     ◣                        ◣                        ◢
+                      ◣                        ◣                      ◢
+                       ◣                        ◣                    ◢
+
+                         ┌──────────────────────────────────────────────────────────────┐
+                         │                 REGIME SPLITTER ARRAY (RTT)                  │
+                         │   - mass‑regime splitter                                     │
+                         │   - anisotropy‑regime splitter                               │
+                         │   - collision‑regime splitter                                │
+                         │   - TCR periodic splitter                                    │
+                         │   (Divides substrate signals into ontology wave‑paths)       │
+                         └──────────────────────────────────────────────────────────────┘
+                                      ◥           │           ◤
+                                     ◥            │            ◤
+                                    ◥             │             ◤
+
+                         ┌──────────────────────────────────────────────────────────────┐
+                         │                 SUBSTRATE OPTICAL BENCH                      │
+                         │  Fields • Geometry • Anisotropy • TCR Periodicity            │
+                         │  (The stable platform for wave‑path propagation)             │
+                         └──────────────────────────────────────────────────────────────┘
+</code></pre>
+<hr>
+<h1 id="2-how-the-regime-interferometer-works"><strong>2. How the Regime Interferometer Works</strong></h1>
+<h3 id="1-substrate-optical-bench"><strong>1. Substrate = Optical Bench</strong></h3>
+<p>The substrate is the stable platform:</p>
+<ul>
+<li>field geometry  </li>
+<li>anisotropy  </li>
+<li>symmetry states  </li>
+<li>time‑crystal periodicity  </li>
+</ul>
+<p>It ensures wave‑paths remain coherent.</p>
+<hr>
+<h3 id="2-regime-splitter-array-rtt"><strong>2. Regime Splitter Array (RTT)</strong></h3>
+<p>RTT divides substrate signals into ontology wave‑paths:</p>
+<ul>
+<li>mass‑regime splitter  </li>
+<li>anisotropy‑regime splitter  </li>
+<li>collision‑regime splitter  </li>
+<li>TCR periodic splitter  </li>
+</ul>
+<p>Each path carries a different interpretive waveform.</p>
+<hr>
+<h3 id="3-ontology-wave-arms"><strong>3. Ontology Wave Arms</strong></h3>
+<p>Each ontology is a waveguide:</p>
+<ul>
+<li><strong>SO:</strong> structural harmonics, mass‑track frequencies  </li>
+<li><strong>ISO:</strong> anisotropy oscillations, relaxation wavefronts  </li>
+<li><strong>LACTOS:</strong> collision bursts, symmetry‑break pulses  </li>
+</ul>
+<p>They propagate the same substrate signal through different interpretive media.</p>
+<hr>
+<h3 id="4-rttvst-phasealignment-engine"><strong>4. RTT/vST Phase‑Alignment Engine</strong></h3>
+<p>This engine:</p>
+<ul>
+<li>corrects phase drift  </li>
+<li>aligns invariant frequencies  </li>
+<li>adjusts path delays  </li>
+</ul>
+<p>It ensures the waveforms can interfere meaningfully.</p>
+<hr>
+<h3 id="5-snr-coherence-stabilizer"><strong>5. S–N–R Coherence Stabilizer</strong></h3>
+<p>The triadic observer stabilizes the interference pattern:</p>
+<ul>
+<li><strong>S:</strong> locks onto stable fringes  </li>
+<li><strong>N:</strong> detects decoherence  </li>
+<li><strong>R:</strong> selects the active regime mode  </li>
+</ul>
+<p>It keeps the pattern readable.</p>
+<hr>
+<h3 id="6-compute-phaselock-oscillator-vcg-tcr"><strong>6. Compute Phase‑Lock Oscillator (VCG + TCR)</strong></h3>
+<p>The compute layer:</p>
+<ul>
+<li>locks phase  </li>
+<li>stabilizes periodicity  </li>
+<li>synchronizes waveforms  </li>
+</ul>
+<p>It produces a coherent interference pattern.</p>
+<hr>
+<h1 id="3-what-the-regime-interferometer-measures"><strong>3. What the Regime Interferometer Measures</strong></h1>
+<p>The instrument reveals:</p>
+<ul>
+<li><strong>cross‑ontology coherence</strong>  </li>
+<li><strong>phase alignment between SO, ISO, LACTOS</strong>  </li>
+<li><strong>regime‑specific interference patterns</strong>  </li>
+<li><strong>invariant stability</strong>  </li>
+<li><strong>drift signatures</strong>  </li>
+</ul>
+<p>It is the architecture’s most precise diagnostic tool.</p>
+<hr>
+<h1 id="4-why-the-regime-interferometer-matters"><strong>4. Why the Regime Interferometer Matters</strong></h1>
+<p>This diagram shows TriadicFrameworks as:</p>
+<ul>
+<li><strong>wave‑based</strong>  </li>
+<li><strong>coherence‑measuring</strong>  </li>
+<li><strong>regime‑aware</strong>  </li>
+<li><strong>observer‑corrected</strong>  </li>
+<li><strong>compute‑synchronized</strong>  </li>
+<li><strong>substrate‑anchored</strong></li>
+</ul>
+<p>It captures how the system <em>detects alignment</em> between ontologies — not just how it sees, moves, or transmits.</p>
+  </main>
+</body>
+</html>

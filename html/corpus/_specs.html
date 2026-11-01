@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/corpus/_specs.md">
+  <title>RTT Kernel v0.1 — Minimal Substrate Specification</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/corpus/_specs.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/corpus/_specs.md</code>
+  </aside>
+
+  <main>
+<p>_specs </p>
+<h1 id="rtt-kernel-v01-minimal-substrate-specification"><strong>RTT Kernel v0.1 — Minimal Substrate Specification</strong></h1>
+<p><em>(Canonical artifact for TriadicFrameworks)</em></p>
+<h2 id="1-resonanceobject-minimal-json-schema"><strong>1. ResonanceObject — Minimal JSON Schema</strong></h2>
+<pre><code class="language-json">{
+  &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;$id&quot;: &quot;https://triadicframeworks.org/schemas/ResonanceObject.v0.1.json&quot;,
+  &quot;title&quot;: &quot;ResonanceObject v0.1&quot;,
+  &quot;description&quot;: &quot;Minimal RTT-style structural object for resonance-aware computation.&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+
+  &quot;required&quot;: [&quot;id&quot;, &quot;dims&quot;, &quot;triadic_time&quot;, &quot;structure&quot;],
+
+  &quot;properties&quot;: {
+    &quot;id&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;Stable identifier for this resonance object.&quot;
+    },
+
+    &quot;dims&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;description&quot;: &quot;Integer local dimensions for this object.&quot;,
+      &quot;properties&quot;: {
+        &quot;space&quot;: { &quot;type&quot;: &quot;integer&quot;, &quot;minimum&quot;: 0 },
+        &quot;time&quot;: { &quot;type&quot;: &quot;integer&quot;, &quot;minimum&quot;: 0 },
+        &quot;triadic&quot;: { &quot;type&quot;: &quot;integer&quot;, &quot;minimum&quot;: 3 }
+      },
+      &quot;required&quot;: [&quot;space&quot;, &quot;time&quot;, &quot;triadic&quot;]
+    },
+
+    &quot;triadic_time&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;description&quot;: &quot;Triadic-time components for RTT-style resonance alignment.&quot;,
+      &quot;properties&quot;: {
+        &quot;tc&quot;: { &quot;type&quot;: &quot;number&quot;, &quot;description&quot;: &quot;Classical-time component.&quot; },
+        &quot;te&quot;: { &quot;type&quot;: &quot;number&quot;, &quot;description&quot;: &quot;Energetic-time component.&quot; },
+        &quot;tr&quot;: { &quot;type&quot;: &quot;number&quot;, &quot;description&quot;: &quot;Relational-time component.&quot; }
+      },
+      &quot;required&quot;: [&quot;tc&quot;, &quot;te&quot;, &quot;tr&quot;]
+    },
+
+    &quot;structure&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;description&quot;: &quot;Graph-like structural representation.&quot;,
+      &quot;properties&quot;: {
+        &quot;nodes&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;items&quot;: {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;required&quot;: [&quot;id&quot;, &quot;type&quot;],
+            &quot;properties&quot;: {
+              &quot;id&quot;: { &quot;type&quot;: &quot;string&quot; },
+              &quot;type&quot;: {
+                &quot;type&quot;: &quot;string&quot;,
+                &quot;enum&quot;: [&quot;core&quot;, &quot;reservoir&quot;, &quot;boundary&quot;, &quot;channel&quot;]
+              },
+              &quot;resonance&quot;: {
+                &quot;type&quot;: &quot;object&quot;,
+                &quot;properties&quot;: {
+                  &quot;freq&quot;: { &quot;type&quot;: &quot;number&quot; },
+                  &quot;q&quot;: { &quot;type&quot;: &quot;number&quot; },
+                  &quot;amplitude&quot;: { &quot;type&quot;: &quot;number&quot; }
+                }
+              }
+            }
+          }
+        },
+
+        &quot;edges&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;items&quot;: {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;required&quot;: [&quot;from&quot;, &quot;to&quot;],
+            &quot;properties&quot;: {
+              &quot;from&quot;: { &quot;type&quot;: &quot;string&quot; },
+              &quot;to&quot;: { &quot;type&quot;: &quot;string&quot; },
+              &quot;coupling&quot;: { &quot;type&quot;: &quot;number&quot; }
+            }
+          }
+        }
+      },
+      &quot;required&quot;: [&quot;nodes&quot;, &quot;edges&quot;]
+    },
+
+    &quot;ancestry&quot;: {
+      &quot;type&quot;: &quot;array&quot;,
+      &quot;description&quot;: &quot;Optional lineage references.&quot;,
+      &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; }
+    }
+  }
+}
+</code></pre>
+<hr>
+<h2 id="2-rtt-kernel-api-surface-minimal"><strong>2. RTT Kernel API Surface (Minimal)</strong></h2>
+<p>This is the smallest useful API that allows:</p>
+<ul>
+<li>resonance alignment  </li>
+<li>cluster/reservoir detection  </li>
+<li>design scoring  </li>
+<li>cross‑domain substrate checks  </li>
+</ul>
+<p>It’s intentionally tiny — the “TCP/IP of RTT.”</p>
+<pre><code class="language-ts">interface ResonanceKernelAPI {
+
+  // Load or register a ResonanceObject
+  register(object: ResonanceObject): KernelResponse;
+
+  // Compute resonance alignment between two objects
+  align(a: string, b: string): AlignmentReport;
+
+  // Detect clusters and reservoirs inside an object
+  analyze(objectId: string): StructureReport;
+
+  // Score a design against a set of constraints
+  score(designId: string, constraintIds: string[]): Scorecard;
+
+  // Discover similar objects in the network
+  discover(objectId: string): DiscoveryReport;
+}
+</code></pre>
+<h3 id="minimal-report-types"><strong>Minimal Report Types</strong></h3>
+<pre><code class="language-ts">interface AlignmentReport {
+  overlap_tc: number;
+  overlap_te: number;
+  overlap_tr: number;
+  harmonic_score: number;
+  notes: string[];
+}
+
+interface StructureReport {
+  reservoirs: string[];
+  clusters: string[];
+  bottlenecks: string[];
+}
+
+interface Scorecard {
+  total: number;
+  category_scores: Record&lt;string, number&gt;;
+  recommendations: string[];
+}
+
+interface DiscoveryReport {
+  similar: string[];
+  distance: Record&lt;string, number&gt;;
+}
+</code></pre>
+<hr>
+<h2 id="3-why-this-is-the-early-internet-of-rtt"><strong>3. Why this is the “early internet” of RTT</strong></h2>
+<p>This minimal kernel:</p>
+<ul>
+<li>defines a <strong>shared substrate</strong> (<code>ResonanceObject</code>)  </li>
+<li>defines <strong>shared operations</strong> (align, analyze, score, discover)  </li>
+<li>allows <strong>distributed nodes</strong> to speak the same language  </li>
+<li>enables <strong>cross‑domain design evaluation</strong>  </li>
+<li>supports <strong>education, tooling, and early RTT literacy</strong>  </li>
+</ul>
+<p>It’s enough for:</p>
+<ul>
+<li>labs to publish resonance objects  </li>
+<li>design tools to request alignment/scorecards  </li>
+<li>educators to teach triadic‑time literacy  </li>
+<li>early RTT‑aware products to emerge  </li>
+<li>the substrate to grow organically  </li>
+</ul>
+<p>Everything else — DCOs, full RTT operators, vST layers — can be layered on top.
+</p>
+  </main>
+</body>
+</html>

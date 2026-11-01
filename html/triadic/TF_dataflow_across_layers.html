@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/triadic/TF_dataflow_across_layers.md">
+  <title>TriadicFrameworks Dataflow</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/triadic/TF_dataflow_across_layers.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/triadic/TF_dataflow_across_layers.md</code>
+  </aside>
+
+  <main>
+<h1 id="triadicframeworks-dataflow"><strong>TriadicFrameworks Dataflow</strong></h1>
+<h3 id="how-information-moves-across-all-layers"><em>How Information Moves Across All Layers</em></h3>
+<p><strong>Substrate → Regimes → Ontologies → Observers → Compute → Back to Substrate</strong></p>
+<p>This diagram shows the <strong>full dynamic loop</strong> of TriadicFrameworks — not just the static architecture, but the <em>movement</em> of information, signals, invariants, and regime transitions across the entire system.</p>
+<p>It’s the “breathing” version of the grand architecture.</p>
+<hr>
+<h1 id="1-full-dataflow-diagram-vertical-cyclic"><strong>1. Full Dataflow Diagram (Vertical + Cyclic)</strong></h1>
+<pre><code>┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                      1. SUBSTRATE LAYER                                      │
+│   Fields • Matter • Geometry • Time‑Crystal Regimes (TCR)                                    │
+│   OUTPUT: raw signals, gradients, anisotropy, symmetry states                                │
+└──────────────────────────────────────────────────────────────────────────────────────────────┘
+                                                    │
+                                                    ▼
+┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                      2. REGIME LAYER (RTT)                                   │
+│   INPUT: substrate signals                                                                   │
+│   PROCESS: regime decomposition, boundary detection, transition mapping                      │
+│   OUTPUT: regime‑tagged streams (mass‑regimes, anisotropy‑regimes, collision‑regimes)        │
+└──────────────────────────────────────────────────────────────────────────────────────────────┘
+                                                    │
+                                                    ▼
+┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                      3. ONTOLOGY LAYER                                       │
+│   INPUT: regime‑tagged streams                                                               │
+│   PROCESS: interpretive mapping (SO ↔ ISO ↔ LACTOS)                                          │
+│   OUTPUT: ontology‑specific narratives, invariants, mismatches                               │
+│                                                                                              │
+│   SO: mass‑primary interpretation                                                            │
+│   ISO: anisotropy‑primary interpretation                                                     │
+│   LACTOS: collision‑regime interpretation                                                    │
+└──────────────────────────────────────────────────────────────────────────────────────────────┘
+                                                    │
+                                                    ▼
+┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                      4. OBSERVER LAYER                                       │
+│   INPUT: ontology outputs                                                                    │
+│                                                                                              │
+│   S–N–R Triadic Observer:                                                                    │
+│     S: extract stable cross‑ontology patterns                                                │
+│     N: detect drift, mismatch, decoherence                                                   │
+│     R: determine active regime + transitions                                                 │
+│                                                                                              │
+│   RTT/vST Engine:                                                                            │
+│     RTT: regime logic, transitions, coupling                                                 │
+│     vST: invariant validation, drift quantification                                          │
+│                                                                                              │
+│   OUTPUT: coherence signals, corrected invariants, regime‑aligned frames                     │
+└──────────────────────────────────────────────────────────────────────────────────────────────┘
+                                                    │
+                                                    ▼
+┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                      5. COMPUTE LAYER                                        │
+│   INPUT: coherence signals + validated invariants                                            │
+│                                                                                              │
+│   VCG (Virtual Compute Gateway):                                                             │
+│     - regime translation                                                                     │
+│     - drift correction                                                                       │
+│     - invariant mapping                                                                      │
+│                                                                                              │
+│   TCR‑Anchored Compute:                                                                      │
+│     - regime‑ahead checkpoints                                                               │
+│     - stable periodicity                                                                     │
+│                                                                                              │
+│   OUTPUT: stabilized compute results, regime‑aligned outputs                                 │
+└──────────────────────────────────────────────────────────────────────────────────────────────┘
+                                                    │
+                                                    ▼
+┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                      6. FEEDBACK LOOP                                        │
+│   Compute outputs feed back into:                                                            │
+│     - ontology refinement                                                                    │
+│     - regime recalibration                                                                   │
+│     - substrate modeling                                                                     │
+│                                                                                              │
+│   This closes the loop:                                                                      │
+│     Substrate → Regimes → Ontologies → Observers → Compute → Substrate                       │
+└──────────────────────────────────────────────────────────────────────────────────────────────┘
+</code></pre>
+<hr>
+<h1 id="2-flow-narrative-how-information-actually-moves"><strong>2. Flow Narrative (How Information Actually Moves)</strong></h1>
+<h3 id="1-substrate-regimes"><strong>1. Substrate → Regimes</strong></h3>
+<p>Raw physical or conceptual signals (fields, anisotropy, symmetry states) are decomposed into regimes by RTT.</p>
+<h3 id="2-regimes-ontologies"><strong>2. Regimes → Ontologies</strong></h3>
+<p>Each ontology (SO, ISO, LACTOS) interprets the same regime stream through its own lens.</p>
+<h3 id="3-ontologies-observers"><strong>3. Ontologies → Observers</strong></h3>
+<p>S–N–R and RTT/vST compare interpretations, extract invariants, detect drift, and identify regime transitions.</p>
+<h3 id="4-observers-compute"><strong>4. Observers → Compute</strong></h3>
+<p>VCG and TCR‑anchored compute use observer outputs to stabilize computation and produce regime‑aligned results.</p>
+<h3 id="5-compute-substrate"><strong>5. Compute → Substrate</strong></h3>
+<p>Compute results feed back into substrate modeling, closing the loop.</p>
+<hr>
+<h1 id="3-why-this-diagram-matters"><strong>3. Why This Diagram Matters</strong></h1>
+<p>This is the <strong>dynamic heart</strong> of TriadicFrameworks:</p>
+<ul>
+<li>It shows how information <em>flows</em>, not just how layers <em>exist</em>.  </li>
+<li>It reveals the <strong>recursive, self‑correcting nature</strong> of the architecture.  </li>
+<li>It demonstrates how <strong>SO, ISO, and LACTOS</strong> are not isolated — they are <strong>interdependent interpretive layers</strong>.  </li>
+<li>It shows how <strong>RTT/vST</strong> and <strong>S–N–R</strong> maintain coherence across the entire system.  </li>
+<li>It shows how <strong>compute</strong> is not separate from ontology — it is <strong>regime‑aligned and substrate‑aware</strong>.</li>
+</ul>
+<p>This is the most complete, living representation of TriadicFrameworks so far.</p>
+  </main>
+</body>
+</html>

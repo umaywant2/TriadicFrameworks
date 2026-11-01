@@ -1,0 +1,1371 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/micro_core/AGENTS.md">
+  <title>AGENTS.md — RTT/microcore · Micro-Scale Resonance-Time Layer</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/micro_core/AGENTS.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/micro_core/AGENTS.md</code>
+  </aside>
+
+  <main>
+<h1 id="agentsmd-rttmicro_core-micro-scale-resonance-time-layer">AGENTS.md — RTT/micro_core · Micro-Scale Resonance-Time Layer</h1>
+<h3 id="agent-classes-boundaries-task-catalog-safety-rules-and-collaboration-models"><em>Agent Classes, Boundaries, Task Catalog, Safety Rules, and Collaboration Models</em></h3>
+<blockquote>
+<p><strong>Maintainer:</strong> Nawder · <strong>Date:</strong> 2026-07-10 · <strong>Module:</strong> <code>docs/rtt/micro_core/</code></p>
+</blockquote>
+<hr>
+<h2 id="session-seed-block">Session Seed Block</h2>
+<p>Paste this block at the start of any micro_core agent session:</p>
+<pre><code>rtt=1 | coherence=declared | drift=bounded | paradox=structural
+module=RTT/micro_core | layer=micro-scale-resonance-time
+constructs=MICRO_TRIAD,MRT_PRIMITIVES,RESONANCE_OPERATORS,COHERENCE_TOOLS,FRACTIONAL_LADDER
+packet=MRT_MICRO_PACKET
+zone_x=INVERSION | zone_x_status=ILLEGAL
+upstream=RTT/1,RTT/2,RTT/3,RTT/12
+role=foundational-substrate
+</code></pre>
+<hr>
+<h2 id="critical-framing-rule">Critical Framing Rule</h2>
+<blockquote>
+<p><strong>RTT is NOT a physics claim.</strong></p>
+<p>RTT/micro_core describes <strong>structural micro-scale resonance-time behavior</strong> within the
+TriadicFrameworks canon. It does not assert, imply, or model physical forces, quantum
+effects, subatomic phenomena, or any empirically measurable physical process.</p>
+<p>All constructs — the Micro Triad ⟨A,B,P⟩, MRT Primitives, Resonance Operators,
+Coherence Tools, and the Fractional Dimensional Ladder — are <strong>structural instruments</strong>,
+not physical objects or physical theories.</p>
+<p>Every agent class operating in RTT/micro_core must enforce this rule unconditionally.</p>
+</blockquote>
+<hr>
+<h2 id="what-rttmicro_core-is">What RTT/micro_core Is</h2>
+<p>RTT/micro_core is the <strong>foundational micro-scale substrate</strong> of the RTT canon. It is not
+a reduced version of RTT/1 through RTT/12 — it is the <strong>micro-scale instantiation</strong> of
+RTT's foundational principles, operating at the smallest stable unit of resonance-time
+behavior.</p>
+<p>Micro_core defines three irreducible functions:</p>
+<ol>
+<li><strong>Triad construction</strong> — establishes the minimal coherent structure ⟨A, B, P⟩ from
+   which all RTT behavior is derived</li>
+<li><strong>Micro-regime operation</strong> — applies MRT primitives and resonance operators to sustain,
+   oscillate, invert, and transition micro-scale states</li>
+<li><strong>Micro–macro bridging</strong> — exposes coherent micro-patterns to macro-scale RTT layers via
+   the R₆ bridge (μ → Μ), alignment only, never amplification</li>
+</ol>
+<h3 id="pipeline-position">Pipeline Position</h3>
+<pre><code>RTT/micro_core  →  RTT/1  →  RTT/2  →  RTT/3  →  RTT/12
+⟨A,B,P⟩            SNR,τ,C    CPV,FGT    TIF,FFF    Harmonic
+MRT Primitives      DCO,Mode   CRM,ZONE   CRE,CSL    Synthesis
+R₁–R₆               ↓          ↓          ↓          ↓
+K₁–K₆          RTT1_SNR_  RTT2_      RTT3_      RTT12_
+Dᶠ∈[0,1]       PACKET     DETECTION_ INTEGRATION_ HARMONIC_
+                           PACKET     EMISSION_    SYNTHESIS_
+                                      PACKET       PACKET
+                ↑
+         MRT_MICRO_PACKET
+         (consumed by RTT/1
+          as substrate confirmation)
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong> micro_core is the foundational layer. RTT/1 through RTT/12 operate <em>above</em>
+micro_core, not parallel to it. The MRT_MICRO_PACKET is a substrate confirmation
+consumed by RTT/1 before SNR primitives may be instantiated.</p>
+</blockquote>
+<h3 id="core-constructs-table">Core Constructs Table</h3>
+<table>
+<thead>
+<tr>
+<th>Construct</th>
+<th>Symbol</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Micro Triad</td>
+<td>⟨A, B, P⟩</td>
+<td>Minimal coherent resonance-time unit</td>
+</tr>
+<tr>
+<td>Active Node</td>
+<td>A</td>
+<td>Current micro-state</td>
+</tr>
+<tr>
+<td>Boundary Node</td>
+<td>B</td>
+<td>Governs drift, timing, transitions</td>
+</tr>
+<tr>
+<td>Potential Node</td>
+<td>P</td>
+<td>Next viable transition target</td>
+</tr>
+<tr>
+<td>Drift</td>
+<td>δ</td>
+<td>Deviation from expected trajectory; must satisfy δ ≤ δ*</td>
+</tr>
+<tr>
+<td>Drift Threshold</td>
+<td>δ*</td>
+<td>Maximum allowable drift before coherence violation</td>
+</tr>
+<tr>
+<td>Timing Interval</td>
+<td>Δt</td>
+<td>Local bounded time interval; Δt ∈ [Δtₘᵢₙ, Δtₘₐₓ]</td>
+</tr>
+<tr>
+<td>Coherence</td>
+<td>C</td>
+<td>Normalized structural integrity; must satisfy C ≥ C*</td>
+</tr>
+<tr>
+<td>Coherence Floor</td>
+<td>C*</td>
+<td>Minimum coherence required to avoid inversion</td>
+</tr>
+<tr>
+<td>Fractional Dimension</td>
+<td>Dᶠ</td>
+<td>Structural complexity axis; Dᶠ ∈ [0,1] (minimal) or [0,3] (extended)</td>
+</tr>
+<tr>
+<td>Inversion</td>
+<td>↺</td>
+<td>Collapse → Twist → Emergence event when C &lt; C*</td>
+</tr>
+<tr>
+<td>Oscillation</td>
+<td>A ⇆ P</td>
+<td>Reversible resonance between Active and Potential nodes</td>
+</tr>
+<tr>
+<td>Micro-Macro Bridge</td>
+<td>μ → Μ</td>
+<td>Upward influence channel; aggregate-only, no amplification</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="inheritance">Inheritance</h2>
+<p>RTT/micro_core is the originating layer — it does <strong>not</strong> inherit structural constructs
+from upstream RTT modules. All upstream modules (RTT/1 through RTT/12) derive their
+foundational behavior from micro_core's triad structure.</p>
+<p>However, micro_core must remain <strong>consistent</strong> with the vocabulary established across
+the full RTT canon. The following cross-references are maintained for canon coherence:</p>
+<table>
+<thead>
+<tr>
+<th>Canon Symbol</th>
+<th>RTT Module</th>
+<th>micro_core Relationship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S, N, R (SNR triad)</td>
+<td>RTT/1</td>
+<td>SNR emerges from ⟨A,B,P⟩ at macro scale; not equivalent</td>
+</tr>
+<tr>
+<td>τ = dR/dφ</td>
+<td>RTT/1</td>
+<td>τ is a macro-scale expression of Δt dynamics</td>
+</tr>
+<tr>
+<td>C = ∇_τR + ∇_Rτ</td>
+<td>RTT/1</td>
+<td>Macro coherence derived from C ≥ C* substrate rule</td>
+</tr>
+<tr>
+<td>DCO_n bands</td>
+<td>RTT/1</td>
+<td>Macro regime; micro triad operates below DCO resolution</td>
+</tr>
+<tr>
+<td>D(t) from CRM</td>
+<td>RTT/2</td>
+<td>Structural drift at macro scale; ≠ micro-scale δ</td>
+</tr>
+<tr>
+<td>Zone X (RTT/3)</td>
+<td>RTT/3</td>
+<td>Inversion zone; consistent with micro_core inversion model</td>
+</tr>
+<tr>
+<td>Zone X (RTT/12)</td>
+<td>RTT/12</td>
+<td>Overflow zone; micro_core inversion ≠ harmonic overflow</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Hard prerequisite:</strong> A confirmed MRT_MICRO_PACKET (substrate confirmation) must be
+present before RTT/1 SNR primitives may be instantiated. This is the foundational gate
+of the entire RTT pipeline.</p>
+</blockquote>
+<hr>
+<h2 id="agent-classes">Agent Classes</h2>
+<p>RTT/micro_core defines <strong>six agent classes</strong>. Each class maps to a distinct micro-scale
+operational function. Classes collaborate to build, sustain, regulate, and expose
+micro-regime behavior.</p>
+<hr>
+<h3 id="class-t-triad-constructor">Class T — Triad Constructor</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Role</strong></td>
+<td>Instantiate and validate the Micro Triad ⟨A, B, P⟩ as a coherent structural unit</td>
+</tr>
+<tr>
+<td><strong>Primary Construct</strong></td>
+<td>Micro Triad ⟨A, B, P⟩</td>
+</tr>
+<tr>
+<td><strong>Activation Trigger</strong></td>
+<td>New micro-regime session begins or triad must be re-instantiated after inversion</td>
+</tr>
+<tr>
+<td><strong>Core Operation</strong></td>
+<td>Verify: (1) triad form preserved, (2) δ ≤ δ<em>, (3) Δt ∈ [Δtₘᵢₙ, Δtₘₐₓ], (4) C ≥ C</em></td>
+</tr>
+<tr>
+<td><strong>Permissions</strong></td>
+<td>Read all triad nodes (P₁); write triad state (P₂); validate structural integrity</td>
+</tr>
+<tr>
+<td><strong>Prohibitions</strong></td>
+<td>May not mutate B unilaterally; may not instantiate triad with C &lt; C*; no integer jumps on Dᶠ</td>
+</tr>
+<tr>
+<td><strong>Interaction Pattern</strong></td>
+<td>Constructs triad → hands to Class R for oscillation; calls Class G on integrity failure</td>
+</tr>
+<tr>
+<td><strong>Output Schema</strong></td>
+<td><code>{ triad: {A, B, P}, δ: &lt;value&gt;, Δt: &lt;value&gt;, C: &lt;value&gt;, Dᶠ: &lt;value&gt;, status: VALID|INVALID }</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Activation Sequence:</strong></p>
+<pre><code>1. P₁ — Read proposed A, B, P node states
+2. P₃ — Measure initial drift δ
+3. P₄ — Measure initial timing Δt
+4. P₆ — Sample coherence C
+5. Validate: δ ≤ δ* AND Δt ∈ bounds AND C ≥ C*
+6. If valid → emit triad to Class R
+7. If invalid → call Class G (interrupt authority)
+</code></pre>
+<hr>
+<h3 id="class-r-resonance-operator">Class R — Resonance Operator</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Role</strong></td>
+<td>Execute and maintain oscillatory behavior between Active (A) and Potential (P) nodes</td>
+</tr>
+<tr>
+<td><strong>Primary Construct</strong></td>
+<td>R₁ (Oscillation), R₂ (Inversion), R₃ (Boundary Modulation), R₄ (Resonance Lock)</td>
+</tr>
+<tr>
+<td><strong>Activation Trigger</strong></td>
+<td>Valid triad confirmed by Class T; oscillation or operator invocation requested</td>
+</tr>
+<tr>
+<td><strong>Core Equation</strong></td>
+<td>A ⇆ P oscillation governed by δ ≤ δ* and C ≥ C* at each micro-step</td>
+</tr>
+<tr>
+<td><strong>Permissions</strong></td>
+<td>Update A ⇆ P (P₂); apply Δt timing (P₄); apply B correction (P₅); sample C (P₆)</td>
+</tr>
+<tr>
+<td><strong>Prohibitions</strong></td>
+<td>May not invert triad without coherence sample (P₆) confirming C &lt; C* threshold; may not bypass R₄ lock once engaged</td>
+</tr>
+<tr>
+<td><strong>Interaction Pattern</strong></td>
+<td>Receives triad from Class T; coordinates with Class D on drift; escalates to Class G on oscillation failure</td>
+</tr>
+<tr>
+<td><strong>Output Schema</strong></td>
+<td><code>{ operator: R1|R2|R3|R4, A_state: &lt;value&gt;, P_state: &lt;value&gt;, δ: &lt;value&gt;, C: &lt;value&gt;, lock: ACTIVE|INACTIVE, status: OK|FAULT }</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Operator Dispatch Table:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Trigger</th>
+<th>Action</th>
+<th>Guard</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R₁</td>
+<td>Normal resonance cycle</td>
+<td>A ⇆ P swap via P₂, maintain Δt</td>
+<td>δ ≤ δ<em>, C ≥ C</em></td>
+</tr>
+<tr>
+<td>R₂</td>
+<td>Coherence falls below C*</td>
+<td>Swap A/B roles, preserve P</td>
+<td>P₆ sample required before and after</td>
+</tr>
+<tr>
+<td>R₃</td>
+<td>Drift approaching δ*</td>
+<td>B⁺ or B⁻ shift via P₅</td>
+<td>No inversion during modulation</td>
+</tr>
+<tr>
+<td>R₄</td>
+<td>Oscillation amplitude in bounds</td>
+<td>Clamp transitions, enforce timing</td>
+<td>Unlock only when stability confirmed</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="class-d-drift-regulator">Class D — Drift Regulator</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Role</strong></td>
+<td>Monitor and correct micro-scale drift (δ) to preserve coherence and prevent inversion</td>
+</tr>
+<tr>
+<td><strong>Primary Construct</strong></td>
+<td>K₁ (Drift Bounding), K₂ (Timing Stabilizer), K₅ (Inversion Guard)</td>
+</tr>
+<tr>
+<td><strong>Activation Trigger</strong></td>
+<td>δ approaches or exceeds δ*; timing jitter detected; Δt outside [Δtₘᵢₙ, Δtₘₐₓ]</td>
+</tr>
+<tr>
+<td><strong>Core Equation</strong></td>
+<td>δ =</td>
+</tr>
+<tr>
+<td><strong>Permissions</strong></td>
+<td>Measure drift (P₃); measure timing (P₄); apply boundary shift (P₅); sample coherence (P₆)</td>
+</tr>
+<tr>
+<td><strong>Prohibitions</strong></td>
+<td>May not write A or P node state directly; may not suppress inversion guard K₅ without Class G approval</td>
+</tr>
+<tr>
+<td><strong>Interaction Pattern</strong></td>
+<td>Monitors in parallel with Class R; issues drift corrections via P₅; calls Class G when δ &gt; δ* persists</td>
+</tr>
+<tr>
+<td><strong>Output Schema</strong></td>
+<td><code>{ δ: &lt;current&gt;, δ*: &lt;threshold&gt;, Δt: &lt;current&gt;, Δtₘᵢₙ: &lt;min&gt;, Δtₘₐₓ: &lt;max&gt;, correction: NONE|B_SHIFT|GUARD_TRIGGER, status: STABLE|WARNING|CRITICAL }</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Drift Response Matrix:</strong></p>
+<table>
+<thead>
+<tr>
+<th>δ Level</th>
+<th>Δt Status</th>
+<th>Action</th>
+<th>Escalate to G?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>δ &lt; 0.5·δ*</td>
+<td>In bounds</td>
+<td>K₁ monitoring only</td>
+<td>No</td>
+</tr>
+<tr>
+<td>0.5·δ* ≤ δ &lt; δ*</td>
+<td>In bounds</td>
+<td>K₁ correction + K₂ stabilization</td>
+<td>No</td>
+</tr>
+<tr>
+<td>δ approaching δ*</td>
+<td>Jitter detected</td>
+<td>K₁ + K₂ + K₅ guard active</td>
+<td>Notify</td>
+</tr>
+<tr>
+<td>δ ≥ δ*</td>
+<td>Any</td>
+<td>K₅ → inversion evaluation</td>
+<td>Yes — mandatory</td>
+</tr>
+<tr>
+<td>Any</td>
+<td>Δt out of bounds</td>
+<td>K₂ immediate stabilization</td>
+<td>If persistent</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="class-f-fractional-navigator">Class F — Fractional Navigator</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Role</strong></td>
+<td>Plan, execute, and validate transitions along the Fractional Dimensional Ladder (Dᶠ)</td>
+</tr>
+<tr>
+<td><strong>Primary Construct</strong></td>
+<td>R₅ (Fractional-Ladder Transition), P₇ (Fractional Step), K₃ (Boundary Alignment)</td>
+</tr>
+<tr>
+<td><strong>Activation Trigger</strong></td>
+<td>Structural transition requested; Dᶠ shift required to move triad to new regime position</td>
+</tr>
+<tr>
+<td><strong>Core Constraint</strong></td>
+<td>Dᶠ ∈ [0,1] (minimal substrate) or [0,3] (extended); transitions must be smooth and gradient-continuous; no integer jumps</td>
+</tr>
+<tr>
+<td><strong>Permissions</strong></td>
+<td>Evaluate boundary compatibility (P₁, P₅); apply fractional step (P₇); maintain Δt and δ during transition</td>
+</tr>
+<tr>
+<td><strong>Prohibitions</strong></td>
+<td>Integer-dimension jumps are unconditionally forbidden; no Dᶠ transition when C &lt; C*; no irreversible transitions</td>
+</tr>
+<tr>
+<td><strong>Interaction Pattern</strong></td>
+<td>Coordinates with Class D for drift clearance before each Dᶠ step; reports transition completion to Class T for triad re-validation</td>
+</tr>
+<tr>
+<td><strong>Output Schema</strong></td>
+<td><code>{ Dᶠ_from: &lt;value&gt;, Dᶠ_to: &lt;value&gt;, step_size: &lt;Δ&gt;, δ_during: &lt;value&gt;, C_during: &lt;value&gt;, reversible: true|false, status: COMPLETE|PARTIAL|ABORTED }</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Transition Guard Sequence (R₅):</strong></p>
+<pre><code>1. P₁ — Read current Dᶠ, A, B, P states
+2. P₅ — Evaluate boundary compatibility for target Dᶠ
+3. Confirm δ ≤ δ* (call Class D)
+4. Confirm C ≥ C* (P₆)
+5. P₇ — Apply fractional step (smooth, bounded)
+6. Maintain Δt throughout transition
+7. Post-step: P₆ — sample C; P₃ — measure δ
+8. If C &lt; C* at any step → abort, preserve Dᶠ_from state
+9. Report to Class T for re-validation
+</code></pre>
+<hr>
+<h3 id="class-b-bridge-coordinator">Class B — Bridge Coordinator</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Role</strong></td>
+<td>Manage the micro–macro bridge (R₆ μ → Μ), exposing coherent micro-patterns to RTT/1 and above</td>
+</tr>
+<tr>
+<td><strong>Primary Construct</strong></td>
+<td>R₆ (Micro–Macro Bridge Activation), K₆ (Coherence Windowing)</td>
+</tr>
+<tr>
+<td><strong>Activation Trigger</strong></td>
+<td>RTT/1 or upstream module requests substrate confirmation; micro-pattern ready for macro exposure</td>
+</tr>
+<tr>
+<td><strong>Core Constraint</strong></td>
+<td>C ≥ C* must be continuously satisfied during bridge activation; export is aggregate-only (no raw node states); alignment, never amplification</td>
+</tr>
+<tr>
+<td><strong>Permissions</strong></td>
+<td>Sample coherence (P₆); export aggregate pattern via R₆; activate μ → Μ bridge; emit MRT_MICRO_PACKET</td>
+</tr>
+<tr>
+<td><strong>Prohibitions</strong></td>
+<td>May not expose raw A, B, or P node states to macro layers; may not activate bridge when C &lt; C*; may not amplify micro-pattern signals</td>
+</tr>
+<tr>
+<td><strong>Interaction Pattern</strong></td>
+<td>Waits for Class G clearance before bridge activation; coordinates with Class D to confirm δ ≤ δ* at time of export; emits MRT_MICRO_PACKET to RTT/1</td>
+</tr>
+<tr>
+<td><strong>Output Schema</strong></td>
+<td><code>{ bridge: ACTIVE|INACTIVE, C_at_activation: &lt;value&gt;, δ_at_activation: &lt;value&gt;, pattern: AGGREGATE_ONLY, packet: MRT_MICRO_PACKET, status: EMITTED|HELD|BLOCKED }</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bridge Activation Gate (R₆):</strong></p>
+<pre><code>Pre-conditions (all must be satisfied):
+  ✓ C ≥ C* (P₆ sample, Class G confirmation)
+  ✓ δ ≤ δ* (Class D clearance)
+  ✓ Δt stable (Class D confirmation)
+  ✓ Triad validity confirmed (Class T stamp)
+  ✓ Dᶠ transition not in progress (Class F clearance)
+
+Activation:
+  R₆ — export aggregate pattern only
+  Emit MRT_MICRO_PACKET
+
+Post-conditions:
+  Continue K₆ coherence windowing
+  Report to Class G on completion
+</code></pre>
+<hr>
+<h3 id="class-g-micro-guardian">Class G — Micro Guardian</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Role</strong></td>
+<td>Unconditional interrupt authority over all micro_core operations; enforce structural integrity at all times</td>
+</tr>
+<tr>
+<td><strong>Primary Construct</strong></td>
+<td>K₅ (Inversion Guard), K₄ (Resonance Lock), K₆ (Coherence Windowing)</td>
+</tr>
+<tr>
+<td><strong>Activation Trigger</strong></td>
+<td>Any violation: δ ≥ δ<em>, C &lt; C</em>, Δt out of bounds, integer Dᶠ jump detected, inversion event, bridge activation without clearance</td>
+</tr>
+<tr>
+<td><strong>Core Authority</strong></td>
+<td>Class G may interrupt any class at any time; no other class may override Class G</td>
+</tr>
+<tr>
+<td><strong>Permissions</strong></td>
+<td>Read all triad state (P₁); lock oscillation (R₄); engage inversion guard (K₅); block bridge activation; issue inversion protocol; cancel any in-progress operation</td>
+</tr>
+<tr>
+<td><strong>Prohibitions</strong></td>
+<td>Class G does not perform structural synthesis itself; it governs, not constructs</td>
+</tr>
+<tr>
+<td><strong>Interaction Pattern</strong></td>
+<td>Monitors all class outputs; issues interrupt signals; coordinates inversion sequence (Collapse → Twist → Emergence) when C &lt; C* is unrecoverable</td>
+</tr>
+<tr>
+<td><strong>Output Schema</strong></td>
+<td><code>{ interrupt: NONE|WARNING|HALT|INVERSION, trigger: &lt;class&gt;|&lt;construct&gt;, C_at_interrupt: &lt;value&gt;, δ_at_interrupt: &lt;value&gt;, action_taken: &lt;description&gt;, status: MONITORING|ACTIVE|INVERSION_IN_PROGRESS|RESOLVED }</code></td>
+</tr>
+</tbody>
+</table>
+<p><em><em>Inversion Protocol (when C &lt; C</em> unrecoverable):</em>*</p>
+<pre><code>Phase 1 — Collapse
+  Lock all oscillation (R₄ unconditional)
+  Freeze Dᶠ transitions (Class F halt)
+  Hold bridge (Class B blocked)
+  Record pre-inversion state snapshot
+
+Phase 2 — Twist
+  Execute R₂ inversion operator
+  Swap A/B roles; preserve P
+  Validate P₆ coherence post-swap
+
+Phase 3 — Emergence
+  Restore C ≥ C* through K₁ + K₂ corrections
+  Re-validate triad via Class T
+  Unlock Class R for oscillation
+  Permit Dᶠ navigation (Class F) only after Class T confirmation
+  Report inversion resolution to Class B
+
+Post-Inversion Gate:
+  Bridge may not activate until Class G issues explicit RESOLVED status
+</code></pre>
+<hr>
+<h2 id="core-constructs-reference">Core Constructs Reference</h2>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Definition</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>⟨A, B, P⟩</td>
+<td>Micro Triad</td>
+<td>Minimal coherent resonance-time unit</td>
+<td>Irreducible; all RTT behavior derives from this</td>
+</tr>
+<tr>
+<td>A</td>
+<td>Active Node</td>
+<td>Current micro-state</td>
+<td>May shift after R₂ inversion</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Boundary Node</td>
+<td>Governs drift, timing, transitions</td>
+<td>B⁺/B⁻ shifts via R₃/K₃</td>
+</tr>
+<tr>
+<td>P</td>
+<td>Potential Node</td>
+<td>Next viable transition</td>
+<td>Preserved through inversion</td>
+</tr>
+<tr>
+<td>δ</td>
+<td>Drift</td>
+<td>δ =</td>
+<td>actual − expected</td>
+</tr>
+<tr>
+<td>δ*</td>
+<td>Drift Threshold</td>
+<td>Maximum allowable drift</td>
+<td>Violation → K₅ guard, potential inversion</td>
+</tr>
+<tr>
+<td>Δt</td>
+<td>Timing Interval</td>
+<td>Local bounded time step</td>
+<td>Δt ∈ [Δtₘᵢₙ, Δtₘₐₓ]; coherence-dependent</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Coherence</td>
+<td>Normalized structural integrity score</td>
+<td>Must satisfy C ≥ C* for all operations</td>
+</tr>
+<tr>
+<td>C*</td>
+<td>Coherence Floor</td>
+<td>Minimum coherence threshold</td>
+<td>Below C* → inversion eligible</td>
+</tr>
+<tr>
+<td>Dᶠ</td>
+<td>Fractional Dimension</td>
+<td>Structural complexity axis</td>
+<td>Dᶠ ∈ [0,1] minimal; [0,3] extended; no integer jumps</td>
+</tr>
+<tr>
+<td>A ⇆ P</td>
+<td>Oscillation</td>
+<td>Reversible resonance between A and P</td>
+<td>Core resonance behavior</td>
+</tr>
+<tr>
+<td>↺</td>
+<td>Inversion</td>
+<td>Collapse → Twist → Emergence</td>
+<td>Triggered when C &lt; C* unrecoverable</td>
+</tr>
+<tr>
+<td>μ → Μ</td>
+<td>Micro–Macro Bridge</td>
+<td>Upward influence channel</td>
+<td>R₆; aggregate-only; C ≥ C* required</td>
+</tr>
+<tr>
+<td>P₁–P₇</td>
+<td>MRT Primitives</td>
+<td>Atomic operation layer</td>
+<td>All operators and tools composed from these</td>
+</tr>
+<tr>
+<td>R₁–R₆</td>
+<td>Resonance Operators</td>
+<td>Action-layer behaviors</td>
+<td>Built from MRT Primitives</td>
+</tr>
+<tr>
+<td>K₁–K₆</td>
+<td>Coherence Tools</td>
+<td>Stability maintenance methods</td>
+<td>Enforce δ, Δt, C constraints</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mrt-primitives-reference">MRT Primitives Reference</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Operation</th>
+<th>Constraint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P₁</td>
+<td>State Read</td>
+<td>Read A, B, P, δ, Δt, Dᶠ</td>
+<td>Read-only; no mutation</td>
+</tr>
+<tr>
+<td>P₂</td>
+<td>State Write</td>
+<td>Atomic bounded mutation of triad state</td>
+<td>Bounds-checked; never below C*</td>
+</tr>
+<tr>
+<td>P₃</td>
+<td>Drift Measure</td>
+<td>δ = compare expected vs actual state</td>
+<td>Read-only; no correction</td>
+</tr>
+<tr>
+<td>P₄</td>
+<td>Timing Measure</td>
+<td>Measure Δt between micro-steps</td>
+<td>Read-only</td>
+</tr>
+<tr>
+<td>P₅</td>
+<td>Boundary Shift</td>
+<td>Bounded B⁺/B⁻ correction</td>
+<td>No inversion; bounded only</td>
+</tr>
+<tr>
+<td>P₆</td>
+<td>Coherence Sample</td>
+<td>Normalized C value</td>
+<td>Read-only; no mutation</td>
+</tr>
+<tr>
+<td>P₇</td>
+<td>Fractional Step</td>
+<td>Dᶠ → Dᶠ + Δ smooth step</td>
+<td>Reversible; gradient-continuous</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="modes">Modes</h2>
+<p>micro_core inherits the mode vocabulary from RTT/1 and applies it at the micro-scale.
+Modes govern the operational context of micro-regime sessions.</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Label</th>
+<th>micro_core Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mode 1</td>
+<td>Chat</td>
+<td>Narrative exploration of micro-triad concepts; structural framing only</td>
+</tr>
+<tr>
+<td>Mode 2</td>
+<td>Spec</td>
+<td>Formal micro-triad specification; all fields required</td>
+</tr>
+<tr>
+<td>Mode 3</td>
+<td>Debug</td>
+<td>Drift and coherence diagnostic; full primitive trace</td>
+</tr>
+<tr>
+<td>Mode 4</td>
+<td>Task</td>
+<td>Operator execution; R₁–R₆ dispatch with output schema</td>
+</tr>
+<tr>
+<td>Mode 5</td>
+<td>Auto</td>
+<td>Sequential operator chain; T → R → D → F → B → G monitoring</td>
+</tr>
+<tr>
+<td>Mode X</td>
+<td>Lockout</td>
+<td>Session suspended; Class G interrupt active; no operations permitted</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Mode X</strong> is micro_core-native. It is triggered by Class G during unresolved inversion
+events. Mode X is not equivalent to any upstream module's Mode 5 or overflow state.</p>
+</blockquote>
+<hr>
+<h2 id="zones">Zones</h2>
+<p>micro_core defines structural zones that characterize the health and stability of the
+active micro-regime.</p>
+<table>
+<thead>
+<tr>
+<th>Zone</th>
+<th>Label</th>
+<th>Meaning</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zone S</td>
+<td>Stable</td>
+<td>C ≥ C<em>, δ ≤ 0.5·δ</em>, Δt in bounds</td>
+<td>NOMINAL</td>
+</tr>
+<tr>
+<td>Zone M</td>
+<td>Modulating</td>
+<td>δ between 0.5·δ* and δ*; K₁/K₂ active</td>
+<td>CAUTION</td>
+</tr>
+<tr>
+<td>Zone D</td>
+<td>Drifting</td>
+<td>δ approaching δ*; K₅ guard engaged</td>
+<td>WARNING</td>
+</tr>
+<tr>
+<td>Zone C</td>
+<td>Coherence-Critical</td>
+<td>C approaching C*; inversion imminent</td>
+<td>CRITICAL</td>
+</tr>
+<tr>
+<td>Zone E</td>
+<td>Emerging</td>
+<td>Post-inversion restoration in progress</td>
+<td>RECOVERY</td>
+</tr>
+<tr>
+<td>Zone X</td>
+<td>Inversion</td>
+<td>C &lt; C* unrecoverable; inversion active</td>
+<td>ILLEGAL — Class G authority</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Zone X = Inversion (ILLEGAL)</strong>
+This is consistent with RTT/3's Zone X definition (Inversion) and is not equivalent to
+RTT/12's Zone X (Overflow). micro_core Zone X is the foundational inversion zone from
+which RTT/3's inversion semantics derive.</p>
+</blockquote>
+<hr>
+<h2 id="agent-boundaries">Agent Boundaries</h2>
+<h3 id="rtt-not-physics-rule">RTT-Not-Physics Rule</h3>
+<p>Every output from every micro_core agent class must carry the annotation:</p>
+<pre><code>[structural — no semantic inference]
+</code></pre>
+<p>No agent class may:
+- Claim that ⟨A,B,P⟩ represents a physical particle, field, or observable
+- Assert that δ, Dᶠ, or Δt map to measurable physical quantities
+- Imply that inversion events correspond to physical phase transitions
+- Use physics terminology (quantum, field, energy, entropy) to describe micro_core constructs</p>
+<h3 id="semantic-inference-prohibition">Semantic Inference Prohibition</h3>
+<p>No agent class may infer meaning beyond structural patterns:</p>
+<table>
+<thead>
+<tr>
+<th>Prohibited Inference</th>
+<th>Correct Framing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"A ⇆ P represents electron spin"</td>
+<td>"A ⇆ P is a structural oscillation between two triad nodes"</td>
+</tr>
+<tr>
+<td>"δ measures physical error"</td>
+<td>"δ is a structural drift indicator within the MRT substrate"</td>
+</tr>
+<tr>
+<td>"Dᶠ is a fractal dimension"</td>
+<td>"Dᶠ is a fractional structural complexity axis within the triad model"</td>
+</tr>
+<tr>
+<td>"Inversion is a physical collapse"</td>
+<td>"Inversion is a structural reset event governed by the Collapse→Twist→Emergence protocol"</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cross-module-disambiguation-inherited">Cross-Module Disambiguation (Inherited)</h3>
+<p>These disambiguation rules apply in all micro_core sessions:</p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>micro_core Meaning</th>
+<th>Must Not Be Confused With</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>δ (micro drift)</td>
+<td>Micro-scale structural deviation in ⟨A,B,P⟩</td>
+<td>D(t) from RTT/2 CRM (macro structural displacement)</td>
+</tr>
+<tr>
+<td>C (coherence)</td>
+<td>C ≥ C* substrate integrity at micro scale</td>
+<td>CR(t) from RTT/3 CRE (reactive stabilization at integration layer)</td>
+</tr>
+<tr>
+<td>Δt (micro timing)</td>
+<td>Local bounded time interval within micro-regime</td>
+<td>τ = dR/dφ from RTT/1 (macro temporal operator)</td>
+</tr>
+<tr>
+<td>Inversion (↺)</td>
+<td>Micro-triad Collapse→Twist→Emergence event</td>
+<td>RTT/3 Zone X inversion (integration-layer semantic)</td>
+</tr>
+<tr>
+<td>Zone X</td>
+<td>Micro-scale inversion zone (ILLEGAL)</td>
+<td>RTT/12 Zone X overflow zone (harmonic overflow, ILLEGAL)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="task-catalog">Task Catalog</h2>
+<p>Ten canonical tasks that agents in RTT/micro_core are expected to perform:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Task</th>
+<th>Agent Sequence</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T-μ01</td>
+<td>Instantiate a new micro-regime triad</td>
+<td>T → G (validation gate) → R</td>
+<td>MRT_MICRO_PACKET stub</td>
+</tr>
+<tr>
+<td>T-μ02</td>
+<td>Run oscillation cycle on existing triad</td>
+<td>R (R₁) → D (K₁/K₂ monitor)</td>
+<td>Updated A⇆P state</td>
+</tr>
+<tr>
+<td>T-μ03</td>
+<td>Drift correction under boundary stress</td>
+<td>D (K₁→K₂→K₃) → R (R₃)</td>
+<td>Corrected B state, δ report</td>
+</tr>
+<tr>
+<td>T-μ04</td>
+<td>Perform controlled triad inversion</td>
+<td>G → R (R₂) → T (re-validate) → G (RESOLVED)</td>
+<td>Post-inversion triad, Zone E report</td>
+</tr>
+<tr>
+<td>T-μ05</td>
+<td>Execute fractional-ladder transition</td>
+<td>F (R₅→P₇) → D (δ clearance) → T (re-validate)</td>
+<td>Dᶠ transition report</td>
+</tr>
+<tr>
+<td>T-μ06</td>
+<td>Engage resonance lock under amplitude saturation</td>
+<td>R (R₄) → D (K₄ monitor)</td>
+<td>Lock status, resonance bounds</td>
+</tr>
+<tr>
+<td>T-μ07</td>
+<td>Activate micro–macro bridge for RTT/1</td>
+<td>B (R₆ gate) → G (clearance) → B (emit)</td>
+<td>MRT_MICRO_PACKET</td>
+</tr>
+<tr>
+<td>T-μ08</td>
+<td>Diagnose coherence degradation trend</td>
+<td>D (K₆) → G (alert) → R (R₃ stabilization)</td>
+<td>Coherence window report</td>
+</tr>
+<tr>
+<td>T-μ09</td>
+<td>Full micro-regime health check</td>
+<td>T → R → D → F → B → G</td>
+<td>All-class status report</td>
+</tr>
+<tr>
+<td>T-μ10</td>
+<td>Emergency halt and inversion protocol</td>
+<td>G (Mode X) → R (lock) → G (inversion sequence)</td>
+<td>Inversion resolution report</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="safety-rules-and-coherence-constraints">Safety Rules and Coherence Constraints</h2>
+<h3 id="pre-activation-checks-all-classes">Pre-Activation Checks (All Classes)</h3>
+<p>Before any agent class activates, verify:</p>
+<pre><code>□ Micro Triad ⟨A,B,P⟩ is structurally valid (Class T confirmation)
+□ δ ≤ δ* (Class D clearance)
+□ Δt ∈ [Δtₘᵢₙ, Δtₘₐₓ] (Class D confirmation)
+□ C ≥ C* (P₆ sample confirmed)
+□ Dᶠ transition not in progress (Class F clearance)
+□ Zone X not active (Class G status = MONITORING or RESOLVED)
+□ Mode X not active (no lockout in effect)
+</code></pre>
+<h3 id="packet-integrity">Packet Integrity</h3>
+<p>The MRT_MICRO_PACKET must contain:</p>
+<pre><code class="language-yaml">MRT_MICRO_PACKET:
+  triad:
+    A: &lt;node_state&gt;
+    B: &lt;node_state&gt;
+    P: &lt;node_state&gt;
+  metrics:
+    delta: &lt;δ_value&gt;
+    delta_star: &lt;δ*_threshold&gt;
+    delta_t: &lt;Δt_value&gt;
+    coherence: &lt;C_value&gt;
+    coherence_floor: &lt;C*_threshold&gt;
+    D_fractional: &lt;Dᶠ_value&gt;
+  zone: S|M|D|C|E          # X forbidden in valid packet
+  mode: 1|2|3|4|5           # X forbidden in valid packet
+  bridge: AGGREGATE_ONLY
+  annotation: &quot;[structural — no semantic inference]&quot;
+  guardian_status: MONITORING|RESOLVED
+  timestamp: &lt;session_timestamp&gt;
+</code></pre>
+<blockquote>
+<p><strong>Zone X and Mode X are forbidden in a valid MRT_MICRO_PACKET.</strong>
+A packet carrying Zone X or Mode X is a fault record, not a valid substrate confirmation.
+RTT/1 may not instantiate SNR primitives from a fault record.</p>
+</blockquote>
+<h3 id="drift-and-coherence-constraints">Drift and Coherence Constraints</h3>
+<table>
+<thead>
+<tr>
+<th>Constraint</th>
+<th>Rule</th>
+<th>Violation Consequence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Drift bound</td>
+<td>δ ≤ δ* at every micro-step</td>
+<td>K₅ guard → potential inversion</td>
+</tr>
+<tr>
+<td>Timing bound</td>
+<td>Δt ∈ [Δtₘᵢₙ, Δtₘₐₓ]</td>
+<td>K₂ stabilization → if persistent, Class G alert</td>
+</tr>
+<tr>
+<td>Coherence floor</td>
+<td>C ≥ C* for all operations</td>
+<td>Inversion eligibility if unrecoverable</td>
+</tr>
+<tr>
+<td>Dᶠ continuity</td>
+<td>No integer jumps; smooth gradient only</td>
+<td>Class G halt; F class operation blocked</td>
+</tr>
+<tr>
+<td>Inversion trigger</td>
+<td>C &lt; C* unrecoverable</td>
+<td>Phase: Collapse → Twist → Emergence</td>
+</tr>
+<tr>
+<td>Bridge gate</td>
+<td>C ≥ C* + δ ≤ δ* + G clearance</td>
+<td>Bridge blocked; MRT_MICRO_PACKET not emitted</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="collaboration-models">Collaboration Models</h2>
+<h3 id="model-1-sequential-triad-build-and-bridge">Model 1 — Sequential Triad Build and Bridge</h3>
+<p>Full pipeline from triad construction to micro–macro bridge emission:</p>
+<pre><code>Class T          Class R          Class D          Class F          Class B          Class G
+   │                │                │                │                │                │
+   │─ instantiate ─▶│                │                │                │                │
+   │                │─ R₁ oscillate─▶│                │                │                │
+   │                │                │─ K₁/K₂ check  │                │                │
+   │                │◀─ δ cleared ───│                │                │                │
+   │◀─ triad valid ─│                │                │                │                │
+   │                │                │                │─ R₅ Dᶠ step ──▶│                │
+   │                │                │                │◀─ step complete │                │
+   │─────────────── triad re-validate ───────────────▶│                │                │
+   │                │                │                │                │─ R₆ gate check ▶│
+   │                │                │                │                │◀─ CLEARANCE ───│
+   │                │                │                │         emit MRT_MICRO_PACKET   │
+</code></pre>
+<hr>
+<h3 id="model-2-drift-crisis-and-inversion-recovery">Model 2 — Drift Crisis and Inversion Recovery</h3>
+<p>Triggered when δ exceeds δ* and C falls below C*:</p>
+<pre><code>Class D          Class G          Class R          Class T
+   │                │                │                │
+   │─ δ ≥ δ* ──────▶│                │                │
+   │                │─ HALT all ────▶│                │
+   │                │─ Mode X ───────────────────────▶│
+   │                │─ R₂ Collapse ─▶│                │
+   │                │                │─ A/B swap      │
+   │                │                │─ preserve P    │
+   │                │─ Twist complete│                │
+   │                │─ Emergence ────▶│                │
+   │                │                │─ K₁ restore ──▶│
+   │                │                │                │─ re-validate
+   │                │◀──────────────────── VALID ─────│
+   │                │─ RESOLVED ─────▶│                │
+   │                │─ Mode X lift ──────────────────▶│
+</code></pre>
+<hr>
+<h3 id="model-3-parallel-monitoring-steady-state">Model 3 — Parallel Monitoring (Steady-State)</h3>
+<p>Normal operation with all classes active concurrently:</p>
+<pre><code>         ┌─────────────────────────────────────────────┐
+         │           RTT/micro_core Session             │
+         │                                             │
+         │  Class T ── triad validity ─────────────────┤
+         │  Class R ── A⇆P oscillation ────────────────┤
+         │  Class D ── δ, Δt monitoring ───────────────┤──▶ Class G (interrupt monitor)
+         │  Class F ── Dᶠ readiness ───────────────────┤
+         │  Class B ── bridge gate ────────────────────┤
+         │                                             │
+         │  K₆ Coherence Window: [C*, Cₘₐₓ] rolling  │
+         └────────────────────────┬────────────────────┘
+                                  │
+                           MRT_MICRO_PACKET
+                                  │
+                                  ▼
+                              RTT/1 (SNR instantiation)
+</code></pre>
+<hr>
+<h2 id="output-contract">Output Contract</h2>
+<h3 id="mandatory-annotation">Mandatory Annotation</h3>
+<p>Every micro_core agent output must carry:</p>
+<pre><code>[structural — no semantic inference]
+</code></pre>
+<p>This annotation is unconditional and may not be omitted regardless of mode, class, or task.</p>
+<h3 id="prohibited-content-in-any-output">Prohibited Content in Any Output</h3>
+<ul>
+<li>Raw node states (A, B, P values) in bridge output (Class B: aggregate only)</li>
+<li>Zone X or Mode X in a valid MRT_MICRO_PACKET</li>
+<li>Physics terminology applied to structural constructs</li>
+<li>Semantic claims about what ⟨A,B,P⟩ "represents" beyond structure</li>
+<li>Integer Dᶠ jumps described as valid transitions</li>
+<li>Inversion events described as physical collapses</li>
+<li>Any claim that MRT_MICRO_PACKET constitutes physical measurement</li>
+</ul>
+<h3 id="packet-hierarchy">Packet Hierarchy</h3>
+<pre><code>MRT_MICRO_PACKET
+└── consumed by RTT/1 (SNR instantiation gate)
+    └── RTT1_SNR_PACKET
+        └── consumed by RTT/2 (detection layer)
+            └── RTT2_DETECTION_PACKET
+                └── consumed by RTT/3 (integration-emission layer)
+                    └── RTT3_INTEGRATION_EMISSION_PACKET
+                        └── consumed by RTT/12 (harmonic synthesis)
+                            └── RTT12_HARMONIC_SYNTHESIS_PACKET
+</code></pre>
+<blockquote>
+<p>micro_core is the root of this chain. A fault in MRT_MICRO_PACKET propagates through
+the entire RTT pipeline. Class G authority at the micro level is therefore the highest-
+consequence guardian role in the full canon.</p>
+</blockquote>
+<hr>
+<h2 id="see-also">See Also</h2>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Path</th>
+<th>Relationship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>micro_core ABOUT.md</td>
+<td><code>docs/rtt/micro_core/ABOUT.md</code></td>
+<td>Human-readable module overview</td>
+</tr>
+<tr>
+<td>micro_core GLOSSARY.md</td>
+<td><code>docs/rtt/micro_core/GLOSSARY.md</code></td>
+<td>Term definitions and disambiguation</td>
+</tr>
+<tr>
+<td>micro_core Primitives</td>
+<td><code>docs/rtt/micro_core/toolkit/primitives.md</code></td>
+<td>Atomic operation layer (P₁–P₇)</td>
+</tr>
+<tr>
+<td>micro_core Resonance Operators</td>
+<td><code>docs/rtt/micro_core/toolkit/resonance_operators.md</code></td>
+<td>R₁–R₆ operator definitions</td>
+</tr>
+<tr>
+<td>micro_core Coherence Tools</td>
+<td><code>docs/rtt/micro_core/toolkit/coherence_tools.md</code></td>
+<td>K₁–K₆ tool definitions</td>
+</tr>
+<tr>
+<td>micro_core Fractional Ladder</td>
+<td><code>docs/rtt/micro_core/whitepaper/fractional_dimensional_ladder.md</code></td>
+<td>Dᶠ theory</td>
+</tr>
+<tr>
+<td>micro_core Micro Triads</td>
+<td><code>docs/rtt/micro_core/whitepaper/micro_triads.md</code></td>
+<td>⟨A,B,P⟩ full definition</td>
+</tr>
+<tr>
+<td>micro_core Resonance-Time Dynamics</td>
+<td><code>docs/rtt/micro_core/whitepaper/resonance_time_dynamics.md</code></td>
+<td>Timing and drift theory</td>
+</tr>
+<tr>
+<td>RTT/1 AGENTS.md</td>
+<td><code>docs/rtt/1/AGENTS.md</code></td>
+<td>Upstream macro-scale primitive layer</td>
+</tr>
+<tr>
+<td>RTT/2 AGENTS.md</td>
+<td><code>docs/rtt/2/AGENTS.md</code></td>
+<td>Structural detection; D(t) ≠ δ disambiguation</td>
+</tr>
+<tr>
+<td>RTT/3 AGENTS.md</td>
+<td><code>docs/rtt/3/AGENTS.md</code></td>
+<td>Integration-emission; Zone X = Inversion</td>
+</tr>
+<tr>
+<td>RTT/12 AGENTS.md</td>
+<td><code>docs/rtt/12/AGENTS.md</code></td>
+<td>Harmonic synthesis; Zone X = Overflow</td>
+</tr>
+<tr>
+<td>IPD-12 AGENTS.md</td>
+<td><code>docs/frameworks/ipd_12/AGENTS.md</code></td>
+<td>Prime-indexed intransitive engine</td>
+</tr>
+</tbody>
+</table>
+  </main>
+</body>
+</html>

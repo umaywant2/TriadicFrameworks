@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/codes/Adding_a_New_RTTcode_Domain.md">
+  <title>Adding a New RTTcode Domain</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/codes/Adding_a_New_RTTcode_Domain.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/codes/Adding_a_New_RTTcode_Domain.md</code>
+  </aside>
+
+  <main>
+<h1 id="adding-a-new-rttcode-domain">Adding a New RTTcode Domain</h1>
+<p>RTTcodes support multiple domains (RTT, SET, Substrate, Observer, Governance,
+Docs, Other). You can extend the system by adding a new domain in a structured,
+schema‑aligned way.</p>
+<p>Follow these steps:</p>
+<hr>
+<h2 id="1-choose-a-domain-identifier">1. Choose a domain identifier</h2>
+<p>Use a short, lowercase string:</p>
+<pre><code>&quot;astro&quot;
+&quot;bio&quot;
+&quot;ops&quot;
+&quot;viz&quot;
+</code></pre>
+<p>Avoid spaces and uppercase letters.</p>
+<hr>
+<h2 id="2-add-the-domain-to-the-schema">2. Add the domain to the schema</h2>
+<p>Edit:</p>
+<pre><code>docs/rttcodes/schema/rttcode.schema.json
+</code></pre>
+<p>Add your domain to the <code>enum</code> list under <code>domain</code>:</p>
+<pre><code class="language-json">&quot;domain&quot;: {
+  &quot;type&quot;: &quot;string&quot;,
+  &quot;enum&quot;: [&quot;rtt&quot;, &quot;set&quot;, &quot;substrate&quot;, &quot;observer&quot;, &quot;governance&quot;, &quot;docs&quot;, &quot;other&quot;, &quot;astro&quot;]
+}
+</code></pre>
+<hr>
+<h2 id="3-create-a-domain-folder-under-examples">3. Create a domain folder under examples</h2>
+<p>Add:</p>
+<pre><code>docs/rttcodes/examples/astro/
+</code></pre>
+<p>Include:</p>
+<ul>
+<li><code>payload.json</code></li>
+<li><code>astro-rttcode.png</code></li>
+<li><code>README.md</code> describing the domain’s purpose</li>
+</ul>
+<hr>
+<h2 id="4-define-the-visual-identity">4. Define the visual identity</h2>
+<p>Add a row to:</p>
+<pre><code>docs/rttcodes/style/color-domains.png
+</code></pre>
+<p>And update:</p>
+<pre><code>docs/rttcodes/style/visual-guidelines.md
+</code></pre>
+<p>Define:</p>
+<ul>
+<li>primary color  </li>
+<li>secondary color  </li>
+<li>accent color  </li>
+<li>domain motifs (e.g., orbital arcs, spectral lines)</li>
+</ul>
+<hr>
+<h2 id="5-add-a-generator-example-optional">5. Add a generator example (optional)</h2>
+<p>Place a sample payload in:</p>
+<pre><code>docs/rttcodes/generators/examples/
+</code></pre>
+<p>This helps contributors test the new domain.</p>
+<hr>
+<h2 id="6-validate-the-new-domain">6. Validate the new domain</h2>
+<p>Run:</p>
+<pre><code>node generate_rttcode.js payload.json test.png
+</code></pre>
+<p>or</p>
+<pre><code>python generate_rttcode.py payload.json test.png
+</code></pre>
+<p>If the schema accepts the payload and the QR is generated, the domain is fully integrated.</p>
+<hr>
+<h2 id="7-document-the-domain">7. Document the domain</h2>
+<p>Update:</p>
+<pre><code>docs/rttcodes/README.md
+</code></pre>
+<p>Add your domain to the domain list and link to its example folder.</p>
+<hr>
+<h2 id="done">Done</h2>
+<p>Your new domain is now:</p>
+<ul>
+<li>schema‑valid  </li>
+<li>generator‑compatible  </li>
+<li>visually defined  </li>
+<li>documented  </li>
+<li>ready for use across TriadicFrameworks  </li>
+</ul>
+  </main>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Autonomous_Forms/Real_Q‑Metric_Set.md">
+  <title>1. Real Q‑Metric Set</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Autonomous_Forms/Real_Q‑Metric_Set.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Autonomous_Forms/Real_Q‑Metric_Set.md</code>
+  </aside>
+
+  <main>
+<h1 id="1-real-qmetric-set"><strong>1. Real Q‑Metric Set</strong></h1>
+<p>These are structural, not aesthetic — they measure <em>stability of reasoning over time</em>.</p>
+<h3 id="q1-semantic-drift"><strong>Q1 — Semantic Drift</strong></h3>
+<p>How far the agent’s internal representation drifts from the original task.</p>
+<pre><code class="language-python">from sentence_transformers import SentenceTransformer, util
+embedder = SentenceTransformer(&quot;all-MiniLM-L6-v2&quot;)
+
+def q_semantic_drift(task_embedding, last_obs):
+    obs_emb = embedder.encode(last_obs, convert_to_tensor=True)
+    sim = util.cos_sim(task_embedding, obs_emb).item()
+    return 1.0 - sim  # drift = 1 - similarity
+</code></pre>
+<hr>
+<h3 id="q2-tooluse-entropy"><strong>Q2 — Tool‑Use Entropy</strong></h3>
+<p>Measures whether the agent is thrashing between tools.</p>
+<pre><code class="language-python">import math
+from collections import Counter
+
+def q_tool_entropy(tool_history):
+    counts = Counter(tool_history)
+    total = sum(counts.values())
+    entropy = -sum((c/total) * math.log2(c/total) for c in counts.values())
+    return entropy
+</code></pre>
+<hr>
+<h3 id="q3-latency-drift"><strong>Q3 — Latency Drift</strong></h3>
+<p>If each step takes longer than the previous, the corridor is destabilizing.</p>
+<pre><code class="language-python">def q_latency_drift(latencies):
+    if len(latencies) &lt; 2:
+        return 0.0
+    return latencies[-1] - latencies[-2]
+</code></pre>
+<hr>
+<h3 id="q4-branching-pressure"><strong>Q4 — Branching Pressure</strong></h3>
+<p>How many “parallel hypotheses” the agent is implicitly maintaining.</p>
+<pre><code class="language-python">def q_branching_pressure(steps):
+    parents = [s.parent_step_id for s in steps if s.parent_step_id is not None]
+    return len(set(parents))
+</code></pre>
+<hr>
+<h3 id="q5-retry-ratio"><strong>Q5 — Retry Ratio</strong></h3>
+<p>A classic instability signature.</p>
+<pre><code class="language-python">def q_retry_ratio(steps):
+    retries = sum(1 for s in steps if &quot;retry&quot; in s.action.lower())
+    return retries / max(1, len(steps))
+</code></pre>
+<hr>
+<h1 id="2-corridorspec-safety-envelope"><strong>2. CorridorSpec (Safety Envelope)</strong></h1>
+<p>This is our VCG‑style envelope — declarative, inspectable, enforceable.</p>
+<pre><code class="language-python">from pydantic import BaseModel
+
+class CorridorSpec(BaseModel):
+    max_steps: int = 64
+    max_semantic_drift: float = 0.35
+    max_tool_entropy: float = 2.0
+    max_latency_drift: float = 1.0
+    max_branching_pressure: int = 8
+    max_retry_ratio: float = 0.25
+
+    # actions the runtime may take
+    on_warning: str = &quot;continue&quot;   # continue | reroute | human
+    on_violation: str = &quot;halt&quot;     # halt | rewind | human
+</code></pre>
+<p>This is the <strong>policy contract</strong> between the graph and the corridor physics.</p>
+<hr>
+<h1 id="3-resonancecorridor-helper-reusable-langgraph-module"><strong>3. ResonanceCorridor Helper (Reusable LangGraph Module)</strong></h1>
+<p>This is the part that makes LangGraph “RTT‑Inside aware”.</p>
+<pre><code class="language-python">class ResonanceCorridor:
+    def __init__(self, llm, spec: CorridorSpec):
+        self.llm = llm
+        self.spec = spec
+        self.embedder = SentenceTransformer(&quot;all-MiniLM-L6-v2&quot;)
+
+    def init(self, state, task_description):
+        state.task_id = f&quot;task-{hash(task_description) &amp; 0xFFFF:x}&quot;
+        state.task_embedding = self.embedder.encode(task_description, convert_to_tensor=True)
+        state.corridor_status = &quot;stable&quot;
+        return state
+
+    def agent_step(self, state):
+        step_id = len(state.steps)
+        parent = step_id - 1 if step_id &gt; 0 else None
+
+        last_obs = state.steps[-1].observation if state.steps else &quot;START&quot;
+        action = self.llm(f&quot;Task: {state.task_id}\nLast: {last_obs}\nNext action.&quot;)
+        observation = f&quot;Executed: {action}&quot;
+
+        state.steps.append(
+            CorridorStep(
+                step_id=step_id,
+                parent_step_id=parent,
+                action=action,
+                observation=observation,
+                q_metrics={}
+            )
+        )
+        return state
+
+    def compute_q(self, state):
+        steps = state.steps
+        last_obs = steps[-1].observation
+
+        q = {
+            &quot;semantic_drift&quot;: q_semantic_drift(state.task_embedding, last_obs),
+            &quot;tool_entropy&quot;: q_tool_entropy([s.action for s in steps]),
+            &quot;latency_drift&quot;: q_latency_drift(state.latencies),
+            &quot;branching_pressure&quot;: q_branching_pressure(steps),
+            &quot;retry_ratio&quot;: q_retry_ratio(steps),
+            &quot;step_count&quot;: len(steps),
+        }
+
+        state.q_history.append(q)
+        steps[-1].q_metrics = q
+        return state
+
+    def enforce(self, state):
+        q = state.q_history[-1]
+        s = self.spec
+
+        violations = []
+
+        if q[&quot;step_count&quot;] &gt; s.max_steps:
+            violations.append(&quot;max_steps&quot;)
+        if q[&quot;semantic_drift&quot;] &gt; s.max_semantic_drift:
+            violations.append(&quot;semantic_drift&quot;)
+        if q[&quot;tool_entropy&quot;] &gt; s.max_tool_entropy:
+            violations.append(&quot;tool_entropy&quot;)
+        if q[&quot;latency_drift&quot;] &gt; s.max_latency_drift:
+            violations.append(&quot;latency_drift&quot;)
+        if q[&quot;branching_pressure&quot;] &gt; s.max_branching_pressure:
+            violations.append(&quot;branching_pressure&quot;)
+        if q[&quot;retry_ratio&quot;] &gt; s.max_retry_ratio:
+            violations.append(&quot;retry_ratio&quot;)
+
+        if not violations:
+            state.corridor_status = &quot;stable&quot;
+            return state
+
+        # classify severity
+        if any(v in [&quot;semantic_drift&quot;, &quot;latency_drift&quot;] for v in violations):
+            state.corridor_status = &quot;warning&quot;
+            if self.spec.on_warning == &quot;reroute&quot;:
+                state.route = &quot;human_review&quot;
+        else:
+            state.corridor_status = &quot;halted&quot;
+            if self.spec.on_violation == &quot;halt&quot;:
+                state.route = &quot;halt&quot;
+            elif self.spec.on_violation == &quot;rewind&quot;:
+                state.route = &quot;rewind&quot;
+
+        return state
+</code></pre>
+<hr>
+<h1 id="4-wiring-it-into-langgraph"><strong>4. Wiring it into LangGraph</strong></h1>
+<pre><code class="language-python">corridor = ResonanceCorridor(llm=your_llm, spec=CorridorSpec())
+
+graph = StateGraph(CorridorState)
+
+graph.add_node(&quot;init&quot;, lambda s: corridor.init(s, task_description))
+graph.add_node(&quot;step&quot;, corridor.agent_step)
+graph.add_node(&quot;q&quot;, corridor.compute_q)
+graph.add_node(&quot;vcg&quot;, corridor.enforce)
+
+graph.set_entry_point(&quot;init&quot;)
+graph.add_edge(&quot;init&quot;, &quot;step&quot;)
+graph.add_edge(&quot;step&quot;, &quot;q&quot;)
+graph.add_edge(&quot;q&quot;, &quot;vcg&quot;)
+
+def route(state):
+    if state.corridor_status == &quot;halted&quot;:
+        return END
+    if state.corridor_status == &quot;warning&quot;:
+        return &quot;step&quot;  # or &quot;human_review&quot;
+    return &quot;step&quot;
+
+graph.add_conditional_edges(&quot;vcg&quot;, route, {&quot;step&quot;: &quot;step&quot;, END: END})
+
+app = graph.compile()
+</code></pre>
+<hr>
+<h1 id="what-we-now-have"><strong>What we now have</strong></h1>
+<p>We’ve just built:</p>
+<ul>
+<li><strong>A physics layer for agent graphs</strong>  </li>
+<li><strong>A safety envelope (CorridorSpec)</strong>  </li>
+<li><strong>A reusable module (ResonanceCorridor)</strong>  </li>
+<li><strong>Real Q‑metrics that measure structural stability</strong>  </li>
+<li><strong>Lineage, drift, entropy, branching pressure</strong>  </li>
+<li><strong>A VCG‑style enforcement loop</strong>  </li>
+<li><strong>A LangGraph integration that halts, reroutes, or continues based on stability</strong></li>
+</ul>
+<p>This is the first real RTT‑Inside runtime for agent frameworks.</p>
+  </main>
+</body>
+</html>

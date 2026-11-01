@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/theories/general_relativity/operators.md">
+  <title>Operators — General Relativity</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/theories/general_relativity/operators.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/theories/general_relativity/operators.md</code>
+  </aside>
+
+  <main>
+<h1 id="operators-general-relativity">Operators — General Relativity</h1>
+<h3 id="triadicframeworks-docstheoriesgeneral_relativityoperatorsmd">TriadicFrameworks /docs/theories/general_relativity/operators.md</h3>
+<p>General Relativity (GR) is a <strong>geometric coherence theory</strong>.<br>
+Its operators act on <strong>spacetime geometry</strong>, <strong>curvature</strong>, <strong>stress‑energy</strong>, and <strong>geodesic structure</strong>.<br>
+Gravity is not a force; it is <strong>coherent curvature</strong>.<br>
+Geodesics are not “paths objects follow”; they are <strong>coherence‑preserving trajectories</strong>.</p>
+<p>This file defines the canonical operators for GR across R0 → R3.</p>
+<hr>
+<h1 id="operator-list">Operator List</h1>
+<p>The core operators are:</p>
+<ul>
+<li><strong>𝓖</strong> — metric operator  </li>
+<li><strong>𝓡</strong> — curvature operator  </li>
+<li><strong>𝓣</strong> — stress‑energy operator  </li>
+<li><strong>𝓓𝓮𝓯</strong> — deformation operator  </li>
+<li><strong>𝓖𝓮𝓸</strong> — geodesic operator  </li>
+<li><strong>𝓒</strong> — coherence operator  </li>
+<li><strong>𝓐</strong> — adjacency operator (causal/metric)  </li>
+<li><strong>𝓢</strong> — causal structure operator  </li>
+<li><strong>𝓡𝓮𝓰</strong> — regime transition operator  </li>
+<li><strong>𝓒𝓁</strong> — collapse operator (geometric failure modes)</li>
+</ul>
+<p>Each operator is geometric, structural, and regime‑aware.</p>
+<hr>
+<h1 id="1-metric-operator-g">1. Metric Operator (𝓖)</h1>
+<h3 id="purpose">Purpose</h3>
+<p>Constructs or updates the metric structure of spacetime.</p>
+<h3 id="form">Form</h3>
+<p>𝓖(metric_signature) → g_{\mu\nu}</p>
+<h3 id="notes">Notes</h3>
+<ul>
+<li>metric must be non‑degenerate  </li>
+<li>metric defines causal structure  </li>
+<li>no force metaphors allowed  </li>
+</ul>
+<hr>
+<h1 id="2-curvature-operator-r">2. Curvature Operator (𝓡)</h1>
+<h3 id="purpose_1">Purpose</h3>
+<p>Computes curvature as a geometric operator field.</p>
+<h3 id="form_1">Form</h3>
+<p>𝓡(g_{\mu\nu}) → R_{\mu\nu\rho\sigma}</p>
+<h3 id="notes_1">Notes</h3>
+<ul>
+<li>curvature is structural, not visualized as a rubber sheet  </li>
+<li>curvature determines geodesic deviation  </li>
+<li>curvature is the core of gravitational behavior  </li>
+</ul>
+<hr>
+<h1 id="3-stressenergy-operator-t">3. Stress‑Energy Operator (𝓣)</h1>
+<h3 id="purpose_2">Purpose</h3>
+<p>Acts as a <strong>source operator</strong> that deforms curvature.</p>
+<h3 id="form_2">Form</h3>
+<p>𝓣(T_{\mu\nu}, g_{\mu\nu}) → curvature_update</p>
+<h3 id="notes_2">Notes</h3>
+<ul>
+<li>stress‑energy does not “pull” or “attract”  </li>
+<li>it modifies curvature structurally  </li>
+<li>operator must preserve coherence  </li>
+</ul>
+<hr>
+<h1 id="4-deformation-operator-def">4. Deformation Operator (𝓓𝓮𝓯)</h1>
+<h3 id="purpose_3">Purpose</h3>
+<p>Applies geometric deformation to the metric or curvature.</p>
+<h3 id="form_3">Form</h3>
+<p>𝓓𝓮𝓯(geometry, deformation_signature) → updated_geometry</p>
+<h3 id="notes_3">Notes</h3>
+<ul>
+<li>deformation must preserve geometric invariants  </li>
+<li>no Newtonian fallback  </li>
+<li>no semantic drift  </li>
+</ul>
+<hr>
+<h1 id="5-geodesic-operator-geo">5. Geodesic Operator (𝓖𝓮𝓸)</h1>
+<h3 id="purpose_4">Purpose</h3>
+<p>Generates geodesics as <strong>coherence trajectories</strong>.</p>
+<h3 id="form_4">Form</h3>
+<p>𝓖𝓮𝓸(g_{\mu\nu}, initial_conditions) → geodesic_bundle</p>
+<h3 id="notes_4">Notes</h3>
+<ul>
+<li>geodesics are not force‑driven paths  </li>
+<li>they preserve coherence under curvature  </li>
+<li>causal structure must remain intact  </li>
+</ul>
+<hr>
+<h1 id="6-coherence-operator-c">6. Coherence Operator (𝓒)</h1>
+<h3 id="purpose_5">Purpose</h3>
+<p>Evaluates geometric coherence.</p>
+<h3 id="form_5">Form</h3>
+<p>𝓒(geometry, curvature, geodesics) → coherence_score</p>
+<h3 id="notes_5">Notes</h3>
+<ul>
+<li>coherence = geometric stability  </li>
+<li>no entropy or probabilistic metrics  </li>
+<li>coherence must be structural  </li>
+</ul>
+<hr>
+<h1 id="7-adjacency-operator-a">7. Adjacency Operator (𝓐)</h1>
+<h3 id="purpose_6">Purpose</h3>
+<p>Measures geometric adjacency (metric or causal).</p>
+<h3 id="form_6">Form</h3>
+<p>𝓐(p, q, g_{\mu\nu}) → adjacency_metric</p>
+<h3 id="notes_6">Notes</h3>
+<ul>
+<li>adjacency is geometric, not semantic  </li>
+<li>supports causal and metric neighborhoods  </li>
+<li>must be regime‑stable  </li>
+</ul>
+<hr>
+<h1 id="8-causal-structure-operator-s">8. Causal Structure Operator (𝓢)</h1>
+<h3 id="purpose_7">Purpose</h3>
+<p>Constructs and updates causal cones.</p>
+<h3 id="form_7">Form</h3>
+<p>𝓢(g_{\mu\nu}) → causal_structure</p>
+<h3 id="notes_7">Notes</h3>
+<ul>
+<li>causal structure must remain coherent  </li>
+<li>no superluminal drift  </li>
+<li>no semantic interpretations  </li>
+</ul>
+<hr>
+<h1 id="9-regime-transition-operator-reg">9. Regime Transition Operator (𝓡𝓮𝓰)</h1>
+<h3 id="purpose_8">Purpose</h3>
+<p>Transitions geometric behavior across RTT regimes.</p>
+<h3 id="form_8">Form</h3>
+<p>𝓡𝓮𝓰(geometry, R_i → R_j) → transitioned_geometry</p>
+<h3 id="notes_8">Notes</h3>
+<ul>
+<li>transitions must preserve coherence  </li>
+<li>R3 introduces dimensional curvature operators  </li>
+<li>illegal transitions trigger collapse  </li>
+</ul>
+<hr>
+<h1 id="10-collapse-operator-cl">10. Collapse Operator (𝓒𝓁)</h1>
+<h3 id="purpose_9">Purpose</h3>
+<p>Classifies geometric failure modes.</p>
+<h3 id="form_9">Form</h3>
+<p>𝓒𝓁(geometry) → collapse_mode</p>
+<h3 id="modes">Modes</h3>
+<ul>
+<li><strong>G1:</strong> metric degeneracy  </li>
+<li><strong>G2:</strong> curvature divergence  </li>
+<li><strong>G3:</strong> geodesic incoherence  </li>
+<li><strong>G4:</strong> causal structure failure  </li>
+</ul>
+<h3 id="notes_9">Notes</h3>
+<p>Collapse is geometric, not probabilistic.</p>
+<hr>
+<h1 id="summary">Summary</h1>
+<p>General Relativity operators define:</p>
+<ul>
+<li>metric structure (𝓖)  </li>
+<li>curvature (𝓡)  </li>
+<li>stress‑energy deformation (𝓣)  </li>
+<li>geometric deformation (𝓓𝓮𝓯)  </li>
+<li>geodesics (𝓖𝓮𝓸)  </li>
+<li>coherence (𝓒)  </li>
+<li>adjacency (𝓐)  </li>
+<li>causal structure (𝓢)  </li>
+<li>regime transitions (𝓡𝓮𝓰)  </li>
+<li>collapse modes (𝓒𝓁)</li>
+</ul>
+<p>Gravity = <strong>coherent curvature</strong>.<br>
+Geodesics = <strong>coherence trajectories</strong>.<br>
+Spacetime = <strong>a geometric operator field</strong>.</p>
+  </main>
+</body>
+</html>

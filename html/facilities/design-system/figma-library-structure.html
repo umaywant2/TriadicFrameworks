@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/facilities/design-system/figma-library-structure.md">
+  <title>🎨 RTT Facilities — Figma Library Structure</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/facilities/design-system/figma-library-structure.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/facilities/design-system/figma-library-structure.md</code>
+  </aside>
+
+  <main>
+<h1 id="rtt-facilities-figma-library-structure">🎨 RTT Facilities — Figma Library Structure</h1>
+<p><strong>Canonical Organization &amp; Design System Integrity</strong></p>
+<p>This document defines the <strong>canonical Figma library structure</strong> for the RTT Facilities design system.</p>
+<p>Its purpose is to ensure that:
+- Components are discoverable and semantically grouped<br>
+- Governance concepts are reflected in structure<br>
+- Contributors cannot accidentally fragment meaning<br>
+- The library scales without reorganization  </p>
+<p>Structure is treated as a <strong>governance artifact</strong>, not a convenience.</p>
+<hr>
+<h2 id="1-library-philosophy">1. Library Philosophy</h2>
+<p>The Figma library is organized to reflect <strong>Facilities meaning</strong>, not UI patterns.</p>
+<ul>
+<li>Folders encode <strong>domain and governance concepts</strong></li>
+<li>Components are grouped by <strong>what they represent</strong>, not how they look</li>
+<li>Naming and structure reinforce each other</li>
+<li>No component exists without a clear semantic home</li>
+</ul>
+<hr>
+<h2 id="2-toplevel-figma-files">2. Top‑Level Figma Files</h2>
+<p>Each major domain has its own canonical library file.</p>
+<pre><code>RTT Facilities — Core Library
+RTT Facilities — Dashboards
+RTT Facilities — City‑Facing
+RTT Facilities — Domain Extensions (AGERI, etc.)
+</code></pre>
+<p>Cross‑domain reuse flows <strong>from Core outward</strong>, never inward.</p>
+<hr>
+<h2 id="3-core-library-file-structure">3. Core Library File Structure</h2>
+<p><strong>RTT Facilities — Core Library</strong></p>
+<pre><code>📁 00 — Foundations
+📁 01 — Systems
+📁 02 — Corridors
+📁 03 — Scores
+📁 04 — Capital
+📁 05 — Audit
+📁 06 — Status
+📁 07 — Navigation
+📁 08 — Layout
+📁 09 — Controls
+📁 99 — Deprecated
+</code></pre>
+<p>Folder numbers are fixed and must not be reordered.</p>
+<hr>
+<h2 id="4-foundations-00">4. Foundations (00)</h2>
+<pre><code>📁 00 — Foundations
+  ├─ Color Tokens
+  ├─ Typography
+  ├─ Spacing &amp; Grid
+  ├─ Iconography
+  ├─ Motion Guidelines
+</code></pre>
+<p>Foundations are <strong>never duplicated</strong> in other files.</p>
+<hr>
+<h2 id="5-systems-01">5. Systems (01)</h2>
+<pre><code>📁 01 — Systems
+  ├─ SystemBadge
+  ├─ DependencyIndicator
+  ├─ SystemStatusFlag
+</code></pre>
+<p>Represents infrastructure systems (Electrical, Water, etc.).</p>
+<hr>
+<h2 id="6-corridors-02">6. Corridors (02)</h2>
+<pre><code>📁 02 — Corridors
+  ├─ CorridorBoundary
+  ├─ CorridorClassBadge
+  ├─ CorridorRiskIndicator
+</code></pre>
+<p>Corridor components are <strong>first‑class governance artifacts</strong>.</p>
+<hr>
+<h2 id="7-scores-03">7. Scores (03)</h2>
+<pre><code>📁 03 — Scores
+  ├─ DriftTrend
+  ├─ HarmonicsIndicator
+  ├─ PropagationRiskBadge
+</code></pre>
+<p>Score components map directly to the Global Index Schema.</p>
+<hr>
+<h2 id="8-capital-04">8. Capital (04)</h2>
+<pre><code>📁 04 — Capital
+  ├─ ModernizationCycleBadge
+  ├─ CapitalPriorityIndicator
+  ├─ DeferredRiskFlag
+</code></pre>
+<p>Capital components must support <strong>decision explainability</strong>.</p>
+<hr>
+<h2 id="9-audit-05">9. Audit (05)</h2>
+<pre><code>📁 05 — Audit
+  ├─ AuditStatusFlag
+  ├─ ReviewTriggerIndicator
+  ├─ FollowUpRequiredBadge
+</code></pre>
+<p>Audit components make accountability visible.</p>
+<hr>
+<h2 id="10-status-06">10. Status (06)</h2>
+<pre><code>📁 06 — Status
+  ├─ OperationalStateIndicator
+  ├─ InterventionActiveFlag
+  ├─ PublicVisibilityBadge
+</code></pre>
+<p>Status components reflect <strong>current governance state</strong>, not alerts.</p>
+<hr>
+<h2 id="11-navigation-07">11. Navigation (07)</h2>
+<pre><code>📁 07 — Navigation
+  ├─ GlobalNav
+  ├─ CorridorSelector
+  ├─ SystemFilter
+</code></pre>
+<p>Navigation components are semantic, not decorative.</p>
+<hr>
+<h2 id="12-layout-08">12. Layout (08)</h2>
+<pre><code>📁 08 — Layout
+  ├─ DashboardFrame
+  ├─ PanelContainer
+  ├─ SectionHeader
+</code></pre>
+<p>Layout components provide structure without meaning leakage.</p>
+<hr>
+<h2 id="13-controls-09">13. Controls (09)</h2>
+<pre><code>📁 09 — Controls
+  ├─ Toggle
+  ├─ Dropdown
+  ├─ Button
+</code></pre>
+<p>Controls are generic and never encode Facilities meaning.</p>
+<hr>
+<h2 id="14-deprecated-99">14. Deprecated (99)</h2>
+<pre><code>📁 99 — Deprecated
+</code></pre>
+<p>Deprecated components:
+- Are clearly marked
+- Are not reused
+- Remain for reference only</p>
+<p>Deletion requires steward approval.</p>
+<hr>
+<h2 id="15-domain-extension-libraries">15. Domain Extension Libraries</h2>
+<p>Domain extensions (e.g., <strong>RTT‑AGERI</strong>) follow the same structure:</p>
+<pre><code>RTT Facilities — AGERI
+  ├─ 00 — Foundations (references Core)
+  ├─ 01 — Systems
+  ├─ 02 — Exposure
+  ├─ 03 — Climate Stress
+</code></pre>
+<p>Extensions <strong>add meaning without redefining it</strong>.</p>
+<hr>
+<h2 id="16-enforcement-rules">16. Enforcement Rules</h2>
+<ul>
+<li>Components must live in exactly one folder  </li>
+<li>Folder hopping is prohibited  </li>
+<li>New folders require steward approval  </li>
+<li>Structure changes are governance events  </li>
+</ul>
+<hr>
+<h2 id="17-canonical-status">17. Canonical Status</h2>
+<p>This Figma library structure is <strong>canonical</strong>.</p>
+<p>All RTT Facilities design work must conform to it.</p>
+  </main>
+</body>
+</html>

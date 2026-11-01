@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/theories/module_rtt3.schema.json.md">
+  <title>module_rtt3.schema.json</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/theories/module_rtt3.schema.json.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/theories/module_rtt3.schema.json.md</code>
+  </aside>
+
+  <main>
+<pre><code class="language-json">{
+  &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;title&quot;: &quot;RTT/3 Substrate Integration Schema&quot;,
+  &quot;description&quot;: &quot;Schema for RTT/3 substrate-integration files across all TriadicFrameworks modules.&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+
+  &quot;properties&quot;: {
+    &quot;ai.module&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;Module identifier (e.g., standard_model.rtt3).&quot;
+    },
+
+    &quot;ai.version&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;Version of the RTT/3 substrate integration.&quot;
+    },
+
+    &quot;substrate_integration&quot;: {
+      &quot;type&quot;: &quot;array&quot;,
+      &quot;description&quot;: &quot;List of substrate-level integration structures.&quot;,
+      &quot;items&quot;: {
+        &quot;type&quot;: &quot;object&quot;,
+        &quot;properties&quot;: {
+          &quot;integration_name&quot;: {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;Name of the integration structure (e.g., substrate_resonance_map).&quot;
+          },
+          &quot;description&quot;: {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;Explanation of how this structure integrates the module with substrate-level behavior.&quot;
+          },
+          &quot;imports&quot;: {
+            &quot;type&quot;: &quot;array&quot;,
+            &quot;description&quot;: &quot;List of substrate-level invariants or structures imported from deeper layers.&quot;,
+            &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; }
+          },
+          &quot;exports&quot;: {
+            &quot;type&quot;: &quot;array&quot;,
+            &quot;description&quot;: &quot;List of structures this module provides to higher layers.&quot;,
+            &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; }
+          },
+          &quot;regime_behavior&quot;: {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;description&quot;: &quot;Behavior of the integration structure across regimes R1–R4.&quot;,
+            &quot;properties&quot;: {
+              &quot;R1&quot;: { &quot;type&quot;: &quot;string&quot; },
+              &quot;R2&quot;: { &quot;type&quot;: &quot;string&quot; },
+              &quot;R3&quot;: { &quot;type&quot;: &quot;string&quot; },
+              &quot;R4&quot;: { &quot;type&quot;: &quot;string&quot; }
+            },
+            &quot;required&quot;: [&quot;R1&quot;, &quot;R2&quot;, &quot;R3&quot;, &quot;R4&quot;]
+          },
+          &quot;coherence_constraints&quot;: {
+            &quot;type&quot;: &quot;array&quot;,
+            &quot;description&quot;: &quot;List of constraints required to maintain coherence.&quot;,
+            &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; }
+          },
+          &quot;drift_boundary&quot;: {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;Description of conceptual drift to avoid.&quot;
+          }
+        },
+        &quot;required&quot;: [
+          &quot;integration_name&quot;,
+          &quot;description&quot;,
+          &quot;imports&quot;,
+          &quot;exports&quot;,
+          &quot;regime_behavior&quot;,
+          &quot;coherence_constraints&quot;,
+          &quot;drift_boundary&quot;
+        ]
+      }
+    },
+
+    &quot;notes&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;Additional notes for RTT/3 reasoning.&quot;
+    }
+  },
+
+  &quot;required&quot;: [&quot;ai.module&quot;, &quot;ai.version&quot;, &quot;substrate_integration&quot;]
+}
+</code></pre>
+  </main>
+</body>
+</html>

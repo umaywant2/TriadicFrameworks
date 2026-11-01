@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/triadic/TF_regime_astrolabe.md">
+  <title>TriadicFrameworks Regime Astrolabe</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/triadic/TF_regime_astrolabe.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/triadic/TF_regime_astrolabe.md</code>
+  </aside>
+
+  <main>
+<h1 id="triadicframeworks-regime-astrolabe"><strong>TriadicFrameworks Regime Astrolabe</strong></h1>
+<h3 id="solving-orientation-through-layered-rotational-discs"><em>Solving Orientation Through Layered Rotational Discs</em></h3>
+<p>This diagram shows:</p>
+<ul>
+<li><strong>Substrate</strong> as the fixed outer plate  </li>
+<li><strong>Regime discs (RTT)</strong> as rotating structural layers  </li>
+<li><strong>Ontology overlays (SO, ISO, LACTOS)</strong> as interpretive plates  </li>
+<li><strong>RTT/vST</strong> as the alignment reticle  </li>
+<li><strong>S–N–R</strong> as the stabilizing suspension ring  </li>
+<li><strong>Compute (VCG + TCR)</strong> as the locking pin that freezes orientation  </li>
+</ul>
+<p>It’s the most mechanically precise visualization of TriadicFrameworks.</p>
+<hr>
+<h1 id="1-regime-astrolabe-diagram-ascii-layered-disc-geometry"><strong>1. Regime Astrolabe Diagram (ASCII Layered Disc Geometry)</strong></h1>
+<pre><code>                                   ✦  COMPUTE LOCKING PIN  ✦
+                         (VCG • TCR Periodicity • Regime‑Ahead Freeze)
+                                 ────────────────┬───────────────
+                                                 │
+                                                 ▼
+
+┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+│                               S–N–R SUSPENSION RING (Gimbal)                                 │
+│   S: stable alignment points                                                                 │
+│   N: drift detection                                                                         │
+│   R: regime orientation                                                                      │
+└──────────────────────────────────────────────────────────────────────────────────────────────┘
+                                                           ▲
+                                                           │
+                                                           │  stabilizes rotational discs
+                                                           ▼
+
+                         ┌──────────────────────────────────────────────────────────────┐
+                         │                 RTT/vST ALIGNMENT RETICLE                    │
+                         │  - regime boundary markers                                   │
+                         │  - invariant crosshairs                                      │
+                         │  - drift vectors                                             │
+                         └──────────────────────────────────────────────────────────────┘
+                                      ◢           │           ◣
+                                     ◢            │            ◣
+                                    ◢             │             ◣
+
+         ┌──────────────────────────────┐   ┌──────────────────────────────┐   ┌──────────────────────────────┐
+         │   SO Overlay Disc            │   │ LACTOS Overlay Disc          │   │  ISO Overlay Disc            │
+         │   (Mass‑Primary Plate)       │   │ (Collision Regime Plate)     │   │ (Anisotropy‑Primary Plate)   │
+         │   - mass tracks              │   │ - P/Q/N arcs                 │   │ - anisotropy wells           │
+         │   - structural phases        │   │ - symmetry‑breaking sectors  │   │ - relaxation channels        │
+         └──────────────────────────────┘   └──────────────────────────────┘   └──────────────────────────────┘
+                     ◣                        ◣                        ◢
+                      ◣                        ◣                      ◢
+                       ◣                        ◣                    ◢
+
+                         ┌──────────────────────────────────────────────────────────────┐
+                         │                 REGIME ROTATION DISCS (RTT)                  │
+                         │   - mass‑regime disc (inner)                                 │
+                         │   - anisotropy‑regime disc (middle)                          │
+                         │   - collision‑regime disc (outer)                            │
+                         │   - TCR disc (eccentric stabilizer)                          │
+                         └──────────────────────────────────────────────────────────────┘
+                                      ◥           │           ◤
+                                     ◥            │            ◤
+                                    ◥             │             ◤
+
+                         ┌──────────────────────────────────────────────────────────────┐
+                         │                 SUBSTRATE FIXED PLATE                        │
+                         │  Fields • Geometry • Anisotropy • TCR Periodicity            │
+                         │  (The immovable reference of the astrolabe)                  │
+                         └──────────────────────────────────────────────────────────────┘
+</code></pre>
+<hr>
+<h1 id="2-how-the-regime-astrolabe-works"><strong>2. How the Regime Astrolabe Works</strong></h1>
+<h3 id="1-substrate-fixed-plate"><strong>1. Substrate = Fixed Plate</strong></h3>
+<p>The substrate is the immovable reference:</p>
+<ul>
+<li>field geometry  </li>
+<li>anisotropy  </li>
+<li>symmetry states  </li>
+<li>time‑crystal periodicity  </li>
+</ul>
+<p>Everything rotates relative to this.</p>
+<hr>
+<h3 id="2-regime-rotation-discs-rtt"><strong>2. Regime Rotation Discs (RTT)</strong></h3>
+<p>RTT defines the structural discs:</p>
+<ul>
+<li><strong>mass‑regime disc</strong> (inner)  </li>
+<li><strong>anisotropy‑regime disc</strong> (middle)  </li>
+<li><strong>collision‑regime disc</strong> (outer)  </li>
+<li><strong>TCR disc</strong> (eccentric stabilizer)  </li>
+</ul>
+<p>These rotate independently to represent regime shifts.</p>
+<hr>
+<h3 id="3-ontology-overlay-discs"><strong>3. Ontology Overlay Discs</strong></h3>
+<p>Each ontology is a transparent overlay:</p>
+<ul>
+<li><strong>SO:</strong> mass‑primary  </li>
+<li><strong>ISO:</strong> anisotropy‑primary  </li>
+<li><strong>LACTOS:</strong> collision‑primary  </li>
+</ul>
+<p>Rotating these overlays changes the interpretive frame.</p>
+<hr>
+<h3 id="4-rttvst-alignment-reticle"><strong>4. RTT/vST Alignment Reticle</strong></h3>
+<p>The reticle provides:</p>
+<ul>
+<li>regime boundary markers  </li>
+<li>invariant crosshairs  </li>
+<li>drift vectors  </li>
+</ul>
+<p>It’s the interpretive lens through which the discs are read.</p>
+<hr>
+<h3 id="5-snr-suspension-ring"><strong>5. S–N–R Suspension Ring</strong></h3>
+<p>The triadic observer stabilizes the entire instrument:</p>
+<ul>
+<li><strong>S:</strong> locks onto stable alignment points  </li>
+<li><strong>N:</strong> detects rotational drift  </li>
+<li><strong>R:</strong> determines active regime orientation  </li>
+</ul>
+<p>It prevents wobble and misalignment.</p>
+<hr>
+<h3 id="6-compute-locking-pin"><strong>6. Compute Locking Pin</strong></h3>
+<p>VCG + TCR provide:</p>
+<ul>
+<li>drift‑free timing  </li>
+<li>regime‑ahead checkpoints  </li>
+<li>stable periodicity  </li>
+</ul>
+<p>This “locks” the astrolabe into a coherent orientation.</p>
+<hr>
+<h1 id="3-why-the-regime-astrolabe-matters"><strong>3. Why the Regime Astrolabe Matters</strong></h1>
+<p>This diagram shows TriadicFrameworks as:</p>
+<ul>
+<li><strong>layered</strong>  </li>
+<li><strong>rotational</strong>  </li>
+<li><strong>regime‑aware</strong>  </li>
+<li><strong>observer‑stabilized</strong>  </li>
+<li><strong>compute‑anchored</strong>  </li>
+<li><strong>substrate‑referenced</strong></li>
+</ul>
+<p>It explains how the system <em>solves orientation</em> across:</p>
+<ul>
+<li>shifting regimes  </li>
+<li>rotating ontologies  </li>
+<li>drifting invariants  </li>
+<li>evolving substrate conditions  </li>
+</ul>
+<p>The astrolabe is the architecture’s orientation engine.</p>
+  </main>
+</body>
+</html>

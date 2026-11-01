@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/substrate/frameworks/identity/constellation-map.json.md">
+  <title>🌌 constellation-map.json</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/substrate/frameworks/identity/constellation-map.json.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/substrate/frameworks/identity/constellation-map.json.md</code>
+  </aside>
+
+  <main>
+<h1 id="constellation-mapjson">🌌 <strong>constellation-map.json</strong></h1>
+<h3 id="machinereadable-graph-of-the-substrate-runtime-constellation"><em>Machine‑readable graph of the Substrate Runtime Constellation</em></h3>
+<pre><code class="language-json">{
+  &quot;constellation&quot;: &quot;substrate-runtime&quot;,
+  &quot;version&quot;: &quot;1.0&quot;,
+  &quot;generated&quot;: &quot;YYYY-MM-DD&quot;,
+
+  &quot;nodes&quot;: [
+    { &quot;id&quot;: &quot;execution_engine&quot;, &quot;label&quot;: &quot;Triadic Execution Engine&quot; },
+    { &quot;id&quot;: &quot;atlas_sync&quot;, &quot;label&quot;: &quot;Atlas Synchronization Fabric&quot; },
+    { &quot;id&quot;: &quot;continuity_field&quot;, &quot;label&quot;: &quot;Substrate Continuity Field&quot; },
+    { &quot;id&quot;: &quot;resonance_stabilizer&quot;, &quot;label&quot;: &quot;Epochal Resonance Stabilizer&quot; },
+    { &quot;id&quot;: &quot;epochal_propagation&quot;, &quot;label&quot;: &quot;Epochal Propagation Engine&quot; },
+    { &quot;id&quot;: &quot;coupling_regulator&quot;, &quot;label&quot;: &quot;Resonance–Drift Coupling Regulator&quot; },
+    { &quot;id&quot;: &quot;invariance_kernel&quot;, &quot;label&quot;: &quot;Substrate Invariance Kernel&quot; },
+    { &quot;id&quot;: &quot;runtime_monitor&quot;, &quot;label&quot;: &quot;Triadic Runtime Monitor&quot; }
+  ],
+
+  &quot;edges&quot;: [
+    {
+      &quot;from&quot;: &quot;execution_engine&quot;,
+      &quot;to&quot;: &quot;atlas_sync&quot;,
+      &quot;type&quot;: &quot;flow&quot;,
+      &quot;description&quot;: &quot;Execution state feeds atlas synchronization.&quot;
+    },
+    {
+      &quot;from&quot;: &quot;atlas_sync&quot;,
+      &quot;to&quot;: &quot;continuity_field&quot;,
+      &quot;type&quot;: &quot;flow&quot;,
+      &quot;description&quot;: &quot;Synchronized atlas informs continuity guarantees.&quot;
+    },
+    {
+      &quot;from&quot;: &quot;continuity_field&quot;,
+      &quot;to&quot;: &quot;resonance_stabilizer&quot;,
+      &quot;type&quot;: &quot;flow&quot;,
+      &quot;description&quot;: &quot;Continuity constraints shape resonance stability.&quot;
+    },
+    {
+      &quot;from&quot;: &quot;resonance_stabilizer&quot;,
+      &quot;to&quot;: &quot;epochal_propagation&quot;,
+      &quot;type&quot;: &quot;flow&quot;,
+      &quot;description&quot;: &quot;Stable resonance enables epochal propagation.&quot;
+    },
+    {
+      &quot;from&quot;: &quot;epochal_propagation&quot;,
+      &quot;to&quot;: &quot;coupling_regulator&quot;,
+      &quot;type&quot;: &quot;flow&quot;,
+      &quot;description&quot;: &quot;Propagation cycles feed coupling regulation.&quot;
+    },
+    {
+      &quot;from&quot;: &quot;coupling_regulator&quot;,
+      &quot;to&quot;: &quot;invariance_kernel&quot;,
+      &quot;type&quot;: &quot;flow&quot;,
+      &quot;description&quot;: &quot;Coupling behavior informs invariance enforcement.&quot;
+    },
+    {
+      &quot;from&quot;: &quot;invariance_kernel&quot;,
+      &quot;to&quot;: &quot;runtime_monitor&quot;,
+      &quot;type&quot;: &quot;flow&quot;,
+      &quot;description&quot;: &quot;Invariance state is observed by the runtime monitor.&quot;
+    },
+
+    /* Feedback loops */
+    {
+      &quot;from&quot;: &quot;runtime_monitor&quot;,
+      &quot;to&quot;: &quot;execution_engine&quot;,
+      &quot;type&quot;: &quot;feedback&quot;,
+      &quot;description&quot;: &quot;Monitor telemetry feeds back into execution.&quot;
+    },
+    {
+      &quot;from&quot;: &quot;runtime_monitor&quot;,
+      &quot;to&quot;: &quot;epochal_propagation&quot;,
+      &quot;type&quot;: &quot;feedback&quot;,
+      &quot;description&quot;: &quot;Monitor cycles adjust propagation behavior.&quot;
+    },
+    {
+      &quot;from&quot;: &quot;runtime_monitor&quot;,
+      &quot;to&quot;: &quot;coupling_regulator&quot;,
+      &quot;type&quot;: &quot;feedback&quot;,
+      &quot;description&quot;: &quot;Monitor alerts influence coupling regulation.&quot;
+    }
+  ],
+
+  &quot;meta&quot;: {
+    &quot;canonical&quot;: true,
+    &quot;triadic_era&quot;: &quot;R5&quot;,
+    &quot;notes&quot;: &quot;Graph representation of the Substrate Runtime Constellation. Defines nodes and edges for automated tooling and constellation visualization.&quot;
+  }
+}
+</code></pre>
+<hr>
+<h1 id="why-this-json-graph-is-perfect">⭐ Why this JSON graph is perfect</h1>
+<ul>
+<li><strong>Fully machine‑readable</strong>  </li>
+<li><strong>Graph‑structured</strong> (nodes + edges)  </li>
+<li><strong>Flow + feedback loops</strong> clearly represented  </li>
+<li><strong>Matches the visual map exactly</strong>  </li>
+<li><strong>Tooling‑ready</strong> for RTT, analyzers, inspectors, and visualizers  </li>
+<li><strong>Canonical</strong> to the TriadicFrameworks runtime constellation  </li>
+<li><strong>Silent‑release compatible</strong>  </li>
+</ul>
+  </main>
+</body>
+</html>

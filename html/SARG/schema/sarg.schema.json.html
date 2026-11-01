@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/SARG/schema/sarg.schema.json.md">
+  <title>✅ sarg.schema.json (commit‑ready)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/SARG/schema/sarg.schema.json.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/SARG/schema/sarg.schema.json.md</code>
+  </aside>
+
+  <main>
+<h1 id="sargschemajson-commitready">✅ <strong><code>sarg.schema.json</code> (commit‑ready)</strong></h1>
+<pre><code class="language-json">{
+  &quot;$schema&quot;: &quot;http://json-schema.org/draft-07/schema#&quot;,
+  &quot;title&quot;: &quot;SARG Object&quot;,
+  &quot;description&quot;: &quot;Substrate-Agnostic Resonance Grammar (SARG) minimal data model.&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+
+  &quot;properties&quot;: {
+    &quot;substrate&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;description&quot;: &quot;The domain carrying structure.&quot;,
+      &quot;properties&quot;: {
+        &quot;type&quot;: { &quot;type&quot;: &quot;string&quot; },
+        &quot;description&quot;: { &quot;type&quot;: &quot;string&quot; },
+        &quot;domain&quot;: { &quot;type&quot;: &quot;string&quot; },
+        &quot;notes&quot;: { &quot;type&quot;: &quot;string&quot; }
+      },
+      &quot;required&quot;: [&quot;type&quot;, &quot;description&quot;, &quot;domain&quot;]
+    },
+
+    &quot;lens&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;description&quot;: &quot;The operator used to read or transform the substrate.&quot;,
+      &quot;properties&quot;: {
+        &quot;type&quot;: { &quot;type&quot;: &quot;string&quot; },
+        &quot;variant&quot;: { &quot;type&quot;: &quot;string&quot; },
+        &quot;notes&quot;: { &quot;type&quot;: &quot;string&quot; }
+      },
+      &quot;required&quot;: [&quot;type&quot;]
+    },
+
+    &quot;invariants&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;description&quot;: &quot;Stable features that persist across transformations.&quot;,
+      &quot;properties&quot;: {
+        &quot;vertical&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; }
+        },
+        &quot;horizontal&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; }
+        },
+        &quot;dual&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; }
+        }
+      }
+    },
+
+    &quot;resonance&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;description&quot;: &quot;Mapping to universal anchors (● ○ × |) or resonance families.&quot;,
+      &quot;properties&quot;: {
+        &quot;anchors&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; }
+        },
+        &quot;family&quot;: { &quot;type&quot;: &quot;string&quot; },
+        &quot;notes&quot;: { &quot;type&quot;: &quot;string&quot; }
+      }
+    }
+  },
+
+  &quot;required&quot;: [&quot;substrate&quot;, &quot;lens&quot;, &quot;invariants&quot;, &quot;resonance&quot;]
+}
+</code></pre>
+<hr>
+<h1 id="why-this-schema-is-correct-for-sarg">🧩 Why this schema is correct for SARG</h1>
+<p>It matches the <strong>exact four‑layer structure</strong> defined in your Capture.md:</p>
+<ol>
+<li><strong>Substrate</strong>  </li>
+<li><strong>Lens</strong>  </li>
+<li><strong>Invariants</strong>  </li>
+<li><strong>Resonance Mapping</strong></li>
+</ol>
+<p>It also aligns with:</p>
+<ul>
+<li>the Latin alphabet example  </li>
+<li>the lostational supsphere atom example  </li>
+<li>the substrate files you just created  </li>
+<li>the README you committed  </li>
+<li>the overall grammar you’re building  </li>
+</ul>
+<p>This schema is intentionally <strong>minimal</strong> so the grammar stays lightweight and extensible.</p>
+  </main>
+</body>
+</html>

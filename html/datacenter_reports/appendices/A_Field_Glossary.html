@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/datacenter_reports/appendices/A_Field_Glossary.md">
+  <title>Appendix A — Field Glossary</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/datacenter_reports/appendices/A_Field_Glossary.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/datacenter_reports/appendices/A_Field_Glossary.md</code>
+  </aside>
+
+  <main>
+<h1 id="appendix-a-field-glossary">Appendix A — Field Glossary</h1>
+<p>RTT‑Inside • Structural • Operator‑First</p>
+<p>This glossary defines the core fields, terms, and structural primitives used
+throughout the Datacenter Reports module. Every tensor, plot, evaluator, and
+diagnostic tool in this module relies on these definitions.</p>
+<p>The glossary is designed to be:</p>
+<ul>
+<li><strong>student‑ready</strong> (plain language first)</li>
+<li><strong>operator‑first</strong> (actionable meaning)</li>
+<li><strong>RTT‑aligned</strong> (regime + dimensional context)</li>
+<li><strong>AI‑parsable</strong> (consistent formatting)</li>
+<li><strong>drift‑bounded</strong> (stable definitions across modules)</li>
+</ul>
+<hr>
+<h2 id="structural-fields-rtt-core">🏗️ Structural Fields (RTT Core)</h2>
+<h3 id="facilities"><strong>Facilities</strong></h3>
+<p>Physical infrastructure supporting compute operations: buildings, racks, cooling,
+power delivery, fiber, and environmental envelopes.</p>
+<p><strong>Regime relevance:</strong> stable → transitional<br>
+<strong>Dimensional ties:</strong> infrastructure, compute</p>
+<hr>
+<h3 id="governance"><strong>Governance</strong></h3>
+<p>Decision‑making structures, policies, escalation paths, and operational authority
+that determine how the datacenter behaves under load, change, or crisis.</p>
+<p><strong>Regime relevance:</strong> stable → emergent<br>
+<strong>Dimensional ties:</strong> governance, cultural</p>
+<hr>
+<h3 id="cultural-substrate"><strong>Cultural Substrate</strong></h3>
+<p>Human norms, communication patterns, team cohesion, and shared operational
+intuition. Often the strongest predictor of drift or coherence.</p>
+<p><strong>Regime relevance:</strong> emergent<br>
+<strong>Dimensional ties:</strong> cultural, human</p>
+<hr>
+<h3 id="standards"><strong>Standards</strong></h3>
+<p>Formalized constraints: ASHRAE envelopes, ISO frameworks, SOC2, Uptime tiers,
+internal SRE rules, and canonical operating procedures.</p>
+<p><strong>Regime relevance:</strong> stable<br>
+<strong>Dimensional ties:</strong> governance, infrastructure</p>
+<hr>
+<h3 id="human-envelope"><strong>Human Envelope</strong></h3>
+<p>Operator load, cognitive bandwidth, fatigue, training, and team resilience.
+Determines how well the system behaves under stress.</p>
+<p><strong>Regime relevance:</strong> transitional → chaotic<br>
+<strong>Dimensional ties:</strong> human, cultural</p>
+<hr>
+<h2 id="dimensional-fields-rtt-stack">🌍 Dimensional Fields (RTT Stack)</h2>
+<h3 id="planetary"><strong>Planetary</strong></h3>
+<p>Environmental, geographic, and regional constraints: climate, water availability,
+grid stability, seismic profile, and regional fiber topology.</p>
+<h3 id="cultural"><strong>Cultural</strong></h3>
+<p>Local norms, communication styles, institutional memory, and cross‑team
+alignment.</p>
+<h3 id="governance_1"><strong>Governance</strong></h3>
+<p>Formal and informal decision‑making structures.</p>
+<h3 id="economic"><strong>Economic</strong></h3>
+<p>Cost envelopes, incentives, resource allocation, and budget rhythms.</p>
+<h3 id="compute"><strong>Compute</strong></h3>
+<p>Density, performance, thermal behavior, and workload patterns.</p>
+<h3 id="infrastructure"><strong>Infrastructure</strong></h3>
+<p>Power, cooling, fiber, physical layout, and mechanical systems.</p>
+<hr>
+<h2 id="triadic-stack-rtt-structural-layer">🔺 Triadic Stack (RTT Structural Layer)</h2>
+<h3 id="layer-1-physical"><strong>Layer 1 — Physical</strong></h3>
+<p>Hardware, racks, cooling, power, fiber.</p>
+<h3 id="layer-2-logical"><strong>Layer 2 — Logical</strong></h3>
+<p>Workloads, orchestration, routing, scheduling.</p>
+<h3 id="layer-3-human"><strong>Layer 3 — Human</strong></h3>
+<p>Operators, governance, culture, communication.</p>
+<p>The triadic stack is the backbone of RTT reasoning.</p>
+<hr>
+<h2 id="operators-fieldlevel-actions">🔧 Operators (Field‑Level Actions)</h2>
+<h3 id="stabilizers"><strong>Stabilizers</strong></h3>
+<p>Reduce drift, increase coherence, enforce standards.</p>
+<h3 id="amplifiers"><strong>Amplifiers</strong></h3>
+<p>Increase dimensional intensity (compute, cultural, economic).</p>
+<h3 id="translators"><strong>Translators</strong></h3>
+<p>Convert meaning across layers (human → logical → physical).</p>
+<h3 id="regime-shifters"><strong>Regime Shifters</strong></h3>
+<p>Trigger transitions between stable, transitional, emergent, chaotic regimes.</p>
+<hr>
+<h2 id="regimes-system-behavior-states">📈 Regimes (System Behavior States)</h2>
+<h3 id="stable"><strong>Stable</strong></h3>
+<p>Predictable, low drift, high coherence.</p>
+<h3 id="transitional"><strong>Transitional</strong></h3>
+<p>Shifting behavior, rising drift, mixed coherence.</p>
+<h3 id="emergent"><strong>Emergent</strong></h3>
+<p>New patterns forming, high dimensional interaction.</p>
+<h3 id="chaotic"><strong>Chaotic</strong></h3>
+<p>Unpredictable, high drift, low coherence.</p>
+<hr>
+<h2 id="drift-coherence">🧬 Drift &amp; Coherence</h2>
+<h3 id="drift"><strong>Drift</strong></h3>
+<p>Deviation from intended structural alignment.<br>
+Ranges from <strong>0.00</strong> (no drift) to <strong>1.00</strong> (max drift).</p>
+<h3 id="coherence"><strong>Coherence</strong></h3>
+<p>Strength of structural alignment.<br>
+Ranges from <strong>0.00</strong> (no coherence) to <strong>1.00</strong> (full coherence).</p>
+<hr>
+<h2 id="tensors-rtt-structural-artifacts">📦 Tensors (RTT Structural Artifacts)</h2>
+<h3 id="structural-field-tensor"><strong>Structural Field Tensor</strong></h3>
+<p>Encodes the five structural fields across datacenter layers.</p>
+<h3 id="dimensional-field-tensor"><strong>Dimensional Field Tensor</strong></h3>
+<p>Encodes planetary, cultural, governance, economic, compute, and infrastructure
+dimensions.</p>
+<h3 id="qcompute-tensor"><strong>qCompute Tensor</strong></h3>
+<p>Encodes compute density, energy envelope, and thermal regime.</p>
+<hr>
+<h2 id="lineage">🧭 Lineage</h2>
+<p>Record of where a tensor, operator, or field originated.<br>
+Used for cross‑module propagation and drift correction.</p>
+<hr>
+<h2 id="crossmodule-propagation">🔗 Cross‑Module Propagation</h2>
+<p>Defines which modules can safely consume a tensor or field without losing
+coherence.</p>
+<hr>
+<h2 id="aiparsable-metadata">🧠 AI‑Parsable Metadata</h2>
+<p>Structured annotations enabling machine reasoning without drift:
+- analyzer_layer<br>
+- dimensional_fields<br>
+- regime<br>
+- coherence<br>
+- drift<br>
+- lineage<br>
+- cross_module_propagation  </p>
+<hr>
+<h1 id="end-of-appendix-a">End of Appendix A</h1>
+  </main>
+</body>
+</html>

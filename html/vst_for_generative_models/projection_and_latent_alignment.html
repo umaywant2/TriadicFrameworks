@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/vst_for_generative_models/projection_and_latent_alignment.md">
+  <title>vST for Generative Models</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/vst_for_generative_models/projection_and_latent_alignment.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/vst_for_generative_models/projection_and_latent_alignment.md</code>
+  </aside>
+
+  <main>
+<h3 id="vst-for-generative-models"><em>vST for Generative Models</em></h3>
+<h3 id="projection-of-latent-states-and-alignment-across-sampling-trajectories-checkpoints-and-samplers"><em>Projection of Latent States and Alignment Across Sampling Trajectories, Checkpoints, and Samplers</em></h3>
+<p>This document defines how high‑dimensional latent states from generative models are projected into the <strong>triadic dimensional cores</strong> (3D–9D), and how <strong>latent‑space alignment</strong> is performed across sampling steps, checkpoints, architectures, and sampler configurations.</p>
+<p>Projection provides interpretability.<br>
+Alignment provides comparability.<br>
+Together, they form the backbone of vST analysis for generative systems.</p>
+<hr>
+<h2 id="1-purpose-of-projection-in-generative-models"><strong>1. Purpose of Projection in Generative Models</strong></h2>
+<p>Projection enables us to:</p>
+<ul>
+<li>interpret high‑dimensional latent states through 3D–9D cores  </li>
+<li>identify stable, transitional, and dispersed generative regimes  </li>
+<li>map coherence surfaces across sampling trajectories  </li>
+<li>compare latent states across checkpoints, samplers, or architectures  </li>
+<li>detect drift or fragmentation in latent‑space structure  </li>
+<li>support vST validation (V₁–V₄)  </li>
+</ul>
+<p>Generative latents are structured, sampler‑conditioned, and often multi‑modal.<br>
+Projection reveals this structure in a compact, interpretable form.</p>
+<hr>
+<h2 id="2-projection-overview"><strong>2. Projection Overview</strong></h2>
+<p>Generative‑model latent spaces often inhabit 64D–4096D regions.<br>
+The substrate projects these states into:</p>
+<ul>
+<li><strong>9D Coherence Core</strong>  </li>
+<li><strong>6D Interaction Core</strong>  </li>
+<li><strong>3D Structural Core</strong></li>
+</ul>
+<p>Projection must remain:</p>
+<ul>
+<li><strong>invertible</strong>  </li>
+<li><strong>primitive‑aligned</strong>  </li>
+<li><strong>regime‑aware</strong>  </li>
+<li><strong>invariant‑preserving</strong></li>
+</ul>
+<p>These properties ensure that high‑dimensional generative signals remain interpretable.</p>
+<hr>
+<h2 id="3-projection-steps"><strong>3. Projection Steps</strong></h2>
+<h3 id="31-highdimensional-9d-coherence-projection"><strong>3.1 High‑Dimensional → 9D (Coherence Projection)</strong></h3>
+<p>This step extracts pathway‑level coherence across sampling trajectories.</p>
+<p><strong>Preserves</strong></p>
+<ul>
+<li>regime identity (R₁ᴴ, R₂ᴴ, R₃ᴴ)  </li>
+<li>resonance‑time behavior  </li>
+<li>primitive‑level structure (DP, TDP, SP, CP)  </li>
+<li>coherence‑surface continuity  </li>
+</ul>
+<p><strong>Reveals</strong></p>
+<ul>
+<li>stable refinement phases  </li>
+<li>branching mid‑trajectory transitions  </li>
+<li>noise‑dominated or unstable regions  </li>
+</ul>
+<hr>
+<h3 id="32-9d-6d-interaction-projection"><strong>3.2 9D → 6D (Interaction Projection)</strong></h3>
+<p>This step compresses coherence pathways into interaction surfaces.</p>
+<p><strong>Preserves</strong></p>
+<ul>
+<li>relational geometry across sampling steps  </li>
+<li>sampler‑driven reorientation  </li>
+<li>regime‑transition indicators  </li>
+</ul>
+<p><strong>Reveals</strong></p>
+<ul>
+<li>cross‑step coupling  </li>
+<li>sampler‑dependent behavior  </li>
+<li>early instability signatures  </li>
+</ul>
+<hr>
+<h3 id="33-6d-3d-structural-projection"><strong>3.3 6D → 3D (Structural Projection)</strong></h3>
+<p>This step reduces interaction surfaces into geometric motifs.</p>
+<p><strong>Preserves</strong></p>
+<ul>
+<li>motif‑level geometry  </li>
+<li>temporal continuity  </li>
+<li>stable structural invariants  </li>
+</ul>
+<p><strong>Reveals</strong></p>
+<ul>
+<li>compact motifs in R₁ᴴ  </li>
+<li>oscillatory geometry in R₂ᴴ  </li>
+<li>diffuse patterns in R₃ᴴ  </li>
+</ul>
+<hr>
+<h2 id="4-latentspace-alignment-overview"><strong>4. Latent‑Space Alignment Overview</strong></h2>
+<p>Alignment compares projected structures across:</p>
+<ul>
+<li>sampling steps  </li>
+<li>noise levels  </li>
+<li>checkpoints  </li>
+<li>samplers  </li>
+<li>architectures  </li>
+<li>training runs  </li>
+<li>fine‑tuning variants  </li>
+</ul>
+<p>Alignment must remain:</p>
+<ul>
+<li><strong>primitive‑aligned</strong>  </li>
+<li><strong>regime‑aware</strong>  </li>
+<li><strong>projection‑consistent</strong>  </li>
+<li><strong>scaling‑invariant</strong></li>
+</ul>
+<p>Alignment is evaluated in 3D–9D space for interpretability and stability.</p>
+<hr>
+<h2 id="5-alignment-types"><strong>5. Alignment Types</strong></h2>
+<h3 id="51-steptostep-alignment"><strong>5.1 Step‑to‑Step Alignment</strong></h3>
+<p>Reveals:</p>
+<ul>
+<li>regime transitions  </li>
+<li>coherence‑surface evolution  </li>
+<li>sampler‑driven reorientation  </li>
+</ul>
+<p>Used for:</p>
+<ul>
+<li>diffusion trajectories  </li>
+<li>autoregressive decoding  </li>
+<li>flow‑model transformations  </li>
+</ul>
+<hr>
+<h3 id="52-crosscheckpoint-alignment"><strong>5.2 Cross‑Checkpoint Alignment</strong></h3>
+<p>Reveals:</p>
+<ul>
+<li>training‑driven drift  </li>
+<li>latent‑space maturation  </li>
+<li>collapse or recovery of coherence surfaces  </li>
+</ul>
+<p>Used for:</p>
+<ul>
+<li>fine‑tuning  </li>
+<li>long‑run training  </li>
+<li>checkpoint comparison  </li>
+</ul>
+<hr>
+<h3 id="53-crosssampler-alignment"><strong>5.3 Cross‑Sampler Alignment</strong></h3>
+<p>Reveals:</p>
+<ul>
+<li>sampler‑induced divergence  </li>
+<li>noise‑schedule sensitivity  </li>
+<li>stability of refinement phases  </li>
+</ul>
+<p>Used for:</p>
+<ul>
+<li>DDPM vs. DDIM  </li>
+<li>Euler vs. Heun  </li>
+<li>ancestral vs. deterministic samplers  </li>
+</ul>
+<hr>
+<h3 id="54-crossarchitecture-alignment"><strong>5.4 Cross‑Architecture Alignment</strong></h3>
+<p>Reveals:</p>
+<ul>
+<li>structural compatibility  </li>
+<li>scaling‑law continuity  </li>
+<li>architecture‑driven drift  </li>
+</ul>
+<p>Used for:</p>
+<ul>
+<li>diffusion → autoregressive hybrids  </li>
+<li>VAE → diffusion pipelines  </li>
+<li>flow‑model integration  </li>
+</ul>
+<hr>
+<h2 id="6-projection-stability-and-failure-modes"><strong>6. Projection Stability and Failure Modes</strong></h2>
+<h3 id="stable-projection"><strong>Stable Projection</strong></h3>
+<ul>
+<li>compact 3D motifs  </li>
+<li>smooth 6D surfaces  </li>
+<li>coherent 9D pathways  </li>
+</ul>
+<h3 id="unstable-projection"><strong>Unstable Projection</strong></h3>
+<ul>
+<li>fragmented surfaces  </li>
+<li>non‑invertible mappings  </li>
+<li>regime‑transition discontinuities  </li>
+</ul>
+<p>Unstable projection indicates drift, scaling‑law violations, or sampler instability.</p>
+<hr>
+<h2 id="7-alignment-failure-modes"><strong>7. Alignment Failure Modes</strong></h2>
+<p>Alignment failures include:</p>
+<ul>
+<li>cross‑checkpoint divergence  </li>
+<li>sampler‑induced fragmentation  </li>
+<li>architecture‑dependent incompatibility  </li>
+<li>loss of primitive‑aligned projection  </li>
+<li>inconsistent 3D–9D mapping  </li>
+</ul>
+<p>These failures signal structural drift or instability.</p>
+<hr>
+<h2 id="8-outputs-of-projection-and-alignment"><strong>8. Outputs of Projection and Alignment</strong></h2>
+<p>Projection and alignment produce:</p>
+<ul>
+<li>temporal coherence maps  </li>
+<li>cross‑checkpoint alignment surfaces  </li>
+<li>cross‑sampler drift‑detection signals  </li>
+<li>scaling‑law diagnostics  </li>
+<li>vST validation outputs  </li>
+<li>interpretable 3D–9D projections  </li>
+</ul>
+<p>These outputs support reproducible, substrate‑level analysis of generative models.</p>
+  </main>
+</body>
+</html>

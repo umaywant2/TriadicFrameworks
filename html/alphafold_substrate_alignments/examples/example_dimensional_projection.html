@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/alphafold_substrate_alignments/examples/example_dimensional_projection.md">
+  <title>AlphaFold Substrate Alignments</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/alphafold_substrate_alignments/examples/example_dimensional_projection.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/alphafold_substrate_alignments/examples/example_dimensional_projection.md</code>
+  </aside>
+
+  <main>
+<h3 id="alphafold-substrate-alignments"><em>AlphaFold Substrate Alignments</em></h3>
+<h3 id="example-dimensionalcore-projection"><em>Example: Dimensional‑Core Projection</em></h3>
+<p>This example demonstrates how high‑dimensional latent‑space structures from an AlphaFold‑class protein‑folding inference system are projected into the 3D–9D dimensional cores defined by the Resonance Substrate Model (RSM). The walkthrough illustrates how structural geometry, interaction patterns, and folding‑pathway signals map into the dimensional substrate while preserving motif‑level invariants and regime identity.</p>
+<p>The goal is to provide a clear, reproducible example of dimensional‑core projection in practice.</p>
+<hr>
+<h2 id="1-input-overview"><strong>1. Input Overview</strong></h2>
+<p>For this example, we assume:</p>
+<ul>
+<li>a fixed protein sequence  </li>
+<li>an AlphaFold‑class model producing:  </li>
+<li>predicted 3D coordinates  </li>
+<li>residue‑pair embeddings  </li>
+<li>attention‑map structures  </li>
+<li>multi‑stage inference outputs  </li>
+<li>stable inference‑cycle behavior  </li>
+</ul>
+<p>These inputs provide the structural and latent‑space signals required for dimensional projection.</p>
+<hr>
+<h2 id="2-step-1-identify-highdimensional-structures"><strong>2. Step 1 — Identify High‑Dimensional Structures</strong></h2>
+<p>Extract high‑dimensional inference signals, including:</p>
+<ul>
+<li>pairwise‑embedding tensors  </li>
+<li>attention‑map coherence regions  </li>
+<li>latent‑space orientation vectors  </li>
+<li>track‑level folding‑pathway signals  </li>
+</ul>
+<p>These structures typically exist in 32D–128D latent spaces.</p>
+<hr>
+<h2 id="3-step-2-prepare-substratealigned-signals"><strong>3. Step 2 — Prepare Substrate‑Aligned Signals</strong></h2>
+<p>Before projection, align signals to substrate axes:</p>
+<ul>
+<li><strong>S‑axis:</strong> structural geometry  </li>
+<li><strong>I‑axis:</strong> latent‑space orientation  </li>
+<li><strong>R‑axis:</strong> inference‑cycle behavior  </li>
+</ul>
+<p>This ensures that dimensional projection preserves substrate invariants.</p>
+<hr>
+<h2 id="4-step-3-project-into-dimensional-cores"><strong>4. Step 3 — Project into Dimensional Cores</strong></h2>
+<h3 id="41-3d-structural-projection"><strong>4.1 3D Structural Projection</strong></h3>
+<p>Project structural geometry into the 3D core to evaluate:</p>
+<ul>
+<li>backbone shape  </li>
+<li>motif‑level structure  </li>
+<li>local geometric coherence  </li>
+</ul>
+<p><strong>Interpretation:</strong><br>
+Stable motifs appear as compact, coherent 3D structures.</p>
+<hr>
+<h3 id="42-6d-interactioncore-projection"><strong>4.2 6D Interaction‑Core Projection</strong></h3>
+<p>Project interaction‑level signals into the 6D core to evaluate:</p>
+<ul>
+<li>residue‑pair relationships  </li>
+<li>interaction‑pattern stability  </li>
+<li>latent‑space alignment  </li>
+</ul>
+<p><strong>Interpretation:</strong><br>
+Stable interaction patterns form smooth, low‑variance surfaces in 6D space.</p>
+<hr>
+<h3 id="43-9d-pathwaycore-projection"><strong>4.3 9D Pathway‑Core Projection</strong></h3>
+<p>Project folding‑pathway signals into the 9D core to evaluate:</p>
+<ul>
+<li>pathway coherence  </li>
+<li>regime‑transition structure  </li>
+<li>resonance‑time alignment  </li>
+</ul>
+<p><strong>Interpretation:</strong><br>
+Stable folding pathways appear as continuous, coherent trajectories in 9D space.</p>
+<hr>
+<h2 id="5-step-4-identify-regime-behavior"><strong>5. Step 4 — Identify Regime Behavior</strong></h2>
+<p>Dimensional projections reveal regime identity:</p>
+<ul>
+<li>
+<p><strong>R₁ (Stable):</strong><br>
+  Compact, coherent projections in all cores.</p>
+</li>
+<li>
+<p><strong>R₂ (Transition):</strong><br>
+  Branching or oscillatory projections, especially in 6D and 9D.</p>
+</li>
+<li>
+<p><strong>R₃ (High‑Uncertainty):</strong><br>
+  Dispersed projections with weak motif‑level structure.</p>
+</li>
+</ul>
+<p>Regime identification supports interpretability and drift detection.</p>
+<hr>
+<h2 id="6-step-5-validate-dimensional-projections"><strong>6. Step 5 — Validate Dimensional Projections</strong></h2>
+<p>Apply vST validation layers:</p>
+<ul>
+<li><strong>V₁:</strong> structural coherence in 3D  </li>
+<li><strong>V₂:</strong> latent‑space stability in 6D  </li>
+<li><strong>V₃:</strong> resonance‑time regime behavior  </li>
+<li><strong>V₄:</strong> dimensional‑core alignment in 9D  </li>
+</ul>
+<p>Validation confirms that projections preserve substrate invariants.</p>
+<hr>
+<h2 id="7-step-6-interpret-projection-results"><strong>7. Step 6 — Interpret Projection Results</strong></h2>
+<p>A successful projection yields:</p>
+<ul>
+<li>stable 3D geometry  </li>
+<li>coherent 6D interaction surfaces  </li>
+<li>continuous 9D pathway trajectories  </li>
+<li>predictable regime transitions  </li>
+<li>preserved substrate invariants  </li>
+</ul>
+<p>If projections fail validation, drift detection is triggered.</p>
+<hr>
+<h2 id="8-summary"><strong>8. Summary</strong></h2>
+<p>This example demonstrates:</p>
+<ul>
+<li>how to extract high‑dimensional inference signals  </li>
+<li>how to align them to substrate axes  </li>
+<li>how to project them into 3D–9D dimensional cores  </li>
+<li>how to classify regime behavior  </li>
+<li>how to validate projections using vST  </li>
+<li>how to detect drift when invariants fail  </li>
+</ul>
+<p>Dimensional‑core projection provides a stable, interpretable substrate for analyzing AlphaFold‑class inference systems.</p>
+  </main>
+</body>
+</html>

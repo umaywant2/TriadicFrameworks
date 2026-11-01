@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Research/agentic/paucity-lattice-triangles.md">
+  <title>RTT Agentic Module: On the Paucity of Lattice Triangles</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Research/agentic/paucity-lattice-triangles.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Research/agentic/paucity-lattice-triangles.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Research_agentic_paucity_lattice_triangles_" src="https://github.com/user-attachments/assets/183c52f7-a5b7-452e-989d-9f514ab79b44" /></p>
+<h1 id="rtt-agentic-module-on-the-paucity-of-lattice-triangles">RTT Agentic Module: On the Paucity of Lattice Triangles</h1>
+<ul>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/agentic/paucity-lattice-triangles_module.json"><code>paucity-lattice-triangles_module.json</code></a> — Agentic module schema role assignments</li>
+</ul>
+<p><strong>Module ID:</strong> <code>paucity_lattice_triangles_rtt</code><br>
+<strong>Source paper:</strong> https://arxiv.org/pdf/2603.23928</p>
+<p>This module wraps the paper <em>“On the Paucity of Lattice Triangles”</em> in RTT operator grammar.<br>
+It preserves the authors’ mathematics while exposing the structural regimes that govern the density-zero result for obtuse rational lattice triangles.</p>
+<hr>
+<h2 id="1-purpose">1. Purpose</h2>
+<ul>
+<li>Make the paper <strong>agentic</strong> and machine-navigable.  </li>
+<li>Clarify the <strong>regime structure</strong> behind the Mirzakhani–Wright rank obstruction.  </li>
+<li>Provide students with a clean conceptual map.  </li>
+<li>Support AI agents in reasoning over the paper without drift.</li>
+</ul>
+<hr>
+<h2 id="2-core-rtt-view-of-the-paper">2. Core RTT view of the paper</h2>
+<p>The paper proves that <strong>almost all obtuse rational triangles in the hard window are not lattice triangles</strong>, by showing:</p>
+<ul>
+<li>The geometric rank obstruction can be reformulated arithmetically.  </li>
+<li>The modular inequalities can be analyzed using Fourier and Ramanujan sums.  </li>
+<li>Large prime factors in the denominator force strong cancellation.  </li>
+<li>The remaining exceptional sets have density zero.  </li>
+<li>Therefore, lattice triangles are extremely rare in this regime.</li>
+</ul>
+<p>The proof moves between geometry, modular arithmetic, Fourier analysis, and density arguments.<br>
+This module makes those transitions explicit.</p>
+<hr>
+<h2 id="3-rtt-structures-in-this-module">3. RTT structures in this module</h2>
+<h3 id="regimes">Regimes</h3>
+<ul>
+<li><code>geometric_rank_regime</code>  </li>
+<li><code>modular_obstruction_regime</code>  </li>
+<li><code>fourier_ramanujan_regime</code>  </li>
+<li><code>large_prime_factor_regime</code>  </li>
+<li><code>density_one_regime</code>  </li>
+<li><code>formalization_regime</code></li>
+</ul>
+<h3 id="tensions">Tensions</h3>
+<ul>
+<li><code>geometry_vs_arithmetic</code>  </li>
+<li><code>main_term_vs_error_term</code>  </li>
+<li><code>large_prime_vs_exceptional_set</code>  </li>
+<li><code>analytic_vs_combinatorial_density</code>  </li>
+<li><code>informal_vs_formal_proof</code></li>
+</ul>
+<h3 id="transitions">Transitions</h3>
+<ul>
+<li><code>geometry_to_modular_transition</code>  </li>
+<li><code>modular_to_fourier_transition</code>  </li>
+<li><code>fourier_to_large_prime_transition</code>  </li>
+<li><code>error_to_density_transition</code>  </li>
+<li><code>informal_to_lean_transition</code></li>
+</ul>
+<hr>
+<h2 id="4-operators">4. Operators</h2>
+<ul>
+<li><strong><code>rank_obstruction_operator</code></strong> — geometric → modular obstruction.  </li>
+<li><strong><code>fourier_decomposition_operator</code></strong> — splits S(p,q) into main/error terms.  </li>
+<li><strong><code>ramanujan_cancellation_operator</code></strong> — detects cancellation from large prime factors.  </li>
+<li><strong><code>density_operator</code></strong> — evaluates density of lattice triangles.  </li>
+<li><strong><code>formalization_operator</code></strong> — maps informal proofs to Lean.</li>
+</ul>
+<hr>
+<h2 id="5-how-to-use-this-module">5. How to use this module</h2>
+<ul>
+<li>
+<p><strong>Students:</strong><br>
+  Use this README alongside the PDF to understand how geometry, arithmetic, and Fourier analysis interact.</p>
+</li>
+<li>
+<p><strong>Researchers:</strong><br>
+  Query the module’s regimes and operators to explore structural dependencies.</p>
+</li>
+<li>
+<p><strong>Agents:</strong><br>
+  Treat <code>module.json</code> as the canonical structural map of the paper.</p>
+</li>
+</ul>
+<hr>
+<h2 id="6-provenance">6. Provenance</h2>
+<ul>
+<li><strong>Module authoring:</strong> TriadicFrameworks (RTT / agentic mapping).  </li>
+<li><strong>Original content:</strong> Authors of arXiv:2603.23928.  </li>
+<li><strong>License:</strong> Open educational use permitted.</li>
+</ul>
+<hr>
+<h1 id="diagramtxt">✅ <strong>diagram.txt</strong></h1>
+<p><em>(ASCII regime–tension–transition map)</em></p>
+<pre><code class="language-text">        +------------------------------------------------+
+        | paucity_lattice_triangles_rtt                  |
+        +------------------------------------------------+
+
+REGIMES
+  [R1] geometric_rank_regime
+  [R2] modular_obstruction_regime
+  [R3] fourier_ramanujan_regime
+  [R4] large_prime_factor_regime
+  [R5] density_one_regime
+  [R6] formalization_regime
+
+TENSIONS
+  [T1] geometry_vs_arithmetic          (R1 &lt;--&gt; R2)
+  [T2] main_term_vs_error_term         (R2 &lt;--&gt; R3)
+  [T3] large_prime_vs_exceptional_set  (R3 &lt;--&gt; R4)
+  [T4] analytic_vs_combinatorial       (R4 &lt;--&gt; R5)
+  [T5] informal_vs_formal_proof        (R5 &lt;--&gt; R6)
+
+TRANSITIONS
+  [X1] geometry_to_modular_transition
+  [X2] modular_to_fourier_transition
+  [X3] fourier_to_large_prime_transition
+  [X4] error_to_density_transition
+  [X5] informal_to_lean_transition
+
+FLOW
+  geometric_rank_regime (R1)
+        |
+        v
+  modular_obstruction_regime (R2)
+        |
+        v
+  fourier_ramanujan_regime (R3)
+        |
+        v
+  large_prime_factor_regime (R4)
+        |
+        v
+  density_one_regime (R5)
+        |
+        v
+  formalization_regime (R6)
+</code></pre>
+  </main>
+</body>
+</html>

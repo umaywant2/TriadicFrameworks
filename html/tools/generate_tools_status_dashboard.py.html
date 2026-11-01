@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/tools/generate_tools_status_dashboard.py.md">
+  <title>generate_tools_status_dashboard.py</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/tools/generate_tools_status_dashboard.py.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/tools/generate_tools_status_dashboard.py.md</code>
+  </aside>
+
+  <main>
+<p>Here’s a compact <strong>Tools Status HTML Dashboard</strong> generator for <code>/docs/spine</code>.</p>
+<p>Save as:</p>
+<pre><code class="language-text">docs/tools/generate_tools_status_dashboard.py
+</code></pre>
+<p>Run from repo root:</p>
+<pre><code class="language-bash">python3 docs/tools/generate_tools_status_dashboard.py
+</code></pre>
+<p>It will create:</p>
+<pre><code class="language-text">docs/spine/tools_status.html
+</code></pre>
+<hr>
+<pre><code class="language-python">import os
+import json
+
+ROOT = &quot;docs&quot;
+TOOLS_DIR = os.path.join(ROOT,&quot;tools&quot;)
+OUTPUT = os.path.join(ROOT,&quot;spine&quot;,&quot;tools_status.html&quot;)
+
+EXPECTED_TOOLS = [
+    &quot;generate_module_bundle.py&quot;,
+    &quot;generate_domain_bundle.py&quot;,
+    &quot;enforce_module_schema.py&quot;,
+    &quot;local_module_guardian.py&quot;,
+    &quot;repair_module_json.py&quot;,
+    &quot;validate_canon_purity.py&quot;,
+    &quot;generate_canon_purity_dashboard.py&quot;,
+    &quot;generate_canon_sitemap.py&quot;,
+    &quot;auto_fix_drift.py&quot;,
+    &quot;generate_canon_purity_heatmap.py&quot;,
+    &quot;repair_module_schema.py&quot;,
+    &quot;validate_module_dependencies.py&quot;,
+    &quot;triad_purity_auditor.py&quot;
+]
+
+def list_tools():
+    if not os.path.isdir(TOOLS_DIR):
+        return []
+    return sorted(f for f in os.listdir(TOOLS_DIR) if f.endswith(&quot;.py&quot;))
+
+def build_dashboard(existing):
+    rows = []
+    for name in sorted(set(EXPECTED_TOOLS + existing)):
+        status = &quot;Present&quot; if name in existing else &quot;Missing&quot;
+        rows.append(f&quot;&quot;&quot;
+        &lt;tr&gt;
+          &lt;td&gt;{name}&lt;/td&gt;
+          &lt;td&gt;{status}&lt;/td&gt;
+        &lt;/tr&gt;
+        &quot;&quot;&quot;)
+
+    html = f&quot;&quot;&quot;&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;TriadicFrameworks Tools Status Dashboard&lt;/title&gt;
+  &lt;style&gt;
+    body {{ font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif; margin: 2rem; }}
+    h1 {{ margin-bottom: 0.5rem; }}
+    table {{ border-collapse: collapse; width: 100%; margin-top: 1rem; }}
+    th, td {{ border: 1px solid #ddd; padding: 0.5rem; }}
+    th {{ background: #f5f5f5; }}
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Tools Status Dashboard — /docs/spine&lt;/h1&gt;
+  &lt;p&gt;This dashboard reflects the status of core canon tools in &lt;code&gt;/docs/tools&lt;/code&gt;.&lt;/p&gt;
+
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Tool Script&lt;/th&gt;
+        &lt;th&gt;Status&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      {''.join(rows)}
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&quot;&quot;&quot;
+    return html
+
+def main():
+    print(&quot;\n=== TriadicFrameworks Tools Status Dashboard Generator ===\n&quot;)
+
+    existing = list_tools()
+    html = build_dashboard(existing)
+
+    os.makedirs(os.path.dirname(OUTPUT), exist_ok=True)
+    with open(OUTPUT,&quot;w&quot;,encoding=&quot;utf-8&quot;) as f:
+        f.write(html)
+
+    print(f&quot;✔ Created {OUTPUT}&quot;)
+    print(&quot;\n✨ Tools status dashboard ready.\n&quot;)
+
+if __name__==&quot;__main__&quot;:
+    main()
+</code></pre>
+  </main>
+</body>
+</html>

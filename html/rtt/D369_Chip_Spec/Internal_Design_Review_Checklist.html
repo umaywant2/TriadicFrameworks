@@ -1,0 +1,1204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/D369_Chip_Spec/Internal_Design_Review_Checklist.md">
+  <title>Internal Design‑Review Checklist</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/D369_Chip_Spec/Internal_Design_Review_Checklist.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/D369_Chip_Spec/Internal_Design_Review_Checklist.md</code>
+  </aside>
+
+  <main>
+<h1 id="internal-designreview-checklist">Internal Design‑Review Checklist</h1>
+<blockquote>
+<p>Structural Observability Reservation — Carry‑In Artifact for Architecture, RTL, and Physical Design Reviews.</p>
+</blockquote>
+<hr>
+<h2 id="session-context">Session Context</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Module</strong></td>
+<td>D369_Chip_Spec</td>
+</tr>
+<tr>
+<td><strong>File</strong></td>
+<td><code>Internal_Design_Review_Checklist.md</code></td>
+</tr>
+<tr>
+<td><strong>Role</strong></td>
+<td>diagnostic · reference</td>
+</tr>
+<tr>
+<td><strong>Version</strong></td>
+<td>0.1.0</td>
+</tr>
+<tr>
+<td><strong>Status</strong></td>
+<td>First‑fill</td>
+</tr>
+<tr>
+<td><strong>Lineage</strong></td>
+<td>Expanded from <code>Capture_Source.md</code> §Internal Design‑Review Checklist and <code>Contractual_Requirements.md</code> §Internal Design‑Review Checklist</td>
+</tr>
+<tr>
+<td><strong>Audience</strong></td>
+<td>Design reviewers · RTL engineers · Physical design leads · Verification engineers · Architecture review boards · AIs</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="how-to-use-this-document">How to Use This Document</h2>
+<p><strong>Print this. Bring it to review. Check the boxes.</strong></p>
+<p>This document is the <strong>standalone, expanded</strong> version of the design review checklist that appears inline in <code>Contractual_Requirements.md</code>. That inline version is a summary. This version is the carry‑in artifact — the document a reviewer physically carries into an architecture review, an RTL review, a physical design review, or a sign‑off meeting.</p>
+<p>Every checklist item includes:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>What it tells you</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>#</strong></td>
+<td>Item ID for citation (e.g., "item 1.3 was not satisfied")</td>
+</tr>
+<tr>
+<td><strong>Check</strong></td>
+<td>The question to ask or condition to verify</td>
+</tr>
+<tr>
+<td><strong>Req</strong></td>
+<td>Which D369 requirement (R1–R7) this item verifies</td>
+</tr>
+<tr>
+<td><strong>Risk</strong></td>
+<td>What failure mode this item prevents (FM, N, or board failure mode)</td>
+</tr>
+<tr>
+<td><strong>Guidance</strong></td>
+<td>Reviewer notes — what to look for, common pitfalls, tool specifics</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Review stages:</strong> Items are grouped by design stage. Use only the section relevant to your current review gate. Items are cumulative — later stages assume earlier stages passed.</p>
+<p><strong>Architecture variants:</strong> Where monolithic SoC and chiplet designs require different checks, both variants are listed. Items marked <strong>[SoC]</strong> apply to monolithic designs. Items marked <strong>[Chiplet]</strong> apply to multi‑die packages. Items with no tag apply to both.</p>
+<hr>
+<h2 id="before-you-begin-context-card">Before You Begin — Context Card</h2>
+<p>Fill this out at the top of every review. It establishes the structural context for all checklist items.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value (fill in)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Design name</td>
+<td></td>
+</tr>
+<tr>
+<td>Architecture type</td>
+<td>☐ Monolithic SoC  ☐ Chiplet package</td>
+</tr>
+<tr>
+<td>Process node</td>
+<td></td>
+</tr>
+<tr>
+<td>Major functional blocks</td>
+<td></td>
+</tr>
+<tr>
+<td>Number of metadata channels</td>
+<td></td>
+</tr>
+<tr>
+<td>Interposer type (if chiplet)</td>
+<td>☐ Passive Si  ☐ Active Si  ☐ Organic</td>
+</tr>
+<tr>
+<td>Target DDR generation</td>
+<td></td>
+</tr>
+<tr>
+<td>Review gate</td>
+<td>☐ Arch  ☐ RTL  ☐ Physical  ☐ Sign‑off</td>
+</tr>
+<tr>
+<td>Date</td>
+<td></td>
+</tr>
+<tr>
+<td>Reviewer(s)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="1-before-architecture-freeze">§1 — Before Architecture Freeze</h2>
+<p><strong>When to use:</strong> Architecture definition, block diagram review, microarchitecture planning.
+<strong>Reviewer profile:</strong> System architect, IP integration lead.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Req</th>
+<th>Risk</th>
+<th>Guidance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.1</td>
+<td>Each major functional block has at least one reserved metadata path.</td>
+<td>R1.1</td>
+<td>N‑1 (source flattening)</td>
+<td>Count the blocks on the block diagram. Count the metadata channels. If blocks &gt; channels, something was missed. "Major functional block" = any block with its own logical boundary: CPU complex, accelerator, memory controller, I/O subsystem, security subsystem.</td>
+</tr>
+<tr>
+<td>1.2</td>
+<td>Metadata paths are logically and electrically separate from functional data.</td>
+<td>R1.2</td>
+<td>ER‑3 (coupling)</td>
+<td>Look for metadata signals routed through the NoC or sharing a bus with functional data. If metadata rides the NoC, it is subject to NoC erasures N‑1 through N‑5. Separate bus, separate wires, or dedicated sideband required.</td>
+</tr>
+<tr>
+<td>1.3</td>
+<td>No functional logic references metadata signals.</td>
+<td>R3.2</td>
+<td>NC‑5 (control logic)</td>
+<td>Search the RTL spec or preliminary HDL for any functional block that reads metadata as an input. If found, the metadata channel has become a control path — violating R3.3.</td>
+</tr>
+<tr>
+<td>1.4</td>
+<td>Metadata paths can remain inactive or unconnected without warnings.</td>
+<td>R3.1</td>
+<td>ER‑7 (optional structures)</td>
+<td>Confirm that EDA tools will not flag unconnected metadata nets as warnings or errors. Use <code>dont_touch</code> / <code>keep</code> attributes from day one. If tools generate warnings, engineers will "fix" them by removing the nets.</td>
+</tr>
+<tr>
+<td>1.5</td>
+<td>Metadata reservation does not alter timing closure assumptions.</td>
+<td>R3.1</td>
+<td>ER‑7 (yield/performance)</td>
+<td>Confirm metadata nets are excluded from critical path analysis. If metadata appears on any timing report, routing is too close to functional paths.</td>
+</tr>
+<tr>
+<td>1.6</td>
+<td><strong>[Chiplet]</strong> Each chiplet has its own independent metadata channel.</td>
+<td>R1.1, R6.1</td>
+<td>FM‑1 (source identity)</td>
+<td>Per‑chiplet metadata is non‑negotiable. If two chiplets share a metadata channel, source identity is lost at the interposer.</td>
+</tr>
+<tr>
+<td>1.7</td>
+<td><strong>[Chiplet]</strong> Active interposer (if present) has its own metadata channel (Meta_INT).</td>
+<td>R1.1</td>
+<td>Topology 3 risk</td>
+<td>An active interposer is a structural source. If it has logic (cache, coherency, PMU), it produces data and must declare its source identity. Passive interposers do not need this.</td>
+</tr>
+<tr>
+<td>1.8</td>
+<td><strong>[Chiplet]</strong> HBM metadata proxy relationship is defined.</td>
+<td>R5.1</td>
+<td>HBM Problem</td>
+<td>HBM has no SPD and no external interface. Confirm which die will proxy HBM metadata and how the proxy distinguishes its own signals from relayed HBM signals.</td>
+</tr>
+<tr>
+<td>1.9</td>
+<td>Power domain map identifies which domains can gate metadata channels.</td>
+<td>R7.1</td>
+<td>FM‑4 (power state collapse)</td>
+<td>If any metadata channel lives in a gatable domain, metadata can be erased on power‑down. The PMU's metadata channel must be in the Always‑On domain.</td>
+</tr>
+<tr>
+<td>1.10</td>
+<td>Security subsystem / Root of Trust identified as lifecycle tag source.</td>
+<td>R5.2</td>
+<td>ER‑4 (lifecycle misuse)</td>
+<td>Lifecycle state must be externally writable, not inferred. Confirm the secure boot chain will set the lifecycle tag, and that the tag is writable from the security subsystem.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="2-during-rtl-microarchitecture-review">§2 — During RTL / Microarchitecture Review</h2>
+<p><strong>When to use:</strong> RTL code review, microarchitecture spec review, IP integration review.
+<strong>Reviewer profile:</strong> RTL designer, verification lead, IP integrator.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Req</th>
+<th>Risk</th>
+<th>Guidance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2.1</td>
+<td>Metadata signals are write‑only from functional blocks, read‑only externally.</td>
+<td>R3.3</td>
+<td>NC‑5 (control logic)</td>
+<td>In the HDL, confirm metadata ports on functional blocks are outputs only. No input port on any functional block should source from a metadata signal. The external read‑only interface must have no write‑back path.</td>
+</tr>
+<tr>
+<td>2.2</td>
+<td>No combinational feedback exists from metadata into logic.</td>
+<td>R3.3</td>
+<td>NC‑5 (control logic)</td>
+<td>Run a combinational loop check that includes metadata nets. Any feedback path from metadata to functional logic is a contract violation — even if the path is currently unused.</td>
+</tr>
+<tr>
+<td>2.3</td>
+<td>Lifecycle / state tags are explicit inputs, not inferred internally.</td>
+<td>R5.2</td>
+<td>ER‑4 (lifecycle misuse)</td>
+<td>Search RTL for any block that computes its own lifecycle state from internal signals (e.g., inferring "test mode" from a register value). Lifecycle must come from an external source — typically the security subsystem.</td>
+</tr>
+<tr>
+<td>2.4</td>
+<td>Source identifiers are static or compile‑time assignable.</td>
+<td>R5.1</td>
+<td>FM‑1 (source identity)</td>
+<td>Source IDs should be parameters, defines, or fuse‑programmable values — not runtime‑computed. If a source ID can change at runtime, it can be lied about.</td>
+</tr>
+<tr>
+<td>2.5</td>
+<td>Metadata signals are not optimized away by synthesis defaults.</td>
+<td>R7.1</td>
+<td>ER‑2 (retrofitting cost)</td>
+<td>Confirm <code>dont_touch</code> or <code>keep</code> attributes are applied to all metadata nets, registers, and ports in the RTL. Check synthesis scripts for global optimization settings that might override per‑net attributes.</td>
+</tr>
+<tr>
+<td>2.6</td>
+<td>Monotonic counter / timestamp is present and correctly implemented.</td>
+<td>R4.1</td>
+<td>ER‑6 (temporal lineage)</td>
+<td>Verify the counter is free‑running, not gated by any functional enable. Confirm the counter width is sufficient for operational lifetime (e.g., 32‑bit at 1 MHz = ~4,295 seconds ≈ 71 minutes; 48‑bit = ~3,257 days).</td>
+</tr>
+<tr>
+<td>2.7</td>
+<td>Timestamp cannot be reset during normal operation.</td>
+<td>R4.2</td>
+<td>ER‑6 (temporal lineage)</td>
+<td>Search RTL for any reset or load input on the timestamp counter. A resettable timestamp is a counter, not a timestamp. Only power‑on reset should initialize it.</td>
+</tr>
+<tr>
+<td>2.8</td>
+<td>Timestamp domain is documented and stable.</td>
+<td>R4.1</td>
+<td>N‑3 (QoS reordering)</td>
+<td>The clock driving the timestamp must be identified, documented, and stable. If the timestamp clock can be dynamically scaled (DVFS), the scaling events must be annotated in metadata.</td>
+</tr>
+<tr>
+<td>2.9</td>
+<td>Timestamp does not gate or influence functional clocks.</td>
+<td>R3.3</td>
+<td>NC‑5 (control logic)</td>
+<td>The timestamp is metadata — it must not create any timing dependency on functional logic. Confirm no clock enable, clock gate, or PLL control depends on timestamp state.</td>
+</tr>
+<tr>
+<td>2.10</td>
+<td><strong>[SoC]</strong> NoC does not strip source IDs from metadata‑tagged transactions.</td>
+<td>R5.1</td>
+<td>N‑1 (source flattening)</td>
+<td>If metadata travels through the NoC (even on a sideband), confirm the NoC protocol preserves source ID fields end‑to‑end. Check for address‑based routing that replaces source tags with routing addresses.</td>
+</tr>
+<tr>
+<td>2.11</td>
+<td><strong>[SoC]</strong> Cache coherency events are loggable in the CPU metadata channel.</td>
+<td>R2.1</td>
+<td>N‑2 (arbitration hiding)</td>
+<td>Snoop, invalidate, and eviction events should be observable as metadata emissions — event type only, not data content. If the coherency directory silently resolves conflicts, structural disagreement is lost.</td>
+</tr>
+<tr>
+<td>2.12</td>
+<td><strong>[SoC]</strong> DMA‑initiated transfers are tagged with initiator source ID.</td>
+<td>R5.1</td>
+<td>N‑1 (source flattening)</td>
+<td>DMA engines are bus masters — they initiate transfers on behalf of other blocks. If the DMA engine's own source ID replaces the initiator's ID, provenance is lost. Confirm the DMA tags transactions with the original requestor's source ID.</td>
+</tr>
+<tr>
+<td>2.13</td>
+<td><strong>[Chiplet]</strong> D2D link protocol carries metadata via sideband or reserved fields.</td>
+<td>R1.2</td>
+<td>D2D analysis</td>
+<td>Confirm the D2D protocol (UCIe, CXL, custom) has a sideband or reserved field allocation for metadata. If metadata must ride the main data path, it competes with functional traffic and may be dropped under load.</td>
+</tr>
+<tr>
+<td>2.14</td>
+<td><strong>[Chiplet]</strong> D2D PHY does not strip clock domain reference during re‑clocking.</td>
+<td>R4.1</td>
+<td>Rule 2 (annotate re‑clock)</td>
+<td>The D2D PHY re‑clocks signals between chiplet clock domains. Confirm the source clock domain identifier survives the PHY boundary — either as a sideband field or as a metadata annotation.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="3-clocking-and-time-handling">§3 — Clocking and Time Handling</h2>
+<p><strong>When to use:</strong> Clock architecture review, CDC (clock domain crossing) review, DVFS review.
+<strong>Reviewer profile:</strong> Clock architect, CDC specialist, timing engineer.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Req</th>
+<th>Risk</th>
+<th>Guidance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3.1</td>
+<td>Monotonic counter or timestamp source is present.</td>
+<td>R4.1</td>
+<td>ER‑6 (temporal lineage)</td>
+<td>Not "planned" — present. In the RTL. Synthesizable. If the timestamp is "TBD," it will be forgotten.</td>
+</tr>
+<tr>
+<td>3.2</td>
+<td>Timestamp cannot be reset during normal operation.</td>
+<td>R4.2</td>
+<td>ER‑6 (temporal lineage)</td>
+<td>Re‑verify after RTL changes. Reset paths are frequently added during debug and forgotten before tape‑out.</td>
+</tr>
+<tr>
+<td>3.3</td>
+<td>Timestamp domain is documented and stable.</td>
+<td>R4.1</td>
+<td>N‑3 (QoS reordering)</td>
+<td>Document which clock drives the timestamp. If the clock changes frequency (DVFS), the frequency change must be annotated. If the clock can be gated, the gating event must be annotated.</td>
+</tr>
+<tr>
+<td>3.4</td>
+<td>Timestamp does not gate or influence functional clocks.</td>
+<td>R3.3</td>
+<td>NC‑5 (control logic)</td>
+<td>Timestamp is metadata. It must not create timing dependencies. Re‑verify after any clock tree modification.</td>
+</tr>
+<tr>
+<td>3.5</td>
+<td>Timestamp width is sufficient for expected operational lifetime.</td>
+<td>R4.1</td>
+<td>ER‑6 (temporal lineage)</td>
+<td>Calculate: (2^width) / (clock frequency) = maximum timestamp duration. Ensure this exceeds the expected operational lifetime between power‑on resets. Typical minimums: 32‑bit at 1 kHz = ~49 days; 48‑bit at 1 MHz = ~8.9 years.</td>
+</tr>
+<tr>
+<td>3.6</td>
+<td>All clock domain crossings on metadata paths are annotated.</td>
+<td>Rule 2</td>
+<td>Board Rule 2 (annotate re‑clock)</td>
+<td>Every CDC on a metadata path must carry the source clock domain identifier through the crossing. If a synchronizer or FIFO strips the clock reference, temporal meaning is lost on the other side.</td>
+</tr>
+<tr>
+<td>3.7</td>
+<td><strong>[Chiplet]</strong> Per‑chiplet clock domains are independently identified.</td>
+<td>R4.1</td>
+<td>Rule 2</td>
+<td>Each chiplet may have its own clock. Confirm that metadata from each chiplet carries its own clock domain identifier — not a unified "package clock" reference that erases per‑die temporal context.</td>
+</tr>
+<tr>
+<td>3.8</td>
+<td>Power state transitions annotate temporal gaps.</td>
+<td>R4.1</td>
+<td>FM‑4 (power state collapse)</td>
+<td>When a domain powers down and resumes, the timestamp experiences a gap. The gap must be recorded (entry time, exit time) so that post‑hoc analysis can distinguish "no events during this period" from "events happened but weren't recorded."</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="4-physical-design-layout-review">§4 — Physical Design / Layout Review</h2>
+<p><strong>When to use:</strong> Floorplan review, place‑and‑route review, DFT insertion review, physical verification.
+<strong>Reviewer profile:</strong> Physical design lead, DFT engineer, package engineer.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Req</th>
+<th>Risk</th>
+<th>Guidance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4.1</td>
+<td>Metadata routing does not share critical paths.</td>
+<td>R1.2</td>
+<td>ER‑3 (coupling)</td>
+<td>Check routing reports for metadata nets that share tracks or vias with timing‑critical functional nets. Any shared routing creates capacitive coupling risk and may affect timing closure.</td>
+</tr>
+<tr>
+<td>4.2</td>
+<td>Metadata nets are excluded from aggressive power gating.</td>
+<td>R7.1</td>
+<td>FM‑4 (power state collapse)</td>
+<td>Check power domain assignments. If metadata nets are in a gatable domain, they will be erased on power‑down. Exception: if power‑down is annotated as a temporal gap (item 3.8).</td>
+</tr>
+<tr>
+<td>4.3</td>
+<td>Metadata structures survive DFT insertion.</td>
+<td>R7.1</td>
+<td>ER‑2 (retrofitting cost)</td>
+<td>DFT tools insert scan chains, BIST logic, and test compression. Confirm that DFT insertion did not replace, merge, or remove metadata nets. Check DFT insertion reports for "removed" or "merged" nets that match metadata signal names.</td>
+</tr>
+<tr>
+<td>4.4</td>
+<td>No ECO removes reserved metadata structures.</td>
+<td>R7.1</td>
+<td>ER‑2 (retrofitting cost)</td>
+<td>ECOs (Engineering Change Orders) are last‑minute fixes. Confirm that no ECO touches metadata nets. Add metadata nets to the "protected" or "frozen" list in the ECO management system.</td>
+</tr>
+<tr>
+<td>4.5</td>
+<td>Metadata pads or interfaces are clearly labeled as optional.</td>
+<td>R3.1</td>
+<td>ER‑7 (optional structures)</td>
+<td>Package pin list must label metadata pads as "optional / structural / inactive by default." If not labeled, the package team may reassign them to functional use.</td>
+</tr>
+<tr>
+<td>4.6</td>
+<td><strong>[SoC]</strong> Metadata paths are routed independently of the NoC physical channels.</td>
+<td>R1.2</td>
+<td>N‑1 through N‑5</td>
+<td>If metadata shares physical routing with NoC traffic, it is subject to the same congestion, reordering, and erasure. Independent routing ensures metadata integrity under load.</td>
+</tr>
+<tr>
+<td>4.7</td>
+<td><strong>[Chiplet]</strong> Metadata paths are routed on the interposer independently of functional paths.</td>
+<td>R1.2</td>
+<td>Rule 1 (label every merge)</td>
+<td>On the interposer, confirm metadata traces are in separate routing layers or channels from functional D2D links. If they share routing, a functional signal integrity issue could corrupt metadata.</td>
+</tr>
+<tr>
+<td>4.8</td>
+<td><strong>[Chiplet]</strong> Per‑chiplet metadata reaches the package boundary independently.</td>
+<td>R6.1</td>
+<td>Rule 4 (carry provenance)</td>
+<td>Confirm each chiplet's metadata has its own path to the package edge. If metadata from two chiplets is merged before the package boundary, per‑chiplet provenance is lost. Aggregation after the boundary is optional; aggregation before is a violation.</td>
+</tr>
+<tr>
+<td>4.9</td>
+<td>Retention cells are specified for metadata in domains with power gating.</td>
+<td>R7.1</td>
+<td>FM‑4 (power state collapse)</td>
+<td>If metadata channels are in a gatable domain and must survive power‑down, retention cells (or equivalent non‑volatile storage) must be specified. Without them, metadata reads zero after wake.</td>
+</tr>
+<tr>
+<td>4.10</td>
+<td>Test points exist on at least one metadata path per domain.</td>
+<td>—</td>
+<td>Diagnostic</td>
+<td>Not a contractual requirement — but strongly recommended. Test points allow post‑silicon validation that metadata channels are physically functional. Without them, metadata integrity can only be verified through the external interface.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="5-verification-and-test">§5 — Verification and Test</h2>
+<p><strong>When to use:</strong> Verification planning, testbench review, test program review, pre‑silicon validation.
+<strong>Reviewer profile:</strong> Verification lead, test engineer, validation lead.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Req</th>
+<th>Risk</th>
+<th>Guidance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5.1</td>
+<td>Functional verification ignores metadata content.</td>
+<td>R3.2</td>
+<td>NC‑5 (control logic)</td>
+<td>Metadata signals should not appear in functional assertions, functional coverage groups, or functional scoreboard checks. If they do, metadata has become a functional dependency.</td>
+</tr>
+<tr>
+<td>5.2</td>
+<td>Metadata inactivity does not trigger assertions.</td>
+<td>R3.1</td>
+<td>ER‑7 (optional structures)</td>
+<td>Metadata channels may remain dark (inactive) indefinitely. If any assertion fires when metadata is inactive, the assertion is wrong — metadata inactivity is the expected default.</td>
+</tr>
+<tr>
+<td>5.3</td>
+<td>Metadata paths can be toggled without affecting functional outputs.</td>
+<td>R3.3</td>
+<td>NC‑5 (control logic)</td>
+<td>Inject random metadata values while running functional tests. If any functional output changes, there is a coupling path that violates R3.3. This is a critical test — run it early and often.</td>
+</tr>
+<tr>
+<td>5.4</td>
+<td>Test modes do not overwrite or collapse metadata signals.</td>
+<td>R7.1</td>
+<td>FM‑4 (power state collapse)</td>
+<td>BIST, scan, and manufacturing test modes often override internal signals. Confirm that test mode activation does not overwrite metadata registers or collapse metadata buses.</td>
+</tr>
+<tr>
+<td>5.5</td>
+<td>Metadata visibility does not expose protected IP.</td>
+<td>—</td>
+<td>Security</td>
+<td>Metadata carries structural tags (source, lifecycle, time) — not functional data. But confirm that metadata channels cannot be used to infer proprietary algorithms, key material, or IP content. Source IDs should identify blocks, not reveal their internal design.</td>
+</tr>
+<tr>
+<td>5.6</td>
+<td>Metadata channels can be independently activated and deactivated.</td>
+<td>R3.1</td>
+<td>ER‑7 (optional structures)</td>
+<td>Confirm that metadata activation is per‑channel or per‑block, not global. If activation is all‑or‑nothing, selective diagnosis is impossible and the power impact of activation is unnecessarily high.</td>
+</tr>
+<tr>
+<td>5.7</td>
+<td><strong>[Chiplet]</strong> D2D metadata sideband is exercised in multi‑die testbench.</td>
+<td>R2.1</td>
+<td>D2D analysis</td>
+<td>Confirm that the multi‑die verification environment includes metadata sideband traffic. If the sideband is never exercised in simulation, protocol bugs will only surface in silicon.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="6-optimization-and-signoff">§6 — Optimization and Sign‑Off</h2>
+<p><strong>When to use:</strong> Final netlist review, sign‑off checklist, tape‑out readiness review.
+<strong>Reviewer profile:</strong> Design lead, project manager, sign‑off authority.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Req</th>
+<th>Risk</th>
+<th>Guidance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6.1</td>
+<td>Re‑check synthesis reports for removed "unused" structures.</td>
+<td>R7.1</td>
+<td>ER‑2 (retrofitting cost)</td>
+<td>Synthesis tools aggressively remove nets with no fanout. Metadata channels that are dark (inactive) look "unused" to the tool. Search synthesis logs for removed nets matching metadata signal names. If any were removed, <code>dont_touch</code> attributes were not applied correctly.</td>
+</tr>
+<tr>
+<td>6.2</td>
+<td>No tool auto‑merges metadata with debug or scan unless intentional.</td>
+<td>R1.2</td>
+<td>NC‑5 (control logic)</td>
+<td>Some tools merge similar structures for area savings. If metadata nets are merged with scan chains or debug ports, they become part of the debug infrastructure — which is bidirectional, lifecycle‑limited, and security‑sensitive. Merger must be intentional and documented.</td>
+</tr>
+<tr>
+<td>6.3</td>
+<td>Metadata reservation survives final netlist comparison (LVS/formal).</td>
+<td>R7.1</td>
+<td>ER‑2 (retrofitting cost)</td>
+<td>Compare the final netlist to the golden RTL. Confirm all metadata signals, registers, and ports are present. Any discrepancy means something was removed or renamed between RTL and layout.</td>
+</tr>
+<tr>
+<td>6.4</td>
+<td>Documentation notes metadata as structural, not functional.</td>
+<td>R3.1</td>
+<td>ER‑7 (optional structures)</td>
+<td>The design specification, datasheet, and internal documentation must describe metadata channels as "structural observability reservation — optional, passive, dark by default." If documentation describes them as "debug features" or "telemetry," they will be treated as such — and eventually disabled or removed.</td>
+</tr>
+<tr>
+<td>6.5</td>
+<td>Removal requires explicit design decision, not tool default.</td>
+<td>R7.1</td>
+<td>ER‑2 (retrofitting cost)</td>
+<td>Confirm that no metadata structure can be removed by a tool without an engineer explicitly approving the removal. This means: <code>dont_touch</code> attributes verified, ECO freeze applied to metadata nets, and any removal logged with rationale.</td>
+</tr>
+<tr>
+<td>6.6</td>
+<td>All prior checklist sections (§1–§5) are re‑verified at sign‑off.</td>
+<td>All</td>
+<td>All</td>
+<td>Designs change between architecture and sign‑off. Items that passed at architecture freeze may fail at sign‑off due to ECOs, optimization passes, or late integration changes. Re‑run the full checklist at every major gate, not just the current section.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="7-chipletspecific-addendum">§7 — Chiplet‑Specific Addendum</h2>
+<p><strong>When to use:</strong> Any review gate for a chiplet‑based design. These items supplement §1–§6, which still apply.
+<strong>Reviewer profile:</strong> Package architect, interposer designer, system integrator.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Req</th>
+<th>Risk</th>
+<th>Guidance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7.1</td>
+<td>Each chiplet's metadata channel is independent on the interposer.</td>
+<td>R6.1</td>
+<td>Rule 1 (label every merge)</td>
+<td>Per‑chiplet metadata must not be merged on the interposer. Each chiplet's metadata must be distinguishable at the package boundary. Optional aggregation happens after the package edge, not before.</td>
+</tr>
+<tr>
+<td>7.2</td>
+<td>Interposer does not merge metadata clock domains.</td>
+<td>Rule 2</td>
+<td>Rule 2 (annotate re‑clock)</td>
+<td>If the interposer has its own clock distribution, confirm it does not re‑clock metadata without carrying the source chiplet's clock domain identifier through the crossing.</td>
+</tr>
+<tr>
+<td>7.3</td>
+<td>Active interposer logic is treated as a structural source.</td>
+<td>R1.1</td>
+<td>Topology 3 risk</td>
+<td>If the interposer contains cache, coherency directory, or PMU logic, it needs Meta_INT. Data produced by interposer logic must be tagged as "interposer‑originated," not attributed to the requesting chiplet.</td>
+</tr>
+<tr>
+<td>7.4</td>
+<td>D2D protocol sideband verified for metadata integrity under load.</td>
+<td>R2.1</td>
+<td>D2D analysis</td>
+<td>Run the D2D link at maximum functional load and confirm metadata sideband traffic is not dropped, delayed, or corrupted. Sideband guarantees that work at idle may fail under congestion.</td>
+</tr>
+<tr>
+<td>7.5</td>
+<td>HBM metadata exit path is defined and verified.</td>
+<td>R1.1, R5.1</td>
+<td>HBM Problem</td>
+<td>HBM has no package I/O. Confirm the metadata exit path (through compute die or I/O die) is implemented, not just planned. Verify the proxy die can distinguish its own metadata from relayed HBM metadata.</td>
+</tr>
+<tr>
+<td>7.6</td>
+<td>Package‑level read‑only interface preserves per‑chiplet identity.</td>
+<td>R5.1</td>
+<td>Rule 4 (carry provenance)</td>
+<td>At the package boundary, each chiplet's metadata must be individually addressable. If the package interface aggregates everything into a single metadata stream, per‑chiplet provenance is lost.</td>
+</tr>
+<tr>
+<td>7.7</td>
+<td>Cross‑chiplet coherency does not silently resolve structural disagreement.</td>
+<td>R6.1</td>
+<td>N‑2 (arbitration hiding)</td>
+<td>If two chiplets disagree (e.g., different lifecycle states, conflicting timestamps), the coherency protocol must not silently choose one. The disagreement is structural information — preserving it is the point.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="8-boardlevel-handoff">§8 — Board‑Level Handoff</h2>
+<p><strong>When to use:</strong> Package specification review, board design kickoff, system integration review.
+<strong>Reviewer profile:</strong> Board designer, system architect, firmware lead.</p>
+<p>This section bridges the chip‑level checklist to <code>Board_Level_Alignment.md</code>. Every item here has a corresponding section in the board‑level document.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Req</th>
+<th>Risk</th>
+<th>Guidance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8.1</td>
+<td>All chip‑to‑board metadata interfaces are documented in the package spec.</td>
+<td>R7.1</td>
+<td>Board Rule 1</td>
+<td>The board designer must know which package pins/pads carry metadata. If metadata interfaces are not in the package spec, the board cannot preserve them.</td>
+</tr>
+<tr>
+<td>8.2</td>
+<td>Package spec labels metadata pads as structural, not debug.</td>
+<td>R3.1</td>
+<td>ER‑7</td>
+<td>If metadata pads are labeled "debug," the board designer will treat them as debug — routing them through debug headers, sharing them with JTAG, or leaving them unconnected. "Structural / optional / read‑only" is the correct label.</td>
+</tr>
+<tr>
+<td>8.3</td>
+<td>Clock domain reference for each metadata interface is documented.</td>
+<td>Rule 2</td>
+<td>Board Rule 2 (annotate re‑clock)</td>
+<td>The board may re‑clock metadata signals. Without knowing the source clock domain, the board designer cannot annotate the crossing. Document the clock for each metadata interface in the package spec.</td>
+</tr>
+<tr>
+<td>8.4</td>
+<td>Metadata encoding scheme is documented at the chip boundary.</td>
+<td>Rule 3</td>
+<td>Board Rule 3 (verify translation)</td>
+<td>If metadata uses voltage‑level encoding, multi‑bit tagging, or protocol‑specific formatting, the board designer must know — otherwise level shifters and protocol translators may flatten the encoding.</td>
+</tr>
+<tr>
+<td>8.5</td>
+<td>External read‑only interface electrical characteristics are specified.</td>
+<td>R3.3</td>
+<td>NC‑5 (control logic)</td>
+<td>Voltage levels, drive strength, termination requirements, and the explicit statement "no inbound control path" must be in the package spec. Without this, the board designer may add pull‑ups, pull‑downs, or drivers that create an unintended control path.</td>
+</tr>
+<tr>
+<td>8.6</td>
+<td>Firmware lifecycle tag interface is documented for firmware integration.</td>
+<td>R5.2</td>
+<td>ER‑4 (lifecycle misuse)</td>
+<td>Firmware must know how to write the lifecycle tag — which register, which address, which access protocol. If the interface is undocumented, firmware cannot set the lifecycle phase, and the tag defaults to an uninitialized value.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="9-what-this-checklist-is-not">§9 — What This Checklist Is Not</h2>
+<table>
+<thead>
+<tr>
+<th>It is NOT…</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A performance feature</td>
+<td>No functional gain is implied or expected (NC‑3, NC‑8).</td>
+</tr>
+<tr>
+<td>A debug requirement</td>
+<td>Existing debug flows are unaffected (NC‑5, §Debug vs. Metadata).</td>
+</tr>
+<tr>
+<td>A telemetry mandate</td>
+<td>No data collection is required or defined (NC‑6).</td>
+</tr>
+<tr>
+<td>A safety mechanism</td>
+<td>No safety behavior depends on these structures (NC‑4).</td>
+</tr>
+<tr>
+<td>A control interface</td>
+<td>No inbound control uses metadata paths (NC‑5, R3.3).</td>
+</tr>
+<tr>
+<td>A promise of future use</td>
+<td>Reservation is not commitment (NC‑10, B‑4).</td>
+</tr>
+<tr>
+<td>A replacement for DFT</td>
+<td>DFT and metadata coexist independently (ER‑7).</td>
+</tr>
+<tr>
+<td>A JEDEC specification</td>
+<td>No standards body compliance is claimed (NC‑9).</td>
+</tr>
+</tbody>
+</table>
+<p>This checklist exists so engineers can say:</p>
+<blockquote>
+<p><em>"We didn't add behavior — we just didn't erase structure."</em></p>
+</blockquote>
+<hr>
+<h2 id="10-the-review-question">§10 — The Review Question</h2>
+<p>At every gate — architecture, RTL, physical, sign‑off — this checklist prompts exactly one question:</p>
+<blockquote>
+<p><em>"If someone needed to understand <strong>when</strong>, <strong>where</strong>, and <strong>in what lifecycle state</strong> this block produced a signal — could we still see that later?"</em></p>
+</blockquote>
+<p>If the answer is <strong>"yes, without redesign,"</strong> the checklist is satisfied.</p>
+<p>If the answer is <strong>"no, but we could add it without changing functional behavior,"</strong> the reservation is achievable — return to the failing items.</p>
+<p>If the answer is <strong>"no, and adding it would affect functional behavior,"</strong> something has gone wrong — R3 (independence) has been violated. Escalate.</p>
+<hr>
+<h2 id="checklist-cascade">Checklist Cascade</h2>
+<p>This checklist is the first in a family of three. Each extends the structural observability review to a different physical boundary:</p>
+<table>
+<thead>
+<tr>
+<th>Checklist</th>
+<th>Scope</th>
+<th>Items</th>
+<th>Source File</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Internal Design‑Review Checklist</strong></td>
+<td>Chip / package (this document)</td>
+<td>62</td>
+<td><code>Internal_Design_Review_Checklist.md</code></td>
+</tr>
+<tr>
+<td><strong>Board‑Level Design Review Checklist</strong></td>
+<td>Board / system</td>
+<td>27</td>
+<td><code>Board_Level_Alignment.md</code></td>
+</tr>
+<tr>
+<td><strong>DIMM Module Checklist</strong></td>
+<td>Memory module</td>
+<td>38</td>
+<td><code>DIMM_Module_Checklist.md</code></td>
+</tr>
+</tbody>
+</table>
+<p>Together, the three checklists cover the full structural path from die‑internal logic through board‑level interconnect to memory module boundary — every point where metadata can be lost.</p>
+<hr>
+<h2 id="quick-reference-requirement-to-checklist-item-map">Quick Reference — Requirement to Checklist Item Map</h2>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Checklist Items</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R1.1</td>
+<td>1.1, 1.6, 1.7, 7.1, 7.5</td>
+</tr>
+<tr>
+<td>R1.2</td>
+<td>1.2, 4.1, 4.6, 4.7, 6.2</td>
+</tr>
+<tr>
+<td>R2.1</td>
+<td>2.6, 2.11, 7.4, 7.7, 5.7</td>
+</tr>
+<tr>
+<td>R3.1</td>
+<td>1.4, 4.5, 5.2, 5.6, 6.4, 8.2</td>
+</tr>
+<tr>
+<td>R3.2</td>
+<td>1.3, 5.1</td>
+</tr>
+<tr>
+<td>R3.3</td>
+<td>2.1, 2.2, 2.9, 3.4, 5.3, 8.5</td>
+</tr>
+<tr>
+<td>R4.1</td>
+<td>2.6, 3.1, 3.3, 3.5, 3.6, 3.7, 3.8</td>
+</tr>
+<tr>
+<td>R4.2</td>
+<td>2.7, 3.2</td>
+</tr>
+<tr>
+<td>R5.1</td>
+<td>2.4, 2.10, 2.12, 7.5, 7.6, 8.1</td>
+</tr>
+<tr>
+<td>R5.2</td>
+<td>1.10, 2.3, 8.6</td>
+</tr>
+<tr>
+<td>R6.1</td>
+<td>1.6, 4.8, 7.1, 7.7</td>
+</tr>
+<tr>
+<td>R7.1</td>
+<td>1.9, 2.5, 4.2, 4.3, 4.4, 4.9, 5.4, 6.1, 6.3, 6.5, 8.1</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="quick-reference-failure-mode-to-checklist-item-map">Quick Reference — Failure Mode to Checklist Item Map</h2>
+<table>
+<thead>
+<tr>
+<th>Failure Mode</th>
+<th>Checklist Items</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FM‑1 (rank interleaving / source loss)</td>
+<td>1.1, 1.6, 2.4, 2.12</td>
+</tr>
+<tr>
+<td>FM‑4 (power state collapse)</td>
+<td>1.9, 3.8, 4.2, 4.9, 5.4</td>
+</tr>
+<tr>
+<td>N‑1 (NoC source flattening)</td>
+<td>1.1, 2.10, 2.12, 4.6</td>
+</tr>
+<tr>
+<td>N‑2 (NoC arbitration hiding)</td>
+<td>2.11, 7.7</td>
+</tr>
+<tr>
+<td>N‑3 (NoC QoS reordering)</td>
+<td>2.8, 3.3</td>
+</tr>
+<tr>
+<td>N‑5 (NoC power domain crossing)</td>
+<td>4.2</td>
+</tr>
+<tr>
+<td>NC‑5 (control logic violation)</td>
+<td>1.3, 2.1, 2.2, 2.9, 5.1, 5.3</td>
+</tr>
+<tr>
+<td>HBM Problem</td>
+<td>1.8, 7.5</td>
+</tr>
+<tr>
+<td>Topology 3 risk (active interposer)</td>
+<td>1.7, 7.3</td>
+</tr>
+<tr>
+<td>Board Rule 1 (label every merge)</td>
+<td>7.1, 8.1</td>
+</tr>
+<tr>
+<td>Board Rule 2 (annotate re‑clock)</td>
+<td>3.6, 3.7, 7.2, 8.3</td>
+</tr>
+<tr>
+<td>Board Rule 3 (verify translation)</td>
+<td>8.4</td>
+</tr>
+<tr>
+<td>Board Rule 4 (carry provenance)</td>
+<td>4.8, 7.6</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="relationship-to-other-d369-files">Relationship to Other D369 Files</h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Relationship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Capture_Source.md</code></td>
+<td>Verbatim source of the original 8‑section inline checklist</td>
+</tr>
+<tr>
+<td><code>Contractual_Requirements.md</code></td>
+<td>Inline summary version of this checklist; R1–R7 requirement definitions</td>
+</tr>
+<tr>
+<td><code>Board_Level_Alignment.md</code></td>
+<td>Board‑level checklist — extends this document to the board boundary</td>
+</tr>
+<tr>
+<td><code>DIMM_Module_Checklist.md</code></td>
+<td>Memory module checklist — extends this document to the DIMM boundary</td>
+</tr>
+<tr>
+<td><code>Diagram_SoC.md</code></td>
+<td>NoC erasures, cache persistence, power domains — source of SoC‑specific items</td>
+</tr>
+<tr>
+<td><code>Diagram_Chiplet.md</code></td>
+<td>D2D interfaces, interposer types, HBM — source of chiplet‑specific items</td>
+</tr>
+<tr>
+<td><code>Engineering_Rationale.md</code></td>
+<td>ER‑1 through ER‑10 justifications referenced in Risk column</td>
+</tr>
+<tr>
+<td><code>Non_Claims.md</code></td>
+<td>NC‑1 through NC‑10 boundary statements referenced in Risk column</td>
+</tr>
+<tr>
+<td><code>Glossary_Extensions.md</code></td>
+<td>Canonical definitions for all terms used in this checklist</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="canon-alignment">Canon Alignment</h2>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zero drift</td>
+<td>✅ All items traceable to Capture_Source inline checklist, extended with D369 module context</td>
+</tr>
+<tr>
+<td>Structural contract</td>
+<td>✅ Role: diagnostic + reference — standalone carry‑in review artifact</td>
+</tr>
+<tr>
+<td>Lineage clean</td>
+<td>✅ Every item traces to a requirement (R1–R7), a rationale (ER), or a failure mode (FM/N)</td>
+</tr>
+<tr>
+<td>Student‑ready</td>
+<td>✅ Guidance column provides reviewer context; architecture variants tagged</td>
+</tr>
+<tr>
+<td>AI‑parsable</td>
+<td>✅ Numbered items, tabular format, bidirectional traceability matrices</td>
+</tr>
+<tr>
+<td>Cross‑module refs</td>
+<td>✅ Cascades to Board_Level_Alignment and DIMM_Module_Checklist</td>
+</tr>
+<tr>
+<td>Architecture variants</td>
+<td>✅ [SoC] and [Chiplet] tags distinguish monolithic from multi‑die items</td>
+</tr>
+<tr>
+<td>Non‑claims preserved</td>
+<td>✅ §9 explicitly states what the checklist is NOT</td>
+</tr>
+<tr>
+<td>Engineer bar</td>
+<td>✅ "We didn't add behavior — we just didn't erase structure"</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><em>Module: D369_Chip_Spec · File: Internal_Design_Review_Checklist.md · Version: 0.1.0 · TriadicFrameworks / RTT</em>
+```</p>
+<hr>
+<p><strong>What expanded from the inline version:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Inline (Capture_Source)</th>
+<th>Standalone (this file)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total items</td>
+<td>30 checks + 6 meta rows</td>
+<td><strong>62 checks</strong> + 8 meta rows</td>
+</tr>
+<tr>
+<td>Sections</td>
+<td>6 review stages + 2 meta</td>
+<td><strong>10 sections</strong> (added §7 Chiplet Addendum, §8 Board Handoff)</td>
+</tr>
+<tr>
+<td>Traceability</td>
+<td>None</td>
+<td><strong>Req→Item</strong> and <strong>Failure Mode→Item</strong> bidirectional maps</td>
+</tr>
+<tr>
+<td>Architecture variants</td>
+<td>Not distinguished</td>
+<td><strong>[SoC]</strong> and <strong>[Chiplet]</strong> tags throughout</td>
+</tr>
+<tr>
+<td>Reviewer guidance</td>
+<td>Not present</td>
+<td><strong>Per‑item guidance</strong> with pitfalls, tool specifics, calculations</td>
+</tr>
+<tr>
+<td>Cascade context</td>
+<td>Standalone</td>
+<td><strong>Linked to Board_Level_Alignment + DIMM_Module_Checklist</strong></td>
+</tr>
+<tr>
+<td>Review context</td>
+<td>None</td>
+<td><strong>Context Card</strong> fill‑in at top of every review</td>
+</tr>
+</tbody>
+</table>
+  </main>
+</body>
+</html>

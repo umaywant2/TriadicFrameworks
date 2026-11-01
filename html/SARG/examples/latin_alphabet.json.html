@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/SARG/examples/latin_alphabet.json.md">
+  <title>latin_alphabet.json</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/SARG/examples/latin_alphabet.json.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/SARG/examples/latin_alphabet.json.md</code>
+  </aside>
+
+  <main>
+<p>Here is a clean, canonical <strong><code>/docs/SARG/examples/latin_alphabet.json</code></strong> — aligned with the schema you already established, consistent with the invariant examples you approved yesterday, and tuned to the exact style you’ve been using across the SARG canon.</p>
+<p>This version is intentionally <strong>minimal, structural, substrate‑agnostic, and demonstrative</strong> — the Latin alphabet as a SARG‑walkable object, not a linguistic essay.</p>
+<hr>
+<pre><code class="language-json">{
+  &quot;sarg_version&quot;: &quot;1.0.0&quot;,
+  &quot;id&quot;: &quot;latin_alphabet_basic&quot;,
+  &quot;description&quot;: &quot;Minimal SARG example: the 26-letter Latin alphabet treated as a substrate with simple invariants and resonance anchors.&quot;,
+  &quot;substrate&quot;: {
+    &quot;type&quot;: &quot;symbolic&quot;,
+    &quot;domain&quot;: &quot;alphabetic&quot;,
+    &quot;name&quot;: &quot;Latin Alphabet&quot;,
+    &quot;elements&quot;: [
+      &quot;A&quot;,&quot;B&quot;,&quot;C&quot;,&quot;D&quot;,&quot;E&quot;,&quot;F&quot;,&quot;G&quot;,&quot;H&quot;,&quot;I&quot;,&quot;J&quot;,&quot;K&quot;,&quot;L&quot;,&quot;M&quot;,
+      &quot;N&quot;,&quot;O&quot;,&quot;P&quot;,&quot;Q&quot;,&quot;R&quot;,&quot;S&quot;,&quot;T&quot;,&quot;U&quot;,&quot;V&quot;,&quot;W&quot;,&quot;X&quot;,&quot;Y&quot;,&quot;Z&quot;
+    ],
+    &quot;properties&quot;: {
+      &quot;cardinality&quot;: 26,
+      &quot;script_direction&quot;: &quot;LTR&quot;,
+      &quot;case_system&quot;: &quot;bicameral&quot;,
+      &quot;historical_root&quot;: &quot;Roman&quot;
+    }
+  },
+  &quot;lens&quot;: {
+    &quot;primary&quot;: &quot;structural&quot;,
+    &quot;secondary&quot;: [&quot;phonetic&quot;, &quot;graphical&quot;],
+    &quot;notes&quot;: &quot;Structural lens treats letters as atomic symbolic units; phonetic lens is optional and not required for invariant extraction.&quot;
+  },
+  &quot;invariants&quot;: {
+    &quot;symmetry&quot;: {
+      &quot;rotational&quot;: [&quot;H&quot;, &quot;I&quot;, &quot;N&quot;, &quot;O&quot;, &quot;S&quot;, &quot;X&quot;, &quot;Z&quot;],
+      &quot;mirror_vertical&quot;: [&quot;A&quot;, &quot;H&quot;, &quot;I&quot;, &quot;M&quot;, &quot;O&quot;, &quot;T&quot;, &quot;U&quot;, &quot;V&quot;, &quot;W&quot;, &quot;X&quot;, &quot;Y&quot;],
+      &quot;mirror_horizontal&quot;: [&quot;B&quot;, &quot;C&quot;, &quot;D&quot;, &quot;E&quot;, &quot;H&quot;, &quot;I&quot;, &quot;K&quot;, &quot;O&quot;, &quot;X&quot;]
+    },
+    &quot;categorical&quot;: {
+      &quot;vowels&quot;: [&quot;A&quot;, &quot;E&quot;, &quot;I&quot;, &quot;O&quot;, &quot;U&quot;],
+      &quot;consonants&quot;: [
+        &quot;B&quot;,&quot;C&quot;,&quot;D&quot;,&quot;F&quot;,&quot;G&quot;,&quot;H&quot;,&quot;J&quot;,&quot;K&quot;,&quot;L&quot;,&quot;M&quot;,
+        &quot;N&quot;,&quot;P&quot;,&quot;Q&quot;,&quot;R&quot;,&quot;S&quot;,&quot;T&quot;,&quot;V&quot;,&quot;W&quot;,&quot;X&quot;,&quot;Y&quot;,&quot;Z&quot;
+      ]
+    },
+    &quot;positional&quot;: {
+      &quot;first&quot;: &quot;A&quot;,
+      &quot;last&quot;: &quot;Z&quot;,
+      &quot;midpoint&quot;: &quot;M&quot;
+    }
+  },
+  &quot;resonance&quot;: {
+    &quot;anchors&quot;: {
+      &quot;axis&quot;: {
+        &quot;primary&quot;: &quot;A–Z linear progression&quot;,
+        &quot;secondary&quot;: &quot;symmetry clusters&quot;
+      },
+      &quot;clusters&quot;: [
+        {
+          &quot;name&quot;: &quot;rotational_symmetry_cluster&quot;,
+          &quot;members&quot;: [&quot;H&quot;, &quot;I&quot;, &quot;N&quot;, &quot;O&quot;, &quot;S&quot;, &quot;X&quot;, &quot;Z&quot;],
+          &quot;signature&quot;: &quot;R1&quot;
+        },
+        {
+          &quot;name&quot;: &quot;vowel_cluster&quot;,
+          &quot;members&quot;: [&quot;A&quot;, &quot;E&quot;, &quot;I&quot;, &quot;O&quot;, &quot;U&quot;],
+          &quot;signature&quot;: &quot;V1&quot;
+        }
+      ]
+    },
+    &quot;mapping&quot;: {
+      &quot;A&quot;: { &quot;cluster&quot;: &quot;vowel_cluster&quot;, &quot;invariants&quot;: [&quot;mirror_vertical&quot;] },
+      &quot;H&quot;: { &quot;cluster&quot;: &quot;rotational_symmetry_cluster&quot;, &quot;invariants&quot;: [&quot;rotational&quot;, &quot;mirror_vertical&quot;, &quot;mirror_horizontal&quot;] },
+      &quot;O&quot;: { &quot;cluster&quot;: &quot;rotational_symmetry_cluster&quot;, &quot;invariants&quot;: [&quot;rotational&quot;, &quot;mirror_vertical&quot;] },
+      &quot;M&quot;: { &quot;cluster&quot;: null, &quot;invariants&quot;: [&quot;mirror_vertical&quot;], &quot;positional_role&quot;: &quot;midpoint&quot; }
+    }
+  },
+  &quot;examples&quot;: {
+    &quot;extraction_walkthrough&quot;: [
+      {
+        &quot;letter&quot;: &quot;A&quot;,
+        &quot;lens&quot;: &quot;structural&quot;,
+        &quot;identified_invariants&quot;: [&quot;mirror_vertical&quot;],
+        &quot;resonance_anchor&quot;: &quot;V1&quot;
+      },
+      {
+        &quot;letter&quot;: &quot;H&quot;,
+        &quot;lens&quot;: &quot;structural&quot;,
+        &quot;identified_invariants&quot;: [&quot;rotational&quot;, &quot;mirror_vertical&quot;, &quot;mirror_horizontal&quot;],
+        &quot;resonance_anchor&quot;: &quot;R1&quot;
+      },
+      {
+        &quot;letter&quot;: &quot;M&quot;,
+        &quot;lens&quot;: &quot;structural&quot;,
+        &quot;identified_invariants&quot;: [&quot;mirror_vertical&quot;],
+        &quot;resonance_anchor&quot;: null,
+        &quot;notes&quot;: &quot;Serves as midpoint anchor in positional invariants.&quot;
+      }
+    ]
+  }
+}
+</code></pre>
+  </main>
+</body>
+</html>

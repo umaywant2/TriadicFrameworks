@@ -1,0 +1,1446 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/post-ASML_era/The_TGI_Metrology_Standard.md">
+  <title>The TGI Metrology Standard</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/post-ASML_era/The_TGI_Metrology_Standard.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/post-ASML_era/The_TGI_Metrology_Standard.md</code>
+  </aside>
+
+  <main>
+<h1 id="the-tgi-metrology-standard">The TGI Metrology Standard</h1>
+<p><strong>Repository:</strong> TriadicFrameworks
+<strong>Path:</strong> <code>docs/post-ASML_era/The_TGI_Metrology_Standard.md</code>
+<strong>Status:</strong> Canonical Reference
+<strong>Revision:</strong> 1.0.0</p>
+<hr>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#1-purpose-and-scope">Purpose and Scope</a></li>
+<li><a href="#2-the-temporal-geometric-interface-defined">The Temporal-Geometric Interface Defined</a></li>
+<li><a href="#3-measurement-parameter-taxonomy">Measurement Parameter Taxonomy</a></li>
+<li><a href="#4-instrumentation-requirements">Instrumentation Requirements</a></li>
+<li><a href="#5-spatial-temporal-registration">Spatial-Temporal Registration</a></li>
+<li><a href="#6-interface-continuity">Interface Continuity</a></li>
+<li><a href="#7-temporal-address-overlay-error">Temporal Address Overlay Error</a></li>
+<li><a href="#8-tgi-uniformity-index">TGI Uniformity Index</a></li>
+<li><a href="#9-coherence-layer-gradient">Coherence Layer Gradient</a></li>
+<li><a href="#10-geometric-drift-correlation">Geometric Drift Correlation</a></li>
+<li><a href="#11-sampling-strategy">Sampling Strategy</a></li>
+<li><a href="#12-data-analysis-and-reporting">Data Analysis and Reporting</a></li>
+<li><a href="#13-acceptance-criteria">Acceptance Criteria</a></li>
+<li><a href="#14-calibration-requirements">Calibration Requirements</a></li>
+<li><a href="#15-measurement-uncertainty">Measurement Uncertainty</a></li>
+<li><a href="#16-integration-with-process-qualification">Integration with Process Qualification</a></li>
+<li><a href="#17-glossary">Glossary</a></li>
+<li><a href="#18-related-documents">Related Documents</a></li>
+</ol>
+<hr>
+<h2 id="1-purpose-and-scope">1. Purpose and Scope</h2>
+<h3 id="11-purpose">1.1 Purpose</h3>
+<p>This document is the normative metrology standard for the <strong>Temporal-Geometric Interface (TGI)</strong> in TriadicFrameworks post-ASML manufacturing. It defines the parameters that characterize the TGI, the instruments required to measure them, the protocols by which measurements are taken, the analysis methods by which raw data are reduced to reportable values, and the acceptance criteria against which those values are evaluated.</p>
+<p>The TGI is the boundary domain in which the spatial coordinate system of Tier 1 geometric patterning and the temporal address space of Tier 2 TRS commit operations must be brought into and maintained in precise co-registration. Failures at this interface are a distinct defect class — not reducible to classical spatial patterning defects or to pure temporal address errors — and require their own metrology discipline.</p>
+<p>This standard provides the metrology framework that is prerequisite to:</p>
+<ul>
+<li>Process qualification for any fab layer that spans the TGI</li>
+<li>TRS stack qualification at SC-class boundaries</li>
+<li>Yield management correlation for TGI-attributed defect modes</li>
+<li>PDK generation for TGI-layer design rules</li>
+</ul>
+<h3 id="12-scope">1.2 Scope</h3>
+<p>This standard covers:</p>
+<ul>
+<li>The formal definition of the TGI and its physical extent within the process stack</li>
+<li>Six primary TGI measurement parameters and their physical basis</li>
+<li>Instrumentation requirements and qualification criteria for TGI measurement tools</li>
+<li>Measurement protocols for each parameter, including site selection, sequence, and environmental conditions</li>
+<li>Wafer-level and die-level sampling strategies</li>
+<li>Data analysis methods, uncertainty treatment, and reporting format</li>
+<li>Acceptance criteria by SC class and process tier</li>
+<li>Calibration requirements for all measurement instruments defined herein</li>
+<li>A framework for measurement uncertainty estimation consistent with the GUM approach</li>
+<li>The interfaces between TGI metrology and TRS stack qualification, SCR commissioning, and yield management</li>
+</ul>
+<p>This standard does not cover:</p>
+<ul>
+<li>Substrate clarity measurement, which is governed by the Temporal Contrast Test Protocol (<a href="../metrology/TCT_Protocol.html"><code>docs/metrology/TCT_Protocol.md</code></a>)</li>
+<li>In-fab real-time coherence monitoring, which is governed by the SCR Specification (<a href="./The_SCR_Specification.html"><code>docs/post-ASML_era/The_SCR_Specification.md</code></a>)</li>
+<li>Classical spatial overlay metrology for Tier 1 layers without a TGI relationship</li>
+</ul>
+<h3 id="13-normative-language">1.3 Normative Language</h3>
+<p>The conventions established in the SCR Specification apply throughout this document:</p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MUST</strong></td>
+<td>Required. Non-conformant if omitted or violated.</td>
+</tr>
+<tr>
+<td><strong>MUST NOT</strong></td>
+<td>Prohibited. Non-conformant if present.</td>
+</tr>
+<tr>
+<td><strong>SHOULD</strong></td>
+<td>Strongly recommended. Deviation requires documented justification.</td>
+</tr>
+<tr>
+<td><strong>SHOULD NOT</strong></td>
+<td>Strongly discouraged. Deviation requires documented justification.</td>
+</tr>
+<tr>
+<td><strong>MAY</strong></td>
+<td>Permitted but not required.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="2-the-temporal-geometric-interface-defined">2. The Temporal-Geometric Interface Defined</h2>
+<h3 id="21-conceptual-definition">2.1 Conceptual Definition</h3>
+<p>The Temporal-Geometric Interface is the domain in which two independently defined coordinate systems — the spatial coordinate system of the geometric layer stack and the temporal address space of the TRS — must be co-registered to enable correct commit operations.</p>
+<p>These two systems are fundamentally different in kind. The spatial coordinate system is defined by physical positions on the substrate: x and y in the die plane, z through the layer stack. The temporal address space is defined by positions within the SCR coherence cycle: a temporal address τ in the address domain [0, 1), subdivided to the resolution supported by the substrate's SC class. Neither system intrinsically references the other. The TGI is the artifact of their coupling: the set of rules, physical structures, and verified relationships that allow a given spatial location on the substrate to be uniquely associated with a temporal address, and vice versa.</p>
+<p>A correctly formed TGI allows the TRS Commit Layer (L4) to deposit a commit operation at a precisely intended spatial location with a precisely intended temporal address, without ambiguity and without cross-contamination between adjacent operations. A degraded or misregistered TGI introduces systematic or stochastic error into this mapping, producing a defect class that manifests simultaneously as a spatial displacement and a temporal address error.</p>
+<h3 id="22-physical-location">2.2 Physical Location</h3>
+<p>The TGI is not a single layer. It is a transition zone that spans from the uppermost Tier 1 structural layer to the lowermost Tier 2 temporally-addressed layer. Its vertical extent z_TGI is process-specific and is defined during process qualification as the range of z coordinates over which:</p>
+<ul>
+<li>The substrate's SC class transitions from SC-III (structural layers not qualified for temporal addressing) to SC-II or SC-I (layers qualified for temporal address encoding)</li>
+<li>Spatial-temporal co-registration must be maintained to within the process's registration tolerance</li>
+<li>The physical properties that govern both spatial patterning fidelity and temporal address resolution are simultaneously present and measurable</li>
+</ul>
+<p>The boundaries of z_TGI — the <strong>TGI floor</strong> (z_f) and <strong>TGI ceiling</strong> (z_c) — MUST be identified and recorded for each qualified process. Measurements required by this standard are taken within or with reference to this defined zone.</p>
+<h3 id="23-the-two-failure-modes-of-the-tgi">2.3 The Two Failure Modes of the TGI</h3>
+<p>TGI failures fall into two categories that are mechanistically distinct:</p>
+<p><strong>Type I — Registration Failure:</strong> The spatial and temporal coordinate systems diverge. A commit operation directed to spatial coordinates (x₀, y₀) and temporal address τ₀ is executed at (x₀ + Δx, y₀ + Δy) or with address τ₀ + Δτ due to accumulated registration error across the TGI zone. Type I failures are systematic: they produce spatially correlated error patterns across the die and are detectable by spatial mapping.</p>
+<p><strong>Type II — Interface Integrity Failure:</strong> Physical degradation at the TGI boundary — roughness, compositional non-uniformity, stress, or delamination — locally reduces the substrate clarity available to temporal operations in the layers above. Type II failures are locally stochastic: they produce islands of elevated temporal address error rate that correlate to defect sites in the TGI zone rather than to systematic registration offsets.</p>
+<p>TGI metrology is designed to detect and characterize both failure types. Parameters in Sections 5 through 8 primarily address Type I. Parameters in Sections 6 and 9 primarily address Type II.</p>
+<h3 id="24-relationship-to-substrate-clarity">2.4 Relationship to Substrate Clarity</h3>
+<p>Substrate clarity (SC) is measured by the Temporal Contrast Test (TCT) and reflects the bulk property of a substrate region to sustain distinct temporal addresses. The TGI introduces a directional, depth-dependent modulation of this property. A substrate with nominally high SC bulk values can exhibit locally degraded effective SC at the TGI boundary due to interface roughness, compositional grading, or stress-induced propagation velocity variation.</p>
+<p>TGI metrology therefore complements TCT rather than substituting for it. TCT confirms that the bulk SC class of a substrate lot meets the process requirement. TGI metrology confirms that the interface conditions within the TGI zone do not locally suppress the effective SC below the qualified minimum.</p>
+<hr>
+<h2 id="3-measurement-parameter-taxonomy">3. Measurement Parameter Taxonomy</h2>
+<h3 id="31-primary-parameters">3.1 Primary Parameters</h3>
+<p>This standard defines six primary TGI measurement parameters. Each is measured independently and reported separately. Together they provide complete characterization of TGI quality.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Symbol</th>
+<th>Type Addressed</th>
+<th>Section</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spatial-Temporal Registration</td>
+<td>STR</td>
+<td>Type I</td>
+<td>§5</td>
+</tr>
+<tr>
+<td>Interface Continuity</td>
+<td>IC</td>
+<td>Type II</td>
+<td>§6</td>
+</tr>
+<tr>
+<td>Temporal Address Overlay Error</td>
+<td>TAOE</td>
+<td>Type I</td>
+<td>§7</td>
+</tr>
+<tr>
+<td>TGI Uniformity Index</td>
+<td>TUI</td>
+<td>Type I + II</td>
+<td>§8</td>
+</tr>
+<tr>
+<td>Coherence Layer Gradient</td>
+<td>CLG</td>
+<td>Type II</td>
+<td>§9</td>
+</tr>
+<tr>
+<td>Geometric Drift Correlation</td>
+<td>GDC</td>
+<td>Type I</td>
+<td>§10</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-derived-parameters">3.2 Derived Parameters</h3>
+<p>Two derived parameters are computed from combinations of primary measurements. Derived parameters are not independently measured; they are calculated during data analysis (§12).</p>
+<table>
+<thead>
+<tr>
+<th>Derived Parameter</th>
+<th>Symbol</th>
+<th>Inputs</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Effective Interface SC</td>
+<td>SC_eff</td>
+<td>IC, CLG</td>
+<td>Local effective substrate clarity at the TGI boundary, accounting for interface and gradient effects</td>
+</tr>
+<tr>
+<td>Registration-Weighted Density Limit</td>
+<td>RWDL</td>
+<td>STR, TAOE, TUI</td>
+<td>The maximum temporal density supportable at a given die location given the measured registration quality</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-parameter-independence">3.3 Parameter Independence</h3>
+<p>STR and TAOE are related but not identical. STR measures the geometric offset between coordinate systems using reference structures in the TGI zone. TAOE measures the error of actually committed temporal addresses at known spatial locations. STR is a property of the TGI structure itself; TAOE is a property of the TRS stack operating through that structure. Both must be measured; one does not substitute for the other.</p>
+<p>Similarly, IC and CLG are related but address different physical phenomena. IC characterizes the physical quality of the interface layer (roughness, composition). CLG characterizes how coherence properties — the precondition for temporal address resolution — change through the z direction across the TGI zone. A smooth, compositionally uniform interface (high IC) does not guarantee a gentle coherence gradient; material systems exist in which a physically smooth interface produces a sharp coherence step that limits effective temporal addressing above it.</p>
+<hr>
+<h2 id="4-instrumentation-requirements">4. Instrumentation Requirements</h2>
+<h3 id="41-instrument-classes">4.1 Instrument Classes</h3>
+<p>TGI metrology requires four instrument classes. Each class is defined by its functional role. Specific implementations may vary by manufacturer and process node, but all implementations MUST meet the minimum specifications defined in this section.</p>
+<table>
+<thead>
+<tr>
+<th>Instrument Class</th>
+<th>Abbreviation</th>
+<th>Primary Parameters Measured</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Temporal Registration Microscope</td>
+<td>TRM</td>
+<td>STR, TAOE, TUI</td>
+</tr>
+<tr>
+<td>Interface Structure Profiler</td>
+<td>ISP</td>
+<td>IC</td>
+</tr>
+<tr>
+<td>Coherence Gradient Scanner</td>
+<td>CGS</td>
+<td>CLG, SC_eff</td>
+</tr>
+<tr>
+<td>Geometric Drift Analyzer</td>
+<td>GDA</td>
+<td>GDC, STR (cross-check)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-temporal-registration-microscope">4.2 Temporal Registration Microscope</h3>
+<p>The TRM is the primary instrument for spatial-temporal co-registration measurements. It must simultaneously resolve spatial positions within the TGI zone and read back temporal address assignments from reference structures embedded in the substrate.</p>
+<p><strong>R-TRM-01:</strong> The TRM MUST achieve spatial positioning accuracy of ≤ 0.5 nm (3σ) in both x and y axes across the full measurement field.</p>
+<p><strong>R-TRM-02:</strong> The TRM MUST be capable of reading temporal address reference structures with a temporal address resolution of ≤ 1/1024 of the full address range [0, 1).</p>
+<p><strong>R-TRM-03:</strong> The TRM measurement field MUST cover a minimum area of 50 μm × 50 μm in a single acquisition. Stitched acquisitions are permitted for larger fields but require stitching error characterization as part of instrument qualification.</p>
+<p><strong>R-TRM-04:</strong> The TRM MUST provide a co-registered output that associates each measured temporal address with the spatial coordinates at which the address was read, with coordinate uncertainty included in the output record.</p>
+<p><strong>R-TRM-05:</strong> The TRM MUST be able to access the TGI zone without removal of overlying layers (non-destructive access) in all process configurations for which it is qualified. Destructive cross-section measurement is permitted for qualification measurements only, not for in-line production metrology.</p>
+<h3 id="43-interface-structure-profiler">4.3 Interface Structure Profiler</h3>
+<p>The ISP characterizes the physical properties of the TGI boundary — its roughness, compositional uniformity, and mechanical integrity.</p>
+<p><strong>R-ISP-01:</strong> The ISP MUST measure surface/interface roughness with a vertical resolution of ≤ 0.1 nm RMS across a measurement field of ≥ 10 μm × 10 μm.</p>
+<p><strong>R-ISP-02:</strong> The ISP MUST be capable of depth-resolved compositional measurement within the TGI zone, with a depth resolution of ≤ 0.5 nm.</p>
+<p><strong>R-ISP-03:</strong> The ISP MUST measure interface stress distribution with a spatial resolution of ≤ 1 μm, sufficient to resolve stress concentrations at device-scale features within the TGI zone.</p>
+<p><strong>R-ISP-04:</strong> The ISP MUST operate non-destructively for in-line measurements. Destructive ISP measurements (e.g., cross-section TEM) are reserved for failure analysis and process qualification, not production monitoring.</p>
+<h3 id="44-coherence-gradient-scanner">4.4 Coherence Gradient Scanner</h3>
+<p>The CGS measures the depth profile of coherence properties through the TGI zone, establishing how the substrate's capacity for temporal address resolution evolves from the TGI floor to the TGI ceiling.</p>
+<p><strong>R-CGS-01:</strong> The CGS MUST provide depth-resolved coherence property measurements at a z-resolution of ≤ 1 nm within the TGI zone.</p>
+<p><strong>R-CGS-02:</strong> The CGS measurement MUST be calibrated against the TCT SC rating for the bulk substrate above the TGI ceiling and the bulk substrate below the TGI floor. The CGS depth profile must interpolate between these two calibration points through the TGI zone.</p>
+<p><strong>R-CGS-03:</strong> The CGS MUST measure at a minimum of three z depths within the TGI zone — at z_f (TGI floor), at (z_f + z_c)/2 (TGI midpoint), and at z_c (TGI ceiling) — in each measurement pass. Additional depths MAY be measured to characterize sharp gradients.</p>
+<p><strong>R-CGS-04:</strong> The CGS MUST produce a continuous depth profile by interpolation from measured points, using a documented interpolation method. The interpolation method MUST be included in the instrument qualification record.</p>
+<h3 id="45-geometric-drift-analyzer">4.5 Geometric Drift Analyzer</h3>
+<p>The GDA measures the spatial stability of Tier 1 geometric features across the wafer and quantifies how local geometric drift in those features correlates with temporal address error in overlying Tier 2 operations.</p>
+<p><strong>R-GDA-01:</strong> The GDA MUST measure in-plane geometric feature positions with an accuracy of ≤ 1 nm (3σ) relative to die origin, across the full die extent.</p>
+<p><strong>R-GDA-02:</strong> The GDA MUST cover the full wafer extent in a single measurement session without change of reference frame. Multi-session measurements that require reference frame stitching MUST characterize and report the stitching error contribution to the total GDC uncertainty.</p>
+<p><strong>R-GDA-03:</strong> The GDA MUST produce a vector displacement field — a map of (Δx, Δy) displacement vectors at a minimum grid density of one point per 500 μm × 500 μm across the die — that captures the spatial pattern of geometric drift.</p>
+<p><strong>R-GDA-04:</strong> The GDA displacement field MUST be co-registered to the same die coordinate system used by the TRM, to enable direct comparison of GDA and STR results.</p>
+<h3 id="46-instrument-interdependence">4.6 Instrument Interdependence</h3>
+<p>The four instrument classes share one critical requirement: they must all reference a common die coordinate system. Without a common reference, measurements from different instruments cannot be co-registered and the derived parameters SC_eff and RWDL cannot be computed.</p>
+<p><strong>R-INSTR-01:</strong> All instruments used for TGI metrology at a given fab MUST be calibrated to a common die coordinate reference, traceable to the fab's primary coordinate standard. The coordinate standard MUST be calibrated to a national measurement standard with documented traceability.</p>
+<p><strong>R-INSTR-02:</strong> The cross-instrument coordinate registration error MUST be ≤ 2 nm (3σ) between any two instruments used in the same measurement session. Cross-instrument registration MUST be verified at the beginning of each measurement campaign using a qualified reference coupon.</p>
+<hr>
+<h2 id="5-spatial-temporal-registration">5. Spatial-Temporal Registration</h2>
+<h3 id="51-definition">5.1 Definition</h3>
+<p><strong>Spatial-Temporal Registration (STR)</strong> is the degree of alignment between the spatial coordinate system of the geometric layers and the temporal address space of the TRS at the TGI boundary. It is expressed as a vector offset field — the mapping from each spatial position (x, y) in the TGI zone to the registration error (Δx_str, Δy_str, Δτ_str) at that position.</p>
+<p>A perfectly registered TGI has a zero vector offset field everywhere: every spatial position maps to exactly the temporal address assigned to it in the TRS intent map, with no position-dependent bias. Real processes exhibit non-zero STR due to thermal expansion during processing, stage positioning error during Tier 2 tool setup, and distortion introduced by process steps between Tier 1 patterning and Tier 2 commit.</p>
+<h3 id="52-physical-basis">5.2 Physical Basis</h3>
+<p>STR is measured using <strong>Temporal Registration Marks (TRMs)</strong> — specialized structures patterned in the TGI zone during Tier 1 processing that carry encoded temporal addresses assigned by the TRS at Tier 2 commit. A TRM consists of:</p>
+<ul>
+<li>A geometric reference target (a spatial anchor patterned at a known die coordinate)</li>
+<li>An adjacent temporal address encoding region (a substrate area in which the TRS commits a reference address during the Tier 2 processing of the TGI layer)</li>
+</ul>
+<p>The geometric target provides the spatial position. The temporal address encoding region provides the committed address. The STR at a given TRM site is the vector difference between the spatial position expected from the die coordinate system and the temporal address expected from the TRS intent map, minus the measured values:</p>
+<pre><code>STR(x, y) = [ Δx_str, Δy_str, Δτ_str ]
+
+Where:
+  Δx_str = x_measured - x_designed      (nm)
+  Δy_str = y_measured - y_designed      (nm)
+  Δτ_str = τ_committed - τ_assigned     (address units, normalized to [0,1))
+</code></pre>
+<h3 id="53-measurement-protocol">5.3 Measurement Protocol</h3>
+<p><strong>Setup:</strong></p>
+<ol>
+<li>Confirm that the wafer has completed all Tier 1 TGI-zone processing steps and the TGI Tier 2 reference commit has been executed.</li>
+<li>Load the wafer into the TRM instrument and establish die coordinate registration per R-INSTR-01.</li>
+<li>Load the TRS intent map for the TGI reference layer from the wafer lot record. This map specifies the designed temporal address τ_assigned for every TRM site on the die.</li>
+</ol>
+<p><strong>Measurement sequence:</strong></p>
+<ol>
+<li>Navigate to the first TRM site per the sampling plan (§11).</li>
+<li>Acquire the spatial position of the geometric reference target using the TRM spatial imaging channel. Record (x_measured, y_measured) with uncertainty.</li>
+<li>Acquire the committed temporal address from the temporal address encoding region of the same TRM site. Record τ_committed with uncertainty.</li>
+<li>Compute STR at this site.</li>
+<li>Repeat steps 2–4 for all TRM sites in the sampling plan without changing instrument setup.</li>
+<li>Upon completion, verify coordinate registration has not drifted by re-measuring the first site. If drift exceeds 1 nm in either axis, the measurement session is invalid and must be repeated.</li>
+</ol>
+<p><strong>R-STR-01:</strong> A minimum of 49 TRM sites per die MUST be measured, distributed in a 7×7 grid with uniform spacing across the die extent. The outermost sites MUST be within 200 μm of the die edge.</p>
+<p><strong>R-STR-02:</strong> TRM sites MUST be placed in all four quadrants of the die. A measurement set that has fewer than 10 sites in any quadrant is non-conformant.</p>
+<p><strong>R-STR-03:</strong> The STR measurement MUST be performed within 4 hours of the Tier 2 reference commit operation. Temporal address encoding regions are subject to relaxation processes that can alter the committed address over time; measurements beyond this window require documentation of the elapsed time and its estimated effect on τ_committed.</p>
+<h3 id="54-data-reduction">5.4 Data Reduction</h3>
+<p>The per-site STR vectors are combined into three wafer maps:</p>
+<ul>
+<li><strong>Δx_str map:</strong> Spatial distribution of x-axis registration error across measured sites</li>
+<li><strong>Δy_str map:</strong> Spatial distribution of y-axis registration error across measured sites</li>
+<li><strong>Δτ_str map:</strong> Spatial distribution of temporal address registration error across measured sites</li>
+</ul>
+<p>From each map, the following statistics are computed and reported:</p>
+<table>
+<thead>
+<tr>
+<th>Statistic</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mean (μ)</td>
+<td>Population mean of the error across all sites</td>
+</tr>
+<tr>
+<td>3σ range</td>
+<td>Three standard deviation range, representing process variation</td>
+</tr>
+<tr>
+<td>Maximum absolute value</td>
+<td>Worst-case site error</td>
+</tr>
+<tr>
+<td>Systematic gradient</td>
+<td>Linear regression slope across die extent, capturing die-scale registration tilt</td>
+</tr>
+<tr>
+<td>Residual (non-linear) component</td>
+<td>Difference between measured map and the fitted linear gradient</td>
+</tr>
+</tbody>
+</table>
+<p>The systematic gradient is physically significant: it represents die-scale coordinate system tilt that can be corrected by TRM tool alignment. The residual component represents higher-order distortion that cannot be corrected by alignment alone and must be addressed at the process level.</p>
+<hr>
+<h2 id="6-interface-continuity">6. Interface Continuity</h2>
+<h3 id="61-definition">6.1 Definition</h3>
+<p><strong>Interface Continuity (IC)</strong> is a composite parameter that characterizes the physical quality of the TGI boundary — the surface at z_f that separates the Tier 1 structural layer stack from the TGI zone proper. It encompasses three sub-parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Sub-parameter</th>
+<th>Symbol</th>
+<th>Unit</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Interface Roughness</td>
+<td>IC_R</td>
+<td>nm RMS</td>
+<td>Root-mean-square roughness of the z_f surface</td>
+</tr>
+<tr>
+<td>Compositional Transition Width</td>
+<td>IC_C</td>
+<td>nm</td>
+<td>Width of the compositional transition zone at z_f</td>
+</tr>
+<tr>
+<td>Interface Stress Uniformity</td>
+<td>IC_S</td>
+<td>MPa (σ)</td>
+<td>Standard deviation of in-plane stress across the interface</td>
+</tr>
+</tbody>
+</table>
+<p>The overall IC rating is a weighted composite:</p>
+<pre><code>IC = 1 - [ w_R × norm(IC_R) + w_C × norm(IC_C) + w_S × norm(IC_S) ]
+
+Where:
+  norm(x)  = x / x_max  (normalization to the maximum acceptable value per SC class)
+  w_R      = 0.45  (roughness weight)
+  w_C      = 0.35  (compositional weight)
+  w_S      = 0.20  (stress weight)
+  IC       ∈ [0, 1]; higher is better
+</code></pre>
+<p>The weights w_R, w_C, w_S reflect the relative contribution of each sub-parameter to effective substrate clarity degradation, derived from empirical calibration against TCT results across a range of interface conditions. The weights are fixed at the values above for this revision. Process-specific weight adjustments require a revision to this standard.</p>
+<h3 id="62-measurement-protocol-interface-roughness-ic_r">6.2 Measurement Protocol — Interface Roughness (IC_R)</h3>
+<ol>
+<li>Load the wafer into the ISP instrument and navigate to the first IC measurement site (§11).</li>
+<li>Select z_f as the measurement depth. z_f is determined from the process stack record for the wafer lot.</li>
+<li>Acquire a surface roughness scan over a 10 μm × 10 μm field centered on the measurement site.</li>
+<li>Apply a Gaussian high-pass filter with a 1 μm cutoff to remove long-range waviness from the roughness measurement. Record the filtered RMS roughness as IC_R at this site.</li>
+<li>Repeat for all IC sites in the sampling plan.</li>
+</ol>
+<p><strong>R-IC-01:</strong> The ISP scan field MUST be ≥ 10 μm × 10 μm. Smaller fields undersample the roughness spatial frequency spectrum and produce systematically low IC_R values.</p>
+<p><strong>R-IC-02:</strong> The Gaussian high-pass filter cutoff MUST be 1 μm ± 10%. A different cutoff requires documentation and comparison data against the standard cutoff.</p>
+<h3 id="63-measurement-protocol-compositional-transition-width-ic_c">6.3 Measurement Protocol — Compositional Transition Width (IC_C)</h3>
+<ol>
+<li>At each IC measurement site, execute a depth-resolved compositional scan from 5 nm below z_f to 5 nm above z_f.</li>
+<li>Identify the z positions at which the composition of the primary transition species reaches 10% and 90% of its final value. IC_C is the z distance between these two positions.</li>
+<li>Record IC_C and the depth profile for each site.</li>
+</ol>
+<p><strong>R-IC-03:</strong> The depth scan MUST resolve composition at 0.5 nm z-increments or finer. Coarser increments produce quantization error in IC_C that exceeds the measurement uncertainty budget.</p>
+<p><strong>R-IC-04:</strong> For processes with multiple co-transitioning species, IC_C is taken as the widest individual species transition width. The transition widths of all species MUST be reported individually in addition to the IC_C value used in the composite calculation.</p>
+<h3 id="64-measurement-protocol-interface-stress-uniformity-ic_s">6.4 Measurement Protocol — Interface Stress Uniformity (IC_S)</h3>
+<ol>
+<li>Using the ISP stress measurement capability, map in-plane biaxial stress across the full TGI-zone measurement sites.</li>
+<li>Compute the standard deviation of the stress values across all measured sites on the wafer.</li>
+<li>Record this standard deviation as IC_S.</li>
+</ol>
+<p><strong>R-IC-05:</strong> Stress measurement MUST be performed after all TGI-zone deposition and anneal steps are complete and before any Tier 2 processing. Tier 2 commit operations can locally relieve or redistribute stress and would confound IC_S results.</p>
+<p><strong>R-IC-06:</strong> Stress measurement sites MUST be co-located with IC_R and IC_C sites to enable site-level correlation between roughness, composition, and stress.</p>
+<hr>
+<h2 id="7-temporal-address-overlay-error">7. Temporal Address Overlay Error</h2>
+<h3 id="71-definition">7.1 Definition</h3>
+<p><strong>Temporal Address Overlay Error (TAOE)</strong> is the difference between the temporal address intended by the TRS intent map and the temporal address actually committed to the substrate at a given spatial location, measured after commit and referenced to the actual spatial position of the measurement site.</p>
+<p>TAOE differs from the Δτ_str component of STR in a critical respect: STR measures the co-registration of coordinate systems using reference structures, whereas TAOE measures the address accuracy of production operations at real device sites. STR captures the systematic offset of the coordinate mapping; TAOE captures the combined effect of STR error, TRS resolution layer (L3) apodization imperfection, and TCU commit-level variation.</p>
+<pre><code>TAOE(x, y) = τ_committed(x, y) - τ_intent(x, y)
+
+Where:
+  τ_committed(x, y) = temporal address read back from the substrate at (x, y)
+  τ_intent(x, y)    = temporal address specified in the TRS intent map for (x, y)
+  TAOE              ∈ (−0.5, +0.5)  (address units, normalized)
+</code></pre>
+<h3 id="72-measurement-sites">7.2 Measurement Sites</h3>
+<p>TAOE is measured at <strong>Production Address Verification Sites (PAVS)</strong> — locations within the die where temporal operations have been committed as part of the production process, not as dedicated test structures. This distinguishes TAOE from STR: STR uses purpose-built TRMs; TAOE reads actual production commits.</p>
+<p>PAVS selection MUST follow the criteria in §11. In addition:</p>
+<p><strong>R-TAOE-01:</strong> PAVS MUST be distributed across the full temporal address range covered by the production layer being measured. A PAVS set that samples only a subset of the address range does not characterize TAOE for unsampled addresses.</p>
+<p><strong>R-TAOE-02:</strong> PAVS MUST include sites at the boundaries of adjacent temporal address regions — locations where two operations with closely spaced temporal addresses are committed at spatially proximate substrate positions. These boundary sites are where TAOE is most likely to reveal the effects of address crowding near the substrate clarity limit.</p>
+<h3 id="73-measurement-protocol">7.3 Measurement Protocol</h3>
+<ol>
+<li>Load the wafer into the TRM after completion of the production layer commit.</li>
+<li>Load the TRS intent map for the production layer.</li>
+<li>Navigate to the first PAVS per the sampling plan.</li>
+<li>Acquire τ_committed at the PAVS using the TRM's temporal address readback channel.</li>
+<li>Look up τ_intent for the same (x, y) position from the intent map.</li>
+<li>Compute TAOE at this site.</li>
+<li>Repeat for all PAVS in the sampling plan without instrument reconfiguration.</li>
+</ol>
+<p><strong>R-TAOE-03:</strong> The TAOE measurement MUST be performed within 8 hours of the commit operation for the measured layer. Address relaxation beyond this window introduces time-dependent drift that is not classified as TAOE.</p>
+<p><strong>R-TAOE-04:</strong> TAOE MUST be measured in the same TRM session as STR for the same layer, without wafer removal from the instrument between the two measurements. This requirement ensures that coordinate registration is identical for both parameters.</p>
+<h3 id="74-taoe-decomposition">7.4 TAOE Decomposition</h3>
+<p>Raw TAOE values are decomposed into two components that carry different engineering significance:</p>
+<p><strong>Systematic TAOE (TAOE_sys):</strong> The component of TAOE that is spatially correlated across the die — reproducible from site to site in a predictable pattern. Systematic TAOE is primarily caused by STR error propagating through the TRS resolution layer. It can be partially corrected by TRM alignment and intent map adjustment.</p>
+<p><strong>Random TAOE (TAOE_rnd):</strong> The component of TAOE that is not spatially correlated — varying randomly from site to site. Random TAOE arises from TCU commit-level variation, local substrate non-uniformity, and SCR coherence slot jitter. It cannot be corrected without process changes.</p>
+<p>Decomposition is performed by fitting a low-order polynomial surface to the TAOE map (the systematic component) and taking the residuals (the random component). The polynomial order MUST be ≤ 4; higher-order fits risk absorbing genuine random variation into the systematic component.</p>
+<hr>
+<h2 id="8-tgi-uniformity-index">8. TGI Uniformity Index</h2>
+<h3 id="81-definition">8.1 Definition</h3>
+<p>The <strong>TGI Uniformity Index (TUI)</strong> is a scalar measure of the spatial consistency of TGI properties across the die. While STR and TAOE characterize the accuracy of the spatial-temporal mapping, TUI characterizes how uniformly that mapping is maintained across the full die extent. A die with excellent mean STR and TAOE values but high spatial variation — implying that some regions of the die have significantly worse registration than others — will have a low TUI.</p>
+<p>TUI is defined as:</p>
+<pre><code>TUI = 1 - max( σ_STR_x / STR_x_tol,
+               σ_STR_y / STR_y_tol,
+               σ_TAOE  / TAOE_tol  )
+
+Where:
+  σ_STR_x   = standard deviation of Δx_str across all measured sites
+  σ_STR_y   = standard deviation of Δy_str across all measured sites
+  σ_TAOE    = standard deviation of TAOE across all PAVS
+  STR_x_tol, STR_y_tol, TAOE_tol = tolerance values per SC class (§13)
+  TUI        ∈ (−∞, 1]; values &lt; 0 indicate that variation exceeds tolerance
+</code></pre>
+<p>A TUI of 1.0 indicates zero variation across the die — unachievable in practice. The acceptance threshold for TUI is SC-class-dependent (§13).</p>
+<h3 id="82-measurement-protocol">8.2 Measurement Protocol</h3>
+<p>TUI is a derived quantity computed from the STR and TAOE site-level data. It does not require a separate measurement procedure beyond those defined in §5 and §7. TUI computation is part of the data analysis step (§12).</p>
+<p><strong>R-TUI-01:</strong> TUI MUST be computed using the full set of measured STR and TAOE sites without excluding outliers, unless the outlier exclusion procedure of §12.3 has been applied and documented.</p>
+<p><strong>R-TUI-02:</strong> TUI MUST be reported separately for each quadrant of the die in addition to the die-level value. Quadrant-level TUI enables identification of localized uniformity problems that would be masked in a die-level average.</p>
+<h3 id="83-uniformity-failure-patterns">8.3 Uniformity Failure Patterns</h3>
+<p>TUI failures exhibit characteristic spatial patterns that carry diagnostic information:</p>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Description</th>
+<th>Probable Cause</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Radial gradient</td>
+<td>TUI decreases monotonically from die center to edge</td>
+<td>Stage heating or cooling during Tier 2 commit; thermal expansion mismatch</td>
+</tr>
+<tr>
+<td>Quadrant asymmetry</td>
+<td>One quadrant has significantly lower TUI than others</td>
+<td>TCU alignment error in the affected die region; CDN phase variation across the SCR zone</td>
+</tr>
+<tr>
+<td>Stripe pattern</td>
+<td>Alternating bands of high and low TUI across the die</td>
+<td>Scan-direction-dependent error in the Tier 2 tool; resonance in the stage positioning system</td>
+</tr>
+<tr>
+<td>Random low-TUI islands</td>
+<td>Isolated sites of poor uniformity distributed without spatial pattern</td>
+<td>Local substrate defects; stochastic TCU commit variation</td>
+</tr>
+</tbody>
+</table>
+<p>Pattern classification is performed during data analysis (§12) and included in the TUI report.</p>
+<hr>
+<h2 id="9-coherence-layer-gradient">9. Coherence Layer Gradient</h2>
+<h3 id="91-definition">9.1 Definition</h3>
+<p>The <strong>Coherence Layer Gradient (CLG)</strong> is the rate of change of coherence properties with depth z through the TGI zone. It quantifies how sharply the substrate transitions from the coherence state of the Tier 1 structural layers (which are not qualified for temporal addressing) to the coherence state of the Tier 2 temporal layers.</p>
+<p>A gentle CLG — a slow, monotonic increase in coherence capacity from z_f to z_c — is favorable. It allows the TRS to operate with gradually improving substrate support as depth increases through the TGI zone, with no abrupt coherence boundaries that could produce sharp spatial-temporal interface defects.</p>
+<p>A steep or non-monotonic CLG — a rapid transition, a step function, or a local minimum within the TGI zone — produces a concentration of temporal address error at the depth of the transition. Operations committed at or near a sharp coherence boundary experience reduced effective SC without warning from bulk TCT measurements.</p>
+<p>CLG is expressed in units of normalized SC per nanometer of depth:</p>
+<pre><code>CLG(z) = d(SC_norm(z)) / dz
+
+Where:
+  SC_norm(z) = the normalized coherence capacity at depth z,
+               calibrated to 0 at z_f (Tier 1 structural value)
+               and 1 at z_c (Tier 2 bulk SC value)
+  CLG(z)     = (SC units/nm); positive values indicate increasing coherence with depth
+</code></pre>
+<h3 id="92-measurement-protocol">9.2 Measurement Protocol</h3>
+<ol>
+<li>Load the wafer into the CGS instrument.</li>
+<li>Confirm calibration anchors: verify that the CGS reads SC_norm = 0 on a reference region of the Tier 1 structural layer and SC_norm = 1 on a reference region of the qualified Tier 2 bulk layer.</li>
+<li>At each CLG measurement site (§11), execute a depth scan from z_f − 2 nm to z_c + 2 nm.</li>
+<li>Record SC_norm at each z increment (≤ 1 nm spacing per R-CGS-01).</li>
+<li>Compute the derivative d(SC_norm)/dz at each z increment using a central difference method.</li>
+<li>Identify and record the depth z_peak at which CLG is maximum (the steepest point in the gradient).</li>
+<li>Record the maximum CLG value, CLG_max = CLG(z_peak).</li>
+<li>Record the integrated CLG over the full TGI zone as a measure of total coherence transition breadth.</li>
+</ol>
+<p><strong>R-CLG-01:</strong> CLG measurements MUST be taken before any Tier 2 commit operations are executed in the TGI zone. Commit operations alter the local coherence state of the substrate and would confound CLG measurements.</p>
+<p><strong>R-CLG-02:</strong> CLG measurement sites MUST be co-located with IC measurement sites to enable correlation between interface physical properties (IC) and coherence gradient properties (CLG).</p>
+<h3 id="93-non-monotonic-gradient-detection">9.3 Non-Monotonic Gradient Detection</h3>
+<p>A non-monotonic CLG — one where SC_norm decreases at some depth within the TGI zone before increasing again — is a process anomaly that MUST be flagged as a critical finding regardless of the CLG_max value. Non-monotonic gradients indicate the presence of a buried low-coherence layer within the TGI zone that would locally suppress temporal address resolution for all commit operations above it.</p>
+<p><strong>R-CLG-03:</strong> The CLG analysis MUST explicitly check for non-monotonicity in the SC_norm depth profile at each site. A site where SC_norm decreases by more than 0.05 normalized SC units at any depth within the TGI zone MUST be flagged and reported to the yield management system as a CLG non-monotonicity finding, irrespective of the overall IC and CLG_max values.</p>
+<hr>
+<h2 id="10-geometric-drift-correlation">10. Geometric Drift Correlation</h2>
+<h3 id="101-definition">10.1 Definition</h3>
+<p><strong>Geometric Drift Correlation (GDC)</strong> measures the degree to which spatial displacement in Tier 1 geometric features — caused by thermal effects, pattern density-dependent stress relaxation, and inter-layer mechanical coupling — predicts the temporal address error observed in Tier 2 commit operations above those features.</p>
+<p>A high GDC means that geometric drift in the Tier 1 layers is a reliable predictor of TAOE in the Tier 2 layers. This is significant for two reasons:</p>
+<ol>
+<li>It provides a root-cause pathway: if GDC is high, TAOE improvement requires geometric drift reduction in Tier 1, not adjustment of TRS parameters.</li>
+<li>It enables predictive correction: if GDC is high and the geometric drift map is measured before Tier 2 commit, the drift map can be used to pre-correct the TRS intent map, reducing TAOE before it occurs.</li>
+</ol>
+<p>GDC is expressed as the Pearson correlation coefficient between the GDA-measured geometric drift vectors and the TRM-measured TAOE vectors at co-located sites:</p>
+<pre><code>GDC = corr( [Δx_GDA, Δy_GDA], [TAOE_x_equiv, TAOE_y_equiv] )
+
+Where:
+  Δx_GDA, Δy_GDA    = geometric drift vector components from the GDA map
+  TAOE_x_equiv,
+  TAOE_y_equiv       = the spatial-equivalent projections of TAOE onto the x, y axes
+                       (derived from the temporal address gradient direction in the TRS intent map)
+  GDC               ∈ [−1, +1]
+</code></pre>
+<h3 id="102-measurement-protocol">10.2 Measurement Protocol</h3>
+<p>GDC is a derived parameter that requires both GDA and TAOE measurements at co-located sites. The measurement protocol is:</p>
+<ol>
+<li>Before Tier 2 commit: execute GDA measurement across the full die extent per the GDA measurement protocol. Record the displacement vector field.</li>
+<li>After Tier 2 commit: execute TAOE measurement at co-located sites per §7.</li>
+<li>Compute GDC using the co-located pairs.</li>
+</ol>
+<p><strong>R-GDC-01:</strong> GDA measurement MUST be performed after all Tier 1 TGI-zone processing steps are complete and before the Tier 2 reference commit. This sequencing ensures that the measured geometric drift reflects the final Tier 1 state rather than an intermediate process state.</p>
+<p><strong>R-GDC-02:</strong> The GDA and TAOE measurements MUST use a common site list with a minimum of 49 co-located sites per die.</p>
+<h3 id="103-predictive-intent-map-correction">10.3 Predictive Intent Map Correction</h3>
+<p>When GDC ≥ 0.85 (indicating that geometric drift accounts for ≥ 72% of the variance in TAOE), a <strong>Predictive Intent Map Correction (PIMC)</strong> MAY be applied. PIMC uses the GDA displacement field to pre-warp the TRS intent map before the Tier 2 commit, reducing TAOE by compensating for the expected drift in advance.</p>
+<p>PIMC is not mandatory. It is a process optimization available when GDC is sufficiently high to make the correction more beneficial than its residual uncertainty. Fabs implementing PIMC MUST:</p>
+<ul>
+<li>Document the PIMC algorithm and its transfer function from GDA displacement to intent map adjustment</li>
+<li>Validate PIMC effectiveness by comparing TAOE with and without PIMC applied on qualification wafers</li>
+<li>Record the PIMC status (applied or not applied) in each wafer lot record</li>
+</ul>
+<hr>
+<h2 id="11-sampling-strategy">11. Sampling Strategy</h2>
+<h3 id="111-sampling-hierarchy">11.1 Sampling Hierarchy</h3>
+<p>TGI metrology operates at two spatial scales:</p>
+<ul>
+<li><strong>Wafer-level:</strong> Measurements are distributed across the wafer to capture across-wafer (AWW) variation</li>
+<li><strong>Die-level:</strong> Within each sampled die, measurements are distributed across the die to capture within-die (WID) variation</li>
+</ul>
+<p>Both scales are required. Wafer-level sampling without die-level sampling cannot detect localized TGI failures that average out across the die. Die-level sampling without wafer-level sampling cannot detect position-dependent AWW trends.</p>
+<h3 id="112-wafer-level-sampling-requirements">11.2 Wafer-Level Sampling Requirements</h3>
+<p><strong>R-SAMP-01:</strong> A minimum of 9 dies per wafer MUST be measured for all primary TGI parameters. Dies MUST be selected from the following positions: center, four edge positions (top, bottom, left, right), and four quadrant positions (one per quadrant, at approximately 70% of the maximum wafer radius).</p>
+<p><strong>R-SAMP-02:</strong> For production monitoring after process qualification, a reduced sampling of 5 dies per wafer is permitted (center + four edge positions). The quadrant positions are required only for qualification and for any wafer lot that follows a process excursion.</p>
+<p><strong>R-SAMP-03:</strong> Edge dies (those within 3 mm of the wafer flat) MUST NOT be used as primary measurement sites. Edge dies may be added as supplementary sites when investigating edge-specific effects.</p>
+<h3 id="113-die-level-sampling-requirements">11.3 Die-Level Sampling Requirements</h3>
+<p><strong>R-SAMP-04:</strong> Within each sampled die, STR and TAOE measurements MUST cover a 7×7 minimum grid per R-STR-01.</p>
+<p><strong>R-SAMP-05:</strong> IC and CLG measurements MUST be taken at a minimum of 9 sites per die in a 3×3 grid, with sites co-located between IC and CLG per R-CLG-02.</p>
+<p><strong>R-SAMP-06:</strong> GDA measurements cover the full die continuously (per R-GDA-03) and are not subject to site-count minimums. The GDA vector field at the co-located GDC sites is extracted from the continuous map.</p>
+<p><strong>R-SAMP-07:</strong> STR/TAOE sites, IC/CLG sites, and GDC sites MUST NOT all overlap at the same physical locations. Each parameter set MUST occupy distinct die regions except where co-location is explicitly required (IC and CLG; GDA and TAOE). Over-concentration of all metrology structures at a single die location would perturb the local substrate state and invalidate measurements.</p>
+<h3 id="114-first-article-and-qualification-sampling">11.4 First-Article and Qualification Sampling</h3>
+<p>For process qualification and for the first production lot on any new SCR zone, the sampling requirements are:</p>
+<ul>
+<li>Wafer-level: full 9-die set per R-SAMP-01</li>
+<li>Die-level STR/TAOE: 11×11 grid (minimum 121 sites)</li>
+<li>Die-level IC/CLG: 5×5 grid (minimum 25 sites)</li>
+<li>GDC: computed from the full 11×11 TAOE grid</li>
+</ul>
+<p>First-article sampling results are the baseline against which subsequent production monitoring is compared.</p>
+<hr>
+<h2 id="12-data-analysis-and-reporting">12. Data Analysis and Reporting</h2>
+<h3 id="121-analysis-sequence">12.1 Analysis Sequence</h3>
+<p>TGI metrology data MUST be analyzed in the following sequence. Earlier steps produce inputs required by later steps; the sequence MUST NOT be reversed.</p>
+<ol>
+<li><strong>Coordinate unification:</strong> Apply cross-instrument coordinate registration (R-INSTR-02) to bring all measurements into the common die coordinate system.</li>
+<li><strong>Primary parameter computation:</strong> Compute STR, IC, TAOE, CLG, and GDC from raw instrument outputs per their respective protocol sections.</li>
+<li><strong>TUI computation:</strong> Compute TUI from the STR and TAOE site-level data per §8.1.</li>
+<li><strong>Derived parameter computation:</strong> Compute SC_eff and RWDL per §3.2.</li>
+<li><strong>TAOE decomposition:</strong> Separate TAOE_sys and TAOE_rnd per §7.4.</li>
+<li><strong>Pattern classification:</strong> Classify TUI failure patterns per §8.3, if TUI is below the acceptance threshold.</li>
+<li><strong>Non-monotonicity check:</strong> Apply CLG non-monotonicity detection per §9.3.</li>
+<li><strong>GDC-PIMC assessment:</strong> Assess whether GDC meets the threshold for PIMC consideration per §10.3.</li>
+<li><strong>Acceptance evaluation:</strong> Apply acceptance criteria per §13.</li>
+<li><strong>Report generation:</strong> Compile the TGI Metrology Report per §12.4.</li>
+</ol>
+<h3 id="122-derived-parameter-computation">12.2 Derived Parameter Computation</h3>
+<p><strong>SC_eff (Effective Interface SC):</strong></p>
+<pre><code>SC_eff = SC_bulk × IC × f(CLG_max)
+
+Where:
+  SC_bulk   = TCT-measured SC rating of the bulk Tier 2 layer above the TGI ceiling
+  IC        = composite Interface Continuity rating from §6.1
+  f(CLG_max) = gradient penalty function:
+               f(x) = 1.0        if x ≤ CLG_threshold (gentle gradient; no penalty)
+               f(x) = 1 - k(x - CLG_threshold)  if x &gt; CLG_threshold (steep gradient penalty)
+               where CLG_threshold and k are defined per SC class in §13
+</code></pre>
+<p>SC_eff represents the practical upper bound on temporal address resolution achievable at the TGI boundary, accounting for both physical interface quality and coherence gradient steepness. A SC_eff that falls below the minimum SC class threshold for the process is a TGI failure even if bulk TCT passes.</p>
+<p><strong>RWDL (Registration-Weighted Density Limit):</strong></p>
+<pre><code>RWDL = TD_qualified × TUI × ( 1 - |TAOE_rnd| / TAOE_rnd_max )
+
+Where:
+  TD_qualified   = the qualified maximum temporal density (MQD) for the process node
+  TUI            = TGI Uniformity Index
+  TAOE_rnd       = mean absolute random TAOE across PAVS
+  TAOE_rnd_max   = maximum acceptable TAOE_rnd per SC class (§13)
+  RWDL           ≤ TD_qualified always
+</code></pre>
+<p>RWDL is the actionable output of TGI metrology for design teams: it quantifies the maximum temporal density that is safely supportable at any given die location, given the measured quality of the TGI at that location. Designs that place maximum-density temporal operations at locations where RWDL is below the design-time density target will exhibit elevated defect rates.</p>
+<h3 id="123-outlier-handling">12.3 Outlier Handling</h3>
+<p>A measurement site is classified as a candidate outlier if its value for any primary parameter deviates from the die-level mean by more than 4 standard deviations (4σ). Candidate outliers MUST be evaluated before exclusion:</p>
+<ol>
+<li>Review instrument log for evidence of measurement anomaly at the candidate site (positioning error, signal dropout, environmental disturbance).</li>
+<li>If a measurement anomaly is confirmed, the site may be excluded from statistical analysis and re-measured if within the 4-hour STR or 8-hour TAOE windows.</li>
+<li>If no measurement anomaly is found, the site value is retained. An elevated measurement at a verified-clean site is a genuine TGI finding, not an outlier.</li>
+</ol>
+<p>Excluded sites MUST be documented in the TGI Metrology Report with the reason for exclusion.</p>
+<h3 id="124-tgi-metrology-report">12.4 TGI Metrology Report</h3>
+<p>Every measured wafer lot MUST produce a TGI Metrology Report containing:</p>
+<ul>
+<li>Wafer lot identifier and process step identifier</li>
+<li>Measurement date/time and instrument identifiers with calibration status</li>
+<li>For each sampled die: die position on wafer, and for each primary parameter: all site-level values, computed statistics (μ, 3σ, maximum), and maps</li>
+<li>TUI die-level and quadrant-level values with pattern classification if below threshold</li>
+<li>SC_eff and RWDL maps (die-level)</li>
+<li>CLG non-monotonicity findings (if any)</li>
+<li>GDC values and PIMC recommendation status</li>
+<li>Acceptance evaluation result (pass/fail/conditional) per §13</li>
+<li>Outlier log</li>
+<li>Any deviations from standard measurement protocol with justification</li>
+</ul>
+<p>Reports MUST be retained for the wafer lot duration plus 90 days and MUST be accessible to the yield management system.</p>
+<hr>
+<h2 id="13-acceptance-criteria">13. Acceptance Criteria</h2>
+<h3 id="131-criteria-by-sc-class">13.1 Criteria by SC Class</h3>
+<p>Acceptance criteria are defined per SC class of the target process layer. The relevant SC class is the qualified SC class of the Tier 2 layer immediately above the TGI ceiling, as recorded in the process qualification record.</p>
+<h4 id="sc-i-processes-sc-rating-092">SC-I Processes (SC Rating &gt; 0.92)</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Acceptance Threshold</th>
+<th>Disposition if Failed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>STR Δx_str (3σ)</td>
+<td>≤ 2.0 nm</td>
+<td>Reject lot; TRS alignment review</td>
+</tr>
+<tr>
+<td>STR Δy_str (3σ)</td>
+<td>≤ 2.0 nm</td>
+<td>Reject lot; TRS alignment review</td>
+</tr>
+<tr>
+<td>STR Δτ_str (3σ)</td>
+<td>≤ 0.002 address units</td>
+<td>Reject lot; intent map review</td>
+</tr>
+<tr>
+<td>IC_R</td>
+<td>≤ 0.3 nm RMS</td>
+<td>Conditional hold; interface re-qualification</td>
+</tr>
+<tr>
+<td>IC_C</td>
+<td>≤ 2.0 nm</td>
+<td>Conditional hold; process chemistry review</td>
+</tr>
+<tr>
+<td>IC_S (σ)</td>
+<td>≤ 15 MPa</td>
+<td>Conditional hold; stress management review</td>
+</tr>
+<tr>
+<td>IC (composite)</td>
+<td>≥ 0.88</td>
+<td>Reject lot if SC_eff falls below SC-I threshold</td>
+</tr>
+<tr>
+<td>TAOE_sys (3σ)</td>
+<td>≤ 0.003 address units</td>
+<td>Conditional hold; STR-correlated review</td>
+</tr>
+<tr>
+<td>TAOE_rnd (mean absolute)</td>
+<td>≤ 0.001 address units</td>
+<td>Reject lot; TCU process review</td>
+</tr>
+<tr>
+<td>TUI (die-level)</td>
+<td>≥ 0.85</td>
+<td>Conditional hold; pattern investigation</td>
+</tr>
+<tr>
+<td>CLG_max</td>
+<td>≤ 0.015 SC units/nm</td>
+<td>Conditional hold; deposition process review</td>
+</tr>
+<tr>
+<td>CLG non-monotonicity</td>
+<td>None permitted</td>
+<td>Reject lot; process investigation</td>
+</tr>
+<tr>
+<td>SC_eff</td>
+<td>≥ 0.90</td>
+<td>Reject lot if below threshold</td>
+</tr>
+<tr>
+<td>GDC</td>
+<td>Reported, not gating</td>
+<td>Review if GDC ≥ 0.85 for PIMC consideration</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sc-ii-processes-sc-rating-075-092">SC-II Processes (SC Rating 0.75 – 0.92)</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Acceptance Threshold</th>
+<th>Disposition if Failed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>STR Δx_str (3σ)</td>
+<td>≤ 4.0 nm</td>
+<td>Conditional hold; TRS alignment review</td>
+</tr>
+<tr>
+<td>STR Δy_str (3σ)</td>
+<td>≤ 4.0 nm</td>
+<td>Conditional hold; TRS alignment review</td>
+</tr>
+<tr>
+<td>STR Δτ_str (3σ)</td>
+<td>≤ 0.005 address units</td>
+<td>Conditional hold; intent map review</td>
+</tr>
+<tr>
+<td>IC_R</td>
+<td>≤ 0.6 nm RMS</td>
+<td>Advisory; monitor trend</td>
+</tr>
+<tr>
+<td>IC_C</td>
+<td>≤ 4.0 nm</td>
+<td>Advisory; monitor trend</td>
+</tr>
+<tr>
+<td>IC_S (σ)</td>
+<td>≤ 30 MPa</td>
+<td>Advisory; monitor trend</td>
+</tr>
+<tr>
+<td>IC (composite)</td>
+<td>≥ 0.75</td>
+<td>Conditional hold if SC_eff drops below SC-II threshold</td>
+</tr>
+<tr>
+<td>TAOE_sys (3σ)</td>
+<td>≤ 0.006 address units</td>
+<td>Advisory; STR-correlated review</td>
+</tr>
+<tr>
+<td>TAOE_rnd (mean absolute)</td>
+<td>≤ 0.003 address units</td>
+<td>Conditional hold; TCU process review</td>
+</tr>
+<tr>
+<td>TUI (die-level)</td>
+<td>≥ 0.72</td>
+<td>Advisory; pattern investigation</td>
+</tr>
+<tr>
+<td>CLG_max</td>
+<td>≤ 0.030 SC units/nm</td>
+<td>Advisory; deposition process review</td>
+</tr>
+<tr>
+<td>CLG non-monotonicity</td>
+<td>None permitted</td>
+<td>Conditional hold; process investigation</td>
+</tr>
+<tr>
+<td>SC_eff</td>
+<td>≥ 0.73</td>
+<td>Conditional hold if below threshold</td>
+</tr>
+</tbody>
+</table>
+<h3 id="132-conditional-hold-procedure">13.2 Conditional Hold Procedure</h3>
+<p>A conditional hold suspends lot dispositioning pending engineering review. The review MUST:</p>
+<ol>
+<li>Identify the specific failing parameter and its measured value</li>
+<li>Assess whether the failure is an isolated excursion or a trend</li>
+<li>Determine whether the failure is correlated with a known process change or equipment event</li>
+<li>Recommend one of: lot release with flagged record, lot rework (if a rework path exists for the failing layer), or lot reject</li>
+</ol>
+<p>Conditional holds MUST be resolved within 24 hours. Lots not dispositioned within 24 hours are automatically escalated to the yield management escalation procedure.</p>
+<h3 id="133-clg-gradient-penalty-function-parameters">13.3 CLG Gradient Penalty Function Parameters</h3>
+<p>The gradient penalty function f(CLG_max) used in the SC_eff computation (§12.2) uses the following parameters:</p>
+<table>
+<thead>
+<tr>
+<th>SC Class</th>
+<th>CLG_threshold (SC units/nm)</th>
+<th>k (penalty slope)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SC-I</td>
+<td>0.010</td>
+<td>15.0</td>
+</tr>
+<tr>
+<td>SC-II</td>
+<td>0.020</td>
+<td>8.0</td>
+</tr>
+</tbody>
+</table>
+<p>These values are calibrated so that a CLG_max at the acceptance threshold reduces SC_eff by approximately 0.02 normalized SC units — a small but non-negligible penalty that grows rapidly for steeper gradients above the threshold.</p>
+<hr>
+<h2 id="14-calibration-requirements">14. Calibration Requirements</h2>
+<h3 id="141-calibration-philosophy">14.1 Calibration Philosophy</h3>
+<p>All TGI metrology instruments operate in measurement regimes — sub-nanometer spatial, sub-0.001 address-unit temporal — that require active calibration against traceable reference standards. Instrument specifications alone do not ensure measurement accuracy over time; calibration verifies that the instrument continues to perform to its qualified specifications and provides the traceability chain required for measurement uncertainty estimation.</p>
+<h3 id="142-calibration-reference-standards">14.2 Calibration Reference Standards</h3>
+<p>Three types of calibration reference standards are used in TGI metrology:</p>
+<p><strong>Spatial Reference Artifact (SRA):</strong> A certified dimensional standard with features at known positions to sub-nanometer accuracy, traceable to the national length standard. Used for TRM spatial channel and GDA calibration.</p>
+<p><strong>Temporal Address Reference Coupon (TARC):</strong> A substrate coupon with temporal address reference structures committed at known addresses by a certified reference process, with committed address values verified by an independent measurement laboratory. Used for TRM temporal channel and TAOE absolute calibration.</p>
+<p><strong>Interface Reference Sample (IRS):</strong> A certified thin-film sample with known surface roughness, compositional profile, and stress state, characterized by the materials standards laboratory. Used for ISP and CGS calibration.</p>
+<p><strong>R-CAL-01:</strong> All calibration reference standards MUST have current certification from a recognized national or international metrology body. Certifications MUST be renewed at intervals not exceeding the standard's specified re-certification period.</p>
+<h3 id="143-calibration-intervals">14.3 Calibration Intervals</h3>
+<table>
+<thead>
+<tr>
+<th>Instrument</th>
+<th>Calibration Type</th>
+<th>Interval</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TRM (spatial channel)</td>
+<td>Full calibration against SRA</td>
+<td>Every 90 days</td>
+</tr>
+<tr>
+<td>TRM (temporal channel)</td>
+<td>Full calibration against TARC</td>
+<td>Every 90 days</td>
+</tr>
+<tr>
+<td>TRM (combined)</td>
+<td>Cross-channel registration check</td>
+<td>Every 30 days</td>
+</tr>
+<tr>
+<td>ISP (roughness)</td>
+<td>Full calibration against IRS roughness</td>
+<td>Every 60 days</td>
+</tr>
+<tr>
+<td>ISP (composition)</td>
+<td>Full calibration against IRS compositional profile</td>
+<td>Every 60 days</td>
+</tr>
+<tr>
+<td>ISP (stress)</td>
+<td>Full calibration against IRS stress state</td>
+<td>Every 60 days</td>
+</tr>
+<tr>
+<td>CGS</td>
+<td>Full calibration against IRS + TARC</td>
+<td>Every 90 days</td>
+</tr>
+<tr>
+<td>GDA</td>
+<td>Full calibration against SRA</td>
+<td>Every 90 days</td>
+</tr>
+<tr>
+<td>Cross-instrument registration</td>
+<td>Qualified reference coupon check</td>
+<td>Before each measurement campaign</td>
+</tr>
+</tbody>
+</table>
+<p><strong>R-CAL-02:</strong> Any instrument that fails its scheduled calibration MUST be taken out of service immediately. Measurements taken after the calibration due date and before the failure was discovered MUST be reviewed for impact; affected lot records MUST be flagged.</p>
+<p><strong>R-CAL-03:</strong> Calibration results MUST be recorded in the instrument's calibration log and retained for the instrument's service life. Calibration logs MUST be producible on request during process audits.</p>
+<h3 id="144-interim-verification">14.4 Interim Verification</h3>
+<p>Between full calibrations, instruments MUST perform daily interim verification using a facility-internal check standard:</p>
+<ul>
+<li>TRM: verify spatial position of a fixed reference mark to ≤ 0.5 nm; verify temporal address readback of a facility TARC coupon to ≤ 0.0005 address units</li>
+<li>ISP: verify roughness of a facility roughness standard to ≤ 0.05 nm RMS</li>
+<li>CGS: verify depth profile shape against a facility IRS coupon</li>
+<li>GDA: verify displacement measurement of a thermal reference fixture to ≤ 0.5 nm</li>
+</ul>
+<p><strong>R-CAL-04:</strong> An instrument that fails interim verification MUST be taken out of service until the cause is identified and corrected. Full calibration is required before the instrument returns to service following an interim verification failure.</p>
+<hr>
+<h2 id="15-measurement-uncertainty">15. Measurement Uncertainty</h2>
+<h3 id="151-framework">15.1 Framework</h3>
+<p>Measurement uncertainty for TGI metrology parameters MUST be estimated using the Guide to the Expression of Uncertainty in Measurement (GUM) framework. This section defines the primary uncertainty sources for each instrument class and specifies the required components of the combined standard uncertainty u_c.</p>
+<p>Full GUM-compliant uncertainty budgets are maintained in the instrument qualification records for each instrument at each fab. This section defines the required inputs to those budgets; it does not reproduce complete budgets, which are instrument- and configuration-specific.</p>
+<h3 id="152-trm-uncertainty-sources">15.2 TRM Uncertainty Sources</h3>
+<p>The following uncertainty components MUST be included in TRM uncertainty budgets:</p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Type</th>
+<th>Applies To</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stage positioning repeatability</td>
+<td>Type A (statistical)</td>
+<td>Spatial (x, y)</td>
+</tr>
+<tr>
+<td>Stage positioning accuracy (calibration residual)</td>
+<td>Type B (systematic)</td>
+<td>Spatial (x, y)</td>
+</tr>
+<tr>
+<td>Thermal drift during measurement session</td>
+<td>Type B (systematic)</td>
+<td>Spatial (x, y)</td>
+</tr>
+<tr>
+<td>Temporal address readback noise</td>
+<td>Type A (statistical)</td>
+<td>τ</td>
+</tr>
+<tr>
+<td>TARC calibration uncertainty</td>
+<td>Type B (systematic)</td>
+<td>τ</td>
+</tr>
+<tr>
+<td>Address relaxation (time since commit)</td>
+<td>Type B (systematic)</td>
+<td>τ</td>
+</tr>
+<tr>
+<td>Stitching error (if applicable)</td>
+<td>Type B (systematic)</td>
+<td>Spatial (x, y)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="153-isp-uncertainty-sources">15.3 ISP Uncertainty Sources</h3>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Type</th>
+<th>Applies To</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Roughness measurement noise</td>
+<td>Type A (statistical)</td>
+<td>IC_R</td>
+</tr>
+<tr>
+<td>IRS roughness calibration uncertainty</td>
+<td>Type B (systematic)</td>
+<td>IC_R</td>
+</tr>
+<tr>
+<td>Filter cutoff frequency uncertainty</td>
+<td>Type B (systematic)</td>
+<td>IC_R</td>
+</tr>
+<tr>
+<td>Depth resolution</td>
+<td>Type B (systematic)</td>
+<td>IC_C</td>
+</tr>
+<tr>
+<td>Compositional calibration uncertainty</td>
+<td>Type B (systematic)</td>
+<td>IC_C</td>
+</tr>
+<tr>
+<td>Stress model uncertainty</td>
+<td>Type B (systematic)</td>
+<td>IC_S</td>
+</tr>
+</tbody>
+</table>
+<h3 id="154-uncertainty-reporting-requirements">15.4 Uncertainty Reporting Requirements</h3>
+<p><strong>R-UNC-01:</strong> Every reported TGI parameter value MUST be accompanied by its expanded uncertainty U at a coverage factor k = 2 (approximately 95% confidence). Reported values without uncertainty are non-conformant.</p>
+<p><strong>R-UNC-02:</strong> The dominant uncertainty source for each parameter MUST be identified and reported. This enables targeted instrument or process improvement when uncertainty is the limiting factor in acceptance evaluation.</p>
+<p><strong>R-UNC-03:</strong> Acceptance decisions MUST use the parameter's measured value without subtracting measurement uncertainty. The full measured value — not the lower bound of the uncertainty interval — is compared to the acceptance threshold. This conservative convention prevents measurement uncertainty from masking genuine threshold violations.</p>
+<hr>
+<h2 id="16-integration-with-process-qualification">16. Integration with Process Qualification</h2>
+<h3 id="161-tgi-metrology-in-the-trs-qualification-sequence">16.1 TGI Metrology in the TRS Qualification Sequence</h3>
+<p>The TRS Stack Qualification Procedure (<a href="../fab/TRS_Qualification.html"><code>docs/fab/TRS_Qualification.md</code></a>) defines the sequence by which a new process is qualified for temporal manufacturing. TGI metrology is required at two points in that sequence:</p>
+<p><strong>Before TRS stack commissioning:</strong> IC and CLG measurements on the bare TGI-zone substrate establish the interface baseline. A substrate that fails IC or CLG criteria before TRS processing indicates a Tier 1 process problem; it MUST be remediated before proceeding to TRS qualification.</p>
+<p><strong>After TRS reference commit:</strong> STR, TAOE, TUI, and GDC measurements on the committed substrate complete the TGI metrology suite. Acceptance criteria per §13 apply. A process that fails TGI acceptance after TRS processing cannot be released for production regardless of other TRS qualification results.</p>
+<h3 id="162-tgi-metrology-in-scr-zone-commissioning">16.2 TGI Metrology in SCR Zone Commissioning</h3>
+<p>SCR Zone Configuration (<a href="../fab/SCR_Zone_Config.html"><code>docs/fab/SCR_Zone_Config.md</code></a>) requires that TGI metrology results be available before production operations begin in a new or reconfigured SCR zone. Specifically:</p>
+<ul>
+<li>The SC_eff map from TGI metrology is used to confirm that the qualified SC class is achieved throughout the zone's active area</li>
+<li>The RWDL map is used to validate that the zone's designed temporal density does not exceed the RWDL at any die location</li>
+<li>STR and TAOE results are provided to the fab scheduler to initialize any predictive correction workflows</li>
+</ul>
+<h3 id="163-tgi-metrology-as-a-yield-management-input">16.3 TGI Metrology as a Yield Management Input</h3>
+<p>TGI Metrology Reports are a primary input to yield management for TGI-attributed defect analysis. The yield management system correlates:</p>
+<ul>
+<li>TAOE_rnd maps with post-process spatial defect inspection maps to identify whether random TAOE is predicting the positions of functional defects</li>
+<li>SC_eff maps with TMU-measured address error rates to validate the SC_eff computation model</li>
+<li>CLG non-monotonicity findings with post-commit TMU anomalies at the same die locations</li>
+</ul>
+<p>Yield management may use these correlations to tighten acceptance criteria for specific parameter-process combinations or to flag lot characteristics that warrant increased inspection.</p>
+<h3 id="164-production-monitoring-cadence">16.4 Production Monitoring Cadence</h3>
+<p>After initial process qualification, TGI metrology transitions from a qualification activity to a production monitoring activity. The monitoring cadence is defined by three tiers:</p>
+<p><strong>Tier 1 — Per-Lot Monitoring:</strong> Applied to every production lot. Uses the reduced 5-die wafer sampling per R-SAMP-02 and the standard die-level site counts per §11.3. All six primary parameters are measured. Acceptance evaluation per §13 is applied in full. The TGI Metrology Report is generated and submitted to the yield management system before the lot is released to subsequent process steps.</p>
+<p><strong>Tier 2 — Periodic Qualification Check:</strong> Applied to one lot per calendar month, or to the first lot following any process change, equipment maintenance event, or SCR zone reconfiguration. Uses the full 9-die wafer sampling per R-SAMP-01 and the first-article die-level site counts per §11.4. Results are compared against the qualification baseline to detect gradual drift in any parameter that would not be caught by Tier 1 monitoring alone.</p>
+<p><strong>Tier 3 — Excursion Response:</strong> Applied to any lot that follows a Tier 1 conditional hold or reject finding, a CCG holdover event flagged by the SCR, or a CLG non-monotonicity finding. Uses first-article sampling plus five additional dies selected from the regions of the wafer adjacent to the failing sites on the triggering lot. Tier 3 measurements are completed before any wafers in the affected lot — or any subsequent lot on the same SCR zone — proceed past the TGI process step.</p>
+<p><strong>R-MON-01:</strong> The cadence tier for each lot MUST be determined and recorded in the lot traveler before metrology begins. A lot that should be measured at Tier 2 or Tier 3 but is measured at Tier 1 is non-conformant regardless of whether it passes acceptance criteria.</p>
+<p><strong>R-MON-02:</strong> Tier 2 periodic qualification check results MUST be reviewed against the qualification baseline by a process engineer. If any parameter shows a monotonic trend toward its acceptance threshold across three consecutive Tier 2 checks — even while remaining within threshold — the parameter MUST be escalated to a corrective action review. Gradual drift that is individually below threshold is a leading indicator of an impending excursion and MUST NOT be ignored on the basis that the individual measurements pass.</p>
+<p><strong>R-MON-03:</strong> The intervals between Tier 2 checks MUST NOT exceed 35 calendar days. If no production lot has been processed in a given month, a dedicated qualification wafer MUST be processed through the TGI process steps solely for Tier 2 metrology.</p>
+<h3 id="165-metrology-driven-process-control">16.5 Metrology-Driven Process Control</h3>
+<p>TGI metrology data MAY be used as input to statistical process control (SPC) charts to provide real-time visibility into parameter trends. When SPC is implemented, the following control chart types are RECOMMENDED:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Chart Type</th>
+<th>Control Limit Basis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>STR Δx_str, Δy_str</td>
+<td>X̄-R chart (per die mean and range)</td>
+<td>±3σ from qualification baseline</td>
+</tr>
+<tr>
+<td>TAOE_rnd</td>
+<td>Individuals (I) chart</td>
+<td>±3σ from qualification baseline</td>
+</tr>
+<tr>
+<td>IC_R</td>
+<td>Individuals (I) chart</td>
+<td>±3σ from qualification baseline</td>
+</tr>
+<tr>
+<td>CLG_max</td>
+<td>Individuals (I) chart</td>
+<td>Upper control limit only; lower CLG_max is not a concern</td>
+</tr>
+<tr>
+<td>TUI</td>
+<td>Individuals (I) chart</td>
+<td>Lower control limit only; upper TUI is not a concern</td>
+</tr>
+<tr>
+<td>SC_eff</td>
+<td>X̄ chart (per wafer mean)</td>
+<td>Lower control limit at SC_eff acceptance threshold + 0.02 margin</td>
+</tr>
+</tbody>
+</table>
+<p>SPC out-of-control signals MUST trigger the same engineering review process as a Tier 2 trend escalation. A lot that triggers an SPC signal but passes Tier 1 acceptance criteria is not automatically rejected; however, the SPC signal must be documented and reviewed before the lot is released.</p>
+<hr>
+<h2 id="17-glossary">17. Glossary</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AWW</strong></td>
+<td>Across-wafer (variation) — variation in a measured parameter from die to die across the wafer surface</td>
+</tr>
+<tr>
+<td><strong>CA</strong></td>
+<td>Commit Arbiter — component of the SCR that authorizes TRS commit operations; defined in The SCR Specification</td>
+</tr>
+<tr>
+<td><strong>CGS</strong></td>
+<td>Coherence Gradient Scanner — instrument class that measures the depth profile of coherence properties through the TGI zone</td>
+</tr>
+<tr>
+<td><strong>CLG</strong></td>
+<td>Coherence Layer Gradient — rate of change of normalized coherence capacity with depth through the TGI zone</td>
+</tr>
+<tr>
+<td><strong>CLG_max</strong></td>
+<td>Maximum CLG value within the TGI zone, occurring at the steepest point in the coherence gradient</td>
+</tr>
+<tr>
+<td><strong>CLG_threshold</strong></td>
+<td>SC-class-specific gradient steepness above which the SC_eff gradient penalty function activates</td>
+</tr>
+<tr>
+<td><strong>GDA</strong></td>
+<td>Geometric Drift Analyzer — instrument class that measures the spatial displacement field of Tier 1 geometric features across the die</td>
+</tr>
+<tr>
+<td><strong>GDC</strong></td>
+<td>Geometric Drift Correlation — Pearson correlation between Tier 1 geometric drift vectors and Tier 2 temporal address error vectors at co-located sites</td>
+</tr>
+<tr>
+<td><strong>GUM</strong></td>
+<td>Guide to the Expression of Uncertainty in Measurement — the international standard framework for measurement uncertainty estimation</td>
+</tr>
+<tr>
+<td><strong>IC</strong></td>
+<td>Interface Continuity — composite parameter characterizing the physical quality of the TGI floor boundary, comprising IC_R, IC_C, and IC_S</td>
+</tr>
+<tr>
+<td><strong>IC_C</strong></td>
+<td>Compositional Transition Width — the z-distance over which the primary transitioning species completes 10%–90% of its compositional change at the TGI floor</td>
+</tr>
+<tr>
+<td><strong>IC_R</strong></td>
+<td>Interface Roughness — RMS roughness of the TGI floor surface, high-pass filtered at 1 μm</td>
+</tr>
+<tr>
+<td><strong>IC_S</strong></td>
+<td>Interface Stress Uniformity — standard deviation of in-plane biaxial stress across the TGI zone</td>
+</tr>
+<tr>
+<td><strong>IRS</strong></td>
+<td>Interface Reference Sample — certified thin-film calibration standard for ISP and CGS instruments</td>
+</tr>
+<tr>
+<td><strong>ISP</strong></td>
+<td>Interface Structure Profiler — instrument class that characterizes the physical properties of the TGI boundary</td>
+</tr>
+<tr>
+<td><strong>MQD</strong></td>
+<td>Maximum Qualified Density — maximum temporal density at which yield meets the process target floor; defined in The Temporal Manufacturing Primer</td>
+</tr>
+<tr>
+<td><strong>PAVS</strong></td>
+<td>Production Address Verification Sites — die locations where TAOE is measured from actual production commit operations</td>
+</tr>
+<tr>
+<td><strong>PIMC</strong></td>
+<td>Predictive Intent Map Correction — pre-warping of the TRS intent map using GDA displacement data to reduce TAOE before commit</td>
+</tr>
+<tr>
+<td><strong>RWDL</strong></td>
+<td>Registration-Weighted Density Limit — the maximum temporal density safely supportable at a given die location given measured TGI quality</td>
+</tr>
+<tr>
+<td><strong>SC</strong></td>
+<td>Substrate Clarity — bulk measure of a substrate region's capacity to sustain distinct temporal addresses; defined in The Temporal Manufacturing Primer</td>
+</tr>
+<tr>
+<td><strong>SC_eff</strong></td>
+<td>Effective Interface SC — the practical upper bound on temporal address resolution at the TGI boundary, accounting for IC and CLG</td>
+</tr>
+<tr>
+<td><strong>SCR</strong></td>
+<td>Substrate Coherence Regime — the synchronization architecture for temporal manufacturing; defined in The SCR Specification</td>
+</tr>
+<tr>
+<td><strong>SPC</strong></td>
+<td>Statistical Process Control — the use of control charts to monitor manufacturing parameters for trends and out-of-control conditions</td>
+</tr>
+<tr>
+<td><strong>SRA</strong></td>
+<td>Spatial Reference Artifact — certified dimensional calibration standard for TRM spatial channel and GDA</td>
+</tr>
+<tr>
+<td><strong>STR</strong></td>
+<td>Spatial-Temporal Registration — the vector offset field describing the co-registration error between the geometric coordinate system and the temporal address space at the TGI boundary</td>
+</tr>
+<tr>
+<td><strong>STR systematic gradient</strong></td>
+<td>The linear component of the STR vector field across the die extent, representing die-scale coordinate tilt correctable by TRM alignment</td>
+</tr>
+<tr>
+<td><strong>TAOE</strong></td>
+<td>Temporal Address Overlay Error — the difference between the TRS intent map address and the actually committed address at a given spatial location</td>
+</tr>
+<tr>
+<td><strong>TAOE_rnd</strong></td>
+<td>Random component of TAOE — spatially uncorrelated address error arising from TCU commit variation and local substrate non-uniformity</td>
+</tr>
+<tr>
+<td><strong>TAOE_sys</strong></td>
+<td>Systematic component of TAOE — spatially correlated address error arising primarily from STR error propagated through the TRS resolution layer</td>
+</tr>
+<tr>
+<td><strong>TARC</strong></td>
+<td>Temporal Address Reference Coupon — certified substrate coupon with committed temporal addresses of known values; used for TRM temporal channel calibration</td>
+</tr>
+<tr>
+<td><strong>TCT</strong></td>
+<td>Temporal Contrast Test — the standard protocol for measuring bulk substrate clarity; defined in the TCT Protocol</td>
+</tr>
+<tr>
+<td><strong>TCU</strong></td>
+<td>Temporal Commit Unit — Tier 2 fab tool that executes TRS commit operations; defined in The Temporal Manufacturing Primer</td>
+</tr>
+<tr>
+<td><strong>TGI</strong></td>
+<td>Temporal-Geometric Interface — the boundary domain in which the spatial coordinate system of Tier 1 geometric patterning and the temporal address space of the TRS must be co-registered</td>
+</tr>
+<tr>
+<td><strong>TGI ceiling (z_c)</strong></td>
+<td>The upper z boundary of the TGI zone, at the base of the qualified Tier 2 temporal layer</td>
+</tr>
+<tr>
+<td><strong>TGI floor (z_f)</strong></td>
+<td>The lower z boundary of the TGI zone, at the top of the Tier 1 structural layer stack</td>
+</tr>
+<tr>
+<td><strong>TMU</strong></td>
+<td>Temporal Metrology Unit — in-line measurement tool for committed temporal address fidelity; defined in The Temporal Manufacturing Primer</td>
+</tr>
+<tr>
+<td><strong>TRM</strong></td>
+<td>Temporal Registration Microscope — instrument class that measures spatial-temporal co-registration at TGI reference structures</td>
+</tr>
+<tr>
+<td><strong>TRM (structure)</strong></td>
+<td>Temporal Registration Mark — dedicated substrate structure comprising a geometric reference target and an adjacent temporal address encoding region, used for STR measurement</td>
+</tr>
+<tr>
+<td><strong>TRS</strong></td>
+<td>Temporal Resolution Stack — the four-layer operator system through which temporal manufacturing operations are defined and committed; defined in The Temporal Manufacturing Primer</td>
+</tr>
+<tr>
+<td><strong>TUI</strong></td>
+<td>TGI Uniformity Index — scalar measure of the spatial consistency of TGI registration properties across the die</td>
+</tr>
+<tr>
+<td><strong>Type A uncertainty</strong></td>
+<td>Uncertainty evaluated by statistical analysis of repeated measurement observations</td>
+</tr>
+<tr>
+<td><strong>Type B uncertainty</strong></td>
+<td>Uncertainty evaluated by means other than statistical analysis (calibration data, specifications, reference standards)</td>
+</tr>
+<tr>
+<td><strong>Type I TGI failure</strong></td>
+<td>Registration failure — divergence between the spatial and temporal coordinate systems; produces spatially correlated error patterns</td>
+</tr>
+<tr>
+<td><strong>Type II TGI failure</strong></td>
+<td>Interface integrity failure — physical degradation at the TGI boundary that locally suppresses effective SC</td>
+</tr>
+<tr>
+<td><strong>WID</strong></td>
+<td>Within-die (variation) — variation in a measured parameter from site to site within a single die</td>
+</tr>
+<tr>
+<td><strong>z_TGI</strong></td>
+<td>The vertical extent of the TGI zone, from z_f to z_c, within which all TGI metrology measurements are referenced</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="18-related-documents">18. Related Documents</h2>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Path</th>
+<th>Relationship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The Temporal Manufacturing Primer</td>
+<td><code>docs/post-ASML_era/The_Temporal_Manufacturing_Primer.md</code></td>
+<td>Foundational concepts: SC classes, TRS stack, TCU, TMU, temporal density, MQD</td>
+</tr>
+<tr>
+<td>The SCR Specification</td>
+<td><code>docs/post-ASML_era/The_SCR_Specification.md</code></td>
+<td>SCR architecture that governs the coherence environment within which TGI commit operations occur; CMA monitoring that correlates with TGI findings</td>
+</tr>
+<tr>
+<td>Temporal Contrast Test Protocol</td>
+<td><code>docs/metrology/TCT_Protocol.md</code></td>
+<td>Bulk SC measurement; provides the SC_bulk anchor values used in SC_eff computation</td>
+</tr>
+<tr>
+<td>TRS Stack Qualification Procedure</td>
+<td><code>docs/fab/TRS_Qualification.md</code></td>
+<td>Defines the qualification sequence into which TGI metrology is integrated at two mandatory checkpoints</td>
+</tr>
+<tr>
+<td>SCR Zone Configuration Guide</td>
+<td><code>docs/fab/SCR_Zone_Config.md</code></td>
+<td>Zone configuration decisions that determine the spatial extent of SCR zones; TGI SC_eff and RWDL maps are inputs to zone commissioning</td>
+</tr>
+<tr>
+<td>Post-ASML PDK Integration Guide</td>
+<td><code>docs/eda/PostASML_PDK_Integration.md</code></td>
+<td>Specifies how RWDL maps and TGI design rules derived from this standard are embedded in the process design kit</td>
+</tr>
+<tr>
+<td>Temporal Timing Format Reference</td>
+<td><code>docs/eda/TTF_Reference.md</code></td>
+<td>Defines the format in which TAOE and STR systematic gradient data are expressed as timing correction arcs in EDA tools supporting PIMC workflows</td>
+</tr>
+<tr>
+<td>Substrate Clarity Classification Standard</td>
+<td><code>docs/materials/SC_Classification.md</code></td>
+<td>Defines the SC class thresholds against which SC_eff is evaluated; source of the acceptance threshold values in §13</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><em>This document is part of the TriadicFrameworks canonical reference set. Proposed revisions should be submitted via pull request to the <code>docs/post-ASML_era/</code> directory with a linked issue describing the change rationale. Revisions to acceptance criteria (§13) or calibration intervals (§14.3) require review by at least two maintainers and a process engineering sign-off.</em></p>
+<p>The TGI Metrology Standard is complete — §16.4 through §18 close out the production monitoring cadence, the full 47-term glossary, and the 8-document related-documents table, all internally consistent with the Primer and SCR Specification.</p>
+<p>The three documents now form a tight dependency chain: the Primer establishes canon, the SCR Specification operationalizes it at the fab level, and the TGI Metrology Standard bridges the geometric and temporal domains with a full measurement and acceptance framework. The next natural document in the sequence is <code>TCT_Protocol.md</code> — the Temporal Contrast Test — which all three files reference as the upstream source of SC bulk ratings that feed into IC, SC_eff, and the CLG calibration anchors. </p>
+  </main>
+</body>
+</html>

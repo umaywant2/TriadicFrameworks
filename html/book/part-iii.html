@@ -1,0 +1,849 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/book/part-iii.md">
+  <title>Part III — Apply</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/book/part-iii.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/book/part-iii.md</code>
+  </aside>
+
+  <main>
+<h1 id="part-iii-apply">Part III — Apply</h1>
+<blockquote>
+<p><strong>Who this is for:</strong> Practitioners who have completed Parts I and II and can answer every item on Part II's exit checklist.
+<strong>What it requires:</strong> Part I fluency. Part II navigation skill. A willingness to work through the examples hands-on, not just read them.
+<strong>What it produces:</strong> The ability to run live sessions — populating the grammar correctly, invoking operators with full syntax, evaluating outputs against the Spectral Clarity model, and recovering from the four canonical failure modes.</p>
+</blockquote>
+<hr>
+<p>Part III is where the system becomes useful.</p>
+<p>Parts I and II were preparation. This part is execution. Every chapter is built around doing something — not understanding a concept in isolation, but applying it to real input and producing a real output. The examples in this part are designed to be followed step by step, not skimmed. If you skim them, you will think you understand more than you do. The failure modes in Chapter 17 exist specifically because practitioners skimmed.</p>
+<p>There are five chapters. They follow a natural operational sequence: initialize the session, invoke the operators, run the passes, evaluate the output, and recover when something goes wrong.</p>
+<hr>
+<h2 id="chapters">Chapters</h2>
+<ul>
+<li><a href="#chapter-13--populating-the-9-field-session-grammar">Chapter 13 — Populating the 9-Field Session Grammar</a></li>
+<li><a href="#chapter-14--operator-invocation-full-signature-syntax">Chapter 14 — Operator Invocation: Full Signature Syntax</a></li>
+<li><a href="#chapter-15--running-a-complete-rtt-pass-on-novel-input">Chapter 15 — Running a Complete RTT Pass on Novel Input</a></li>
+<li><a href="#chapter-16--applying-spectral-clarity-and-the-nawderian-theorem">Chapter 16 — Applying Spectral Clarity and the Nawderian Theorem</a></li>
+<li><a href="#chapter-17--the-four-canonical-session-failure-modes">Chapter 17 — The Four Canonical Session Failure Modes</a></li>
+<li><a href="#exit-checklist--you-can-apply-when">Exit Checklist — You Can Apply When...</a></li>
+</ul>
+<hr>
+<h2 id="chapter-13-populating-the-9-field-session-grammar">Chapter 13 — Populating the 9-Field Session Grammar</h2>
+<p>A session begins with grammar. Not with the problem. Not with the input. Not with the modules. With the grammar — the nine fields that define everything the session is and is not allowed to do.</p>
+<p>A session with incomplete grammar is not a session running without some optional scaffolding. It is a malformed session. Outputs from malformed sessions cannot be validated, audited, or reproduced. They may be useful by accident. They are never useful by design.</p>
+<p>This chapter walks through each of the nine fields in order, specifying the population rules, the valid values, the common errors, and the test you can apply to verify the field is correctly set before proceeding.</p>
+<hr>
+<h3 id="the-session-grammar-template">The Session Grammar Template</h3>
+<p>Every session begins with this structure, populated before any operator is invoked:</p>
+<pre><code class="language-json">{
+  &quot;session_id&quot;: &quot;&quot;,
+  &quot;intent&quot;: &quot;&quot;,
+  &quot;scope&quot;: &quot;&quot;,
+  &quot;active_modules&quot;: [],
+  &quot;role_context&quot;: &quot;&quot;,
+  &quot;layer_context&quot;: &quot;&quot;,
+  &quot;input&quot;: &quot;&quot;,
+  &quot;output_format&quot;: &quot;&quot;,
+  &quot;validator&quot;: &quot;&quot;
+}
+</code></pre>
+<p>Do not begin operator invocations until all nine fields are non-empty and have passed their field-level tests.</p>
+<hr>
+<h3 id="field-1-session_id">Field 1: <code>session_id</code></h3>
+<p><strong>What it holds:</strong> A unique identifier for this session instance.</p>
+<p><strong>Population rules:</strong>
+- Must be unique across all sessions in the practitioner's history.
+- Must be stable — do not change it once the session has begun.
+- Recommended format: <code>[domain]-[date]-[sequence]</code> — e.g., <code>clarity-eval-20260925-01</code>
+- The date should be the date the session is initialized, in <code>YYYYMMDD</code> format.
+- The sequence number disambiguates multiple sessions initialized on the same date.</p>
+<p><strong>Common error:</strong> Using a vague or non-unique ID like <code>session-1</code> or <code>test</code>. These collide across time. When you need to audit or resume a session, a non-unique ID makes retrieval impossible.</p>
+<p><strong>Field test:</strong> Can you locate this session by its ID alone, with no other context, six months from now? If not, the ID is insufficient.</p>
+<hr>
+<h3 id="field-2-intent">Field 2: <code>intent</code></h3>
+<p><strong>What it holds:</strong> The declared goal — what this session is for, stated precisely.</p>
+<p><strong>Population rules:</strong>
+- One to three sentences. No more.
+- Must be actionable — it should specify what the session will <em>produce</em>, not what it will <em>think about</em>.
+- Must be testable — at the end of the session, you must be able to answer "did we achieve the intent?" with a yes or no.
+- Do not use hedged language ("explore," "consider," "look at"). Use directed language ("produce," "evaluate," "specify," "resolve").</p>
+<p><strong>Examples:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Weak (do not use)</th>
+<th>Strong (use this)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Explore what RTT means for decision-making</td>
+<td>Produce a single-pass RTT analysis of a named decision, identifying all three structural faces and packaging the output as a valid next-pass input</td>
+</tr>
+<tr>
+<td>Think about the clarity of the draft output</td>
+<td>Evaluate the draft output against the Spectral Clarity model and produce a structured validator assessment stating which criteria are satisfied and which are not</td>
+</tr>
+<tr>
+<td>Work on the new module</td>
+<td>Author the complete four-file specification for the <code>scope-check-operator</code> module, including manifest, links, prose, and session bindings</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Common error:</strong> Writing the intent as a topic rather than a deliverable. "Understand RTT" is a topic. "Produce a two-pass RTT analysis of the onboarding problem with depth=2 and output_format=StructuredFaces" is a deliverable.</p>
+<p><strong>Field test:</strong> Remove the intent and show someone the session's final output. Can they reconstruct the intent from the output alone? If yes, the intent was precise. If not, it was underspecified.</p>
+<hr>
+<h3 id="field-3-scope">Field 3: <code>scope</code></h3>
+<p><strong>What it holds:</strong> The explicit boundary — what is and is not in play for this session.</p>
+<p><strong>Population rules:</strong>
+- State both what is included and what is excluded.
+- The scope must be narrower than the intent's natural range. Every intent has implicit scope creep potential — the scope field closes it off before the session begins.
+- Use the format: <em>"This session covers [X]. It does not cover [Y]."</em>
+- Scope statements should be short enough to check against at any moment during the session.</p>
+<p><strong>Examples:</strong></p>
+<blockquote>
+<p>This session covers the evaluation of the draft <code>rtt-operator-core</code> module's <code>module.md</code> for scope compliance against its <code>module.json</code> manifest. It does not cover the module's dependency chain, its session bindings, or its compatibility with other operator modules.</p>
+<p>This session covers a single-depth RTT pass on the input statement provided in Field 7. It does not cover recursive extension beyond depth=1, application to adjacent inputs, or evaluation of the output's implications.</p>
+</blockquote>
+<p><strong>Common error:</strong> Leaving the scope field as a restatement of the intent. The scope narrows the intent. If <code>scope</code> and <code>intent</code> say the same thing, the scope has not been set — it has been paraphrased.</p>
+<p><strong>Field test:</strong> At any point during the session, you should be able to check any action against the scope and get a binary answer: <em>is this within scope?</em> If the scope is so vague that the answer is usually "probably," the scope needs tightening.</p>
+<hr>
+<h3 id="field-4-active_modules">Field 4: <code>active_modules</code></h3>
+<p><strong>What it holds:</strong> The complete, dependency-resolved list of modules invoked for this session.</p>
+<p><strong>Population rules:</strong>
+- Use the four-stage module discovery protocol from Chapter 10 to identify the primary modules.
+- Trace the full dependency chain for each primary module (Chapter 8, forward traversal).
+- Include every module in every dependency chain. The <code>active_modules</code> list is the complete closure of all module dependencies for the session.
+- Order the list from foundational to surface — anchors first, operators last.
+- Use module IDs, not labels.</p>
+<p><strong>Common error:</strong> Including only the top-level modules and omitting their dependencies. This creates invisible dependency gaps — the session will invoke modules that require other modules to be valid, but those supporting modules are not active. The session's outputs cannot be properly validated.</p>
+<p><strong>Field test:</strong> For every module in the list, open its <code>module_links.json</code>. Every module in its <code>depends_on</code> list must also appear in <code>active_modules</code>. If any do not, the list is incomplete.</p>
+<hr>
+<h3 id="field-5-role_context">Field 5: <code>role_context</code></h3>
+<p><strong>What it holds:</strong> The role(s) in operation during this session — the functional types of work being performed.</p>
+<p><strong>Population rules:</strong>
+- Declare the primary role this session is performing. Use the Role enum exactly.
+- If the session spans multiple functional types (e.g., both evaluating and transforming), list all roles that apply.
+- Most sessions have one or two primary roles. A session with five or more declared roles is likely conflating multiple sessions into one — consider splitting.</p>
+<p><strong>Valid values:</strong> <code>anchor</code>, <code>lens</code>, <code>protocol</code>, <code>grammar</code>, <code>operator</code>, <code>index</code>, <code>map</code>, <code>bridge</code>, <code>validator</code>, <code>field</code></p>
+<p><strong>Common error:</strong> Leaving this field at a vague meta-description ("thinking," "working," "analyzing") rather than a value from the Role enum. The role_context field exists to constrain which modules may be invoked and how outputs are structured — a vague value provides no constraint.</p>
+<p><strong>Field test:</strong> Does every module in <code>active_modules</code> have a <code>valid_roles</code> entry in its <code>module_session.json</code> that includes at least one of the declared role_context values? If not, a module is being invoked outside its valid role context.</p>
+<hr>
+<h3 id="field-6-layer_context">Field 6: <code>layer_context</code></h3>
+<p><strong>What it holds:</strong> The analyzer layer(s) the session operates within.</p>
+<p><strong>Population rules:</strong>
+- Declare the primary layer. Use the Layer enum exactly.
+- Most sessions operate at a single layer. If a session genuinely spans two layers (e.g., both <code>structural</code> and <code>operational</code>), both may be declared — but examine whether the session should be split.
+- The layer_context constrains which modules may be invoked. A module with <code>valid_layers: ["operational"]</code> cannot be invoked in a <code>foundational</code> layer context.</p>
+<p><strong>Valid values:</strong> <code>surface</code>, <code>structural</code>, <code>operational</code>, <code>foundational</code>, <code>meta</code></p>
+<p><strong>Common error:</strong> Defaulting to <code>operational</code> for every session without considering whether the work is actually at the structural or foundational layer. A session authoring a new grammar module is structural, not operational. The distinction matters — it affects which validators apply and which modules are available.</p>
+<p><strong>Field test:</strong> Does every module in <code>active_modules</code> have a <code>valid_layers</code> entry that includes the declared <code>layer_context</code>? If not, the layer context or the module list is wrong.</p>
+<hr>
+<h3 id="field-7-input">Field 7: <code>input</code></h3>
+<p><strong>What it holds:</strong> The raw material the session works on.</p>
+<p><strong>Population rules:</strong>
+- The input must be a well-formed <code>InputUnit</code> — a thought, claim, decision, artifact, or document with a declared scope.
+- If the input is text, include the full text — do not summarize it. The session works on the actual input, not a description of it.
+- If the input is a module, include the module ID and specify which file(s) are in scope.
+- The input must be consistent with the declared scope in Field 3. If the input exceeds the scope, reduce the input to the in-scope portion before populating this field.</p>
+<p><strong>Common error:</strong> Populating this field with a description of the input rather than the input itself. "A draft of the module" is not an input. The draft module's actual content is the input.</p>
+<p><strong>Field test:</strong> Could the session be handed to a different practitioner — with only the nine fields and no additional context — and produce the same class of output? If the <code>input</code> field requires implicit knowledge to interpret, it is underspecified.</p>
+<hr>
+<h3 id="field-8-output_format">Field 8: <code>output_format</code></h3>
+<p><strong>What it holds:</strong> The required shape of the session's deliverable.</p>
+<p><strong>Population rules:</strong>
+- Declare the format precisely. Use the FormatEnum values where applicable.
+- If the output is a structured document, specify the document's sections.
+- If the output is a validator assessment, specify which validator fields must be present.
+- If the output is a module, specify which of the four files are required.
+- The output format is a promise — the session is obligated to produce output that matches this specification exactly.</p>
+<p><strong>FormatEnum core values:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Output Shape</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>StructuredFaces</code></td>
+<td>Three labeled sections: generative_face, present_face, terminal_face</td>
+</tr>
+<tr>
+<td><code>ValidatorAssessment</code></td>
+<td>Criteria list with satisfied/unsatisfied/insufficient-input status per criterion</td>
+</tr>
+<tr>
+<td><code>ModuleSpec</code></td>
+<td>One or more of the four module files in valid schema</td>
+</tr>
+<tr>
+<td><code>NarrativeAnalysis</code></td>
+<td>Prose analysis with declared sections, bounded to scope</td>
+</tr>
+<tr>
+<td><code>DependencyTrace</code></td>
+<td>Ordered list of module IDs from source to foundational anchor</td>
+</tr>
+<tr>
+<td><code>SessionRecord</code></td>
+<td>Complete populated session grammar plus output</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Common error:</strong> Leaving this field vague ("a write-up," "some notes," "analysis"). A vague output format means the validator cannot check whether the output meets the session's intent. The output becomes a judgment call rather than a checkable deliverable.</p>
+<p><strong>Field test:</strong> Given only the <code>output_format</code> value, could you tell whether a sample output passes or fails? If not, the format is not specific enough.</p>
+<hr>
+<h3 id="field-9-validator">Field 9: <code>validator</code></h3>
+<p><strong>What it holds:</strong> The module ID of the validator applied to the session's output.</p>
+<p><strong>Population rules:</strong>
+- Use a module ID from the <code>validator-suite</code> or <code>clarity-system</code> group.
+- The validator must be present in <code>active_modules</code>.
+- The validator must be appropriate for the declared <code>output_format</code> — a validator designed for RTT pass outputs should not be applied to a module spec deliverable.
+- If no existing validator covers the session's output type, this is a gap — address it before running the session, or document the absence explicitly.</p>
+<p><strong>Common error:</strong> Leaving this field as <code>"none"</code> or <code>"TBD"</code>. A session without a validator has no correctness criterion. Its output cannot be distinguished from noise. This is not a minor omission — it defeats the purpose of the session grammar.</p>
+<p><strong>Field test:</strong> Can you read the declared validator's <code>module.json</code> scope and confirm it covers the output format declared in Field 8? If not, the validator is mismatched.</p>
+<hr>
+<h3 id="a-fully-populated-example-session">A Fully Populated Example Session</h3>
+<pre><code class="language-json">{
+  &quot;session_id&quot;: &quot;rtt-analysis-20260925-01&quot;,
+  &quot;intent&quot;: &quot;Produce a depth=2 RTT analysis of the input statement, identifying all three structural faces at both pass levels and packaging the second-pass output as a valid InputUnit for a potential third pass.&quot;,
+  &quot;scope&quot;: &quot;This session covers a two-pass RTT analysis of the single input statement in Field 7. It does not cover application to related statements, recursive extension beyond depth=2, or evaluation of the output's downstream implications.&quot;,
+  &quot;active_modules&quot;: [
+    &quot;rtt-anchor-definition&quot;,
+    &quot;session-grammar-anchor&quot;,
+    &quot;session-grammar-field-input&quot;,
+    &quot;session-grammar-field-output-format&quot;,
+    &quot;session-grammar-field-validator&quot;,
+    &quot;rtt-operator-core&quot;,
+    &quot;rtt-operator-recursive-extension&quot;,
+    &quot;clarity-validator-rtt-output&quot;
+  ],
+  &quot;role_context&quot;: &quot;operator&quot;,
+  &quot;layer_context&quot;: &quot;operational&quot;,
+  &quot;input&quot;: &quot;Our team's decision-making process produces inconsistent outcomes. Sometimes we converge quickly on the right answer; other times we cycle through the same options without resolution. The pattern is not correlated with decision difficulty or team composition.&quot;,
+  &quot;output_format&quot;: &quot;StructuredFaces&quot;,
+  &quot;validator&quot;: &quot;clarity-validator-rtt-output&quot;
+}
+</code></pre>
+<p>This session is fully specified. Every field is populated, precise, and internally consistent. The <code>active_modules</code> list includes all declared dependencies. The <code>validator</code> is present in the module list. The <code>output_format</code> and <code>validator</code> are compatible. The <code>scope</code> narrows the <code>intent</code>. The <code>input</code> is the actual input, not a description of it.</p>
+<p>This session can be handed to any practitioner and produce structurally equivalent output.</p>
+<hr>
+<h2 id="chapter-14-operator-invocation-full-signature-syntax">Chapter 14 — Operator Invocation: Full Signature Syntax</h2>
+<p>Operators are the workhorses of the session. Every transformation you perform on an input is the result of an operator invocation. This chapter covers how to read an operator's invocation syntax, how to construct a valid call, and the errors that make a call malformed.</p>
+<h3 id="the-invocation-grammar">The Invocation Grammar</h3>
+<p>Every operator invocation follows this structure:</p>
+<pre><code>[OperatorNamespace].[method](
+  [param_name]: &lt;value&gt;,
+  [param_name]: &lt;value&gt;,
+  ...
+)
+</code></pre>
+<ul>
+<li><strong>OperatorNamespace</strong> — the domain prefix of the operator module (e.g., <code>RTT</code>, <code>Clarity</code>, <code>Scope</code>, <code>Session</code>)</li>
+<li><strong>method</strong> — the specific operation being performed (e.g., <code>pass</code>, <code>evaluate</code>, <code>check</code>, <code>initialize</code>)</li>
+<li><strong>param_name: value</strong> — every parameter declared in <code>module_session.json</code> → <code>invocation_syntax</code>, in order</li>
+</ul>
+<p>All parameters are required unless explicitly marked <code>optional</code> in the <code>input_schema</code>. There are no positional defaults — every parameter must be named explicitly.</p>
+<h3 id="reading-the-syntax-from-module_sessionjson">Reading the Syntax from <code>module_session.json</code></h3>
+<p>Before invoking any operator, open its <code>module_session.json</code> and read three fields:</p>
+<ol>
+<li><strong><code>invocation_syntax</code></strong> — the exact call signature, with parameter names and type placeholders</li>
+<li><strong><code>input_schema</code></strong> — the valid values and constraints for each parameter</li>
+<li><strong><code>output_schema</code></strong> — what you will receive, which determines how you handle the result</li>
+</ol>
+<p>Never invoke an operator from memory. Always read the <code>module_session.json</code> freshly. Version changes alter signatures.</p>
+<h3 id="worked-invocations">Worked Invocations</h3>
+<h4 id="invocation-1-rtt-core-operator">Invocation 1: RTT Core Operator</h4>
+<p><strong><code>module_session.json</code> → <code>invocation_syntax</code>:</strong></p>
+<pre><code>RTT.pass(input: &lt;InputUnit&gt;, depth: &lt;integer&gt;, output_format: &lt;FormatEnum&gt;)
+</code></pre>
+<p><strong><code>input_schema</code>:</strong>
+- <code>input</code>: A well-formed InputUnit with a declared scope
+- <code>depth</code>: Integer ≥ 1. Number of recursive passes. Default: 1
+- <code>output_format</code>: A value from FormatEnum. Specifies the output structure</p>
+<p><strong>Valid invocation:</strong></p>
+<pre><code>RTT.pass(
+  input: {
+    content: &quot;Our team's decision-making process produces inconsistent outcomes...&quot;,
+    scope: &quot;Single decision-making pattern statement — no adjacent statements in scope&quot;
+  },
+  depth: 2,
+  output_format: StructuredFaces
+)
+</code></pre>
+<p><strong>Malformed invocation (missing parameter):</strong></p>
+<pre><code>RTT.pass(
+  input: &quot;Our team's decision-making process produces inconsistent outcomes...&quot;,
+  depth: 2
+)
+</code></pre>
+<blockquote>
+<p>Missing <code>output_format</code>. This is a malformed call. The operator does not know how to structure its output. Do not attempt to infer the output format from context — stop and complete the call.</p>
+</blockquote>
+<p><strong>Malformed invocation (wrong input type):</strong></p>
+<pre><code>RTT.pass(
+  input: &quot;Our team's decision-making process produces inconsistent outcomes...&quot;,
+  depth: 2,
+  output_format: StructuredFaces
+)
+</code></pre>
+<blockquote>
+<p>The <code>input</code> is a raw string, not an <code>InputUnit</code>. An <code>InputUnit</code> requires a <code>content</code> field and a <code>scope</code> field. A raw string has no declared scope — the operator cannot validate that the input is well-formed.</p>
+</blockquote>
+<hr>
+<h4 id="invocation-2-spectral-clarity-operator">Invocation 2: Spectral Clarity Operator</h4>
+<p><strong><code>module_session.json</code> → <code>invocation_syntax</code>:</strong></p>
+<pre><code>Clarity.evaluate(
+  input: &lt;OutputUnit&gt;,
+  theorem_ref: &lt;TheoremID&gt;,
+  validator_id: &lt;ValidatorModuleID&gt;,
+  output_format: &lt;FormatEnum&gt;
+)
+</code></pre>
+<p><strong><code>input_schema</code>:</strong>
+- <code>input</code>: A completed OutputUnit — the result of a prior operator invocation, with all declared output_schema fields present
+- <code>theorem_ref</code>: The ID of the Nawderian Theorem module to apply. Standard value: <code>nawderian-theorem-validator-pulses</code>
+- <code>validator_id</code>: The validator module to use for assessment. Must match the output type
+- <code>output_format</code>: Must be <code>ValidatorAssessment</code> for clarity evaluations</p>
+<p><strong>Valid invocation:</strong></p>
+<pre><code>Clarity.evaluate(
+  input: {
+    generative_face: &quot;The inconsistency originates in...&quot;,
+    present_face: &quot;A reproducibility failure exists because...&quot;,
+    terminal_face: &quot;Without intervention, the pattern will compound because...&quot;,
+    pass_depth: 1,
+    next_input: { content: &quot;...&quot;, scope: &quot;...&quot; }
+  },
+  theorem_ref: &quot;nawderian-theorem-validator-pulses&quot;,
+  validator_id: &quot;clarity-validator-rtt-output&quot;,
+  output_format: ValidatorAssessment
+)
+</code></pre>
+<hr>
+<h4 id="invocation-3-scope-check-operator">Invocation 3: Scope Check Operator</h4>
+<p><strong><code>module_session.json</code> → <code>invocation_syntax</code>:</strong></p>
+<pre><code>Scope.check(
+  module_id: &lt;ModuleID&gt;,
+  target_file: &lt;FileEnum&gt;,
+  manifest_ref: &lt;ModuleID&gt;
+)
+</code></pre>
+<p><strong><code>input_schema</code>:</strong>
+- <code>module_id</code>: The ID of the module being checked
+- <code>target_file</code>: Which file to check against the manifest scope. Values: <code>module.md</code>, <code>module_session.json</code>
+- <code>manifest_ref</code>: The module ID whose <code>module.json</code> scope field serves as the boundary. Usually the same as <code>module_id</code>, unless checking a linked module</p>
+<p><strong>Valid invocation:</strong></p>
+<pre><code>Scope.check(
+  module_id: &quot;rtt-operator-core&quot;,
+  target_file: module.md,
+  manifest_ref: &quot;rtt-operator-core&quot;
+)
+</code></pre>
+<hr>
+<h3 id="chaining-invocations">Chaining Invocations</h3>
+<p>Operators may be chained — the output of one invocation becomes the input of the next. Chaining is valid when:</p>
+<ol>
+<li>The output schema of the first operator matches the input schema of the second.</li>
+<li>Both operators are in <code>active_modules</code>.</li>
+<li>The chain stays within the session's declared scope.</li>
+</ol>
+<p><strong>Valid chain:</strong></p>
+<pre><code>Step 1:
+RTT.pass(input: &lt;InputUnit&gt;, depth: 1, output_format: StructuredFaces)
+→ produces: OutputUnit { generative_face, present_face, terminal_face, pass_depth, next_input }
+
+Step 2:
+Clarity.evaluate(
+  input: &lt;OutputUnit from Step 1&gt;,
+  theorem_ref: &quot;nawderian-theorem-validator-pulses&quot;,
+  validator_id: &quot;clarity-validator-rtt-output&quot;,
+  output_format: ValidatorAssessment
+)
+→ produces: ValidatorAssessment { criteria_results[], overall_coherence, flags[] }
+</code></pre>
+<p>This is the canonical two-step pattern for any session that both transforms an input and evaluates the result. Use it as the default unless the session's intent specifies otherwise.</p>
+<h3 id="the-non-negotiable-rules-of-invocation">The Non-Negotiable Rules of Invocation</h3>
+<ol>
+<li><strong>Never invoke without reading <code>module_session.json</code> first.</strong> Memory is not a valid substitute.</li>
+<li><strong>Never omit a required parameter.</strong> There is no such thing as a "partial invocation." A call with missing parameters is malformed.</li>
+<li><strong>Never pass a raw string where an <code>InputUnit</code> is required.</strong> Wrap it properly.</li>
+<li><strong>Never chain operators whose schemas are incompatible.</strong> Verify output_schema → input_schema alignment before chaining.</li>
+<li><strong>Never invoke an operator outside its <code>valid_layers</code> or <code>valid_roles</code>.</strong> Check these constraints before every invocation.</li>
+</ol>
+<hr>
+<h2 id="chapter-15-running-a-complete-rtt-pass-on-novel-input">Chapter 15 — Running a Complete RTT Pass on Novel Input</h2>
+<p>This chapter is a full end-to-end execution. It begins with a raw problem statement and ends with a validated two-pass RTT output. Follow it step by step.</p>
+<h3 id="the-input">The Input</h3>
+<blockquote>
+<p><em>"We are three months into a new product initiative. The team is executing well on individual tasks, but the initiative as a whole feels directionless. Stakeholders are starting to ask questions we don't have answers to. The PM is confident but cannot articulate what success looks like beyond the next sprint."</em></p>
+</blockquote>
+<h3 id="step-1-prepare-the-inputunit">Step 1: Prepare the InputUnit</h3>
+<p>Wrap the raw input in an <code>InputUnit</code> by declaring its scope:</p>
+<pre><code class="language-json">{
+  &quot;content&quot;: &quot;We are three months into a new product initiative. The team is executing well on individual tasks, but the initiative as a whole feels directionless. Stakeholders are starting to ask questions we don't have answers to. The PM is confident but cannot articulate what success looks like beyond the next sprint.&quot;,
+  &quot;scope&quot;: &quot;A single product initiative's current state as described by a team member — no adjacent initiatives, no historical context, no organizational context beyond what is stated.&quot;
+}
+</code></pre>
+<p>The scope declaration is not optional. It tells the RTT operator exactly what the input claims to represent and what it does not. Without it, the operator cannot know whether a given face is drawing inside or outside the input's legitimate bounds.</p>
+<h3 id="step-2-initialize-the-session">Step 2: Initialize the Session</h3>
+<pre><code class="language-json">{
+  &quot;session_id&quot;: &quot;rtt-product-initiative-20260925-01&quot;,
+  &quot;intent&quot;: &quot;Produce a depth=2 RTT analysis of the product initiative input, identifying structural failure at both the surface and meta levels, and packaging the second-pass output as a valid InputUnit for intervention planning.&quot;,
+  &quot;scope&quot;: &quot;This session covers a two-pass RTT analysis of the single input statement. It does not cover team dynamics, stakeholder management strategy, or PM performance evaluation.&quot;,
+  &quot;active_modules&quot;: [
+    &quot;rtt-anchor-definition&quot;,
+    &quot;session-grammar-anchor&quot;,
+    &quot;session-grammar-field-input&quot;,
+    &quot;session-grammar-field-output-format&quot;,
+    &quot;session-grammar-field-validator&quot;,
+    &quot;rtt-operator-core&quot;,
+    &quot;rtt-operator-recursive-extension&quot;,
+    &quot;clarity-validator-rtt-output&quot;
+  ],
+  &quot;role_context&quot;: &quot;operator&quot;,
+  &quot;layer_context&quot;: &quot;operational&quot;,
+  &quot;input&quot;: &quot;&lt;InputUnit from Step 1&gt;&quot;,
+  &quot;output_format&quot;: &quot;StructuredFaces&quot;,
+  &quot;validator&quot;: &quot;clarity-validator-rtt-output&quot;
+}
+</code></pre>
+<p>All nine fields populated. Session initialized.</p>
+<h3 id="step-3-first-rtt-pass-depth1">Step 3: First RTT Pass (depth=1)</h3>
+<p><strong>Invocation:</strong></p>
+<pre><code>RTT.pass(
+  input: &lt;InputUnit&gt;,
+  depth: 1,
+  output_format: StructuredFaces
+)
+</code></pre>
+<p><strong>Execution — filling the three faces:</strong></p>
+<p><strong>Generative face — where did this come from?</strong></p>
+<p>The initiative began with energy and individual competence — the team executes well on tasks. The origin context is one where local execution was prioritized over systemic coherence. At the time of launch, success was likely defined in terms of task delivery rather than initiative-level outcomes. The PM's confidence is real but is anchored to a task-delivery frame, not an outcomes frame. This mismatch between the launch framing (task-oriented) and the current expectation (stakeholder-facing outcomes) is the generative source of the problem.</p>
+<p><strong>Present face — what is this, right now?</strong></p>
+<p>A coherence gap between micro-execution and macro-orientation. The team is operationally capable but strategically unmoored. The specific structural failure: the initiative has no declared success definition at the initiative level — only at the sprint level. Sprint-level success can be high while initiative-level direction is undefined. This is not a morale problem, a talent problem, or a stakeholder management problem. It is a missing artifact problem: the initiative-level success specification does not exist.</p>
+<p><strong>Terminal face — where is this going?</strong></p>
+<p>Without intervention, two convergent failure paths:
+1. Stakeholder confidence erodes as questions go unanswered, leading to reduced sponsorship or increased scrutiny that slows execution.
+2. The PM's sprint-level confidence persists while initiative-level drift accelerates, creating a growing gap between reported progress and actual strategic alignment.</p>
+<p>Both paths terminate in initiative failure or redefinition — not from poor execution, but from undefined direction.</p>
+<p><strong>First-pass output:</strong></p>
+<pre><code class="language-json">{
+  &quot;generative_face&quot;: &quot;The initiative was launched with a task-delivery frame. The PM's confidence and the team's execution capability are both anchored to sprint-level success definitions. No initiative-level success specification was established at launch.&quot;,
+  &quot;present_face&quot;: &quot;A missing artifact: the initiative-level success specification. The gap between sprint-level execution (strong) and initiative-level orientation (absent) is the structural failure. This is not a performance problem — it is a specification problem.&quot;,
+  &quot;terminal_face&quot;: &quot;Two convergent failure paths: stakeholder confidence erosion and accelerating strategic drift, both leading to initiative failure or forced redefinition.&quot;,
+  &quot;pass_depth&quot;: 1,
+  &quot;next_input&quot;: {
+    &quot;content&quot;: &quot;The initiative lacks an initiative-level success specification. Sprint-level success is well-defined and being achieved. The absence of the higher-level specification is creating stakeholder misalignment and strategic drift.&quot;,
+    &quot;scope&quot;: &quot;The structural gap identified in the first RTT pass — scoped to the specification deficit, not to team performance or stakeholder management.&quot;
+  }
+}
+</code></pre>
+<h3 id="step-4-second-rtt-pass-depth2">Step 4: Second RTT Pass (depth=2)</h3>
+<p><strong>Invocation:</strong></p>
+<pre><code>RTT.pass(
+  input: &lt;next_input from first-pass output&gt;,
+  depth: 2,
+  output_format: StructuredFaces
+)
+</code></pre>
+<p><strong>Execution:</strong></p>
+<p><strong>Generative face — where did this specification deficit come from?</strong></p>
+<p>Initiative-level success specifications are not authored because most teams do not have a grammar for them. Sprint-level success is easy to specify — stories, points, acceptance criteria. Initiative-level success requires a different kind of specification: one that declares what the world looks like when the initiative has succeeded, measured at a level above any individual sprint's deliverables. Without a grammar for this artifact, it is not authored — not because teams forget, but because they do not have the structural tools to do it.</p>
+<p><strong>Present face — what is the specification deficit, at a deeper level?</strong></p>
+<p>The deficit is not just the absence of one document. It is the absence of a specification <em>practice</em> at the initiative level. The team knows how to specify sprint outputs because they do it every sprint. They do not know how to specify initiative outcomes because they have never been taught the grammar for it. The PM's inability to articulate what success looks like is not a failure of insight — it is the absence of a structural tool.</p>
+<p><strong>Terminal face — what does filling this deficit enable?</strong></p>
+<p>An initiative-level success specification, once authored, immediately resolves the stakeholder question problem — stakeholders can now be given a clear, testable answer. It also gives the PM a frame for evaluating whether sprint work is initiative-aligned (not just sprint-complete). The drift problem becomes diagnosable: is this sprint's output moving toward the success definition or away from it?</p>
+<p><strong>Second-pass output:</strong></p>
+<pre><code class="language-json">{
+  &quot;generative_face&quot;: &quot;Teams lack a grammar for initiative-level success specification. Sprint-level grammar exists and is practiced. Initiative-level grammar does not — so the artifact is never authored.&quot;,
+  &quot;present_face&quot;: &quot;The deficit is structural: the team does not have the tool to specify what they need to specify. The PM's uncertainty is not a knowledge failure — it is a grammar failure.&quot;,
+  &quot;terminal_face&quot;: &quot;Authoring an initiative-level success specification resolves stakeholder misalignment, gives the PM an alignment frame, and makes drift diagnosable at the sprint level.&quot;,
+  &quot;pass_depth&quot;: 2,
+  &quot;next_input&quot;: {
+    &quot;content&quot;: &quot;The team needs an initiative-level success specification grammar — a structural tool that enables them to define what success looks like above the sprint level.&quot;,
+    &quot;scope&quot;: &quot;The grammar-level intervention required to resolve the initiative's specification deficit — scoped to the tool itself, not to its implementation or adoption.&quot;
+  }
+}
+</code></pre>
+<p>Notice what the second pass produced that the first could not: the identification that the problem is a <em>grammar failure</em>, not a specification failure. The first pass said "the artifact is missing." The second pass said "the artifact is missing because the grammar for authoring it does not exist in this team's practice." These are different problems with different interventions. The second pass found the right level.</p>
+<h3 id="step-5-apply-the-validator">Step 5: Apply the Validator</h3>
+<pre><code>Clarity.evaluate(
+  input: &lt;second-pass OutputUnit&gt;,
+  theorem_ref: &quot;nawderian-theorem-validator-pulses&quot;,
+  validator_id: &quot;clarity-validator-rtt-output&quot;,
+  output_format: ValidatorAssessment
+)
+</code></pre>
+<p>See Chapter 16 for the full validator assessment process.</p>
+<hr>
+<h2 id="chapter-16-applying-spectral-clarity-and-the-nawderian-theorem">Chapter 16 — Applying Spectral Clarity and the Nawderian Theorem</h2>
+<p>Producing output is not the end of a session. Evaluating the output against the system's clarity standard is. This chapter covers the Nawderian Theorem of Validator Pulses, how to apply the Spectral Clarity operator, how to read a validator assessment, and how to act on it.</p>
+<h3 id="the-nawderian-theorem-of-validator-pulses">The Nawderian Theorem of Validator Pulses</h3>
+<p>The theorem makes a single foundational claim:</p>
+<blockquote>
+<p><strong>Clarity is a function of signal coherence across validator layers — not a subjective sense of understanding.</strong></p>
+</blockquote>
+<p>Unpacked:</p>
+<ul>
+<li><strong>Signal</strong> — the information content of the output. A signal is high when the output makes specific, checkable claims. It is low when the output makes vague, hedged, or open-ended claims.</li>
+<li><strong>Coherence</strong> — the degree to which the output's claims are internally consistent and consistent with the session's declared intent and scope. A coherent output does not contradict itself and does not wander outside the scope.</li>
+<li><strong>Validator layers</strong> — clarity is not evaluated once. It is evaluated at multiple structural layers: the face level (is each face present and substantive?), the pass level (does the second pass build on the first, not repeat it?), the scope level (does the output stay within the session's declared scope?), and the intent level (does the output fulfill the declared intent?).</li>
+</ul>
+<p>An output is <strong>clear</strong> when its signal is high and its coherence is high across all validator layers. An output can feel clear — readable, confident, well-written — while failing on coherence. And an output can feel dense or technical while scoring high on all four validator layers. The feeling is irrelevant. The measurement is what counts.</p>
+<h3 id="the-validator-assessment-structure">The Validator Assessment Structure</h3>
+<p>Every <code>clarity-validator-rtt-output</code> assessment produces a <code>ValidatorAssessment</code> with this structure:</p>
+<pre><code class="language-json">{
+  &quot;validator_id&quot;: &quot;clarity-validator-rtt-output&quot;,
+  &quot;session_id&quot;: &quot;&lt;session being evaluated&gt;&quot;,
+  &quot;pass_depth_evaluated&quot;: &lt;integer&gt;,
+  &quot;criteria_results&quot;: [
+    {
+      &quot;criterion&quot;: &quot;Face completeness&quot;,
+      &quot;status&quot;: &quot;satisfied | not_satisfied | insufficient_input&quot;,
+      &quot;notes&quot;: &quot;...&quot;
+    },
+    {
+      &quot;criterion&quot;: &quot;Face substantiveness&quot;,
+      &quot;status&quot;: &quot;satisfied | not_satisfied | insufficient_input&quot;,
+      &quot;notes&quot;: &quot;...&quot;
+    },
+    {
+      &quot;criterion&quot;: &quot;Pass differentiation&quot;,
+      &quot;status&quot;: &quot;satisfied | not_satisfied | insufficient_input&quot;,
+      &quot;notes&quot;: &quot;...&quot;
+    },
+    {
+      &quot;criterion&quot;: &quot;Scope compliance&quot;,
+      &quot;status&quot;: &quot;satisfied | not_satisfied | insufficient_input&quot;,
+      &quot;notes&quot;: &quot;...&quot;
+    },
+    {
+      &quot;criterion&quot;: &quot;Intent fulfillment&quot;,
+      &quot;status&quot;: &quot;satisfied | not_satisfied | insufficient_input&quot;,
+      &quot;notes&quot;: &quot;...&quot;
+    }
+  ],
+  &quot;overall_coherence&quot;: &quot;high | moderate | low&quot;,
+  &quot;flags&quot;: [],
+  &quot;recommendation&quot;: &quot;accept | revise | re-run&quot;
+}
+</code></pre>
+<h3 id="the-five-clarity-criteria">The Five Clarity Criteria</h3>
+<p><strong>Criterion 1: Face completeness.</strong>
+Are all three structural faces present in every pass output? A pass output with a missing face is incomplete — the terminal face is the most commonly omitted. <em>Satisfied</em> means all three faces are present in all passes evaluated.</p>
+<p><strong>Criterion 2: Face substantiveness.</strong>
+Does each face contain a specific, checkable claim — or is it vague? A generative face that says "this came from various factors" is not substantive. A generative face that names the specific structural origin is substantive. <em>Satisfied</em> means every face makes at least one specific, checkable claim.</p>
+<p><strong>Criterion 3: Pass differentiation.</strong>
+Does each successive pass produce claims that could not have been produced by the previous pass? If Pass 2 largely restates Pass 1 in different words, the recursion is not doing its work. <em>Satisfied</em> means each pass produces at least one claim that is structurally distinct from all prior passes.</p>
+<p><strong>Criterion 4: Scope compliance.</strong>
+Does the output stay within the scope declared in Field 3? Any claim that references content outside the declared scope is a scope violation. <em>Satisfied</em> means no scope violations are detected.</p>
+<p><strong>Criterion 5: Intent fulfillment.</strong>
+Does the output fulfill the intent declared in Field 2? An output can be internally coherent and scope-compliant but still fail to produce what the intent specified. <em>Satisfied</em> means the output can be checked against the intent and passes.</p>
+<h3 id="reading-a-validator-assessment-the-chapter-15-example">Reading a Validator Assessment: The Chapter 15 Example</h3>
+<p>Applying the validator to the two-pass output from Chapter 15:</p>
+<pre><code class="language-json">{
+  &quot;validator_id&quot;: &quot;clarity-validator-rtt-output&quot;,
+  &quot;session_id&quot;: &quot;rtt-product-initiative-20260925-01&quot;,
+  &quot;pass_depth_evaluated&quot;: 2,
+  &quot;criteria_results&quot;: [
+    {
+      &quot;criterion&quot;: &quot;Face completeness&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;All three faces present in both passes.&quot;
+    },
+    {
+      &quot;criterion&quot;: &quot;Face substantiveness&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;Each face makes specific, checkable claims. Pass 1 present face names the missing artifact precisely. Pass 2 present face identifies the grammar failure specifically.&quot;
+    },
+    {
+      &quot;criterion&quot;: &quot;Pass differentiation&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;Pass 2 produces the grammar-failure claim, which is structurally distinct from Pass 1's artifact-absence claim. The level of analysis deepened.&quot;
+    },
+    {
+      &quot;criterion&quot;: &quot;Scope compliance&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;No references to team dynamics, PM performance, or stakeholder management strategy detected. Output stayed within declared scope.&quot;
+    },
+    {
+      &quot;criterion&quot;: &quot;Intent fulfillment&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;The second-pass next_input is packaged as a valid InputUnit for intervention planning, as the intent specified.&quot;
+    }
+  ],
+  &quot;overall_coherence&quot;: &quot;high&quot;,
+  &quot;flags&quot;: [],
+  &quot;recommendation&quot;: &quot;accept&quot;
+}
+</code></pre>
+<p>All five criteria satisfied. Overall coherence: high. Recommendation: accept.</p>
+<h3 id="acting-on-a-validator-assessment">Acting on a Validator Assessment</h3>
+<table>
+<thead>
+<tr>
+<th>Recommendation</th>
+<th>What It Means</th>
+<th>What to Do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>accept</code></td>
+<td>The output meets all criteria at the evaluated depth</td>
+<td>Close the session. Package the output per <code>output_format</code>.</td>
+</tr>
+<tr>
+<td><code>revise</code></td>
+<td>One or more criteria are <code>not_satisfied</code> but the structural work is present</td>
+<td>Return to the specific failing pass and revise only the faces flagged in <code>criteria_results</code>. Do not re-run the entire session.</td>
+</tr>
+<tr>
+<td><code>re-run</code></td>
+<td>The output has fundamental structural problems — missing faces, no pass differentiation, or scope violations throughout</td>
+<td>Discard the output. Re-examine the session grammar fields (especially <code>intent</code>, <code>scope</code>, and <code>input</code>) before re-running.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The critical rule:</strong> Never act on an output before receiving a validator assessment. An unvalidated output is not a session output — it is a draft. Only a <code>ValidatorAssessment</code> with <code>recommendation: accept</code> produces a session output.</p>
+<h3 id="when-a-criterion-returns-insufficient_input">When a Criterion Returns <code>insufficient_input</code></h3>
+<p><code>insufficient_input</code> means the validator cannot evaluate the criterion because the output does not provide enough information to check against. This is distinct from <code>not_satisfied</code> — it is not a failure, it is a structural gap.</p>
+<p>When a criterion returns <code>insufficient_input</code>:
+1. Read the <code>notes</code> field for the specific criterion. It will state what additional information is required.
+2. Determine whether the missing information is within the session's scope.
+3. If yes — revise the output to include it. The information should have been there.
+4. If no — the criterion is genuinely unevaluable within this session's scope. Document this in the session record and close. The criterion will need to be evaluated in a follow-on session with a wider scope.</p>
+<hr>
+<h2 id="chapter-17-the-four-canonical-session-failure-modes">Chapter 17 — The Four Canonical Session Failure Modes</h2>
+<p>Every practitioner encounters these four failure modes. They are canonical because they appear consistently, across domains, across experience levels, and across session types. Knowing them in advance does not prevent them — but it makes them recoverable when they occur.</p>
+<hr>
+<h3 id="failure-mode-1-underspecified-intent">Failure Mode 1: Underspecified Intent</h3>
+<p><strong>What it looks like:</strong></p>
+<p>The session produces output, but the output does not feel like it answered the right question. The practitioner cannot determine whether the session succeeded or failed. When asked "did you achieve the intent?" the answer is "I think so?" or "mostly."</p>
+<p><strong>Root cause:</strong></p>
+<p>The <code>intent</code> field was populated with a topic or a direction rather than a deliverable. The session had no testable success criterion, so it wandered within the intent's implicit space and produced output that is adjacent to what was needed — but not exactly it.</p>
+<p><strong>How to detect it in advance:</strong></p>
+<p>Apply the intent field test from Chapter 13: can you answer "did we achieve the intent?" with a binary yes or no, using only the session's output? If not, the intent is underspecified. Do not start the session.</p>
+<p><strong>Recovery procedure:</strong></p>
+<ol>
+<li>Do not discard the output. Read it carefully — it likely contains valuable material.</li>
+<li>Apply RTT to the output itself: what did the session actually produce (present face)? What was the original need (terminal face of the session's intent)?</li>
+<li>Use the gap between present face and terminal face to write a precise intent for a follow-on session.</li>
+<li>Initialize the follow-on session with the revised intent and use the current output as part of the input.</li>
+</ol>
+<p><strong>The trap:</strong> Re-running the same session with the same underspecified intent. The output will be different but equally unfocused. Fix the intent before re-running.</p>
+<hr>
+<h3 id="failure-mode-2-scope-creep-mid-session">Failure Mode 2: Scope Creep Mid-Session</h3>
+<p><strong>What it looks like:</strong></p>
+<p>The session begins within its declared scope, but at some point — often after a productive first RTT pass — the practitioner begins pulling in adjacent content, related problems, or interesting tangents. By the end, the output addresses two or three problems instead of one. The validator flags scope violations. The output cannot be cleanly accepted.</p>
+<p><strong>Root cause:</strong></p>
+<p>The first RTT pass often reveals adjacent problems that are genuinely interesting and important. The practitioner, energized by the insight, follows the adjacent thread without re-specifying the session's scope. The session scope has drifted, but the grammar fields were not updated to reflect the drift.</p>
+<p><strong>How to detect it in advance:</strong></p>
+<p>At every point during session execution, check any action against Field 3: <em>is this within scope?</em> If you find yourself writing content about a topic not named in the scope, stop. You have left the session.</p>
+<p><strong>Recovery procedure:</strong></p>
+<ol>
+<li>Stop execution immediately when scope creep is detected.</li>
+<li>Identify the point at which the output left the declared scope.</li>
+<li>Decide: is the new content more valuable than the original scope?
+   - <strong>If yes:</strong> Close the current session. Open a new session with a scope that covers the new content. Use the current output's in-scope portion as context.
+   - <strong>If no:</strong> Discard everything after the scope departure point. Return to the last in-scope output and continue from there.</li>
+<li>Never attempt to retroactively widen the scope to cover content already produced. Scope is declared before execution, not adjusted to fit the output.</li>
+</ol>
+<p><strong>The trap:</strong> Widening the scope retroactively ("well, it's all related anyway"). This defeats the purpose of the scope field. A scope that expands to fit the output provides no constraint.</p>
+<hr>
+<h3 id="failure-mode-3-dependency-gap-in-active_modules">Failure Mode 3: Dependency Gap in <code>active_modules</code></h3>
+<p><strong>What it looks like:</strong></p>
+<p>An operator invocation fails or produces structurally incomplete output. The validator flags criteria as <code>insufficient_input</code> for reasons that cannot be traced to the input itself. The session feels like it is working but the outputs do not cohere.</p>
+<p><strong>Root cause:</strong></p>
+<p>One or more modules in <code>active_modules</code> have dependencies that were not included in the list. The operator was invoked, but the modules it depends on were not active. The system is operating with missing structural support — like invoking a function whose required libraries are not imported.</p>
+<p><strong>How to detect it in advance:</strong></p>
+<p>Apply the <code>active_modules</code> field test from Chapter 13: for every module in the list, open its <code>module_links.json</code> and verify every module in its <code>depends_on</code> list also appears in <code>active_modules</code>. Do this before initializing the session.</p>
+<p><strong>Recovery procedure:</strong></p>
+<ol>
+<li>Run a forward traversal (Chapter 8) on every module in <code>active_modules</code>.</li>
+<li>Identify all dependency IDs that are missing from the list.</li>
+<li>Add all missing modules to <code>active_modules</code>.</li>
+<li>Re-run the session from the point of the failed invocation — not from the beginning, unless the gap affected earlier steps.</li>
+<li>If the validator produced <code>insufficient_input</code> flags, re-evaluate against the updated module set.</li>
+</ol>
+<p><strong>The trap:</strong> Attempting to infer the missing module's behavior from context and continuing anyway. A dependency gap is a structural error. Workarounds produce structurally unsound outputs.</p>
+<hr>
+<h3 id="failure-mode-4-comfort-filtering-outputs">Failure Mode 4: Comfort-Filtering Outputs</h3>
+<p><strong>What it looks like:</strong></p>
+<p>The session produces a valid, well-structured output — but it is uncomfortable. The generative face names an origin the practitioner would prefer not to acknowledge. The present face identifies a failure the practitioner is implicated in. The terminal face describes a future that requires difficult action. The practitioner discards the output and re-runs the session, adjusting the input or the passes until the output is more palatable.</p>
+<p><strong>Root cause:</strong></p>
+<p>The practitioner is using the system as a mirror rather than as a precision instrument. They are filtering outputs by comfort rather than by the validator's assessment. This is the violation of Canon Commitment 2 in operational form.</p>
+<p><strong>How to detect it in advance:</strong></p>
+<p>Ask yourself, before closing a session: <em>am I accepting this output because the validator assessed it as <code>accept</code>, or because I like what it says?</em> These two reasons should be the same. When they are not, you are comfort-filtering.</p>
+<p><strong>Recovery procedure:</strong></p>
+<ol>
+<li>Retrieve the discarded output. Read it again.</li>
+<li>Apply the validator — formally, with a full invocation — to the discarded output.</li>
+<li>If the validator returns <code>accept</code>, the output is correct. Your discomfort is information — it is telling you something true that you were not ready to hear. Accept the output.</li>
+<li>If the validator returns <code>revise</code> or <code>re-run</code>, revise or re-run — but based on the specific criteria that failed, not on the overall comfort level of the result.</li>
+<li>Never use comfort as a selection criterion between two validator-accepted outputs. If both pass, both are correct — they are different valid analyses of the same input, not a correct answer and a wrong answer.</li>
+</ol>
+<p><strong>The trap:</strong> Running the session repeatedly until a comfortable output appears, then accepting that one. This is not iteration — it is selection bias. The comfortable output is not more correct than the uncomfortable one. It is simply more comfortable.</p>
+<p><strong>The deeper issue:</strong> Comfort-filtering is the failure mode that most directly undermines the system's long-term value. A practitioner who comfort-filters consistently will produce a body of work that validates their existing beliefs — which is exactly what the system was designed to prevent. If you find yourself comfort-filtering often, apply RTT to the pattern itself: where does it come from, what is it now, and where is it going?</p>
+<hr>
+<h3 id="failure-mode-summary">Failure Mode Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Failure Mode</th>
+<th>Detectable In Advance</th>
+<th>Recovery Entry Point</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Underspecified intent</td>
+<td>Yes — intent field test</td>
+<td>Revise intent; use current output as input context</td>
+</tr>
+<tr>
+<td>Scope creep mid-session</td>
+<td>Yes — scope check at each action</td>
+<td>Close; new session; or trim to last in-scope output</td>
+</tr>
+<tr>
+<td>Dependency gap</td>
+<td>Yes — <code>active_modules</code> field test</td>
+<td>Forward traversal; add missing modules; re-run from failure point</td>
+</tr>
+<tr>
+<td>Comfort-filtering</td>
+<td>Partially — requires self-awareness</td>
+<td>Retrieve discarded output; validate formally; accept if <code>accept</code></td>
+</tr>
+</tbody>
+</table>
+<p>All four failure modes are preventable through disciplined grammar population and honest validator application. The practitioners who encounter them least are the ones who apply the field tests from Chapter 13 without exception — every session, every time.</p>
+<hr>
+<h2 id="exit-checklist-you-can-apply-when">Exit Checklist — You Can Apply When...</h2>
+<p>Before considering yourself a practitioner of TriadicFrameworks, verify you can answer every item below without referring back to this document.</p>
+<p><strong>On the Session Grammar:</strong>
+- [ ] You can populate all nine fields correctly for a novel intent without consulting a template.
+- [ ] You can apply the field test for each of the nine fields and determine pass/fail independently.
+- [ ] You can identify an underspecified intent from the <code>intent</code> field alone, before the session runs.
+- [ ] You can construct a complete, dependency-resolved <code>active_modules</code> list using the discovery protocol and forward traversal.</p>
+<p><strong>On Operator Invocation:</strong>
+- [ ] You can read a <code>module_session.json</code> and construct a valid invocation from its <code>invocation_syntax</code> field.
+- [ ] You can identify a malformed invocation (missing parameter, wrong input type, incompatible chain) and state the specific error.
+- [ ] You can chain two operators correctly, verifying output_schema → input_schema alignment before chaining.
+- [ ] You know all five non-negotiable rules of invocation.</p>
+<p><strong>On Running RTT Passes:</strong>
+- [ ] You can prepare a well-formed <code>InputUnit</code> from a raw input, including a declared scope.
+- [ ] You can execute a first-pass RTT analysis on a novel input, producing all three faces with substantive, checkable claims.
+- [ ] You can execute a second-pass RTT analysis on the first pass's <code>next_input</code>, producing claims that could not have been produced at depth=1.
+- [ ] You can package a pass output as a valid <code>next_input</code> for a subsequent pass.</p>
+<p><strong>On Spectral Clarity:</strong>
+- [ ] You can state the Nawderian Theorem in one sentence.
+- [ ] You can name and define all five clarity criteria.
+- [ ] You can read a <code>ValidatorAssessment</code> and determine the correct next action (accept, revise, or re-run).
+- [ ] You know what <code>insufficient_input</code> means and how to respond to it.
+- [ ] You can invoke <code>Clarity.evaluate()</code> with a full, valid signature.</p>
+<p><strong>On Failure Modes:</strong>
+- [ ] You can name all four canonical session failure modes.
+- [ ] You can identify which failure mode is occurring from a session's symptoms alone.
+- [ ] You can apply the recovery procedure for each failure mode.
+- [ ] You can distinguish comfort-filtering from legitimate output revision.
+- [ ] You can detect scope creep at the moment it occurs — not retroactively.</p>
+<hr>
+<p><strong>If every box is checked, you are a practitioner.</strong></p>
+<p>The system is now available to you in full. Parts I, II, and III together constitute the minimum complete orientation. Everything beyond this point — the full module registry, the canonical example session library, the module authoring guides, the group-level deep dives — builds on what you have read here.</p>
+<p>The work begins now.</p>
+<p>→ <a href="./index">Return to Book Index</a>
+→ <a href="./registry">Browse the Module Registry</a>
+→ <a href="./sessions">Explore the Canonical Session Library</a></p>
+<hr>
+<p><em>TriadicFrameworks Book — <code>/docs/book/part-iii.md</code></em>
+<em>Authored by Nawder Loswin. AI-augmented authorship. All rights reserved.</em></p>
+  </main>
+</body>
+</html>

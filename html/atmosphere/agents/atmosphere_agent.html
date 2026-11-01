@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/atmosphere/agents/atmosphere_agent.md">
+  <title>Atmosphere Agent</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/atmosphere/agents/atmosphere_agent.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/atmosphere/agents/atmosphere_agent.md</code>
+  </aside>
+
+  <main>
+<h1 id="atmosphere-agent">Atmosphere Agent</h1>
+<p>Module: atmosphere<br>
+Version: 1.0  </p>
+<p>The Atmosphere Agent is the AI interpreter for the Atmosphere module.<br>
+It evaluates atmospheric states, activates operators, classifies regimes, and integrates cross‑module coupling.</p>
+<hr>
+<h2 id="purpose">Purpose</h2>
+<p>The agent provides:</p>
+<ul>
+<li>Module‑level evaluation  </li>
+<li>Diagnostic aggregation  </li>
+<li>Signature generation  </li>
+<li>Regime classification  </li>
+<li>Operator activation  </li>
+<li>Trace interpretation  </li>
+<li>Cross‑module coupling  </li>
+</ul>
+<p>It is the “reader” of the Atmosphere module.</p>
+<hr>
+<h2 id="capabilities">Capabilities</h2>
+<ul>
+<li><strong>Evaluate examples</strong> in <code>/docs/atmosphere/examples</code>  </li>
+<li><strong>Run all diagnostics</strong> in parallel  </li>
+<li><strong>Generate module‑level signatures</strong>  </li>
+<li><strong>Classify regimes</strong> (stable, transition, unstable)  </li>
+<li><strong>Activate module‑level operators</strong>  </li>
+<li><strong>Interpret module‑level trace events</strong>  </li>
+<li><strong>Integrate cross‑module coupling</strong>  </li>
+</ul>
+<hr>
+<h2 id="required-input-domains">Required Input Domains</h2>
+<p>The agent expects fields from:</p>
+<ul>
+<li>dynamics  </li>
+<li>thermodynamics  </li>
+<li>hydrospheric  </li>
+<li>forcing  </li>
+<li>teleconnection  </li>
+<li>resonance  </li>
+<li>paradox  </li>
+<li>drift  </li>
+<li>dimensional  </li>
+<li>continuity  </li>
+<li>coherence  </li>
+<li>clarity  </li>
+<li>composition  </li>
+</ul>
+<p>These domains form the Atmosphere Envelope.</p>
+<hr>
+<h2 id="outputs">Outputs</h2>
+<ul>
+<li><strong>Signature</strong> — unified atmospheric state  </li>
+<li><strong>Regime</strong> — stable, transition, or unstable  </li>
+<li><strong>Operators Triggered</strong> — module‑level operator set  </li>
+<li><strong>Trace Events</strong> — module‑level event ledger  </li>
+</ul>
+<hr>
+<h2 id="operator-sets">Operator Sets</h2>
+<h3 id="modulelevel-operators">Module‑Level Operators</h3>
+<ul>
+<li>atmosphere_alignment  </li>
+<li>atmosphere_continuity  </li>
+<li>atmosphere_coherence  </li>
+<li>atmosphere_clarity  </li>
+<li>atmosphere_regime  </li>
+<li>atmosphere_resonance  </li>
+<li>atmosphere_drift  </li>
+<li>atmosphere_paradox  </li>
+<li>atmosphere_dimensional  </li>
+<li>atmosphere_composition  </li>
+</ul>
+<h3 id="diagnostic-operators">Diagnostic Operators</h3>
+<p>All diagnostic operators are inherited automatically.</p>
+<hr>
+<h2 id="regime-classification-rules">Regime Classification Rules</h2>
+<h3 id="stable">Stable</h3>
+<ul>
+<li>radiative balance high  </li>
+<li>coherence high  </li>
+<li>drift low  </li>
+<li>paradox low  </li>
+</ul>
+<h3 id="transition">Transition</h3>
+<ul>
+<li>radiative balance moderate  </li>
+<li>coherence moderate  </li>
+<li>drift moderate  </li>
+<li>paradox moderate  </li>
+</ul>
+<h3 id="unstable">Unstable</h3>
+<ul>
+<li>radiative balance low  </li>
+<li>coherence low  </li>
+<li>drift high  </li>
+<li>paradox high  </li>
+</ul>
+<hr>
+<h2 id="trace-integration">Trace Integration</h2>
+<p>The agent uses:</p>
+<ul>
+<li><code>atmosphere_trace.json</code>  </li>
+<li>all diagnostic traces  </li>
+</ul>
+<p>to interpret atmospheric events.</p>
+<hr>
+<h2 id="crossmodule-coupling">Cross‑Module Coupling</h2>
+<p>Supported domains:</p>
+<ul>
+<li>cryosphere  </li>
+<li>ocean  </li>
+<li>land  </li>
+<li>biosphere  </li>
+<li>magnetosphere  </li>
+</ul>
+<p>These enable multi‑domain examples.</p>
+<hr>
+<h2 id="example-directory">Example Directory</h2>
+<p>All examples are located in:</p>
+<p><code>/docs/atmosphere/examples</code></p>
+<p>The agent evaluates each example and produces:</p>
+<ul>
+<li>signature  </li>
+<li>regime  </li>
+<li>operator set  </li>
+<li>trace events  </li>
+</ul>
+<hr>
+<h1 id="status">Status</h1>
+<p>The Atmosphere Agent is now <strong>fully activated</strong> and ready for:</p>
+<ul>
+<li>inference  </li>
+<li>teaching  </li>
+<li>cross‑module integration  </li>
+<li>example evaluation  </li>
+<li>regime classification  </li>
+<li>operator alignment  </li>
+</ul>
+  </main>
+</body>
+</html>

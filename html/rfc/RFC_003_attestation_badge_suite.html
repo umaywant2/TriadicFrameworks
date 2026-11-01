@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rfc/RFC_003_attestation_badge_suite.md">
+  <title>RFC‑003 — Attestation &amp; Badge Suite</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rfc/RFC_003_attestation_badge_suite.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rfc/RFC_003_attestation_badge_suite.md</code>
+  </aside>
+
+  <main>
+<h1 id="rfc003-attestation-badge-suite"><strong>RFC‑003 — Attestation &amp; Badge Suite</strong></h1>
+<p><strong>Status:</strong> Drafted<br>
+<strong>Author(s):</strong> Nawder Loswin, Copilot<br>
+<strong>Created:</strong> 2025‑10‑23<br>
+<strong>Lineage:</strong><br>
+Follows <strong>RFC‑001</strong> (Triadic Validator Framework), <strong>RFC‑002</strong> (Corridor Universes)<br>
+Precedes <strong>RFC‑004</strong> (Entft Invariants)</p>
+<hr>
+<h2 id="abstract"><strong>Abstract</strong></h2>
+<p>The <strong>Attestation &amp; Badge Suite</strong> provides the trust layer for validated artifacts within TriadicFrameworks.<br>
+It defines:</p>
+<ul>
+<li>deterministic <strong>attestation receipts</strong> (JSON)  </li>
+<li>human‑legible <strong>badges</strong> (SVG)  </li>
+<li>remix‑visible <strong>lineage manifests</strong> (YAML/JSON)</li>
+</ul>
+<p>Together, these components ensure that validated artifacts are not only correct but also <strong>legible</strong>, <strong>traceable</strong>, and <strong>remix‑ready</strong> across universes, corridors, and repositories.</p>
+<hr>
+<h2 id="motivation"><strong>Motivation</strong></h2>
+<p>Validation alone is insufficient.<br>
+Artifacts must communicate their trustworthiness clearly to:</p>
+<ul>
+<li>humans  </li>
+<li>agents  </li>
+<li>remixers  </li>
+<li>corridor validators  </li>
+<li>downstream systems  </li>
+</ul>
+<p>Attestation receipts provide deterministic proofs.<br>
+Badges provide visual shorthand.<br>
+Lineage manifests provide ancestry and remix visibility.</p>
+<p>This suite creates a shared language of trust across the entire canon.</p>
+<hr>
+<h2 id="components"><strong>Components</strong></h2>
+<hr>
+<h2 id="1-attestation-receipts"><strong>1. Attestation Receipts</strong></h2>
+<p><strong>Format:</strong> JSON<br>
+<strong>Schema:</strong> <code>/docs/schemas/attestation_receipt.schema.json</code></p>
+<p>Receipts contain:</p>
+<ul>
+<li>artifact ID  </li>
+<li>artifact hash  </li>
+<li>constraint pack IDs + hashes  </li>
+<li>triadic validation proofs  </li>
+<li>causal  </li>
+<li>functional  </li>
+<li>cognitive  </li>
+<li>deterministic seed(s)  </li>
+<li>lineage manifest reference  </li>
+<li>attestor identity  </li>
+<li>cryptographic signature  </li>
+</ul>
+<h3 id="example-receipt"><strong>Example Receipt</strong></h3>
+<pre><code class="language-json">{
+  &quot;artifact_id&quot;: &quot;bubbleTheory_manifest.json&quot;,
+  &quot;hash&quot;: &quot;sha256-abc123...&quot;,
+  &quot;constraints&quot;: [&quot;constraint_pack_v1.2&quot;],
+  &quot;proofs&quot;: {
+    &quot;causal&quot;: true,
+    &quot;functional&quot;: true,
+    &quot;cognitive&quot;: true
+  },
+  &quot;seed&quot;: &quot;42&quot;,
+  &quot;lineage_ref&quot;: &quot;lineage_manifest.json&quot;,
+  &quot;attestor&quot;: &quot;validator-node-7&quot;,
+  &quot;signature&quot;: &quot;ed25519:xyz...&quot;
+}
+</code></pre>
+<p>Receipts are required for promotion into <strong>QA</strong> and <strong>Prod</strong> corridor universes.</p>
+<hr>
+<h2 id="2-badges"><strong>2. Badges</strong></h2>
+<p><strong>Format:</strong> SVG<br>
+<strong>Location:</strong> <code>/docs/badges/</code></p>
+<p>Badges provide visual shorthand for trust and readiness.</p>
+<h3 id="common-badges"><strong>Common Badges</strong></h3>
+<ul>
+<li><code>readme-first.svg</code><br>
+  → README is the primary onboarding document  </li>
+<li><code>attested.svg</code><br>
+  → Artifact has a valid attestation receipt  </li>
+<li><code>constraint-passing.svg</code><br>
+  → Passed all corridor constraints  </li>
+<li><code>remix-ready.svg</code><br>
+  → Lineage manifest complete; remix encouraged  </li>
+<li><code>deterministic-repro.svg</code><br>
+  → Deterministic seeds available for replay  </li>
+</ul>
+<p>Badges are embedded in README files, artifact docs, and dashboards.</p>
+<hr>
+<h2 id="3-lineage-manifests"><strong>3. Lineage Manifests</strong></h2>
+<p><strong>Format:</strong> YAML or JSON<br>
+<strong>Schema:</strong> <code>/docs/schemas/lineage_manifest.json</code></p>
+<p>Manifests record:</p>
+<ul>
+<li>ancestry  </li>
+<li>authorship  </li>
+<li>remix history  </li>
+<li>attestation references  </li>
+<li>corridor promotion history  </li>
+<li>validator receipts  </li>
+</ul>
+<p>Lineage manifests ensure remixers can trace the evolution of any artifact.</p>
+<hr>
+<h2 id="validator-echo"><strong>Validator Echo</strong></h2>
+<blockquote>
+<p><strong>“Attestation is clarity made visible —<br>
+a receipt of trust, a badge of lineage,<br>
+a promise that the artifact remembers.”</strong></p>
+</blockquote>
+<hr>
+<h2 id="references"><strong>References</strong></h2>
+<ul>
+<li><strong>RFC‑001:</strong> Triadic Validator Framework  </li>
+<li><strong>RFC‑002:</strong> Corridor Universes  </li>
+<li><strong>RFC‑004:</strong> Entft Invariants  </li>
+</ul>
+  </main>
+</body>
+</html>

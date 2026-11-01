@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/atmosphere/prompts/templates.md">
+  <title>🌐 Atmosphere Module — Prompt Templates (v1)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/atmosphere/prompts/templates.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/atmosphere/prompts/templates.md</code>
+  </aside>
+
+  <main>
+<h1 id="atmosphere-module-prompt-templates-v1">🌐 <strong>Atmosphere Module — Prompt Templates (v1)</strong></h1>
+<h3 id="triadicframeworks-canon-operatoraligned-templates-for-maps-diagnostics-overlays-traces"><em>TriadicFrameworks Canon — Operator‑Aligned Templates for Maps, Diagnostics, Overlays &amp; Traces</em></h3>
+<hr>
+<h2 id="template-identity"><strong>Template Identity</strong></h2>
+<ul>
+<li><strong>template.name:</strong> AtmospherePromptTemplates  </li>
+<li><strong>template.category:</strong> PromptTemplates  </li>
+<li><strong>template.version:</strong> 1.0  </li>
+<li>
+<p><strong>template.summary:</strong><br>
+  Canonical prompt templates for Atmosphere Module tasks — maps, diagnostics, overlays, traces, and structural analyses.</p>
+</li>
+<li>
+<p><strong>template.purpose:</strong><br>
+  Provide reusable, operator‑aligned prompt templates for all Atmosphere Module workflows.</p>
+</li>
+</ul>
+<hr>
+<h1 id="1-map-templates"><strong>1. Map Templates</strong></h1>
+<h2 id="11-coherence-map-template"><strong>1.1 Coherence Map Template</strong></h2>
+<pre><code>AtmospherePrompt {
+    operator: coherence
+    agents: [coherence_agent, fluid_agent, thermo_agent]
+    scales: [meso, macro, mega]
+    phases: [dynamics, thermodynamics, resonance_coherence]
+    inputs: &lt;fields&gt;
+    outputs: coherence_fields, stability_maps, persistence_zones
+    constraints: structural_map
+}
+</code></pre>
+<h2 id="12-drift-map-template"><strong>1.2 Drift Map Template</strong></h2>
+<pre><code>AtmospherePrompt {
+    operator: drift
+    agents: [drift_agent, fluid_agent, thermo_agent]
+    scales: [meso, macro]
+    phases: [forcing, dynamics, thermodynamics, regime_transitions]
+    inputs: &lt;fields&gt;
+    outputs: drift_vectors, instability_hotspots, tension_zones
+    constraints: structural_map
+}
+</code></pre>
+<h2 id="13-paradox-map-template"><strong>1.3 Paradox Map Template</strong></h2>
+<pre><code>AtmospherePrompt {
+    operator: paradox
+    agents: [paradox_agent, fluid_agent]
+    scales: [meso, macro]
+    phases: [dynamics, regime_transitions]
+    inputs: &lt;fields&gt;
+    outputs: paradox_corridors, conflict_maps, tension_fields
+    constraints: structural_map
+}
+</code></pre>
+<h2 id="14-resonance-map-template"><strong>1.4 Resonance Map Template</strong></h2>
+<pre><code>AtmospherePrompt {
+    operator: resonance
+    agents: [resonance_agent, dimensional_agent]
+    scales: [macro, mega]
+    phases: [resonance_coherence]
+    inputs: &lt;fields&gt;
+    outputs: resonance_signatures, oscillation_maps, harmonic_fields
+    constraints: structural_map
+}
+</code></pre>
+<h2 id="15-dimensional-overlay-template"><strong>1.5 Dimensional Overlay Template</strong></h2>
+<pre><code>AtmospherePrompt {
+    operator: dimensional_coupling
+    agents: [dimensional_agent, hydro_agent]
+    scales: [meso, macro, mega]
+    phases: [hydrospheric_coupling, resonance_coherence]
+    inputs: &lt;domain_fields&gt;
+    outputs: coupling_maps, feedback_loops, cross_domain_fields
+    constraints: cross_domain_alignment
+}
+</code></pre>
+<h2 id="16-continuity-trace-template"><strong>1.6 Continuity Trace Template</strong></h2>
+<pre><code>AtmospherePrompt {
+    operator: continuity
+    agents: [resonance_agent, clarity_agent]
+    scales: [macro, mega]
+    phases: [resonance_coherence]
+    inputs: &lt;temporal_fields&gt;
+    outputs: continuity_traces, evolution_maps, oscillation_cycles
+    constraints: temporal_alignment
+}
+</code></pre>
+<h2 id="17-nudge-map-template"><strong>1.7 Nudge Map Template</strong></h2>
+<pre><code>AtmospherePrompt {
+    operator: clarity
+    agents: [clarity_agent, fluid_agent, thermo_agent]
+    scales: [micro, meso, macro]
+    phases: [composition, dynamics, thermodynamics]
+    inputs: &lt;fields&gt;
+    outputs: micro_adjustments, gentle_force_fields, nudge_vectors
+    constraints: micro_influence_mode
+}
+</code></pre>
+<hr>
+<h1 id="2-diagnostic-templates"><strong>2. Diagnostic Templates</strong></h1>
+<h2 id="21-coherence-diagnostic-template"><strong>2.1 Coherence Diagnostic Template</strong></h2>
+<pre><code>AtmospherePrompt {
+    operator: coherence
+    agents: [coherence_agent, fluid_agent, thermo_agent]
+    scales: [meso, macro, mega]
+    phases: [dynamics, thermodynamics, resonance_coherence]
+    inputs: &lt;fields&gt;
+    outputs: coherence_index, stability_maps, persistence_diagnostics
+    constraints: diagnostic_mode
+}
+</code></pre>
+<h2 id="22-drift-diagnostic-template"><strong>2.2 Drift Diagnostic Template</strong></h2>
+<pre><code>AtmospherePrompt {
+    operator: drift
+    agents: [drift_agent, fluid_agent, thermo_agent]
+    scales: [meso, macro]
+    phases: [forcing, dynamics, thermodynamics, regime_transitions]
+    inputs: &lt;fields&gt;
+    outputs: drift_index, instability_hotspots, tension_diagnostics
+    constraints: diagnostic_mode
+}
+</code></pre>
+<h2 id="23-paradox-diagnostic-template"><strong>2.3 Paradox Diagnostic Template</strong></h2>
+<pre><code>AtmospherePrompt {
+    operator: paradox
+    agents: [paradox_agent, fluid_agent]
+    scales: [meso, macro]
+    phases: [dynamics, regime_transitions]
+    inputs: &lt;fields&gt;
+    outputs: paradox_index, conflict_maps, tension_diagnostics
+    constraints: diagnostic_mode
+}
+</code></pre>
+<h2 id="24-resonance-diagnostic-template"><strong>2.4 Resonance Diagnostic Template</strong></h2>
+<pre><code>AtmospherePrompt {
+    operator: resonance
+    agents: [resonance_agent, dimensional_agent]
+    scales: [macro, mega]
+    phases: [resonance_coherence]
+    inputs: &lt;fields&gt;
+    outputs: resonance_index, oscillation_stability, harmonic_diagnostics
+    constraints: diagnostic_mode
+}
+</code></pre>
+<h2 id="25-dimensional-diagnostic-template"><strong>2.5 Dimensional Diagnostic Template</strong></h2>
+<pre><code>AtmospherePrompt {
+    operator: dimensional_coupling
+    agents: [dimensional_agent, hydro_agent]
+    scales: [meso, macro, mega]
+    phases: [hydrospheric_coupling, resonance_coherence]
+    inputs: &lt;domain_fields&gt;
+    outputs: coupling_index, cross_domain_diagnostics
+    constraints: diagnostic_mode
+}
+</code></pre>
+<h2 id="26-continuity-diagnostic-template"><strong>2.6 Continuity Diagnostic Template</strong></h2>
+<pre><code>AtmospherePrompt {
+    operator: continuity
+    agents: [resonance_agent, clarity_agent]
+    scales: [macro, mega]
+    phases: [resonance_coherence]
+    inputs: &lt;temporal_fields&gt;
+    outputs: continuity_index, regime_memory_maps, oscillation_cycles
+    constraints: diagnostic_mode
+}
+</code></pre>
+<h2 id="27-clarity-diagnostic-template"><strong>2.7 Clarity Diagnostic Template</strong></h2>
+<pre><code>AtmospherePrompt {
+    operator: clarity
+    agents: [clarity_agent]
+    scales: [micro, meso, macro, mega]
+    phases: [composition, dynamics, thermodynamics, resonance_coherence]
+    inputs: &lt;fields&gt;
+    outputs: clarity_index, truth_maps, noise_reduction_fields
+    constraints: diagnostic_mode
+}
+</code></pre>
+<hr>
+<h1 id="3-atmosphere-prompt-template-summary"><strong>3. Atmosphere Prompt Template Summary</strong></h1>
+<p>The <strong>Atmosphere Prompt Templates</strong> provide:</p>
+<ul>
+<li>reusable operator‑aligned prompt blocks  </li>
+<li>agent‑aware structure  </li>
+<li>multi‑scale reasoning patterns  </li>
+<li>Seven‑Phase alignment  </li>
+<li>canonical templates for maps, diagnostics, overlays, traces, and micro‑influence nudges  </li>
+<li>full integration with Atmosphere operators, agents, scales, and structural outputs  </li>
+</ul>
+<p>They are the <strong>template backbone</strong> of the Atmosphere Module.</p>
+  </main>
+</body>
+</html>

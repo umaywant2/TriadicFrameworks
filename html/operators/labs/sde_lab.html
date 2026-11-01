@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/operators/labs/sde_lab.md">
+  <title>🟣 SDE‑ONLY LAB (RTT/2 Detection)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/operators/labs/sde_lab.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/operators/labs/sde_lab.md</code>
+  </aside>
+
+  <main>
+<h1 id="sdeonly-lab-rtt2-detection">🟣 <strong>SDE‑ONLY LAB (RTT/2 Detection)</strong></h1>
+<h3 id="structural-detection-engine-handson-lab">Structural Detection Engine — Hands‑On Lab</h3>
+<p><em>(Print‑ready, text‑only)</em></p>
+<pre><code>====================================================================
+SDE LAB — STRUCTURAL DETECTION ENGINE (RTT/2)
+====================================================================
+
+This lab isolates the RTT/2 detection layer:
+  - collapse signatures
+  - fusion‑gradient tensors
+  - collapse→reassembly mapping
+  - mode + zone classification
+  - RTT2_DETECTION_PACKET construction
+
+You will work with three synthetic samples.
+
+--------------------------------------------------------------------
+SAMPLE DATA
+--------------------------------------------------------------------
+
+Sample A:
+  collapse: A=0.8, K=0.3, T=0.1
+  gradient: collapse-weighted
+  deformation: drift deformation
+  regime: slow-relaxation
+
+Sample B:
+  collapse: A=1.5, K=0.9, T=0.4
+  gradient: mixed collapse/reassembly
+  deformation: envelope torsion
+  regime: mixed
+
+Sample C:
+  collapse: A=2.3, K=1.7, T=1.2
+  gradient: triad-weighted
+  deformation: continuity fracture
+  regime: inversion-adjacent
+
+--------------------------------------------------------------------
+PART 1 — COLLAPSE SIGNATURES
+--------------------------------------------------------------------
+
+TASK 1 — Compute SDE::CPV(A, K, T)
+Sample A: ____________________________________________  
+Sample B: ____________________________________________  
+Sample C: ____________________________________________  
+
+TASK 2 — Rank collapse severity (lowest → highest)
+Order: ________________________________________________
+
+--------------------------------------------------------------------
+PART 2 — FUSION‑GRADIENT TENSORS
+--------------------------------------------------------------------
+
+TASK 3 — Classify SDE::FGT()
+Sample A: ____________________________________________  
+Sample B: ____________________________________________  
+Sample C: ____________________________________________  
+
+TASK 4 — Identify the first snapshot where gradient becomes triad‑dominant.
+Answer: _______________________________________________
+
+--------------------------------------------------------------------
+PART 3 — COLLAPSE→REASSEMBLY MAPPING
+--------------------------------------------------------------------
+
+TASK 5 — Map SDE::CRM()
+Sample A: ____________________________________________  
+Sample B: ____________________________________________  
+Sample C: ____________________________________________  
+
+TASK 6 — Identify the deformation that first breaks continuity.
+Answer: _______________________________________________
+
+--------------------------------------------------------------------
+PART 4 — MODE + ZONE CLASSIFICATION
+--------------------------------------------------------------------
+
+TASK 7 — Assign SDE::MODE()
+Sample A: ____________________________________________  
+Sample B: ____________________________________________  
+Sample C: ____________________________________________  
+
+TASK 8 — Assign SDE::ZONE()
+Sample A: ____________________________________________  
+Sample B: ____________________________________________  
+Sample C: ____________________________________________  
+
+--------------------------------------------------------------------
+PART 5 — RTT2_DETECTION_PACKET
+--------------------------------------------------------------------
+
+TASK 9 — Construct the packet for Sample C.
+
+collapse_propagation: _________________________________  
+fusion_gradient: ______________________________________  
+triad_deformation: _____________________________________  
+regime: _______________________________________________  
+detection_mode: ________________________________________  
+detection_zone: ________________________________________  
+
+--------------------------------------------------------------------
+END OF SDE LAB
+--------------------------------------------------------------------
+</code></pre>
+  </main>
+</body>
+</html>

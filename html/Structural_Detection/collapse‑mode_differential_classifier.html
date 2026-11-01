@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Structural_Detection/collapse‑mode_differential_classifier.md">
+  <title>⚠️ Structural Detection — Collapse‑Mode Differential Classifier (RTT/2)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Structural_Detection/collapse‑mode_differential_classifier.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Structural_Detection/collapse‑mode_differential_classifier.md</code>
+  </aside>
+
+  <main>
+<h1 id="structural-detection-collapsemode-differential-classifier-rtt2">⚠️ <strong>Structural Detection — Collapse‑Mode Differential Classifier (RTT/2)</strong></h1>
+<h3 id="triadicframeworks-rtt2-systemscale-diagnostic-architecture"><em>TriadicFrameworks • RTT/2 • System‑Scale Diagnostic Architecture</em></h3>
+<h3 id="collapse-modes-are-not-categories-they-are-differential-signatures"><em>“Collapse modes are not categories. They are differential signatures.”</em></h3>
+<h1 id="collapsemode-differential-classifier">Collapse‑Mode Differential Classifier</h1>
+<h3 id="structural-detection-module">Structural Detection Module</h3>
+<h3 id="rtt2-systemscale-diagnostic-architecture">RTT/2 • System‑Scale Diagnostic Architecture</h3>
+<hr>
+<h1 id="1-purpose-of-the-differential-classifier">1. Purpose of the Differential Classifier</h1>
+<p>The Collapse‑Mode Differential Classifier provides a <strong>formal diagnostic system</strong> for identifying collapse modes across:</p>
+<ul>
+<li>drift  </li>
+<li>envelope  </li>
+<li>regime  </li>
+<li>continuity  </li>
+<li>coherence‑break geometry  </li>
+<li>TEL/FFT/Opacity projections  </li>
+</ul>
+<p>It is used when:</p>
+<ul>
+<li>collapse signatures overlap  </li>
+<li>break‑chains are ambiguous  </li>
+<li>hybrid collapse modes occur  </li>
+<li>cross‑module projections contradict each other  </li>
+<li>inversion or oscillation distort the geometry  </li>
+</ul>
+<p>This classifier ensures <strong>correct collapse identification</strong> under all conditions.</p>
+<hr>
+<h1 id="2-the-seven-canonical-collapse-modes">2. The Seven Canonical Collapse Modes</h1>
+<p>The classifier distinguishes between:</p>
+<ol>
+<li><strong>Type A — Linear Collapse</strong>  </li>
+<li><strong>Type B — Radial Collapse</strong>  </li>
+<li><strong>Type C — Fragmentation Collapse</strong>  </li>
+<li><strong>Type D — Hybrid Oscillation Collapse</strong>  </li>
+<li><strong>Type I — Inversion Collapse</strong>  </li>
+<li><strong>Type E — Rotational Collapse</strong>  </li>
+<li><strong>Type G — Topological Collapse</strong></li>
+</ol>
+<p>Each mode has a unique differential signature.</p>
+<hr>
+<h1 id="3-differential-signature-matrix-dsm">3. Differential Signature Matrix (DSM)</h1>
+<p>The DSM is the core of the classifier.</p>
+<table>
+<thead>
+<tr>
+<th>Collapse Mode</th>
+<th>Drift Signature</th>
+<th>Envelope Signature</th>
+<th>Continuity Signature</th>
+<th>Regime Signature</th>
+<th>Break Type</th>
+<th>TEL</th>
+<th>FFT</th>
+<th>Opacity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td>linear loss</td>
+<td>inward flattening</td>
+<td>anchor collapse</td>
+<td>Formal→Emergent</td>
+<td>1</td>
+<td>linear implosion</td>
+<td>variance spike</td>
+<td>boundary sink</td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td>radial overload</td>
+<td>outward fracture</td>
+<td>invariant collapse</td>
+<td>Emergent</td>
+<td>2</td>
+<td>radial tear</td>
+<td>discontinuity</td>
+<td>boundary rupture</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>multi‑vector chaos</td>
+<td>fragmentation</td>
+<td>layer collapse</td>
+<td>Chaotic</td>
+<td>3</td>
+<td>multi‑layer collapse</td>
+<td>spectral fragmentation</td>
+<td>occlusion</td>
+</tr>
+<tr>
+<td><strong>D</strong></td>
+<td>oscillation overload</td>
+<td>oscillation fracture</td>
+<td>oscillating threads</td>
+<td>Hybrid</td>
+<td>4</td>
+<td>oscillating tear</td>
+<td>oscillatory variance</td>
+<td>oscillating gradient</td>
+</tr>
+<tr>
+<td><strong>I</strong></td>
+<td>drift reversal</td>
+<td>envelope inversion</td>
+<td>partial collapse</td>
+<td>Inversion</td>
+<td>5</td>
+<td>lattice reversal</td>
+<td>variance normalization</td>
+<td>boundary stabilization</td>
+</tr>
+<tr>
+<td><strong>E</strong></td>
+<td>rotational overload</td>
+<td>spiral implosion</td>
+<td>twisted threads</td>
+<td>Hybrid→Emergent</td>
+<td>E</td>
+<td>rotating tear</td>
+<td>spiral collapse</td>
+<td>rotational sink</td>
+</tr>
+<tr>
+<td><strong>G</strong></td>
+<td>warp overload</td>
+<td>topological fold</td>
+<td>bent layers</td>
+<td>Chaotic→Hybrid</td>
+<td>G</td>
+<td>warped lattice failure</td>
+<td>discontinuous collapse</td>
+<td>warped field</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="4-differential-classification-protocol-dcp">4. Differential Classification Protocol (DCP)</h1>
+<p>The DCP is a <strong>five‑stage diagnostic sequence</strong>.</p>
+<hr>
+<h2 id="stage-1-drift-differential"><strong>Stage 1 — Drift Differential</strong></h2>
+<p>Identify drift geometry:</p>
+<ul>
+<li>linear → A  </li>
+<li>radial → B  </li>
+<li>multi‑vector → C  </li>
+<li>oscillatory → D  </li>
+<li>reversed → I  </li>
+<li>rotational → E  </li>
+<li>warped → G  </li>
+</ul>
+<p>If drift is hybrid → proceed to Stage 2.</p>
+<hr>
+<h2 id="stage-2-envelope-differential"><strong>Stage 2 — Envelope Differential</strong></h2>
+<p>Identify envelope deformation:</p>
+<ul>
+<li>inward collapse → A  </li>
+<li>outward fracture → B  </li>
+<li>fragmentation → C  </li>
+<li>oscillation fracture → D  </li>
+<li>inversion → I  </li>
+<li>spiral collapse → E  </li>
+<li>topological fold → G  </li>
+</ul>
+<p>If envelope contradicts drift → classify as <strong>hybrid collapse</strong>.</p>
+<hr>
+<h2 id="stage-3-continuity-differential"><strong>Stage 3 — Continuity Differential</strong></h2>
+<p>Identify continuity failure:</p>
+<ul>
+<li>anchor collapse → A  </li>
+<li>invariant collapse → B  </li>
+<li>layer collapse → C  </li>
+<li>oscillating threads → D  </li>
+<li>partial collapse → I  </li>
+<li>twisted threads → E  </li>
+<li>bent layers → G  </li>
+</ul>
+<p>If continuity contradicts envelope → collapse is <strong>multi‑origin</strong>.</p>
+<hr>
+<h2 id="stage-4-regime-differential"><strong>Stage 4 — Regime Differential</strong></h2>
+<p>Identify regime instability:</p>
+<ul>
+<li>Formal→Emergent → A  </li>
+<li>Emergent → B  </li>
+<li>Chaotic → C  </li>
+<li>Hybrid → D  </li>
+<li>Inversion → I  </li>
+<li>Hybrid→Emergent → E  </li>
+<li>Chaotic→Hybrid → G  </li>
+</ul>
+<p>If regime contradicts drift → collapse is <strong>regime‑driven</strong>.</p>
+<hr>
+<h2 id="stage-5-crossmodule-differential"><strong>Stage 5 — Cross‑Module Differential</strong></h2>
+<p>Use TEL/FFT/Opacity signatures to finalize classification.</p>
+<p>TEL:
+- implosion → A<br>
+- radial tear → B<br>
+- multi‑layer collapse → C<br>
+- oscillating tear → D<br>
+- reversal → I<br>
+- rotating tear → E<br>
+- warped failure → G  </p>
+<p>FFT:
+- spike → A<br>
+- discontinuity → B<br>
+- fragmentation → C<br>
+- oscillatory variance → D<br>
+- normalization → I<br>
+- spiral collapse → E<br>
+- discontinuous collapse → G  </p>
+<p>Opacity:
+- sink → A<br>
+- rupture → B<br>
+- occlusion → C<br>
+- oscillating gradient → D<br>
+- stabilization → I<br>
+- rotational sink → E<br>
+- warped field → G  </p>
+<hr>
+<h1 id="5-hybrid-collapse-classifier">5. Hybrid Collapse Classifier</h1>
+<p>Hybrid collapse occurs when:</p>
+<ul>
+<li>drift and envelope disagree  </li>
+<li>envelope and continuity disagree  </li>
+<li>regime contradicts drift  </li>
+<li>TEL/FFT/Opacity signatures diverge  </li>
+</ul>
+<p>Hybrid collapse types:</p>
+<ul>
+<li><strong>A/B Hybrid</strong> — linear + radial  </li>
+<li><strong>C/D Hybrid</strong> — fragmentation + oscillation  </li>
+<li><strong>E/F Hybrid</strong> — spiral + shear  </li>
+<li><strong>E/G Hybrid</strong> — spiral + warp  </li>
+<li><strong>D/I Hybrid</strong> — oscillation + inversion  </li>
+</ul>
+<p>Hybrid collapse requires <strong>multi‑path recovery</strong>.</p>
+<hr>
+<h1 id="6-breakchain-differential-classifier">6. Break‑Chain Differential Classifier</h1>
+<p>Break‑chains determine collapse origin.</p>
+<h3 id="chain-a-driftorigin-collapse"><strong>Chain A — Drift‑Origin Collapse</strong></h3>
+<pre><code>Drift → Envelope → Regime → Continuity → Break
+</code></pre>
+<h3 id="chain-b-envelopeorigin-collapse"><strong>Chain B — Envelope‑Origin Collapse</strong></h3>
+<pre><code>Envelope → Regime → Continuity → Break → Drift
+</code></pre>
+<h3 id="chain-c-continuityorigin-collapse"><strong>Chain C — Continuity‑Origin Collapse</strong></h3>
+<pre><code>Continuity → Break → Envelope → Drift → Regime
+</code></pre>
+<h3 id="chain-d-moduleorigin-collapse"><strong>Chain D — Module‑Origin Collapse</strong></h3>
+<pre><code>TEL/FFT/Opacity → Break → Continuity → Envelope → Drift
+</code></pre>
+<p>Break‑chain determines recovery order.</p>
+<hr>
+<h1 id="7-collapsemode-differential-packet">7. Collapse‑Mode Differential Packet</h1>
+<pre><code>COLLAPSE_DIFFERENTIAL_PACKET:
+  collapse_mode:
+  drift_signature:
+  envelope_signature:
+  continuity_signature:
+  regime_signature:
+  break_signature:
+  tel_signature:
+  fft_signature:
+  opacity_signature:
+  hybrid_status:
+  break_chain:
+  collapse_origin:
+  notes:
+</code></pre>
+<hr>
+<h1 id="8-summary">8. Summary</h1>
+<p>The Collapse‑Mode Differential Classifier provides:</p>
+<ul>
+<li>precise collapse identification  </li>
+<li>hybrid collapse detection  </li>
+<li>break‑chain origin mapping  </li>
+<li>cross‑module signature alignment  </li>
+<li>system‑scale diagnostic clarity  </li>
+</ul>
+<p>This classifier is the <strong>diagnostic core</strong> of RTT/2 collapse analysis.</p>
+  </main>
+</body>
+</html>

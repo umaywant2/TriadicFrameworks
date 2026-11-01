@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/qCompute/qc_Examples_Advanced.md">
+  <title>qCompute — Advanced Structural Examples</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/qCompute/qc_Examples_Advanced.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/qCompute/qc_Examples_Advanced.md</code>
+  </aside>
+
+  <main>
+<h1 id="qcompute-advanced-structural-examples">qCompute — Advanced Structural Examples</h1>
+<p><strong>File:</strong> qc_Examples_Advanced.md<br>
+<strong>Layer:</strong> RTT‑Inside Compute Harness<br>
+<strong>Status:</strong> Canonical (2026)</p>
+<p>These examples demonstrate <strong>full‑pipeline</strong>, <strong>multi‑frame</strong>, <strong>multi‑backend</strong>, and <strong>multi‑transition</strong> structural behavior in qCompute.</p>
+<p>They show:</p>
+<ul>
+<li>tier escalation (r1 → r2 → r3)</li>
+<li>tier decrease (measurement)</li>
+<li>drift overflow</li>
+<li>backend switching</li>
+<li>environment transitions</li>
+<li>token usage</li>
+<li>meta‑operators</li>
+<li>capture + replay</li>
+<li>full structural lifecycle</li>
+</ul>
+<p>No amplitudes.<br>
+No simulation.<br>
+Structure only.</p>
+<hr>
+<h1 id="1-advanced-multiframe-example-r1-r2-r1">1. Advanced Multi‑Frame Example (r1 → r2 → r1)</h1>
+<pre><code class="language-python">session = qSession(env=&quot;sandbox&quot;)
+
+session.h(q=0)            # r1 → frame 1
+session.cx(q1=0, q2=1)    # r2 → new frame
+session.measure(q=0)      # measurement → tier decrease → new frame
+session.x(q=1)            # r1 → same frame
+
+session.save_trace(&quot;adv_multiframe.qtrace&quot;)
+</code></pre>
+<p><strong>Demonstrates</strong></p>
+<ul>
+<li>r1 → r2 tier escalation  </li>
+<li>measurement forcing tier decrease  </li>
+<li>frame 1 (r1), frame 2 (r2), frame 3 (measurement + r1)  </li>
+<li>backend sequence: local-sim → hybrid-sim → local-sim  </li>
+</ul>
+<hr>
+<h1 id="2-advanced-drift-overflow-example">2. Advanced Drift Overflow Example</h1>
+<pre><code class="language-python">session = qSession(env=&quot;sandbox&quot;)
+
+# r2 operators accumulate medium drift
+session.cx(q1=0, q2=1)  
+session.cx(q1=1, q2=2)
+session.cx(q1=2, q2=3)
+
+# drift overflow → new frame
+session.cx(q1=3, q2=4)
+
+session.save_trace(&quot;adv_drift_overflow.qtrace&quot;)
+</code></pre>
+<p><strong>Demonstrates</strong></p>
+<ul>
+<li>drift accumulation  </li>
+<li>drift overflow forcing new frame  </li>
+<li>backend = hybrid-sim  </li>
+<li>two frames with identical tier but different drift summaries  </li>
+</ul>
+<hr>
+<h1 id="3-advanced-transition-example-sandbox-production-archive">3. Advanced Transition Example (Sandbox → Production → Archive)</h1>
+<pre><code class="language-python">session = qSession(env=&quot;sandbox&quot;)
+session.deploy_token(&quot;t1&quot;)
+session.deploy_token(&quot;t2&quot;)
+
+session.h(q=0)                 # sandbox
+session.transition(&quot;production&quot;)  # token t1
+
+session.pulse(q=0, duration=20, amplitude=0.5)  # r3 → production only
+
+session.transition(&quot;archive&quot;)  # token t2
+
+session.save_trace(&quot;adv_transitions.qtrace&quot;)
+</code></pre>
+<p><strong>Demonstrates</strong></p>
+<ul>
+<li>sandbox → production → archive  </li>
+<li>token usage  </li>
+<li>r3 operator allowed only in production  </li>
+<li>archive terminality  </li>
+<li>lineage: ["sandbox", "production", "archive"]  </li>
+</ul>
+<hr>
+<h1 id="4-advanced-backend-switching-example">4. Advanced Backend Switching Example</h1>
+<pre><code class="language-python">session = qSession(env=&quot;production&quot;)
+session.deploy_token(&quot;t1&quot;)
+
+session.h(q=0)                    # r1 → local-sim
+session.cx(q1=0, q2=1)            # r2 → hybrid-sim
+session.pulse(q=1, duration=10, amplitude=0.4)  # r3 → hardware-qpu-2
+
+session.save_trace(&quot;adv_backend_switch.qtrace&quot;)
+</code></pre>
+<p><strong>Demonstrates</strong></p>
+<ul>
+<li>backend progression: local-sim → hybrid-sim → hardware-qpu-2  </li>
+<li>tier escalation across three levels  </li>
+<li>r3 token requirement  </li>
+</ul>
+<hr>
+<h1 id="5-advanced-metaoperator-example-barrier-flush">5. Advanced Meta‑Operator Example (Barrier + Flush)</h1>
+<pre><code class="language-python">session = qSession(env=&quot;sandbox&quot;)
+
+session.h(q=0)
+session.barrier()                 # meta → new frame
+session.cx(q1=0, q2=1)
+session.flush()                   # meta → new frame
+
+session.save_trace(&quot;adv_meta.qtrace&quot;)
+</code></pre>
+<p><strong>Demonstrates</strong></p>
+<ul>
+<li>meta‑operators always open new frames  </li>
+<li>zero drift  </li>
+<li>structural segmentation  </li>
+</ul>
+<hr>
+<h1 id="6-advanced-mixed-pipeline-example-full-system">6. Advanced Mixed Pipeline Example (Full System)</h1>
+<pre><code class="language-python">session = qSession(env=&quot;sandbox&quot;)
+session.deploy_token(&quot;t1&quot;)
+session.deploy_token(&quot;t2&quot;)
+
+# Frame 1: r1
+session.h(q=0)
+
+# Frame 2: r2
+session.cx(q1=0, q2=1)
+
+# Transition to production
+session.transition(&quot;production&quot;)   # token t1
+
+# Frame 3: r3
+session.pulse(q=0, duration=15, amplitude=0.3)
+
+# Frame 4: measurement → tier decrease
+session.measure(q=0)
+
+# Transition to archive
+session.transition(&quot;archive&quot;)      # token t2
+
+session.save_trace(&quot;adv_full_pipeline.qtrace&quot;)
+</code></pre>
+<p><strong>Demonstrates</strong></p>
+<ul>
+<li>r1 → r2 → transition → r3 → measurement → transition  </li>
+<li>four frames  </li>
+<li>backend sequence: local-sim → hybrid-sim → hardware-qpu-2 → local-sim  </li>
+<li>drift progression  </li>
+<li>lineage: ["sandbox", "production", "archive"]  </li>
+<li>archive terminality  </li>
+</ul>
+<hr>
+<h1 id="7-advanced-replay-example">7. Advanced Replay Example</h1>
+<pre><code class="language-python">replay = qReplay(&quot;adv_full_pipeline.qtrace&quot;)
+
+for frame in replay.frames:
+    print(frame.frame_id, frame.backend, frame.resonance_profile)
+
+for op in replay.operators:
+    print(op.op_id, op.routing[&quot;reason&quot;])
+</code></pre>
+<p><strong>Demonstrates</strong></p>
+<ul>
+<li>frame reconstruction  </li>
+<li>backend reconstruction  </li>
+<li>routing reasons  </li>
+<li>deterministic replay  </li>
+<li>invariant verification  </li>
+</ul>
+<hr>
+<h1 id="summary">Summary</h1>
+<p>These advanced examples demonstrate:</p>
+<ul>
+<li>multi‑tier execution  </li>
+<li>multi‑backend routing  </li>
+<li>drift overflow  </li>
+<li>environment transitions  </li>
+<li>token usage  </li>
+<li>meta‑operators  </li>
+<li>capture + replay  </li>
+<li>full structural lifecycle  </li>
+</ul>
+<p>Use these examples to understand <strong>complex qCompute behavior</strong>.</p>
+  </main>
+</body>
+</html>

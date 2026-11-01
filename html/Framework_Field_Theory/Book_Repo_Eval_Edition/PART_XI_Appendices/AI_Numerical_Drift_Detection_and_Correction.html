@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/AI_Numerical_Drift_Detection_and_Correction.md">
+  <title>Appendix AI — Numerical Drift Detection &amp; Correction</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/AI_Numerical_Drift_Detection_and_Correction.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/AI_Numerical_Drift_Detection_and_Correction.md</code>
+  </aside>
+
+  <main>
+<h1 id="appendix-ai-numerical-drift-detection-correction"><strong>Appendix AI — Numerical Drift Detection &amp; Correction</strong></h1>
+<h3 id="protocols-for-identifying-classifying-and-correcting-numerical-drift-in-fft-simulations"><em>Protocols for identifying, classifying, and correcting numerical drift in FFT simulations</em></h3>
+<p>Framework Field Theory (FFT) simulations operate across:</p>
+<ul>
+<li>three interacting fields (φ, V, R)  </li>
+<li>three temporal modes (t_r, t_d, t_a)  </li>
+<li>five regimes with different operator dominance  </li>
+<li>nonlocal kernels  </li>
+<li>activation–damping competition  </li>
+<li>ΔSET‑driven structural changes  </li>
+</ul>
+<p>This multi‑scale architecture makes FFT simulations powerful — but also vulnerable to <strong>numerical drift</strong>.</p>
+<p>Numerical drift is the slow, unintended deviation of a simulation from its mathematically intended trajectory.<br>
+This appendix defines the <strong>canonical methods</strong> for detecting, classifying, and correcting drift in FFT.</p>
+<hr>
+<h1 id="1-what-is-numerical-drift-in-fft"><strong>1. What Is Numerical Drift in FFT?</strong></h1>
+<p>Numerical drift occurs when:</p>
+<ul>
+<li>discretization errors accumulate  </li>
+<li>operator imbalance grows  </li>
+<li>kernel convolution introduces bias  </li>
+<li>triadic‑time loops desynchronize  </li>
+<li>regime transitions amplify small errors  </li>
+<li>ΔSET contributions diverge  </li>
+<li>boundary reflections distort fields  </li>
+</ul>
+<p>Drift is not noise — it is <strong>systematic deviation</strong>.</p>
+<p>FFT requires explicit drift detection and correction to maintain:</p>
+<ul>
+<li>stability  </li>
+<li>coherence  </li>
+<li>reproducibility  </li>
+<li>regime fidelity  </li>
+</ul>
+<hr>
+<h1 id="2-drift-categories-canonical"><strong>2. Drift Categories (Canonical)</strong></h1>
+<p>FFT recognizes <strong>five types of numerical drift</strong>, aligned with the field’s operator ecology:</p>
+<h3 id="21-scalar-drift-d"><strong>2.1 Scalar Drift (Dφ)</strong></h3>
+<p>Deviation in φ due to:</p>
+<ul>
+<li>diffusion imbalance  </li>
+<li>kernel bias  </li>
+<li>boundary leakage  </li>
+</ul>
+<h3 id="22-vector-drift-dv"><strong>2.2 Vector Drift (DV)</strong></h3>
+<p>Deviation in V due to:</p>
+<ul>
+<li>advection overshoot  </li>
+<li>divergence accumulation  </li>
+<li>misaligned triadic‑time updates  </li>
+</ul>
+<h3 id="23-resonance-drift-dr"><strong>2.3 Resonance Drift (DR)</strong></h3>
+<p>Deviation in R due to:</p>
+<ul>
+<li>activation overshoot  </li>
+<li>damping underflow  </li>
+<li>oscillatory instability  </li>
+</ul>
+<h3 id="24-kernel-drift-dk"><strong>2.4 Kernel Drift (DK)</strong></h3>
+<p>Deviation introduced by:</p>
+<ul>
+<li>non‑normalized kernels  </li>
+<li>truncated tails  </li>
+<li>FFT convolution artifacts  </li>
+</ul>
+<h3 id="25-set-drift-dset"><strong>2.5 ΔSET Drift (DΔSET)</strong></h3>
+<p>Deviation in ΔSET due to:</p>
+<ul>
+<li>inconsistent κ scaling  </li>
+<li>regime misclassification  </li>
+<li>accumulated field drift  </li>
+</ul>
+<p>These five drift types form the <strong>FFT Drift Taxonomy</strong>.</p>
+<hr>
+<h1 id="3-drift-detection-metrics"><strong>3. Drift Detection Metrics</strong></h1>
+<p>FFT uses five canonical drift metrics.</p>
+<hr>
+<h2 id="31-field-consistency-error-fce"><strong>3.1 Field Consistency Error (FCE)</strong></h2>
+<p>$$FCE_X = \frac{\lVert X(t+\Delta t) - X(t) \rVert}{\Delta t}$$</p>
+<p>Large FCE indicates instability or drift.</p>
+<hr>
+<h2 id="32-operator-imbalance-error-oie"><strong>3.2 Operator Imbalance Error (OIE)</strong></h2>
+<p>$$OIE = \frac{\lVert \alpha[R] \rVert}{\lVert S[R] \rVert}$$</p>
+<p>If OIE diverges, resonance drift is occurring.</p>
+<hr>
+<h2 id="33-kernel-consistency-error-kce"><strong>3.3 Kernel Consistency Error (KCE)</strong></h2>
+<p>$$KCE = \left| 1 - \int_{\Omega} K(r)\, dr \right|$$</p>
+<p>Non‑zero KCE indicates kernel drift.</p>
+<hr>
+<h2 id="34-divergence-error-div"><strong>3.4 Divergence Error (DIV)</strong></h2>
+<p>$$DIV = \lVert \nabla \cdot V \rVert$$</p>
+<p>High DIV indicates vector drift.</p>
+<hr>
+<h2 id="35-set-stability-error-se"><strong>3.5 ΔSET Stability Error (ΔSE)</strong></h2>
+<p>$$\Delta SE = \frac{\text{Var}(\Delta SET)}{\text{mean}(\Delta SET)}$$</p>
+<p>Large ΔSE indicates ΔSET drift.</p>
+<hr>
+<h1 id="4-drift-thresholds-regime-sensitivity"><strong>4. Drift Thresholds &amp; Regime Sensitivity</strong></h1>
+<p>Each regime has different drift tolerance:</p>
+<table>
+<thead>
+<tr>
+<th>Regime</th>
+<th>Drift Sensitivity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stable</td>
+<td>low</td>
+</tr>
+<tr>
+<td>Transitional</td>
+<td>moderate</td>
+</tr>
+<tr>
+<td>Paradox</td>
+<td>very high</td>
+</tr>
+<tr>
+<td>Interference</td>
+<td>oscillatory</td>
+</tr>
+<tr>
+<td>Coherence</td>
+<td>high</td>
+</tr>
+</tbody>
+</table>
+<p>Paradox and Coherence regimes are the most drift‑sensitive.</p>
+<hr>
+<h1 id="5-drift-detection-protocol"><strong>5. Drift Detection Protocol</strong></h1>
+<p>At each timestep:</p>
+<h3 id="step-1-compute-drift-metrics"><strong>Step 1 — Compute Drift Metrics</strong></h3>
+<p>Compute FCE, OIE, KCE, DIV, ΔSE.</p>
+<h3 id="step-2-compare-to-thresholds"><strong>Step 2 — Compare to Thresholds</strong></h3>
+<p>Use regime‑dependent thresholds.</p>
+<h3 id="step-3-classify-drift-type"><strong>Step 3 — Classify Drift Type</strong></h3>
+<p>Identify which drift category is active.</p>
+<h3 id="step-4-log-drift-event"><strong>Step 4 — Log Drift Event</strong></h3>
+<p>Record:</p>
+<ul>
+<li>drift type  </li>
+<li>magnitude  </li>
+<li>location  </li>
+<li>regime  </li>
+<li>operator ratios  </li>
+<li>ΔSET values  </li>
+</ul>
+<h3 id="step-5-trigger-correction-protocol"><strong>Step 5 — Trigger Correction Protocol</strong></h3>
+<p>Apply correction based on drift type.</p>
+<hr>
+<h1 id="6-drift-correction-methods"><strong>6. Drift Correction Methods</strong></h1>
+<p>FFT defines <strong>five canonical correction methods</strong>, one for each drift type.</p>
+<hr>
+<h2 id="61-scalar-drift-correction-d"><strong>6.1 Scalar Drift Correction (Dφ)</strong></h2>
+<ul>
+<li>apply implicit diffusion  </li>
+<li>enforce boundary consistency  </li>
+<li>re‑normalize φ if required  </li>
+</ul>
+<hr>
+<h2 id="62-vector-drift-correction-dv"><strong>6.2 Vector Drift Correction (DV)</strong></h2>
+<ul>
+<li>apply divergence cleaning  </li>
+<li>project V onto divergence‑free subspace  </li>
+<li>reduce Δt_r or Δt_d  </li>
+</ul>
+<hr>
+<h2 id="63-resonance-drift-correction-dr"><strong>6.3 Resonance Drift Correction (DR)</strong></h2>
+<ul>
+<li>apply activation damping window  </li>
+<li>reduce α scaling (Appendix AF)  </li>
+<li>shrink Δt_r (Appendix AE)  </li>
+</ul>
+<hr>
+<h2 id="64-kernel-drift-correction-dk"><strong>6.4 Kernel Drift Correction (DK)</strong></h2>
+<ul>
+<li>re‑normalize kernel  </li>
+<li>re‑compute convolution using FFT  </li>
+<li>enforce compact support  </li>
+</ul>
+<hr>
+<h2 id="65-set-drift-correction-dset"><strong>6.5 ΔSET Drift Correction (DΔSET)</strong></h2>
+<ul>
+<li>re‑compute ΔSET from φ, V, R  </li>
+<li>enforce κ scaling consistency  </li>
+<li>smooth ΔSET using Gaussian kernel  </li>
+</ul>
+<hr>
+<h1 id="7-global-drift-correction-loop"><strong>7. Global Drift Correction Loop</strong></h1>
+<p>Every N timesteps:</p>
+<pre><code>compute drift metrics
+if drift detected:
+    classify drift
+    apply correction
+    re-evaluate regime
+    adjust operator scaling
+    adjust triadic-time steps
+</code></pre>
+<p>This ensures long‑term stability.</p>
+<hr>
+<h1 id="8-drift-prevention-strategies"><strong>8. Drift Prevention Strategies</strong></h1>
+<h3 id="81-adaptive-time-stepping"><strong>8.1 Adaptive Time Stepping</strong></h3>
+<p>Reduce Δt_r, Δt_d, Δt_a when drift grows.</p>
+<h3 id="82-operator-balancing"><strong>8.2 Operator Balancing</strong></h3>
+<p>Use regime‑dependent scaling (Appendix AF).</p>
+<h3 id="83-kernel-normalization"><strong>8.3 Kernel Normalization</strong></h3>
+<p>Ensure ∫K = 1 at every timestep.</p>
+<h3 id="84-boundary-stabilization"><strong>8.4 Boundary Stabilization</strong></h3>
+<p>Use absorbing layers to prevent reflection‑induced drift.</p>
+<h3 id="85-set-smoothing"><strong>8.5 ΔSET Smoothing</strong></h3>
+<p>Apply mild smoothing to prevent runaway variance.</p>
+<hr>
+<h1 id="9-drift-visualization-methods"><strong>9. Drift Visualization Methods</strong></h1>
+<p>Recommended:</p>
+<ul>
+<li>drift heatmaps  </li>
+<li>ΔSET variance maps  </li>
+<li>operator‑imbalance timelines  </li>
+<li>divergence maps  </li>
+<li>regime‑transition overlays  </li>
+</ul>
+<p>These help diagnose drift sources.</p>
+<hr>
+<h1 id="closing-statement"><strong>Closing Statement</strong></h1>
+<blockquote>
+<p><strong>Appendix AI defines the canonical methods for detecting, classifying, and correcting numerical drift in FFT simulations. Drift management is essential for maintaining coherence, stability, and regime fidelity across FFT’s multi‑scale, tri‑time, nonlocal architecture.</strong></p>
+</blockquote>
+  </main>
+</body>
+</html>

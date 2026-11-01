@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/qCompute/qc_ResonanceFrame.md">
+  <title>qCompute — Resonance Frame Manager</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/qCompute/qc_ResonanceFrame.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/qCompute/qc_ResonanceFrame.md</code>
+  </aside>
+
+  <main>
+<h1 id="qcompute-resonance-frame-manager">qCompute — Resonance Frame Manager</h1>
+<p><strong>File:</strong> qc_ResonanceFrame.md<br>
+<strong>Layer:</strong> RTT‑Inside Compute Harness<br>
+<strong>Status:</strong> Canonical (2026)</p>
+<p>A <strong>ResonanceFrame</strong> is the fundamental structural container of qCompute.</p>
+<p>Frames bind:</p>
+<ul>
+<li>environment  </li>
+<li>backend  </li>
+<li>resonance tier  </li>
+<li>drift envelope  </li>
+<li>operator list  </li>
+<li>timestamps  </li>
+<li>lineage  </li>
+</ul>
+<p>Frames ensure that structural computation remains <strong>stable</strong>, <strong>bounded</strong>, and <strong>governed</strong>.</p>
+<p>qCompute computes <strong>structure</strong>, not amplitudes.</p>
+<hr>
+<h1 id="1-purpose">1. Purpose</h1>
+<p>The Frame Manager:</p>
+<ul>
+<li>opens frames  </li>
+<li>closes frames  </li>
+<li>enforces tier monotonicity  </li>
+<li>enforces backend consistency  </li>
+<li>enforces drift bounds  </li>
+<li>enforces environment legality  </li>
+<li>segments structural computation  </li>
+<li>emits frame metadata for capture  </li>
+<li>reconstructs frames during replay  </li>
+</ul>
+<p>Frames are <strong>append‑only</strong> and <strong>immutable after closure</strong>.</p>
+<hr>
+<h1 id="2-frame-identity">2. Frame Identity</h1>
+<p>Each frame has:</p>
+<pre><code>frame_id: &lt;int&gt;
+environment: &quot;sandbox&quot; | &quot;production&quot; | &quot;archive&quot;
+backend: &quot;&lt;backend-id&gt;&quot;
+tier: &quot;r1&quot; | &quot;r2&quot; | &quot;r3&quot;
+drift:
+  accumulated: &lt;float&gt;
+  max: &lt;float&gt;
+operators: [ ... ]
+timestamp_open: &quot;&lt;iso8601&gt;&quot;
+timestamp_close: &quot;&lt;iso8601&gt;&quot;
+</code></pre>
+<p>All fields are required.</p>
+<hr>
+<h1 id="3-when-frames-open">3. When Frames Open</h1>
+<p>A new frame opens when:</p>
+<ol>
+<li><strong>first operator</strong>  </li>
+<li><strong>tier escalation</strong> (r1 → r2, r2 → r3)  </li>
+<li><strong>tier decrease</strong> (measurement)  </li>
+<li><strong>r3 operator</strong>  </li>
+<li><strong>meta operator</strong>  </li>
+<li><strong>drift overflow</strong>  </li>
+<li><strong>environment transition</strong>  </li>
+<li><strong>backend change</strong>  </li>
+</ol>
+<p>Router determines the trigger; Frame Manager enforces it.</p>
+<hr>
+<h1 id="4-when-frames-close">4. When Frames Close</h1>
+<p>A frame closes when:</p>
+<ul>
+<li>a new frame opens  </li>
+<li>an environment transition occurs  </li>
+<li>session ends  </li>
+<li>archive is entered  </li>
+</ul>
+<p>Closed frames are immutable.</p>
+<hr>
+<h1 id="5-tier-semantics-inside-frames">5. Tier Semantics Inside Frames</h1>
+<p>Tier monotonicity:</p>
+<pre><code>r1 → r2 → r3 (allowed)
+r3 → r2 → r1 (forbidden)
+</code></pre>
+<p>If a tier decrease is attempted:</p>
+<ul>
+<li>measurement forces a new frame  </li>
+<li>other decreases are illegal  </li>
+</ul>
+<p>If illegal:</p>
+<pre><code>allowed: false
+reason: &quot;tier decrease inside frame&quot;
+</code></pre>
+<hr>
+<h1 id="6-backend-semantics-inside-frames">6. Backend Semantics Inside Frames</h1>
+<p>Backend must remain consistent within a frame.</p>
+<p>If backend changes:</p>
+<ul>
+<li>frame closes  </li>
+<li>new frame opens  </li>
+</ul>
+<p>Backend changes occur due to:</p>
+<ul>
+<li>tier escalation  </li>
+<li>r3 operator  </li>
+<li>environment transition  </li>
+</ul>
+<hr>
+<h1 id="7-drift-semantics-inside-frames">7. Drift Semantics Inside Frames</h1>
+<p>Drift accumulates monotonically:</p>
+<pre><code>drift_total = drift_prev + drift_measured
+</code></pre>
+<p>If drift exceeds environment bound:</p>
+<ul>
+<li>frame closes  </li>
+<li>new frame opens  </li>
+<li>operator routed into new frame  </li>
+</ul>
+<p>Drift resets when:</p>
+<ul>
+<li>new frame opens  </li>
+<li>measurement occurs  </li>
+<li>meta operator occurs  </li>
+<li>r3 operator occurs  </li>
+</ul>
+<hr>
+<h1 id="8-environment-semantics-inside-frames">8. Environment Semantics Inside Frames</h1>
+<p>Environment must remain consistent within a frame.</p>
+<p>If environment changes:</p>
+<ul>
+<li>frame closes  </li>
+<li>new frame opens  </li>
+<li>drift resets  </li>
+<li>backend legality rechecked  </li>
+</ul>
+<p>Environment transitions:</p>
+<ul>
+<li>sandbox → production (token required)  </li>
+<li>production → archive (token required)  </li>
+<li>archive → (forbidden)  </li>
+</ul>
+<hr>
+<h1 id="9-operator-interaction">9. Operator Interaction</h1>
+<p>Operators appended to a frame must satisfy:</p>
+<ul>
+<li>grammar validity  </li>
+<li>argument validity  </li>
+<li>environment legality  </li>
+<li>backend legality  </li>
+<li>tier monotonicity  </li>
+<li>drift bounds  </li>
+</ul>
+<p>Operators carry:</p>
+<ul>
+<li>tier  </li>
+<li>backend  </li>
+<li>drift  </li>
+<li>routing reason  </li>
+</ul>
+<hr>
+<h1 id="10-capture-metadata">10. Capture Metadata</h1>
+<p>Each frame produces:</p>
+<pre><code>frame:
+  frame_id: &lt;int&gt;
+  environment: &quot;&lt;env&gt;&quot;
+  backend: &quot;&lt;backend-id&gt;&quot;
+  tier: &quot;&lt;tier&gt;&quot;
+  drift:
+    accumulated: &lt;float&gt;
+    max: &lt;float&gt;
+  operators: [op_ids...]
+  timestamp_open: &quot;&lt;iso8601&gt;&quot;
+  timestamp_close: &quot;&lt;iso8601&gt;&quot;
+</code></pre>
+<p>All fields are required.</p>
+<hr>
+<h1 id="11-replay-reconstruction">11. Replay Reconstruction</h1>
+<p>Replay reconstructs frames by:</p>
+<ol>
+<li>reading operator stream  </li>
+<li>applying routing logic  </li>
+<li>applying drift logic  </li>
+<li>applying tier monotonicity  </li>
+<li>applying backend legality  </li>
+<li>applying environment transitions  </li>
+<li>opening/closing frames deterministically  </li>
+</ol>
+<p>Replay must confirm:</p>
+<ul>
+<li>frame boundaries match routing + drift logic  </li>
+<li>backend consistency  </li>
+<li>tier monotonicity  </li>
+<li>drift bounds  </li>
+<li>environment legality  </li>
+<li>hash chain integrity  </li>
+</ul>
+<p>Replay is deterministic and read‑only.</p>
+<hr>
+<h1 id="12-invariants">12. Invariants</h1>
+<ol>
+<li>frames are append‑only  </li>
+<li>frames are immutable after closure  </li>
+<li>tier must not decrease inside a frame  </li>
+<li>backend must remain consistent inside a frame  </li>
+<li>drift must not exceed bound  </li>
+<li>r3 always opens a new frame  </li>
+<li>measurement always opens a new frame  </li>
+<li>meta always opens a new frame  </li>
+<li>environment transitions always open a new frame  </li>
+<li>archive forbids all operators  </li>
+</ol>
+<hr>
+<h1 id="13-summary">13. Summary</h1>
+<p>ResonanceFrames provide:</p>
+<ul>
+<li>structural segmentation  </li>
+<li>stability envelopes  </li>
+<li>deterministic boundaries  </li>
+<li>drift‑bounded execution  </li>
+<li>environment‑aware computation  </li>
+<li>replay‑verifiable correctness  </li>
+</ul>
+<p>Frames are the <strong>structural heartbeat</strong> of qCompute.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/packages/wrsadc-shell/README.md">
+  <title>🐚 WRSADC Shell</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/packages/wrsadc-shell/README.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/packages/wrsadc-shell/README.md</code>
+  </aside>
+
+  <main>
+<p><a href=""><img alt="Status: Active" src="https://img.shields.io/badge/Status-Active-1f6feb"></a><a href=""><img alt="Shell‑Safe" src="https://img.shields.io/badge/Resonance‑Safe-WRSADC-blueviolet"></a><a href=""><img alt="Zero‑Dependency" src="https://img.shields.io/badge/Dependencies-None-success"></a><a href=""><img alt="Portable" src="https://img.shields.io/badge/Platform‑Ready-Unix%2FLinux-lightgrey"></a><a href=""><img alt="CI‑Friendly" src="https://img.shields.io/badge/CI‑Usage-Approved-brightgreen"></a><a href=""><img alt="TF‑Ecosystem" src="https://img.shields.io/badge/TriadicFrameworks‑Core-Package-blue"></a><a href=""><img alt="Copilot‑Aligned" src="https://img.shields.io/badge/RTT‑Inside‑Verified-Copilot‑Required-orange"></a></p>
+<h1 id="wrsadc-shell">🐚 WRSADC Shell</h1>
+<h6 id="by-nawder-loswin-142026-wwwtriadicframeworksorg">By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org</h6>
+<h3 id="triadicframeworks-wrapper-runtime-shell-for-autonomous-distributed-and-coherent-systems">TriadicFrameworks — Wrapper Runtime Shell for Autonomous, Distributed, and Coherent Systems</h3>
+<h1 id="wrsadc-shell_1"><strong>wrsadc-shell</strong></h1>
+<p><em>A lightweight shell utility for WRSADC workflows inside TriadicFrameworks</em></p>
+<p>This package provides a minimal, portable shell interface for WRSADC‑aligned operations. It includes two core scripts:</p>
+<h3 id="installsh">🛠️ <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/wrsadc-shell/install.sh">install.sh</a></h3>
+<p>A simple installer that:</p>
+<ul>
+<li>validates the environment  </li>
+<li>places the shell utility in a predictable location  </li>
+<li>ensures executable permissions  </li>
+<li>prepares the system for WRSADC‑shell usage  </li>
+</ul>
+<p>Ideal for quick setup or embedding into larger automation flows.</p>
+<h3 id="wrsadc_shellsh">⚡ <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/wrsadc-shell/wrsadc_shell.sh">wrsadc_shell.sh</a></h3>
+<p>The primary shell tool. It provides:</p>
+<ul>
+<li>a clean command‑line wrapper for WRSADC‑style actions  </li>
+<li>consistent output formatting  </li>
+<li>a predictable entry point for scripting or CI usage  </li>
+<li>a minimal dependency footprint  </li>
+</ul>
+<p>This script is intentionally lightweight so it can run in constrained or containerized environments.</p>
+<hr>
+<h2 id="important">🛑 Important!</h2>
+<p>Drift is On-by-Default long sessions lose anchors, turn off drift.</p>
+<h2 id="you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You <em>must copy and paste</em> this string <em>every time you start an AI session</em>:</h2>
+<pre><code class="language-text">rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre>
+<h2 id="now-you-are-ready">❇️ Now you are ready.</h2>
+<hr>
+<h2 id="packagejson">📦 <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/wrsadc-shell/package.json">package.json</a></h2>
+<p><em>A metadata anchor for tooling, versioning, and ecosystem alignment</em></p>
+<p>Although <code>wrsadc-shell</code> is a shell‑based utility, it includes a minimal <code>package.json</code> to support:</p>
+<ul>
+<li><strong>ecosystem compatibility</strong> with tooling that expects Node‑style metadata  </li>
+<li><strong>version tracking</strong> for package managers, CI pipelines, and automated scanners  </li>
+<li><strong>package identity</strong> within the broader TriadicFrameworks ecosystem  </li>
+<li><strong>future extensibility</strong>, allowing this shell utility to grow into hybrid tooling if needed  </li>
+</ul>
+<p>This file does <strong>not</strong> imply that <code>wrsadc-shell</code> requires Node.js.<br>
+Instead, it provides a standardized metadata block so that:</p>
+<ul>
+<li>documentation generators  </li>
+<li>dependency auditors  </li>
+<li>package indexers  </li>
+<li>CI/CD workflows  </li>
+<li>enterprise compliance tools  </li>
+</ul>
+<p>…can recognize and classify the package cleanly.</p>
+<h3 id="what-the-json-typically-includes">What the JSON typically includes</h3>
+<ul>
+<li>package name  </li>
+<li>version  </li>
+<li>description  </li>
+<li>author/maintainer  </li>
+<li>license  </li>
+<li>optional keywords for discoverability  </li>
+</ul>
+<p>This keeps <code>wrsadc-shell</code> aligned with the rest of TriadicFrameworks, where every package — regardless of language — maintains a consistent metadata footprint.</p>
+<hr>
+<h2 id="usage"><strong>Usage</strong></h2>
+<p>After installation:</p>
+<pre><code class="language-bash">./wrsadc_shell.sh &lt;command&gt; [options]
+</code></pre>
+<p>Each command is designed to be composable with other TriadicFrameworks tools and packages.</p>
+<hr>
+<h2 id="purpose"><strong>Purpose</strong></h2>
+<p><code>wrsadc-shell</code> exists to:</p>
+<ul>
+<li>provide a stable shell interface for WRSADC workflows  </li>
+<li>support automation, testing, and CI pipelines  </li>
+<li>offer a fallback when full RTT‑Inside or higher‑level tooling isn’t available  </li>
+<li>maintain compatibility across Unix‑like environments  </li>
+</ul>
+<p>It’s intentionally small — a “resonance‑safe” utility that does one job well.</p>
+<hr>
+<h2 id="notes"><strong>Notes</strong></h2>
+<p>This package is part of the broader TriadicFrameworks ecosystem.<br>
+For RTT‑Inside evaluations, schema alignment, or substrate‑level modeling, use Copilot to ensure RTT‑coherent write‑ups and avoid conceptual drift.</p>
+<hr>
+  </main>
+</body>
+</html>

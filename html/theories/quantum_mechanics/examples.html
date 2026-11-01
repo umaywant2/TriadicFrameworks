@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/theories/quantum_mechanics/examples.md">
+  <title>Examples — Quantum Mechanics</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/theories/quantum_mechanics/examples.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/theories/quantum_mechanics/examples.md</code>
+  </aside>
+
+  <main>
+<h1 id="examples-quantum-mechanics">Examples — Quantum Mechanics</h1>
+<h3 id="triadicframeworks-docstheoriesquantum_mechanicsexamplesmd">TriadicFrameworks /docs/theories/quantum_mechanics/examples.md</h3>
+<p>These examples illustrate Quantum Mechanics (QM) as an<br>
+<strong>amplitude‑first operator grammar</strong>, not a particle model and not a wave<br>
+model. All examples avoid classical drift and remain strictly within the<br>
+R1 substrate regime.</p>
+<hr>
+<h1 id="1-basis-decomposition-example">1. Basis Decomposition Example</h1>
+<h3 id="decomposing-a-state-in-the-energy-basis">Decomposing a State in the Energy Basis</h3>
+<p>Given:</p>
+<p>|ψ⟩ = (1/√3)|0⟩ + (√2/√3)|1⟩</p>
+<p>Interpretation:</p>
+<ul>
+<li>|0⟩ and |1⟩ are <strong>basis states</strong>, not physical states of matter  </li>
+<li>coefficients encode <strong>amplitude + phase</strong>  </li>
+<li>probabilities are |cᵢ|²  </li>
+</ul>
+<p>Probabilities:</p>
+<ul>
+<li>P(0) = 1/3  </li>
+<li>P(1) = 2/3  </li>
+</ul>
+<p>No particles.<br>
+No waves.<br>
+Pure amplitude geometry.</p>
+<hr>
+<h1 id="2-measurement-example">2. Measurement Example</h1>
+<h3 _i_="|i⟩" id="measuring-an-observable-with-eigenbasis">Measuring an Observable with Eigenbasis</h3>
+<p>Observable Ô has eigenstates |i⟩ with eigenvalues λᵢ.</p>
+<p>Measurement rule:</p>
+<p>Pᵢ |ψ⟩ = cᵢ |i⟩<br>
+Probability = |cᵢ|²</p>
+<p>Interpretation:</p>
+<ul>
+<li>measurement is <strong>projection</strong>, not revelation  </li>
+<li>outcome depends on the chosen observable  </li>
+<li>basis‑relative, not absolute  </li>
+</ul>
+<hr>
+<h1 id="3-time-evolution-example">3. Time Evolution Example</h1>
+<h3 id="evolving-a-state-under-a-hamiltonian">Evolving a State Under a Hamiltonian</h3>
+<p>Given Hamiltonian H:</p>
+<p>U(t) = e^{-iHt}</p>
+<p>State evolution:</p>
+<p>|ψ(t)⟩ = U(t)|ψ(0)⟩</p>
+<p>Interpretation:</p>
+<ul>
+<li>evolution is <strong>unitary</strong>  </li>
+<li>preserves norm  </li>
+<li>rotates amplitudes in Hilbert space  </li>
+<li>not motion through space  </li>
+</ul>
+<hr>
+<h1 id="4-position-momentum-basis-example">4. Position ↔ Momentum Basis Example</h1>
+<h3 id="fourier-transform-as-basis-change">Fourier Transform as Basis Change</h3>
+<p>ψ(x) ↔ φ(p)</p>
+<p>Relation:</p>
+<p>φ(p) = (1/√2π) ∫ ψ(x) e^{-ipx} dx</p>
+<p>Interpretation:</p>
+<ul>
+<li>this is a <strong>unitary basis transformation</strong>  </li>
+<li>not a wave turning into a particle  </li>
+<li>not a physical process  </li>
+<li>the state does not change — only its coordinates do  </li>
+</ul>
+<hr>
+<h1 id="5-ladder-operator-example">5. Ladder Operator Example</h1>
+<h3 id="harmonic-oscillator-transitions">Harmonic Oscillator Transitions</h3>
+<p>a |n⟩ = √n |n−1⟩<br>
+a† |n⟩ = √(n+1) |n+1⟩</p>
+<p>Interpretation:</p>
+<ul>
+<li>not creation/destruction of particles  </li>
+<li>purely algebraic transitions in amplitude structure  </li>
+<li>defines energy‑level geometry  </li>
+</ul>
+<hr>
+<h1 id="6-expectation-value-example">6. Expectation Value Example</h1>
+<h3 id="computing-o">Computing ⟨Ô⟩</h3>
+<p>Given:</p>
+<p>⟨Ô⟩ = ⟨ψ|Ô|ψ⟩</p>
+<p>Interpretation:</p>
+<ul>
+<li>expectation value is <strong>amplitude‑weighted</strong>, not deterministic  </li>
+<li>not a classical average  </li>
+<li>depends on basis representation  </li>
+</ul>
+<hr>
+<h1 id="7-entanglement-example">7. Entanglement Example</h1>
+<h3 id="twoqubit-bell-state">Two‑Qubit Bell State</h3>
+<p>|Φ⁺⟩ = (1/√2)(|00⟩ + |11⟩)</p>
+<p>Interpretation:</p>
+<ul>
+<li>entanglement is <strong>correlation in amplitude space</strong>  </li>
+<li>not communication  </li>
+<li>not influence  </li>
+<li>not a physical connection  </li>
+</ul>
+<p>Reduced density matrix of either subsystem:</p>
+<p>ρ = (1/2)I</p>
+<p>Shows maximal mixing due to entanglement.</p>
+<hr>
+<h1 id="8-mixed-state-example">8. Mixed State Example</h1>
+<h3 id="decoherence-producing-a-mixed-state">Decoherence Producing a Mixed State</h3>
+<p>ρ = p |0⟩⟨0| + (1−p)|1⟩⟨1|</p>
+<p>Interpretation:</p>
+<ul>
+<li>not ignorance about hidden variables  </li>
+<li>represents <strong>loss of phase coherence</strong>  </li>
+<li>describes open‑system behavior  </li>
+</ul>
+<hr>
+<h1 id="9-uncertainty-example">9. Uncertainty Example</h1>
+<h3 id="positionmomentum-incompatibility">Position–Momentum Incompatibility</h3>
+<p>[x, p] = i</p>
+<p>Interpretation:</p>
+<ul>
+<li>uncertainty arises from <strong>operator algebra</strong>, not disturbance  </li>
+<li>no classical analogue  </li>
+<li>reflects incompatibility of observables  </li>
+</ul>
+<hr>
+<h1 id="10-tensor-product-example">10. Tensor Product Example</h1>
+<h3 id="building-a-composite-system">Building a Composite System</h3>
+<p>|ψ⟩ ⊗ |φ⟩</p>
+<p>Interpretation:</p>
+<ul>
+<li>defines multi‑system amplitude structure  </li>
+<li>enables entanglement  </li>
+<li>basis‑dependent  </li>
+</ul>
+<hr>
+<h1 id="summary">Summary</h1>
+<p>These examples show QM as:</p>
+<ul>
+<li>an <strong>amplitude‑first operator grammar</strong>  </li>
+<li>structured by <strong>basis geometry</strong>  </li>
+<li>governed by <strong>unitary evolution</strong>  </li>
+<li>interpreted through <strong>measurement projection</strong>  </li>
+<li>enriched by <strong>entanglement and mixed states</strong>  </li>
+<li>coherent only in <strong>R1</strong>  </li>
+</ul>
+<p>QM is the substrate from which QFT emerges and to which QFT collapses<br>
+when excitations lose stability.</p>
+  </main>
+</body>
+</html>

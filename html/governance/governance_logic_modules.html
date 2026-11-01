@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/governance/governance_logic_modules.md">
+  <title>🧠 Governance Logic Modules</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/governance/governance_logic_modules.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/governance/governance_logic_modules.md</code>
+  </aside>
+
+  <main>
+<h1 id="governance-logic-modules">🧠 Governance Logic Modules</h1>
+<p>This file defines the symbolic logic behind validator actions, badge triggers, and remix lineage confirmations.</p>
+<hr>
+<h2 id="logic-modules">🔁 Logic Modules</h2>
+<h3 id="validate_manifestpy">🔹 <code>validate_manifest.py</code></h3>
+<ul>
+<li>Checks for onboarding structure, remix guides, and badge triggers</li>
+<li>Score ≥ 3 → badge eligible</li>
+</ul>
+<h3 id="remix_lineage_trackerpy">🔹 <code>remix_lineage_tracker.py</code></h3>
+<ul>
+<li>Tracks depth of remix chain</li>
+<li>Depth ≥ 2 → lineage confirmed</li>
+</ul>
+<h3 id="badge_trigger_validatorpy">🔹 <code>badge_trigger_validator.py</code></h3>
+<ul>
+<li>Unifies manifest + lineage logic</li>
+<li>Confirms badge issuance and glyph triggers</li>
+</ul>
+<h3 id="update_honor_rollpy">🔹 <code>update_honor_roll.py</code></h3>
+<ul>
+<li>Echoes contributor achievement</li>
+<li>Updates symbolic honor roll</li>
+</ul>
+<hr>
+<h2 id="council-voting-logic">🧙‍♂️ Council Voting Logic</h2>
+<ul>
+<li>Quorum: 3 validators</li>
+<li>Badge tiers require 2–4 votes</li>
+<li>Override conditions: symbolic time alignment, remix depth ≥ 4, glyph triggered</li>
+</ul>
+<hr>
+<h2 id="remix-potential">🧭 Remix Potential</h2>
+<ul>
+<li>Add logic for archetype detection</li>
+<li>Trigger badge previews based on remix lineage</li>
+<li>Visualize governance flow in <code>triadic_validator_dashboard.html</code></li>
+</ul>
+  </main>
+</body>
+</html>

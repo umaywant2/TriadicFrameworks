@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/alphafold_substrate_alignments/examples/example_alignment_walkthrough.md">
+  <title>AlphaFold Substrate Alignments</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/alphafold_substrate_alignments/examples/example_alignment_walkthrough.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/alphafold_substrate_alignments/examples/example_alignment_walkthrough.md</code>
+  </aside>
+
+  <main>
+<h3 id="alphafold-substrate-alignments"><em>AlphaFold Substrate Alignments</em></h3>
+<h3 id="example-substratelevel-alignment-walkthrough"><em>Example: Substrate‑Level Alignment Walkthrough</em></h3>
+<p>This example provides a step‑by‑step walkthrough of aligning an AlphaFold‑class protein‑folding inference output to the Resonance Substrate Model (RSM). The walkthrough demonstrates how structural outputs, latent‑space representations, and inference‑cycle behavior map onto substrate axes, dimensional cores, and folding regimes.</p>
+<p>The goal is to illustrate the full alignment workflow in a clear, reproducible sequence.</p>
+<hr>
+<h2 id="1-input-overview"><strong>1. Input Overview</strong></h2>
+<p>For this example, we assume:</p>
+<ul>
+<li>a fixed protein sequence  </li>
+<li>an AlphaFold‑class model producing:  </li>
+<li>predicted 3D coordinates  </li>
+<li>attention maps  </li>
+<li>pairwise residue embeddings  </li>
+<li>multi‑stage inference outputs  </li>
+<li>stable inference‑cycle behavior under repeated runs  </li>
+</ul>
+<p>No biochemical or experimental data is required.</p>
+<hr>
+<h2 id="2-step-1-extract-structural-and-latentspace-signals"><strong>2. Step 1 — Extract Structural and Latent‑Space Signals</strong></h2>
+<h3 id="21-structural-outputs"><strong>2.1 Structural Outputs</strong></h3>
+<p>Extract:</p>
+<ul>
+<li>backbone coordinates  </li>
+<li>side‑chain orientations  </li>
+<li>motif‑level geometry  </li>
+</ul>
+<p>These form the basis for S‑axis mapping.</p>
+<h3 id="22-latentspace-outputs"><strong>2.2 Latent‑Space Outputs</strong></h3>
+<p>Extract:</p>
+<ul>
+<li>attention‑map coherence patterns  </li>
+<li>residue‑pair embeddings  </li>
+<li>track‑level alignment signals  </li>
+</ul>
+<p>These form the basis for I‑axis and R‑axis mapping.</p>
+<hr>
+<h2 id="3-step-2-map-to-substrate-axes"><strong>3. Step 2 — Map to Substrate Axes</strong></h2>
+<h3 id="31-structural-axis-saxis"><strong>3.1 Structural Axis (S‑axis)</strong></h3>
+<p>Project structural outputs onto the S‑axis by identifying:</p>
+<ul>
+<li>backbone continuity  </li>
+<li>motif‑level stability  </li>
+<li>residue‑interaction geometry  </li>
+</ul>
+<p>This anchors the inference to the 3D structural core.</p>
+<h3 id="32-inference-axis-iaxis"><strong>3.2 Inference Axis (I‑axis)</strong></h3>
+<p>Map latent‑space structures onto the I‑axis by identifying:</p>
+<ul>
+<li>stable attention‑map regions  </li>
+<li>consistent embedding orientations  </li>
+<li>coherent latent‑space surfaces  </li>
+</ul>
+<p>This reveals the model’s internal structural representation.</p>
+<h3 id="33-resonancetime-axis-raxis"><strong>3.3 Resonance‑Time Axis (R‑axis)</strong></h3>
+<p>Track inference‑cycle behavior:</p>
+<ul>
+<li>convergence  </li>
+<li>oscillation  </li>
+<li>divergence  </li>
+</ul>
+<p>This classifies folding behavior into R₁, R₂, or R₃ regimes.</p>
+<hr>
+<h2 id="4-step-3-project-into-dimensional-cores"><strong>4. Step 3 — Project into Dimensional Cores</strong></h2>
+<h3 id="41-3d-projection"><strong>4.1 3D Projection</strong></h3>
+<p>Project structural geometry into the 3D core to evaluate:</p>
+<ul>
+<li>backbone shape  </li>
+<li>motif‑level structure  </li>
+<li>local coherence  </li>
+</ul>
+<h3 id="42-6d-projection"><strong>4.2 6D Projection</strong></h3>
+<p>Project interaction‑level signals into the 6D core to evaluate:</p>
+<ul>
+<li>residue‑pair relationships  </li>
+<li>interaction‑pattern stability  </li>
+<li>latent‑space alignment  </li>
+</ul>
+<h3 id="43-9d-projection"><strong>4.3 9D Projection</strong></h3>
+<p>Project folding‑pathway signals into the 9D core to evaluate:</p>
+<ul>
+<li>pathway coherence  </li>
+<li>regime‑transition structure  </li>
+<li>resonance‑time alignment  </li>
+</ul>
+<p>These projections preserve substrate invariants.</p>
+<hr>
+<h2 id="5-step-4-identify-folding-regimes"><strong>5. Step 4 — Identify Folding Regimes</strong></h2>
+<p>Using the projections:</p>
+<ul>
+<li>
+<p><strong>R₁ (Stable):</strong><br>
+  Compact, coherent projections in 3D–9D cores.</p>
+</li>
+<li>
+<p><strong>R₂ (Transition):</strong><br>
+  Branching or oscillatory projections indicating structural reorientation.</p>
+</li>
+<li>
+<p><strong>R₃ (High‑Uncertainty):</strong><br>
+  Dispersed projections with weak motif‑level structure.</p>
+</li>
+</ul>
+<p>Regime identification supports interpretability and drift detection.</p>
+<hr>
+<h2 id="6-step-5-apply-vst-validation-layers"><strong>6. Step 5 — Apply vST Validation Layers</strong></h2>
+<p>Apply V₁–V₄ validation layers:</p>
+<ul>
+<li><strong>V₁:</strong> Structural coherence  </li>
+<li><strong>V₂:</strong> Latent‑space stability  </li>
+<li><strong>V₃:</strong> Resonance‑time regime behavior  </li>
+<li><strong>V₄:</strong> Dimensional‑core alignment  </li>
+</ul>
+<p>Validation confirms whether the alignment is stable and reproducible.</p>
+<hr>
+<h2 id="7-step-6-interpret-alignment-results"><strong>7. Step 6 — Interpret Alignment Results</strong></h2>
+<p>A complete alignment yields:</p>
+<ul>
+<li>stable structural projections  </li>
+<li>coherent latent‑space surfaces  </li>
+<li>predictable regime transitions  </li>
+<li>consistent dimensional‑core mapping  </li>
+<li>validated substrate invariants  </li>
+</ul>
+<p>If any validation layer fails, drift detection is triggered.</p>
+<hr>
+<h2 id="8-summary"><strong>8. Summary</strong></h2>
+<p>This walkthrough demonstrates:</p>
+<ul>
+<li>how to extract structural and latent‑space signals  </li>
+<li>how to map them onto substrate axes  </li>
+<li>how to project them into dimensional cores  </li>
+<li>how to classify folding regimes  </li>
+<li>how to validate alignment using vST  </li>
+<li>how to detect drift when invariants fail  </li>
+</ul>
+<p>The workflow provides a reproducible method for interpreting AlphaFold‑class inference systems through the RSM substrate.</p>
+  </main>
+</body>
+</html>

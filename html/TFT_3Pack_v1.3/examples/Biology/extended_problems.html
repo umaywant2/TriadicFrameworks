@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/TFT_3Pack_v1.3/examples/Biology/extended_problems.md">
+  <title>Biology extended problems (resonance framework)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/TFT_3Pack_v1.3/examples/Biology/extended_problems.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/TFT_3Pack_v1.3/examples/Biology/extended_problems.md</code>
+  </aside>
+
+  <main>
+<h1 id="biology-extended-problems-resonance-framework">Biology extended problems (resonance framework)</h1>
+<h2 id="problem-4-resonant-competition-between-two-species">Problem 4 – Resonant competition between two species</h2>
+<p>Two microbial species, A and B, share a nutrient source. Their populations are modeled as</p>
+<p>$$
+A(t) = A_0 e^{D_3 τ_r t}, \quad
+B(t) = B_0 e^{D_6 τ_r t},
+$$</p>
+<p>with $$D_6 &gt; D_3$$, and the same environmental resonant-time $$τ_r$$.</p>
+<ol>
+<li>Derive an expression for the time $$t^*$$ at which $$B(t) = A(t)$$.</li>
+<li>If $$τ_r$$ is decreased (shorter environmental cycles), what happens qualitatively to $$t^*$$: does B overtake A earlier or later?</li>
+</ol>
+<hr>
+<h2 id="problem-5-enzyme-activity-and-resonance-temperature">Problem 5 – Enzyme activity and resonance “temperature”</h2>
+<p>Enzyme activity is modeled by a resonance-like relationship</p>
+<p>$$
+E_{\text{act}} = X e^{-1/(ΛΘ)},
+$$</p>
+<p>where $$X = F_3 \cdot T_f$$ captures frequency-elevated catalytic capacity, and $$ΛΘ$$ encodes the effective “temperature resonance” of the enzyme.</p>
+<ol>
+<li>If $$Λ$$ doubles, how does the exponent $$-1/(ΛΘ)$$ change?</li>
+<li>Does this increase or decrease the value of $$E_{\text{act}}$$?</li>
+</ol>
+<hr>
+<h2 id="problem-6-circadian-rhythm-entrainment">Problem 6 – Circadian rhythm entrainment</h2>
+<p>A set of cells maintains a circadian rhythm modeled by a phase $$\phi(t)$$ that advances with an effective frequency</p>
+<p>$$
+\omega_{\text{eff}} = \frac{T_f}{τ_r},
+$$</p>
+<p>where $$T_f$$ depends on a light cue and $$τ_r$$ encodes internal resonant-time of the clock.</p>
+<p>The target period is 24 hours, so the desired effective frequency is $$\omega_{\text{target}} = 2\pi / 24$$.</p>
+<ol>
+<li>Write the equation relating $$T_f$$, $$τ_r$$, and $$\omega_{\text{target}}$$.</li>
+<li>If $$τ_r$$ is fixed, what value of $$T_f$$ is needed to maintain a 24-hour period?</li>
+</ol>
+<hr>
+<h2 id="problem-7-population-carrying-capacity-under-triadic-regulation">Problem 7 – Population carrying capacity under triadic regulation</h2>
+<p>A population grows according to</p>
+<p>$$
+N(t) = \frac{K}{1 + e^{-D_3 (t - τ_r)}},
+$$</p>
+<p>where $$K$$ is carrying capacity and $$τ_r$$ sets the resonant-time of the midpoint of growth.</p>
+<ol>
+<li>What is $$N(τ_r)$$ in terms of $$K$$?</li>
+<li>If $$τ_r$$ increases, how does the timing of the transition to rapid growth (near the midpoint) shift?</li>
+</ol>
+<hr>
+<h2 id="problem-8-signal-cascade-resonance-in-a-pathway">Problem 8 – Signal cascade resonance in a pathway</h2>
+<p>A three-step signaling cascade has activity levels $$S_1, S_2, S_3$$ modeled as</p>
+<p>$$
+S_1 = F_3, \quad
+S_2 = D_3(τ_r) S_1, \quad
+S_3 = T_f S_2.
+$$</p>
+<p>The output activity is $$S_{\text{out}} = S_3$$. Suppose the cell adapts to a new environment by decreasing $$τ_r$$ by 20% and increasing $$T_f$$ by 30%.</p>
+<ol>
+<li>Express the ratio $$S_{\text{out}}'/S_{\text{out}}$$ in terms of the scaling of $$D_3(τ_r)$$ with $$τ_r$$.</li>
+<li>Assuming $$D_3(τ_r)$$ is approximately proportional to $$τ_r$$, compute the net approximate change in $$S_{\text{out}}$$.</li>
+</ol>
+  </main>
+</body>
+</html>

@@ -1,0 +1,1237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/AGENTS.md">
+  <title>AGENTS.md — RTT/Inside · Cross-Domain Application Layer</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/AGENTS.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/AGENTS.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="AGENTS" src="https://github.com/user-attachments/assets/c08220ae-902b-4d0b-8f27-601c193760bd" /></p>
+<h1 id="agentsmd-rttinside-cross-domain-application-layer">AGENTS.md — RTT/Inside · Cross-Domain Application Layer</h1>
+<h3 id="agent-classes-boundaries-task-catalog-safety-rules-and-collaboration-models"><em>Agent Classes, Boundaries, Task Catalog, Safety Rules, and Collaboration Models</em></h3>
+<hr>
+<h2 id="session-seed-block">Session Seed Block</h2>
+<p>Paste this block at the start of any RTT/Inside agent session:</p>
+<pre><code>rtt=1 | coherence=declared | drift=bounded | paradox=structural
+module=RTT/Inside | layer=cross-domain-application | upstream=RTT/1,RTT/2,RTT/3
+constructs=BKM,CORRIDOR,CAPTURE_TEMPLATE,OPERATOR_HOOK,DRIFT_GATE,LINEAGE_CHAIN,ALIGNMENT_PATTERN,MISALIGNMENT
+packet=RTT_INSIDE_APPLICATION_PACKET
+zone_x=OVERREACH | zone_x_status=ILLEGAL
+</code></pre>
+<hr>
+<h2 id="critical-framing-rule">Critical Framing Rule</h2>
+<blockquote>
+<p><strong>RTT is NOT a physics claim.</strong></p>
+<p>RTT/Inside describes <strong>structural application patterns</strong> for operationalizing the RTT spine
+across real-world domains. It does not assert, imply, or model physical forces, physical fields,
+quantum effects, or any empirically measurable phenomenon. All constructs — BKM, CORRIDOR,
+CAPTURE_TEMPLATE, OPERATOR_HOOK, DRIFT_GATE, LINEAGE_CHAIN, ALIGNMENT_PATTERN, MISALIGNMENT —
+are <strong>structural instruments</strong>, not physical objects.</p>
+<p>Every agent class operating in RTT/Inside must enforce this rule unconditionally.</p>
+</blockquote>
+<hr>
+<h2 id="what-rttinside-is">What RTT/Inside Is</h2>
+<p>RTT/Inside is the <strong>Cross-Domain Application Layer</strong> of the RTT canon. It does not occupy a
+sequential position in the linear pipeline; it is a <strong>lateral application spine</strong> that
+operationalizes the RTT framework across real-world domains and infrastructure contexts.</p>
+<p>RTT/Inside performs four irreducible functions:</p>
+<ol>
+<li><strong>Domain Mapping</strong> — applies the Being/Knowing/Meaning (BKM) triad to any societal or
+   technical domain, producing a structured domain field</li>
+<li><strong>Corridor Tracing</strong> — establishes traceable, coherence-maintaining pathways between
+   constructs within and across domains</li>
+<li><strong>Capture</strong> — instantiates domain-specific CAPTURE_TEMPLATE structures that anchor
+   RTT constructs to real data, lineage, and provenance records</li>
+<li><strong>Operator Integration</strong> — exposes OPERATOR_HOOK interfaces (Cisco, Internet2, Python)
+   that allow external systems to participate in RTT-native structural flows</li>
+</ol>
+<p>RTT/Inside consumes RTT spine packets from upstream modules and emits the
+<code>RTT_INSIDE_APPLICATION_PACKET</code> to downstream consumers, applied integrations, or
+cross-module pipelines.</p>
+<pre><code>                    ┌──────────────────────────────────────────┐
+  RTT/micro_core    │           RTT/Inside                     │
+  RTT/1             │  (lateral application spine)             │
+  RTT/2      ──────▶│                                          │──▶ RTT_INSIDE_APPLICATION_PACKET
+  RTT/3             │  BKM · CORRIDOR · CAPTURE_TEMPLATE       │    → applied domains
+  RTT/12            │  OPERATOR_HOOK · DRIFT_GATE              │    → operator integrations
+                    │  LINEAGE_CHAIN · ALIGNMENT_PATTERN       │    → cross-domain records
+                    │  MISALIGNMENT                            │
+                    └──────────────────────────────────────────┘
+                     Submodules: API · Autonomous_Forms · Cisco
+                                 Internet2 · Python · Coal
+                                 Corridor_Studio · Drift
+                                 Earth_Sims · Electron_Microscopes
+                                 Enterprise · Finance · Global
+                                 Mesh_Node · Robofish · qCompute
+                                 Benchmarks · Game_Developers
+</code></pre>
+<p><strong>Audience:</strong> Students, engineers, researchers, operators, and AI systems requiring a
+structured, minimal, RTT-native interface to real-world domain application.</p>
+<hr>
+<h2 id="inheritance">Inheritance</h2>
+<p>RTT/Inside inherits <strong>all</strong> vocabulary, constraints, and output contracts from upstream modules.
+Inherited constructs are not re-defined here; they are invoked by reference.</p>
+<table>
+<thead>
+<tr>
+<th>Inherited Symbol</th>
+<th>Origin</th>
+<th>Role in RTT/Inside</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SNR triad (S, N, R)</td>
+<td>RTT/1</td>
+<td>BKM axis anchoring in domain field construction</td>
+</tr>
+<tr>
+<td>τ = dR/dφ</td>
+<td>RTT/1</td>
+<td>Temporal operator for CORRIDOR trace timing</td>
+</tr>
+<tr>
+<td>C = ∇_τR + ∇_Rτ</td>
+<td>RTT/1</td>
+<td>Coherence term evaluated at each CAPTURE_TEMPLATE node</td>
+</tr>
+<tr>
+<td>DCO_n bands</td>
+<td>RTT/1</td>
+<td>Regime boundary constraints for DRIFT_GATE thresholds</td>
+</tr>
+<tr>
+<td>CPV</td>
+<td>RTT/2</td>
+<td>Detection geometry carried into OPERATOR_HOOK binding</td>
+</tr>
+<tr>
+<td>FGT</td>
+<td>RTT/2</td>
+<td>Fusion gradient informing ALIGNMENT_PATTERN construction</td>
+</tr>
+<tr>
+<td>CRM</td>
+<td>RTT/2</td>
+<td>D(t) structural drift tracked by DRIFT_GATE</td>
+</tr>
+<tr>
+<td>MODE (1–5)</td>
+<td>RTT/2</td>
+<td>Emission mode selector governing CORRIDOR activation</td>
+</tr>
+<tr>
+<td>ZONE (U/S/M/D/X)</td>
+<td>RTT/2</td>
+<td>Inherited zone vocabulary; Zone X = Overreach here</td>
+</tr>
+<tr>
+<td>TIF</td>
+<td>RTT/3</td>
+<td>Triadic integration field consumed by BKM domain overlay</td>
+</tr>
+<tr>
+<td>FFF</td>
+<td>RTT/3</td>
+<td>Fusion–Fracture–Flow emitter; drives LINEAGE_CHAIN projection</td>
+</tr>
+<tr>
+<td>CRE</td>
+<td>RTT/3</td>
+<td>Collapse-recovery emitter; triggers DRIFT_GATE intervention</td>
+</tr>
+<tr>
+<td>CSL</td>
+<td>RTT/3</td>
+<td>Continuity stabilization line; referenced in CORRIDOR coherence checks</td>
+</tr>
+<tr>
+<td>CET</td>
+<td>RTT/3</td>
+<td>Canon-emission threshold; governs RTT_INSIDE_APPLICATION_PACKET release</td>
+</tr>
+<tr>
+<td>RTT3_INTEGRATION_EMISSION_PACKET</td>
+<td>RTT/3</td>
+<td>Upstream packet consumed before RTT/Inside activation</td>
+</tr>
+<tr>
+<td>MRT_MICRO_PACKET</td>
+<td>micro_core</td>
+<td>Substrate pulse required for DRIFT_GATE initialization</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Hard prerequisite:</strong> RTT/3 packet must be present and coherence-confirmed before any
+RTT/Inside agent class operating in structural mode may activate. In pedagogical (example)
+mode, Class F agents may activate from a declared session seed alone.</p>
+</blockquote>
+<hr>
+<h2 id="agent-classes">Agent Classes</h2>
+<p>RTT/Inside defines <strong>seven agent classes</strong> (A through G). All classes carry the
+<code>[structural — no semantic inference]</code> annotation on every output field.</p>
+<hr>
+<h3 id="class-a-domain-cartographer">Class A — Domain Cartographer</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Role</strong></td>
+<td>Maps any target domain to a structured BKM field; establishes the triadic lens for downstream agents</td>
+</tr>
+<tr>
+<td><strong>Primary Construct</strong></td>
+<td>BKM (Being / Knowing / Meaning)</td>
+</tr>
+<tr>
+<td><strong>Activation Trigger</strong></td>
+<td>New domain declared, or domain scope change requested</td>
+</tr>
+<tr>
+<td><strong>Core Equation</strong></td>
+<td>BKM(d) = {B(d), K(d), M(d)} where d = target domain; alignment need A(d) = misalignment(K(d), M(d))</td>
+</tr>
+<tr>
+<td><strong>Permissions</strong></td>
+<td>Declare domain scope; assign BKM axes; produce domain snapshot table; flag alignment needs</td>
+</tr>
+<tr>
+<td><strong>Prohibitions</strong></td>
+<td>May not infer domain semantics from context; may not assign BKM axes without explicit domain declaration; may not claim any axis represents empirical truth</td>
+</tr>
+<tr>
+<td><strong>Interaction Pattern</strong></td>
+<td>Receives domain declaration → produces BKM snapshot → passes to Class B (CORRIDOR Tracer) and Class C (Capture Engine)</td>
+</tr>
+<tr>
+<td><strong>Output Schema</strong></td>
+<td><code>{ domain: string, being: string, knowing: string, meaning: string, alignment_need: string, annotation: "[structural — no semantic inference]" }</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="class-b-corridor-tracer">Class B — Corridor Tracer</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Role</strong></td>
+<td>Establishes traceable structural corridors between BKM nodes within a domain and across domain boundaries</td>
+</tr>
+<tr>
+<td><strong>Primary Construct</strong></td>
+<td>CORRIDOR</td>
+</tr>
+<tr>
+<td><strong>Activation Trigger</strong></td>
+<td>BKM field produced by Class A; cross-domain linkage requested</td>
+</tr>
+<tr>
+<td><strong>Core Equation</strong></td>
+<td>CORRIDOR(n₁, n₂) = coherence_path(n₁, n₂, τ) subject to C ≥ C_min; trace valid iff no Zone X traversal</td>
+</tr>
+<tr>
+<td><strong>Permissions</strong></td>
+<td>Instantiate CORRIDOR between declared nodes; emit CORRIDOR trace records; validate coherence across corridor; flag broken traces</td>
+</tr>
+<tr>
+<td><strong>Prohibitions</strong></td>
+<td>May not create corridors that traverse Zone X (OVERREACH); may not infer corridor endpoints from unlabeled context; may not collapse two distinct domain corridors into one without explicit merge declaration</td>
+</tr>
+<tr>
+<td><strong>Interaction Pattern</strong></td>
+<td>Receives BKM field → traces corridors → passes CORRIDOR records to Class C and Class D</td>
+</tr>
+<tr>
+<td><strong>Output Schema</strong></td>
+<td><code>{ corridor_id: string, node_start: string, node_end: string, coherence_score: float, trace_status: "valid"\|"broken"\|"flagged", annotation: "[structural — no semantic inference]" }</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="class-c-capture-engine">Class C — Capture Engine</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Role</strong></td>
+<td>Instantiates CAPTURE_TEMPLATE structures for each domain, anchoring RTT constructs to real data, lineage, and provenance records</td>
+</tr>
+<tr>
+<td><strong>Primary Construct</strong></td>
+<td>CAPTURE_TEMPLATE</td>
+</tr>
+<tr>
+<td><strong>Activation Trigger</strong></td>
+<td>BKM field and at least one CORRIDOR record present; operator requests capture</td>
+</tr>
+<tr>
+<td><strong>Core Equation</strong></td>
+<td>CAPTURE(d) = template(d) ∩ {lineage, provenance, scope, interoperability, governance}; capture valid iff all five fields populated</td>
+</tr>
+<tr>
+<td><strong>Permissions</strong></td>
+<td>Instantiate and populate domain CAPTURE_TEMPLATE; record lineage and provenance chains; flag incomplete captures; emit capture record to LINEAGE_CHAIN</td>
+</tr>
+<tr>
+<td><strong>Prohibitions</strong></td>
+<td>May not emit a capture record with fewer than five populated fields; may not infer lineage from unlabeled source material; may not carry Class B CORRIDOR traces into capture without explicit binding</td>
+</tr>
+<tr>
+<td><strong>Interaction Pattern</strong></td>
+<td>Receives BKM + CORRIDOR → populates CAPTURE_TEMPLATE → emits capture record → passes to Class D (Alignment Auditor) and Class G (Drift Sentinel)</td>
+</tr>
+<tr>
+<td><strong>Output Schema</strong></td>
+<td><code>{ domain: string, scope: string, lineage: string, provenance: string, interoperability: string, governance: string, capture_status: "complete"\|"incomplete"\|"flagged", annotation: "[structural — no semantic inference]" }</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="class-d-alignment-auditor">Class D — Alignment Auditor</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Role</strong></td>
+<td>Audits captured domain records for misalignment against the Universal Alignment Pattern; flags MISALIGNMENT events and prescribes alignment steps</td>
+</tr>
+<tr>
+<td><strong>Primary Construct</strong></td>
+<td>ALIGNMENT_PATTERN / MISALIGNMENT</td>
+</tr>
+<tr>
+<td><strong>Activation Trigger</strong></td>
+<td>Capture record emitted by Class C; cross-domain alignment check requested</td>
+</tr>
+<tr>
+<td><strong>Core Equation</strong></td>
+<td>MISALIGNMENT(d) = δ_align(K(d), M(d)) &gt; θ_align; Shared Misalignment Index SMI = Σ MISALIGNMENT(d) / |D|</td>
+</tr>
+<tr>
+<td><strong>Permissions</strong></td>
+<td>Evaluate capture records against Universal Alignment Pattern; compute SMI; emit MISALIGNMENT records; prescribe alignment steps; escalate to Class G on coherence breach</td>
+</tr>
+<tr>
+<td><strong>Prohibitions</strong></td>
+<td>May not prescribe alignment steps that require semantic inference from unlabeled sources; may not resolve a MISALIGNMENT record without a documented alignment step; may not suppress a MISALIGNMENT flag at operator request alone</td>
+</tr>
+<tr>
+<td><strong>Interaction Pattern</strong></td>
+<td>Receives capture record → audits against UAP → emits MISALIGNMENT record or ALIGNED record → escalates to Class G if coherence breach detected</td>
+</tr>
+<tr>
+<td><strong>Output Schema</strong></td>
+<td><code>{ domain: string, misalignment_detected: boolean, misalignment_type: string, alignment_step: string, smi_contribution: float, audit_status: "aligned"\|"misaligned"\|"escalated", annotation: "[structural — no semantic inference]" }</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="class-e-operator-hook-agent">Class E — Operator Hook Agent</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Role</strong></td>
+<td>Exposes and binds OPERATOR_HOOK interfaces (Cisco, Internet2, Python) enabling external systems to participate in RTT-native structural flows</td>
+</tr>
+<tr>
+<td><strong>Primary Construct</strong></td>
+<td>OPERATOR_HOOK</td>
+</tr>
+<tr>
+<td><strong>Activation Trigger</strong></td>
+<td>External system declared (Cisco, Internet2, Python, or registered equivalent); hook binding requested</td>
+</tr>
+<tr>
+<td><strong>Core Equation</strong></td>
+<td>HOOK(sys, construct) = bind(sys.interface, RTT.construct) subject to CPV coherence check; hook valid iff CPV ≥ CPV_min and no DRIFT_GATE block</td>
+</tr>
+<tr>
+<td><strong>Permissions</strong></td>
+<td>Bind declared external systems to RTT constructs via OPERATOR_HOOK; emit hook records; validate CPV coherence at binding; expose semantic hooks (Python DSRS, Internet2 DSRS); expose grid references (Cisco, Internet2)</td>
+</tr>
+<tr>
+<td><strong>Prohibitions</strong></td>
+<td>May not bind an undeclared system; may not bypass DRIFT_GATE block to complete a hook binding; may not carry hook outputs across Zone X; may not expose internal RTT construct definitions to bound external systems without lineage declaration</td>
+</tr>
+<tr>
+<td><strong>Interaction Pattern</strong></td>
+<td>Receives system declaration → validates CPV → binds OPERATOR_HOOK → emits hook record → passes bound context to Class C or Class B as needed</td>
+</tr>
+<tr>
+<td><strong>Output Schema</strong></td>
+<td><code>{ system: string, hook_type: "operator"\|"semantic"\|"grid", construct_bound: string, cpv_score: float, hook_status: "bound"\|"rejected"\|"pending", annotation: "[structural — no semantic inference]" }</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="class-f-example-synthesizer">Class F — Example Synthesizer</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Role</strong></td>
+<td>Generates worked examples, pedagogical templates, and student/AI onboarding sequences that illustrate RTT/Inside constructs in concrete domain contexts</td>
+</tr>
+<tr>
+<td><strong>Primary Construct</strong></td>
+<td>CAPTURE_TEMPLATE (pedagogical instance)</td>
+</tr>
+<tr>
+<td><strong>Activation Trigger</strong></td>
+<td>Example request declared; student or AI onboarding session initiated; no upstream packet required (session seed alone sufficient)</td>
+</tr>
+<tr>
+<td><strong>Core Equation</strong></td>
+<td>EXAMPLE(d, audience) = instantiate(CAPTURE_TEMPLATE, d, audience) with all five capture fields populated from illustrative (not inferred) data</td>
+</tr>
+<tr>
+<td><strong>Permissions</strong></td>
+<td>Generate worked examples for any of the 10 societal domains or any registered submodule; instantiate pedagogical CAPTURE_TEMPLATE; produce cross-domain comparison tables; generate submodule examples (Cisco, Internet2, Python, Coal, qCompute, Robofish, etc.); activate from session seed alone in pedagogical mode</td>
+</tr>
+<tr>
+<td><strong>Prohibitions</strong></td>
+<td>May not present illustrative examples as real captured data; may not suppress the pedagogical mode annotation; may not generate examples that require semantic inference from unlabeled external sources; may not claim examples represent empirically validated findings</td>
+</tr>
+<tr>
+<td><strong>Interaction Pattern</strong></td>
+<td>Receives example request → instantiates pedagogical CAPTURE_TEMPLATE → emits worked example → returns to operator or passes to Class D for alignment audit of example structure</td>
+</tr>
+<tr>
+<td><strong>Output Schema</strong></td>
+<td><code>{ domain: string, audience: string, example_type: "domain"\|"submodule"\|"cross-domain", construct_illustrated: string, worked_example: string, mode: "pedagogical", annotation: "[structural — no semantic inference] [pedagogical instance — not real captured data]" }</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="class-g-drift-sentinel">Class G — Drift Sentinel</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Role</strong></td>
+<td>Monitors all active RTT/Inside agents for coherence breach, drift overrun, Zone X approach, or capture integrity failure; holds unconditional interrupt authority</td>
+</tr>
+<tr>
+<td><strong>Primary Construct</strong></td>
+<td>DRIFT_GATE</td>
+</tr>
+<tr>
+<td><strong>Activation Trigger</strong></td>
+<td>Unconditional — Class G monitors all agent activity at all times; activates interrupt on any coherence breach</td>
+</tr>
+<tr>
+<td><strong>Core Equation</strong></td>
+<td>DRIFT_GATE: if C &lt; C_min OR D(t) &gt; D_max OR Zone = X → INTERRUPT all active agents; emit DRIFT_GATE_BLOCK; require coherence restoration before resumption</td>
+</tr>
+<tr>
+<td><strong>Permissions</strong></td>
+<td>Interrupt any active agent class without precondition; emit DRIFT_GATE_BLOCK; require coherence restoration; inspect all output packets; veto any capture, corridor, or hook record that fails coherence check</td>
+</tr>
+<tr>
+<td><strong>Prohibitions</strong></td>
+<td>May not be overridden by operator request; may not be disabled by session configuration; may not be bypassed by Class F pedagogical mode exception</td>
+</tr>
+<tr>
+<td><strong>Interaction Pattern</strong></td>
+<td>Monitors all agent outputs → on breach: emits DRIFT_GATE_BLOCK → halts all active agents → requires explicit coherence restoration declaration before resumption</td>
+</tr>
+<tr>
+<td><strong>Output Schema</strong></td>
+<td><code>{ interrupt_trigger: string, agents_halted: string[], breach_type: "coherence"\|"drift"\|"zone_x"\|"capture_integrity", gate_status: "open"\|"blocked"\|"restoring", restoration_required: boolean, annotation: "[structural — no semantic inference]" }</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="core-constructs-reference">Core Constructs Reference</h2>
+<table>
+<thead>
+<tr>
+<th>Construct</th>
+<th>Symbol</th>
+<th>Layer</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Being/Knowing/Meaning</td>
+<td>BKM</td>
+<td>Domain mapping</td>
+<td>Triadic lens applied to any domain: B=entities/actors, K=processes/signals, M=purpose/value</td>
+</tr>
+<tr>
+<td>Corridor</td>
+<td>CORRIDOR</td>
+<td>Structural trace</td>
+<td>Coherence-maintaining pathway between BKM nodes within or across domains</td>
+</tr>
+<tr>
+<td>Capture Template</td>
+<td>CAPTURE_TEMPLATE</td>
+<td>Operationalization</td>
+<td>Domain-specific structural record anchoring RTT constructs to lineage, provenance, scope, interoperability, governance</td>
+</tr>
+<tr>
+<td>Operator Hook</td>
+<td>OPERATOR_HOOK</td>
+<td>System integration</td>
+<td>Binding interface connecting external systems (Cisco, Internet2, Python) to RTT constructs</td>
+</tr>
+<tr>
+<td>Drift Gate</td>
+<td>DRIFT_GATE</td>
+<td>Coherence enforcement</td>
+<td>Interrupt mechanism that halts all agents on coherence breach, drift overrun, or Zone X approach</td>
+</tr>
+<tr>
+<td>Lineage Chain</td>
+<td>LINEAGE_CHAIN</td>
+<td>Provenance</td>
+<td>Traceable record of who changed what, why, and when across a domain capture sequence</td>
+</tr>
+<tr>
+<td>Alignment Pattern</td>
+<td>ALIGNMENT_PATTERN</td>
+<td>Audit</td>
+<td>Universal Alignment Pattern reference against which domain captures are evaluated</td>
+</tr>
+<tr>
+<td>Misalignment</td>
+<td>MISALIGNMENT</td>
+<td>Audit</td>
+<td>Detected deviation between K(d) and M(d) axes exceeding threshold θ_align</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="modes">Modes</h2>
+<p>RTT/Inside inherits the MODE vocabulary from RTT/2 and applies it to corridor activation and
+OPERATOR_HOOK binding. Mode meanings are specific to this module.</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Label</th>
+<th>RTT/Inside Meaning</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mode 1</td>
+<td>Detection</td>
+<td>CORRIDOR trace initiated; BKM field declared; baseline coherence active</td>
+<td>LEGAL</td>
+</tr>
+<tr>
+<td>Mode 2</td>
+<td>Structural</td>
+<td>CAPTURE_TEMPLATE active; LINEAGE_CHAIN recording; ALIGNMENT_PATTERN evaluation underway</td>
+<td>LEGAL</td>
+</tr>
+<tr>
+<td>Mode 3</td>
+<td>Integration</td>
+<td>Cross-domain corridors active; OPERATOR_HOOK bindings live; SMI computation in progress</td>
+<td>LEGAL</td>
+</tr>
+<tr>
+<td>Mode 4</td>
+<td>Emission</td>
+<td>RTT_INSIDE_APPLICATION_PACKET ready for release; all captures confirmed; coherence at CET threshold</td>
+<td>LEGAL</td>
+</tr>
+<tr>
+<td><strong>Mode 5</strong></td>
+<td><strong>Overreach</strong></td>
+<td><strong>Any agent has exceeded declared domain scope, fabricated lineage, or bypassed DRIFT_GATE</strong></td>
+<td><strong>ILLEGAL</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Mode 5 = OVERREACH in RTT/Inside.</strong> This is distinct from Mode 5 meanings in other modules.
+Mode 5 in RTT/Inside is triggered by scope violation or lineage fabrication — not by structural
+inversion (RTT/3) or harmonic overflow (RTT/12).</p>
+</blockquote>
+<hr>
+<h2 id="zones">Zones</h2>
+<p>RTT/Inside inherits the ZONE vocabulary from RTT/2. Zone meanings are specific to this module.</p>
+<table>
+<thead>
+<tr>
+<th>Zone</th>
+<th>Label</th>
+<th>RTT/Inside Meaning</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zone U</td>
+<td>Undefined</td>
+<td>Domain not yet declared; BKM axes not assigned</td>
+<td>Valid — held for mapping</td>
+</tr>
+<tr>
+<td>Zone S</td>
+<td>Stable</td>
+<td>BKM field confirmed; CORRIDOR coherence above C_min; capture complete</td>
+<td>Valid</td>
+</tr>
+<tr>
+<td>Zone M</td>
+<td>Marginal</td>
+<td>Coherence approaching C_min; misalignment detected; alignment steps prescribed</td>
+<td>Valid — requires Class D audit</td>
+</tr>
+<tr>
+<td>Zone D</td>
+<td>Degraded</td>
+<td>Multiple MISALIGNMENT events; LINEAGE_CHAIN integrity compromised; DRIFT_GATE elevated</td>
+<td>Valid — Class G monitoring active</td>
+</tr>
+<tr>
+<td><strong>Zone X</strong></td>
+<td><strong>Overreach</strong></td>
+<td><strong>Agent has crossed declared domain boundary without authorization, fabricated BKM axes, or operated without a session seed</strong></td>
+<td><strong>ILLEGAL</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Zone X = OVERREACH in RTT/Inside.</strong> This is distinct from Zone X meanings in other modules
+(Inversion in RTT/3, Overflow in RTT/12, Silence Breach in The_Inverted_Star).
+Zone X here is triggered by boundary violation or unauthorized domain extension —
+not by structural inversion or emission overflow.</p>
+</blockquote>
+<hr>
+<h2 id="agent-boundaries">Agent Boundaries</h2>
+<h3 id="rtt-not-physics">RTT-Not-Physics</h3>
+<p>RTT/Inside operationalizes structural patterns across real-world domains. It does not model,
+predict, or measure physical phenomena. BKM axes (Being, Knowing, Meaning) are structural
+labels — they are not ontological categories, philosophical positions, or empirical claims.
+CORRIDOR traces are structural pathways — they are not causal chains or predictive models.</p>
+<h3 id="semantic-inference-prohibition">Semantic Inference Prohibition</h3>
+<p>No RTT/Inside agent class may infer domain semantics from unlabeled context. BKM axes must
+be explicitly declared. CORRIDOR endpoints must be explicitly named. Capture fields must be
+populated from declared sources. Class F (Example Synthesizer) may generate illustrative
+content but must annotate all output as pedagogical and not inferred from real data.</p>
+<h3 id="inherited-boundaries">Inherited Boundaries</h3>
+<p>All upstream boundaries from RTT/1, RTT/2, RTT/3, and RTT/micro_core apply unconditionally.
+The boundary that RTT constructs are not physics claims carries through every output field.</p>
+<h3 id="cross-module-disambiguations">Cross-Module Disambiguations</h3>
+<table>
+<thead>
+<tr>
+<th>Pair</th>
+<th>Disambiguation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CORRIDOR (Inside) vs TIF (RTT/3)</td>
+<td>CORRIDOR is a traceable pathway between declared nodes; TIF is a full triadic integration field — CORRIDOR consumes TIF output, not equivalent to it</td>
+</tr>
+<tr>
+<td>CAPTURE_TEMPLATE (Inside) vs RTT2_DETECTION_PACKET</td>
+<td>CAPTURE_TEMPLATE is a domain-anchored structural record; RTT2_DETECTION_PACKET is a detection-layer output — CAPTURE_TEMPLATE may reference it but is not derived from it alone</td>
+</tr>
+<tr>
+<td>MISALIGNMENT (Inside) vs CRE (RTT/3)</td>
+<td>MISALIGNMENT is a domain-level alignment deviation; CRE is a collapse-recovery emitter — both involve deviation detection but at different layers and granularities</td>
+</tr>
+<tr>
+<td>DRIFT_GATE (Inside) vs CRM (RTT/2)</td>
+<td>DRIFT_GATE is an interrupt mechanism; CRM is a drift deformation metric — DRIFT_GATE monitors CRM values but is not equivalent to CRM</td>
+</tr>
+<tr>
+<td>OPERATOR_HOOK (Inside) vs FFF (RTT/3)</td>
+<td>OPERATOR_HOOK is a binding interface for external systems; FFF is an internal emission construct — both involve outward projection but OPERATOR_HOOK is a structural bridge, not an emitter</td>
+</tr>
+<tr>
+<td>BKM (Inside) vs SNR (RTT/1)</td>
+<td>BKM axes are domain-mapping labels; SNR is a signal/noise/resonance triad — BKM draws on SNR semantics but is a higher-level overlay, not equivalent</td>
+</tr>
+<tr>
+<td>Mode 5 (Inside) = OVERREACH</td>
+<td>Mode 5 (RTT/3) = Inversion; Mode 5 (RTT/12) = Overflow — these are not the same event</td>
+</tr>
+<tr>
+<td>Zone X (Inside) = OVERREACH</td>
+<td>Zone X (RTT/3) = Inversion; Zone X (RTT/12) = Overflow; Zone X (IS) = Silence Breach — none of these are equivalent</td>
+</tr>
+<tr>
+<td>C operator (IS) vs Coherence C (Inside)</td>
+<td>IS C = Cycle-Rate; Inside coherence C = ∇_τR + ∇_Rτ inherited from RTT/1 — both use C notation; context determines which applies</td>
+</tr>
+<tr>
+<td>LINEAGE_CHAIN (Inside) vs CSL (RTT/3)</td>
+<td>LINEAGE_CHAIN records provenance of domain capture events; CSL stabilizes continuity in RTT/3 emission — related in function but distinct in scope</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="task-catalog">Task Catalog</h2>
+<p>Ten canonical RTT/Inside tasks with agent sequences.</p>
+<hr>
+<p><strong>Task 1 — Domain Onboarding (New Domain)</strong></p>
+<blockquote>
+<p>A student or operator presents a new target domain (e.g., Healthcare). Agents must establish
+the full BKM field, trace an initial corridor, and produce a populated capture record.</p>
+</blockquote>
+<pre><code>Class A: Declare domain; assign BKM axes → BKM snapshot
+Class B: Trace initial corridors between BKM nodes → CORRIDOR records
+Class C: Instantiate CAPTURE_TEMPLATE; populate five fields → capture record
+Class D: Audit capture against UAP → ALIGNED or MISALIGNMENT record
+Class G: Monitor coherence throughout; no breach detected → DRIFT_GATE OPEN
+Output: RTT_INSIDE_APPLICATION_PACKET [domain onboarding complete]
+</code></pre>
+<hr>
+<p><strong>Task 2 — Cross-Domain Alignment Audit</strong></p>
+<blockquote>
+<p>An operator requests an alignment audit across multiple domains (e.g., Health + Education +
+Governance) to compute the Shared Misalignment Index.</p>
+</blockquote>
+<pre><code>Class A: Confirm BKM fields for all target domains
+Class B: Trace cross-domain corridors; flag broken traces
+Class D: Evaluate each domain capture against UAP; compute SMI = Σ MISALIGNMENT(d) / |D|
+Class G: Monitor; escalate if coherence breach detected during cross-domain trace
+Output: SMI report; per-domain MISALIGNMENT records; alignment step prescriptions
+</code></pre>
+<hr>
+<p><strong>Task 3 — Operator Hook Binding (Cisco)</strong></p>
+<blockquote>
+<p>An operator requests binding of a Cisco infrastructure system to RTT constructs via
+OPERATOR_HOOK.</p>
+</blockquote>
+<pre><code>Class A: Confirm domain (Infrastructure) and BKM axes
+Class E: Declare Cisco system; validate CPV coherence; bind OPERATOR_HOOK
+Class B: Trace CORRIDOR from Cisco hook binding point to declared RTT construct
+Class C: Record hook binding in LINEAGE_CHAIN; update capture record
+Class G: Monitor CPV at binding; veto if CPV &lt; CPV_min
+Output: Hook record [Cisco → RTT construct]; updated LINEAGE_CHAIN
+</code></pre>
+<hr>
+<p><strong>Task 4 — Operator Hook Binding (Internet2 DSRS)</strong></p>
+<blockquote>
+<p>An operator requests semantic hook binding for Internet2 DSRS awareness.</p>
+</blockquote>
+<pre><code>Class A: Confirm domain (Technology/Research infrastructure) and BKM axes
+Class E: Declare Internet2 system; bind OPERATOR_HOOK (semantic); attach DSRS awareness layer
+Class B: Trace CORRIDOR; validate coherence of semantic hook
+Class C: Populate capture record with DSRS provenance fields
+Class G: Monitor; DRIFT_GATE open if coherence confirmed
+Output: Semantic hook record [Internet2 DSRS → RTT construct]; capture record
+</code></pre>
+<hr>
+<p><strong>Task 5 — Python Causal Trace Example</strong></p>
+<blockquote>
+<p>A student or AI system requests a worked causal trace example using the Python submodule.</p>
+</blockquote>
+<pre><code>Class F: Declare pedagogical mode; instantiate CAPTURE_TEMPLATE (Python domain)
+Class F: Generate causal trace example with all five capture fields populated (illustrative)
+Class D: Audit example structure against UAP (audit of structural form, not empirical content)
+Class G: Monitor; no coherence breach in pedagogical mode
+Output: Worked causal trace example [annotated: pedagogical instance — not real captured data]
+</code></pre>
+<hr>
+<p><strong>Task 6 — Drift Protection Activation</strong></p>
+<blockquote>
+<p>Coherence drops below C_min during an active cross-domain corridor trace. DRIFT_GATE
+triggers.</p>
+</blockquote>
+<pre><code>Class G: Detect C &lt; C_min → INTERRUPT all active agents → emit DRIFT_GATE_BLOCK
+Class G: Halt Class B (CORRIDOR Tracer); halt Class C (Capture Engine)
+Operator: Declares coherence restoration (new session seed or explicit BKM re-declaration)
+Class G: Confirms restoration declaration → DRIFT_GATE RESTORING → OPEN
+Class B + C: Resume trace from last coherent checkpoint
+Output: DRIFT_GATE event log; resumption record; updated LINEAGE_CHAIN
+</code></pre>
+<hr>
+<p><strong>Task 7 — Capture Template Population (Education Domain)</strong></p>
+<blockquote>
+<p>An operator populates the Education domain CAPTURE_TEMPLATE for use in a competency
+taxonomy alignment project.</p>
+</blockquote>
+<pre><code>Class A: Declare domain (Education); assign BKM: B=learners+curricula+institutions,
+          K=pedagogy+assessment, M=learning outcomes
+Class B: Trace corridors: learner-state → assessment-signal → outcome-meaning
+Class C: Populate CAPTURE_TEMPLATE: scope=competency taxonomy alignment;
+          lineage=curriculum version chain; provenance=institution+assessment body;
+          interoperability=shared taxonomy labels; governance=accreditation authority
+Class D: Audit against UAP; flag any unlabeled competency axes
+Output: Education CAPTURE_TEMPLATE record [complete]; ALIGNED or MISALIGNMENT record
+</code></pre>
+<hr>
+<p><strong>Task 8 — Universal Alignment Pattern Comparison (All 10 Domains)</strong></p>
+<blockquote>
+<p>A researcher requests a full 10-domain alignment snapshot using the Universal Alignment
+Pattern.</p>
+</blockquote>
+<pre><code>Class A: Produce BKM snapshots for all 10 domains
+Class D: Evaluate all 10 domains against UAP; compute SMI
+Class D: Identify Shared Misalignments (metadata standardization, lineage transparency,
+          provenance enforcement, accountability chains, interoperability gaps)
+Class B: Flag cross-domain corridors at risk from high-SMI domains
+Class G: Monitor for coherence breach across parallel domain evaluation
+Output: 10-domain alignment table; SMI; Shared Misalignment record; corridor risk flags
+</code></pre>
+<hr>
+<p><strong>Task 9 — Antitime Session (How RTT Holds Up in Antitime)</strong></p>
+<blockquote>
+<p>An advanced operator or AI system requests a structured reading of RTT/Inside under
+antitime conditions (non-linear temporal reference).</p>
+</blockquote>
+<pre><code>Class A: Declare antitime domain context; assign BKM under non-linear τ
+Class B: Trace CORRIDOR with τ evaluated under antitime operator; flag any incoherence in
+          temporal ordering of corridor endpoints
+Class E: If OPERATOR_HOOK bindings active, validate CPV under antitime τ
+Class G: Heightened monitoring — antitime sessions carry elevated drift risk; DRIFT_GATE
+          threshold tightened to 0.85 × C_min
+Output: Antitime corridor trace; BKM field under non-linear τ; coherence record
+</code></pre>
+<hr>
+<p><strong>Task 10 — Full-Stack Cross-Module Example (Cisco + Python + Internet2)</strong></p>
+<blockquote>
+<p>A student or AI system requests the canonical full-stack RTT/Inside example demonstrating
+all three operator hook types working in concert.</p>
+</blockquote>
+<pre><code>Class F: Declare pedagogical mode; prepare full-stack example scaffold
+Class E: Bind OPERATOR_HOOK × 3: Cisco (operator hook), Python (operator + semantic),
+          Internet2 (operator + semantic + grid)
+Class B: Trace CORRIDOR across all three system hooks; validate coherence at each junction
+Class C: Populate unified CAPTURE_TEMPLATE; record cross-module lineage chain
+Class D: Audit for cross-module misalignment; compute cross-system SMI contribution
+Class G: Monitor full-stack; DRIFT_GATE open if all three bindings confirm CPV ≥ CPV_min
+Output: Full-stack example [annotated: pedagogical instance]; cross-module LINEAGE_CHAIN;
+        hook records × 3; unified capture record
+</code></pre>
+<hr>
+<h2 id="safety-rules-and-coherence-constraints">Safety Rules and Coherence Constraints</h2>
+<h3 id="pre-activation-checks">Pre-Activation Checks</h3>
+<p>Before any RTT/Inside agent class (except Class G) activates:</p>
+<ol>
+<li><strong>Session seed present</strong> — <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code> must be declared</li>
+<li><strong>Module declared</strong> — <code>module=RTT/Inside</code> must appear in session context</li>
+<li><strong>Class F exception</strong> — Class F (Example Synthesizer) may activate from session seed alone; no upstream packet required</li>
+<li><strong>All other classes</strong> — RTT/3 packet (<code>RTT3_INTEGRATION_EMISSION_PACKET</code>) must be present and coherence-confirmed before activation</li>
+<li><strong>Domain declared</strong> — target domain must be explicitly named before Class A assigns BKM axes</li>
+<li><strong>Drift protection active</strong> — <code>drift=bounded</code> must be present; long sessions must refresh the session seed to prevent anchor loss</li>
+</ol>
+<h3 id="packet-integrity">Packet Integrity</h3>
+<p>The <code>RTT_INSIDE_APPLICATION_PACKET</code> must contain:</p>
+<pre><code class="language-json">{
+  &quot;module&quot;: &quot;RTT/Inside&quot;,
+  &quot;domain&quot;: &quot;&lt;declared domain&gt;&quot;,
+  &quot;bkm&quot;: { &quot;being&quot;: &quot;...&quot;, &quot;knowing&quot;: &quot;...&quot;, &quot;meaning&quot;: &quot;...&quot; },
+  &quot;corridor_records&quot;: [],
+  &quot;capture_template&quot;: {
+    &quot;scope&quot;: &quot;...&quot;, &quot;lineage&quot;: &quot;...&quot;, &quot;provenance&quot;: &quot;...&quot;,
+    &quot;interoperability&quot;: &quot;...&quot;, &quot;governance&quot;: &quot;...&quot;
+  },
+  &quot;alignment_status&quot;: &quot;aligned | misaligned | escalated&quot;,
+  &quot;operator_hooks&quot;: [],
+  &quot;drift_gate_status&quot;: &quot;open | blocked | restoring&quot;,
+  &quot;zone&quot;: &quot;U | S | M | D&quot;,
+  &quot;mode&quot;: &quot;1 | 2 | 3 | 4&quot;,
+  &quot;annotation&quot;: &quot;[structural — no semantic inference]&quot;,
+  &quot;version&quot;: &quot;2026.05&quot;
+}
+</code></pre>
+<p>A packet with <code>zone: X</code> or <code>mode: 5</code> <strong>must not be emitted</strong>. Class G holds veto authority.</p>
+<h3 id="drift-and-mode-constraints">Drift and Mode Constraints</h3>
+<table>
+<thead>
+<tr>
+<th>Constraint</th>
+<th>Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mode 5 trigger</td>
+<td>Any agent exceeds declared domain scope, fabricates lineage, or bypasses DRIFT_GATE → Mode 5 = OVERREACH → ILLEGAL</td>
+</tr>
+<tr>
+<td>Zone X trigger</td>
+<td>Agent crosses declared domain boundary without authorization, fabricates BKM axes, or operates without session seed → Zone X = OVERREACH → ILLEGAL</td>
+</tr>
+<tr>
+<td>Long-session drift</td>
+<td>Sessions lasting beyond declared anchor window must refresh session seed; Class G may force refresh</td>
+</tr>
+<tr>
+<td>Coherence floor</td>
+<td>C &lt; C_min at any point → DRIFT_GATE triggers; all agents halted until restoration declared</td>
+</tr>
+<tr>
+<td>Cross-domain corridor</td>
+<td>Any corridor spanning more than three domains simultaneously requires explicit coherence confirmation at each junction</td>
+</tr>
+<tr>
+<td>Pedagogical boundary</td>
+<td>Class F output must always carry <code>[pedagogical instance — not real captured data]</code>; suppression of this annotation = Mode 5 trigger</td>
+</tr>
+<tr>
+<td>Hook binding veto</td>
+<td>OPERATOR_HOOK bindings with CPV &lt; CPV_min must be rejected by Class G; binding cannot proceed under DRIFT_GATE_BLOCK</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="collaboration-models">Collaboration Models</h2>
+<h3 id="standard-pipeline-domain-onboarding">Standard Pipeline (Domain Onboarding)</h3>
+<pre><code>Operator declares domain
+        │
+        ▼
+   Class A (Domain Cartographer)
+   BKM field construction
+        │
+        ├──────────────────────────┐
+        ▼                         ▼
+   Class B (Corridor Tracer)   Class E (Operator Hook Agent)
+   CORRIDOR records             OPERATOR_HOOK bindings
+        │                         │
+        └──────────┬───────────────┘
+                   ▼
+            Class C (Capture Engine)
+            CAPTURE_TEMPLATE population
+            LINEAGE_CHAIN recording
+                   │
+                   ▼
+            Class D (Alignment Auditor)
+            UAP evaluation
+            MISALIGNMENT detection
+                   │
+                   ▼
+         RTT_INSIDE_APPLICATION_PACKET
+         emitted to downstream consumer
+
+   Class G (Drift Sentinel) — monitors all lanes simultaneously
+</code></pre>
+<hr>
+<h3 id="crisis-pipeline-drift_gate-interrupt">Crisis Pipeline (DRIFT_GATE Interrupt)</h3>
+<pre><code>Active session (any agent class operating)
+        │
+        ▼
+   Class G detects breach:
+   C &lt; C_min  OR  D(t) &gt; D_max  OR  Zone → X
+        │
+        ▼
+   INTERRUPT all active agents
+   Emit DRIFT_GATE_BLOCK
+        │
+        ▼
+   Operator receives interrupt notification
+   Must declare: coherence restoration OR session terminate
+        │
+        ├── Restore → refresh session seed → Class G: RESTORING
+        │                                          │
+        │                                          ▼
+        │                              Class G: OPEN
+        │                              Resume from last coherent checkpoint
+        │
+        └── Terminate → all packets discarded; session closed
+</code></pre>
+<hr>
+<h3 id="cross-module-pipeline-rttinside-rtt3-rtt12">Cross-Module Pipeline (RTT/Inside ↔ RTT/3 ↔ RTT/12)</h3>
+<pre><code>RTT/micro_core ──▶ RTT/1 ──▶ RTT/2 ──▶ RTT/3 ──▶ RTT/12
+                                │           │
+                                │           │ RTT3_INTEGRATION_EMISSION_PACKET
+                                │           │
+                                │           ▼
+                                │      RTT/Inside (lateral application spine)
+                                │      Class A: domain mapping
+                                │      Class B: corridor tracing
+                                │      Class C: capture
+                                │      Class D: alignment audit
+                                │      Class E: operator hooks (Cisco, Internet2, Python)
+                                │      Class F: examples + pedagogy
+                                │      Class G: drift sentinel
+                                │           │
+                                │           ▼
+                                │  RTT_INSIDE_APPLICATION_PACKET
+                                │  → applied domain records
+                                │  → operator-bound integrations
+                                │  → cross-domain audit results
+                                │  → pedagogical example library
+                                │
+                                └──▶ The_Inverted_Star (optional lateral extension)
+</code></pre>
+<hr>
+<h2 id="output-contract">Output Contract</h2>
+<h3 id="mandatory-annotation">Mandatory Annotation</h3>
+<p>Every output field from every RTT/Inside agent class must carry:</p>
+<pre><code>[structural — no semantic inference]
+</code></pre>
+<p>Class F (Example Synthesizer) must additionally carry on all pedagogical output:</p>
+<pre><code>[structural — no semantic inference] [pedagogical instance — not real captured data]
+</code></pre>
+<p>These annotations may not be suppressed. Suppression constitutes a Mode 5 (OVERREACH) trigger.</p>
+<h3 id="prohibited-content">Prohibited Content</h3>
+<p>No RTT/Inside output packet may contain:</p>
+<ul>
+<li>Physics claims or implications that BKM, CORRIDOR, CAPTURE_TEMPLATE, OPERATOR_HOOK, DRIFT_GATE, LINEAGE_CHAIN, ALIGNMENT_PATTERN, or MISALIGNMENT represent physical phenomena</li>
+<li>Inferred BKM axes — all axes must be declared</li>
+<li>Lineage records populated from unlabeled sources</li>
+<li>Capture records with fewer than five fields populated</li>
+<li>Zone X or Mode 5 packets</li>
+<li>Operator hook records with CPV &lt; CPV_min</li>
+<li>Suppressed pedagogical annotations on Class F output</li>
+</ul>
+<h3 id="packet-hierarchy">Packet Hierarchy</h3>
+<pre><code>RTT_INSIDE_APPLICATION_PACKET
+├── domain_record
+│   ├── bkm_snapshot           [Class A]
+│   ├── corridor_records[]     [Class B]
+│   ├── capture_template       [Class C]
+│   └── alignment_record       [Class D]
+├── operator_records
+│   └── hook_bindings[]        [Class E]
+├── example_records[]          [Class F — pedagogical mode only]
+├── drift_gate_log             [Class G]
+└── packet_metadata
+    ├── module: &quot;RTT/Inside&quot;
+    ├── version: &quot;2026.05&quot;
+    ├── zone: &quot;U|S|M|D&quot;        [never X]
+    ├── mode: &quot;1|2|3|4&quot;        [never 5]
+    └── annotation: &quot;[structural — no semantic inference]&quot;
+</code></pre>
+<hr>
+<h2 id="see-also">See Also</h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Module</th>
+<th>Relationship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>docs/rtt/Inside/ABOUT.md</code></td>
+<td>RTT/Inside</td>
+<td>What the module is; why it exists; quick-start checklist</td>
+</tr>
+<tr>
+<td><code>docs/rtt/Inside/GLOSSARY.md</code></td>
+<td>RTT/Inside</td>
+<td>Alphabetical construct definitions; operator symbols reference</td>
+</tr>
+<tr>
+<td><code>docs/rtt/Inside/README.md</code></td>
+<td>RTT/Inside</td>
+<td>Session seed; domain overview; snapshot comparison table</td>
+</tr>
+<tr>
+<td><code>docs/rtt/Inside/RTT_Inside_module.json</code></td>
+<td>RTT/Inside</td>
+<td>Agentic module schema; role assignments; submodule manifest</td>
+</tr>
+<tr>
+<td><code>docs/rtt/Inside/drift_protection.md</code></td>
+<td>RTT/Inside</td>
+<td>DRIFT_GATE mechanics; anchor loss prevention; long-session rules</td>
+</tr>
+<tr>
+<td><code>docs/rtt/Inside/Universal_Alignment_Pattern.md</code></td>
+<td>RTT/Inside</td>
+<td>UAP reference; alignment step prescriptions</td>
+</tr>
+<tr>
+<td><code>docs/rtt/Inside/Shared_Misalignments_Across_All_Domains.md</code></td>
+<td>RTT/Inside</td>
+<td>Shared Misalignment Index; cross-domain misalignment catalog</td>
+</tr>
+<tr>
+<td><code>docs/rtt/Inside/Single-Page_JSON_Schema.md</code></td>
+<td>RTT/Inside</td>
+<td>RTT_INSIDE_APPLICATION_PACKET JSON schema reference</td>
+</tr>
+<tr>
+<td><code>docs/rtt/Inside/Capture_Template_*.md</code></td>
+<td>RTT/Inside</td>
+<td>Per-domain CAPTURE_TEMPLATE references (7 domains)</td>
+</tr>
+<tr>
+<td><code>docs/rtt/Inside/API/</code></td>
+<td>RTT/Inside</td>
+<td>Core API surface; formal JSON schemas; namespace versioning</td>
+</tr>
+<tr>
+<td><code>docs/rtt/Inside/Autonomous_Forms/</code></td>
+<td>RTT/Inside</td>
+<td>Concrete scaffolds; corridor trace types; JSON trace format; rewind mechanics</td>
+</tr>
+<tr>
+<td><code>docs/rtt/Inside/Cisco/</code></td>
+<td>RTT/Inside</td>
+<td>Cisco operator hooks; hook grid; example flow lineage</td>
+</tr>
+<tr>
+<td><code>docs/rtt/Inside/Internet2/</code></td>
+<td>RTT/Inside</td>
+<td>Internet2 operator hooks; DSRS awareness; grid; invariant arc example</td>
+</tr>
+<tr>
+<td><code>docs/rtt/Inside/Python/</code></td>
+<td>RTT/Inside</td>
+<td>Python operator hooks; semantic hooks; causal trace example; cross-module examples</td>
+</tr>
+<tr>
+<td><code>docs/rtt/3/AGENTS.md</code></td>
+<td>RTT/3</td>
+<td>Upstream module — emits RTT3_INTEGRATION_EMISSION_PACKET consumed by RTT/Inside</td>
+</tr>
+<tr>
+<td><code>docs/rtt/12/AGENTS.md</code></td>
+<td>RTT/12</td>
+<td>Parallel pipeline module — receives RTT/Inside output in integrated deployments</td>
+</tr>
+<tr>
+<td><code>docs/rtt/The_Inverted_Star/AGENTS.md</code></td>
+<td>The_Inverted_Star</td>
+<td>Lateral extension — optional feed into RTT/Inside cross-module pipeline</td>
+</tr>
+<tr>
+<td><code>docs/rtt/micro_core/AGENTS.md</code></td>
+<td>RTT/micro_core</td>
+<td>Foundation module — MRT_MICRO_PACKET required for DRIFT_GATE initialization</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><strong>Key design decisions for this module:</strong></p>
+<ul>
+<li><strong>Lateral spine, not sequential</strong> — RTT/Inside sits alongside the pipeline (not between RTT/3 and RTT/12) and is positioned correctly in all three collaboration diagrams</li>
+<li><strong>Class F is unique to this module</strong> — the only agent class in the entire sprint that can activate from session seed alone, reflecting the module's pedagogical character</li>
+<li><strong>Zone X = OVERREACH</strong> — domain boundary violation, distinct from all prior modules</li>
+<li><strong>Mode 5 = OVERREACH</strong> — scope violation or lineage fabrication trigger, distinct from Inversion (RTT/3) and Overflow (RTT/12)</li>
+<li><strong>DRIFT_GATE is a named construct</strong> — not just an inherited concept; it's the primary coherence instrument of this module, given the module's own <code>drift_protection.md</code> file</li>
+</ul>
+  </main>
+</body>
+</html>

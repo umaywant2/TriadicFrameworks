@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/scientific_instrument_review/99_appendix/notes_on_fw_sw_alignment.md">
+  <title>notesonfwswalignment.md</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/scientific_instrument_review/99_appendix/notes_on_fw_sw_alignment.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/scientific_instrument_review/99_appendix/notes_on_fw_sw_alignment.md</code>
+  </aside>
+
+  <main>
+<h1 id="notes_on_fw_sw_alignmentmd"><strong>notes_on_fw_sw_alignment.md</strong></h1>
+<p><em>(draft — alignment guidance)</em></p>
+<h2 id="notes-on-fwsw-alignment"><strong>Notes on FW/SW Alignment</strong></h2>
+<p>Firmware and software alignment differs from hardware alignment.<br>
+Instead of physical stability, we focus on:</p>
+<h3 id="1-transparency-of-behavior"><strong>1. Transparency of Behavior</strong></h3>
+<p>Aligned FW/SW is:
+- deterministic<br>
+- documented<br>
+- predictable<br>
+- easy to inspect  </p>
+<p>Opaque or adaptive behavior requires containment.</p>
+<h3 id="2-inference-layers"><strong>2. Inference Layers</strong></h3>
+<p>Each inference step increases regime fragility.<br>
+Aligned systems minimize:
+- hidden assumptions<br>
+- black‑box transformations<br>
+- multi‑stage pipelines  </p>
+<h3 id="3-drift-versioning"><strong>3. Drift &amp; Versioning</strong></h3>
+<p>Software drifts through:
+- updates<br>
+- library changes<br>
+- OS patches<br>
+- cloud‑side modifications  </p>
+<p>Aligned systems document version boundaries clearly.</p>
+<h3 id="4-substrate-sensitivity"><strong>4. Substrate Sensitivity</strong></h3>
+<p>FW/SW becomes fragile when behavior depends on:
+- sample composition<br>
+- environmental conditions<br>
+- hardware quirks<br>
+- calibration history  </p>
+<p>Aligned systems state these dependencies explicitly.</p>
+<h3 id="5-regime-behavior"><strong>5. Regime Behavior</strong></h3>
+<ul>
+<li><strong>pos‑regime:</strong> stable algorithms, predictable outputs  </li>
+<li><strong>Q‑regime:</strong> assumption‑heavy or adaptive behavior  </li>
+<li><strong>neg‑regime:</strong> fragile, nonlinear, or unstable pipelines  </li>
+</ul>
+<p>These notes help contributors classify new FW/SW examples consistently.</p>
+  </main>
+</body>
+</html>

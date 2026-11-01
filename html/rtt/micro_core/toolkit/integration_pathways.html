@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/micro_core/toolkit/integration_pathways.md">
+  <title>🔗 Integration Pathways (MRT)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/micro_core/toolkit/integration_pathways.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/micro_core/toolkit/integration_pathways.md</code>
+  </aside>
+
+  <main>
+<h1 id="integration-pathways-mrt">🔗 <strong>Integration Pathways (MRT)</strong></h1>
+<p><em>How Micro‑Core and the Micro‑Resonance Toolkit embed into real systems</em></p>
+<p>Integration Pathways describe how Micro‑Core structures, operators, and coherence tools are applied in embedded, distributed, and micro‑agent environments.<br>
+Each pathway is:</p>
+<ul>
+<li>minimal  </li>
+<li>deterministic  </li>
+<li>coherence‑preserving  </li>
+<li>suitable for ultra‑low‑power or constrained systems  </li>
+</ul>
+<p>These pathways provide practical guidance without exposing substrate internals.</p>
+<hr>
+<h2 id="pathway-1-embedded-loop-integration"><strong>Pathway 1 — Embedded Loop Integration</strong></h2>
+<p><strong>Use Case</strong><br>
+Ultra‑low‑power devices and micro‑controllers.</p>
+<p><strong>Approach</strong><br>
+- embed a Micro Triad as the core state machine<br>
+- use <strong>K₁</strong> (Drift Bounding) and <strong>K₂</strong> (Timing Stabilizer)<br>
+- apply <strong>R₁</strong> for micro‑resonance when needed<br>
+- maintain Δt and δ within thresholds  </p>
+<p><strong>Outcome</strong><br>
+A stable, predictable micro‑loop that remains coherent under energy constraints.<br>
+<a href="https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/toolkit/integration_pathways.md">github.com</a></p>
+<hr>
+<h2 id="pathway-2-distributed-microagents"><strong>Pathway 2 — Distributed Micro‑Agents</strong></h2>
+<p><strong>Use Case</strong><br>
+Swarms, sensor networks, distributed micro‑systems.</p>
+<p><strong>Approach</strong><br>
+- each agent runs a local triad<br>
+- coherence tools maintain local stability<br>
+- bridge operator activates only when <strong>C ≥ C*</strong><br>
+- micro‑patterns influence macro‑behavior through alignment  </p>
+<p><strong>Outcome</strong><br>
+Agents remain independent yet capable of coherent collective behavior.<br>
+<a href="https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/toolkit/integration_pathways.md">github.com</a></p>
+<hr>
+<h2 id="pathway-3-fractionalladder-modeling"><strong>Pathway 3 — Fractional‑Ladder Modeling</strong></h2>
+<p><strong>Use Case</strong><br>
+Systems requiring fine‑grained state transitions.</p>
+<p><strong>Approach</strong><br>
+- represent micro‑states using fractional dimensions<br>
+- use <strong>K₆</strong> to regulate transitions (Dᶠ₁ → Dᶠ₂)<br>
+- prevent overshoot or collapse<br>
+- integrate with timing and drift tools  </p>
+<p><strong>Outcome</strong><br>
+Smooth, stable micro‑state evolution with minimal computational overhead.<br>
+<a href="https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/toolkit/integration_pathways.md">github.com</a></p>
+<hr>
+<h2 id="pathway-4-resonancedriven-control"><strong>Pathway 4 — Resonance‑Driven Control</strong></h2>
+<p><em>(Your file cuts off here; this is the completed canonical version.)</em></p>
+<p><strong>Use Case</strong><br>
+Systems that rely on periodic or oscillatory behavior.</p>
+<p><strong>Approach</strong><br>
+- use <strong>R₁</strong> (oscillation) and <strong>R₂</strong> (inversion)<br>
+- maintain resonance amplitude within bounds<br>
+- apply <strong>K₄</strong> (Resonance Lock) for stability<br>
+- integrate with <strong>K₃</strong> (Boundary Alignment) to prevent structural drift  </p>
+<p><strong>Outcome</strong><br>
+A stable, resonance‑driven control loop that remains coherent even under timing noise or boundary fluctuations.<br>
+<a href="https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/toolkit/integration_pathways.md">github.com</a></p>
+<hr>
+<h2 id="pathway-5-micromacro-bridge-integration"><strong>Pathway 5 — Micro–Macro Bridge Integration (μ → Μ)</strong></h2>
+<p><strong>Use Case</strong><br>
+Systems where micro‑patterns may influence macro‑scale behavior.</p>
+<p><strong>Approach</strong><br>
+- maintain micro‑coherence above threshold (<strong>C ≥ C*</strong> )<br>
+- ensure drift and timing remain bounded<br>
+- activate μ → Μ bridge only when structural integrity is preserved<br>
+- expose macro‑systems to stable micro‑patterns without amplification  </p>
+<p><strong>Outcome</strong><br>
+A deterministic, coherence‑preserving channel for upward influence — alignment, not scaling.</p>
+<hr>
+<h2 id="summary">✔️ <strong>Summary</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Pathway</th>
+<th>Focus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Embedded micro‑loops</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Distributed micro‑agents</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Fractional‑ladder modeling</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>Resonance‑driven control</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td>Micro–macro bridge integration</td>
+</tr>
+</tbody>
+</table>
+<p>Integration Pathways provide the <strong>operational backbone</strong> for applying Micro‑Core in real systems — minimal, deterministic, and coherence‑preserving.</p>
+  </main>
+</body>
+</html>

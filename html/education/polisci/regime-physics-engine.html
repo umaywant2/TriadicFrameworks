@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/education/polisci/regime-physics-engine.md">
+  <title>TriadicFrameworks — Regime Physics Engine (RPE)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/education/polisci/regime-physics-engine.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/education/polisci/regime-physics-engine.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="education_polisci_regime_physics_engine_" src="https://github.com/user-attachments/assets/a49ba28e-cfe7-4bc4-a1b9-6de8cf9e928e" /></p>
+<h1 id="triadicframeworks-regime-physics-engine-rpe"><strong>TriadicFrameworks — Regime Physics Engine (RPE)</strong></h1>
+<p><em>A substrate‑aware engine for modeling constraints, flows, and transitions in Future Desert Cities.</em></p>
+<hr>
+<h2 id="0-overview"><strong>0. Overview</strong></h2>
+<p>The <strong>Regime Physics Engine (RPE)</strong> is a conceptual and structural framework for modeling:</p>
+<ul>
+<li>thermal flows  </li>
+<li>water regimes  </li>
+<li>material transformations  </li>
+<li>spatial/temporal scheduling  </li>
+<li>regime boundaries  </li>
+<li>drift detection  </li>
+</ul>
+<p>It is not a particle simulator.<br>
+It is a <strong>regime simulator</strong> — a system that models how <strong>substrates</strong>, <strong>regimes</strong>, and <strong>observers</strong> interact.</p>
+<p>RPE is built on the TriadicFrameworks dimensional substrate:</p>
+<pre><code>-1024D → qmroot → +1024D
+</code></pre>
+<hr>
+<h2 id="1-core-abstractions"><strong>1. Core Abstractions</strong></h2>
+<h2 id="11-substrate"><strong>1.1 Substrate</strong></h2>
+<p>Represents the physical layer.</p>
+<p><strong>Fields</strong>
+- <code>type</code> (sand, stone, air, water, ecology, civic)<br>
+- <code>depth</code> (m)<br>
+- <code>temperature</code> (°C)<br>
+- <code>capacity</code> (mass/volume/flow)<br>
+- <code>stability</code> (low/med/high)</p>
+<p><strong>Role</strong>
+Defines what is <em>physically possible</em>.</p>
+<hr>
+<h2 id="12-regime"><strong>1.2 Regime</strong></h2>
+<p>Represents the rules and boundaries.</p>
+<p><strong>Fields</strong>
+- <code>name</code> (thermal, water, material, civic)<br>
+- <code>bounds</code> (min/max thresholds)<br>
+- <code>state</code> (stable, transitional, overloaded)<br>
+- <code>links</code> (connections to other regimes)</p>
+<p><strong>Role</strong>
+Defines what is <em>allowed</em>.</p>
+<hr>
+<h2 id="13-observer"><strong>1.3 Observer</strong></h2>
+<p>Represents agents interacting with the system.</p>
+<p><strong>Fields</strong>
+- <code>agent_type</code> (human, building, system)<br>
+- <code>schedule</code> (time bands)<br>
+- <code>demands</code> (water, comfort, mobility)<br>
+- <code>permissions</code> (which regimes it can touch)</p>
+<p><strong>Role</strong>
+Defines what is <em>requested</em>.</p>
+<hr>
+<h2 id="2-dimensional-bindings"><strong>2. Dimensional Bindings</strong></h2>
+<p>Every subsystem must declare:</p>
+<pre><code>negative_binding: [...]
+qmroot_binding:   [...]
+positive_binding: [...]
+</code></pre>
+<h3 id="dimensional-interpretation"><strong>Dimensional Interpretation</strong></h3>
+<pre><code>-1024D  = depth, mass, stability
+qmroot  = gradients, transitions, awareness
++1024D  = interface, expression, ecology
+</code></pre>
+<hr>
+<h2 id="3-engine-loops"><strong>3. Engine Loops</strong></h2>
+<h2 id="31-thermal-loop"><strong>3.1 Thermal Loop</strong></h2>
+<p><strong>Inputs:</strong> external temp curve, depth profile, occupancy<br>
+<strong>Outputs:</strong> ballast states, airflow routes, comfort bands  </p>
+<p><strong>Steps</strong>
+1. Compute subsurface baseline.<br>
+2. Propagate heat through mass.<br>
+3. Adjust RTT‑Inside ballasts.<br>
+4. Flag overloads.</p>
+<hr>
+<h2 id="32-water-loop"><strong>3.2 Water Loop</strong></h2>
+<p><strong>Inputs:</strong> desal capacity, dew yield, industrial demand<br>
+<strong>Outputs:</strong> allocation, pressure, regime flags  </p>
+<p><strong>Steps</strong>
+1. Allocate desal → human.<br>
+2. Allocate dew → agriculture.<br>
+3. Allocate recycled → industry.<br>
+4. Enforce <strong>no aquifer use</strong>.</p>
+<hr>
+<h2 id="33-material-loop"><strong>3.3 Material Loop</strong></h2>
+<p><strong>Inputs:</strong> excavation volume, binder capacity, infrastructure demand<br>
+<strong>Outputs:</strong> megalith formation, road/bridge feedstock  </p>
+<p><strong>Steps</strong>
+1. Convert sand → stone in forms.<br>
+2. Track voids → habitable volume.<br>
+3. Route surplus sand → surface infrastructure.</p>
+<hr>
+<h2 id="34-governance-loop"><strong>3.4 Governance Loop</strong></h2>
+<p><strong>Inputs:</strong> regime states, drift metrics, civic policies<br>
+<strong>Outputs:</strong> constraints, alerts, schedule adjustments  </p>
+<p><strong>Steps</strong>
+1. Monitor regime boundaries.<br>
+2. Detect drift.<br>
+3. Enforce constraints.<br>
+4. Suggest schedule changes.</p>
+<hr>
+<h2 id="4-subsystem-bindings"><strong>4. Subsystem Bindings</strong></h2>
+<h2 id="41-sandtostone-megalithics"><strong>4.1 Sand‑to‑Stone Megalithics</strong></h2>
+<pre><code>-1024D: sand mass
+qmroot: binder/polymer/water transformation
++1024D: megalith walls
+</code></pre>
+<hr>
+<h2 id="42-vaulted-chambers"><strong>4.2 Vaulted Chambers</strong></h2>
+<pre><code>-1024D: load-bearing mass
+qmroot: curvature → force distribution
++1024D: human-scale space
+</code></pre>
+<hr>
+<h2 id="43-rttinside-thermal-system"><strong>4.3 RTT‑Inside Thermal System</strong></h2>
+<pre><code>-1024D: cool ballast
+qmroot: gradient chamber
++1024D: warm ballast
+</code></pre>
+<hr>
+<h2 id="44-water-tier-separation"><strong>4.4 Water Tier Separation</strong></h2>
+<pre><code>-1024D: aquifers (untouched)
+qmroot: dew capture + filtration
++1024D: desalinated water
+</code></pre>
+<hr>
+<h2 id="45-airflow-grid"><strong>4.5 Airflow Grid</strong></h2>
+<pre><code>-1024D: intake shafts
+qmroot: vault circulation
++1024D: exhaust towers
+</code></pre>
+<hr>
+<h2 id="46-city-geometry"><strong>4.6 City Geometry</strong></h2>
+<pre><code>-1024D: levels -6 to -3
+qmroot: levels -2 to -1
++1024D: level 0
+</code></pre>
+<hr>
+<h2 id="5-ascii-atlas-engineering-diagrams"><strong>5. ASCII Atlas (Engineering Diagrams)</strong></h2>
+<h2 id="51-city-crosssection"><strong>5.1 City Cross‑Section</strong></h2>
+<pre><code>Surface
+──────────────────────────────────────────
+ Level 0: Access / Light Wells
+──────────────────────────────────────────
+ Level -1: Residential Vaults
+ Level -2: Residential Vaults
+ Level -3: Civic / Commercial
+ Level -4: Industrial / Utility
+ Level -5: Reservoirs / Ballasts
+ Level -6: Deep Infrastructure
+──────────────────────────────────────────
+Bedrock
+</code></pre>
+<hr>
+<h2 id="52-megalith-cell-top-view"><strong>5.2 Megalith Cell (Top View)</strong></h2>
+<pre><code>┌───────────────────────────────┐
+│   Steel Sheet Form (Outer)    │
+│ ┌───────────────────────────┐ │
+│ │  Sand → Stone Core        │ │
+│ └───────────────────────────┘ │
+└───────────────────────────────┘
+</code></pre>
+<hr>
+<h2 id="53-reverseskyscraper-sequence"><strong>5.3 Reverse‑Skyscraper Sequence</strong></h2>
+<pre><code>[Drive Forms] → [Fill Sand] → [Inject Binder] → [Cure] → [Excavate] → [Repeat Downward]
+</code></pre>
+<hr>
+<h2 id="54-vault-load-diagram"><strong>5.4 Vault Load Diagram</strong></h2>
+<pre><code>      ↑ Load
+     /‾‾‾‾‾\
+    /       \
+   /         \
+  /           \
+ /_____________\
+→ Thrust →   ← Thrust
+</code></pre>
+<hr>
+<h2 id="55-rttinside-thermal-system"><strong>5.5 RTT‑Inside Thermal System</strong></h2>
+<pre><code>        [ Warm Ballast ]
+               ▲
+               │
+      [ Gradient Chamber ]
+               │
+               ▼
+        [ Cool Ballast ]
+</code></pre>
+<hr>
+<h2 id="56-water-tier-separation"><strong>5.6 Water Tier Separation</strong></h2>
+<pre><code>Ocean → Desal → Humans
+Dew → Farming
+Recycled → Industry
+Aquifers → Untouched
+</code></pre>
+<hr>
+<h2 id="57-dew-farm-deployed"><strong>5.7 Dew Farm (Deployed)</strong></h2>
+<pre><code>   \\\\\\\\\\  ← Condensation Mesh
+    \\\\\\\\\
+     \\\\\\\\\
+</code></pre>
+<hr>
+<h2 id="58-dew-farm-retracted"><strong>5.8 Dew Farm (Retracted)</strong></h2>
+<pre><code>   ________
+  |        |
+  | Tower  |
+  |________|
+</code></pre>
+<hr>
+<h2 id="59-airflow-tower"><strong>5.9 Airflow Tower</strong></h2>
+<pre><code>Hot Air ↑
+───────────────
+   Wind Tower
+───────────────
+Cool Air ↓
+</code></pre>
+<hr>
+<h2 id="510-city-air-grid"><strong>5.10 City Air Grid</strong></h2>
+<pre><code>[ Intake ] → [ Vaults ] → [ Exhaust ]
+</code></pre>
+<hr>
+<h2 id="511-seedcore-layout"><strong>5.11 Seed‑Core Layout</strong></h2>
+<pre><code>        [ Seed A ]
+            ▲
+            │
+[ Seed B ]──┼──[ Seed C ]
+            ▼
+        [  Core  ]
+</code></pre>
+<hr>
+<h2 id="512-transit-grid"><strong>5.12 Transit Grid</strong></h2>
+<pre><code>[ North ]───[ Hub ]───[ South ]
+     │          │          │
+[ West ]────────┘────────[ East ]
+</code></pre>
+<hr>
+<h2 id="513-light-well-geometry"><strong>5.13 Light Well Geometry</strong></h2>
+<pre><code>   /‾‾‾‾‾‾‾‾\
+  /           \
+ |   Light     |
+ |   Shaft     |
+  \           /
+   \_________/
+</code></pre>
+<hr>
+<h2 id="514-subsurface-temperature-curve"><strong>5.14 Subsurface Temperature Curve</strong></h2>
+<pre><code>Surface: 120°F → 40°F
+10 ft: ~70°F
+50 ft: ~68°F
+100 ft: ~67°F
+</code></pre>
+<hr>
+<h2 id="515-sand-extraction-loop"><strong>5.15 Sand Extraction Loop</strong></h2>
+<pre><code>Excavation → Sorting → Roads/Bridges → Zero External Mining
+</code></pre>
+<hr>
+<h2 id="516-reservoir-vault"><strong>5.16 Reservoir Vault</strong></h2>
+<pre><code>┌───────────────────────────┐
+│  Cool Water Reservoir     │
+│  Thermal Ballast Layer    │
+└───────────────────────────┘
+</code></pre>
+<hr>
+<h2 id="517-industrial-loop"><strong>5.17 Industrial Loop</strong></h2>
+<pre><code>Industry → Recycle → Towers → Industry
+</code></pre>
+<hr>
+<h2 id="518-residential-vault-layout"><strong>5.18 Residential Vault Layout</strong></h2>
+<pre><code>┌───────────────┐
+│  Rooms         │
+│  Corridors     │
+│  Ballast Nodes │
+└───────────────┘
+</code></pre>
+<hr>
+<h2 id="519-civic-vault-layout"><strong>5.19 Civic Vault Layout</strong></h2>
+<pre><code>┌───────────────────────────┐
+│  Markets  |  Clinics      │
+│  Schools  |  Meeting Halls│
+└───────────────────────────┘
+</code></pre>
+<hr>
+<h2 id="520-ecological-surface-zone"><strong>5.20 Ecological Surface Zone</strong></h2>
+<pre><code>[ Solar Arrays ]   [ Dew Farms ]
+[ Native Flora ]   [ Access Points ]
+</code></pre>
+<hr>
+<h2 id="521-regime-boundary-diagram"><strong>5.21 Regime Boundary Diagram</strong></h2>
+<pre><code>───────────────
+ NO CROSSING
+───────────────
+</code></pre>
+<hr>
+<h1 id="6-summary"><strong>6. Summary</strong></h1>
+<p>The Regime Physics Engine provides:</p>
+<ul>
+<li>a unified substrate model  </li>
+<li>triadic regime separation  </li>
+<li>drift‑resistant architecture  </li>
+<li>thermal, water, and material coherence  </li>
+<li>a scalable foundation for Future Desert Cities  </li>
+</ul>
+<p>This file is ready to drop into your repo as‑is.</p>
+  </main>
+</body>
+</html>

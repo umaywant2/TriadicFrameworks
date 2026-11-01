@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/openloop/Vitals/architecture.md">
+  <title>🫀 OpenVitals — architecture.md</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/openloop/Vitals/architecture.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/openloop/Vitals/architecture.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="openloop_Vitals_architecture_" src="https://github.com/user-attachments/assets/e480cecd-826c-45bd-9df8-2ace7b46383f" /></p>
+<h1 id="openvitals-architecturemd">🫀 <strong>OpenVitals — architecture.md</strong></h1>
+<p><strong>OpenWarden Suite — Health &amp; Physiological Signal Substrate</strong><br>
+<strong>Analyzer Layer:</strong> dimensional<br>
+<strong>Regime:</strong> open‑vitals‑governance<br>
+<strong>Version:</strong> 1.0  </p>
+<hr>
+<h2 id="1-architectural-overview"><strong>1. Architectural Overview</strong></h2>
+<p>OpenVitals provides a <strong>dimensional, drift‑aware, coherence‑declared physiological signal substrate</strong> for the OpenWarden suite.<br>
+Its architecture is built around five canonical components:</p>
+<ol>
+<li><strong>Vital Signature Engine</strong>  </li>
+<li><strong>Physiological Metric Layer</strong>  </li>
+<li><strong>Interpretation Boundary System</strong>  </li>
+<li><strong>Governance &amp; Drift Control</strong>  </li>
+<li><strong>Cross‑Module Integration Layer</strong></li>
+</ol>
+<p>Each component ensures physiological stability, metadata correctness, and operator‑aligned transformations.</p>
+<hr>
+<h2 id="2-vital-signature-engine"><strong>2. Vital Signature Engine</strong></h2>
+<p>The Vital Signature Engine defines the <strong>identity</strong> of a physiological signal using canonical fields.<br>
+It includes:</p>
+<ul>
+<li>dimensional signature  </li>
+<li>vital metric block  </li>
+<li>interpretation boundary  </li>
+<li>coherence score  </li>
+<li>drift status  </li>
+<li>lineage ID  </li>
+</ul>
+<p>Vital signatures allow consistent interpretation across modules.</p>
+<h3 id="21-metadata-requirements"><strong>2.1 Metadata Requirements</strong></h3>
+<p>Every vital signal must include:</p>
+<ul>
+<li><code>open.vitals.signature</code>  </li>
+<li><code>open.vitals.metric</code>  </li>
+<li><code>open.vitals.boundary</code>  </li>
+<li><code>open.vitals.coherence</code>  </li>
+<li><code>open.vitals.drift</code>  </li>
+<li><code>open.vitals.lineage</code>  </li>
+<li><code>open.vitals.version</code>  </li>
+<li><code>open.vitals.module</code>  </li>
+</ul>
+<p>Missing fields trigger drift correction.</p>
+<hr>
+<h2 id="3-physiological-metric-layer"><strong>3. Physiological Metric Layer</strong></h2>
+<p>The Physiological Metric Layer ensures:</p>
+<ul>
+<li>vital metric correctness  </li>
+<li>variability stability  </li>
+<li>interpretation integrity  </li>
+<li>drift detection  </li>
+<li>operator‑aligned transformations  </li>
+</ul>
+<h3 id="31-vital-metric-rules"><strong>3.1 Vital Metric Rules</strong></h3>
+<p>Vital metrics must be:</p>
+<ul>
+<li>canonical  </li>
+<li>bounded  </li>
+<li>reversible  </li>
+<li>dimensionally coherent  </li>
+</ul>
+<p>Metric corruption is treated as physiological drift.</p>
+<h3 id="32-variability-rules"><strong>3.2 Variability Rules</strong></h3>
+<p>Variability descriptors must maintain:</p>
+<ul>
+<li>correct physiological mapping  </li>
+<li>non‑ambiguous descriptors  </li>
+<li>stable interpretation boundaries  </li>
+</ul>
+<p>Variability drift triggers correction and lineage update.</p>
+<hr>
+<h2 id="4-interpretation-boundary-system"><strong>4. Interpretation Boundary System</strong></h2>
+<p>Physiological interpretation is governed by:</p>
+<ul>
+<li>declared boundaries  </li>
+<li>dimensional constraints  </li>
+<li>contextual overlays  </li>
+<li>canonical metadata  </li>
+</ul>
+<h3 id="41-boundary-inputs"><strong>4.1 Boundary Inputs</strong></h3>
+<ul>
+<li>dimensional signature  </li>
+<li>vital metric block  </li>
+<li>variability descriptor  </li>
+<li>operator grammar fields  </li>
+</ul>
+<h3 id="42-boundary-outputs"><strong>4.2 Boundary Outputs</strong></h3>
+<ul>
+<li>interpretation classification  </li>
+<li>boundary correction  </li>
+<li>variability recalibration  </li>
+<li>lineage update  </li>
+</ul>
+<p>Boundary violations trigger suppression.</p>
+<hr>
+<h2 id="5-governance-drift-control"><strong>5. Governance &amp; Drift Control</strong></h2>
+<p>OpenVitals enforces strict governance rules inherited from OpenWarden.</p>
+<h3 id="51-drift-types"><strong>5.1 Drift Types</strong></h3>
+<ul>
+<li><strong>Signal Drift</strong> — malformed or unstable physiological signals  </li>
+<li><strong>Variability Drift</strong> — corrupted or ambiguous variability descriptors  </li>
+<li><strong>Boundary Drift</strong> — incorrect or mismatched interpretation boundaries  </li>
+<li><strong>Metadata Drift</strong> — missing or manipulated fields  </li>
+<li><strong>Lineage Drift</strong> — corrupted or ambiguous lineage  </li>
+</ul>
+<h3 id="52-drift-responses"><strong>5.2 Drift Responses</strong></h3>
+<ol>
+<li><strong>Flag</strong> — mark signal as drifted  </li>
+<li><strong>Suppress</strong> — remove from interpretation output  </li>
+<li><strong>Correct</strong> — repair metadata  </li>
+<li><strong>Recalibrate</strong> — adjust variability or boundaries  </li>
+<li><strong>Update Lineage</strong> — record correction  </li>
+</ol>
+<p>All drift responses are logged.</p>
+<hr>
+<h2 id="6-operator-grammar-alignment"><strong>6. Operator Grammar Alignment</strong></h2>
+<p>OpenVitals uses the OpenWarden operator grammar:</p>
+<ul>
+<li><strong>extend</strong> — add dimensional or physiological detail  </li>
+<li><strong>condense</strong> — simplify metadata  </li>
+<li><strong>refactor</strong> — reorganize vital fields  </li>
+<li><strong>capture</strong> — record drift or lineage  </li>
+<li><strong>annotate</strong> — add governance notes  </li>
+<li><strong>correct</strong> — fix drift or misalignment  </li>
+</ul>
+<p>Operators ensure safe, reversible physiological evolution.</p>
+<hr>
+<h2 id="7-crossmodule-integration"><strong>7. Cross‑Module Integration</strong></h2>
+<p>OpenVitals integrates with:</p>
+<ul>
+<li><strong>OpenRisk</strong> — anomaly detection for physiological drift  </li>
+<li><strong>OpenIAM</strong> — identity‑safe health‑signal access  </li>
+<li><strong>OpenGeo</strong> — location‑aware physiological interpretation  </li>
+<li><strong>OpenFeed</strong> — health‑signal‑aware feed rules  </li>
+<li><strong>OpenCatalog</strong> — vital metadata alignment  </li>
+<li><strong>OpenLLM</strong> — model‑aware physiological interpretation  </li>
+<li><strong>OpenWarden</strong> — suite‑governed health‑signal policies  </li>
+</ul>
+<p>All integrations are drift‑bounded and coherence‑declared.</p>
+<hr>
+<h2 id="8-canonical-metadata-block-example"><strong>8. Canonical Metadata Block (Example)</strong></h2>
+<pre><code class="language-html">&lt;meta name=&quot;open.vitals.signature&quot; content=&quot;vital:openvitals-core&quot;&gt;
+&lt;meta name=&quot;open.vitals.metric&quot; content=&quot;metric:heart-rate&quot;&gt;
+&lt;meta name=&quot;open.vitals.boundary&quot; content=&quot;boundary:physio-safe&quot;&gt;
+&lt;meta name=&quot;open.vitals.coherence&quot; content=&quot;0.92&quot;&gt;
+&lt;meta name=&quot;open.vitals.drift&quot; content=&quot;bounded&quot;&gt;
+&lt;meta name=&quot;open.vitals.lineage&quot; content=&quot;vitalslineage:3f9a&quot;&gt;
+&lt;meta name=&quot;open.vitals.version&quot; content=&quot;1.0&quot;&gt;
+&lt;meta name=&quot;open.vitals.module&quot; content=&quot;OpenVitals&quot;&gt;
+</code></pre>
+<hr>
+<h2 id="9-file-structure"><strong>9. File Structure</strong></h2>
+<ul>
+<li><code>README.md</code> — front door  </li>
+<li><code>architecture.md</code> — this file  </li>
+<li><code>canonical_metadata.md</code> — metadata schema  </li>
+<li><code>governance.md</code> — drift &amp; policy rules  </li>
+<li><code>operators.md</code> — operator grammar  </li>
+<li><code>index.html</code> — module front page  </li>
+<li><code>module.json</code> — manifest  </li>
+</ul>
+  </main>
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/ai/absolute_module_identity.md">
+  <title>RTT Absolute module.json Identity Specification</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/ai/absolute_module_identity.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/ai/absolute_module_identity.md</code>
+  </aside>
+
+  <main>
+<h1 id="rtt-absolute-modulejson-identity-specification">RTT Absolute <code>module.json</code> Identity Specification</h1>
+<h3 id="version-10-canonlocked-protocol">Version 1.0 — Canon‑Locked Protocol</h3>
+<hr>
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This specification defines the <strong>absolute identity protocol</strong> for RTT <code>module.json</code> files.</p>
+<p>Its goals:</p>
+<ul>
+<li><strong>Guarantee global resolvability</strong> of module metadata  </li>
+<li><strong>Enable cross‑substrate agentic behavior</strong> (GitHub, Docsbook.io, mirrors, etc.)  </li>
+<li><strong>Prevent drift</strong> caused by renderer‑relative paths  </li>
+<li><strong>Lock in a canonical identity surface</strong> for all RTT modules  </li>
+</ul>
+<p>This spec is <strong>normative</strong> for all RTT‑aligned modules.</p>
+<hr>
+<h2 id="2-identity-object">2. Identity Object</h2>
+<p>Each RTT module exposes a single <strong>identity object</strong>:</p>
+<ul>
+<li>File name: <code>module.json</code>  </li>
+<li>Location: inside the module’s directory (e.g. <code>/docs/ai/</code>, <code>/docs/Structural_Detection/</code>)  </li>
+<li>Access: via a <strong>canonical absolute URL</strong> to the raw file</li>
+</ul>
+<p>Example identity URL:</p>
+<pre><code class="language-text">https://raw.githubusercontent.com/&lt;user&gt;/&lt;repo&gt;/main/docs/My_Module/module.json
+</code></pre>
+<p>This URL is the <strong>canonical identity</strong> of the module.</p>
+<hr>
+<h2 id="3-absolute-url-requirement">3. Absolute URL Requirement</h2>
+<h3 id="31-normative-rule">3.1 Normative Rule</h3>
+<p>All RTT <code>module.json</code> references used for <strong>agentic behavior</strong> MUST be:</p>
+<ul>
+<li><strong>absolute URLs</strong></li>
+<li>pointing to the <strong>raw content</strong></li>
+<li>stable across renderers and hosts</li>
+</ul>
+<p>Form:</p>
+<pre><code class="language-text">https://raw.githubusercontent.com/&lt;user&gt;/&lt;repo&gt;/main/&lt;path&gt;/module.json
+</code></pre>
+<h3 id="32-rationale">3.2 Rationale</h3>
+<p>Absolute URLs:</p>
+<ul>
+<li>decouple metadata from any specific renderer  </li>
+<li>ensure AI agents can always dereference the module  </li>
+<li>prevent path resolution errors in foreign substrates  </li>
+<li>make the module a <strong>portable service descriptor</strong>  </li>
+</ul>
+<p>Relative paths (e.g. <code>./module.json</code>) MUST NOT be used for agentic metadata resolution.</p>
+<hr>
+<h2 id="4-activation-surface-html-link-contract">4. Activation Surface (HTML Link Contract)</h2>
+<p>Modules expose their identity via a <strong>link element</strong> in their primary document (e.g. <code>README.md</code>, <code>index.html</code>):</p>
+<pre><code class="language-html">&lt;!-- RTT Agentic Module Identity --&gt;
+&lt;link rel=&quot;rtt-module&quot;
+      href=&quot;https://raw.githubusercontent.com/&lt;user&gt;/&lt;repo&gt;/main/&lt;path&gt;/module.json&quot;&gt;
+</code></pre>
+<p>Normative requirements:</p>
+<ul>
+<li><code>rel="rtt-module"</code> — fixed, reserved value  </li>
+<li><code>href</code> — MUST be the canonical absolute URL to <code>module.json</code>  </li>
+<li>Only one primary identity link per module document SHOULD be present  </li>
+</ul>
+<p>This is the <strong>standard discovery mechanism</strong> for RTT‑aware tools.</p>
+<hr>
+<h2 id="5-canonical-url-shape">5. Canonical URL Shape</h2>
+<p>The canonical identity URL MUST conform to:</p>
+<pre><code class="language-text">https://raw.githubusercontent.com/&lt;user&gt;/&lt;repo&gt;/&lt;branch&gt;/&lt;path&gt;/module.json
+</code></pre>
+<p>Recommended defaults:</p>
+<ul>
+<li><code>&lt;branch&gt;</code>: <code>main</code>  </li>
+<li><code>&lt;path&gt;</code>: path from repo root to module directory  </li>
+</ul>
+<p>Example:</p>
+<pre><code class="language-text">https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/ai/ai_module.json
+</code></pre>
+<p>If a repository uses a different default branch, that branch name MUST be reflected in the URL.</p>
+<hr>
+<h2 id="6-identity-invariants">6. Identity Invariants</h2>
+<p>For a <code>module.json</code> to be considered <strong>identity‑stable</strong>, the following invariants MUST hold:</p>
+<ol>
+<li>
+<p><strong>Single Canonical URL per module</strong><br>
+   - A module may have mirrors, but one URL is designated canonical.</p>
+</li>
+<li>
+<p><strong>Content Stability</strong><br>
+   - Changes to <code>module.json</code> SHOULD be versioned via the <code>version</code> field.<br>
+   - Breaking changes MUST increment the version appropriately.</p>
+</li>
+<li>
+<p><strong>Location Stability</strong><br>
+   - The path to <code>module.json</code> SHOULD NOT be moved casually.<br>
+   - If moved, all <code>rel="rtt-module"</code> links MUST be updated.</p>
+</li>
+<li>
+<p><strong>Renderer Independence</strong><br>
+   - No renderer‑specific query parameters or host‑dependent paths are allowed in the canonical URL.</p>
+</li>
+</ol>
+<hr>
+<h2 id="7-relative-vs-absolute-path-policy">7. Relative vs Absolute Path Policy</h2>
+<p>To preserve cross‑substrate behavior:</p>
+<ul>
+<li><strong>Absolute paths</strong>  </li>
+<li>ONLY for <code>module.json</code> and other RTT metadata endpoints  </li>
+<li>
+<p>Used in <code>href</code> attributes for <code>rel="rtt-module"</code></p>
+</li>
+<li>
+<p><strong>Relative paths</strong>  </p>
+</li>
+<li>For all internal content links (markdown pages, examples, diagrams, etc.)  </li>
+<li>Keeps documentation portable across hosts and themes  </li>
+</ul>
+<p>This separation is <strong>normative</strong>:</p>
+<ul>
+<li>Metadata → absolute  </li>
+<li>Content → relative  </li>
+</ul>
+<hr>
+<h2 id="8-minimal-identity-payload-inside-modulejson">8. Minimal Identity Payload (Inside <code>module.json</code>)</h2>
+<p>The identity file MUST at least contain:</p>
+<pre><code class="language-json">{
+  &quot;module&quot;: &quot;Module Name&quot;,
+  &quot;version&quot;: &quot;1.0&quot;,
+  &quot;description&quot;: &quot;Short description of the module.&quot;,
+  &quot;roles&quot;: [&quot;profile&quot;],
+  &quot;operators&quot;: [&quot;substrate&quot;, &quot;flow&quot;],
+  &quot;files&quot;: {
+    &quot;README.md&quot;: &quot;profile&quot;
+  }
+}
+</code></pre>
+<p>Required fields:</p>
+<ul>
+<li><code>module</code> — canonical module name  </li>
+<li><code>version</code> — semantic version string  </li>
+<li><code>description</code> — concise purpose  </li>
+<li><code>roles</code> — RTT file‑role grammar  </li>
+<li><code>operators</code> — RTT operator grammar  </li>
+<li><code>files</code> — file‑to‑role mapping  </li>
+</ul>
+<p>The <strong>identity protocol</strong> cares primarily that:</p>
+<ul>
+<li>the file exists  </li>
+<li>the absolute URL resolves  </li>
+<li>the JSON is valid  </li>
+<li>the required fields are present  </li>
+</ul>
+<hr>
+<h2 id="9-crosssubstrate-expectations">9. Cross‑Substrate Expectations</h2>
+<p>Any RTT‑aware tool (AI agent, renderer, validator) MAY:</p>
+<ol>
+<li>Discover <code>module.json</code> via <code>rel="rtt-module"</code>  </li>
+<li>Fetch the absolute URL  </li>
+<li>Parse the JSON  </li>
+<li>Use the identity to:</li>
+</ol>
+<ul>
+<li>understand module purpose  </li>
+<li>map files to roles  </li>
+<li>reason about operators  </li>
+<li>integrate the module into larger systems  </li>
+</ul>
+<p>Tools MUST NOT assume:</p>
+<ul>
+<li>a specific host (GitHub, Docsbook.io, etc.)  </li>
+<li>a specific visual theme  </li>
+<li>a specific documentation engine  </li>
+</ul>
+<p>Only the <strong>absolute URL + JSON schema</strong> are normative.</p>
+<hr>
+<h2 id="10-compliance-checklist">10. Compliance Checklist</h2>
+<p>A module is compliant with the <strong>RTT Absolute <code>module.json</code> Identity</strong> spec if:</p>
+<ul>
+<li>[ ] <code>module.json</code> exists in the module directory  </li>
+<li>[ ] A canonical absolute raw URL can be constructed  </li>
+<li>[ ] The primary document includes:</li>
+</ul>
+<p><code>html
+  &lt;link rel="rtt-module"
+        href="https://raw.githubusercontent.com/&lt;user&gt;/&lt;repo&gt;/main/&lt;path&gt;/module.json"&gt;</code></p>
+<ul>
+<li>[ ] The URL resolves successfully  </li>
+<li>[ ] The JSON is valid and includes required fields  </li>
+<li>[ ] Internal content links remain relative  </li>
+</ul>
+<hr>
+<h2 id="11-versioning">11. Versioning</h2>
+<p>This is <strong>RTT Absolute <code>module.json</code> Identity Specification v1.0</strong>.</p>
+<p>Future versions MAY:</p>
+<ul>
+<li>add optional fields  </li>
+<li>define additional discovery mechanisms  </li>
+<li>extend identity semantics  </li>
+</ul>
+<p>They MUST NOT:</p>
+<ul>
+<li>break existing absolute URL behavior  </li>
+<li>invalidate compliant v1.0 modules  </li>
+</ul>
+  </main>
+</body>
+</html>

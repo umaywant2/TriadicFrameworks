@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/vst_for_protein_language_models/drift_detection_plm.md">
+  <title>vST for Protein Language Models</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/vst_for_protein_language_models/drift_detection_plm.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/vst_for_protein_language_models/drift_detection_plm.md</code>
+  </aside>
+
+  <main>
+<h3 id="vst-for-protein-language-models"><em>vST for Protein Language Models</em></h3>
+<h3 id="drift-detection-in-highdimensional-protein-embedding-spaces"><em>Drift Detection in High‑Dimensional Protein Embedding Spaces</em></h3>
+<p>This document defines how <strong>drift</strong> is detected in Protein Language Models (PLMs) using the <strong>Validation‑Space‑Time (vST)</strong> framework and the <strong>1024D dimensional substrate</strong>. Drift refers to any deviation from expected substrate behavior, including structural instability, regime misalignment, scaling discontinuities, or projection failure.</p>
+<p>Drift detection is essential for evaluating model updates, fine‑tuning procedures, training interventions, and cross‑version consistency in PLMs.</p>
+<hr>
+<h2 id="1-purpose-of-drift-detection"><strong>1. Purpose of Drift Detection</strong></h2>
+<p>Drift detection enables reproducible evaluation of:</p>
+<ul>
+<li>instability in residue‑level embedding structure  </li>
+<li>changes in regime behavior (R₁ᴴ, R₂ᴴ, R₃ᴴ)  </li>
+<li>cross‑version compatibility  </li>
+<li>scaling‑law continuity across PLM sizes  </li>
+<li>projection stability into 3D–9D cores  </li>
+<li>primitive‑level integrity (DP, TDP, SP, CP)  </li>
+<li>sequence‑level coherence surfaces  </li>
+</ul>
+<p>Drift is not inherently negative; it is a signal of structural change.<br>
+The substrate determines whether that change is stable, transitional, or harmful.</p>
+<hr>
+<h2 id="2-types-of-drift"><strong>2. Types of Drift</strong></h2>
+<p>Drift is classified into four substrate‑aligned categories:</p>
+<h3 id="21-structural-drift-d1"><strong>2.1 Structural Drift (D₁)</strong></h3>
+<p>Deviation in motif‑level geometry or local residue coherence.</p>
+<p><strong>Indicators</strong></p>
+<ul>
+<li>unstable 3D projections  </li>
+<li>loss of compact residue motifs  </li>
+<li>abrupt variance spikes  </li>
+</ul>
+<hr>
+<h3 id="22-dimensional-drift-d2"><strong>2.2 Dimensional Drift (D₂)</strong></h3>
+<p>Discontinuities in dimensional scaling or projection behavior.</p>
+<p><strong>Indicators</strong></p>
+<ul>
+<li>non‑invertible 9D projections  </li>
+<li>fragmentation in 64D–1024D embedding regions  </li>
+<li>scaling‑law violations  </li>
+</ul>
+<hr>
+<h3 id="23-regime-drift-d3"><strong>2.3 Regime Drift (D₃)</strong></h3>
+<p>Unexpected changes in regime identity or transitions across residues.</p>
+<p><strong>Indicators</strong></p>
+<ul>
+<li>premature transitions into R₃ᴴ  </li>
+<li>oscillatory instability in R₂ᴴ  </li>
+<li>collapse of stable R₁ᴴ regions  </li>
+</ul>
+<hr>
+<h3 id="24-projection-drift-d4"><strong>2.4 Projection Drift (D₄)</strong></h3>
+<p>Misalignment between high‑dimensional embeddings and triadic cores.</p>
+<p><strong>Indicators</strong></p>
+<ul>
+<li>inconsistent 3D–9D mapping  </li>
+<li>loss of primitive‑aligned projection  </li>
+<li>divergence across layers or residues  </li>
+</ul>
+<hr>
+<h2 id="3-drift-detection-signals"><strong>3. Drift Detection Signals</strong></h2>
+<p>Drift is detected using substrate‑aligned signals:</p>
+<ul>
+<li>variance distribution across dimensions  </li>
+<li>coherence‑surface continuity along the sequence  </li>
+<li>primitive‑level stability (DP, TDP, SP, CP)  </li>
+<li>resonance‑time alignment  </li>
+<li>projection‑stability metrics  </li>
+<li>cross‑version alignment surfaces  </li>
+<li>vST validation outputs (V₁–V₄)  </li>
+</ul>
+<p>These signals collectively determine drift category and severity.</p>
+<hr>
+<h2 id="4-drift-across-the-dimensional-ladder"><strong>4. Drift Across the Dimensional Ladder</strong></h2>
+<p>Drift may appear at different scales:</p>
+<h3 id="41-64d128d-residueembedding-drift"><strong>4.1 64D–128D (Residue‑Embedding Drift)</strong></h3>
+<ul>
+<li>loss of local biochemical coherence  </li>
+<li>unstable residue embeddings  </li>
+<li>semantic drift in sequence representation  </li>
+</ul>
+<h3 id="42-256d512d-hiddenstate-drift"><strong>4.2 256D–512D (Hidden‑State Drift)</strong></h3>
+<ul>
+<li>branching instability  </li>
+<li>regime‑transition irregularities  </li>
+<li>inconsistent attention patterns  </li>
+</ul>
+<h3 id="43-1024d-highdimensional-drift"><strong>4.3 1024D+ (High‑Dimensional Drift)</strong></h3>
+<ul>
+<li>fragmentation of coherence surfaces  </li>
+<li>scaling discontinuities  </li>
+<li>projection failure  </li>
+</ul>
+<p>High‑dimensional drift is the most severe and often indicates training instability.</p>
+<hr>
+<h2 id="5-crossversion-drift-detection"><strong>5. Cross‑Version Drift Detection</strong></h2>
+<p>Cross‑version drift is detected by comparing:</p>
+<ul>
+<li>residue‑level regime maps  </li>
+<li>coherence‑surface geometry  </li>
+<li>projection stability  </li>
+<li>variance distribution  </li>
+<li>primitive‑level structure  </li>
+<li>resonance‑time behavior  </li>
+</ul>
+<p>Drift may arise from:</p>
+<ul>
+<li>fine‑tuning  </li>
+<li>MSA‑conditioned training  </li>
+<li>architecture changes  </li>
+<li>training‑data shifts  </li>
+<li>checkpoint selection  </li>
+</ul>
+<p>vST provides a consistent substrate for evaluating these changes.</p>
+<hr>
+<h2 id="6-drift-severity-levels"><strong>6. Drift Severity Levels</strong></h2>
+<p>Drift severity is classified into:</p>
+<h3 id="low-severity"><strong>Low Severity</strong></h3>
+<ul>
+<li>minor variance shifts  </li>
+<li>stable projections  </li>
+<li>no regime collapse  </li>
+</ul>
+<h3 id="moderate-severity"><strong>Moderate Severity</strong></h3>
+<ul>
+<li>partial fragmentation  </li>
+<li>unstable R₂ᴴ transitions  </li>
+<li>inconsistent cross‑layer alignment  </li>
+</ul>
+<h3 id="high-severity"><strong>High Severity</strong></h3>
+<ul>
+<li>collapse of coherence surfaces  </li>
+<li>persistent R₃ᴴ behavior  </li>
+<li>non‑invertible projections  </li>
+<li>loss of primitive‑level structure  </li>
+</ul>
+<p>High‑severity drift indicates a failure of substrate invariants.</p>
+<hr>
+<h2 id="7-drift-detection-workflow"><strong>7. Drift Detection Workflow</strong></h2>
+<p>A substrate‑aligned drift detection workflow:</p>
+<ol>
+<li><strong>Project embeddings into 9D</strong>  </li>
+<li><strong>Classify regime behavior (R₁ᴴ, R₂ᴴ, R₃ᴴ)</strong>  </li>
+<li><strong>Evaluate scaling continuity (64D–1024D)</strong>  </li>
+<li><strong>Check primitive‑level stability (DP, TDP, SP, CP)</strong>  </li>
+<li><strong>Validate with vST layers (V₁–V₄)</strong>  </li>
+<li><strong>Compare across layers, residues, or versions</strong>  </li>
+<li><strong>Assign drift category (D₁–D₄)</strong>  </li>
+<li><strong>Assign drift severity (low, moderate, high)</strong>  </li>
+</ol>
+<p>This workflow is model‑agnostic and reproducible.</p>
+<hr>
+<h2 id="8-outputs-of-drift-detection"><strong>8. Outputs of Drift Detection</strong></h2>
+<p>Drift detection produces:</p>
+<ul>
+<li>drift category (D₁–D₄)  </li>
+<li>drift severity  </li>
+<li>regime‑transition anomalies  </li>
+<li>projection‑stability indicators  </li>
+<li>scaling‑law discontinuities  </li>
+<li>cross‑version alignment surfaces  </li>
+<li>vST validation results  </li>
+</ul>
+<p>These outputs support governance, interpretability, and model‑version management for PLMs.</p>
+  </main>
+</body>
+</html>

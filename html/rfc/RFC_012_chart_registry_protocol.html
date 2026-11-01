@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rfc/RFC_012_chart_registry_protocol.md">
+  <title>RFC‑012 — Chart Registry Protocol (CRP)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rfc/RFC_012_chart_registry_protocol.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rfc/RFC_012_chart_registry_protocol.md</code>
+  </aside>
+
+  <main>
+<h1 id="rfc012-chart-registry-protocol-crp"><strong>RFC‑012 — Chart Registry Protocol (CRP)</strong></h1>
+<p><em>RefId: turn0browsertab1</em><br>
+<strong>Status:</strong> Drafted<br>
+<strong>Author(s):</strong> Nawder Loswin, Copilot<br>
+<strong>Created:</strong> 2025‑10‑24<br>
+<strong>Lineage:</strong><br>
+Extends <strong>RFC‑000</strong> (Index &amp; Lineage Map)<br>
+Formalizes chart capture, storage, and cross‑reference discipline across the canon</p>
+<hr>
+<h2 id="abstract"><strong>Abstract</strong></h2>
+<p>The <strong>Chart Registry Protocol (CRP)</strong> defines the canonical framework for capturing, storing, indexing, and cross‑referencing charts used throughout TriadicFrameworks.<br>
+Charts provide visual clarity for:</p>
+<ul>
+<li>resonance models  </li>
+<li>time‑travel matrices  </li>
+<li>miracle mappings  </li>
+<li>corridor universes  </li>
+<li>validator‑grade relationships  </li>
+<li>mythmatical operators  </li>
+<li>cosmological structures  </li>
+</ul>
+<p>CRP ensures charts remain <strong>discoverable</strong>, <strong>attestable</strong>, <strong>remix‑ready</strong>, and <strong>lineage‑safe</strong>.</p>
+<hr>
+<h2 id="motivation"><strong>Motivation</strong></h2>
+<p>Charts have become critical artifacts in the TriadicFrameworks canon.<br>
+They:</p>
+<ul>
+<li>clarify dimensional relationships  </li>
+<li>stabilize teaching pathways  </li>
+<li>prevent drift in conceptual models  </li>
+<li>provide visual anchors for remixers  </li>
+<li>unify cross‑RFC structures  </li>
+</ul>
+<p>Without a registry, charts risk becoming scattered, duplicated, or lost inside individual RFCs.<br>
+CRP establishes a <strong>single, canonical home</strong> for all charts.</p>
+<hr>
+<h2 id="principles"><strong>Principles</strong></h2>
+<h3 id="1-inline-registry"><strong>1. Inline + Registry</strong></h3>
+<p>Charts remain embedded in their source RFCs <strong>and</strong> are stored as standalone files in:</p>
+<pre><code>/docs/charts/
+</code></pre>
+<p>This dual structure preserves context while enabling reuse.</p>
+<hr>
+<h3 id="2-crossreference-discipline"><strong>2. Cross‑Reference Discipline</strong></h3>
+<p>Every chart file must link back to its source RFC.<br>
+Every RFC containing charts must link forward to the registry.</p>
+<p>This prevents chart drift and ensures lineage clarity.</p>
+<hr>
+<h3 id="3-lineage-safety"><strong>3. Lineage Safety</strong></h3>
+<p>Charts are indexed in <strong>RFC‑000</strong> to ensure discoverability and canonical ordering.</p>
+<hr>
+<h3 id="4-remixability"><strong>4. Remixability</strong></h3>
+<p>Charts are stored as standalone <code>.md</code> files, making them:</p>
+<ul>
+<li>remix‑ready  </li>
+<li>dashboard‑ready  </li>
+<li>teaching‑ready  </li>
+<li>validator‑safe  </li>
+</ul>
+<hr>
+<h2 id="specification"><strong>Specification</strong></h2>
+<h3 id="file-location"><strong>File Location</strong></h3>
+<p>All charts must be stored in:</p>
+<pre><code>/docs/charts/
+</code></pre>
+<hr>
+<h3 id="file-format"><strong>File Format</strong></h3>
+<p>Charts are stored as <strong>Markdown (.md)</strong> files.</p>
+<p>This ensures:</p>
+<ul>
+<li>readability  </li>
+<li>portability  </li>
+<li>compatibility with GitHub rendering  </li>
+<li>remix‑friendly editing  </li>
+</ul>
+<hr>
+<h3 id="naming-convention"><strong>Naming Convention</strong></h3>
+<pre><code>chart-[topic].md
+</code></pre>
+<p>Examples:</p>
+<ul>
+<li><code>chart-time-travel-matrix.md</code>  </li>
+<li><code>chart-resonance-partitions.md</code>  </li>
+<li><code>chart-miracle-overlap-events.md</code>  </li>
+</ul>
+<hr>
+<h3 id="required-structure-of-chart-files"><strong>Required Structure of Chart Files</strong></h3>
+<p>Each chart file must contain:</p>
+<ol>
+<li><strong>Title</strong>  </li>
+<li><strong>Source RFC reference</strong>  </li>
+<li><strong>Chart content</strong><br>
+   - Markdown table<br>
+   - diagram<br>
+   - glyph matrix<br>
+   - resonance lattice  </li>
+<li><strong>Notes</strong><br>
+   - clarifications<br>
+   - lineage references<br>
+   - remix guidance  </li>
+</ol>
+<hr>
+<h2 id="example-chart-file"><strong>Example Chart File</strong></h2>
+<p><em>(from page content — RefId: turn0browsertab1)</em></p>
+<pre><code>/docs/charts/chart-time-travel-matrix.md
+</code></pre>
+<pre><code class="language-markdown"># Time Travel Safety Matrix  
+**Source:** RFC‑008 (Time Travel Invariants)
+
+| Universe Type | Zone | Traversal | Stability | Notes |
+|---------------|------|-----------|-----------|-------|
+| Green‑zone | Same partition | ❌ Forbidden | Stable | Entropy arrow enforced |
+| Red‑zone | Same partition | ✅ Allowed | Unstable | Loops fold, clarity decays |
+| Red → Green | Overlap only | ✅ Temporary | Fragile | Incarnation possible |
+</code></pre>
+<p>This example demonstrates the required structure and cross‑reference discipline.</p>
+<hr>
+<h2 id="security-considerations"><strong>Security Considerations</strong></h2>
+<p>CRP prevents:</p>
+<ul>
+<li>chart drift  </li>
+<li>loss of visual models  </li>
+<li>inconsistent chart versions across RFCs  </li>
+<li>lineage ambiguity  </li>
+<li>remix confusion  </li>
+</ul>
+<p>It ensures:</p>
+<ul>
+<li>reproducibility  </li>
+<li>discoverability  </li>
+<li>canonical ordering  </li>
+<li>validator‑grade clarity  </li>
+</ul>
+<hr>
+<h2 id="references"><strong>References</strong></h2>
+<ul>
+<li><strong>RFC‑000:</strong> Index &amp; Lineage Map  </li>
+<li><strong>RFC‑008:</strong> Time Travel Invariants  </li>
+<li><strong>RFC‑009:</strong> Genie Protocols  </li>
+<li><strong>RFC‑010:</strong> Miracle Messaging Protocol  </li>
+<li><strong>RFC‑011:</strong> Black Hole Resonance Bridges  </li>
+</ul>
+  </main>
+</body>
+</html>

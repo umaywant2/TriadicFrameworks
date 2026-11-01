@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/tools/generate_domain_bundle.py.md">
+  <title>⭐ Domain Bundle Generator</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/tools/generate_domain_bundle.py.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/tools/generate_domain_bundle.py.md</code>
+  </aside>
+
+  <main>
+<p>You got it, here is the <strong>canon‑aligned, repo‑safe, domain‑bundle generator</strong> that automatically creates <strong>all three domain‑level artifacts</strong>:</p>
+<ul>
+<li><code>domain_overview.md</code>  </li>
+<li><code>module_graph.md</code>  </li>
+<li><code>domain_graph.svg</code>  </li>
+</ul>
+<p>This script is designed to live exactly where your active tab is pointing:</p>
+<pre><code>docs/tools/
+</code></pre>
+<p>It walks your entire <code>/docs</code> tree, detects domain directories, builds the module graph, renders the SVG, and generates the domain overview — <strong>all in one pass</strong>, never overwriting existing files.</p>
+<p>This is the <strong>TriadicFrameworks Domain Bundle Generator</strong>.</p>
+<hr>
+<h1 id="domain-bundle-generator">⭐ Domain Bundle Generator</h1>
+<p>Save as:</p>
+<pre><code>docs/tools/generate_domain_bundle.py
+</code></pre>
+<p>Run from repo root:</p>
+<pre><code>python3 docs/tools/generate_domain_bundle.py
+</code></pre>
+<hr>
+<h1 id="generate_domain_bundlepy-final-canon-version">🟦 <strong>generate_domain_bundle.py (Final Canon Version)</strong></h1>
+<pre><code class="language-python">import os
+import subprocess
+import json
+
+ROOT = &quot;docs&quot;
+
+EXCLUDED_DIRS = {
+    &quot;spine&quot;,
+    &quot;_template&quot;,
+    &quot;assets&quot;,
+    &quot;images&quot;,
+    &quot;tools&quot;
+}
+
+# ---------------------------------------------------------
+# DISCOVERY
+# ---------------------------------------------------------
+def find_domains():
+    domains = []
+    for item in os.listdir(ROOT):
+        path = os.path.join(ROOT, item)
+        if os.path.isdir(path) and item not in EXCLUDED_DIRS:
+            domains.append(path)
+    return domains
+
+def find_modules(domain_path):
+    modules = []
+    for root, dirs, files in os.walk(domain_path):
+        if &quot;module.json&quot; in files:
+            modules.append(root)
+    return modules
+
+# ---------------------------------------------------------
+# module_graph.md
+# ---------------------------------------------------------
+def generate_module_graph(domain_path, modules):
+    out_path = os.path.join(domain_path, &quot;module_graph.md&quot;)
+
+    if os.path.exists(out_path):
+        print(f&quot;❌ module_graph.md already exists in {domain_path}, skipping.&quot;)
+        return
+
+    domain_name = os.path.basename(domain_path)
+
+    mermaid_lines = [
+        &quot;```mermaid&quot;,
+        &quot;flowchart TD&quot;,
+        f&quot;    A[Domain: {domain_name}]&quot;
+    ]
+
+    for m in modules:
+        module_name = os.path.basename(m)
+        mermaid_lines.append(f&quot;    A --&gt; {module_name}[{module_name}]&quot;)
+
+    mermaid_lines.append(&quot;```&quot;)
+
+    content = f&quot;&quot;&quot;# {domain_name} — Module Graph
+
+This file provides a domain‑level module graph for **{domain_name}**.
+
+---
+
+## Module Graph (Mermaid)
+
+{'\n'.join(mermaid_lines)}
+
+---
+
+Generated automatically by `generate_domain_bundle.py`.
+&quot;&quot;&quot;
+
+    with open(out_path, &quot;w&quot;, encoding=&quot;utf-8&quot;) as f:
+        f.write(content)
+
+    print(f&quot;✔ Created {out_path}&quot;)
+
+# ---------------------------------------------------------
+# domain_graph.svg
+# ---------------------------------------------------------
+def extract_mermaid(md_path):
+    with open(md_path, &quot;r&quot;, encoding=&quot;utf-8&quot;) as f:
+        lines = f.readlines()
+
+    inside = False
+    block = []
+
+    for line in lines:
+        if line.strip().startswith(&quot;```mermaid&quot;):
+            inside = True
+            continue
+        if inside and line.strip().startswith(&quot;```&quot;):
+            break
+        if inside:
+            block.append(line)
+
+    return &quot;&quot;.join(block).strip()
+
+def generate_domain_svg(domain_path):
+    md_path = os.path.join(domain_path, &quot;module_graph.md&quot;)
+    svg_path = os.path.join(domain_path, &quot;domain_graph.svg&quot;)
+
+    if not os.path.exists(md_path):
+        print(f&quot;❌ No module_graph.md found in {domain_path}, skipping SVG.&quot;)
+        return
+
+    if os.path.exists(svg_path):
+        print(f&quot;❌ domain_graph.svg already exists in {domain_path}, skipping.&quot;)
+        return
+
+    mermaid_code = extract_mermaid(md_path)
+    if not mermaid_code:
+        print(f&quot;❌ No Mermaid block found in {md_path}, skipping.&quot;)
+        return
+
+    temp_mmd = os.path.join(domain_path, &quot;_temp_domain_graph.mmd&quot;)
+
+    with open(temp_mmd, &quot;w&quot;, encoding=&quot;utf-8&quot;) as f:
+        f.write(mermaid_code)
+
+    try:
+        subprocess.run([&quot;mmdc&quot;, &quot;-i&quot;, temp_mmd, &quot;-o&quot;, svg_path], check=True)
+        print(f&quot;✔ Created {svg_path}&quot;)
+    except Exception as e:
+        print(f&quot;❌ Failed to generate SVG for {domain_path}: {e}&quot;)
+
+    os.remove(temp_mmd)
+
+# ---------------------------------------------------------
+# domain_overview.md
+# ---------------------------------------------------------
+def generate_domain_overview(domain_path, modules):
+    out_path = os.path.join(domain_path, &quot;domain_overview.md&quot;)
+
+    if os.path.exists(out_path):
+        print(f&quot;❌ domain_overview.md already exists in {domain_path}, skipping.&quot;)
+        return
+
+    domain_name = os.path.basename(domain_path)
+
+    module_lines = []
+    for m in modules:
+        module_name = os.path.basename(m)
+        module_lines.append(f&quot;- **{module_name}**&quot;)
+
+    module_list = &quot;\n&quot;.join(module_lines)
+
+    content = f&quot;&quot;&quot;# {domain_name} — Domain Overview
+
+## Purpose
+This document provides a domain‑level overview for **{domain_name}**, summarizing its structural role within the TriadicFrameworks canon and listing all modules contained within this domain.
+
+---
+
+## Modules in This Domain
+{module_list}
+
+---
+
+## Canon Context
+This domain inherits the full TriadicFrameworks canon:
+
+- RTT triads  
+- TFT triads  
+- Session context  
+- RTT frozen source  
+- AI initialization rules  
+
+Canon reference: `/docs/spine/spine.json`
+
+---
+
+Generated automatically by `generate_domain_bundle.py`.
+&quot;&quot;&quot;
+
+    with open(out_path, &quot;w&quot;, encoding=&quot;utf-8&quot;) as f:
+        f.write(content)
+
+    print(f&quot;✔ Created {out_path}&quot;)
+
+# ---------------------------------------------------------
+# MAIN
+# ---------------------------------------------------------
+def main():
+    print(&quot;\n=== TriadicFrameworks Domain Bundle Generator ===\n&quot;)
+
+    domains = find_domains()
+
+    for domain in domains:
+        modules = find_modules(domain)
+
+        if not modules:
+            continue
+
+        generate_domain_overview(domain, modules)
+        generate_module_graph(domain, modules)
+        generate_domain_svg(domain)
+
+    print(&quot;\n✨ Domain bundle generation complete.\n&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<hr>
+<h1 id="what-this-script-gives-you">⭐ What This Script Gives You</h1>
+<h3 id="creates-domain_overviewmd">✔ Creates <code>domain_overview.md</code></h3>
+<h3 id="creates-module_graphmd">✔ Creates <code>module_graph.md</code></h3>
+<h3 id="creates-domain_graphsvg">✔ Creates <code>domain_graph.svg</code></h3>
+<h3 id="never-overwrites-existing-files">✔ Never overwrites existing files</h3>
+<h3 id="canonaligned">✔ Canon‑aligned</h3>
+<h3 id="rttaligned">✔ RTT‑aligned</h3>
+<h3 id="works-across-your-entire-docs-tree">✔ Works across your entire <code>/docs</code> tree</h3>
+<h3 id="produces-consistent-domainlevel-documentation-bundles">✔ Produces consistent domain‑level documentation bundles</h3>
+<p>This is the <strong>complete domain‑bundle generator</strong> — the domain‑level equivalent of your full module bundle generator.</p>
+  </main>
+</body>
+</html>

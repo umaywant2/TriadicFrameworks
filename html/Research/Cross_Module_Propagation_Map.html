@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Research/Cross_Module_Propagation_Map.md">
+  <title>Cross‑Module Propagation Map</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Research/Cross_Module_Propagation_Map.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Research/Cross_Module_Propagation_Map.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Research_Cross_Module_Propagation_Map_" src="https://github.com/user-attachments/assets/6cff9688-ec55-411b-aa65-4704b105749e" /></p>
+<h1 id="crossmodule-propagation-map">Cross‑Module Propagation Map</h1>
+<h2 id="replicators-transporters-cts">Replicators → Transporters → CTs</h2>
+<h2 id="summary">Summary</h2>
+<p>This map shows how identity, asymmetry, blueprints, substrates, and environments propagate across the three operator families.</p>
+<hr>
+<h1 id="1-propagation-diagram-textual">1. Propagation Diagram (textual)</h1>
+<pre><code>(T, M) --𝓡--&gt; (T, M)
+|             |
+|             v
++----𝓣----&gt; (T, S₂)
+|
+v
+--𝓒--&gt; (T, E')
+</code></pre>
+<hr>
+<h1 id="2-propagation-rules">2. Propagation Rules</h1>
+<h3 id="identity-kernel-t">Identity Kernel (T)</h3>
+<ul>
+<li>Preserved across all modules  </li>
+<li>No drift allowed  </li>
+<li>Correction allowed only in windows</li>
+</ul>
+<h3 id="asymmetry-at">Asymmetry (A(T))</h3>
+<ul>
+<li>Must remain &gt; 0  </li>
+<li>Never modified  </li>
+<li>Acts as continuity invariant</li>
+</ul>
+<h3 id="blueprint-m">Blueprint (M)</h3>
+<ul>
+<li>Propagates only through Replicators  </li>
+<li>Transporters preserve but do not modify  </li>
+<li>CTs ignore</li>
+</ul>
+<h3 id="substrate-s">Substrate (S)</h3>
+<ul>
+<li>Modified only by Transporters  </li>
+<li>Replicators and CTs treat substrate as fixed</li>
+</ul>
+<h3 id="environment-e">Environment (E)</h3>
+<ul>
+<li>Modified only by CTs  </li>
+<li>Replicators and Transporters preserve</li>
+</ul>
+<hr>
+<h1 id="3-propagation-table">3. Propagation Table</h1>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Replicators</th>
+<th>Transporters</th>
+<th>CTs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T</td>
+<td>preserve</td>
+<td>preserve</td>
+<td>preserve</td>
+</tr>
+<tr>
+<td>A(T)</td>
+<td>preserve</td>
+<td>preserve</td>
+<td>preserve</td>
+</tr>
+<tr>
+<td>M</td>
+<td>preserve</td>
+<td>preserve</td>
+<td>ignore</td>
+</tr>
+<tr>
+<td>S</td>
+<td>fixed</td>
+<td>change</td>
+<td>fixed</td>
+</tr>
+<tr>
+<td>E</td>
+<td>ignore</td>
+<td>preserve</td>
+<td>instantiate</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="claim">Claim</h2>
+<blockquote>
+<p>Cross‑module propagation is stable because each operator family modifies only one structural component while preserving the rest.</p>
+</blockquote>
+  </main>
+</body>
+</html>

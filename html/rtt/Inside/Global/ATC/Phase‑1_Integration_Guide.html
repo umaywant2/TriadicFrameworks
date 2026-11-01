@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Global/ATC/Phase‑1_Integration_Guide.md">
+  <title>✈️ RTT/Inside ATC Phase‑1 Integration Guide</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Global/ATC/Phase‑1_Integration_Guide.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Global/ATC/Phase‑1_Integration_Guide.md</code>
+  </aside>
+
+  <main>
+<h1 id="rttinside-atc-phase1-integration-guide">✈️ <strong>RTT/Inside ATC Phase‑1 Integration Guide</strong></h1>
+<p><em>Operator + Developer Edition</em></p>
+<hr>
+<h2 id="purpose-of-this-guide">📘 <strong>Purpose of This Guide</strong></h2>
+<p>This document provides a <strong>Phase‑1 integration pathway</strong> for introducing the vetted <strong>RTT/Inside</strong> variant into existing Air Traffic Control (ATC) systems <strong>without modifying core surveillance, fusion, or safety‑critical automation stacks</strong>.</p>
+<p>Phase‑1 focuses on:</p>
+<ul>
+<li><strong>Non‑intrusive overlays</strong>  </li>
+<li><strong>Middleware augmentation</strong>  </li>
+<li><strong>Predictive resonance‑time insights</strong>  </li>
+<li><strong>Operator‑visible improvements</strong>  </li>
+<li><strong>Zero‑risk integration with legacy systems</strong></li>
+</ul>
+<p>This allows ANSPs (Air Navigation Service Providers), military ATC, and Space Force operations to evaluate RTT/Inside’s benefits <strong>before</strong> committing to deeper stack integration.</p>
+<hr>
+<h1 id="1-overview-of-phase1-integration">1. 🧭 Overview of Phase‑1 Integration</h1>
+<h3 id="goals">🎯 <strong>Goals</strong></h3>
+<ul>
+<li>Add RTT/Inside predictive metrics to existing track data  </li>
+<li>Display resonance‑aware overlays on current ATC screens  </li>
+<li>Improve operator situational awareness without altering SOPs  </li>
+<li>Enable A/B testing in simulation and live shadow mode  </li>
+<li>Prepare for Phase‑2 (automation integration) and Phase‑3 (full stack redesign)</li>
+</ul>
+<h3 id="nongoals">🧩 <strong>Non‑Goals</strong></h3>
+<ul>
+<li>No changes to radar/ADS‑B hardware  </li>
+<li>No changes to fusion engines  </li>
+<li>No changes to separation minima  </li>
+<li>No changes to certified automation logic  </li>
+</ul>
+<p>Phase‑1 is <strong>decision‑support only</strong>, not safety‑critical.</p>
+<hr>
+<h1 id="2-atc-system-architecture-where-rttinside-fits">2. 🛰️ ATC System Architecture (Where RTT/Inside Fits)</h1>
+<h3 id="existing-atc-stack-simplified">Existing ATC stack (simplified)</h3>
+<pre><code>[PSR / SSR / ADS-B / MLAT]
+            ↓
+   [Surveillance Processor]
+            ↓
+     [Track Fusion Engine]
+            ↓
+       [Track Bus / API]
+            ↓
+   [Automation &amp; Safety Nets]
+            ↓
+   [Controller Working Position]
+</code></pre>
+<h3 id="rttinside-phase1-insertion-points">RTT/Inside Phase‑1 insertion points</h3>
+<pre><code>                     +---------------------------+
+                     |     RTT-Inside Engine     |
+                     |  (resonance-time metrics) |
+                     +---------------------------+
+                               ↑
+[Track Bus] → [RTT Middleware] → publishes augmented tracks
+                               ↓
+                     [Overlay Renderer]
+                               ↓
+                  [Existing ATC Display HMI]
+</code></pre>
+<p>RTT/Inside <strong>subscribes</strong> to fused tracks and <strong>publishes</strong> augmented tracks with resonance‑time metrics.</p>
+<hr>
+<h1 id="3-developer-integration-steps">3. 🔧 Developer Integration Steps</h1>
+<h2 id="31-subscribe-to-the-track-bus">3.1 Subscribe to the Track Bus</h2>
+<p>Our ATC system already publishes fused tracks via:</p>
+<ul>
+<li>ASTERIX categories  </li>
+<li>Protobuf messages  </li>
+<li>JSON over WebSocket  </li>
+<li>Proprietary middleware  </li>
+</ul>
+<p>RTT/Inside middleware needs <strong>read‑only</strong> access.</p>
+<h3 id="example-typescriptstyle-pseudocode">Example (TypeScript‑style pseudocode)</h3>
+<pre><code class="language-ts">subscribeTracks((tracks: Track[]) =&gt; {
+  rttMiddleware.process(tracks);
+});
+</code></pre>
+<hr>
+<h2 id="32-compute-rttinside-metrics">3.2 Compute RTT/Inside Metrics</h2>
+<p>The RTT/Inside engine computes:</p>
+<ul>
+<li><strong>Corridor Stability Score</strong> (0–1)  </li>
+<li><strong>Drift Risk Index</strong> (0–1)  </li>
+<li><strong>Conflict Resonance Index</strong> (0–1)  </li>
+<li><strong>Predictive Ghost Positions</strong>  </li>
+<li><strong>Advisory Level</strong> (NORMAL / WATCH / ALERT)</li>
+</ul>
+<h3 id="example-rttinside-engine-call">Example RTT/Inside engine call</h3>
+<pre><code class="language-ts">const rtt = rttEngine.computeMetrics(track, neighbors);
+return { ...track, rtt };
+</code></pre>
+<p>This produces an <strong>AugmentedTrack</strong> object.</p>
+<hr>
+<h2 id="33-publish-augmented-tracks">3.3 Publish Augmented Tracks</h2>
+<p>Publish to a new topic such as:</p>
+<ul>
+<li><code>tracks.rtt</code>  </li>
+<li><code>augmented.tracks</code>  </li>
+<li><code>rtt-inside.overlay</code>  </li>
+</ul>
+<h3 id="example">Example</h3>
+<pre><code class="language-ts">publishAugmented(augmentedTracks);
+</code></pre>
+<p>This keeps RTT/Inside <strong>logically separate</strong> from certified systems.</p>
+<hr>
+<h2 id="34-render-overlays-on-existing-displays">3.4 Render Overlays on Existing Displays</h2>
+<p>The overlay module reads augmented tracks and draws:</p>
+<ul>
+<li>Stability‑colored paths  </li>
+<li>Advisory badges  </li>
+<li>Predictive ghost positions  </li>
+<li>Drift contours  </li>
+</ul>
+<h3 id="example-overlay-logic">Example overlay logic</h3>
+<pre><code class="language-ts">const style = buildOverlayStyle(augmentedTrack);
+
+drawTrackPath(ctx, track, style.pathColor);
+drawLabelBadge(ctx, track, style.labelBadge);
+drawGhosts(ctx, style.ghostPositions);
+</code></pre>
+<p>This is <strong>non‑intrusive</strong>: if RTT/Inside is offline, the overlay simply doesn’t draw.</p>
+<hr>
+<h1 id="4-operatorfacing-features">4. 🧑‍✈️ Operator‑Facing Features</h1>
+<h2 id="41-new-visual-elements">4.1 New Visual Elements</h2>
+<h3 id="corridor-stability-colors">🟢 <strong>Corridor Stability Colors</strong></h3>
+<ul>
+<li>Green: highly stable  </li>
+<li>Blue: normal  </li>
+<li>Amber: watch  </li>
+<li>Red: alert  </li>
+</ul>
+<h3 id="predictive-ghost-positions">👻 <strong>Predictive Ghost Positions</strong></h3>
+<p>Shows where the aircraft is <em>likely</em> to drift over the next 10 minutes.</p>
+<h3 id="resonance-drift-indicators">🔺 <strong>Resonance Drift Indicators</strong></h3>
+<p>Subtle arrows or contours showing directional drift pressure.</p>
+<h3 id="advisory-badges">🏷️ <strong>Advisory Badges</strong></h3>
+<ul>
+<li>NORMAL  </li>
+<li>WATCH  </li>
+<li>ALERT  </li>
+</ul>
+<p>These appear on the aircraft label.</p>
+<hr>
+<h2 id="42-operator-benefits">4.2 Operator Benefits</h2>
+<h3 id="earlier-awareness-of-emerging-conflicts">✔️ Earlier awareness of emerging conflicts</h3>
+<p>Controllers see drift <strong>before</strong> it becomes a conflict.</p>
+<h3 id="smoother-sequencing">✔️ Smoother sequencing</h3>
+<p>Stability scoring helps identify the best candidates for speed control or vectoring.</p>
+<h3 id="reduced-cognitive-load">✔️ Reduced cognitive load</h3>
+<p>The system visually highlights where attention is needed.</p>
+<h3 id="better-coordination-with-space-force">✔️ Better coordination with Space Force</h3>
+<p>Air + space tracks share a unified resonance‑aware model.</p>
+<h3 id="zero-change-to-sops">✔️ Zero change to SOPs</h3>
+<p>Controllers continue using existing procedures; RTT/Inside simply enhances awareness.</p>
+<hr>
+<h1 id="5-testing-validation">5. 🧪 Testing &amp; Validation</h1>
+<h2 id="51-simulation-mode">5.1 Simulation Mode</h2>
+<p>RTT/Inside can run in:</p>
+<ul>
+<li><strong>Replay mode</strong> (historical traffic)  </li>
+<li><strong>Shadow mode</strong> (live traffic, not visible to pilots)  </li>
+<li><strong>Training mode</strong> (synthetic scenarios)  </li>
+</ul>
+<p>This allows ANSPs to validate:</p>
+<ul>
+<li>Stability scoring accuracy  </li>
+<li>Drift prediction quality  </li>
+<li>Operator workload impact  </li>
+<li>False positive/negative rates  </li>
+</ul>
+<hr>
+<h2 id="52-success-criteria">5.2 Success Criteria</h2>
+<p>A Phase‑1 deployment is considered successful when:</p>
+<ul>
+<li>Operators report improved situational awareness  </li>
+<li>Drift predictions match real‑world outcomes  </li>
+<li>No interference with certified systems  </li>
+<li>Overlay performance meets latency requirements  </li>
+<li>No increase in controller workload  </li>
+</ul>
+<hr>
+<h1 id="6-example-code-snippets-developerready">6. 🛠️ Example Code Snippets (Developer‑Ready)</h1>
+<h2 id="61-rttinside-middleware-skeleton">6.1 RTT/Inside Middleware Skeleton</h2>
+<pre><code class="language-ts">export class RttMiddleware {
+  private engine = new RttEngine();
+
+  constructor(subscribe, publish) {
+    subscribe((tracks) =&gt; {
+      const augmented = tracks.map(t =&gt; {
+        const neighbors = tracks.filter(n =&gt; n.trackId !== t.trackId);
+        const rtt = this.engine.computeMetrics(t, neighbors);
+        return { ...t, rtt };
+      });
+      publish(augmented);
+    });
+  }
+}
+</code></pre>
+<hr>
+<h2 id="62-overlay-style-builder">6.2 Overlay Style Builder</h2>
+<pre><code class="language-ts">export function buildOverlayStyle(track: AugmentedTrack) {
+  const { corridor_stability, advisory_level } = track.rtt;
+
+  const pathColor =
+    advisory_level === &quot;ALERT&quot; ? &quot;#ff4d4f&quot; :
+    advisory_level === &quot;WATCH&quot; ? &quot;#faad14&quot; :
+    corridor_stability &gt; 0.9 ? &quot;#52c41a&quot; :
+    &quot;#1890ff&quot;;
+
+  return {
+    pathColor,
+    labelBadge: advisory_level,
+    ghostPositions: extrapolateGhosts(track)
+  };
+}
+</code></pre>
+<hr>
+<h1 id="7-deployment-model">7. 🧱 Deployment Model</h1>
+<h3 id="phase1-deployment-characteristics">Phase‑1 Deployment Characteristics</h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Safety‑critical</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>Requires certification</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>Requires hardware changes</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>Requires HMI rewrite</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>Operator training</td>
+<td>Minimal</td>
+</tr>
+<tr>
+<td>Rollout speed</td>
+<td>Fast</td>
+</tr>
+<tr>
+<td>Risk</td>
+<td>Very low</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="8-path-to-phase2-and-phase3">8. 🚀 Path to Phase‑2 and Phase‑3</h1>
+<h3 id="phase2-automation-integration">Phase‑2 (Automation Integration)</h3>
+<ul>
+<li>Integrate RTT/Inside into CD&amp;R  </li>
+<li>Resonance‑aware sequencing  </li>
+<li>Predictive metering  </li>
+</ul>
+<h3 id="phase3-full-stack-redesign">Phase‑3 (Full Stack Redesign)</h3>
+<ul>
+<li>Native resonance‑aware fusion  </li>
+<li>Unified air‑space traffic model  </li>
+<li>Next‑generation HMI  </li>
+<li>Space Force integration  </li>
+</ul>
+<hr>
+<h1 id="9-summary">9. 🏁 Summary</h1>
+<p>Phase‑1 RTT/Inside integration gives ATC and Space Force operators:</p>
+<ul>
+<li>Predictive clarity  </li>
+<li>Structural coherence  </li>
+<li>Drift‑aware situational awareness  </li>
+<li>Zero‑risk overlays  </li>
+<li>A clear path to deeper integration  </li>
+</ul>
+<p>It is the <strong>fastest, safest, and most impactful</strong> way to introduce resonance‑time intelligence into global air and space traffic management.</p>
+  </main>
+</body>
+</html>

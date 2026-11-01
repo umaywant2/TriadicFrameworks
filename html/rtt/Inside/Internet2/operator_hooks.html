@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Internet2/operator_hooks.md">
+  <title>RTT‑Inside / Internet2 — Operator Hooks (Base Variant)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Internet2/operator_hooks.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Internet2/operator_hooks.md</code>
+  </aside>
+
+  <main>
+<h1 id="rttinside-internet2-operator-hooks-base-variant">RTT‑Inside / Internet2 — Operator Hooks (Base Variant)</h1>
+<h2 id="purpose">Purpose</h2>
+<p>Define the RTT‑Inside operator grammar for <strong>Internet2‑class dimensional substrates</strong>.
+These operators convert long‑haul, multi‑regime, high‑coherence signals into RTT‑style
+causal objects.</p>
+<p>This file includes:</p>
+<ul>
+<li>Base Internet2 operator chain (INTENT_I2 → RTT_I2)</li>
+<li>DSRSP regime‑aware hooks</li>
+<li>Resonance Chamber routing</li>
+<li>ROA (Internet3 seed) compatibility</li>
+<li>RRB (harsh regime relay) integration</li>
+</ul>
+<p>This module is <strong>non‑substrate‑exposing</strong>, <strong>operator‑first</strong>, and <strong>canon‑aligned</strong> with RTT/1.</p>
+<hr>
+<h1 id="1-base-internet2-operator-grammar"><strong>1. Base Internet2 Operator Grammar</strong></h1>
+<h2 id="intent_i2-declared-intent-for-dimensional-paths">INTENT_I2 — Declared Intent for Dimensional Paths</h2>
+<pre><code>INTENT_I2(source) → declared_intent
+</code></pre>
+<h2 id="tif_i2-telemetry-interpretation-frame-longhaul">TIF_I2 — Telemetry Interpretation Frame (Long‑Haul)</h2>
+<pre><code>TIF_I2(telemetry) → interpreted_signal
+</code></pre>
+<h2 id="man_i2-management-plane-causality-multidomain">MAN_I2 — Management Plane Causality (Multi‑Domain)</h2>
+<pre><code>MAN_I2(action) → mgmt_causal_link
+</code></pre>
+<h2 id="fff_i2-flow-causality-across-regimes">FFF_I2 — Flow Causality Across Regimes</h2>
+<pre><code>FFF_I2(flow) → flow_causality
+</code></pre>
+<h2 id="cre_i2-causal-resolution-engine">CRE_I2 — Causal Resolution Engine</h2>
+<pre><code>CRE_I2(intent, signal, mgmt) → resolved_causality
+</code></pre>
+<h2 id="csl_i2-causal-lineage-stitching-dimensional">CSL_I2 — Causal Lineage Stitching (Dimensional)</h2>
+<pre><code>CSL_I2(events[]) → lineage_chain
+</code></pre>
+<h2 id="cet_i2-causal-event-time-antitime-normalization">CET_I2 — Causal Event Time (Antitime Normalization)</h2>
+<pre><code>CET_I2(event) → time_indexed_event
+</code></pre>
+<h2 id="rtt_i2-final-causal-output">RTT_I2 — Final Causal Output</h2>
+<pre><code>RTT_I2(chain) → causal_object
+</code></pre>
+<hr>
+<h1 id="2-dsrsp-regimeaware-extensions"><strong>2. DSRSP Regime‑Aware Extensions</strong></h1>
+<p>Internet2 flows cross timing, optical, orbital, and deep‑shadow regimes.</p>
+<h2 id="dsrsp_aware_i2">DSRSP_AWARE_I2</h2>
+<pre><code>DSRSP_AWARE_I2(path, sensors) → substrate_signature
+</code></pre>
+<h2 id="harmonic_scan_i2">HARMONIC_SCAN_I2</h2>
+<pre><code>HARMONIC_SCAN_I2(flow, regime_profile) → harmonic_signature
+</code></pre>
+<h2 id="substrate_classify">SUBSTRATE_CLASSIFY</h2>
+<pre><code>SUBSTRATE_CLASSIFY(harmonic_signature, invariants) → tier_class
+</code></pre>
+<h2 id="substrate_health_i2">SUBSTRATE_HEALTH_I2</h2>
+<pre><code>SUBSTRATE_HEALTH_I2(regime_profiles, tier_distribution) → health_score
+</code></pre>
+<h2 id="invariant_registry_i2">INVARIANT_REGISTRY_I2</h2>
+<pre><code>INVARIANT_REGISTRY_I2(candidate, evidence) → {accepted, sandboxed, rejected}
+</code></pre>
+<hr>
+<h1 id="3-resonance-chamber-hooks-tier2-sandbox"><strong>3. Resonance Chamber Hooks (Tier‑2 Sandbox)</strong></h1>
+<p>Used when flows exhibit unstable invariants, harmonics, or regime‑crossing distortions.</p>
+<h2 id="route_to_resonance_chamber">ROUTE_TO_RESONANCE_CHAMBER</h2>
+<pre><code>ROUTE_TO_RESONANCE_CHAMBER(flow, tier_class) → chamber_path
+</code></pre>
+<h2 id="sandbox_boundary_enforce">SANDBOX_BOUNDARY_ENFORCE</h2>
+<pre><code>SANDBOX_BOUNDARY_ENFORCE(chamber_state) → allowed_egress
+</code></pre>
+<h2 id="resonance_cooldown_i2">RESONANCE_COOLDOWN_I2</h2>
+<pre><code>RESONANCE_COOLDOWN_I2(chamber_state, time) → decay_profile
+</code></pre>
+<h2 id="regime_fold_i2">REGIME_FOLD_I2</h2>
+<pre><code>REGIME_FOLD_I2(overload_signal, health_score) → fold_plan
+</code></pre>
+<hr>
+<h1 id="4-rrb-integration-harsh-regimes"><strong>4. RRB Integration (Harsh Regimes)</strong></h1>
+<p>The Resonance Relay Beacon preserves meaning under occlusion.</p>
+<h2 id="rrb_state_aware">RRB_STATE_AWARE</h2>
+<pre><code>RRB_STATE_AWARE(rrb_signature, prior_lineage) → awareness_delta
+</code></pre>
+<h2 id="rrb_meaning_density">RRB_MEANING_DENSITY</h2>
+<pre><code>RRB_MEANING_DENSITY(flow, rrb_scan) → effective_signal
+</code></pre>
+<hr>
+<h1 id="5-roa-compatibility-internet3-seed"><strong>5. ROA Compatibility (Internet3 Seed)</strong></h1>
+<p>The Regime Observer Agent provides self‑diagnosis and safe routing.</p>
+<h2 id="roa_observe">ROA_OBSERVE</h2>
+<pre><code>ROA_OBSERVE(regimes, flux, invariants) → observation_state
+</code></pre>
+<h2 id="roa_diagnose">ROA_DIAGNOSE</h2>
+<pre><code>ROA_DIAGNOSE(observation_state, substrate_health) → diagnosis
+</code></pre>
+<h2 id="roa_decide">ROA_DECIDE</h2>
+<pre><code>ROA_DECIDE(diagnosis, policy) → action_class
+</code></pre>
+<h2 id="roa_act">ROA_ACT</h2>
+<pre><code>ROA_ACT(action_class, flows) → routed_state
+</code></pre>
+<hr>
+<h1 id="6-full-base-chain"><strong>6. Full Base Chain</strong></h1>
+<pre><code>INTENT_I2
+→ TIF_I2
+→ MAN_I2
+→ FFF_I2
+→ CRE_I2
+→ CSL_I2
+→ CET_I2
+→ RTT_I2
+</code></pre>
+<hr>
+<h1 id="end-of-file">End of File</h1>
+  </main>
+</body>
+</html>

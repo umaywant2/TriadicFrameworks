@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/TFT_3Pack_v1.3/WRSADC/Scaffolding.md">
+  <title>🔷 Why WRSADC belongs in TFT3Packv1.3</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/TFT_3Pack_v1.3/WRSADC/Scaffolding.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/TFT_3Pack_v1.3/WRSADC/Scaffolding.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="WRSADC_module" src="https://github.com/user-attachments/assets/b98384cf-8f8a-4d94-b701-64bd02186fd2" /></p>
+<h1 id="why-wrsadc-belongs-in-tft_3pack_v13">🔷 Why WRSADC belongs in TFT_3Pack_v1.3</h1>
+<p>The TFT tools (Triadic Framework Tools) are already built around:</p>
+<ul>
+<li><strong>dimensional thinking</strong>  </li>
+<li><strong>state transitions</strong>  </li>
+<li><strong>triadic primitives</strong>  </li>
+<li><strong>structural mapping</strong>  </li>
+</ul>
+<p>A WRSADC is essentially the <em>runtime embodiment</em> of those ideas — a tiny, embedded core that:</p>
+<ul>
+<li>tracks states  </li>
+<li>logs transitions  </li>
+<li>surfaces patterns  </li>
+<li>exposes structural snapshots  </li>
+</ul>
+<p>In other words, it gives TFT tools <strong>live resonance awareness</strong>.</p>
+<p>This is exactly what you did for Coeus, but now adapted for the TFT toolset.</p>
+<hr>
+<h1 id="where-wrsadc-fits-inside-tft_3pack">🔷 Where WRSADC fits inside TFT_3Pack</h1>
+<p>Looking at the repo structure on screen, the best insertion point is:</p>
+<pre><code>docs/TFT_3Pack_v1.3/
+    ├── TFT_Primitive_1.md
+    ├── TFT_Primitive_2.md
+    ├── TFT_Primitive_3.md
+    └── (new) WRSADC/
+</code></pre>
+<p>Inside <code>WRSADC/</code>, you can place:</p>
+<ul>
+<li><code>wrsadc_core.py</code>  </li>
+<li><code>wrsadc_shell.sh</code>  </li>
+<li><code>README.md</code> describing how TFT tools call into the core  </li>
+</ul>
+<p>This keeps the TFT primitives clean while giving them a shared structural engine.</p>
+<hr>
+<h1 id="what-the-wrsadc-should-provide">🔷 What the WRSADC should provide</h1>
+<p>Here’s the minimal feature set that aligns with TFT:</p>
+<h3 id="1-dimensional-tracking"><strong>1. Dimensional tracking</strong></h3>
+<p>Each TFT tool can register its own dimension:</p>
+<pre><code class="language-python">core.dimension(&quot;tft1&quot;).observe(&quot;init&quot;)
+</code></pre>
+<h3 id="2-state-transitions"><strong>2. State transitions</strong></h3>
+<p>Tools can mark progress:</p>
+<pre><code class="language-python">core.dimension(&quot;tft1&quot;).observe(&quot;phase_A_complete&quot;)
+</code></pre>
+<h3 id="3-structural-snapshots"><strong>3. Structural snapshots</strong></h3>
+<p>A TFT tool can request a structural view:</p>
+<pre><code class="language-python">core.snapshot()
+</code></pre>
+<h3 id="4-debug-introspection"><strong>4. Debug introspection</strong></h3>
+<p>Perfect for development and testing:</p>
+<pre><code class="language-python">core.debug_print()
+</code></pre>
+<p>This mirrors the Coeus RTT adapter but tuned for TFT’s triadic logic.</p>
+  </main>
+</body>
+</html>

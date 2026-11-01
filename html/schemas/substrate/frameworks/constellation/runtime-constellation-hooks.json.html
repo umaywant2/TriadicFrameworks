@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/substrate/frameworks/constellation/runtime-constellation-hooks.json.md">
+  <title>🌠 runtime-constellation-hooks.json</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/substrate/frameworks/constellation/runtime-constellation-hooks.json.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/substrate/frameworks/constellation/runtime-constellation-hooks.json.md</code>
+  </aside>
+
+  <main>
+<h1 id="runtime-constellation-hooksjson">🌠 <strong>runtime-constellation-hooks.json</strong></h1>
+<h3 id="canonical-substratelevel-runtime-hook-registry"><em>Canonical substrate‑level runtime hook registry</em></h3>
+<pre><code class="language-json">{
+  &quot;identity&quot;: &quot;substrate-runtime-constellation-hooks&quot;,
+  &quot;version&quot;: &quot;1.0&quot;,
+  &quot;generated&quot;: &quot;YYYY-MM-DD&quot;,
+
+  &quot;engines&quot;: {
+    &quot;execution&quot;: {
+      &quot;cycle_start&quot;: {
+        &quot;description&quot;: &quot;Triggered at the beginning of a runtime cycle.&quot;,
+        &quot;severity&quot;: &quot;info&quot;,
+        &quot;constraints&quot;: [&quot;execution-state-valid&quot;]
+      },
+      &quot;cycle_end&quot;: {
+        &quot;description&quot;: &quot;Triggered at the end of a runtime cycle.&quot;,
+        &quot;severity&quot;: &quot;info&quot;,
+        &quot;constraints&quot;: [&quot;execution-state-stable&quot;]
+      },
+      &quot;state_update&quot;: {
+        &quot;description&quot;: &quot;Execution state updated.&quot;,
+        &quot;severity&quot;: &quot;info&quot;,
+        &quot;constraints&quot;: [&quot;update-valid&quot;]
+      },
+      &quot;ignition_trigger&quot;: {
+        &quot;description&quot;: &quot;Ignition event detected.&quot;,
+        &quot;severity&quot;: &quot;critical&quot;,
+        &quot;constraints&quot;: [&quot;ignition-signal-valid&quot;]
+      }
+    },
+
+    &quot;atlas&quot;: {
+      &quot;sync_event&quot;: {
+        &quot;description&quot;: &quot;Atlas synchronization event.&quot;,
+        &quot;severity&quot;: &quot;info&quot;,
+        &quot;constraints&quot;: [&quot;sync-route-valid&quot;]
+      },
+      &quot;navigation_event&quot;: {
+        &quot;description&quot;: &quot;Atlas navigation event.&quot;,
+        &quot;severity&quot;: &quot;info&quot;,
+        &quot;constraints&quot;: [&quot;navigation-transition-valid&quot;]
+      },
+      &quot;interaction_event&quot;: {
+        &quot;description&quot;: &quot;Atlas interaction protocol event.&quot;,
+        &quot;severity&quot;: &quot;info&quot;,
+        &quot;constraints&quot;: [&quot;interaction-mode-valid&quot;]
+      }
+    },
+
+    &quot;epoch&quot;: {
+      &quot;epoch_transition&quot;: {
+        &quot;description&quot;: &quot;Epoch transition detected.&quot;,
+        &quot;severity&quot;: &quot;warning&quot;,
+        &quot;constraints&quot;: [&quot;epoch-timeline-valid&quot;]
+      },
+      &quot;resonance_shift&quot;: {
+        &quot;description&quot;: &quot;Resonance magnitude/phase shift.&quot;,
+        &quot;severity&quot;: &quot;warning&quot;,
+        &quot;constraints&quot;: [&quot;harmonic-consistency&quot;]
+      },
+      &quot;propagation_cycle&quot;: {
+        &quot;description&quot;: &quot;Epochal propagation cycle executed.&quot;,
+        &quot;severity&quot;: &quot;info&quot;,
+        &quot;constraints&quot;: [&quot;propagation-valid&quot;]
+      }
+    },
+
+    &quot;coupling&quot;: {
+      &quot;drift_spike&quot;: {
+        &quot;description&quot;: &quot;Drift magnitude spike detected.&quot;,
+        &quot;severity&quot;: &quot;warning&quot;,
+        &quot;constraints&quot;: [&quot;drift-boundary-valid&quot;]
+      },
+      &quot;resonance_surge&quot;: {
+        &quot;description&quot;: &quot;Resonance surge detected.&quot;,
+        &quot;severity&quot;: &quot;warning&quot;,
+        &quot;constraints&quot;: [&quot;resonance-phase-valid&quot;]
+      },
+      &quot;coupling_instability&quot;: {
+        &quot;description&quot;: &quot;Coupling instability detected.&quot;,
+        &quot;severity&quot;: &quot;critical&quot;,
+        &quot;constraints&quot;: [&quot;coupling-stability-required&quot;]
+      }
+    },
+
+    &quot;invariance&quot;: {
+      &quot;invariance_break&quot;: {
+        &quot;description&quot;: &quot;Invariance violation detected.&quot;,
+        &quot;severity&quot;: &quot;critical&quot;,
+        &quot;constraints&quot;: [&quot;invariance-class-valid&quot;]
+      },
+      &quot;invariance_restore&quot;: {
+        &quot;description&quot;: &quot;Invariance restored.&quot;,
+        &quot;severity&quot;: &quot;info&quot;,
+        &quot;constraints&quot;: [&quot;restore-valid&quot;]
+      }
+    },
+
+    &quot;monitor&quot;: {
+      &quot;telemetry_packet&quot;: {
+        &quot;description&quot;: &quot;Telemetry packet emitted.&quot;,
+        &quot;severity&quot;: &quot;info&quot;,
+        &quot;constraints&quot;: [&quot;telemetry-format-valid&quot;]
+      },
+      &quot;anomaly_alert&quot;: {
+        &quot;description&quot;: &quot;Runtime anomaly detected.&quot;,
+        &quot;severity&quot;: &quot;critical&quot;,
+        &quot;constraints&quot;: [&quot;anomaly-signal-valid&quot;]
+      },
+      &quot;cycle_report&quot;: {
+        &quot;description&quot;: &quot;Cycle report generated.&quot;,
+        &quot;severity&quot;: &quot;info&quot;,
+        &quot;constraints&quot;: [&quot;report-format-valid&quot;]
+      }
+    }
+  },
+
+  &quot;meta&quot;: {
+    &quot;canonical&quot;: true,
+    &quot;triadic_era&quot;: &quot;R5&quot;,
+    &quot;notes&quot;: &quot;Substrate-wide registry of runtime hooks for the Runtime Constellation engines.&quot;
+  }
+}
+</code></pre>
+<hr>
+<h2 id="why-this-is-the-correct-constellationlevel-hook-registry">⭐ Why this is the correct constellation‑level hook registry</h2>
+<ul>
+<li>Mirrors the <strong>engine structure</strong> of the Runtime Constellation: execution, atlas, epoch, coupling, invariance, monitor.  </li>
+<li>Aligns with your previously generated <strong>module.runtime-hooks.json</strong>, but at the <em>substrate</em> level.  </li>
+<li>Includes <strong>severity</strong>, <strong>constraints</strong>, and <strong>descriptions</strong> for every hook.  </li>
+<li>Fully consistent with your substrate runtime architecture and RTT operator grammar.  </li>
+<li>Silent‑release compatible and ready for commit.</li>
+</ul>
+  </main>
+</body>
+</html>

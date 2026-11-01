@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Drift_Taxonomy/d_Operators.md">
+  <title>📘 Minimal Algebraic Corrections</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Drift_Taxonomy/d_Operators.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Drift_Taxonomy/d_Operators.md</code>
+  </aside>
+
+  <main>
+<h1 id="minimal-algebraic-corrections">📘 Minimal Algebraic Corrections</h1>
+<p><em>Purpose: Provide universal algebraic operator corrections for each drift type identified in d_Capture. These corrections are regime‑agnostic and can be applied to any gravity model.</em></p>
+<p>This file contains <strong>operator‑level fixes</strong>, not philosophical commentary.<br>
+Each correction is intentionally minimal, testable, and compatible with existing physics formalisms.</p>
+<hr>
+<h1 id="1-scale-drift-scaleaware-operator-correction"><strong>1. Scale Drift — Scale‑Aware Operator Correction</strong></h1>
+<h3 id="problem"><strong>Problem</strong></h3>
+<p>Operators are applied outside their valid scale, producing infinities or contradictions.</p>
+<h3 id="correction"><strong>Correction</strong></h3>
+<p>Introduce a <strong>scale‑bounded operator</strong>:</p>
+<p>$$
+\mathcal{O}(x) \;\rightarrow\; \mathcal{O}(x\,|\,\sigma)
+$$</p>
+<p>Where:</p>
+<ul>
+<li>$$\sigma$$ is a <strong>scale parameter</strong>  </li>
+<li>$$\sigma \to 0$$ recovers micro‑scale behavior  </li>
+<li>$$\sigma \to \infty$$ recovers macro‑scale behavior  </li>
+</ul>
+<h3 id="minimal-form"><strong>Minimal form</strong></h3>
+<p>$$
+\mathcal{O}_\sigma = \frac{\mathcal{O}}{1 + \left(\frac{\ell}{\sigma}\right)^n}
+$$</p>
+<p>This regularizes:</p>
+<ul>
+<li>curvature blow‑ups  </li>
+<li>density infinities  </li>
+<li>QFT vacuum catastrophes  </li>
+</ul>
+<hr>
+<h1 id="2-substrate-drift-mixedsubstrate-operator"><strong>2. Substrate Drift — Mixed‑Substrate Operator</strong></h1>
+<h3 id="problem_1"><strong>Problem</strong></h3>
+<p>Assuming spacetime is purely smooth or purely discrete.</p>
+<h3 id="correction_1"><strong>Correction</strong></h3>
+<p>Blend continuous and discrete contributions:</p>
+<p>$$
+\mathcal{O} = \alpha\,\mathcal{O}<em _text_disc="\text{disc">{\text{cont}} + (1-\alpha)\,\mathcal{O}</em>
+$$}</p>
+<p>Where:</p>
+<ul>
+<li>$$\alpha\in[0,1]$$ is a <strong>substrate mixing coefficient</strong>  </li>
+<li>Determined empirically or by regime boundary conditions  </li>
+</ul>
+<h3 id="minimal-form_1"><strong>Minimal form</strong></h3>
+<p>$$
+\mathcal{O} = \alpha\,\partial_x + (1-\alpha)\,\Delta_x
+$$</p>
+<p>This removes singularities and discontinuities without changing the underlying physics.</p>
+<hr>
+<h1 id="3-regime-imposition-drift-regimeconditioned-operator"><strong>3. Regime Imposition Drift — Regime‑Conditioned Operator</strong></h1>
+<h3 id="problem_2"><strong>Problem</strong></h3>
+<p>Operators from one regime are forced onto another.</p>
+<h3 id="correction_2"><strong>Correction</strong></h3>
+<p>$$
+\mathcal{O} \;\rightarrow\; \mathcal{O}(x\,|\,R)
+$$</p>
+<p>Where $$R$$ is the <strong>regime tag</strong> (macro, micro, hybrid, etc.).</p>
+<h3 id="minimal-form_2"><strong>Minimal form</strong></h3>
+<p>$$
+\mathcal{O}(R) = 
+\begin{cases}
+\mathcal{O}<em _text_QFT="\text{QFT">{\text{GR}} &amp; R = \text{macro} \
+\mathcal{O}</em> \
+\lambda\,\mathcal{O}}} &amp; R = \text{micro<em _text_QFT="\text{QFT">{\text{GR}} + (1-\lambda)\,\mathcal{O}</em>
+\end{cases}
+$$}} &amp; R = \text{hybrid</p>
+<p>This prevents graviton‑forcing, curvature‑forcing, and other regime impositions.</p>
+<hr>
+<h1 id="4-interface-drift-boundarycondition-operator"><strong>4. Interface Drift — Boundary‑Condition Operator</strong></h1>
+<h3 id="problem_3"><strong>Problem</strong></h3>
+<p>Regime interfaces (GR↔QM, horizon↔interior) are treated as contradictions.</p>
+<h3 id="correction_3"><strong>Correction</strong></h3>
+<p>$$
+\mathcal{O} \;\rightarrow\; \mathcal{O}(x) + \mathcal{B}(x)
+$$</p>
+<p>Where $$\mathcal{B}(x)$$ is a <strong>boundary operator</strong>.</p>
+<h3 id="minimal-form_3"><strong>Minimal form</strong></h3>
+<p>$$
+\mathcal{B}(x) = \beta\,\delta(x-x_0)
+$$</p>
+<p>This regularizes:</p>
+<ul>
+<li>horizon physics  </li>
+<li>early universe transitions  </li>
+<li>GR/QM handoff regions  </li>
+</ul>
+<hr>
+<h1 id="5-analogy-drift-analogyfree-operator"><strong>5. Analogy Drift — Analogy‑Free Operator</strong></h1>
+<h3 id="problem_4"><strong>Problem</strong></h3>
+<p>Operators are imported by analogy (e.g., “gravity must have a particle”).</p>
+<h3 id="correction_4"><strong>Correction</strong></h3>
+<p>$$
+\mathcal{O} \;\rightarrow\; \mathcal{O} - \mathcal{A}
+$$</p>
+<p>Where $$\mathcal{A}$$ is the <strong>analogy term</strong>.</p>
+<h3 id="minimal-form_4"><strong>Minimal form</strong></h3>
+<p>$$
+\mathcal{A} = \gamma\,\mathcal{O}_{\text{analog}}
+$$</p>
+<p>Setting $$\gamma = 0$$ removes analogy‑based assumptions.</p>
+<hr>
+<h1 id="6-extension-drift-domainrestricted-operator"><strong>6. Extension Drift — Domain‑Restricted Operator</strong></h1>
+<h3 id="problem_5"><strong>Problem</strong></h3>
+<p>Operators are extended beyond their validated domain.</p>
+<h3 id="correction_5"><strong>Correction</strong></h3>
+<p>$$
+\mathcal{O}(x) \;\rightarrow\; \mathcal{O}(x)\,\chi_D(x)
+$$</p>
+<p>Where:</p>
+<ul>
+<li>$$\chi_D(x)$$ is a <strong>domain indicator function</strong>  </li>
+<li>$$\chi_D(x)=1$$ inside domain  </li>
+<li>$$\chi_D(x)=0$$ outside domain  </li>
+</ul>
+<h3 id="minimal-form_5"><strong>Minimal form</strong></h3>
+<p>$$
+\chi_D(x) = 
+\begin{cases}
+1 &amp; x \in D \
+0 &amp; x \notin D
+\end{cases}
+$$</p>
+<p>This prevents GR from being applied at Planck scale and QFT from being applied at cosmic scale.</p>
+<hr>
+<h1 id="7-symmetry-drift-symmetryconditioned-operator"><strong>7. Symmetry Drift — Symmetry‑Conditioned Operator</strong></h1>
+<h3 id="problem_6"><strong>Problem</strong></h3>
+<p>Assuming symmetries that do not hold across regimes.</p>
+<h3 id="correction_6"><strong>Correction</strong></h3>
+<p>$$
+\mathcal{O} \;\rightarrow\; \mathcal{O}(x\,|\,S)
+$$</p>
+<p>Where $$S$$ is the <strong>symmetry set</strong> valid in the regime.</p>
+<h3 id="minimal-form_6"><strong>Minimal form</strong></h3>
+<p>$$
+\mathcal{O}(S) = \mathcal{O}\cdot \prod_{i} s_i
+$$</p>
+<p>Where $$s_i\in{0,1}$$ toggles symmetry components.</p>
+<hr>
+<h1 id="8-continuity-drift-continuityconditioned-operator"><strong>8. Continuity Drift — Continuity‑Conditioned Operator</strong></h1>
+<h3 id="problem_7"><strong>Problem</strong></h3>
+<p>Assuming continuity where the regime is discrete or layered.</p>
+<h3 id="correction_7"><strong>Correction</strong></h3>
+<p>$$
+\mathcal{O} \;\rightarrow\; \mathcal{O}<em _text_disc="\text{disc">{\text{cont}}\,\theta + \mathcal{O}</em>\,(1-\theta)
+$$}</p>
+<p>Where $$\theta$$ is a <strong>continuity coefficient</strong>.</p>
+<h3 id="minimal-form_7"><strong>Minimal form</strong></h3>
+<p>$$
+\theta = \frac{1}{1 + (\ell/\ell_c)^m}
+$$</p>
+<p>This removes continuous infinities and discrete discontinuities.</p>
+<hr>
+<h1 id="9-isolation-drift-coupled-operator"><strong>9. Isolation Drift — Coupled Operator</strong></h1>
+<h3 id="problem_8"><strong>Problem</strong></h3>
+<p>Treating a regime as isolated when it is actually coupled.</p>
+<h3 id="correction_8"><strong>Correction</strong></h3>
+<p>$$
+\mathcal{O} \;\rightarrow\; \mathcal{O} + \kappa\,\mathcal{C}
+$$</p>
+<p>Where $$\mathcal{C}$$ is the <strong>coupling operator</strong>.</p>
+<h3 id="minimal-form_8"><strong>Minimal form</strong></h3>
+<p>$$
+\mathcal{C} = \partial_x \mathcal{O}
+$$</p>
+<p>This fixes vacuum‑gravity coupling, horizon coupling, and interior/exterior coupling.</p>
+<hr>
+<h1 id="10-ontology-drift-entityfree-operator"><strong>10. Ontology Drift — Entity‑Free Operator</strong></h1>
+<h3 id="problem_9"><strong>Problem</strong></h3>
+<p>Inventing new entities (dark matter, dark energy, gravitons) to preserve a failing regime.</p>
+<h3 id="correction_9"><strong>Correction</strong></h3>
+<p>$$
+\mathcal{O} \;\rightarrow\; \mathcal{O} - \mathcal{E}
+$$</p>
+<p>Where $$\mathcal{E}$$ is the <strong>entity‑invention term</strong>.</p>
+<h3 id="minimal-form_9"><strong>Minimal form</strong></h3>
+<p>$$
+\mathcal{E} = \eta\,\mathcal{O}_{\text{entity}}
+$$</p>
+<p>Setting $$\eta = 0$$ removes ontology drift.</p>
+<hr>
+<h1 id="summary-table"><strong>Summary Table</strong></h1>
+<table>
+<thead>
+<tr>
+<th>Drift Type</th>
+<th>Minimal Operator Correction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scale</td>
+<td>$\mathcal{O}_\sigma = \frac{\mathcal{O}}{1 + (\ell/\sigma)^n}$</td>
+</tr>
+<tr>
+<td>Substrate</td>
+<td>$\mathcal{O} = \alpha\,\mathcal{O}<em disc>{cont} + (1-\alpha)\,\mathcal{O}</em>$</td>
+</tr>
+<tr>
+<td>Regime Imposition</td>
+<td>$\mathcal{O}(R)$ piecewise by regime</td>
+</tr>
+<tr>
+<td>Interface</td>
+<td>$\mathcal{O} + \beta\,\delta(x-x_0)$</td>
+</tr>
+<tr>
+<td>Analogy</td>
+<td>$\mathcal{O} - \gamma\,\mathcal{O}_{analog}$</td>
+</tr>
+<tr>
+<td>Extension</td>
+<td>$\mathcal{O}\,\chi_D(x)$</td>
+</tr>
+<tr>
+<td>Symmetry</td>
+<td>$\mathcal{O}\cdot \prod s_i$</td>
+</tr>
+<tr>
+<td>Continuity</td>
+<td>$\mathcal{O}<em disc>{cont}\theta + \mathcal{O}</em>(1-\theta)$</td>
+</tr>
+<tr>
+<td>Isolation</td>
+<td>$\mathcal{O} + \kappa\,\partial_x\mathcal{O}$</td>
+</tr>
+<tr>
+<td>Ontology</td>
+<td>$\mathcal{O} - \eta\,\mathcal{O}_{entity}$</td>
+</tr>
+</tbody>
+</table>
+<hr>
+  </main>
+</body>
+</html>

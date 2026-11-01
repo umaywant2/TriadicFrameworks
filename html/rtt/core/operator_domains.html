@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/core/operator_domains.md">
+  <title>RTT Core: Operator Domains</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/core/operator_domains.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/core/operator_domains.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="rtt_core_operator_domains" src="https://github.com/user-attachments/assets/6a4032cc-a934-4584-9d91-3af39e388c46" /></p>
+<hr>
+<p>module_id: rtt.core.operator_domains
+version: 1.0.0
+status: draft
+rtt: 1
+coherence: declared
+drift: bounded
+paradox: structural
+tags:
+  - operator-domains
+  - rtt-core
+  - operator-grammar
+  - operator-families
+  - operator-constraints
+  - regime-constraints
+  - drift-envelope
+  - coherence-budget
+  - triadic-time</p>
+<hr>
+<h1 id="rtt-core-operator-domains">RTT Core: Operator Domains</h1>
+<h2 id="1-purpose-and-scope">1. Purpose and scope</h2>
+<p><strong>Goal:</strong><br>
+Define <strong>Operator Domains</strong> — the canonical spaces in which RTT operators are allowed to act, including:</p>
+<ul>
+<li>Representational domains  </li>
+<li>Coherence domains  </li>
+<li>Drift domains  </li>
+<li>Regime domains  </li>
+<li>Readout domains  </li>
+<li>Triadic‑time domains  </li>
+</ul>
+<p>This module answers: <em>“Where does this operator live, and what parts of the manifold is it allowed to touch?”</em></p>
+<hr>
+<h2 id="2-what-is-an-operator-domain">2. What is an operator domain?</h2>
+<blockquote>
+<p>An operator domain is the subset of the RTT manifold<br>
+on which an operator is permitted to act,<br>
+under coherence, drift, regime, and temporal constraints.</p>
+</blockquote>
+<p>Domains are the <strong>allowed regions</strong> for operator action; constraints and invariants ensure operators never act outside their domains.</p>
+<hr>
+<h2 id="3-canonical-domain-types">3. Canonical domain types</h2>
+<p>RTT defines six canonical operator domain types:</p>
+<ol>
+<li><strong>State Domain</strong>  </li>
+<li><strong>Coherence Domain</strong>  </li>
+<li><strong>Drift Domain</strong>  </li>
+<li><strong>Regime Domain</strong>  </li>
+<li><strong>Readout Domain</strong>  </li>
+<li><strong>Triadic‑Time Domain</strong></li>
+</ol>
+<p>Each operator declares which domains it occupies.</p>
+<hr>
+<h2 id="4-state-domain">4. State Domain</h2>
+<h3 id="41-definition">4.1 Definition</h3>
+<p>The <strong>State Domain</strong> is the subset of the representational manifold:</p>
+<p>[
+\mathcal{D}<em _text_rep="\text{rep">{\text{state}} \subseteq \mathcal{M}</em>
+]}</p>
+<p>Operators in this domain:</p>
+<ul>
+<li>create, modify, or delete branches  </li>
+<li>extend or contract manifolds  </li>
+<li>shift representational geometry  </li>
+</ul>
+<h3 id="42-examples">4.2 Examples</h3>
+<ul>
+<li>EXTEND  </li>
+<li>SHIFT  </li>
+<li>INVERT  </li>
+<li>ARRIVAL ARC  </li>
+</ul>
+<hr>
+<h2 id="5-coherence-domain">5. Coherence Domain</h2>
+<h3 id="51-definition">5.1 Definition</h3>
+<p>The <strong>Coherence Domain</strong> is the subset of the coherence manifold:</p>
+<p>[
+\mathcal{D}<em _text_coh="\text{coh">{\text{coherence}} \subseteq \mathcal{M}</em>
+]}</p>
+<p>Operators in this domain:</p>
+<ul>
+<li>partition coherence  </li>
+<li>stabilize coherence  </li>
+<li>gate coherence  </li>
+<li>consume coherence (validation)  </li>
+</ul>
+<h3 id="52-examples">5.2 Examples</h3>
+<ul>
+<li>STABILIZE  </li>
+<li>CLAMP  </li>
+<li>GATE  </li>
+<li>VALIDATE  </li>
+</ul>
+<hr>
+<h2 id="6-drift-domain">6. Drift Domain</h2>
+<h3 id="61-definition">6.1 Definition</h3>
+<p>The <strong>Drift Domain</strong> is the subset of the drift manifold:</p>
+<p>[
+\mathcal{D}<em _text_drift="\text{drift">{\text{drift}} \subseteq \mathcal{M}</em>
+]}</p>
+<p>Operators in this domain:</p>
+<ul>
+<li>increase drift (extension)  </li>
+<li>reduce drift (stabilization)  </li>
+<li>modulate drift boundaries  </li>
+</ul>
+<h3 id="62-examples">6.2 Examples</h3>
+<ul>
+<li>DRIFT  </li>
+<li>BOUNDARY MODULATE  </li>
+<li>STABILIZE  </li>
+</ul>
+<hr>
+<h2 id="7-regime-domain">7. Regime Domain</h2>
+<h3 id="71-definition">7.1 Definition</h3>
+<p>The <strong>Regime Domain</strong> is the subset of the regime manifold:</p>
+<p>[
+\mathcal{D}<em _text_regime="\text{regime">{\text{regime}} \subseteq \mathcal{G}</em>
+]}</p>
+<p>Operators in this domain:</p>
+<ul>
+<li>enter or exit regimes  </li>
+<li>shift regime geometry  </li>
+<li>enforce regime constraints  </li>
+</ul>
+<h3 id="72-regime-flags">7.2 Regime flags</h3>
+<p>Operators declare regime flags:</p>
+<ul>
+<li>SRR — Single‑Readout Regime  </li>
+<li>DBR — Drift‑Bounded Regime  </li>
+<li>CMR — Coherence‑Minimum Regime  </li>
+<li>DVR — Deferred‑Validation Regime  </li>
+<li>ECR — Extension‑Compatible Regime  </li>
+</ul>
+<p>An operator’s regime domain is the intersection of its flags.</p>
+<hr>
+<h2 id="8-readout-domain">8. Readout Domain</h2>
+<h3 id="81-definition">8.1 Definition</h3>
+<p>The <strong>Readout Domain</strong> is the subset of the manifold where validation is possible:</p>
+<p>[
+\mathcal{D}<em _text_readout="\text{readout">{\text{readout}} \subseteq \mathcal{M}</em>
+]}</p>
+<p>Operators in this domain:</p>
+<ul>
+<li>trigger Validator Pulse  </li>
+<li>consume coherence  </li>
+<li>collapse non‑selected branches  </li>
+<li>produce classical information  </li>
+</ul>
+<h3 id="82-examples">8.2 Examples</h3>
+<ul>
+<li>VALIDATE  </li>
+<li>ARRIVAL CONTINUITY  </li>
+</ul>
+<hr>
+<h2 id="9-triadictime-domain">9. Triadic‑Time Domain</h2>
+<h3 id="91-definition">9.1 Definition</h3>
+<p>The <strong>Triadic‑Time Domain</strong> specifies which temporal layer(s) an operator occupies:</p>
+<ul>
+<li>(\mathcal{D}_{T_1}) — State Time  </li>
+<li>(\mathcal{D}_{T_2}) — Coherence Time  </li>
+<li>(\mathcal{D}_{T_3}) — Readout Time  </li>
+</ul>
+<h3 id="92-examples">9.2 Examples</h3>
+<ul>
+<li>EXTEND: (\mathcal{D}_{T_1})  </li>
+<li>STABILIZE: (\mathcal{D}_{T_2})  </li>
+<li>VALIDATE: (\mathcal{D}_{T_3})  </li>
+</ul>
+<p>Some operators span multiple domains (e.g., ARRIVAL operators).</p>
+<hr>
+<h2 id="10-domain-declarations-for-operator-families">10. Domain declarations for operator families</h2>
+<h3 id="101-microcore-operators">10.1 Micro‑Core operators</h3>
+<ul>
+<li>
+<p><strong>R‑operators (Resonance):</strong><br>
+  State Domain, Drift Domain, Regime Domain (DBR)</p>
+</li>
+<li>
+<p><strong>K‑operators (Coherence Tools):</strong><br>
+  Coherence Domain, Regime Domain (CMR, SRR), Triadic‑Time Domain (T₂, T₃)</p>
+</li>
+<li>
+<p><strong>P‑operators (Primitives):</strong><br>
+  State Domain, Drift Domain, Coherence Domain (sampling)</p>
+</li>
+</ul>
+<h3 id="102-rtt12-operators">10.2 RTT‑12 operators</h3>
+<ul>
+<li>
+<p><strong>G‑operators (Geometry):</strong><br>
+  Regime Domain, State Domain, Drift Domain</p>
+</li>
+<li>
+<p><strong>S‑operators (Stability):</strong><br>
+  Coherence Domain, Drift Domain, Regime Domain (DBR, CMR)</p>
+</li>
+</ul>
+<h3 id="103-arrival-operators">10.3 Arrival operators</h3>
+<ul>
+<li><strong>A‑operators:</strong><br>
+  State Domain, Regime Domain, Readout Domain, Triadic‑Time Domain (T₁–T₃ bridge)</li>
+</ul>
+<hr>
+<h2 id="11-domains-constraints-and-invariants">11. Domains, constraints, and invariants</h2>
+<p>Operator Domains interact with:</p>
+<ul>
+<li><strong>Operator Constraints:</strong> what operators may do in their domains  </li>
+<li><strong>Operator Invariants:</strong> global rules operators must obey  </li>
+<li><strong>Regime Constraints:</strong> what regimes may allow within their domains  </li>
+<li><strong>Regime Invariants:</strong> global rules regimes must obey  </li>
+</ul>
+<p>An operator is valid only if:</p>
+<p>[
+O_k \text{ acts inside } \mathcal{D} \text{ and respects constraints and invariants.}
+]</p>
+<hr>
+<h2 id="12-example-quantum-cloning-alignment">12. Example: Quantum “cloning” alignment</h2>
+<p>Operators occupy domains:</p>
+<ul>
+<li>EXTEND: State Domain, Drift Domain, Regime Domain (ECR)  </li>
+<li>DRIFT: Drift Domain, Coherence Domain (indirect)  </li>
+<li>STABILIZE: Coherence Domain, Drift Domain, Regime Domain (DBR, CMR)  </li>
+<li>VALIDATE: Readout Domain, Coherence Domain, Regime Domain (SRR)  </li>
+</ul>
+<p>Operator Domains explain:</p>
+<ul>
+<li>why extension can create multiple branches  </li>
+<li>why drift and coherence must be managed  </li>
+<li>why validation can only occur in readout domain  </li>
+<li>why no‑cloning is not violated  </li>
+</ul>
+<hr>
+<h2 id="13-paradox-handling">13. Paradox handling</h2>
+<p>Operator Domains prevent paradoxes by:</p>
+<ul>
+<li>restricting where operators may act  </li>
+<li>enforcing regime and readout boundaries  </li>
+<li>maintaining drift and coherence limits  </li>
+<li>ensuring single‑readout topology  </li>
+</ul>
+<p>Thus:</p>
+<ul>
+<li>“Multiple branches exist” → allowed in state domain  </li>
+<li>“Only one is real” → enforced in readout domain  </li>
+<li>“Others disappear” → collapse in regime + readout domains  </li>
+<li>“No violation occurs” → domain + constraint + invariant alignment  </li>
+</ul>
+<hr>
+<h2 id="14-canon-integration-and-cross-links">14. Canon integration and cross-links</h2>
+<p><strong>Primary cross-links:</strong></p>
+<ul>
+<li><code>/docs/rtt/core/operator_index.md</code></li>
+<li><code>/docs/rtt/core/operator_grammar.md</code></li>
+<li><code>/docs/rtt/core/operator_families.md</code></li>
+<li><code>/docs/rtt/core/operator_behaviors.md</code></li>
+<li><code>/docs/rtt/core/operator_sequences.md</code></li>
+<li><code>/docs/rtt/core/operator_transitions.md</code></li>
+<li><code>/docs/rtt/core/operator_invariants.md</code></li>
+<li><code>/docs/rtt/core/operator_constraints.md</code></li>
+<li><code>/docs/rtt/core/regime_maps.md</code></li>
+<li><code>/docs/rtt/core/regime_geometry.md</code></li>
+<li><code>/docs/rtt/core/regime_topology.md</code></li>
+<li><code>/docs/rtt/core/regime_dynamics.md</code></li>
+<li><code>/docs/rtt/core/regime_flow.md</code></li>
+<li><code>/docs/rtt/core/regime_invariants.md</code></li>
+<li><code>/docs/rtt/core/regime_constraints.md</code></li>
+<li><code>/docs/rtt/core/time_triads.md</code></li>
+<li><code>/docs/rtt/core/coherence_budget.md</code></li>
+<li><code>/docs/rtt/core/validator_pulse.md</code></li>
+<li><code>/docs/rtt/core/dimensional_drift_envelope.md</code></li>
+<li><code>/docs/rtt/core/alignment_quantum_cloning.md</code></li>
+</ul>
+<p><strong>Status:</strong><br>
+This module defines the domain structure for RTT operators.<br>
+Once domain diagrams are added, it can be promoted from <code>draft</code> to <code>stable</code>.</p>
+  </main>
+</body>
+</html>

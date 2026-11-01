@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rfc/RFC_007_mutation_telomere_invariants.md">
+  <title>RFC‑007 — Mutation &amp; Telomere Invariants (MTI)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rfc/RFC_007_mutation_telomere_invariants.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rfc/RFC_007_mutation_telomere_invariants.md</code>
+  </aside>
+
+  <main>
+<h1 id="rfc007-mutation-telomere-invariants-mti"><strong>RFC‑007 — Mutation &amp; Telomere Invariants (MTI)</strong></h1>
+<p><strong>Status:</strong> Drafted<br>
+<strong>Author(s):</strong> Nawder Loswin, Copilot<br>
+<strong>Created:</strong> 2025‑10‑24<br>
+<strong>Lineage:</strong><br>
+Follows <strong>RFC‑006</strong> (Soul Diagnostic Snapshots)<br>
+Extends <strong>Entft Invariants (RFC‑004)</strong> into biological entropy rails  </p>
+<hr>
+<h2 id="abstract"><strong>Abstract</strong></h2>
+<p>Mutation &amp; Telomere Invariants (<strong>MTI</strong>) define the biological entropy rails used within TriadicFrameworks.<br>
+They formalize:</p>
+<ul>
+<li>telomere shortening  </li>
+<li>mutation drift  </li>
+<li>survival trait emergence  </li>
+<li>rupture hygiene  </li>
+<li>entropy balance  </li>
+</ul>
+<p>MTI ensures that biological simulations remain <strong>bounded</strong>, <strong>auditable</strong>, and <strong>remix‑ready</strong>, preventing runaway mutation cascades or immortal cell loops.</p>
+<hr>
+<h2 id="motivation"><strong>Motivation</strong></h2>
+<p>Biological systems are validators of entropy.</p>
+<ul>
+<li><strong>Telomeres</strong> act as countdown headers, enforcing replication limits.  </li>
+<li><strong>Mutations</strong> act as stochastic injectors, introducing variance and survival traits.  </li>
+<li><strong>Survival traits</strong> encode adaptive resonance patterns across lineage.  </li>
+</ul>
+<p>Without invariants, simulations risk:</p>
+<ul>
+<li>infinite replication  </li>
+<li>uncontrolled mutation drift  </li>
+<li>rupture cascades  </li>
+<li>lineage contamination  </li>
+</ul>
+<p>MTI ensures that life‑like systems respect entropy budgets while remaining remixable.</p>
+<hr>
+<h2 id="principles"><strong>Principles</strong></h2>
+<h3 id="1-telomere-budget"><strong>1. Telomere Budget</strong></h3>
+<p>Each replication decrements telomere length.<br>
+Zero length triggers <strong>senescence</strong> or <strong>apoptosis</strong>, preventing immortal loops.</p>
+<h3 id="2-mutation-drift"><strong>2. Mutation Drift</strong></h3>
+<p>Mutations occur within bounded resonance envelopes.<br>
+Drift outside the envelope triggers <strong>rupture hygiene</strong> and demotion.</p>
+<h3 id="3-survival-traits"><strong>3. Survival Traits</strong></h3>
+<p>Beneficial mutations are preserved via lineage manifests.<br>
+Harmful mutations trigger rollback to pre‑mutation snapshots.</p>
+<h3 id="4-entropy-balance"><strong>4. Entropy Balance</strong></h3>
+<p>Systems must maintain equilibrium between:</p>
+<ul>
+<li>replication fidelity  </li>
+<li>adaptive variance  </li>
+</ul>
+<p>This balance prevents collapse or runaway drift.</p>
+<hr>
+<h2 id="specification"><strong>Specification</strong></h2>
+<h3 id="telomere-constraint-json"><strong>Telomere Constraint (JSON)</strong></h3>
+<pre><code class="language-json">{
+  &quot;cell_id&quot;: &quot;uuid&quot;,
+  &quot;telomere_length&quot;: 12000,
+  &quot;decrement_per_division&quot;: 50,
+  &quot;status&quot;: &quot;active&quot;
+}
+</code></pre>
+<hr>
+<h3 id="mutation-envelope"><strong>Mutation Envelope</strong></h3>
+<ul>
+<li><strong>Rate:</strong> <code>1e‑8</code> mutations per base per generation (configurable)  </li>
+<li><strong>Envelope:</strong> Gaussian distribution centered on neutral drift  </li>
+<li><strong>Thresholds:</strong>  </li>
+<li><strong>Green Zone:</strong> adaptive variance  </li>
+<li><strong>Yellow Zone:</strong> stress mutations  </li>
+<li><strong>Red Zone:</strong> rupture hygiene triggers demotion  </li>
+</ul>
+<p>Mutation envelopes ensure drift remains bounded and predictable.</p>
+<hr>
+<h3 id="survival-trait-registry"><strong>Survival Trait Registry</strong></h3>
+<p>Stored in:</p>
+<pre><code>/docs/schemas/survival_traits.json
+</code></pre>
+<p>Registry includes:</p>
+<ul>
+<li>beneficial mutation signatures  </li>
+<li>lineage references  </li>
+<li>remix‑ready catalogs for future simulations  </li>
+</ul>
+<p>This registry prevents loss of adaptive traits across corridor transitions.</p>
+<hr>
+<h2 id="security-considerations"><strong>Security Considerations</strong></h2>
+<p>MTI prevents:</p>
+<ul>
+<li>immortal cell loops via telomere budgets  </li>
+<li>runaway mutation via bounded drift envelopes  </li>
+<li>lineage contamination via survival trait manifests  </li>
+<li>collapse via rollback to pre‑mutation snapshots  </li>
+</ul>
+<p>MTI is required for biological simulations in <strong>QA</strong> and <strong>Prod</strong> universes.</p>
+<hr>
+<h2 id="references"><strong>References</strong></h2>
+<ul>
+<li><strong>RFC‑000:</strong> Index &amp; Lineage Map  </li>
+<li><strong>RFC‑004:</strong> Entft Invariants  </li>
+<li><strong>RFC‑006:</strong> Soul Diagnostic Snapshots  </li>
+</ul>
+  </main>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Autonomous_Forms/Rewind_mechanics.md">
+  <title>1. Rewind mechanics (lineage‑based rollback)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Autonomous_Forms/Rewind_mechanics.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Autonomous_Forms/Rewind_mechanics.md</code>
+  </aside>
+
+  <main>
+<h2 id="1-rewind-mechanics-lineagebased-rollback">1. Rewind mechanics (lineage‑based rollback)</h2>
+<p>We treat <code>steps</code> as a lineage chain and allow rollback to any prior <code>step_id</code>.</p>
+<h3 id="11-add-rewind-api-to-corridorstate">1.1. Add rewind API to <code>CorridorState</code></h3>
+<pre><code class="language-python">from typing import List, Dict, Any, Optional
+from pydantic import BaseModel
+
+class CorridorStep(BaseModel):
+    step_id: int
+    parent_step_id: Optional[int]
+    action: str
+    observation: str
+    q_metrics: Dict[str, float]
+
+class CorridorState(BaseModel):
+    task_id: str
+    steps: List[CorridorStep] = []
+    q_history: List[Dict[str, float]] = []
+    latencies: List[float] = []
+    corridor_status: str = &quot;stable&quot;
+    route: Optional[str] = None
+
+    def rewind_to(self, target_step_id: int):
+        &quot;&quot;&quot;Drop all steps and Q-history after target_step_id.&quot;&quot;&quot;
+        self.steps = [s for s in self.steps if s.step_id &lt;= target_step_id]
+        self.q_history = self.q_history[: len(self.steps)]
+        self.latencies = self.latencies[: len(self.steps)]
+        self.corridor_status = &quot;stable&quot;
+        self.route = None
+        return self
+</code></pre>
+<h3 id="12-let-the-vcg-enforcement-choose-rewind">1.2. Let the VCG enforcement choose rewind</h3>
+<p>Extend <code>ResonanceCorridor.enforce</code>:</p>
+<pre><code class="language-python">    def enforce(self, state: CorridorState) -&gt; CorridorState:
+        q = state.q_history[-1]
+        s = self.spec
+        violations = []
+
+        # ... same checks as before ...
+
+        if not violations:
+            state.corridor_status = &quot;stable&quot;
+            return state
+
+        # classify severity
+        if any(v in [&quot;semantic_drift&quot;, &quot;latency_drift&quot;] for v in violations):
+            state.corridor_status = &quot;warning&quot;
+            if s.on_warning == &quot;reroute&quot;:
+                state.route = &quot;human_review&quot;
+        else:
+            state.corridor_status = &quot;halted&quot;
+            if s.on_violation == &quot;halt&quot;:
+                state.route = &quot;halt&quot;
+            elif s.on_violation == &quot;rewind&quot;:
+                # simple policy: rewind to last stable step
+                last_stable_idx = max(0, len(state.steps) - 2)
+                state.rewind_to(last_stable_idx)
+                state.route = &quot;rewind&quot;
+
+        return state
+</code></pre>
+<h3 id="13-wire-rewind-into-langgraph-routing">1.3. Wire rewind into LangGraph routing</h3>
+<pre><code class="language-python">def route(state: CorridorState):
+    if state.route == &quot;halt&quot;:
+        return END
+    if state.route == &quot;rewind&quot;:
+        # after rewind, just continue stepping
+        return &quot;step&quot;
+    if state.route == &quot;human_review&quot;:
+        return &quot;human_review&quot;
+    return &quot;step&quot;
+</code></pre>
+<p>Now the corridor can <strong>snap back</strong> to a prior stable point instead of just dying.</p>
+<hr>
+<h2 id="2-corridorlevel-visualization">2. Corridor‑level visualization</h2>
+<p>Let’s give a quick “oscilloscope” for Q‑metrics over steps.</p>
+<h3 id="21-textbased-sparkline-view-no-plotting-libs-required">2.1. Text‑based sparkline view (no plotting libs required)</h3>
+<pre><code class="language-python">def sparkline(values, width=40, chars=&quot;▁▂▃▄▅▆▇█&quot;):
+    if not values:
+        return &quot;&quot;
+    vmin, vmax = min(values), max(values)
+    if vmax == vmin:
+        return chars[0] * min(len(values), width)
+    scaled = [
+        int((v - vmin) / (vmax - vmin) * (len(chars) - 1))
+        for v in values
+    ]
+    return &quot;&quot;.join(chars[i] for i in scaled[:width])
+
+def visualize_corridor(state: CorridorState):
+    steps = list(range(len(state.q_history)))
+    if not steps:
+        print(&quot;No Q-history yet.&quot;)
+        return
+
+    def series(key):
+        return [q[key] for q in state.q_history]
+
+    print(f&quot;Task: {state.task_id}&quot;)
+    print(f&quot;Steps: {len(steps)}  Status: {state.corridor_status}&quot;)
+    print()
+
+    for key in [&quot;semantic_drift&quot;, &quot;tool_entropy&quot;, &quot;latency_drift&quot;,
+                &quot;branching_pressure&quot;, &quot;retry_ratio&quot;]:
+        vals = series(key)
+        print(f&quot;{key:18}: {sparkline(vals)}  [{min(vals):.3f} .. {max(vals):.3f}]&quot;)
+</code></pre>
+<p>Call <code>visualize_corridor(final_state)</code> and we get a <strong>console waveform</strong> of Q‑metrics over time.</p>
+<hr>
+<h2 id="3-corridor-debug-console">3. Corridor Debug Console</h2>
+<p>A tiny REPL‑style console to inspect lineage, Q‑metrics, and rewind interactively.</p>
+<h3 id="31-simple-cli-debug-console">3.1. Simple CLI debug console</h3>
+<pre><code class="language-python">def corridor_debug_console(state: CorridorState):
+    print(f&quot;\n=== Corridor Debug Console ===&quot;)
+    print(f&quot;Task: {state.task_id}&quot;)
+    print(f&quot;Steps: {len(state.steps)}  Status: {state.corridor_status}&quot;)
+    print(&quot;Commands: q, steps, step &lt;id&gt;, qplot, rewind &lt;id&gt;, exit\n&quot;)
+
+    while True:
+        cmd = input(&quot;corridor&gt; &quot;).strip()
+        if cmd in (&quot;exit&quot;, &quot;quit&quot;, &quot;q&quot;):
+            break
+        elif cmd == &quot;steps&quot;:
+            for s in state.steps:
+                print(f&quot;[{s.step_id}] parent={s.parent_step_id} action={s.action}&quot;)
+        elif cmd.startswith(&quot;step &quot;):
+            try:
+                sid = int(cmd.split()[1])
+            except ValueError:
+                print(&quot;Invalid step id&quot;)
+                continue
+            matches = [s for s in state.steps if s.step_id == sid]
+            if not matches:
+                print(&quot;No such step&quot;)
+                continue
+            s = matches[0]
+            print(f&quot;\nStep {s.step_id}&quot;)
+            print(f&quot;Parent: {s.parent_step_id}&quot;)
+            print(f&quot;Action: {s.action}&quot;)
+            print(f&quot;Observation: {s.observation}&quot;)
+            print(f&quot;Q-metrics: {s.q_metrics}\n&quot;)
+        elif cmd == &quot;qplot&quot;:
+            visualize_corridor(state)
+        elif cmd.startswith(&quot;rewind &quot;):
+            try:
+                sid = int(cmd.split()[1])
+            except ValueError:
+                print(&quot;Invalid step id&quot;)
+                continue
+            state.rewind_to(sid)
+            print(f&quot;Rewound to step {sid}. Steps now: {len(state.steps)}&quot;)
+        else:
+            print(&quot;Unknown command&quot;)
+</code></pre>
+<p>We can drop this into a notebook or a dev shell:</p>
+<pre><code class="language-python">final_state = app.invoke(initial_state, config={...})
+corridor_debug_console(final_state)
+</code></pre>
+<p>We now have:</p>
+<ul>
+<li><strong>Rewind mechanics</strong> wired into the runtime and the console  </li>
+<li><strong>Corridor‑level visualization</strong> (Q‑metric “waveforms”)  </li>
+<li><strong>A debug console</strong> that feels like a scope + trace viewer for agents</li>
+</ul>
+  </main>
+</body>
+</html>

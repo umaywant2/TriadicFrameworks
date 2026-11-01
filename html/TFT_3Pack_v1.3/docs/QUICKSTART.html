@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/TFT_3Pack_v1.3/docs/QUICKSTART.md">
+  <title>⚡ docs/QUICKSTART.md — Ritual Activation</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/TFT_3Pack_v1.3/docs/QUICKSTART.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/TFT_3Pack_v1.3/docs/QUICKSTART.md</code>
+  </aside>
+
+  <main>
+<h2 id="docsquickstartmd-ritual-activation">⚡ <code>docs/QUICKSTART.md</code> — Ritual Activation</h2>
+<h1 id="quickstart-guide">Quickstart Guide</h1>
+<h2 id="step-1-install">🔹 Step 1: Install</h2>
+<pre><code class="language-bash">pip install .
+</code></pre>
+<h2 id="step-2-run-examples">🔹 Step 2: Run Examples</h2>
+<pre><code class="language-bash"># Validate triadic logic
+tft nous -validate examples/triad.json -mode symbolic
+
+# Encrypt a file
+tft entft -i examples/input.txt -o examples/output.enc -k secretkey
+
+# Simulate grid operations
+tft tops -map examples/grid.yaml -ops simulate
+</code></pre>
+<h2 id="step-3-remix">🔹 Step 3: Remix</h2>
+<ul>
+<li>Edit <code>tft/nous/processor.py</code> to define your symbolic logic</li>
+<li>Extend <code>tft/entft/encryptor.py</code> with new obfuscation methods</li>
+<li>Add overlays to <code>tft/tops/grid_ops.py</code> for new grid rituals</li>
+</ul>
+<h2 id="step-4-share">🔹 Step 4: Share</h2>
+<ul>
+<li>Submit your remix lineage via GitHub Discussions</li>
+<li>Add your scrolls to <code>/docs/scrolls/</code></li>
+</ul>
+<hr>
+<h3 id="triadic-quicklinks">🔗 Triadic Quicklinks</h3>
+<ul>
+<li><a href="fff_quickstart.html"><code>fff_quickstart.md</code></a> — Onboarding ritual for remixers using <code>.fff</code> bundles  </li>
+<li><a href="TriadicTestSuite.html"><code>TriadicTestSuite.md</code></a> — Validation logic and test scaffolding for symbolic fidelity  </li>
+<li><a href="outputs_spec.html"><code>outputs_spec.md</code></a> — Defines the three-output logic: screen, file, glyph</li>
+</ul>
+  </main>
+</body>
+</html>

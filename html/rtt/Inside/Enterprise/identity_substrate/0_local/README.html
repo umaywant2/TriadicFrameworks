@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Enterprise/identity_substrate/0_local/README.md">
+  <title>Local Identity Substrate (Layer 0)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Enterprise/identity_substrate/0_local/README.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Enterprise/identity_substrate/0_local/README.md</code>
+  </aside>
+
+  <main>
+<h1 id="local-identity-substrate-layer-0"><strong>Local Identity Substrate (Layer 0)</strong></h1>
+<h3 id="the-foundation-of-all-enterprise-identity-flows-in-rttinside"><em>The foundation of all enterprise identity flows in RTT/Inside</em></h3>
+<hr>
+<h2 id="overview"><strong>Overview</strong></h2>
+<p>The <strong>Local Identity Substrate</strong> represents the most fundamental identity layer in RTT/Inside Enterprise.<br>
+It models identity at the <strong>machine‑local</strong>, <strong>runtime</strong>, and <strong>operator‑visible</strong> level — before Active Directory, LDAP, Kerberos, DNS SRV, cloud identity, or zero‑trust policies enter the picture.</p>
+<p>Layer 0 is intentionally simple.<br>
+It provides the substrate where clarity, regime tagging, triad roles, and coherence envelopes can be demonstrated <strong>without any external dependencies</strong>.</p>
+<p>This makes it the perfect starting point for students, operators, and AIs learning how RTT/Inside identity semantics work.</p>
+<hr>
+<h2 id="purpose"><strong>Purpose</strong></h2>
+<p>Layer 0 exists to:</p>
+<ul>
+<li>Provide a <strong>minimal identity substrate</strong> for demonstrations  </li>
+<li>Show how RTT/Inside semantics attach to identity even when no directory service is present  </li>
+<li>Anchor the Identity Substrate Zero‑through‑Seven model  </li>
+<li>Serve as the “local baseline” for higher‑order identity layers  </li>
+<li>Demonstrate clarity envelopes and regime tagging in isolation  </li>
+<li>Offer a safe, operator‑friendly environment for experimentation  </li>
+</ul>
+<p>It is the simplest identity layer — but also the most universal.</p>
+<hr>
+<h2 id="identity-characteristics"><strong>Identity Characteristics</strong></h2>
+<p>The Local Identity Substrate models:</p>
+<h3 id="1-machinelocal-identity"><strong>1. Machine‑Local Identity</strong></h3>
+<ul>
+<li>Hostname  </li>
+<li>Local user accounts  </li>
+<li>Runtime process identity  </li>
+<li>Local service identity  </li>
+<li>Ephemeral session identity  </li>
+</ul>
+<h3 id="2-no-external-dependencies"><strong>2. No External Dependencies</strong></h3>
+<ul>
+<li>No AD  </li>
+<li>No LDAP  </li>
+<li>No Kerberos  </li>
+<li>No DNS SRV  </li>
+<li>No cloud identity  </li>
+<li>No zero‑trust policy engine  </li>
+</ul>
+<p>This layer is pure substrate.</p>
+<h3 id="3-substrateaware-metadata"><strong>3. Substrate‑Aware Metadata</strong></h3>
+<p>Even without external identity systems, RTT/Inside semantics apply:</p>
+<ul>
+<li><strong>Clarity score</strong> — how well the local identity is defined  </li>
+<li><strong>Regime tag</strong> — analytic, mythic, or control  </li>
+<li><strong>Triad role</strong> — A / B / C assignment  </li>
+<li><strong>Coherence envelope</strong> — boundaries for local identity flows  </li>
+</ul>
+<p>These metadata fields demonstrate how substrate awareness works at the smallest scale.</p>
+<hr>
+<h2 id="example-minimal-local-identity-record"><strong>Example: Minimal Local Identity Record</strong></h2>
+<p>A simple substrate‑aware identity object might look like:</p>
+<pre><code>{
+  &quot;local_identity&quot;: {
+    &quot;hostname&quot;: &quot;enterprise-node-01&quot;,
+    &quot;user&quot;: &quot;operator&quot;,
+    &quot;session&quot;: &quot;local-runtime&quot;
+  },
+  &quot;substrate&quot;: {
+    &quot;clarity&quot;: 0.82,
+    &quot;regime&quot;: &quot;analytic&quot;,
+    &quot;triad_role&quot;: &quot;A&quot;,
+    &quot;coherence_envelope&quot;: &quot;local&quot;
+  }
+}
+</code></pre>
+<p>This example is intentionally minimal — it shows how substrate semantics attach to identity even when no directory service exists.</p>
+<hr>
+<h2 id="how-layer-0-connects-to-higher-layers"><strong>How Layer 0 Connects to Higher Layers</strong></h2>
+<p>Layer 0 feeds directly into:</p>
+<ul>
+<li><strong>Active Directory (1)</strong> — local identity becomes domain identity  </li>
+<li><strong>LDAP (2)</strong> — local attributes map to schema entries  </li>
+<li><strong>DNS SRV (3)</strong> — local services become discoverable  </li>
+<li><strong>Kerberos (4)</strong> — local principals become realm principals  </li>
+<li><strong>Service Discovery (5)</strong> — local services gain substrate tags  </li>
+<li><strong>Modern Identity (6)</strong> — local identity becomes claims  </li>
+<li><strong>Cloud Directory (7)</strong> — local identity becomes cloud identity  </li>
+<li><strong>Zero‑Trust (8)</strong> — local identity becomes policy‑bounded identity  </li>
+</ul>
+<p>This makes Layer 0 the <strong>root substrate</strong> of the entire enterprise identity model.</p>
+<hr>
+<h2 id="teaching-notes"><strong>Teaching Notes</strong></h2>
+<p>Students and AIs should begin here because:</p>
+<ul>
+<li>It is the simplest identity layer  </li>
+<li>It demonstrates substrate semantics without complexity  </li>
+<li>It provides a clean baseline for clarity and regime analysis  </li>
+<li>It shows how identity exists even without external systems  </li>
+<li>It prepares learners for the more complex layers that follow  </li>
+</ul>
+<p>Layer 0 is the “hello world” of substrate‑aware identity.</p>
+<hr>
+<h2 id="status"><strong>Status</strong></h2>
+<p><strong>Experimental</strong> — stable enough for teaching and RFC anchoring, evolving as the substrate model expands.</p>
+  </main>
+</body>
+</html>

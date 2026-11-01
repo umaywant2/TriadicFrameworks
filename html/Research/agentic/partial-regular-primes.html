@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Research/agentic/partial-regular-primes.md">
+  <title>RTT Agentic Module: Almost All Primes Are Partially Regular</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Research/agentic/partial-regular-primes.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Research/agentic/partial-regular-primes.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Research_agentic_partial_regular_primes_" src="https://github.com/user-attachments/assets/636a3bee-d8f2-49fd-8b37-b74d2b2dba91" /></p>
+<h1 id="rtt-agentic-module-almost-all-primes-are-partially-regular">RTT Agentic Module: Almost All Primes Are Partially Regular</h1>
+<ul>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/agentic/partial-regular-primes_module.json"><code>partial-regular-primes_module.json</code></a> — Agentic module schema role assignments</li>
+</ul>
+<p><strong>Module ID:</strong> <code>partial_regular_primes_rtt</code><br>
+<strong>Source paper:</strong> https://arxiv.org/pdf/2602.05090</p>
+<p>This module wraps the paper <em>“Almost all primes are partially regular”</em> in RTT operator grammar.<br>
+It preserves the authors’ results while exposing the structural regimes that govern irregularity, partial regularity, and density-one phenomena.</p>
+<hr>
+<h2 id="1-purpose">1. Purpose</h2>
+<ul>
+<li>Make the paper <strong>agentic</strong> and machine-navigable.  </li>
+<li>Clarify the <strong>regime structure</strong> behind partial regularity of primes.  </li>
+<li>Provide students with a clean conceptual map.  </li>
+<li>Support AI agents in reasoning over the paper without drift.</li>
+</ul>
+<hr>
+<h2 id="2-core-rtt-view-of-the-paper">2. Core RTT view of the paper</h2>
+<p>The paper proves that <strong>almost all primes are partially regular</strong>, meaning:</p>
+<ul>
+<li>A prime may be irregular at some Bernoulli indices,  </li>
+<li>but for a positive proportion of admissible indices, it behaves regularly,  </li>
+<li>and the set of such primes has <strong>density 1</strong>.</li>
+</ul>
+<p>This involves three interacting structures:</p>
+<ul>
+<li>
+<p><strong>Bernoulli irregularity regime:</strong><br>
+  Irregularity is defined by divisibility of Bernoulli numerators.</p>
+</li>
+<li>
+<p><strong>Partial regularity regime:</strong><br>
+  A relaxed notion of regularity that allows some irregular pairs.</p>
+</li>
+<li>
+<p><strong>Analytic density regime:</strong><br>
+  Density-one results require analytic number theory tools.</p>
+</li>
+</ul>
+<p>The proof moves between these regimes, often implicitly.<br>
+This module makes those transitions explicit.</p>
+<hr>
+<h2 id="3-rtt-structures-in-this-module">3. RTT structures in this module</h2>
+<h3 id="regimes">Regimes</h3>
+<ul>
+<li><code>bernoulli_irregularity_regime</code>  </li>
+<li><code>partial_regularity_regime</code>  </li>
+<li><code>analytic_density_regime</code></li>
+</ul>
+<h3 id="tensions">Tensions</h3>
+<ul>
+<li><code>local_vs_global_irregularity</code>  </li>
+<li><code>combinatorial_vs_analytic</code>  </li>
+<li><code>rare_irregularity_vs_density_one</code></li>
+</ul>
+<h3 id="transitions">Transitions</h3>
+<ul>
+<li><code>irregular_to_partial_transition</code>  </li>
+<li><code>local_condition_to_density_transition</code>  </li>
+<li><code>exception_control_transition</code></li>
+</ul>
+<hr>
+<h2 id="4-operators">4. Operators</h2>
+<ul>
+<li><strong><code>irregularity_operator</code></strong> — detects irregular pairs (p, k).  </li>
+<li><strong><code>partial_regularity_operator</code></strong> — measures proportion of regular indices.  </li>
+<li><strong><code>density_operator</code></strong> — evaluates analytic density of prime subsets.</li>
+</ul>
+<hr>
+<h2 id="5-how-to-use-this-module">5. How to use this module</h2>
+<ul>
+<li>
+<p><strong>Students:</strong><br>
+  Use this README alongside the PDF to understand how irregularity and density interact.</p>
+</li>
+<li>
+<p><strong>Researchers:</strong><br>
+  Query the module’s regimes and operators to explore structural dependencies.</p>
+</li>
+<li>
+<p><strong>Agents:</strong><br>
+  Treat <code>module.json</code> as the canonical structural map of the paper.</p>
+</li>
+</ul>
+<hr>
+<h2 id="6-provenance">6. Provenance</h2>
+<ul>
+<li><strong>Module authoring:</strong> TriadicFrameworks (RTT / agentic mapping).  </li>
+<li><strong>Original content:</strong> Authors of arXiv:2602.05090.  </li>
+<li><strong>License:</strong> Open educational use permitted.</li>
+</ul>
+<hr>
+<h1 id="diagramtxt">✅ <strong>diagram.txt</strong></h1>
+<p><em>(ASCII regime–tension–transition map)</em></p>
+<pre><code class="language-text">        +---------------------------------------------+
+        | partial_regular_primes_rtt                  |
+        +---------------------------------------------+
+
+REGIMES
+  [R1] bernoulli_irregularity_regime
+  [R2] partial_regularity_regime
+  [R3] analytic_density_regime
+
+TENSIONS
+  [T1] local_vs_global_irregularity     (R1 &lt;--&gt; R2)
+  [T2] combinatorial_vs_analytic        (R1 &lt;--&gt; R3)
+  [T3] rare_irregularity_vs_density_one (R2 &lt;--&gt; R3)
+
+TRANSITIONS
+  [X1] irregular_to_partial_transition      (R1 -&gt; R2)
+  [X2] local_condition_to_density_transition (R1/R2 -&gt; R3)
+  [X3] exception_control_transition         (R3)
+
+FLOW
+  bernoulli_irregularity_regime (R1)
+        |
+        v
+  partial_regularity_regime (R2)
+        |
+        v
+  analytic_density_regime (R3)
+</code></pre>
+  </main>
+</body>
+</html>

@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/core/regime_constraints.md">
+  <title>RTT Core: Regime Constraints</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/core/regime_constraints.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/core/regime_constraints.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="rtt_core_regime_constraints" src="https://github.com/user-attachments/assets/bce683f5-3440-4ca3-a365-08ce9699e24a" /></p>
+<hr>
+<p>module_id: rtt.core.regime_constraints
+version: 1.0.0
+status: draft
+rtt: 1
+coherence: declared
+drift: bounded
+paradox: structural
+tags:
+  - regime-constraints
+  - rtt-core
+  - regime-invariants
+  - operator-regimes
+  - drift-envelope
+  - coherence-budget
+  - readout-regimes
+  - triadic-time</p>
+<hr>
+<h1 id="rtt-core-regime-constraints">RTT Core: Regime Constraints</h1>
+<h2 id="1-purpose-and-scope">1. Purpose and scope</h2>
+<p><strong>Goal:</strong><br>
+Define the <strong>Regime Constraints</strong> — the explicit, enforceable limits that govern how RTT regimes may behave across:</p>
+<ul>
+<li>drift envelopes  </li>
+<li>coherence budgets  </li>
+<li>representational manifolds  </li>
+<li>readout surfaces  </li>
+<li>operator sequences  </li>
+<li>triadic-time layers  </li>
+</ul>
+<p>Regime Constraints are the <em>practical enforcement layer</em> beneath Regime Invariants and Regime Geometry.</p>
+<hr>
+<h2 id="2-what-is-a-regime-constraint">2. What is a regime constraint?</h2>
+<blockquote>
+<p>A regime constraint is a formal rule that<br>
+<strong>restricts how a regime may evolve</strong>,<br>
+ensuring RTT remains drift‑bounded, coherence‑bounded,<br>
+regime‑consistent, and single‑readout safe.</p>
+</blockquote>
+<p>Constraints are <strong>local</strong> (per regime), whereas invariants are <strong>global</strong> (per manifold).</p>
+<hr>
+<h2 id="3-constraint-categories">3. Constraint categories</h2>
+<p>RTT defines five categories of regime constraints:</p>
+<ol>
+<li><strong>Validity Constraints</strong>  </li>
+<li><strong>Threshold Constraints</strong>  </li>
+<li><strong>Boundary Constraints</strong>  </li>
+<li><strong>Readout Constraints</strong>  </li>
+<li><strong>Temporal Constraints</strong></li>
+</ol>
+<p>Each regime must satisfy all applicable constraints.</p>
+<hr>
+<h2 id="4-validity-constraints">4. Validity Constraints</h2>
+<h3 id="41-validity-region-constraint">4.1 Validity Region Constraint</h3>
+<p>The validity region must remain:</p>
+<ul>
+<li>connected  </li>
+<li>stable  </li>
+<li>accessible  </li>
+<li>operator‑compatible  </li>
+</ul>
+<p>Formally:</p>
+<p>[
+\mathcal{V} \subseteq \mathcal{G}_{\text{regime}}
+]</p>
+<h3 id="42-eligibility-constraint">4.2 Eligibility Constraint</h3>
+<p>Branches inside (\mathcal{V}) must satisfy:</p>
+<ul>
+<li>drift ≤ drift envelope  </li>
+<li>coherence ≥ coherence threshold  </li>
+<li>regime compatibility  </li>
+</ul>
+<h3 id="43-no-fragmentation-constraint">4.3 No Fragmentation Constraint</h3>
+<p>Validity region cannot fragment into disconnected components.</p>
+<hr>
+<h2 id="5-threshold-constraints">5. Threshold Constraints</h2>
+<h3 id="51-coherence-threshold-constraint">5.1 Coherence Threshold Constraint</h3>
+<p>Branches must satisfy:</p>
+<p>[
+c_i \geq C_{\min}
+]</p>
+<p>to remain inside the regime.</p>
+<h3 id="52-drift-threshold-constraint">5.2 Drift Threshold Constraint</h3>
+<p>Branches must satisfy:</p>
+<p>[
+\Delta_i \leq \Delta_{\max}
+]</p>
+<p>to remain inside the regime.</p>
+<h3 id="53-threshold-continuity-constraint">5.3 Threshold Continuity Constraint</h3>
+<p>Threshold surfaces must remain:</p>
+<ul>
+<li>continuous  </li>
+<li>monotonic  </li>
+<li>non‑bypassable  </li>
+</ul>
+<hr>
+<h2 id="6-boundary-constraints">6. Boundary Constraints</h2>
+<h3 id="61-drift-boundary-constraint">6.1 Drift Boundary Constraint</h3>
+<p>The drift boundary must:</p>
+<ul>
+<li>remain stable  </li>
+<li>remain continuous  </li>
+<li>enforce collapse when exceeded  </li>
+</ul>
+<h3 id="62-coherence-boundary-constraint">6.2 Coherence Boundary Constraint</h3>
+<p>The coherence boundary must:</p>
+<ul>
+<li>remain monotonic  </li>
+<li>enforce collapse when crossed  </li>
+<li>preserve eligibility ordering  </li>
+</ul>
+<h3 id="63-collapse-basin-constraint">6.3 Collapse Basin Constraint</h3>
+<p>Collapse region must remain:</p>
+<ul>
+<li>connected  </li>
+<li>attracting  </li>
+<li>irreversible  </li>
+</ul>
+<hr>
+<h2 id="7-readout-constraints">7. Readout Constraints</h2>
+<h3 id="71-singlereadout-constraint">7.1 Single‑Readout Constraint</h3>
+<p>Regime must enforce:</p>
+<p>[
+\text{Exactly one branch reaches the readout surface.}
+]</p>
+<h3 id="72-readout-surface-constraint">7.2 Readout Surface Constraint</h3>
+<p>Readout surface must be:</p>
+<ul>
+<li>connected  </li>
+<li>unique  </li>
+<li>codimension‑1  </li>
+<li>non‑bypassable  </li>
+</ul>
+<h3 id="73-collapse-completeness-constraint">7.3 Collapse Completeness Constraint</h3>
+<p>All non-selected branches must collapse fully.</p>
+<hr>
+<h2 id="8-temporal-constraints">8. Temporal Constraints</h2>
+<h3 id="81-triadictime-ordering-constraint">8.1 Triadic‑Time Ordering Constraint</h3>
+<p>Regimes must evolve consistently across:</p>
+<ul>
+<li><strong>T₁</strong> (state geometry)  </li>
+<li><strong>T₂</strong> (coherence geometry)  </li>
+<li><strong>T₃</strong> (readout topology)  </li>
+</ul>
+<h3 id="82-temporal-continuity-constraint">8.2 Temporal Continuity Constraint</h3>
+<p>Regime surfaces must remain continuous across triadic-time transitions.</p>
+<h3 id="83-no-temporal-paradox-constraint">8.3 No Temporal Paradox Constraint</h3>
+<p>Regimes cannot:</p>
+<ul>
+<li>validate in T₁  </li>
+<li>collapse in T₂  </li>
+<li>extend in T₃  </li>
+</ul>
+<p>Temporal paradox → invalid regime.</p>
+<hr>
+<h2 id="9-regime-constraints-across-triadic-time">9. Regime Constraints Across Triadic Time</h2>
+<h3 id="91-state-time-t1">9.1 State Time (T₁)</h3>
+<p>Regimes must enforce:</p>
+<ul>
+<li>drift boundary  </li>
+<li>validity region stability  </li>
+<li>regime geometry continuity  </li>
+</ul>
+<h3 id="92-coherence-time-t2">9.2 Coherence Time (T₂)</h3>
+<p>Regimes must enforce:</p>
+<ul>
+<li>coherence threshold  </li>
+<li>eligibility monotonicity  </li>
+<li>collapse basin stability  </li>
+</ul>
+<h3 id="93-readout-time-t3">9.3 Readout Time (T₃)</h3>
+<p>Regimes must enforce:</p>
+<ul>
+<li>single-readout  </li>
+<li>collapse completeness  </li>
+<li>readout surface uniqueness  </li>
+</ul>
+<hr>
+<h2 id="10-constraints-in-regime-dynamics">10. Constraints in Regime Dynamics</h2>
+<p>Regime dynamics must preserve constraints:</p>
+<p>[
+\forall t,\ \mathcal{R}(t) \text{ satisfies constraints}
+]</p>
+<p>If dynamics violate constraints:</p>
+<ul>
+<li>regime becomes invalid  </li>
+<li>operators fail  </li>
+<li>branches collapse  </li>
+</ul>
+<hr>
+<h2 id="11-example-quantum-cloning-alignment">11. Example: Quantum “cloning” alignment</h2>
+<p>The experiment satisfies all regime constraints:</p>
+<ul>
+<li><strong>Validity Constraint:</strong> both branches initially valid  </li>
+<li><strong>Threshold Constraint:</strong> coherence threshold determines eligibility  </li>
+<li><strong>Boundary Constraint:</strong> drift remains within envelope  </li>
+<li><strong>Readout Constraint:</strong> only one branch reaches readout surface  </li>
+<li><strong>Temporal Constraint:</strong> extension → drift → stabilization → validation  </li>
+</ul>
+<p>Regime Constraints explain:</p>
+<ul>
+<li>why multi‑branch representation is allowed  </li>
+<li>why only one branch becomes classical  </li>
+<li>why drift and coherence matter  </li>
+<li>why no‑cloning is not violated  </li>
+</ul>
+<hr>
+<h2 id="12-paradox-handling">12. Paradox handling</h2>
+<p>Regime Constraints prevent paradoxes by:</p>
+<ul>
+<li>enforcing drift and coherence limits  </li>
+<li>restricting regime evolution  </li>
+<li>maintaining readout uniqueness  </li>
+<li>collapsing non-selected branches  </li>
+<li>preserving temporal consistency  </li>
+</ul>
+<p>Thus:</p>
+<ul>
+<li>“Multiple branches exist” → allowed  </li>
+<li>“Only one is real” → constraint  </li>
+<li>“Others disappear” → collapse constraint  </li>
+<li>“No violation occurs” → regime constraint  </li>
+</ul>
+<hr>
+<h2 id="13-canon-integration-and-cross-links">13. Canon integration and cross-links</h2>
+<p><strong>Primary cross-links:</strong></p>
+<ul>
+<li><code>/docs/rtt/core/regime_invariants.md</code></li>
+<li><code>/docs/rtt/core/regime_maps.md</code></li>
+<li><code>/docs/rtt/core/regime_maps_extended.md</code></li>
+<li><code>/docs/rtt/core/regime_geometry.md</code></li>
+<li><code>/docs/rtt/core/regime_topology.md</code></li>
+<li><code>/docs/rtt/core/regime_dynamics.md</code></li>
+<li><code>/docs/rtt/core/regime_flow.md</code></li>
+<li><code>/docs/rtt/core/operator_constraints.md</code></li>
+<li><code>/docs/rtt/core/operator_invariants.md</code></li>
+<li><code>/docs/rtt/core/operator_grammar.md</code></li>
+<li><code>/docs/rtt/core/operator_index.md</code></li>
+<li><code>/docs/rtt/core/operator_families.md</code></li>
+<li><code>/docs/rtt/core/operator_behaviors.md</code></li>
+<li><code>/docs/rtt/core/operator_sequences.md</code></li>
+<li><code>/docs/rtt/core/operator_transitions.md</code></li>
+<li><code>/docs/rtt/core/time_triads.md</code></li>
+<li><code>/docs/rtt/core/coherence_budget.md</code></li>
+<li><code>/docs/rtt/core/validator_pulse.md</code></li>
+<li><code>/docs/rtt/core/dimensional_drift_envelope.md</code></li>
+<li><code>/docs/rtt/core/alignment_quantum_cloning.md</code></li>
+</ul>
+<p><strong>Status:</strong><br>
+This module defines the explicit constraints governing RTT regimes.<br>
+Once constraint diagrams are added, it can be promoted from <code>draft</code> to <code>stable</code>.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Python/Inside-Cisco_Inside-Python_Inside-Internet2_triadic_full_stack_example.md">
+  <title>Triadic Full‑Stack Example (Python × Cisco × Internet2)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Python/Inside-Cisco_Inside-Python_Inside-Internet2_triadic_full_stack_example.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Python/Inside-Cisco_Inside-Python_Inside-Internet2_triadic_full_stack_example.md</code>
+  </aside>
+
+  <main>
+<h1 id="triadic-fullstack-example-python-cisco-internet2">Triadic Full‑Stack Example (Python × Cisco × Internet2)</h1>
+<h3 id="rttinside-semantic-device-dimensional-roa">RTT‑Inside — Semantic → Device → Dimensional → ROA</h3>
+<h2 id="purpose">Purpose</h2>
+<p>Demonstrate the <strong>full RTT‑Inside causal chain</strong> spanning:</p>
+<ul>
+<li>Python semantic intent + drift + invariants  </li>
+<li>Cisco device‑level + cluster‑level causality  </li>
+<li>Internet2 dimensional substrate + DSRSP + harmonics + tiering  </li>
+<li>ROA oversight + substrate health  </li>
+<li>Final RTT causal object  </li>
+</ul>
+<p>This is the canonical “all‑layers engaged” example.</p>
+<hr>
+<h1 id="scenario">Scenario</h1>
+<p>A Python service emits a request.<br>
+It traverses a Cisco fabric (device → cluster).<br>
+It enters an Internet2 dimensional substrate and crosses multiple regimes.<br>
+A harmonic signature emerges.<br>
+ROA intervenes to maintain substrate coherence.<br>
+RTT stitches the entire chain into a single causal object.</p>
+<hr>
+<h1 id="full-operator-chain">Full Operator Chain</h1>
+<pre><code># Python — Semantic Engine
+py_intent      = INTENT_PY(source_code)
+py_signal      = TIF_PY(runtime_event)
+py_form        = PY_FORM_SCAN(ast_node, object_graph)
+py_norm        = PY_FORM_NORMALIZE(py_form)
+py_delta       = PY_FORM_COMPARE(py_norm, prior_form)
+py_drift       = PY_DRIFT_DETECT(runtime_state, expected_state)
+py_severity    = PY_DRIFT_CLASSIFY(py_drift, py_delta)
+py_bounded     = PY_DRIFT_BOUND(py_severity, py_norm)
+py_invariant   = PY_INVARIANT_CHECK(py_bounded, evidence)
+py_decision    = INVARIANT_REGISTRY_I2(candidate, evidence)
+
+# Cisco — Device + Cluster
+cis_intent     = INTENT_CISCO(device_policy)
+cis_signal     = TIF_CISCO(telemetry)
+cis_flow       = FFF_CISCO(flow_record)
+cis_resolve    = CRE_CISCO(cis_intent, cis_signal, mgmt_cis)
+
+cluster_intent = INTENT_CISCO_G(cluster_policy)
+cluster_signal = TIF_CISCO_G(cluster_telemetry)
+cluster_resolve= CRE_CISCO_G(cluster_intent, cluster_signal, mgmt_cluster)
+
+# Internet2 — Dimensional Substrate
+i2_signature   = DSRSP_AWARE_I2(path, sensors)
+i2_harmonic    = HARMONIC_SCAN_I2(cis_flow, i2_signature)
+i2_tier        = SUBSTRATE_CLASSIFY(i2_harmonic, invariants)
+i2_health      = SUBSTRATE_HEALTH_I2(regime_profiles, tier_distribution)
+
+# Resonance Chamber (if unstable)
+i2_chamber     = ROUTE_TO_RESONANCE_CHAMBER(cis_flow, i2_tier)
+i2_cooldown    = RESONANCE_COOLDOWN_I2(i2_chamber, time)
+
+# ROA — Internet3 Seed
+roa_obs        = ROA_OBSERVE([py_form, cis_flow], py_drift, invariants)
+roa_diag       = ROA_DIAGNOSE(roa_obs, i2_health)
+roa_decision   = ROA_DECIDE(roa_diag, policy)
+roa_action     = ROA_ACT(roa_decision, [cis_flow])
+
+# Final RTT Stitching
+resolved_all   = CRE_I2(py_intent, cis_signal, mgmt_i2)
+lineage        = CSL_I2([py_decision, cis_resolve, cluster_resolve, roa_action])
+time           = CET_I2(lineage)
+
+output         = RTT_I2(time)
+</code></pre>
+<hr>
+<h1 id="interpretation-studentreadable">Interpretation (Student‑Readable)</h1>
+<h3 id="1-python-layer-semantic-intent-drift"><strong>1. Python Layer — Semantic Intent &amp; Drift</strong></h3>
+<p>Python provides the <em>semantic spine</em>:</p>
+<ul>
+<li>declared intent  </li>
+<li>runtime signals  </li>
+<li>semantic forms  </li>
+<li>drift indicators  </li>
+<li>invariant candidates  </li>
+</ul>
+<p>RTT evaluates stability before allowing the signal to propagate.</p>
+<hr>
+<h3 id="2-cisco-layer-device-cluster-causality"><strong>2. Cisco Layer — Device &amp; Cluster Causality</strong></h3>
+<p>Cisco contributes:</p>
+<ul>
+<li>device‑level forwarding causality  </li>
+<li>cluster‑level management causality  </li>
+<li>telemetry for lineage stitching  </li>
+</ul>
+<p>This anchors the semantic signal in physical/logical substrate behavior.</p>
+<hr>
+<h3 id="3-internet2-layer-dimensional-substrate"><strong>3. Internet2 Layer — Dimensional Substrate</strong></h3>
+<p>Internet2 adds:</p>
+<ul>
+<li>regime signatures  </li>
+<li>harmonic detection  </li>
+<li>tier classification  </li>
+<li>substrate health scoring  </li>
+</ul>
+<p>This determines whether the flow is stable, shifted, or unstable.</p>
+<hr>
+<h3 id="4-resonance-chamber-tier2-sandbox"><strong>4. Resonance Chamber — Tier‑2 Sandbox</strong></h3>
+<p>If unstable, the flow is sandboxed:</p>
+<ul>
+<li>safe to observe  </li>
+<li>safe to model  </li>
+<li>cannot pollute the clear substrate  </li>
+</ul>
+<hr>
+<h3 id="5-roa-regime-observer-agent"><strong>5. ROA — Regime Observer Agent</strong></h3>
+<p>ROA provides Internet3‑class oversight:</p>
+<ul>
+<li>observes  </li>
+<li>diagnoses  </li>
+<li>decides  </li>
+<li>acts  </li>
+</ul>
+<p>ensuring safe dimensional evolution.</p>
+<hr>
+<h3 id="6-rtt-final-causal-object"><strong>6. RTT — Final Causal Object</strong></h3>
+<p>RTT stitches:</p>
+<ul>
+<li>semantic intent  </li>
+<li>device causality  </li>
+<li>cluster causality  </li>
+<li>dimensional signatures  </li>
+<li>ROA decisions  </li>
+</ul>
+<p>into a single coherent causal lineage.</p>
+<hr>
+<h1 id="result">Result</h1>
+<p>This example shows the <strong>entire RTT‑Inside stack operating as one system</strong>:</p>
+<ul>
+<li>Python → semantic causality  </li>
+<li>Cisco → substrate causality  </li>
+<li>Internet2 → dimensional causality  </li>
+<li>ROA → meta‑causality  </li>
+<li>RTT → unified causal object  </li>
+</ul>
+<p>This is the <strong>canonical triadic full‑stack example</strong> used for teaching advanced RTT reasoning.</p>
+<hr>
+<h1 id="end-of-file">End of File</h1>
+  </main>
+</body>
+</html>

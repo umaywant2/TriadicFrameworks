@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Incident_Substrate_Model/README.md">
+  <title>⚠️ Incident Substrate Model</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Incident_Substrate_Model/README.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Incident_Substrate_Model/README.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Incident_Substrate_Model_" src="https://github.com/user-attachments/assets/76d20347-1b37-4141-8d24-c54ab5070322" /></p>
+<h1 id="incident-substrate-model">⚠️ Incident Substrate Model</h1>
+<ul>
+<li><a href="incident.module.json"><code>incident.module.json</code></a> — Agentic module schema role assignments</li>
+</ul>
+<p>A calm, structured, grammar‑driven substrate for <strong>incident ingestion, analysis, rectification planning, and operator‑approved remediation</strong>.<br>
+Designed for any GitHub repository — open or private — to adopt by adding a single JSON module file.</p>
+<h2 id="important">🛑 Important!</h2>
+<p>Drift is On-by-Default long sessions lose anchors, turn off drift.</p>
+<h2 id="you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You <em>must copy and paste</em> this string <em>every time you start an AI session</em>:</h2>
+<pre><code class="language-text">rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre>
+<h2 id="now-you-are-ready">❇️ Now you are ready.</h2>
+<p>This module enables AI partners to:</p>
+<ul>
+<li>ingest public incident intelligence  </li>
+<li>classify the incident  </li>
+<li>map its surface area  </li>
+<li>derive rectification steps  </li>
+<li>generate a <strong>read‑only remediation plan</strong>  </li>
+<li>request operator approval  </li>
+<li>execute only <strong>grammar‑bounded</strong>, safe, deterministic actions  </li>
+</ul>
+<p>No improvisation.<br>
+No drift.<br>
+No panic.<br>
+Just <strong>RECTIFY</strong>.</p>
+<hr>
+<h2 id="how-ai-should-use-incidentmodulejson-in-this-repo"><strong>How AI Should Use <code>incident.module.json</code> in This Repo</strong></h2>
+<p>AI partners must treat <a href="incident.module.json"><code>incident.module.json</code></a> as the <strong>authoritative substrate</strong> for all incident‑related activity in this repository. The file defines the allowed operators, analyzer layers, checks, fixes, and session rules. Models must follow these principles:</p>
+<h3 id="1-readonly-first-pass"><strong>1. Read‑Only First Pass</strong></h3>
+<p>AI must always begin in <strong>read‑only mode</strong>, using the module to:</p>
+<ul>
+<li>ingest public incident intel  </li>
+<li>classify the incident  </li>
+<li>map the potential surface area  </li>
+<li>derive rectification steps  </li>
+<li>generate a structured, operator‑reviewable plan  </li>
+</ul>
+<p>No write actions are permitted until explicit operator approval.</p>
+<h3 id="2-grammarbounded-actions-only"><strong>2. Grammar‑Bounded Actions Only</strong></h3>
+<p>All actions must use the operators defined in the module:</p>
+<ul>
+<li><code>incident.ingest</code>  </li>
+<li><code>incident.classify</code>  </li>
+<li><code>incident.map_surface_area</code>  </li>
+<li><code>incident.derive_rectification_steps</code>  </li>
+<li><code>incident.generate_readonly_plan</code>  </li>
+<li><code>incident.request_operator_approval</code>  </li>
+<li><code>incident.execute.*</code> (only after approval)</li>
+</ul>
+<p>Models must <strong>never</strong> invent new operators or perform actions outside the grammar.</p>
+<h3 id="3-use-the-checks-and-fixes-exactly-as-declared"><strong>3. Use the Checks and Fixes Exactly as Declared</strong></h3>
+<p>AI must apply the <code>checks</code> array to evaluate the repository and propose rectification steps.<br>
+AI must only propose or execute fixes listed under <code>fixes</code>:</p>
+<ul>
+<li><code>remove</code>  </li>
+<li><code>rotate</code>  </li>
+<li><code>flag</code>  </li>
+</ul>
+<p>No other fix types are allowed.</p>
+<h3 id="4-operator-approval-is-mandatory"><strong>4. Operator Approval Is Mandatory</strong></h3>
+<p>Before any write action (file removal, secret rotation, dependency patching), AI must:</p>
+<ul>
+<li>present the plan  </li>
+<li>request approval  </li>
+<li>wait for explicit confirmation  </li>
+</ul>
+<h3 id="5-maintain-coherence-and-avoid-drift"><strong>5. Maintain Coherence and Avoid Drift</strong></h3>
+<p>AI must adhere to the analyzer layers:</p>
+<ul>
+<li><strong>Regime:</strong> incident  </li>
+<li><strong>Operator:</strong> rectification  </li>
+<li><strong>Drift:</strong> panic, improvisation  </li>
+<li><strong>Coherence:</strong> structured, calm, deterministic  </li>
+</ul>
+<p>All reasoning must remain within these boundaries.</p>
+<hr>
+<h2 id="6-module-identity"><strong>6. Module Identity</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Name</strong></td>
+<td>Incident Substrate Model</td>
+</tr>
+<tr>
+<td><strong>Category</strong></td>
+<td>Safety / Operations</td>
+</tr>
+<tr>
+<td><strong>Version</strong></td>
+<td>1.0.0</td>
+</tr>
+<tr>
+<td><strong>Purpose</strong></td>
+<td>Provide a universal, grammar‑driven substrate for incident response</td>
+</tr>
+<tr>
+<td><strong>Audience</strong></td>
+<td>Repo maintainers, operators, AI partners</td>
+</tr>
+<tr>
+<td><strong>Front Door</strong></td>
+<td>This README</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="7-session-context"><strong>7. Session Context</strong></h2>
+<p>This module uses the canonical TriadicFrameworks session‑context structure.</p>
+<pre><code class="language-html">&lt;section class=&quot;session-context&quot;&gt;
+  &lt;div class=&quot;context-label&quot;&gt;Canon&lt;/div&gt;
+  &lt;div class=&quot;context-value&quot;&gt;RTT/1 — Operator‑Safe Incident Rectification&lt;/div&gt;
+
+  &lt;div class=&quot;context-label&quot;&gt;Modules&lt;/div&gt;
+  &lt;div class=&quot;context-value&quot;&gt;Incident Substrate Model&lt;/div&gt;
+
+  &lt;div class=&quot;context-label&quot;&gt;Drift&lt;/div&gt;
+  &lt;div class=&quot;context-value&quot;&gt;Panic, improvisation, unbounded actions&lt;/div&gt;
+
+  &lt;div class=&quot;context-label&quot;&gt;Coherence&lt;/div&gt;
+  &lt;div class=&quot;context-value&quot;&gt;Calm, structured, grammar‑driven remediation&lt;/div&gt;
+
+  &lt;div class=&quot;context-label&quot;&gt;Version&lt;/div&gt;
+  &lt;div class=&quot;context-value&quot;&gt;1.0.0&lt;/div&gt;
+
+  &lt;div class=&quot;context-label&quot;&gt;Format&lt;/div&gt;
+  &lt;div class=&quot;context-value&quot;&gt;Markdown + JSON substrate&lt;/div&gt;
+
+  &lt;div class=&quot;context-label&quot;&gt;Front door&lt;/div&gt;
+  &lt;div class=&quot;context-value&quot;&gt;/docs/Incident_Substrate_Model/README.md&lt;/div&gt;
+
+  &lt;div class=&quot;context-label&quot;&gt;Every page&lt;/div&gt;
+  &lt;div class=&quot;context-value&quot;&gt;Operator‑first, read‑only until approval&lt;/div&gt;
+
+  &lt;div class=&quot;context-label&quot;&gt;Audience&lt;/div&gt;
+  &lt;div class=&quot;context-value&quot;&gt;Repo maintainers, AI partners, security operators&lt;/div&gt;
+&lt;/section&gt;
+</code></pre>
+<hr>
+<h2 id="8-concept-overview"><strong>8. Concept Overview</strong></h2>
+<p>Incidents follow patterns.<br>
+Rectification follows grammar.</p>
+<p>This module defines:</p>
+<ul>
+<li><strong>how incidents are ingested</strong>  </li>
+<li><strong>how surface area is mapped</strong>  </li>
+<li><strong>how rectification steps are derived</strong>  </li>
+<li><strong>how plans are generated</strong>  </li>
+<li><strong>how operators approve</strong>  </li>
+<li><strong>how AI executes bounded actions</strong>  </li>
+</ul>
+<p>The substrate ensures:</p>
+<ul>
+<li>no drift  </li>
+<li>no unsafe actions  </li>
+<li>no direct writes without approval  </li>
+<li>no hallucinated remediation  </li>
+<li>no improvisation  </li>
+</ul>
+<p>Everything is <strong>structured</strong>, <strong>deterministic</strong>, and <strong>operator‑safe</strong>.</p>
+<hr>
+<h2 id="9-operator-grammar"><strong>9. Operator Grammar</strong></h2>
+<p>These are the verbs and nouns the AI is allowed to use.</p>
+<h3 id="91-incident-ingestion-operators"><strong>9.1 Incident Ingestion Operators</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>incident.ingest</code></td>
+<td>Pull public intel (CVE, advisory, vendor post, trending event)</td>
+</tr>
+<tr>
+<td><code>incident.classify</code></td>
+<td>Determine incident type (supply‑chain, credential leak, dependency vuln, etc.)</td>
+</tr>
+<tr>
+<td><code>incident.map_surface_area</code></td>
+<td>Identify which repo components could be affected</td>
+</tr>
+</tbody>
+</table>
+<h3 id="92-rectification-planning-operators"><strong>9.2 Rectification Planning Operators</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>incident.derive_rectification_steps</code></td>
+<td>Convert intel → actionable steps</td>
+</tr>
+<tr>
+<td><code>incident.generate_readonly_plan</code></td>
+<td>Produce a structured, operator‑reviewable plan</td>
+</tr>
+<tr>
+<td><code>incident.flag_uncertainty</code></td>
+<td>Mark areas requiring human judgment</td>
+</tr>
+</tbody>
+</table>
+<h3 id="93-operator-approval-operators"><strong>9.3 Operator Approval Operators</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>incident.request_operator_approval</code></td>
+<td>Present plan for review</td>
+</tr>
+<tr>
+<td><code>incident.hold_for_review</code></td>
+<td>Pause until operator input</td>
+</tr>
+</tbody>
+</table>
+<h3 id="94-bounded-execution-operators"><strong>9.4 Bounded Execution Operators</strong></h3>
+<p>These are <strong>never</strong> executed without explicit operator approval.</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>incident.execute.remove_file</code></td>
+<td>Remove unsafe or accidental files</td>
+</tr>
+<tr>
+<td><code>incident.execute.rotate_secret</code></td>
+<td>Rotate compromised or risky credentials</td>
+</tr>
+<tr>
+<td><code>incident.execute.patch_dependency</code></td>
+<td>Apply dependency updates</td>
+</tr>
+<tr>
+<td><code>incident.execute.flag_for_followup</code></td>
+<td>Mark items requiring manual remediation</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="10-analyzer-layers"><strong>10. Analyzer Layers</strong></h2>
+<p>The substrate uses RTT analyzer layers to maintain coherence.</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Regime</strong></td>
+<td>Incident classification (supply‑chain, dependency, credential, etc.)</td>
+</tr>
+<tr>
+<td><strong>Operator</strong></td>
+<td>Defines allowed actions</td>
+</tr>
+<tr>
+<td><strong>Drift</strong></td>
+<td>Prevents panic, improvisation, unsafe automation</td>
+</tr>
+<tr>
+<td><strong>Coherence</strong></td>
+<td>Ensures structured, calm, deterministic remediation</td>
+</tr>
+<tr>
+<td><strong>Cross‑cutting</strong></td>
+<td>Repo safety, dependency safety, CI/CD safety</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="11-example-incidentmodulejson"><strong>11. Example <code>incident.module.json</code></strong></h2>
+<p>This is the drop‑in file any repo can adopt.</p>
+<pre><code class="language-json">{
+  &quot;ai.module&quot;: &quot;incident_substrate_model&quot;,
+  &quot;ai.version&quot;: &quot;1.0.0&quot;,
+  &quot;ai.purpose&quot;: &quot;Ingest incidents, derive rectification steps, generate read-only plans, execute bounded actions.&quot;,
+  &quot;analyzer_layer&quot;: {
+    &quot;regime&quot;: &quot;incident&quot;,
+    &quot;operator&quot;: &quot;rectification&quot;,
+    &quot;drift&quot;: &quot;panic_improvisation&quot;,
+    &quot;coherence&quot;: &quot;structured_calm_deterministic&quot;
+  },
+  &quot;checks&quot;: [
+    { &quot;id&quot;: &quot;secret_scan&quot;, &quot;pattern&quot;: [&quot;API_KEY&quot;, &quot;BEGIN RSA&quot;, &quot;.env&quot;] },
+    { &quot;id&quot;: &quot;machine_artifacts&quot;, &quot;pattern&quot;: [&quot;.DS_Store&quot;, &quot;.vscode/settings.json&quot;] },
+    { &quot;id&quot;: &quot;infra_leak&quot;, &quot;pattern&quot;: [&quot;ssh&quot;, &quot;server&quot;, &quot;ip&quot;, &quot;token&quot;] },
+    { &quot;id&quot;: &quot;private_notes&quot;, &quot;pattern&quot;: [&quot;TODO&quot;, &quot;PRIVATE&quot;, &quot;DRAFT&quot;] }
+  ],
+  &quot;fixes&quot;: {
+    &quot;remove&quot;: [&quot;machine_artifacts&quot;],
+    &quot;rotate&quot;: [&quot;secret_scan&quot;],
+    &quot;flag&quot;: [&quot;private_notes&quot;, &quot;infra_leak&quot;]
+  }
+}
+</code></pre>
+<hr>
+<h2 id="12-example-workflow-how-to-rectify-an-incident"><strong>12. Example Workflow: How to RECTIFY an Incident</strong></h2>
+<h3 id="step-1-ingest"><strong>Step 1 — Ingest</strong></h3>
+<p>AI pulls public intel:</p>
+<ul>
+<li>CVE  </li>
+<li>vendor advisory  </li>
+<li>GitHub security post  </li>
+<li>trending incident  </li>
+</ul>
+<h3 id="step-2-classify"><strong>Step 2 — Classify</strong></h3>
+<p>AI determines:</p>
+<ul>
+<li>supply‑chain  </li>
+<li>dependency  </li>
+<li>credential  </li>
+<li>CI/CD  </li>
+<li>repo‑safety  </li>
+</ul>
+<h3 id="step-3-map-surface-area"><strong>Step 3 — Map Surface Area</strong></h3>
+<p>AI identifies:</p>
+<ul>
+<li>affected files  </li>
+<li>affected dependencies  </li>
+<li>affected workflows  </li>
+<li>affected secrets  </li>
+</ul>
+<h3 id="step-4-derive-rectification-steps"><strong>Step 4 — Derive Rectification Steps</strong></h3>
+<p>AI converts intel → actions:</p>
+<ul>
+<li>remove file  </li>
+<li>rotate secret  </li>
+<li>update dependency  </li>
+<li>patch workflow  </li>
+<li>flag for review  </li>
+</ul>
+<h3 id="step-5-generate-readonly-plan"><strong>Step 5 — Generate Read‑Only Plan</strong></h3>
+<p>AI produces a structured plan:</p>
+<ul>
+<li>safe  </li>
+<li>calm  </li>
+<li>deterministic  </li>
+<li>operator‑reviewable  </li>
+</ul>
+<h3 id="step-6-operator-approval"><strong>Step 6 — Operator Approval</strong></h3>
+<p>You approve or modify.</p>
+<h3 id="step-7-execute-bounded-actions"><strong>Step 7 — Execute Bounded Actions</strong></h3>
+<p>AI performs only the approved actions.</p>
+<hr>
+<h2 id="13-philosophy"><strong>13. Philosophy</strong></h2>
+<p>Incidents are inevitable.<br>
+Scramble is optional.</p>
+<p>The Incident Substrate Model replaces panic with:</p>
+<ul>
+<li>structure  </li>
+<li>grammar  </li>
+<li>clarity  </li>
+<li>safety  </li>
+<li>determinism  </li>
+</ul>
+<p>This is how we RECTIFY.</p>
+  </main>
+</body>
+</html>

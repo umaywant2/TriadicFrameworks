@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Regime_Interlock_Mapper/boundary_profiles.md">
+  <title>Boundary Profiles — RTT/1</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Regime_Interlock_Mapper/boundary_profiles.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Regime_Interlock_Mapper/boundary_profiles.md</code>
+  </aside>
+
+  <main>
+<h1 id="boundary-profiles-rtt1"><strong>Boundary Profiles — RTT/1</strong></h1>
+<h3 id="regime-interlock-mapper-rim-boundary-intelligence-layer"><em>Regime Interlock Mapper (RIM) — Boundary Intelligence Layer</em></h3>
+<p>Boundary profiles describe <strong>how regimes meet, transition, or constrain one another</strong>.<br>
+They are the structural backbone of RIM’s boundary‑level analysis and feed directly into:</p>
+<ul>
+<li><strong>RIM‑Boundary</strong>  </li>
+<li><strong>RIM‑Detect</strong>  </li>
+<li><strong>RIM‑Map</strong>  </li>
+<li><strong>RIM‑Interlock</strong>  </li>
+<li><strong>RIM‑Resolve</strong></li>
+</ul>
+<p>Each profile defines a <strong>canonical boundary condition</strong>, its <strong>diagnostic markers</strong>, and <strong>example regime pairs</strong>.</p>
+<hr>
+<h2 id="1-boundary-profile-structuralconstraint-boundary"><strong>1. Boundary Profile: Structural‑Constraint Boundary</strong></h2>
+<h3 id="definition"><strong>Definition</strong></h3>
+<p>A boundary where one regime imposes a structural constraint on another.</p>
+<h3 id="diagnostic-markers"><strong>Diagnostic Markers</strong></h3>
+<ul>
+<li>rigid structural dependency  </li>
+<li>unidirectional constraint flow  </li>
+<li>low entanglement  </li>
+<li>high stability  </li>
+</ul>
+<h3 id="example-regime-pairs"><strong>Example Regime Pairs</strong></h3>
+<ul>
+<li>R1 → R2 (conceptual constraint → computational structure)  </li>
+<li>R2 → R3 (computational constraint → physical calibration)</li>
+</ul>
+<h3 id="rim-output-pattern"><strong>RIM Output Pattern</strong></h3>
+<ul>
+<li><code>interlock_type</code>: boundary  </li>
+<li><code>boundary_condition</code>: structural-constraint  </li>
+<li><code>interlock_strength</code>: 0.70–0.85  </li>
+<li><code>entanglement_score</code>: 0.20–0.40  </li>
+</ul>
+<hr>
+<h2 id="2-boundary-profile-gradientalignment-boundary"><strong>2. Boundary Profile: Gradient‑Alignment Boundary</strong></h2>
+<h3 id="definition_1"><strong>Definition</strong></h3>
+<p>A boundary where gradients in two regimes align (directionally or in magnitude).</p>
+<h3 id="diagnostic-markers_1"><strong>Diagnostic Markers</strong></h3>
+<ul>
+<li>parallel gradients  </li>
+<li>directional coherence  </li>
+<li>medium entanglement  </li>
+<li>moderate stability  </li>
+</ul>
+<h3 id="example-regime-pairs_1"><strong>Example Regime Pairs</strong></h3>
+<ul>
+<li>R2 ↔ R4 (computational gradient ↔ dimensional gradient)  </li>
+<li>R1 ↔ R3 (conceptual gradient ↔ physical gradient)</li>
+</ul>
+<h3 id="rim-output-pattern_1"><strong>RIM Output Pattern</strong></h3>
+<ul>
+<li><code>interlock_type</code>: boundary  </li>
+<li><code>boundary_condition</code>: gradient-alignment  </li>
+<li><code>interlock_strength</code>: 0.75–0.88  </li>
+<li><code>entanglement_score</code>: 0.25–0.45  </li>
+</ul>
+<hr>
+<h2 id="3-boundary-profile-transitionboundary"><strong>3. Boundary Profile: Transition‑Boundary</strong></h2>
+<h3 id="definition_2"><strong>Definition</strong></h3>
+<p>A boundary where a regime transitions into another (e.g., abstraction → implementation).</p>
+<h3 id="diagnostic-markers_2"><strong>Diagnostic Markers</strong></h3>
+<ul>
+<li>clear transition point  </li>
+<li>medium stability  </li>
+<li>low entanglement  </li>
+<li>boundary curvature present  </li>
+</ul>
+<h3 id="example-regime-pairs_2"><strong>Example Regime Pairs</strong></h3>
+<ul>
+<li>R1 → R3 (abstract model → physical implementation)  </li>
+<li>R2 → R4 (computational model → dimensional coherence)</li>
+</ul>
+<h3 id="rim-output-pattern_2"><strong>RIM Output Pattern</strong></h3>
+<ul>
+<li><code>interlock_type</code>: boundary  </li>
+<li><code>boundary_condition</code>: transition  </li>
+<li><code>interlock_strength</code>: 0.60–0.75  </li>
+<li><code>entanglement_score</code>: 0.15–0.30  </li>
+</ul>
+<hr>
+<h2 id="4-boundary-profile-driftsensitivity-boundary"><strong>4. Boundary Profile: Drift‑Sensitivity Boundary</strong></h2>
+<h3 id="definition_3"><strong>Definition</strong></h3>
+<p>A boundary where drift in one regime increases sensitivity in another.</p>
+<h3 id="diagnostic-markers_3"><strong>Diagnostic Markers</strong></h3>
+<ul>
+<li>drift amplification  </li>
+<li>instability ridge formation  </li>
+<li>medium entanglement  </li>
+<li>low stability  </li>
+</ul>
+<h3 id="example-regime-pairs_3"><strong>Example Regime Pairs</strong></h3>
+<ul>
+<li>R2 ↔ R3 (computational drift ↔ physical drift sensitivity)  </li>
+<li>R3 ↔ R4 (physical drift ↔ dimensional drift envelope)</li>
+</ul>
+<h3 id="rim-output-pattern_3"><strong>RIM Output Pattern</strong></h3>
+<ul>
+<li><code>interlock_type</code>: boundary  </li>
+<li><code>boundary_condition</code>: drift-sensitivity  </li>
+<li><code>interlock_strength</code>: 0.72–0.84  </li>
+<li><code>entanglement_score</code>: 0.30–0.50  </li>
+</ul>
+<hr>
+<h2 id="5-boundary-profile-coherencethreshold-boundary"><strong>5. Boundary Profile: Coherence‑Threshold Boundary</strong></h2>
+<h3 id="definition_4"><strong>Definition</strong></h3>
+<p>A boundary where coherence must exceed a threshold for regimes to interact.</p>
+<h3 id="diagnostic-markers_4"><strong>Diagnostic Markers</strong></h3>
+<ul>
+<li>coherence gating  </li>
+<li>threshold discontinuity  </li>
+<li>high stability  </li>
+<li>low drift  </li>
+</ul>
+<h3 id="example-regime-pairs_4"><strong>Example Regime Pairs</strong></h3>
+<ul>
+<li>R1 ↔ R2 (conceptual coherence ↔ computational coherence)  </li>
+<li>R2 ↔ R3 (computational coherence ↔ physical coherence)</li>
+</ul>
+<h3 id="rim-output-pattern_4"><strong>RIM Output Pattern</strong></h3>
+<ul>
+<li><code>interlock_type</code>: boundary  </li>
+<li><code>boundary_condition</code>: coherence-threshold  </li>
+<li><code>interlock_strength</code>: 0.78–0.92  </li>
+<li><code>entanglement_score</code>: 0.20–0.35  </li>
+</ul>
+<hr>
+<h2 id="6-boundary-profile-resonanceboundary"><strong>6. Boundary Profile: Resonance‑Boundary</strong></h2>
+<h3 id="definition_5"><strong>Definition</strong></h3>
+<p>A boundary where resonance in one regime influences resonance in another.</p>
+<h3 id="diagnostic-markers_5"><strong>Diagnostic Markers</strong></h3>
+<ul>
+<li>resonance amplification  </li>
+<li>resonance curvature  </li>
+<li>high entanglement  </li>
+<li>medium stability  </li>
+</ul>
+<h3 id="example-regime-pairs_5"><strong>Example Regime Pairs</strong></h3>
+<ul>
+<li>R3 ↔ R4 (physical resonance ↔ dimensional resonance)  </li>
+<li>R2 ↔ R4 (computational resonance ↔ dimensional resonance)</li>
+</ul>
+<h3 id="rim-output-pattern_5"><strong>RIM Output Pattern</strong></h3>
+<ul>
+<li><code>interlock_type</code>: boundary  </li>
+<li><code>boundary_condition</code>: resonance  </li>
+<li><code>interlock_strength</code>: 0.80–0.95  </li>
+<li><code>entanglement_score</code>: 0.40–0.70  </li>
+</ul>
+<hr>
+<h2 id="7-boundary-profile-matrix-snippet"><strong>7. Boundary Profile Matrix Snippet</strong></h2>
+<p>A typical entry in <code>regime_interlock_matrix.json</code> for boundary profiles:</p>
+<pre><code class="language-json">{
+  &quot;regime_a&quot;: &quot;R2&quot;,
+  &quot;regime_b&quot;: &quot;R4&quot;,
+  &quot;interlock_type&quot;: &quot;boundary&quot;,
+  &quot;boundary_condition&quot;: &quot;gradient-alignment&quot;,
+  &quot;interlock_strength&quot;: 0.83,
+  &quot;entanglement_score&quot;: 0.32,
+  &quot;stability_rating&quot;: 0.71
+}
+</code></pre>
+<hr>
+<h2 id="8-status"><strong>8. Status</strong></h2>
+<ul>
+<li><strong>Version:</strong> 1.0  </li>
+<li><strong>Status:</strong> canon‑stable  </li>
+<li><strong>Category:</strong> rtt‑structural  </li>
+<li><strong>Module Path:</strong> <code>/docs/rtt/Regime_Interlock_Mapper/</code></li>
+</ul>
+  </main>
+</body>
+</html>

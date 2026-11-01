@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/scientific_instrument_review/99_appendix/Instrument_Regime_Map_Mini_Schema.md">
+  <title>🌐 Instrument Regime Map — Mini‑Schema (Human‑Readable)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/scientific_instrument_review/99_appendix/Instrument_Regime_Map_Mini_Schema.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/scientific_instrument_review/99_appendix/Instrument_Regime_Map_Mini_Schema.md</code>
+  </aside>
+
+  <main>
+<h1 id="instrument-regime-map-minischema-humanreadable">🌐 <strong>Instrument Regime Map — Mini‑Schema (Human‑Readable)</strong></h1>
+<h2 id="regime-map-legend">📘 Regime Map Legend</h2>
+<hr>
+<h3 id="green-zone-stable-direct">💚 Green Zone — “Stable &amp; Direct”</h3>
+<ul>
+<li>Low drift  </li>
+<li>Transparent behavior  </li>
+<li>Minimal inference  </li>
+<li>Predictable across conditions  </li>
+</ul>
+<h3 id="yellow-zone-assumptionheavy">💛 Yellow Zone — “Assumption‑Heavy”</h3>
+<ul>
+<li>Model‑dependent  </li>
+<li>Mixed‑regime behavior  </li>
+<li>Environmental sensitivity  </li>
+<li>Compensation &amp; filtering layers  </li>
+</ul>
+<h3 id="red-zone-fragile-inferenceheavy">❤️ Red Zone — “Fragile &amp; Inference‑Heavy”</h3>
+<ul>
+<li>Nonlinear or unstable  </li>
+<li>Substrate‑sensitive  </li>
+<li>Multi‑stage inference  </li>
+<li>Drift‑prone or opaque  </li>
+</ul>
+<h3 id="set-axes-substrate-anchors">🧭 SET Axes (Substrate Anchors)</h3>
+<ul>
+<li>🌀 Spin — polarization, magnetic coupling  </li>
+<li>⚡ Elec — sensor readout, digital logic  </li>
+<li>🔥 Temp — drift, stability, compensation  </li>
+</ul>
+<hr>
+<p>This schema is intentionally minimal. It mirrors your triadic structure and keeps contributors aligned.</p>
+<pre><code>instrument_regime_map:
+  name: &lt;string&gt;                # instrument or FW/SW module
+  zone: &lt;green|yellow|red&gt;      # triadic classification
+  substrate_axes:
+    spin: &lt;notes&gt;               # only if relevant
+    elec: &lt;notes&gt;
+    temp: &lt;notes&gt;
+  pos_regime:
+    description: &lt;string&gt;       # stable behavior
+    conditions:                 # optional
+      - &lt;string&gt;
+  q_regime:
+    description: &lt;string&gt;       # transitional behavior
+    conditions:
+      - &lt;string&gt;
+  neg_regime:
+    description: &lt;string&gt;       # fragile behavior
+    conditions:
+      - &lt;string&gt;
+  alignment_notes: &lt;string&gt;     # for green/yellow
+  containment_notes: &lt;string&gt;   # for red
+</code></pre>
+<p>This is not meant to be machine‑validated — it’s a <strong>conceptual scaffold</strong> that keeps every contributor writing in the same shape.</p>
+<hr>
+<h1 id="teaser-examples-short-readable-canonaligned">✨ <strong>Teaser Examples (Short, Readable, Canon‑Aligned)</strong></h1>
+<p>These are intentionally tiny — just enough to show the pattern.</p>
+<hr>
+<h2 id="example-1-accelerometer-green-zone"><strong>Example 1 — Accelerometer (Green Zone)</strong></h2>
+<pre><code>instrument_regime_map:
+  name: Accelerometer
+  zone: green
+  substrate_axes:
+    spin: not relevant
+    elec: stable sensor readout
+    temp: minor drift
+  pos_regime:
+    description: stable acceleration measurement
+    conditions:
+      - rigid mounting
+      - steady temperature
+  q_regime:
+    description: mild drift or vibration coupling
+  neg_regime:
+    description: saturation or nonlinear response
+  alignment_notes: stable, direct, low-inference
+</code></pre>
+<hr>
+<h2 id="example-2-automated-peak-fitting-yellow-zone"><strong>Example 2 — Automated Peak Fitting (Yellow Zone)</strong></h2>
+<pre><code>instrument_regime_map:
+  name: Automated Peak Fitting Software
+  zone: yellow
+  substrate_axes:
+    spin: not relevant
+    elec: digital computation
+    temp: not relevant
+  pos_regime:
+    description: clean peaks, high SNR
+  q_regime:
+    description: overlapping peaks, baseline drift
+  neg_regime:
+    description: unstable fits, model mismatch
+  alignment_notes: model assumptions must be explicit
+</code></pre>
+<hr>
+<h2 id="example-3-aibased-signal-interpretation-red-zone"><strong>Example 3 — AI‑Based Signal Interpretation (Red Zone)</strong></h2>
+<pre><code>instrument_regime_map:
+  name: AI-Based Signal Interpretation Tools
+  zone: red
+  substrate_axes:
+    spin: not relevant
+    elec: digital computation
+    temp: upstream sensor-dependent
+  pos_regime:
+    description: clean, well-represented data
+  q_regime:
+    description: domain shift or partial mismatch
+  neg_regime:
+    description: out-of-distribution inputs, unstable predictions
+  containment_notes: dataset boundaries and version drift must be documented
+</code></pre>
+<hr>
+<h1 id="why-this-schema-works">🧭 Why this schema works</h1>
+<ul>
+<li>It’s <strong>small</strong> — contributors won’t feel intimidated.  </li>
+<li>It’s <strong>structural</strong> — every file ends up shaped the same way.  </li>
+<li>It’s <strong>triadic</strong> — pos/Q/neg is always visible.  </li>
+<li>It’s <strong>substrate‑aware</strong> — SET anchors remain central.  </li>
+<li>It’s <strong>future‑proof</strong> — works for hardware, firmware, software, and hybrids.  </li>
+</ul>
+<hr>
+<h2 id="regime-map-schema-mini">🧩 Regime Map Schema (Mini)</h2>
+<p>name: instrument/module<br>
+zone: 💚 / 💛 / ❤️<br>
+substrate_axes: 🌀 ⚡ 🔥<br>
+pos_regime: stable behavior<br>
+q_regime: transitional behavior<br>
+neg_regime: fragile behavior<br>
+notes: alignment or containment  </p>
+  </main>
+</body>
+</html>

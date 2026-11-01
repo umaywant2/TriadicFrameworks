@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Echo_Classifier/examples.md">
+  <title>🧪 Echo Classifier — Applied Examples</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Echo_Classifier/examples.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Echo_Classifier/examples.md</code>
+  </aside>
+
+  <main>
+<h1 id="echo-classifier-applied-examples">🧪 Echo Classifier — Applied Examples</h1>
+<blockquote>
+<p><em>Six echo types. Six walkthroughs. Each one runs the full pipeline.</em></p>
+</blockquote>
+<p><strong>Module:</strong> Echo Classifier
+<strong>Canonical ID:</strong> EC
+<strong>HSP Section:</strong> 06c
+<strong>Role:</strong> Applied classification examples</p>
+<hr>
+<h2 id="example-1-e1-structural-echo">Example 1 — E1 Structural Echo</h2>
+<p><strong>Domain:</strong> Framework development
+<strong>Scenario:</strong> A new term is coined during a writing session. The definition
+echoes once from Symbolic to Cognitive and stops.</p>
+<h3 id="pipeline-walkthrough">Pipeline Walkthrough</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Step</th>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Value</th>
+<th style="text-align: left;">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Trigger</td>
+<td style="text-align: left;">A (structural boundary crossed)</td>
+<td style="text-align: left;">06a</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Signature</td>
+<td style="text-align: left;">A (localized, low‑amplitude)</td>
+<td style="text-align: left;">06b</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">ESI</td>
+<td style="text-align: left;">1 (local only)</td>
+<td style="text-align: left;">04c</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">Substrates</td>
+<td style="text-align: left;">1 (Symbolic only)</td>
+<td style="text-align: left;">05a</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">Recursion</td>
+<td style="text-align: left;">R1 (S→C ladder)</td>
+<td style="text-align: left;">06</td>
+</tr>
+</tbody>
+</table>
+<p><strong>EC‑Classify Result:</strong> E1 — Structural Echo
+<strong>EC‑Tag Confidence:</strong> Definite (5/5 inputs align)</p>
+<p><strong>Downstream:</strong>
+- <strong>TEL:</strong> Placed in Ladder layer (bottom).
+- <strong>Substrate Flow:</strong> Routed through S→C channel. No migration expected.</p>
+<p><strong>Canon Takeaway:</strong>
+E1 is the most common and most stable echo type. Most new definitions
+start here. Only a fraction escalate to E2 or beyond.</p>
+<hr>
+<h2 id="example-2-e2-harmonic-echo">Example 2 — E2 Harmonic Echo</h2>
+<p><strong>Domain:</strong> Music theory / RTT harmonic analysis
+<strong>Scenario:</strong> A concept introduced in the Cognitive substrate begins
+oscillating with a harmonic pattern — it resonates with an existing
+interval structure.</p>
+<h3 id="pipeline-walkthrough_1">Pipeline Walkthrough</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Step</th>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Value</th>
+<th style="text-align: left;">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Trigger</td>
+<td style="text-align: left;">B (harmonic resonance detected)</td>
+<td style="text-align: left;">06a</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Signature</td>
+<td style="text-align: left;">B (oscillatory, harmonic‑locked)</td>
+<td style="text-align: left;">06b</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">ESI</td>
+<td style="text-align: left;">2 (mild energy)</td>
+<td style="text-align: left;">04c</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">Substrates</td>
+<td style="text-align: left;">1 (Harmonic dominant)</td>
+<td style="text-align: left;">05a</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">Recursion</td>
+<td style="text-align: left;">R2 (C↔H cycle)</td>
+<td style="text-align: left;">06</td>
+</tr>
+</tbody>
+</table>
+<p><strong>EC‑Classify Result:</strong> E2 — Harmonic Echo
+<strong>EC‑Tag Confidence:</strong> Definite (5/5 inputs align)</p>
+<p><strong>Downstream:</strong>
+- <strong>TEL:</strong> Placed in Cycle layer. Oscillation between C and H.
+- <strong>Substrate Flow:</strong> Routed through C↔H channel. Stable oscillation.</p>
+<p><strong>Canon Takeaway:</strong>
+E2 echoes are stable as long as the harmonic band holds. If the band
+shifts (due to external drift or new input), E2 can escalate to E3.</p>
+<hr>
+<h2 id="example-3-e3-substrate-echo">Example 3 — E3 Substrate Echo</h2>
+<p><strong>Domain:</strong> Cross‑domain framework migration
+<strong>Scenario:</strong> A concept originally defined in the Symbolic substrate migrates
+to Cognitive, then Harmonic, then Social — crossing three substrates.</p>
+<h3 id="pipeline-walkthrough_2">Pipeline Walkthrough</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Step</th>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Value</th>
+<th style="text-align: left;">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Trigger</td>
+<td style="text-align: left;">C (cross‑substrate migration)</td>
+<td style="text-align: left;">06a</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Signature</td>
+<td style="text-align: left;">C (distributed, multi‑substrate)</td>
+<td style="text-align: left;">06b</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">ESI</td>
+<td style="text-align: left;">3 (cross‑substrate flow)</td>
+<td style="text-align: left;">04c</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">Substrates</td>
+<td style="text-align: left;">3 (S + C + H)</td>
+<td style="text-align: left;">05a</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">Recursion</td>
+<td style="text-align: left;">R2 (C↔H cycle active)</td>
+<td style="text-align: left;">06</td>
+</tr>
+</tbody>
+</table>
+<p><strong>EC‑Classify Result:</strong> E3 — Substrate Echo
+<strong>EC‑Tag Confidence:</strong> Definite (5/5 inputs align)</p>
+<p><strong>Downstream:</strong>
+- <strong>TEL:</strong> Placed in Map layer. Cross‑substrate presence.
+- <strong>Substrate Flow:</strong> Multi‑channel routing. Creates echo pressure at
+  substrate boundaries.</p>
+<p><strong>Canon Takeaway:</strong>
+E3 is the migration threshold. Once an echo crosses three substrates,
+it creates pressure on boundaries — which can trigger further migration
+or stabilize into a cross‑substrate structure.</p>
+<hr>
+<h2 id="example-4-e4-recursion-echo">Example 4 — E4 Recursion Echo</h2>
+<p><strong>Domain:</strong> Self‑referencing framework dynamics
+<strong>Scenario:</strong> A module references itself during analysis — the recursion
+detector fires, and the echo begins following recursion lines rather
+than substrate channels.</p>
+<h3 id="pipeline-walkthrough_3">Pipeline Walkthrough</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Step</th>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Value</th>
+<th style="text-align: left;">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Trigger</td>
+<td style="text-align: left;">D (recursion loop detected)</td>
+<td style="text-align: left;">06a</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Signature</td>
+<td style="text-align: left;">D (recursive, self‑referencing)</td>
+<td style="text-align: left;">06b</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">ESI</td>
+<td style="text-align: left;">3 (cross‑substrate energy)</td>
+<td style="text-align: left;">04c</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">Substrates</td>
+<td style="text-align: left;">3 (C + H + So)</td>
+<td style="text-align: left;">05a</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">Recursion</td>
+<td style="text-align: left;">R3 (H→So map recursion)</td>
+<td style="text-align: left;">06</td>
+</tr>
+</tbody>
+</table>
+<p><strong>EC‑Classify Result:</strong> E4 — Recursion Echo
+<strong>EC‑Tag Confidence:</strong> Definite (5/5 inputs align)</p>
+<p><strong>Downstream:</strong>
+- <strong>TEL:</strong> Placed in Map‑to‑Atlas transition zone.
+- <strong>Substrate Flow:</strong> Follows R3 recursion line. Can accelerate toward
+  atlas or stabilize in map layer.</p>
+<p><strong>Canon Takeaway:</strong>
+E4 is the decision point. Recursion echoes either amplify (pushing toward
+E5/E6) or dampen (stabilizing into E3). The recursion mode determines
+trajectory.</p>
+<hr>
+<h2 id="example-5-e5-driftshadow-echo">Example 5 — E5 Drift‑Shadow Echo</h2>
+<p><strong>Domain:</strong> Framework stability analysis
+<strong>Scenario:</strong> An existing structure begins drifting. The drift generates
+shadow echoes that trail the original — not new echoes, but distorted
+copies riding drift currents.</p>
+<h3 id="pipeline-walkthrough_4">Pipeline Walkthrough</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Step</th>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Value</th>
+<th style="text-align: left;">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Trigger</td>
+<td style="text-align: left;">E (drift pressure exceeds threshold)</td>
+<td style="text-align: left;">06a</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Signature</td>
+<td style="text-align: left;">E (shadow‑trailing, drift‑aligned)</td>
+<td style="text-align: left;">06b</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">ESI</td>
+<td style="text-align: left;">4 (atlas pull)</td>
+<td style="text-align: left;">04c</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">Substrates</td>
+<td style="text-align: left;">4 (C + H + So + A)</td>
+<td style="text-align: left;">05a</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">Recursion</td>
+<td style="text-align: left;">R3 (H→So map recursion)</td>
+<td style="text-align: left;">06</td>
+</tr>
+</tbody>
+</table>
+<p><strong>EC‑Classify Result:</strong> E5 — Drift‑Shadow Echo
+<strong>EC‑Tag Confidence:</strong> Definite (5/5 inputs align)</p>
+<p><strong>Downstream:</strong>
+- <strong>TEL:</strong> Placed in pressure zones. Cross‑layer instability marker.
+- <strong>Substrate Flow:</strong> Rides D3 drift current (H→So instability).</p>
+<p><strong>Canon Takeaway:</strong>
+E5 echoes are instability markers. They signal that the underlying
+structure is drifting, and the echoes are symptoms, not causes. Treating
+E5 echoes without addressing the source drift is futile.</p>
+<hr>
+<h2 id="example-6-e6-atlas-echo">Example 6 — E6 Atlas Echo</h2>
+<p><strong>Domain:</strong> Canon‑level architectural resonance
+<strong>Scenario:</strong> A concept achieves full‑spectrum resonance across all five
+substrates simultaneously. The Atlas substrate pulls it into permanent
+structural alignment.</p>
+<h3 id="pipeline-walkthrough_5">Pipeline Walkthrough</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Step</th>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Value</th>
+<th style="text-align: left;">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Trigger</td>
+<td style="text-align: left;">F (atlas‑level resonance)</td>
+<td style="text-align: left;">06a</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Signature</td>
+<td style="text-align: left;">F (full‑spectrum, anchoring)</td>
+<td style="text-align: left;">06b</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">ESI</td>
+<td style="text-align: left;">4 (maximum energy)</td>
+<td style="text-align: left;">04c</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">Substrates</td>
+<td style="text-align: left;">5 (all substrates)</td>
+<td style="text-align: left;">05a</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">Recursion</td>
+<td style="text-align: left;">R4 (So→A atlas recursion)</td>
+<td style="text-align: left;">06</td>
+</tr>
+</tbody>
+</table>
+<p><strong>EC‑Classify Result:</strong> E6 — Atlas Echo
+<strong>EC‑Tag Confidence:</strong> Definite (5/5 inputs align)</p>
+<p><strong>Downstream:</strong>
+- <strong>TEL:</strong> Placed in Atlas layer. Anchoring position.
+- <strong>Substrate Flow:</strong> So→A channel. Full‑spectrum forcing.</p>
+<p><strong>Canon Takeaway:</strong>
+E6 is the rarest echo type. It represents a concept that has achieved
+structural permanence across the entire framework. Atlas echoes reshape
+the lattice — they do not merely occupy a position within it.</p>
+<hr>
+<h2 id="crossexample-comparison">Cross‑Example Comparison</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Example</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Trigger</th>
+<th style="text-align: left;">ESI</th>
+<th style="text-align: left;">Substrates</th>
+<th style="text-align: left;">Recursion</th>
+<th style="text-align: left;">Confidence</th>
+<th style="text-align: left;">TEL Layer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">E1 Structural</td>
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">R1</td>
+<td style="text-align: left;">Definite</td>
+<td style="text-align: left;">Ladder</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">E2 Harmonic</td>
+<td style="text-align: left;">B</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">R2</td>
+<td style="text-align: left;">Definite</td>
+<td style="text-align: left;">Cycle</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">E3 Substrate</td>
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">R2</td>
+<td style="text-align: left;">Definite</td>
+<td style="text-align: left;">Map</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">E4 Recursion</td>
+<td style="text-align: left;">D</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">R3</td>
+<td style="text-align: left;">Definite</td>
+<td style="text-align: left;">Map→Atlas</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">E5 Drift‑Shadow</td>
+<td style="text-align: left;">E</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">R3</td>
+<td style="text-align: left;">Definite</td>
+<td style="text-align: left;">Pressure</td>
+</tr>
+<tr>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">E6 Atlas</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">R4</td>
+<td style="text-align: left;">Definite</td>
+<td style="text-align: left;">Atlas</td>
+</tr>
+</tbody>
+</table>
+<h3 id="patterns">Patterns</h3>
+<ol>
+<li>
+<p><strong>ESI escalates with type.</strong> E1 starts at ESI‑1; E6 requires ESI‑4.
+   Energy increases monotonically across the classification spectrum.</p>
+</li>
+<li>
+<p><strong>Substrate spread widens with type.</strong> E1 is single‑substrate; E6 spans
+   all five. Migration is the structural driver of type escalation.</p>
+</li>
+<li>
+<p><strong>Recursion deepens with type.</strong> E1 uses R1 only; E6 requires R4.
+   Higher echo types follow deeper recursion lines.</p>
+</li>
+<li>
+<p><strong>TEL layer rises with type.</strong> E1 sits at the bottom (Ladder); E6
+   sits at the top (Atlas). Echo type predicts lattice position.</p>
+</li>
+<li>
+<p><strong>Stability risk increases with type.</strong> E1 is maximally stable; E5–E6
+   are instability/reshaping markers.</p>
+</li>
+</ol>
+<hr>
+<h2 id="ambiguous-classification-example">Ambiguous Classification Example</h2>
+<p><strong>Scenario:</strong> An echo triggers with type C (substrate migration) but has
+ESI‑4 and recursion R4 — values that suggest E5 or E6, not E3.</p>
+<h3 id="pipeline-walkthrough_6">Pipeline Walkthrough</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Step</th>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Value</th>
+<th style="text-align: left;">Expected for E3</th>
+<th style="text-align: left;">Actual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Trigger</td>
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">C ✓</td>
+<td style="text-align: left;">Match</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Signature</td>
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">C ✓</td>
+<td style="text-align: left;">Match</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">ESI</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">2–3 ✗</td>
+<td style="text-align: left;">Mismatch</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">Substrates</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">3–4 ✓</td>
+<td style="text-align: left;">Match</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">Recursion</td>
+<td style="text-align: left;">R4</td>
+<td style="text-align: left;">R2–R3 ✗</td>
+<td style="text-align: left;">Mismatch</td>
+</tr>
+</tbody>
+</table>
+<p><strong>EC‑Classify Result:</strong> Conflict — Trigger/Signature say E3, but ESI/Recursion
+say E5 or E6.</p>
+<p><strong>EC‑Tag Confidence:</strong> Ambiguous (3/5 inputs align to E3; 2/5 point higher)</p>
+<p><strong>Resolution:</strong> The classifier flags this as ambiguous. Manual review checks
+whether the echo is a high‑energy E3 (substrate migration with unusual
+force) or a mislabeled E5 (drift‑shadow with substrate trigger). The
+trigger and signature take precedence per conflict resolution rules, but
+the ambiguity flag ensures human review.</p>
+<p><strong>Canon Takeaway:</strong>
+The classifier does not force. When inputs conflict, it says so. This
+is the transparency invariant in action.</p>
+<hr>
+<!-- SESSION_CONTEXT:START -->
+
+<pre><code class="language-yaml">file: examples.md
+module: Echo Classifier
+canonical_id: EC
+hsp_section: 06c
+role: applied-examples
+status: canon-stable
+examples:
+  - { type: E1, name: Structural Echo, confidence: definite }
+  - { type: E2, name: Harmonic Echo, confidence: definite }
+  - { type: E3, name: Substrate Echo, confidence: definite }
+  - { type: E4, name: Recursion Echo, confidence: definite }
+  - { type: E5, name: Drift-Shadow Echo, confidence: definite }
+  - { type: E6, name: Atlas Echo, confidence: definite }
+  - { type: ambiguous, name: Conflict Example, confidence: ambiguous }
+</code></pre>
+<!-- SESSION_CONTEXT:END -->
+  </main>
+</body>
+</html>

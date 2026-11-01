@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/vst_for_multi_model_alignment/scaling_behavior_multi_model.md">
+  <title>vST for Multi‑Model Alignment</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/vst_for_multi_model_alignment/scaling_behavior_multi_model.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/vst_for_multi_model_alignment/scaling_behavior_multi_model.md</code>
+  </aside>
+
+  <main>
+<h3 id="vst-for-multimodel-alignment"><em>vST for Multi‑Model Alignment</em></h3>
+<h3 id="crossarchitecture-scaling-behavior-across-the-dimensional-ladder"><em>Cross‑Architecture Scaling Behavior Across the Dimensional Ladder</em></h3>
+<p>This document defines how <strong>multi‑model alignment</strong> behaves as dimensionality, model size, modality complexity, and architectural diversity increase. It maps cross‑model scaling laws onto the <strong>3D–1024D dimensional ladder</strong>, providing a reproducible, invariant‑preserving framework for understanding how alignment capacity grows, stabilizes, or fragments across heterogeneous systems.</p>
+<p>Scaling in multi‑model alignment is not about increasing parameters — it is about increasing <strong>compatibility</strong>, <strong>coherence</strong>, and <strong>alignment bandwidth</strong> across models.</p>
+<hr>
+<h2 id="1-purpose-of-multimodel-scaling-analysis"><strong>1. Purpose of Multi‑Model Scaling Analysis</strong></h2>
+<p>Cross‑model scaling analysis enables us to:</p>
+<ul>
+<li>interpret how alignment capacity expands with model size and modality diversity  </li>
+<li>identify stable, transitional, and dispersed scaling regimes  </li>
+<li>detect scaling discontinuities across architectures  </li>
+<li>evaluate cross‑model compatibility at different dimensional levels  </li>
+<li>support vST validation (V₁–V₄)  </li>
+<li>project alignment surfaces into 3D–9D cores for interpretability  </li>
+</ul>
+<p>Scaling is the backbone of cross‑model comparability.</p>
+<hr>
+<h2 id="2-dimensional-ladder-for-multimodel-alignment"><strong>2. Dimensional Ladder for Multi‑Model Alignment</strong></h2>
+<p>Cross‑model alignment naturally aligns with the substrate’s dimensional ladder:</p>
+<ul>
+<li><strong>3D</strong> — geometric alignment motifs  </li>
+<li><strong>6D</strong> — interaction‑surface alignment  </li>
+<li><strong>9D</strong> — coherence‑pathway alignment  </li>
+<li><strong>64D</strong> — minimal cross‑model substrate  </li>
+<li><strong>128D</strong> — expanded alignment surfaces  </li>
+<li><strong>256D</strong> — multi‑primitive cross‑architecture interaction  </li>
+<li><strong>512D</strong> — high‑variance cross‑modality regions  </li>
+<li><strong>1024D</strong> — full research‑grade alignment substrate  </li>
+</ul>
+<p>Each step increases alignment bandwidth and structural compatibility.</p>
+<hr>
+<h2 id="3-scaling-primitives-for-multimodel-alignment"><strong>3. Scaling Primitives for Multi‑Model Alignment</strong></h2>
+<p>Scaling behavior is governed by <strong>Cross‑Model Scaling Primitives (SP‑X)</strong>, which ensure:</p>
+<ul>
+<li>invariant‑preserving dimensional expansion  </li>
+<li>compatibility between heterogeneous latent spaces  </li>
+<li>stable projection into triadic cores  </li>
+<li>consistent scaling‑law interpretation across architectures  </li>
+</ul>
+<p>SP‑X is essential for aligning models with different latent sizes, modalities, or inference dynamics.</p>
+<hr>
+<h2 id="4-scaling-regimes-in-multimodel-alignment"><strong>4. Scaling Regimes in Multi‑Model Alignment</strong></h2>
+<h3 id="41-stable-scaling-regime-s1m"><strong>4.1 Stable Scaling Regime (S₁ᴹ)</strong></h3>
+<p>Characteristics:</p>
+<ul>
+<li>smooth increase in alignment capacity  </li>
+<li>stable cross‑model coherence surfaces  </li>
+<li>predictable improvements in compatibility  </li>
+<li>consistent regime behavior (A₁ᴴ ↔ A₁ᴴ transitions remain bounded)</li>
+</ul>
+<p>Occurs in:</p>
+<ul>
+<li>small → medium model comparisons  </li>
+<li>similar modalities (e.g., LLM ↔ PLM)  </li>
+<li>well‑conditioned cross‑model projections  </li>
+</ul>
+<hr>
+<h3 id="42-transitional-scaling-regime-s2m"><strong>4.2 Transitional Scaling Regime (S₂ᴹ)</strong></h3>
+<p>Characteristics:</p>
+<ul>
+<li>rapid expansion of alignment surfaces  </li>
+<li>increased variance across architectures  </li>
+<li>branching or oscillatory cross‑model behavior  </li>
+<li>sensitivity to modality or architecture differences  </li>
+</ul>
+<p>Occurs in:</p>
+<ul>
+<li>medium → large model comparisons  </li>
+<li>cross‑modality alignment (e.g., text ↔ image)  </li>
+<li>cross‑architecture transitions (e.g., diffusion ↔ autoregressive)  </li>
+</ul>
+<hr>
+<h3 id="43-dispersion-scaling-regime-s3m"><strong>4.3 Dispersion Scaling Regime (S₃ᴹ)</strong></h3>
+<p>Characteristics:</p>
+<ul>
+<li>fragmentation of alignment surfaces  </li>
+<li>unstable or divergent cross‑model mappings  </li>
+<li>increased risk of alignment collapse  </li>
+<li>non‑invertible projections into 3D–9D cores  </li>
+</ul>
+<p>Occurs in:</p>
+<ul>
+<li>extremely heterogeneous model pairs  </li>
+<li>poorly conditioned cross‑modality mappings  </li>
+<li>aggressive scaling or architecture changes  </li>
+</ul>
+<hr>
+<h2 id="5-scaling-behavior-across-model-families"><strong>5. Scaling Behavior Across Model Families</strong></h2>
+<h3 id="51-llm-plm"><strong>5.1 LLM ↔ PLM</strong></h3>
+<ul>
+<li>high compatibility  </li>
+<li>scaling mostly in S₁ᴹ  </li>
+<li>stable alignment surfaces</li>
+</ul>
+<h3 id="52-llm-diffusion"><strong>5.2 LLM ↔ Diffusion</strong></h3>
+<ul>
+<li>modality mismatch introduces S₂ᴹ  </li>
+<li>alignment depends on projection stability</li>
+</ul>
+<h3 id="53-diffusion-autoregressive-generators"><strong>5.3 Diffusion ↔ Autoregressive Generators</strong></h3>
+<ul>
+<li>different inference dynamics  </li>
+<li>transitional scaling dominates (S₂ᴹ)</li>
+</ul>
+<h3 id="54-simulators-robotics-policies"><strong>5.4 Simulators ↔ Robotics Policies</strong></h3>
+<ul>
+<li>strong structural invariants  </li>
+<li>scaling often stable (S₁ᴹ → S₂ᴹ)</li>
+</ul>
+<h3 id="55-embedding-stores-generative-models"><strong>5.5 Embedding Stores ↔ Generative Models</strong></h3>
+<ul>
+<li>alignment depends on latent‑space conditioning  </li>
+<li>scaling oscillates between S₂ᴹ and S₃ᴹ</li>
+</ul>
+<hr>
+<h2 id="6-scalinglaw-alignment-across-architectures"><strong>6. Scaling‑Law Alignment Across Architectures</strong></h2>
+<p>Cross‑model scaling follows predictable patterns:</p>
+<ul>
+<li>alignment bandwidth increases with latent dimensionality  </li>
+<li>variance increases with modality diversity  </li>
+<li>coherence surfaces expand smoothly in S₁ᴹ, sharply in S₂ᴹ, and fragment in S₃ᴹ  </li>
+<li>projection stability decreases as architectural heterogeneity increases  </li>
+</ul>
+<p>The substrate provides a structured way to interpret these patterns.</p>
+<hr>
+<h2 id="7-projection-behavior-under-crossmodel-scaling"><strong>7. Projection Behavior Under Cross‑Model Scaling</strong></h2>
+<p>Projection into triadic cores must remain:</p>
+<ul>
+<li>invertible  </li>
+<li>primitive‑aligned  </li>
+<li>regime‑aware  </li>
+<li>architecture‑neutral  </li>
+<li>invariant‑preserving  </li>
+</ul>
+<p>Scaling affects projection as follows:</p>
+<ul>
+<li><strong>64D → 9D</strong>: stable  </li>
+<li><strong>128D–256D → 9D</strong>: transitional  </li>
+<li><strong>512D–1024D → 9D</strong>: sensitive, drift‑prone  </li>
+</ul>
+<p>Projection stability is a key indicator of cross‑model scaling health.</p>
+<hr>
+<h2 id="8-scalingdriven-drift-in-multimodel-alignment"><strong>8. Scaling‑Driven Drift in Multi‑Model Alignment</strong></h2>
+<p>Scaling can introduce drift through:</p>
+<ul>
+<li>discontinuities in cross‑model latent‑space expansion  </li>
+<li>unstable regime transitions  </li>
+<li>fragmentation of alignment surfaces  </li>
+<li>loss of primitive‑level compatibility  </li>
+</ul>
+<p>vST validation layers (V₁–V₄) detect these failures.</p>
+<hr>
+<h2 id="9-outputs-of-multimodel-scaling-analysis"><strong>9. Outputs of Multi‑Model Scaling Analysis</strong></h2>
+<p>Scaling analysis produces:</p>
+<ul>
+<li>scaling‑regime classification (S₁ᴹ, S₂ᴹ, S₃ᴹ)  </li>
+<li>cross‑model expansion diagnostics  </li>
+<li>projection‑stability indicators  </li>
+<li>alignment‑regime maps  </li>
+<li>drift‑detection signals  </li>
+<li>cross‑architecture comparison metrics  </li>
+</ul>
+<p>These outputs support reproducible, substrate‑aligned evaluation of multi‑model alignment.</p>
+  </main>
+</body>
+</html>

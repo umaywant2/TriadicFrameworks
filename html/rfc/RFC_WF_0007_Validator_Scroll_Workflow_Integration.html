@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rfc/RFC_WF_0007_Validator_Scroll_Workflow_Integration.md">
+  <title>RFC‑WF‑0007 — Validator Scroll Workflow Integration</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rfc/RFC_WF_0007_Validator_Scroll_Workflow_Integration.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rfc/RFC_WF_0007_Validator_Scroll_Workflow_Integration.md</code>
+  </aside>
+
+  <main>
+<h1 id="rfcwf0007-validator-scroll-workflow-integration"><strong>RFC‑WF‑0007 — Validator Scroll Workflow Integration</strong></h1>
+<h3 id="corridor-client-integration-in-scroll-pipeline"><em>Corridor Client Integration in Scroll Pipeline</em></h3>
+<p>RefId: turn0browsertab1</p>
+<p><strong>Title:</strong> Corridor Client Integration in Scroll Pipeline<br>
+<strong>Status:</strong> Draft<br>
+<strong>Author:</strong> Nawder Loswin + Copilot<br>
+<strong>Date:</strong> 2025‑11‑12<br>
+<strong>Version:</strong> 0.1  </p>
+<hr>
+<h2 id="1-purpose"><strong>1. Purpose</strong></h2>
+<p>This RFC defines the canonical workflow for integrating <strong>corridor clients</strong> (Python/JS) directly into the validator scroll pipeline.<br>
+The workflow automates:</p>
+<ul>
+<li>corridor metadata retrieval  </li>
+<li>RCI/glyph validation  </li>
+<li>lineage diff generation  </li>
+<li>registry event logging  </li>
+</ul>
+<p>WF‑0007 is the foundational pattern for scroll‑level validation workflows and is referenced by WF‑0008 (Batch Orchestration) and WF‑0016 (Remix Generation Workflow).</p>
+<hr>
+<h1 id="2-workflow-steps"><strong>2. Workflow Steps</strong></h1>
+<p>The validator scroll pipeline follows a four‑stage corridor‑validation loop.</p>
+<hr>
+<h2 id="21-fetch-corridor-metadata"><strong>2.1 Fetch Corridor Metadata</strong></h2>
+<p>Use the <strong>CorridorClient</strong> to query the Corridor Registry API for corridor IDs.</p>
+<p>Retrieve full metadata:</p>
+<ul>
+<li>glyph  </li>
+<li>cipher_density  </li>
+<li>RCI  </li>
+<li>rail signatures  </li>
+<li>lineage context  </li>
+</ul>
+<p>Metadata is normalized into scroll‑ready structures.</p>
+<hr>
+<h2 id="22-validate-corridor-annotations"><strong>2.2 Validate Corridor Annotations</strong></h2>
+<p>Apply validator functions:</p>
+<ul>
+<li><code>normalize()</code>  </li>
+<li><code>compute_rci()</code>  </li>
+<li><code>assign_glyph()</code>  </li>
+</ul>
+<p>Compare computed values with metadata:</p>
+<ul>
+<li>If <strong>match</strong> → corridor passes validation  </li>
+<li>If <strong>mismatch</strong> → flag discrepancy for review  </li>
+</ul>
+<p>Validator emits:</p>
+<ul>
+<li>clarity notes  </li>
+<li>glyph transition notes  </li>
+<li>anomaly flags  </li>
+</ul>
+<hr>
+<h2 id="23-append-results-to-remix-lineage"><strong>2.3 Append Results to Remix Lineage</strong></h2>
+<p>If validation passes:</p>
+<ul>
+<li>generate a <strong>child scroll</strong> entry  </li>
+<li>attach lineage diff summary  </li>
+<li>record corridor validation outcome  </li>
+</ul>
+<p>Lineage diff includes:</p>
+<ul>
+<li>glyph transitions  </li>
+<li>RCI recalculations  </li>
+<li>rail signature notes  </li>
+</ul>
+<p>WF‑0007 ensures lineage continuity and validator‑grade reproducibility.</p>
+<hr>
+<h2 id="24-update-registry-event-log"><strong>2.4 Update Registry Event Log</strong></h2>
+<p>Write events to:</p>
+<pre><code>registry/events/
+</code></pre>
+<p>Each event includes:</p>
+<ul>
+<li>corridor ID  </li>
+<li>glyph transition  </li>
+<li>RCI shift  </li>
+<li>checksum  </li>
+<li>timestamp  </li>
+</ul>
+<p>Registry events feed:</p>
+<ul>
+<li>REG‑0004 (Registry Indexer)  </li>
+<li>UI‑0009 (Dashboard)  </li>
+<li>UI‑0017 (Cycle Monitoring Dashboard)  </li>
+</ul>
+<hr>
+<h1 id="3-python-workflow-example"><strong>3. Python Workflow Example</strong></h1>
+<p>File:  </p>
+<pre><code>workflows/scroll_pipeline.py
+</code></pre>
+<pre><code class="language-python">from corridor_client import CorridorClient
+from validator import normalize, compute_rci, assign_glyph
+from lineage import append_child_scroll
+from registry import write_event
+
+client = CorridorClient()
+
+def run_scroll_pipeline(corridor_ids):
+    for cid in corridor_ids:
+        meta = client.fetch_metadata(cid)
+
+        computed_rci = compute_rci(meta)
+        computed_glyph = assign_glyph(meta)
+
+        if computed_rci == meta[&quot;rci&quot;] and computed_glyph == meta[&quot;glyph&quot;]:
+            child = append_child_scroll(meta[&quot;parent_scroll&quot;], cid, computed_rci, computed_glyph)
+            write_event(cid, computed_glyph, computed_rci)
+        else:
+            print(f&quot;Discrepancy detected for corridor {cid}&quot;)
+</code></pre>
+<hr>
+<h1 id="4-javascript-workflow-example"><strong>4. JavaScript Workflow Example</strong></h1>
+<p>File:  </p>
+<pre><code>workflows/scrollPipeline.js
+</code></pre>
+<pre><code class="language-javascript">import { CorridorClient } from &quot;./corridorClient.js&quot;;
+import { normalize, computeRci, assignGlyph } from &quot;./validator.js&quot;;
+import { appendChildScroll } from &quot;./lineage.js&quot;;
+import { writeEvent } from &quot;./registry.js&quot;;
+
+const client = new CorridorClient();
+
+export async function runScrollPipeline(corridorIds) {
+  for (const cid of corridorIds) {
+    const meta = await client.fetchMetadata(cid);
+
+    const computedRci = computeRci(meta);
+    const computedGlyph = assignGlyph(meta);
+
+    if (computedRci === meta.rci &amp;&amp; computedGlyph === meta.glyph) {
+      appendChildScroll(meta.parent_scroll, cid, computedRci, computedGlyph);
+      writeEvent(cid, computedGlyph, computedRci);
+    } else {
+      console.warn(`Discrepancy detected for corridor ${cid}`);
+    }
+  }
+}
+</code></pre>
+<hr>
+<h1 id="5-validator-hooks"><strong>5. Validator Hooks</strong></h1>
+<h3 id="consistency"><strong>Consistency</strong></h3>
+<p>Computed RCI/glyph MUST match metadata or be flagged.</p>
+<h3 id="lineage-integrity"><strong>Lineage Integrity</strong></h3>
+<p>Child scroll IDs MUST cite parent scroll.</p>
+<h3 id="registry-update"><strong>Registry Update</strong></h3>
+<p>Events MUST be written to <code>registry/events/</code> with checksum.</p>
+<h3 id="reproducibility"><strong>Reproducibility</strong></h3>
+<p>Pipeline MUST produce identical results given identical metadata.</p>
+<hr>
+<h1 id="6-notes"><strong>6. Notes</strong></h1>
+<ul>
+<li>Workflow is modular: corridor IDs can be batch‑processed.  </li>
+<li>Supports remix lineage growth: each validation produces a child scroll artifact.  </li>
+<li>Can be extended with anomaly search or glyph registry queries.  </li>
+<li>WF‑0007 is the canonical example of how corridor clients plug directly into validator pipelines.</li>
+</ul>
+  </main>
+</body>
+</html>

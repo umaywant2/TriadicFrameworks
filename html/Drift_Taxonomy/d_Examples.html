@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Drift_Taxonomy/d_Examples.md">
+  <title>Applying Corrections to Top 10 Representative Works</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Drift_Taxonomy/d_Examples.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Drift_Taxonomy/d_Examples.md</code>
+  </aside>
+
+  <main>
+<h1 id="applying-corrections-to-top-10-representative-works">Applying Corrections to Top 10 Representative Works</h1>
+<p><em>Purpose: Show how the Drift Taxonomy and minimal operators correct representative gravity results, without changing their validated domains.</em></p>
+<p>Below are <strong>generic example blocks</strong> for the Top 10 papers. You can replace the placeholders (<code>[Paper Title]</code>, etc.) with actual citations once you finalize the list.</p>
+<hr>
+<h4 id="example-1-classical-gr-foundation-singularity-scale-drift">Example 1 — Classical GR Foundation (Singularity / Scale Drift)</h4>
+<p><strong>Paper:</strong> P001 — [Einstein, GR foundation]<br>
+<strong>Regime:</strong> REG:GR-Macro<br>
+<strong>Primary Drift:</strong> DRIFT:Scale  </p>
+<p><strong>Original issue:</strong><br>
+Curvature $$\,R\,$$ diverges as $$r \to 0$$ in strong‑field solutions.</p>
+<p><strong>Correction:</strong><br>
+Apply <strong>Scale‑Aware Operator</strong>:</p>
+<p>$$
+R \;\rightarrow\; R_\sigma = \frac{R}{1 + \left(\frac{\ell}{\sigma}\right)^n}
+$$</p>
+<p><strong>Effect:</strong><br>
+- At macro scales ($$\sigma \gg \ell$$), $$R_\sigma \approx R$$ → GR unchanged where validated.<br>
+- At micro scales ($$\sigma \sim \ell$$), divergence is regularized → singularity removed.</p>
+<hr>
+<h4 id="example-2-quantum-gravity-via-gravitons-regime-imposition-substrate-drift">Example 2 — Quantum Gravity via Gravitons (Regime Imposition / Substrate Drift)</h4>
+<p><strong>Paper:</strong> P002 — [Canonical graviton QFT paper]<br>
+<strong>Regime:</strong> REG:QM-Micro<br>
+<strong>Primary Drift:</strong> DRIFT:RegimeImposition  </p>
+<p><strong>Original issue:</strong><br>
+Gravity forced into a QFT force‑carrier model.</p>
+<p><strong>Correction:</strong><br>
+Use <strong>Regime‑Conditioned Operator</strong>:</p>
+<p>$$
+\mathcal{O}(R) = 
+\begin{cases}
+\mathcal{O}<em _text_QFT="\text{QFT">{\text{GR}} &amp; R = \text{macro} \
+\mathcal{O}</em> \
+\lambda\,\mathcal{O}}} &amp; R = \text{micro<em _text_QFT="\text{QFT">{\text{GR}} + (1-\lambda)\,\mathcal{O}</em>
+\end{cases}
+$$}} &amp; R = \text{hybrid</p>
+<p><strong>Effect:</strong><br>
+- Graviton assumption becomes optional, not mandatory.<br>
+- Hybrid regime can be explored without forcing pure QFT structure onto gravity.</p>
+<hr>
+<h4 id="example-3-dark-matter-in-galaxy-rotation-curves-ontology-extension-drift">Example 3 — Dark Matter in Galaxy Rotation Curves (Ontology / Extension Drift)</h4>
+<p><strong>Paper:</strong> P003 — [Classic galaxy rotation / dark matter paper]<br>
+<strong>Regime:</strong> REG:Cosmo-ΛCDM<br>
+<strong>Primary Drift:</strong> DRIFT:Ontology  </p>
+<p><strong>Original issue:</strong><br>
+Extra mass term added to preserve GR at galactic scales.</p>
+<p><strong>Correction:</strong><br>
+Replace ontology term with <strong>Scale‑Aware Gravity Operator</strong>:</p>
+<p>$$
+g(r) \;\rightarrow\; g_\sigma(r) = \frac{g_{\text{GR}}(r)}{1 + \left(\frac{r}{\sigma}\right)^n}
+$$</p>
+<p><strong>Effect:</strong><br>
+- Rotation curves can be fit by scale‑aware gravity without inventing new matter.<br>
+- Dark matter becomes a testable alternative, not a necessity.</p>
+<hr>
+<h4 id="example-4-dark-energy-cosmological-constant-ontology-continuity-drift">Example 4 — Dark Energy / Cosmological Constant (Ontology / Continuity Drift)</h4>
+<p><strong>Paper:</strong> P004 — [ΛCDM dark energy / acceleration paper]<br>
+<strong>Regime:</strong> REG:Cosmo-ΛCDM<br>
+<strong>Primary Drift:</strong> DRIFT:Ontology  </p>
+<p><strong>Original issue:</strong><br>
+Vacuum energy density treated as continuous and uniform → cosmological constant problem.</p>
+<p><strong>Correction:</strong><br>
+Use <strong>Continuity‑Conditioned Operator</strong>:</p>
+<p>$$
+\rho_{\text{vac}} \;\rightarrow\; \rho_{\text{vac}}(\theta) = \rho_{\text{cont}}\theta + \rho_{\text{disc}}(1-\theta)
+$$</p>
+<p>With:</p>
+<p>$$
+\theta = \frac{1}{1 + (\ell/\ell_c)^m}
+$$</p>
+<p><strong>Effect:</strong><br>
+- Vacuum energy contribution is scale‑dependent.<br>
+- Removes extreme mismatch between QFT vacuum and observed Λ.</p>
+<hr>
+<h4 id="example-5-black-hole-singularity-theorems-scale-substrate-drift">Example 5 — Black Hole Singularity Theorems (Scale / Substrate Drift)</h4>
+<p><strong>Paper:</strong> P005 — [Penrose/Hawking singularity theorem]<br>
+<strong>Regime:</strong> REG:BH-Extreme<br>
+<strong>Primary Drift:</strong> DRIFT:Scale  </p>
+<p><strong>Original issue:</strong><br>
+Geodesic incompleteness → singularities as inevitable.</p>
+<p><strong>Correction:</strong><br>
+Apply <strong>Mixed‑Substrate Operator</strong>:</p>
+<p>$$
+\mathcal{O} = \alpha\,\mathcal{O}<em _text_disc="\text{disc">{\text{cont}} + (1-\alpha)\,\mathcal{O}</em>
+$$}</p>
+<p><strong>Effect:</strong><br>
+- Near Planck scale, $$\alpha$$ shifts, allowing discrete microstructure.<br>
+- Geodesic incompleteness no longer implies infinite curvature.</p>
+<hr>
+<h4 id="example-6-hawking-radiation-interface-isolation-drift">Example 6 — Hawking Radiation (Interface / Isolation Drift)</h4>
+<p><strong>Paper:</strong> P006 — [Hawking radiation derivation]<br>
+<strong>Regime:</strong> REG:BH-Extreme<br>
+<strong>Primary Drift:</strong> DRIFT:Interface  </p>
+<p><strong>Original issue:</strong><br>
+Horizon treated as a sharp interface with classical geometry and quantum fields.</p>
+<p><strong>Correction:</strong><br>
+Add <strong>Boundary‑Condition Operator</strong>:</p>
+<p>$$
+\mathcal{O} \;\rightarrow\; \mathcal{O} + \mathcal{B}(x), \quad \mathcal{B}(x) = \beta\,\delta(x-x_H)
+$$</p>
+<p><strong>Effect:</strong><br>
+- Horizon physics explicitly encoded as a boundary term.<br>
+- Clarifies where semiclassical approximations break.</p>
+<hr>
+<h4 id="example-7-inflation-inflaton-field-ontology-symmetry-drift">Example 7 — Inflation / Inflaton Field (Ontology / Symmetry Drift)</h4>
+<p><strong>Paper:</strong> P007 — [Canonical inflation paper]<br>
+<strong>Regime:</strong> REG:Cosmo-ΛCDM<br>
+<strong>Primary Drift:</strong> DRIFT:Ontology  </p>
+<p><strong>Original issue:</strong><br>
+Inflaton field introduced to preserve homogeneity and flatness.</p>
+<p><strong>Correction:</strong><br>
+Use <strong>Symmetry‑Conditioned Operator</strong>:</p>
+<p>$$
+\mathcal{O}(S) = \mathcal{O}\cdot \prod_i s_i
+$$</p>
+<p>Where $$s_i$$ toggles symmetries (e.g., homogeneity, isotropy).</p>
+<p><strong>Effect:</strong><br>
+- Symmetry assumptions become explicit and tunable.<br>
+- Reduces need for new fields solely to enforce symmetry.</p>
+<hr>
+<h4 id="example-8-loop-quantum-gravity-substrate-extension-drift">Example 8 — Loop Quantum Gravity (Substrate / Extension Drift)</h4>
+<p><strong>Paper:</strong> P008 — [Foundational LQG paper]<br>
+<strong>Regime:</strong> REG:Hybrid-GR/QM<br>
+<strong>Primary Drift:</strong> DRIFT:Substrate  </p>
+<p><strong>Original issue:</strong><br>
+Spacetime fully discretized; extension to all scales assumed.</p>
+<p><strong>Correction:</strong><br>
+Apply <strong>Mixed‑Substrate Operator</strong> with scale dependence:</p>
+<p>$$
+\alpha = \alpha(\sigma)
+$$</p>
+<p><strong>Effect:</strong><br>
+- Discreteness dominates at micro scales.<br>
+- Continuum limit recovered at macro scales without forcing full discretization everywhere.</p>
+<hr>
+<h4 id="example-9-adscft-gravity-duality-regime-imposition-analogy-drift">Example 9 — AdS/CFT Gravity Duality (Regime Imposition / Analogy Drift)</h4>
+<p><strong>Paper:</strong> P009 — [AdS/CFT foundational paper]<br>
+<strong>Regime:</strong> REG:Hybrid-GR/QM<br>
+<strong>Primary Drift:</strong> DRIFT:Analogy  </p>
+<p><strong>Original issue:</strong><br>
+Gravity ↔ field theory duality treated as universal by analogy.</p>
+<p><strong>Correction:</strong><br>
+Subtract <strong>Analogy Term</strong>:</p>
+<p>$$
+\mathcal{O} \;\rightarrow\; \mathcal{O} - \gamma\,\mathcal{O}_{\text{analog}}
+$$</p>
+<p><strong>Effect:</strong><br>
+- Duality becomes a specific construction, not a universal template.<br>
+- Reduces overextension of AdS/CFT to regimes where it may not apply.</p>
+<hr>
+<h4 id="example-10-mond-modified-gravity-extension-scale-drift">Example 10 — MOND / Modified Gravity (Extension / Scale Drift)</h4>
+<p><strong>Paper:</strong> P010 — [MOND or modified gravity paper]<br>
+<strong>Regime:</strong> REG:Alt-Gravity<br>
+<strong>Primary Drift:</strong> DRIFT:Extension  </p>
+<p><strong>Original issue:</strong><br>
+New gravity law extended to all scales without domain restriction.</p>
+<p><strong>Correction:</strong><br>
+Use <strong>Domain‑Restricted Operator</strong>:</p>
+<p>$$
+\mathcal{O}(x) \;\rightarrow\; \mathcal{O}(x)\,\chi_D(x)
+$$</p>
+<p><strong>Effect:</strong><br>
+- Modified gravity applies only in specified regimes (e.g., low acceleration).<br>
+- Preserves standard GR where it is already validated.</p>
+<hr>
+<p>These 10 examples:</p>
+<ul>
+<li>Show how each drift type is corrected with minimal algebra.  </li>
+<li>Provide enough structure for the meta‑paper to reference ~200 works by category.  </li>
+<li>Stay framework‑neutral while quietly encoding your regime logic.</li>
+</ul>
+  </main>
+</body>
+</html>

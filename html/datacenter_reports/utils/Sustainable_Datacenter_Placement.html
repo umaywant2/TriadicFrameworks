@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/datacenter_reports/utils/Sustainable_Datacenter_Placement.md">
+  <title>Triadic Model for Sustainable Datacenter Placement</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/datacenter_reports/utils/Sustainable_Datacenter_Placement.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/datacenter_reports/utils/Sustainable_Datacenter_Placement.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="datacenter_reports_utils_Sustainable_Datacenter_Placement_" src="https://github.com/user-attachments/assets/37a4bc1e-faa5-45a7-ac0f-383cd449ba93" /></p>
+<h2 id="triadic-model-for-sustainable-datacenter-placement"><strong>Triadic Model for Sustainable Datacenter Placement</strong></h2>
+<p><em>(RTT‑aligned, field‑native, coherence‑first)</em></p>
+<p>This model evaluates any potential datacenter site through the <strong>Triad</strong>:</p>
+<ul>
+<li><strong>Boundary (B)</strong></li>
+<li><strong>Lineage (L)</strong></li>
+<li><strong>Relation (R)</strong></li>
+</ul>
+<p>…and then resolves the site’s viability through the <strong>Transition (T)</strong> and <strong>Envelope (E)</strong> layers, producing a final <strong>Coherence (C)</strong> score.</p>
+<p>This is the same grammar your RTT Datacenter Evaluator uses, but applied specifically to <em>placement strategy</em>.</p>
+<hr>
+<h1 id="1-boundary-layer-what-is-the-site"><strong>1. Boundary Layer — “What is the site?”</strong></h1>
+<h3 id="reuse-sites-malls-factories-bases-warehouses"><strong>Reuse Sites (Malls, Factories, Bases, Warehouses)</strong></h3>
+<ul>
+<li>Boundary already established  </li>
+<li>Structural presence high  </li>
+<li>Utilities, roads, zoning often pre‑existing  </li>
+<li>Community familiarity present  </li>
+<li>Environmental impact already absorbed  </li>
+</ul>
+<p><strong>Boundary Score: High</strong></p>
+<h3 id="new-build-sites-farmland-greenfield-new-industrial-parks"><strong>New Build Sites (Farmland, Greenfield, New Industrial Parks)</strong></h3>
+<ul>
+<li>Boundary undefined  </li>
+<li>Structural absence high  </li>
+<li>Requires full substrate creation  </li>
+<li>Community unfamiliarity  </li>
+<li>New environmental impact  </li>
+</ul>
+<p><strong>Boundary Score: Low–Medium</strong></p>
+<hr>
+<h1 id="2-lineage-layer-what-history-does-the-site-carry"><strong>2. Lineage Layer — “What history does the site carry?”</strong></h1>
+<h3 id="reuse"><strong>Reuse</strong></h3>
+<ul>
+<li>Preserves local identity  </li>
+<li>Converts economic memory into new purpose  </li>
+<li>Stabilizes cultural substrate  </li>
+<li>Reduces lineage shock  </li>
+</ul>
+<p><strong>Lineage Score: High</strong></p>
+<h3 id="new-build"><strong>New Build</strong></h3>
+<ul>
+<li>Erases prior land identity  </li>
+<li>Introduces abrupt industrial presence  </li>
+<li>Creates lineage discontinuity  </li>
+<li>Often mismatched with local narrative  </li>
+</ul>
+<p><strong>Lineage Score: Low</strong></p>
+<hr>
+<h1 id="3-relation-layer-how-does-the-site-connect-to-its-surroundings"><strong>3. Relation Layer — “How does the site connect to its surroundings?”</strong></h1>
+<h3 id="reuse_1"><strong>Reuse</strong></h3>
+<ul>
+<li>Existing relational graph (roads, utilities, logistics)  </li>
+<li>Known traffic patterns  </li>
+<li>Known noise envelope  </li>
+<li>Known community expectations  </li>
+</ul>
+<p><strong>Relation Score: High</strong></p>
+<h3 id="new-build_1"><strong>New Build</strong></h3>
+<ul>
+<li>Requires new roads, substations, fiber routes  </li>
+<li>Introduces new traffic rhythms  </li>
+<li>Creates relational stress  </li>
+<li>Often mismatched with residential adjacency  </li>
+</ul>
+<p><strong>Relation Score: Medium–Low</strong></p>
+<hr>
+<h1 id="4-transition-layer-how-hard-is-the-shift-to-datacenter-use"><strong>4. Transition Layer — “How hard is the shift to datacenter use?”</strong></h1>
+<h3 id="reuse_2"><strong>Reuse</strong></h3>
+<ul>
+<li>Bounded transition  </li>
+<li>Retrofit complexity, but predictable  </li>
+<li>Faster than full construction  </li>
+<li>Lower governance friction  </li>
+</ul>
+<p><strong>Transition Score: Medium–High</strong></p>
+<h3 id="new-build_2"><strong>New Build</strong></h3>
+<ul>
+<li>Expansive transition  </li>
+<li>Long construction timelines  </li>
+<li>High governance friction  </li>
+<li>High permitting drift  </li>
+</ul>
+<p><strong>Transition Score: Low–Medium</strong></p>
+<hr>
+<h1 id="5-envelope-layer-what-is-the-environmental-and-structural-envelope"><strong>5. Envelope Layer — “What is the environmental and structural envelope?”</strong></h1>
+<h3 id="reuse_3"><strong>Reuse</strong></h3>
+<ul>
+<li>Envelope already disturbed  </li>
+<li>Minimal new ecological impact  </li>
+<li>Heat/noise footprint easier to integrate  </li>
+<li>Visual continuity preserved  </li>
+</ul>
+<p><strong>Envelope Score: High</strong></p>
+<h3 id="new-build_3"><strong>New Build</strong></h3>
+<ul>
+<li>New ecological disturbance  </li>
+<li>New heat/noise footprint  </li>
+<li>New impermeable surfaces  </li>
+<li>Visual shock to community  </li>
+</ul>
+<p><strong>Envelope Score: Low</strong></p>
+<hr>
+<h1 id="6-coherence-layer-does-the-site-make-sense"><strong>6. Coherence Layer — “Does the site make sense?”</strong></h1>
+<p>RTT coherence emerges from the alignment of B + L + R + T + E.</p>
+<h3 id="reuse-coherence"><strong>Reuse Coherence</strong></h3>
+<ul>
+<li>Boundary aligned  </li>
+<li>Lineage preserved  </li>
+<li>Relations leveraged  </li>
+<li>Transition bounded  </li>
+<li>Envelope stable  </li>
+</ul>
+<p><strong>Coherence: Strong</strong></p>
+<h3 id="new-build-coherence"><strong>New Build Coherence</strong></h3>
+<ul>
+<li>Boundary absent  </li>
+<li>Lineage disrupted  </li>
+<li>Relations rewritten  </li>
+<li>Transition heavy  </li>
+<li>Envelope expanded  </li>
+</ul>
+<p><strong>Coherence: Weak–Fragile</strong></p>
+<hr>
+<h1 id="triadic-verdict-sustainable-placement"><strong>Triadic Verdict: Sustainable Placement</strong></h1>
+<h3 id="reuse-sites-malls-factories-bases-warehouses_1"><strong>Reuse Sites (Malls, Factories, Bases, Warehouses)</strong></h3>
+<p><strong>rtt = 1</strong><br>
+<strong>coherence = declared</strong><br>
+<strong>drift = bounded</strong><br>
+<strong>paradox = structural → resolvable</strong>  </p>
+<p>These sites are <strong>triad‑aligned</strong>, <strong>community‑aligned</strong>, and <strong>planetary‑aligned</strong>.</p>
+<h3 id="new-build-sites-farmland-greenfield"><strong>New Build Sites (Farmland, Greenfield)</strong></h3>
+<p><strong>rtt = 1</strong><br>
+<strong>coherence = fragile</strong><br>
+<strong>drift = expanding</strong><br>
+<strong>paradox = structural → often ignored</strong>  </p>
+<p>These sites are <strong>incentive‑aligned</strong>, not <strong>coherence‑aligned</strong>.</p>
+<hr>
+<h2 id="summary-table-triadic-placement-model"><strong>Summary Table (Triadic Placement Model)</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Reuse Sites</th>
+<th>New Build Sites</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Boundary</strong></td>
+<td>High</td>
+<td>Low–Medium</td>
+</tr>
+<tr>
+<td><strong>Lineage</strong></td>
+<td>High</td>
+<td>Low</td>
+</tr>
+<tr>
+<td><strong>Relation</strong></td>
+<td>High</td>
+<td>Medium–Low</td>
+</tr>
+<tr>
+<td><strong>Transition</strong></td>
+<td>Medium–High</td>
+<td>Low–Medium</td>
+</tr>
+<tr>
+<td><strong>Envelope</strong></td>
+<td>High</td>
+<td>Low</td>
+</tr>
+<tr>
+<td><strong>Coherence</strong></td>
+<td>Strong</td>
+<td>Fragile</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="why-this-matters-for-your-datacenter_reports-directory"><strong>Why this matters for your datacenter_reports directory</strong></h2>
+<p>Because this model gives you:</p>
+<ul>
+<li>a <strong>canonical triadic rubric</strong>  </li>
+<li>a <strong>field‑native placement grammar</strong>  </li>
+<li>a <strong>coherence‑first sustainability framework</strong>  </li>
+<li>a <strong>consistent evaluator for future modules</strong>  </li>
+<li>a <strong>foundation for RTT‑aligned infrastructure policy</strong>  </li>
+</ul>
+<p>It belongs directly in the <em>datacenter_reports</em> section you’re viewing now .</p>
+  </main>
+</body>
+</html>

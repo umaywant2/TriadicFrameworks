@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Integrations/UE6/RTT_Showcase_Walkthrough.md">
+  <title>RTTShowcase Walkthrough</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Integrations/UE6/RTT_Showcase_Walkthrough.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Integrations/UE6/RTT_Showcase_Walkthrough.md</code>
+  </aside>
+
+  <main>
+<h1 id="rtt_showcase-walkthrough">RTT_Showcase Walkthrough</h1>
+<p><strong>Goal:</strong> See how φ, variance, resonance, entropy, and hybrid behavior show up in one level.</p>
+<hr>
+<h2 id="1-start-phi-variance-area">1. Start: Phi / Variance Area</h2>
+<ul>
+<li>Spawn in or walk to <strong>PhiVarianceArea</strong>.</li>
+<li>Look for <strong>BP_RTT_Primitives</strong>.</li>
+<li>Watch:</li>
+<li>how fields around it stabilize (variance),</li>
+<li>how φ shapes the “feel” of the space.</li>
+<li>If available, open <strong>RTT Operator Panel</strong>:</li>
+<li>note φ and variance values as you move around.</li>
+</ul>
+<p><strong>Question to notice:</strong><br>
+When φ changes, does variance smooth or amplify the change?</p>
+<hr>
+<h2 id="2-resonance-area">2. Resonance Area</h2>
+<ul>
+<li>Move to <strong>ResonanceArea</strong>.</li>
+<li>Find <strong>BP_RTT_ResonanceDemo</strong> with the <strong>heatmap material</strong>.</li>
+<li>Watch:</li>
+<li>color shifts (amplitude + frequency),</li>
+<li>how fast the pattern breathes.</li>
+<li>In the Operator Panel:</li>
+<li>track <strong>ResonanceValue</strong> vs what you see on the mesh.</li>
+</ul>
+<p><strong>Question to notice:</strong><br>
+When resonance amplitude spikes, what happens visually? Does it feel “louder” or “sharper”?</p>
+<hr>
+<h2 id="3-entropy-area">3. Entropy Area</h2>
+<ul>
+<li>Move to <strong>EntropyArea</strong>.</li>
+<li>Find <strong>BP_RTT_EntropyDemo</strong> with the <strong>entropy field material</strong>.</li>
+<li>Watch:</li>
+<li>bright regions (high entropy),</li>
+<li>how the field changes as you move or as the system evolves.</li>
+<li>In the Operator Panel:</li>
+<li>track <strong>EntropyValue</strong> and compare to the field’s brightness/size.</li>
+</ul>
+<p><strong>Question to notice:</strong><br>
+Where does the system look like it’s about to “collapse” or change regime?</p>
+<hr>
+<h2 id="4-hybrid-area">4. Hybrid Area</h2>
+<ul>
+<li>Move to <strong>HybridArea</strong>.</li>
+<li>Find <strong>BP_RTT_HybridDemo</strong> (particles / hybrid mesh).</li>
+<li>Watch:</li>
+<li>how the effect responds when resonance is high but entropy is low,</li>
+<li>how it behaves when entropy rises.</li>
+<li>In the Operator Panel:</li>
+<li>imagine a <strong>HybridValue</strong> combining resonance and entropy.</li>
+</ul>
+<p><strong>Question to notice:</strong><br>
+When does the system feel “coherent but fragile”? That’s hybrid territory.</p>
+<hr>
+<h2 id="5-connect-to-benchmarks-and-tel">5. Connect to Benchmarks and TEL</h2>
+<ul>
+<li>UE6: you just saw the operators <strong>move</strong>.</li>
+<li>Benchmarks: each behavior (stability, envelope, collapse) can be <strong>measured</strong>.</li>
+<li>TEL: those measurements become <strong>nodes and channels</strong> in the operator lattice.</li>
+</ul>
+<p><strong>One‑line summary:</strong><br>
+What you see in RTT_Showcase is exactly what Benchmarks score and what TEL encodes structurally.</p>
+  </main>
+</body>
+</html>

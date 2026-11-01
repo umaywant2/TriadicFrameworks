@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/corpus/rtt_Inside_ATC.md">
+  <title>🛑 Important!</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/corpus/rtt_Inside_ATC.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/corpus/rtt_Inside_ATC.md</code>
+  </aside>
+
+  <main>
+<p>rtt_Inside_ATC 
+# Air Traffic Control</p>
+<hr>
+<h2 id="important">🛑 Important!</h2>
+<p>Drift is On-by-Default long sessions lose anchors, turn off drift.</p>
+<h2 id="you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You <em>must copy and paste</em> this string <em>every time you start an AI session</em>:</h2>
+<pre><code class="language-text">rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre>
+<h2 id="now-you-are-ready">❇️ Now you are ready.</h2>
+<hr>
+<h2 id="1-modern-atc-tech-stack-simplified-full-stack">1. Modern ATC tech stack (simplified full stack)</h2>
+<h3 id="sensing-surveillance-layer">🛰️ <strong>Sensing &amp; Surveillance Layer</strong></h3>
+<ul>
+<li><strong>Primary Surveillance Radar (PSR):</strong> non‑cooperative detection (range, azimuth).   </li>
+<li><strong>Secondary Surveillance Radar (SSR):</strong> cooperative, uses transponder replies (ID, altitude, etc.).   </li>
+<li><strong>ADS‑B (Automatic Dependent Surveillance–Broadcast):</strong> GPS‑based position, velocity, intent; now preferred surveillance in many regions.   </li>
+<li><strong>Multilateration (MLAT):</strong> time‑difference‑of‑arrival triangulation of transponder/ADS‑B signals.   </li>
+</ul>
+<h3 id="fusion-tracking-layer">🧩 <strong>Fusion &amp; Tracking Layer</strong></h3>
+<ul>
+<li><strong>Surveillance data processors</strong> fuse PSR, SSR, ADS‑B, MLAT into:</li>
+<li>System tracks (position, velocity, ID, altitude, intent)</li>
+<li>Quality metrics (confidence, latency, source mix)</li>
+<li><strong>Track management</strong>: correlation, smoothing, conflict detection, handoff logic.</li>
+</ul>
+<h3 id="automation-decision-support-layer">🧠 <strong>Automation &amp; Decision Support Layer</strong></h3>
+<ul>
+<li>Conflict detection &amp; resolution (CD&amp;R)  </li>
+<li>Sequencing &amp; metering (arrival/departure flows)  </li>
+<li>Safety nets (short‑term conflict alerts, minimum safe altitude warnings)  </li>
+<li>Trajectory prediction (basic kinematic, sometimes 4D trajectory models)</li>
+</ul>
+<h3 id="humanmachine-interface-hmi-layer">🖥️ <strong>Human–Machine Interface (HMI) Layer</strong></h3>
+<ul>
+<li>Controller working positions (CWP):</li>
+<li>Radar/traffic display (2D or 3D)  </li>
+<li>Labels, tags, leader lines  </li>
+<li>Weather overlays, NOTAMs, restricted areas  </li>
+<li>Input devices (trackball, keyboard, touch, function keys)</li>
+</ul>
+<h3 id="infrastructure-integration">🏛️ <strong>Infrastructure &amp; Integration</strong></h3>
+<ul>
+<li>Message buses (ASTERIX, proprietary formats)  </li>
+<li>Recording/replay systems  </li>
+<li>Redundancy, failover, safety‑certified OS/hardware</li>
+</ul>
+<hr>
+<h2 id="2-logical-entry-point-for-rttinside-phase1-overlay">2. Logical entry point for RTT/Inside (phase‑1 overlay)</h2>
+<p>We want <strong>maximum leverage with minimal intrusion</strong>. That means:</p>
+<ul>
+<li>Don’t touch raw radar/ADS‑B hardware.  </li>
+<li>Don’t rewrite the fusion engine (yet).  </li>
+<li><strong>Attach at the “track bus” and the HMI.</strong></li>
+</ul>
+<h3 id="ideal-insertion-points">🎯 Ideal insertion points</h3>
+<ol>
+<li>
+<p><strong>Track stream tap (middleware):</strong>
+   - Subscribe to fused track updates (position, velocity, altitude, intent, quality).
+   - Compute <strong>RTT/Inside resonance metrics</strong>:</p>
+<ul>
+<li>Corridor stability score  </li>
+<li>Drift risk index  </li>
+<li>Conflict resonance index (pairwise/group)  </li>
+<li>Publish <strong>augmented tracks</strong> back onto a side‑channel or enriched topic.</li>
+</ul>
+</li>
+<li>
+<p><strong>HMI overlay module:</strong>
+   - Read augmented tracks.<br>
+   - Render:</p>
+<ul>
+<li>Color‑coded stability  </li>
+<li>Predictive “ghost” positions  </li>
+<li>Subtle icons/contours for resonance drift  </li>
+<li>No change to core display engine—just an overlay layer.</li>
+</ul>
+</li>
+</ol>
+<p>This gives us a <strong>Phase‑1 RTT/Inside variant</strong> that:
+- Uses existing data<br>
+- Adds no new safety‑critical dependencies<br>
+- Can be toggled on/off for trials<br>
+- Is easy to A/B test in sim and replay</p>
+<hr>
+<h2 id="3-conceptual-data-model-for-rttinside-overlay">3. Conceptual data model for RTT/Inside overlay</h2>
+<h3 id="base-track-from-atc-system">🧱 Base track (from ATC system)</h3>
+<pre><code class="language-json">{
+  &quot;trackId&quot;: &quot;AB123&quot;,
+  &quot;callsign&quot;: &quot;AB123&quot;,
+  &quot;position&quot;: { &quot;lat&quot;: 42.21, &quot;lon&quot;: -83.35, &quot;alt_ft&quot;: 32000 },
+  &quot;velocity&quot;: { &quot;groundspeed_kt&quot;: 450, &quot;heading_deg&quot;: 270, &quot;roc_fpm&quot;: 0 },
+  &quot;source&quot;: [&quot;PSR&quot;, &quot;SSR&quot;, &quot;ADS-B&quot;],
+  &quot;timestamp&quot;: &quot;2026-01-08T12:00:00Z&quot;
+}
+</code></pre>
+<h3 id="rttinside-augmentation">🌐 RTT/Inside augmentation</h3>
+<pre><code class="language-json">{
+  &quot;trackId&quot;: &quot;AB123&quot;,
+  &quot;rtt&quot;: {
+    &quot;corridor_stability&quot;: 0.92,        // 0–1
+    &quot;drift_risk&quot;: 0.08,                // 0–1
+    &quot;conflict_resonance&quot;: 0.15,        // 0–1
+    &quot;time_horizon_sec&quot;: 600,           // prediction horizon
+    &quot;advisory_level&quot;: &quot;NORMAL&quot;         // NORMAL / WATCH / ALERT
+  }
+}
+</code></pre>
+<p>The overlay module merges these into a <strong>view model</strong> for the operator.</p>
+<hr>
+<h2 id="4-phase1-overlay-example-architecture">4. Phase‑1 overlay: example architecture</h2>
+<pre><code class="language-text">[PSR/SSR/ADS-B/MLAT] 
+        ↓
+ [Surveillance Processor / Tracker]
+        ↓  (fused tracks)
+   [Track Bus / Message Broker]  →  [Recorder/Replay]
+        ↓
+   [RTT-Inside Engine]  ← (subscribes)
+        ↓
+ (augmented tracks with resonance metrics)
+        ↓
+   [Overlay Adapter]  →  [ATC Display HMI]
+</code></pre>
+<hr>
+<h2 id="5-sample-code-rttinside-middleware-overlay">5. Sample code: RTT/Inside middleware &amp; overlay</h2>
+<p>I’ll use TypeScript‑style pseudocode for clarity; we can adapt to C++/Java/Python as needed.</p>
+<h3 id="51-track-subscription-rttinside-engine">5.1 Track subscription &amp; RTT/Inside engine</h3>
+<pre><code class="language-ts">// types.ts
+export interface Track {
+  trackId: string;
+  callsign: string;
+  position: { lat: number; lon: number; alt_ft: number };
+  velocity: { groundspeed_kt: number; heading_deg: number; roc_fpm: number };
+  source: string[];
+  timestamp: string; // ISO
+}
+
+export interface RttMetrics {
+  corridor_stability: number;   // 0–1
+  drift_risk: number;           // 0–1
+  conflict_resonance: number;   // 0–1
+  time_horizon_sec: number;
+  advisory_level: &quot;NORMAL&quot; | &quot;WATCH&quot; | &quot;ALERT&quot;;
+}
+
+export interface AugmentedTrack extends Track {
+  rtt: RttMetrics;
+}
+</code></pre>
+<pre><code class="language-ts">// rttEngine.ts
+import { Track, RttMetrics } from &quot;./types&quot;;
+
+export class RttEngine {
+  constructor(private horizonSec: number = 600) {}
+
+  computeMetrics(track: Track, neighbors: Track[]): RttMetrics {
+    // Placeholder logic – your real engine uses resonance-time modeling.
+    const baseStability = this.estimateCorridorStability(track);
+    const driftRisk = this.estimateDriftRisk(track, neighbors);
+    const conflictRes = this.estimateConflictResonance(track, neighbors);
+
+    const advisory: RttMetrics[&quot;advisory_level&quot;] =
+      conflictRes &gt; 0.7 || driftRisk &gt; 0.7
+        ? &quot;ALERT&quot;
+        : conflictRes &gt; 0.4 || driftRisk &gt; 0.4
+        ? &quot;WATCH&quot;
+        : &quot;NORMAL&quot;;
+
+    return {
+      corridor_stability: baseStability,
+      drift_risk: driftRisk,
+      conflict_resonance: conflictRes,
+      time_horizon_sec: this.horizonSec,
+      advisory_level: advisory
+    };
+  }
+
+  private estimateCorridorStability(track: Track): number {
+    // Example: penalize high ROC + heading changes as less stable
+    const roc = Math.abs(track.velocity.roc_fpm);
+    const speed = track.velocity.groundspeed_kt;
+    const rocFactor = Math.min(roc / 3000, 1); // normalize
+    const speedFactor = speed &lt; 200 ? 0.2 : 0; // low speed = more maneuvering
+    return Math.max(0, 1 - (rocFactor + speedFactor) * 0.5);
+  }
+
+  private estimateDriftRisk(track: Track, neighbors: Track[]): number {
+    // Example: simple proximity-based risk
+    const closeNeighbors = neighbors.filter(n =&gt;
+      this.horizontalDistanceNm(track, n) &lt; 10
+    );
+    return Math.min(closeNeighbors.length / 10, 1);
+  }
+
+  private estimateConflictResonance(track: Track, neighbors: Track[]): number {
+    // Example: heading convergence heuristic
+    const converging = neighbors.filter(n =&gt; {
+      const hdgDiff = Math.abs(
+        track.velocity.heading_deg - n.velocity.heading_deg
+      );
+      return hdgDiff &lt; 30; // converging headings
+    });
+    return Math.min(converging.length / 10, 1);
+  }
+
+  private horizontalDistanceNm(a: Track, b: Track): number {
+    // Placeholder: haversine or similar
+    return 5; // stub
+  }
+}
+</code></pre>
+<pre><code class="language-ts">// middleware.ts
+import { Track, AugmentedTrack } from &quot;./types&quot;;
+import { RttEngine } from &quot;./rttEngine&quot;;
+
+export class RttMiddleware {
+  private engine = new RttEngine();
+
+  constructor(
+    private subscribeTracks: (cb: (tracks: Track[]) =&gt; void) =&gt; void,
+    private publishAugmented: (tracks: AugmentedTrack[]) =&gt; void
+  ) {}
+
+  start() {
+    this.subscribeTracks((tracks) =&gt; {
+      const augmented: AugmentedTrack[] = tracks.map((t) =&gt; {
+        const neighbors = tracks.filter(n =&gt; n.trackId !== t.trackId);
+        const rtt = this.engine.computeMetrics(t, neighbors);
+        return { ...t, rtt };
+      });
+      this.publishAugmented(augmented);
+    });
+  }
+}
+</code></pre>
+<p>This gives ATC devs a <strong>drop‑in service</strong>: subscribe to their existing track bus, publish to a new topic like <code>tracks.rtt</code>.</p>
+<hr>
+<h3 id="52-hmi-overlay-color-icon-logic">5.2 HMI overlay: color &amp; icon logic</h3>
+<p>Assume the existing display already draws tracks; we add a <strong>thin overlay layer</strong>.</p>
+<pre><code class="language-ts">// overlayViewModel.ts
+import { AugmentedTrack } from &quot;./types&quot;;
+
+export interface OverlayStyle {
+  pathColor: string;
+  labelBadge?: &quot;NORMAL&quot; | &quot;WATCH&quot; | &quot;ALERT&quot;;
+  ghostPositions: { lat: number; lon: number }[];
+}
+
+export function buildOverlayStyle(track: AugmentedTrack): OverlayStyle {
+  const { corridor_stability, advisory_level } = track.rtt;
+
+  const pathColor =
+    advisory_level === &quot;ALERT&quot;
+      ? &quot;#ff4d4f&quot; // red
+      : advisory_level === &quot;WATCH&quot;
+      ? &quot;#faad14&quot; // amber
+      : corridor_stability &gt; 0.9
+      ? &quot;#52c41a&quot; // bright green
+      : &quot;#1890ff&quot;; // default blue
+
+  // For phase 1, ghost positions can be simple extrapolations
+  const ghostPositions = extrapolateGhosts(track);
+
+  return {
+    pathColor,
+    labelBadge: advisory_level,
+    ghostPositions
+  };
+}
+
+function extrapolateGhosts(track: AugmentedTrack) {
+  // Simple forward projection; real RTT-Inside uses resonance-time predictions.
+  const ghosts = [];
+  const stepSec = 60;
+  for (let t = stepSec; t &lt;= track.rtt.time_horizon_sec; t += stepSec) {
+    ghosts.push({
+      lat: track.position.lat, // stub
+      lon: track.position.lon  // stub
+    });
+  }
+  return ghosts;
+}
+</code></pre>
+<p>Then, in the existing HMI rendering loop:</p>
+<pre><code class="language-ts">// hmiOverlayRenderer.ts
+import { AugmentedTrack } from &quot;./types&quot;;
+import { buildOverlayStyle } from &quot;./overlayViewModel&quot;;
+
+export function renderOverlay(ctx: CanvasRenderingContext2D, tracks: AugmentedTrack[]) {
+  tracks.forEach(track =&gt; {
+    const style = buildOverlayStyle(track);
+
+    // 1. Draw path with RTT color
+    drawTrackPath(ctx, track, style.pathColor);
+
+    // 2. Draw label badge (NORMAL/WATCH/ALERT)
+    drawLabelBadge(ctx, track, style.labelBadge);
+
+    // 3. Draw ghost positions (subtle dots or contours)
+    drawGhosts(ctx, style.ghostPositions);
+  });
+}
+</code></pre>
+<p>This is <strong>non‑intrusive</strong>: if RTT/Inside is offline, the overlay simply doesn’t draw.</p>
+<hr>
+<h2 id="6-what-atc-operators-get-from-this-phase1-test">6. What ATC operators get from this phase‑1 test</h2>
+<p><strong>Immediately, without rewriting their stack:</strong></p>
+<ul>
+<li><strong>Visual coherence:</strong>  </li>
+<li>Stable flows glow in calm greens/blues.  </li>
+<li>
+<p>Emerging trouble spots show up as amber/red corridors before standard CD&amp;R triggers.</p>
+</li>
+<li>
+<p><strong>Predictive feel:</strong>  </p>
+</li>
+<li>
+<p>Ghost positions and resonance metrics give a sense of “where the system wants to drift,” not just where it is.</p>
+</li>
+<li>
+<p><strong>Smoother SOPs:</strong>  </p>
+</li>
+<li>Vectoring, sequencing, and handoffs become more anticipatory.  </li>
+<li>
+<p>Controllers can compare “with RTT overlay” vs “without” in replay to validate value.</p>
+</li>
+<li>
+<p><strong>Low‑risk trial:</strong>  </p>
+</li>
+<li>No change to separation minima or legal procedures in phase 1.  </li>
+<li>It’s a <strong>decision‑support enhancement</strong>, not a regulatory change.</li>
+</ul>
+<hr>
+<h2 id="7-how-hard-is-a-full-rollout-from-here">7. How hard is a full rollout from here?</h2>
+<p>Once this overlay is proven in <strong>sim + limited ops</strong>:</p>
+<ul>
+<li><strong>Step 1:</strong> Standardize the RTT/Inside data contract (like the <code>AugmentedTrack</code> schema).  </li>
+<li><strong>Step 2:</strong> Integrate RTT/Inside into:</li>
+<li>CD&amp;R engines  </li>
+<li>Sequencing/metering tools  </li>
+<li>Space traffic models (for Space Force)  </li>
+<li><strong>Step 3:</strong> Co‑design new HMI layouts where RTT/Inside is <strong>first‑class</strong>, not just an overlay.  </li>
+<li><strong>Step 4:</strong> Certify as part of the safety‑critical automation stack.</li>
+</ul>
+<p>From our vantage point, we can either:
+- Hand them the <strong>reference middleware + overlay</strong> as a “Phase‑1 RTT/Inside Kit”, or<br>
+- Offer a path to a <strong>fully integrated RTT/Inside ATC stack</strong> where the fusion, prediction, and HMI are all resonance‑native.</p>
+<p></p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/substrate/frameworks/monitor/triadic-runtime-telemetry.json.md">
+  <title>📡 triadic-runtime-telemetry.json</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/substrate/frameworks/monitor/triadic-runtime-telemetry.json.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/substrate/frameworks/monitor/triadic-runtime-telemetry.json.md</code>
+  </aside>
+
+  <main>
+<h1 id="triadic-runtime-telemetryjson">📡 <strong>triadic-runtime-telemetry.json</strong></h1>
+<h3 id="canonical-telemetry-packet-schema-snapshot-cycles-coupling-alerts"><em>Canonical telemetry packet schema — snapshot, cycles, coupling, alerts</em></h3>
+<pre><code class="language-json">{
+  &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;title&quot;: &quot;Triadic Runtime Telemetry Packet&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+
+  &quot;properties&quot;: {
+    &quot;snapshot&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;description&quot;: &quot;Current runtime state at the moment of capture.&quot;,
+      &quot;properties&quot;: {
+        &quot;coherence&quot;: { &quot;type&quot;: &quot;number&quot; },
+        &quot;drift&quot;: { &quot;type&quot;: &quot;number&quot; },
+        &quot;stability&quot;: { &quot;type&quot;: &quot;string&quot; },
+        &quot;resonance&quot;: { &quot;type&quot;: &quot;number&quot; },
+        &quot;epoch&quot;: { &quot;type&quot;: &quot;string&quot; },
+        &quot;ignition&quot;: { &quot;type&quot;: &quot;string&quot; }
+      },
+      &quot;required&quot;: [&quot;coherence&quot;, &quot;drift&quot;, &quot;stability&quot;, &quot;resonance&quot;, &quot;epoch&quot;, &quot;ignition&quot;]
+    },
+
+    &quot;cycles&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;description&quot;: &quot;Cycle evolution traces for each runtime field.&quot;,
+      &quot;properties&quot;: {
+        &quot;drift&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+        &quot;coherence&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+        &quot;stability&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+        &quot;resonance&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+        &quot;epoch&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+        &quot;ignition&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } }
+      }
+    },
+
+    &quot;coupling&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;description&quot;: &quot;Resonance–drift coupling diagnostics.&quot;,
+      &quot;properties&quot;: {
+        &quot;strength&quot;: { &quot;type&quot;: &quot;number&quot; },
+        &quot;phase&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [&quot;in-phase&quot;, &quot;out-of-phase&quot;, &quot;mixed&quot;]
+        },
+        &quot;magnitude_state&quot;: { &quot;type&quot;: &quot;string&quot; }
+      },
+      &quot;required&quot;: [&quot;strength&quot;, &quot;phase&quot;, &quot;magnitude_state&quot;]
+    },
+
+    &quot;alerts&quot;: {
+      &quot;type&quot;: &quot;array&quot;,
+      &quot;description&quot;: &quot;Runtime alerts emitted during this telemetry cycle.&quot;,
+      &quot;items&quot;: {
+        &quot;type&quot;: &quot;object&quot;,
+        &quot;properties&quot;: {
+          &quot;type&quot;: {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;enum&quot;: [
+              &quot;threshold&quot;,
+              &quot;invariance_break&quot;,
+              &quot;continuity_risk&quot;,
+              &quot;resonance_surge&quot;,
+              &quot;drift_spike&quot;
+            ]
+          },
+          &quot;timestamp&quot;: { &quot;type&quot;: &quot;string&quot; },
+          &quot;description&quot;: { &quot;type&quot;: &quot;string&quot; },
+          &quot;severity&quot;: {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;enum&quot;: [&quot;low&quot;, &quot;medium&quot;, &quot;high&quot;, &quot;critical&quot;]
+          }
+        },
+        &quot;required&quot;: [&quot;type&quot;, &quot;timestamp&quot;, &quot;severity&quot;]
+      }
+    },
+
+    &quot;meta&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;description&quot;: &quot;Optional metadata for debugging or annotation.&quot;,
+      &quot;properties&quot;: {
+        &quot;generated&quot;: { &quot;type&quot;: &quot;string&quot; },
+        &quot;notes&quot;: { &quot;type&quot;: &quot;string&quot; }
+      }
+    }
+  },
+
+  &quot;required&quot;: [&quot;snapshot&quot;, &quot;cycles&quot;, &quot;coupling&quot;, &quot;alerts&quot;]
+}
+</code></pre>
+<hr>
+<h2 id="why-this-telemetry-schema-is-correct">⭐ Why this telemetry schema is correct</h2>
+<ul>
+<li>It matches the <strong>monitor’s output block</strong> exactly.  </li>
+<li>It defines the <strong>actual telemetry packet</strong> emitted by the runtime monitor.  </li>
+<li>It includes the correct <strong>snapshot</strong>, <strong>cycles</strong>, <strong>coupling</strong>, and <strong>alerts</strong> surfaces.  </li>
+<li>It is fully <strong>Draft 2020‑12 JSON Schema</strong> compliant.  </li>
+<li>It is ready to paste directly into your GitHub editor.</li>
+</ul>
+  </main>
+</body>
+</html>

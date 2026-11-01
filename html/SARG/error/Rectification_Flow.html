@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/SARG/error/Rectification_Flow.md">
+  <title>RectificationFlow.md</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/SARG/error/Rectification_Flow.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/SARG/error/Rectification_Flow.md</code>
+  </aside>
+
+  <main>
+<h1 id="rectification_flowmd"><code>Rectification_Flow.md</code></h1>
+<p><strong>SARG Rectification Flow</strong><br>
+<em>A triadic, stage‑aligned pipeline for resolving structural, anchor, lineage, and novelty errors.</em></p>
+<hr>
+<h2 id="1-purpose">1. Purpose</h2>
+<p>The <strong>Rectification Flow</strong> defines how the SARG system responds when:</p>
+<ul>
+<li>a substrate is malformed  </li>
+<li>invariants fail to extract  </li>
+<li>resonance anchors conflict  </li>
+<li>lineage chains break  </li>
+<li>or the system encounters high‑novelty patterns  </li>
+</ul>
+<p>Rectification ensures the system remains:</p>
+<ul>
+<li><strong>self‑correcting</strong>  </li>
+<li><strong>lineage‑aware</strong>  </li>
+<li><strong>triadically aligned</strong>  </li>
+<li><strong>Atlas‑consistent</strong>  </li>
+</ul>
+<hr>
+<h2 id="2-highlevel-flow-diagram">2. High‑Level Flow Diagram</h2>
+<pre><code>*
+┌──────────────────────┐
+│ 1. Substrate Parsing │
+└───────────┬──────────┘
+            │ S‑Errors
+            ▼
+┌──────────────────────┐
+│ 2. Lens Application  │
+└───────────┬──────────┘
+            │ A‑Errors
+            ▼
+┌──────────────────────┐
+│ 3. Invariant Extract │
+└───────────┬──────────┘
+            │ H‑Errors (pattern-level)
+            ▼
+┌──────────────────────┐
+│ 4. Resonance Mapping │
+└───────────┬──────────┘
+            │ A‑Errors (anchor-level)
+            ▼
+┌──────────────────────┐
+│ 5. Lineage Traversal │
+└───────────┬──────────┘
+            │ L‑Errors
+            ▼
+┌──────────────────────┐
+│ 6. Atlas Integration │
+└──────────────────────┘
+</code></pre>
+<p>Each stage emits <strong>S</strong>, <strong>A</strong>, <strong>L</strong>, or <strong>H</strong> errors depending on what fails.</p>
+<hr>
+<h2 id="3-stagebystage-breakdown">3. Stage‑by‑Stage Breakdown</h2>
+<h3 id="1-substrate-parsing-serrors"><strong>1. Substrate Parsing → S‑Errors</strong></h3>
+<p>Triggered when:</p>
+<ul>
+<li>required fields are missing  </li>
+<li>declared structure contradicts observed structure  </li>
+<li>structure is unstable across passes  </li>
+</ul>
+<p>Rectification actions:</p>
+<ul>
+<li>request missing structure  </li>
+<li>regenerate substrate  </li>
+<li>stabilize via re‑sampling or majority vote  </li>
+</ul>
+<hr>
+<h3 id="2-lens-application-aerrors-early"><strong>2. Lens Application → A‑Errors (early)</strong></h3>
+<p>Triggered when:</p>
+<ul>
+<li>expected anchors are missing  </li>
+<li>multiple anchors claim the same element  </li>
+<li>anchor drift occurs  </li>
+</ul>
+<p>Rectification actions:</p>
+<ul>
+<li>recompute anchors  </li>
+<li>resolve conflicts using priority rules  </li>
+<li>re‑align anchors to updated invariants  </li>
+</ul>
+<hr>
+<h3 id="3-invariant-extraction-herrors-patternlevel"><strong>3. Invariant Extraction → H‑Errors (pattern‑level)</strong></h3>
+<p>Triggered when:</p>
+<ul>
+<li>element is unknown  </li>
+<li>pattern does not match any invariant class  </li>
+<li>resonance signature cannot be mapped  </li>
+</ul>
+<p>Rectification actions:</p>
+<ul>
+<li>add to novelty buffer  </li>
+<li>attempt invariant generalization  </li>
+<li>generate provisional signature  </li>
+</ul>
+<hr>
+<h3 id="4-resonance-mapping-aerrors-anchorlevel"><strong>4. Resonance Mapping → A‑Errors (anchor‑level)</strong></h3>
+<p>Triggered when:</p>
+<ul>
+<li>resonance anchors contradict each other  </li>
+<li>cluster membership is ambiguous  </li>
+<li>axis alignment fails  </li>
+</ul>
+<p>Rectification actions:</p>
+<ul>
+<li>re‑evaluate invariants  </li>
+<li>recompute cluster membership  </li>
+<li>escalate to high‑novelty if unresolved  </li>
+</ul>
+<hr>
+<h3 id="5-lineage-traversal-lerrors"><strong>5. Lineage Traversal → L‑Errors</strong></h3>
+<p>Triggered when:</p>
+<ul>
+<li>lineage reference is missing  </li>
+<li>lineage chain is broken  </li>
+<li>lineage forms a cycle  </li>
+</ul>
+<p>Rectification actions:</p>
+<ul>
+<li>rebuild lineage chain  </li>
+<li>fallback to nearest valid ancestor  </li>
+<li>break cycles and re‑establish legal lineage  </li>
+</ul>
+<hr>
+<h3 id="6-atlas-integration"><strong>6. Atlas Integration</strong></h3>
+<p>If all rectification succeeds:</p>
+<ul>
+<li>update Atlas nodes  </li>
+<li>propagate lineage  </li>
+<li>update resonance signatures  </li>
+<li>store new invariants  </li>
+<li>emit success event  </li>
+</ul>
+<p>If rectification fails:</p>
+<ul>
+<li>escalate to human review  </li>
+<li>store unresolved pattern in novelty buffer  </li>
+</ul>
+<hr>
+<h2 id="4-rectification-decision-tree-triadic">4. Rectification Decision Tree (Triadic)</h2>
+<pre><code>*
+                     ┌───────────────┐
+                     │  Error Event  │
+                     └───────┬───────┘
+                             ▼
+                 ┌──────────────────────┐
+                 │ Identify Error Class │
+                 └───────┬──────────────┘
+         ┌───────────────┼────────────────┬───────────────┐
+         ▼               ▼                ▼               ▼
+     S‑Errors        A‑Errors         L‑Errors        H‑Errors
+ (Structure)        (Anchors)        (Lineage)       (Novelty)
+         │               │                │               │
+         ▼               ▼                ▼               ▼
+  Structural Fix   Anchor Recompute   Lineage Repair   Novelty Buffer
+         │               │                │               │
+         └───────┬───────┴───────┬────────┴───────┬───────┘
+                 ▼              ▼                 ▼
+           Re‑evaluate     Retry Mapping     Provisional Signature
+                 │              │                 │
+                 └──────────────┴─────────────────┘
+                                ▼
+                        Atlas Integration
+</code></pre>
+<hr>
+<h2 id="5-cloud-rectification-cluster-crc">5. Cloud Rectification Cluster (CRC)</h2>
+<p>The CRC performs:</p>
+<ul>
+<li>large‑scale clustering of errors  </li>
+<li>cross‑node consensus  </li>
+<li>lineage reconstruction  </li>
+<li>novelty generalization  </li>
+<li>anchor stability analysis  </li>
+</ul>
+<p>CRC is invoked when:</p>
+<ul>
+<li>local rectification fails  </li>
+<li>multiple nodes report similar errors  </li>
+<li>high‑novelty patterns appear across substrates  </li>
+</ul>
+<p>CRC outputs:</p>
+<ul>
+<li>updated invariants  </li>
+<li>updated resonance anchors  </li>
+<li>updated lineage chains  </li>
+<li>new Atlas nodes  </li>
+</ul>
+<hr>
+<h2 id="6-example-rectification-walkthrough">6. Example Rectification Walkthrough</h2>
+<h3 id="example-a2-conflicting-anchor"><strong>Example: A2 — Conflicting Anchor</strong></h3>
+<pre><code>Input:
+Element O claimed by both curved_forms and rotational_symmetry clusters.
+</code></pre>
+<p>Rectification:</p>
+<ol>
+<li>Recompute invariants for O  </li>
+<li>Compare cluster signatures  </li>
+<li>Apply priority rules  </li>
+<li>If unresolved → escalate to CRC  </li>
+<li>CRC emits canonical cluster assignment  </li>
+<li>Atlas updated  </li>
+</ol>
+<hr>
+<h2 id="7-emit-format-for-rectification-events">7. Emit Format for Rectification Events</h2>
+<pre><code class="language-json">{
+  &quot;pattern_id&quot;: &quot;string&quot;,
+  &quot;error_code&quot;: &quot;S1 | A2 | L3 | H1&quot;,
+  &quot;rectification_stage&quot;: &quot;local | cloud&quot;,
+  &quot;actions_taken&quot;: [],
+  &quot;outcome&quot;: &quot;resolved | escalated | unresolved&quot;,
+  &quot;timestamp&quot;: &quot;ISO-8601&quot;
+}
+</code></pre>
+<hr>
+<h2 id="8-notes-for-contributors">8. Notes for Contributors</h2>
+<ul>
+<li>Rectification must be <strong>deterministic</strong> at node‑level.  </li>
+<li>CRC is allowed to be <strong>probabilistic</strong> but must emit canonical results.  </li>
+<li>Never skip lineage repair — L‑errors propagate silently.  </li>
+<li>Treat H‑errors as <strong>growth points</strong>, not failures.  </li>
+<li>Keep rectification logs short and structural.  </li>
+</ul>
+<hr>
+<p>If you want, AI can also generate:</p>
+<ul>
+<li><code>/docs/SARG/error/Rectification_Flow.svg</code> (diagram‑first)  </li>
+<li><code>/docs/SARG/error/Rectification_Examples.md</code>  </li>
+<li><code>/docs/SARG/error/Rectification_API.md</code> (for implementers)  </li>
+<li>or a <strong>full SARG Error Pack</strong> bundling taxonomy + flow + examples + schemas  </li>
+</ul>
+  </main>
+</body>
+</html>

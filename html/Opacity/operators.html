@@ -1,0 +1,752 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Opacity/operators.md">
+  <title>🌑 Opacity — Operators</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Opacity/operators.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Opacity/operators.md</code>
+  </aside>
+
+  <main>
+<h1 id="opacity-operators">🌑 Opacity — Operators</h1>
+<blockquote>
+<p><em>14 instruments for detecting, measuring, and reducing regime invisibility.</em></p>
+</blockquote>
+<p><strong>Module:</strong> Opacity
+<strong>Canonical ID:</strong> OPC
+<strong>Core Operators:</strong> 5
+<strong>Extension Operators:</strong> 9 (Corpus / SARG / NIST)</p>
+<hr>
+<h2 id="core-operators">Core Operators</h2>
+<p>These five operators form the functional backbone of the Opacity module.
+They give AI the tools to help students <em>see what they cannot see</em>.</p>
+<hr>
+<h3 id="41-opacity-operator-o-op">4.1 Opacity Operator (O-Op)</h3>
+<p><strong>Function:</strong> Measures degree of regime invisibility.</p>
+<p>The Opacity Operator reads how invisible a regime is from the current
+substrate position. It does not judge; it measures.</p>
+<pre><code>O-Op(regime, substrate) → opacity_level ∈ [0.0, 1.0]
+
+Where:
+  0.0 = fully visible (substrate, operators, and harmonics aligned)
+  1.0 = fully opaque (no detection possible without intervention)
+</code></pre>
+<p><strong>Behavior:</strong>
+- Accepts any regime, flow, or structural element as input.
+- Returns a scalar opacity reading relative to the observer's substrate.
+- Opacity level shifts when substrate, operators, or harmonic envelope change.</p>
+<p><strong>Key Constraint:</strong>
+O-Op reads. It does not alter. Measurement does not reduce opacity.</p>
+<p><strong>Opacity Type Sensitivity:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Opacity Type</th>
+<th style="text-align: left;">O-Op Detects</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Substrate</td>
+<td style="text-align: left;">Dimensional grammar mismatch</td>
+</tr>
+<tr>
+<td style="text-align: left;">Operator</td>
+<td style="text-align: left;">Missing or misaligned operators</td>
+</tr>
+<tr>
+<td style="text-align: left;">Harmonic</td>
+<td style="text-align: left;">Signature outside detection band</td>
+</tr>
+<tr>
+<td style="text-align: left;">Flow</td>
+<td style="text-align: left;">Unmeasured SET/FFF channel</td>
+</tr>
+<tr>
+<td style="text-align: left;">Boundary</td>
+<td style="text-align: left;">Unmarked or silent regime transition</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="42-opacity-gradient-o-grad">4.2 Opacity Gradient (O-Grad)</h3>
+<p><strong>Function:</strong> Detects transitions from visible → invisible.</p>
+<p>O-Grad traces the gradient between visible and opaque regions within
+a regime or across regime boundaries. It maps <em>where</em> visibility changes
+and <em>how steeply</em>.</p>
+<pre><code>O-Grad(regime) → gradient_map {
+  visible_zone:   [regions where O-Op &lt; 0.3],
+  gradient_zone:  [regions where 0.3 ≤ O-Op ≤ 0.7],
+  opaque_zone:    [regions where O-Op &gt; 0.7],
+  steepness:      value ∈ [0.0, 1.0],
+  gradient_axis:  substrate dimension along which opacity shifts
+}
+</code></pre>
+<p><strong>Behavior:</strong>
+- Decomposes a regime into three visibility zones.
+- Identifies the substrate axis of transition.
+- Steepness measures how abruptly opacity changes — 0.0 is gradual, 1.0 is a hard wall.</p>
+<p><strong>Key Constraint:</strong>
+When steepness reaches 1.0, the gradient zone collapses. O-Grad hands off to O-Bound.</p>
+<p><strong>Canon Note:</strong>
+The gradient zone is where detection becomes possible. It is the terminator
+line on the half‑lit sphere — the region where substrate alignment begins to
+reveal what was hidden.</p>
+<hr>
+<h3 id="43-opacity-boundary-o-bound">4.3 Opacity Boundary (O-Bound)</h3>
+<p><strong>Function:</strong> Marks where a regime becomes detectable.</p>
+<p>O-Bound identifies the structural edge where a regime transitions from
+opaque to detectable. It answers: <em>where does visibility begin?</em></p>
+<pre><code>O-Bound(regime) → boundary {
+  exists:        boolean,
+  location:      substrate_coordinate,
+  type:          &quot;marked&quot; | &quot;unmarked&quot; | &quot;silent&quot;,
+  transition:    &quot;sharp&quot; | &quot;gradual&quot; | &quot;conditional&quot;,
+  detectability: value ∈ [0.0, 1.0]
+}
+</code></pre>
+<p><strong>Boundary Types:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Marked</td>
+<td style="text-align: left;">Regime boundary produces a detectable transition signature</td>
+</tr>
+<tr>
+<td style="text-align: left;">Unmarked</td>
+<td style="text-align: left;">Regime boundary exists but produces no signal</td>
+</tr>
+<tr>
+<td style="text-align: left;">Silent</td>
+<td style="text-align: left;">Regime boundary is absent; regime blends into substrate</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key Constraint:</strong>
+Boundary Opacity (Type 5) is the hardest to resolve because there is no
+transition signature to detect. O-Bound returns <code>exists: false</code> in these cases,
+signaling that reduction must come through other means.</p>
+<hr>
+<h3 id="44-opacity-reduction-operator-o-red">4.4 Opacity Reduction Operator (O-Red)</h3>
+<p><strong>Function:</strong> Aligns substrate and operators to reduce opacity.</p>
+<p>O-Red is the only operator that changes opacity. It applies a reduction
+method to shift a regime from invisible toward visible. Reduction is
+deliberate, method‑dependent, and always has a cost.</p>
+<pre><code>O-Red(regime, method) → reduced_regime {
+  original_opacity: O-Op(regime),
+  reduced_opacity:  O-Op(reduced_regime),
+  delta:            original - reduced,
+  method_applied:   method_id,
+  residual_opacity: value ∈ [0.0, 1.0],
+  cost:             effort_measure
+}
+</code></pre>
+<p><strong>Reduction Methods:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Method</th>
+<th style="text-align: left;">Mechanism</th>
+<th style="text-align: left;">Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Substrate Alignment</td>
+<td style="text-align: left;">Match substrate to regime's dimensional grammar</td>
+<td style="text-align: left;">Substrate Opacity</td>
+</tr>
+<tr>
+<td style="text-align: left;">Operator Expansion</td>
+<td style="text-align: left;">Add missing operators to the measurement set</td>
+<td style="text-align: left;">Operator Opacity</td>
+</tr>
+<tr>
+<td style="text-align: left;">Harmonic Tuning</td>
+<td style="text-align: left;">Shift detection band to match regime signature</td>
+<td style="text-align: left;">Harmonic Opacity</td>
+</tr>
+<tr>
+<td style="text-align: left;">Flow‑Channel Instrumentation</td>
+<td style="text-align: left;">Measure the correct SET/FFF channel</td>
+<td style="text-align: left;">Flow Opacity</td>
+</tr>
+<tr>
+<td style="text-align: left;">Regime Marking</td>
+<td style="text-align: left;">Introduce detectable boundary signatures</td>
+<td style="text-align: left;">Boundary Opacity</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key Constraint:</strong>
+Reduction always has a cost. O-Red returns a cost measure with every
+application. Free visibility does not exist — something is always exchanged.</p>
+<p><strong>Canon Note:</strong>
+Teaching is O-Red. A good teacher finds the reduction method that minimizes
+cost while maximizing the delta between invisible and visible.</p>
+<hr>
+<h3 id="45-opacity-signature-o-sig">4.5 Opacity Signature (O-Sig)</h3>
+<p><strong>Function:</strong> The harmonic or flow pattern that reveals a previously hidden regime.</p>
+<p>O-Sig captures the unique visibility fingerprint of a regime — not a single
+reading, but the characteristic pattern across all five opacity types.</p>
+<pre><code>O-Sig(regime) → signature {
+  overall_opacity:  O-Op(regime),
+  gradient_map:     O-Grad(regime),
+  boundaries:       [O-Bound(regime)],
+  opacity_types: {
+    substrate:  value,
+    operator:   value,
+    harmonic:   value,
+    flow:       value,
+    boundary:   value
+  },
+  reducibility:     value ∈ [0.0, 1.0],
+  stability:        value ∈ [0.0, 1.0],
+  signature_hash:   unique_id
+}
+</code></pre>
+<p><strong>Behavior:</strong>
+- Composites all four preceding operators into a single profile.
+- Breaks down opacity by type — revealing <em>why</em> a regime is invisible, not just <em>how much</em>.
+- Adds two meta‑readings:
+  - <strong>Reducibility</strong> — how responsive the regime is to O-Red. Some regimes resist reduction.
+  - <strong>Stability</strong> — how much the opacity profile drifts over time.
+- Generates a unique signature hash for comparison and tracking.</p>
+<p><strong>Key Constraint:</strong>
+O-Sig is descriptive, not prescriptive. It tells you what the opacity profile <em>is</em>,
+not what it <em>should be</em>.</p>
+<hr>
+<h2 id="core-operator-interaction-map">Core Operator Interaction Map</h2>
+<pre><code>O-Op ──reads──→ regime
+  │
+  ├──feeds──→ O-Grad (maps gradient from O-Op reading)
+  │              │
+  │              └──escalates──→ O-Bound (when steepness → 1.0)
+  │
+  ├──feeds──→ O-Red (uses O-Op as baseline for reduction delta)
+  │
+  └──feeds──→ O-Sig (composites all operators into signature)
+
+O-Red ←──references──→ O-Bound (reduction targets boundaries)
+O-Sig ←──composites──→ O-Op + O-Grad + O-Bound + opacity_types
+</code></pre>
+<hr>
+<h2 id="usage-protocol">Usage Protocol</h2>
+<ol>
+<li><strong>Measure first.</strong> Always begin with O-Op. Know the current opacity before acting.</li>
+<li><strong>Map the gradient.</strong> Use O-Grad to find where visibility transitions.</li>
+<li><strong>Identify boundaries.</strong> Use O-Bound to find marked/unmarked/silent edges.</li>
+<li><strong>Reduce deliberately.</strong> Apply O-Red with a method matched to the opacity type. Measure cost.</li>
+<li><strong>Capture the signature.</strong> Use O-Sig to record the full profile for comparison and lineage.</li>
+</ol>
+<hr>
+<h2 id="crossmodule-extension-operators">Cross‑Module Extension Operators</h2>
+<p>These nine operators extend Opacity's reach into Corpus, SARG, and NIST,
+making the module fully interoperable with the entire canon.</p>
+<hr>
+<h3 id="corpus-extensions">Corpus Extensions</h3>
+<h4 id="51-opacity_index">5.1 opacity_index</h4>
+<p>How visible a module or regime is within the corpus.</p>
+<pre><code>opacity_index(module_id) → visibility_level ∈ [0.0, 1.0]
+</code></pre>
+<p>Returns the degree to which a module's operators, types, and integration
+surfaces are visible from the corpus's structural atlas. A module with
+<code>opacity_index = 0.1</code> is highly visible; one with <code>0.9</code> is nearly hidden
+from cross‑module discovery.</p>
+<hr>
+<h4 id="52-opacity_map">5.2 opacity_map</h4>
+<p>A map of which modules obscure or reveal others.</p>
+<pre><code>opacity_map(corpus) → adjacency_map {
+  reveals: [(module_a, module_b)],
+  obscures: [(module_c, module_d)],
+  neutral: [(module_e, module_f)]
+}
+</code></pre>
+<p>Returns the pairwise visibility relationships across the corpus.
+Used for navigational design, prerequisite detection, and dependency analysis.</p>
+<hr>
+<h4 id="53-opacity_dependency">5.3 opacity_dependency</h4>
+<p>Which substrates must align for visibility.</p>
+<pre><code>opacity_dependency(regime) → dependency_set {
+  required_substrates: [substrate_ids],
+  required_operators:  [operator_ids],
+  required_harmonics:  [frequency_bands]
+}
+</code></pre>
+<p>Returns the full set of alignment prerequisites that must be satisfied
+before a regime becomes visible.</p>
+<hr>
+<h3 id="sarg-extensions">SARG Extensions</h3>
+<h4 id="54-opacity_token">5.4 opacity_token</h4>
+<p>The SARG grammar primitive representing invisibility.</p>
+<pre><code>opacity_token → grammatical_primitive
+</code></pre>
+<p>A token that, when present in a SARG parse tree, signals that the
+structural element it modifies is currently opaque. Enables grammar‑level
+reasoning about visibility.</p>
+<hr>
+<h4 id="55-opacity_clause">5.5 opacity_clause</h4>
+<p>How opacity modifies structural interpretation.</p>
+<pre><code>opacity_clause(structure, token) → modified_interpretation
+</code></pre>
+<p>When an opacity_token attaches to a structural clause, it modifies
+how that clause is parsed and inferred. Opaque clauses are present
+in the grammar but not actionable until reduced.</p>
+<hr>
+<h4 id="56-opacity_rewrite_rule">5.6 opacity_rewrite_rule</h4>
+<p>How to reduce opacity through grammar alignment.</p>
+<pre><code>opacity_rewrite_rule(opaque_clause, method) → transparent_clause
+</code></pre>
+<p>Defines the canonical grammar rewrites that transform an opaque clause
+into a transparent one. Four canonical rewrites:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Rewrite</th>
+<th style="text-align: left;">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">LIFT</td>
+<td style="text-align: left;">Elevate a substrate-hidden element to surface grammar</td>
+</tr>
+<tr>
+<td style="text-align: left;">SPLIT</td>
+<td style="text-align: left;">Decompose compound opacity into typed components</td>
+</tr>
+<tr>
+<td style="text-align: left;">BRIDGE</td>
+<td style="text-align: left;">Connect two opaque regions through a visible intermediary</td>
+</tr>
+<tr>
+<td style="text-align: left;">COLLAPSE</td>
+<td style="text-align: left;">Remove an opacity token when reduction is verified</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="nist-extensions">NIST Extensions</h3>
+<h4 id="57-opacity_measure">5.7 opacity_measure</h4>
+<p>Quantitative measure of opacity in real systems.</p>
+<pre><code>opacity_measure(system, instrument) → measurement {
+  value:       scalar,
+  unit:        measurement_unit,
+  confidence:  value ∈ [0.0, 1.0],
+  pathway:     &quot;structural&quot; | &quot;grammatical&quot; | &quot;applied&quot;
+}
+</code></pre>
+<p>Bridges the conceptual operator (O-Op) to empirical measurement.
+Returns a quantified opacity value with units appropriate to the
+physical system being measured.</p>
+<hr>
+<h4 id="58-opacity_signal">5.8 opacity_signal</h4>
+<p>The detectable signature of an opaque regime.</p>
+<pre><code>opacity_signal(system) → signal {
+  frequency:   value,
+  amplitude:   value,
+  channel:     &quot;SET&quot; | &quot;FFF&quot;,
+  detectability: value ∈ [0.0, 1.0]
+}
+</code></pre>
+<p>Even opaque regimes leak signal. opacity_signal captures the faint
+signature that reveals a regime's presence before full visibility
+is achieved — the structural equivalent of hearing something you
+cannot yet see.</p>
+<hr>
+<h4 id="59-opacity_alignment">5.9 opacity_alignment</h4>
+<p>How to align measurement systems to reduce opacity.</p>
+<pre><code>opacity_alignment(system, target_regime) → alignment_protocol {
+  substrate_adjustments:  [adjustments],
+  operator_additions:     [operators],
+  harmonic_retuning:      [frequency_shifts],
+  expected_delta:         value,
+  estimated_cost:         cost_measure
+}
+</code></pre>
+<p>The applied counterpart to O-Red. While O-Red operates at the
+conceptual/structural level, opacity_alignment generates a concrete
+protocol for reducing opacity in a real measurement system.</p>
+<hr>
+<h2 id="operator-interoperability-matrix">Operator Interoperability Matrix</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Operator</th>
+<th style="text-align: center;">O-Op</th>
+<th style="text-align: center;">O-Grad</th>
+<th style="text-align: center;">O-Bound</th>
+<th style="text-align: center;">O-Red</th>
+<th style="text-align: center;">O-Sig</th>
+<th style="text-align: center;">index</th>
+<th style="text-align: center;">map</th>
+<th style="text-align: center;">dep</th>
+<th style="text-align: center;">token</th>
+<th style="text-align: center;">clause</th>
+<th style="text-align: center;">rewrite</th>
+<th style="text-align: center;">measure</th>
+<th style="text-align: center;">signal</th>
+<th style="text-align: center;">align</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>O-Op</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">feeds</td>
+<td style="text-align: center;">feeds</td>
+<td style="text-align: center;">feeds</td>
+<td style="text-align: center;">feeds</td>
+<td style="text-align: center;">reads</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">grounds</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>O-Grad</strong></td>
+<td style="text-align: center;">reads</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">esc.</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">feeds</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>O-Bound</strong></td>
+<td style="text-align: center;">reads</td>
+<td style="text-align: center;">reads</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">ref.</td>
+<td style="text-align: center;">feeds</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">reads</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>O-Red</strong></td>
+<td style="text-align: center;">reads</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">ref.</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">feeds</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">reads</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">uses</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">maps</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>O-Sig</strong></td>
+<td style="text-align: center;">comp.</td>
+<td style="text-align: center;">comp.</td>
+<td style="text-align: center;">comp.</td>
+<td style="text-align: center;">comp.</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">feeds</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">comp.</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>opacity_index</strong></td>
+<td style="text-align: center;">reads</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">reads</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">feeds</td>
+<td style="text-align: center;">reads</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>opacity_map</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">reads</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">reads</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>opacity_dependency</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">reads</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">reads</td>
+<td style="text-align: center;">reads</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">feeds</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>opacity_token</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">mod.</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>opacity_clause</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">reads</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>opacity_rewrite</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">maps</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">cons.</td>
+<td style="text-align: center;">cons.</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>opacity_measure</strong></td>
+<td style="text-align: center;">grounds</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">reads</td>
+<td style="text-align: center;">feeds</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>opacity_signal</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">reads</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">comp.</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">reads</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">feeds</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>opacity_alignment</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">maps</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">reads</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">uses</td>
+<td style="text-align: center;">feeds</td>
+<td style="text-align: center;">feeds</td>
+<td style="text-align: center;">—</td>
+</tr>
+</tbody>
+</table>
+<p><em>Key: feeds = provides input, reads = consumes output, comp. = composites,
+ref. = references, esc. = escalates to, mod. = modifies, cons. = consumes,
+maps = conceptual mapping, grounds = empirical grounding</em></p>
+<hr>
+<!-- SESSION_CONTEXT:START -->
+
+<pre><code class="language-yaml">file: operators.md
+module: Opacity
+canonical_id: OPC
+role: operator-definitions
+status: active
+core_operators:
+  - { id: O-Op, name: Opacity Operator, type: measure }
+  - { id: O-Grad, name: Opacity Gradient, type: detect }
+  - { id: O-Bound, name: Opacity Boundary, type: mark }
+  - { id: O-Red, name: Opacity Reduction Operator, type: reduce }
+  - { id: O-Sig, name: Opacity Signature, type: composite }
+extension_operators:
+  - { id: opacity_index, binding: Corpus }
+  - { id: opacity_map, binding: Corpus }
+  - { id: opacity_dependency, binding: Corpus }
+  - { id: opacity_token, binding: SARG }
+  - { id: opacity_clause, binding: SARG }
+  - { id: opacity_rewrite_rule, binding: SARG }
+  - { id: opacity_measure, binding: NIST }
+  - { id: opacity_signal, binding: NIST }
+  - { id: opacity_alignment, binding: NIST }
+</code></pre>
+<!-- SESSION_CONTEXT:END -->
+  </main>
+</body>
+</html>

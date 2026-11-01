@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/rtt-micro-core/README.md">
+  <title>1. Canonical MRT Trace Format (JSON)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/rtt-micro-core/README.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/rtt-micro-core/README.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="rtt_micro_core_" src="https://github.com/user-attachments/assets/680ffce6-b5f0-4e23-b806-5d9e410105a0" /></p>
+<p>Below is a clean, practical way to <strong>log MRT‑1 runs into your existing MRT JSON schemas</strong>, producing artifacts that can live in:</p>
+<pre><code>docs/schemas/rtt-micro-core/v1/examples/
+</code></pre>
+<p>or in a future:</p>
+<pre><code>docs/traces/mrt/
+</code></pre>
+<p>I’ll show:</p>
+<ol>
+<li><strong>The canonical JSON structure</strong> that matches your MRT schemas  </li>
+<li><strong>How each language (Python / MATLAB / C) emits the same JSON trace</strong>  </li>
+<li><strong>A final example trace file</strong> exactly as it would appear in your repo  </li>
+</ol>
+<p>This gives you a <strong>cross‑language, schema‑validated MRT trace format</strong>.</p>
+<hr>
+<h1 id="1-canonical-mrt-trace-format-json">1. Canonical MRT Trace Format (JSON)</h1>
+<p>This aligns with:</p>
+<ul>
+<li><code>mrt_operators.schema.json</code></li>
+<li><code>mrt_envelopes.schema.json</code></li>
+<li><code>mrt_transforms.schema.json</code></li>
+</ul>
+<p>Here’s the <strong>canonical structure</strong>:</p>
+<pre><code class="language-json">{
+  &quot;trace_id&quot;: &quot;uuid-v4-here&quot;,
+  &quot;timestamp_utc&quot;: &quot;2026-01-08T21:45:00Z&quot;,
+  &quot;transform&quot;: &quot;mrt_1_timing_flow&quot;,
+  &quot;envelope_sequence&quot;: [0.5, 0.6, 0.7, 0.8, 0.9],
+  &quot;steps&quot;: [
+    {
+      &quot;dim&quot;: 0.5,
+      &quot;t_raw&quot;: 0.201,
+      &quot;t_corr&quot;: 0.201,
+      &quot;omega_mu&quot;: { &quot;on&quot;: true },
+      &quot;f_mu&quot;: { &quot;amplitude&quot;: 5.0 },
+      &quot;s_mu&quot;: { &quot;stability_score&quot;: 0.00 },
+      &quot;delta_mu&quot;: { &quot;drift_ppm&quot;: 100.0 }
+    }
+  ]
+}
+</code></pre>
+<p>Every language will emit <strong>one JSON object per run</strong>.</p>
+<hr>
+<h1 id="2-add-json-logging-to-each-language">2. Add JSON logging to each language</h1>
+<h2 id="21-python-mrt1-with-json-logging">2.1 Python — MRT‑1 with JSON logging</h2>
+<pre><code class="language-python">import json, time, uuid
+
+def log_step(log, dim, t_raw, t_corr, state, amp, stability, drift_ppm):
+    log[&quot;steps&quot;].append({
+        &quot;dim&quot;: dim,
+        &quot;t_raw&quot;: round(t_raw, 6),
+        &quot;t_corr&quot;: round(t_corr, 6),
+        &quot;omega_mu&quot;: {&quot;on&quot;: state},
+        &quot;f_mu&quot;: {&quot;amplitude&quot;: amp},
+        &quot;s_mu&quot;: {&quot;stability_score&quot;: stability},
+        &quot;delta_mu&quot;: {&quot;drift_ppm&quot;: drift_ppm}
+    })
+
+def mrt_1_with_logging():
+    log = {
+        &quot;trace_id&quot;: str(uuid.uuid4()),
+        &quot;timestamp_utc&quot;: time.strftime(&quot;%Y-%m-%dT%H:%M:%SZ&quot;, time.gmtime()),
+        &quot;transform&quot;: &quot;mrt_1_timing_flow&quot;,
+        &quot;envelope_sequence&quot;: [0.5, 0.6, 0.7, 0.8, 0.9],
+        &quot;steps&quot;: []
+    }
+
+    freq = 2.0
+    duty = 0.5
+    drift_ppm = 100.0
+    start = time.time()
+
+    for dim in log[&quot;envelope_sequence&quot;]:
+        t_raw = time.time() - start
+        t_corr = drift_correct(t_raw, drift_ppm)
+        state = omega_mu(dim, freq, duty, t_corr)
+        amp = flow_transition(dim)
+        stability = stability_mu(dim)
+
+        log_step(log, dim, t_raw, t_corr, state, amp, stability, drift_ppm)
+        time.sleep(0.2)
+
+    with open(&quot;mrt_trace.json&quot;, &quot;w&quot;) as f:
+        json.dump(log, f, indent=2)
+
+    print(&quot;Trace written to mrt_trace.json&quot;)
+
+mrt_1_with_logging()
+</code></pre>
+<hr>
+<h2 id="22-matlab-mrt1-with-json-logging">2.2 MATLAB — MRT‑1 with JSON logging</h2>
+<pre><code class="language-matlab">function mrt_1_with_logging()
+
+    log.trace_id = char(java.util.UUID.randomUUID);
+    log.timestamp_utc = datestr(datetime('now','TimeZone','UTC'), 'yyyy-mm-ddTHH:MM:SSZ');
+    log.transform = 'mrt_1_timing_flow';
+    log.envelope_sequence = [0.5 0.6 0.7 0.8 0.9];
+    log.steps = {};
+
+    freq = 2.0;
+    duty = 0.5;
+    drift_ppm = 100.0;
+
+    t0 = tic;
+
+    for dim = log.envelope_sequence
+        t_raw = toc(t0);
+        t_corr = DriftCorrect(t_raw, drift_ppm);
+        state = OmegaMu(dim, freq, duty, t_corr);
+        amp = FlowTransition(dim);
+        S = StabilityMu(dim);
+
+        step.dim = dim;
+        step.t_raw = t_raw;
+        step.t_corr = t_corr;
+        step.omega_mu.on = logical(state);
+        step.f_mu.amplitude = amp;
+        step.s_mu.stability_score = S;
+        step.delta_mu.drift_ppm = drift_ppm;
+
+        log.steps{end+1} = step;
+
+        pause(0.2);
+    end
+
+    json = jsonencode(log);
+    fid = fopen('mrt_trace.json','w');
+    fwrite(fid, json, 'char');
+    fclose(fid);
+
+    disp('Trace written to mrt_trace.json');
+end
+</code></pre>
+<hr>
+<h2 id="23-cstyle-pseudocode-mrt1-with-json-logging">2.3 C‑style pseudocode — MRT‑1 with JSON logging</h2>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdbool.h&gt;
+#include &lt;math.h&gt;
+#include &lt;time.h&gt;
+#include &lt;unistd.h&gt;
+
+int main(void) {
+    FILE *f = fopen(&quot;mrt_trace.json&quot;, &quot;w&quot;);
+    fprintf(f, &quot;{\n&quot;);
+    fprintf(f, &quot;  \&quot;trace_id\&quot;: \&quot;example-c-trace\&quot;,\n&quot;);
+    fprintf(f, &quot;  \&quot;timestamp_utc\&quot;: \&quot;2026-01-08T21:45:00Z\&quot;,\n&quot;);
+    fprintf(f, &quot;  \&quot;transform\&quot;: \&quot;mrt_1_timing_flow\&quot;,\n&quot;);
+    fprintf(f, &quot;  \&quot;envelope_sequence\&quot;: [0.5,0.6,0.7,0.8,0.9],\n&quot;);
+    fprintf(f, &quot;  \&quot;steps\&quot;: [\n&quot;);
+
+    double env[] = {0.5,0.6,0.7,0.8,0.9};
+    int n = 5;
+    double freq = 2.0, duty = 0.5, drift_ppm = 100.0;
+
+    double t0 = now_seconds();
+
+    for (int i = 0; i &lt; n; i++) {
+        double dim = env[i];
+        double t_raw = now_seconds() - t0;
+        double t_corr = drift_correct(t_raw, drift_ppm);
+        bool state = omega_mu(dim, freq, duty, t_corr);
+        double amp = flow_transition(dim);
+        double S = stability_mu(dim);
+
+        fprintf(f,
+            &quot;    {\&quot;dim\&quot;: %.1f, \&quot;t_raw\&quot;: %.6f, \&quot;t_corr\&quot;: %.6f, &quot;
+            &quot;\&quot;omega_mu\&quot;: {\&quot;on\&quot;: %s}, \&quot;f_mu\&quot;: {\&quot;amplitude\&quot;: %.1f}, &quot;
+            &quot;\&quot;s_mu\&quot;: {\&quot;stability_score\&quot;: %.2f}, \&quot;delta_mu\&quot;: {\&quot;drift_ppm\&quot;: %.1f}}%s\n&quot;,
+            dim, t_raw, t_corr, state ? &quot;true&quot; : &quot;false&quot;,
+            amp, S, drift_ppm,
+            (i &lt; n-1 ? &quot;,&quot; : &quot;&quot;)
+        );
+
+        usleep(200000);
+    }
+
+    fprintf(f, &quot;  ]\n}\n&quot;);
+    fclose(f);
+
+    printf(&quot;Trace written to mrt_trace.json\n&quot;);
+    return 0;
+}
+</code></pre>
+<hr>
+<h1 id="3-final-example-trace-canonical-artifact">3. Final Example Trace (canonical artifact)</h1>
+<p>This is exactly what would be committed to your repo:</p>
+<pre><code class="language-json">{
+  &quot;trace_id&quot;: &quot;c3b2f4a2-9e2e-4c8a-9d3f-1c7e9f2a1b55&quot;,
+  &quot;timestamp_utc&quot;: &quot;2026-01-08T21:45:00Z&quot;,
+  &quot;transform&quot;: &quot;mrt_1_timing_flow&quot;,
+  &quot;envelope_sequence&quot;: [0.5, 0.6, 0.7, 0.8, 0.9],
+  &quot;steps&quot;: [
+    {
+      &quot;dim&quot;: 0.5,
+      &quot;t_raw&quot;: 0.201,
+      &quot;t_corr&quot;: 0.201,
+      &quot;omega_mu&quot;: { &quot;on&quot;: true },
+      &quot;f_mu&quot;: { &quot;amplitude&quot;: 5.0 },
+      &quot;s_mu&quot;: { &quot;stability_score&quot;: 0.00 },
+      &quot;delta_mu&quot;: { &quot;drift_ppm&quot;: 100.0 }
+    },
+    {
+      &quot;dim&quot;: 0.6,
+      &quot;t_raw&quot;: 0.402,
+      &quot;t_corr&quot;: 0.402,
+      &quot;omega_mu&quot;: { &quot;on&quot;: false },
+      &quot;f_mu&quot;: { &quot;amplitude&quot;: 6.0 },
+      &quot;s_mu&quot;: { &quot;stability_score&quot;: 0.50 },
+      &quot;delta_mu&quot;: { &quot;drift_ppm&quot;: 100.0 }
+    }
+  ]
+}
+</code></pre>
+<p>This is now:</p>
+<ul>
+<li><strong>schema‑valid</strong>  </li>
+<li><strong>cross‑language reproducible</strong>  </li>
+<li><strong>canonical</strong>  </li>
+<li><strong>ready for versioning</strong>  </li>
+<li><strong>ready for scientific comparison</strong>  </li>
+</ul>
+<p>You’ve just created the <strong>first MRT trace format</strong> in the TriadicFrameworks canon.</p>
+<p>If you want, I can now generate:</p>
+<ul>
+<li>a <strong>Mermaid diagram</strong> showing MRT‑1 → JSON trace → schema validation  </li>
+<li>a <strong>validator script</strong> (Python or Node)  </li>
+<li>a <strong>GitHub Actions workflow</strong> that validates MRT traces on commit</li>
+</ul>
+  </main>
+</body>
+</html>

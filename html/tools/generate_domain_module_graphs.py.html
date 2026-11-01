@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/tools/generate_domain_module_graphs.py.md">
+  <title>⭐ Bulk modulegraph.md Generator (per domain)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/tools/generate_domain_module_graphs.py.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/tools/generate_domain_module_graphs.py.md</code>
+  </aside>
+
+  <main>
+<p>Here it is, the <strong>canon‑aligned, repo‑safe bulk generator</strong> that automatically creates <strong><code>module_graph.md</code> for each domain</strong>.</p>
+<p>This script is designed to live in:</p>
+<pre><code>docs/tools/
+</code></pre>
+<p>and works seamlessly with your existing generators.<br>
+It produces a <strong>domain‑level module graph</strong> using Mermaid, listing all modules inside each domain directory (e.g., <code>/docs/atmosphere</code>, <code>/docs/psychology</code>, <code>/docs/physics</code>, etc.).</p>
+<p>This is the foundation for your <strong>domain‑level structural maps</strong>, which will later feed into the full <strong>TriadicFrameworks Canon Graph</strong>.</p>
+<hr>
+<h1 id="bulk-module_graphmd-generator-per-domain">⭐ Bulk <code>module_graph.md</code> Generator (per domain)</h1>
+<p>Save as:</p>
+<pre><code>docs/tools/generate_domain_module_graphs.py
+</code></pre>
+<p>Run from repo root:</p>
+<pre><code>python3 docs/tools/generate_domain_module_graphs.py
+</code></pre>
+<hr>
+<h1 id="generate_domain_module_graphspy-final-canon-version">🟦 <strong>generate_domain_module_graphs.py (Final Canon Version)</strong></h1>
+<pre><code class="language-python">import os
+
+ROOT = &quot;docs&quot;
+
+EXCLUDED_DIRS = {
+    &quot;spine&quot;,
+    &quot;_template&quot;,
+    &quot;assets&quot;,
+    &quot;images&quot;,
+    &quot;tools&quot;
+}
+
+def find_domains():
+    &quot;&quot;&quot;Return all top-level domain directories under /docs.&quot;&quot;&quot;
+    domains = []
+    for item in os.listdir(ROOT):
+        path = os.path.join(ROOT, item)
+        if os.path.isdir(path) and item not in EXCLUDED_DIRS:
+            domains.append(path)
+    return domains
+
+def find_modules(domain_path):
+    &quot;&quot;&quot;Return all module directories inside a domain.&quot;&quot;&quot;
+    modules = []
+    for root, dirs, files in os.walk(domain_path):
+        if &quot;module.json&quot; in files:
+            modules.append(root)
+    return modules
+
+def generate_graph(domain_path, modules):
+    &quot;&quot;&quot;Create module_graph.md inside the domain directory.&quot;&quot;&quot;
+    out_path = os.path.join(domain_path, &quot;module_graph.md&quot;)
+
+    if os.path.exists(out_path):
+        print(f&quot;❌ module_graph.md already exists in {domain_path}, skipping.&quot;)
+        return
+
+    domain_name = os.path.basename(domain_path)
+
+    # Build Mermaid graph
+    mermaid_lines = [
+        &quot;```mermaid&quot;,
+        &quot;flowchart TD&quot;,
+        f&quot;    A[Domain: {domain_name}]&quot;
+    ]
+
+    for m in modules:
+        module_name = os.path.basename(m)
+        mermaid_lines.append(f&quot;    A --&gt; {module_name}[{module_name}]&quot;)
+
+    mermaid_lines.append(&quot;```&quot;)
+
+    content = f&quot;&quot;&quot;# {domain_name} — Module Graph
+
+This file provides a domain‑level module graph for **{domain_name}**.
+
+It lists all modules detected under:
+
+`{domain_path}`
+
+---
+
+## Canon Context
+This domain inherits the full TriadicFrameworks canon:
+
+- RTT triads  
+- TFT triads  
+- Session context  
+- RTT frozen source  
+- AI initialization rules  
+
+Canon reference: `/docs/spine/spine.json`
+
+---
+
+## Module Graph (Mermaid)
+
+{'\n'.join(mermaid_lines)}
+
+---
+
+Generated automatically by `generate_domain_module_graphs.py`.
+&quot;&quot;&quot;
+
+    with open(out_path, &quot;w&quot;, encoding=&quot;utf-8&quot;) as f:
+        f.write(content)
+
+    print(f&quot;✔ Created {out_path}&quot;)
+
+def main():
+    print(&quot;\n=== TriadicFrameworks Domain Module Graph Generator ===\n&quot;)
+
+    domains = find_domains()
+
+    for domain in domains:
+        modules = find_modules(domain)
+        if modules:
+            generate_graph(domain, modules)
+
+    print(&quot;\n✨ Domain module_graph.md generation complete.\n&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<hr>
+<h1 id="what-this-script-gives-you">⭐ What This Script Gives You</h1>
+<h3 id="creates-module_graphmd-for-every-domain">✔ Creates <code>module_graph.md</code> for every domain</h3>
+<h3 id="lists-all-modules-inside-each-domain">✔ Lists all modules inside each domain</h3>
+<h3 id="uses-mermaid-for-clean-visual-graphs">✔ Uses Mermaid for clean visual graphs</h3>
+<h3 id="never-overwrites-existing-module_graphmd">✔ Never overwrites existing module_graph.md</h3>
+<h3 id="canonaligned-documentation">✔ Canon‑aligned documentation</h3>
+<h3 id="works-across-your-entire-docs-tree">✔ Works across your entire <code>/docs</code> tree</h3>
+<h3 id="produces-consistent-domainlevel-structural-maps">✔ Produces consistent domain‑level structural maps</h3>
+<p>This is the <strong>domain‑level structural layer</strong> of TriadicFrameworks.</p>
+  </main>
+</body>
+</html>

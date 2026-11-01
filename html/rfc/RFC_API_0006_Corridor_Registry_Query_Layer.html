@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rfc/RFC_API_0006_Corridor_Registry_Query_Layer.md">
+  <title>📜 RFC‑API‑0006 — Corridor Registry Query Layer</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rfc/RFC_API_0006_Corridor_Registry_Query_Layer.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rfc/RFC_API_0006_Corridor_Registry_Query_Layer.md</code>
+  </aside>
+
+  <main>
+<h1 id="rfcapi0006-corridor-registry-query-layer">📜 <strong>RFC‑API‑0006 — Corridor Registry Query Layer</strong></h1>
+<h3 id="unified-query-interface-for-corridor-metadata-events-glyphs-and-validator-states"><em>Unified Query Interface for Corridor Metadata, Events, Glyphs, and Validator States</em></h3>
+<p>RefId: turn0browsertab1</p>
+<p><strong>Title:</strong> Corridor Registry Query Layer<br>
+<strong>Status:</strong> Draft<br>
+<strong>Author:</strong> Nawder Loswin + Copilot<br>
+<strong>Date:</strong> 2026‑09‑06<br>
+<strong>Version:</strong> 0.1  </p>
+<hr>
+<h2 id="1-purpose">1. Purpose</h2>
+<p>The <strong>Corridor Registry Query Layer (CRQL)</strong> provides a unified, canonical interface for querying:</p>
+<ul>
+<li>corridor metadata  </li>
+<li>corridor events  </li>
+<li>glyph lineage  </li>
+<li>validator states  </li>
+<li>scroll artifacts  </li>
+<li>resonance‑time signatures  </li>
+<li>corridor‑family relationships  </li>
+</ul>
+<p>CRQL is the <strong>read‑only query layer</strong> of the Corridor Registry, enabling engines, dashboards, validators, and contributors to retrieve corridor information in a consistent, structured, canon‑aligned format.</p>
+<hr>
+<h2 id="2-query-model-overview">2. Query Model Overview</h2>
+<p>CRQL exposes a <strong>tri‑layer query model</strong>:</p>
+<h3 id="layer-1-direct-corridor-queries"><strong>Layer 1 — Direct Corridor Queries</strong></h3>
+<p>Retrieve corridor metadata and structural fields.</p>
+<h3 id="layer-2-event-glyph-queries"><strong>Layer 2 — Event &amp; Glyph Queries</strong></h3>
+<p>Retrieve corridor events, glyph lineage, validator signatures.</p>
+<h3 id="layer-3-resonance-temporal-queries"><strong>Layer 3 — Resonance &amp; Temporal Queries</strong></h3>
+<p>Retrieve resonance‑time signatures, temporal overlays, drift vectors.</p>
+<p>Each query layer is independent but interoperable.</p>
+<hr>
+<h2 id="3-query-types">3. Query Types</h2>
+<h3 id="31-corridor-metadata-query"><strong>3.1 Corridor Metadata Query</strong></h3>
+<p>Retrieves:</p>
+<ul>
+<li>corridor ID  </li>
+<li>corridor name  </li>
+<li>corridor family  </li>
+<li>corridor category  </li>
+<li>corridor glyph  </li>
+<li>corridor description  </li>
+<li>corridor lineage  </li>
+</ul>
+<p>Example:</p>
+<pre><code class="language-json">{
+  &quot;query&quot;: &quot;corridor.metadata&quot;,
+  &quot;id&quot;: &quot;C-ΔΩ-014&quot;
+}
+</code></pre>
+<hr>
+<h3 id="32-corridor-event-query"><strong>3.2 Corridor Event Query</strong></h3>
+<p>Retrieves:</p>
+<ul>
+<li>event ID  </li>
+<li>event type  </li>
+<li>event timestamp  </li>
+<li>event glyph  </li>
+<li>event resonance signature  </li>
+<li>event validator state  </li>
+</ul>
+<p>Example:</p>
+<pre><code class="language-json">{
+  &quot;query&quot;: &quot;corridor.events&quot;,
+  &quot;id&quot;: &quot;C-ΔΩ-014&quot;,
+  &quot;limit&quot;: 25
+}
+</code></pre>
+<hr>
+<h3 id="33-corridor-glyph-query"><strong>3.3 Corridor Glyph Query</strong></h3>
+<p>Retrieves:</p>
+<ul>
+<li>glyph ID  </li>
+<li>glyph lineage  </li>
+<li>glyph family  </li>
+<li>glyph resonance signature  </li>
+<li>glyph validator state  </li>
+</ul>
+<p>Example:</p>
+<pre><code class="language-json">{
+  &quot;query&quot;: &quot;corridor.glyph&quot;,
+  &quot;glyph&quot;: &quot;G-ΔΩ-77&quot;
+}
+</code></pre>
+<hr>
+<h3 id="34-corridor-validator-query"><strong>3.4 Corridor Validator Query</strong></h3>
+<p>Retrieves:</p>
+<ul>
+<li>validator ID  </li>
+<li>validator state  </li>
+<li>validator signature  </li>
+<li>validator drift  </li>
+<li>validator paradox vectors  </li>
+</ul>
+<p>Example:</p>
+<pre><code class="language-json">{
+  &quot;query&quot;: &quot;corridor.validator&quot;,
+  &quot;validator&quot;: &quot;V-ΔΩ-09&quot;
+}
+</code></pre>
+<hr>
+<h3 id="35-corridor-resonance-query"><strong>3.5 Corridor Resonance Query</strong></h3>
+<p>Retrieves:</p>
+<ul>
+<li>resonance signature  </li>
+<li>resonance drift  </li>
+<li>resonance stability  </li>
+<li>resonance‑time overlays  </li>
+</ul>
+<p>Example:</p>
+<pre><code class="language-json">{
+  &quot;query&quot;: &quot;corridor.resonance&quot;,
+  &quot;id&quot;: &quot;C-ΔΩ-014&quot;
+}
+</code></pre>
+<hr>
+<h2 id="4-query-response-format">4. Query Response Format</h2>
+<p>All CRQL responses follow the canonical structure:</p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;ok&quot;,
+  &quot;corridor&quot;: { ... },
+  &quot;resonance&quot;: { ... },
+  &quot;events&quot;: [ ... ],
+  &quot;glyphs&quot;: [ ... ],
+  &quot;validator&quot;: { ... },
+  &quot;meta&quot;: {
+    &quot;timestamp&quot;: &quot;2026-09-06T23:52:00Z&quot;,
+    &quot;version&quot;: &quot;1.0&quot;
+  }
+}
+</code></pre>
+<hr>
+<h2 id="5-query-routing-layer">5. Query Routing Layer</h2>
+<p>CRQL routes queries through:</p>
+<ul>
+<li><strong>Registry Engine</strong>  </li>
+<li><strong>Validator Layer</strong>  </li>
+<li><strong>Glyph Library</strong>  </li>
+<li><strong>Corridor Event Stream</strong>  </li>
+<li><strong>Resonance‑Time Analyzer</strong>  </li>
+</ul>
+<p>Routing is drift‑safe, paradox‑safe, and Nullarium‑aligned.</p>
+<hr>
+<h2 id="6-error-model">6. Error Model</h2>
+<p>CRQL defines canonical error types:</p>
+<ul>
+<li><strong>ERR‑NOT‑FOUND</strong> — Corridor or glyph not found  </li>
+<li><strong>ERR‑INVALID‑QUERY</strong> — Query malformed  </li>
+<li><strong>ERR‑DRIFT‑UNSAFE</strong> — Drift exceeds safe thresholds  </li>
+<li><strong>ERR‑PARADOX‑VECTOR</strong> — Paradox vector detected  </li>
+<li><strong>ERR‑NULLARIUM‑BREACH</strong> — Emotional‑phase misalignment  </li>
+</ul>
+<hr>
+<h2 id="7-example-full-query-packet">7. Example Full Query Packet</h2>
+<pre><code class="language-json">{
+  &quot;query&quot;: &quot;corridor.full&quot;,
+  &quot;id&quot;: &quot;C-ΔΩ-014&quot;,
+  &quot;include&quot;: [&quot;events&quot;, &quot;glyphs&quot;, &quot;validator&quot;, &quot;resonance&quot;]
+}
+</code></pre>
+<hr>
+<h2 id="8-example-full-response-packet">8. Example Full Response Packet</h2>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;ok&quot;,
+  &quot;corridor&quot;: {
+    &quot;id&quot;: &quot;C-ΔΩ-014&quot;,
+    &quot;family&quot;: &quot;temporal&quot;,
+    &quot;glyph&quot;: &quot;G-ΔΩ-77&quot;,
+    &quot;description&quot;: &quot;Temporal corridor with resonance‑time overlays.&quot;
+  },
+  &quot;events&quot;: [
+    { &quot;id&quot;: &quot;EV-014-01&quot;, &quot;type&quot;: &quot;activation&quot;, &quot;timestamp&quot;: &quot;2026-09-06T21:00:00Z&quot; }
+  ],
+  &quot;glyphs&quot;: [
+    { &quot;id&quot;: &quot;G-ΔΩ-77&quot;, &quot;lineage&quot;: &quot;ΔΩ‑root‑lineage&quot; }
+  ],
+  &quot;validator&quot;: {
+    &quot;id&quot;: &quot;V-ΔΩ-09&quot;,
+    &quot;state&quot;: &quot;stable&quot;
+  },
+  &quot;resonance&quot;: {
+    &quot;signature&quot;: &quot;RS‑ΔΩ‑0.441&quot;,
+    &quot;drift&quot;: &quot;ΔR=0.011&quot;
+  },
+  &quot;meta&quot;: {
+    &quot;timestamp&quot;: &quot;2026-09-06T23:52:00Z&quot;,
+    &quot;version&quot;: &quot;1.0&quot;
+  }
+}
+</code></pre>
+<hr>
+<h2 id="9-closing-note">9. Closing Note</h2>
+<p>RFC‑API‑0006 formalizes the <strong>Corridor Registry Query Layer</strong>, completing the API‑series foundation for corridor metadata, events, glyphs, validator states, and resonance‑time signatures.</p>
+<p>This file is now ready to paste directly into your GitHub editor.</p>
+  </main>
+</body>
+</html>

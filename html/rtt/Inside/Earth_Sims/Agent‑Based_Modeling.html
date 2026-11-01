@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Earth_Sims/Agent‑Based_Modeling.md">
+  <title>Agent‑Based Modeling vs RTT‑Inside Modeling</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Earth_Sims/Agent‑Based_Modeling.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Earth_Sims/Agent‑Based_Modeling.md</code>
+  </aside>
+
+  <main>
+<h1 id="agentbased-modeling-vs-rttinside-modeling"><strong>Agent‑Based Modeling vs RTT‑Inside Modeling</strong></h1>
+<h3 id="a-structural-sidebyside"><em>A Structural Side‑by‑Side</em></h3>
+<hr>
+<h2 id="core-orientation"><strong>Core Orientation</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Agent‑Based Modeling (ABM)</th>
+<th>RTT‑Inside Modeling</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Primary Focus</td>
+<td>Behavior of agents</td>
+<td>State, lineage, and meaning</td>
+</tr>
+<tr>
+<td>Modeling Unit</td>
+<td>Autonomous agents</td>
+<td>Living systems (agents, groups, environments)</td>
+</tr>
+<tr>
+<td>Core Question</td>
+<td><em>What happens if agents do X?</em></td>
+<td><em>What is happening, why, and how did we get here?</em></td>
+</tr>
+<tr>
+<td>Strength</td>
+<td>Emergent behavior</td>
+<td>Interpretability and alignment</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="being-how-state-is-represented"><strong>BEING — How State Is Represented</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>ABM</th>
+<th>RTT‑Inside</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Agent State</td>
+<td>Variables and attributes</td>
+<td>Living condition (health, stress, readiness)</td>
+</tr>
+<tr>
+<td>System Health</td>
+<td>Emergent, inferred</td>
+<td>Explicit and visible</td>
+</tr>
+<tr>
+<td>Degradation &amp; Recovery</td>
+<td>Often implicit</td>
+<td>First‑class concepts</td>
+</tr>
+<tr>
+<td>Fragility Detection</td>
+<td>After failure</td>
+<td>Before collapse</td>
+</tr>
+</tbody>
+</table>
+<p>🌱 <em>RTT‑Inside treats state as something that can be cared for.</em></p>
+<hr>
+<h2 id="knowing-how-time-and-causality-are-handled"><strong>KNOWING — How Time and Causality Are Handled</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>ABM</th>
+<th>RTT‑Inside</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Decision Tracking</td>
+<td>Step‑based</td>
+<td>Lineage‑based</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td>Local or limited</td>
+<td>Persistent and traceable</td>
+</tr>
+<tr>
+<td>Explainability</td>
+<td>Post‑hoc analysis</td>
+<td>Built‑in</td>
+</tr>
+<tr>
+<td>Fork Transparency</td>
+<td>Divergent, opaque</td>
+<td>Divergent, interpretable</td>
+</tr>
+</tbody>
+</table>
+<p>🔗 <em>RTT‑Inside preserves memory across time and forks.</em></p>
+<hr>
+<h2 id="meaning-how-purpose-is-modeled"><strong>MEANING — How Purpose Is Modeled</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>ABM</th>
+<th>RTT‑Inside</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Purpose</td>
+<td>External to the model</td>
+<td>Embedded and declared</td>
+</tr>
+<tr>
+<td>Optimization Target</td>
+<td>Metrics (fitness, payoff)</td>
+<td>Alignment with intent</td>
+</tr>
+<tr>
+<td>Ethical Context</td>
+<td>Outside the sim</td>
+<td>Inside the structure</td>
+</tr>
+<tr>
+<td>Human Interpretability</td>
+<td>Requires translation</td>
+<td>Native</td>
+</tr>
+</tbody>
+</table>
+<p>❤️ <em>RTT‑Inside makes “why” a structural element.</em></p>
+<hr>
+<h2 id="time-how-futures-are-treated"><strong>TIME — How Futures Are Treated</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>ABM</th>
+<th>RTT‑Inside</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Time Horizon</td>
+<td>Often short‑term</td>
+<td>Multi‑generational</td>
+</tr>
+<tr>
+<td>Maintenance</td>
+<td>Rarely modeled</td>
+<td>Central</td>
+</tr>
+<tr>
+<td>Long‑Term Drift</td>
+<td>Emergent surprise</td>
+<td>Tracked and visible</td>
+</tr>
+<tr>
+<td>Stewardship</td>
+<td>External concern</td>
+<td>Internal signal</td>
+</tr>
+</tbody>
+</table>
+<p>⏳ <em>RTT‑Inside treats time as a dimension, not a loop counter.</em></p>
+<hr>
+<h2 id="artifacts-what-the-model-produces"><strong>ARTIFACTS — What the Model Produces</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>ABM</th>
+<th>RTT‑Inside</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Outputs</td>
+<td>Metrics, graphs, states</td>
+<td>Narratives of state, cause, and meaning</td>
+</tr>
+<tr>
+<td>Data Volume</td>
+<td>High</td>
+<td>Purposeful</td>
+</tr>
+<tr>
+<td>Human Readability</td>
+<td>Low without tooling</td>
+<td>High by design</td>
+</tr>
+<tr>
+<td>Trust</td>
+<td>External validation</td>
+<td>Structural transparency</td>
+</tr>
+</tbody>
+</table>
+<p>📄 <em>RTT‑Inside artifacts explain themselves.</em></p>
+<hr>
+<h2 id="forking-variants"><strong>FORKING &amp; VARIANTS</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>ABM</th>
+<th>RTT‑Inside</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Forking</td>
+<td>Technically easy</td>
+<td>Structurally grounded</td>
+</tr>
+<tr>
+<td>Shared Context</td>
+<td>Often lost</td>
+<td>Preserved</td>
+</tr>
+<tr>
+<td>Cross‑Fork Learning</td>
+<td>Manual</td>
+<td>Native</td>
+</tr>
+<tr>
+<td>Cultural Adaptation</td>
+<td>External</td>
+<td>Built‑in</td>
+</tr>
+</tbody>
+</table>
+<p>✨ <em>RTT‑Inside supports plural futures without losing coherence.</em></p>
+<hr>
+<h2 id="what-rttinside-does-not-replace"><strong>What RTT‑Inside Does <em>Not</em> Replace</strong></h2>
+<p>RTT‑Inside does <strong>not</strong> replace:
+- agent logic
+- stochastic modeling
+- numerical simulation
+- optimization techniques</p>
+<p>It <strong>wraps them</strong> in:
+- visible state
+- preserved lineage
+- declared meaning</p>
+<hr>
+<h2 id="summary-in-one-line"><strong>Summary in One Line</strong></h2>
+<blockquote>
+<p><strong>ABM shows what systems do.<br>
+RTT‑Inside shows what systems <em>are</em>, <em>why they act</em>, and <em>what their actions mean</em>.</strong></p>
+</blockquote>
+<hr>
+<h2 id="why-this-matters"><strong>Why This Matters</strong></h2>
+<p>Agent‑based models help us explore complexity.<br>
+RTT‑Inside helps us <strong>understand it without losing humanity</strong>.</p>
+<p>Together, they form a simulation stack that can:
+- scale computationally
+- remain interpretable
+- survive cultural translation
+- endure across civilizations</p>
+  </main>
+</body>
+</html>

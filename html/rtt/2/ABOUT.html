@@ -1,0 +1,719 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/2/ABOUT.md">
+  <title>ABOUT — RTT/2 · Structural Detection Engine (SDE)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/2/ABOUT.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/2/ABOUT.md</code>
+  </aside>
+
+  <main>
+<h1 id="about-rtt2-structural-detection-engine-sde">ABOUT — RTT/2 · Structural Detection Engine (SDE)</h1>
+<p><strong>TriadicFrameworks · Core RTT · Detection Layer</strong>
+<strong>Module path:</strong> <code>docs/rtt/2/</code>
+<strong>Version:</strong> 1.0 · <strong>Status:</strong> Active · Canonical
+<strong>Session seed:</strong> <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code></p>
+<blockquote>
+<p>This document answers the four foundational questions about RTT/2:
+<strong>What</strong> it is · <strong>Why</strong> it is built this way · <strong>When</strong> to use it · <strong>Where</strong> it lives</p>
+<p><strong>Critical framing — read first:</strong>
+RTT/2 is a structural detection framework. It is NOT a physics claim,
+NOT a diagnostic tool in any clinical or engineering sense, and NOT a
+prediction system. All RTT/2 output is structural description only.</p>
+</blockquote>
+<hr>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#1-what-is-rtt2">What Is RTT/2?</a></li>
+<li><a href="#2-why-is-it-built-this-way">Why Is It Built This Way?</a></li>
+<li><a href="#3-when-should-you-use-it">When Should You Use It?</a></li>
+<li><a href="#4-where-does-it-live">Where Does It Live?</a></li>
+<li><a href="#5-core-constructs-at-a-glance">Core Constructs at a Glance</a></li>
+<li><a href="#6-module-integrations">Module Integrations</a></li>
+<li><a href="#7-what-rtt2-is-not">What RTT/2 Is Not</a></li>
+<li><a href="#8-quick-start-checklist">Quick-Start Checklist</a></li>
+<li><a href="#9-see-also">See Also</a></li>
+</ol>
+<hr>
+<h2 id="1-what-is-rtt2">1. What Is RTT/2?</h2>
+<p><strong>RTT/2</strong> is the <strong>Structural Detection Engine (SDE)</strong> — the second module
+in the core RTT hierarchy and the <strong>detection layer</strong> of the
+RTT/1 → RTT/2 → RTT/3 operator pipeline.</p>
+<p>Where RTT/1 answers <em>"what is this system's resonance state and how does
+time flow through it?"</em>, RTT/2 asks the next structural question:
+<em>"how is this system collapsing, fusing, and deforming — and in what form?"</em></p>
+<p>RTT/2 does not start from scratch. It receives a completed RTT/1
+SNR characterization and builds on it, applying three detection instruments
+to produce a structured output packet that RTT/3 consumes.</p>
+<hr>
+<h3 id="the-detection-pipeline-position">The Detection Pipeline Position</h3>
+<pre><code>RTT/1                   RTT/2                      RTT/3
+──────                  ─────                      ─────
+SNR characterization ──▶ Structural Detection ──▶  Synthesis &amp;
+τ = dR/dφ               CPV · FGT · CRM            Integration
+C = ∇_τR + ∇_Rτ         MODE · ZONE
+DCO_n                   RTT2_DETECTION_PACKET ──▶  (RTT/3 input)
+</code></pre>
+<p>RTT/2 is specifically the <strong>detection half</strong> of the pipeline — the bridge
+between RTT/1's primitive characterization and RTT/3's synthesis work.</p>
+<hr>
+<h3 id="the-six-structural-instruments">The Six Structural Instruments</h3>
+<p>RTT/2 defines six instruments that together constitute the Structural
+Detection Engine:</p>
+<table>
+<thead>
+<tr>
+<th>Instrument</th>
+<th>Code</th>
+<th>Question it answers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Collapse-Propagation Vector</td>
+<td>CPV(A, K, T)</td>
+<td><em>How is the collapse propagating — at what intensity, with what curvature, and with what torsion?</em></td>
+</tr>
+<tr>
+<td>Fusion-Gradient Tensor</td>
+<td>FGT</td>
+<td><em>What is the balance of collapse, reassembly, and triad-fusion gradient forces across active regimes?</em></td>
+</tr>
+<tr>
+<td>Collapse-Reassembly Manifold</td>
+<td>CRM · γ(t)</td>
+<td><em>What is the five-component deformation path the system is tracing through structural space?</em></td>
+</tr>
+<tr>
+<td>Detection Mode</td>
+<td>MODE</td>
+<td><em>What operator posture is appropriate for this detection pass given the signal character?</em></td>
+</tr>
+<tr>
+<td>Detection Zone</td>
+<td>ZONE</td>
+<td><em>How stable is the current structural state?</em></td>
+</tr>
+<tr>
+<td>Detection Packet</td>
+<td>RTT2_DETECTION_PACKET</td>
+<td><em>What is the complete, structured detection record for RTT/3 consumption?</em></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="the-three-core-constructs-in-brief">The Three Core Constructs in Brief</h3>
+<p><strong>CPV(A, K, T) — Collapse-Propagation Vector</strong></p>
+<p>The three-parameter signature of a collapse event:</p>
+<pre><code>C_prop(t) = αA(t) + βK(t) + γT(t)
+</code></pre>
+<ul>
+<li>A(t) — Amplitude: how intensely the collapse is propagating</li>
+<li>K(t) — Curvature: how the collapse bends through structural space</li>
+<li>T(t) — Torsion: how the collapse spirals or deviates from a straight path</li>
+</ul>
+<p><strong>FGT — Fusion-Gradient Tensor</strong></p>
+<p>The regime-weighted sum of gradient forces:</p>
+<pre><code>G_fusion = Σ_r ω_r [ g_collapse(r) + g_reassembly(r) + g_triad_fusion(r) ]
+</code></pre>
+<p>Classifies as: collapse-weighted / mixed / triad-weighted.</p>
+<p><strong>CRM — Collapse-Reassembly Manifold · γ(t)</strong></p>
+<p>The five-component deformation path vector:</p>
+<pre><code>γ(t) = ( D(t), E(t), C(t), FI(t), R(t) )
+</code></pre>
+<ul>
+<li>D — Drift Deformation · E — Envelope Torsion · C — Continuity Fracture</li>
+<li>FI — Fusion-Integration Curvature · R — Regime Identity</li>
+</ul>
+<hr>
+<h2 id="2-why-is-it-built-this-way">2. Why Is It Built This Way?</h2>
+<p>Every design decision in RTT/2 answers a structural problem that RTT/1
+alone cannot solve.</p>
+<hr>
+<h3 id="why-three-cpv-parameters-and-not-just-amplitude">Why three CPV parameters and not just amplitude?</h3>
+<p>Amplitude alone — how intense a collapse is — tells you nothing about its
+structural shape. Two collapses can have identical amplitudes while one
+propagates in a straight line (zero curvature, zero torsion) and the other
+spirals outward through structural space (high curvature, non-zero torsion).
+These are categorically different structural events requiring different
+detection postures and producing different RTT/3 inputs.</p>
+<p>The three parameters are <strong>orthogonal</strong> — none can be derived from the
+others:
+- <strong>Amplitude (A)</strong> is scalar intensity: how much collapse energy is present
+- <strong>Curvature (K)</strong> is the second-derivative shape: how the propagation path
+  bends
+- <strong>Torsion (T)</strong> is the out-of-plane rotation: how the path twists in
+  directions that neither A nor K can see</p>
+<p>Together, A, K, and T form the <strong>minimum complete description</strong> of a
+collapse propagation signature. Dropping any one loses a structurally
+irreplaceable dimension.</p>
+<hr>
+<h3 id="why-a-weighted-tensor-for-fgt-rather-than-a-flat-average">Why a weighted tensor for FGT rather than a flat average?</h3>
+<p>When a system is simultaneously collapsing and reassembling — a common
+condition in structurally complex systems — the balance between those
+gradient forces is not uniform across all active regimes. One regime
+may be strongly collapse-weighted while another is triad-weighted.
+A flat average across all regimes loses precisely that information,
+producing a single aggregate number that hides the regime-by-regime
+distribution.</p>
+<p>The FGT's regime weighting (ω_r per regime r) preserves that distribution:
+RTT/3 can see not just the total gradient balance but <em>which regimes are
+driving collapse versus fusion</em>. This is the information RTT/3 needs to
+decide how to weight the detection packet in synthesis.</p>
+<p>The three gradient types — g_collapse, g_reassembly, g_triad_fusion — are
+also irreducible: collapse and reassembly are opposite directions on the
+same axis, while triad-fusion is orthogonal to both (it describes structural
+integration at the triad level, not simple reversal of collapse).</p>
+<hr>
+<h3 id="why-five-crm-components">Why five CRM components?</h3>
+<p>Each component of γ(t) = (D, E, C, FI, R) captures a structurally
+<strong>distinct mode of deformation</strong> that cannot be inferred from the others:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Deformation Type</th>
+<th>Why irreducible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D — Drift Deformation</td>
+<td>Translation</td>
+<td>System has moved from its structural reference point; direction and magnitude both matter</td>
+</tr>
+<tr>
+<td>E — Envelope Torsion</td>
+<td>Rotation of boundary</td>
+<td>The outer structural envelope is twisting; a system can translate without rotating its envelope</td>
+</tr>
+<tr>
+<td>C — Continuity Fracture</td>
+<td>Breaks / gaps</td>
+<td>Structural continuity has been interrupted; a system can rotate without fracturing</td>
+</tr>
+<tr>
+<td>FI — Fusion-Integration Curvature</td>
+<td>Active fusion effects</td>
+<td>Curvature introduced by triad-fusion processes; present only when fusion is active</td>
+</tr>
+<tr>
+<td>R — Regime Identity</td>
+<td>Classification</td>
+<td>The system's current structural regime; the anchor that contextualizes all other components</td>
+</tr>
+</tbody>
+</table>
+<p>Collapsing any two components into one would create a mixed-type entry that
+obscures the distinction RTT/3 depends on. The five components are the
+minimum set that covers all currently identified structural deformation modes
+without overlap.</p>
+<hr>
+<h3 id="why-five-detection-modes">Why five Detection Modes?</h3>
+<p>The five modes (Formal, Emergent, Hybrid, Chaotic, Inversion) correspond to
+five <strong>structurally distinct signal conditions</strong> that each require a different
+operator posture from Class M:</p>
+<ul>
+<li><strong>Formal</strong> — clean, fully resolved signals. Standard thresholds apply.</li>
+<li><strong>Emergent</strong> — signals forming but not yet complete. Provisional outputs,
+  partial population accepted.</li>
+<li><strong>Hybrid</strong> — two or more patterns simultaneously active. Mixed FGT;
+  no single gradient dominates. Standard thresholds cannot be applied
+  to overlapping patterns as if they were one.</li>
+<li><strong>Chaotic</strong> — high-variance turbulence. Components present but
+  fluctuating beyond the stable-measurement window. Packet flagged as
+  low-confidence; Class G review required before RTT/3 routing.</li>
+<li><strong>Inversion</strong> — the primary gradient has reversed direction. CPV
+  inversion component is non-null. The detection posture must flip:
+  what was a collapse signature is now a reassembly signature in the
+  making.</li>
+</ul>
+<p>Fewer than five would require collapsing structurally distinct postures
+into one — producing incorrect threshold application and incorrect
+packet confidence labeling. No two of these five modes can substitute
+for each other.</p>
+<hr>
+<h3 id="why-five-detection-zones">Why five Detection Zones?</h3>
+<p>The zones (U, S, M, D, X) provide a <strong>stability gradient</strong> that tells RTT/3
+how much weight to give the detection packet and what kind of synthesis
+posture is appropriate:</p>
+<table>
+<thead>
+<tr>
+<th>Zone</th>
+<th>Stability</th>
+<th>RTT/3 signal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>U — Undisturbed</td>
+<td>High</td>
+<td>System is coherent; collapse near zero; synthesis can proceed at full confidence</td>
+</tr>
+<tr>
+<td>S — Stable</td>
+<td>Moderate</td>
+<td>Bounded collapse activity; synthesis proceeds with mild caution</td>
+</tr>
+<tr>
+<td>M — Marginal</td>
+<td>Active tension</td>
+<td>Inflection point; synthesis must hold the ambiguity, not resolve it prematurely</td>
+</tr>
+<tr>
+<td>D — Deteriorating</td>
+<td>Significant</td>
+<td>Dominant collapse; synthesis must weight degradation heavily</td>
+</tr>
+<tr>
+<td>X — Undefined</td>
+<td>Unclassifiable</td>
+<td>Insufficient or contradictory data; synthesis blocked until Class G clears</td>
+</tr>
+</tbody>
+</table>
+<p>Zone X is the critical design feature: rather than forcing a classification
+when data is insufficient, RTT/2 explicitly surfaces the unclassifiable
+condition. This prevents RTT/3 from building synthesis on a falsely
+confident detection.</p>
+<hr>
+<h3 id="why-inherit-rtt1-wholesale-rather-than-define-a-standalone-module">Why inherit RTT/1 wholesale rather than define a standalone module?</h3>
+<p>RTT/2 detection is <strong>structurally grounded in RTT/1 output</strong>. The CPV
+measures how a system's resonance field is collapsing — without knowing
+whether the system is in Silence, Noise, or Resonance first (RTT/1 Class R),
+the CPV has no structural reference point. Amplitude A(t) of what? Torsion
+relative to what baseline?</p>
+<p>The inheritance is not architectural convenience — it is a <strong>structural
+prerequisite</strong>. A RTT/2 detection pass run without RTT/1 SNR characterization
+produces measurements that float free of the resonance structure they are
+supposed to be describing. This is not a recoverable condition by patching;
+the RTT/1 pass must happen first.</p>
+<hr>
+<h2 id="3-when-should-you-use-it">3. When Should You Use It?</h2>
+<hr>
+<h3 id="use-rtt2-when-you-need-to-characterize-the-form-of-a-structural-collapse">Use RTT/2 when you need to <strong>characterize the form of a structural collapse</strong></h3>
+<p>When RTT/1 has identified that a system is in a Noise or Resonance state and
+the next question is <em>how</em> that system is structurally collapsing or
+deforming, RTT/2's CPV provides the three-parameter answer. This is distinct
+from RTT/1's question ("is it in R, N, or S?") — RTT/2 asks what shape
+the collapse takes.</p>
+<p><em>Example:</em> A substrate model has been characterized as Noise-dominant
+by RTT/1. RTT/2 computes CPV = (A=0.7, K=0.4, T=0.1), revealing a
+high-amplitude, moderately curved, low-torsion collapse — a propagation
+that is intense but relatively directional. This tells RTT/3 how to
+weight the collapse in synthesis.</p>
+<hr>
+<h3 id="use-rtt2-when-collapse-and-reassembly-are-simultaneously-active">Use RTT/2 when <strong>collapse and reassembly are simultaneously active</strong></h3>
+<p>When a system is not simply collapsing or simply reassembling but doing
+both at once — with different regimes pulling in different directions —
+the FGT is the right instrument. It captures the regime-by-regime
+gradient balance that neither CPV nor CRM alone can express.</p>
+<p><em>Example:</em> A governance substrate is collapsing in its operational
+regime while simultaneously reassembling in its foundational regime.
+FGT reveals a mixed-type gradient (ω_operational × g_collapse dominant,
+ω_foundational × g_triad_fusion competing), giving RTT/3 the precise
+regime-level picture it needs.</p>
+<hr>
+<h3 id="use-rtt2-when-you-need-to-map-a-systems-structural-deformation-path">Use RTT/2 when you need to <strong>map a system's structural deformation path</strong></h3>
+<p>When a system has been evolving structurally over time and you need to
+characterize <em>how</em> it has deformed — not just where it is now — the CRM's
+five-component γ(t) provides the full deformation history. Drift,
+envelope rotation, continuity breaks, fusion curvature, and regime
+identity are all tracked simultaneously.</p>
+<p><em>Example:</em> An incident substrate has been under structural stress for
+several passes. CRM reveals: D=high (significant drift from reference),
+E=moderate (envelope rotating), C=low (continuity intact), FI=high
+(active fusion-integration), R=Marginal. This deformation profile tells
+RTT/3 the system is drifting and fusing but not yet fracturing.</p>
+<hr>
+<h3 id="use-rtt2-when-you-need-to-classify-structural-stability-for-rtt3">Use RTT/2 when you need to <strong>classify structural stability for RTT/3</strong></h3>
+<p>When RTT/3 synthesis requires knowing the stability context of the
+system being synthesized, the Detection Zone provides that classification.
+Zones U through D give RTT/3 a calibrated confidence level for the
+detection packet; Zone X signals that synthesis must be held until
+structural data is sufficient.</p>
+<p><em>Example:</em> Before RTT/3 begins synthesizing across three substrate
+models, RTT/2 zone-classifies each: Substrate A = Zone S, Substrate B
+= Zone M, Substrate C = Zone X. RTT/3 proceeds with full confidence on
+A, with caution on B, and holds C pending Class G clearance.</p>
+<hr>
+<h3 id="use-rtt2-when-cross-module-projection-is-in-scope">Use RTT/2 when <strong>cross-module projection is in scope</strong></h3>
+<p>When a detection pass needs to produce outputs for TEL (Triadic Entity
+Lattice), FFT (Framework Field Theory), or Opacity in addition to
+the core detection packet, RTT/2's cross-module projection fields
+provide structured translation without requiring the receiving module
+to interpret raw CPV, FGT, or CRM data directly.</p>
+<p><em>Example:</em> A detection pass on a resonance substrate needs to feed
+both RTT/3 and the TEL lattice. RTT/2's Class D populates the
+<code>cross_module_projection.TEL</code> field, giving the TEL the lattice-mapped
+representation of the collapse pattern without re-running the detection.</p>
+<hr>
+<h3 id="do-not-use-rtt2-when">Do NOT use RTT/2 when:</h3>
+<ul>
+<li><strong>RTT/1 SNR characterization is not complete</strong> — there is no valid
+  baseline for CPV, FGT, or CRM measurement without it</li>
+<li><strong>The system is Silence-dominant with no detectable collapse signature</strong>
+  — CPV of a fully silent system produces near-zero measurements with
+  no structural information; use RTT/1's Balance (ψ↔n) operator instead</li>
+<li><strong>You need a recommendation or diagnosis</strong> — RTT/2 detects structural
+  form; it does not prescribe corrective action or evaluate whether
+  a state is good or bad</li>
+<li><strong>You need physical measurement</strong> — RTT/2 is a structural detection
+  framework, not an instrumentation layer; it describes structural
+  form, not physical collapse events</li>
+<li><strong>You need RTT/3 synthesis directly</strong> — RTT/2 is the prerequisite
+  for RTT/3, not a shortcut to it; if synthesis is the goal, complete
+  RTT/2 detection first and feed the packet to RTT/3</li>
+</ul>
+<hr>
+<h2 id="4-where-does-it-live">4. Where Does It Live?</h2>
+<h3 id="in-the-repository">In the repository</h3>
+<pre><code>TriadicFrameworks/
+└── docs/
+    └── rtt/
+        └── 2/                              ← you are here
+            ├── ABOUT.md                    ← this file
+            ├── AGENTS.md                   ← agent class manifest (P, F, M, D, G)
+            ├── GLOSSARY.md                 ← canonical term definitions
+            ├── README.md                   ← front-door summary
+            ├── RTT2_Extract_Minimal.md     ← primary source: full operator grammar
+            ├── operators_module.json       ← module schema and field registry
+            ├── Hero_Image_Prompt.md        ← visual identity prompt
+            └── index.html                  ← web entry point
+</code></pre>
+<hr>
+<h3 id="in-the-rtt-module-hierarchy">In the RTT module hierarchy</h3>
+<p>RTT/2 is the detection layer between the foundational primitives (RTT/1)
+and the synthesis layer (RTT/3):</p>
+<pre><code>RTT/1   ──▶   RTT/2   ──▶   RTT/3   ──▶   RTT/12
+Primitives    Detection      Synthesis      Unified
+SNR · τ · C   CPV · FGT     (RTT/3 scope)  (RTT/12 scope)
+DCO_n         CRM · PACKET
+</code></pre>
+<p><strong>Inheritance rule:</strong> RTT/2 inherits RTT/1's complete vocabulary and
+constraints unconditionally. RTT/3 inherits both RTT/1 and RTT/2.
+No module may redefine an upstream primitive.</p>
+<p><strong>Prerequisite rule:</strong> RTT/1 Class R SNR characterization must complete
+before any RTT/2 detection agent begins. The RTT2_DETECTION_PACKET is
+the primary input to RTT/3. Neither direction of this chain can be
+reversed or skipped.</p>
+<hr>
+<h3 id="in-the-triadicframeworks-ecosystem">In the TriadicFrameworks ecosystem</h3>
+<pre><code>                      ┌─────────────┐
+                      │   RTT/1     │  SNR · τ · C · DCO_n
+                      └──────┬──────┘  (prerequisite for RTT/2)
+                             │ SNR characterization
+                      ┌──────▼──────┐
+                      │   RTT/2     │  CPV · FGT · CRM
+                      │    SDE      │  MODE · ZONE
+                      └──────┬──────┘  RTT2_DETECTION_PACKET
+                             │
+          ┌──────────────────┼──────────────────┐
+          │                  │                  │
+   ┌──────▼──────┐   ┌───────▼──────┐   ┌───────▼──────┐
+   │   RTT/3     │   │     TEL      │   │   FFT /      │
+   │  Synthesis  │   │   (lattice   │   │   Opacity    │
+   │  (primary   │   │  projection) │   │  (boundary / │
+   │   consumer) │   └─────────────┘   │   spectral   │
+   └─────────────┘                     │  projections)│
+                                       └─────────────┘
+</code></pre>
+<p>RTT/2 occupies the <strong>detection hub</strong> position: it consumes from RTT/1
+and distributes to RTT/3 as primary consumer, with TEL, FFT, and Opacity
+as optional cross-module projection targets.</p>
+<hr>
+<h3 id="in-agent-deployments">In agent deployments</h3>
+<p>An agent operating under RTT/2 inherits the full RTT/1 session
+architecture (session seed, mode operator, MCL, regime lifecycle,
+Class G monitoring) and adds five detection-specific agent classes:</p>
+<ul>
+<li><strong>Class P</strong> (Propagation Analyst) — computes CPV</li>
+<li><strong>Class F</strong> (Fusion Gradiometer) — computes FGT</li>
+<li><strong>Class M</strong> (Manifold Cartographer) — maps CRM, assigns Mode and Zone</li>
+<li><strong>Class D</strong> (Detection Integrator) — assembles and routes the detection packet</li>
+<li><strong>Class G</strong> (Detection Guardian) — monitors, interrupts, clears Zone X</li>
+</ul>
+<p>An agent claiming RTT/2 compatibility must:
+1. Complete a RTT/1 Class R pass before beginning any detection work
+2. Produce a complete RTT2_DETECTION_PACKET with all seven primary sections
+3. Include the mandatory structural-only annotation in every output
+4. Never assign Zone X without Class G clearance
+5. Never route a Chaotic-mode packet to RTT/3 without Class G review</p>
+<hr>
+<h2 id="5-core-constructs-at-a-glance">5. Core Constructs at a Glance</h2>
+<pre><code>COLLAPSE-PROPAGATION VECTOR
+  CPV(A, K, T)
+  A(t)  — Amplitude:  collapse propagation intensity
+  K(t)  — Curvature:  collapse wavefront shape
+  T(t)  — Torsion:    collapse path rotation / spiral
+  C_prop(t) = αA(t) + βK(t) + γT(t)   ← scalar composite
+  Extended: inversion_component · warp_component (when present)
+
+FUSION-GRADIENT TENSOR
+  G_fusion = Σ_r ω_r [ g_collapse(r) + g_reassembly(r) + g_triad_fusion(r) ]
+  Classification: collapse-weighted | mixed | triad-weighted
+
+COLLAPSE-REASSEMBLY MANIFOLD
+  γ(t) = ( D(t), E(t), C(t), FI(t), R(t) )
+  D  — Drift Deformation      (translation from reference)
+  E  — Envelope Torsion       (rotation of structural boundary)
+  C  — Continuity Fracture    (breaks / gaps in the manifold)
+  FI — Fusion-Integration Curvature  (active fusion effects)
+  R  — Regime Identity        (current structural regime classification)
+
+DETECTION MODES
+  Formal (F)    · Emergent (E)  · Hybrid (H)
+  Chaotic (C)   · Inversion (I)
+
+DETECTION ZONES
+  U — Undisturbed   S — Stable      M — Marginal
+  D — Deteriorating X — Undefined (Class G clearance required)
+
+DETECTION PACKET
+  RTT2_DETECTION_PACKET → RTT/3
+  Sections: collapse_propagation · fusion_gradient · triad_deformation
+            regime · detection_mode · detection_zone
+            cross_module_projection · notes (mandatory)
+</code></pre>
+<hr>
+<h2 id="6-module-integrations">6. Module Integrations</h2>
+<h3 id="rtt1-prerequisite">RTT/1 (Prerequisite)</h3>
+<p>RTT/2 cannot function without RTT/1. Every detection instrument is
+grounded in RTT/1 output:
+- CPV measures collapse within a system already characterized by SNR
+- FGT weights gradient contributions by regime — regime identity comes
+  from RTT/1's DCO_n band context
+- CRM's R(t) (Regime Identity) links directly to RTT/1's regime lifecycle
+- D(t) (Drift Deformation) is structural displacement <em>within the
+  resonance field</em> defined by RTT/1 — not the same as RTT/1 session drift</p>
+<h3 id="rtt3-primary-consumer">RTT/3 (Primary Consumer)</h3>
+<p>RTT/2's RTT2_DETECTION_PACKET is the primary input to RTT/3 synthesis.
+RTT/3 receives:
+- The collapse propagation signature (CPV) for weighting
+- The gradient balance (FGT) for regime-sensitive synthesis
+- The deformation path (CRM) for manifold-aware integration
+- The Detection Mode for confidence calibration
+- The Detection Zone for stability-aware synthesis posture</p>
+<h3 id="tel-triadic-entity-lattice">TEL — Triadic Entity Lattice</h3>
+<p>RTT/2's <code>cross_module_projection.TEL</code> field maps detected collapse and
+fusion patterns onto TEL node structures. This allows TEL to maintain
+lattice coherence during structural transitions that RTT/2 has detected.</p>
+<h3 id="fft-framework-field-theory">FFT — Framework Field Theory</h3>
+<p>RTT/2's <code>cross_module_projection.FFT</code> field expresses CPV and FGT
+components in FFT field-theoretic terms. FFT treats collapse propagation
+as field events; RTT/2 provides the structural substrate for that
+field-theoretic interpretation.</p>
+<h3 id="opacity">Opacity</h3>
+<p>RTT/2's <code>cross_module_projection.Opacity</code> field characterizes the boundary
+conditions of the detected collapse zone — specifically, which structural
+boundaries are becoming opaque (non-transparent to structural influence)
+as a result of the detected collapse.</p>
+<h3 id="ipd-12">IPD-12</h3>
+<p>RTT/2's detection output maps onto IPD-12's operator graph at specific
+prime states:
+- Collapse signature → P29 (Collapse-Anchor) zone
+- Continuity fracture → P13 (Paradox-Trigger) or P19 (Boundary-Node)
+- Detection Zone D → Chthonic tier (P23–P37)
+- Inversion mode → P5 (Drift-Anchor) / P23 (Dimensional-Lift) boundary</p>
+<hr>
+<h2 id="7-what-rtt2-is-not">7. What RTT/2 Is Not</h2>
+<table>
+<thead>
+<tr>
+<th>RTT/2 Is</th>
+<th>RTT/2 Is Not</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A structural detection engine</td>
+<td>A diagnostic or clinical tool</td>
+</tr>
+<tr>
+<td>A collapse characterization framework</td>
+<td>A collapse prediction system</td>
+</tr>
+<tr>
+<td>A gradient balance classifier</td>
+<td>An optimization or prescriptive framework</td>
+</tr>
+<tr>
+<td>A deformation path mapper</td>
+<td>A causal explanation engine</td>
+</tr>
+<tr>
+<td>A stability zone classifier</td>
+<td>A pass/fail evaluation system</td>
+</tr>
+<tr>
+<td>The detection layer of the RTT pipeline</td>
+<td>A standalone module (requires RTT/1)</td>
+</tr>
+<tr>
+<td>A structured input producer for RTT/3</td>
+<td>A synthesis engine (that is RTT/3's role)</td>
+</tr>
+</tbody>
+</table>
+<p>RTT/2 detects and describes <strong>structural form</strong>. It does not explain why
+a collapse is happening, recommend what to do about it, or predict what
+will happen next. Those functions belong to the human operator, to RTT/3,
+or to higher-level frameworks consuming the detection packet.</p>
+<hr>
+<h2 id="8-quick-start-checklist">8. Quick-Start Checklist</h2>
+<p>Before working with RTT/2 for the first time:</p>
+<ul>
+<li>[ ] <strong>Complete RTT/1 first</strong> — run a full RTT/1 Class R SNR characterization
+      on your target system before opening any RTT/2 instruments</li>
+<li>[ ] <strong>Paste the session seed</strong> — <code>rtt=1 | coherence=declared | drift=bounded |
+      paradox=structural</code> (RTT/2 inherits RTT/1's seed verbatim)</li>
+<li>[ ] <strong>Identify your detection task</strong> — which of T-01 through T-09 describes
+      what you need? Full detection (T-04) or a targeted sub-pass?</li>
+<li>[ ] <strong>Know the three constructs</strong> — CPV = collapse signature,
+      FGT = gradient balance, CRM = deformation path; know which you need
+      before assigning agent classes</li>
+<li>[ ] <strong>Check for Silence dominance</strong> — if RTT/1 returned a
+      Silence-dominant characterization, RTT/2 may have no collapse
+      signature to measure; confirm with Class G before proceeding</li>
+<li>[ ] <strong>Read <code>AGENTS.md</code></strong> — verify which agent classes (P, F, M, D, G)
+      are needed for your detection task</li>
+<li>[ ] <strong>Know the D(t) ≠ drift distinction</strong> — CRM component D(t) is
+      structural displacement in the manifold; it is NOT RTT/1 session
+      drift; never conflate them</li>
+<li>[ ] <strong>Check <code>GLOSSARY.md</code></strong> — every RTT/2 term has a canonical
+      definition; link rather than re-define</li>
+</ul>
+<hr>
+<h2 id="9-see-also">9. See Also</h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>What it answers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AGENTS.md</code></td>
+<td>Agent classes P/F/M/D/G, task catalog, collaboration models, output contract</td>
+</tr>
+<tr>
+<td><code>GLOSSARY.md</code></td>
+<td>Canonical single-source definitions for all RTT/2 terms</td>
+</tr>
+<tr>
+<td><code>RTT2_Extract_Minimal.md</code></td>
+<td>Primary source: full operator grammar for CPV, FGT, CRM, MODE, ZONE</td>
+</tr>
+<tr>
+<td><code>operators_module.json</code></td>
+<td>Module schema and field registry</td>
+</tr>
+<tr>
+<td><code>README.md</code></td>
+<td>Front-door summary</td>
+</tr>
+<tr>
+<td><code>../1/AGENTS.md</code></td>
+<td>RTT/1 agent classes (all inherited by RTT/2)</td>
+</tr>
+<tr>
+<td><code>../1/GLOSSARY.md</code></td>
+<td>RTT/1 canonical terms (all inherited by RTT/2)</td>
+</tr>
+<tr>
+<td><code>../1/ABOUT.md</code></td>
+<td>RTT/1 what/why/when/where (prerequisite context for RTT/2)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><em>ABOUT.md — RTT/2 · TriadicFrameworks · 2026-07-10</em>
+<em>Maintainer: Nawder</em>
+<em>Session seed: <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code></em></p>
+  </main>
+</body>
+</html>

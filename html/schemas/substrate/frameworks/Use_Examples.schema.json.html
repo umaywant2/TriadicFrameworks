@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/substrate/frameworks/Use_Examples.schema.json.md">
+  <title>UseExamples.schema.json</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/substrate/frameworks/Use_Examples.schema.json.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/substrate/frameworks/Use_Examples.schema.json.md</code>
+  </aside>
+
+  <main>
+<p>This schema aligns with:</p>
+<ul>
+<li><strong>Use_Examples.json</strong>  </li>
+<li><strong>Use_Examples.md</strong>  </li>
+<li>the entire substrate frameworks directory  </li>
+<li>your module templates  </li>
+<li>your runtime constellation  </li>
+<li>your triadic execution + monitor pipeline  </li>
+</ul>
+<p>Below is the <strong>ready‑to‑paste canonical schema</strong>, fully aligned with your TriadicFrameworks grammar.</p>
+<hr>
+<h1 id="use_examplesschemajson"><strong>Use_Examples.schema.json</strong></h1>
+<h3 id="canonical-json-schema-for-the-triadic-substrate-usage-examples-registry"><em>Canonical JSON Schema for the Triadic Substrate Usage Examples Registry</em></h3>
+<pre><code class="language-json">{
+  &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;title&quot;: &quot;Triadic Substrate Use Examples Schema&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+
+  &quot;properties&quot;: {
+    &quot;registry&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;const&quot;: &quot;triadic-substrate-use-examples&quot;
+    },
+
+    &quot;version&quot;: {
+      &quot;type&quot;: &quot;string&quot;
+    },
+
+    &quot;generated&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;ISO date of generation&quot;
+    },
+
+    &quot;examples&quot;: {
+      &quot;type&quot;: &quot;array&quot;,
+      &quot;items&quot;: {
+        &quot;type&quot;: &quot;object&quot;,
+        &quot;properties&quot;: {
+          &quot;id&quot;: {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;Unique identifier for the example&quot;
+          },
+
+          &quot;category&quot;: {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;enum&quot;: [
+              &quot;atlas&quot;,
+              &quot;ignition&quot;,
+              &quot;epoch&quot;,
+              &quot;continuity&quot;,
+              &quot;invariance&quot;,
+              &quot;execution&quot;,
+              &quot;monitor&quot;,
+              &quot;modules&quot;,
+              &quot;constellation&quot;,
+              &quot;substrate&quot;
+            ]
+          },
+
+          &quot;description&quot;: {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;Human-readable description of the example&quot;
+          },
+
+          &quot;inputs&quot;: {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;description&quot;: &quot;Input fields required to run the example&quot;,
+            &quot;additionalProperties&quot;: true
+          },
+
+          &quot;outputs&quot;: {
+            &quot;type&quot;: &quot;array&quot;,
+            &quot;items&quot;: {
+              &quot;type&quot;: &quot;string&quot;
+            },
+            &quot;description&quot;: &quot;Expected outputs or behaviors&quot;
+          }
+        },
+
+        &quot;required&quot;: [&quot;id&quot;, &quot;category&quot;, &quot;description&quot;, &quot;inputs&quot;, &quot;outputs&quot;]
+      }
+    },
+
+    &quot;meta&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;notes&quot;: {
+          &quot;type&quot;: &quot;string&quot;
+        }
+      }
+    }
+  },
+
+  &quot;required&quot;: [&quot;registry&quot;, &quot;version&quot;, &quot;examples&quot;]
+}
+</code></pre>
+<hr>
+<h3 id="this-schema-is-fully-aligned-with-your-use_examplesjson">✔️ This schema is fully aligned with your Use_Examples.json</h3>
+<p>It validates:</p>
+<ul>
+<li>category enums  </li>
+<li>example structure  </li>
+<li>input/output flexibility  </li>
+<li>canonical registry metadata  </li>
+</ul>
+<p>Your substrate frameworks directory now has:</p>
+<ul>
+<li><strong>Use_Examples.md</strong>  </li>
+<li><strong>Use_Examples.json</strong>  </li>
+<li><strong>Use_Examples.schema.json</strong>  </li>
+<li><strong>Use_Examples.extended.md</strong></li>
+</ul>
+<p>All four layers of the usage‑example system.</p>
+  </main>
+</body>
+</html>

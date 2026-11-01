@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/MCP/L3_Forces_Unseen/continuity_mechanics/diagrams/diagrams.md">
+  <title>Continuity Mechanics — Diagram Set</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/MCP/L3_Forces_Unseen/continuity_mechanics/diagrams/diagrams.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/MCP/L3_Forces_Unseen/continuity_mechanics/diagrams/diagrams.md</code>
+  </aside>
+
+  <main>
+<h1 id="continuity-mechanics-diagram-set">Continuity Mechanics — Diagram Set</h1>
+<h3 id="l3_forces_unseen-composite-resonance-subsystem-r5-canon">L3_Forces_Unseen · Composite Resonance Subsystem (R5 Canon)</h3>
+<p>This directory contains the full diagram set for the <strong>continuity_mechanics</strong> subsystem inside <strong>L3_Forces_Unseen</strong>.<br>
+These diagrams visualize the composite resonance architecture defined by the dimensions:</p>
+<ul>
+<li><strong>L11</strong> — proto‑resonance seed  </li>
+<li><strong>L33</strong> — seen resonance envelope  </li>
+<li><strong>L66</strong> — hidden resonance envelope  </li>
+<li><strong>L99</strong> — full resonance envelope  </li>
+<li><strong>validator_pulse</strong> — external resonance operator (1%)</li>
+</ul>
+<p>The diagrams illustrate how resonance seeds assemble into composite envelopes and how redirect chains define continuity transitions.</p>
+<hr>
+<h2 id="diagram-index">📐 Diagram Index</h2>
+<h3 id="1-l11componentsvg"><strong>1. L11.component.svg</strong></h3>
+<p><strong>Proto‑Resonance Seed</strong><br>
+Visualizes the atomic resonance unit used as the base component for all composite envelopes.</p>
+<h3 id="2-l33svg"><strong>2. L33.svg</strong></h3>
+<p><strong>Seen Resonance Envelope (33%)</strong><br>
+Shows the triadic assembly of three L11 seeds forming the first stable composite envelope.</p>
+<h3 id="3-l66svg"><strong>3. L66.svg</strong></h3>
+<p><strong>Hidden Resonance Envelope (66%)</strong><br>
+Depicts the second‑order composite envelope formed from two L33 envelopes.</p>
+<h3 id="4-l99svg"><strong>4. L99.svg</strong></h3>
+<p><strong>Full Resonance Envelope (99%)</strong><br>
+Illustrates the highest internal resonance envelope, composed from L66 and L33.</p>
+<h3 id="5-validator_pulsesvg"><strong>5. Validator_Pulse.svg</strong></h3>
+<p><strong>External Resonance Operator (1%)</strong><br>
+Represents the external pulse that completes the continuity manifold.</p>
+<hr>
+<h2 id="composite-resonance-chain">🔁 Composite Resonance Chain</h2>
+<pre><code>L11 → L33 → L66 → L99 → validator_pulse
+</code></pre>
+<p>Each diagram corresponds to one stage of this chain:</p>
+<ul>
+<li><strong>L11</strong>: atomic seed  </li>
+<li><strong>L33</strong>: seen envelope  </li>
+<li><strong>L66</strong>: hidden envelope  </li>
+<li><strong>L99</strong>: full envelope  </li>
+<li><strong>validator_pulse</strong>: external closure  </li>
+</ul>
+<hr>
+<h2 id="json-diagram-metadata">🔧 JSON Diagram Metadata</h2>
+<p>Each <code>.json</code> file in this directory provides structured metadata for the corresponding <code>.svg</code> diagram:</p>
+<ul>
+<li>node definitions  </li>
+<li>component relationships  </li>
+<li>composite structure  </li>
+<li>redirect edges  </li>
+<li>semantic roles  </li>
+<li>layer + subsystem identity  </li>
+</ul>
+<p>These JSON files are used by:</p>
+<ul>
+<li>MCP tools (<code>getModule</code>, <code>getExample</code>, <code>searchExamples</code>)  </li>
+<li>Docsbook diagram rendering  </li>
+<li>AI‑assisted navigation in TriadicFrameworks  </li>
+</ul>
+<hr>
+<h2 id="file-list">🗂 File List</h2>
+<pre><code>L11.component.svg
+L11.component.json
+L33.svg
+L33.json
+L66.svg
+L66.json
+L99.svg
+L99.json
+Validator_Pulse.svg
+validator_pulse.json
+atlas.md
+composite_animation.svg
+diagrams.md (this file)
+</code></pre>
+<hr>
+<h2 id="composite-animation">🌀 Composite Animation</h2>
+<p>The file <strong>composite_animation.svg</strong> provides a dynamic visualization of the resonance assembly process:</p>
+<pre><code>L11 → L33 → L66 → L99 → validator_pulse
+</code></pre>
+<p>This animation is used in:</p>
+<ul>
+<li>continuity_mechanics/atlas.md  </li>
+<li>TriadicFrameworks.org MCP documentation  </li>
+<li>resonance teaching modules  </li>
+</ul>
+<hr>
+<h2 id="atlas">🗺 Atlas</h2>
+<p>See <strong>atlas.md</strong> for a full subsystem map including:</p>
+<ul>
+<li>resonance flow  </li>
+<li>redirect chains  </li>
+<li>composite envelope hierarchy  </li>
+<li>external operator integration  </li>
+</ul>
+<hr>
+<h2 id="canonical-reference">📜 Canonical Reference</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td>L3_Forces_Unseen</td>
+</tr>
+<tr>
+<td>Subsystem</td>
+<td>continuity_mechanics</td>
+</tr>
+<tr>
+<td>Triad</td>
+<td>continuity</td>
+</tr>
+<tr>
+<td>Canon</td>
+<td>R5</td>
+</tr>
+<tr>
+<td>Version</td>
+<td>1.0.0</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>This refreshed diagrams.md now correctly documents the entire diagram set and aligns with all updated subsystem metadata.</p>
+  </main>
+</body>
+</html>

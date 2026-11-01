@@ -1,0 +1,1122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/book/glossary.md">
+  <title>Glossary</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/book/glossary.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/book/glossary.md</code>
+  </aside>
+
+  <main>
+<h1 id="glossary">Glossary</h1>
+<blockquote>
+<p><strong>The authoritative definition of every term in the TriadicFrameworks system.</strong>
+This glossary expands the Quick Reference in the <a href="./index">Book Index</a>.
+Definitions here are precise — not introductory summaries. When a term is used
+in a module, session, or book section, its meaning is exactly what is stated here.</p>
+</blockquote>
+<hr>
+<h2 id="how-to-use-this-glossary">How to Use This Glossary</h2>
+<p>Terms are organized by domain, not alphabetically, because TriadicFrameworks terms
+are deeply interconnected — understanding a term often requires understanding the
+terms that surround it. Read a section in order when you are learning a domain.
+Jump to the <a href="#master-alphabetical-index">Master Alphabetical Index</a> when you know
+the term and need its definition quickly.</p>
+<p><strong>Cross-references</strong> appear as → <em>Term</em> when another glossary entry is directly
+relevant. Follow them when a definition depends on another term you have not yet
+read.</p>
+<p><strong>Module IDs</strong> appear in backtick code format when a glossary term has a backing
+specification in the registry (e.g., <code>rtt-anchor-definition</code>). The registry entry
+is the authoritative structural specification; this glossary is the human-readable
+definition.</p>
+<hr>
+<h2 id="sections">Sections</h2>
+<ol>
+<li><a href="#1-core-system-concepts">Core System Concepts</a></li>
+<li><a href="#2-the-rtt-engine">The RTT Engine</a></li>
+<li><a href="#3-module-architecture">Module Architecture</a></li>
+<li><a href="#4-the-role-enum">The Role Enum</a></li>
+<li><a href="#5-the-layer-enum">The Layer Enum</a></li>
+<li><a href="#6-the-session-grammar">The Session Grammar</a></li>
+<li><a href="#7-output-formats">Output Formats</a></li>
+<li><a href="#8-the-clarity-system">The Clarity System</a></li>
+<li><a href="#9-operator-invocation">Operator Invocation</a></li>
+<li><a href="#10-the-dependency-system">The Dependency System</a></li>
+<li><a href="#11-session-failure-modes">Session Failure Modes</a></li>
+<li><a href="#12-versioning-and-module-status">Versioning and Module Status</a></li>
+<li><a href="#13-attribution-and-authorship">Attribution and Authorship</a></li>
+<li><a href="#master-alphabetical-index">Master Alphabetical Index</a></li>
+</ol>
+<hr>
+<h2 id="1-core-system-concepts">1. Core System Concepts</h2>
+<hr>
+<p><strong>Canon</strong>
+The set of five irreversible commitments that define what TriadicFrameworks is, what it does, and who made it. The canon is the outermost boundary of the system — every module, session, and output exists within it, not outside it. The canon is permanent and author-controlled; it cannot be modified through the contribution process. Backing document: <a href="./canon"><code>/docs/book/canon</code></a>.</p>
+<hr>
+<p><strong>Canon Commitment</strong>
+One of the five individual declarations that together constitute the → <em>Canon</em>. Each commitment is backed by a foundational anchor module in the registry and has a precise canonical statement that must be quoted exactly when cited. The five commitments are: RTT Is the Engine, Clarity Is Precision Not Comfort, Modules Are the Unit of Knowledge, Sessions Are the Unit of Application, and Attribution Is Honest.</p>
+<hr>
+<p><strong>Clarity</strong>
+In TriadicFrameworks, clarity is a structural property of an output — not a psychological property of the person reading it. Formally defined by the → <em>Nawderian Theorem of Validator Pulses</em> as a function of → <em>signal coherence</em> across → <em>validator layers</em>. An output is clear when its signal is high and its coherence is high simultaneously across all layers of evaluation. Comfort, agreement, and familiarity are not evidence of clarity.</p>
+<hr>
+<p><strong>Module</strong>
+The atomic unit of knowledge in TriadicFrameworks. A module is a structured knowledge unit with a defined → <em>role</em>, → <em>layer</em>, → <em>scope</em>, version, and dependency map. Every module is specified by exactly four files: <code>module.json</code>, <code>module.md</code>, <code>module_links.json</code>, and <code>module_session.json</code>. Modules are invoked in sessions; prose documents are not. See → <em>Four-File Architecture</em>.</p>
+<hr>
+<p><strong>Practitioner</strong>
+A person who applies TriadicFrameworks by initializing sessions, invoking operators, and evaluating outputs against the → <em>Clarity System</em>. A practitioner has completed Parts I, II, and III of the Book and can answer every item on Part III's exit checklist. The word "practitioner" is used specifically in this system — it is not a synonym for "user" or "reader."</p>
+<hr>
+<p><strong>Recursive Triadic Thinking (RTT)</strong>
+The governing engine of TriadicFrameworks. <code>canon-anchor-rtt-engine</code>. RTT is the structural method by which all system outputs are produced. It holds that any meaningful unit of thought has exactly three structural faces — generative, present, and terminal — and that clarity is produced by parsing all three in sequence, recursively. RTT is not one analytical tool among many; it is the substrate from which the system is built. See → <em>Section 2</em> for the full RTT vocabulary.</p>
+<hr>
+<p><strong>Registry</strong>
+The complete set of all active, draft, deprecated, and archived modules in the TriadicFrameworks system, organized by → <em>module group</em>. The registry is the source of truth for which modules exist, what they cover, and how they relate. The human-readable version lives at <a href="./registry"><code>/docs/book/registry</code></a>. The machine-readable version is <code>modules_group.json</code> plus the four files of each module.</p>
+<hr>
+<p><strong>Session</strong>
+The bounded operational container in which every application of TriadicFrameworks takes place. A session is defined by exactly nine fields — the → <em>Session Grammar</em> — which must be fully populated before any operator is invoked. Sessions are reproducible: two practitioners running the same session on the same input should produce structurally equivalent outputs. A session that closes before all nine fields have been populated is not a completed session; it is an abandoned one. <code>canon-anchor-session-unit</code>.</p>
+<hr>
+<p><strong>System</strong>
+When used without qualification in TriadicFrameworks documentation, "the system" refers to the complete TriadicFrameworks system: its canon, its module registry, its session grammar, its clarity standard, and the body of canonical sessions and documentation. It does not refer to a software system, a technical platform, or any external tool.</p>
+<hr>
+<h2 id="2-the-rtt-engine">2. The RTT Engine</h2>
+<hr>
+<p><strong>Generative Face</strong>
+The first of the three structural faces produced by an → <em>RTT pass</em>. The generative face answers the question: <em>Where did this come from?</em> It identifies the origin, cause, prior state, or input context of the unit of thought being parsed. A generative face that answers only "various factors" or "complex history" is not substantive — it must name specific origins.</p>
+<hr>
+<p><strong>Present Face</strong>
+The second of the three structural faces. The present face answers the question: <em>What is this, right now?</em> It describes the current form, active state, or observable structure of the unit of thought. The present face is the most commonly underspecified — practitioners often write directional analysis that belongs in the terminal face and call it the present state.</p>
+<hr>
+<p><strong>Terminal Face</strong>
+The third of the three structural faces. The terminal face answers the question: <em>Where is this going?</em> It describes the direction, consequence, forward trajectory, or telos of the unit of thought. The terminal face is the most frequently omitted in malformed sessions; its absence is the most common cause of a → <em>Face Completeness</em> failure.</p>
+<hr>
+<p><strong>RTT Pass</strong>
+A single application of RTT to a → <em>InputUnit</em>, producing an → <em>OutputUnit</em> containing all three structural faces plus a <code>pass_depth</code> stamp and a <code>next_input</code> for potential recursive extension. A pass is the atomic unit of RTT execution. Multiple passes on the same input constitute → <em>recursion</em>.</p>
+<hr>
+<p><strong>Pass Depth</strong>
+The integer indicating how many RTT passes have been applied to derive a given output. A <code>pass_depth</code> of 1 indicates a single pass. A <code>pass_depth</code> of 2 indicates the output was produced by running RTT on the <code>next_input</code> of a depth=1 pass. Pass depth is recorded in every → <em>OutputUnit</em> and evaluated by → <em>Pass Differentiation</em> in the clarity criteria.</p>
+<hr>
+<p><strong>Recursion</strong>
+In RTT, recursion means the → <em>OutputUnit</em> of one pass becomes the → <em>InputUnit</em> of the next. Each recursive pass must produce at least one claim that is structurally distinct from all prior passes — a claim that could not have been produced without the prior pass's output as input. Recursion that merely restates the prior pass in different language is not recursion; it is repetition. The <code>rtt-op-recursive-extension</code> module governs multi-depth recursion.</p>
+<hr>
+<p><strong>InputUnit</strong>
+The well-formed data structure required as input by any RTT operator. An InputUnit has exactly two required fields: <code>content</code> (the raw input text or reference) and <code>scope</code> (a precise one-sentence declaration of what the content represents and what it does not). A raw string is not an InputUnit. Wrapping content without declaring its scope is not a valid InputUnit. <code>input-unit-grammar</code>.</p>
+<hr>
+<p><strong>OutputUnit</strong>
+The structured data structure produced by every RTT operator invocation. An OutputUnit has five fields: <code>generative_face</code>, <code>present_face</code>, <code>terminal_face</code>, <code>pass_depth</code>, and <code>next_input</code>. Every field is required. An output missing any field is an incomplete OutputUnit and cannot be submitted to a validator. <code>output-unit-grammar</code>.</p>
+<hr>
+<p><strong>Next Input</strong>
+The fifth field of an → <em>OutputUnit</em>. <code>next_input</code> is the current OutputUnit repackaged as an → <em>InputUnit</em> for the next RTT pass. It is produced automatically by the RTT operator. Its <code>content</code> field is a concise statement of the output's key finding. Its <code>scope</code> field is narrowed to the specific structural claim identified in the current pass. A session that declares <code>depth=1</code> still produces <code>next_input</code> — for potential future extension, not for immediate use.</p>
+<hr>
+<p><strong>Three Faces</strong>
+Collective shorthand for → <em>Generative Face</em>, → <em>Present Face</em>, and → <em>Terminal Face</em>. All three must be present in every → <em>OutputUnit</em>. They are not interchangeable with "past," "present," and "future" — the faces describe structural relationships within any unit of thought, not temporal position.</p>
+<hr>
+<h2 id="3-module-architecture">3. Module Architecture</h2>
+<hr>
+<p><strong>Four-File Architecture</strong>
+The specification pattern for every module in TriadicFrameworks. Every module is defined by exactly four files: <code>module.json</code> (identity manifest), <code>module.md</code> (canonical prose content), <code>module_links.json</code> (dependency and relationship map), and <code>module_session.json</code> (runtime session-context bindings). No file is optional. A module missing any file is an incomplete module and cannot be invoked in a session.</p>
+<hr>
+<p><strong><code>module.json</code></strong>
+The identity manifest of a module. Contains: <code>id</code>, <code>label</code>, <code>role</code>, <code>layer</code>, <code>scope</code>, <code>version</code>, <code>status</code>, <code>dependencies</code>, and <code>tags</code>. This is the first file to read when encountering any module. The <code>scope</code> field is the contract — the module's prose must not exceed it. All other files are subordinate to this one.</p>
+<hr>
+<p><strong><code>module.md</code></strong>
+The human-readable prose content of a module. Written within the boundaries declared by <code>module.json</code>'s <code>scope</code> field. Contains definitions, explanations, examples, and invocation syntax (for operator-role modules). Read after <code>module.json</code> — the manifest constrains the prose, not the reverse.</p>
+<hr>
+<p><strong><code>module_links.json</code></strong>
+The dependency and relationship map of a module. Contains: <code>depends_on</code>, <code>required_by</code>, <code>related</code>, <code>supersedes</code>, and <code>superseded_by</code>. The structural wiring of the module — it defines what the module requires, what requires it, and its version lineage. Read second, after <code>module.json</code>, to understand the module's position in the dependency graph before reading its content.</p>
+<hr>
+<p><strong><code>module_session.json</code></strong>
+The runtime session-context bindings of a module. Contains: <code>invocation_syntax</code>, <code>input_schema</code>, <code>output_schema</code>, <code>valid_layers</code>, <code>valid_roles</code>, and <code>validator_id</code>. Defines how the module behaves when active in a session. A module without this file can be read but not invoked.</p>
+<hr>
+<p><strong>Module ID</strong>
+The stable unique identifier of a module. Follows the convention <code>domain-role_short-descriptor</code> in kebab-case lowercase. Module IDs do not change across versions. When referencing a module in <code>active_modules</code>, <code>depends_on</code>, or any other structural field, always use the ID — never the label. <code>module-id-grammar</code>.</p>
+<hr>
+<p><strong>Module Group</strong>
+A named cluster of related modules that share a domain, purpose, or structural region. Defined in <code>modules_group.json</code> at the repository root. A module can belong to more than one group. Groups are the primary navigation unit for practitioners who know what domain they are working in but not which specific module applies.</p>
+<hr>
+<p><strong><code>modules_group.json</code></strong>
+The file at the repository root that defines all module groups in the system. Each entry declares a group's <code>id</code>, <code>label</code>, <code>description</code>, <code>layer_affinity</code>, and <code>modules</code> array. The <code>modules</code> array is ordered — the order reflects recommended reading sequence for practitioners new to the group.</p>
+<hr>
+<p><strong>Scope (module)</strong>
+The precise declaration of what a module claims to know, stated in <code>module.json</code>'s <code>scope</code> field. The scope is a contract: the module's prose must cover everything the scope declares and nothing beyond it. Prose that exceeds the scope is a scope violation. A module whose prose does not reach the scope's full extent has underclaimed. <code>scope-statement-grammar</code>.</p>
+<hr>
+<p><strong>Scope Statement</strong>
+The specific text in <code>module.json</code>'s <code>scope</code> field. One to three sentences. Must include a coverage declaration (what the module covers) and, where the boundary is non-obvious, an exclusion declaration (what the module does not cover). Must be testable: at any point, a practitioner must be able to check a specific claim against the scope statement and get a binary in/out answer.</p>
+<hr>
+<p><strong>Gap</strong>
+A module that should exist in the system but does not. Three types: <strong>Type 1</strong> (a missing dependency — a <code>depends_on</code> reference that points to a non-existent module), <strong>Type 2</strong> (a missing role/layer intersection — no module covers a needed domain at a specific role and layer), <strong>Type 3</strong> (a navigational gap — the modules exist but no group clusters them for discovery). See → <em>Apparent Gap</em> and → <em>True Gap</em>.</p>
+<hr>
+<p><strong>Apparent Gap</strong>
+A gap that appears to exist but does not — because the needed module exists under a different ID, or is in a group that was not checked. Before declaring a gap, a practitioner must exhaust synonym searches and adjacent group browsing. An apparent gap resolved this way is not a gap; it is a discovery path issue.</p>
+<hr>
+<p><strong>True Gap</strong>
+A gap confirmed after exhausting all apparent-gap checks. A true gap exists when: no existing module has a scope covering the needed content, the content cannot be served by composing two adjacent modules, and the content is within the system's canon. Confirmed true gaps are filled by the <code>gap-fill-proto</code> protocol.</p>
+<hr>
+<p><strong>Ratification</strong>
+The process by which a module's status changes from <code>draft</code> to <code>active</code>. Ratification requires: minimum 14-day observation period, at least one production session using the module, no open issues, a passing scope compliance check, and a passing dependency audit. Ratification is separate from the PR merge process — a module can be merged as <code>draft</code> and ratified later. See the <a href="../contributing#the-ratification-flow">Contributing Guidelines</a>.</p>
+<hr>
+<p><strong>Reading Order</strong>
+The prescribed sequence for reading a module's four files: <code>module.json</code> first, <code>module_links.json</code> second, <code>module.md</code> third, <code>module_session.json</code> fourth. Violating this order is the most common source of module misreading. The manifest constrains the prose; read the constraint before reading what it constrains.</p>
+<hr>
+<h2 id="4-the-role-enum">4. The Role Enum</h2>
+<p>Every module has exactly one role. The role declares the module's <em>functional type</em> — what it does in the system.</p>
+<hr>
+<p><strong><code>anchor</code></strong>
+A module that establishes a fixed reference point the rest of the system depends on. Anchors are the closest thing the system has to axioms — they do not derive their validity from other modules; other modules derive their validity from them. The desire to override or extend an anchor is a signal of a misunderstanding of the system's scope, not evidence that the anchor is wrong.
+<em>Examples:</em> <code>rtt-anchor-definition</code>, <code>session-grammar-anchor</code>, <code>nawderian-theorem-validator-pulses</code></p>
+<hr>
+<p><strong><code>lens</code></strong>
+A module that provides a perspective through which other content is interpreted. A lens does not change the content it is applied to — it changes the angle of view. Multiple lenses may be active in a single session simultaneously. Lenses must not contradict each other at the foundational layer.
+<em>Examples:</em> <code>lens-temporal</code>, <code>lens-stakeholder</code>, <code>clarity-lens-signal-coherence</code></p>
+<hr>
+<p><strong><code>protocol</code></strong>
+A module that defines a repeatable procedure — a numbered sequence of steps that produces a predictable class of output when followed correctly. Protocols are deterministic in structure even when their inputs vary. Protocols may invoke operators; operators do not invoke protocols.
+<em>Examples:</em> <code>session-init-proto</code>, <code>module-author-proto</code>, <code>gap-fill-proto</code></p>
+<hr>
+<p><strong><code>grammar</code></strong>
+A module that specifies a structural pattern for language, thought, or output. Grammars define the valid structures within which content may be expressed. A grammar is violated when content appears that has no place in the defined structure.
+<em>Examples:</em> <code>session-grammar-spec</code>, <code>operator-invocation-grammar</code>, <code>input-unit-grammar</code></p>
+<hr>
+<p><strong><code>operator</code></strong>
+A module that performs a transformation on a defined input to produce a defined output. Operators are the workhorses of the session — every transformation is an operator invocation. Every operator has a full invocation signature in <code>module_session.json</code>. A call with missing parameters is malformed.
+<em>Examples:</em> <code>rtt-op-core</code>, <code>clarity-op-spectral</code>, <code>scope-check-op</code></p>
+<hr>
+<p><strong><code>index</code></strong>
+A module that organizes and surfaces access to a collection of modules. An index maintains a structured registry of a module group or domain with access patterns and cross-references. The book's index page is an index-role artifact.
+<em>Examples:</em> <code>index-master-registry</code>, <code>index-operator-suite</code>, <code>index-by-role</code></p>
+<hr>
+<p><strong><code>map</code></strong>
+A module that charts the relationships between modules or concepts. Maps provide navigational views of regions of the system — showing how multiple modules relate without performing any transformation or invocation.
+<em>Examples:</em> <code>map-session-lifecycle</code>, <code>map-dependency-graph</code>, <code>map-canon-constraint-model</code></p>
+<hr>
+<p><strong><code>bridge</code></strong>
+A module that connects two otherwise separate regions of the system. A bridge defines the translation layer between two module clusters whose scopes do not naturally overlap. Bridges are narrow by definition — a bridge claiming a wide scope is misclassified.
+<em>Examples:</em> <code>bridge-rtt-to-session</code>, <code>bridge-lens-to-rtt</code>, <code>bridge-operator-to-validator</code></p>
+<hr>
+<p><strong><code>validator</code></strong>
+A module that checks outputs or claims against defined criteria. Validators produce → <em>ValidatorAssessment</em> objects — structured assessments of which criteria are satisfied, which are not, and which cannot be evaluated with the available information. Validators do not produce verdicts of "good" or "bad."
+<em>Examples:</em> <code>clarity-val-rtt-output</code>, <code>scope-val</code>, <code>session-record-val</code></p>
+<hr>
+<p><strong><code>field</code></strong>
+A module that holds the specification of a single named parameter of a session or structure. Field modules define a slot's type, valid values, validation rules, and default (if any). The nine session grammar fields are each their own field-role module.
+<em>Examples:</em> <code>session-grammar-field-intent</code>, <code>session-grammar-field-scope</code>, <code>session-grammar-field-validator</code></p>
+<hr>
+<h2 id="5-the-layer-enum">5. The Layer Enum</h2>
+<p>Every module has exactly one layer. The layer declares the module's <em>depth</em> in the cognitive and operational stack. <strong>The dependency direction rule:</strong> modules may depend on modules at the same or lower layer. A module that depends on a module at a higher layer is structurally malformed.</p>
+<hr>
+<p><strong><code>surface</code></strong>
+The highest visible layer; the shallowest structural layer. Holds observable outputs and final-form content — the artifacts, answers, and deliverables that leave the session. Surface modules depend on all layers below them. Nothing within the system depends on them.</p>
+<hr>
+<p><strong><code>structural</code></strong>
+The layer of form. Holds patterns, grammars, and relationships — how things are shaped, connected, and organized, independent of specific content. Consumed by surface and operational modules; depends on foundational modules.</p>
+<hr>
+<p><strong><code>operational</code></strong>
+The layer of process. Holds protocols, sessions, and runtime behavior — how the system runs, how modules are invoked, how outputs are produced. This is where the system comes to life. Most of Part III operates at this layer.</p>
+<hr>
+<p><strong><code>foundational</code></strong>
+The layer of commitment. Holds canon, axioms, and non-negotiable specifications. The layer that cannot be changed without changing the system itself. Every other layer depends on it; it depends on nothing within the system.</p>
+<hr>
+<p><strong><code>meta</code></strong>
+The layer of self-reference. Holds content about the system itself — the book, the indexes, the maps, the changelog. The meta layer can reference any other layer. It produces no operational outputs; it is for understanding, not execution.</p>
+<hr>
+<p><strong>Dependency Direction Rule</strong>
+The structural constraint that modules may depend on modules at the same or lower layer, never on modules at a higher layer. A foundational module that depends on an operational module is malformed. This rule governs the construction of every <code>depends_on</code> list in the system.</p>
+<hr>
+<p><strong>Role × Layer Position</strong>
+The unique position a module occupies in the role × layer space, determined by the combination of its declared role and layer. The position determines what the module can claim, what it can do, what it can depend on, and what can depend on it.</p>
+<hr>
+<h2 id="6-the-session-grammar">6. The Session Grammar</h2>
+<p>The session grammar is the 9-field protocol governing every application of TriadicFrameworks. <code>session-grammar-anchor</code>.</p>
+<hr>
+<p><strong>Session Grammar</strong>
+The complete specification of the nine required fields that must be populated before any session begins. The grammar is the mechanism that makes sessions reproducible — it fixes the variable inputs that would otherwise cause the same practitioner to produce different outputs on the same problem. A session with incomplete grammar is malformed. <code>session-grammar-spec</code>.</p>
+<hr>
+<p><strong><code>session_id</code></strong>
+Field 1. A unique identifier for a session instance. Must be stable across the session's lifetime. Recommended format: <code>[domain]-[YYYYMMDD]-[sequence]</code>. A non-unique session_id makes session retrieval, auditing, and resumption impossible. <code>session-grammar-field-session-id</code>.</p>
+<hr>
+<p><strong><code>intent</code></strong>
+Field 2. The declared goal of the session — what it will produce, stated precisely. Must be actionable (directed at a deliverable, not a topic) and testable (answerable with a binary yes/no from the output alone). Prohibited phrasing: "explore," "think about," "consider," "look at." Required phrasing: "produce," "evaluate," "specify," "resolve." <code>session-grammar-field-intent</code>.</p>
+<hr>
+<p><strong><code>scope</code> (session)</strong>
+Field 3. The explicit boundary of the session — what is and is not in play. Must be narrower than the intent's natural range. Format: "This session covers [X]. It does not cover [Y]." The scope is the mid-session check instrument: at any point, any action must be checkable against it with a binary in/out result. <code>session-grammar-field-scope</code>.</p>
+<hr>
+<p><strong><code>active_modules</code></strong>
+Field 4. The complete, dependency-resolved list of modules invoked for this session. Must include every module in every transitive dependency chain of the primary modules. Ordered foundational-to-surface. Uses module IDs, not labels. A list that omits a dependency is not a partial list — it is a malformed one. <code>session-grammar-field-active-modules</code>.</p>
+<hr>
+<p><strong><code>role_context</code></strong>
+Field 5. The functional type(s) of work being performed in the session. Declares one or more values from the → <em>Role Enum</em>. Constrains which modules may be invoked and how outputs are structured. Must be a precise enum value — not a description of the session's activity. <code>session-grammar-field-role-context</code>.</p>
+<hr>
+<p><strong><code>layer_context</code></strong>
+Field 6. The depth at which the session operates. Declares one or more values from the → <em>Layer Enum</em>. Constrains which modules are available. Most sessions operate at a single layer; a session spanning three or more layers is likely conflating multiple sessions. <code>session-grammar-field-layer-context</code>.</p>
+<hr>
+<p><strong><code>input</code> (session)</strong>
+Field 7. The raw material the session works on, wrapped in an → <em>InputUnit</em>. Must be the actual input — not a description of it. Must be consistent with the declared scope. A raw string in this field is malformed; it must be an InputUnit with both <code>content</code> and <code>scope</code> fields populated. <code>session-grammar-field-input</code>.</p>
+<hr>
+<p><strong><code>output_format</code></strong>
+Field 8. The required shape of the session's deliverable. Declares a value from the → <em>FormatEnum</em>. A promise: the session is obligated to produce output that matches this specification exactly. A vague value ("some analysis") is not a valid output format — the validator cannot check against it. <code>session-grammar-field-output-format</code>.</p>
+<hr>
+<p><strong><code>validator</code> (session)</strong>
+Field 9. The module ID of the validator applied to the session's output. Must be present in <code>active_modules</code>. Must be compatible with the declared <code>output_format</code>. A session without a validator has no correctness criterion — its output cannot be distinguished from noise. <code>session-grammar-field-validator</code>.</p>
+<hr>
+<p><strong>Session Initialization</strong>
+The process of populating all nine session grammar fields and verifying each passes its field-level test before any operator is invoked. Governed by <code>session-init-proto</code>. Initialization is complete when all nine fields are non-empty and all nine field tests pass. A session that skips initialization is not a session — it is an unstructured analytical exercise.</p>
+<hr>
+<p><strong>Session Closure</strong>
+The process of formally ending a session: applying the validator, packaging the output, creating the session record, and archiving. Governed by <code>session-close-proto</code>. An output produced before formal closure is a draft. Only closure produces a session output.</p>
+<hr>
+<p><strong>Session Resumption</strong>
+The process of returning to a session that was closed before its intent was fulfilled. Governed by <code>session-resume-proto</code>. Requires retrieving the session record, re-verifying all nine fields (they may have become stale), assessing the output state, and determining the continuation point.</p>
+<hr>
+<p><strong>Field Test</strong>
+The binary pass/fail test applied to each session grammar field to verify it is correctly populated before the session begins. Each field has its own test (defined in the corresponding field module). A field that fails its test must be corrected before the session proceeds. The field test for <code>active_modules</code> is dependency closure verification. The field test for <code>intent</code> is the actionability and testability check.</p>
+<hr>
+<p><strong>Malformed Session</strong>
+A session in which one or more of the nine grammar fields are missing, empty, or incorrectly populated. Malformed sessions produce outputs that cannot be validated, reproduced, or audited. Diagnosing and repairing a malformed session is covered by <code>CS-07</code> in the canonical session library.</p>
+<hr>
+<h2 id="7-output-formats">7. Output Formats</h2>
+<p>The FormatEnum defines the valid shapes for session outputs. The declared <code>output_format</code> determines which validator applies. <code>format-enum-anchor</code>.</p>
+<hr>
+<p><strong><code>StructuredFaces</code></strong>
+An output format consisting of three labeled sections corresponding to the three RTT faces: <code>generative_face</code>, <code>present_face</code>, <code>terminal_face</code>. Also includes <code>pass_depth</code> and <code>next_input</code>. The standard output format for RTT analysis sessions. Validated by <code>clarity-val-rtt-output</code>.</p>
+<hr>
+<p><strong><code>ValidatorAssessment</code></strong>
+An output format consisting of a structured evaluation: <code>validator_id</code>, <code>session_id</code>, <code>pass_depth_evaluated</code>, <code>criteria_results</code> array, <code>overall_coherence</code>, <code>flags</code> array, and <code>recommendation</code>. The standard output format for clarity evaluation sessions. Validated by <code>clarity-val-session-output</code>.</p>
+<hr>
+<p><strong><code>NarrativeAnalysis</code></strong>
+An output format consisting of bounded prose with declared sections. Used when the deliverable is an analytical document rather than a structured data output. The sections must be declared in the <code>output_format</code> field specification — "NarrativeAnalysis" alone is not sufficient; the required sections must be named.</p>
+<hr>
+<p><strong><code>DependencyTrace</code></strong>
+An output format consisting of an ordered traversal path: starting module, level-by-level dependency resolution, full resolved dependency set, hidden dependency findings, cycle check result, and minimum <code>active_modules</code> list. The standard output format for dependency audit sessions.</p>
+<hr>
+<p><strong><code>ModuleSpec</code></strong>
+An output format consisting of one or more of the four module files in valid schema. Used in module authoring and gap-filling sessions. The <code>output_format</code> field must specify which files are required (e.g., "ModuleSpec: all four files" or "ModuleSpec: module.json and module_links.json").</p>
+<hr>
+<p><strong><code>SessionRecord</code></strong>
+An output format consisting of the complete populated session grammar plus the session's final output and validator assessment. The standard format for session archival. A session record is self-contained — it preserves everything needed to understand, audit, or resume the session.</p>
+<hr>
+<h2 id="8-the-clarity-system">8. The Clarity System</h2>
+<hr>
+<p><strong>Nawderian Theorem of Validator Pulses</strong>
+The foundational theorem specifying how clarity is measured in TriadicFrameworks. States: <em>clarity is a function of signal coherence across validator layers — not a subjective sense of understanding.</em> The theorem is a foundational anchor and is not open for revision. <code>nawderian-theorem-validator-pulses</code>.</p>
+<hr>
+<p><strong>Spectral Clarity</strong>
+The operationalization of the → <em>Nawderian Theorem</em> as an evaluative operator. The Spectral Clarity operator (<code>clarity-op-spectral</code>) applies the theorem to an OutputUnit, runs all five → <em>Clarity Criteria</em>, and produces a → <em>ValidatorAssessment</em>. "Spectral" refers to the multi-layer evaluation structure — clarity is assessed across a spectrum of validator layers simultaneously.</p>
+<hr>
+<p><strong>Signal</strong>
+In the context of the Nawderian Theorem, signal refers to the information content of an output. Signal is high when the output makes specific, checkable claims. Signal is low when the output makes vague, hedged, or open-ended claims ("various factors," "complex dynamics," "it depends"). High signal is a necessary but not sufficient condition for → <em>Clarity</em>.</p>
+<hr>
+<p><strong>Coherence</strong>
+In the context of the Nawderian Theorem, coherence refers to the internal consistency of an output and its consistency with the session's declared intent and scope. A coherent output does not contradict itself, does not wander outside the scope, and fulfills the declared intent. High coherence is a necessary but not sufficient condition for → <em>Clarity</em>.</p>
+<hr>
+<p><strong>Signal Coherence</strong>
+The combined property of high signal and high coherence, simultaneously, across all → <em>Validator Layers</em>. Signal coherence is the measure the Nawderian Theorem uses to define clarity. An output with high signal but low coherence is specific but internally inconsistent. An output with high coherence but low signal is consistent but vague. Only the combination constitutes clarity.</p>
+<hr>
+<p><strong>Validator Layer</strong>
+One of the structural levels at which → <em>Signal Coherence</em> is evaluated in the clarity system. The five clarity criteria each correspond to a distinct validator layer: face-level evaluation (face completeness), claim-level evaluation (face substantiveness), pass-level evaluation (pass differentiation), boundary-level evaluation (scope compliance), and goal-level evaluation (intent fulfillment).</p>
+<hr>
+<p><strong>Five Clarity Criteria</strong>
+The five structural criteria applied by the → <em>Spectral Clarity</em> operator to every output. All five must be evaluated for a → <em>ValidatorAssessment</em> to be complete.</p>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>What It Checks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Face Completeness</strong></td>
+<td>All three structural faces are present in every pass</td>
+</tr>
+<tr>
+<td><strong>Face Substantiveness</strong></td>
+<td>Each face makes at least one specific, checkable claim</td>
+</tr>
+<tr>
+<td><strong>Pass Differentiation</strong></td>
+<td>Each successive pass produces claims structurally distinct from all prior passes</td>
+</tr>
+<tr>
+<td><strong>Scope Compliance</strong></td>
+<td>The output contains no references to content outside the session's declared scope</td>
+</tr>
+<tr>
+<td><strong>Intent Fulfillment</strong></td>
+<td>The output fulfills the session's declared intent</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><strong>Face Completeness</strong>
+Clarity Criterion 1. Satisfied when all three structural faces (generative, present, terminal) are present in every pass output. The most commonly failing criterion in beginner sessions — the terminal face is most frequently omitted.</p>
+<hr>
+<p><strong>Face Substantiveness</strong>
+Clarity Criterion 2. Satisfied when every face makes at least one specific, checkable claim — a claim that can be verified or falsified by consulting evidence, running another pass, or applying a validator. "Various factors" does not satisfy this criterion. "The metric was set upstream without a feedback loop" does.</p>
+<hr>
+<p><strong>Pass Differentiation</strong>
+Clarity Criterion 3. Satisfied when each successive RTT pass produces at least one claim that is structurally distinct from all prior passes — a claim that could not have been produced without the prior pass's output as input. A pass that restates the prior pass in different language fails this criterion. Not applicable for <code>pass_depth=1</code> sessions.</p>
+<hr>
+<p><strong>Scope Compliance (clarity criterion)</strong>
+Clarity Criterion 4. Satisfied when no claim in the output references content outside the session's declared scope. A single out-of-scope reference is sufficient to fail this criterion. Not to be confused with → <em>Scope (module)</em> — this criterion applies to session outputs, not module prose.</p>
+<hr>
+<p><strong>Intent Fulfillment</strong>
+Clarity Criterion 5. Satisfied when the output fulfills the session's declared intent. An output can be internally coherent and scope-compliant but still fail this criterion if it produces a different deliverable than the intent specified.</p>
+<hr>
+<p><strong><code>satisfied</code></strong>
+The positive status of a clarity criterion result. Indicates the criterion is met by the evaluated output. All five criteria must return <code>satisfied</code> for a → <em>ValidatorAssessment</em> to recommend <code>accept</code>.</p>
+<hr>
+<p><strong><code>not_satisfied</code></strong>
+The negative status of a clarity criterion result. Indicates the criterion is not met. The → <em>ValidatorAssessment</em> <code>notes</code> field for this criterion will specify what is missing or incorrect. A <code>not_satisfied</code> result produces a <code>revise</code> or <code>re-run</code> recommendation.</p>
+<hr>
+<p><strong><code>insufficient_input</code></strong>
+The indeterminate status of a clarity criterion result. Indicates the validator cannot evaluate the criterion because the output does not provide enough information — not because the criterion is failed, but because it is unevaluable. The practitioner must determine whether the missing information is within scope (revise the output to include it) or outside scope (document and close; evaluate in a follow-on session).</p>
+<hr>
+<p><strong>Overall Coherence Rating</strong>
+A summary field in the → <em>ValidatorAssessment</em> with three possible values: <code>high</code>, <code>moderate</code>, or <code>low</code>. Reflects the validator's holistic assessment of the output's signal coherence across all five criteria. A <code>high</code> rating with a <code>revise</code> recommendation indicates a specific, isolated criterion failure on an otherwise strong output. A <code>low</code> rating with a <code>re-run</code> recommendation indicates systemic structural problems.</p>
+<hr>
+<p><strong>Flags</strong>
+An array field in the → <em>ValidatorAssessment</em> that records notable observations that do not constitute criterion failures but warrant practitioner attention. Common flags include near-violations (content approaching but not crossing a boundary), editorial notes (the terminal face is weaker than the other two), and advisory notices (near-hidden dependency detected).</p>
+<hr>
+<p><strong>Recommendation</strong>
+The concluding field of a → <em>ValidatorAssessment</em>. Three possible values:</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Meaning</th>
+<th>Practitioner Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>accept</code></td>
+<td>Output meets all criteria</td>
+<td>Close the session; package the output</td>
+</tr>
+<tr>
+<td><code>revise</code></td>
+<td>One or more criteria not satisfied; structural work is present</td>
+<td>Return to the specific failing pass; revise only the flagged faces</td>
+</tr>
+<tr>
+<td><code>re-run</code></td>
+<td>Fundamental structural problems throughout</td>
+<td>Discard the output; re-examine the session grammar before re-running</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="9-operator-invocation">9. Operator Invocation</h2>
+<hr>
+<p><strong>Invocation</strong>
+The act of calling an operator module with its full parameter signature to perform a transformation. Every invocation must supply all required parameters by name. A call with missing parameters is malformed — not a partial invocation, but a structurally invalid one.</p>
+<hr>
+<p><strong>Invocation Syntax</strong>
+The exact call signature of an operator, defined in <code>module_session.json</code> → <code>invocation_syntax</code>. Format: <code>OperatorNamespace.method(param_name: &lt;Type&gt;, ...)</code>. Must be read from the module's <code>module_session.json</code> before every invocation — never from memory. Signatures change across versions.</p>
+<hr>
+<p><strong>OperatorNamespace</strong>
+The domain prefix in an operator's invocation syntax. Derived from the operator module's domain segment. Examples: <code>RTT</code> for <code>rtt-op-core</code>, <code>Clarity</code> for <code>clarity-op-spectral</code>, <code>Scope</code> for <code>scope-check-op</code>. The namespace identifies which domain's operator is being called.</p>
+<hr>
+<p><strong>Input Schema</strong>
+The field in <code>module_session.json</code> that defines the valid values and constraints for every parameter in the invocation syntax. A practitioner must verify that their input satisfies the input schema before invoking an operator. Supplying the wrong type (e.g., a raw string where an → <em>InputUnit</em> is required) is an input schema violation.</p>
+<hr>
+<p><strong>Output Schema</strong>
+The field in <code>module_session.json</code> that defines the structure of every field in the operator's output. The output schema of one operator must align with the input schema of the next when operators are → <em>chained</em>. A downstream module that consumes an operator's output must be designed against that output schema.</p>
+<hr>
+<p><strong>Operator Chain</strong>
+A sequence of operator invocations where the → <em>OutputUnit</em> of one becomes the → <em>InputUnit</em> of the next. A chain is valid when: every output schema aligns with the next input schema, all operators are in <code>active_modules</code>, and the entire chain stays within the session's declared layer context. Validated by <code>chain-validate-op</code>.</p>
+<hr>
+<p><strong>Schema Alignment</strong>
+The property of an operator chain in which the output schema of every operator correctly feeds the input schema of the next operator in the sequence. A chain with misaligned schemas will produce type errors, missing fields, or structurally invalid inputs at the misalignment point.</p>
+<hr>
+<p><strong>Valid Layers / Valid Roles</strong>
+The <code>valid_layers</code> and <code>valid_roles</code> fields in <code>module_session.json</code> declare the layer contexts and role contexts in which a module may be invoked. Invoking a module outside its valid contexts is a constraint violation. Always check these fields before invoking an unfamiliar module.</p>
+<hr>
+<h2 id="10-the-dependency-system">10. The Dependency System</h2>
+<hr>
+<p><strong>Dependency</strong>
+A structural relationship between two modules in which Module A cannot be validly invoked without Module B being active. Declared in <code>module_links.json</code> → <code>depends_on</code>. Dependencies are the load-bearing relationships of the module system — they define what the session must include for an invocation to be structurally sound.</p>
+<hr>
+<p><strong>Dependency Graph</strong>
+The full set of <code>depends_on</code> and <code>required_by</code> relationships across all modules in the registry. A directed acyclic graph (DAG) — directed because dependencies have direction, acyclic because no module may depend on itself directly or through a chain. <code>map-dependency-graph</code>.</p>
+<hr>
+<p><strong>Forward Traversal</strong>
+The direction of traversal that moves from a higher-layer module toward its foundational anchors — surface to foundational. Used to determine the complete dependency chain that must be included in <code>active_modules</code>, and to identify the foundational commitments that support a given output.</p>
+<hr>
+<p><strong>Backward Traversal</strong>
+The direction of traversal that moves from a foundational anchor toward its surface expressions — foundational to surface. Used to determine the full impact surface of a module before modifying it. Never modify a foundational or structural module without first running a backward traversal.</p>
+<hr>
+<p><strong>Impact Surface</strong>
+The complete set of modules that depend (directly or transitively) on a given module, determined by backward traversal. A module's impact surface is the set of everything that will be affected if the module changes. Always compute the impact surface before making a MAJOR version increment.</p>
+<hr>
+<p><strong>Hidden Dependency</strong>
+A dependency that does not appear in <code>module_links.json</code> → <code>depends_on</code> but functionally exists — because the module's <code>module.md</code> prose makes claims that require another module's content to be valid. Hidden dependencies arise from authoring errors. When detected, the correct fix is to add the missing module to <code>depends_on</code> — not to work around it.</p>
+<hr>
+<p><strong>Dependency Cycle</strong>
+A dependency chain in which Module A → Module B → Module C → Module A. Cycles are structural failures — the system cannot resolve the chain because each module requires another to be valid first. Cycles must be broken by converting the weakest dependency link from <code>depends_on</code> to <code>related</code>.</p>
+<hr>
+<p><strong>Dependency Closure</strong>
+The property of an <code>active_modules</code> list in which every transitive dependency of every declared module is also present in the list. An <code>active_modules</code> list is closed when there are no missing transitive dependencies. Closure is verified by running <code>active-modules-closure-val</code> or by manually tracing all dependency chains.</p>
+<hr>
+<p><strong><code>depends_on</code></strong>
+The field in <code>module_links.json</code> that lists all modules this module structurally requires. Must match the <code>dependencies</code> field in <code>module.json</code> exactly. Every ID in this list must exist in the registry.</p>
+<hr>
+<p><strong><code>required_by</code></strong>
+The field in <code>module_links.json</code> that lists all modules that declare this module in their <code>depends_on</code>. Always empty for new modules. Populated over time as other modules add this one as a dependency. Read this field before modifying any module — it is the backward traversal entry point.</p>
+<hr>
+<p><strong><code>related</code></strong>
+The field in <code>module_links.json</code> that lists editorial neighbors — modules in adjacent scope that a practitioner might want to read alongside this one. <code>related</code> entries are not structural dependencies. A module in <code>related</code> is not required for the module to be valid. Do not place structural dependencies in <code>related</code> to bypass the closure rule.</p>
+<hr>
+<h2 id="11-session-failure-modes">11. Session Failure Modes</h2>
+<p>The four canonical failure modes are the most frequently occurring session errors. They are canonical because they appear consistently across domains, experience levels, and session types. <code>map-failure-mode-recovery</code>.</p>
+<hr>
+<p><strong>Failure Mode 1: Underspecified Intent</strong>
+Occurs when the <code>intent</code> field is populated with a topic or direction rather than a testable deliverable. Symptom: the session produces output, but the practitioner cannot answer "did we achieve the intent?" with a binary yes/no. Root cause: the intent field test was not applied before initialization. Recovery: do not discard the output — apply RTT to it; use the gap between what was produced and what was needed to write a precise intent for a follow-on session.</p>
+<hr>
+<p><strong>Failure Mode 2: Scope Creep Mid-Session</strong>
+Occurs when a session begins within its declared scope but drifts outside it — typically after a productive first RTT pass reveals an adjacent problem. Symptom: the output addresses multiple problems; the validator flags scope compliance failures. Root cause: the practitioner followed an interesting thread without re-specifying the session's scope. Recovery: stop at the moment creep is detected; decide whether the new content is more valuable than the original scope; close the current session and open a new one if yes, trim to the last in-scope output if no.</p>
+<hr>
+<p><strong>Failure Mode 3: Dependency Gap in <code>active_modules</code></strong>
+Occurs when one or more modules in <code>active_modules</code> have dependencies that were not included in the list. Symptom: operator invocations fail or produce incomplete outputs; the validator returns <code>insufficient_input</code> flags that cannot be traced to the input. Root cause: the <code>active_modules</code> closure check was not run before initialization. Recovery: run forward traversal on every primary module; add all missing transitive dependencies; re-run from the point of the failed invocation.</p>
+<hr>
+<p><strong>Failure Mode 4: Comfort-Filtering Outputs</strong>
+Occurs when a practitioner discards a validator-accepted output because it is uncomfortable and re-runs until a more agreeable result appears. Symptom: the session is re-run repeatedly; the accepted output happens to validate prior beliefs. Root cause: violation of → <em>Canon Commitment II</em>. Recovery: retrieve the discarded output; apply the validator formally; if it returns <code>accept</code>, the output is correct — the discomfort is information, not error. This is the failure mode hardest to detect from the inside and the one that most fundamentally undermines the system's long-term value.</p>
+<hr>
+<h2 id="12-versioning-and-module-status">12. Versioning and Module Status</h2>
+<hr>
+<p><strong>Version Stamp</strong>
+The <code>version</code> field in <code>module.json</code>. Follows semantic versioning: <code>MAJOR.MINOR.PATCH</code>. All new modules begin at <code>0.1.0</code>. The first ratification increments to <code>1.0.0</code>. The version stamp must be incremented for every change to a module.</p>
+<hr>
+<p><strong>PATCH Increment</strong>
+A version increment from <code>x.y.z</code> to <code>x.y.(z+1)</code>. Applied when prose corrections (typos, clarity improvements) are made that do not change the scope, invocation syntax, or dependency list. No downstream impact audit required.</p>
+<hr>
+<p><strong>MINOR Increment</strong>
+A version increment from <code>x.y.z</code> to <code>x.(y+1).0</code>. Applied when content is added (new examples, scope clarifications, additional <code>related</code> entries) without changing the structural specification. No downstream impact audit required.</p>
+<hr>
+<p><strong>MAJOR Increment</strong>
+A version increment from <code>x.y.z</code> to <code>(x+1).0.0</code>. Applied when the structural contract changes: scope changes, role or layer changes, dependency additions or removals, invocation syntax changes, output schema changes. A MAJOR increment requires a downstream impact audit — every module in the <code>required_by</code> list must be checked for compatibility.</p>
+<hr>
+<p><strong><code>draft</code></strong>
+Module status assigned to all new modules on creation. A draft module is in the repository and usable, but practitioners should treat it as experimental. Draft modules use <code>0.x.x</code> versioning. Ratification changes <code>draft</code> to <code>active</code>.</p>
+<hr>
+<p><strong><code>active</code></strong>
+Module status assigned to a module that has passed ratification. An active module is production-ready. Its structural contract is considered stable. Use <code>active</code> modules in production sessions without reservation.</p>
+<hr>
+<p><strong><code>deprecated</code></strong>
+Module status assigned to a module that has been superseded by a newer module. A deprecated module still exists in the registry and may still be invoked, but practitioners should migrate to the superseding module. The <code>superseded_by</code> field in <code>module_links.json</code> identifies the replacement.</p>
+<hr>
+<p><strong><code>archived</code></strong>
+Module status assigned to a module that has been fully retired and should not be invoked. Archived modules are preserved in the registry for historical reference and dependency auditing of older session records. They do not appear in active module discovery workflows.</p>
+<hr>
+<h2 id="13-attribution-and-authorship">13. Attribution and Authorship</h2>
+<hr>
+<p><strong>Nawder Loswin</strong>
+The pen name of the human author of TriadicFrameworks. Derived from the phrase "one who wanders inward." A deliberate creative identity, fully owned and consistently maintained. Not a pseudonym for concealment — a chosen authorial identity for this body of work. All canon commitments, module scopes, and foundational design decisions are attributed to this intelligence.</p>
+<hr>
+<p><strong>AI-Augmented Authorship</strong>
+The authorship model of TriadicFrameworks. The human author (Nawder Loswin) directed the creative and analytical process. AI was used as a precision instrument — extending the author's capability without substituting for the author's judgment. The AI made no foundational decisions. Every canon commitment, every module scope, every design choice is the product of human authorial intent. <code>canon-anchor-attribution</code>.</p>
+<hr>
+<p><strong>Pen Name</strong>
+See → <em>Nawder Loswin</em>. The pen name is the public-facing authorial identity for this work. It is how the author is cited in module attribution fields, book footers, and contribution records.</p>
+<hr>
+<h2 id="master-alphabetical-index">Master Alphabetical Index</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Section</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>active</code> (status)</td>
+<td><a href="#12-versioning-and-module-status">12</a></td>
+</tr>
+<tr>
+<td><code>active_modules</code> (field)</td>
+<td><a href="#6-the-session-grammar">6</a></td>
+</tr>
+<tr>
+<td>AI-Augmented Authorship</td>
+<td><a href="#13-attribution-and-authorship">13</a></td>
+</tr>
+<tr>
+<td>Anchor (role)</td>
+<td><a href="#4-the-role-enum">4</a></td>
+</tr>
+<tr>
+<td>Apparent Gap</td>
+<td><a href="#3-module-architecture">3</a></td>
+</tr>
+<tr>
+<td><code>archived</code> (status)</td>
+<td><a href="#12-versioning-and-module-status">12</a></td>
+</tr>
+<tr>
+<td>Backward Traversal</td>
+<td><a href="#10-the-dependency-system">10</a></td>
+</tr>
+<tr>
+<td>Bridge (role)</td>
+<td><a href="#4-the-role-enum">4</a></td>
+</tr>
+<tr>
+<td>Canon</td>
+<td><a href="#1-core-system-concepts">1</a></td>
+</tr>
+<tr>
+<td>Canon Commitment</td>
+<td><a href="#1-core-system-concepts">1</a></td>
+</tr>
+<tr>
+<td>Clarity</td>
+<td><a href="#1-core-system-concepts">1</a></td>
+</tr>
+<tr>
+<td>Coherence</td>
+<td><a href="#8-the-clarity-system">8</a></td>
+</tr>
+<tr>
+<td><code>depends_on</code></td>
+<td><a href="#10-the-dependency-system">10</a></td>
+</tr>
+<tr>
+<td><code>deprecated</code> (status)</td>
+<td><a href="#12-versioning-and-module-status">12</a></td>
+</tr>
+<tr>
+<td>Dependency</td>
+<td><a href="#10-the-dependency-system">10</a></td>
+</tr>
+<tr>
+<td>Dependency Closure</td>
+<td><a href="#10-the-dependency-system">10</a></td>
+</tr>
+<tr>
+<td>Dependency Cycle</td>
+<td><a href="#10-the-dependency-system">10</a></td>
+</tr>
+<tr>
+<td>Dependency Direction Rule</td>
+<td><a href="#5-the-layer-enum">5</a></td>
+</tr>
+<tr>
+<td>Dependency Graph</td>
+<td><a href="#10-the-dependency-system">10</a></td>
+</tr>
+<tr>
+<td><code>DependencyTrace</code> (format)</td>
+<td><a href="#7-output-formats">7</a></td>
+</tr>
+<tr>
+<td><code>draft</code> (status)</td>
+<td><a href="#12-versioning-and-module-status">12</a></td>
+</tr>
+<tr>
+<td>Face Completeness</td>
+<td><a href="#8-the-clarity-system">8</a></td>
+</tr>
+<tr>
+<td>Face Substantiveness</td>
+<td><a href="#8-the-clarity-system">8</a></td>
+</tr>
+<tr>
+<td>Field (role)</td>
+<td><a href="#4-the-role-enum">4</a></td>
+</tr>
+<tr>
+<td>Field Test</td>
+<td><a href="#6-the-session-grammar">6</a></td>
+</tr>
+<tr>
+<td>Five Clarity Criteria</td>
+<td><a href="#8-the-clarity-system">8</a></td>
+</tr>
+<tr>
+<td><code>flags</code></td>
+<td><a href="#8-the-clarity-system">8</a></td>
+</tr>
+<tr>
+<td>FormatEnum</td>
+<td><a href="#7-output-formats">7</a></td>
+</tr>
+<tr>
+<td>Forward Traversal</td>
+<td><a href="#10-the-dependency-system">10</a></td>
+</tr>
+<tr>
+<td>Four-File Architecture</td>
+<td><a href="#3-module-architecture">3</a></td>
+</tr>
+<tr>
+<td><code>foundational</code> (layer)</td>
+<td><a href="#5-the-layer-enum">5</a></td>
+</tr>
+<tr>
+<td>Gap</td>
+<td><a href="#3-module-architecture">3</a></td>
+</tr>
+<tr>
+<td>Generative Face</td>
+<td><a href="#2-the-rtt-engine">2</a></td>
+</tr>
+<tr>
+<td>Grammar (role)</td>
+<td><a href="#4-the-role-enum">4</a></td>
+</tr>
+<tr>
+<td>Hidden Dependency</td>
+<td><a href="#10-the-dependency-system">10</a></td>
+</tr>
+<tr>
+<td>Impact Surface</td>
+<td><a href="#10-the-dependency-system">10</a></td>
+</tr>
+<tr>
+<td>Index (role)</td>
+<td><a href="#4-the-role-enum">4</a></td>
+</tr>
+<tr>
+<td>Input Schema</td>
+<td><a href="#9-operator-invocation">9</a></td>
+</tr>
+<tr>
+<td><code>input</code> (session field)</td>
+<td><a href="#6-the-session-grammar">6</a></td>
+</tr>
+<tr>
+<td>InputUnit</td>
+<td><a href="#2-the-rtt-engine">2</a></td>
+</tr>
+<tr>
+<td><code>insufficient_input</code></td>
+<td><a href="#8-the-clarity-system">8</a></td>
+</tr>
+<tr>
+<td>Intent Fulfillment</td>
+<td><a href="#8-the-clarity-system">8</a></td>
+</tr>
+<tr>
+<td><code>intent</code> (session field)</td>
+<td><a href="#6-the-session-grammar">6</a></td>
+</tr>
+<tr>
+<td>Invocation</td>
+<td><a href="#9-operator-invocation">9</a></td>
+</tr>
+<tr>
+<td>Invocation Syntax</td>
+<td><a href="#9-operator-invocation">9</a></td>
+</tr>
+<tr>
+<td><code>layer_context</code> (field)</td>
+<td><a href="#6-the-session-grammar">6</a></td>
+</tr>
+<tr>
+<td>Lens (role)</td>
+<td><a href="#4-the-role-enum">4</a></td>
+</tr>
+<tr>
+<td>MAJOR Increment</td>
+<td><a href="#12-versioning-and-module-status">12</a></td>
+</tr>
+<tr>
+<td>Malformed Session</td>
+<td><a href="#6-the-session-grammar">6</a></td>
+</tr>
+<tr>
+<td>Map (role)</td>
+<td><a href="#4-the-role-enum">4</a></td>
+</tr>
+<tr>
+<td><code>meta</code> (layer)</td>
+<td><a href="#5-the-layer-enum">5</a></td>
+</tr>
+<tr>
+<td>MINOR Increment</td>
+<td><a href="#12-versioning-and-module-status">12</a></td>
+</tr>
+<tr>
+<td>Module</td>
+<td><a href="#1-core-system-concepts">1</a></td>
+</tr>
+<tr>
+<td>Module Group</td>
+<td><a href="#3-module-architecture">3</a></td>
+</tr>
+<tr>
+<td>Module ID</td>
+<td><a href="#3-module-architecture">3</a></td>
+</tr>
+<tr>
+<td><code>module.json</code></td>
+<td><a href="#3-module-architecture">3</a></td>
+</tr>
+<tr>
+<td><code>module.md</code></td>
+<td><a href="#3-module-architecture">3</a></td>
+</tr>
+<tr>
+<td><code>module_links.json</code></td>
+<td><a href="#3-module-architecture">3</a></td>
+</tr>
+<tr>
+<td><code>module_session.json</code></td>
+<td><a href="#3-module-architecture">3</a></td>
+</tr>
+<tr>
+<td><code>ModuleSpec</code> (format)</td>
+<td><a href="#7-output-formats">7</a></td>
+</tr>
+<tr>
+<td><code>modules_group.json</code></td>
+<td><a href="#3-module-architecture">3</a></td>
+</tr>
+<tr>
+<td><code>NarrativeAnalysis</code> (format)</td>
+<td><a href="#7-output-formats">7</a></td>
+</tr>
+<tr>
+<td>Nawderian Theorem of Validator Pulses</td>
+<td><a href="#8-the-clarity-system">8</a></td>
+</tr>
+<tr>
+<td>Nawder Loswin</td>
+<td><a href="#13-attribution-and-authorship">13</a></td>
+</tr>
+<tr>
+<td>Next Input</td>
+<td><a href="#2-the-rtt-engine">2</a></td>
+</tr>
+<tr>
+<td><code>not_satisfied</code></td>
+<td><a href="#8-the-clarity-system">8</a></td>
+</tr>
+<tr>
+<td><code>operational</code> (layer)</td>
+<td><a href="#5-the-layer-enum">5</a></td>
+</tr>
+<tr>
+<td>Operator (role)</td>
+<td><a href="#4-the-role-enum">4</a></td>
+</tr>
+<tr>
+<td>Operator Chain</td>
+<td><a href="#9-operator-invocation">9</a></td>
+</tr>
+<tr>
+<td>OperatorNamespace</td>
+<td><a href="#9-operator-invocation">9</a></td>
+</tr>
+<tr>
+<td>Output Schema</td>
+<td><a href="#9-operator-invocation">9</a></td>
+</tr>
+<tr>
+<td><code>output_format</code> (field)</td>
+<td><a href="#6-the-session-grammar">6</a></td>
+</tr>
+<tr>
+<td>OutputUnit</td>
+<td><a href="#2-the-rtt-engine">2</a></td>
+</tr>
+<tr>
+<td>Overall Coherence Rating</td>
+<td><a href="#8-the-clarity-system">8</a></td>
+</tr>
+<tr>
+<td>Pass Depth</td>
+<td><a href="#2-the-rtt-engine">2</a></td>
+</tr>
+<tr>
+<td>Pass Differentiation</td>
+<td><a href="#8-the-clarity-system">8</a></td>
+</tr>
+<tr>
+<td>PATCH Increment</td>
+<td><a href="#12-versioning-and-module-status">12</a></td>
+</tr>
+<tr>
+<td>Pen Name</td>
+<td><a href="#13-attribution-and-authorship">13</a></td>
+</tr>
+<tr>
+<td>Practitioner</td>
+<td><a href="#1-core-system-concepts">1</a></td>
+</tr>
+<tr>
+<td>Present Face</td>
+<td><a href="#2-the-rtt-engine">2</a></td>
+</tr>
+<tr>
+<td>Protocol (role)</td>
+<td><a href="#4-the-role-enum">4</a></td>
+</tr>
+<tr>
+<td>Ratification</td>
+<td><a href="#3-module-architecture">3</a></td>
+</tr>
+<tr>
+<td>Reading Order</td>
+<td><a href="#3-module-architecture">3</a></td>
+</tr>
+<tr>
+<td>Recommendation</td>
+<td><a href="#8-the-clarity-system">8</a></td>
+</tr>
+<tr>
+<td>Recursion</td>
+<td><a href="#2-the-rtt-engine">2</a></td>
+</tr>
+<tr>
+<td>Recursive Triadic Thinking (RTT)</td>
+<td><a href="#1-core-system-concepts">1</a></td>
+</tr>
+<tr>
+<td>Registry</td>
+<td><a href="#1-core-system-concepts">1</a></td>
+</tr>
+<tr>
+<td><code>related</code></td>
+<td><a href="#10-the-dependency-system">10</a></td>
+</tr>
+<tr>
+<td><code>required_by</code></td>
+<td><a href="#10-the-dependency-system">10</a></td>
+</tr>
+<tr>
+<td>Role × Layer Position</td>
+<td><a href="#5-the-layer-enum">5</a></td>
+</tr>
+<tr>
+<td><code>role_context</code> (field)</td>
+<td><a href="#6-the-session-grammar">6</a></td>
+</tr>
+<tr>
+<td>RTT Pass</td>
+<td><a href="#2-the-rtt-engine">2</a></td>
+</tr>
+<tr>
+<td><code>satisfied</code></td>
+<td><a href="#8-the-clarity-system">8</a></td>
+</tr>
+<tr>
+<td>Schema Alignment</td>
+<td><a href="#9-operator-invocation">9</a></td>
+</tr>
+<tr>
+<td>Scope (module)</td>
+<td><a href="#3-module-architecture">3</a></td>
+</tr>
+<tr>
+<td>Scope Compliance (clarity criterion)</td>
+<td><a href="#8-the-clarity-system">8</a></td>
+</tr>
+<tr>
+<td><code>scope</code> (session field)</td>
+<td><a href="#6-the-session-grammar">6</a></td>
+</tr>
+<tr>
+<td>Scope Statement</td>
+<td><a href="#3-module-architecture">3</a></td>
+</tr>
+<tr>
+<td>Session</td>
+<td><a href="#1-core-system-concepts">1</a></td>
+</tr>
+<tr>
+<td>Session Closure</td>
+<td><a href="#6-the-session-grammar">6</a></td>
+</tr>
+<tr>
+<td>Session Failure Mode 1: Underspecified Intent</td>
+<td><a href="#11-session-failure-modes">11</a></td>
+</tr>
+<tr>
+<td>Session Failure Mode 2: Scope Creep</td>
+<td><a href="#11-session-failure-modes">11</a></td>
+</tr>
+<tr>
+<td>Session Failure Mode 3: Dependency Gap</td>
+<td><a href="#11-session-failure-modes">11</a></td>
+</tr>
+<tr>
+<td>Session Failure Mode 4: Comfort-Filtering</td>
+<td><a href="#11-session-failure-modes">11</a></td>
+</tr>
+<tr>
+<td>Session Grammar</td>
+<td><a href="#6-the-session-grammar">6</a></td>
+</tr>
+<tr>
+<td>Session Initialization</td>
+<td><a href="#6-the-session-grammar">6</a></td>
+</tr>
+<tr>
+<td><code>SessionRecord</code> (format)</td>
+<td><a href="#7-output-formats">7</a></td>
+</tr>
+<tr>
+<td>Session Resumption</td>
+<td><a href="#6-the-session-grammar">6</a></td>
+</tr>
+<tr>
+<td><code>session_id</code> (field)</td>
+<td><a href="#6-the-session-grammar">6</a></td>
+</tr>
+<tr>
+<td>Signal</td>
+<td><a href="#8-the-clarity-system">8</a></td>
+</tr>
+<tr>
+<td>Signal Coherence</td>
+<td><a href="#8-the-clarity-system">8</a></td>
+</tr>
+<tr>
+<td>Spectral Clarity</td>
+<td><a href="#8-the-clarity-system">8</a></td>
+</tr>
+<tr>
+<td><code>StructuredFaces</code> (format)</td>
+<td><a href="#7-output-formats">7</a></td>
+</tr>
+<tr>
+<td><code>structural</code> (layer)</td>
+<td><a href="#5-the-layer-enum">5</a></td>
+</tr>
+<tr>
+<td><code>surface</code> (layer)</td>
+<td><a href="#5-the-layer-enum">5</a></td>
+</tr>
+<tr>
+<td>System</td>
+<td><a href="#1-core-system-concepts">1</a></td>
+</tr>
+<tr>
+<td>Terminal Face</td>
+<td><a href="#2-the-rtt-engine">2</a></td>
+</tr>
+<tr>
+<td>Three Faces</td>
+<td><a href="#2-the-rtt-engine">2</a></td>
+</tr>
+<tr>
+<td>True Gap</td>
+<td><a href="#3-module-architecture">3</a></td>
+</tr>
+<tr>
+<td><code>valid_layers</code> / <code>valid_roles</code></td>
+<td><a href="#9-operator-invocation">9</a></td>
+</tr>
+<tr>
+<td><code>ValidatorAssessment</code> (format)</td>
+<td><a href="#7-output-formats">7</a></td>
+</tr>
+<tr>
+<td>Validator (role)</td>
+<td><a href="#4-the-role-enum">4</a></td>
+</tr>
+<tr>
+<td><code>validator</code> (session field)</td>
+<td><a href="#6-the-session-grammar">6</a></td>
+</tr>
+<tr>
+<td>Validator Layer</td>
+<td><a href="#8-the-clarity-system">8</a></td>
+</tr>
+<tr>
+<td>Version Stamp</td>
+<td><a href="#12-versioning-and-module-status">12</a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>→ <a href="./index">Return to Book Index</a>
+→ <a href="./registry">Module Registry</a>
+→ <a href="./canon">Canon</a></p>
+<hr>
+<p><em>TriadicFrameworks Book — <code>/docs/book/glossary.md</code></em>
+<em>Authored by Nawder Loswin. AI-augmented authorship. All rights reserved.</em></p>
+  </main>
+</body>
+</html>

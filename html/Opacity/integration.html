@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Opacity/integration.md">
+  <title>🌑 Opacity — Integration Map</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Opacity/integration.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Opacity/integration.md</code>
+  </aside>
+
+  <main>
+<h1 id="opacity-integration-map">🌑 Opacity — Integration Map</h1>
+<blockquote>
+<p><em>Opacity touches every module that has depth. This file maps the eight integration surfaces and the bidirectional data flows between them.</em></p>
+</blockquote>
+<p><strong>Module:</strong> Opacity
+<strong>Canonical ID:</strong> OPC
+<strong>Role:</strong> Cross‑module alignment
+<strong>Integration Targets:</strong> 8</p>
+<hr>
+<h2 id="integration-principle">Integration Principle</h2>
+<p>Opacity is a substrate‑level condition, not a local phenomenon. Any module
+that defines regimes, flows, boundaries, or harmonic envelopes interacts with
+Opacity. This file maps how — with precise one‑line formulations, operator
+crosswalks, and bidirectional data flows.</p>
+<hr>
+<h2 id="core-module-integrations">Core Module Integrations</h2>
+<hr>
+<h3 id="1-the-inverted-star">1. The Inverted Star</h3>
+<p><strong>Opacity Formulation:</strong> Opacity = the unlit faces of the star.</p>
+<p>The Inverted Star is a visibility map. When the substrate flips, perception
+flips with it:</p>
+<ul>
+<li>A system inside an inverted regime cannot see the outer regime.</li>
+<li>A system outside cannot see the inner regime.</li>
+<li>The star shape literally encodes which faces are lit (visible) and which
+  are dark (opaque).</li>
+</ul>
+<p><strong>Operator Crosswalk:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Opacity Operator</th>
+<th style="text-align: left;">Star Interaction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">O-Op</td>
+<td style="text-align: left;">Reads opacity of each star face from observer's substrate</td>
+</tr>
+<tr>
+<td style="text-align: left;">O-Grad</td>
+<td style="text-align: left;">Maps gradient across faces from most lit to most dark</td>
+</tr>
+<tr>
+<td style="text-align: left;">O-Bound</td>
+<td style="text-align: left;">Identifies unmarked boundaries between star faces</td>
+</tr>
+<tr>
+<td style="text-align: left;">O-Red</td>
+<td style="text-align: left;">Substrate alignment reveals hidden faces</td>
+</tr>
+<tr>
+<td style="text-align: left;">O-Sig</td>
+<td style="text-align: left;">Star's full visibility fingerprint across all faces</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bidirectional Flow:</strong>
+- <strong>Star → Opacity:</strong> Star geometry defines which regimes are structurally hidden.
+- <strong>Opacity → Star:</strong> Opacity operators quantify and reduce face‑level invisibility.</p>
+<hr>
+<h3 id="2-harmonic-stability-profile-hsp">2. Harmonic Stability Profile (HSP)</h3>
+<p><strong>Opacity Formulation:</strong> Opacity = harmonic mismatch.</p>
+<p>HSP formalizes drift, coherence, and resonance envelopes. Opacity fits because:</p>
+<ul>
+<li>A regime becomes opaque when its harmonic signature is outside the observer's
+  detection band.</li>
+<li>Drift increases opacity — an unstable harmonic is harder to see.</li>
+<li>Stability decreases opacity — a coherent harmonic is easier to detect.</li>
+</ul>
+<p><strong>Operator Crosswalk:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Opacity Operator</th>
+<th style="text-align: left;">HSP Interaction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">O-Op</td>
+<td style="text-align: left;">Reads opacity caused by harmonic band mismatch</td>
+</tr>
+<tr>
+<td style="text-align: left;">O-Grad</td>
+<td style="text-align: left;">Maps gradient from stable (visible) to drifting (opaque)</td>
+</tr>
+<tr>
+<td style="text-align: left;">O-Red</td>
+<td style="text-align: left;">Harmonic tuning shifts detection band to match regime</td>
+</tr>
+<tr>
+<td style="text-align: left;">O-Sig</td>
+<td style="text-align: left;">Includes harmonic mismatch as a typed component</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bidirectional Flow:</strong>
+- <strong>HSP → Opacity:</strong> Harmonic envelopes define detection bands and drift patterns.
+- <strong>Opacity → HSP:</strong> Opacity operators identify which harmonics are below detection threshold.</p>
+<hr>
+<h3 id="3-lostational-supspheres">3. Lostational Supspheres</h3>
+<p><strong>Opacity Formulation:</strong> Opacity = the hidden side of the dual envelope.</p>
+<p>Supspheres have two sides. One is always partially invisible:</p>
+<ul>
+<li>Loss reveals structure — without loss, the envelope becomes opaque.</li>
+<li>Lossation creates visibility windows into the structure.</li>
+<li>Supsphere boundaries are natural opacity boundaries.</li>
+</ul>
+<p><strong>Operator Crosswalk:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Opacity Operator</th>
+<th style="text-align: left;">Supsphere Interaction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">O-Op</td>
+<td style="text-align: left;">Reads opacity of each envelope side</td>
+</tr>
+<tr>
+<td style="text-align: left;">O-Bound</td>
+<td style="text-align: left;">Identifies supsphere boundary as opacity boundary</td>
+</tr>
+<tr>
+<td style="text-align: left;">O-Red</td>
+<td style="text-align: left;">Loss‑driven exposure reveals hidden envelope side</td>
+</tr>
+<tr>
+<td style="text-align: left;">O-Sig</td>
+<td style="text-align: left;">Dual‑envelope visibility profile</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bidirectional Flow:</strong>
+- <strong>Supspheres → Opacity:</strong> Dual‑envelope geometry defines which side is hidden.
+- <strong>Opacity → Supspheres:</strong> Opacity operators quantify envelope‑side invisibility.</p>
+<hr>
+<h3 id="4-set-decomposition">4. SET Decomposition</h3>
+<p><strong>Opacity Formulation:</strong> Opacity = missing acceleration channel.</p>
+<p>SET (Spin, Electric, Thermal) provides three acceleration channels. A regime
+is opaque if its dominant acceleration channel is unmeasured:</p>
+<ul>
+<li>SET misalignment = regime opacity.</li>
+<li>SET alignment = regime visibility.</li>
+<li>Measuring Thermal when the regime is Spin‑dominated → flow appears absent.</li>
+</ul>
+<p><strong>Operator Crosswalk:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Opacity Operator</th>
+<th style="text-align: left;">SET Interaction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">O-Op</td>
+<td style="text-align: left;">Reads opacity per SET channel</td>
+</tr>
+<tr>
+<td style="text-align: left;">O-Grad</td>
+<td style="text-align: left;">Maps gradient across S → E → T channels</td>
+</tr>
+<tr>
+<td style="text-align: left;">O-Red</td>
+<td style="text-align: left;">Flow‑channel instrumentation adds missing SET measurement</td>
+</tr>
+<tr>
+<td style="text-align: left;">O-Sig</td>
+<td style="text-align: left;">SET‑weighted opacity signature</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bidirectional Flow:</strong>
+- <strong>SET → Opacity:</strong> Channel dominance defines which flows are detectable.
+- <strong>Opacity → SET:</strong> Opacity operators reveal which channels are unmeasured.</p>
+<hr>
+<h3 id="5-fff-lattice">5. FFF Lattice</h3>
+<p><strong>Opacity Formulation:</strong> Opacity = wrong lattice layer measured.</p>
+<p>The FFF Lattice (Frequency, Fluids, Forces) partitions flow across three layers.
+A regime becomes opaque when the lattice layer dominating the flow is not the
+one being measured:</p>
+<ul>
+<li>Frequency‑dominated flows are invisible to Fluid‑based sensors.</li>
+<li>Force‑dominated flows are invisible to Frequency‑based operators.</li>
+<li>Layer mismatch is the most common source of Flow Opacity.</li>
+</ul>
+<p><strong>Operator Crosswalk:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Opacity Operator</th>
+<th style="text-align: left;">FFF Interaction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">O-Op</td>
+<td style="text-align: left;">Reads opacity per FFF layer</td>
+</tr>
+<tr>
+<td style="text-align: left;">O-Grad</td>
+<td style="text-align: left;">Maps gradient across Frequency → Fluids → Forces</td>
+</tr>
+<tr>
+<td style="text-align: left;">O-Red</td>
+<td style="text-align: left;">Flow‑channel instrumentation targets correct FFF layer</td>
+</tr>
+<tr>
+<td style="text-align: left;">O-Sig</td>
+<td style="text-align: left;">FFF‑weighted opacity signature</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bidirectional Flow:</strong>
+- <strong>FFF → Opacity:</strong> Lattice layer dominance defines which flows are visible.
+- <strong>Opacity → FFF:</strong> Opacity operators reveal which layers are unmeasured.</p>
+<hr>
+<h2 id="canon-infrastructure-integrations">Canon Infrastructure Integrations</h2>
+<hr>
+<h3 id="6-corpus">6. Corpus</h3>
+<p><strong>Opacity Formulation:</strong> Opacity determines which modules are visible,
+partially visible, or hidden within the structural atlas.</p>
+<p>The Corpus is the structural atlas of the entire canon. Opacity extends
+into it through three dedicated operators:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Extension Operator</th>
+<th style="text-align: left;">Corpus Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">opacity_index</td>
+<td style="text-align: left;">How visible a module is within the corpus</td>
+</tr>
+<tr>
+<td style="text-align: left;">opacity_map</td>
+<td style="text-align: left;">Which modules obscure or reveal others</td>
+</tr>
+<tr>
+<td style="text-align: left;">opacity_dependency</td>
+<td style="text-align: left;">Which substrates must align for visibility</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bidirectional Flow:</strong>
+- <strong>Corpus → Opacity:</strong> Atlas structure defines inter‑module visibility.
+- <strong>Opacity → Corpus:</strong> Opacity operators index, map, and track module visibility.</p>
+<hr>
+<h3 id="7-sarg">7. SARG</h3>
+<p><strong>Opacity Formulation:</strong> Opacity becomes a grammar modifier affecting parsing,
+inference, and operator chaining.</p>
+<p>SARG is the structural grammar of TriadicFrameworks. Opacity becomes a
+first‑class grammatical concept through three dedicated operators:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Extension Operator</th>
+<th style="text-align: left;">SARG Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">opacity_token</td>
+<td style="text-align: left;">Grammar primitive representing invisibility</td>
+</tr>
+<tr>
+<td style="text-align: left;">opacity_clause</td>
+<td style="text-align: left;">How opacity modifies structural interpretation</td>
+</tr>
+<tr>
+<td style="text-align: left;">opacity_rewrite_rule</td>
+<td style="text-align: left;">How to reduce opacity through grammar alignment</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Canonical Rewrite Operations:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Rewrite</th>
+<th style="text-align: left;">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">LIFT</td>
+<td style="text-align: left;">Elevate a substrate‑hidden element to surface grammar</td>
+</tr>
+<tr>
+<td style="text-align: left;">SPLIT</td>
+<td style="text-align: left;">Decompose compound opacity into typed components</td>
+</tr>
+<tr>
+<td style="text-align: left;">BRIDGE</td>
+<td style="text-align: left;">Connect two opaque regions through a visible intermediary</td>
+</tr>
+<tr>
+<td style="text-align: left;">COLLAPSE</td>
+<td style="text-align: left;">Remove an opacity token when reduction is verified</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bidirectional Flow:</strong>
+- <strong>SARG → Opacity:</strong> Grammar structure defines parse‑level visibility.
+- <strong>Opacity → SARG:</strong> Opacity tokens modify parsing and enable grammar‑level reduction.</p>
+<hr>
+<h3 id="8-nist">8. NIST</h3>
+<p><strong>Opacity Formulation:</strong> Opacity becomes a measurable property of real‑world
+systems, enabling applied regime detection.</p>
+<p>The NIST module handles substrate mapping and applied structure. Opacity extends
+into it through three dedicated operators:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Extension Operator</th>
+<th style="text-align: left;">NIST Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">opacity_measure</td>
+<td style="text-align: left;">Quantitative measure of opacity in real systems</td>
+</tr>
+<tr>
+<td style="text-align: left;">opacity_signal</td>
+<td style="text-align: left;">Detectable signature of an opaque regime</td>
+</tr>
+<tr>
+<td style="text-align: left;">opacity_alignment</td>
+<td style="text-align: left;">Protocol for aligning measurement systems</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Measurement Pathways:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Pathway</th>
+<th style="text-align: left;">Domain</th>
+<th style="text-align: left;">Uses</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Structural</td>
+<td style="text-align: left;">Conceptual / framework level</td>
+<td style="text-align: left;">O-Op, O-Grad, O-Bound</td>
+</tr>
+<tr>
+<td style="text-align: left;">Grammatical</td>
+<td style="text-align: left;">SARG parse / inference level</td>
+<td style="text-align: left;">opacity_token, opacity_clause</td>
+</tr>
+<tr>
+<td style="text-align: left;">Applied</td>
+<td style="text-align: left;">Real‑world measurement systems</td>
+<td style="text-align: left;">opacity_measure, opacity_signal</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bidirectional Flow:</strong>
+- <strong>NIST → Opacity:</strong> Empirical data grounds conceptual operators.
+- <strong>Opacity → NIST:</strong> Opacity operators generate measurement protocols and alignment procedures.</p>
+<hr>
+<h2 id="integration-summary">Integration Summary</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Module</th>
+<th style="text-align: left;">Opacity Formulation</th>
+<th style="text-align: left;">Primary Operators</th>
+<th style="text-align: left;">Reduction Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Inverted Star</td>
+<td style="text-align: left;">Unlit faces of the star</td>
+<td style="text-align: left;">O-Op, O-Grad, O-Bound, O-Sig</td>
+<td style="text-align: left;">Substrate alignment</td>
+</tr>
+<tr>
+<td style="text-align: left;">HSP</td>
+<td style="text-align: left;">Harmonic mismatch</td>
+<td style="text-align: left;">O-Op, O-Grad, O-Red, O-Sig</td>
+<td style="text-align: left;">Harmonic tuning</td>
+</tr>
+<tr>
+<td style="text-align: left;">Lostational Supspheres</td>
+<td style="text-align: left;">Hidden side of the dual envelope</td>
+<td style="text-align: left;">O-Op, O-Bound, O-Red, O-Sig</td>
+<td style="text-align: left;">Loss‑driven exposure</td>
+</tr>
+<tr>
+<td style="text-align: left;">SET Decomposition</td>
+<td style="text-align: left;">Missing acceleration channel</td>
+<td style="text-align: left;">O-Op, O-Grad, O-Red, O-Sig</td>
+<td style="text-align: left;">Flow‑channel instrumentation</td>
+</tr>
+<tr>
+<td style="text-align: left;">FFF Lattice</td>
+<td style="text-align: left;">Wrong lattice layer measured</td>
+<td style="text-align: left;">O-Op, O-Grad, O-Red, O-Sig</td>
+<td style="text-align: left;">Flow‑channel instrumentation</td>
+</tr>
+<tr>
+<td style="text-align: left;">Corpus</td>
+<td style="text-align: left;">Module visibility within the atlas</td>
+<td style="text-align: left;">opacity_index, opacity_map, opacity_dep.</td>
+<td style="text-align: left;">Indexing + dependency resolution</td>
+</tr>
+<tr>
+<td style="text-align: left;">SARG</td>
+<td style="text-align: left;">Grammar modifier on structural parsing</td>
+<td style="text-align: left;">opacity_token, opacity_clause, rewrite</td>
+<td style="text-align: left;">Grammar rewrite (LIFT/SPLIT/…)</td>
+</tr>
+<tr>
+<td style="text-align: left;">NIST</td>
+<td style="text-align: left;">Measurable property of real systems</td>
+<td style="text-align: left;">opacity_measure, opacity_signal, alignment</td>
+<td style="text-align: left;">Measurement alignment</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="substrate-alignment-rules">Substrate Alignment Rules</h2>
+<p>Five formal rules governing cross‑module Opacity behavior:</p>
+<ol>
+<li><strong>Fidelity Rule</strong> — O-Op readings must be reproducible across substrate positions. If two observers on the same substrate disagree, the substrate is drifting.</li>
+<li><strong>Lens Preservation Rule</strong> — O-Red must not destroy the operator set used to measure the regime. Reduction reveals; it does not consume the instrument.</li>
+<li><strong>Resonance Inheritance Rule</strong> — When a regime's harmonic signature changes, its O-Sig must be re‑captured. Stale signatures produce false visibility.</li>
+<li><strong>Regime Monotonicity Rule</strong> — O-Red can only decrease opacity. No reduction method may increase opacity as a side effect.</li>
+<li><strong>Corpus Addressability Rule</strong> — Every module with an opacity_index must be reachable from the corpus atlas. Hidden modules must be findable, even if opaque.</li>
+</ol>
+<hr>
+<!-- SESSION_CONTEXT:START -->
+
+<pre><code class="language-yaml">file: integration.md
+module: Opacity
+canonical_id: OPC
+role: cross-module-map
+status: active
+integrations:
+  - { module: Inverted Star, type: core }
+  - { module: HSP, type: core }
+  - { module: Lostational Supspheres, type: core }
+  - { module: SET Decomposition, type: core }
+  - { module: FFF Lattice, type: core }
+  - { module: Corpus, type: infrastructure }
+  - { module: SARG, type: infrastructure }
+  - { module: NIST, type: infrastructure }
+</code></pre>
+<!-- SESSION_CONTEXT:END -->
+  </main>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/core/validator_pulse.md">
+  <title>RTT Core: Validator Pulse</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/core/validator_pulse.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/core/validator_pulse.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="rtt_core_validator_pulse" src="https://github.com/user-attachments/assets/2e2c7c2e-ce94-4bc6-8989-2fb34ae1094d" /></p>
+<hr>
+<p>module_id: rtt.core.validator_pulse
+version: 1.0.0
+status: draft
+rtt: 1
+coherence: declared
+drift: bounded
+paradox: structural
+tags:
+  - validator-pulse
+  - rtt-core
+  - readout-constraints
+  - coherence-budget
+  - triadic-time</p>
+<hr>
+<h1 id="rtt-core-validator-pulse">RTT Core: Validator Pulse</h1>
+<h2 id="1-purpose-and-role-in-rtt">1. Purpose and role in RTT</h2>
+<p><strong>Goal:</strong><br>
+Define the <strong>Validator Pulse</strong> as a core RTT mechanism that:</p>
+<ul>
+<li>Selects a <strong>single branch</strong> of a multi‑branch quantum or resonant state for classical readout.</li>
+<li>Couples <strong>coherence budget</strong> to a unique validation event.</li>
+<li>Enforces <strong>regime‑dependent constraints</strong> on what can become classical information.</li>
+</ul>
+<p>Validator Pulse is the bridge between:</p>
+<ul>
+<li><strong>Representational manifolds</strong> (states, entangled structures, drift envelopes)</li>
+<li><strong>Classical outcomes</strong> (measurement, records, macroscopic effects)</li>
+</ul>
+<hr>
+<h2 id="2-conceptual-definition">2. Conceptual definition</h2>
+<h3 id="21-informal-definition">2.1 Informal definition</h3>
+<blockquote>
+<p>The Validator Pulse is the RTT mechanism that<br>
+<strong>chooses one branch to become “real” in the classical sense</strong>,<br>
+while demoting all other branches to non‑informational residue.</p>
+</blockquote>
+<p>It is not a measurement operator in the usual quantum‑mechanical sense; it is a <strong>regime‑aware validation event</strong> that:</p>
+<ul>
+<li>Respects coherence and drift constraints.</li>
+<li>Operates within a triadic time structure (state–coherence–readout).</li>
+</ul>
+<h3 id="22-core-properties">2.2 Core properties</h3>
+<ul>
+<li>
+<p><strong>Uniqueness:</strong><br>
+  At any given validation event, only <strong>one branch</strong> is promoted to classical readout.</p>
+</li>
+<li>
+<p><strong>Budgeted:</strong><br>
+  Validation consumes a finite <strong>coherence budget</strong>; it cannot be repeated arbitrarily on the same manifold.</p>
+</li>
+<li>
+<p><strong>Regime‑dependent:</strong><br>
+  The set of eligible branches is determined by the <strong>operator regime</strong> and <strong>drift envelope</strong>.</p>
+</li>
+<li>
+<p><strong>Non‑symmetric:</strong><br>
+  Different branches may have different eligibility; the Validator Pulse is not required to treat all branches equally.</p>
+</li>
+</ul>
+<hr>
+<h2 id="3-formal-structure-rtt-level">3. Formal structure (RTT-level)</h2>
+<h3 id="31-branch-manifold">3.1 Branch manifold</h3>
+<p>Let (\mathcal{M}) be a representational manifold of branches:</p>
+<p>[
+\mathcal{M} = { b_i \mid i \in I }
+]</p>
+<p>Each branch (b_i) carries:</p>
+<ul>
+<li><strong>State content:</strong> (|\psi_i\rangle)</li>
+<li><strong>Coherence weight:</strong> (c_i)</li>
+<li><strong>Drift profile:</strong> (d_i)</li>
+<li><strong>Regime flags:</strong> (R_i) (operator/regime eligibility)</li>
+</ul>
+<h3 id="32-validator-pulse-operator-schematic">3.2 Validator Pulse operator (schematic)</h3>
+<p>Define a Validator Pulse event (V) as:</p>
+<p>[
+V: \mathcal{M} \rightarrow (b_k, \text{residue})
+]</p>
+<p>such that:</p>
+<ul>
+<li>(b_k) is the <strong>validated branch</strong>.</li>
+<li>All (b_{j \neq k}) are mapped into <strong>non‑informational residue</strong> (they may still exist physically, but not as classical information carriers).</li>
+</ul>
+<p>Constraints:</p>
+<ol>
+<li><strong>Single‑branch validation:</strong></li>
+</ol>
+<p>[
+   \exists! \, k \in I \quad \text{s.t.} \quad b_k \text{ is validated}
+   ]</p>
+<ol start="2">
+<li><strong>Coherence budget:</strong></li>
+</ol>
+<p>[
+   \sum_{i \in I} c_i \leq C_{\text{max}}
+   ]</p>
+<p>and validation consumes a portion of (C_{\text{max}}) that cannot be reused for the same manifold.</p>
+<ol start="3">
+<li><strong>Regime eligibility:</strong></li>
+</ol>
+<p>[
+   b_k \in { b_i \mid R_i \text{ satisfies regime constraints} }
+   ]</p>
+<hr>
+<h2 id="4-relationship-to-coherence-and-drift">4. Relationship to coherence and drift</h2>
+<h3 id="41-coherence-coupling">4.1 Coherence coupling</h3>
+<p>Validator Pulse is <strong>coherence‑gated</strong>:</p>
+<ul>
+<li>A branch with insufficient coherence (c_i) cannot be validated.</li>
+<li>Coherence is not merely amplitude; it is the <strong>capacity to support classical readout</strong>.</li>
+</ul>
+<p>RTT coherence rule:</p>
+<blockquote>
+<p>Coherence is the resource that makes validation possible;<br>
+validation is the event that spends it.</p>
+</blockquote>
+<h3 id="42-drift-and-eligibility">4.2 Drift and eligibility</h3>
+<p>Drift (d_i) affects:</p>
+<ul>
+<li>How “clean” a branch is at validation time.</li>
+<li>Whether it remains within the <strong>Spectral Clarity Drift Envelope</strong>.</li>
+</ul>
+<p>Branches that drift outside the envelope:</p>
+<ul>
+<li>May still exist physically.</li>
+<li>Are <strong>ineligible</strong> for Validator Pulse selection.</li>
+</ul>
+<hr>
+<h2 id="5-time-structure-triadic-time">5. Time structure: triadic time</h2>
+<p>Validator Pulse lives naturally in <strong>triadic time</strong>, with three coupled layers:</p>
+<ol>
+<li>
+<p><strong>State time:</strong><br>
+   Evolution of (|\psi_i\rangle) across branches and manifolds.</p>
+</li>
+<li>
+<p><strong>Coherence time:</strong><br>
+   Evolution of coherence weights (c_i), including drift, loss, and redistribution.</p>
+</li>
+<li>
+<p><strong>Readout time:</strong><br>
+   Discrete validation events (V) that promote one branch to classical information.</p>
+</li>
+</ol>
+<p>RTT triadic time statement:</p>
+<blockquote>
+<p>State, coherence, and readout are distinct but coupled temporal layers;<br>
+Validator Pulse is the readout layer’s primary event.</p>
+</blockquote>
+<p>Quadradic time (with multiple independent readout/coherence axes) would generalize Validator Pulse, but the <strong>core definition</strong> assumes a single readout axis and a single coherence axis.</p>
+<hr>
+<h2 id="6-interaction-with-operator-regimes">6. Interaction with operator regimes</h2>
+<h3 id="61-regime-restricted-operators">6.1 Regime-restricted operators</h3>
+<p>Operators in RTT are <strong>regime‑tagged</strong>:</p>
+<ul>
+<li>Some operators are valid only under <strong>single‑readout regimes</strong>.</li>
+<li>Others may require <strong>multi‑readout</strong> or <strong>deferred validation</strong>.</li>
+</ul>
+<p>Validator Pulse:</p>
+<ul>
+<li>Enforces regime constraints at the moment of classical promotion.</li>
+<li>Can render certain operator sequences <strong>non‑realizable</strong> if they would require multiple simultaneous validations.</li>
+</ul>
+<h3 id="62-example-quantum-cloning-alignment">6.2 Example: “quantum cloning” alignment</h3>
+<p>In the alignment module <code>/docs/rtt/core/alignment_quantum_cloning.md</code>:</p>
+<ul>
+<li>The entanglement‑extension operator creates multiple representational branches.</li>
+<li>Validator Pulse enforces <strong>Single‑Validator Readout Constraint (SVRC)</strong>:</li>
+<li>Only one copy is ever validated.</li>
+<li>The other copy collapses into residue.</li>
+</ul>
+<p>This shows Validator Pulse as the <strong>mechanism that preserves no‑cloning</strong> while allowing richer representational structure.</p>
+<hr>
+<h2 id="7-paradox-handling">7. Paradox handling</h2>
+<p>Validator Pulse is central to RTT’s <strong>structural paradox</strong> handling:</p>
+<ul>
+<li>
+<p><strong>Apparent paradox:</strong><br>
+  Multiple branches exist; only one becomes “real” in the classical sense.</p>
+</li>
+<li>
+<p><strong>RTT resolution:</strong><br>
+  “Real” is a <strong>Validator Pulse outcome</strong>, not a property of the manifold itself.</p>
+</li>
+</ul>
+<p>Thus:</p>
+<ul>
+<li>Paradoxes like “cloning” or “many worlds vs single history” are reframed as:</li>
+<li>Questions about <strong>validation topology</strong></li>
+<li>Not contradictions in the underlying state manifold</li>
+</ul>
+<hr>
+<h2 id="8-canon-integration-and-cross-links">8. Canon integration and cross-links</h2>
+<p><strong>Primary cross-links:</strong></p>
+<ul>
+<li><code>/docs/rtt/core/coherence_budget.md</code></li>
+<li><code>/docs/rtt/core/dimensional_drift_envelope.md</code></li>
+<li><code>/docs/rtt/core/time_triads.md</code></li>
+<li><code>/docs/rtt/core/alignment_quantum_cloning.md</code></li>
+</ul>
+<p><strong>Status:</strong></p>
+<ul>
+<li>This module defines the <strong>conceptual and structural core</strong> of Validator Pulse.</li>
+<li>Operator‑grammar formalization (with explicit syntax for validation events and regime flags) is recommended as a follow‑up module.</li>
+</ul>
+<p>Once grammar and examples are integrated, this file can be promoted from <code>draft</code> to <code>stable</code> in the RTT core canon.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/substrate/frameworks/invariance/substrate-invariance.schema.json.md">
+  <title>substrate-invariance.schema.json</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/substrate/frameworks/invariance/substrate-invariance.schema.json.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/substrate/frameworks/invariance/substrate-invariance.schema.json.md</code>
+  </aside>
+
+  <main>
+<p>Time to restore the <strong>canonical invariance schema</strong> — the validator for the entire invariance kernel you’ve been building:</p>
+<ul>
+<li>structural invariance  </li>
+<li>behavioral invariance  </li>
+<li>temporal invariance  </li>
+<li>atlas invariance  </li>
+<li>activation invariance  </li>
+<li>invariance rules  </li>
+<li>invariance webs  </li>
+</ul>
+<p>Below is the <strong>ready‑to‑paste canonical JSON Schema</strong>, fully aligned with your substrate invariance grammar and the invariance kernel you already established.</p>
+<hr>
+<h1 id="substrate-invarianceschemajson"><strong>substrate-invariance.schema.json</strong></h1>
+<h3 id="canonical-json-schema-for-the-substrate-invariance-kernel"><em>Canonical JSON Schema for the Substrate Invariance Kernel</em></h3>
+<pre><code class="language-json">{
+  &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;title&quot;: &quot;Substrate Invariance Schema&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+
+  &quot;properties&quot;: {
+    &quot;kernel&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;const&quot;: &quot;substrate-invariance&quot;
+    },
+
+    &quot;version&quot;: {
+      &quot;type&quot;: &quot;string&quot;
+    },
+
+    &quot;generated&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;ISO date of generation&quot;
+    },
+
+    &quot;imports&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;patternProperties&quot;: {
+        &quot;^[a-zA-Z0-9_-]+$&quot;: { &quot;type&quot;: &quot;string&quot; }
+      }
+    },
+
+    &quot;invariance&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;structural&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;properties&quot;: {
+            &quot;operators&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+            &quot;dimensions&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+            &quot;regimes&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+            &quot;layers&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+            &quot;rules&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } }
+          }
+        },
+
+        &quot;behavioral&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;properties&quot;: {
+            &quot;drift&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+            &quot;coherence&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+            &quot;stability&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+            &quot;resonance&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+            &quot;ignition&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+            &quot;rules&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } }
+          }
+        },
+
+        &quot;temporal&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;properties&quot;: {
+            &quot;epochs&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+            &quot;transitions&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+            &quot;propagation&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+            &quot;rules&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } }
+          }
+        },
+
+        &quot;atlas&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;properties&quot;: {
+            &quot;routes&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+            &quot;modes&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+            &quot;transitions&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+            &quot;rules&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } }
+          }
+        },
+
+        &quot;activation&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;properties&quot;: {
+            &quot;waves&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+            &quot;cascades&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+            &quot;harmonics&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+            &quot;rules&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } }
+          }
+        }
+      }
+    },
+
+    &quot;invariance_rules&quot;: {
+      &quot;type&quot;: &quot;array&quot;,
+      &quot;items&quot;: {
+        &quot;type&quot;: &quot;object&quot;,
+        &quot;properties&quot;: {
+          &quot;rule&quot;: { &quot;type&quot;: &quot;string&quot; },
+          &quot;scope&quot;: {
+            &quot;type&quot;: &quot;array&quot;,
+            &quot;items&quot;: {
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;enum&quot;: [&quot;structural&quot;, &quot;behavioral&quot;, &quot;temporal&quot;, &quot;atlas&quot;, &quot;activation&quot;]
+            }
+          },
+          &quot;conditions&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+          &quot;guarantees&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } }
+        },
+        &quot;required&quot;: [&quot;rule&quot;, &quot;scope&quot;]
+      }
+    },
+
+    &quot;invariance_webs&quot;: {
+      &quot;type&quot;: &quot;array&quot;,
+      &quot;items&quot;: {
+        &quot;type&quot;: &quot;object&quot;,
+        &quot;properties&quot;: {
+          &quot;web_id&quot;: { &quot;type&quot;: &quot;string&quot; },
+          &quot;nodes&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+          &quot;edges&quot;: {
+            &quot;type&quot;: &quot;array&quot;,
+            &quot;items&quot;: {
+              &quot;type&quot;: &quot;object&quot;,
+              &quot;properties&quot;: {
+                &quot;source&quot;: { &quot;type&quot;: &quot;string&quot; },
+                &quot;target&quot;: { &quot;type&quot;: &quot;string&quot; },
+                &quot;weight&quot;: { &quot;type&quot;: &quot;number&quot; },
+                &quot;mode&quot;: {
+                  &quot;type&quot;: &quot;string&quot;,
+                  &quot;enum&quot;: [&quot;structural&quot;, &quot;behavioral&quot;, &quot;temporal&quot;, &quot;atlas&quot;, &quot;activation&quot;]
+                }
+              },
+              &quot;required&quot;: [&quot;source&quot;, &quot;target&quot;, &quot;mode&quot;]
+            }
+          }
+        },
+        &quot;required&quot;: [&quot;web_id&quot;, &quot;nodes&quot;, &quot;edges&quot;]
+      }
+    },
+
+    &quot;output&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;substrate_invariance&quot;: { &quot;type&quot;: &quot;string&quot; }
+      }
+    },
+
+    &quot;meta&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;notes&quot;: { &quot;type&quot;: &quot;string&quot; }
+      }
+    }
+  },
+
+  &quot;required&quot;: [
+    &quot;kernel&quot;,
+    &quot;version&quot;,
+    &quot;invariance&quot;,
+    &quot;invariance_rules&quot;,
+    &quot;invariance_webs&quot;
+  ]
+}
+</code></pre>
+  </main>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/archive_org/operators/LINEAGE_OPERATOR.md">
+  <title>🟢 LINEAGEOPERATOR</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/archive_org/operators/LINEAGE_OPERATOR.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/archive_org/operators/LINEAGE_OPERATOR.md</code>
+  </aside>
+
+  <main>
+<h1 id="lineage_operator">🟢 <strong>LINEAGE_OPERATOR</strong></h1>
+<h3 id="rtt1-operator-specification-archive_org-module"><em>RTT/1 Operator Specification — archive_org Module</em></h3>
+<h2 id="identity"><strong>Identity</strong></h2>
+<ul>
+<li><strong>Operator Name:</strong> LINEAGE_OPERATOR  </li>
+<li><strong>Operator Family:</strong> L‑Ops (Lineage Operators)  </li>
+<li><strong>Module:</strong> archive_org  </li>
+<li><strong>Purpose:</strong> Construct the <strong>continuity kernel</strong> and <strong>lineage graph</strong> from normalized metadata and time‑indexed snapshots.</li>
+</ul>
+<hr>
+<h2 id="purpose-one-sentence"><strong>Purpose (One Sentence)</strong></h2>
+<p>The LINEAGE_OPERATOR reconstructs the object’s structural evolution by building a <strong>lineage graph</strong>, identifying <strong>transformations</strong>, and detecting <strong>regime shifts</strong> across snapshots.</p>
+<hr>
+<h2 id="inputs"><strong>Inputs</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>snapshots</code></td>
+<td>list</td>
+<td>Time‑ordered IA captures from WAYBACK_OPERATOR.</td>
+</tr>
+<tr>
+<td><code>metadata</code></td>
+<td>object</td>
+<td>Normalized metadata from METADATA_OPERATOR.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="outputs"><strong>Outputs</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Output</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>lineage_graph</code></td>
+<td>Directed graph showing structural evolution across snapshots.</td>
+</tr>
+<tr>
+<td><code>transformations</code></td>
+<td>List of structural changes (template, layout, substrate, navigation).</td>
+</tr>
+<tr>
+<td><code>regime_shifts</code></td>
+<td>Points where the object changes operational regime.</td>
+</tr>
+<tr>
+<td><code>continuity_kernel</code></td>
+<td>Stable structural elements preserved across versions.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="operator-guarantees"><strong>Operator Guarantees</strong></h2>
+<ul>
+<li>No content‑based inference.  </li>
+<li>Lineage is <strong>structural</strong>, not semantic.  </li>
+<li>Regime shifts are based on <strong>structural change</strong>, not topic change.  </li>
+<li>Continuity kernel is <strong>minimal</strong>, <strong>stable</strong>, and <strong>non‑speculative</strong>.  </li>
+<li>Missing snapshots produce <strong>uncertainty</strong>, not assumptions.</li>
+</ul>
+<hr>
+<h2 id="lineage-concepts-rtt1"><strong>Lineage Concepts (RTT/1)</strong></h2>
+<h3 id="continuity-kernel"><strong>Continuity Kernel</strong></h3>
+<p>The minimal set of structural elements that persist across snapshots.<br>
+Examples:<br>
+- navigation skeleton<br>
+- header/footer structure<br>
+- persistent template regions<br>
+- stable metadata fields  </p>
+<h3 id="transformations"><strong>Transformations</strong></h3>
+<p>Structural changes between snapshots:<br>
+- layout changes<br>
+- navigation rewrites<br>
+- template replacements<br>
+- substrate changes<br>
+- CMS migrations  </p>
+<h3 id="regime-shifts"><strong>Regime Shifts</strong></h3>
+<p>A regime shift occurs when the object’s <strong>structural purpose</strong> or <strong>operational mode</strong> changes.<br>
+Examples:<br>
+- static HTML → CMS<br>
+- HTML → Flash → HTML5<br>
+- public page → paywalled page<br>
+- v1 → v2 branch in software docs  </p>
+<hr>
+<h2 id="operator-procedure"><strong>Operator Procedure</strong></h2>
+<ol>
+<li>Receive <code>snapshots</code> + <code>metadata</code>.  </li>
+<li>Compare each snapshot pair for structural changes.  </li>
+<li>Identify transformations and drift patterns.  </li>
+<li>Detect regime shifts using:<br>
+   - substrate changes<br>
+   - template changes<br>
+   - navigation rewrites<br>
+   - functional changes (e.g., paywall)  </li>
+<li>Extract continuity kernel across all snapshots.  </li>
+<li>Build lineage graph:<br>
+   - nodes = snapshots<br>
+   - edges = transformations<br>
+   - flags = regime shifts  </li>
+<li>Emit outputs for COLLECTION_OPERATOR and PRESERVATION_OPERATOR.</li>
+</ol>
+<hr>
+<h2 id="failure-modes"><strong>Failure Modes</strong></h2>
+<ul>
+<li><strong>Sparse snapshots:</strong> lineage graph may be incomplete.  </li>
+<li><strong>Mixed substrates:</strong> kernel extraction may require PRESERVATION_OPERATOR.  </li>
+<li><strong>Redirects:</strong> may indicate lineage forks (handled structurally).  </li>
+</ul>
+<hr>
+<h2 id="handoff-to-next-operator"><strong>Hand‑Off to Next Operator</strong></h2>
+<p>Outputs feed directly into:</p>
+<h3 id="collection_operator"><strong>COLLECTION_OPERATOR</strong></h3>
+<ul>
+<li>lineage_graph  </li>
+<li>regime_shifts  </li>
+</ul>
+<h3 id="preservation_operator"><strong>PRESERVATION_OPERATOR</strong></h3>
+<ul>
+<li>continuity_kernel  </li>
+<li>transformations  </li>
+</ul>
+<hr>
+<h2 id="example-synthetic"><strong>Example (Synthetic)</strong></h2>
+<pre><code>Input:
+  snapshots = [2014, 2017, 2020, 2023]
+  metadata = { regime: &quot;institutional&quot;, substrate: &quot;html&quot; }
+
+Output:
+  lineage_graph = {
+    &quot;2014→2017&quot;: &quot;minor transformation&quot;,
+    &quot;2017→2020&quot;: &quot;major transformation (CMS migration)&quot;,
+    &quot;2020→2023&quot;: &quot;minor transformation&quot;
+  }
+  transformations = [&quot;CSS shift&quot;, &quot;CMS migration&quot;, &quot;PDF layer added&quot;]
+  regime_shifts = [&quot;2020: static → CMS&quot;]
+  continuity_kernel = [&quot;header&quot;, &quot;footer&quot;, &quot;records-index&quot;]
+</code></pre>
+<hr>
+<h2 id="rtt1-mindset"><strong>RTT/1 Mindset</strong></h2>
+<ul>
+<li>Lineage is <strong>structural</strong>, not narrative.  </li>
+<li>Regime shifts are <strong>structural</strong>, not topical.  </li>
+<li>Continuity kernel is the <strong>anchor</strong> for drift‑bounded reasoning.  </li>
+<li>No assumptions about missing snapshots.  </li>
+<li>No content‑based inference.  </li>
+</ul>
+  </main>
+</body>
+</html>

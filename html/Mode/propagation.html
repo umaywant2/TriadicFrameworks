@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Mode/propagation.md">
+  <title>🌐 Cross‑Module Propagation — propagation.md</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Mode/propagation.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Mode/propagation.md</code>
+  </aside>
+
+  <main>
+<h1 id="crossmodule-propagation-propagationmd">🌐 Cross‑Module Propagation — propagation.md</h1>
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<p><img alt="Module" src="https://img.shields.io/badge/Module-Mode-0aa">
+<img alt="Component" src="https://img.shields.io/badge/Component-Propagation-ffe600">
+<img alt="Status" src="https://img.shields.io/badge/Status-Active-0af">
+<img alt="RTT" src="https://img.shields.io/badge/RTT%2F1-Aligned-8A2BE2"></p>
+<hr>
+<h2 id="session-context">Session Context</h2>
+<pre><code>Module:      Mode
+Component:   Cross-Module Propagation
+Version:     1.0
+Status:      active
+Layer:       Session
+Coherence:   declared
+Drift:       bounded
+Canon:       active
+</code></pre>
+<hr>
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This document defines how the Mode Layer propagates its state, constraints,
+and events to sibling modules within the Session Layer and to the parent
+Regime Layer. Propagation ensures that every module inherits Mode awareness
+automatically — no module operates mode-blind.</p>
+<p><strong>Design principle:</strong> Propagation is <em>push-based and declarative</em>. The Mode
+Layer announces state; receiving modules decide how to consume it. No module
+polls for mode state.</p>
+<hr>
+<h2 id="2-propagation-architecture">2. Propagation Architecture</h2>
+<pre><code>*
+┌─────────────────┐
+│   Regime Layer   │
+│  (coherence src) │
+└────────┬────────┘
+│ inherits coherence posture
+▼
+┌──────────────────────────────┐
+│        Session Layer         │
+│                              │
+│  ┌────────┐   ┌──────────┐   │
+│  │  Mode  │──▶│ Opacity  │   │
+│  │  (M)   │   └──────────┘   │
+│  │        │   ┌──────────┐   │
+│  │        │──▶│ Capture  │   │
+│  │        │   └──────────┘   │
+│  │        │   ┌──────────┐   │
+│  │        │──▶│ Context  │   │
+│  └────────┘   └──────────┘   │
+└──────────────────────────────┘
+</code></pre>
+<p><strong>Direction:</strong> Mode pushes outward. Regime pushes downward. Nothing pushes into Mode
+except Regime (coherence posture) and User (stance transitions).</p>
+<hr>
+<h2 id="3-propagation-rules">3. Propagation Rules</h2>
+<h3 id="31-mode-opacity">3.1 Mode → Opacity</h3>
+<pre><code>Event:     mode_transition
+Payload:   { previous: M_x, current: M_y, timestamp, origin }
+Effect:    Opacity recalculates session transparency weight
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Mode Stance</th>
+<th style="text-align: left;">Opacity Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">M_chat</td>
+<td style="text-align: left;">Standard transparency — balanced visibility</td>
+</tr>
+<tr>
+<td style="text-align: left;">M_task</td>
+<td style="text-align: left;">Reduced transparency — goal-scoped visibility</td>
+</tr>
+<tr>
+<td style="text-align: left;">M_spec</td>
+<td style="text-align: left;">Structural transparency — schema-level visibility</td>
+</tr>
+<tr>
+<td style="text-align: left;">M_debug</td>
+<td style="text-align: left;">Maximum transparency — full internal visibility</td>
+</tr>
+<tr>
+<td style="text-align: left;">M_auto</td>
+<td style="text-align: left;">Bounded transparency — declared boundaries only</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rule:</strong> Every mode transition triggers an Opacity recalculation.
+Opacity must never cache a stale mode state.</p>
+<h3 id="32-mode-capture">3.2 Mode → Capture</h3>
+<pre><code>Event:     mode_transition | mode_violation
+Payload:   { stance, timestamp, origin, violation_detail? }
+Effect:    Capture logs the mode event to the session record
+</code></pre>
+<p><strong>What Capture records:</strong></p>
+<ul>
+<li>Every mode transition (stance, timestamp, user/system origin).</li>
+<li>Every MCL violation (invariant, guardrail, attempted transition).</li>
+<li>Mode stance at session start and session end.</li>
+</ul>
+<p><strong>Rule:</strong> Capture must record mode events <em>before</em> the transition completes.
+The log is append-only and immutable within a session.</p>
+<h3 id="33-mode-context">3.3 Mode → Context</h3>
+<pre><code>Event:     mode_transition
+Payload:   { current: M_y, drift_tolerance, coherence_posture }
+Effect:    Context adjusts window behavior based on active stance
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Mode Stance</th>
+<th style="text-align: left;">Context Window Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">M_chat</td>
+<td style="text-align: left;">Wide context — exploratory, associative</td>
+</tr>
+<tr>
+<td style="text-align: left;">M_task</td>
+<td style="text-align: left;">Narrow context — goal-scoped, pruned</td>
+</tr>
+<tr>
+<td style="text-align: left;">M_spec</td>
+<td style="text-align: left;">Structural context — schema and definition only</td>
+</tr>
+<tr>
+<td style="text-align: left;">M_debug</td>
+<td style="text-align: left;">Deep context — includes internal state traces</td>
+</tr>
+<tr>
+<td style="text-align: left;">M_auto</td>
+<td style="text-align: left;">Bounded context — pre-declared scope only</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rule:</strong> Context must adjust its window <em>after</em> receiving the mode event
+and <em>before</em> processing the next user input.</p>
+<h3 id="34-regime-mode-inbound">3.4 Regime → Mode (inbound)</h3>
+<pre><code>Event:     regime_posture_change
+Payload:   { posture: declared | inferred | suspended }
+Effect:    MCL re-evaluates all active constraints
+</code></pre>
+<p>This is the <strong>only inbound propagation</strong> the Mode Layer accepts from
+a non-user source. It flows from the Regime Layer and affects the MCL
+(see constraints.md §6).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Regime Posture</th>
+<th style="text-align: left;">MCL Response</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">declared</td>
+<td style="text-align: left;">All transitions require explicit declaration</td>
+</tr>
+<tr>
+<td style="text-align: left;">inferred</td>
+<td style="text-align: left;">Transitions may be proposed, user confirms</td>
+</tr>
+<tr>
+<td style="text-align: left;">suspended</td>
+<td style="text-align: left;">Non-Chat modes locked; graceful exit to Chat</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rule:</strong> Regime posture changes are processed immediately. If the new
+posture is more restrictive, active non-Chat modes exit gracefully.</p>
+<hr>
+<h2 id="4-event-schema">4. Event Schema</h2>
+<p>All propagation events follow a single canonical schema:</p>
+<pre><code class="language-yaml">mode_event:
+  type: mode_transition | mode_violation | mode_query
+  timestamp: ISO-8601
+  origin: user | system | regime
+  previous_stance: M_chat | M_task | M_spec | M_debug | M_auto | null
+  current_stance: M_chat | M_task | M_spec | M_debug | M_auto
+  coherence_posture: declared | inferred | suspended
+  drift_tolerance: wide | bounded | tight | minimal
+  violation:
+    invariant: INV-1 | INV-2 | INV-3 | null
+    guardrail: GRD-1 | GRD-2 | GRD-3 | GRD-4 | GRD-5 | null
+    detail: string | null
+</code></pre>
+<p>Rule: Every event must include type, timestamp, origin, and
+current_stance. All other fields are optional but encouraged.</p>
+<hr>
+<h2 id="5-propagation-invariants">5. Propagation Invariants</h2>
+<p>PROP-1 · No Stale State</p>
+<pre><code>No sibling module may operate on a cached mode state
+older than the most recent mode_transition event.
+</code></pre>
+<h3 id="prop-2-order-preservation">PROP-2 · Order Preservation</h3>
+<pre><code>Propagation events are delivered in timestamp order.
+Out-of-order delivery is a constraint violation.
+</code></pre>
+<h3 id="prop-3-idempotent-consumption">PROP-3 · Idempotent Consumption</h3>
+<pre><code>Receiving modules must handle duplicate events gracefully.
+A repeated mode_transition with the same timestamp is a no-op.
+</code></pre>
+<hr>
+<h2 id="6-module-inheritance-block">6. Module Inheritance Block</h2>
+<p>Any module can inherit Mode Layer awareness by including this block
+in its session-context:</p>
+<pre><code class="language-yaml"># Mode Propagation — Inherited
+mode_propagation:
+  version: 1.0
+  listens_to:
+    - mode_transition
+    - mode_violation
+  receives_from: Mode (Session Layer)
+  coherence_source: Regime Layer
+  default_stance: M_chat
+  on_missing_event: assume M_chat
+</code></pre>
+<p>Paste this into any module's session-context to make it Mode-aware.
+The module will automatically receive mode events and adjust its behavior.</p>
+<hr>
+<h2 id="7-lineage">7. Lineage</h2>
+<pre><code>Source:     Mode Operator (M) + MCL
+Targets:   Opacity, Capture, Context
+Inbound:   Regime Layer (coherence posture only)
+Layer:     Session
+Pattern:   push-based, event-driven, declarative
+</code></pre>
+<p>🔙 Back to Mode Module · Operators · Constraints · Tests</p>
+<p>Cross-Module Propagation v1.0 · RTT/1 Session Layer · TriadicFrameworks</p>
+  </main>
+</body>
+</html>

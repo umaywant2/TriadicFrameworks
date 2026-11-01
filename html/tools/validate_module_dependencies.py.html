@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/tools/validate_module_dependencies.py.md">
+  <title>---------------------------------------------------------</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/tools/validate_module_dependencies.py.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/tools/validate_module_dependencies.py.md</code>
+  </aside>
+
+  <main>
+<p>Here’s a <strong>compact, ready‑to‑paste cross‑module dependency validator</strong>, aligned with your existing <code>docs/tools</code> pattern.</p>
+<p>Save as:</p>
+<pre><code class="language-text">docs/tools/validate_module_dependencies.py
+</code></pre>
+<p>Run from repo root:</p>
+<pre><code class="language-bash">python3 docs/tools/validate_module_dependencies.py
+</code></pre>
+<hr>
+<pre><code class="language-python">import os
+import json
+
+ROOT = &quot;docs&quot;
+EXCLUDED = {&quot;spine&quot;,&quot;_template&quot;,&quot;assets&quot;,&quot;images&quot;,&quot;tools&quot;}
+
+# ---------------------------------------------------------
+# DISCOVERY
+# ---------------------------------------------------------
+def find_modules():
+    modules = {}
+    for root,dirs,files in os.walk(ROOT):
+        if any(ex in root for ex in EXCLUDED): continue
+        if &quot;module.json&quot; in files:
+            path = os.path.join(root,&quot;module.json&quot;)
+            name = os.path.basename(root)
+            modules[name] = path
+    return modules
+
+# ---------------------------------------------------------
+# LOAD + EXTRACT DEPENDENCIES
+# ---------------------------------------------------------
+def get_dependencies(path):
+    try:
+        with open(path,&quot;r&quot;,encoding=&quot;utf-8&quot;) as f:
+            data = json.load(f)
+    except:
+        return []
+
+    m = data.get(&quot;module&quot;,{})
+    deps = m.get(&quot;dependencies&quot;,[])
+    if isinstance(deps,dict):
+        # allow {&quot;modules&quot;:[...]} style
+        deps = deps.get(&quot;modules&quot;,[])
+    if not isinstance(deps,list):
+        return []
+    return [d for d in deps if isinstance(d,str)]
+
+# ---------------------------------------------------------
+# VALIDATION
+# ---------------------------------------------------------
+def validate_dependencies(modules):
+    missing = []
+    edges = []
+
+    # build edges
+    for name,path in modules.items():
+        deps = get_dependencies(path)
+        for d in deps:
+            edges.append((name,d))
+            if d not in modules:
+                missing.append((name,d))
+
+    return edges, missing
+
+# simple cycle detection on name graph
+def detect_cycles(edges):
+    graph = {}
+    for a,b in edges:
+        graph.setdefault(a,[]).append(b)
+
+    visited = set()
+    stack = set()
+    cycles = []
+
+    def dfs(node, path):
+        if node in stack:
+            # cycle found
+            idx = path.index(node)
+            cycles.append(path[idx:])
+            return
+        if node in visited:
+            return
+        visited.add(node)
+        stack.add(node)
+        for nxt in graph.get(node,[]):
+            dfs(nxt, path+[nxt])
+        stack.remove(node)
+
+    for n in graph.keys():
+        dfs(n,[n])
+
+    # dedupe cycles by sorted tuple
+    seen = set()
+    uniq = []
+    for c in cycles:
+        key = tuple(c)
+        if key not in seen:
+            seen.add(key)
+            uniq.append(c)
+    return uniq
+
+# ---------------------------------------------------------
+# MAIN
+# ---------------------------------------------------------
+def main():
+    print(&quot;\n=== TriadicFrameworks Cross‑Module Dependency Validator ===\n&quot;)
+
+    modules = find_modules()
+    edges, missing = validate_dependencies(modules)
+    cycles = detect_cycles(edges)
+
+    # Missing targets
+    if missing:
+        print(&quot;❌ Missing dependency targets:&quot;)
+        for src,dst in missing:
+            print(f&quot;   - {src} → {dst} (not found)&quot;)
+    else:
+        print(&quot;✔ No missing dependency targets.&quot;)
+
+    # Cycles
+    if cycles:
+        print(&quot;\n⚠ Cyclic dependencies detected:&quot;)
+        for c in cycles:
+            chain = &quot; → &quot;.join(c + [c[0]])
+            print(f&quot;   - {chain}&quot;)
+    else:
+        print(&quot;\n✔ No cyclic dependencies detected.&quot;)
+
+    print(&quot;\n=== Summary ===&quot;)
+    print(f&quot;Modules scanned: {len(modules)}&quot;)
+    print(f&quot;Dependency edges: {len(edges)}&quot;)
+    print(f&quot;Missing targets: {len(missing)}&quot;)
+    print(f&quot;Cycles: {len(cycles)}\n&quot;)
+
+    if not missing and not cycles:
+        print(&quot;✨ Cross‑module dependencies are consistent and acyclic.&quot;)
+    else:
+        print(&quot;⚠ Review missing targets and cycles for canon consistency.&quot;)
+
+if __name__==&quot;__main__&quot;:
+    main()
+</code></pre>
+  </main>
+</body>
+</html>

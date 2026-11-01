@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/emotions/emotions_module.json.md">
+  <title>emotions_module.json</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/emotions/emotions_module.json.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/emotions/emotions_module.json.md</code>
+  </aside>
+
+  <main>
+<pre><code class="language-json">{
+  &quot;module&quot;: &quot;RTT_Emotions&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;category&quot;: &quot;rtt-emotional-dynamics&quot;,
+  &quot;summary&quot;: &quot;Parent emotional ontology module referencing six sub-modules.&quot;,
+  &quot;description&quot;: &quot;The RTT Emotions parent module defines shared metadata, regime logic, alignment structures, and observer models. It delegates all 60 emotional operators to six sub-modules for clarity, modularity, and long-term maintainability.&quot;,
+
+  &quot;includes&quot;: [
+    &quot;emotions_part_a.json&quot;,
+    &quot;emotions_part_b.json&quot;,
+    &quot;emotions_part_c.json&quot;,
+    &quot;emotions_part_d.json&quot;,
+    &quot;emotions_part_e.json&quot;,
+    &quot;emotions_part_f.json&quot;
+  ],
+
+  &quot;shared_definitions&quot;: {
+    &quot;variables&quot;: {
+      &quot;D&quot;: &quot;drift&quot;,
+      &quot;C&quot;: &quot;coherence&quot;,
+      &quot;R&quot;: &quot;resonance alignment&quot;,
+      &quot;ΔO&quot;: &quot;observer distance&quot;,
+      &quot;A_s&quot;: &quot;self alignment&quot;,
+      &quot;A_o&quot;: &quot;other alignment&quot;,
+      &quot;A_w&quot;: &quot;world alignment&quot;,
+      &quot;σ&quot;: &quot;emotional intensity&quot;,
+      &quot;θ&quot;: &quot;context factor&quot;,
+      &quot;k_e&quot;: &quot;emotion-specific constant&quot;
+    },
+    &quot;regimes&quot;: {
+      &quot;coherence&quot;: &quot;stabilizing emotions that reduce drift&quot;,
+      &quot;corridor&quot;: &quot;transitional emotions that can increase or decrease drift&quot;,
+      &quot;drift&quot;: &quot;destabilizing emotions that increase drift&quot;,
+      &quot;meta&quot;: &quot;emotions that modulate regime thresholds&quot;,
+      &quot;structural&quot;: &quot;RTT-native emotions tied to coherence/drift operators&quot;
+    }
+  },
+
+  &quot;observer_model&quot;: {
+    &quot;self&quot;: &quot;internal emotional state&quot;,
+    &quot;other&quot;: &quot;perceived emotional state&quot;,
+    &quot;world&quot;: &quot;contextual emotional meaning&quot;
+  },
+
+  &quot;regime_transitions&quot;: {
+    &quot;drift_to_corridor&quot;: &quot;E_coh + E_cor &gt; D&quot;,
+    &quot;corridor_to_coherence&quot;: &quot;E_coh &gt; D + |R - C|&quot;,
+    &quot;coherence_to_corridor&quot;: &quot;E_cor &gt; E_coh&quot;,
+    &quot;corridor_to_drift&quot;: &quot;E_drift &gt; E_coh + E_cor&quot;,
+    &quot;coherence_to_drift&quot;: &quot;E_drift &gt;&gt; E_coh&quot;,
+    &quot;drift_to_coherence&quot;: &quot;E_coh &gt;&gt; D&quot;,
+    &quot;meta_modulation&quot;: {
+      &quot;meta_awareness&quot;: &quot;D_effective = D / (1 + M_aw)&quot;,
+      &quot;clarity&quot;: &quot;C' = C + E_clarity&quot;,
+      &quot;overwhelm&quot;: &quot;D' = D + E_overwhelm&quot;,
+      &quot;numbness&quot;: &quot;E_effective = E / (1 + E_numb)&quot;
+    }
+  },
+
+  &quot;alignment_triads&quot;: {
+    &quot;values&quot;: [-1, 0, 1],
+    &quot;description&quot;: &quot;Triadic alignment signature for each emotion: (self, other, world).&quot;
+  },
+
+  &quot;status&quot;: &quot;modular&quot;,
+  &quot;license&quot;: &quot;Open educational use permitted&quot;
+}
+</code></pre>
+  </main>
+</body>
+</html>

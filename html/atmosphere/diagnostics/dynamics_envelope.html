@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/atmosphere/diagnostics/dynamics_envelope.md">
+  <title>Dynamics Envelope — Atmosphere Module</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/atmosphere/diagnostics/dynamics_envelope.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/atmosphere/diagnostics/dynamics_envelope.md</code>
+  </aside>
+
+  <main>
+<h1 id="dynamics-envelope-atmosphere-module"><strong>Dynamics Envelope — Atmosphere Module</strong></h1>
+<p>TriadicFrameworks Canon</p>
+<p>The Dynamics Envelope defines the structural wrapper for atmospheric motion, circulation, flow regimes, wave propagation, vorticity behavior, and dynamic transitions. It organizes envelope fields, thresholds, regime zones, and operator overlays used by the Dynamics Diagnostic, Map, and Trace.</p>
+<hr>
+<h2 id="1-envelope-metadata"><strong>1. Envelope Metadata</strong></h2>
+<p><strong>Module:</strong> Atmosphere<br>
+<strong>Diagnostic:</strong> Dynamics<br>
+<strong>Category:</strong> Envelope<br>
+<strong>Version:</strong> 1.0<br>
+<strong>Purpose:</strong> Provide envelope‑level structure for dynamic evaluation.</p>
+<hr>
+<h2 id="2-envelope-fields"><strong>2. Envelope Fields</strong></h2>
+<h3 id="flow-field"><strong>Flow Field</strong></h3>
+<ul>
+<li>laminar flow  </li>
+<li>turbulent flow  </li>
+<li>shear flow  </li>
+<li>boundary‑layer flow  </li>
+</ul>
+<h3 id="circulation-field"><strong>Circulation Field</strong></h3>
+<ul>
+<li>Hadley circulation  </li>
+<li>Ferrel circulation  </li>
+<li>Polar circulation  </li>
+<li>regional circulation cells  </li>
+</ul>
+<h3 id="motion-field"><strong>Motion Field</strong></h3>
+<ul>
+<li>vertical motion (ascent/descent)  </li>
+<li>horizontal motion (advection)  </li>
+<li>rotational motion (vorticity)  </li>
+</ul>
+<h3 id="wave-field"><strong>Wave Field</strong></h3>
+<ul>
+<li>gravity waves  </li>
+<li>Rossby waves  </li>
+<li>Kelvin waves  </li>
+<li>mixed‑mode wave interactions  </li>
+</ul>
+<h3 id="instability-field"><strong>Instability Field</strong></h3>
+<ul>
+<li>baroclinic instability  </li>
+<li>barotropic instability  </li>
+<li>convective dynamic bursts  </li>
+</ul>
+<hr>
+<h2 id="3-thresholds"><strong>3. Thresholds</strong></h2>
+<ul>
+<li><strong>dynamics_clarity_min:</strong> 0.7  </li>
+<li><strong>dynamics_stability_min:</strong> 0.6  </li>
+<li><strong>dynamics_noise_max:</strong> 50  </li>
+</ul>
+<p>Thresholds determine envelope regime classification.</p>
+<hr>
+<h2 id="4-regime-zones"><strong>4. Regime Zones</strong></h2>
+<h3 id="stable"><strong>Stable</strong></h3>
+<ul>
+<li>coherent momentum flux  </li>
+<li>predictable vorticity cycles  </li>
+<li>stable wave propagation  </li>
+</ul>
+<h3 id="transition"><strong>Transition</strong></h3>
+<ul>
+<li>partial momentum breakdown  </li>
+<li>shear‑driven instability onset  </li>
+<li>mixed‑mode wave interference  </li>
+</ul>
+<h3 id="unstable"><strong>Unstable</strong></h3>
+<ul>
+<li>vorticity collapse  </li>
+<li>convective dynamic bursts  </li>
+<li>wave‑driven regime disruption  </li>
+</ul>
+<hr>
+<h2 id="5-operator-overlays"><strong>5. Operator Overlays</strong></h2>
+<h3 id="dynamics-operators"><strong>Dynamics Operators</strong></h3>
+<ul>
+<li>momentum_flux_analysis  </li>
+<li>vorticity_alignment  </li>
+<li>wave_propagation_detection  </li>
+<li>shear_transition_analysis  </li>
+<li>instability_development_evaluation  </li>
+</ul>
+<h3 id="continuity-operators"><strong>Continuity Operators</strong></h3>
+<ul>
+<li>momentum_continuity  </li>
+<li>vorticity_continuity  </li>
+</ul>
+<h3 id="coherence-operators"><strong>Coherence Operators</strong></h3>
+<ul>
+<li>stable_dynamical_regime  </li>
+<li>coherent_wave_behavior  </li>
+</ul>
+<h3 id="clarity-operators"><strong>Clarity Operators</strong></h3>
+<ul>
+<li>noise_reduction  </li>
+<li>dynamical_signal_clarity  </li>
+</ul>
+<h3 id="dimensional-operators"><strong>Dimensional Operators</strong></h3>
+<ul>
+<li>micro → meso momentum scaling  </li>
+<li>meso → macro dynamical propagation  </li>
+</ul>
+<h3 id="drift-operators"><strong>Drift Operators</strong></h3>
+<ul>
+<li>dynamical_instability_propagation  </li>
+<li>momentum_drift_detection  </li>
+</ul>
+<h3 id="paradox-operators"><strong>Paradox Operators</strong></h3>
+<ul>
+<li>conflicting_dynamical_signals  </li>
+<li>inversion_paradox  </li>
+</ul>
+<h3 id="resonance-operators"><strong>Resonance Operators</strong></h3>
+<ul>
+<li>dynamical oscillation amplification  </li>
+<li>harmonic wave alignment  </li>
+</ul>
+<hr>
+<h2 id="6-envelope-role"><strong>6. Envelope Role</strong></h2>
+<p>The Dynamics Envelope:</p>
+<ul>
+<li>defines dynamic envelope fields  </li>
+<li>establishes clarity and stability thresholds  </li>
+<li>provides regime classification  </li>
+<li>overlays operator families  </li>
+<li>supports diagnostic, map, and trace interpretation  </li>
+</ul>
+<p>It is the structural envelope companion to the Dynamics Diagnostic family.</p>
+  </main>
+</body>
+</html>

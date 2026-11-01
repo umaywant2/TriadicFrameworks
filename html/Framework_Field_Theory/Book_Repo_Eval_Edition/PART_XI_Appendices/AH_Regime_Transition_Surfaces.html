@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/AH_Regime_Transition_Surfaces.md">
+  <title>Appendix AH — Regime Transition Surfaces</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/AH_Regime_Transition_Surfaces.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/AH_Regime_Transition_Surfaces.md</code>
+  </aside>
+
+  <main>
+<h1 id="appendix-ah-regime-transition-surfaces"><strong>Appendix AH — Regime Transition Surfaces</strong></h1>
+<h3 id="geometric-structures-that-define-regime-boundaries-and-transition-dynamics-in-fft"><em>Geometric structures that define regime boundaries and transition dynamics in FFT</em></h3>
+<p>Framework Field Theory (FFT) models system behavior through <strong>five canonical regimes</strong>:</p>
+<ol>
+<li>Stable  </li>
+<li>Transitional  </li>
+<li>Paradox  </li>
+<li>Interference  </li>
+<li>Coherence  </li>
+</ol>
+<p>These regimes are not discrete states.<br>
+They are <strong>regions</strong> in a high‑dimensional space defined by:</p>
+<ul>
+<li>coherence (R)  </li>
+<li>flow/alignment (V)  </li>
+<li>substrate structure (φ)  </li>
+<li>ΔSET contributions  </li>
+<li>operator dominance  </li>
+<li>temporal mode interactions  </li>
+</ul>
+<p>The boundaries between these regions are called <strong>Regime Transition Surfaces</strong>.</p>
+<p>This appendix defines their mathematical structure, detection criteria, and simulation protocols.</p>
+<hr>
+<h1 id="1-purpose-of-regime-transition-surfaces"><strong>1. Purpose of Regime Transition Surfaces</strong></h1>
+<p>Regime Transition Surfaces (RTS) serve four essential roles:</p>
+<ul>
+<li><strong>1. Identify regime boundaries</strong>  </li>
+<li><strong>2. Predict transitions before they occur</strong>  </li>
+<li><strong>3. Provide geometric structure for simulations</strong>  </li>
+<li><strong>4. Enable regime‑aware operator scaling</strong> (Appendix AF)</li>
+</ul>
+<p>RTS are the <em>phase‑space geometry</em> of FFT.</p>
+<hr>
+<h1 id="2-regime-coordinates"><strong>2. Regime Coordinates</strong></h1>
+<p>Each point in the system is mapped into a <strong>Regime Coordinate Vector</strong>:</p>
+<pre><code class="language-math">\mathbf{Q}(x,t) =
+\begin{bmatrix}
+CI(x,t) \\
+FI(x,t) \\
+\Delta SET(x,t) \\
+OI(x,t) \\
+TI(x,t)
+\end{bmatrix}
+</code></pre>
+<p>Where:</p>
+<ul>
+<li><strong>CI</strong> — Coherence Index (‖R‖)  </li>
+<li><strong>FI</strong> — Flow Index (‖V‖)  </li>
+<li><strong>ΔSET</strong> — Coherence‑derived mass/energy contribution  </li>
+<li><strong>OI</strong> — Operator Imbalance (activation vs stabilization)  </li>
+<li><strong>TI</strong> — Triadic‑Time Imbalance (t_r : t_d : t_a)</li>
+</ul>
+<p>These five quantities define a <strong>Regime Space</strong> ℛ ⊂ ℝ⁵.</p>
+<hr>
+<h1 id="3-regime-regions-in-r"><strong>3. Regime Regions in ℛ</strong></h1>
+<p>Each regime occupies a region in ℛ:</p>
+<ul>
+<li><strong>Stable Region</strong> — low CI, low FI, high S dominance  </li>
+<li><strong>Transitional Region</strong> — rising CI, moderate FI, operator competition  </li>
+<li><strong>Paradox Region</strong> — high OI, high CI, high FI, low S  </li>
+<li><strong>Interference Region</strong> — oscillatory OI, oscillatory CI, oscillatory FI  </li>
+<li><strong>Coherence Region</strong> — high CI, high alignment, low diffusion  </li>
+</ul>
+<p>These regions are not linear; they are <strong>curved manifolds</strong>.</p>
+<hr>
+<h1 id="4-definition-of-regime-transition-surfaces"><strong>4. Definition of Regime Transition Surfaces</strong></h1>
+<p>A <strong>Regime Transition Surface</strong> is a hypersurface in ℛ defined by:</p>
+<p>$$\Sigma_{i \to j} = { \mathbf{Q} \in \mathbb{R}^5 \mid f_{i}(\mathbf{Q}) = f_{j}(\mathbf{Q}) }$$</p>
+<p>Where:</p>
+<ul>
+<li>$$f_i$$ is the regime‑fitness function for regime i  </li>
+<li>$$\Sigma_{i \to j}$$ is the surface separating regimes i and j  </li>
+</ul>
+<p>These surfaces represent <strong>operator‑dominance equality conditions</strong>.</p>
+<hr>
+<h1 id="5-canonical-transition-surfaces"><strong>5. Canonical Transition Surfaces</strong></h1>
+<p>Below are the five primary surfaces.</p>
+<hr>
+<h2 id="51-stable-transitional-surface"><strong>5.1 Stable → Transitional Surface</strong></h2>
+<p>Defined by:</p>
+<p>$$CI = CI_{\text{threshold}}$$</p>
+<p>Interpretation:</p>
+<ul>
+<li>coherence begins to rise  </li>
+<li>stabilization no longer dominates  </li>
+</ul>
+<hr>
+<h2 id="52-transitional-paradox-surface"><strong>5.2 Transitional → Paradox Surface</strong></h2>
+<p>Defined by:</p>
+<p>$$OI = OI_{\text{critical}}$$</p>
+<p>Where:</p>
+<p>$$OI = \frac{\lVert \alpha[R] \rVert}{\lVert S[R] \rVert}$$</p>
+<p>Interpretation:</p>
+<ul>
+<li>activation overwhelms stabilization  </li>
+<li>system becomes stiff and unstable  </li>
+</ul>
+<hr>
+<h2 id="53-paradox-interference-surface"><strong>5.3 Paradox → Interference Surface</strong></h2>
+<p>Defined by:</p>
+<p>$$\frac{d}{dt} OI = 0$$</p>
+<p>Interpretation:</p>
+<ul>
+<li>operator dominance begins to oscillate  </li>
+<li>system enters interference patterns  </li>
+</ul>
+<hr>
+<h2 id="54-interference-coherence-surface"><strong>5.4 Interference → Coherence Surface</strong></h2>
+<p>Defined by:</p>
+<p>$$\text{Var}(OI) \to 0,\quad CI \to \text{high}$$</p>
+<p>Interpretation:</p>
+<ul>
+<li>oscillations collapse into order  </li>
+<li>coherence stabilizes  </li>
+</ul>
+<hr>
+<h2 id="55-coherence-stable-surface-rare"><strong>5.5 Coherence → Stable Surface (rare)</strong></h2>
+<p>Defined by:</p>
+<p>$$CI \to 0,\quad S \gg \alpha$$</p>
+<p>Interpretation:</p>
+<ul>
+<li>coherence collapses  </li>
+<li>system returns to baseline  </li>
+</ul>
+<hr>
+<h1 id="6-transition-surface-geometry"><strong>6. Transition Surface Geometry</strong></h1>
+<p>RTS are typically:</p>
+<ul>
+<li><strong>curved</strong>  </li>
+<li><strong>nonlinear</strong>  </li>
+<li><strong>multi‑scale</strong>  </li>
+<li><strong>kernel‑dependent</strong>  </li>
+<li><strong>time‑dependent</strong>  </li>
+</ul>
+<p>Their geometry changes with:</p>
+<ul>
+<li>kernel family (Appendix AD)  </li>
+<li>operator scaling (Appendix AF)  </li>
+<li>triadic‑time dynamics (Appendix AE)  </li>
+<li>ΔSET contributions (Appendix AB)</li>
+</ul>
+<hr>
+<h1 id="7-simulation-protocol-for-rts"><strong>7. Simulation Protocol for RTS</strong></h1>
+<h3 id="71-compute-regime-coordinates"><strong>7.1 Compute Regime Coordinates</strong></h3>
+<p>At each timestep:</p>
+<ul>
+<li>compute CI, FI, ΔSET, OI, TI  </li>
+<li>assemble Q(x,t)</li>
+</ul>
+<h3 id="72-evaluate-regime-fitness-functions"><strong>7.2 Evaluate Regime Fitness Functions</strong></h3>
+<p>For each regime i:</p>
+<p>$$f_i(\mathbf{Q})$$</p>
+<h3 id="73-detect-surface-crossings"><strong>7.3 Detect Surface Crossings</strong></h3>
+<p>A transition occurs when:</p>
+<p>$$f_i(\mathbf{Q}) = f_j(\mathbf{Q})$$</p>
+<h3 id="74-apply-operator-scaling"><strong>7.4 Apply Operator Scaling</strong></h3>
+<p>Use Appendix AF to adjust:</p>
+<ul>
+<li>D  </li>
+<li>A  </li>
+<li>C  </li>
+<li>α  </li>
+<li>S  </li>
+</ul>
+<h3 id="75-adjust-triadictime-steps"><strong>7.5 Adjust Triadic‑Time Steps</strong></h3>
+<p>Use Appendix AE to modify:</p>
+<ul>
+<li>Δt_r  </li>
+<li>Δt_d  </li>
+<li>Δt_a  </li>
+</ul>
+<h3 id="76-log-transition-events"><strong>7.6 Log Transition Events</strong></h3>
+<p>Record:</p>
+<ul>
+<li>surface crossed  </li>
+<li>location  </li>
+<li>time  </li>
+<li>operator ratios  </li>
+<li>ΔSET values  </li>
+</ul>
+<hr>
+<h1 id="8-visualization-of-rts"><strong>8. Visualization of RTS</strong></h1>
+<p>Recommended visualizations:</p>
+<ul>
+<li>2D slices of ℛ  </li>
+<li>3D projections (CI, FI, ΔSET)  </li>
+<li>transition timelines  </li>
+<li>operator‑dominance maps  </li>
+<li>kernel‑weighted regime diagrams  </li>
+</ul>
+<p>These visualizations help interpret system behavior.</p>
+<hr>
+<h1 id="closing-statement"><strong>Closing Statement</strong></h1>
+<blockquote>
+<p><strong>Appendix AH defines the geometric and mathematical structure of Regime Transition Surfaces — the hypersurfaces that separate FFT’s regimes and govern transitions between them. These surfaces form the navigational topology of the field, enabling regime‑aware simulation, prediction, and analysis.</strong></p>
+</blockquote>
+  </main>
+</body>
+</html>

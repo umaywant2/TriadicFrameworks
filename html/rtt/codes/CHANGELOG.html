@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/codes/CHANGELOG.md">
+  <title>Changelog — /docs/rtt/codes/</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/codes/CHANGELOG.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/codes/CHANGELOG.md</code>
+  </aside>
+
+  <main>
+<h1 id="changelog-docsrttcodes">Changelog — <code>/docs/rtt/codes/</code></h1>
+<blockquote>
+<p>RTT/codes module — QR-compatible metadata layer: schema, validators, generators, style system, and domain examples.</p>
+</blockquote>
+<p>All notable changes to files in <code>/docs/rtt/codes/</code> are documented in this file.
+Format follows <a href="https://keepachangelog.com/en/1.1.0/">Keep a Changelog</a>.</p>
+<hr>
+<h2 id="11-2026-05-06">[1.1] — 2026-05-06</h2>
+<h3 id="context">Context</h3>
+<p>Full 14-file module audit triggered by directory migration from <code>/docs/rttcodes/</code> to <code>/docs/rtt/codes/</code>.
+Audit confirmed <strong>zero path breaks</strong> — no file in the module references the old path.
+Two infrastructure files received metadata refresh; twelve content files passed clean.</p>
+<h3 id="migration">Migration</h3>
+<ul>
+<li><strong>Previous location:</strong> <code>/docs/rttcodes/</code></li>
+<li><strong>Current location:</strong> <code>/docs/rtt/codes/</code></li>
+<li><strong>Impact:</strong> All internal relative paths preserved. No <code>$ref</code>, <code>$id</code>, or cross-file reference required updating. The canonical schema directory (<code>/docs/schemas/</code>) was not relocated.</li>
+</ul>
+<h3 id="changed-rtt_codes_modulejson-module-manifest">Changed — <code>RTT_codes_module.json</code> (Module Manifest)</h3>
+<ul>
+<li><strong><code>_meta</code></strong> — Added full module registry block:</li>
+<li><code>module</code>, <code>canonical_id</code>, <code>module_type</code>, <code>role</code>, <code>version</code>, <code>status</code>, <code>author</code>, <code>license</code></li>
+<li><code>canonical_path</code>, <code>module_home</code> (now <code>/docs/rtt/codes/</code>), <code>module_url</code></li>
+<li><code>repository</code>, <code>last_updated</code>, <code>migration_note</code></li>
+<li><strong><code>_session_context</code></strong> — Replaced old non-standard <code>session_context</code> with standardized <code>_session_context</code> block matching TriadicFrameworks conventions (9 fields).</li>
+<li><strong><code>_version_history</code></strong> — Added array with v1.0 and v1.1 entries.</li>
+<li><strong><code>cross_module_propagation</code></strong> — Added imports (RTT/1 operators, SARG structural grammar) and exports (schema, validators, generators, style system, examples).</li>
+<li><strong><code>structural_grammar</code></strong> — Added dimensional, regime, coherence, drift, and regime sensitivity envelopes.</li>
+<li><strong>Version</strong> — Bumped from 1.0 → 1.1.</li>
+</ul>
+<h3 id="changed-schemarttcodeschemajson-local-qr-payload-schema">Changed — <code>schema/rttcode.schema.json</code> (Local QR Payload Schema)</h3>
+<ul>
+<li><strong><code>$id</code></strong> — Added: <code>https://www.triadicframeworks.org/rtt/codes/schema/rttcode.schema.json</code>.</li>
+<li><strong><code>$comment</code></strong> — Added refresh stamp with migration note.</li>
+<li><strong><code>_meta</code></strong> — Added full module registry block with <code>relationship_note</code> documenting the distinction between this schema (QR payload) and the canonical packet schema (<code>/docs/schemas/rttcode.v1.json</code>).</li>
+<li><strong><code>_session_context</code></strong> — Added 9-field session context block.</li>
+<li><strong><code>_version_history</code></strong> — Added array with v1.0 and v1.1 entries. Documents intentional inclusion of <code>"simulation"</code> in domain enum.</li>
+<li><strong>Version</strong> — Bumped from 1.0 → 1.1.</li>
+</ul>
+<h3 id="not-changed-example-payloads-8-files">Not Changed — Example Payloads (8 files)</h3>
+<p>All eight domain example payloads passed the audit with no changes required:</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Domain</th>
+<th>Artifact</th>
+<th>Version</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>examples/docs.json</code></td>
+<td>docs</td>
+<td>diagram</td>
+<td>v1.0</td>
+<td>✅ Pass</td>
+</tr>
+<tr>
+<td><code>examples/governance.json</code></td>
+<td>governance</td>
+<td>docs</td>
+<td>v1.3.1</td>
+<td>✅ Pass</td>
+</tr>
+<tr>
+<td><code>examples/observer.json</code></td>
+<td>observer</td>
+<td>module</td>
+<td>v0.4.2</td>
+<td>✅ Pass</td>
+</tr>
+<tr>
+<td><code>examples/other.json</code></td>
+<td>other</td>
+<td>other</td>
+<td>v0.0.1</td>
+<td>✅ Pass</td>
+</tr>
+<tr>
+<td><code>examples/rtt.json</code></td>
+<td>rtt</td>
+<td>paper</td>
+<td>v2.1.0</td>
+<td>✅ Pass</td>
+</tr>
+<tr>
+<td><code>examples/set.json</code></td>
+<td>set</td>
+<td>simulation</td>
+<td>v0.9.3</td>
+<td>✅ Pass</td>
+</tr>
+<tr>
+<td><code>examples/simulation.json</code></td>
+<td>simulation</td>
+<td>config</td>
+<td>v0.2.0</td>
+<td>✅ Pass</td>
+</tr>
+<tr>
+<td><code>examples/substrate.json</code></td>
+<td>substrate</td>
+<td>README</td>
+<td>v1.0.0</td>
+<td>✅ Pass</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rationale for no metadata addition:</strong> Example payloads are pure sample data — they validate against the schema but do not define infrastructure. Adding <code>_meta</code>/<code>_session_context</code> would conflate sample content with module metadata.</p>
+<h3 id="not-changed-schema-examples-4-files">Not Changed — Schema Examples (4 files)</h3>
+<p>All four schema-level example files passed the audit with no changes required:</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Purpose</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>schema/rttcode-payload-example.json</code></td>
+<td>Inline validation example (≡ <code>examples/substrate.json</code>)</td>
+<td>✅ Pass</td>
+</tr>
+<tr>
+<td><code>schema/examples/diagram.schema.json</code></td>
+<td>Minimal payload sample (required fields only)</td>
+<td>✅ Pass</td>
+</tr>
+<tr>
+<td><code>schema/examples/paper.schema.json</code></td>
+<td>Full payload sample (≡ <code>examples/rtt.json</code>)</td>
+<td>✅ Pass</td>
+</tr>
+<tr>
+<td><code>schema/examples/simulation.schema.json</code></td>
+<td>Full payload sample (≡ <code>examples/set.json</code>)</td>
+<td>✅ Pass</td>
+</tr>
+</tbody>
+</table>
+<h3 id="noted-content-duplicate-pairs">Noted — Content Duplicate Pairs</h3>
+<p>Three example files exist in both <code>examples/</code> and <code>schema/examples/</code>. This is <strong>by design</strong> — <code>examples/</code> holds domain-organized samples; <code>schema/examples/</code> holds validation-organized samples:</p>
+<ol>
+<li><code>examples/substrate.json</code> ≡ <code>schema/rttcode-payload-example.json</code></li>
+<li><code>examples/rtt.json</code> ≡ <code>schema/examples/paper.schema.json</code></li>
+<li><code>examples/set.json</code> ≡ <code>schema/examples/simulation.schema.json</code></li>
+</ol>
+<h3 id="noted-schema-relationship">Noted — Schema Relationship</h3>
+<p>The module contains <strong>two distinct schemas</strong> serving different levels of abstraction:</p>
+<table>
+<thead>
+<tr>
+<th>Schema</th>
+<th>Location</th>
+<th>Purpose</th>
+<th>Properties</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>QR Payload Schema</td>
+<td><code>schema/rttcode.schema.json</code></td>
+<td>QR-compatible metadata payload</td>
+<td>domain, artifact_type, version, triad, url, checksum</td>
+</tr>
+<tr>
+<td>RTTcode Packet Schema</td>
+<td><code>/docs/schemas/rttcode.v1.json</code></td>
+<td>Full RTTcode packet structure</td>
+<td>rtt_version, tick, entities, environment, intent</td>
+</tr>
+</tbody>
+</table>
+<p>Both schemas now document this relationship in their <code>_meta</code> blocks.</p>
+<h3 id="noted-domain-enum-discrepancy">Noted — Domain Enum Discrepancy</h3>
+<p>The local QR payload schema includes <code>"simulation"</code> in its <code>domain</code> enum. The canonical packet schema's <code>_domains</code> list does not. This is <strong>intentional</strong> — <code>"simulation"</code> is a payload-level classification used by <code>examples/simulation.json</code> and does not map to a canonical RTTcode packet domain. Documented in <code>_version_history</code> of <code>schema/rttcode.schema.json</code>.</p>
+<hr>
+<h2 id="10-2025-01-01">[1.0] — 2025-01-01</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li><code>RTT_codes_module.json</code> — Module manifest.</li>
+<li><code>schema/rttcode.schema.json</code> — QR-compatible metadata payload schema.</li>
+<li><code>schema/rttcode-payload-example.json</code> — Inline validation example.</li>
+<li><code>schema/examples/diagram.schema.json</code> — Minimal payload example.</li>
+<li><code>schema/examples/paper.schema.json</code> — Full payload example (paper).</li>
+<li><code>schema/examples/simulation.schema.json</code> — Full payload example (simulation).</li>
+<li><code>examples/docs.json</code> — Domain example: docs.</li>
+<li><code>examples/governance.json</code> — Domain example: governance.</li>
+<li><code>examples/observer.json</code> — Domain example: observer.</li>
+<li><code>examples/other.json</code> — Domain example: other.</li>
+<li><code>examples/rtt.json</code> — Domain example: rtt.</li>
+<li><code>examples/set.json</code> — Domain example: set.</li>
+<li><code>examples/simulation.json</code> — Domain example: simulation.</li>
+<li><code>examples/substrate.json</code> — Domain example: substrate.</li>
+</ul>
+<hr>
+<h2 id="file-inventory">File Inventory</h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Current Version</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>RTT_codes_module.json</code></td>
+<td>1.1</td>
+<td>refreshed</td>
+</tr>
+<tr>
+<td><code>schema/rttcode.schema.json</code></td>
+<td>1.1</td>
+<td>refreshed</td>
+</tr>
+<tr>
+<td><code>schema/rttcode-payload-example.json</code></td>
+<td>1.0</td>
+<td>pass</td>
+</tr>
+<tr>
+<td><code>schema/examples/diagram.schema.json</code></td>
+<td>1.0</td>
+<td>pass</td>
+</tr>
+<tr>
+<td><code>schema/examples/paper.schema.json</code></td>
+<td>1.0</td>
+<td>pass</td>
+</tr>
+<tr>
+<td><code>schema/examples/simulation.schema.json</code></td>
+<td>1.0</td>
+<td>pass</td>
+</tr>
+<tr>
+<td><code>examples/docs.json</code></td>
+<td>1.0</td>
+<td>pass</td>
+</tr>
+<tr>
+<td><code>examples/governance.json</code></td>
+<td>1.0</td>
+<td>pass</td>
+</tr>
+<tr>
+<td><code>examples/observer.json</code></td>
+<td>1.0</td>
+<td>pass</td>
+</tr>
+<tr>
+<td><code>examples/other.json</code></td>
+<td>1.0</td>
+<td>pass</td>
+</tr>
+<tr>
+<td><code>examples/rtt.json</code></td>
+<td>1.0</td>
+<td>pass</td>
+</tr>
+<tr>
+<td><code>examples/set.json</code></td>
+<td>1.0</td>
+<td>pass</td>
+</tr>
+<tr>
+<td><code>examples/simulation.json</code></td>
+<td>1.0</td>
+<td>pass</td>
+</tr>
+<tr>
+<td><code>examples/substrate.json</code></td>
+<td>1.0</td>
+<td>pass</td>
+</tr>
+<tr>
+<td><code>CHANGELOG.md</code></td>
+<td>—</td>
+<td>this file</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="related-changelog">Related Changelog</h3>
+<p>The canonical schema directory has its own changelog at <code>/docs/schemas/CHANGELOG.md</code>, covering the master packet schema (<code>rttcode.v1.json</code>) and its four sub-schemas (<code>tick.v1.json</code>, <code>entity.v1.json</code>, <code>environment.v1.json</code>, <code>intent.v1.json</code>).</p>
+<hr>
+<p><em>Maintained by: Nawder Loswin · TriadicFrameworks · MIT</em></p>
+  </main>
+</body>
+</html>

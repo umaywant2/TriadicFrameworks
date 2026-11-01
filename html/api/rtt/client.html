@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/api/rtt/client.md">
+  <title>client.md — Interacting with the RTT API Router</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/api/rtt/client.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/api/rtt/client.md</code>
+  </aside>
+
+  <main>
+<h1 id="clientmd-interacting-with-the-rtt-api-router"><strong>client.md — Interacting with the RTT API Router</strong></h1>
+<p>This document describes how clients, services, and tools can interact with the RTT API.<br>
+It provides examples for:</p>
+<ul>
+<li>command‑line usage (<code>curl</code>)  </li>
+<li>browser‑side JavaScript  </li>
+<li>Node/server‑to‑server integrations  </li>
+</ul>
+<p>All examples target the canonical RTT API surface:</p>
+<pre><code>/api/rtt/beacon
+/api/rtt/profile/{site}
+/api/rtt/validate
+/api/rtt/corridor
+/api/rtt/topology
+</code></pre>
+<p>The diagnostics endpoints are placeholders but included for completeness.</p>
+<hr>
+<h1 id="1-using-curl">1. Using <code>curl</code></h1>
+<h2 id="send-a-beacon-event">Send a Beacon Event</h2>
+<pre><code class="language-bash">curl -X POST https://www.triadicframeworks.org/api/rtt/beacon \
+  -H &quot;Content-Type: application/json&quot; \
+  -d '{
+        &quot;site&quot;: &quot;example.com&quot;,
+        &quot;session&quot;: &quot;rtt-abc123&quot;,
+        &quot;event&quot;: &quot;page_load&quot;,
+        &quot;ts&quot;: &quot;2026-01-19T14:22:00Z&quot;,
+        &quot;structure&quot;: {
+          &quot;url&quot;: &quot;https://example.com&quot;,
+          &quot;title&quot;: &quot;Home&quot;,
+          &quot;nav_count&quot;: 1,
+          &quot;main_count&quot;: 1,
+          &quot;form_count&quot;: 0,
+          &quot;button_count&quot;: 3,
+          &quot;dom_nodes&quot;: 142
+        }
+      }'
+</code></pre>
+<hr>
+<h2 id="get-a-site-profile">Get a Site Profile</h2>
+<pre><code class="language-bash">curl https://www.triadicframeworks.org/api/rtt/profile/example.com
+</code></pre>
+<hr>
+<h2 id="set-a-site-profile">Set a Site Profile</h2>
+<pre><code class="language-bash">curl -X POST https://www.triadicframeworks.org/api/rtt/profile/example.com \
+  -H &quot;Content-Type: application/json&quot; \
+  -d '{
+        &quot;rtt_version&quot;: &quot;1.0&quot;,
+        &quot;supports&quot;: [&quot;coherence&quot;],
+        &quot;contact&quot;: &quot;ops@example.com&quot;
+      }'
+</code></pre>
+<hr>
+<h2 id="call-a-diagnostics-endpoint-reserved">Call a Diagnostics Endpoint (Reserved)</h2>
+<pre><code class="language-bash">curl -X POST https://www.triadicframeworks.org/api/rtt/validate \
+  -H &quot;Content-Type: application/json&quot; \
+  -d '{&quot;system_map&quot;: {}, &quot;flows&quot;: [], &quot;constraints&quot;: []}'
+</code></pre>
+<hr>
+<h1 id="2-javascript-browser">2. JavaScript (Browser)</h1>
+<h2 id="sending-a-beacon-event-manually">Sending a Beacon Event Manually</h2>
+<pre><code class="language-js">fetch(&quot;https://www.triadicframeworks.org/api/rtt/beacon&quot;, {
+  method: &quot;POST&quot;,
+  headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },
+  body: JSON.stringify({
+    site: &quot;example.com&quot;,
+    session: &quot;rtt-&quot; + Math.random().toString(36).slice(2),
+    event: &quot;manual_ping&quot;,
+    ts: new Date().toISOString(),
+    structure: {
+      url: window.location.href,
+      title: document.title,
+      nav_count: document.querySelectorAll(&quot;nav&quot;).length,
+      dom_nodes: document.getElementsByTagName(&quot;*&quot;).length
+    }
+  })
+});
+</code></pre>
+<hr>
+<h2 id="using-the-rttjs-global-api">Using the <code>rtt.js</code> Global API</h2>
+<p>If the site includes:</p>
+<pre><code class="language-html">&lt;script src=&quot;https://www.triadicframeworks.org/rtt.js&quot; data-site=&quot;example.com&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>Then:</p>
+<pre><code class="language-js">// Send a manual ping
+RTT.ping(&quot;user_action&quot;);
+
+// Get a structural snapshot
+const snapshot = RTT.getStructureSnapshot();
+console.log(snapshot);
+</code></pre>
+<hr>
+<h1 id="3-javascript-node-servertoserver">3. JavaScript (Node / Server‑to‑Server)</h1>
+<h2 id="sending-a-beacon-event">Sending a Beacon Event</h2>
+<pre><code class="language-js">import fetch from &quot;node-fetch&quot;;
+
+async function sendBeacon() {
+  const payload = {
+    site: &quot;backend-service&quot;,
+    session: &quot;srv-&quot; + Date.now(),
+    event: &quot;heartbeat&quot;,
+    ts: new Date().toISOString(),
+    structure: {
+      url: &quot;internal://service&quot;,
+      title: &quot;Service Node&quot;,
+      dom_nodes: 0
+    }
+  };
+
+  await fetch(&quot;https://www.triadicframeworks.org/api/rtt/beacon&quot;, {
+    method: &quot;POST&quot;,
+    headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },
+    body: JSON.stringify(payload)
+  });
+}
+
+sendBeacon();
+</code></pre>
+<hr>
+<h2 id="setting-a-profile-from-a-backend">Setting a Profile from a Backend</h2>
+<pre><code class="language-js">import fetch from &quot;node-fetch&quot;;
+
+await fetch(&quot;https://www.triadicframeworks.org/api/rtt/profile/myservice&quot;, {
+  method: &quot;POST&quot;,
+  headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },
+  body: JSON.stringify({
+    rtt_version: &quot;1.0&quot;,
+    supports: [&quot;coherence&quot;, &quot;drift&quot;],
+    contact: &quot;infra@example.com&quot;
+  })
+});
+</code></pre>
+<hr>
+<h2 id="calling-diagnostics-futureready">Calling Diagnostics (Future‑Ready)</h2>
+<pre><code class="language-js">import fetch from &quot;node-fetch&quot;;
+
+const response = await fetch(&quot;https://www.triadicframeworks.org/api/rtt/validate&quot;, {
+  method: &quot;POST&quot;,
+  headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },
+  body: JSON.stringify({
+    system_map: { services: [&quot;auth&quot;, &quot;api&quot;, &quot;db&quot;] },
+    flows: [],
+    constraints: []
+  })
+});
+
+const result = await response.json();
+console.log(result);
+</code></pre>
+<hr>
+<h1 id="4-integration-patterns">4. Integration Patterns</h1>
+<h2 id="a-browser-extensions">A. Browser Extensions</h2>
+<p>Extensions can:</p>
+<ul>
+<li>listen for navigation events  </li>
+<li>collect structural snapshots  </li>
+<li>send periodic beacons  </li>
+<li>annotate pages with RTT clarity indicators  </li>
+</ul>
+<p>They use the same <code>/beacon</code> endpoint.</p>
+<hr>
+<h2 id="b-web-services">B. Web Services</h2>
+<p>Services can:</p>
+<ul>
+<li>declare RTT‑Inside support via <code>/profile/{site}</code>  </li>
+<li>send periodic structural heartbeats  </li>
+<li>prepare for vST‑beta diagnostics  </li>
+</ul>
+<hr>
+<h2 id="c-datacenters-research-labs">C. Datacenters / Research Labs</h2>
+<p>These clients will eventually use:</p>
+<ul>
+<li><code>/validate</code> for coherence  </li>
+<li><code>/corridor</code> for flow alignment  </li>
+<li><code>/topology</code> for triadic decomposition  </li>
+</ul>
+<p>The API surface is stable even if the internals are not yet active.</p>
+<hr>
+<h1 id="5-summary">5. Summary</h1>
+<p>This document provides:</p>
+<ul>
+<li><code>curl</code> examples  </li>
+<li>browser JavaScript examples  </li>
+<li>Node/server‑to‑server examples  </li>
+<li>integration patterns for extensions, services, and datacenters  </li>
+</ul>
+<p>The RTT API is intentionally minimal and stable, allowing early adopters to integrate now while the vST substrate continues to evolve.</p>
+  </main>
+</body>
+</html>

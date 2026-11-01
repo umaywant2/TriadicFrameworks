@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Enterprise/identity_substrate/5_service_discovery/README.md">
+  <title>Service Discovery Frameworks Identity Substrate (Layer 5)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Enterprise/identity_substrate/5_service_discovery/README.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Enterprise/identity_substrate/5_service_discovery/README.md</code>
+  </aside>
+
+  <main>
+<h1 id="service-discovery-frameworks-identity-substrate-layer-5"><strong>Service Discovery Frameworks Identity Substrate (Layer 5)</strong></h1>
+<h3 id="triadic-substrate-semantics-applied-to-dynamic-serviceidentity-and-runtime-discovery"><em>Triadic substrate semantics applied to dynamic service‑identity and runtime discovery</em></h3>
+<hr>
+<h2 id="overview"><strong>Overview</strong></h2>
+<p>The <strong>Service Discovery Frameworks Identity Substrate</strong> represents <strong>Layer 5</strong> of the RTT/Inside Enterprise Identity model.<br>
+It is the first <em>dynamic</em> identity substrate — the layer where identity becomes:</p>
+<ul>
+<li>runtime‑visible  </li>
+<li>dynamically registered  </li>
+<li>dynamically resolved  </li>
+<li>topology‑aware  </li>
+<li>environment‑aware  </li>
+<li>substrate‑extendable  </li>
+</ul>
+<p>Service discovery frameworks (SD frameworks) include:</p>
+<ul>
+<li>Consul  </li>
+<li>etcd  </li>
+<li>Zookeeper  </li>
+<li>Eureka  </li>
+<li>Kubernetes service discovery  </li>
+<li>Cloud service registries  </li>
+<li>Microservice mesh discovery (Istio, Linkerd)  </li>
+</ul>
+<p>These systems define <em>how services identify themselves</em> and <em>how clients find them</em> at runtime.<br>
+This makes Layer 5 ideal for demonstrating <strong>triadic service roles</strong>, <strong>clarity envelopes</strong>, <strong>regime tagging</strong>, and <strong>coherence boundaries</strong> in a dynamic, distributed environment.</p>
+<hr>
+<h2 id="purpose"><strong>Purpose</strong></h2>
+<p>Layer 5 exists to:</p>
+<ul>
+<li>Show how RTT/Inside substrate metadata attaches to service discovery entries  </li>
+<li>Demonstrate clarity, regime, triad roles, and coherence envelopes in runtime service identity  </li>
+<li>Provide a working example of substrate‑aware service registration  </li>
+<li>Serve as the bridge between Kerberos authentication (Layer 4) and modern identity/cloud identity (Layers 6–7)  </li>
+<li>Offer a minimal, operator‑safe demonstration of substrate‑aware service metadata  </li>
+</ul>
+<p>Service discovery is the <strong>runtime identity substrate</strong> — the layer where identity becomes active.</p>
+<hr>
+<h2 id="identity-characteristics"><strong>Identity Characteristics</strong></h2>
+<p>Service discovery frameworks provide:</p>
+<h3 id="1-runtime-service-identity"><strong>1. Runtime Service Identity</strong></h3>
+<p>Services register themselves with:</p>
+<ul>
+<li>names  </li>
+<li>tags  </li>
+<li>metadata  </li>
+<li>health checks  </li>
+<li>endpoints  </li>
+<li>protocols  </li>
+</ul>
+<p>This makes SD frameworks ideal for substrate metadata.</p>
+<h3 id="2-dynamic-resolution"><strong>2. Dynamic Resolution</strong></h3>
+<p>Clients discover services via:</p>
+<ul>
+<li>DNS  </li>
+<li>HTTP APIs  </li>
+<li>gRPC  </li>
+<li>mesh sidecars  </li>
+<li>cluster registries  </li>
+</ul>
+<p>This maps naturally to <strong>clarity envelopes</strong> and <strong>triad roles</strong>.</p>
+<h3 id="3-metadatarich-registrations"><strong>3. Metadata‑Rich Registrations</strong></h3>
+<p>SD frameworks support:</p>
+<ul>
+<li>custom metadata fields  </li>
+<li>structured tags  </li>
+<li>annotations  </li>
+<li>labels  </li>
+<li>key/value attributes  </li>
+</ul>
+<p>These allow triadic metadata without altering service behavior.</p>
+<hr>
+<h2 id="substrateaware-service-discovery-metadata"><strong>Substrate‑Aware Service Discovery Metadata</strong></h2>
+<p>A minimal substrate extension might define:</p>
+<h3 id="consul-example"><strong>Consul Example</strong></h3>
+<pre><code>{
+  &quot;Service&quot;: &quot;auth-service&quot;,
+  &quot;Tags&quot;: [
+    &quot;triadicClarity=0.81&quot;,
+    &quot;triadicRegime=analytic&quot;,
+    &quot;triadicRole=C&quot;,
+    &quot;triadicCoherence=network&quot;
+  ]
+}
+</code></pre>
+<h3 id="kubernetes-example"><strong>Kubernetes Example</strong></h3>
+<pre><code>metadata:
+  name: auth-service
+  labels:
+    triadicClarity: &quot;0.81&quot;
+    triadicRegime: &quot;analytic&quot;
+    triadicRole: &quot;C&quot;
+    triadicCoherence: &quot;network&quot;
+</code></pre>
+<h3 id="etcd-example"><strong>etcd Example</strong></h3>
+<pre><code>/services/auth-service:
+  triadicClarityScore=0.81
+  triadicRegimeTag=analytic
+  triadicRole=C
+  triadicCoherenceEnvelope=network
+</code></pre>
+<p>These metadata fields are optional and non‑breaking.</p>
+<hr>
+<h2 id="example-substrateaware-service-registration"><strong>Example: Substrate‑Aware Service Registration</strong></h2>
+<pre><code>Service: api-gateway
+Endpoint: https://gateway.enterprise.local
+Metadata:
+  triadicClarityScore: 0.94
+  triadicRegimeTag: control
+  triadicRole: A
+  triadicCoherenceEnvelope: cloud
+</code></pre>
+<p>This example shows how substrate metadata attaches to service discovery entries without altering routing or service behavior.</p>
+<hr>
+<h2 id="how-layer-5-connects-to-higher-layers"><strong>How Layer 5 Connects to Higher Layers</strong></h2>
+<p>Service discovery feeds directly into:</p>
+<ul>
+<li><strong>Modern Identity (Layer 6)</strong> — services expose identity claims  </li>
+<li><strong>Cloud Directory (Layer 7)</strong> — cloud registries map service metadata  </li>
+<li><strong>Zero‑Trust (Layer 8)</strong> — service metadata becomes policy inputs  </li>
+</ul>
+<p>Service discovery is the <strong>runtime identity substrate</strong>.</p>
+<hr>
+<h2 id="teaching-notes"><strong>Teaching Notes</strong></h2>
+<p>Students and AIs should study Layer 5 because:</p>
+<ul>
+<li>It is the first dynamic identity substrate  </li>
+<li>It demonstrates substrate semantics in distributed systems  </li>
+<li>It shows how clarity and regime tagging map to runtime service identity  </li>
+<li>It prepares learners for modern identity, cloud identity, and zero‑trust  </li>
+<li>It provides a realistic example for the RFC substrate‑awareness model  </li>
+</ul>
+<p>Layer 5 is where identity becomes <strong>dynamic</strong>, <strong>discoverable</strong>, and <strong>triadic‑aware</strong>.</p>
+<hr>
+<h2 id="status"><strong>Status</strong></h2>
+<p><strong>Experimental</strong> — stable enough for teaching and RFC anchoring, evolving as substrate semantics expand.</p>
+  </main>
+</body>
+</html>

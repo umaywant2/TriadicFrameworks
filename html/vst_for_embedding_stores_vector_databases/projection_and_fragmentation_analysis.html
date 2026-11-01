@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/vst_for_embedding_stores_vector_databases/projection_and_fragmentation_analysis.md">
+  <title>vST for Embedding Stores &amp; Vector Databases</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/vst_for_embedding_stores_vector_databases/projection_and_fragmentation_analysis.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/vst_for_embedding_stores_vector_databases/projection_and_fragmentation_analysis.md</code>
+  </aside>
+
+  <main>
+<h3 id="vst-for-embedding-stores-vector-databases"><em>vST for Embedding Stores &amp; Vector Databases</em></h3>
+<h3 id="projection-of-embedding-spaces-and-fragmentation-analysis-across-index-structures"><em>Projection of Embedding Spaces and Fragmentation Analysis Across Index Structures</em></h3>
+<p>This document defines how high‑dimensional embedding spaces are projected into the <strong>triadic dimensional cores</strong> (3D–9D) and how <strong>fragmentation</strong> is detected, classified, and interpreted across embedding clusters, retrieval neighborhoods, and index partitions. Projection provides interpretability; fragmentation analysis provides structural diagnostics.</p>
+<p>Together, they form the backbone of vST analysis for embedding stores and vector databases.</p>
+<hr>
+<h2 id="1-purpose-of-projection-and-fragmentation-analysis"><strong>1. Purpose of Projection and Fragmentation Analysis</strong></h2>
+<p>Projection enables us to:</p>
+<ul>
+<li>interpret high‑dimensional embedding spaces through 3D–9D cores  </li>
+<li>identify stable, transitional, and dispersed cluster regimes  </li>
+<li>map coherence surfaces across index structures  </li>
+<li>compare embeddings across model versions or re‑indexing events  </li>
+</ul>
+<p>Fragmentation analysis enables us to:</p>
+<ul>
+<li>detect cluster boundary breakdown  </li>
+<li>identify outlier proliferation  </li>
+<li>diagnose index‑structure instability  </li>
+<li>detect drift across embedding‑model updates  </li>
+<li>evaluate scaling‑law continuity  </li>
+</ul>
+<p>Both are essential for vST validation (V₁–V₄).</p>
+<hr>
+<h2 id="2-projection-overview"><strong>2. Projection Overview</strong></h2>
+<p>Embedding spaces often inhabit 64D–4096D regions.<br>
+The substrate projects these states into:</p>
+<ul>
+<li><strong>9D Coherence Core</strong>  </li>
+<li><strong>6D Interaction Core</strong>  </li>
+<li><strong>3D Structural Core</strong></li>
+</ul>
+<p>Projection must remain:</p>
+<ul>
+<li><strong>invertible</strong>  </li>
+<li><strong>primitive‑aligned</strong>  </li>
+<li><strong>regime‑aware</strong>  </li>
+<li><strong>invariant‑preserving</strong></li>
+</ul>
+<p>These properties ensure that high‑dimensional embedding signals remain interpretable.</p>
+<hr>
+<h2 id="3-projection-steps"><strong>3. Projection Steps</strong></h2>
+<h3 id="31-highdimensional-9d-coherence-projection"><strong>3.1 High‑Dimensional → 9D (Coherence Projection)</strong></h3>
+<p>This step extracts pathway‑level coherence across retrieval neighborhoods.</p>
+<p><strong>Preserves</strong></p>
+<ul>
+<li>cluster regime identity (R₁ᴴ, R₂ᴴ, R₃ᴴ)  </li>
+<li>resonance‑time behavior  </li>
+<li>primitive‑level structure (DP, TDP, SP, CP)  </li>
+<li>coherence‑surface continuity  </li>
+</ul>
+<p><strong>Reveals</strong></p>
+<ul>
+<li>stable cluster interiors  </li>
+<li>branching cluster boundaries  </li>
+<li>fragmentation in outlier regions  </li>
+</ul>
+<hr>
+<h3 id="32-9d-6d-interaction-projection"><strong>3.2 9D → 6D (Interaction Projection)</strong></h3>
+<p>This step compresses coherence pathways into interaction surfaces.</p>
+<p><strong>Preserves</strong></p>
+<ul>
+<li>relational geometry across clusters  </li>
+<li>index‑partition interactions  </li>
+<li>regime‑transition indicators  </li>
+</ul>
+<p><strong>Reveals</strong></p>
+<ul>
+<li>cross‑cluster reorientation  </li>
+<li>semantic‑overlap regions  </li>
+<li>early fragmentation signatures  </li>
+</ul>
+<hr>
+<h3 id="33-6d-3d-structural-projection"><strong>3.3 6D → 3D (Structural Projection)</strong></h3>
+<p>This step reduces interaction surfaces into geometric motifs.</p>
+<p><strong>Preserves</strong></p>
+<ul>
+<li>motif‑level geometry  </li>
+<li>cluster‑interior continuity  </li>
+<li>stable structural invariants  </li>
+</ul>
+<p><strong>Reveals</strong></p>
+<ul>
+<li>compact motifs in R₁ᴴ  </li>
+<li>oscillatory geometry in R₂ᴴ  </li>
+<li>diffuse patterns in R₃ᴴ  </li>
+</ul>
+<hr>
+<h2 id="4-fragmentation-overview"><strong>4. Fragmentation Overview</strong></h2>
+<p>Fragmentation refers to the breakdown of coherence surfaces in embedding space.<br>
+It appears as:</p>
+<ul>
+<li>cluster boundary tearing  </li>
+<li>outlier proliferation  </li>
+<li>index‑partition instability  </li>
+<li>retrieval‑neighborhood divergence  </li>
+<li>semantic drift after model updates  </li>
+</ul>
+<p>Fragmentation is a structural signal, not an error.<br>
+The substrate classifies it into stable, transitional, or harmful forms.</p>
+<hr>
+<h2 id="5-types-of-fragmentation"><strong>5. Types of Fragmentation</strong></h2>
+<h3 id="51-boundary-fragmentation-f1"><strong>5.1 Boundary Fragmentation (F₁)</strong></h3>
+<p>Occurs at cluster edges.</p>
+<p><strong>Indicators</strong></p>
+<ul>
+<li>moderate variance  </li>
+<li>partial coherence‑surface tearing  </li>
+<li>oscillatory 6D geometry  </li>
+<li>transitional regime behavior (R₂ᴴ)</li>
+</ul>
+<p><strong>Interpretation</strong><br>
+Expected during semantic blending or index‑partition refinement.</p>
+<hr>
+<h3 id="52-partition-fragmentation-f2"><strong>5.2 Partition Fragmentation (F₂)</strong></h3>
+<p>Occurs across index partitions.</p>
+<p><strong>Indicators</strong></p>
+<ul>
+<li>inconsistent retrieval neighborhoods  </li>
+<li>cross‑partition divergence  </li>
+<li>unstable 9D coherence pathways  </li>
+<li>sensitivity to re‑indexing  </li>
+</ul>
+<p><strong>Interpretation</strong><br>
+Indicates index‑structure instability or misalignment.</p>
+<hr>
+<h3 id="53-outlier-fragmentation-f3"><strong>5.3 Outlier Fragmentation (F₃)</strong></h3>
+<p>Occurs in dispersed regions.</p>
+<p><strong>Indicators</strong></p>
+<ul>
+<li>high variance  </li>
+<li>diffuse 3D projections  </li>
+<li>loss of primitive‑level structure  </li>
+<li>persistent R₃ᴴ behavior  </li>
+</ul>
+<p><strong>Interpretation</strong><br>
+Often caused by noisy embeddings, model drift, or heterogeneous datasets.</p>
+<hr>
+<h3 id="54-modelupdate-fragmentation-f4"><strong>5.4 Model‑Update Fragmentation (F₄)</strong></h3>
+<p>Occurs after embedding‑model changes.</p>
+<p><strong>Indicators</strong></p>
+<ul>
+<li>cluster reorientation  </li>
+<li>semantic drift  </li>
+<li>inconsistent cross‑version alignment  </li>
+<li>non‑invertible projections  </li>
+</ul>
+<p><strong>Interpretation</strong><br>
+Requires cross‑version alignment and drift detection.</p>
+<hr>
+<h2 id="6-fragmentation-detection-signals"><strong>6. Fragmentation Detection Signals</strong></h2>
+<p>Fragmentation is detected using:</p>
+<ul>
+<li>variance distribution across dimensions  </li>
+<li>coherence‑surface continuity  </li>
+<li>primitive‑level stability (DP, TDP, SP, CP)  </li>
+<li>resonance‑time behavior  </li>
+<li>retrieval‑trajectory geometry  </li>
+<li>cross‑index alignment  </li>
+<li>vST validation layers (V₁–V₄)  </li>
+</ul>
+<p>These signals collectively determine fragmentation category and severity.</p>
+<hr>
+<h2 id="7-projection-stability-and-fragmentation"><strong>7. Projection Stability and Fragmentation</strong></h2>
+<p>Projection stability is a key indicator of fragmentation health.</p>
+<h3 id="stable-projection"><strong>Stable Projection</strong></h3>
+<ul>
+<li>compact 3D motifs  </li>
+<li>smooth 6D surfaces  </li>
+<li>coherent 9D pathways  </li>
+</ul>
+<h3 id="unstable-projection"><strong>Unstable Projection</strong></h3>
+<ul>
+<li>fragmented surfaces  </li>
+<li>non‑invertible mappings  </li>
+<li>regime‑transition discontinuities  </li>
+</ul>
+<p>Unstable projection indicates harmful fragmentation or drift.</p>
+<hr>
+<h2 id="8-fragmentation-across-the-dimensional-ladder"><strong>8. Fragmentation Across the Dimensional Ladder</strong></h2>
+<p>Fragmentation may appear at different scales:</p>
+<h3 id="64d128d-local-fragmentation"><strong>64D–128D (Local Fragmentation)</strong></h3>
+<ul>
+<li>cluster‑interior instability  </li>
+<li>boundary tearing  </li>
+<li>semantic overlap  </li>
+</ul>
+<h3 id="256d512d-partition-fragmentation"><strong>256D–512D (Partition Fragmentation)</strong></h3>
+<ul>
+<li>cross‑partition divergence  </li>
+<li>retrieval‑path instability  </li>
+<li>inconsistent index behavior  </li>
+</ul>
+<h3 id="1024d-highdimensional-fragmentation"><strong>1024D+ (High‑Dimensional Fragmentation)</strong></h3>
+<ul>
+<li>coherence‑surface collapse  </li>
+<li>scaling discontinuities  </li>
+<li>projection failure  </li>
+</ul>
+<p>High‑dimensional fragmentation is the most severe.</p>
+<hr>
+<h2 id="9-outputs-of-projection-and-fragmentation-analysis"><strong>9. Outputs of Projection and Fragmentation Analysis</strong></h2>
+<p>This analysis produces:</p>
+<ul>
+<li>fragmentation category (F₁–F₄)  </li>
+<li>fragmentation severity  </li>
+<li>cluster‑boundary diagnostics  </li>
+<li>projection‑stability indicators  </li>
+<li>scaling‑law discontinuities  </li>
+<li>cross‑index and cross‑version alignment surfaces  </li>
+<li>vST validation results  </li>
+</ul>
+<p>These outputs support reproducible, substrate‑aligned evaluation of embedding stores and vector databases.</p>
+  </main>
+</body>
+</html>

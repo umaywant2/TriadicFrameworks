@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/vst_for_robotics_and_control_policies/examples/example_control_surface_projection.md">
+  <title>vST for Robotics and Control Policies</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/vst_for_robotics_and_control_policies/examples/example_control_surface_projection.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/vst_for_robotics_and_control_policies/examples/example_control_surface_projection.md</code>
+  </aside>
+
+  <main>
+<h3 id="vst-for-robotics-and-control-policies"><em>vST for Robotics and Control Policies</em></h3>
+<h3 id="example-projection-of-a-manipulator-control-surface-into-triadic-dimensional-cores"><em>Example: Projection of a Manipulator Control Surface into Triadic Dimensional Cores</em></h3>
+<p>This example demonstrates how a manipulator’s control‑policy latent state is projected from <strong>1024D</strong> into the <strong>9D → 6D → 3D</strong> triadic dimensional cores. It illustrates primitive‑level structure, interaction geometry, and projection stability during a grasp‑and‑lift task.</p>
+<p>The goal is to provide a reproducible, invariant‑preserving demonstration of control‑surface projection.</p>
+<hr>
+<h2 id="1-scenario-overview"><strong>1. Scenario Overview</strong></h2>
+<p>We assume:</p>
+<ul>
+<li>a 6‑DoF robotic arm  </li>
+<li>a policy trained for grasp‑and‑lift  </li>
+<li>latent states in the 512D–1024D range  </li>
+<li>sensor inputs: joint encoders, wrist force‑torque, RGB‑D features  </li>
+<li>action outputs: joint torques or velocity commands  </li>
+</ul>
+<p>The example is architecture‑agnostic.</p>
+<hr>
+<h2 id="2-step-1-extract-the-1024d-latent-state"><strong>2. Step 1 — Extract the 1024D Latent State</strong></h2>
+<p>At a given timestep ( t ), the policy produces:</p>
+<p>[
+C^{(t)} = [z_1, z_2, \dots, z_{1024}]
+]</p>
+<h3 id="observed-properties"><strong>Observed Properties</strong></h3>
+<ul>
+<li>stable DP/TDP structure during approach  </li>
+<li>branching behavior during grasp closure  </li>
+<li>dispersion during slip‑risk moments  </li>
+</ul>
+<hr>
+<h2 id="3-step-2-project-1024d-9d-coherence-projection"><strong>3. Step 2 — Project 1024D → 9D (Coherence Projection)</strong></h2>
+<h3 id="preserves"><strong>Preserves</strong></h3>
+<ul>
+<li>regime identity  </li>
+<li>resonance‑time behavior  </li>
+<li>primitive‑level structure  </li>
+<li>coherence‑surface continuity  </li>
+</ul>
+<h3 id="reveals"><strong>Reveals</strong></h3>
+<ul>
+<li>smooth surfaces during approach  </li>
+<li>branching during grasp closure  </li>
+<li>fragmentation during slip‑risk  </li>
+</ul>
+<h3 id="interpretation"><strong>Interpretation</strong></h3>
+<p>The 9D projection exposes the “coherence geometry” of the control surface.</p>
+<hr>
+<h2 id="4-step-3-project-9d-6d-interaction-projection"><strong>4. Step 3 — Project 9D → 6D (Interaction Projection)</strong></h2>
+<h3 id="preserves_1"><strong>Preserves</strong></h3>
+<ul>
+<li>relational geometry across sensor channels  </li>
+<li>coupling between force‑torque and joint states  </li>
+<li>regime‑transition indicators  </li>
+</ul>
+<h3 id="reveals_1"><strong>Reveals</strong></h3>
+<ul>
+<li>force‑driven reorientation  </li>
+<li>multi‑modal integration  </li>
+<li>early instability signatures  </li>
+</ul>
+<hr>
+<h2 id="5-step-4-project-6d-3d-structural-projection"><strong>5. Step 4 — Project 6D → 3D (Structural Projection)</strong></h2>
+<h3 id="preserves_2"><strong>Preserves</strong></h3>
+<ul>
+<li>motif‑level geometry  </li>
+<li>temporal continuity  </li>
+<li>stable structural invariants  </li>
+</ul>
+<h3 id="reveals_2"><strong>Reveals</strong></h3>
+<ul>
+<li>compact motifs during stable grasp  </li>
+<li>oscillatory geometry during closure  </li>
+<li>diffuse patterns during slip‑risk  </li>
+</ul>
+<hr>
+<h2 id="6-step-5-validate-with-vst-layers"><strong>6. Step 5 — Validate with vST Layers</strong></h2>
+<h3 id="v1-structural-coherence-stable-except-during-sliprisk"><strong>V₁</strong>: structural coherence stable except during slip‑risk</h3>
+<h3 id="v2-dimensional-continuity-intact"><strong>V₂</strong>: dimensional continuity intact</h3>
+<h3 id="v3-regime-transitions-substratealigned"><strong>V₃</strong>: regime transitions substrate‑aligned</h3>
+<h3 id="v4-core-alignment-stable-across-the-task"><strong>V₄</strong>: core alignment stable across the task</h3>
+<hr>
+<h2 id="7-step-6-drift-detection"><strong>7. Step 6 — Drift Detection</strong></h2>
+<p>Drift categories:</p>
+<ul>
+<li><strong>D₁ Structural Drift:</strong> moderate (slip‑risk)  </li>
+<li><strong>D₂ Dimensional Drift:</strong> none  </li>
+<li><strong>D₃ Regime Drift:</strong> moderate (R₃ᴴ onset)  </li>
+<li><strong>D₄ Projection Drift:</strong> none  </li>
+</ul>
+<hr>
+<h2 id="8-summary"><strong>8. Summary</strong></h2>
+<p>This example demonstrates:</p>
+<ul>
+<li>how a 1024D control surface is projected into triadic cores  </li>
+<li>how interaction geometry reveals multi‑modal coupling  </li>
+<li>how projection exposes instability during grasp closure  </li>
+<li>how vST layers validate structural integrity  </li>
+<li>how drift detection isolates slip‑risk behavior  </li>
+</ul>
+  </main>
+</body>
+</html>

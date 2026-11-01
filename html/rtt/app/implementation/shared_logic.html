@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/app/implementation/shared_logic.md">
+  <title>Shared Logic</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/app/implementation/shared_logic.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/app/implementation/shared_logic.md</code>
+  </aside>
+
+  <main>
+<h1 id="shared-logic">Shared Logic</h1>
+<p>The shared logic layer provides the platform‑agnostic foundation for the RTT‑App. It implements the Awareness model, merge rules, caching behavior, and state evaluation in a way that is identical across iOS and Android. Each platform supplies its own local signals and lifecycle hooks, but the interpretation of those signals is unified.</p>
+<p>This layer ensures that the RTT‑App behaves consistently regardless of device, OS version, or implementation details.</p>
+<hr>
+<h3 id="responsibilities-of-the-shared-layer">Responsibilities of the Shared Layer</h3>
+<p>The shared logic layer handles four core responsibilities:</p>
+<ul>
+<li><strong>Classifying local signals</strong> into <em>Stable</em> or <em>Unstable</em>.</li>
+<li><strong>Interpreting server‑declared Awareness</strong> from the cached endpoint.</li>
+<li><strong>Merging local and server states</strong> into a single Awareness state.</li>
+<li><strong>Providing a stable interface</strong> for the UI layer to observe state changes.</li>
+</ul>
+<p>These responsibilities form the backbone of the RTT‑App v1 architecture.</p>
+<hr>
+<h2 id="local-signal-classification">Local Signal Classification</h2>
+<p>Each platform collects its own local signals, but the shared layer performs the classification:</p>
+<ul>
+<li>Stable — network and device signals within expected bounds.</li>
+<li>Unstable — drift detected in timing, jitter, memory pressure, or protocol fallback.</li>
+</ul>
+<p>The shared layer receives a simple boolean classification rather than raw metrics. This keeps the logic portable and predictable.</p>
+<hr>
+<h2 id="server-state-interpretation">Server State Interpretation</h2>
+<p>The shared layer parses and interprets the server‑declared Awareness document:</p>
+<ul>
+<li>Reads the cached JSON payload.</li>
+<li>Validates required fields.</li>
+<li>Applies fallback rules for missing or stale data.</li>
+<li>Reduces the server state to <em>Stable</em>, <em>Unstable</em>, or <em>Unknown</em>.</li>
+</ul>
+<p><em>Unknown</em> is treated as <em>Stable</em> for merge purposes to maintain predictable behavior during outages.</p>
+<hr>
+<h2 id="awareness-merge-logic">Awareness Merge Logic</h2>
+<p>The merge logic is identical across platforms and follows the rules defined in the Awareness model:</p>
+<ul>
+<li>Local stable + Server stable → <strong>Clear</strong></li>
+<li>Local unstable + Server stable → <strong>Local Drift</strong></li>
+<li>Local stable + Server unstable → <strong>Global Drift</strong></li>
+<li>Local unstable + Server unstable → <strong>Drift</strong></li>
+</ul>
+<p>This logic is implemented once in the shared layer and reused by both iOS and Android.</p>
+<hr>
+<h2 id="state-evaluation-and-updates">State Evaluation and Updates</h2>
+<p>The shared layer exposes a simple interface for evaluating Awareness:</p>
+<ul>
+<li>Accepts local classification updates.</li>
+<li>Accepts server state updates.</li>
+<li>Computes the new Awareness state.</li>
+<li>Emits state changes to the UI layer.</li>
+</ul>
+<p>The shared layer never triggers UI updates directly; it only publishes state changes.</p>
+<hr>
+<h2 id="caching-integration">Caching Integration</h2>
+<p>The shared layer manages cache interpretation but not storage:</p>
+<ul>
+<li>Platforms handle reading/writing the cache.</li>
+<li>The shared layer validates freshness and expiration.</li>
+<li>Expired or missing data is treated as <em>Unknown</em>.</li>
+<li>The merge logic proceeds using the interpreted state.</li>
+</ul>
+<p>This separation keeps the shared layer portable and platform‑agnostic.</p>
+<hr>
+<h2 id="error-handling">Error Handling</h2>
+<p>The shared layer applies consistent fallback behavior:</p>
+<ul>
+<li>Invalid server data → treat as <em>Unknown</em>.</li>
+<li>Missing local classification → assume <em>Stable</em>.</li>
+<li>Merge errors → default to <strong>Drift</strong>.</li>
+<li>No oscillation or intermediate states.</li>
+</ul>
+<p>These rules ensure that the Awareness state remains stable even when inputs degrade.</p>
+<hr>
+<h2 id="platform-integration">Platform Integration</h2>
+<p>Both iOS and Android integrate with the shared layer by:</p>
+<ul>
+<li>Providing local signal updates.</li>
+<li>Providing server state updates.</li>
+<li>Observing Awareness state changes.</li>
+<li>Triggering evaluations at lifecycle boundaries.</li>
+</ul>
+<p>This architecture ensures that the RTT‑App behaves the same way on all devices.</p>
+  </main>
+</body>
+</html>

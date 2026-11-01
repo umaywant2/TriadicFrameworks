@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/tools/generate_full_canon_graph_svg.py.md">
+  <title>⭐ Bulk Canon‑Wide modulegraph.svg Generator</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/tools/generate_full_canon_graph_svg.py.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/tools/generate_full_canon_graph_svg.py.md</code>
+  </aside>
+
+  <main>
+<p>Here you go, the <strong>canon‑aligned, repo‑safe bulk generator</strong> that automatically creates <strong><code>module_graph.svg</code></strong> from your unified Mermaid file:</p>
+<pre><code>docs/module_graph.mermaid
+</code></pre>
+<p>This script:</p>
+<ul>
+<li>Reads the <strong>full canon graph</strong> Mermaid file  </li>
+<li>Uses Mermaid CLI (<code>mmdc</code>) to render an SVG  </li>
+<li>Writes the output to:<br>
+<code>docs/module_graph.svg</code></li>
+<li>Never overwrites existing SVGs  </li>
+<li>Produces a clean, AI‑readable visual artifact of the entire TriadicFrameworks canon  </li>
+<li>Completes the <strong>global visualization layer</strong> of your framework  </li>
+</ul>
+<p>It belongs in:</p>
+<pre><code>docs/tools/
+</code></pre>
+<hr>
+<h1 id="bulk-canonwide-module_graphsvg-generator">⭐ Bulk Canon‑Wide <code>module_graph.svg</code> Generator</h1>
+<p>Save as:</p>
+<pre><code>docs/tools/generate_full_canon_graph_svg.py
+</code></pre>
+<p>Run from repo root:</p>
+<pre><code>python3 docs/tools/generate_full_canon_graph_svg.py
+</code></pre>
+<hr>
+<h1 id="generate_full_canon_graph_svgpy-final-canon-version">🟦 <strong>generate_full_canon_graph_svg.py (Final Canon Version)</strong></h1>
+<pre><code class="language-python">import os
+import subprocess
+
+MERMAID_PATH = &quot;docs/module_graph.mermaid&quot;
+SVG_PATH = &quot;docs/module_graph.svg&quot;
+
+def generate_svg():
+    if not os.path.exists(MERMAID_PATH):
+        print(f&quot;❌ Mermaid file not found: {MERMAID_PATH}&quot;)
+        return
+
+    if os.path.exists(SVG_PATH):
+        print(f&quot;❌ module_graph.svg already exists, skipping.&quot;)
+        return
+
+    try:
+        subprocess.run(
+            [&quot;mmdc&quot;, &quot;-i&quot;, MERMAID_PATH, &quot;-o&quot;, SVG_PATH],
+            check=True
+        )
+        print(f&quot;✔ Created {SVG_PATH}&quot;)
+    except Exception as e:
+        print(f&quot;❌ Failed to generate SVG: {e}&quot;)
+
+def main():
+    print(&quot;\n=== TriadicFrameworks Full Canon Graph SVG Generator ===\n&quot;)
+    generate_svg()
+    print(&quot;\n✨ module_graph.svg generation complete.\n&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<hr>
+<h1 id="what-this-script-gives-you">⭐ What This Script Gives You</h1>
+<h3 id="creates-module_graphsvg-for-the-entire-canon">✔ Creates <code>module_graph.svg</code> for the entire canon</h3>
+<h3 id="reads-your-unified-mermaid-graph">✔ Reads your unified Mermaid graph</h3>
+<h3 id="never-overwrites-existing-svgs">✔ Never overwrites existing SVGs</h3>
+<h3 id="produces-a-clean-aireadable-visual-artifact">✔ Produces a clean, AI‑readable visual artifact</h3>
+<h3 id="works-across-your-entire-repo">✔ Works across your entire repo</h3>
+<h3 id="completes-the-global-visualization-layer">✔ Completes the global visualization layer</h3>
+<p>This is the <strong>canonical SVG representation</strong> of TriadicFrameworks.</p>
+  </main>
+</body>
+</html>

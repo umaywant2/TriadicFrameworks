@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/NoS/What_Devs_Students_and_Researchers_Are_Doing.md">
+  <title>What Devs, Students, and Researchers Are Actually Doing on Linux Today</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/NoS/What_Devs_Students_and_Researchers_Are_Doing.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/NoS/What_Devs_Students_and_Researchers_Are_Doing.md</code>
+  </aside>
+
+  <main>
+<h2 id="what-devs-students-and-researchers-are-actually-doing-on-linux-today">What Devs, Students, and Researchers Are <em>Actually</em> Doing on Linux Today</h2>
+<p>Before we talk about NawderOS (NoS), it helps to ground ourselves in the <strong>default mental posture</strong> people bring to Linux right now.</p>
+<h3 id="their-daily-reality-looks-like-this">Their daily reality looks like this:</h3>
+<ul>
+<li><strong>Tool‑first workflows</strong></li>
+<li><code>systemd</code>, <code>journalctl</code>, <code>perf</code>, <code>strace</code>, <code>bpftrace</code></li>
+<li>Containers, VMs, CI pipelines</li>
+<li><strong>Outcome‑oriented debugging</strong></li>
+<li>“Why is this slow?”</li>
+<li>“Why did this crash?”</li>
+<li>“How do I fix it?”</li>
+<li><strong>Implicit trust in enforcement</strong></li>
+<li>The kernel <em>prevents</em> bad things</li>
+<li>The scheduler <em>ensures</em> fairness</li>
+<li>The system <em>recovers</em> automatically</li>
+</ul>
+<p>Even researchers often arrive with:
+- a <strong>control mindset</strong>
+- an expectation that instrumentation exists to <em>drive action</em>
+- a belief that “if nothing broke, nothing happened”</p>
+<p>This is the road surface they’re used to.</p>
+<hr>
+<h2 id="what-theyll-experience-when-they-boot-a-nawderos-variant">What They’ll Experience When They Boot a NawderOS Variant</h2>
+<p>Here’s the key insight:</p>
+<blockquote>
+<p><strong>NawderOS doesn’t feel broken — it feels quiet.</strong></p>
+</blockquote>
+<p>And that quiet can be misinterpreted.</p>
+<h3 id="firsttime-reactions-we-should-expect">First‑time reactions we should expect:</h3>
+<ul>
+<li>“Nothing is happening.”</li>
+<li>“Where’s the dashboard?”</li>
+<li>“Why didn’t it stop that?”</li>
+<li>“Is this incomplete?”</li>
+</ul>
+<p>None of those are wrong questions. They’re just asked from the <em>old road</em>.</p>
+<hr>
+<h2 id="potential-windshield-chips-and-how-to-sweep-them-away">Potential “Windshield Chips” (and How to Sweep Them Away)</h2>
+<p>Let’s walk through the likely gotchas and how to pre‑empt them.</p>
+<hr>
+<h3 id="1-silence-inactivity">1️⃣ Silence ≠ Inactivity</h3>
+<p><strong>Gotcha:</strong><br>
+Badges emit, but nothing <em>acts</em> on them.</p>
+<p><strong>Risk:</strong><br>
+Users assume instrumentation is missing or broken.</p>
+<p><strong>Sweep:</strong><br>
+Make it explicit, early, and repeatedly:</p>
+<ul>
+<li>Badges are <strong>outputs</strong>, not triggers</li>
+<li>No default remediation is intentional</li>
+<li>Observation is the product</li>
+</ul>
+<p><strong>Concrete mitigation:</strong>
+- A README callout:</p>
+<blockquote>
+<p>“If you’re waiting for the system to react, you’re already past the point RTT cares about.”</p>
+</blockquote>
+<ul>
+<li>A first‑boot message or doc snippet:<blockquote>
+<p>“You should see very little. That’s success.”</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h3 id="2-logging-expectations-vs-badge-semantics">2️⃣ Logging Expectations vs Badge Semantics</h3>
+<p><strong>Gotcha:</strong><br>
+Users treat badges like logs.</p>
+<p><strong>Risk:</strong><br>
+They grep, filter, and discard them as noise.</p>
+<p><strong>Sweep:</strong><br>
+Clarify that badges are <strong>semantic events</strong>, not verbose traces.</p>
+<p><strong>Concrete mitigation:</strong>
+- Strong language in <code>BADGE_LOGIC.md</code>:
+  - “If it didn’t emit a badge, RTT considers it irrelevant.”
+- Encourage <em>reading badges slowly</em>, not aggregating them immediately.</p>
+<hr>
+<h3 id="3-tooling-muscle-memory-works-against-rtt">3️⃣ Tooling Muscle Memory Works Against RTT</h3>
+<p><strong>Gotcha:</strong><br>
+Users immediately reach for:
+- <code>journalctl -f</code>
+- dashboards
+- alerting rules</p>
+<p><strong>Risk:</strong><br>
+They rebuild a control loop on top of RTT and miss the point.</p>
+<p><strong>Sweep:</strong><br>
+Delay tooling gratification.</p>
+<p><strong>Concrete mitigation:</strong>
+- Provide <strong>no default dashboard</strong>
+- Provide <strong>no alert thresholds</strong>
+- Provide <strong>example badge replays</strong>, not live monitors</p>
+<p>RTT wants <em>post‑hoc understanding</em> before real‑time reaction.</p>
+<hr>
+<h3 id="4-kernel-instrumentation-feels-too-small">4️⃣ Kernel Instrumentation Feels “Too Small”</h3>
+<p><strong>Gotcha:</strong><br>
+The minimal kernel patch looks trivial.</p>
+<p><strong>Risk:</strong><br>
+Users assume RTT is superficial.</p>
+<p><strong>Sweep:</strong><br>
+Frame minimalism as <strong>structural discipline</strong>, not lack of ambition.</p>
+<p><strong>Concrete mitigation:</strong>
+- Explicitly state:</p>
+<blockquote>
+<p>“If this feels underwhelming, that’s because it’s doing exactly one thing — telling the truth.”</p>
+</blockquote>
+<ul>
+<li>Tie the MVP patch directly to the theory:</li>
+<li>One assumption</li>
+<li>One boundary</li>
+<li>One badge</li>
+</ul>
+<hr>
+<h3 id="5-students-want-to-fix-things-immediately">5️⃣ Students Want to Fix Things (Immediately)</h3>
+<p><strong>Gotcha:</strong><br>
+Students instinctively add enforcement.</p>
+<p><strong>Risk:</strong><br>
+They collapse observation and control.</p>
+<p><strong>Sweep:</strong><br>
+Normalize restraint as a skill.</p>
+<p><strong>Concrete mitigation:</strong>
+- The grading rubric you drafted already does this beautifully
+- Add a visible mantra:</p>
+<blockquote>
+<p>“If you fixed it, you missed it.”</p>
+</blockquote>
+<hr>
+<h2 id="are-additional-settings-needed">Are Additional Settings Needed?</h2>
+<p><strong>Short answer:</strong> No.<br>
+<strong>Long answer:</strong> We need <em>conceptual toggles</em>, not config flags.</p>
+<h3 id="what-we-should-not-add">What we should <em>not</em> add:</h3>
+<ul>
+<li>RTT enable/disable switches</li>
+<li>“strict mode”</li>
+<li>enforcement options</li>
+<li>auto‑remediation hooks</li>
+</ul>
+<p>Those invite misuse.</p>
+<h3 id="what-we-should-add">What we <em>should</em> add:</h3>
+<ul>
+<li><strong>Narrative affordances</strong></li>
+<li><strong>Expectation‑setting</strong></li>
+<li><strong>Intentional friction</strong></li>
+</ul>
+<p>RTT works when people slow down just enough to notice time.</p>
+<hr>
+<h2 id="the-big-picture-why-this-will-actually-land-well">The Big Picture: Why This Will Actually Land Well</h2>
+<p>Here’s the encouraging part.</p>
+<p>Modern devs and researchers are:
+- burned out on dashboards
+- skeptical of “smart” automation
+- increasingly aware that systems fail <em>quietly</em></p>
+<p>NawderOS doesn’t fight that instinct — it validates it.</p>
+<p>Once users realize:</p>
+<blockquote>
+<p>“This system isn’t trying to save me — it’s trying to tell me the truth”</p>
+</blockquote>
+<p>…they stop asking where the guardrails are and start asking better questions.</p>
+<p>That’s when the road opens up.</p>
+<hr>
+<h2 id="final-sweep-summary">Final Sweep Summary 🧹</h2>
+<p>To make the first drive smooth:
+- Emphasize <strong>quiet as a feature</strong>
+- Reframe <strong>inaction as honesty</strong>
+- Delay tooling
+- Reward restraint
+- Keep the kernel patch small and legible
+- Say, out loud, what RTT refuses to do</p>
+<p>You’ve already paved the road correctly.<br>
+This is just making sure the signage is clear and the gravel is swept.</p>
+  </main>
+</body>
+</html>

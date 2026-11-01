@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/substrate/frameworks/module_templates/module.roles.json.md">
+  <title>🎭 module.roles.json</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/substrate/frameworks/module_templates/module.roles.json.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/substrate/frameworks/module_templates/module.roles.json.md</code>
+  </aside>
+
+  <main>
+<h1 id="modulerolesjson">🎭 <strong>module.roles.json</strong></h1>
+<h3 id="canonical-moduleroles-template-structural-role-grammar"><em>Canonical module‑roles template — structural role grammar</em></h3>
+<pre><code class="language-json">{
+  &quot;$schema&quot;: &quot;../../module.schema.json&quot;,
+  &quot;module&quot;: &quot;my-roles-module&quot;,
+  &quot;identity&quot;: &quot;student.my-roles-module&quot;,
+  &quot;purpose&quot;: &quot;Defines canonical roles for module architecture, including engine, profile, signature, diagnostic, map, example, extension, index, reference, and template.&quot;,
+
+  &quot;files&quot;: [
+    {
+      &quot;name&quot;: &quot;README.md&quot;,
+      &quot;role&quot;: &quot;profile&quot;
+    },
+    {
+      &quot;name&quot;: &quot;engine.md&quot;,
+      &quot;role&quot;: &quot;engine&quot;
+    },
+    {
+      &quot;name&quot;: &quot;signature.md&quot;,
+      &quot;role&quot;: &quot;signature&quot;
+    },
+    {
+      &quot;name&quot;: &quot;diagnostic.md&quot;,
+      &quot;role&quot;: &quot;diagnostic&quot;
+    },
+    {
+      &quot;name&quot;: &quot;map.md&quot;,
+      &quot;role&quot;: &quot;map&quot;
+    },
+    {
+      &quot;name&quot;: &quot;example.md&quot;,
+      &quot;role&quot;: &quot;example&quot;
+    },
+    {
+      &quot;name&quot;: &quot;extension.md&quot;,
+      &quot;role&quot;: &quot;extension&quot;
+    },
+    {
+      &quot;name&quot;: &quot;index.md&quot;,
+      &quot;role&quot;: &quot;index&quot;
+    },
+    {
+      &quot;name&quot;: &quot;reference.md&quot;,
+      &quot;role&quot;: &quot;reference&quot;
+    },
+    {
+      &quot;name&quot;: &quot;template.md&quot;,
+      &quot;role&quot;: &quot;template&quot;
+    }
+  ],
+
+  &quot;roles&quot;: {
+    &quot;engine&quot;: {
+      &quot;fields&quot;: [&quot;string&quot;],
+      &quot;rules&quot;: [&quot;string&quot;]
+    },
+    &quot;profile&quot;: {
+      &quot;fields&quot;: [&quot;string&quot;],
+      &quot;rules&quot;: [&quot;string&quot;]
+    },
+    &quot;signature&quot;: {
+      &quot;fields&quot;: [&quot;string&quot;],
+      &quot;rules&quot;: [&quot;string&quot;]
+    },
+    &quot;diagnostic&quot;: {
+      &quot;fields&quot;: [&quot;string&quot;],
+      &quot;rules&quot;: [&quot;string&quot;]
+    },
+    &quot;map&quot;: {
+      &quot;fields&quot;: [&quot;string&quot;],
+      &quot;rules&quot;: [&quot;string&quot;]
+    },
+    &quot;example&quot;: {
+      &quot;fields&quot;: [&quot;string&quot;],
+      &quot;rules&quot;: [&quot;string&quot;]
+    },
+    &quot;extension&quot;: {
+      &quot;fields&quot;: [&quot;string&quot;],
+      &quot;rules&quot;: [&quot;string&quot;]
+    },
+    &quot;index&quot;: {
+      &quot;fields&quot;: [&quot;string&quot;],
+      &quot;rules&quot;: [&quot;string&quot;]
+    },
+    &quot;reference&quot;: {
+      &quot;fields&quot;: [&quot;string&quot;],
+      &quot;rules&quot;: [&quot;string&quot;]
+    },
+    &quot;template&quot;: {
+      &quot;fields&quot;: [&quot;string&quot;],
+      &quot;rules&quot;: [&quot;string&quot;]
+    }
+  },
+
+  &quot;operators&quot;: [
+    {
+      &quot;name&quot;: &quot;role-define&quot;,
+      &quot;description&quot;: &quot;Define a new role for the module.&quot;,
+      &quot;example&quot;: &quot;Define engine role → engine.md&quot;
+    },
+    {
+      &quot;name&quot;: &quot;role-extend&quot;,
+      &quot;description&quot;: &quot;Extend an existing role with module-specific fields.&quot;,
+      &quot;example&quot;: &quot;Extend signature role → signature.md&quot;
+    },
+    {
+      &quot;name&quot;: &quot;role-bind&quot;,
+      &quot;description&quot;: &quot;Bind module roles to substrate structural engines.&quot;,
+      &quot;example&quot;: &quot;Bind diagnostic role → diagnostic.md&quot;
+    }
+  ],
+
+  &quot;output&quot;: {
+    &quot;roles_template&quot;: &quot;./module.roles.json&quot;
+  },
+
+  &quot;meta&quot;: {
+    &quot;notes&quot;: &quot;Structural role grammar for module-level role declarations.&quot;
+  }
+}
+</code></pre>
+<hr>
+<h2 id="why-this-is-the-correct-roles-template">Why this is the correct roles template</h2>
+<ul>
+<li>Mirrors your <strong>TriadicFrameworks role enums</strong> exactly.  </li>
+<li>Includes all ten canonical roles: engine, profile, signature, diagnostic, map, example, extension, index, reference, template.  </li>
+<li>Uses <strong>map‑role files</strong> for each role.  </li>
+<li>Includes <strong>operators</strong> for define / extend / bind.  </li>
+<li>Fully <strong>schema‑aligned</strong>, silent‑release compatible, and ready for commit.  </li>
+</ul>
+  </main>
+</body>
+</html>

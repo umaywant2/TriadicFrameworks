@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/tools/generate_all_modules.py.md">
+  <title>⭐ Bulk Module Generator</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/tools/generate_all_modules.py.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/tools/generate_all_modules.py.md</code>
+  </aside>
+
+  <main>
+<p>Here it is, the <strong>bulk module.json generator</strong>, built to sweep your entire TriadicFrameworks repo and automatically create canon‑aligned <code>module.json</code> files for every module directory that <em>does not already have one</em>.</p>
+<p>This script is:</p>
+<ul>
+<li><strong>Safe</strong> — never overwrites existing module.json files  </li>
+<li><strong>Canon‑aligned</strong> — uses your template + spine inheritance  </li>
+<li><strong>Repo‑aware</strong> — walks your <code>/docs</code> tree exactly the way TriadicFrameworks is structured  </li>
+<li><strong>Flexible</strong> — works for maps, operators, examples, references, engines, profiles, signatures, diagnostics, etc.  </li>
+<li><strong>Fast</strong> — generates all missing module.json files in seconds  </li>
+</ul>
+<p>And it’s designed to live right where your active tab is pointing:<br>
+<code>docs/tools/</code> in your GitHub repo.</p>
+<hr>
+<h1 id="bulk-module-generator">⭐ Bulk Module Generator</h1>
+<p>Save as:</p>
+<pre><code>docs/tools/generate_all_modules.py
+</code></pre>
+<p>Run from repo root:</p>
+<pre><code>python3 docs/tools/generate_all_modules.py
+</code></pre>
+<hr>
+<h1 id="generate_all_modulespy-final-canon-version">🟦 <strong>generate_all_modules.py (Final Canon Version)</strong></h1>
+<pre><code class="language-python">import os
+import json
+
+TEMPLATE_PATH = &quot;docs/_template/module.json&quot;
+SPINE_REF = &quot;/docs/spine/spine.json&quot;
+
+EXCLUDED_DIRS = {
+    &quot;spine&quot;,
+    &quot;_template&quot;,
+    &quot;assets&quot;,
+    &quot;images&quot;,
+    &quot;tools&quot;
+}
+
+def load_template():
+    with open(TEMPLATE_PATH, &quot;r&quot;, encoding=&quot;utf-8&quot;) as f:
+        return json.load(f)
+
+def is_module_dir(path):
+    # A module directory is any directory containing content files
+    # but NOT already containing module.json
+    if &quot;module.json&quot; in os.listdir(path):
+        return False
+
+    for f in os.listdir(path):
+        if f.endswith((&quot;.md&quot;, &quot;.txt&quot;, &quot;.json&quot;)) and f != &quot;module.json&quot;:
+            return True
+
+    return False
+
+def generate_module_json(path, template):
+    module_name = os.path.basename(path)
+
+    data = template.copy()
+
+    # Fill in module fields
+    data[&quot;module&quot;][&quot;name&quot;] = module_name
+    data[&quot;module&quot;][&quot;summary&quot;] = f&quot;Auto‑generated module.json for {module_name}&quot;
+    data[&quot;module&quot;][&quot;category&quot;] = os.path.basename(os.path.dirname(path))
+
+    # Canon inheritance
+    data[&quot;module&quot;][&quot;canon_ref&quot;] = SPINE_REF
+    data[&quot;module&quot;][&quot;inherit&quot;] = {
+        &quot;canon&quot;: True,
+        &quot;session_context&quot;: True,
+        &quot;triad_alias_resolution&quot;: True
+    }
+
+    # RTT block
+    data[&quot;module&quot;][&quot;rtt&quot;] = {
+        &quot;layer&quot;: 1,
+        &quot;source&quot;: &quot;https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html&quot;
+    }
+
+    # AI initialization
+    data[&quot;module&quot;][&quot;ai&quot;] = {
+        &quot;initialization&quot;: {
+            &quot;load_spine_first&quot;: True,
+            &quot;load_canon_first&quot;: True,
+            &quot;apply_session_context&quot;: True,
+            &quot;triad_validation&quot;: True
+        }
+    }
+
+    out_path = os.path.join(path, &quot;module.json&quot;)
+
+    with open(out_path, &quot;w&quot;, encoding=&quot;utf-8&quot;) as f:
+        json.dump(data, f, indent=2)
+
+    print(f&quot;✔ Created {out_path}&quot;)
+
+def main():
+    print(&quot;\n=== TriadicFrameworks Bulk Module Generator ===\n&quot;)
+
+    template = load_template()
+
+    for root, dirs, files in os.walk(&quot;docs&quot;):
+        # Skip excluded directories
+        if any(ex in root for ex in EXCLUDED_DIRS):
+            continue
+
+        # Check if this directory qualifies as a module
+        if is_module_dir(root):
+            generate_module_json(root, template)
+
+    print(&quot;\n✨ Bulk generation complete — all missing module.json files created.\n&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<hr>
+<h1 id="what-this-script-does">⭐ What This Script Does</h1>
+<h3 id="walks-your-entire-docs-tree">✔ Walks your entire <code>/docs</code> tree</h3>
+<p>It finds every directory that contains content (maps, operators, examples, references, etc.).</p>
+<h3 id="skips-directories-that-should-not-have-modulejson">✔ Skips directories that should not have module.json</h3>
+<ul>
+<li><code>/docs/spine/</code>  </li>
+<li><code>/docs/_template/</code>  </li>
+<li><code>/docs/tools/</code>  </li>
+<li><code>/docs/assets/</code>  </li>
+<li><code>/docs/images/</code>  </li>
+</ul>
+<h3 id="creates-modulejson-only-where-missing">✔ Creates module.json only where missing</h3>
+<p>Never overwrites existing files.</p>
+<h3 id="autofills-canon-inheritance">✔ Auto‑fills canon inheritance</h3>
+<p>Every generated module includes:</p>
+<pre><code class="language-json">&quot;canon_ref&quot;: &quot;/docs/spine/spine.json&quot;,
+&quot;inherit&quot;: {
+  &quot;canon&quot;: true,
+  &quot;session_context&quot;: true,
+  &quot;triad_alias_resolution&quot;: true
+}
+</code></pre>
+<h3 id="autofills-rtt">✔ Auto‑fills RTT</h3>
+<p>Every module declares:</p>
+<pre><code class="language-json">&quot;rtt&quot;: {
+  &quot;layer&quot;: 1,
+  &quot;source&quot;: &quot;https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html&quot;
+}
+</code></pre>
+<h3 id="autofills-ai-initialization">✔ Auto‑fills AI initialization</h3>
+<p>Ensuring the module loads the spine first.</p>
+<h3 id="uses-your-actual-template">✔ Uses your actual template</h3>
+<p>The script reads:</p>
+<pre><code>docs/_template/module.json
+</code></pre>
+<p>which you just created.</p>
+<hr>
+<h1 id="you-now-have">⭐ You now have:</h1>
+<ul>
+<li>A <strong>single‑module generator</strong>  </li>
+<li>A <strong>bulk generator for all modules</strong>  </li>
+<li>A <strong>canon spine</strong>  </li>
+<li>A <strong>drift audit workflow</strong>  </li>
+<li>A <strong>triad alias‑aware validator</strong></li>
+</ul>
+<p>This is the foundation of your <strong>canon purity milestone</strong>.</p>
+  </main>
+</body>
+</html>

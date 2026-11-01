@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/core/operator_behaviors.md">
+  <title>RTT Core: Operator Behaviors</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/core/operator_behaviors.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/core/operator_behaviors.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="rtt_core_operator_behaviors" src="https://github.com/user-attachments/assets/818cc537-9fc4-4766-ab91-5593981564c3" /></p>
+<hr>
+<p>module_id: rtt.core.operator_behaviors
+version: 1.0.0
+status: draft
+rtt: 1
+coherence: declared
+drift: bounded
+paradox: structural
+tags:
+  - operator-behaviors
+  - rtt-core
+  - operator-grammar
+  - operator-families
+  - regime-maps
+  - drift-envelope
+  - coherence-budget
+  - triadic-time</p>
+<hr>
+<h1 id="rtt-core-operator-behaviors">RTT Core: Operator Behaviors</h1>
+<h2 id="1-purpose-and-scope">1. Purpose and scope</h2>
+<p><strong>Goal:</strong><br>
+Define the behavioral characteristics of RTT operators across:</p>
+<ul>
+<li>Representational manifolds  </li>
+<li>Drift envelopes  </li>
+<li>Coherence budgets  </li>
+<li>Regime constraints  </li>
+<li>Triadic time layers  </li>
+<li>Validator Pulse interactions  </li>
+</ul>
+<p>This module explains <strong>how operators behave</strong>, not just what they are. It is the dynamic counterpart to <code>/docs/rtt/core/operator_grammar.md</code> and <code>/docs/rtt/core/operator_families.md</code>.</p>
+<hr>
+<h2 id="2-behavioral-dimensions">2. Behavioral dimensions</h2>
+<p>RTT operators exhibit behavior across five canonical dimensions:</p>
+<ol>
+<li><strong>Representational Behavior</strong>  </li>
+<li><strong>Coherence Behavior</strong>  </li>
+<li><strong>Drift Behavior</strong>  </li>
+<li><strong>Regime Behavior</strong>  </li>
+<li><strong>Readout Behavior</strong></li>
+</ol>
+<p>These dimensions determine how operators affect branches, manifolds, and classical outcomes.</p>
+<hr>
+<h2 id="3-representational-behavior">3. Representational Behavior</h2>
+<h3 id="31-extension-behavior">3.1 Extension Behavior</h3>
+<p>Operators may:</p>
+<ul>
+<li>Create new branches  </li>
+<li>Expand representational manifolds  </li>
+<li>Partition coherence  </li>
+<li>Increase drift  </li>
+</ul>
+<p>Example: <code>EXTEND</code> operator</p>
+<h3 id="32-contraction-behavior">3.2 Contraction Behavior</h3>
+<p>Operators may:</p>
+<ul>
+<li>Merge branches  </li>
+<li>Reduce representational complexity  </li>
+<li>Stabilize coherence  </li>
+<li>Reduce drift  </li>
+</ul>
+<p>Example: <code>SEAL</code> operator (S‑family)</p>
+<h3 id="33-reconfiguration-behavior">3.3 Reconfiguration Behavior</h3>
+<p>Operators may:</p>
+<ul>
+<li>Rotate regime geometry  </li>
+<li>Shift representational coordinates  </li>
+<li>Invert branch eligibility  </li>
+</ul>
+<p>Example: <code>G₂ — Regime Shifter</code></p>
+<hr>
+<h2 id="4-coherence-behavior">4. Coherence Behavior</h2>
+<h3 id="41-coherence-partition">4.1 Coherence Partition</h3>
+<p>Operators may divide coherence across branches:</p>
+<p>[
+c_i \rightarrow c_i' + c_j'
+]</p>
+<p>Used in extension operators.</p>
+<h3 id="42-coherence-stabilization">4.2 Coherence Stabilization</h3>
+<p>Operators may stabilize coherence:</p>
+<ul>
+<li>Reduce decay  </li>
+<li>Clamp drift  </li>
+<li>Increase eligibility  </li>
+</ul>
+<p>Example: <code>K₂ — Timing Stabilizer</code></p>
+<h3 id="43-coherence-consumption">4.3 Coherence Consumption</h3>
+<p>Validator Pulse consumes coherence:</p>
+<p>[
+c_k \rightarrow 0
+]</p>
+<p>All other branches collapse.</p>
+<h3 id="44-coherence-decay">4.4 Coherence Decay</h3>
+<p>Drift increases coherence loss:</p>
+<p>[
+c_i' = c_i - f(\Delta_i)
+]</p>
+<p>Example: <code>DRIFT</code> operator.</p>
+<hr>
+<h2 id="5-drift-behavior">5. Drift Behavior</h2>
+<h3 id="51-drift-increase">5.1 Drift Increase</h3>
+<p>Operators may increase drift:</p>
+<ul>
+<li>Extension  </li>
+<li>Regime inversion  </li>
+<li>Boundary modulation  </li>
+</ul>
+<h3 id="52-drift-reduction">5.2 Drift Reduction</h3>
+<p>Operators may reduce drift:</p>
+<ul>
+<li>Stabilization  </li>
+<li>Coherence gating  </li>
+<li>Boundary alignment  </li>
+</ul>
+<h3 id="53-drift-envelope-interaction">5.3 Drift Envelope Interaction</h3>
+<p>Operators must respect:</p>
+<ul>
+<li>Drift boundaries  </li>
+<li>Envelope curvature  </li>
+<li>Stability surfaces  </li>
+</ul>
+<p>Branches exceeding drift envelope lose eligibility.</p>
+<hr>
+<h2 id="6-regime-behavior">6. Regime Behavior</h2>
+<p>Operators declare regime compatibility:</p>
+<ul>
+<li><strong>SRR</strong> — Single‑Readout  </li>
+<li><strong>DBR</strong> — Drift‑Bounded  </li>
+<li><strong>CMR</strong> — Coherence‑Minimum  </li>
+<li><strong>DVR</strong> — Deferred‑Validation  </li>
+<li><strong>ECR</strong> — Extension‑Compatible  </li>
+</ul>
+<h3 id="61-regime-entry">6.1 Regime Entry</h3>
+<p>Operators may push branches into a regime:</p>
+<ul>
+<li>Stabilization  </li>
+<li>Coherence increase  </li>
+<li>Drift reduction  </li>
+</ul>
+<h3 id="62-regime-exit">6.2 Regime Exit</h3>
+<p>Operators may push branches out of a regime:</p>
+<ul>
+<li>Drift spike  </li>
+<li>Coherence collapse  </li>
+<li>Invalid operator sequence  </li>
+</ul>
+<h3 id="63-regime-transition">6.3 Regime Transition</h3>
+<p>Operators may cause transitions:</p>
+<p>[
+ECC \rightarrow SDC \rightarrow SRR
+]</p>
+<p>Used in multi-step RTT sequences.</p>
+<hr>
+<h2 id="7-readout-behavior">7. Readout Behavior</h2>
+<h3 id="71-readout-eligibility">7.1 Readout Eligibility</h3>
+<p>Operators determine whether branches satisfy:</p>
+<ul>
+<li>Coherence thresholds  </li>
+<li>Drift boundaries  </li>
+<li>Regime constraints  </li>
+</ul>
+<h3 id="72-readout-triggering">7.2 Readout Triggering</h3>
+<p>Validator Pulse triggers readout:</p>
+<ul>
+<li>Consumes coherence  </li>
+<li>Collapses non-selected branches  </li>
+<li>Produces classical information  </li>
+</ul>
+<h3 id="73-readout-deferral">7.3 Readout Deferral</h3>
+<p>Some operators defer readout:</p>
+<ul>
+<li>Stabilization  </li>
+<li>Drift reduction  </li>
+<li>Coherence recovery  </li>
+</ul>
+<p>Example: <code>DEFER</code> operator.</p>
+<hr>
+<h2 id="8-operator-behavior-across-triadic-time">8. Operator Behavior Across Triadic Time</h2>
+<p>Operators interact with triadic time layers:</p>
+<h3 id="81-state-time-t1">8.1 State Time (T₁)</h3>
+<ul>
+<li>Extension  </li>
+<li>Drift  </li>
+<li>Regime shifts  </li>
+<li>Boundary modulation  </li>
+</ul>
+<h3 id="82-coherence-time-t2">8.2 Coherence Time (T₂)</h3>
+<ul>
+<li>Coherence partition  </li>
+<li>Coherence decay  </li>
+<li>Coherence stabilization  </li>
+</ul>
+<h3 id="83-readout-time-t3">8.3 Readout Time (T₃)</h3>
+<ul>
+<li>Validation  </li>
+<li>Collapse  </li>
+<li>Continuity (Arrival operators)</li>
+</ul>
+<p>Operators may trigger transitions across layers.</p>
+<hr>
+<h2 id="9-composite-operator-behaviors">9. Composite Operator Behaviors</h2>
+<p>Operators often combine behaviors:</p>
+<h3 id="91-extension-drift-deferred-readout">9.1 Extension + Drift + Deferred Readout</h3>
+<p>Used in multi-branch creation:</p>
+<ul>
+<li>Increase drift  </li>
+<li>Partition coherence  </li>
+<li>Defer readout  </li>
+</ul>
+<h3 id="92-stabilization-coherence-gate-regime-entry">9.2 Stabilization + Coherence Gate + Regime Entry</h3>
+<p>Used in preparation for validation:</p>
+<ul>
+<li>Reduce drift  </li>
+<li>Increase coherence  </li>
+<li>Enter SRR  </li>
+</ul>
+<h3 id="93-validation-collapse">9.3 Validation + Collapse</h3>
+<p>Used in classical readout:</p>
+<ul>
+<li>Consume coherence  </li>
+<li>Collapse non-selected branches  </li>
+</ul>
+<hr>
+<h2 id="10-example-quantum-cloning-alignment">10. Example: Quantum “cloning” alignment</h2>
+<p>The experiment uses:</p>
+<ul>
+<li><strong>Extension Behavior:</strong> create two branches  </li>
+<li><strong>Coherence Behavior:</strong> partition coherence  </li>
+<li><strong>Drift Behavior:</strong> increase drift but remain bounded  </li>
+<li><strong>Regime Behavior:</strong> operate in ECR + SRR  </li>
+<li><strong>Readout Behavior:</strong> validate one branch, collapse the other  </li>
+</ul>
+<p>Operator Behaviors explain:</p>
+<ul>
+<li>Why multi-branch representation is allowed  </li>
+<li>Why only one branch becomes classical  </li>
+<li>Why drift and coherence matter  </li>
+<li>Why no-cloning is not violated  </li>
+</ul>
+<hr>
+<h2 id="11-paradox-handling">11. Paradox handling</h2>
+<p>Operator Behaviors prevent paradoxes by:</p>
+<ul>
+<li>Enforcing regime constraints  </li>
+<li>Managing coherence budgets  </li>
+<li>Bounding drift  </li>
+<li>Restricting readout  </li>
+<li>Collapsing non-selected branches  </li>
+</ul>
+<p>Thus:</p>
+<ul>
+<li>“Multiple branches exist” → extension behavior  </li>
+<li>“Only one is real” → readout behavior  </li>
+<li>“Others disappear” → collapse behavior  </li>
+<li>“No violation occurs” → regime behavior  </li>
+</ul>
+<hr>
+<h2 id="12-canon-integration-and-cross-links">12. Canon integration and cross-links</h2>
+<p><strong>Primary cross-links:</strong></p>
+<ul>
+<li><code>/docs/rtt/core/operator_grammar.md</code></li>
+<li><code>/docs/rtt/core/operator_index.md</code></li>
+<li><code>/docs/rtt/core/operator_families.md</code></li>
+<li><code>/docs/rtt/core/regime_maps.md</code></li>
+<li><code>/docs/rtt/core/regime_maps_extended.md</code></li>
+<li><code>/docs/rtt/core/regime_geometry.md</code></li>
+<li><code>/docs/rtt/core/time_triads.md</code></li>
+<li><code>/docs/rtt/core/coherence_budget.md</code></li>
+<li><code>/docs/rtt/core/validator_pulse.md</code></li>
+<li><code>/docs/rtt/core/dimensional_drift_envelope.md</code></li>
+<li><code>/docs/rtt/core/alignment_quantum_cloning.md</code></li>
+</ul>
+<p><strong>Status:</strong><br>
+This module defines the behavioral dynamics of RTT operators.<br>
+Once operator-behavior diagrams are added, it can be promoted from <code>draft</code> to <code>stable</code>.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/openloop/IAM/architecture.md">
+  <title>🛡️ OpenIAM — architecture.md</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/openloop/IAM/architecture.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/openloop/IAM/architecture.md</code>
+  </aside>
+
+  <main>
+<h1 id="openiam-architecturemd">🛡️ <strong>OpenIAM — architecture.md</strong></h1>
+<p><strong>OpenWarden Suite — Identity &amp; Access Substrate</strong><br>
+<strong>Analyzer Layer:</strong> structural<br>
+<strong>Regime:</strong> open‑identity‑governance<br>
+<strong>Version:</strong> 1.0  </p>
+<hr>
+<h2 id="1-architectural-overview"><strong>1. Architectural Overview</strong></h2>
+<p>OpenIAM provides a <strong>structural, drift‑aware, coherence‑declared identity substrate</strong> for the OpenWarden suite.<br>
+Its architecture is built around five canonical components:</p>
+<ol>
+<li><strong>Identity Metadata Model</strong>  </li>
+<li><strong>Role &amp; Permission Engine</strong>  </li>
+<li><strong>Boundary &amp; Access Layer</strong>  </li>
+<li><strong>Governance &amp; Drift Control</strong>  </li>
+<li><strong>Cross‑Module Integration Layer</strong></li>
+</ol>
+<p>Each component ensures identity stability, metadata correctness, and operator‑aligned transformations.</p>
+<hr>
+<h2 id="2-identity-metadata-model"><strong>2. Identity Metadata Model</strong></h2>
+<p>The Identity Metadata Model defines the <strong>identity</strong> of a subject using canonical fields.<br>
+It includes:</p>
+<ul>
+<li>role signature  </li>
+<li>permission block  </li>
+<li>boundary descriptor  </li>
+<li>coherence score  </li>
+<li>drift status  </li>
+<li>lineage ID  </li>
+</ul>
+<p>Identity metadata is designed for:</p>
+<ul>
+<li>access control  </li>
+<li>lineage tracking  </li>
+<li>interoperability  </li>
+<li>AI interpretation  </li>
+</ul>
+<h3 id="21-metadata-requirements"><strong>2.1 Metadata Requirements</strong></h3>
+<p>Every identity must include:</p>
+<ul>
+<li><code>open.iam.role</code>  </li>
+<li><code>open.iam.permissions</code>  </li>
+<li><code>open.iam.boundary</code>  </li>
+<li><code>open.iam.coherence</code>  </li>
+<li><code>open.iam.drift</code>  </li>
+<li><code>open.iam.lineage</code>  </li>
+<li><code>open.iam.version</code>  </li>
+<li><code>open.iam.module</code>  </li>
+</ul>
+<p>Missing fields trigger drift correction.</p>
+<hr>
+<h2 id="3-role-permission-engine"><strong>3. Role &amp; Permission Engine</strong></h2>
+<p>The Role &amp; Permission Engine ensures:</p>
+<ul>
+<li>role correctness  </li>
+<li>permission stability  </li>
+<li>boundary integrity  </li>
+<li>drift detection  </li>
+<li>operator‑aligned transformations  </li>
+</ul>
+<h3 id="31-role-rules"><strong>3.1 Role Rules</strong></h3>
+<p>Roles must be:</p>
+<ul>
+<li>canonical  </li>
+<li>bounded  </li>
+<li>reversible  </li>
+<li>structurally coherent  </li>
+</ul>
+<p>Role corruption is treated as identity drift.</p>
+<h3 id="32-permission-rules"><strong>3.2 Permission Rules</strong></h3>
+<p>Permissions must maintain:</p>
+<ul>
+<li>correct access boundaries  </li>
+<li>non‑ambiguous descriptors  </li>
+<li>stable inheritance patterns  </li>
+</ul>
+<p>Permission drift triggers correction and lineage update.</p>
+<hr>
+<h2 id="4-boundary-access-layer"><strong>4. Boundary &amp; Access Layer</strong></h2>
+<p>Access is determined by:</p>
+<ul>
+<li>role signature  </li>
+<li>permission block  </li>
+<li>boundary descriptor  </li>
+<li>coherence score  </li>
+<li>canonical metadata  </li>
+</ul>
+<h3 id="41-boundary-inputs"><strong>4.1 Boundary Inputs</strong></h3>
+<ul>
+<li>role category  </li>
+<li>permission block  </li>
+<li>boundary descriptor  </li>
+<li>operator grammar fields  </li>
+</ul>
+<h3 id="42-boundary-outputs"><strong>4.2 Boundary Outputs</strong></h3>
+<ul>
+<li>access classification  </li>
+<li>boundary correction  </li>
+<li>permission recalibration  </li>
+<li>lineage update  </li>
+</ul>
+<p>Boundary violations trigger suppression.</p>
+<hr>
+<h2 id="5-governance-drift-control"><strong>5. Governance &amp; Drift Control</strong></h2>
+<p>OpenIAM enforces strict governance rules inherited from OpenWarden.</p>
+<h3 id="51-drift-types"><strong>5.1 Drift Types</strong></h3>
+<ul>
+<li><strong>Identity Drift</strong> — malformed or unstable identity metadata  </li>
+<li><strong>Permission Drift</strong> — corrupted or ambiguous permissions  </li>
+<li><strong>Boundary Drift</strong> — incorrect or mismatched access boundaries  </li>
+<li><strong>Metadata Drift</strong> — missing or manipulated fields  </li>
+<li><strong>Lineage Drift</strong> — corrupted or ambiguous lineage  </li>
+</ul>
+<h3 id="52-drift-responses"><strong>5.2 Drift Responses</strong></h3>
+<ol>
+<li><strong>Flag</strong> — mark identity as drifted  </li>
+<li><strong>Suppress</strong> — remove from access output  </li>
+<li><strong>Correct</strong> — repair metadata  </li>
+<li><strong>Recalibrate</strong> — adjust permissions or boundaries  </li>
+<li><strong>Update Lineage</strong> — record correction  </li>
+</ol>
+<p>All drift responses are logged.</p>
+<hr>
+<h2 id="6-operator-grammar-alignment"><strong>6. Operator Grammar Alignment</strong></h2>
+<p>OpenIAM uses the OpenWarden operator grammar:</p>
+<ul>
+<li><strong>extend</strong> — add structural detail  </li>
+<li><strong>condense</strong> — simplify metadata  </li>
+<li><strong>refactor</strong> — reorganize identity fields  </li>
+<li><strong>capture</strong> — record drift or lineage  </li>
+<li><strong>annotate</strong> — add governance notes  </li>
+<li><strong>correct</strong> — fix drift or misalignment  </li>
+</ul>
+<p>Operators ensure safe, reversible identity evolution.</p>
+<hr>
+<h2 id="7-crossmodule-integration"><strong>7. Cross‑Module Integration</strong></h2>
+<p>OpenIAM integrates with:</p>
+<ul>
+<li><strong>OpenCatalog</strong> — identity‑safe product access  </li>
+<li><strong>OpenFeed</strong> — identity‑safe feed rules  </li>
+<li><strong>OpenGeo</strong> — location‑aware identity boundaries  </li>
+<li><strong>OpenRisk</strong> — anomaly detection for identity drift  </li>
+<li><strong>OpenSEO</strong> — semantic identity metadata  </li>
+<li><strong>OpenWarden</strong> — suite‑governed identity policies  </li>
+</ul>
+<p>All integrations are drift‑bounded and coherence‑declared.</p>
+<hr>
+<h2 id="8-canonical-metadata-block-example"><strong>8. Canonical Metadata Block (Example)</strong></h2>
+<pre><code class="language-html">&lt;meta name=&quot;open.iam.role&quot; content=&quot;role:admin&quot;&gt;
+&lt;meta name=&quot;open.iam.permissions&quot; content=&quot;read:all;write:restricted&quot;&gt;
+&lt;meta name=&quot;open.iam.boundary&quot; content=&quot;boundary:global&quot;&gt;
+&lt;meta name=&quot;open.iam.coherence&quot; content=&quot;0.96&quot;&gt;
+&lt;meta name=&quot;open.iam.drift&quot; content=&quot;bounded&quot;&gt;
+&lt;meta name=&quot;open.iam.lineage&quot; content=&quot;iamlineage:9d4c&quot;&gt;
+&lt;meta name=&quot;open.iam.version&quot; content=&quot;1.0&quot;&gt;
+&lt;meta name=&quot;open.iam.module&quot; content=&quot;OpenIAM&quot;&gt;
+</code></pre>
+<hr>
+<h2 id="9-file-structure"><strong>9. File Structure</strong></h2>
+<ul>
+<li><code>README.md</code> — front door  </li>
+<li><code>architecture.md</code> — this file  </li>
+<li><code>canonical_metadata.md</code> — metadata schema  </li>
+<li><code>governance.md</code> — drift &amp; policy rules  </li>
+<li><code>operators.md</code> — operator grammar  </li>
+<li><code>index.html</code> — module front page  </li>
+<li><code>module.json</code> — manifest  </li>
+</ul>
+  </main>
+</body>
+</html>

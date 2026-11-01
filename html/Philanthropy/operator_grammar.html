@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Philanthropy/operator_grammar.md">
+  <title>Operator Grammar — Philanthropy &amp; Funding Transparency Module</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Philanthropy/operator_grammar.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Philanthropy/operator_grammar.md</code>
+  </aside>
+
+  <main>
+<h1 id="operator-grammar-philanthropy-funding-transparency-module">Operator Grammar — Philanthropy &amp; Funding Transparency Module</h1>
+<p>This file defines the RTT operator grammar used to analyze, map, and correct philanthropic funding flows.<br>
+These operators allow donors, organizations, auditors, and AI agents to speak a shared structural language.</p>
+<hr>
+<h1 id="1-core-operators-funding-flow">1. Core Operators (Funding Flow)</h1>
+<h2 id="flowsrc-dst"><strong>FLOW(src → dst)</strong></h2>
+<p>Maps the movement of funds from one node to another.<br>
+Used for: donor → foundation → intermediary → NGO → beneficiary.</p>
+<p><strong>Example:</strong><br>
+FLOW(DonorA → FoundationB)</p>
+<hr>
+<h2 id="loadnode"><strong>LOAD(node)</strong></h2>
+<p>Measures the structural load placed on a node (financial, administrative, governance).</p>
+<p><strong>Example:</strong><br>
+LOAD(LocalPartnerX)</p>
+<hr>
+<h2 id="leaknode"><strong>LEAK(node)</strong></h2>
+<p>Identifies points where funds are lost, diluted, or diverted.</p>
+<p><strong>Example:</strong><br>
+LEAK(IntermediaryY)</p>
+<hr>
+<h2 id="convertinput-output"><strong>CONVERT(input → output)</strong></h2>
+<p>Maps how funds are transformed (e.g., money → overhead, money → services).</p>
+<p><strong>Example:</strong><br>
+CONVERT($1M → $600k programs)</p>
+<hr>
+<h2 id="routepath"><strong>ROUTE(path)</strong></h2>
+<p>Describes the full multi-layer path of funds.</p>
+<p><strong>Example:</strong><br>
+ROUTE(Donor → Foundation → NGO → Subcontractor → Community)</p>
+<hr>
+<h1 id="2-regime-operators-authority-narrative-emotional-structural">2. Regime Operators (Authority, Narrative, Emotional, Structural)</h1>
+<h2 id="regtype"><strong>REG(type)</strong></h2>
+<p>Tags the dominant regime influencing a decision or flow.</p>
+<p>Types:<br>
+- AUTH (authority)<br>
+- NAR (narrative)<br>
+- EMO (emotional)<br>
+- STR (structural)</p>
+<p><strong>Example:</strong><br>
+REG(NAR) — impact story driving funding</p>
+<hr>
+<h2 id="drftype"><strong>DRF(type)</strong></h2>
+<p>Detects drift between stated purpose and actual behavior.</p>
+<p>Types:<br>
+- mission<br>
+- financial<br>
+- governance<br>
+- reporting  </p>
+<p><strong>Example:</strong><br>
+DRF(financial)</p>
+<hr>
+<h2 id="alntarget"><strong>ALN(target)</strong></h2>
+<p>Measures alignment between intent, flow, and outcome.</p>
+<p><strong>Example:</strong><br>
+ALN(ProgramGoal)</p>
+<hr>
+<h2 id="cohsystem"><strong>COH(system)</strong></h2>
+<p>Evaluates coherence across nodes (donor, org, community).</p>
+<p><strong>Example:</strong><br>
+COH(FundingChain)</p>
+<hr>
+<h1 id="3-governance-operators">3. Governance Operators</h1>
+<h2 id="govnode"><strong>GOV(node)</strong></h2>
+<p>Maps governance authority and decision rights.</p>
+<p><strong>Example:</strong><br>
+GOV(Board)</p>
+<hr>
+<h2 id="subnode"><strong>SUB(node)</strong></h2>
+<p>Maps the governance substrate supporting or constraining flows.</p>
+<p><strong>Example:</strong><br>
+SUB(FoundationStructure)</p>
+<hr>
+<h2 id="accnode"><strong>ACC(node)</strong></h2>
+<p>Measures accountability strength.</p>
+<p><strong>Example:</strong><br>
+ACC(ExecutiveDirector)</p>
+<hr>
+<h2 id="visnode"><strong>VIS(node)</strong></h2>
+<p>Measures structural visibility (not narrative visibility).</p>
+<p><strong>Example:</strong><br>
+VIS(ProgramBudget)</p>
+<hr>
+<h1 id="4-set-structural-energy-theory-operators-for-funding">4. SET (Structural Energy Theory) Operators for Funding</h1>
+<h2 id="set_innode"><strong>SET_IN(node)</strong></h2>
+<p>Energy (funding, incentives, mandates) entering a node.</p>
+<hr>
+<h2 id="set_outnode"><strong>SET_OUT(node)</strong></h2>
+<p>Energy leaving a node (services, grants, outcomes).</p>
+<hr>
+<h2 id="set_leaknode"><strong>SET_LEAK(node)</strong></h2>
+<p>Energy lost to inefficiency, overhead, or misalignment.</p>
+<hr>
+<h2 id="set_balnode"><strong>SET_BAL(node)</strong></h2>
+<p>Balance between input and output.</p>
+<hr>
+<h1 id="5-triadic-observer-operators-signal-noise-regime">5. Triadic Observer Operators (Signal / Noise / Regime)</h1>
+<h2 id="sigdata"><strong>SIG(data)</strong></h2>
+<p>Extracts structural signal from reports, budgets, or narratives.</p>
+<hr>
+<h2 id="noidata"><strong>NOI(data)</strong></h2>
+<p>Identifies noise (PR, emotional appeals, branding).</p>
+<hr>
+<h2 id="ctxdata"><strong>CTX(data)</strong></h2>
+<p>Binds context to a claim or flow.</p>
+<hr>
+<h2 id="syndata"><strong>SYN(data)</strong></h2>
+<p>Produces a structural synthesis (AI summary).</p>
+<hr>
+<h1 id="6-fraud-misuse-operators-structural-not-accusatory">6. Fraud &amp; Misuse Operators (Structural, Not Accusatory)</h1>
+<h2 id="redflag"><strong>RED(flag)</strong></h2>
+<p>Flags structural red indicators (not moral judgments).</p>
+<p>Examples:<br>
+- RED(related-party)<br>
+- RED(overhead &gt; 50%)<br>
+- RED(flow-break)  </p>
+<hr>
+<h2 id="opanode"><strong>OPA(node)</strong></h2>
+<p>Measures opacity level.</p>
+<hr>
+<h2 id="asymnode"><strong>ASYM(node)</strong></h2>
+<p>Detects asymmetry between authority and accountability.</p>
+<hr>
+<h1 id="7-donor-alignment-operators">7. Donor Alignment Operators</h1>
+<h2 id="intentdonor"><strong>INTENT(donor)</strong></h2>
+<p>Maps donor’s stated purpose.</p>
+<hr>
+<h2 id="impactflow"><strong>IMPACT(flow)</strong></h2>
+<p>Maps actual measurable outcomes.</p>
+<hr>
+<h2 id="gapintent-impact"><strong>GAP(intent ↔ impact)</strong></h2>
+<p>Measures divergence between donor intent and real-world results.</p>
+<hr>
+<h2 id="scoredonor"><strong>SCORE(donor)</strong></h2>
+<p>Produces an alignment score (AI-generated).</p>
+<hr>
+<h1 id="8-flow-integrity-operators">8. Flow Integrity Operators</h1>
+<h2 id="tracepath"><strong>TRACE(path)</strong></h2>
+<p>Ensures every step of the flow is visible.</p>
+<hr>
+<h2 id="mapsystem"><strong>MAP(system)</strong></h2>
+<p>Generates a full structural map of flows, regimes, and drift.</p>
+<hr>
+<h2 id="checknode"><strong>CHECK(node)</strong></h2>
+<p>Performs a structural integrity check.</p>
+<hr>
+<h2 id="fixnode"><strong>FIX(node)</strong></h2>
+<p>Recommends structural corrections.</p>
+<hr>
+<h1 id="summary">Summary</h1>
+<p>These operators form the structural grammar of the Philanthropy &amp; Funding Transparency module.<br>
+They allow all actors — donors, organizations, auditors, communities, and AI agents — to analyze funding flows using a shared, triadic, RTT-aligned language.</p>
+<p>This grammar is the foundation of the module’s clarity engine.</p>
+  </main>
+</body>
+</html>

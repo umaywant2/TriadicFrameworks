@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/openloop/LLM/governance.md">
+  <title>🤖 OpenLLM — governance.md</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/openloop/LLM/governance.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/openloop/LLM/governance.md</code>
+  </aside>
+
+  <main>
+<h1 id="openllm-governancemd">🤖 <strong>OpenLLM — governance.md</strong></h1>
+<p><strong>OpenWarden Suite — Large Language Model Substrate</strong><br>
+<strong>Analyzer Layer:</strong> semantic‑structural<br>
+<strong>Regime:</strong> open‑llm‑governance<br>
+<strong>Version:</strong> 1.0  </p>
+<hr>
+<h2 id="1-governance-overview"><strong>1. Governance Overview</strong></h2>
+<p>OpenLLM enforces a <strong>semantic‑structural, drift‑bounded, coherence‑declared governance model</strong> for large language models across the OpenWarden suite.<br>
+Its governance ensures:</p>
+<ul>
+<li>model identity integrity  </li>
+<li>parameter correctness  </li>
+<li>inference boundary stability  </li>
+<li>metadata completeness  </li>
+<li>lineage transparency  </li>
+<li>operator grammar compliance  </li>
+<li>drift detection and correction  </li>
+</ul>
+<p>All governance rules inherit from the OpenWarden suite root and extend specifically for LLM behavior.</p>
+<hr>
+<h2 id="2-governance-principles"><strong>2. Governance Principles</strong></h2>
+<h3 id="21-model-integrity"><strong>2.1 Model Integrity</strong></h3>
+<p>LLMs must maintain:</p>
+<ul>
+<li>stable model signatures  </li>
+<li>correct parameter blocks  </li>
+<li>non‑ambiguous inference boundaries  </li>
+<li>coherent semantic behavior  </li>
+</ul>
+<p>Model corruption is treated as semantic drift.</p>
+<h3 id="22-metadata-correctness"><strong>2.2 Metadata Correctness</strong></h3>
+<p>Every LLM must include:</p>
+<ul>
+<li>identity &amp; signature fields  </li>
+<li>parameter fields  </li>
+<li>inference boundary fields  </li>
+<li>coherence &amp; drift fields  </li>
+<li>lineage fields  </li>
+<li>operator grammar fields  </li>
+<li>module identity fields  </li>
+</ul>
+<p>Missing or malformed metadata triggers correction.</p>
+<h3 id="23-parameter-stability"><strong>2.3 Parameter Stability</strong></h3>
+<p>Parameters must be:</p>
+<ul>
+<li>canonical  </li>
+<li>bounded  </li>
+<li>reversible  </li>
+<li>structurally coherent  </li>
+</ul>
+<p>Parameter manipulation is semantic drift.</p>
+<h3 id="24-operator-alignment"><strong>2.4 Operator Alignment</strong></h3>
+<p>Model transformations must use the OpenWarden operator grammar:</p>
+<ul>
+<li>extend  </li>
+<li>condense  </li>
+<li>refactor  </li>
+<li>capture  </li>
+<li>annotate  </li>
+<li>correct  </li>
+</ul>
+<p>Operator misuse is drift.</p>
+<hr>
+<h2 id="3-drift-governance"><strong>3. Drift Governance</strong></h2>
+<h3 id="31-drift-types"><strong>3.1 Drift Types</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Drift Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Semantic Drift</strong></td>
+<td>Meaning diverges from declared model intent</td>
+</tr>
+<tr>
+<td><strong>Parameter Drift</strong></td>
+<td>Parameters corrupted or ambiguous</td>
+</tr>
+<tr>
+<td><strong>Boundary Drift</strong></td>
+<td>Inference boundaries unstable or mismatched</td>
+</tr>
+<tr>
+<td><strong>Metadata Drift</strong></td>
+<td>Missing, malformed, or manipulated fields</td>
+</tr>
+<tr>
+<td><strong>Lineage Drift</strong></td>
+<td>Corrupted or ambiguous lineage relationships</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-drift-responses"><strong>3.2 Drift Responses</strong></h3>
+<p>When drift is detected:</p>
+<ol>
+<li><strong>Flag</strong> — mark model as drifted  </li>
+<li><strong>Suppress</strong> — remove from inference output  </li>
+<li><strong>Correct</strong> — repair metadata  </li>
+<li><strong>Recalibrate</strong> — adjust parameters or boundaries  </li>
+<li><strong>Update Lineage</strong> — record correction  </li>
+</ol>
+<p>All drift responses are logged.</p>
+<hr>
+<h2 id="4-metadata-governance"><strong>4. Metadata Governance</strong></h2>
+<p>Metadata must be:</p>
+<ul>
+<li>canonical  </li>
+<li>complete  </li>
+<li>semantically coherent  </li>
+<li>drift‑bounded  </li>
+<li>operator‑aligned  </li>
+<li>suite‑compliant  </li>
+</ul>
+<p>Metadata violations result in:</p>
+<ul>
+<li>suppression  </li>
+<li>correction  </li>
+<li>lineage update  </li>
+<li>governance flag  </li>
+</ul>
+<hr>
+<h2 id="5-parameter-boundary-governance"><strong>5. Parameter &amp; Boundary Governance</strong></h2>
+<p>Parameters must:</p>
+<ul>
+<li>follow canonical format  </li>
+<li>remain bounded  </li>
+<li>avoid adversarial manipulation  </li>
+<li>maintain coherence with model signature  </li>
+</ul>
+<p>Inference boundaries must:</p>
+<ul>
+<li>preserve semantic constraints  </li>
+<li>remain contextually aligned  </li>
+<li>avoid ambiguous mapping  </li>
+</ul>
+<p>Parameter or boundary corruption is semantic drift.</p>
+<hr>
+<h2 id="6-model-lineage-governance"><strong>6. Model Lineage Governance</strong></h2>
+<p>Model lineage must:</p>
+<ul>
+<li>remain immutable  </li>
+<li>preserve parent relationships  </li>
+<li>track parameter or boundary changes  </li>
+<li>record drift events  </li>
+<li>maintain semantic clarity  </li>
+</ul>
+<p>Lineage corruption is semantic drift.</p>
+<hr>
+<h2 id="7-operator-governance"><strong>7. Operator Governance</strong></h2>
+<p>Operators must:</p>
+<ul>
+<li>preserve semantic meaning  </li>
+<li>maintain metadata correctness  </li>
+<li>avoid adversarial transformations  </li>
+<li>remain reversible and safe  </li>
+</ul>
+<p>Operator misuse is drift.</p>
+<hr>
+<h2 id="8-crossmodule-governance-alignment"><strong>8. Cross‑Module Governance Alignment</strong></h2>
+<p>OpenLLM governance aligns with:</p>
+<ul>
+<li><strong>OpenSEO</strong> — semantic metadata alignment  </li>
+<li><strong>OpenFeed</strong> — LLM‑safe feed rules  </li>
+<li><strong>OpenGeo</strong> — location‑aware inference boundaries  </li>
+<li><strong>OpenIAM</strong> — identity‑safe model access  </li>
+<li><strong>OpenRisk</strong> — anomaly detection  </li>
+<li><strong>OpenCatalog</strong> — model metadata alignment  </li>
+<li><strong>OpenWarden</strong> — suite‑governed model policies  </li>
+</ul>
+<p>All alignment is drift‑bounded and coherence‑declared.</p>
+<hr>
+<h2 id="9-governance-summary"><strong>9. Governance Summary</strong></h2>
+<p>OpenLLM ensures that large language models:</p>
+<ul>
+<li>maintain semantic integrity  </li>
+<li>preserve parameter correctness  </li>
+<li>remain boundary‑coherent  </li>
+<li>follow operator grammar  </li>
+<li>stay drift‑bounded  </li>
+<li>uphold coherence  </li>
+<li>integrate safely across modules  </li>
+</ul>
+<p>This governance model creates a transparent, predictable, and trustworthy LLM substrate.</p>
+  </main>
+</body>
+</html>

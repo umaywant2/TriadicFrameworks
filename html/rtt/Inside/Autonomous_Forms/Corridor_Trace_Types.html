@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Autonomous_Forms/Corridor_Trace_Types.md">
+  <title>1. Types for the Corridor Trace</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Autonomous_Forms/Corridor_Trace_Types.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Autonomous_Forms/Corridor_Trace_Types.md</code>
+  </aside>
+
+  <main>
+<h3 id="1-types-for-the-corridor-trace">1. Types for the Corridor Trace</h3>
+<pre><code class="language-ts">// types/corridor.ts
+export type CorridorHeader = {
+  type: &quot;header&quot;;
+  task_id: string;
+  timestamp: number;
+  corridor_spec: Record&lt;string, any&gt;;
+};
+
+export type CorridorStepEvent = {
+  type: &quot;step&quot;;
+  step_id: number;
+  parent_step_id: number | null;
+  timestamp: number;
+  action: string;
+  observation: string;
+  tool?: string;
+  latency_ms?: number;
+};
+
+export type CorridorQEvent = {
+  type: &quot;q&quot;;
+  step_id: number;
+  semantic_drift: number;
+  tool_entropy: number;
+  latency_drift: number;
+  branching_pressure: number;
+  retry_ratio: number;
+};
+
+export type CorridorStatusEvent = {
+  type: &quot;status&quot;;
+  step_id: number;
+  corridor_status: &quot;stable&quot; | &quot;warning&quot; | &quot;halted&quot;;
+  violations: string[];
+};
+
+export type CorridorRewindEvent = {
+  type: &quot;rewind&quot;;
+  from_step: number;
+  to_step: number;
+  timestamp: number;
+};
+
+export type CorridorFooter = {
+  type: &quot;footer&quot;;
+  timestamp: number;
+  final_status: string;
+};
+
+export type CorridorEvent =
+  | CorridorHeader
+  | CorridorStepEvent
+  | CorridorQEvent
+  | CorridorStatusEvent
+  | CorridorRewindEvent
+  | CorridorFooter;
+
+export type CorridorTrace = {
+  header: CorridorHeader;
+  steps: CorridorStepEvent[];
+  qHistory: CorridorQEvent[];
+  statuses: CorridorStatusEvent[];
+  rewinds: CorridorRewindEvent[];
+  footer?: CorridorFooter;
+};
+</code></pre>
+<hr>
+<h3 id="2-api-route-that-returns-a-parsed-ctf">2. API route that returns a parsed CTF</h3>
+<p>We can wire this later to disk or object storage.</p>
+<pre><code class="language-ts">// app/api/corridor/[id]/route.ts
+import { NextResponse } from &quot;next/server&quot;;
+import type { CorridorTrace, CorridorEvent } from &quot;@/types/corridor&quot;;
+
+export async function GET(
+  _req: Request,
+  { params }: { params: { id: string } }
+) {
+  const id = params.id;
+
+  // TODO: load from storage; for now, mock
+  const raw = await fetch(`https://example.com/traces/${id}.ctf`).then(r =&gt;
+    r.text()
+  );
+
+  const events: CorridorEvent[] = raw
+    .trim()
+    .split(&quot;\n&quot;)
+    .map((line) =&gt; JSON.parse(line));
+
+  const trace: CorridorTrace = {
+    header: events.find((e) =&gt; e.type === &quot;header&quot;) as any,
+    steps: events.filter((e) =&gt; e.type === &quot;step&quot;) as any,
+    qHistory: events.filter((e) =&gt; e.type === &quot;q&quot;) as any,
+    statuses: events.filter((e) =&gt; e.type === &quot;status&quot;) as any,
+    rewinds: events.filter((e) =&gt; e.type === &quot;rewind&quot;) as any,
+    footer: events.find((e) =&gt; e.type === &quot;footer&quot;) as any,
+  };
+
+  return NextResponse.json(trace);
+}
+</code></pre>
+<hr>
+<h3 id="3-nextjs-corridor-viewer-page">3. Next.js Corridor Viewer page</h3>
+<pre><code class="language-tsx">// app/corridor/[id]/page.tsx
+&quot;use client&quot;;
+
+import { useEffect, useState } from &quot;react&quot;;
+import type { CorridorTrace, CorridorStepEvent } from &quot;@/types/corridor&quot;;
+import { QMetricWaveformPanel } from &quot;@/components/QMetricWaveformPanel&quot;;
+
+export default function CorridorPage({ params }: { params: { id: string } }) {
+  const { id } = params;
+  const [trace, setTrace] = useState&lt;CorridorTrace | null&gt;(null);
+  const [selectedStep, setSelectedStep] = useState&lt;number | null&gt;(null);
+
+  useEffect(() =&gt; {
+    fetch(`/api/corridor/${id}`)
+      .then((r) =&gt; r.json())
+      .then(setTrace)
+      .catch(console.error);
+  }, [id]);
+
+  if (!trace) return &lt;div&gt;Loading corridor {id}…&lt;/div&gt;;
+
+  const { header, steps, qHistory, statuses } = trace;
+
+  const statusByStep = new Map(
+    statuses.map((s) =&gt; [s.step_id, s.corridor_status])
+  );
+
+  const onSelectStep = (s: CorridorStepEvent) =&gt; {
+    setSelectedStep(s.step_id);
+  };
+
+  return (
+    &lt;div className=&quot;flex flex-col gap-4 p-4&quot;&gt;
+      &lt;header className=&quot;border-b pb-2&quot;&gt;
+        &lt;h1 className=&quot;text-xl font-semibold&quot;&gt;
+          Corridor: {header.task_id} ({id})
+        &lt;/h1&gt;
+        &lt;p className=&quot;text-sm text-gray-500&quot;&gt;
+          Max steps: {header.corridor_spec.max_steps} ·
+          max drift: {header.corridor_spec.max_semantic_drift}
+        &lt;/p&gt;
+      &lt;/header&gt;
+
+      &lt;main className=&quot;grid grid-cols-3 gap-4&quot;&gt;
+        {/* Left: step timeline */}
+        &lt;section className=&quot;col-span-1 border rounded p-2 overflow-y-auto max-h-[70vh]&quot;&gt;
+          &lt;h2 className=&quot;font-semibold mb-2 text-sm&quot;&gt;Steps&lt;/h2&gt;
+          &lt;ul className=&quot;space-y-1 text-xs&quot;&gt;
+            {steps.map((s) =&gt; {
+              const status = statusByStep.get(s.step_id) ?? &quot;stable&quot;;
+              const isSelected = selectedStep === s.step_id;
+              return (
+                &lt;li
+                  key={s.step_id}
+                  onClick={() =&gt; onSelectStep(s)}
+                  className={`cursor-pointer rounded px-2 py-1 flex justify-between items-center ${
+                    isSelected ? &quot;bg-blue-100&quot; : &quot;hover:bg-gray-100&quot;
+                  }`}
+                &gt;
+                  &lt;div&gt;
+                    &lt;div className=&quot;font-mono&quot;&gt;
+                      #{s.step_id} → {s.action}
+                    &lt;/div&gt;
+                    &lt;div className=&quot;text-gray-500&quot;&gt;
+                      tool: {s.tool ?? &quot;n/a&quot;} · latency:{&quot; &quot;}
+                      {s.latency_ms ?? &quot;?&quot;} ms
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;span
+                    className={`text-[10px] px-1 py-0.5 rounded ${
+                      status === &quot;stable&quot;
+                        ? &quot;bg-green-100 text-green-700&quot;
+                        : status === &quot;warning&quot;
+                        ? &quot;bg-yellow-100 text-yellow-700&quot;
+                        : &quot;bg-red-100 text-red-700&quot;
+                    }`}
+                  &gt;
+                    {status}
+                  &lt;/span&gt;
+                &lt;/li&gt;
+              );
+            })}
+          &lt;/ul&gt;
+        &lt;/section&gt;
+
+        {/* Right: Q-metrics + details */}
+        &lt;section className=&quot;col-span-2 flex flex-col gap-4&quot;&gt;
+          &lt;div className=&quot;border rounded p-2&quot;&gt;
+            &lt;h2 className=&quot;font-semibold mb-2 text-sm&quot;&gt;Q‑Metrics&lt;/h2&gt;
+            &lt;QMetricWaveformPanel qHistory={qHistory} /&gt;
+          &lt;/div&gt;
+
+          &lt;div className=&quot;border rounded p-2&quot;&gt;
+            &lt;h2 className=&quot;font-semibold mb-2 text-sm&quot;&gt;Step Details&lt;/h2&gt;
+            {selectedStep == null ? (
+              &lt;p className=&quot;text-xs text-gray-500&quot;&gt;
+                Select a step from the left timeline.
+              &lt;/p&gt;
+            ) : (
+              (() =&gt; {
+                const step = steps.find((s) =&gt; s.step_id === selectedStep);
+                const q = qHistory.find((q) =&gt; q.step_id === selectedStep);
+                if (!step) return null;
+                return (
+                  &lt;div className=&quot;text-xs space-y-1&quot;&gt;
+                    &lt;div className=&quot;font-mono&quot;&gt;
+                      #{step.step_id} (parent {step.parent_step_id ?? &quot;∅&quot;})
+                    &lt;/div&gt;
+                    &lt;div&gt;Action: {step.action}&lt;/div&gt;
+                    &lt;div&gt;Observation: {step.observation}&lt;/div&gt;
+                    &lt;div&gt;Tool: {step.tool ?? &quot;n/a&quot;}&lt;/div&gt;
+                    &lt;div&gt;Latency: {step.latency_ms ?? &quot;?&quot;} ms&lt;/div&gt;
+                    {q &amp;&amp; (
+                      &lt;div className=&quot;mt-2&quot;&gt;
+                        &lt;div className=&quot;font-semibold&quot;&gt;Q‑metrics&lt;/div&gt;
+                        &lt;pre className=&quot;bg-gray-50 p-2 rounded&quot;&gt;
+                          {JSON.stringify(q, null, 2)}
+                        &lt;/pre&gt;
+                      &lt;/div&gt;
+                    )}
+                  &lt;/div&gt;
+                );
+              })()
+            )}
+          &lt;/div&gt;
+        &lt;/section&gt;
+      &lt;/main&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+  </main>
+</body>
+</html>

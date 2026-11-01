@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/resonance_atlas/phase_mapping_rules.md">
+  <title>🌈 RTT Phase‑Mapping Rules (v1.0 Minimal Edition)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/resonance_atlas/phase_mapping_rules.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/resonance_atlas/phase_mapping_rules.md</code>
+  </aside>
+
+  <main>
+<h1 id="rtt-phasemapping-rules-v10-minimal-edition">🌈 <strong>RTT Phase‑Mapping Rules (v1.0 Minimal Edition)</strong></h1>
+<p>These rules align directly with the phase descriptions already in your repo’s README   <a href="https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance_atlas">github.com</a> but express them as <strong>operational logic</strong> for the harvester.</p>
+<hr>
+<h2 id="map_phase-rtt-phase-mapping-logic"><strong><code>map_phase()</code> — RTT Phase Mapping Logic</strong></h2>
+<p>Below is the conceptual version (the code version would be trivial to implement):</p>
+<hr>
+<h2 id="phase-i-atomic-molecular-10111014-hz"><strong>Phase I — ⚛️ Atomic / Molecular (10¹¹–10¹⁴ Hz)</strong></h2>
+<p><strong>Corridor:</strong> IR/Raman vibrational bands<br>
+<strong>Sources:</strong> NIST, RSC, Bowserinator atomic JSON<br>
+<strong>Rule:</strong><br>
+If the frequency is in the <strong>terahertz</strong> range or corresponds to <strong>molecular vibration</strong>, map to Phase I.</p>
+<hr>
+<h2 id="phase-ii-biological-105101-hz"><strong>Phase II — 🧬 Biological (10⁻⁵–10¹ Hz)</strong></h2>
+<p><strong>Corridor:</strong> heartbeat, neural rhythms, circadian cycles<br>
+<strong>Sources:</strong> biological datasets<br>
+<strong>Rule:</strong><br>
+If the frequency corresponds to <strong>organism‑scale cycles</strong>, map to Phase II.</p>
+<hr>
+<h2 id="phase-iii-ecological-seasonal-107103-hz"><strong>Phase III — 🍃 Ecological / Seasonal (10⁻⁷–10⁻³ Hz)</strong></h2>
+<p><strong>Corridor:</strong> seasonal, ecological, environmental cycles<br>
+<strong>Rule:</strong><br>
+If the frequency corresponds to <strong>environmental rhythms</strong>, map to Phase III.</p>
+<hr>
+<h2 id="phase-iv-geological-1012108-hz"><strong>Phase IV — ⛰️ Geological (10⁻¹²–10⁻⁸ Hz)</strong></h2>
+<p><strong>Corridor:</strong> seismic, tectonic, geomagnetic<br>
+<strong>Sources:</strong> USGS, geophysical datasets<br>
+<strong>Rule:</strong><br>
+If the frequency corresponds to <strong>planetary‑scale cycles</strong>, map to Phase IV.</p>
+<hr>
+<h2 id="phase-v-mythic-civilizational-10141012-hz"><strong>Phase V — 📜 Mythic / Civilizational (10⁻¹⁴–10⁻¹² Hz)</strong></h2>
+<p><strong>Corridor:</strong> cultural epochs, civilizational cycles<br>
+<strong>Rule:</strong><br>
+If the frequency corresponds to <strong>multi‑century human cycles</strong>, map to Phase V.</p>
+<hr>
+<h2 id="phase-vi-cosmic-1091011-hz"><strong>Phase VI — ⭐ Cosmic (10⁹–10¹¹ Hz)</strong></h2>
+<p><strong>Corridor:</strong> CMB, stellar spectra<br>
+<strong>Sources:</strong> NASA, Planck, WMAP<br>
+<strong>Rule:</strong><br>
+If the frequency corresponds to <strong>cosmic background or stellar resonance</strong>, map to Phase VI.</p>
+<hr>
+<h1 id="minimal-pseudocode-version">⭐ <strong>Minimal Pseudocode Version</strong></h1>
+<pre><code class="language-python">def map_phase(freq_range_hz):
+    f = parse_frequency(freq_range_hz)
+
+    if 1e11 &lt;= f &lt;= 1e14:
+        return &quot;I&quot;, &quot;⚛️&quot;
+    if 1e-5 &lt;= f &lt;= 1e1:
+        return &quot;II&quot;, &quot;🧬&quot;
+    if 1e-7 &lt;= f &lt;= 1e-3:
+        return &quot;III&quot;, &quot;🍃&quot;
+    if 1e-12 &lt;= f &lt;= 1e-8:
+        return &quot;IV&quot;, &quot;⛰️&quot;
+    if 1e-14 &lt;= f &lt;= 1e-12:
+        return &quot;V&quot;, &quot;📜&quot;
+    if 1e9 &lt;= f &lt;= 1e11:
+        return &quot;VI&quot;, &quot;⭐&quot;
+
+    return None, None  # drift or out-of-corridor
+</code></pre>
+<p>This matches your existing phase definitions exactly, but expresses them in a way that a validator or scanner can use.</p>
+  </main>
+</body>
+</html>

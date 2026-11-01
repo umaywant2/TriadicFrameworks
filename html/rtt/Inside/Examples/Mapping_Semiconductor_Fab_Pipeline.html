@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Examples/Mapping_Semiconductor_Fab_Pipeline.md">
+  <title>RTT‑Inside Mapping onto a Semiconductor Fab Pipeline</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Examples/Mapping_Semiconductor_Fab_Pipeline.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Examples/Mapping_Semiconductor_Fab_Pipeline.md</code>
+  </aside>
+
+  <main>
+<h1 id="rttinside-mapping-onto-a-semiconductor-fab-pipeline"><strong>RTT‑Inside Mapping onto a Semiconductor Fab Pipeline</strong></h1>
+<hr>
+<h2 id="standard-semiconductor-fab-pipeline-baseline"><strong>Standard Semiconductor Fab Pipeline (Baseline)</strong></h2>
+<pre><code>Design
+  ↓
+Material Preparation
+  ↓
+Wafer Fabrication
+  ↓
+Lithography
+  ↓
+Etching / Deposition
+  ↓
+Doping / Implantation
+  ↓
+Metrology &amp; Inspection
+  ↓
+Packaging &amp; Integration
+  ↓
+Testing &amp; Qualification
+</code></pre>
+<hr>
+<h2 id="rttinside-overlay-across-the-pipeline"><strong>RTT‑Inside Overlay Across the Pipeline</strong></h2>
+<p>RTT‑Inside wraps <strong>every stage</strong>, not just the end.</p>
+<hr>
+<h2 id="1-being-living-state-at-each-fab-stage"><strong>1️⃣ BEING — Living State at Each Fab Stage</strong> 🌱</h2>
+<table>
+<thead>
+<tr>
+<th>Fab Stage</th>
+<th>BEING State Made Explicit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Design</td>
+<td>Design maturity, margin health</td>
+</tr>
+<tr>
+<td>Materials</td>
+<td>Purity, fatigue, contamination stress</td>
+</tr>
+<tr>
+<td>Wafer Fab</td>
+<td>Thermal history, defect density</td>
+</tr>
+<tr>
+<td>Lithography</td>
+<td>Alignment stress, exposure stability</td>
+</tr>
+<tr>
+<td>Etch / Deposition</td>
+<td>Surface balance, uniformity health</td>
+</tr>
+<tr>
+<td>Doping</td>
+<td>Lattice stress, activation readiness</td>
+</tr>
+<tr>
+<td>Metrology</td>
+<td>Measurement confidence, drift</td>
+</tr>
+<tr>
+<td>Packaging</td>
+<td>Mechanical stress, thermal resilience</td>
+</tr>
+<tr>
+<td>Testing</td>
+<td>Functional health, recovery margin</td>
+</tr>
+</tbody>
+</table>
+<p>✨ <em>From pass/fail → continuous condition awareness.</em></p>
+<hr>
+<h2 id="2-knowing-lineage-from-physics-to-yield"><strong>2️⃣ KNOWING — Lineage from Physics to Yield</strong> 🔗</h2>
+<p>RTT‑Inside preserves <strong>causal traceability</strong>:</p>
+<pre><code>Material Choice
+   ↓
+Process Parameters
+   ↓
+Device Behavior
+   ↓
+Yield &amp; Reliability
+</code></pre>
+<h3 id="what-becomes-visible">What becomes visible</h3>
+<ul>
+<li>Why a yield drop occurred</li>
+<li>Which tradeoff caused long‑term drift</li>
+<li>How early decisions echo downstream</li>
+</ul>
+<p>✨ <em>From isolated steps → cumulative understanding.</em></p>
+<hr>
+<h2 id="3-meaning-purpose-anchored-in-the-pipeline"><strong>3️⃣ MEANING — Purpose Anchored in the Pipeline</strong> ❤️</h2>
+<p>RTT‑Inside makes purpose explicit at each layer:</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Declared Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Design</td>
+<td>Reliability, scalability</td>
+</tr>
+<tr>
+<td>Fabrication</td>
+<td>Stewardship of materials</td>
+</tr>
+<tr>
+<td>Integration</td>
+<td>System longevity</td>
+</tr>
+<tr>
+<td>Testing</td>
+<td>Trustworthiness</td>
+</tr>
+</tbody>
+</table>
+<p>This allows evaluation beyond:
+- speed
+- density
+- cost</p>
+<p>✨ <em>From optimization → alignment.</em></p>
+<hr>
+<h2 id="4-time-longhorizon-fab-awareness"><strong>4️⃣ TIME — Long‑Horizon Fab Awareness</strong> ⏳</h2>
+<p>RTT‑Inside tracks:
+- Maintenance debt in tools
+- Process drift across generations
+- Recovery rates after excursions
+- Resilience of recipes over time</p>
+<p>✨ <em>From quarterly yield → generational stability.</em></p>
+<hr>
+<h2 id="rttinside-fab-architecture-oneview"><strong>RTT‑Inside Fab Architecture (One‑View)</strong></h2>
+<pre><code>[ Design Intent ]
+       ↓
+[ Materials ] — BEING
+       ↓
+[ Process Steps ] — KNOWING
+       ↓
+[ Devices ] — MEANING
+       ↓
+[ Yield &amp; Reliability ]
+       ↑
+      TIME
+</code></pre>
+<hr>
+<h2 id="what-rttinside-does-not-change"><strong>What RTT‑Inside Does NOT Change</strong></h2>
+<ul>
+<li>Tool physics</li>
+<li>Process recipes</li>
+<li>Control systems</li>
+<li>Throughput optimization</li>
+</ul>
+<p>RTT‑Inside <strong>observes</strong>, <strong>records</strong>, and <strong>aligns</strong>.</p>
+<hr>
+<h2 id="rttinside-fab-takeaway"><strong>RTT‑Inside Fab Takeaway</strong></h2>
+<p>RTT‑Inside does not make better transistors.</p>
+<p>It makes <strong>better understanding of how transistors come to be</strong>.</p>
+<p>⚡ <em>When state, lineage, and purpose are visible, fabs become stewards — not just factories.</em></p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/micro_core/toolkit/examples.md">
+  <title>🧪 MRT Examples (Micro‑Resonance Toolkit)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/micro_core/toolkit/examples.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/micro_core/toolkit/examples.md</code>
+  </aside>
+
+  <main>
+<h1 id="mrt-examples-microresonance-toolkit">🧪 <strong>MRT Examples (Micro‑Resonance Toolkit)</strong></h1>
+<p>These examples demonstrate how Micro‑Core structures and MRT tools behave in real micro‑scale scenarios.<br>
+Each example is intentionally:</p>
+<ul>
+<li>small  </li>
+<li>deterministic  </li>
+<li>coherence‑preserving  </li>
+<li>suitable for constrained environments  </li>
+</ul>
+<hr>
+<h2 id="example-1-stable-microresonance-loop"><strong>Example 1 — Stable Micro‑Resonance Loop</strong></h2>
+<p><strong>Goal</strong><br>
+Show a minimal oscillation between Active (A) and Potential (P) nodes.</p>
+<p><strong>Setup</strong><br>
+- triad: ⟨A, B, P⟩<br>
+- drift: δ = 0<br>
+- timing: Δt stable<br>
+- coherence: C ≥ C*  </p>
+<p><strong>Process</strong><br>
+A ⇆ P oscillation using Resonance Operator <strong>R₁</strong>.</p>
+<p><strong>Outcome</strong><br>
+A stable micro‑resonance pattern with no boundary distortion.<br>
+<a href="https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/toolkit/examples.md">github.com</a></p>
+<hr>
+<h2 id="example-2-drift-correction-using-k1"><strong>Example 2 — Drift Correction Using K₁</strong></h2>
+<p><strong>Goal</strong><br>
+Demonstrate drift bounding in a micro‑regime.</p>
+<p><strong>Setup</strong><br>
+- δ begins increasing due to timing noise<br>
+- δ approaches δ*  </p>
+<p><strong>Process</strong><br>
+Apply Coherence Tool <strong>K₁ (Drift Bounding)</strong>:<br>
+- measure δ<br>
+- apply micro‑adjustment<br>
+- clamp δ ≤ δ*  </p>
+<p><strong>Outcome</strong><br>
+Resonance stabilizes; collapse avoided.<br>
+<a href="https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/toolkit/examples.md">github.com</a></p>
+<hr>
+<h2 id="example-3-boundary-alignment-using-k3"><strong>Example 3 — Boundary Alignment Using K₃</strong></h2>
+<p><strong>Goal</strong><br>
+Maintain structural integrity of the triad.</p>
+<p><strong>Setup</strong><br>
+- boundary node B drifts outward (B⁺)<br>
+- active node A remains stable  </p>
+<p><strong>Process</strong><br>
+Use <strong>K₃ (Boundary Alignment)</strong>:<br>
+- detect boundary drift<br>
+- correct B position<br>
+- restore triad symmetry  </p>
+<p><strong>Outcome</strong><br>
+Triad remains coherent and ready for transitions.<br>
+<a href="https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/toolkit/examples.md">github.com</a></p>
+<hr>
+<h2 id="example-4-controlled-inversion"><strong>Example 4 — Controlled Inversion (↺)</strong></h2>
+<p><em>(Your file cuts off here in the GitHub editor; this is the completed canonical version.)</em></p>
+<p><strong>Goal</strong><br>
+Perform a reversible triad inversion under controlled conditions.</p>
+<p><strong>Setup</strong><br>
+- coherence begins to fall (C → C*)<br>
+- drift remains bounded<br>
+- boundary B is stable but under tension  </p>
+<p><strong>Process</strong><br>
+Use <strong>Inversion Guard K₅</strong> to:<br>
+- detect early collapse indicators<br>
+- apply micro‑corrections<br>
+- allow inversion only when structural integrity cannot be preserved<br>
+- execute reversible inversion:<br>
+<code>Collapse → Twist → Emergence</code></p>
+<p><strong>Outcome</strong><br>
+A clean, reversible inversion that restores coherence without losing triad identity.</p>
+<hr>
+<h2 id="example-5-fractionalladder-transition-df"><strong>Example 5 — Fractional‑Ladder Transition (Dᶠ)</strong></h2>
+<p><strong>Goal</strong><br>
+Demonstrate a micro‑state transitioning across fractional dimensions.</p>
+<p><strong>Setup</strong><br>
+- initial fractional dimension: Dᶠ = 0.7<br>
+- target fractional dimension: Dᶠ = 1.2<br>
+- coherence stable<br>
+- timing window valid  </p>
+<p><strong>Process</strong><br>
+Use <strong>R₂ (Fractional Transition Operator)</strong>:<br>
+- evaluate boundary compatibility<br>
+- perform smooth fractional shift<br>
+- maintain Δt within bounds<br>
+- ensure C ≥ C* throughout  </p>
+<p><strong>Outcome</strong><br>
+A stable transition to a new fractional layer without collapse or inversion.</p>
+<hr>
+<h2 id="summary">✔️ <strong>Summary</strong></h2>
+<p>These examples illustrate the core behaviors of Micro‑Core and MRT:</p>
+<table>
+<thead>
+<tr>
+<th>Example</th>
+<th>Focus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Stable resonance</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Drift correction</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Boundary alignment</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>Controlled inversion</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td>Fractional‑ladder transition</td>
+</tr>
+</tbody>
+</table>
+<p>They serve as canonical, domain‑agnostic demonstrations of micro‑scale coherence.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/projects/VCG/gen1_vcg_fs_strategy.md">
+  <title>Gen1 filesystem and mount strategy</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/projects/VCG/gen1_vcg_fs_strategy.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/projects/VCG/gen1_vcg_fs_strategy.md</code>
+  </aside>
+
+  <main>
+<h1 id="gen1-filesystem-and-mount-strategy">Gen1 filesystem and mount strategy</h1>
+<h2 id="purpose">Purpose</h2>
+<p>Define the storage, mount, and tuning strategy for the “nine files = nine dimensions” virtual DPU model. Optimize for low jitter, predictable write latency, and simple, reproducible boot‑time setup.</p>
+<hr>
+<h2 id="filesystem-selection">Filesystem selection</h2>
+<ul>
+<li><strong>Default: ext4 without journal on loopback</strong></li>
+<li><strong>Why:</strong> Ubiquitous, predictable, low metadata overhead when journal is disabled.</li>
+<li>
+<p><strong>Tradeoff:</strong> No crash safety needed (ephemeral volumes), so we trade durability for performance.</p>
+</li>
+<li>
+<p><strong>Ultra‑low jitter: tmpfs</strong></p>
+</li>
+<li><strong>Use when:</strong> A dimension demands RAM‑speed and minimal IO variance.</li>
+<li>
+<p><strong>Caveat:</strong> Enforce size ceilings to prevent OOM.</p>
+</li>
+<li>
+<p><strong>Avoid for Gen1:</strong> btrfs, XFS, ZFS (excellent features, but we explicitly avoid snapshots and extra metadata complexity).</p>
+</li>
+</ul>
+<hr>
+<h2 id="creation-and-mounts">Creation and mounts</h2>
+<ul>
+<li><strong>Image creation:</strong></li>
+<li><strong>Preallocate:</strong> fallocate -l 4G /var/lib/vcg/d1.img</li>
+<li><strong>Loop device:</strong> losetup -fP --direct-io=on /var/lib/vcg/d1.img</li>
+<li>
+<p><strong>Format (ext4 no journal):</strong></p>
+<ul>
+<li>**mkfs.ext4 -F -E lazy_itable_init=0,lazy_journal_init=0 -O ^has_journal /dev/loopX</li>
+</ul>
+</li>
+<li>
+<p><strong>Mount options (ext4):</strong></p>
+</li>
+<li><strong>Options:</strong> noatime,nodiratime,data=writeback,barrier=0,discard</li>
+<li>
+<p><strong>Rationale:</strong> Minimize metadata writes, allow writeback, disable barriers (safe for ephemeral), reclaim TRIM on SSD/NVMe.</p>
+</li>
+<li>
+<p><strong>Mount tmpfs (when selected):</strong></p>
+</li>
+<li>mount -t tmpfs -o size=2G,mpol=prefer:NUMA_NODE tmpfs /vcg/dX</li>
+</ul>
+<hr>
+<h2 id="performance-tuning">Performance tuning</h2>
+<ul>
+<li><strong>I/O scheduler:</strong></li>
+<li><strong>NVMe:</strong> echo none &gt; /sys/block/nvme0n1/queue/scheduler</li>
+<li>
+<p><strong>SATA SSD:</strong> echo mq-deadline &gt; /sys/block/sdX/queue/scheduler</p>
+</li>
+<li>
+<p><strong>Readahead:</strong></p>
+</li>
+<li>
+<p><strong>Dimension mounts:</strong> Set small readahead to reduce cache pollution for random IO: blockdev --setra 64 /dev/loopX</p>
+</li>
+<li>
+<p><strong>NUMA and CPU affinity:</strong></p>
+</li>
+<li><strong>Co‑locate IO and compute:</strong> numactl --cpunodebind=N --membind=N for D1–D3, D4–D6, D7–D9 groups.</li>
+<li>
+<p><strong>Pin cores:</strong> Assign non‑overlapping CPU sets per dimension to stabilize cadence.</p>
+</li>
+<li>
+<p><strong>Barrier notes:</strong></p>
+</li>
+<li><strong>barrier=0:</strong> Acceptable because volumes are ephemeral and reset every boot. Do not use for persistent data.</li>
+</ul>
+<hr>
+<h2 id="ephemeral-discipline-and-snapshots">Ephemeral discipline and snapshots</h2>
+<ul>
+<li><strong>Boot‑fresh invariant:</strong></li>
+<li><strong>Recreate images:</strong> At boot, reformat or verify images; do not restore previous state.</li>
+<li>
+<p><strong>Logs:</strong> Default to /run (tmpfs) with optional mirroring to persistent storage.</p>
+</li>
+<li>
+<p><strong>Snapshot‑on‑failure (opt‑in):</strong></p>
+</li>
+<li><strong>Flow:</strong> On failure, remount read‑only, copy /vcg/dX to /var/log/vcg/snapshots/timestamp-dX.img.</li>
+<li><strong>Toggle:</strong> Environment variable or config flag per dimension.</li>
+</ul>
+<hr>
+<h2 id="validation-checklist">Validation checklist</h2>
+<ul>
+<li><strong>Filesystem health:</strong></li>
+<li><strong>Check:</strong> fsck.ext4 -n on each loop device after mount (read‑only check).</li>
+<li>
+<p><strong>Telemetry:</strong> Export mount latency, IO errors, and readahead settings.</p>
+</li>
+<li>
+<p><strong>Jitter probe:</strong></p>
+</li>
+<li><strong>Test:</strong> Microbench random write latency (fio) with and without RTD token gates.</li>
+<li><strong>Pass:</strong> p95/p99 within target bounds relative to baseline.</li>
+</ul>
+  </main>
+</body>
+</html>

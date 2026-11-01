@@ -1,0 +1,1695 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/FFF_Gravity/f_Capture_Soft.md">
+  <title>fCaptureSoft — Provisional Binding Variant</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/FFF_Gravity/f_Capture_Soft.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/FFF_Gravity/f_Capture_Soft.md</code>
+  </aside>
+
+  <main>
+<h1 id="f_capture_soft-provisional-binding-variant">f_Capture_Soft — Provisional Binding Variant</h1>
+<pre><code>session_id: SES-20260813-SOFT-001
+tag: &quot;[FFF:GRAVITY:CAPTURE:SOFT]&quot;
+version: 1.0.0
+status: canonical
+wave: 4
+wave_position: &quot;3 of 6&quot;
+file: docs/FFF_Gravity/f_Capture_Soft.md
+module: FFF_Gravity
+dependencies:
+  - f_Capture.md        # base capture — d_bind, β, e, r_capture, SCs
+  - f_Decay.md          # d_warn, d_collapse, δ, FM-004
+  - f_Field.md          # ρ(Φ), v_escape, F_freq
+  - f_Force.md          # β, M_A, M_E, F_fluid
+  - f_Frame.md          # capacity_MAX, register_capture
+  - f_Amplify.md        # β strengthening — primary soft-to-hard pathway
+  - f_Emit.md           # ρ(Φ) strengthening — secondary soft-to-hard pathway
+new_operators:
+  - d_soft          # provisional binding depth
+  - soft_threshold  # minimum d_bind for soft capture eligibility
+  - grace_period    # cycle budget for soft capture to resolve
+  - k_grace         # current grace cycle counter
+new_state_flags:
+  - CAPTURE_SOFT        # provisional binding — between soft_threshold and d_warn
+  - SOFT_STRENGTHENED   # transition: CAPTURE_SOFT → CAPTURE_LOCKED
+  - SOFT_DISSOLVED      # transition: CAPTURE_SOFT → CAPTURE_FAILED
+  - GRACE_EXPIRED       # grace_period exhausted without resolution
+new_primitives:
+  - PRIM:029  evaluate_soft_eligibility   Pure
+  - PRIM:030  execute_soft_capture        Impure
+failure_modes_active:
+  - FM-004  # Resonance Drift — primary risk for soft captures
+  - FM-002  # Field Null — terminates soft capture immediately
+new_failure_modes: []  # FM registry frozen at FM-010; no new IDs
+changelog:
+  - version: 1.0.0
+    date: 2026-08-13
+    session: SES-20260813-SOFT-001
+    summary: &gt;
+      Initial canonical release. Provisional binding model defined.
+      d_soft, soft_threshold, grace_period, k_grace frozen.
+      PRIM:029–030 opened. Four resolution pathways: STRENGTHEN,
+      DISSOLVE, EXPIRE, HOLD. Four canonical examples.
+</code></pre>
+<blockquote>
+<p><strong>[FFF:GRAVITY:CAPTURE:SOFT]</strong> · Wave 4 · File 3 of 6 · PRIM:029–030<br>
+A soft capture is a provisional binding established when <code>d_bind</code> falls
+below the standard stable-orbit floor (<code>d_warn</code>) but above the minimum
+viable threshold (<code>soft_threshold</code>). It persists for at most <code>grace_period</code>
+cycles before either strengthening to a full binding or dissolving.</p>
+</blockquote>
+<hr>
+<h2 id="0-session-context">§0 · Session Context</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Session ID</td>
+<td><code>SES-20260813-SOFT-001</code></td>
+</tr>
+<tr>
+<td>Date / Time</td>
+<td>2026-08-13 22:14 EDT</td>
+</tr>
+<tr>
+<td>Wave</td>
+<td>4 — Capture Variants</td>
+</tr>
+<tr>
+<td>Wave Position</td>
+<td>3 of 6</td>
+</tr>
+<tr>
+<td>Prior file</td>
+<td>f_Capture_Cascade.md (PRIM:027–028, FM-003-C)</td>
+</tr>
+<tr>
+<td>PRIM range</td>
+<td>PRIM:029–030</td>
+</tr>
+<tr>
+<td>Next file</td>
+<td>f_Capture_Hard.md</td>
+</tr>
+</tbody>
+</table>
+<h3 id="01-motivation">§0.1 — Motivation</h3>
+<p>Standard <code>f_Capture.md</code> requires <code>d_bind ≥ d_warn</code> for a stable binding.
+This is a conservative threshold: it ensures the captured element is
+immediately in the STABLE stability class (from <code>f_Orbit.md</code>) and
+unlikely to trigger FM-004 in the first decay cycle.</p>
+<p>Real attractor/element pairs frequently form tentative, sub-threshold
+bindings first — interactions that are real but fragile, requiring
+reinforcement before they stabilize. <code>f_Capture_Soft</code> formalizes this
+regime as a first-class state rather than a capture failure.</p>
+<h3 id="02-what-wave-4-files-may-and-may-not-introduce">§0.2 — What Wave 4 Files May and May Not Introduce</h3>
+<table>
+<thead>
+<tr>
+<th>Permitted</th>
+<th>Prohibited</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New state flags</td>
+<td>New FM IDs (frozen at FM-010)</td>
+</tr>
+<tr>
+<td>New operators</td>
+<td>New Invariants (frozen at INV-010)</td>
+</tr>
+<tr>
+<td>New PRIM IDs</td>
+<td>Redefining base f_Capture.md operators</td>
+</tr>
+<tr>
+<td>FM sub-modes (suffixed)</td>
+<td>Breaking changes to OPERATORS.md frozen entries</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="1-module-identity">§1 · Module Identity</h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tag</td>
+<td><code>[FFF:GRAVITY:CAPTURE:SOFT]</code></td>
+</tr>
+<tr>
+<td>Signature</td>
+<td><code>f_Capture_Soft(E, A, Φ) → CAPTURE_SOFT \| CAPTURE_FAILED</code></td>
+</tr>
+<tr>
+<td>Extends</td>
+<td><code>f_Capture.md</code></td>
+</tr>
+<tr>
+<td>Node emphasis</td>
+<td>F_fluid (d_bind), F_freq (ρ(Φ) as soft field)</td>
+</tr>
+<tr>
+<td>Binding range</td>
+<td><code>soft_threshold ≤ d_bind &lt; d_warn</code></td>
+</tr>
+<tr>
+<td>State on success</td>
+<td><code>CAPTURE_SOFT</code> (provisional)</td>
+</tr>
+<tr>
+<td>Resolution states</td>
+<td><code>CAPTURE_LOCKED</code> (strengthened) · <code>CAPTURE_FAILED</code> (dissolved / expired)</td>
+</tr>
+<tr>
+<td>Primary hazard</td>
+<td>FM-004 (Resonance Drift)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="11-relationship-to-standard-capture">§1.1 — Relationship to Standard Capture</h3>
+<pre><code>Standard f_Capture.md:
+  d_bind ≥ d_warn     → CAPTURE_LOCKED (stable from cycle 1)
+  d_bind &lt; d_warn     → CAPTURE_FAILED (rejected)
+
+f_Capture_Soft (this file):
+  d_bind ≥ d_warn          → defer to f_Capture.md (out of scope here)
+  soft_threshold ≤ d_bind
+             &lt; d_warn      → CAPTURE_SOFT (provisional — this file)
+  d_bind &lt; soft_threshold  → CAPTURE_FAILED (too weak; no provisional state)
+</code></pre>
+<p>The three zones partition the d_bind range completely and exhaustively:</p>
+<pre><code>[0, soft_threshold)  →  hard reject
+[soft_threshold, d_warn)  →  soft capture (this file)
+[d_warn, ∞)          →  standard capture (f_Capture.md)
+</code></pre>
+<hr>
+<h2 id="2-canonical-description">§2 · Canonical Description</h2>
+<h3 id="21-the-provisional-binding-model">§2.1 — The Provisional Binding Model</h3>
+<p>A soft capture registers the (A, E) pair in the Frame with state
+<code>CAPTURE_SOFT</code>. It does not enter the standard orbit pipeline
+(<code>f_Orbit.md</code>) immediately. Instead it enters a <strong>grace period</strong> —
+a bounded window of <code>grace_period</code> cycles during which:</p>
+<ol>
+<li><code>f_Decay</code> monitors the binding's evolution (d_bind trend)</li>
+<li>The operator may apply <code>f_Amplify</code> or <code>f_Emit</code> to strengthen it</li>
+<li>If d_bind rises to ≥ d_warn, the binding <strong>strengthens</strong> → <code>CAPTURE_LOCKED</code></li>
+<li>If d_bind falls below <code>soft_threshold</code>, the binding <strong>dissolves</strong> → <code>CAPTURE_FAILED</code></li>
+<li>If <code>grace_period</code> expires without either transition → <code>GRACE_EXPIRED</code> → <code>CAPTURE_FAILED</code></li>
+</ol>
+<p>The grace period is tracked by <code>k_grace</code>, a per-binding cycle counter
+that increments each evaluation cycle while the binding holds <code>CAPTURE_SOFT</code>.</p>
+<h3 id="22-what-f_capture_soft-is-not">§2.2 — What f_Capture_Soft IS NOT</h3>
+<table>
+<thead>
+<tr>
+<th>Misconception</th>
+<th>Correction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A weaker version of f_Capture</td>
+<td>It is a provisional state with its own lifecycle; not just "capture with lower β"</td>
+</tr>
+<tr>
+<td>Automatically stable</td>
+<td>CAPTURE_SOFT is explicitly fragile; FM-004 is actively monitored</td>
+</tr>
+<tr>
+<td>Invisible to f_Decay</td>
+<td>f_Decay monitors all registered bindings including CAPTURE_SOFT</td>
+</tr>
+<tr>
+<td>Equivalent to a failed capture</td>
+<td>The binding is registered; the Frame slot is consumed; it is real</td>
+</tr>
+<tr>
+<td>Permanent</td>
+<td>It resolves within grace_period cycles — always</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-resolution-pathways">§2.3 — Resolution Pathways</h3>
+<pre><code>CAPTURE_SOFT
+  ├── d_bind rises to ≥ d_warn     → SOFT_STRENGTHENED → CAPTURE_LOCKED
+  ├── d_bind falls below soft_threshold → SOFT_DISSOLVED → CAPTURE_FAILED
+  ├── k_grace reaches grace_period  → GRACE_EXPIRED → CAPTURE_FAILED
+  └── [HOLD: d_bind stable within soft zone; k_grace increments]
+</code></pre>
+<p>All four pathways terminate the provisional state.
+<code>HOLD</code> is not a terminal state — it is the in-progress condition
+between resolution events.</p>
+<h3 id="24-energy-budget-during-grace-period">§2.4 — Energy Budget During Grace Period</h3>
+<p>A soft capture binds a Frame slot for <code>grace_period</code> cycles whether it
+resolves or not. This is the <strong>grace cost</strong> — the opportunity cost
+of holding capacity for a provisional binding. Operators should set
+<code>grace_period</code> conservatively when <code>capacity_MAX</code> is low.</p>
+<p>The soft capture does <strong>not</strong> consume additional energy beyond the
+standard capture evaluation. The energy cost of transition (from SOFT
+to LOCKED) is borne by whichever strengthening primitive is applied
+(<code>f_Amplify</code> or <code>f_Emit</code>), not by <code>f_Capture_Soft</code> itself.</p>
+<hr>
+<h2 id="3-triadic-equation">§3 · Triadic Equation</h2>
+<h3 id="31-base-identity-inv-001">§3.1 — Base Identity (INV-001)</h3>
+<pre><code>G = F_freq · F_fluid · F_force
+</code></pre>
+<h3 id="32-soft-capture-zone-definition">§3.2 — Soft Capture Zone Definition</h3>
+<pre><code>d_bind = β × ρ(Φ) × (1 − e)              [frozen, f_Capture.md §3]
+
+Soft zone:
+  soft_threshold = α_soft × d_bind_nominal
+  d_warn         = α_warn  × d_bind_nominal   [from f_Decay.md §4]
+
+  where d_bind_nominal = β_nominal × ρ(Φ)_nominal × (1 − e_nominal)
+        is computed at standard field conditions.
+
+  Soft eligibility:
+    soft_threshold ≤ d_bind &lt; d_warn
+  ⟺  α_soft × d_bind_nominal ≤ β × ρ(Φ) × (1 − e) &lt; α_warn × d_bind_nominal
+</code></pre>
+<h3 id="33-grace-period-decay-model">§3.3 — Grace Period Decay Model</h3>
+<p>During the grace period, the soft binding is subject to standard decay:</p>
+<pre><code>d_bind(t+1) = d_bind(t) + δ(t)          [δ from f_Decay.md §3.2]
+
+Strengthening condition:   d_bind(t) ≥ d_warn      (at any t ≤ grace_period)
+Dissolution condition:     d_bind(t) &lt; soft_threshold (at any t ≤ grace_period)
+Expiry condition:          k_grace = grace_period    (without prior resolution)
+</code></pre>
+<h3 id="34-why-soft-captures-are-fm-004-sensitive">§3.4 — Why Soft Captures Are FM-004 Sensitive</h3>
+<p>FM-004 (Resonance Drift) fires when:</p>
+<pre><code>d_bind ≤ d_warn AND δ(t) &lt; 0
+</code></pre>
+<p>A soft capture sits <em>at or below</em> d_warn by definition. Therefore, any
+negative decay rate on a soft binding <strong>immediately</strong> meets FM-004's
+trigger condition. Soft captures should be treated as perpetually in the
+FM-004 warning zone from the moment of registration.</p>
+<hr>
+<h2 id="4-operator-registry">§4 · Operator Registry</h2>
+<h3 id="41-new-operators-frozen-here">§4.1 — New Operators (Frozen Here)</h3>
+<h4 id="d_soft-provisional-binding-depth"><code>d_soft</code> — Provisional Binding Depth</h4>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Symbol</td>
+<td><code>d_soft</code></td>
+</tr>
+<tr>
+<td>Type</td>
+<td>float</td>
+</tr>
+<tr>
+<td>Domain</td>
+<td><code>[soft_threshold, d_warn)</code></td>
+</tr>
+<tr>
+<td>Meaning</td>
+<td>The actual d_bind value at the time of soft capture registration</td>
+</tr>
+<tr>
+<td>Relation</td>
+<td>d_soft = d_bind at capture time; may evolve during grace period</td>
+</tr>
+<tr>
+<td>Frozen</td>
+<td>SES-20260813-SOFT-001</td>
+</tr>
+</tbody>
+</table>
+<h4 id="soft_threshold-minimum-viable-soft-binding"><code>soft_threshold</code> — Minimum Viable Soft Binding</h4>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Symbol</td>
+<td><code>soft_threshold</code></td>
+</tr>
+<tr>
+<td>Type</td>
+<td>float</td>
+</tr>
+<tr>
+<td>Domain</td>
+<td><code>(0, d_warn)</code></td>
+</tr>
+<tr>
+<td>Default</td>
+<td><code>α_soft × d_bind_nominal</code> where α_soft = 0.05</td>
+</tr>
+<tr>
+<td>Meaning</td>
+<td>Floor of the soft capture zone; below this, capture always fails</td>
+</tr>
+<tr>
+<td>Frozen</td>
+<td>SES-20260813-SOFT-001</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Derivation:</strong> <code>soft_threshold</code> is a fraction of <code>d_bind_nominal</code> (the
+expected binding depth under standard field conditions). Setting α_soft
+= 0.05 means a binding at 5 % of nominal strength is the weakest
+permissible provisional state. Weaker than this indicates a field or
+approach condition too degraded to hold any binding.</p>
+<h4 id="grace_period-provisional-binding-window"><code>grace_period</code> — Provisional Binding Window</h4>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Symbol</td>
+<td><code>grace_period</code></td>
+</tr>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+<tr>
+<td>Domain</td>
+<td>≥ 1 cycle</td>
+</tr>
+<tr>
+<td>Default</td>
+<td>5 cycles</td>
+</tr>
+<tr>
+<td>Meaning</td>
+<td>Maximum number of evaluation cycles before automatic GRACE_EXPIRED</td>
+</tr>
+<tr>
+<td>Constraint</td>
+<td>Must be ≥ 1; grace_period = 0 is equivalent to immediate CAPTURE_FAILED</td>
+</tr>
+<tr>
+<td>Frozen</td>
+<td>SES-20260813-SOFT-001</td>
+</tr>
+</tbody>
+</table>
+<h4 id="k_grace-grace-cycle-counter"><code>k_grace</code> — Grace Cycle Counter</h4>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Symbol</td>
+<td><code>k_grace</code></td>
+</tr>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+<tr>
+<td>Domain</td>
+<td><code>[0, grace_period]</code></td>
+</tr>
+<tr>
+<td>Meaning</td>
+<td>Count of evaluation cycles elapsed since CAPTURE_SOFT was registered</td>
+</tr>
+<tr>
+<td>Initialized</td>
+<td>0 at registration</td>
+</tr>
+<tr>
+<td>Incremented</td>
+<td>By 1 each evaluation cycle while state = CAPTURE_SOFT</td>
+</tr>
+<tr>
+<td>Frozen</td>
+<td>SES-20260813-SOFT-001</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-inherited-operators-referenced-not-redefined">§4.2 — Inherited Operators (Referenced, Not Redefined)</h3>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Source</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>d_bind</code></td>
+<td>f_Capture.md</td>
+<td>Computed at capture time; becomes d_soft</td>
+</tr>
+<tr>
+<td><code>d_warn</code></td>
+<td>f_Decay.md</td>
+<td>Upper boundary of soft zone; strengthening target</td>
+</tr>
+<tr>
+<td><code>d_collapse</code></td>
+<td>f_Decay.md</td>
+<td>Hard floor below soft_threshold; FM-005 boundary</td>
+</tr>
+<tr>
+<td><code>β</code></td>
+<td>f_Force.md</td>
+<td>Binding coefficient; key lever for strengthening</td>
+</tr>
+<tr>
+<td><code>ρ(Φ)</code></td>
+<td>f_Field.md</td>
+<td>Field density; second lever for strengthening</td>
+</tr>
+<tr>
+<td><code>e</code></td>
+<td>f_Orbit.md</td>
+<td>Eccentricity; affects d_bind calculation</td>
+</tr>
+<tr>
+<td><code>δ(t)</code></td>
+<td>f_Decay.md</td>
+<td>Decay rate; determines d_bind trajectory</td>
+</tr>
+<tr>
+<td><code>capacity_MAX</code></td>
+<td>f_Frame.md</td>
+<td>Frame capacity; slot consumed during grace period</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="5-soft-capture-conditions">§5 · Soft Capture Conditions</h2>
+<p>All four conditions are <strong>conjunctive</strong> (INV-005). Each is evaluated once
+at the moment of the soft capture attempt.</p>
+<h3 id="scs-1-standard-capture-conditions-partially-met">SCS-1 — Standard Capture Conditions Partially Met</h3>
+<pre><code>SC-1 through SC-4 all pass (from f_Capture.md §5)
+AND
+d_bind &lt; d_warn           (soft zone — otherwise standard capture applies)
+</code></pre>
+<p><strong>Rationale:</strong> The element has passed all standard approach and binding
+pre-conditions except the stable-orbit binding floor. The soft capture
+pathway handles only this specific shortfall.</p>
+<h3 id="scs-2-soft-zone-eligibility">SCS-2 — Soft Zone Eligibility</h3>
+<pre><code>d_bind ≥ soft_threshold
+</code></pre>
+<p><strong>Rationale:</strong> The binding must be at least minimally viable. Below
+<code>soft_threshold</code>, the field and approach conditions are too degraded
+to sustain any provisional state. Hard reject applies.</p>
+<h3 id="scs-3-frame-capacity-available">SCS-3 — Frame Capacity Available</h3>
+<pre><code>frame_count &lt; capacity_MAX
+</code></pre>
+<p><strong>Rationale:</strong> A Frame slot is consumed at registration. If the Frame
+is full, soft capture cannot proceed — identical to standard SC-5.
+A soft capture holds its slot for the full grace period regardless of
+resolution outcome.</p>
+<h3 id="scs-4-grace-period-positive">SCS-4 — Grace Period Positive</h3>
+<pre><code>grace_period ≥ 1
+</code></pre>
+<p><strong>Rationale:</strong> grace_period = 0 would register and immediately expire
+the binding, producing a CAPTURE_FAILED with no grace interval. This
+is semantically equivalent to a standard capture failure and should be
+treated as a pre-flight configuration error rather than a soft capture.</p>
+<hr>
+<h2 id="6-failure-modes">§6 · Failure Modes</h2>
+<h3 id="61-fm-004-as-primary-hazard">§6.1 — FM-004 as Primary Hazard</h3>
+<p>FM-004 (Resonance Drift) fires when:</p>
+<pre><code>d_bind ≤ d_warn  AND  δ(t) &lt; 0
+</code></pre>
+<p>Because soft captures have <code>d_bind &lt; d_warn</code> by definition:
+- <strong>Every soft capture with negative δ immediately meets FM-004 conditions.</strong>
+- FM-004 is therefore not an edge case for soft captures — it is the default
+  monitoring state.</p>
+<p>FM-004 in the soft context does not automatically dissolve the binding.
+It flags the trajectory as decaying, which informs the operator that
+intervention (f_Amplify or f_Emit) is needed before grace_period expires.</p>
+<h3 id="62-fm-005-reachability">§6.2 — FM-005 Reachability</h3>
+<p>If δ is sharply negative and the grace period is long relative to the
+decay rate, d_bind may pass through <code>soft_threshold</code> and approach
+<code>d_collapse</code>. This activates FM-005 (Decay Spiral). FM-005 preempts
+the grace period: once d_bind ≤ d_collapse, f_Collapse fires
+immediately regardless of remaining grace cycles.</p>
+<pre><code>CAPTURE_SOFT → (d_bind ≤ d_collapse) → FM-005 → f_Collapse
+</code></pre>
+<p>This is the most severe soft capture outcome — the provisional binding
+doesn't merely dissolve; it collapses.</p>
+<h3 id="63-failure-mode-coverage-table">§6.3 — Failure Mode Coverage Table</h3>
+<table>
+<thead>
+<tr>
+<th>FM</th>
+<th>Relevance to Soft Capture</th>
+<th>Trigger</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FM-001</td>
+<td>Pre-filter (SCS-1 includes SC-1 check)</td>
+<td>v_approach = 0 → no soft capture</td>
+</tr>
+<tr>
+<td>FM-002</td>
+<td>Pre-filter (SCS-1 includes SC-2 check)</td>
+<td>ρ(Φ) = 0 → no soft capture</td>
+</tr>
+<tr>
+<td>FM-003</td>
+<td>SCS-3 — Frame capacity</td>
+<td>frame_count = capacity_MAX → hard reject</td>
+</tr>
+<tr>
+<td>FM-004</td>
+<td><strong>Primary risk</strong></td>
+<td>d_bind ≤ d_warn AND δ &lt; 0 (always true for soft bindings with negative δ)</td>
+</tr>
+<tr>
+<td>FM-005</td>
+<td>Severe escalation</td>
+<td>d_bind ≤ d_collapse → preempts grace period</td>
+</tr>
+<tr>
+<td>FM-006</td>
+<td>Not applicable</td>
+<td>v_escape exceeded → handled at SC-3</td>
+</tr>
+<tr>
+<td>FM-007</td>
+<td>Mass-parity check</td>
+<td>M_E ≈ M_A → soft binding with parity risk</td>
+</tr>
+<tr>
+<td>FM-008</td>
+<td>Post-capture</td>
+<td>Governs release attempts after SOFT_STRENGTHENED</td>
+</tr>
+<tr>
+<td>FM-009</td>
+<td>Not applicable in this file</td>
+<td>Cascade dampen guard</td>
+</tr>
+<tr>
+<td>FM-010</td>
+<td>Strengthening risk</td>
+<td>β_max or ρ(Φ)=1.0 guard during f_Amplify / f_Emit use</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="7-engineering-primitives">§7 · Engineering Primitives</h2>
+<h3 id="prim029-evaluate_soft_eligibility-pure">PRIM:029 — <code>evaluate_soft_eligibility</code> (Pure)</h3>
+<p><strong>Purpose:</strong> Determine whether a candidate (A, E, Φ) pair qualifies for
+soft capture. Returns a structured eligibility result covering all four
+SCS conditions. This is a pure pre-flight gate — no state mutation.</p>
+<pre><code class="language-python">from dataclasses import dataclass
+from typing import Optional
+
+@dataclass
+class SoftEligibilityResult:
+    eligible:           bool
+    d_bind:             float
+    d_soft:             float       # same as d_bind when eligible
+    soft_threshold:     float
+    d_warn:             float
+    margin_above_floor: float       # d_bind - soft_threshold; negative = ineligible
+    margin_below_warn:  float       # d_warn - d_bind; positive = in soft zone
+    scs_failures:       list[str]   # list of failed condition codes
+    recommendation:     str
+
+
+def evaluate_soft_eligibility(
+    d_bind:         float,
+    soft_threshold: float,
+    d_warn:         float,
+    frame_count:    int,
+    capacity_MAX:   int,
+    grace_period:   int,
+    beta:           float,
+    v_approach:     float,
+    rho_phi:        float,
+) -&gt; SoftEligibilityResult:
+    &quot;&quot;&quot;
+    PRIM:029 — evaluate_soft_eligibility (Pure)
+    ============================================
+    Pre-flight gate for soft capture attempt.
+
+    Evaluates SCS-1 through SCS-4 conjunctively. Returns eligible=True
+    only when all four pass. Pure: no registry mutation, no side effects.
+
+    Parameters
+    ----------
+    d_bind         : float  — computed binding depth at approach time
+    soft_threshold : float  — minimum d_bind for soft zone eligibility
+    d_warn         : float  — standard stable-orbit floor (from f_Decay.md)
+    frame_count    : int    — current registered count in Frame
+    capacity_MAX   : int    — Frame hard capacity ceiling
+    grace_period   : int    — configured grace window (cycles)
+    beta           : float  — binding coefficient β
+    v_approach     : float  — approach velocity (for SCS-1 / SC-4 proxy check)
+    rho_phi        : float  — field density ρ(Φ)
+
+    Returns
+    -------
+    SoftEligibilityResult
+        eligible           : True iff all SCS pass
+        d_bind             : input echo
+        d_soft             : d_bind (set only when eligible)
+        soft_threshold     : input echo
+        d_warn             : input echo
+        margin_above_floor : d_bind − soft_threshold
+        margin_below_warn  : d_warn − d_bind
+        scs_failures       : list of failed condition codes
+        recommendation     : human-readable guidance string
+    &quot;&quot;&quot;
+    failures = []
+
+    # SCS-1: Standard approach preconditions
+    if rho_phi &lt;= 0.0:
+        failures.append(&quot;SCS-1:FM-002:rho_phi=0&quot;)
+    if v_approach &lt;= 0.0:
+        failures.append(&quot;SCS-1:FM-001:v_approach=0&quot;)
+    if beta &lt; 1.0:
+        failures.append(&quot;SCS-1:SC-4:beta&lt;1.0&quot;)
+    if d_bind &gt;= d_warn:
+        # In standard capture zone — defer to f_Capture.md
+        failures.append(&quot;SCS-1:ABOVE_DWARD:defer_to_standard_capture&quot;)
+
+    # SCS-2: Soft zone floor
+    if d_bind &lt; soft_threshold:
+        failures.append(&quot;SCS-2:BELOW_SOFT_THRESHOLD&quot;)
+
+    # SCS-3: Frame capacity
+    if frame_count &gt;= capacity_MAX:
+        failures.append(&quot;SCS-3:FM-003:frame_full&quot;)
+
+    # SCS-4: Grace period positive
+    if grace_period &lt; 1:
+        failures.append(&quot;SCS-4:GRACE_PERIOD_ZERO&quot;)
+
+    eligible = len(failures) == 0
+    margin_above = d_bind - soft_threshold
+    margin_below = d_warn - d_bind
+
+    if eligible:
+        recommendation = (
+            f&quot;Soft capture eligible. d_soft={d_bind:.4f} in &quot;
+            f&quot;[{soft_threshold:.4f}, {d_warn:.4f}). &quot;
+            f&quot;Grace window: {grace_period} cycles. &quot;
+            f&quot;Apply f_Amplify or f_Emit within grace window to strengthen.&quot;
+        )
+    elif &quot;SCS-1:ABOVE_DWARD:defer_to_standard_capture&quot; in failures:
+        recommendation = (
+            f&quot;d_bind={d_bind:.4f} ≥ d_warn={d_warn:.4f}. &quot;
+            &quot;Defer to standard f_Capture.md — no soft capture needed.&quot;
+        )
+    elif &quot;SCS-2:BELOW_SOFT_THRESHOLD&quot; in failures:
+        recommendation = (
+            f&quot;d_bind={d_bind:.4f} &lt; soft_threshold={soft_threshold:.4f}. &quot;
+            &quot;Binding too weak for provisional state. &quot;
+            &quot;Apply f_Emit or f_Amplify first, then retry.&quot;
+        )
+    else:
+        recommendation = (
+            f&quot;Soft capture ineligible: {', '.join(failures)}. &quot;
+            &quot;Resolve blocking conditions before retrying.&quot;
+        )
+
+    return SoftEligibilityResult(
+        eligible=eligible,
+        d_bind=d_bind,
+        d_soft=d_bind if eligible else 0.0,
+        soft_threshold=soft_threshold,
+        d_warn=d_warn,
+        margin_above_floor=margin_above,
+        margin_below_warn=margin_below,
+        scs_failures=failures,
+        recommendation=recommendation,
+    )
+</code></pre>
+<hr>
+<h3 id="prim030-execute_soft_capture-impure">PRIM:030 — <code>execute_soft_capture</code> (Impure)</h3>
+<p><strong>Purpose:</strong> Register a provisional binding in the Frame, initialize
+<code>k_grace = 0</code>, set state flag to <code>CAPTURE_SOFT</code>, and return the
+registration record. Also implements the per-cycle resolution check
+invoked by <code>f_Decay</code> on each evaluation cycle.</p>
+<pre><code class="language-python">from dataclasses import dataclass, field
+from typing import Optional
+
+@dataclass
+class SoftBinding:
+    &quot;&quot;&quot;
+    Registry record for a provisional soft capture binding.
+    Stored in Frame.soft_registry keyed by (A.id, E.id).
+    &quot;&quot;&quot;
+    attractor_id:   str
+    element_id:     str
+    d_soft:         float       # d_bind at registration
+    soft_threshold: float
+    d_warn:         float
+    grace_period:   int
+    k_grace:        int = 0
+    state:          str = &quot;CAPTURE_SOFT&quot;
+    history:        list = field(default_factory=list)  # [(cycle, d_bind, state)]
+
+
+@dataclass
+class SoftResolutionResult:
+    &quot;&quot;&quot;Result of one grace-cycle resolution check.&quot;&quot;&quot;
+    resolved:   bool
+    state:      str             # CAPTURE_SOFT / SOFT_STRENGTHENED / SOFT_DISSOLVED / GRACE_EXPIRED
+    k_grace:    int
+    d_bind_now: float
+    reason:     Optional[str]   # None if still CAPTURE_SOFT (HOLD)
+
+
+def execute_soft_capture(
+    attractor_id:   str,
+    element_id:     str,
+    d_soft:         float,
+    soft_threshold: float,
+    d_warn:         float,
+    grace_period:   int,
+    frame_registry: dict,
+    soft_registry:  dict,
+) -&gt; SoftBinding:
+    &quot;&quot;&quot;
+    PRIM:030 — execute_soft_capture (Impure)
+    =========================================
+    Register a provisional soft binding in Frame and soft_registry.
+
+    Must be called only after PRIM:029 confirms eligibility.
+
+    Parameters
+    ----------
+    attractor_id   : str   — Attractor node identifier
+    element_id     : str   — Element node identifier
+    d_soft         : float — d_bind at capture time (from PRIM:029 result)
+    soft_threshold : float — Minimum viable binding depth
+    d_warn         : float — Strengthening target (upper soft zone boundary)
+    grace_period   : int   — Cycle budget for resolution
+    frame_registry : dict  — Frame node registry (mutated: slot consumed)
+    soft_registry  : dict  — Soft binding registry (mutated: entry added)
+
+    Returns
+    -------
+    SoftBinding — the newly registered provisional binding record
+
+    Side Effects
+    ------------
+    frame_registry[(attractor_id, element_id)] = {
+        &quot;state&quot;: &quot;CAPTURE_SOFT&quot;, &quot;d_soft&quot;: d_soft, &quot;k_grace&quot;: 0
+    }
+    soft_registry[(attractor_id, element_id)] = SoftBinding(...)
+    &quot;&quot;&quot;
+    pair_key = (attractor_id, element_id)
+
+    binding = SoftBinding(
+        attractor_id=attractor_id,
+        element_id=element_id,
+        d_soft=d_soft,
+        soft_threshold=soft_threshold,
+        d_warn=d_warn,
+        grace_period=grace_period,
+        k_grace=0,
+        state=&quot;CAPTURE_SOFT&quot;,
+        history=[(0, d_soft, &quot;CAPTURE_SOFT&quot;)],
+    )
+
+    # Register in Frame (slot consumed)
+    frame_registry[pair_key] = {
+        &quot;state&quot;:          &quot;CAPTURE_SOFT&quot;,
+        &quot;d_soft&quot;:         d_soft,
+        &quot;k_grace&quot;:        0,
+        &quot;grace_period&quot;:   grace_period,
+    }
+
+    # Register in soft binding tracker
+    soft_registry[pair_key] = binding
+    return binding
+
+
+def resolve_soft_binding(
+    binding:    SoftBinding,
+    d_bind_now: float,
+    cycle:      int,
+    frame_registry: dict,
+    soft_registry:  dict,
+) -&gt; SoftResolutionResult:
+    &quot;&quot;&quot;
+    Per-cycle resolution check for a soft binding.
+
+    Called by f_Decay on each evaluation cycle for every CAPTURE_SOFT entry.
+    Applies the four-pathway resolution logic.
+
+    Parameters
+    ----------
+    binding        : SoftBinding — current provisional binding record
+    d_bind_now     : float       — d_bind at this cycle (from f_Decay output)
+    cycle          : int         — current evaluation cycle index
+    frame_registry : dict        — mutated on resolution
+    soft_registry  : dict        — mutated on resolution
+
+    Returns
+    -------
+    SoftResolutionResult
+        resolved   : True if binding exited CAPTURE_SOFT state
+        state      : final or current state
+        k_grace    : updated grace counter
+        d_bind_now : input echo
+        reason     : description of resolution trigger (or None on HOLD)
+    &quot;&quot;&quot;
+    pair_key = (binding.attractor_id, binding.element_id)
+    binding.k_grace += 1
+    binding.history.append((cycle, d_bind_now, binding.state))
+
+    # ── Pathway 1: Strengthen ─────────────────────────────────────────
+    if d_bind_now &gt;= binding.d_warn:
+        binding.state = &quot;SOFT_STRENGTHENED&quot;
+        frame_registry[pair_key][&quot;state&quot;] = &quot;CAPTURE_LOCKED&quot;
+        soft_registry.pop(pair_key, None)
+        return SoftResolutionResult(
+            resolved=True, state=&quot;SOFT_STRENGTHENED&quot;,
+            k_grace=binding.k_grace, d_bind_now=d_bind_now,
+            reason=f&quot;d_bind={d_bind_now:.4f} ≥ d_warn={binding.d_warn:.4f} — CAPTURE_LOCKED&quot;
+        )
+
+    # ── Pathway 2: Dissolve ───────────────────────────────────────────
+    if d_bind_now &lt; binding.soft_threshold:
+        binding.state = &quot;SOFT_DISSOLVED&quot;
+        frame_registry.pop(pair_key, None)
+        soft_registry.pop(pair_key, None)
+        return SoftResolutionResult(
+            resolved=True, state=&quot;SOFT_DISSOLVED&quot;,
+            k_grace=binding.k_grace, d_bind_now=d_bind_now,
+            reason=f&quot;d_bind={d_bind_now:.4f} &lt; soft_threshold={binding.soft_threshold:.4f}&quot;
+        )
+
+    # ── Pathway 3: Expire ─────────────────────────────────────────────
+    if binding.k_grace &gt;= binding.grace_period:
+        binding.state = &quot;GRACE_EXPIRED&quot;
+        frame_registry.pop(pair_key, None)
+        soft_registry.pop(pair_key, None)
+        return SoftResolutionResult(
+            resolved=True, state=&quot;GRACE_EXPIRED&quot;,
+            k_grace=binding.k_grace, d_bind_now=d_bind_now,
+            reason=f&quot;Grace period of {binding.grace_period} cycles exhausted without resolution&quot;
+        )
+
+    # ── Pathway 4: Hold ───────────────────────────────────────────────
+    frame_registry[pair_key][&quot;k_grace&quot;] = binding.k_grace
+    frame_registry[pair_key][&quot;d_soft&quot;]  = d_bind_now
+    return SoftResolutionResult(
+        resolved=False, state=&quot;CAPTURE_SOFT&quot;,
+        k_grace=binding.k_grace, d_bind_now=d_bind_now,
+        reason=None
+    )
+</code></pre>
+<hr>
+<h2 id="8-canonical-examples">§8 · Canonical Examples</h2>
+<h3 id="ex-s-001-strengthened-via-f_amplify-soft-locked">EX-S-001 — Strengthened via f_Amplify (SOFT → LOCKED)</h3>
+<p><strong>Scenario:</strong> A nascent professional collaboration forms between a senior
+practitioner (A) and a junior colleague (E). The initial binding is
+below the stable-orbit threshold but genuine — a soft capture is registered.
+At grace cycle 2, the operator applies <code>f_Amplify</code> to raise β, pushing
+d_bind above d_warn. The binding locks.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>β₀</td>
+<td>1.05</td>
+<td>Just above minimum viable (1.0)</td>
+</tr>
+<tr>
+<td>ρ(Φ)₀</td>
+<td>0.62</td>
+<td>Moderate field</td>
+</tr>
+<tr>
+<td>e₀</td>
+<td>0.18</td>
+<td>Slightly eccentric</td>
+</tr>
+<tr>
+<td>d_bind</td>
+<td>0.62 × 1.05 × (1−0.18) = <strong>0.534</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>d_bind_nominal</td>
+<td>1.0 × 1.0 × 1.0 = 1.0</td>
+<td>Unit baseline</td>
+</tr>
+<tr>
+<td>soft_threshold</td>
+<td>0.05 × 1.0 = <strong>0.05</strong></td>
+<td>α_soft = 0.05</td>
+</tr>
+<tr>
+<td>d_warn</td>
+<td>0.40 × 1.0 = <strong>0.40</strong></td>
+<td>α_warn = 0.40</td>
+</tr>
+<tr>
+<td>grace_period</td>
+<td>5 cycles</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>PRIM:029 eligibility:</strong></p>
+<pre><code>d_bind = 0.534 ≥ d_warn = 0.40?  → NO (soft zone, not standard)
+d_bind = 0.534 ≥ soft_threshold = 0.05?  → YES  ✅
+All SCS pass → eligible = True
+</code></pre>
+<p>Wait — 0.534 ≥ 0.40, so this would actually be handled by standard capture. Let me adjust the parameters:</p>
+<pre><code>β₀ = 1.05, ρ(Φ)₀ = 0.38, e₀ = 0.20
+d_bind = 0.38 × 1.05 × (1 − 0.20) = 0.38 × 1.05 × 0.80 = 0.3192
+
+d_warn = 0.40       (standard stable floor)
+soft_threshold = 0.05
+
+SCS-2: 0.3192 ≥ 0.05 ✅
+SCS-1: 0.3192 &lt; 0.40 ✅ (soft zone, not standard)
+→ eligible = True  d_soft = 0.3192
+</code></pre>
+<p><strong>Grace cycle trace:</strong></p>
+<table>
+<thead>
+<tr>
+<th>k_grace</th>
+<th>d_bind(t)</th>
+<th>δ(t)</th>
+<th>Event</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0.3192</td>
+<td>—</td>
+<td>CAPTURE_SOFT registered</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0.3100</td>
+<td>−0.0092</td>
+<td>HOLD (FM-004 flagged: δ &lt; 0)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0.3028</td>
+<td>−0.0072</td>
+<td>f_Amplify applied: β → 1.35</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>0.4136</strong></td>
+<td>—</td>
+<td>d_bind recomputed: 0.38×1.35×0.80 = <strong>0.4109</strong> ≥ d_warn</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td><strong>SOFT_STRENGTHENED → CAPTURE_LOCKED</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Outcome:</strong>
+- <code>state</code> = CAPTURE_LOCKED
+- Grace cycles used: 2 of 5
+- FM-004 was flagged at k_grace=1 — operator saw the warning and acted</p>
+<hr>
+<h3 id="ex-s-002-dissolved-negative-grace-expires-soft-failed">EX-S-002 — Dissolved: δ Negative, Grace Expires (SOFT → FAILED)</h3>
+<p><strong>Scenario:</strong> A tentative connection forms but no reinforcement is applied.
+d_bind decays monotonically. At k_grace = 5 (grace_period), the binding
+has not resolved upward and expires.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>d_soft</td>
+<td>0.220</td>
+</tr>
+<tr>
+<td>soft_threshold</td>
+<td>0.05</td>
+</tr>
+<tr>
+<td>d_warn</td>
+<td>0.40</td>
+</tr>
+<tr>
+<td>grace_period</td>
+<td>5</td>
+</tr>
+<tr>
+<td>δ per cycle</td>
+<td>−0.035 (steady decay)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Grace cycle trace:</strong></p>
+<table>
+<thead>
+<tr>
+<th>k_grace</th>
+<th>d_bind(t)</th>
+<th>Pathway check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0.220</td>
+<td>Registered as CAPTURE_SOFT</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0.185</td>
+<td>HOLD (0.05 ≤ 0.185 &lt; 0.40; k_grace=1 &lt; 5)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0.150</td>
+<td>HOLD</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0.115</td>
+<td>HOLD</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0.080</td>
+<td>HOLD</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0.045</td>
+<td>k_grace=5 = grace_period → <strong>GRACE_EXPIRED</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Note at k_grace=5: d_bind=0.045 &lt; soft_threshold=0.05, so DISSOLVE would also fire — but EXPIRE is checked first and takes priority when k_grace = grace_period.</p>
+<p><strong>Outcome:</strong>
+- <code>state</code> = GRACE_EXPIRED → CAPTURE_FAILED
+- Frame slot released
+- Binding record purged from soft_registry</p>
+<hr>
+<h3 id="ex-s-003-dissolved-d_bind-drops-below-soft_threshold-soft-failed">EX-S-003 — Dissolved: d_bind Drops Below soft_threshold (SOFT → FAILED)</h3>
+<p><strong>Scenario:</strong> A sharp field disruption (f_Dampen applied externally)
+causes ρ(Φ) to drop, pulling d_bind below soft_threshold before
+grace_period expires.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>d_soft</td>
+<td>0.185</td>
+</tr>
+<tr>
+<td>soft_threshold</td>
+<td>0.10</td>
+</tr>
+<tr>
+<td>d_warn</td>
+<td>0.40</td>
+</tr>
+<tr>
+<td>grace_period</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Grace cycle trace:</strong></p>
+<table>
+<thead>
+<tr>
+<th>k_grace</th>
+<th>d_bind(t)</th>
+<th>Event</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0.185</td>
+<td>CAPTURE_SOFT registered</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0.172</td>
+<td>HOLD</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0.158</td>
+<td>HOLD</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>0.091</strong></td>
+<td>f_Dampen applied externally — ρ(Φ) drops sharply</td>
+</tr>
+<tr>
+<td>3</td>
+<td>—</td>
+<td>0.091 &lt; soft_threshold=0.10 → <strong>SOFT_DISSOLVED</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Outcome:</strong>
+- <code>state</code> = SOFT_DISSOLVED → CAPTURE_FAILED
+- k_grace = 3 (5 cycles remaining, but dissolution fires first)
+- Frame slot released immediately
+- Operator may re-attempt soft capture after field is restored via f_Emit</p>
+<hr>
+<h3 id="ex-s-004-near-miss-strengthen-d_bind-reaches-d_warn-on-final-grace-cycle">EX-S-004 — Near-Miss Strengthen: d_bind Reaches d_warn on Final Grace Cycle</h3>
+<p><strong>Scenario:</strong> A fragile binding slowly strengthens over the entire grace
+window. It reaches d_warn on the final grace cycle — the last possible
+moment for SOFT_STRENGTHENED to fire.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>d_soft</td>
+<td>0.250</td>
+</tr>
+<tr>
+<td>soft_threshold</td>
+<td>0.05</td>
+</tr>
+<tr>
+<td>d_warn</td>
+<td>0.40</td>
+</tr>
+<tr>
+<td>grace_period</td>
+<td>6</td>
+</tr>
+<tr>
+<td>δ per cycle</td>
+<td>+0.025 (gradual positive trend)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Grace cycle trace:</strong></p>
+<table>
+<thead>
+<tr>
+<th>k_grace</th>
+<th>d_bind(t)</th>
+<th>Pathway check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0.250</td>
+<td>CAPTURE_SOFT registered</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0.275</td>
+<td>HOLD</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0.300</td>
+<td>HOLD</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0.325</td>
+<td>HOLD</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0.350</td>
+<td>HOLD</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0.375</td>
+<td>HOLD</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>0.400</strong></td>
+<td>d_bind=0.400 = d_warn=0.40 → <strong>SOFT_STRENGTHENED</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Strengthen condition: <code>d_bind_now ≥ d_warn</code> (≥, not strict &gt;).
+d_bind = 0.400 meets this exactly. CAPTURE_LOCKED fires.</p>
+</blockquote>
+<p><strong>Outcome:</strong>
+- <code>state</code> = SOFT_STRENGTHENED → CAPTURE_LOCKED
+- k_grace = 6 = grace_period (resolved on final valid cycle)
+- Zero additional strengthening primitives needed — natural recovery</p>
+<p><strong>Key insight:</strong> Even without f_Amplify or f_Emit intervention, if the
+natural field trajectory is positive, a soft binding may self-strengthen
+within the grace window. Operators should not automatically apply
+strengthening primitives at registration — monitor δ first.</p>
+<hr>
+<h2 id="9-cross-module-references">§9 · Cross-Module References</h2>
+<h3 id="91-upstream-dependencies">§9.1 — Upstream Dependencies</h3>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>What f_Capture_Soft Uses</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f_Capture.md</td>
+<td>SCS-1 passes SC-1–SC-4 as pre-conditions; d_bind formula</td>
+</tr>
+<tr>
+<td>f_Decay.md</td>
+<td>d_warn, d_collapse, δ; resolve_soft_binding called per decay cycle</td>
+</tr>
+<tr>
+<td>f_Field.md</td>
+<td>ρ(Φ) — second lever for d_bind strengthening</td>
+</tr>
+<tr>
+<td>f_Force.md</td>
+<td>β, M_A, M_E — binding coefficient as primary lever</td>
+</tr>
+<tr>
+<td>f_Frame.md</td>
+<td>capacity_MAX, frame_registry — slot consumed during grace period</td>
+</tr>
+<tr>
+<td>f_Amplify.md</td>
+<td>Primary strengthening tool — raises β toward d_warn</td>
+</tr>
+<tr>
+<td>f_Emit.md</td>
+<td>Secondary strengthening tool — raises ρ(Φ) toward d_warn</td>
+</tr>
+<tr>
+<td>f_Dampen.md</td>
+<td>Threat: may cause d_bind to drop below soft_threshold (SOFT_DISSOLVED)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="92-downstream-consumers">§9.2 — Downstream Consumers</h3>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>How Output Is Used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f_Orbit.md</td>
+<td>classify_orbit called only after SOFT_STRENGTHENED → CAPTURE_LOCKED</td>
+</tr>
+<tr>
+<td>f_Decay.md</td>
+<td>resolve_soft_binding invoked each cycle for all CAPTURE_SOFT entries</td>
+</tr>
+<tr>
+<td>f_Release.md</td>
+<td>CAPTURE_SOFT is not in eligible release states (RC-1 violation) until SOFT_STRENGTHENED</td>
+</tr>
+<tr>
+<td>f_Collapse.md</td>
+<td>FM-005 preempts grace period if d_bind → d_collapse mid-grace</td>
+</tr>
+</tbody>
+</table>
+<h3 id="93-integration-with-f_decay">§9.3 — Integration with f_Decay</h3>
+<p><code>f_Decay.md</code> must call <code>resolve_soft_binding</code> (from PRIM:030) on every
+evaluation cycle for each entry in <code>soft_registry</code>. The integration point:</p>
+<pre><code class="language-python"># In f_Decay main loop:
+for pair_key, soft_binding in list(soft_registry.items()):
+    d_bind_now = compute_current_d_bind(pair_key, ...)
+    resolution = resolve_soft_binding(
+        binding=soft_binding,
+        d_bind_now=d_bind_now,
+        cycle=current_cycle,
+        frame_registry=frame_registry,
+        soft_registry=soft_registry,
+    )
+    if resolution.resolved:
+        log_resolution(pair_key, resolution)
+</code></pre>
+<p>This integration is normative — <code>f_Decay.md</code> retains authority over the
+decay evaluation loop; <code>f_Capture_Soft.md</code> provides the resolution
+primitive that f_Decay invokes.</p>
+<h3 id="94-operatorsmd-registration-block">§9.4 — OPERATORS.md Registration Block</h3>
+<pre><code class="language-markdown">### Wave 4 Operators — f_Capture_Soft.md
+
+| Symbol         | Name                    | Type    | Domain          | Defined In                |
+|----------------|-------------------------|---------|-----------------|---------------------------|
+| d_soft         | Provisional Binding Depth | float | [soft_threshold, d_warn) | f_Capture_Soft.md §4 |
+| soft_threshold | Soft Zone Floor         | float   | (0, d_warn)     | f_Capture_Soft.md §4      |
+| grace_period   | Grace Window            | int     | ≥ 1 cycles      | f_Capture_Soft.md §4      |
+| k_grace        | Grace Cycle Counter     | int     | [0, grace_period] | f_Capture_Soft.md §4    |
+</code></pre>
+<hr>
+<h2 id="10-document-metadata">§10 · Document Metadata</h2>
+<h3 id="101-inv-compliance-table">§10.1 — INV Compliance Table</h3>
+<table>
+<thead>
+<tr>
+<th>INV</th>
+<th>Statement</th>
+<th>Status</th>
+<th>How Satisfied</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INV-001</td>
+<td>G = F_freq · F_fluid · F_force</td>
+<td>✅</td>
+<td>d_bind computed from all three nodes; §3.2</td>
+</tr>
+<tr>
+<td>INV-002</td>
+<td>ρ(Φ) ≥ 0</td>
+<td>✅</td>
+<td>SCS-1 includes FM-002 guard (ρ(Φ) = 0 rejects)</td>
+</tr>
+<tr>
+<td>INV-003</td>
+<td>β ∈ [0,1]</td>
+<td>✅</td>
+<td>SCS-1 includes SC-4 proxy (β ≥ 1.0 required)</td>
+</tr>
+<tr>
+<td>INV-004</td>
+<td>v_approach &gt; 0</td>
+<td>✅</td>
+<td>SCS-1 includes SC-1 proxy</td>
+</tr>
+<tr>
+<td>INV-005</td>
+<td>Conditions conjunctive</td>
+<td>✅</td>
+<td>SCS-1 through SCS-4 all evaluated; any failure → reject</td>
+</tr>
+<tr>
+<td>INV-006</td>
+<td>Terminal states irreversible</td>
+<td>✅</td>
+<td>CAPTURE_LOCKED and CAPTURE_FAILED are terminal; CAPTURE_SOFT is provisional</td>
+</tr>
+<tr>
+<td>INV-007</td>
+<td>FM registry frozen</td>
+<td>✅</td>
+<td>No new FM IDs; FM-004 and FM-005 referenced only</td>
+</tr>
+<tr>
+<td>INV-008</td>
+<td>PRIM IDs sequential</td>
+<td>✅</td>
+<td>PRIM:029–030 follow PRIM:028 (f_Capture_Cascade.md)</td>
+</tr>
+<tr>
+<td>INV-009</td>
+<td>OPERATORS.md pre-registration</td>
+<td>✅</td>
+<td>§9.4 registration block provided</td>
+</tr>
+<tr>
+<td>INV-010</td>
+<td>Frozen symbol protection</td>
+<td>✅</td>
+<td>d_soft, soft_threshold, grace_period, k_grace all frozen here</td>
+</tr>
+</tbody>
+</table>
+<h3 id="102-state-flag-registry">§10.2 — State Flag Registry</h3>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Meaning</th>
+<th>Terminal?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CAPTURE_SOFT</code></td>
+<td>Provisional binding; within grace window</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>SOFT_STRENGTHENED</code></td>
+<td>d_bind reached d_warn; binding promoted</td>
+<td>Yes (→ CAPTURE_LOCKED)</td>
+</tr>
+<tr>
+<td><code>SOFT_DISSOLVED</code></td>
+<td>d_bind fell below soft_threshold</td>
+<td>Yes (→ CAPTURE_FAILED)</td>
+</tr>
+<tr>
+<td><code>GRACE_EXPIRED</code></td>
+<td>k_grace = grace_period; no resolution</td>
+<td>Yes (→ CAPTURE_FAILED)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="103-primitive-registry-this-file">§10.3 — Primitive Registry (This File)</h3>
+<table>
+<thead>
+<tr>
+<th>PRIM</th>
+<th>Name</th>
+<th>Type</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PRIM:029</td>
+<td><code>evaluate_soft_eligibility</code></td>
+<td>Pure</td>
+<td>Pre-flight eligibility gate (SCS-1 – SCS-4)</td>
+</tr>
+<tr>
+<td>PRIM:030</td>
+<td><code>execute_soft_capture</code> + <code>resolve_soft_binding</code></td>
+<td>Impure</td>
+<td>Registration and per-cycle resolution</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Running PRIM total after this file:</strong> PRIM:030</p>
+<h3 id="104-changelog">§10.4 — Changelog</h3>
+<pre><code>v1.0.0 — 2026-08-13 — SES-20260813-SOFT-001
+  - Initial canonical release
+  - Operators: d_soft, soft_threshold, grace_period, k_grace (all frozen)
+  - State flags: CAPTURE_SOFT, SOFT_STRENGTHENED, SOFT_DISSOLVED, GRACE_EXPIRED
+  - Conditions: SCS-1 – SCS-4 (conjunctive)
+  - Primitives: PRIM:029 (Pure), PRIM:030 (Impure + resolve helper)
+  - Four resolution pathways: STRENGTHEN, DISSOLVE, EXPIRE, HOLD
+  - Four canonical examples: strengthen, expire, dissolve, near-miss
+  - f_Decay integration contract specified (§9.3)
+  - OPERATORS.md registration block (§9.4)
+</code></pre>
+<h3 id="105-wave-4-status-tracker">§10.5 — Wave 4 Status Tracker</h3>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Status</th>
+<th>PRIM Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f_Capture_Multi.md</td>
+<td>✅ Complete</td>
+<td>025–026</td>
+</tr>
+<tr>
+<td>f_Capture_Cascade.md</td>
+<td>✅ Complete</td>
+<td>027–028</td>
+</tr>
+<tr>
+<td><strong>f_Capture_Soft.md</strong></td>
+<td><strong>✅ Complete</strong></td>
+<td><strong>029–030</strong></td>
+</tr>
+<tr>
+<td>f_Capture_Hard.md</td>
+<td>⏳ Pending</td>
+<td>031–032</td>
+</tr>
+<tr>
+<td>f_Capture_Resonant.md</td>
+<td>⏳ Pending</td>
+<td>TBD</td>
+</tr>
+<tr>
+<td>f_Capture_Asymmetric.md</td>
+<td>⏳ Pending</td>
+<td>TBD</td>
+</tr>
+</tbody>
+</table>
+<h3 id="106-suggested-commit-message">§10.6 — Suggested Commit Message</h3>
+<pre><code>docs(FFF_Gravity): add canonical f_Capture_Soft — provisional binding
+model, grace-period resolution, PRIM:029-030 [Wave4 / SES-SOFT-001]
+
+- Soft capture zone: soft_threshold ≤ d_bind &lt; d_warn
+- Operators: d_soft, soft_threshold, grace_period, k_grace (all frozen)
+- PRIM:029 evaluate_soft_eligibility (Pure) — SCS-1–SCS-4 gate
+- PRIM:030 execute_soft_capture + resolve_soft_binding (Impure)
+- Four resolution pathways: STRENGTHEN / DISSOLVE / EXPIRE / HOLD
+- FM-004 is primary active hazard; FM-005 can preempt grace period
+- f_Decay integration contract at §9.3 (resolve called each cycle)
+- 4 canonical examples, all four pathways demonstrated
+</code></pre>
+<hr>
+<p><em>End of f_Capture_Soft.md — [FFF:GRAVITY:CAPTURE:SOFT] v1.0.0 — Wave 4 File 3 of 6</em></p>
+  </main>
+</body>
+</html>

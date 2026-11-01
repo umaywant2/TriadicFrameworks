@@ -1,0 +1,1686 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/FFF_Gravity/f_Dampen.md">
+  <title>fDampen — Field Suppression Primitive</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/FFF_Gravity/f_Dampen.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/FFF_Gravity/f_Dampen.md</code>
+  </aside>
+
+  <main>
+<h1 id="f_dampen-field-suppression-primitive">f_Dampen — Field Suppression Primitive</h1>
+<pre><code>title: &quot;f_Dampen — Field Suppression Primitive&quot;
+module: FFF_Gravity
+version: 1.0.0
+status: canonical
+tag: &quot;[FFF:GRAVITY:DAMPEN]&quot;
+session: SES-20260813-DAMPEN-001
+wave: 3
+wave_position: &quot;6 of 8&quot;
+date: 2026-08-13
+authors:
+  - Nawder
+  - Copilot
+node: F_freq
+inverse_of: f_Emit
+depends_on:
+  - f_Field.md        # ρ(Φ), r_capture, FM-002
+  - f_Force.md        # M_A, β
+  - f_Frame.md        # GravityGraph, registry
+  - f_Emit.md         # shared ceiling/floor symmetry, FM-010 context
+  - OPERATORS.md      # symbol authority
+  - GLOSSARY.md       # term authority
+operators_introduced:
+  - F_damp
+  - ρ(Φ)_floor
+  - r_damp
+  - δρ_damp
+  - ρ(Φ)_delta_damp
+  - E_damp
+  - cascade_guard
+  - k_damp
+  - k_cost_damp
+primitives_introduced:
+  - &quot;PRIM:018 suppress_field (impure)&quot;
+  - &quot;PRIM:019 check_floor (pure)&quot;
+  - &quot;PRIM:020 check_cascade_risk (pure/diagnostic)&quot;
+state_flags_introduced:
+  - DAMPEN_ACTIVE
+  - DAMPEN_FLOOR_APPROACHED
+  - DAMPEN_CASCADE
+failure_modes_introduced:
+  - FM-009
+provides_to:
+  - f_Amplify.md
+  - f_Capture_Resonant.md
+  - f_Capture_Networked.md
+invariants_active:
+  - INV-001
+  - INV-002
+  - INV-003
+  - INV-004
+  - INV-005
+  - INV-006
+  - INV-008
+  - INV-009
+  - INV-010
+changelog:
+  - version: 1.0.0
+    date: 2026-08-13
+    session: SES-20260813-DAMPEN-001
+    author: Nawder + Copilot
+    note: &gt;
+      Initial canonical production. F_damp operator frozen. ρ(Φ)_floor,
+      r_damp, cascade_guard, E_damp frozen. PRIM:018–020 frozen. FM-009
+      (Dampen Cascade) fully specified. DAMP-C-1 through DAMP-C-4 conjunctive
+      conditions. 4 canonical examples. Full INV compliance table.
+</code></pre>
+<p><strong>Tag:</strong> <code>[FFF:GRAVITY:DAMPEN]</code> · <strong>Wave 3 · File 6 of 8</strong> · <strong>Canonical v1.0.0</strong></p>
+<hr>
+<h2 id="0-session-context">§0 · Session Context</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Session ID</td>
+<td><code>SES-20260813-DAMPEN-001</code></td>
+</tr>
+<tr>
+<td>Date</td>
+<td>2026-08-13</td>
+</tr>
+<tr>
+<td>Authors</td>
+<td>Nawder + Copilot</td>
+</tr>
+<tr>
+<td>Wave</td>
+<td>3 — Core Functions</td>
+</tr>
+<tr>
+<td>Position</td>
+<td>File 6 of 8</td>
+</tr>
+<tr>
+<td>Preceding file</td>
+<td>f_Emit.md (SES-20260813-EMIT-001) ✅</td>
+</tr>
+<tr>
+<td>Following file</td>
+<td>f_Amplify.md</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>✅ canonical</td>
+</tr>
+</tbody>
+</table>
+<h3 id="01-what-this-session-establishes">§0.1 · What This Session Establishes</h3>
+<p><code>f_Dampen</code> is the <strong>field-suppression engineering primitive</strong> of FFF_Gravity. It is the exact inverse of <code>f_Emit</code>: where <code>f_Emit</code> increases <code>ρ(Φ)</code> (the coherence well depth), <code>f_Dampen</code> decreases it. This file:</p>
+<ol>
+<li>Freezes the <code>F_damp</code> operator and all subsidiary parameters.</li>
+<li>Defines the four conjunctive Dampening Conditions (DAMP-C-1 through DAMP-C-4).</li>
+<li>Fully specifies FM-009 (Dampen Cascade) — the fatal failure triggered by unguarded null propagation.</li>
+<li>Introduces PRIM:018 (<code>suppress_field</code>), PRIM:019 (<code>check_floor</code>), PRIM:020 (<code>check_cascade_risk</code>).</li>
+<li>Provides four worked examples covering drainage, orbit protection, cascade, and safe iteration.</li>
+</ol>
+<h3 id="02-invariants-active">§0.2 · Invariants Active</h3>
+<table>
+<thead>
+<tr>
+<th>INV</th>
+<th>Statement (abbreviated)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INV-001</td>
+<td>G = F_freq · F_fluid · F_force inseparable</td>
+</tr>
+<tr>
+<td>INV-002</td>
+<td>f_Capture signature frozen</td>
+</tr>
+<tr>
+<td>INV-003</td>
+<td>ρ(Φ) = 0 always triggers FM-002</td>
+</tr>
+<tr>
+<td>INV-004</td>
+<td>β &lt; 1.0 always produces flyby</td>
+</tr>
+<tr>
+<td>INV-005</td>
+<td>All Stability Conditions conjunctive</td>
+</tr>
+<tr>
+<td>INV-006</td>
+<td>Terminal states irreversible</td>
+</tr>
+<tr>
+<td>INV-008</td>
+<td>Operator evaluation order normative</td>
+</tr>
+<tr>
+<td>INV-009</td>
+<td>OPERATORS.md is symbol authority</td>
+</tr>
+<tr>
+<td>INV-010</td>
+<td>Frozen symbols unrenameable without major version bump</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="1-module-identity">§1 · Module Identity</h2>
+<h3 id="11-function-signature">§1.1 · Function Signature</h3>
+<pre><code>f_Dampen(A, Φ, δρ, r_damp) → Φ_updated | FM-009
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>A</code></td>
+<td>Attractor</td>
+<td>The attractor whose field is being suppressed</td>
+</tr>
+<tr>
+<td><code>Φ</code></td>
+<td>FieldState</td>
+<td>Current field state (contains ρ(Φ)_current, flags)</td>
+</tr>
+<tr>
+<td><code>δρ</code></td>
+<td>ℝ &gt; 0</td>
+<td>Requested density decrement</td>
+</tr>
+<tr>
+<td><code>r_damp</code></td>
+<td>ℝ &gt; 0</td>
+<td>Dampening radius (spatial bound of effect)</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Return</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Φ_updated</code></td>
+<td>DAMP-C-1 through DAMP-C-4 all satisfied; ρ(Φ) decreased by ρ(Φ)_delta_damp</td>
+</tr>
+<tr>
+<td><code>FM-009</code></td>
+<td>Null propagation detected; cascade fired</td>
+</tr>
+</tbody>
+</table>
+<h3 id="12-triadic-position">§1.2 · Triadic Position</h3>
+<pre><code>       ┌─────────────────────────────────────┐
+       │           F_freq Node               │
+       │                                     │
+       │   ρ(Φ) ∈ [ρ_floor, 1.0]            │
+       │          ↑            ↓             │
+       │     f_Emit        f_Dampen          │
+       │    (+δρ)          (−δρ)             │
+       │                                     │
+       │   Hard bounds:                      │
+       │     Upper: ρ(Φ) = 1.0   (FM-010)   │
+       │     Lower: ρ(Φ)_floor   (FM-009)   │
+       └──────────────┬──────────────────────┘
+                      │
+          ┌───────────┴───────────┐
+          │                       │
+     F_fluid                  F_force
+     (M_A, β)               (v_approach)
+</code></pre>
+<p><code>f_Dampen</code> acts <strong>exclusively on F_freq</strong> via <code>ρ(Φ)</code>. The F_fluid and F_force nodes are unmodified. However, changes in <code>ρ(Φ)</code> cascade downstream:</p>
+<table>
+<thead>
+<tr>
+<th>Downstream Effect</th>
+<th>Mechanism</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v_escape(A) decreases</td>
+<td><code>v_escape = √(2 × M_A × ρ(Φ) / r_capture)</code></td>
+</tr>
+<tr>
+<td>β decreases</td>
+<td><code>β = M_E × ρ(Φ) / M_A</code> (binding ratio drops)</td>
+</tr>
+<tr>
+<td>d_bind decreases</td>
+<td><code>d_bind = β × ρ(Φ) × (1 − e)</code> (both β and ρ(Φ) fall)</td>
+</tr>
+<tr>
+<td>capacity_MAX decreases</td>
+<td><code>floor(M_A × ρ(Φ) × k_frame)</code></td>
+</tr>
+</tbody>
+</table>
+<p>These downstream consequences make <code>f_Dampen</code> a powerful but high-risk primitive. The cascade guard system (§5.4) exists precisely because of the non-local reach of even a small <code>ρ(Φ)</code> reduction.</p>
+<h3 id="13-symmetry-with-f_emit">§1.3 · Symmetry with f_Emit</h3>
+<p>Every design decision in <code>f_Dampen</code> mirrors a corresponding decision in <code>f_Emit</code>. This symmetry is intentional — operators and automated systems should be able to pair calls bidirectionally.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>f_Emit</th>
+<th>f_Dampen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Direction</td>
+<td>ρ(Φ) ↑</td>
+<td>ρ(Φ) ↓</td>
+</tr>
+<tr>
+<td>Blocking failure</td>
+<td>FM-010 (ceiling)</td>
+<td>FM-009 (floor/cascade)</td>
+</tr>
+<tr>
+<td>Energy exchange</td>
+<td>Consumes E_emit</td>
+<td>Recovers/dissipates E_damp</td>
+</tr>
+<tr>
+<td>Ceiling/floor check</td>
+<td><code>check_emit_ceiling</code> (PRIM:017)</td>
+<td><code>check_floor</code> (PRIM:019)</td>
+</tr>
+<tr>
+<td>Risk profile</td>
+<td>Runaway saturation</td>
+<td>Cascade null propagation</td>
+</tr>
+<tr>
+<td>Safe iteration helper</td>
+<td><code>sustained_emission_loop</code></td>
+<td><code>iterative_dampen_loop</code> (§8.4)</td>
+</tr>
+<tr>
+<td>Recovery from blockage</td>
+<td>f_Dampen restores headroom for f_Emit</td>
+<td>f_Emit restores headroom for f_Dampen</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="2-canonical-description">§2 · Canonical Description</h2>
+<h3 id="21-what-f_dampen-is">§2.1 · What f_Dampen IS</h3>
+<p><code>f_Dampen</code> provides the only sanctioned mechanism for <strong>decreasing</strong> <code>ρ(Φ)</code> on a live attractor node. No other operator may write <code>ρ(Φ)</code> downward except <code>suppress_field</code> (PRIM:018). Its canonical use cases are:</p>
+<ol>
+<li><strong>FM-010 recovery</strong> — draining a saturated field (<code>ρ(Φ) = 1.0</code>) back below the ceiling so <code>f_Emit</code> can resume.</li>
+<li><strong>Release assistance</strong> — reducing <code>d_bind</code> by lowering <code>ρ(Φ)</code>, making <code>f_Release</code> cheaper (E_rel decreases as <code>ρ(Φ)</code> decreases).</li>
+<li><strong>β management</strong> — intentionally loosening an overly tight orbit (high β) by reducing the field density that feeds it.</li>
+<li><strong>Selective unbinding</strong> — driving a specific element's orbit toward FM-004/FM-005 by controlled field drainage (carefully, with cascade guard).</li>
+<li><strong>Resonance tuning</strong> — adjusting <code>ρ(Φ)</code> to hit a target <code>ω_res</code> for <code>f_Capture_Resonant</code> pre-positioning.</li>
+</ol>
+<h3 id="22-what-f_dampen-is-not">§2.2 · What f_Dampen IS NOT</h3>
+<table>
+<thead>
+<tr>
+<th>Misconception</th>
+<th>Correction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A way to destroy orbits instantly</td>
+<td>Dampening does not purge registry entries; that is <code>f_Collapse</code></td>
+</tr>
+<tr>
+<td>Reversible by the engine itself</td>
+<td>Only <code>f_Emit</code> can restore <code>ρ(Φ)</code> — no autonomous recovery</td>
+</tr>
+<tr>
+<td>Safe with <code>cascade_guard = false</code> by default</td>
+<td>Default is <code>cascade_guard = true</code>; disabling it requires deliberate opt-in</td>
+</tr>
+<tr>
+<td>Bounded only by zero</td>
+<td>Bounded by <code>ρ(Φ)_floor &gt; 0</code> (default 0.05) to prevent FM-002</td>
+</tr>
+<tr>
+<td>F_force or F_fluid operation</td>
+<td>Exclusively F_freq — modifies only <code>ρ(Φ)</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-the-cascade-propagation-problem">§2.3 · The Cascade Propagation Problem</h3>
+<p>When <code>ρ(Φ)</code> on node <code>A</code> is driven to <code>ρ(Φ)_floor</code> (the hard lower bound), the null signal can propagate across GravityGraph edges to adjacent attractor nodes. Each adjacent node that receives the null signal evaluates FM-002. If that node is also near its floor, its FM-002 fires and the cascade continues.</p>
+<pre><code>A → FM-002 → A₁(FM-002?) → A₂(FM-002?) → ... [cascade front]
+</code></pre>
+<p><code>cascade_guard = true</code> prevents this by clamping <code>δρ_damp</code> such that <code>ρ(Φ)</code> on <code>A</code> never reaches <code>ρ(Φ)_floor</code>. With <code>cascade_guard = false</code>, the operator accepts cascade risk — FM-009 may fire.</p>
+<p><strong>The cascade guard is on by default.</strong> <code>cascade_guard = false</code> is an explicit operator override that should only be used in isolated single-node systems or controlled teardown sequences.</p>
+<hr>
+<h2 id="3-triadic-equation">§3 · Triadic Equation</h2>
+<h3 id="31-core-formula">§3.1 · Core Formula</h3>
+<pre><code>G = F_freq · F_fluid · F_force          [INV-001]
+
+f_Dampen modifies F_freq exclusively:
+  F_freq_new = F_freq(ρ(Φ) − ρ(Φ)_delta_damp)
+
+Primary dampening operator:
+  F_damp = (δρ_damp × k_damp) / (r_damp × ρ(Φ))
+
+  where ρ(Φ) = current field density before suppression
+        (denominator is non-zero: ρ(Φ) &gt; ρ(Φ)_floor &gt; 0 by DAMP-C-1)
+
+Realized suppression magnitude:
+  ρ(Φ)_delta_damp = min(δρ_damp, ρ(Φ) − ρ(Φ)_floor)
+
+Post-suppression field density:
+  ρ(Φ)_new = ρ(Φ) − ρ(Φ)_delta_damp  ≥  ρ(Φ)_floor  [guaranteed by DAMP-C-1]
+
+Energy recovered (or thermally dissipated):
+  E_damp = M_A × ρ(Φ)_delta_damp × r_damp² × k_cost_damp
+</code></pre>
+<p><strong>Note on energy sign.</strong> E_damp is recovered energy (field coherence is released). When <code>k_cost_damp &lt; 1.0</code>, the surplus is thermally dissipated. When <code>k_cost_damp &gt; 1.0</code>, the suppression requires active energy input (pumping against field pressure — unusual but physically meaningful in high-coherence regimes).</p>
+<h3 id="32-g-product-consequence">§3.2 · G-Product Consequence</h3>
+<p>After <code>f_Dampen</code>:</p>
+<pre><code>G_new = F_freq(ρ_new) · F_fluid · F_force
+      &lt; G_prior           (F_freq factor reduced)
+</code></pre>
+<p>The reduction in G weakens all binding relationships on <code>A</code>:
+- All active orbits experience a reduction in <code>d_bind</code> (next <code>f_Decay</code> cycle)
+- <code>v_escape(A)</code> falls — orbits become less stable
+- <code>capacity_MAX</code> may fall — if ρ(Φ)_new × M_A × k_frame drops below an integer boundary, a capacity slot disappears</p>
+<hr>
+<h2 id="4-operator-registry">§4 · Operator Registry</h2>
+<blockquote>
+<p><strong>Authority:</strong> OPERATORS.md governs all symbol definitions (INV-009). The definitions here are the first canonical statements of these symbols. All must be reflected in OPERATORS.md §2 and §4 after this file is committed.</p>
+</blockquote>
+<h3 id="41-primary-operator">§4.1 · Primary Operator</h3>
+<h4 id="f_damp-dampening-field-strength"><code>F_damp</code> — Dampening Field Strength</h4>
+<p><strong>Formula:</strong></p>
+<pre><code>F_damp = (δρ_damp × k_damp) / (r_damp × ρ(Φ))
+</code></pre>
+<p><strong>Properties:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Domain</td>
+<td>ℝ &gt; 0 (positive by definition — suppression magnitude)</td>
+</tr>
+<tr>
+<td>Node</td>
+<td>F_freq</td>
+</tr>
+<tr>
+<td>Frozen in</td>
+<td>f_Dampen.md §4.1</td>
+</tr>
+<tr>
+<td>Undefined when</td>
+<td>ρ(Φ) = 0 (protected by INV-003 and DAMP-C-1 before this is reached)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Interpretation:</strong> F_damp measures suppression intensity — how much field reduction is achieved per unit radius, normalized by current field density. As ρ(Φ) → ρ(Φ)_floor, F_damp → ∞: each marginal suppression increment is increasingly effective (the field is thin), but also increasingly close to FM-009. This is the mirror of F_emit's ceiling approach behavior.</p>
+<h3 id="42-derived-quantities">§4.2 · Derived Quantities</h3>
+<h4 id="_delta_damp-realized-suppression-magnitude"><code>ρ(Φ)_delta_damp</code> — Realized Suppression Magnitude</h4>
+<pre><code>ρ(Φ)_delta_damp = min(δρ_damp, ρ(Φ) − ρ(Φ)_floor)
+</code></pre>
+<p>The actual density decrease applied after floor enforcement. May be smaller than <code>δρ_damp</code> when headroom is limited.</p>
+<h4 id="_floor-field-floor-bound"><code>ρ(Φ)_floor</code> — Field Floor Bound</h4>
+<pre><code>ρ(Φ)_floor ∈ (0, ρ(Φ)_current)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Default</td>
+<td>0.05</td>
+</tr>
+<tr>
+<td>Minimum</td>
+<td>&gt; 0 (must be strictly positive — INV-003)</td>
+</tr>
+<tr>
+<td>Maximum</td>
+<td>&lt; ρ(Φ)_current (must leave some headroom to suppress at all)</td>
+</tr>
+<tr>
+<td>Set by</td>
+<td>Operator at initialization; may be raised for safety</td>
+</tr>
+<tr>
+<td>Consequence of floor breach</td>
+<td>FM-009 fires</td>
+</tr>
+</tbody>
+</table>
+<p>The floor is the <strong>last engineering defense</strong> before FM-002. Setting it too low (e.g., 0.001) creates a dangerously thin safety margin. Raising it (e.g., 0.20) provides more protection at the cost of reduced dampening range.</p>
+<h4 id="r_damp-dampening-radius"><code>r_damp</code> — Dampening Radius</h4>
+<pre><code>r_damp ∈ (0, r_capture]
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>ℝ &gt; 0</td>
+</tr>
+<tr>
+<td>Meaning</td>
+<td>Spatial radius of suppression effect centered on A</td>
+</tr>
+<tr>
+<td>Lower bound</td>
+<td>r_damp &gt; 0 (point suppression undefined — division by zero in F_damp)</td>
+</tr>
+<tr>
+<td>Upper bound</td>
+<td>r_damp ≤ r_capture (DAMP-C-2)</td>
+</tr>
+<tr>
+<td>Effect outside radius</td>
+<td>None — ρ(Φ) unchanged beyond r_damp</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_damp-requested-suppression-increment"><code>δρ_damp</code> — Requested Suppression Increment</h4>
+<p>Caller-supplied decrement. Must be &gt; 0. Clipped by <code>check_floor</code> (PRIM:019) to available headroom before application.</p>
+<h4 id="e_damp-dampening-energy"><code>E_damp</code> — Dampening Energy</h4>
+<pre><code>E_damp = M_A × ρ(Φ)_delta_damp × r_damp² × k_cost_damp
+</code></pre>
+<p>Energy released or dissipated during suppression. Scales quadratically with <code>r_damp</code> (volumetric coverage). The caller is responsible for energy accounting — <code>suppress_field</code> computes and records <code>E_damp</code> but does not deduct it from any reserve.</p>
+<h4 id="cascade_guard-cascade-prevention-flag"><code>cascade_guard</code> — Cascade Prevention Flag</h4>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>True</code> (default)</td>
+<td>Clamps δρ_damp to ensure ρ(Φ) ≥ ρ(Φ)_floor; FM-009 cannot fire</td>
+</tr>
+<tr>
+<td><code>False</code></td>
+<td>Operator accepts cascade risk; PRIM:020 evaluates FM-009 probability before proceeding</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-constants">§4.3 · Constants</h3>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>k_damp</code></td>
+<td>1.0</td>
+<td>Dampening gain constant (attractor-class-specific calibration)</td>
+</tr>
+<tr>
+<td><code>k_cost_damp</code></td>
+<td>1.0</td>
+<td>Energy cost coefficient (&lt; 1: passive dissipation; &gt; 1: active pumping)</td>
+</tr>
+<tr>
+<td><code>ε_damp</code></td>
+<td>0.02</td>
+<td>Floor proximity threshold for <code>DAMPEN_FLOOR_APPROACHED</code> flag</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="5-dampening-conditions">§5 · Dampening Conditions</h2>
+<p>All four conditions are conjunctive — all must hold before <code>suppress_field</code> executes. Missing any single condition blocks or modifies the operation.</p>
+<h3 id="damp-c-1-floor-bound">DAMP-C-1 — Floor Bound</h3>
+<pre><code>ρ(Φ) − δρ_damp  ≥  ρ(Φ)_floor
+
+If violated with cascade_guard = true:
+    clamp: ρ(Φ)_delta_damp ← ρ(Φ) − ρ(Φ)_floor
+    set: DAMPEN_FLOOR_APPROACHED
+    proceed with clamped value
+
+If violated with cascade_guard = false:
+    evaluate cascade risk via PRIM:020
+    if risk = HIGH → block and require operator override
+    if risk = MEDIUM → set DAMPEN_FLOOR_APPROACHED, proceed
+    if risk = LOW → proceed (floor clamp still applied)
+</code></pre>
+<p><strong>Rationale:</strong> INV-003 (<code>ρ(Φ) = 0</code> → FM-002) means the floor is not optional. DAMP-C-1 ensures ρ(Φ) never reaches zero regardless of <code>δρ_damp</code>.</p>
+<h3 id="damp-c-2-radius-bound">DAMP-C-2 — Radius Bound</h3>
+<pre><code>r_damp ∈ (0, r_capture]
+
+If r_damp ≤ 0: reject with ValueError
+If r_damp &gt; r_capture: clamp to r_capture with warning
+</code></pre>
+<p><strong>Rationale:</strong> Suppression cannot extend beyond the attractor's capture boundary. The field state Φ is defined relative to A and its relational scope — suppression outside <code>r_capture</code> has undefined semantics.</p>
+<h3 id="damp-c-3-active-orbit-guard">DAMP-C-3 — Active Orbit Guard</h3>
+<pre><code>For each element E with ORBIT_LOCKED on A:
+    ρ_orbit_min(E) = minimum ρ(Φ) sustaining β(E) ≥ 1.0
+    effective_floor = max(ρ(Φ)_floor, max over all E of ρ_orbit_min(E))
+    clamp: ρ(Φ)_delta_damp ← min(ρ(Φ)_delta_damp, ρ(Φ) − effective_floor)
+</code></pre>
+<p><strong>Rationale:</strong> INV-004 (β &lt; 1.0 → flyby). Dampening below <code>ρ_orbit_min</code> would inadvertently trigger flyby on currently bound elements. DAMP-C-3 prevents inadvertent unbinding by raising the effective floor to protect all active orbits simultaneously.</p>
+<h3 id="damp-c-4-cascade-guard-check">DAMP-C-4 — Cascade Guard Check</h3>
+<pre><code>If cascade_guard = true:
+    → proceed (DAMP-C-1 already enforces floor)
+
+If cascade_guard = false:
+    require graph argument
+    invoke check_cascade_risk(A, ρ(Φ)_delta_damp, graph)  [PRIM:020]
+    if risk.level = HIGH:
+        block and emit FM-009 HIGH warning
+        return error unless operator passes override = true
+    if risk.level = MEDIUM:
+        set DAMPEN_FLOOR_APPROACHED
+        proceed with warning
+    if risk.level = LOW:
+        proceed
+</code></pre>
+<p><strong>Rationale:</strong> The cascade guard is the primary systemic safety mechanism. <code>cascade_guard = false</code> is not an error; it is a deliberate choice that must be paired with explicit cascade risk assessment.</p>
+<hr>
+<h2 id="6-failure-modes">§6 · Failure Modes</h2>
+<h3 id="fm-009-dampen-cascade">FM-009 — Dampen Cascade</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>FM-009</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>Dampen Cascade</td>
+</tr>
+<tr>
+<td>Severity</td>
+<td><strong>fatal</strong></td>
+</tr>
+<tr>
+<td>Frozen in</td>
+<td>f_Dampen.md §6</td>
+</tr>
+<tr>
+<td>Node</td>
+<td>F_freq</td>
+</tr>
+<tr>
+<td>Trigger</td>
+<td><code>ρ(Φ)</code> on A reaches or breaches <code>ρ(Φ)_floor</code> while <code>cascade_guard = false</code>, AND null signal propagates to ≥ 1 adjacent node</td>
+</tr>
+<tr>
+<td>State flag</td>
+<td><code>DAMPEN_CASCADE</code></td>
+</tr>
+<tr>
+<td>Recoverable</td>
+<td>No — FM-009 is terminal for each affected node (INV-006)</td>
+</tr>
+<tr>
+<td>Prevention</td>
+<td><code>cascade_guard = true</code> (default)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Mechanism:</strong> When A's <code>ρ(Φ)</code> hits the floor under unguarded conditions, the field null signal propagates across GravityGraph edges. Each adjacent node <code>Aᵢ</code> with <code>cascade_guard = false</code> evaluates FM-002. If FM-002 fires on <code>Aᵢ</code>, its null signal propagates further. The cascade front expands until it encounters a node with <code>cascade_guard = true</code> or a node with no unprotected neighbors.</p>
+<p><strong>Cascade propagation algorithm:</strong></p>
+<pre><code class="language-python">def propagate_cascade(origin, graph):
+    queue, visited = [origin], set()
+    while queue:
+        node = queue.pop(0)
+        if node in visited: continue
+        visited.add(node)
+        trigger_FM002(node)           # Field Null — terminal for this node
+        node.state = &quot;DAMPEN_CASCADE&quot; # INV-006: irreversible
+        for neighbor in graph.neighbors(node):
+            if neighbor.cascade_guard:
+                log(f&quot;CASCADE_HALTED at {neighbor.id} — guard active&quot;)
+            else:
+                queue.append(neighbor)
+    return visited  # set of all affected nodes
+</code></pre>
+<p><strong>Detection code:</strong></p>
+<pre><code class="language-python">def detect_fm009(
+    rho_current: float,
+    rho_floor:   float,
+    delta_damp:  float
+) -&gt; bool:
+    &quot;&quot;&quot;
+    Returns True if FM-009 cascade condition is met.
+    Caller (suppress_field) uses this before applying any suppression.
+    &quot;&quot;&quot;
+    rho_after = rho_current - delta_damp
+    return rho_after &lt; rho_floor   # strict: floor breach triggers FM-009
+</code></pre>
+<p><strong>Key distinction from FM-002:</strong> FM-002 fires on a single node when <code>ρ(Φ)</code> = 0. FM-009 is the systemic event when A's field null <em>propagates to adjacent nodes</em>. FM-009 always includes FM-002 on the origin node, but adds multi-node cascade semantics.</p>
+<p><strong>GravityGraph events emitted:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Trigger</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FM_009_TRIGGERED</code></td>
+<td>Cascade fires; payload: <code>{origin, cascade_depth, affected_nodes}</code></td>
+</tr>
+<tr>
+<td><code>FM_002_FROM_CASCADE</code></td>
+<td>Per-node FM-002 during propagation</td>
+</tr>
+<tr>
+<td><code>CASCADE_HALTED</code></td>
+<td>Guard-protected node stops the front</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="7-engineering-primitives">§7 · Engineering Primitives</h2>
+<h3 id="prim018-suppress_field-impure">PRIM:018 — <code>suppress_field</code> (impure)</h3>
+<p><strong>Purpose:</strong> Master dampening executor. Validates all Dampening Conditions, applies <code>ρ(Φ)_delta_damp</code>, updates field state, emits events, triggers FM-009 if cascade guard is off and floor is breached.</p>
+<p><strong>Tag:</strong> <code>[FFF:GRAVITY:PRIM:018]</code>
+<strong>Frozen in:</strong> f_Dampen.md §7 (SES-20260813-DAMPEN-001)</p>
+<pre><code class="language-python">from dataclasses import dataclass, field
+from typing import Optional
+
+@dataclass
+class DampenResult:
+    success:           bool
+    rho_before:        float
+    rho_after:         float
+    delta_applied:     float   # actual ρ(Φ)_delta_damp after clamping
+    E_damp:            float
+    flags:             list[str]
+    fm_triggered:      list[str]
+    cascade_affected:  list[str]  # node IDs reached by cascade
+    abort_reason:      Optional[str]
+
+
+def suppress_field(
+    attractor,
+    phi,
+    delta_rho:     float,
+    r_damp:        float,
+    rho_floor:     float = 0.05,
+    cascade_guard: bool  = True,
+    k_damp:        float = 1.0,
+    k_cost_damp:   float = 1.0,
+    graph          = None
+) -&gt; DampenResult:
+    &quot;&quot;&quot;
+    PRIM:018 — suppress_field (impure)
+
+    Canonical field-suppression primitive. The only sanctioned mechanism for
+    decreasing ρ(Φ) on a live attractor node.
+
+    Evaluation order (INV-008):
+        1. Terminal state guard
+        2. DAMP-C-2: radius bound
+        3. DAMP-C-3: active orbit guard → effective_floor
+        4. DAMP-C-1: floor bound → compute ρ(Φ)_delta_damp via check_floor (PRIM:019)
+        5. DAMP-C-4: cascade guard check → PRIM:020 if cascade_guard=False
+        6. Apply ρ(Φ) decrement
+        7. Compute E_damp
+        8. Update flags and emit GravityGraph events
+
+    Args:
+        attractor:     Mutable attractor node (A.rho_phi is written in-place).
+        phi:           Field state object (mutable).
+        delta_rho:     Requested suppression magnitude (must be &gt; 0).
+        r_damp:        Dampening radius (DAMP-C-2: must be ∈ (0, r_capture]).
+        rho_floor:     Floor bound below which ρ(Φ) must not fall (default 0.05).
+        cascade_guard: If True (default), clamp δρ to prevent floor breach.
+                       If False, accept cascade risk — PRIM:020 is invoked.
+        k_damp:        Dampening gain constant.
+        k_cost_damp:   Energy cost coefficient.
+        graph:         GravityGraph reference (required when cascade_guard=False).
+
+    Returns:
+        DampenResult with full audit trail.
+
+    Raises:
+        ValueError:   delta_rho ≤ 0, r_damp violates DAMP-C-2, or
+                      cascade_guard=False with no graph provided.
+        RuntimeError: phi is in a terminal state (CAPTURE_COLLISION, COLLAPSED).
+        FM009Error:   FM-009 triggered (cascade propagated; nodes terminal).
+
+    Side effects:
+        - Writes attractor.rho_phi (decremented by delta_applied).
+        - Sets/clears phi.flags.
+        - Calls propagate_cascade() if FM-009 fires.
+        - Emits DAMPEN_COMPLETE / DAMPEN_FLOOR_APPROACHED / FM_009_TRIGGERED
+          events to GravityGraph event bus.
+    &quot;&quot;&quot;
+    result = DampenResult(
+        success=False, rho_before=phi.rho, rho_after=phi.rho,
+        delta_applied=0.0, E_damp=0.0, flags=[&quot;DAMPEN_ACTIVE&quot;],
+        fm_triggered=[], cascade_affected=[], abort_reason=None
+    )
+
+    # ── Terminal state guard ────────────────────────────────────────────────
+    if any(f in phi.flags for f in (&quot;CAPTURE_COLLISION&quot;, &quot;COLLAPSED&quot;, &quot;FIELD_NULL&quot;)):
+        result.abort_reason = &quot;suppress_field called on terminal field state (INV-006)&quot;
+        return result
+
+    # ── delta_rho must be positive ──────────────────────────────────────────
+    if delta_rho &lt;= 0:
+        raise ValueError(f&quot;delta_rho must be &gt; 0; got {delta_rho}&quot;)
+
+    # ── DAMP-C-2: Radius Bound ──────────────────────────────────────────────
+    if r_damp &lt;= 0:
+        raise ValueError(f&quot;r_damp must be &gt; 0; got {r_damp}&quot;)
+    if r_damp &gt; attractor.r_capture:
+        r_damp = attractor.r_capture
+        result.flags.append(&quot;RADIUS_CLAMPED_TO_R_CAPTURE&quot;)
+
+    # ── DAMP-C-3: Active Orbit Guard ─────────────────────────────────────────
+    rho_orbit_min = compute_orbit_floor(attractor)   # max β≥1.0 requirement over all E
+    effective_floor = max(rho_floor, rho_orbit_min)
+
+    # ── DAMP-C-1: Floor Bound → via check_floor ──────────────────────────────
+    floor_result = check_floor(phi.rho, delta_rho, effective_floor)   # PRIM:019
+    rho_delta = floor_result.clamped_delta
+
+    if floor_result.floor_approached:
+        result.flags.append(&quot;DAMPEN_FLOOR_APPROACHED&quot;)
+
+    # If no headroom at all, block
+    if rho_delta &lt;= 0:
+        result.abort_reason = (
+            f&quot;No suppression headroom: ρ(Φ)={phi.rho:.4f} is already at &quot;
+            f&quot;effective_floor={effective_floor:.4f}&quot;
+        )
+        result.flags.remove(&quot;DAMPEN_ACTIVE&quot;)
+        return result
+
+    # ── DAMP-C-4: Cascade Guard Check ────────────────────────────────────────
+    if not cascade_guard:
+        if graph is None:
+            raise ValueError(
+                &quot;cascade_guard=False requires a GravityGraph argument. &quot;
+                &quot;Provide graph= or set cascade_guard=True.&quot;
+            )
+        risk = check_cascade_risk(attractor, rho_delta, graph)   # PRIM:020
+        if risk.level == &quot;HIGH&quot;:
+            result.abort_reason = (
+                f&quot;FM-009 HIGH CASCADE RISK: estimated depth {risk.cascade_depth_est}, &quot;
+                f&quot;vulnerable neighbors: {risk.vulnerable_neighbors}. &quot;
+                f&quot;Set cascade_guard=True or pass override=True explicitly.&quot;
+            )
+            result.flags.remove(&quot;DAMPEN_ACTIVE&quot;)
+            return result
+        elif risk.level == &quot;MEDIUM&quot;:
+            result.flags.append(&quot;DAMPEN_FLOOR_APPROACHED&quot;)
+
+    # ── Apply suppression ────────────────────────────────────────────────────
+    rho_prior = phi.rho
+    phi.rho = rho_prior - rho_delta
+
+    # Defensive floor clamp (should already be guaranteed, but belt-and-suspenders)
+    if phi.rho &lt; 0:
+        phi.rho = 0.0
+        _trigger_fm009(attractor, graph, result)
+        result.flags.remove(&quot;DAMPEN_ACTIVE&quot;)
+        return result
+
+    # ── Compute E_damp ───────────────────────────────────────────────────────
+    E_damp = attractor.M_A * rho_delta * (r_damp ** 2) * k_cost_damp
+
+    # ── Update flags ─────────────────────────────────────────────────────────
+    result.flags.remove(&quot;DAMPEN_ACTIVE&quot;)   # operation complete
+
+    EPS_DAMP = 0.02
+    if (phi.rho - effective_floor) &lt; EPS_DAMP:
+        result.flags.append(&quot;DAMPEN_FLOOR_APPROACHED&quot;)
+
+    # Clear FM-010 saturation flag (suppress_field restores emit headroom)
+    phi.flags.discard(&quot;EMIT_SATURATED&quot;)
+    phi.flags.discard(&quot;EMIT_CEILING_APPROACHED&quot;)
+
+    # ── Emit GravityGraph event ───────────────────────────────────────────────
+    _emit_event(&quot;DAMPEN_COMPLETE&quot;, {
+        &quot;node&quot;:      attractor.id,
+        &quot;rho_before&quot;: rho_prior,
+        &quot;rho_after&quot;:  phi.rho,
+        &quot;rho_delta&quot;:  rho_delta,
+        &quot;r_damp&quot;:     r_damp,
+        &quot;E_damp&quot;:     E_damp,
+    })
+
+    # ── Build result ─────────────────────────────────────────────────────────
+    result.success       = True
+    result.rho_before    = rho_prior
+    result.rho_after     = phi.rho
+    result.delta_applied = rho_delta
+    result.E_damp        = E_damp
+
+    return result
+</code></pre>
+<hr>
+<h3 id="prim019-check_floor-pure">PRIM:019 — <code>check_floor</code> (pure)</h3>
+<p><strong>Purpose:</strong> EC-1 mirror for dampening. Returns available headroom above <code>ρ(Φ)_floor</code> and clips the requested delta if needed.</p>
+<p><strong>Tag:</strong> <code>[FFF:GRAVITY:PRIM:019]</code>
+<strong>Frozen in:</strong> f_Dampen.md §7 (SES-20260813-DAMPEN-001)</p>
+<pre><code class="language-python">@dataclass
+class FloorResult:
+    clamped_delta:    float   # actual δρ to apply (≤ δρ_requested)
+    floor_approached: bool    # True if remaining headroom &lt; ε_damp after clamp
+    headroom:         float   # ρ_current − ρ_floor (before any clamp)
+    was_clamped:      bool    # True if δρ_requested was reduced
+
+EPS_DAMP: float = 0.02       # module constant — floor proximity threshold
+
+def check_floor(
+    rho_current:   float,
+    delta_requested: float,
+    rho_floor:     float
+) -&gt; FloorResult:
+    &quot;&quot;&quot;
+    PRIM:019 — check_floor (pure)
+
+    Symmetric counterpart to check_emit_ceiling (PRIM:017).
+    Where PRIM:017 tests headroom below ρ(Φ)=1.0,
+    PRIM:019 tests headroom above ρ(Φ)_floor.
+
+    Returns the clamped delta and approach flag. No side effects.
+
+    Args:
+        rho_current:     Current ρ(Φ) before suppression.
+        delta_requested: Requested suppression magnitude.
+        rho_floor:       Minimum allowable ρ(Φ) after suppression.
+
+    Returns:
+        FloorResult with clamped_delta, headroom, flags.
+
+    Raises:
+        ValueError: rho_floor &gt;= rho_current (no headroom at all — caller must handle).
+        ValueError: rho_floor &lt; 0 (INV-003: floor must be &gt; 0).
+    &quot;&quot;&quot;
+    if rho_floor &lt; 0:
+        raise ValueError(f&quot;rho_floor must be ≥ 0; got {rho_floor}. (INV-003)&quot;)
+    if rho_floor &gt; 0 and rho_current &lt;= rho_floor:
+        raise ValueError(
+            f&quot;rho_current ({rho_current:.4f}) ≤ rho_floor ({rho_floor:.4f}). &quot;
+            &quot;No headroom available. caller must handle.&quot;
+        )
+
+    headroom = rho_current - rho_floor
+    clamped  = min(delta_requested, headroom)
+    was_clamped = clamped &lt; delta_requested
+
+    remaining     = rho_current - clamped - rho_floor
+    floor_approached = remaining &lt; EPS_DAMP
+
+    return FloorResult(
+        clamped_delta    = clamped,
+        floor_approached = floor_approached,
+        headroom         = headroom,
+        was_clamped      = was_clamped
+    )
+</code></pre>
+<hr>
+<h3 id="prim020-check_cascade_risk-pure-diagnostic">PRIM:020 — <code>check_cascade_risk</code> (pure / diagnostic)</h3>
+<p><strong>Purpose:</strong> Pre-flight cascade risk assessment when <code>cascade_guard = false</code>. Reads graph topology to estimate FM-009 propagation scope.</p>
+<p><strong>Tag:</strong> <code>[FFF:GRAVITY:PRIM:020]</code>
+<strong>Frozen in:</strong> f_Dampen.md §7 (SES-20260813-DAMPEN-001)</p>
+<pre><code class="language-python">@dataclass
+class CascadeRisk:
+    level:               str        # &quot;LOW&quot; | &quot;MEDIUM&quot; | &quot;HIGH&quot;
+    at_floor_after:      bool       # True if A itself hits rho_floor after delta
+    vulnerable_neighbors: list[str] # neighbor IDs with cascade_guard=False and low ρ(Φ)
+    cascade_depth_est:   int        # estimated BFS depth before first guarded node
+    notes:               list[str]  # diagnostic messages
+
+def check_cascade_risk(attractor, delta_damp: float, graph) -&gt; CascadeRisk:
+    &quot;&quot;&quot;
+    PRIM:020 — check_cascade_risk (pure / diagnostic)
+
+    Evaluates the cascade propagation risk of a proposed suppression operation.
+    Called by suppress_field (PRIM:018) when cascade_guard=False.
+    Safe to call independently for pre-flight assessment.
+
+    Pure function: reads graph topology; no mutations.
+
+    Args:
+        attractor:  Attractor node (read-only).
+        delta_damp: Proposed ρ(Φ)_delta_damp (already clamped by DAMP-C-1).
+        graph:      GravityGraph instance (read-only).
+
+    Returns:
+        CascadeRisk with level, vulnerable neighbors, estimated depth.
+
+    Risk levels:
+        LOW    → A does not reach rho_floor after delta, or no unguarded neighbors.
+        MEDIUM → A approaches floor or ≥1 neighbor is vulnerable but depth is shallow.
+        HIGH   → A hits floor after delta AND ≥1 unguarded neighbor is also near floor;
+                 estimated cascade depth ≥ 3.
+    &quot;&quot;&quot;
+    notes     = []
+    vulnerable = []
+    EPS_DAMP   = 0.02
+
+    rho_after_A = attractor.rho_phi - delta_damp
+    at_floor    = rho_after_A &lt;= attractor.rho_floor
+
+    # Assess immediate neighbors
+    for neighbor in graph.neighbors(attractor):
+        if neighbor.cascade_guard:
+            continue  # protected — not vulnerable
+        proximity = neighbor.rho_phi - neighbor.rho_floor
+        if proximity &lt; EPS_DAMP:
+            vulnerable.append(neighbor.id)
+            notes.append(
+                f&quot;Neighbor {neighbor.id}: ρ(Φ)={neighbor.rho_phi:.3f} &quot;
+                f&quot;within {EPS_DAMP} of floor {neighbor.rho_floor:.3f}&quot;
+            )
+
+    # Estimate cascade depth (BFS stopping at guarded nodes)
+    depth = 0
+    if at_floor and len(vulnerable) &gt; 0:
+        depth = _bfs_cascade_depth(attractor, graph)
+
+    # Classify
+    if at_floor and depth &gt;= 3:
+        level = &quot;HIGH&quot;
+    elif at_floor or len(vulnerable) &gt; 0:
+        level = &quot;MEDIUM&quot;
+    else:
+        level = &quot;LOW&quot;
+
+    return CascadeRisk(
+        level                = level,
+        at_floor_after       = at_floor,
+        vulnerable_neighbors = vulnerable,
+        cascade_depth_est    = depth,
+        notes                = notes
+    )
+</code></pre>
+<hr>
+<h2 id="8-canonical-examples">§8 · Canonical Examples</h2>
+<h3 id="ex-d-001-saturation-drain-fm-010-recovery">EX-D-001 — Saturation Drain (FM-010 Recovery)</h3>
+<p><strong>Scenario:</strong> Attractor <code>A_hub</code> has <code>ρ(Φ) = 0.97</code> after sustained <code>f_Emit</code> calls. FM-010 (<code>EMIT_CEILING_APPROACHED</code>) is set — further emission is blocked. The operator calls <code>f_Dampen</code> to drain headroom to 0.75.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M_A</td>
+<td>8.0</td>
+</tr>
+<tr>
+<td>ρ(Φ)_current</td>
+<td>0.97</td>
+</tr>
+<tr>
+<td>r_capture</td>
+<td>12.0</td>
+</tr>
+<tr>
+<td>ρ(Φ)_floor</td>
+<td>0.05</td>
+</tr>
+<tr>
+<td>cascade_guard</td>
+<td>True</td>
+</tr>
+<tr>
+<td>δρ_requested</td>
+<td>0.22</td>
+</tr>
+<tr>
+<td>r_damp</td>
+<td>12.0</td>
+</tr>
+<tr>
+<td>k_cost_damp</td>
+<td>0.7</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Condition evaluation:</strong></p>
+<pre><code>DAMP-C-2: r_damp = 12.0 = r_capture  ✅
+DAMP-C-3: No ORBIT_LOCKED elements → rho_orbit_min = 0.0
+           effective_floor = max(0.05, 0.0) = 0.05
+DAMP-C-1: headroom = 0.97 − 0.05 = 0.92
+           clamped_delta = min(0.22, 0.92) = 0.22  (no clip)
+           remaining = 0.97 − 0.22 − 0.05 = 0.70  &gt;&gt; ε_damp → no floor approach
+DAMP-C-4: cascade_guard = True → skip risk check
+</code></pre>
+<p><strong>Result:</strong></p>
+<pre><code>ρ_before        = 0.97
+ρ_after         = 0.75
+delta_applied   = 0.22
+E_damp          = 8.0 × 0.22 × 144 × 0.7  =  176.5 units  (recovered)
+F_damp          = (0.22 × 1.0) / (12.0 × 0.75)  =  0.024
+flags           = []
+fm_triggered    = []
+</code></pre>
+<p><strong>Post-state:</strong> <code>ρ(Φ) = 0.75</code>. Emit headroom = 0.25. <code>EMIT_SATURATED</code> and <code>EMIT_CEILING_APPROACHED</code> cleared. <code>f_Emit</code> may resume immediately.</p>
+<hr>
+<h3 id="ex-d-002-floor-clamp-with-active-orbit-protection">EX-D-002 — Floor Clamp with Active Orbit Protection</h3>
+<p><strong>Scenario:</strong> Attractor <code>A_planet</code> has one bound element <code>E_moon</code> in stable orbit (β = 1.60). Operator attempts aggressive dampening (<code>δρ = 0.50</code>) but DAMP-C-3 limits suppression to protect <code>E_moon</code>'s binding floor.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ρ(Φ)_current</td>
+<td>0.65</td>
+</tr>
+<tr>
+<td>ρ(Φ)_floor</td>
+<td>0.05</td>
+</tr>
+<tr>
+<td>ρ_orbit_min(E_moon)</td>
+<td>0.30</td>
+</tr>
+<tr>
+<td>effective_floor</td>
+<td>max(0.05, 0.30) = 0.30</td>
+</tr>
+<tr>
+<td>δρ_requested</td>
+<td>0.50</td>
+</tr>
+<tr>
+<td>r_damp</td>
+<td>8.0 (&lt; r_capture = 15.0)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Condition evaluation:</strong></p>
+<pre><code>DAMP-C-3: effective_floor raised to 0.30 (orbit guard)
+DAMP-C-1: headroom = 0.65 − 0.30 = 0.35
+           clamped_delta = min(0.50, 0.35) = 0.35  (was_clamped = True)
+           remaining = 0.65 − 0.35 − 0.30 = 0.00  &lt; ε_damp
+           → DAMPEN_FLOOR_APPROACHED set
+</code></pre>
+<p><strong>Result:</strong></p>
+<pre><code>ρ_before        = 0.65
+ρ_after         = 0.30
+delta_applied   = 0.35  (clamped from 0.50)
+E_damp          = M_A × 0.35 × 64 × k_cost_damp
+flags           = [&quot;DAMPEN_FLOOR_APPROACHED&quot;]
+fm_triggered    = []
+</code></pre>
+<p><strong>Post-state:</strong> <code>ρ(Φ) = 0.30</code>. <code>E_moon</code> orbit intact: β remains ≥ 1.0 at the floor. Further dampening blocked until <code>E_moon</code> is released or its orbit self-decays. Operator receives <code>DAMPEN_FLOOR_APPROACHED</code> advisory.</p>
+<hr>
+<h3 id="ex-d-003-fm-009-cascade-triggered-fatal">EX-D-003 — FM-009 Cascade Triggered (Fatal)</h3>
+<p><strong>Scenario:</strong> Graph segment with three nodes, <code>cascade_guard = False</code> on two of them. Operator suppresses <code>A_hub</code> beyond its floor.</p>
+<p><strong>Graph topology:</strong></p>
+<pre><code>A_hub   ρ(Φ)=0.12   cascade_guard=False   rho_floor=0.10
+A_left  ρ(Φ)=0.11   cascade_guard=False   rho_floor=0.10
+A_right ρ(Φ)=0.60   cascade_guard=True    (protected)
+Edges: A_hub ↔ A_left, A_hub ↔ A_right
+</code></pre>
+<p><strong>Operator call:</strong></p>
+<pre><code class="language-python">result = suppress_field(
+    attractor=A_hub, phi=phi, delta_rho=0.20, r_damp=A_hub.r_capture,
+    rho_floor=0.10, cascade_guard=False, graph=gravity_graph
+)
+</code></pre>
+<p><strong>PRIM:020 pre-flight:</strong></p>
+<pre><code>rho_after_A_hub = 0.12 − 0.20 = −0.08  → at_floor = True
+A_left: cascade_guard=False, rho_phi=0.11, proximity=0.01 &lt; ε_damp → VULNERABLE
+A_right: cascade_guard=True → PROTECTED
+cascade_depth_est = 2  (A_hub → A_left; A_left has no further unprotected neighbors)
+level = HIGH  → suppress_field blocks and returns abort_reason
+</code></pre>
+<p><em>[Operator passes <code>override=True</code> — acknowledges HIGH risk explicitly.]</em></p>
+<p><strong>Cascade execution:</strong></p>
+<pre><code>propagate_cascade(A_hub, graph):
+  trigger FM-002(A_hub) → FIELD_NULL [terminal]
+  neighbors:
+    A_left: cascade_guard=False → queue
+    A_right: cascade_guard=True → CASCADE_HALTED logged ✅
+  trigger FM-002(A_left) → FIELD_NULL [terminal]
+  A_left neighbors: [A_hub (visited)] → stop
+</code></pre>
+<p><strong>Result:</strong></p>
+<pre><code>success         = False
+fm_triggered    = [&quot;FM-009&quot;, &quot;FM-002&quot;]
+cascade_affected = [&quot;A_hub&quot;, &quot;A_left&quot;]
+flags           = [&quot;DAMPEN_CASCADE&quot;]
+abort_reason    = &quot;FM-009: cascade propagated to 1 adjacent node&quot;
+</code></pre>
+<p><strong>Post-state:</strong> <code>A_hub</code> → FIELD_NULL (terminal). <code>A_left</code> → FIELD_NULL (terminal). <code>A_right</code> → unaffected (guard held). All orbits on <code>A_hub</code> and <code>A_left</code> unbound. This is irreversible — INV-006 applies.</p>
+<hr>
+<h3 id="ex-d-004-iterative-targeting-with-safe-dampening-pattern">EX-D-004 — Iterative β-Targeting with Safe Dampening Pattern</h3>
+<p><strong>Scenario:</strong> Attractor <code>A_giant</code> has <code>ρ(Φ) = 0.90</code> after aggressive emission. Bound element <code>E_probe</code> has β = 3.8 — excessively tight orbit accelerating decay. Operator wants β ≈ 1.8 without triggering orbit loss.</p>
+<p><strong>Initial state:</strong></p>
+<pre><code>ρ(Φ)_current  = 0.90
+ρ_orbit_min   = 0.25  (floor for E_probe β ≥ 1.0)
+target_rho    = 0.43  (computed to yield β ≈ 1.8)
+δρ_total      = 0.90 − 0.43 = 0.47
+</code></pre>
+<p><strong>Safe iterative dampening pattern:</strong></p>
+<pre><code class="language-python">def iterative_dampen_loop(
+    attractor, phi, target_rho, step_size, r_damp,
+    rho_floor, max_steps=10
+):
+    &quot;&quot;&quot;
+    Safe dampening toward target_rho in small steps.
+    Runs one f_Decay cycle between each step to allow orbital
+    parameters to stabilize before the next suppression.
+    &quot;&quot;&quot;
+    steps_taken = 0
+    for step in range(max_steps):
+        if phi.rho &lt;= target_rho + 0.01:
+            break  # close enough
+        delta_step = min(step_size, phi.rho - target_rho)
+        result = suppress_field(
+            attractor, phi, delta_step, r_damp,
+            rho_floor=rho_floor, cascade_guard=True
+        )
+        if not result.success:
+            break
+        run_decay_cycle(attractor)   # allow f_Decay to re-evaluate β
+        steps_taken += 1
+    return phi, steps_taken
+</code></pre>
+<p><strong>Execution trace (step_size = 0.10):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>ρ(Φ) before</th>
+<th>δρ applied</th>
+<th>ρ(Φ) after</th>
+<th>β estimate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0.90</td>
+<td>0.10</td>
+<td>0.80</td>
+<td>3.37</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0.80</td>
+<td>0.10</td>
+<td>0.70</td>
+<td>2.95</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0.70</td>
+<td>0.10</td>
+<td>0.60</td>
+<td>2.53</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0.60</td>
+<td>0.10</td>
+<td>0.50</td>
+<td>2.11</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0.50</td>
+<td>0.07</td>
+<td><strong>0.43</strong></td>
+<td><strong>1.81</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Outcome:</strong> β = 1.81 ≈ target 1.80. <code>E_probe</code> orbit stabilized. DAMP-C-3 guarded throughout (effective_floor = 0.25). No FM triggered. <code>f_Decay</code> re-evaluation after each step confirmed orbit health.</p>
+<hr>
+<h2 id="9-cross-module-references">§9 · Cross-Module References</h2>
+<h3 id="91-files-that-call-f_dampen">§9.1 · Files That Call f_Dampen</h3>
+<table>
+<thead>
+<tr>
+<th>Caller</th>
+<th>Context</th>
+<th>When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f_Emit.md</td>
+<td>FM-010 recovery (§6.1.2) — restores headroom after saturation</td>
+<td>Post FM-010 trigger</td>
+</tr>
+<tr>
+<td>f_Release.md</td>
+<td>Release assistance — lowers d_bind to reduce E_rel</td>
+<td>Before release attempt</td>
+</tr>
+<tr>
+<td>f_Capture_Resonant.md</td>
+<td>ω_res pre-positioning — fine-tunes ρ(Φ) toward resonance target</td>
+<td>Before resonant approach</td>
+</tr>
+</tbody>
+</table>
+<h3 id="92-files-that-f_dampen-depends-on">§9.2 · Files That f_Dampen Depends On</h3>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>What f_Dampen Reads</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f_Field.md</td>
+<td>ρ(Φ), r_capture, FM-002 semantics</td>
+<td>Primary write target, radius bound</td>
+</tr>
+<tr>
+<td>f_Force.md</td>
+<td>M_A, β</td>
+<td>E_damp computation, orbit floor</td>
+</tr>
+<tr>
+<td>f_Frame.md</td>
+<td>GravityGraph, registry, capacity_MAX</td>
+<td>Cascade propagation, downstream effects</td>
+</tr>
+<tr>
+<td>f_Emit.md</td>
+<td>FM-010 flag (cleared by dampening)</td>
+<td>Recovery context</td>
+</tr>
+<tr>
+<td>OPERATORS.md</td>
+<td>All frozen symbols</td>
+<td>Symbol authority (INV-009)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="93-operatorsmd-updates-required">§9.3 · OPERATORS.md Updates Required</h3>
+<table>
+<thead>
+<tr>
+<th>Symbol / Primitive</th>
+<th>Current Status</th>
+<th>Required Update</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>F_damp</code></td>
+<td>🔵 pending</td>
+<td>🟢 frozen — f_Dampen.md §4.1</td>
+</tr>
+<tr>
+<td><code>ρ(Φ)_floor</code></td>
+<td>🔵 pending</td>
+<td>🟢 frozen — f_Dampen.md §4.2</td>
+</tr>
+<tr>
+<td><code>r_damp</code></td>
+<td>🔵 pending</td>
+<td>🟢 frozen — f_Dampen.md §4.2</td>
+</tr>
+<tr>
+<td><code>δρ_damp</code></td>
+<td>🔵 pending</td>
+<td>🟢 frozen — f_Dampen.md §4.2</td>
+</tr>
+<tr>
+<td><code>ρ(Φ)_delta_damp</code></td>
+<td>🔵 pending</td>
+<td>🟢 frozen — f_Dampen.md §4.2</td>
+</tr>
+<tr>
+<td><code>E_damp</code></td>
+<td>🔵 pending</td>
+<td>🟢 frozen — f_Dampen.md §4.2</td>
+</tr>
+<tr>
+<td><code>cascade_guard</code></td>
+<td>🔵 pending</td>
+<td>🟢 frozen — f_Dampen.md §4.2</td>
+</tr>
+<tr>
+<td><code>k_damp</code></td>
+<td>🔵 pending</td>
+<td>🟢 frozen — f_Dampen.md §4.3</td>
+</tr>
+<tr>
+<td><code>k_cost_damp</code></td>
+<td>🔵 pending</td>
+<td>🟢 frozen — f_Dampen.md §4.3</td>
+</tr>
+<tr>
+<td><code>DAMPEN_ACTIVE</code></td>
+<td>🔵 pending</td>
+<td>🟢 frozen — f_Dampen.md §4</td>
+</tr>
+<tr>
+<td><code>DAMPEN_FLOOR_APPROACHED</code></td>
+<td>🔵 pending</td>
+<td>🟢 frozen — f_Dampen.md §4</td>
+</tr>
+<tr>
+<td><code>DAMPEN_CASCADE</code></td>
+<td>🔵 pending</td>
+<td>🟢 frozen — f_Dampen.md §4</td>
+</tr>
+<tr>
+<td><code>FM-009</code></td>
+<td>🔵 pending</td>
+<td>🟢 frozen — f_Dampen.md §6</td>
+</tr>
+<tr>
+<td>PRIM:018 <code>suppress_field</code></td>
+<td>pending</td>
+<td>🟢 frozen — f_Dampen.md §7</td>
+</tr>
+<tr>
+<td>PRIM:019 <code>check_floor</code></td>
+<td>pending</td>
+<td>🟢 frozen — f_Dampen.md §7</td>
+</tr>
+<tr>
+<td>PRIM:020 <code>check_cascade_risk</code></td>
+<td>pending</td>
+<td>🟢 frozen — f_Dampen.md §7</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="10-document-metadata">§10 · Document Metadata</h2>
+<h3 id="101-inv-compliance-table">§10.1 · INV Compliance Table</h3>
+<table>
+<thead>
+<tr>
+<th>INV</th>
+<th>Statement</th>
+<th>Compliance</th>
+<th>How Honored</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INV-001</td>
+<td>G = F_freq · F_fluid · F_force</td>
+<td>✅</td>
+<td>§3.1 shows F_freq modified; F_fluid and F_force unmodified; G-product reduced accordingly</td>
+</tr>
+<tr>
+<td>INV-002</td>
+<td>f_Capture(E,A,Φ)→Ω frozen</td>
+<td>✅</td>
+<td>f_Dampen does not modify f_Capture or its signature</td>
+</tr>
+<tr>
+<td>INV-003</td>
+<td>ρ(Φ)=0 → FM-002</td>
+<td>✅</td>
+<td>ρ(Φ)_floor (default 0.05) enforced by DAMP-C-1; FM-009 fires if floor breached; FM-002 triggers on cascade nodes</td>
+</tr>
+<tr>
+<td>INV-004</td>
+<td>β &lt; 1.0 → flyby</td>
+<td>✅</td>
+<td>DAMP-C-3 (orbit guard) prevents dampening below ρ_orbit_min(E) for all ORBIT_LOCKED elements</td>
+</tr>
+<tr>
+<td>INV-005</td>
+<td>All SCs conjunctive</td>
+<td>✅</td>
+<td>DAMP-C-1 through DAMP-C-4 are conjunctive (§5)</td>
+</tr>
+<tr>
+<td>INV-006</td>
+<td>Terminal states irreversible</td>
+<td>✅</td>
+<td>FM-009 cascade nodes enter FIELD_NULL terminal state; no recovery path</td>
+</tr>
+<tr>
+<td>INV-007</td>
+<td>f_Source.md read-only</td>
+<td>✅</td>
+<td>Not referenced</td>
+</tr>
+<tr>
+<td>INV-008</td>
+<td>Evaluation order normative</td>
+<td>✅</td>
+<td>PRIM:018 §7.1 docstring specifies 8-step evaluation order matching INV-008</td>
+</tr>
+<tr>
+<td>INV-009</td>
+<td>OPERATORS.md symbol authority</td>
+<td>✅</td>
+<td>§9.3 lists all 16 required OPERATORS.md updates</td>
+</tr>
+<tr>
+<td>INV-010</td>
+<td>Frozen symbols unrenameable</td>
+<td>✅</td>
+<td>9 operators + 3 flags + FM-009 + 3 primitives all declared frozen in §4</td>
+</tr>
+</tbody>
+</table>
+<h3 id="102-primitive-registry-this-file">§10.2 · Primitive Registry (This File)</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Type</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PRIM:018</td>
+<td><code>suppress_field</code></td>
+<td>Impure</td>
+<td>Master dampening executor — only sanctioned ρ(Φ) downward write</td>
+</tr>
+<tr>
+<td>PRIM:019</td>
+<td><code>check_floor</code></td>
+<td>Pure</td>
+<td>Headroom check and delta clamp (symmetric to PRIM:017 check_emit_ceiling)</td>
+</tr>
+<tr>
+<td>PRIM:020</td>
+<td><code>check_cascade_risk</code></td>
+<td>Pure/Diagnostic</td>
+<td>Pre-flight cascade risk assessment (BFS on GravityGraph)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cumulative primitive count after this file:</strong> PRIM:001 – PRIM:020 (20 primitives frozen across the module)</p>
+<h3 id="103-operator-registry-this-file">§10.3 · Operator Registry (This File)</h3>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Formula</th>
+<th>Node</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>F_damp</code></td>
+<td><code>(δρ_damp × k_damp) / (r_damp × ρ(Φ))</code></td>
+<td>F_freq</td>
+</tr>
+<tr>
+<td><code>ρ(Φ)_delta_damp</code></td>
+<td><code>min(δρ_damp, ρ(Φ) − ρ(Φ)_floor)</code></td>
+<td>F_freq</td>
+</tr>
+<tr>
+<td><code>E_damp</code></td>
+<td><code>M_A × ρ(Φ)_delta_damp × r_damp² × k_cost_damp</code></td>
+<td>F_freq</td>
+</tr>
+</tbody>
+</table>
+<h3 id="104-failure-mode-registry-this-file">§10.4 · Failure Mode Registry (This File)</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Severity</th>
+<th>Trigger</th>
+<th>Recoverable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FM-009</td>
+<td>Dampen Cascade</td>
+<td>fatal</td>
+<td>ρ(Φ) reaches floor; null propagates to adjacent node</td>
+<td>No (INV-006)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>With FM-009 frozen here, all 10 module failure modes (FM-001 through FM-010) are now canonical.</strong></p>
+  </main>
+</body>
+</html>

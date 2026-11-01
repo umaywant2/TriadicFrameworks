@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/app/awareness_model/server_signals.md">
+  <title>Server Signals</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/app/awareness_model/server_signals.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/app/awareness_model/server_signals.md</code>
+  </aside>
+
+  <main>
+<h2 id="server-signals">Server Signals</h2>
+<p>Server signals provide the RTT‑App with a global sense of clarity that complements the device’s local observations. These signals are published by the RTT ecosystem and represent conditions that apply across users, regions, or the broader environment. They do not depend on device capabilities and require no permissions to access.</p>
+<hr>
+<h3 id="purpose-of-serverdeclared-awareness">Purpose of Server‑Declared Awareness</h3>
+<p>Server‑declared Awareness acts as the global anchor for the RTT‑App. It provides:</p>
+<ul>
+<li>A consistent interpretation of global clarity or drift.</li>
+<li>A shared reference point across all devices and platforms.</li>
+<li>A stable baseline that local signals can be compared against.</li>
+<li>A future‑proof path toward RTT‑Inside, where deeper sensing becomes optional.</li>
+</ul>
+<p>The server does not explain <em>why</em> a state is declared. It simply publishes the current global condition.</p>
+<hr>
+<h3 id="awareness-endpoint">Awareness Endpoint</h3>
+<p>The RTT server exposes a simple JSON document at:</p>
+<p><code>/.well-known/rtt-awareness</code></p>
+<p>This endpoint returns a minimal, declarative structure such as:</p>
+<pre><code class="language-json">{
+  &quot;clarity&quot;: &quot;high&quot;,
+  &quot;drift&quot;: &quot;low&quot;,
+  &quot;timestamp&quot;: &quot;2026-02-28T20:00:00Z&quot;
+}
+</code></pre>
+<p>The app reads this document periodically, caches it, and merges it with local signals to compute the final Awareness state.</p>
+<hr>
+<h3 id="signal-characteristics">Signal Characteristics</h3>
+<p>Server signals have several important properties:</p>
+<ul>
+<li><strong>Canonical</strong> — they represent the authoritative global state for the RTT ecosystem.</li>
+<li><strong>Lightweight</strong> — the payload is intentionally small and easy to cache.</li>
+<li><strong>Permissionless</strong> — the app retrieves the document using standard network requests.</li>
+<li><strong>Decoupled</strong> — server logic can evolve without requiring app updates.</li>
+<li><strong>Non‑diagnostic</strong> — the server declares clarity or drift without exposing internal reasoning.</li>
+</ul>
+<p>These characteristics ensure that server signals remain stable and predictable across versions.</p>
+<hr>
+<h3 id="how-server-signals-influence-awareness">How Server Signals Influence Awareness</h3>
+<p>Server‑declared Awareness provides the global half of the merge model:</p>
+<ul>
+<li>When the server reports <strong>high clarity</strong>, local instability is interpreted as <em>Local Drift</em>.</li>
+<li>When the server reports <strong>low clarity</strong>, even stable local conditions may be interpreted as <em>Global Drift</em>.</li>
+<li>When both local and server signals indicate instability, the app enters the <em>Drift</em> state.</li>
+<li>When both are stable, the app reports <em>Clear</em>.</li>
+</ul>
+<p>This relationship ensures that the app’s Awareness state reflects both immediate conditions and broader context.</p>
+<hr>
+<h3 id="update-and-caching-behavior">Update and Caching Behavior</h3>
+<p>The RTT‑App follows a conservative, cache‑first approach:</p>
+<ul>
+<li>Fetch the server state periodically.</li>
+<li>Cache the last known value.</li>
+<li>Fall back to the cached value when offline.</li>
+<li>Expire the cache only after a safe interval.</li>
+</ul>
+<p>This ensures stable behavior even in degraded network conditions.</p>
+  </main>
+</body>
+</html>

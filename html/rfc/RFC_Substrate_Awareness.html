@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rfc/RFC_Substrate_Awareness.md">
+  <title>RFC‑Substrate‑Awareness — Substrate‑Aware Transport Services (SATS)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rfc/RFC_Substrate_Awareness.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rfc/RFC_Substrate_Awareness.md</code>
+  </aside>
+
+  <main>
+<h1 id="rfcsubstrateawareness-substrateaware-transport-services-sats"><strong>RFC‑Substrate‑Awareness — Substrate‑Aware Transport Services (SATS)</strong></h1>
+<h3 id="eisaligned-substrate-consciousness-layering-for-taps-rfc-8095-rfc-8923-and-http-rfc-9110"><em>EIS‑Aligned Substrate Consciousness Layering for TAPS (RFC 8095 / RFC 8923) and HTTP (RFC 9110)</em></h3>
+<p>RefId: turn0browsertab1</p>
+<p><strong>Identifier:</strong> TFAWG‑0001<br>
+<strong>Status:</strong> Draft<br>
+<strong>Category:</strong> Informational<br>
+<strong>Date:</strong> 2026‑07‑02  </p>
+<hr>
+<h2 id="abstract"><strong>Abstract</strong></h2>
+<p>This RFC defines <strong>Substrate‑Aware Transport Services (SATS)</strong> — an extension framework that layers <strong>EIS substrate‑consciousness</strong> onto the IETF TAPS transport model (RFC 8095 / RFC 8923), with HTTP‑level field extensions aligned to RFC 9110.</p>
+<p>SATS introduces:</p>
+<ul>
+<li>a substrate model (Layer 0–8)  </li>
+<li>substrate metadata encoding (SCO)  </li>
+<li>traversal semantics  </li>
+<li>fidelity‑grade computation  </li>
+<li>transport‑service extensions  </li>
+<li>HTTP substrate fields and status codes  </li>
+<li>IANA registry definitions  </li>
+</ul>
+<p>SATS enables applications, relays, and transport systems to express <strong>substrate‑layer intent</strong>, <strong>RTT budgets</strong>, <strong>ordering constraints</strong>, and <strong>relay negotiation</strong> in a structured, interoperable way.</p>
+<hr>
+<h1 id="1-introduction"><strong>1. Introduction</strong></h1>
+<p>Modern transport systems lack substrate awareness.<br>
+RFC 8923 defines transport services but does not provide:</p>
+<ul>
+<li>substrate‑layer signaling  </li>
+<li>RTT‑budget semantics  </li>
+<li>layer‑transition ordering  </li>
+<li>relay negotiation  </li>
+<li>fidelity‑graded reliability  </li>
+</ul>
+<p>SATS addresses these gaps by layering <strong>EIS substrate‑consciousness</strong> onto TAPS, enabling:</p>
+<ol>
+<li><strong>SATS Framework</strong> — unified substrate‑aware transport model  </li>
+<li><strong>SCO (Substrate Context Object)</strong> — metadata container  </li>
+<li><strong>IPR Negotiation</strong> — Inside‑Path Relay discovery  </li>
+<li><strong>HTTP Extensions</strong> — substrate‑aware request/response fields  </li>
+</ol>
+<hr>
+<h1 id="2-conventions-definitions"><strong>2. Conventions &amp; Definitions</strong></h1>
+<h3 id="rfc-2119-rfc-8174-keywords"><strong>RFC 2119 / RFC 8174 Keywords</strong></h3>
+<p>MUST, MUST NOT, SHOULD, SHOULD NOT, MAY.</p>
+<h3 id="glossary"><strong>Glossary</strong></h3>
+<ul>
+<li><strong>EIS</strong> — Enterprise Identity Substrate  </li>
+<li><strong>SATS</strong> — Substrate‑Aware Transport Services  </li>
+<li><strong>SCO</strong> — Substrate Context Object  </li>
+<li><strong>RTT‑Budget</strong> — advisory/soft/hard RTT constraints  </li>
+<li><strong>IPR</strong> — Inside‑Path Relay  </li>
+<li><strong>Traversal Vector</strong> — ordered list of substrate layers  </li>
+<li><strong>Fidelity Grade</strong> — composite reliability score  </li>
+</ul>
+<hr>
+<h1 id="3-motivation"><strong>3. Motivation</strong></h1>
+<p>RFC 8923 lacks substrate‑layer semantics for:</p>
+<ul>
+<li>identity traversal  </li>
+<li>RTT budgets  </li>
+<li>reliability grading  </li>
+<li>ordering constraints  </li>
+<li>relay negotiation  </li>
+</ul>
+<p>SATS introduces two primary axes:</p>
+<ul>
+<li><strong>RTT/Inside</strong> — substrate‑layer RTT semantics  </li>
+<li><strong>EIS Identity</strong> — enterprise identity traversal  </li>
+</ul>
+<p>Together they form the substrate‑aware extension to TAPS.</p>
+<hr>
+<h1 id="4-eis-substrate-model-layer-08"><strong>4. EIS Substrate Model (Layer 0–8)</strong></h1>
+<p>SATS defines nine substrate layers:</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Symbol</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>L0</td>
+<td>Bootstrap</td>
+<td>Origin substrate; identity seed</td>
+</tr>
+<tr>
+<td>1</td>
+<td>L1</td>
+<td>Assertion</td>
+<td>Identity assertion layer</td>
+</tr>
+<tr>
+<td>2</td>
+<td>L2</td>
+<td>Relay‑Prep</td>
+<td>Pre‑relay substrate</td>
+</tr>
+<tr>
+<td>3</td>
+<td>L3</td>
+<td>Identity</td>
+<td>Enterprise identity layer</td>
+</tr>
+<tr>
+<td>4</td>
+<td>L4</td>
+<td>Semantic</td>
+<td>Semantic payload layer</td>
+</tr>
+<tr>
+<td>5</td>
+<td>L5</td>
+<td>Relay</td>
+<td>Relay negotiation layer</td>
+</tr>
+<tr>
+<td>6</td>
+<td>L6</td>
+<td>Ordering</td>
+<td>Layer‑transition ordering</td>
+</tr>
+<tr>
+<td>7</td>
+<td>L7</td>
+<td>Reliability</td>
+<td>Fidelity‑graded reliability</td>
+</tr>
+<tr>
+<td>8</td>
+<td>L8</td>
+<td>Loss‑Tolerance</td>
+<td>Loss‑tolerance envelope</td>
+</tr>
+</tbody>
+</table>
+<h3 id="traversal-semantics"><strong>Traversal Semantics</strong></h3>
+<ul>
+<li><strong>Ascending</strong> — 0 → 8  </li>
+<li><strong>Descending</strong> — 8 → 0  </li>
+<li><strong>Lateral</strong> — same‑layer transitions  </li>
+<li><strong>Non‑Contiguous</strong> — e.g., 0 → 4 → 8  </li>
+</ul>
+<h3 id="canonical-rtt-budgets"><strong>Canonical RTT Budgets</strong></h3>
+<p>Defined per layer.</p>
+<h3 id="reliability-ordering-loss-tolerance"><strong>Reliability / Ordering / Loss Tolerance</strong></h3>
+<p>Each layer defines minimum fidelity thresholds.</p>
+<hr>
+<h1 id="5-substrate-metadata-sco"><strong>5. Substrate Metadata (SCO)</strong></h1>
+<p>SCO is encoded using:</p>
+<ul>
+<li><strong>CBOR (RFC 8949)</strong>  </li>
+<li><strong>Structured Fields (RFC 8941)</strong>  </li>
+</ul>
+<h3 id="sco-structure"><strong>SCO Structure</strong></h3>
+<ul>
+<li>LayerToken  </li>
+<li>Traversal Vector  </li>
+<li>RTT‑Budget  </li>
+<li>Fidelity Grade  </li>
+<li>RelayHop list  </li>
+</ul>
+<h3 id="traversal-vector-construction-rules"><strong>Traversal Vector Construction Rules</strong></h3>
+<p>Vectors MUST:</p>
+<ul>
+<li>be ordered  </li>
+<li>reflect actual layer transitions  </li>
+<li>match transport‑service constraints  </li>
+</ul>
+<h3 id="fidelity-grade-formula"><strong>Fidelity Grade Formula</strong></h3>
+<p>[
+F = W_{rtt} f_{rtt} + W_{loss} f_{loss} + W_{relay} f_{relay} + W_{order} f_{order}
+]</p>
+<p>Weights and factors defined in IANA registry.</p>
+<hr>
+<h1 id="6-transportservice-extensions"><strong>6. Transport‑Service Extensions</strong></h1>
+<p>SATS extends RFC 8095 / RFC 8923 with four features:</p>
+<h3 id="1-satsrttbudget"><strong>1. sats‑rtt‑budget</strong></h3>
+<ul>
+<li>advisory  </li>
+<li>soft enforcement  </li>
+<li>hard enforcement  </li>
+</ul>
+<h3 id="2-insidepath-relay-negotiation-ipr"><strong>2. Inside‑Path Relay Negotiation (IPR)</strong></h3>
+<p>Discovery via:</p>
+<pre><code>/.well-known/sats-relays
+</code></pre>
+<p>RelayHop structure defines:</p>
+<ul>
+<li>relay identity  </li>
+<li>substrate layer  </li>
+<li>fidelity grade  </li>
+</ul>
+<h3 id="3-satsorderingcontract"><strong>3. sats‑ordering‑contract</strong></h3>
+<p>Defines layer‑transition ordering constraints.</p>
+<h3 id="4-satsreliability"><strong>4. sats‑reliability</strong></h3>
+<p>Fidelity‑graded reliability with fallback/abort escalation.</p>
+<hr>
+<h1 id="7-httplevel-extensions-rfc-9110"><strong>7. HTTP‑Level Extensions (RFC 9110)</strong></h1>
+<h3 id="request-fields"><strong>Request Fields</strong></h3>
+<ul>
+<li><code>Substrate-Layer</code>  </li>
+<li><code>Substrate-Context</code>  </li>
+<li><code>Substrate-RTT-Budget</code>  </li>
+<li><code>Substrate-Traversal</code>  </li>
+<li><code>Substrate-Domain</code>  </li>
+</ul>
+<h3 id="response-fields"><strong>Response Fields</strong></h3>
+<p>Three substrate‑aware response headers.</p>
+<h3 id="trailer-fields"><strong>Trailer Fields</strong></h3>
+<p>Two substrate trailers for HTTP/2 and HTTP/3.</p>
+<h3 id="status-codes-560564"><strong>Status Codes (560–564)</strong></h3>
+<p>Custom substrate‑aware error codes.</p>
+<h3 id="media-type-parameter"><strong>Media Type Parameter</strong></h3>
+<p><code>sats-layer</code> + <code>Accept-Substrate</code>.</p>
+<hr>
+<h1 id="8-examples"><strong>8. Examples</strong></h1>
+<p>Five annotated exchanges:</p>
+<ol>
+<li><strong>L0 bootstrap</strong>  </li>
+<li><strong>L3 identity assertion with RTT budget</strong>  </li>
+<li><strong>L6 semantic payload relay with trailer</strong>  </li>
+<li><strong>Non‑contiguous 0→4→8 traversal</strong>  </li>
+<li><strong>HTTP/2 push with substrate trailer</strong></li>
+</ol>
+<hr>
+<h1 id="9-security-considerations"><strong>9. Security Considerations</strong></h1>
+<ul>
+<li>SCO spoofing  </li>
+<li>RTT exhaustion attacks  </li>
+<li>IPR trust model  </li>
+<li>header injection  </li>
+<li>downgrade/strip attacks  </li>
+<li>SCO privacy requirements  </li>
+</ul>
+<hr>
+<h1 id="10-iana-considerations"><strong>10. IANA Considerations</strong></h1>
+<p>Three registries:</p>
+<ol>
+<li><strong>HTTP Header Fields</strong> (11 entries)  </li>
+<li><strong>Transport Error Codes</strong> (0x5A01–0x5A07)  </li>
+<li><strong>Layer Profile Weights &amp; Fidelity Thresholds</strong>  </li>
+</ol>
+<hr>
+<h1 id="1112-references"><strong>11–12. References</strong></h1>
+<h3 id="normative"><strong>Normative</strong></h3>
+<p>RFC 2119, 8174, 8095, 8923, 9110, 8941, 8949, 4648</p>
+<h3 id="informative"><strong>Informative</strong></h3>
+<p>RFC 8303, 9112, 9113, 9114, 8922, TAPS‑ARCH</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/vst_for_generative_models/appendix/references.md">
+  <title>vST for Generative Models</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/vst_for_generative_models/appendix/references.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/vst_for_generative_models/appendix/references.md</code>
+  </aside>
+
+  <main>
+<h3 id="vst-for-generative-models"><em>vST for Generative Models</em></h3>
+<h3 id="references"><em>References</em></h3>
+<p>This appendix lists references relevant to generative modeling, diffusion processes, autoregressive decoding, flow‑based models, latent‑space geometry, scaling laws, and validation frameworks. Citations are grouped by category for clarity and presented in a substrate‑agnostic, architecture‑independent format consistent with the RSM and vST canon.</p>
+<hr>
+<h2 id="1-diffusion-models-denoising-processes"><strong>1. Diffusion Models &amp; Denoising Processes</strong></h2>
+<ul>
+<li>
+<p>Ho, J., Jain, A., &amp; Abbeel, P.<br>
+<em>Denoising Diffusion Probabilistic Models.</em><br>
+  NeurIPS (2020).</p>
+</li>
+<li>
+<p>Song, J., Sohl‑Dickstein, J., Kingma, D. P., et al.<br>
+<em>Score‑Based Generative Modeling Through Stochastic Differential Equations.</em><br>
+  ICLR (2021).</p>
+</li>
+<li>
+<p>Karras, T., Aittala, M., Laine, S., et al.<br>
+<em>Elucidating the Design Space of Diffusion‑Based Generative Models.</em><br>
+  NeurIPS (2022).</p>
+</li>
+</ul>
+<hr>
+<h2 id="2-autoregressive-transformerbased-generators"><strong>2. Autoregressive &amp; Transformer‑Based Generators</strong></h2>
+<ul>
+<li>
+<p>Vaswani, A., Shazeer, N., Parmar, N., et al.<br>
+<em>Attention Is All You Need.</em><br>
+  NeurIPS (2017).</p>
+</li>
+<li>
+<p>Ramesh, A., Dhariwal, P., Nichol, A., et al.<br>
+<em>Zero‑Shot Text‑to‑Image Generation.</em><br>
+  ICML (2021).</p>
+</li>
+</ul>
+<hr>
+<h2 id="3-flow-models-vaes"><strong>3. Flow Models &amp; VAEs</strong></h2>
+<ul>
+<li>
+<p>Kingma, D. P., &amp; Welling, M.<br>
+<em>Auto‑Encoding Variational Bayes.</em><br>
+  ICLR (2014).</p>
+</li>
+<li>
+<p>Rezende, D. J., &amp; Mohamed, S.<br>
+<em>Variational Inference with Normalizing Flows.</em><br>
+  ICML (2015).</p>
+</li>
+<li>
+<p>Kobyzev, I., Prince, S. J., &amp; Brubaker, M. A.<br>
+<em>Normalizing Flows: An Introduction and Review.</em><br>
+  IEEE PAMI (2020).</p>
+</li>
+</ul>
+<hr>
+<h2 id="4-gans-hybrid-generative-systems"><strong>4. GANs &amp; Hybrid Generative Systems</strong></h2>
+<ul>
+<li>
+<p>Goodfellow, I., Pouget‑Abadie, J., Mirza, M., et al.<br>
+<em>Generative Adversarial Nets.</em><br>
+  NeurIPS (2014).</p>
+</li>
+<li>
+<p>Brock, A., Donahue, J., &amp; Simonyan, K.<br>
+<em>Large Scale GAN Training for High Fidelity Natural Image Synthesis.</em><br>
+  ICLR (2019).</p>
+</li>
+</ul>
+<hr>
+<h2 id="5-scaling-laws-latentspace-behavior"><strong>5. Scaling Laws &amp; Latent‑Space Behavior</strong></h2>
+<ul>
+<li>
+<p>Kaplan, J., McCandlish, S., Henighan, T., et al.<br>
+<em>Scaling Laws for Neural Language Models.</em><br>
+  arXiv:2001.08361 (2020).</p>
+</li>
+<li>
+<p>Ho, J., &amp; Salimans, T.<br>
+<em>Classifier‑Free Diffusion Guidance.</em><br>
+  arXiv:2207.12598 (2022).</p>
+</li>
+<li>
+<p>Dhariwal, P., &amp; Nichol, A.<br>
+<em>Diffusion Models Beat GANs on Image Synthesis.</em><br>
+  NeurIPS (2021).</p>
+</li>
+</ul>
+<hr>
+<h2 id="6-validation-verification-drift-detection"><strong>6. Validation, Verification &amp; Drift Detection</strong></h2>
+<ul>
+<li>
+<p>Breck, E., Cai, S., Nielsen, E., et al.<br>
+<em>The ML Test Score: A Rubric for ML Production Readiness.</em><br>
+  Google Research (2017).</p>
+</li>
+<li>
+<p>Amodei, D., Olah, C., Steinhardt, J., et al.<br>
+<em>Concrete Problems in AI Safety.</em><br>
+  arXiv:1606.06565 (2016).</p>
+</li>
+<li>
+<p>Oberkampf, W. L., &amp; Roy, C. J.<br>
+<em>Verification and Validation in Scientific Computing.</em><br>
+  Cambridge University Press (2010).</p>
+</li>
+</ul>
+<hr>
+<h2 id="7-substratelevel-and-triadicframeworks-canon"><strong>7. Substrate‑Level and Triadic‑Frameworks Canon</strong></h2>
+<ul>
+<li>
+<p>Loswin, N.<br>
+<em>Resonance Substrate Model (RSM): Structural Foundations for High‑Dimensional Inference.</em><br>
+  TriadicFrameworks (2025).</p>
+</li>
+<li>
+<p>Loswin, N.<br>
+<em>Triadic Dimensional Cores: A 3D–9D Substrate for Structural and Inference‑Level Alignment.</em><br>
+  TriadicFrameworks (2025).</p>
+</li>
+<li>
+<p>Loswin, N.<br>
+<em>Validation‑Space‑Time (vST): A Substrate‑Level Framework for Reproducibility and Drift Detection.</em><br>
+  TriadicFrameworks (2025).</p>
+</li>
+<li>
+<p>Loswin, N.<br>
+<em>Dimensional Substrate Structures: Scaling Laws and High‑Dimensional Regimes.</em><br>
+  TriadicFrameworks (2026).</p>
+</li>
+<li>
+<p>Loswin, N.<br>
+<em>vST for Generative Models.</em><br>
+  TriadicFrameworks (2026).</p>
+</li>
+</ul>
+  </main>
+</body>
+</html>

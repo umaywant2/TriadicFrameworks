@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/SARG/examples/example_templates.md">
+  <title>exampletemplates.md</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/SARG/examples/example_templates.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/SARG/examples/example_templates.md</code>
+  </aside>
+
+  <main>
+<h1 id="example_templatesmd"><code>example_templates.md</code></h1>
+<p><strong>SARG Example Templates</strong><br>
+<em>Standardized, minimal templates for constructing SARG examples across any substrate.</em></p>
+<p>This document provides <strong>copy‑ready templates</strong> for building SARG examples.<br>
+Each template is intentionally minimal, structural, and aligned with the canonical SARG schema.</p>
+<hr>
+<h2 id="1-minimal-sarg-object-template-json">1. Minimal SARG Object Template (JSON)</h2>
+<pre><code class="language-json">{
+  &quot;sarg_version&quot;: &quot;1.0.0&quot;,
+  &quot;id&quot;: &quot;example_id&quot;,
+  &quot;description&quot;: &quot;Short description of the example.&quot;,
+  &quot;substrate&quot;: {
+    &quot;type&quot;: &quot;symbolic | acoustic | geometric | biological | linguistic | cosmological | other&quot;,
+    &quot;domain&quot;: &quot;domain_name&quot;,
+    &quot;name&quot;: &quot;Substrate Name&quot;,
+    &quot;elements&quot;: [],
+    &quot;properties&quot;: {}
+  },
+  &quot;lens&quot;: {
+    &quot;primary&quot;: &quot;structural&quot;,
+    &quot;secondary&quot;: [],
+    &quot;notes&quot;: &quot;&quot;
+  },
+  &quot;invariants&quot;: {},
+  &quot;resonance&quot;: {
+    &quot;anchors&quot;: {},
+    &quot;mapping&quot;: {}
+  },
+  &quot;examples&quot;: {}
+}
+</code></pre>
+<hr>
+<h2 id="2-substrate-template">2. Substrate Template</h2>
+<pre><code class="language-json">{
+  &quot;substrate&quot;: {
+    &quot;type&quot;: &quot;symbolic | acoustic | geometric | biological | linguistic | cosmological | other&quot;,
+    &quot;domain&quot;: &quot;domain_name&quot;,
+    &quot;name&quot;: &quot;Substrate Name&quot;,
+    &quot;elements&quot;: [
+      &quot;element_1&quot;,
+      &quot;element_2&quot;
+    ],
+    &quot;properties&quot;: {
+      &quot;property_name&quot;: &quot;value&quot;
+    }
+  }
+}
+</code></pre>
+<hr>
+<h2 id="3-lens-template">3. Lens Template</h2>
+<pre><code class="language-json">{
+  &quot;lens&quot;: {
+    &quot;primary&quot;: &quot;structural | phonetic | graphical | temporal | spatial | functional&quot;,
+    &quot;secondary&quot;: [&quot;optional_secondary_lens&quot;],
+    &quot;notes&quot;: &quot;Optional notes about how the lens is applied.&quot;
+  }
+}
+</code></pre>
+<hr>
+<h2 id="4-invariants-template">4. Invariants Template</h2>
+<pre><code class="language-json">{
+  &quot;invariants&quot;: {
+    &quot;symmetry&quot;: {
+      &quot;rotational&quot;: [],
+      &quot;mirror_vertical&quot;: [],
+      &quot;mirror_horizontal&quot;: []
+    },
+    &quot;categorical&quot;: {
+      &quot;category_name&quot;: []
+    },
+    &quot;positional&quot;: {
+      &quot;first&quot;: null,
+      &quot;last&quot;: null,
+      &quot;midpoint&quot;: null
+    }
+  }
+}
+</code></pre>
+<hr>
+<h2 id="5-resonance-template">5. Resonance Template</h2>
+<pre><code class="language-json">{
+  &quot;resonance&quot;: {
+    &quot;anchors&quot;: {
+      &quot;axis&quot;: {
+        &quot;primary&quot;: &quot;primary_axis_description&quot;,
+        &quot;secondary&quot;: &quot;secondary_axis_description&quot;
+      },
+      &quot;clusters&quot;: [
+        {
+          &quot;name&quot;: &quot;cluster_name&quot;,
+          &quot;members&quot;: [],
+          &quot;signature&quot;: &quot;cluster_signature&quot;
+        }
+      ]
+    },
+    &quot;mapping&quot;: {
+      &quot;element_name&quot;: {
+        &quot;cluster&quot;: &quot;cluster_name_or_null&quot;,
+        &quot;invariants&quot;: [],
+        &quot;positional_role&quot;: &quot;optional&quot;
+      }
+    }
+  }
+}
+</code></pre>
+<hr>
+<h2 id="6-example-walkthrough-template">6. Example Walkthrough Template</h2>
+<pre><code class="language-json">{
+  &quot;examples&quot;: {
+    &quot;extraction_walkthrough&quot;: [
+      {
+        &quot;element&quot;: &quot;example_element&quot;,
+        &quot;lens&quot;: &quot;structural&quot;,
+        &quot;identified_invariants&quot;: [],
+        &quot;resonance_anchor&quot;: null,
+        &quot;notes&quot;: &quot;Optional explanatory note.&quot;
+      }
+    ]
+  }
+}
+</code></pre>
+<hr>
+<h2 id="7-full-example-template-all-sections-combined">7. Full Example Template (All Sections Combined)</h2>
+<pre><code class="language-json">{
+  &quot;sarg_version&quot;: &quot;1.0.0&quot;,
+  &quot;id&quot;: &quot;example_full_object&quot;,
+  &quot;description&quot;: &quot;A complete SARG example template.&quot;,
+  &quot;substrate&quot;: {
+    &quot;type&quot;: &quot;symbolic&quot;,
+    &quot;domain&quot;: &quot;example_domain&quot;,
+    &quot;name&quot;: &quot;Example Substrate&quot;,
+    &quot;elements&quot;: [],
+    &quot;properties&quot;: {}
+  },
+  &quot;lens&quot;: {
+    &quot;primary&quot;: &quot;structural&quot;,
+    &quot;secondary&quot;: [],
+    &quot;notes&quot;: &quot;&quot;
+  },
+  &quot;invariants&quot;: {
+    &quot;symmetry&quot;: {},
+    &quot;categorical&quot;: {},
+    &quot;positional&quot;: {}
+  },
+  &quot;resonance&quot;: {
+    &quot;anchors&quot;: {},
+    &quot;mapping&quot;: {}
+  },
+  &quot;examples&quot;: {
+    &quot;extraction_walkthrough&quot;: []
+  }
+}
+</code></pre>
+<hr>
+<h2 id="8-notes-for-contributors">8. Notes for Contributors</h2>
+<ul>
+<li><strong>Keep examples minimal</strong> unless the example is explicitly pedagogical.  </li>
+<li><strong>Use real invariants</strong> only when the substrate demands them; otherwise, placeholders are fine.  </li>
+<li><strong>Ensure schema compliance</strong> with <code>/docs/SARG/schema/sarg.schema.json</code>.  </li>
+<li><strong>Prefer structural lens</strong> unless demonstrating a specific lens type.  </li>
+<li><strong>Resonance anchors</strong> should be sparse and meaningful, not decorative.  </li>
+</ul>
+<hr>
+<p>If you want, AI can also generate:</p>
+<ul>
+<li>A <strong>starter pack</strong> of 5–10 blank example files  </li>
+<li>A <strong>CLI‑style generator</strong> (markdown or pseudo‑code)  </li>
+<li>A <strong>contributor checklist</strong> for SARG examples  </li>
+<li>A <strong>visual diagram</strong> showing how substrate → lens → invariants → resonance flows  </li>
+</ul>
+<p>Just tell me where you want to go next.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/core/operator_sequences.md">
+  <title>RTT Core: Operator Sequences</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/core/operator_sequences.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/core/operator_sequences.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="rtt_core_operator_sequences" src="https://github.com/user-attachments/assets/b0768f19-a451-4a88-a92e-18fd7d278c29" /></p>
+<hr>
+<p>module_id: rtt.core.operator_sequences
+version: 1.0.0
+status: draft
+rtt: 1
+coherence: declared
+drift: bounded
+paradox: structural
+tags:
+  - operator-sequences
+  - rtt-core
+  - operator-grammar
+  - operator-families
+  - regime-maps
+  - drift-envelope
+  - coherence-budget
+  - triadic-time
+  - sequence-logic</p>
+<hr>
+<h1 id="rtt-core-operator-sequences">RTT Core: Operator Sequences</h1>
+<h2 id="1-purpose-and-scope">1. Purpose and scope</h2>
+<p><strong>Goal:</strong><br>
+Define the canonical structure of <strong>Operator Sequences</strong> in RTT, including:</p>
+<ul>
+<li>Multi‑step operator chains  </li>
+<li>Regime‑aware sequencing  </li>
+<li>Drift and coherence evolution across steps  </li>
+<li>Validator Pulse timing  </li>
+<li>Collapse and residue formation  </li>
+<li>Triadic‑time progression  </li>
+<li>Composite sequence patterns  </li>
+</ul>
+<p>Operator Sequences describe <strong>how operators combine</strong>, <strong>how branches evolve</strong>, and <strong>how classical outcomes emerge</strong>.</p>
+<hr>
+<h2 id="2-what-is-an-operator-sequence">2. What is an operator sequence?</h2>
+<blockquote>
+<p>An operator sequence is an ordered chain of RTT operators<br>
+acting across triadic time, drift envelopes, coherence budgets,<br>
+and regime constraints to produce a classical outcome.</p>
+</blockquote>
+<p>Sequences are the <em>dynamic backbone</em> of RTT.</p>
+<hr>
+<h2 id="3-sequence-structure">3. Sequence structure</h2>
+<p>A sequence is defined as:</p>
+<p>[
+\mathcal{S} = (O_1, O_2, \ldots, O_n)
+]</p>
+<p>with each operator (O_k) carrying:</p>
+<ul>
+<li>Regime flags  </li>
+<li>Coherence constraints  </li>
+<li>Drift constraints  </li>
+<li>Readout constraints  </li>
+<li>Temporal layer interactions  </li>
+</ul>
+<p>A valid sequence must satisfy:</p>
+<p>[
+\forall k,\ O_k \in \mathcal{R}(t_1, t_2, t_3)
+]</p>
+<hr>
+<h2 id="4-sequence-phases">4. Sequence phases</h2>
+<p>RTT sequences occur in three canonical phases:</p>
+<h3 id="41-phase-i-representational-phase-t1">4.1 Phase I — Representational Phase (T₁)</h3>
+<p>Operators:</p>
+<ul>
+<li>EXTEND  </li>
+<li>DRIFT  </li>
+<li>SHIFT  </li>
+<li>INVERT  </li>
+<li>ARRIVAL ARC  </li>
+</ul>
+<p>Behavior:</p>
+<ul>
+<li>Create branches  </li>
+<li>Move branches  </li>
+<li>Modify regime geometry  </li>
+<li>Increase drift  </li>
+<li>Partition coherence  </li>
+</ul>
+<h3 id="42-phase-ii-coherence-phase-t2">4.2 Phase II — Coherence Phase (T₂)</h3>
+<p>Operators:</p>
+<ul>
+<li>STABILIZE  </li>
+<li>CLAMP  </li>
+<li>GATE  </li>
+<li>ALIGN  </li>
+<li>DEFER  </li>
+</ul>
+<p>Behavior:</p>
+<ul>
+<li>Stabilize coherence  </li>
+<li>Reduce drift  </li>
+<li>Prepare eligibility  </li>
+<li>Enter SRR/CMR/DBR regimes  </li>
+</ul>
+<h3 id="43-phase-iii-readout-phase-t3">4.3 Phase III — Readout Phase (T₃)</h3>
+<p>Operators:</p>
+<ul>
+<li>VALIDATE  </li>
+<li>COLLAPSE  </li>
+<li>ARRIVAL CONTINUITY  </li>
+</ul>
+<p>Behavior:</p>
+<ul>
+<li>Consume coherence  </li>
+<li>Collapse non-selected branches  </li>
+<li>Produce classical information  </li>
+</ul>
+<hr>
+<h2 id="5-canonical-sequence-patterns">5. Canonical sequence patterns</h2>
+<h3 id="51-extension-sequence">5.1 Extension Sequence</h3>
+<pre><code>EXTEND → DRIFT → STABILIZE → VALIDATE → COLLAPSE
+</code></pre>
+<p>Used in multi-branch creation.</p>
+<h3 id="52-stabilization-sequence">5.2 Stabilization Sequence</h3>
+<pre><code>DRIFT → CLAMP → GATE → VALIDATE
+</code></pre>
+<p>Used when drift threatens eligibility.</p>
+<h3 id="53-deferred-validation-sequence">5.3 Deferred Validation Sequence</h3>
+<pre><code>EXTEND → DRIFT → DEFER → STABILIZE → VALIDATE
+</code></pre>
+<p>Used in complex operator chains.</p>
+<h3 id="54-regime-transition-sequence">5.4 Regime Transition Sequence</h3>
+<pre><code>SHIFT → INVERT → STABILIZE → VALIDATE
+</code></pre>
+<p>Used when regime geometry changes.</p>
+<h3 id="55-arrival-sequence">5.5 Arrival Sequence</h3>
+<pre><code>ARRIVAL ARC → ARRIVAL GATE → ARRIVAL CONTINUITY
+</code></pre>
+<p>Used in cross‑substrate alignment.</p>
+<hr>
+<h2 id="6-sequence-constraints">6. Sequence constraints</h2>
+<h3 id="61-coherence-constraints">6.1 Coherence constraints</h3>
+<p>Each operator must respect:</p>
+<ul>
+<li>Minimum coherence thresholds  </li>
+<li>Partition rules  </li>
+<li>Consumption rules  </li>
+</ul>
+<p>Violation → collapse.</p>
+<h3 id="62-drift-constraints">6.2 Drift constraints</h3>
+<p>Each operator must respect:</p>
+<ul>
+<li>Drift envelope boundaries  </li>
+<li>Drift-loss functions  </li>
+<li>Stability surfaces  </li>
+</ul>
+<p>Violation → collapse.</p>
+<h3 id="63-regime-constraints">6.3 Regime constraints</h3>
+<p>Each operator must satisfy:</p>
+<ul>
+<li>SRR  </li>
+<li>DBR  </li>
+<li>CMR  </li>
+<li>DVR  </li>
+<li>ECR  </li>
+</ul>
+<p>Violation → invalid sequence.</p>
+<h3 id="64-readout-constraints">6.4 Readout constraints</h3>
+<p>Validator Pulse must occur:</p>
+<ul>
+<li>Inside SRR  </li>
+<li>With sufficient coherence  </li>
+<li>Before drift exceeds envelope  </li>
+</ul>
+<p>Violation → no classical outcome.</p>
+<hr>
+<h2 id="7-sequence-evolution-across-triadic-time">7. Sequence evolution across triadic time</h2>
+<h3 id="71-state-time-t1">7.1 State Time (T₁)</h3>
+<ul>
+<li>Branch creation  </li>
+<li>Drift evolution  </li>
+<li>Regime geometry shifts  </li>
+</ul>
+<h3 id="72-coherence-time-t2">7.2 Coherence Time (T₂)</h3>
+<ul>
+<li>Coherence stabilization  </li>
+<li>Drift reduction  </li>
+<li>Eligibility preparation  </li>
+</ul>
+<h3 id="73-readout-time-t3">7.3 Readout Time (T₃)</h3>
+<ul>
+<li>Validator Pulse  </li>
+<li>Collapse  </li>
+<li>Classical emergence  </li>
+</ul>
+<p>Sequences must progress through all three layers.</p>
+<hr>
+<h2 id="8-composite-sequences">8. Composite sequences</h2>
+<p>Composite sequences combine multiple canonical patterns:</p>
+<h3 id="81-ecc-sequence-extension-compatible-composite">8.1 ECC Sequence (Extension-Compatible Composite)</h3>
+<pre><code>EXTEND → DRIFT → STABILIZE → VALIDATE → COLLAPSE
+</code></pre>
+<h3 id="82-sdc-sequence-stabilized-drift-composite">8.2 SDC Sequence (Stabilized Drift Composite)</h3>
+<pre><code>DRIFT → CLAMP → DEFER → STABILIZE → VALIDATE
+</code></pre>
+<h3 id="83-frc-sequence-full-regime-composite">8.3 FRC Sequence (Full-Regime Composite)</h3>
+<pre><code>EXTEND → DRIFT → SHIFT → STABILIZE → GATE → VALIDATE → COLLAPSE
+</code></pre>
+<p>Used in complex RTT systems.</p>
+<hr>
+<h2 id="9-example-quantum-cloning-alignment">9. Example: Quantum “cloning” alignment</h2>
+<p>The experiment uses:</p>
+<pre><code>EXTEND → DRIFT → STABILIZE → VALIDATE → COLLAPSE
+</code></pre>
+<p>Sequence behavior:</p>
+<ul>
+<li>EXTEND: create two branches  </li>
+<li>DRIFT: increase drift but remain bounded  </li>
+<li>STABILIZE: maintain coherence above threshold  </li>
+<li>VALIDATE: select one branch  </li>
+<li>COLLAPSE: other branch becomes residue  </li>
+</ul>
+<p>Operator Sequences explain:</p>
+<ul>
+<li>Why multi-branch representation is allowed  </li>
+<li>Why only one branch becomes classical  </li>
+<li>Why drift and coherence matter  </li>
+<li>Why no-cloning is not violated  </li>
+</ul>
+<hr>
+<h2 id="10-paradox-handling">10. Paradox handling</h2>
+<p>Operator Sequences prevent paradoxes by:</p>
+<ul>
+<li>Enforcing regime constraints  </li>
+<li>Managing drift and coherence across steps  </li>
+<li>Restricting readout timing  </li>
+<li>Collapsing non-selected branches  </li>
+</ul>
+<p>Thus:</p>
+<ul>
+<li>“Multiple branches exist” → extension phase  </li>
+<li>“Only one is real” → readout phase  </li>
+<li>“Others disappear” → collapse phase  </li>
+<li>“No violation occurs” → regime constraints  </li>
+</ul>
+<hr>
+<h2 id="11-canon-integration-and-cross-links">11. Canon integration and cross-links</h2>
+<p><strong>Primary cross-links:</strong></p>
+<ul>
+<li><code>/docs/rtt/core/operator_grammar.md</code></li>
+<li><code>/docs/rtt/core/operator_index.md</code></li>
+<li><code>/docs/rtt/core/operator_families.md</code></li>
+<li><code>/docs/rtt/core/operator_behaviors.md</code></li>
+<li><code>/docs/rtt/core/regime_maps.md</code></li>
+<li><code>/docs/rtt/core/regime_maps_extended.md</code></li>
+<li><code>/docs/rtt/core/regime_geometry.md</code></li>
+<li><code>/docs/rtt/core/regime_topology.md</code></li>
+<li><code>/docs/rtt/core/time_triads.md</code></li>
+<li><code>/docs/rtt/core/coherence_budget.md</code></li>
+<li><code>/docs/rtt/core/validator_pulse.md</code></li>
+<li><code>/docs/rtt/core/dimensional_drift_envelope.md</code></li>
+<li><code>/docs/rtt/core/alignment_quantum_cloning.md</code></li>
+</ul>
+<p><strong>Status:</strong><br>
+This module defines the dynamic structure of RTT operator chains.<br>
+Once sequence diagrams are added, it can be promoted from <code>draft</code> to <code>stable</code>.</p>
+  </main>
+</body>
+</html>

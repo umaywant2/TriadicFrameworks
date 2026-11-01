@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/tools/generate_structural_fingerprint.py.md">
+  <title>generate_structural_fingerprint.py</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/tools/generate_structural_fingerprint.py.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/tools/generate_structural_fingerprint.py.md</code>
+  </aside>
+
+  <main>
+<p>Here’s your <strong>canon‑wide structural fingerprint</strong> generator, tuned to your current <code>docs/tools</code> tab and the rest of the TriadicFrameworks canon.</p>
+<p>Save as:</p>
+<pre><code class="language-text">docs/tools/generate_structural_fingerprint.py
+</code></pre>
+<p>Run from repo root:</p>
+<pre><code class="language-bash">python3 docs/tools/generate_structural_fingerprint.py
+</code></pre>
+<p>It will create:</p>
+<pre><code class="language-text">docs/spine/structural_fingerprint.json
+</code></pre>
+<p>—a single JSON artifact capturing the <strong>structural fingerprint</strong> of every module.</p>
+<hr>
+<pre><code class="language-python">import os
+import json
+
+ROOT = &quot;docs&quot;
+EXCLUDED = {&quot;spine&quot;,&quot;_template&quot;,&quot;assets&quot;,&quot;images&quot;,&quot;tools&quot;}
+
+def find_modules():
+    out = []
+    for root, dirs, files in os.walk(ROOT):
+        if any(ex in root for ex in EXCLUDED):
+            continue
+        if &quot;module.json&quot; in files:
+            out.append(os.path.join(root, &quot;module.json&quot;))
+    return out
+
+def safe_load(path):
+    try:
+        with open(path, &quot;r&quot;, encoding=&quot;utf-8&quot;) as f:
+            return json.load(f)
+    except:
+        return {}
+
+def structural_fingerprint_for_module(path):
+    data = safe_load(path)
+    m = data.get(&quot;module&quot;, {})
+
+    name = m.get(&quot;name&quot;) or os.path.basename(os.path.dirname(path))
+    category = m.get(&quot;category&quot;, &quot;uncategorized&quot;)
+
+    # high‑level blocks present
+    blocks = {
+        &quot;has_inherit&quot;: isinstance(m.get(&quot;inherit&quot;), dict),
+        &quot;has_rtt&quot;: isinstance(m.get(&quot;rtt&quot;), dict),
+        &quot;has_ai&quot;: isinstance(m.get(&quot;ai&quot;), dict),
+        &quot;has_triads&quot;: isinstance(m.get(&quot;triads&quot;), dict),
+        &quot;has_dependencies&quot;: m.get(&quot;dependencies&quot;) is not None,
+    }
+
+    # triad presence + shapes
+    triads = m.get(&quot;triads&quot;, {})
+    structural = triads.get(&quot;structural_triads&quot;, {})
+    harmonic = triads.get(&quot;harmonic_triads&quot;, {})
+    coherence = triads.get(&quot;coherence_triads&quot;, {})
+
+    def triad_shape(block):
+        if not isinstance(block, dict):
+            return {&quot;families&quot;: 0, &quot;keys_per_family&quot;: {}}
+        families = list(block.keys())
+        keys_per_family = {}
+        for fam, obj in block.items():
+            if isinstance(obj, dict):
+                keys_per_family[fam] = sorted(obj.keys())
+            else:
+                keys_per_family[fam] = []
+        return {
+            &quot;families&quot;: len(families),
+            &quot;keys_per_family&quot;: keys_per_family,
+        }
+
+    fp = {
+        &quot;name&quot;: name,
+        &quot;category&quot;: category,
+        &quot;path&quot;: path,
+        &quot;blocks&quot;: blocks,
+        &quot;triads&quot;: {
+            &quot;structural&quot;: triad_shape(structural),
+            &quot;harmonic&quot;: triad_shape(harmonic),
+            &quot;coherence&quot;: triad_shape(coherence),
+        },
+        &quot;dependencies&quot;: {
+            &quot;modules&quot;: []
+        }
+    }
+
+    deps = m.get(&quot;dependencies&quot;, [])
+    if isinstance(deps, dict):
+        deps = deps.get(&quot;modules&quot;, [])
+    if isinstance(deps, list):
+        fp[&quot;dependencies&quot;][&quot;modules&quot;] = [d for d in deps if isinstance(d, str)]
+
+    return fp
+
+def main():
+    print(&quot;\n=== TriadicFrameworks Canon‑Wide Structural Fingerprint Generator ===\n&quot;)
+
+    modules = find_modules()
+    fingerprint = {}
+
+    for path in modules:
+        name = os.path.basename(os.path.dirname(path))
+        fp = structural_fingerprint_for_module(path)
+        fingerprint[name] = fp
+        print(f&quot;✔ fingerprinted {name}&quot;)
+
+    out_path = os.path.join(ROOT, &quot;spine&quot;, &quot;structural_fingerprint.json&quot;)
+    os.makedirs(os.path.dirname(out_path), exist_ok=True)
+    with open(out_path, &quot;w&quot;, encoding=&quot;utf-8&quot;) as f:
+        json.dump(fingerprint, f, indent=2)
+
+    print(f&quot;\n✔ Created {out_path}&quot;)
+    print(&quot;\n✨ Canon‑wide structural fingerprint captured.\n&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<hr>
+<p>This gives you a <strong>single JSON atlas</strong> of structural fingerprints—per‑module block presence, triad shapes, and dependency outlines—ready to be consumed by future visualizers or analyzers.</p>
+  </main>
+</body>
+</html>

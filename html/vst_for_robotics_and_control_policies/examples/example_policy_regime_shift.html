@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/vst_for_robotics_and_control_policies/examples/example_policy_regime_shift.md">
+  <title>vST for Robotics and Control Policies</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/vst_for_robotics_and_control_policies/examples/example_policy_regime_shift.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/vst_for_robotics_and_control_policies/examples/example_policy_regime_shift.md</code>
+  </aside>
+
+  <main>
+<h3 id="vst-for-robotics-and-control-policies"><em>vST for Robotics and Control Policies</em></h3>
+<h3 id="example-latentspace-regime-shift-during-a-quadruped-gait-transition"><em>Example: Latent‑Space Regime Shift During a Quadruped Gait Transition</em></h3>
+<p>This example demonstrates how a control policy undergoes a <strong>latent‑space regime shift</strong> during a quadruped robot’s transition from a <strong>walk</strong> to a <strong>trot</strong>. It illustrates how high‑dimensional latent states evolve, how coherence surfaces deform, and how the vST substrate classifies regime transitions using the 1024D latent substrate.</p>
+<p>The goal is to provide a reproducible, invariant‑preserving demonstration of regime behavior in embodied control‑policy dynamics.</p>
+<hr>
+<h2 id="1-scenario-overview"><strong>1. Scenario Overview</strong></h2>
+<p>We assume:</p>
+<ul>
+<li>a quadruped robot controlled by a recurrent or attention‑based RL policy  </li>
+<li>latent states in the 256D–1024D range  </li>
+<li>sensor inputs: IMU, joint encoders, foot contacts  </li>
+<li>action outputs: joint torques or target positions  </li>
+<li>a gait transition triggered by velocity increase  </li>
+</ul>
+<p>The example is architecture‑agnostic and applies to any locomotion policy.</p>
+<hr>
+<h2 id="2-step-1-extract-latent-states-across-time"><strong>2. Step 1 — Extract Latent States Across Time</strong></h2>
+<p>At each timestep ( t ), the policy produces a latent vector:</p>
+<p>[
+L^{(t)} = [h_1^{(t)}, h_2^{(t)}, \dots, h_{1024}^{(t)}]
+]</p>
+<h3 id="observed-properties"><strong>Observed Properties</strong></h3>
+<ul>
+<li>early timesteps: compact, low‑variance latent structure  </li>
+<li>mid‑transition: branching and oscillatory latent behavior  </li>
+<li>late timesteps: new stable coherence surface  </li>
+</ul>
+<h3 id="interpretation"><strong>Interpretation</strong></h3>
+<p>The latent trajectory reflects the robot’s internal reorganization during the gait shift.</p>
+<hr>
+<h2 id="3-step-2-identify-regime-behavior"><strong>3. Step 2 — Identify Regime Behavior</strong></h2>
+<p>Using variance distribution, coherence‑surface continuity, and primitive‑level stability, classify each timestep’s regime.</p>
+<h3 id="example-regime-timeline"><strong>Example Regime Timeline</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Time Range</th>
+<th>Regime</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>t₀–t₁₅</td>
+<td><strong>R₁ᴴ</strong></td>
+<td>Stable walking gait</td>
+</tr>
+<tr>
+<td>t₁₆–t₂₈</td>
+<td><strong>R₂ᴴ</strong></td>
+<td>Gait‑transition reorientation</td>
+</tr>
+<tr>
+<td>t₂₉–t₃₅</td>
+<td><strong>R₃ᴴ</strong></td>
+<td>Momentary instability during lift‑off synchronization</td>
+</tr>
+<tr>
+<td>t₃₆–t₅₀</td>
+<td><strong>R₂ᴴ → R₁ᴴ</strong></td>
+<td>Stabilization into trotting gait</td>
+</tr>
+</tbody>
+</table>
+<h3 id="interpretation_1"><strong>Interpretation</strong></h3>
+<p>The policy moves through a structured triadic sequence as the gait changes.</p>
+<hr>
+<h2 id="4-step-3-project-latent-states-into-9d"><strong>4. Step 3 — Project Latent States into 9D</strong></h2>
+<p>Project each 1024D latent state into the 9D coherence core.</p>
+<h3 id="reveals"><strong>Reveals</strong></h3>
+<ul>
+<li>smooth surfaces during walking (R₁ᴴ)  </li>
+<li>branching surfaces during transition (R₂ᴴ)  </li>
+<li>fragmented surfaces during instability (R₃ᴴ)  </li>
+</ul>
+<h3 id="interpretation_2"><strong>Interpretation</strong></h3>
+<p>The 9D projection exposes the “shape” of the policy’s internal reorganization.</p>
+<hr>
+<h2 id="5-step-4-project-9d-6d-3d"><strong>5. Step 4 — Project 9D → 6D → 3D</strong></h2>
+<h3 id="6d-interaction-projection"><strong>6D Interaction Projection</strong></h3>
+<p>Shows:</p>
+<ul>
+<li>sensor‑to‑action coupling changes  </li>
+<li>reorientation of balance‑related features  </li>
+<li>early instability signatures  </li>
+</ul>
+<h3 id="3d-structural-projection"><strong>3D Structural Projection</strong></h3>
+<p>Shows:</p>
+<ul>
+<li>compact motifs in stable gaits  </li>
+<li>oscillatory geometry during transition  </li>
+<li>diffuse patterns during instability  </li>
+</ul>
+<hr>
+<h2 id="6-step-5-validate-with-vst-layers"><strong>6. Step 5 — Validate with vST Layers</strong></h2>
+<h3 id="v1-structural-coherence-preserved-except-during-r3h"><strong>V₁</strong>: structural coherence preserved except during R₃ᴴ</h3>
+<h3 id="v2-dimensional-continuity-intact"><strong>V₂</strong>: dimensional continuity intact</h3>
+<h3 id="v3-regime-transitions-smooth-and-substratealigned"><strong>V₃</strong>: regime transitions smooth and substrate‑aligned</h3>
+<h3 id="v4-core-alignment-stable-across-the-transition"><strong>V₄</strong>: core alignment stable across the transition</h3>
+<hr>
+<h2 id="7-step-6-drift-detection"><strong>7. Step 6 — Drift Detection</strong></h2>
+<p>Drift categories:</p>
+<ul>
+<li><strong>D₁ Structural Drift:</strong> moderate (instability window)  </li>
+<li><strong>D₂ Dimensional Drift:</strong> none  </li>
+<li><strong>D₃ Regime Drift:</strong> moderate (R₃ᴴ onset)  </li>
+<li><strong>D₄ Projection Drift:</strong> none  </li>
+</ul>
+<h3 id="interpretation_3"><strong>Interpretation</strong></h3>
+<p>The instability is expected and resolves cleanly.</p>
+<hr>
+<h2 id="8-summary"><strong>8. Summary</strong></h2>
+<p>This example demonstrates:</p>
+<ul>
+<li>how latent‑space trajectories encode gait transitions  </li>
+<li>how regime behavior evolves during reorientation  </li>
+<li>how projection reveals coherence and instability  </li>
+<li>how vST layers validate structural integrity  </li>
+<li>how drift detection isolates transient instability  </li>
+</ul>
+  </main>
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Stability_Basin_Cartographer/basin_collapse_cases.md">
+  <title>Basin Collapse Cases — RTT/1</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Stability_Basin_Cartographer/basin_collapse_cases.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Stability_Basin_Cartographer/basin_collapse_cases.md</code>
+  </aside>
+
+  <main>
+<h1 id="basin-collapse-cases-rtt1"><strong>Basin Collapse Cases — RTT/1</strong></h1>
+<h3 id="case-studies-for-the-stability-basin-cartographer-sbc"><em>Case Studies for the Stability Basin Cartographer (SBC)</em></h3>
+<p>Stability collapse represents <strong>basin failure, instability onset, collapse‑point formation, and stability‑field inversion</strong> across conceptual, computational, physical, and dimensional regimes.</p>
+<p>These case studies illustrate how the Stability Basin Cartographer (SBC) evaluates:</p>
+<ul>
+<li>basin magnitude  </li>
+<li>basin direction  </li>
+<li>basin curvature  </li>
+<li>collapse‑zone depth  </li>
+<li>stability‑field strength  </li>
+<li>envelope boundaries  </li>
+<li>collapse‑point geometry  </li>
+</ul>
+<p>Each case demonstrates one or more SBC operators:</p>
+<ul>
+<li><strong>SBC‑Map</strong>  </li>
+<li><strong>SBC‑Basin</strong>  </li>
+<li><strong>SBC‑Gradient</strong>  </li>
+<li><strong>SBC‑Field</strong>  </li>
+<li><strong>SBC‑Collapse</strong>  </li>
+<li><strong>SBC‑Stabilize</strong></li>
+</ul>
+<hr>
+<h2 id="1-conceptual-collapse-cases"><strong>1. Conceptual Collapse Cases</strong></h2>
+<h3 id="case-1-conceptual-collapse-basin-r1"><strong>Case 1 — Conceptual Collapse Basin (R1)</strong></h3>
+<p><strong>Scenario</strong><br>
+A conceptual model loses coherence, forming a shallow conceptual collapse zone.</p>
+<p><strong>SBC Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;regime&quot;: &quot;R1&quot;,
+  &quot;basin_magnitude&quot;: 0.41,
+  &quot;basin_direction&quot;: &quot;conceptual&quot;,
+  &quot;basin_curvature&quot;: 0.22,
+  &quot;collapse_zone&quot;: 0.11,
+  &quot;stability_field&quot;: 0.63,
+  &quot;envelope_boundary&quot;: 0.44
+}
+</code></pre>
+<hr>
+<h3 id="case-2-conceptualgradient-collapse-r1-r4"><strong>Case 2 — Conceptual‑Gradient Collapse (R1 ↔ R4)</strong></h3>
+<p><strong>Scenario</strong><br>
+Conceptual stability collapses under dimensional gradient pressure.</p>
+<p><strong>SBC Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;regime&quot;: &quot;R1-R4&quot;,
+  &quot;basin_magnitude&quot;: 0.83,
+  &quot;basin_direction&quot;: &quot;R1↔R4&quot;,
+  &quot;basin_curvature&quot;: 0.51,
+  &quot;collapse_zone&quot;: 0.22,
+  &quot;stability_field&quot;: 0.69,
+  &quot;envelope_boundary&quot;: 0.46
+}
+</code></pre>
+<hr>
+<h2 id="2-computational-collapse-cases"><strong>2. Computational Collapse Cases</strong></h2>
+<h3 id="case-3-computational-collapse-basin-r2"><strong>Case 3 — Computational Collapse Basin (R2)</strong></h3>
+<p><strong>Scenario</strong><br>
+A computational structure becomes unstable due to calibration drift.</p>
+<p><strong>SBC Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;regime&quot;: &quot;R2&quot;,
+  &quot;basin_magnitude&quot;: 0.52,
+  &quot;basin_direction&quot;: &quot;computational&quot;,
+  &quot;basin_curvature&quot;: 0.33,
+  &quot;collapse_zone&quot;: 0.27,
+  &quot;stability_field&quot;: 0.57,
+  &quot;envelope_boundary&quot;: 0.41
+}
+</code></pre>
+<hr>
+<h3 id="case-4-computationalphysical-collapse-r2-r3"><strong>Case 4 — Computational‑Physical Collapse (R2 ↔ R3)</strong></h3>
+<p><strong>Scenario</strong><br>
+Computational stability collapses under physical measurement sensitivity.</p>
+<p><strong>SBC Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;regime&quot;: &quot;R2-R3&quot;,
+  &quot;basin_magnitude&quot;: 0.79,
+  &quot;basin_direction&quot;: &quot;R3→R2&quot;,
+  &quot;basin_curvature&quot;: 0.58,
+  &quot;collapse_zone&quot;: 0.31,
+  &quot;stability_field&quot;: 0.72,
+  &quot;envelope_boundary&quot;: 0.41
+}
+</code></pre>
+<hr>
+<h2 id="3-boundary-collapse-cases"><strong>3. Boundary Collapse Cases</strong></h2>
+<h3 id="case-5-abstractionmeasurement-collapse-r1-r3"><strong>Case 5 — Abstraction‑Measurement Collapse (R1 ↔ R3)</strong></h3>
+<p><strong>Scenario</strong><br>
+Conceptual abstraction collapses when confronted with contradictory physical measurement.</p>
+<p><strong>SBC Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;regime&quot;: &quot;R1-R3&quot;,
+  &quot;basin_magnitude&quot;: 0.67,
+  &quot;basin_direction&quot;: &quot;R1→R3&quot;,
+  &quot;basin_curvature&quot;: 0.33,
+  &quot;collapse_zone&quot;: 0.22,
+  &quot;stability_field&quot;: 0.55,
+  &quot;envelope_boundary&quot;: 0.38
+}
+</code></pre>
+<hr>
+<h3 id="case-6-gradientboundary-collapse-r2-r4"><strong>Case 6 — Gradient‑Boundary Collapse (R2 ↔ R4)</strong></h3>
+<p><strong>Scenario</strong><br>
+Aligned gradients across computational and dimensional regimes collapse into instability.</p>
+<p><strong>SBC Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;regime&quot;: &quot;R2-R4&quot;,
+  &quot;basin_magnitude&quot;: 0.88,
+  &quot;basin_direction&quot;: &quot;R2↔R4&quot;,
+  &quot;basin_curvature&quot;: 0.47,
+  &quot;collapse_zone&quot;: 0.29,
+  &quot;stability_field&quot;: 0.66,
+  &quot;envelope_boundary&quot;: 0.58
+}
+</code></pre>
+<hr>
+<h2 id="4-stabilityfield-collapse-cases"><strong>4. Stability‑Field Collapse Cases</strong></h2>
+<h3 id="case-7-multiregime-collapse-field-r1-r2-r3"><strong>Case 7 — Multi‑Regime Collapse Field (R1 ↔ R2 ↔ R3)</strong></h3>
+<p><strong>Scenario</strong><br>
+A multi‑regime stability field collapses under tensor‑level instability.</p>
+<p><strong>SBC Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;regime&quot;: &quot;R1-R2-R3&quot;,
+  &quot;basin_magnitude&quot;: 0.94,
+  &quot;basin_direction&quot;: &quot;tensor&quot;,
+  &quot;basin_curvature&quot;: 0.63,
+  &quot;collapse_zone&quot;: 0.37,
+  &quot;stability_field&quot;: 0.78,
+  &quot;envelope_boundary&quot;: 0.57
+}
+</code></pre>
+<hr>
+<h3 id="case-8-dimensional-stability-collapse-r2-r4"><strong>Case 8 — Dimensional Stability Collapse (R2 ↔ R4)</strong></h3>
+<p><strong>Scenario</strong><br>
+Dimensional constraints collapse computational stability pathways.</p>
+<p><strong>SBC Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;regime&quot;: &quot;R2-R4&quot;,
+  &quot;basin_magnitude&quot;: 0.88,
+  &quot;basin_direction&quot;: &quot;R4→R2&quot;,
+  &quot;basin_curvature&quot;: 0.55,
+  &quot;collapse_zone&quot;: 0.33,
+  &quot;stability_field&quot;: 0.73,
+  &quot;envelope_boundary&quot;: 0.63
+}
+</code></pre>
+<hr>
+<h2 id="5-driftsensitive-collapse-cases"><strong>5. Drift‑Sensitive Collapse Cases</strong></h2>
+<h3 id="case-9-driftamplified-collapse-basin-r3-r4"><strong>Case 9 — Drift‑Amplified Collapse Basin (R3 → R4)</strong></h3>
+<p><strong>Scenario</strong><br>
+Physical drift amplifies stability curvature, forming a collapse basin.</p>
+<p><strong>SBC Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;regime&quot;: &quot;R3-R4&quot;,
+  &quot;basin_magnitude&quot;: 0.91,
+  &quot;basin_direction&quot;: &quot;R3→R4&quot;,
+  &quot;basin_curvature&quot;: 0.71,
+  &quot;collapse_zone&quot;: 0.52,
+  &quot;stability_field&quot;: 0.82,
+  &quot;envelope_boundary&quot;: 0.44
+}
+</code></pre>
+<hr>
+<h3 id="case-10-stabilitycoherence-collapse-ridge-r2-r3"><strong>Case 10 — Stability‑Coherence Collapse Ridge (R2 ↔ R3)</strong></h3>
+<p><strong>Scenario</strong><br>
+Computational stability reduces coherence while physical stability increases coherence sensitivity.</p>
+<p><strong>SBC Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;regime&quot;: &quot;R2-R3&quot;,
+  &quot;basin_magnitude&quot;: 0.86,
+  &quot;basin_direction&quot;: &quot;R2↔R3&quot;,
+  &quot;basin_curvature&quot;: 0.62,
+  &quot;collapse_zone&quot;: 0.49,
+  &quot;stability_field&quot;: 0.77,
+  &quot;envelope_boundary&quot;: 0.48
+}
+</code></pre>
+<hr>
+<h2 id="6-canonical-sbc-collapse-snippet"><strong>6. Canonical SBC Collapse Snippet</strong></h2>
+<pre><code class="language-json">{
+  &quot;regime&quot;: &quot;R1-R4&quot;,
+  &quot;basin_magnitude&quot;: 0.83,
+  &quot;basin_direction&quot;: &quot;R1↔R4&quot;,
+  &quot;basin_curvature&quot;: 0.51,
+  &quot;collapse_zone&quot;: 0.22,
+  &quot;stability_field&quot;: 0.69,
+  &quot;envelope_boundary&quot;: 0.46
+}
+</code></pre>
+<hr>
+<h2 id="status"><strong>Status</strong></h2>
+<ul>
+<li><strong>Version:</strong> 1.0  </li>
+<li><strong>Status:</strong> canon‑stable  </li>
+<li><strong>Category:</strong> rtt‑stability  </li>
+<li><strong>Module Path:</strong> <code>/docs/rtt/Stability_Basin_Cartographer/</code></li>
+</ul>
+  </main>
+</body>
+</html>

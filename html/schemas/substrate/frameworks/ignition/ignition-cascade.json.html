@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/substrate/frameworks/ignition/ignition-cascade.json.md">
+  <title>🌌 ignition-cascade.json</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/substrate/frameworks/ignition/ignition-cascade.json.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/substrate/frameworks/ignition/ignition-cascade.json.md</code>
+  </aside>
+
+  <main>
+<h1 id="ignition-cascadejson">🌌 <strong>ignition-cascade.json</strong></h1>
+<h3 id="planetary-ignition-cascade-atlas-waves-arcs-chains-webs-clusters-harmonics-anomalies"><em>Planetary ignition cascade atlas — waves, arcs, chains, webs, clusters, harmonics, anomalies</em></h3>
+<pre><code class="language-json">{
+  &quot;cascade&quot;: &quot;ignition&quot;,
+  &quot;version&quot;: &quot;1.0&quot;,
+  &quot;generated&quot;: &quot;YYYY-MM-DD&quot;,
+
+  &quot;imports&quot;: {
+    &quot;ignition_ledger&quot;: &quot;./global-ignition-ledger.json&quot;,
+    &quot;triadic_atlas&quot;: &quot;../atlas/triadic-atlas.json&quot;,
+    &quot;coherence_map&quot;: &quot;../coherence/global-coherence-map.json&quot;,
+    &quot;drift_map&quot;: &quot;../drift/global-drift-boundary-map.json&quot;,
+    &quot;stability_envelope&quot;: &quot;../stability/planetary-stability-envelope.json&quot;,
+    &quot;resonance_map&quot;: &quot;../resonance/global-resonance-map.json&quot;,
+    &quot;epochal_timeline&quot;: &quot;../epoch/timeline.json&quot;,
+    &quot;triadic_surfaces&quot;: &quot;../render/&quot;
+  },
+
+  &quot;ignition_cascade&quot;: {
+    &quot;waves&quot;: [
+      {
+        &quot;wave_id&quot;: &quot;string&quot;,
+        &quot;timestamp&quot;: &quot;YYYY-MM-DD&quot;,
+        &quot;countries&quot;: [&quot;string&quot;],
+        &quot;harmonics&quot;: [&quot;string&quot;],
+        &quot;phase&quot;: &quot;in-phase | out-of-phase | mixed&quot;,
+        &quot;severity&quot;: &quot;low | medium | high | critical&quot;
+      }
+    ],
+
+    &quot;arcs&quot;: [
+      {
+        &quot;arc_id&quot;: &quot;string&quot;,
+        &quot;origin&quot;: &quot;string&quot;,
+        &quot;targets&quot;: [&quot;string&quot;],
+        &quot;vector&quot;: &quot;string&quot;,
+        &quot;envelope&quot;: &quot;string&quot;,
+        &quot;epoch&quot;: &quot;string&quot;
+      }
+    ],
+
+    &quot;chains&quot;: [
+      {
+        &quot;chain_id&quot;: &quot;string&quot;,
+        &quot;sequence&quot;: [&quot;string&quot;],
+        &quot;trigger&quot;: &quot;string&quot;,
+        &quot;threshold&quot;: &quot;string&quot;
+      }
+    ],
+
+    &quot;webs&quot;: [
+      {
+        &quot;web_id&quot;: &quot;string&quot;,
+        &quot;nodes&quot;: [&quot;string&quot;],
+        &quot;edges&quot;: [
+          {
+            &quot;source&quot;: &quot;string&quot;,
+            &quot;target&quot;: &quot;string&quot;,
+            &quot;weight&quot;: 0.0,
+            &quot;mode&quot;: &quot;coherence | drift | stability | resonance | ignition&quot;
+          }
+        ]
+      }
+    ],
+
+    &quot;clusters&quot;: [
+      {
+        &quot;name&quot;: &quot;string&quot;,
+        &quot;countries&quot;: [&quot;string&quot;],
+        &quot;shared_harmonics&quot;: [&quot;string&quot;],
+        &quot;shared_phase&quot;: &quot;in-phase | out-of-phase | mixed&quot;,
+        &quot;shared_vectors&quot;: [&quot;string&quot;]
+      }
+    ],
+
+    &quot;anomalies&quot;: [
+      {
+        &quot;timestamp&quot;: &quot;YYYY-MM-DD&quot;,
+        &quot;country&quot;: &quot;string&quot;,
+        &quot;description&quot;: &quot;string&quot;,
+        &quot;severity&quot;: &quot;low | medium | high | critical&quot;
+      }
+    ]
+  },
+
+  &quot;output&quot;: {
+    &quot;ignition_cascade&quot;: &quot;./ignition-cascade.json&quot;
+  },
+
+  &quot;meta&quot;: {
+    &quot;notes&quot;: &quot;Planetary ignition cascade atlas: waves, arcs, chains, webs, clusters, harmonics, anomalies, and propagation routes.&quot;
+  }
+}
+</code></pre>
+<hr>
+<h2 id="canon-alignment">⭐ Canon alignment</h2>
+<p>This matches the ignition cascade renderer we built earlier:</p>
+<ul>
+<li><strong>Waves</strong>  </li>
+<li><strong>Arcs</strong>  </li>
+<li><strong>Chains</strong>  </li>
+<li><strong>Webs</strong>  </li>
+<li><strong>Clusters</strong>  </li>
+<li><strong>Anomalies</strong>  </li>
+<li><strong>Silent‑release compatible</strong>  </li>
+<li><strong>Ready for commit</strong>  </li>
+</ul>
+  </main>
+</body>
+</html>

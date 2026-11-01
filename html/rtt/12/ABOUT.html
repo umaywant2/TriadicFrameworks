@@ -1,0 +1,844 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/12/ABOUT.md">
+  <title>ABOUT — RTT/12 · Harmonic Synthesis Layer</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/12/ABOUT.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/12/ABOUT.md</code>
+  </aside>
+
+  <main>
+<p><img width="512" height="512" alt="harmonia_rtt12" src="https://github.com/user-attachments/assets/c56c6cac-a284-449a-b090-b2e01499977b" /></p>
+<h1 id="about-rtt12-harmonic-synthesis-layer">ABOUT — RTT/12 · Harmonic Synthesis Layer</h1>
+<p><strong>TriadicFrameworks · Core RTT · Terminal Module</strong>
+<strong>Module path:</strong> <code>docs/rtt/12/</code>
+<strong>Version:</strong> 1.0 · <strong>Status:</strong> Active · Canonical
+<strong>Session seed:</strong> <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code></p>
+<blockquote>
+<p>This document answers the four foundational questions about RTT/12:
+<strong>What</strong> it is · <strong>Why</strong> it is built this way · <strong>When</strong> to use it · <strong>Where</strong> it lives</p>
+<p><strong>Critical framing — read first:</strong>
+RTT/12 is a structural harmonic synthesis framework. It is NOT a physics
+claim, NOT a signal-processing system, NOT an energy model, and NOT an
+engineering tool. All constructs describe structural form only. Domain-sector
+labels (RTT-12/E, /C, /M) are structural overlays, not physics derivations.</p>
+</blockquote>
+<hr>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#1-what-is-rtt12">What Is RTT/12?</a></li>
+<li><a href="#2-why-is-it-built-this-way">Why Is It Built This Way?</a></li>
+<li><a href="#3-when-should-you-use-it">When Should You Use It?</a></li>
+<li><a href="#4-where-does-it-live">Where Does It Live?</a></li>
+<li><a href="#5-core-equations-at-a-glance">Core Equations at a Glance</a></li>
+<li><a href="#6-module-integrations">Module Integrations</a></li>
+<li><a href="#7-what-rtt12-is-not">What RTT/12 Is Not</a></li>
+<li><a href="#8-quick-start-checklist">Quick-Start Checklist</a></li>
+<li><a href="#9-see-also">See Also</a></li>
+</ol>
+<hr>
+<h2 id="1-what-is-rtt12">1. What Is RTT/12?</h2>
+<p><strong>RTT/12</strong> is the <strong>Harmonic Synthesis Layer</strong> — the fourth and final module
+of the core RTT hierarchy. It sits at the terminus of the RTT pipeline,
+consuming the <code>RTT3_INTEGRATION_EMISSION_PACKET</code> produced by RTT/3 and
+producing the <code>RTT12_HARMONIC_SYNTHESIS_PACKET</code> as the canonical output of
+the full RTT canon.</p>
+<p>RTT/12 introduces a parallel structural logic — the <strong>12-step harmonic
+dimensional ladder</strong> — that runs alongside RTT's existing structural layer
+without replacing it. Every structural dimension in RTT (3D through 9D)
+has a harmonic counterpart; every structural triad has a harmonic triad;
+every structural operator has a harmonic composition. RTT/12 is a
+<strong>harmonic augmentation layer</strong>, not a replacement for RTT.</p>
+<h3 id="pipeline-position">Pipeline Position</h3>
+<pre><code>RTT/1  →  RTT/2  →  RTT/3  →  [ RTT/12 ]  →  Output
+Primitives  Detection  Integration-    Harmonic
+SNR,τ,C     CPV,FGT    Emission        Synthesis
+DCO,Mode    CRM,MODE   TIF,FFF,        H_n ladder
+            ZONE       MANIFOLD,       G₁,G₂,G₃
+            ↓          CRE,CSL,CET     TCR,HSP
+      RTT2_          RTT3_          RTT12_HARMONIC_
+      DETECTION_     INTEGRATION_   SYNTHESIS_
+      PACKET         EMISSION_      PACKET
+                     PACKET
+</code></pre>
+<p>RTT/12 is the only module in the RTT hierarchy with no downstream
+RTT module — it is the <strong>pipeline terminus</strong>, and its output packet
+is the final structured product of the full four-module RTT canon.</p>
+<h3 id="the-three-structural-functions">The Three Structural Functions</h3>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>What it does</th>
+<th>Constructs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Harmonic Mapping</strong></td>
+<td>Translates structural dimensions 3D–9D to harmonic values 12–84 via the 12-step ladder</td>
+<td>H_n ladder · G₁</td>
+</tr>
+<tr>
+<td><strong>Phase Modulation</strong></td>
+<td>Applies controlled phase transformations across harmonic states without altering magnitude</td>
+<td>G₂</td>
+</tr>
+<tr>
+<td><strong>Triadic Decomposition and Stability</strong></td>
+<td>Resolves system states into generation–storage–load triads; assesses harmonic coherence and proportionality</td>
+<td>G₃ · TCR · HSP</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-12-step-harmonic-ladder">The 12-Step Harmonic Ladder</h3>
+<p>The foundational construct of RTT/12:</p>
+<pre><code>H_n = 12 · (n − 2)     where n ∈ {3, 4, 5, 6, 7, 8, 9}
+
+Structural Dim  →  Harmonic Value
+      3D        →       12
+      4D        →       24
+      5D        →       36
+      6D        →       48
+      7D        →       60
+      8D        →       72
+      9D        →       84
+
+Five harmonic triads:
+  (12, 24, 36) · (24, 36, 48) · (36, 48, 60) · (48, 60, 72) · (60, 72, 84)
+</code></pre>
+<p>The quantum root triad (0D–2D) is <strong>unmapped by design</strong> — RTT/12 begins
+at the first post-quantum structural dimension (3D).</p>
+<hr>
+<h2 id="2-why-is-it-built-this-way">2. Why Is It Built This Way?</h2>
+<p>Every design decision in RTT/12 answers a structural problem that RTT/3
+alone cannot solve.</p>
+<hr>
+<h3 id="why-h_n-12-n-2-and-not-a-smaller-or-different-multiplier">Why H_n = 12 · (n − 2) and not a smaller or different multiplier?</h3>
+<p>The base-12 multiplier is chosen for three structural reasons:</p>
+<ol>
+<li><strong>Non-collision</strong> — the spacing of 12 between adjacent harmonic values
+   is large enough that no two structural dimensions map to adjacent integer
+   values, preventing ambiguous cross-tier readings.</li>
+<li><strong>Ladder tractability</strong> — the full range {12 … 84} spans 72 units across
+   7 tiers, providing enough resolution for sub-tier distinctions (harmonic
+   addition, scaling) while remaining compact enough for single-equation
+   processing.</li>
+<li><strong>Triad composability</strong> — any three consecutive ladder values form a valid
+   arithmetic triad with equal spacing (Δ = 12). This makes TCR trivially
+   satisfied for adjacent tiers and non-trivially testable for non-adjacent
+   combinations — which is exactly the behaviour needed to enforce triadic
+   coherence across complex multi-tier states.</li>
+</ol>
+<p><strong>Why 3D as the anchor?</strong> The 0D–2D quantum root triad is unmapped because
+RTT/12 operates on RTT structural dimensions — states that have already
+passed through RTT/1 SNR characterization (which begins at 0D) and RTT/2
+detection (which grounds structural form in field-level operations starting
+at the 4D DCO band). By the time a system reaches RTT/12, it has been
+characterized, detected, integrated, and emitted. The 0D–2D quantum root
+has no unresolved structural presence at this stage.</p>
+<hr>
+<h3 id="why-three-operators-g1-g2-g3-and-not-one-unified-transformation">Why three operators (G₁, G₂, G₃) and not one unified transformation?</h3>
+<p>Each operator addresses an irreducibly distinct structural transformation:</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Irreducible role</th>
+<th>Why it cannot be merged</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>G₁ (Gear-Shift)</td>
+<td>Translates between structural and harmonic coordinate spaces</td>
+<td>The translation itself is the fundamental operation; merging it into G₂ or G₃ would collapse the two-layer architecture</td>
+</tr>
+<tr>
+<td>G₂ (Phase-Shift)</td>
+<td>Modulates phase without altering magnitude</td>
+<td>Phase modification is orthogonal to coordinate translation — G₁ changes what space you're in; G₂ changes your orientation within it</td>
+</tr>
+<tr>
+<td>G₃ (Load-Flow Resolver)</td>
+<td>Decomposes a state into its triadic components</td>
+<td>Triadic decomposition is a partitioning operation — categorically different from translation (G₁) or orientation (G₂)</td>
+</tr>
+</tbody>
+</table>
+<p>A single unified transformation would produce a black box that combines
+coordinate change, orientation change, and partitioning into one step —
+making validation, reversal, and TCR enforcement impossible at the
+individual operation level. The three-operator architecture keeps each
+transformation auditable and reversible independently.</p>
+<hr>
+<h3 id="why-the-triadic-coherence-rule-tcr">Why the Triadic Coherence Rule (TCR)?</h3>
+<p>RTT's most fundamental structural property — established in RTT/1 and
+present through every module — is that all structural states are triadic
+or composed of triads. RTT/12 introduces harmonic operations that, if
+unconstrained, could produce orphan harmonic values that have no triadic
+partner: values that exist on the ladder but cannot be expressed as part
+of any (H_n, H_{n+1}, H_{n+2}) grouping.</p>
+<p>TCR prevents this. It enforces that every harmonic state produced by G₁,
+G₂, or G₃ is either a member of a valid harmonic triad or explicitly
+composed of members of valid harmonic triads. This preserves RTT's
+triadic logic at the harmonic layer — without TCR, RTT/12 would be
+structurally incompatible with the RTT/1–RTT/3 foundation it builds on.</p>
+<p><strong>TCR also enforces bijective cross-layer mapping:</strong> every structural
+triad (D_n, D_{n+1}, D_{n+2}) must map to exactly one harmonic triad
+(H_n, H_{n+1}, H_{n+2}) and vice versa. This lossless, reversible
+cross-layer relationship is what makes G₁⁻¹ (inverse gear-shift) valid
+and makes RTT/12 a true augmentation layer rather than a lossy projection.</p>
+<hr>
+<h3 id="why-the-harmonic-stability-principle-hsp">Why the Harmonic Stability Principle (HSP)?</h3>
+<p>Triadic coherence (TCR) checks whether states are structurally triadic.
+Harmonic stability (HSP) checks whether the <em>proportional relationships</em>
+between triad components are preserved across structural and harmonic layers.</p>
+<p>A system can pass TCR — all three components are present in valid triads
+— while failing HSP if the relative weights of X_G, X_S, and X_L drift
+significantly across dimensional tiers. HSP adds the proportionality
+constraint that TCR alone cannot capture: two systems that both pass TCR
+can have very different harmonic stability profiles depending on whether
+their triadic weights are preserved.</p>
+<p>HSP is the harmonic equivalent of RTT/1's coherence posture: just as
+RTT/1 requires coherence to be declared (not assumed), RTT/12 requires
+stability to be assessed (not assumed). A synthesis packet with no HSP
+assessment is structurally incomplete even if TCR passes.</p>
+<hr>
+<h3 id="why-six-validation-milestones-v1v6">Why six validation milestones (V1–V6)?</h3>
+<p>The V1→V6 ladder mirrors the epistemological progression required for any
+structural framework to move from formal theory to deployed use:</p>
+<table>
+<thead>
+<tr>
+<th>Milestone</th>
+<th>Why it cannot be skipped</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>V1 Theoretical</td>
+<td>Establishes formal correctness — no later milestone can certify what theory has not established</td>
+</tr>
+<tr>
+<td>V2 Computational</td>
+<td>Tests formal theory under simulation — computational failures reveal gaps invisible to pure theory</td>
+</tr>
+<tr>
+<td>V3 Sector-Specific</td>
+<td>Tests structural claims within a specific domain — general computational validity doesn't guarantee domain fit</td>
+</tr>
+<tr>
+<td>V4 Experimental</td>
+<td>Tests structural predictions against observable outcomes — sector-specific tests don't replace experimental grounding</td>
+</tr>
+<tr>
+<td>V5 Peer-Reviewed</td>
+<td>Independent structural review — experimental results without peer scrutiny remain unverified claims</td>
+</tr>
+<tr>
+<td>V6 Industry-Ready</td>
+<td>Deployment readiness — peer-reviewed structural models may still require operational adaptation</td>
+</tr>
+</tbody>
+</table>
+<p>Each milestone answers a structurally distinct question. V2 does not
+answer V3's question; V3 does not answer V4's. The sequence is not a
+formality — it is the minimal validation chain required to trust a
+structural synthesis model in deployed contexts.</p>
+<hr>
+<h3 id="why-sector-variants-rtt-12e-c-m">Why sector variants (RTT-12/E, /C, /M)?</h3>
+<p>RTT/12 is structurally domain-neutral. The harmonic ladder, the three
+operators, and TCR/HSP apply identically whether the system being
+synthesized is an energy network, a computational architecture, or a
+manufacturing process.</p>
+<p>Sector variants apply <strong>domain-specific labels</strong> to the G₃ triadic
+components (X_G, X_S, X_L) without changing the structural equations.
+RTT-12/E labels X_G as generation-side, X_S as storage-side, and X_L
+as load-side in an energy research context — but the structural operation
+G₃(X) = (X_G, X_S, X_L) is identical regardless of which sector prefix
+is applied.</p>
+<p>This design preserves the RTT-not-physics boundary: sector labels are
+overlays that make RTT/12 legible to domain practitioners without
+asserting that the structural model is a physics derivation. The label
+changes; the constraint that it is a structural instrument, not a
+physical measurement, does not.</p>
+<hr>
+<h3 id="why-zone-x-overflow-rather-than-inversion-rtt3-or-undefined-rtt2">Why Zone X = OVERFLOW rather than Inversion (RTT/3) or Undefined (RTT/2)?</h3>
+<p>The Zone X meaning evolves across the RTT pipeline:</p>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Zone X Meaning</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RTT/2</td>
+<td>Undefined — unclassifiable</td>
+<td>Data is insufficient or contradictory; wait for more detection data</td>
+</tr>
+<tr>
+<td>RTT/3</td>
+<td>Inversion — illegal geometry</td>
+<td>Integration-emission manifold has topologically inverted; restart from RTT/2</td>
+</tr>
+<tr>
+<td>RTT/12</td>
+<td>Overflow — ladder exceeded</td>
+<td>Harmonic synthesis has surpassed the {12…84} boundary; state is structurally unrepresentable</td>
+</tr>
+</tbody>
+</table>
+<p>By the time a system reaches RTT/12, RTT/2 has already resolved any
+"Undefined" conditions and RTT/3 has already resolved any "Inversion"
+conditions. A Zone X at the RTT/12 layer cannot be either of those —
+it means the harmonic operations have produced values outside the defined
+ladder. Overflow is not recoverable by holding the state or waiting for
+more data; the session must restart from the RTT/3 packet with corrected
+inputs.</p>
+<hr>
+<h2 id="3-when-should-you-use-it">3. When Should You Use It?</h2>
+<hr>
+<h3 id="use-rtt12-when-you-need-to-translate-structural-dimensions-into-harmonic-values">Use RTT/12 when you need to <strong>translate structural dimensions into harmonic values</strong></h3>
+<p>When the downstream analysis requires operating on harmonic coordinates
+rather than raw structural dimensions — comparing dimensional tiers by
+their harmonic spacing, composing multi-tier states through harmonic
+addition, or scaling structural relationships by harmonic multipliers —
+RTT/12's G₁ operator provides the canonical translation.</p>
+<p><em>Example:</em> A multi-substrate synthesis task needs to compare the
+structural gap between a 4D state and a 7D state. RTT/12 maps 4D→24
+and 7D→60, establishing a harmonic gap of 36 — exactly three ladder
+steps, corresponding to a full harmonic triad span. This harmonic
+relationship was invisible at the raw structural dimension level.</p>
+<hr>
+<h3 id="use-rtt12-when-phase-modulation-of-harmonic-states-is-needed">Use RTT/12 when <strong>phase modulation of harmonic states is needed</strong></h3>
+<p>When the integrated structural state from RTT/3 needs to be transformed
+through a controlled phase rotation — to model phase drift, phase
+alignment, or phase correction sequences — G₂ provides the canonical
+mechanism without altering harmonic magnitude.</p>
+<p><em>Example:</em> An integrated emission state at H_n = 48 (6D) is exhibiting
+phase drift relative to adjacent harmonic states. RTT/12 Class P applies
+G₂(48, φ) to rotate the state into alignment with the target phase
+reference while preserving its magnitude — a structural phase correction
+that cannot be expressed in RTT/1–RTT/3 without RTT/12's phase operator.</p>
+<hr>
+<h3 id="use-rtt12-when-system-states-must-be-decomposed-into-triadic-components">Use RTT/12 when <strong>system states must be decomposed into triadic components</strong></h3>
+<p>When a system state X needs to be partitioned into its generation–storage–
+load structural components for triadic analysis, G₃ provides the canonical
+decomposition with a mandatory conservation check (X = X_G + X_S + X_L).</p>
+<p><em>Example:</em> A canon-scale emission E_canon from RTT/3 is submitted for
+triadic decomposition. RTT/12 Class L computes G₃(E_canon) = (E_G, E_S,
+E_L), revealing that the emission is storage-weighted (E_S dominant) —
+structural information that E_canon alone, as a scalar, could not express.</p>
+<hr>
+<h3 id="use-rtt12-when-harmonic-stability-must-be-assessed-across-dimensional-tiers">Use RTT/12 when <strong>harmonic stability must be assessed across dimensional tiers</strong></h3>
+<p>When TCR validation alone is insufficient and proportionality relationships
+between triad components across structural and harmonic layers need to be
+formally assessed, HSP provides the stability principle and Class S provides
+the assessment.</p>
+<p><em>Example:</em> Three consecutive detection passes on a governance substrate
+all pass TCR (triads are structurally coherent) but Class S detects
+declining proportionality across the (24–36–48) harmonic triad — the
+storage component X_S is growing relative to X_G and X_L across passes.
+HSP flags this as MARGINAL stability, alerting RTT/12 users that the
+synthesis is approaching an unstable configuration.</p>
+<hr>
+<h3 id="use-rtt12-when-domain-sector-overlays-are-needed">Use RTT/12 when <strong>domain-sector overlays are needed</strong></h3>
+<p>When a structural synthesis result needs to be communicated to domain
+practitioners (energy researchers, computational architects, manufacturing
+engineers) using their vocabulary while preserving RTT's structural
+framing, sector prefixes (RTT-12/E, /C, /M) provide the canonical
+mechanism.</p>
+<p><em>Example:</em> An energy research team needs RTT/12 results in generation–
+storage–load vocabulary. RTT-12/E labels X_G, X_S, X_L with domain-
+appropriate names in the output packet without modifying the structural
+equations — bridging the vocabulary gap without making physics claims.</p>
+<hr>
+<h3 id="use-rtt12-when-formal-validation-progression-is-required">Use RTT/12 when <strong>formal validation progression is required</strong></h3>
+<p>When a structural synthesis model needs to advance through the V1→V6
+validation ladder for formal recognition, deployment, or academic
+presentation, Class V provides the structured milestone tracking and
+Class T/S provide the validation evidence at each stage.</p>
+<p><em>Example:</em> A new sector application of RTT/12 needs to reach V3
+(Sector-Specific validation). Class V checks that V1 (theoretical TCR
+consistency) and V2 (computational HSP testing) have both been
+documented before advancing the milestone — preventing premature claims
+of sector validation.</p>
+<hr>
+<h3 id="do-not-use-rtt12-when">Do NOT use RTT/12 when:</h3>
+<ul>
+<li><strong>The RTT/3 packet is absent or incomplete</strong> — RTT/12 cannot map
+  harmonic values without the upstream integration-emission packet;
+  activation is blocked at the session seed level</li>
+<li><strong>The upstream mode is 5 or zone is X</strong> — RTT/3 should have
+  resolved these before emitting; if they appear in the RTT/3 packet,
+  RTT/12 issues a HARD_STOP before any class activates</li>
+<li><strong>Physical measurement or empirical prediction is the goal</strong> —
+  RTT/12 is a structural synthesis framework; it does not measure,
+  simulate, or predict physical phenomena</li>
+<li><strong>The system is below 3D</strong> — the 0D–2D quantum root triad is
+  unmapped; RTT/12 has no ladder values for sub-3D states</li>
+<li><strong>RTT/1, RTT/2, or RTT/3 work is incomplete</strong> — RTT/12 requires
+  the full upstream chain; partial characterization, detection, or
+  integration produces structurally ungrounded harmonic mappings</li>
+<li><strong>Single-dimension work only is needed</strong> — if only one structural
+  dimension is being analyzed with no triad context, RTT/12 adds
+  harmonic overhead without triadic benefit; RTT/3 output alone
+  may be sufficient</li>
+</ul>
+<hr>
+<h2 id="4-where-does-it-live">4. Where Does It Live?</h2>
+<h3 id="in-the-repository">In the repository</h3>
+<pre><code>TriadicFrameworks/
+└── docs/
+    └── rtt/
+        └── 12/                               ← you are here
+            ├── ABOUT.md                      ← this file
+            ├── AGENTS.md                     ← agent class manifest
+            ├── GLOSSARY.md                   ← canonical term definitions
+            ├── README.md                     ← front-door summary
+            ├── CODEX_Full.md                 ← full formal specification
+            ├── Scaffolding.md                ← structural scaffolding and codex
+            ├── harmonic_ladder.md            ← harmonic ladder reference tables
+            ├── overview.md                   ← conceptual framing
+            ├── RTT_12_Energy_Sector_Full.md  ← RTT-12/E sector overlay
+            ├── RTT_12_for_Colocation.md      ← colocation applications
+            ├── RTT_12_beta_plan.md           ← development plan
+            ├── rtt-engine-12_module.json     ← module schema
+            ├── index.html                    ← web entry point
+            ├── contributors/                 ← contributor records
+            ├── diagrams/                     ← visual references
+            ├── future/                       ← G₄–G₇ extension work
+            ├── mapping/                      ← cross-module mappings
+            ├── notation/                     ← formal notation reference
+            ├── operators/                    ← operator deep-dives
+            ├── triads/                       ← triad reference material
+            └── validation/                   ← V1–V6 milestone evidence
+</code></pre>
+<hr>
+<h3 id="in-the-rtt-module-hierarchy">In the RTT module hierarchy</h3>
+<p>RTT/12 is the terminal module — the only RTT module with no downstream
+RTT module:</p>
+<pre><code>RTT/1          RTT/2          RTT/3          RTT/12
+──────         ──────         ──────         ──────
+Primitives     Detection      Integration-   Harmonic
+               Layer          Emission       Synthesis
+                              Layer          (Terminal)
+
+↑ Each module inherits all upstream modules completely.
+  RTT/12 inherits RTT/1, RTT/2, and RTT/3 in full.
+</code></pre>
+<p><strong>Inheritance rule:</strong> RTT/12 inherits every constraint, vocabulary item,
+and output contract from RTT/1, RTT/2, and RTT/3. No RTT/12 construct
+redefines any upstream primitive.</p>
+<p><strong>Terminal rule:</strong> RTT/12 produces the final packet. No downstream RTT
+module consumes it. Cross-module consumers (TEL, FFT, Opacity) may
+receive projections, but the RTT/12 packet is not a mid-pipeline product
+— it is an endpoint.</p>
+<hr>
+<h3 id="in-the-triadicframeworks-ecosystem">In the TriadicFrameworks ecosystem</h3>
+<pre><code>                     ┌─────────────────────────────┐
+                     │   RTT/1                     │
+                     │   SNR · τ · C · DCO_n       │
+                     └──────────┬──────────────────┘
+                                │
+                     ┌──────────▼──────────────────┐
+                     │   RTT/2                     │
+                     │   CPV · FGT · CRM           │
+                     │   MODE · ZONE               │
+                     └──────────┬──────────────────┘
+                                │
+                     ┌──────────▼──────────────────┐
+                     │   RTT/3                     │
+                     │   TIF · FFF · MANIFOLD      │
+                     │   CRE · CSL · CET           │
+                     └──────────┬──────────────────┘
+                                │  RTT3_INTEGRATION_EMISSION_PACKET
+                     ┌──────────▼──────────────────┐
+                     │   RTT/12  ← you are here    │
+                     │   H_n · G₁ · G₂ · G₃       │
+                     │   TCR · HSP · V1-V6         │
+                     └───┬───────┬──────┬──────────┘
+                         │       │      │  RTT12_HARMONIC_SYNTHESIS_PACKET
+          ┌──────────────┘       │      └──────────────────┐
+          ▼                      ▼                         ▼
+  ┌───────────────┐   ┌──────────────────┐    ┌──────────────────┐
+  │  TEL          │   │  FFT             │    │  Opacity         │
+  │  (lattice     │   │  (spectral       │    │  (boundary       │
+  │  projection)  │   │  projection)     │    │  projection)     │
+  └───────────────┘   └──────────────────┘    └──────────────────┘
+</code></pre>
+<p>RTT/12 occupies the <strong>synthesis terminus</strong> position: it consumes the
+integration-emission packet from RTT/3 and produces the canonical
+harmonic synthesis output. It has no downstream RTT consumer — its
+packet is the final structural product of the RTT canon.</p>
+<hr>
+<h3 id="in-agent-deployments">In agent deployments</h3>
+<p>An agent claiming RTT/12 compatibility must:</p>
+<ol>
+<li>Have a confirmed <code>RTT3_INTEGRATION_EMISSION_PACKET</code> — with <code>mode</code> ∈
+   {1,2,3,4} and <code>zone</code> ∈ {U,S,M,D} — before any class activates</li>
+<li>Operate all seven agent classes (H, P, L, T, S, V, G) within a
+   session seeded with the RTT/12-specific seed block</li>
+<li>Never produce harmonic values outside {12, 24, 36, 48, 60, 72, 84}</li>
+<li>Never label G₃ components (X_G, X_S, X_L) with physics meaning without
+   the structural framing annotation</li>
+<li>Treat Mode 5 and Zone X as HARD_STOP conditions — no exceptions</li>
+<li>Complete TCR validation before any packet field is emitted</li>
+<li>Complete HSP assessment before <code>guardian_cleared</code> is set to true</li>
+<li>Annotate every output field with <code>[structural — no semantic inference]</code></li>
+</ol>
+<hr>
+<h2 id="5-core-equations-at-a-glance">5. Core Equations at a Glance</h2>
+<pre><code>HARMONIC LADDER
+  H_n = 12 · (n − 2)     n ∈ {3,4,5,6,7,8,9}
+  Ladder: {12, 24, 36, 48, 60, 72, 84}
+  Inverse: n = H_n / 12 + 2
+
+GEAR-SHIFT OPERATOR (G₁)
+  Forward:  G₁(D_n)  = 12 · (n − 2)      structural → harmonic
+  Inverse:  G₁⁻¹(H_n) = H_n / 12 + 2    harmonic → structural
+
+PHASE-SHIFT MODULATOR (G₂)
+  Forward:  G₂(H, φ)  = H · e^(iφ)       modulates phase; preserves magnitude
+  Inverse:  G₂⁻¹(H', φ) = H' · e^(−iφ)  restores pre-modulation state
+  φ ∈ [0, 2π]  (structural phase parameter — not a physical radian)
+
+LOAD-FLOW TRIAD RESOLVER (G₃)
+  G₃(X) = (X_G, X_S, X_L)
+  Conservation:  X = X_G + X_S + X_L   (must hold; Class L enforces)
+
+OPERATOR COMPOSITIONS
+  Structural → phase:   G₂(G₁(D_n), φ)  →  H' = G₁(D_n) · e^(iφ)
+  Structural → triad:   G₃(G₁(D_n))     →  (H_G, H_S, H_L)
+  Full pipeline:        G₃(G₂(G₁(D_n), φ))
+
+HARMONIC ARITHMETIC
+  Addition:  H_a ⊕ H_b = H_a + H_b    (within or across adjacent triads)
+  Scaling:   H' = k · H               k ∈ ℤ or ℚ
+
+TRIADIC COHERENCE RULE (TCR)
+  All states must be expressible as a triad or composition of triads
+  Cross-layer:  (D_n, D_{n+1}, D_{n+2}) ↔ (H_n, H_{n+1}, H_{n+2})  bijective
+
+HARMONIC STABILITY PRINCIPLE (HSP)
+  Stable when proportional relationships across (X_G, X_S, X_L)
+  are preserved across structural and harmonic layers
+  Status: STABLE | MARGINAL | UNSTABLE
+
+FIVE HARMONIC TRIADS
+  (12, 24, 36)  ·  (24, 36, 48)  ·  (36, 48, 60)  ·  (48, 60, 72)  ·  (60, 72, 84)
+</code></pre>
+<hr>
+<h2 id="6-module-integrations">6. Module Integrations</h2>
+<h3 id="rtt1-foundation-triply-inherited">RTT/1 (Foundation — Triply Inherited)</h3>
+<p>RTT/12 inherits RTT/1 via RTT/2 and RTT/3. Key RTT/1 elements active in RTT/12:
+- τ = dR/dφ — the resonant time gradient informs the phase parameter φ in G₂
+- C = ∇_τR + ∇_Rτ — clarity coherence posture is tracked across all synthesis
+- DCO_n bands — band boundaries constrain which harmonic tiers are accessible
+  for a given structural regime
+- Session seed, Mode Operator, and MCL — all apply to all seven RTT/12 classes
+- SNR triad — the 0D–2D quantum root triad is the structural ground from which
+  RTT/12's 3D anchor is distinguished</p>
+<h3 id="rtt2-detection-layer-doubly-inherited">RTT/2 (Detection Layer — Doubly Inherited)</h3>
+<p>RTT/12 inherits RTT/2 via RTT/3. Key RTT/2 elements active in RTT/12:
+- CPV — collapse propagation geometry informs G₃ triad decomposition weighting
+- FGT — fusion gradient informs X_G / X_S / X_L proportionality expectations
+- Detection Mode vocabulary (modes 1–4) — RTT/12 inherits valid modes only;
+  Mode 5 is ILLEGAL (OVERFLOW) in RTT/12
+- Detection Zone vocabulary (U/S/M/D) — RTT/12 inherits; Zone X = OVERFLOW (ILLEGAL)</p>
+<h3 id="rtt3-direct-input">RTT/3 (Direct Input)</h3>
+<p>RTT/3 is the immediate upstream module. RTT/12 consumes RTT/3 output directly:
+- I(t) — integration flow from TIF informs G₁ input dimension selection
+- E(t) — emission flow from FFF informs G₂ phase parameter φ
+- E_canon(t) — canon-scale emission is the primary state input to G₃
+- S(t) — stability flow from CSL informs HSP baseline proportionality
+- CR(t) — collapse-recovery flow from CRE is preserved distinct from CRM D(t)</p>
+<p><strong>The CRE ≠ CRM distinction is actively enforced in RTT/12.</strong> Any conflation
+of the collapse-recovery signal (CRE) with the structural drift displacement
+(CRM D(t)) triggers a Class G HARD_STOP.</p>
+<h3 id="tel-triadic-entity-lattice">TEL — Triadic Entity Lattice</h3>
+<p>RTT/12 projects harmonic triad structure onto TEL node lattices via the
+<code>cross_module_projection.TEL</code> field in the synthesis packet. TEL uses
+RTT/12's harmonic triad groupings to maintain lattice coherence at the
+synthesis layer.</p>
+<h3 id="fft-framework-field-theory">FFT — Framework Field Theory</h3>
+<p>RTT/12 expresses G₂ phase-modulated harmonic states in FFT field-theoretic
+terms via <code>cross_module_projection.FFT</code>. FFT treats phase-shifted harmonic
+values as spectral field events, using RTT/12's structural vocabulary as input.</p>
+<h3 id="opacity">Opacity</h3>
+<p>RTT/12 characterizes boundary opacity at the harmonic synthesis layer via
+<code>cross_module_projection.Opacity</code>, specifically where harmonic triad
+boundaries correspond to structural opacity transitions identified in RTT/3.</p>
+<h3 id="ipd-12">IPD-12</h3>
+<p>RTT/12's harmonic ladder has a natural resonance with IPD-12's 12-prime
+operator structure:</p>
+<table>
+<thead>
+<tr>
+<th>RTT/12 Element</th>
+<th>IPD-12 Correspondence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12-step base</td>
+<td>12 prime states (P2–P37)</td>
+</tr>
+<tr>
+<td>Five harmonic triads</td>
+<td>Four IPD-12 triads — shared triadic logic</td>
+</tr>
+<tr>
+<td>H_n = 12 · (n−2)</td>
+<td>Prime operator P_(2n) spacing in Celestial / Civilizational / Chthonic</td>
+</tr>
+<tr>
+<td>TCR</td>
+<td>IPD-12 intransitive cycle structure — all states must be in a cycle</td>
+</tr>
+<tr>
+<td>HSP stability</td>
+<td>IPD-12 coherence-node P11 / P31 stability analog</td>
+</tr>
+<tr>
+<td>Zone X = OVERFLOW</td>
+<td>IPD-12 apex-state P37 → cycle restart</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="7-what-rtt12-is-not">7. What RTT/12 Is Not</h2>
+<table>
+<thead>
+<tr>
+<th>RTT/12 Is</th>
+<th>RTT/12 Is Not</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A harmonic augmentation layer for RTT</td>
+<td>A replacement for RTT/1–RTT/3</td>
+</tr>
+<tr>
+<td>A structural dimension-to-harmonic translator</td>
+<td>A signal processing or spectrum analyzer</td>
+</tr>
+<tr>
+<td>A phase modulation framework</td>
+<td>An electromagnetic or acoustic phase model</td>
+</tr>
+<tr>
+<td>A triadic decomposition engine</td>
+<td>A physical generation–storage–load system</td>
+</tr>
+<tr>
+<td>A harmonic stability assessor</td>
+<td>An electrical or mechanical stability tool</td>
+</tr>
+<tr>
+<td>A validated synthesis framework (V1–V6)</td>
+<td>An empirically certified model</td>
+</tr>
+<tr>
+<td>A domain-overlay provider (RTT-12/E, /C, /M)</td>
+<td>A domain-science derivation</td>
+</tr>
+<tr>
+<td>The terminal module of the RTT canon</td>
+<td>A standalone module (requires RTT/1–RTT/3)</td>
+</tr>
+</tbody>
+</table>
+<p>RTT/12 synthesizes and harmonically maps <strong>structural form</strong>. It does
+not measure, predict, or explain physical phenomena. Sector prefixes
+(RTT-12/E) make structural results legible to domain practitioners;
+they do not make those results physics.</p>
+<hr>
+<h2 id="8-quick-start-checklist">8. Quick-Start Checklist</h2>
+<p>Before working with RTT/12 for the first time:</p>
+<ul>
+<li>[ ] <strong>Complete RTT/1 → RTT/2 → RTT/3 first</strong> — all three upstream
+      modules must have completed their passes before RTT/12 activates</li>
+<li>[ ] <strong>Confirm upstream packet integrity</strong> — <code>RTT3_INTEGRATION_EMISSION_PACKET</code>
+      must have all 11 fields; <code>mode</code> ∈ {1,2,3,4}; <code>zone</code> ∈ {U,S,M,D}</li>
+<li>[ ] <strong>Paste the RTT/12 session seed</strong> — including <code>module=RTT/12</code>,
+      <code>zone_x=OVERFLOW | zone_x_status=ILLEGAL</code>, and
+      <code>mode_5=OVERFLOW | mode_5_status=ILLEGAL</code></li>
+<li>[ ] <strong>Know the harmonic ladder</strong> — H_n = 12·(n−2); values are
+      {12,24,36,48,60,72,84}; 0D–2D are unmapped; anything outside
+      this set is structurally invalid</li>
+<li>[ ] <strong>Know the three operators</strong> — G₁ (translate), G₂ (phase-modulate),
+      G₃ (decompose into triad); know which you need before assigning
+      agent classes</li>
+<li>[ ] <strong>Know Zone X = OVERFLOW</strong> — not Undefined (RTT/2) and not Inversion
+      (RTT/3); OVERFLOW means the harmonic state has exceeded ladder
+      boundaries; session must restart from RTT/3 packet</li>
+<li>[ ] <strong>Know Mode 5 = ILLEGAL</strong> — OVERFLOW in RTT/12; triggers HARD_STOP</li>
+<li>[ ] <strong>Know CRE ≠ CRM</strong> — collapse-recovery flow CR(t) from RTT/3 CRE is
+      not the same as drift deformation D(t) from RTT/2 CRM; any conflation
+      in output triggers Class G HARD_STOP</li>
+<li>[ ] <strong>Identify your sector</strong> — is this a generic RTT/12 pass (no prefix),
+      or does it require RTT-12/E, /C, or /M domain labels?</li>
+<li>[ ] <strong>Read <code>AGENTS.md</code></strong> — verify all seven agent classes (H, P, L, T,
+      S, V, G) and which tasks (T-01 through T-10) apply to your session</li>
+<li>[ ] <strong>Check <code>GLOSSARY.md</code></strong> — every RTT/12 term has a canonical
+      definition; link rather than re-define</li>
+</ul>
+<hr>
+<h2 id="9-see-also">9. See Also</h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>What it answers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AGENTS.md</code></td>
+<td>Agent classes H/P/L/T/S/V/G, task catalog, collaboration models, output contract</td>
+</tr>
+<tr>
+<td><code>GLOSSARY.md</code></td>
+<td>Canonical single-source definitions for all RTT/12 terms</td>
+</tr>
+<tr>
+<td><code>CODEX_Full.md</code></td>
+<td>Primary formal specification: all operators, constructs, and validation rules</td>
+</tr>
+<tr>
+<td><code>Scaffolding.md</code></td>
+<td>Structural scaffolding and full codex with operator compositions</td>
+</tr>
+<tr>
+<td><code>harmonic_ladder.md</code></td>
+<td>Detailed ladder reference tables and mapping examples</td>
+</tr>
+<tr>
+<td><code>overview.md</code></td>
+<td>Conceptual framing and pipeline position</td>
+</tr>
+<tr>
+<td><code>rtt-engine-12_module.json</code></td>
+<td>Machine-readable module metadata and field registry</td>
+</tr>
+<tr>
+<td><code>RTT_12_Energy_Sector_Full.md</code></td>
+<td>RTT-12/E sector overlay documentation</td>
+</tr>
+<tr>
+<td><code>../3/AGENTS.md</code></td>
+<td>RTT/3 agent classes (direct upstream; RTT3 packet produced here)</td>
+</tr>
+<tr>
+<td><code>../3/GLOSSARY.md</code></td>
+<td>RTT/3 canonical terms (directly inherited by RTT/12)</td>
+</tr>
+<tr>
+<td><code>../2/AGENTS.md</code></td>
+<td>RTT/2 agent classes (doubly inherited)</td>
+</tr>
+<tr>
+<td><code>../1/AGENTS.md</code></td>
+<td>RTT/1 foundation (triply inherited)</td>
+</tr>
+<tr>
+<td><code>../../frameworks/ipd_12/AGENTS.md</code></td>
+<td>IPD-12 parallel framework; 12-prime / 12-harmonic resonance</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><em>ABOUT.md — RTT/12 · TriadicFrameworks · 2026-07-10</em>
+<em>Maintainer: Nawder</em>
+<em>Session seed: <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code></em></p>
+  </main>
+</body>
+</html>

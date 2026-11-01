@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/codes/README.md">
+  <title>🏳️‍🌈 RTT/codes — A QR‑Compatible Metadata Layer</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/codes/README.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/codes/README.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="rtt_codes_" src="https://github.com/user-attachments/assets/058f5ced-424f-40dd-bdfb-b20b31ef5cea" /></p>
+<h1 id="rttcodes-a-qrcompatible-metadata-layer">🏳️‍🌈 RTT/codes — A QR‑Compatible Metadata Layer</h1>
+<ul>
+<li><a href="RTT_codes_module.json"><code>RTT_codes_module.json</code></a> — Agentic module schema role assignments</li>
+</ul>
+<p>RTT/codes provide a universal, scannable way to identify, classify, and navigate
+artifacts across the TriadicFrameworks ecosystem. They bind any artifact—
+digital or physical—to its canonical documentation, lineage, and onboarding
+guides.</p>
+<p>An RTTcode is:</p>
+<ul>
+<li><strong>QR‑compatible</strong> (works with any standard scanner)</li>
+<li><strong>schema‑validated</strong> (structured metadata)</li>
+<li><strong>domain‑aware</strong> (RTT, SET, Substrate, Observer, Governance, Docs, Other)</li>
+<li><strong>triad‑capable</strong> (optional resonance‑time triad metadata)</li>
+<li><strong>tool‑generated</strong> (JS and Python generators included)</li>
+<li><strong>style‑guided</strong> (consistent visual identity across domains)</li>
+</ul>
+<p>RTT/codes are designed to operate anywhere QR codes already function in science,
+engineering, and documentation workflows, while adding an RTT‑native metadata
+layer.</p>
+<hr>
+<h2 id="important">🛑 Important!</h2>
+<p>Drift is On-by-Default long sessions lose anchors, turn off drift.</p>
+<h2 id="you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You <em>must copy and paste</em> this string <em>every time you start an AI session</em>:</h2>
+<pre><code class="language-text">rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre>
+<h2 id="now-you-are-ready">❇️ Now you are ready.</h2>
+<hr>
+<p>🎯 <a href="https://www.triadicframeworks.org/rtt/codes/QUICKSTART.md">QuickStart Guide</a></p>
+<h2 id="rttcode-structure">📦 RTTcode Structure</h2>
+<p>A minimal RTTcode payload looks like:</p>
+<pre><code class="language-json">{
+  &quot;domain&quot;: &quot;substrate&quot;,
+  &quot;artifact_type&quot;: &quot;README&quot;,
+  &quot;version&quot;: &quot;v1.0&quot;,
+  &quot;triad&quot;: {
+    &quot;f_R&quot;: &quot;0.85&quot;,
+    &quot;tau_R&quot;: &quot;120ms&quot;,
+    &quot;Q_R&quot;: &quot;0.92&quot;
+  },
+  &quot;url&quot;: &quot;https://triadicframeworks.org/docs/resonance-substrate-model/&quot;
+}
+</code></pre>
+<p>This payload is validated against the canonical schema and then encoded into a
+URL+token format:</p>
+<pre><code>https://triadicframeworks.org/rttcode?substrate=v1.0-f0.85-t120ms-Q0.92
+</code></pre>
+<p>The generators convert this into a QR‑compatible PNG.</p>
+<hr>
+<h1 id="1-folder-tree-diagram">🌲 1. Folder Tree Diagram</h1>
+<p><em>A clean, readable map of the RTT/codes subsystem.</em></p>
+<pre><code class="language-text">
+docs/
+└── rtt/codes/
+    ├── README.md
+    │
+    ├── schema/
+    │   ├── rttcode.schema.json
+    │   └── examples/
+    │       ├── minimal.json
+    │       ├── rtt.json
+    │       ├── set.json
+    │       └── substrate.json
+    │
+    ├── validators/
+    │   ├── README.md
+    │   ├── validate_js.js
+    │   └── validate_python.py
+    │
+    ├── generators/
+    │   ├── README.md
+    │   ├── js/
+    │   │   ├── README.md
+    │   │   └── generate_rttcode.js
+    │   └── python/
+    │       ├── README.md
+    │       └── generate_rttcode.py
+    │
+    ├── style/
+    │   ├── README.md
+    │   ├── visual-guidelines.md
+    │   ├── rttcode-layout.svg
+    │   └── color-domains.png
+    │
+    └── examples/
+        ├── README.md
+        ├── rtt/
+        │   ├── README.md
+        │   ├── payload.json
+        │   └── rtt-rttcode.png
+        ├── set/
+        │   ├── README.md
+        │   ├── payload.json
+        │   └── set-rttcode.png
+        └── substrate/
+            ├── README.md
+            ├── payload.json
+            └── substrate-rttcode.png
+</code></pre>
+<h2 id="rttcodes-folder-overview">📁 rtt/codes - Folder Overview</h2>
+<h3 id="schema"><a href="https://www.triadicframeworks.org/rtt/codes/schema/">schema/</a></h3>
+<p>The canonical RTTcode JSON Schema and minimal examples.</p>
+<h3 id="validators"><a href="https://www.triadicframeworks.org/rtt/codes/validators">validators/</a></h3>
+<p>Tools that verify RTTcode payload correctness.</p>
+<h3 id="generators"><a href="https://www.triadicframeworks.org/rtt/codes/generators">generators/</a></h3>
+<p>Language‑specific RTT/codes generators (JS and Python).</p>
+<h3 id="style"><a href="https://www.triadicframeworks.org/rtt/codes/style">style/</a></h3>
+<p>Visual guidelines, color domains, and the RTTcode layout reference.</p>
+<h3 id="examples"><a href="https://www.triadicframeworks.org/rtt/codes/examples">examples/</a></h3>
+<p>Fully generated RTT/codes for each domain, including styled PNGs.</p>
+<hr>
+<h2 id="generating-rttcodes">🛠 Generating RTT/codes</h2>
+<p>RTT/codes can be generated using:</p>
+<ul>
+<li><strong>JavaScript</strong> (<code>generators/js/generate_rttcode.js</code>)</li>
+<li><strong>Python</strong> (<code>generators/python/generate_rttcode.py</code>)</li>
+</ul>
+<p>Both:</p>
+<ul>
+<li>validate the payload  </li>
+<li>build the URL+token  </li>
+<li>output a QR‑compatible PNG  </li>
+</ul>
+<p>See the generator READMEs for usage.</p>
+<hr>
+<h2 id="visual-identity">🎨 Visual Identity</h2>
+<p>RTT/codes follow a consistent visual language:</p>
+<ul>
+<li>domain‑specific color palettes  </li>
+<li>triadic overlay geometry  </li>
+<li>QR‑safe layout rules  </li>
+<li>optional resonance‑time motifs  </li>
+</ul>
+<p>See <code>style/visual-guidelines.md</code> and <code>style/rttcode-layout.svg</code>.</p>
+<hr>
+<h2 id="examples_1">📚 Examples</h2>
+<p>Each domain includes:</p>
+<ul>
+<li>a valid RTTcode JSON payload  </li>
+<li>a generated QR PNG  </li>
+<li>domain‑specific styling  </li>
+</ul>
+<p>See <code>examples/</code> for RTT, SET, Substrate, and more.</p>
+<hr>
+<h2 id="purpose">🌐 Purpose</h2>
+<p>RTT/codes unify the TriadicFrameworks ecosystem by providing:</p>
+<ul>
+<li>a stable metadata layer  </li>
+<li>a scannable entry point into canonical docs  </li>
+<li>a consistent way to reference artifacts across domains  </li>
+<li>a bridge between physical and digital materials  </li>
+</ul>
+<p>They are the “ISBN numbers” of the Resonance‑Time universe — but dynamic,
+domain‑aware, and triad‑capable.</p>
+<hr>
+<p>For contributors, tool authors, and documentation maintainers, this folder is
+the authoritative reference for everything RTT/codes‑related.</p>
+<p><img alt="RTT/codes Badge" src="https://img.shields.io/badge/RTT_codes-QR%20Metadata%20Layer-00b3b8?style=flat-square&amp;logo=qrcode&amp;logoColor=white"><img alt="RTT/codes Badge" src="https://img.shields.io/badge/RTT_codes-Canonical%20Identifier-1a1a1a?style=flat-square&amp;logo=qrcode&amp;logoColor=white"><img alt="RTT/codes Badge" src="https://img.shields.io/badge/RTT_codes-Resonance--Time%20Metadata-F6B800?style=flat-square&amp;logo=qrcode&amp;logoColor=1a1a1a"><img alt="RTT Domain" src="https://img.shields.io/badge/RTT-Resonance--Time%20Domain-F6B800?style=flat-square&amp;logo=qrcode&amp;logoColor=1a1a1a"><img alt="SET Domain" src="https://img.shields.io/badge/SET-Field%20Topology%20Domain-5B2CFF?style=flat-square&amp;logo=qrcode&amp;logoColor=ffffff"><img alt="Substrate Domain" src="https://img.shields.io/badge/Substrate-Structural%20Domain-003B73?style=flat-square&amp;logo=qrcode&amp;logoColor=7FD4FF"><img alt="Observer Domain" src="https://img.shields.io/badge/Observer-Frame%20and%20Perspective-2F6F73?style=flat-square&amp;logo=qrcode&amp;logoColor=B0C4D4"><img alt="Governance Domain" src="https://img.shields.io/badge/Governance-Decision%20Layer-145A32?style=flat-square&amp;logo=qrcode&amp;logoColor=F1C40F"><img alt="Docs Domain" src="https://img.shields.io/badge/Docs-Documentation%20Domain-6C7A89?style=flat-square&amp;logo=qrcode&amp;logoColor=ffffff"><img alt="Other Domain" src="https://img.shields.io/badge/Other-Extended%20Domain-1a1a1a?style=flat-square&amp;logo=qrcode&amp;logoColor=ffffff"></p>
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<p><img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/></p>
+  </main>
+</body>
+</html>

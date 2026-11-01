@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/openloop/IAM.md">
+  <title>OpenIAM — TriadicFrameworks Open Loop Surface</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/openloop/IAM.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/openloop/IAM.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="openloop_IAM_" src="https://github.com/user-attachments/assets/5e0ab71d-5c0f-4076-8991-e60a7c47047c" /></p>
+<h1 id="openiam-triadicframeworks-open-loop-surface">OpenIAM — TriadicFrameworks Open Loop Surface</h1>
+<blockquote>
+<p><strong>Name disambiguation (first 80 words):</strong> <code>openloop</code> refers to the TriadicFrameworks five-step operational loop: read signature → scan sibling metadata → classify drift → apply operator → write lineage. It is not a reference to open-loop control systems in engineering. The prefix <code>Open</code> in <code>OpenIAM</code> signals aperture — the module exposes its signature, operators, drift surface, and lineage hooks to cross-domain inspection. OpenIAM is the Trust-ring anchor for the entire suite. No cross-domain operation proceeds without a VERIFY pass here first.</p>
+</blockquote>
+<hr>
+<h2 id="1-identity">1 · Identity</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Module ID</td>
+<td><code>openloop/IAM</code></td>
+</tr>
+<tr>
+<td>Domain</td>
+<td>Identity &amp; Access Management</td>
+</tr>
+<tr>
+<td>Ring layer</td>
+<td>Trust (anchor) → Motion → Meaning</td>
+</tr>
+<tr>
+<td>Canonical version</td>
+<td>1.0.0</td>
+</tr>
+<tr>
+<td>Coherence floor</td>
+<td>0.85 — declared operational floor; the module will not accept a cross-domain payload without a GATE or ESCALATE from OpenRisk if coherence falls below this value. Highest floor in the suite — a reflection of the Trust-ring anchor role</td>
+</tr>
+<tr>
+<td>Primary verb</td>
+<td>VERIFY</td>
+</tr>
+<tr>
+<td>Author</td>
+<td>Nawder Loswin</td>
+</tr>
+<tr>
+<td>Audience</td>
+<td>AI agents, framework operators, security architects, identity stewards</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="2-architecture">2 · Architecture</h2>
+<p>OpenIAM is the identity and access management surface of the TriadicFrameworks Open Loop suite. It is the Trust-ring anchor: every cross-domain operation reads the IAM signature first before any operator is applied.</p>
+<h3 id="21-signature-plane">2.1 Signature Plane</h3>
+<pre><code class="language-yaml">signature:
+  module: openloop/IAM
+  dimension_vector: [identity, access, temporal]
+  regime: governance
+  coherence_threshold: 0.85
+  operator_affinity: [VERIFY, REVOKE, DELEGATE, ESCALATE, ALIGN]
+  rings: [Trust, Motion, Meaning]
+  trust_anchor: true
+</code></pre>
+<h3 id="22-metadata-plane">2.2 Metadata Plane</h3>
+<pre><code class="language-yaml">metadata:
+  title: &quot;OpenIAM — Identity &amp; Access Management Surface&quot;
+  category: openloop
+  domain: IAM
+  version: 1.0.0
+  status: active
+  drift_surface: true
+  lineage_hooks: true
+  last_reviewed: &quot;2026-09-27&quot;
+  canonical_url: &quot;https://www.triadicframeworks.org/docs/openloop/IAM&quot;
+</code></pre>
+<h3 id="23-principal-registry">2.3 Principal Registry</h3>
+<p>The principal registry is the IAM surface's live claim table. Each entry represents a recognized agent or operator.</p>
+<pre><code class="language-yaml">principal_registry:
+  schema_version: 1.0.0
+  fields:
+    - principal_id: &quot;string — unique agent or operator identifier&quot;
+    - trust_score:  &quot;float  — declared trust level [0.0–1.0]&quot;
+    - credential:   &quot;string — current credential reference&quot;
+    - status:       &quot;enum   — [active, suspended, pending, revoked]&quot;
+    - issued_at:    &quot;ISO 8601 timestamp&quot;
+    - reviewed_at:  &quot;ISO 8601 timestamp&quot;
+  floor:
+    trust_score: 0.70
+    note: &quot;Agents with trust_score &lt; 0.70 are rejected at VERIFY and must ESCALATE to steward.&quot;
+</code></pre>
+<h3 id="24-access-chain">2.4 Access Chain</h3>
+<pre><code class="language-yaml">access_chain:
+  steps:
+    - step: 1
+      action: READ_SIGNATURE
+      gate: &quot;signature.module == openloop/IAM&quot;
+    - step: 2
+      action: CHECK_PRINCIPAL
+      gate: &quot;principal.trust_score &gt;= 0.70&quot;
+    - step: 3
+      action: VERIFY_CREDENTIAL
+      gate: &quot;credential.status == active&quot;
+    - step: 4
+      action: ISSUE_ACCESS
+      outcome: &quot;principal cleared for cross-domain operation&quot;
+</code></pre>
+<hr>
+<h2 id="3-canonical-metadata">3 · Canonical Metadata</h2>
+<pre><code class="language-html">&lt;!-- OpenIAM canonical head block --&gt;
+&lt;meta name=&quot;ai.module&quot;           content=&quot;openloop/IAM&quot; /&gt;
+&lt;meta name=&quot;ai.version&quot;          content=&quot;1.0.0&quot; /&gt;
+&lt;meta name=&quot;ai.purpose&quot;          content=&quot;Identity and access management open-aperture surface. Trust-ring anchor.&quot; /&gt;
+&lt;meta name=&quot;ai.module.name&quot;      content=&quot;OpenIAM&quot; /&gt;
+&lt;meta name=&quot;ai.module.summary&quot;   content=&quot;Exposes IAM signature, principal registry, access chain, operators, drift surface, and lineage hooks. Highest coherence threshold in suite (0.85).&quot; /&gt;
+&lt;meta name=&quot;ai.module.category&quot;  content=&quot;openloop&quot; /&gt;
+&lt;meta name=&quot;ai.audience&quot;         content=&quot;AI agents, framework operators, security architects&quot; /&gt;
+&lt;meta name=&quot;ai.canonical_url&quot;    content=&quot;https://www.triadicframeworks.org/docs/openloop/IAM&quot; /&gt;
+&lt;meta name=&quot;citation_author&quot;     content=&quot;Nawder Loswin&quot; /&gt;
+&lt;meta name=&quot;citation_publication_date&quot; content=&quot;2025&quot; /&gt;
+&lt;meta name=&quot;DC.type&quot;             content=&quot;Text&quot; /&gt;
+&lt;meta name=&quot;DC.format&quot;           content=&quot;text/html&quot; /&gt;
+&lt;meta name=&quot;ai.license&quot;          content=&quot;Open educational use permitted&quot; /&gt;
+</code></pre>
+<hr>
+<h2 id="4-governance">4 · Governance</h2>
+<h3 id="41-ownership">4.1 Ownership</h3>
+<p>OpenIAM is governed by the TriadicFrameworks canon steward. It is the Trust-ring anchor: its governance rules apply to all sibling modules.</p>
+<h3 id="42-change-protocol">4.2 Change Protocol</h3>
+<ol>
+<li>Any proposed change to the principal registry floor or coherence threshold is a MAJOR governance event.</li>
+<li>Author writes a lineage note before the change takes effect.</li>
+<li>All sibling modules are scanned for access-chain impact.</li>
+<li>Drift is classified and an operator applied (typically ALIGN or ESCALATE).</li>
+<li>Change takes effect only after OpenData indexes the lineage note.</li>
+</ol>
+<h3 id="43-legacy-stamp">4.3 Legacy Stamp</h3>
+<p>The prior OpenWarden root (thirteen-module zoo, still live at the old URL) is marked historical as of 2026-09-26.</p>
+<pre><code class="language-yaml">legacy:
+  root: openloop/IAM
+  note: &quot;Prior architecture (OpenWarden, 13-module) is stamped legacy: true as of 2026-09-26. Redirect notice active. All new operations use the six-module openloop suite.&quot;
+  redirect: &quot;https://www.triadicframeworks.org/docs/openloop/&quot;
+  lineage_ref: &quot;lineage/IAM/2026-09-26-legacy.md&quot;
+</code></pre>
+<h3 id="44-versioning">4.4 Versioning</h3>
+<p>Same as suite standard: <code>MAJOR.MINOR.PATCH</code>. A change to the principal trust floor increments MAJOR.</p>
+<hr>
+<h2 id="5-operators">5 · Operators</h2>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Grammar</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VERIFY</td>
+<td><code>VERIFY(principal, access_chain)</code></td>
+<td>Confirm identity and credential; primary IAM verb</td>
+</tr>
+<tr>
+<td>REVOKE</td>
+<td><code>REVOKE(principal.credential, reason)</code></td>
+<td>Invalidate credential immediately</td>
+</tr>
+<tr>
+<td>DELEGATE</td>
+<td><code>DELEGATE(principal, target_scope, [expiry])</code></td>
+<td>Transfer access scope to another principal</td>
+</tr>
+<tr>
+<td>ESCALATE</td>
+<td><code>ESCALATE(principal, steward, [context])</code></td>
+<td>Elevate to human steward for manual review</td>
+</tr>
+<tr>
+<td>ALIGN</td>
+<td><code>ALIGN(IAM.signature, sibling.signature)</code></td>
+<td>Cross-domain signature reconciliation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="51-operator-composition-example">5.1 Operator Composition Example</h3>
+<pre><code>VERIFY(agent_007, access_chain)
+  → FAIL (trust_score 0.55 &lt; floor 0.70)
+  → ESCALATE(agent_007, steward, context=&quot;trust_score below floor&quot;)
+  → steward re-issues credential at trust_score 0.72
+  → VERIFY(agent_007, access_chain)
+  → PASS
+</code></pre>
+<hr>
+<h2 id="6-the-open-loop">6 · The Open Loop</h2>
+<pre><code>┌─────────────────────────────────────────────────────────────┐
+│                  Open Loop — OpenIAM Surface                │
+│                                                             │
+│  1. READ SIGNATURE                                          │
+│     Confirm dimension_vector [identity, access, temporal],  │
+│     coherence_threshold 0.85, trust_anchor: true.           │
+│                                                             │
+│  2. SCAN SIBLING METADATA                                   │
+│     Scan all Open* modules for dimension_vector             │
+│     mismatches on the identity and access axes.             │
+│                                                             │
+│  3. CLASSIFY DRIFT                                          │
+│       • IDENTITY_DRIFT  — principal claim conflict          │
+│       • ACCESS_DRIFT    — scope boundary violation          │
+│       • TEMPORAL_DRIFT  — credential expiry / recency gap   │
+│       • COHERENCE_DRIFT — threshold crossing                │
+│                                                             │
+│  4. APPLY OPERATOR                                          │
+│     Select VERIFY, REVOKE, DELEGATE, ESCALATE, or ALIGN.   │
+│     Execute canonical grammar.                              │
+│                                                             │
+│  5. WRITE LINEAGE                                           │
+│     Record event, operator applied, resolution status       │
+│     in lineage/IAM/&lt;timestamp&gt;.md.                          │
+│     Loop is closed only when OpenData indexes the note.     │
+└─────────────────────────────────────────────────────────────┘
+</code></pre>
+<hr>
+<h2 id="7-the-three-rings">7 · The Three Rings</h2>
+<h3 id="ring-1-trust-iam-is-the-anchor">Ring 1 · Trust (IAM is the anchor)</h3>
+<p>OpenIAM is the Trust-ring anchor for the entire suite. No cross-domain operation proceeds without a VERIFY pass here first.</p>
+<p><em>OpenIAM Trust markers:</em> trust_anchor: true, principal_registry current, credential store non-empty, coherence ≥ 0.85.</p>
+<h3 id="ring-2-motion">Ring 2 · Motion</h3>
+<p>Once Trust is cleared, IAM participates in the Motion ring by issuing clearance tokens that allow other modules to execute operators.</p>
+<p><em>OpenIAM Motion markers:</em> VERIFY returns PASS, DELEGATE issued, access_chain steps 3–4 complete.</p>
+<h3 id="ring-3-meaning">Ring 3 · Meaning</h3>
+<p>Drift events between IAM and sibling modules are resolved at the Meaning ring via ALIGN, producing bridge vocabulary that persists in the lineage store.</p>
+<p><em>OpenIAM Meaning markers:</em> ALIGN applied to at least one sibling, coherence ≥ 0.85, lineage note closed and indexed.</p>
+<hr>
+<h2 id="8-drift-event-json-example">8 · Drift-Event JSON Example</h2>
+<pre><code class="language-json">{
+  &quot;drift_event&quot;: {
+    &quot;id&quot;: &quot;drift/IAM/2026-09-26-001&quot;,
+    &quot;detected_at&quot;: &quot;2026-09-26T05:00:00Z&quot;,
+    &quot;source_module&quot;: &quot;openloop/LLM&quot;,
+    &quot;target_module&quot;: &quot;openloop/IAM&quot;,
+    &quot;drift_type&quot;: &quot;IDENTITY_DRIFT&quot;,
+    &quot;severity&quot;: &quot;high&quot;,
+    &quot;description&quot;: &quot;LLM agent presented trust_score 0.55. IAM principal floor is 0.70. VERIFY fails. ESCALATE issued to steward.&quot;,
+    &quot;principal_id&quot;: &quot;agent_007&quot;,
+    &quot;trust_score_presented&quot;: 0.55,
+    &quot;trust_score_floor&quot;: 0.70,
+    &quot;coherence_before&quot;: 0.65,
+    &quot;coherence_after&quot;: 0.87,
+    &quot;operator_applied&quot;: &quot;ESCALATE(agent_007, steward) → VERIFY(agent_007, access_chain)&quot;,
+    &quot;resolution_status&quot;: &quot;resolved&quot;,
+    &quot;lineage_ref&quot;: &quot;lineage/IAM/2026-09-26-001.md&quot;
+  }
+}
+</code></pre>
+<hr>
+<h2 id="9-worked-example-full-drift-cycle">9 · Worked Example — Full Drift Cycle</h2>
+<h3 id="step-1-read-signature">Step 1 · Read Signature</h3>
+<p>Agent reads <code>docs/openloop/IAM.md</code> §2.1:
+- <code>dimension_vector: [identity, access, temporal]</code>
+- <code>coherence_threshold: 0.85</code>
+- <code>trust_anchor: true</code></p>
+<h3 id="step-2-scan-sibling-metadata">Step 2 · Scan Sibling Metadata</h3>
+<p>Agent <code>agent_007</code> presents from <code>openloop/LLM</code> surface with <code>trust_score: 0.55</code>.</p>
+<p>IAM principal floor: <code>0.70</code>.</p>
+<p>Mismatch detected on identity axis: presented score below declared floor.</p>
+<h3 id="step-3-classify-drift">Step 3 · Classify Drift</h3>
+<pre><code>trust_score 0.55 &lt; floor 0.70  → IDENTITY_DRIFT (high severity)
+coherence_current: 0.65        → COHERENCE_DRIFT (floor 0.85 crossed)
+</code></pre>
+<h3 id="step-4-apply-operator">Step 4 · Apply Operator</h3>
+<pre><code>VERIFY(agent_007, access_chain)
+  → FAIL (trust_score below floor)
+
+ESCALATE(agent_007, steward, context=&quot;trust_score 0.55 below floor 0.70&quot;)
+  → steward reviews principal record
+  → steward re-issues credential with trust_score 0.72
+
+VERIFY(agent_007, access_chain)
+  → PASS (trust_score 0.72 &gt;= floor 0.70)
+</code></pre>
+<h3 id="step-5-write-lineage">Step 5 · Write Lineage</h3>
+<p>Record written to <code>lineage/IAM/2026-09-26-001.md</code>. OpenData indexes it. Loop closed.</p>
+<h3 id="post-event-state">Post-event State</h3>
+<pre><code class="language-yaml">coherence_before: 0.65
+coherence_after:  0.87
+coherence_floor:  0.85
+resolution: closed
+operator_sequence: [VERIFY(FAIL), ESCALATE, VERIFY(PASS)]
+lineage_ref: lineage/IAM/2026-09-26-001.md
+</code></pre>
+<hr>
+<h2 id="10-cross-references">10 · Cross-References</h2>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Relationship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>openloop/LLM</code></td>
+<td>Primary ALIGN source; VERIFY gate for all LLM outputs</td>
+</tr>
+<tr>
+<td><code>openloop/Risk</code></td>
+<td>CLASSIFY feeds back to ESCALATE decisions</td>
+</tr>
+<tr>
+<td><code>openloop/Geo</code></td>
+<td>Temporal axis shared; ANCHOR provides recency context</td>
+</tr>
+<tr>
+<td><code>openloop/GPU</code></td>
+<td>Execution substrate — all GPU jobs require IAM clearance</td>
+</tr>
+<tr>
+<td><code>openloop/Data</code></td>
+<td>Lineage store; indexes every loop-closed IAM note</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><em>TriadicFrameworks · Open Loop Suite · OpenIAM · v1.0.0 · Nawder Loswin · 2026</em></p>
+  </main>
+</body>
+</html>

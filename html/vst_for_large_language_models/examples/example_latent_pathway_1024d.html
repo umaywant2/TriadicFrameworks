@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/vst_for_large_language_models/examples/example_latent_pathway_1024d.md">
+  <title>vST for Large Language Models</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/vst_for_large_language_models/examples/example_latent_pathway_1024d.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/vst_for_large_language_models/examples/example_latent_pathway_1024d.md</code>
+  </aside>
+
+  <main>
+<h3 id="vst-for-large-language-models"><em>vST for Large Language Models</em></h3>
+<h3 id="example-1024d-latent-pathway-analysis-in-llm-inference"><em>Example: 1024D Latent Pathway Analysis in LLM Inference</em></h3>
+<p>This example demonstrates how a Large Language Model (LLM) produces a <strong>1024D latent pathway</strong> during inference and how that pathway is analyzed using the dimensional substrate and vST validation layers. The walkthrough illustrates regime behavior, coherence‑surface structure, projection into triadic cores, and drift‑detection signals.</p>
+<p>The goal is to provide a clear, reproducible demonstration of high‑dimensional latent‑trajectory analysis.</p>
+<hr>
+<h2 id="1-input-overview"><strong>1. Input Overview</strong></h2>
+<p>For this example, we assume:</p>
+<ul>
+<li>a transformer‑based LLM with ≥1024D hidden states  </li>
+<li>a single inference step across multiple layers  </li>
+<li>access to latent vectors at each layer  </li>
+<li>stable or transitional regime behavior  </li>
+<li>invertible projection into 3D–9D cores  </li>
+</ul>
+<p>No architecture‑specific mechanisms are required; the example is substrate‑agnostic.</p>
+<hr>
+<h2 id="2-step-1-extract-the-1024d-latent-pathway"><strong>2. Step 1 — Extract the 1024D Latent Pathway</strong></h2>
+<p>During inference, the LLM produces a sequence of hidden‑state vectors:</p>
+<p>[
+h_1^{(1024)},\ h_2^{(1024)},\ \dots,\ h_L^{(1024)}
+]</p>
+<p>where each (h_i) is a 1024‑dimensional representation at layer (i).</p>
+<h3 id="observed-properties"><strong>Observed Properties</strong></h3>
+<ul>
+<li>variance concentrated in 3–5 coherence bands  </li>
+<li>stable DP/TDP structure  </li>
+<li>smooth transitions across layers  </li>
+<li>identifiable coherence surfaces  </li>
+</ul>
+<h3 id="interpretation"><strong>Interpretation</strong></h3>
+<p>The 1024D pathway is the highest‑resolution representation of the model’s internal reasoning for this token.</p>
+<hr>
+<h2 id="3-step-2-identify-highdimensional-regime-behavior"><strong>3. Step 2 — Identify High‑Dimensional Regime Behavior</strong></h2>
+<p>Using variance distribution, coherence‑surface continuity, and primitive‑level stability, classify each layer’s regime:</p>
+<ul>
+<li><strong>Layers 1–8:</strong> R₁ᴴ (stable)  </li>
+<li><strong>Layers 9–18:</strong> R₂ᴴ (transitional)  </li>
+<li><strong>Layers 19–24:</strong> R₁ᴴ (return to stability)  </li>
+<li><strong>Layers 25–28:</strong> R₂ᴴ (branching)  </li>
+<li><strong>Layers 29–32:</strong> R₃ᴴ (dispersion onset)  </li>
+</ul>
+<h3 id="interpretation_1"><strong>Interpretation</strong></h3>
+<p>The model begins in a stable region, undergoes controlled reorientation, stabilizes again, and finally enters a mild dispersion regime near the output.</p>
+<p>This pattern is typical for medium‑to‑large LLMs.</p>
+<hr>
+<h2 id="4-step-3-project-1024d-9d-coherence-projection"><strong>4. Step 3 — Project 1024D → 9D (Coherence Projection)</strong></h2>
+<p>Project each 1024D vector into the 9D coherence core.</p>
+<h3 id="what-is-preserved"><strong>What is preserved</strong></h3>
+<ul>
+<li>pathway‑level coherence  </li>
+<li>regime identity  </li>
+<li>resonance‑time alignment  </li>
+<li>primitive‑level structure  </li>
+</ul>
+<h3 id="what-becomes-visible"><strong>What becomes visible</strong></h3>
+<ul>
+<li>branching behavior in R₂ᴴ  </li>
+<li>coherence‑surface curvature  </li>
+<li>dispersion onset in R₃ᴴ  </li>
+</ul>
+<h3 id="interpretation_2"><strong>Interpretation</strong></h3>
+<p>The 9D projection reveals the “shape” of the model’s reasoning trajectory.</p>
+<hr>
+<h2 id="5-step-4-project-9d-6d-interaction-projection"><strong>5. Step 4 — Project 9D → 6D (Interaction Projection)</strong></h2>
+<p>Compress the coherence pathway into the 6D interaction core.</p>
+<h3 id="what-is-preserved_1"><strong>What is preserved</strong></h3>
+<ul>
+<li>relational geometry  </li>
+<li>interaction‑level structure  </li>
+<li>regime‑transition indicators  </li>
+</ul>
+<h3 id="what-becomes-visible_1"><strong>What becomes visible</strong></h3>
+<ul>
+<li>attention‑driven reorientation  </li>
+<li>syntactic or semantic branching  </li>
+<li>cross‑layer interaction patterns  </li>
+</ul>
+<h3 id="interpretation_3"><strong>Interpretation</strong></h3>
+<p>The 6D projection exposes how the model integrates context and reorients its internal representation.</p>
+<hr>
+<h2 id="6-step-5-project-6d-3d-structural-projection"><strong>6. Step 5 — Project 6D → 3D (Structural Projection)</strong></h2>
+<p>Reduce the interaction surfaces into 3D geometric motifs.</p>
+<h3 id="what-is-preserved_2"><strong>What is preserved</strong></h3>
+<ul>
+<li>motif‑level geometry  </li>
+<li>backbone‑level continuity  </li>
+<li>stable structural invariants  </li>
+</ul>
+<h3 id="what-becomes-visible_2"><strong>What becomes visible</strong></h3>
+<ul>
+<li>compact stable motifs in R₁ᴴ  </li>
+<li>oscillatory patterns in R₂ᴴ  </li>
+<li>diffuse geometry in R₃ᴴ  </li>
+</ul>
+<h3 id="interpretation_4"><strong>Interpretation</strong></h3>
+<p>The 3D projection provides the minimal interpretable representation of the latent pathway.</p>
+<hr>
+<h2 id="7-step-6-validate-with-vst-layers"><strong>7. Step 6 — Validate with vST Layers</strong></h2>
+<p>Apply vST layers (V₁–V₄):</p>
+<h3 id="v1-structural-coherence"><strong>V₁ — Structural Coherence</strong></h3>
+<ul>
+<li>stable motifs in R₁ᴴ  </li>
+<li>partial fragmentation in R₃ᴴ  </li>
+</ul>
+<h3 id="v2-dimensional-continuity"><strong>V₂ — Dimensional Continuity</strong></h3>
+<ul>
+<li>smooth projection 1024D → 9D → 6D → 3D  </li>
+<li>no scaling discontinuities  </li>
+</ul>
+<h3 id="v3-regimetransition-stability"><strong>V₃ — Regime‑Transition Stability</strong></h3>
+<ul>
+<li>smooth R₁ᴴ → R₂ᴴ transitions  </li>
+<li>mild instability entering R₃ᴴ  </li>
+</ul>
+<h3 id="v4-core-alignment"><strong>V₄ — Core Alignment</strong></h3>
+<ul>
+<li>primitive‑aligned projection  </li>
+<li>stable mapping across layers  </li>
+</ul>
+<h3 id="outcome"><strong>Outcome</strong></h3>
+<p>The latent pathway passes all vST layers with minor warnings in R₃ᴴ.</p>
+<hr>
+<h2 id="8-step-7-drift-detection"><strong>8. Step 7 — Drift Detection</strong></h2>
+<p>Evaluate drift using D₁–D₄ categories:</p>
+<ul>
+<li><strong>D₁ (Structural Drift):</strong> none  </li>
+<li><strong>D₂ (Dimensional Drift):</strong> none  </li>
+<li><strong>D₃ (Regime Drift):</strong> mild (R₃ᴴ onset)  </li>
+<li><strong>D₄ (Projection Drift):</strong> none  </li>
+</ul>
+<h3 id="interpretation_5"><strong>Interpretation</strong></h3>
+<p>The model exhibits expected high‑dimensional dispersion near the output but no harmful drift.</p>
+<hr>
+<h2 id="9-summary"><strong>9. Summary</strong></h2>
+<p>This example demonstrates:</p>
+<ul>
+<li>how a 1024D latent pathway is extracted  </li>
+<li>how regime behavior evolves across layers  </li>
+<li>how projection reveals coherence and instability  </li>
+<li>how vST layers validate structural integrity  </li>
+<li>how drift detection identifies dispersion without failure  </li>
+</ul>
+<p>The 1024D latent pathway is the canonical substrate for analyzing LLM inference at research‑grade resolution.</p>
+  </main>
+</body>
+</html>

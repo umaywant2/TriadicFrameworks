@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Structural_Detection/AI_Edition/README.md">
+  <title>Book 3 — Structural Detection (AI Edition)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Structural_Detection/AI_Edition/README.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Structural_Detection/AI_Edition/README.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Structural_Detection__" src="https://github.com/user-attachments/assets/474c6708-ef30-439c-9d4c-e34a51a630a7" /></p>
+<ul>
+<li><a href="module.json"><code>module.json</code></a> — Agentic module schema role assignments</li>
+</ul>
+<h1 id="book-3-structural-detection-ai-edition">Book 3 — Structural Detection (AI Edition)</h1>
+<blockquote>
+<p><strong>Module:</strong> Structural Detection · AI Edition<br>
+<strong>Series Position:</strong> Book 3 of the QM Operator Series<br>
+<strong>Path:</strong> <code>docs/Structural_Detection/AI_Edition/</code><br>
+<strong>Last Audited:</strong> 2026-10-10T06:09:00 EDT<br>
+<strong>Session Source:</strong> Task context — tab 1774719730 (Structural Detection directory)</p>
+</blockquote>
+<hr>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#1-module-identity">Module Identity</a></li>
+<li><a href="#2-purpose--scope">Purpose &amp; Scope</a></li>
+<li><a href="#3-operator-roster">Operator Roster</a></li>
+<li><a href="#4-phase-sequence">Phase Sequence</a></li>
+<li><a href="#5-maps--reference-files">Maps &amp; Reference Files</a></li>
+<li><a href="#6-invariants">Invariants</a></li>
+<li><a href="#7-qmroot-declarations">QMROOT Declarations</a></li>
+<li><a href="#8-session-context">Session Context</a></li>
+<li><a href="#9-front-door-sidebar-audit">Front-Door Sidebar Audit</a></li>
+<li><a href="#10-directory-structure">Directory Structure</a></li>
+<li><a href="#11-usage--integration-notes">Usage &amp; Integration Notes</a></li>
+</ol>
+<hr>
+<h2 id="1-module-identity">1. Module Identity</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Module Name</strong></td>
+<td>Structural Detection</td>
+</tr>
+<tr>
+<td><strong>Edition</strong></td>
+<td>AI Edition</td>
+</tr>
+<tr>
+<td><strong>Book Number</strong></td>
+<td>3</td>
+</tr>
+<tr>
+<td><strong>Series</strong></td>
+<td>QM Operator Series</td>
+</tr>
+<tr>
+<td><strong>Namespace Prefix</strong></td>
+<td><code>SD‑</code></td>
+</tr>
+<tr>
+<td><strong>Operator Count</strong></td>
+<td>5</td>
+</tr>
+<tr>
+<td><strong>Phase Count</strong></td>
+<td>6</td>
+</tr>
+<tr>
+<td><strong>Status</strong></td>
+<td>Active</td>
+</tr>
+<tr>
+<td><strong>QMROOT Binding</strong></td>
+<td>0D only (see §7)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="2-purpose-scope">2. Purpose &amp; Scope</h2>
+<p><strong>Structural Detection</strong> is the module responsible for identifying, classifying,
+and cataloguing structural signals within a quantum-mapped (QM) session. The AI
+Edition extends the base module with automated scan-and-probe routines,
+noise-gated filtering, and operator-assisted confirmation loops.</p>
+<p><strong>Core responsibilities:</strong></p>
+<ul>
+<li>Detect structural boundaries and rungs within a QM session space</li>
+<li>Enforce dimensional constraints (QMROOT invariants)</li>
+<li>Filter noise from genuine structural signals via the noise-gate map</li>
+<li>Catalogue confirmed detections for downstream operator use</li>
+<li>Maintain invariant integrity across all detection phases</li>
+</ul>
+<p><strong>Out of scope:</strong></p>
+<ul>
+<li>6D structural expansion (disabled by QMROOT constraint; see §7)</li>
+<li>Negative rung traversal (prohibited; see INV‑013)</li>
+<li>Cross-book operator delegation (handled at series level)</li>
+</ul>
+<hr>
+<h2 id="3-operator-roster">3. Operator Roster</h2>
+<p>Five operators govern this module. Each carries a distinct detection
+responsibility and activation phase.</p>
+<table>
+<thead>
+<tr>
+<th>Operator ID</th>
+<th>Symbol</th>
+<th>Role</th>
+<th>Primary Phase</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SD‑Σd</strong></td>
+<td>Σd</td>
+<td>Summation-Detection — aggregates structural signal deltas across the scan window</td>
+<td><code>scan</code></td>
+</tr>
+<tr>
+<td><strong>SD‑Γ</strong></td>
+<td>Γ</td>
+<td>Gradient operator — measures structural transition steepness between rungs</td>
+<td><code>probe</code></td>
+</tr>
+<tr>
+<td><strong>SD‑Λ</strong></td>
+<td>Λ</td>
+<td>Lambda filter — applies noise-gate thresholds; suppresses sub-threshold signals</td>
+<td><code>filter</code></td>
+</tr>
+<tr>
+<td><strong>SD‑Ξ</strong></td>
+<td>Ξ</td>
+<td>Xi classifier — categorises confirmed structural signals by type and rung position</td>
+<td><code>confirm</code></td>
+</tr>
+<tr>
+<td><strong>SD‑Π</strong></td>
+<td>Π</td>
+<td>Pi cataloguer — writes confirmed, classified detections to the session catalogue</td>
+<td><code>catalogue</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="operator-interaction-order">Operator Interaction Order</h3>
+<pre><code>SD‑Σd  →  SD‑Γ  →  SD‑Λ  →  SD‑Ξ  →  SD‑Π
+ (scan)   (probe)  (filter) (confirm) (catalogue)
+</code></pre>
+<p>Operators are not independently re-entrant; each phase must reach a <code>PASS</code>
+state before the next operator activates. The <code>init</code> phase precedes all
+operators.</p>
+<hr>
+<h2 id="4-phase-sequence">4. Phase Sequence</h2>
+<p>The detection cycle runs exactly six phases in strict order. No phase may be
+skipped or reversed during a live session.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Phase</th>
+<th>Trigger</th>
+<th>Exit Condition</th>
+<th>Operator Active</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>init</strong></td>
+<td>Session open</td>
+<td>Environment validated; QMROOT binding confirmed</td>
+<td>— (system)</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>scan</strong></td>
+<td><code>init</code> PASS</td>
+<td>Full scan window traversed; Σd delta table populated</td>
+<td>SD‑Σd</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>probe</strong></td>
+<td><code>scan</code> PASS</td>
+<td>Gradient map complete; all rung transitions measured</td>
+<td>SD‑Γ</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>filter</strong></td>
+<td><code>probe</code> PASS</td>
+<td>Noise-gate applied; sub-threshold signals suppressed</td>
+<td>SD‑Λ</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>confirm</strong></td>
+<td><code>filter</code> PASS</td>
+<td>All surviving signals classified and confirmed</td>
+<td>SD‑Ξ</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>catalogue</strong></td>
+<td><code>confirm</code> PASS</td>
+<td>Confirmed detections written to session catalogue</td>
+<td>SD‑Π</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Phase abort rules:</strong></p>
+<ul>
+<li>Any invariant violation during a phase halts the cycle immediately.</li>
+<li>The session is flagged <code>DETECTION_ABORTED</code> and logged with the violating
+  invariant ID.</li>
+<li>Re-entry requires a clean <code>init</code> restart.</li>
+</ul>
+<hr>
+<h2 id="5-maps-reference-files">5. Maps &amp; Reference Files</h2>
+<p>Three map files govern runtime behaviour. All are located at the module root.</p>
+<h3 id="51-detection_cyclejson">5.1 <code>detection_cycle.json</code></h3>
+<p>Defines the phase-transition graph, per-phase timeout values, and abort
+conditions. Keys:</p>
+<pre><code>phases[]           — ordered phase definitions
+transitions{}      — valid source → target phase pairs
+abort_conditions[] — invariant IDs that trigger immediate abort
+timeout_ms{}       — per-phase maximum duration
+</code></pre>
+<h3 id="52-operator_rolesjson">5.2 <code>operator_roles.json</code></h3>
+<p>Enumerates each operator's capabilities, activation conditions, and
+inter-operator dependencies. Keys:</p>
+<pre><code>operators[]        — array of operator descriptors
+  .id              — canonical operator ID (e.g. &quot;SD-Σd&quot;)
+  .symbol          — Greek symbol shorthand
+  .role            — human-readable role description
+  .phase           — owning phase name
+  .depends_on[]    — upstream operator IDs required before activation
+  .outputs[]       — data structures this operator writes
+</code></pre>
+<h3 id="53-noise_gate_mapjson">5.3 <code>noise_gate_map.json</code></h3>
+<p>Lookup table used by SD‑Λ during the <code>filter</code> phase. Maps signal types to
+their threshold values. Keys:</p>
+<pre><code>gates{}            — keyed by signal_type
+  .threshold       — minimum signal strength to survive filtering
+  .band            — frequency / dimensional band descriptor
+  .suppress_below  — boolean, default true
+default_threshold  — fallback if signal_type not found in gates
+</code></pre>
+<hr>
+<h2 id="6-invariants">6. Invariants</h2>
+<p>All invariants are declared in <code>structural_detection.invariants.json</code>.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Description</th>
+<th>Enforced At</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>INV‑001</strong></td>
+<td>Phase Order Lock</td>
+<td>Phases must execute in the sequence defined in <code>detection_cycle.json</code></td>
+<td><code>init</code></td>
+</tr>
+<tr>
+<td><strong>INV‑002</strong></td>
+<td>Operator Singularity</td>
+<td>Each operator may be active in at most one phase at a time</td>
+<td><code>scan</code>→<code>catalogue</code></td>
+</tr>
+<tr>
+<td><strong>INV‑003</strong></td>
+<td>Noise Gate Integrity</td>
+<td>SD‑Λ must load <code>noise_gate_map.json</code> before any filter operation</td>
+<td><code>filter</code></td>
+</tr>
+<tr>
+<td><strong>INV‑004</strong></td>
+<td>Catalogue Immutability</td>
+<td>Once SD‑Π writes to the session catalogue, entries are read-only</td>
+<td><code>catalogue</code></td>
+</tr>
+<tr>
+<td><strong>INV‑005</strong></td>
+<td>Gradient Positivity</td>
+<td>SD‑Γ gradient values must be ≥ 0; negative gradient = abort</td>
+<td><code>probe</code></td>
+</tr>
+<tr>
+<td><strong>INV‑006</strong></td>
+<td>Delta Table Completeness</td>
+<td>SD‑Σd must produce a complete delta table before <code>scan</code> exits</td>
+<td><code>scan</code></td>
+</tr>
+<tr>
+<td><strong>INV‑007</strong></td>
+<td>Signal Classification Coverage</td>
+<td>SD‑Ξ must assign a classification to every post-filter signal</td>
+<td><code>confirm</code></td>
+</tr>
+<tr>
+<td><strong>INV‑008</strong></td>
+<td>Timeout Compliance</td>
+<td>No phase may exceed its <code>timeout_ms</code> value</td>
+<td>All phases</td>
+</tr>
+<tr>
+<td><strong>INV‑009</strong></td>
+<td>QMROOT Dimension Lock</td>
+<td>Only 0D signals are valid; 6D signals rejected at <code>scan</code> ingestion</td>
+<td><code>scan</code></td>
+</tr>
+<tr>
+<td><strong>INV‑010</strong></td>
+<td>Re-entry Clean Start</td>
+<td>Re-entry after abort requires fresh <code>init</code>; partial state is cleared</td>
+<td><code>init</code></td>
+</tr>
+<tr>
+<td><strong>INV‑011</strong></td>
+<td>Operator Dependency Chain</td>
+<td>Operators activate strictly in dependency order</td>
+<td>All phases</td>
+</tr>
+<tr>
+<td><strong>INV‑012</strong></td>
+<td>Noise Gate Default Fallback</td>
+<td>If signal type absent from map, default threshold applies</td>
+<td><code>filter</code></td>
+</tr>
+<tr>
+<td><strong>INV‑013</strong></td>
+<td>Negative Rung Prohibition</td>
+<td>No rung index may be negative; negative rungs are rejected</td>
+<td><code>scan</code>, <code>probe</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="7-qmroot-declarations">7. QMROOT Declarations</h2>
+<p>QMROOT is the dimensional binding that constrains all structural detection
+operations in this module.</p>
+<pre><code>QMROOT {
+  dimension_binding : 0D
+  6D_expansion      : ABSENT   // 6D structural space not present in this module
+  negative_rungs    : ABSENT   // Negative rung indices are structurally undefined
+  valid_rung_range  : [0, ∞)   // Only non-negative integer rung indices
+  INV-013           : 0D only  // Enforces rung non-negativity at scan and probe
+}
+</code></pre>
+<p><strong>Implications:</strong></p>
+<ul>
+<li><strong>6D Absent:</strong> Any signal referencing a 6D coordinate is rejected at <code>scan</code>
+  ingestion with error code <code>QMROOT_DIM_VIOLATION</code>.</li>
+<li><strong>Negative Rungs Absent:</strong> Rung indices below zero are undefined. SD‑Γ aborts
+  <code>probe</code> on negative-gradient rung inversion (INV‑005); SD‑Σd rejects
+  negative-rung signals at ingestion (INV‑013).</li>
+<li><strong>0D Only:</strong> All structural signals are evaluated as dimensionless point
+  detections before classification by SD‑Ξ.</li>
+</ul>
+<hr>
+<h2 id="8-session-context">8. Session Context</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Source Tab</strong></td>
+<td>1774719730</td>
+</tr>
+<tr>
+<td><strong>Tab Title</strong></td>
+<td>Structural Detection directory</td>
+</tr>
+<tr>
+<td><strong>Session Date</strong></td>
+<td>2026-10-10</td>
+</tr>
+<tr>
+<td><strong>Session Time</strong></td>
+<td>06:09 EDT</td>
+</tr>
+<tr>
+<td><strong>Context Origin</strong></td>
+<td>Prior conversation — "Build Book 3 README with Sidebar Audit"</td>
+</tr>
+<tr>
+<td><strong>Data Recovered</strong></td>
+<td>Module identity, all 5 operators, all 6 phases, all 3 maps, all 13 invariants, QMROOT binding</td>
+</tr>
+<tr>
+<td><strong>Tab Live Status</strong></td>
+<td>Unavailable at write time; data reconstructed from task context</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="9-front-door-sidebar-audit">9. Front-Door Sidebar Audit</h2>
+<pre><code>╔══════════════════════════════════════════════════════════════════╗
+║          FRONT-DOOR SIDEBAR AUDIT — Book 3                       ║
+║          Structural Detection · AI Edition                       ║
+║          Audit Date : 2026-10-10  06:09 EDT                      ║
+╠══════════════════════════════════════════════════════════════════╣
+║                                                                  ║
+║  MODULE IDENTITY                                                 ║
+║  ├─ Name        : Structural Detection                           ║
+║  ├─ Edition     : AI Edition                                     ║
+║  ├─ Book        : 3                                              ║
+║  └─ Namespace   : SD-                                            ║
+║                                                                  ║
+║  OPERATORS  (5 total)                                            ║
+║  ├─ SD-Σd   Summation-Detection     phase: scan                  ║
+║  ├─ SD-Γ    Gradient                phase: probe                 ║
+║  ├─ SD-Λ    Lambda Filter           phase: filter                ║
+║  ├─ SD-Ξ    Xi Classifier           phase: confirm               ║
+║  └─ SD-Π    Pi Cataloguer           phase: catalogue             ║
+║                                                                  ║
+║  PHASES  (6 total, strictly ordered)                             ║
+║  1. init       2. scan       3. probe                            ║
+║  4. filter     5. confirm    6. catalogue                        ║
+║                                                                  ║
+║  MAPS  (3 files)                                                 ║
+║  ├─ detection_cycle.json                                         ║
+║  ├─ operator_roles.json                                          ║
+║  └─ noise_gate_map.json                                          ║
+║                                                                  ║
+║  INVARIANTS  (13 total)                                          ║
+║  ├─ INV-001  Phase Order Lock                                    ║
+║  ├─ INV-002  Operator Singularity                                ║
+║  ├─ INV-003  Noise Gate Integrity                                ║
+║  ├─ INV-004  Catalogue Immutability                              ║
+║  ├─ INV-005  Gradient Positivity                                 ║
+║  ├─ INV-006  Delta Table Completeness                            ║
+║  ├─ INV-007  Signal Classification Coverage                      ║
+║  ├─ INV-008  Timeout Compliance                                  ║
+║  ├─ INV-009  QMROOT Dimension Lock                               ║
+║  ├─ INV-010  Re-entry Clean Start                                ║
+║  ├─ INV-011  Operator Dependency Chain                           ║
+║  ├─ INV-012  Noise Gate Default Fallback                         ║
+║  └─ INV-013  Negative Rung Prohibition  [0D only]                ║
+║                                                                  ║
+║  QMROOT DECLARATIONS                                             ║
+║  ├─ dimension_binding : 0D                                       ║
+║  ├─ 6D_expansion      : ABSENT                                   ║
+║  ├─ negative_rungs    : ABSENT                                   ║
+║  ├─ valid_rung_range  : [0, ∞)                                   ║
+║  └─ INV-013           : 0D only                                  ║
+║                                                                  ║
+║  AUDIT RESULT                                                    ║
+║  ├─ Operators accounted for     : 5 / 5   ✓                      ║
+║  ├─ Phases accounted for        : 6 / 6   ✓                      ║
+║  ├─ Maps accounted for          : 3 / 3   ✓                      ║
+║  ├─ Invariants accounted for    : 13 / 13 ✓                      ║
+║  ├─ QMROOT binding confirmed    : 0D      ✓                      ║
+║  ├─ 6D absent confirmed         : YES     ✓                      ║
+║  ├─ Negative rungs absent       : YES     ✓                      ║
+║  └─ OVERALL STATUS              : PASS    ✓                      ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+</code></pre>
+<hr>
+<h2 id="10-directory-structure">10. Directory Structure</h2>
+<pre><code>docs/Structural_Detection/AI_Edition/
+├── README.md                              ← this file (module authority + audit)
+├── structural_detection.invariants.json   ← all 13 invariants
+├── detection_cycle.json                   ← phase graph &amp; timeouts
+├── operator_roles.json                    ← operator descriptors &amp; dependencies
+└── noise_gate_map.json                    ← SD-Λ filter thresholds
+</code></pre>
+<hr>
+<h2 id="11-usage-integration-notes">11. Usage &amp; Integration Notes</h2>
+<ul>
+<li><strong>Single-file authority:</strong> This README is intentionally self-contained. The
+  sidebar audit (§9) mirrors the full structural state of the module so any
+  reader opening this file first has complete orientation without opening
+  companion files.</li>
+<li><strong>Map file precedence:</strong> <code>detection_cycle.json</code> loads first (phase graph),
+  then <code>operator_roles.json</code> (operator binding), then <code>noise_gate_map.json</code>
+  (loaded lazily at <code>filter</code> phase entry). Loading order is significant.</li>
+<li><strong>Invariant enforcement:</strong> Invariants are enforced at the phase level, not the
+  file level. A missing or malformed map file will trigger the relevant invariant
+  violation at the phase that first depends on it.</li>
+<li><strong>QMROOT immutability:</strong> QMROOT declarations are set at module load and cannot
+  be changed at runtime. 6D signals → rejected by INV‑009. Negative rung indices
+  → rejected by INV‑013.</li>
+<li><strong>Book series continuity:</strong> Book 3 follows Book 2 and precedes Book 4 in the
+  QM Operator Series. Cross-book operator references are brokered at series
+  level; direct inter-book operator calls are not supported within this module.</li>
+</ul>
+<hr>
+<p><em>End of Book 3 — Structural Detection (AI Edition) README</em></p>
+  </main>
+</body>
+</html>

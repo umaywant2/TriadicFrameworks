@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/qCompute/qc_OperatorGrammar.md">
+  <title>qCompute — Operator Grammar</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/qCompute/qc_OperatorGrammar.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/qCompute/qc_OperatorGrammar.md</code>
+  </aside>
+
+  <main>
+<h1 id="qcompute-operator-grammar">qCompute — Operator Grammar</h1>
+<p><strong>File:</strong> qc_OperatorGrammar.md<br>
+<strong>Layer:</strong> RTT‑Inside Compute Harness<br>
+<strong>Status:</strong> Canonical (2026)</p>
+<p>This document defines the <strong>formal grammar</strong>, <strong>argument rules</strong>, and <strong>legality semantics</strong> for all qCompute operators.</p>
+<p>The grammar is:</p>
+<ul>
+<li>minimal  </li>
+<li>deterministic  </li>
+<li>environment‑aware  </li>
+<li>backend‑aware  </li>
+<li>drift‑aware  </li>
+<li>replay‑safe  </li>
+</ul>
+<p>qCompute computes <strong>structure</strong>, not amplitudes.</p>
+<hr>
+<h1 id="1-operator-namespace">1. Operator Namespace</h1>
+<p>Operators belong to five families:</p>
+<table>
+<thead>
+<tr>
+<th>Family</th>
+<th>Tier</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>r1</strong> (primitive)</td>
+<td>r1</td>
+<td><code>x</code>, <code>y</code>, <code>z</code>, <code>h</code>, <code>s</code>, <code>t</code></td>
+</tr>
+<tr>
+<td><strong>r2</strong> (composite)</td>
+<td>r2</td>
+<td><code>cx</code>, <code>cz</code>, <code>swap</code></td>
+</tr>
+<tr>
+<td><strong>r3</strong> (pulse)</td>
+<td>r3</td>
+<td><code>pulse</code></td>
+</tr>
+<tr>
+<td><strong>measurement</strong></td>
+<td>special</td>
+<td><code>measure</code></td>
+</tr>
+<tr>
+<td><strong>meta</strong></td>
+<td>meta</td>
+<td><code>barrier</code>, <code>flush</code></td>
+</tr>
+</tbody>
+</table>
+<p>Each operator has:</p>
+<ul>
+<li>name  </li>
+<li>tier  </li>
+<li>drift characteristic  </li>
+<li>backend requirement  </li>
+<li>environment legality  </li>
+</ul>
+<hr>
+<h1 id="2-formal-grammar">2. Formal Grammar</h1>
+<h3 id="21-operator-invocation">2.1 Operator Invocation</h3>
+<pre><code>&lt;operator&gt; &quot;(&quot; &lt;args&gt; &quot;)&quot;
+</code></pre>
+<h3 id="22-arguments">2.2 Arguments</h3>
+<pre><code>&lt;args&gt; ::= &lt;arg&gt; | &lt;arg&gt; &quot;,&quot; &lt;args&gt;
+&lt;arg&gt;  ::= &lt;name&gt; &quot;=&quot; &lt;value&gt;
+</code></pre>
+<h3 id="23-names">2.3 Names</h3>
+<pre><code>&lt;name&gt; ::= /[a-zA-Z_][a-zA-Z0-9_]*/
+</code></pre>
+<h3 id="24-values">2.4 Values</h3>
+<pre><code>&lt;value&gt; ::= &lt;int&gt; | &lt;float&gt; | &lt;bool&gt; | &lt;string&gt;
+</code></pre>
+<h3 id="25-qubits">2.5 QuBits</h3>
+<pre><code>q, q1, q2 ∈ ℕ
+</code></pre>
+<hr>
+<h1 id="3-operator-legality-rules">3. Operator Legality Rules</h1>
+<p>Each operator is validated against:</p>
+<ol>
+<li>grammar  </li>
+<li>argument correctness  </li>
+<li>environment legality  </li>
+<li>tier legality  </li>
+<li>backend legality  </li>
+<li>token requirements  </li>
+<li>archive terminality  </li>
+</ol>
+<p>If invalid:</p>
+<pre><code>allowed: false
+reason: &quot;&lt;canonical reason&gt;&quot;
+</code></pre>
+<p>Canonical reasons:</p>
+<ul>
+<li><code>"invalid grammar"</code></li>
+<li><code>"invalid arguments"</code></li>
+<li><code>"illegal in environment"</code></li>
+<li><code>"backend mismatch"</code></li>
+<li><code>"backend illegal in environment"</code></li>
+<li><code>"tier decrease inside frame"</code></li>
+<li><code>"token required"</code></li>
+<li><code>"archive terminal"</code></li>
+<li><code>"illegal transition"</code></li>
+</ul>
+<hr>
+<h1 id="4-tier-semantics">4. Tier Semantics</h1>
+<h3 id="r1-primitive">r1 (primitive)</h3>
+<ul>
+<li>allowed in sandbox + production  </li>
+<li>low drift  </li>
+<li>backend: <code>local-sim</code>  </li>
+<li>may reuse frame  </li>
+</ul>
+<h3 id="r2-composite">r2 (composite)</h3>
+<ul>
+<li>allowed in sandbox + production  </li>
+<li>medium drift  </li>
+<li>backend: <code>hybrid-sim</code>  </li>
+<li><strong>tier escalation</strong> → new frame  </li>
+</ul>
+<h3 id="r3-pulse">r3 (pulse)</h3>
+<ul>
+<li><strong>production only</strong>  </li>
+<li><strong>token required</strong>  </li>
+<li>high drift  </li>
+<li>backend: <code>hardware-qpu-2</code>  </li>
+<li>always opens new frame  </li>
+</ul>
+<h3 id="measurement">measurement</h3>
+<ul>
+<li>allowed in sandbox + production  </li>
+<li>forces <strong>tier decrease</strong>  </li>
+<li>forces <strong>new frame</strong>  </li>
+</ul>
+<h3 id="meta">meta</h3>
+<ul>
+<li>allowed in sandbox + production  </li>
+<li>zero drift  </li>
+<li>always opens new frame  </li>
+</ul>
+<hr>
+<h1 id="5-backend-legality">5. Backend Legality</h1>
+<table>
+<thead>
+<tr>
+<th>Backend</th>
+<th>Allowed Tiers</th>
+<th>Environments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>local-sim</code></td>
+<td>r1</td>
+<td>sandbox, production</td>
+</tr>
+<tr>
+<td><code>hybrid-sim</code></td>
+<td>r1, r2</td>
+<td>sandbox, production</td>
+</tr>
+<tr>
+<td><code>hardware-qpu-2</code></td>
+<td>r3</td>
+<td>production only</td>
+</tr>
+</tbody>
+</table>
+<p>Archive is <strong>terminal</strong> and forbids all operators.</p>
+<hr>
+<h1 id="6-environment-legality">6. Environment Legality</h1>
+<table>
+<thead>
+<tr>
+<th>Environment</th>
+<th>Allowed Tiers</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sandbox</td>
+<td>r1, r2</td>
+<td>relaxed drift</td>
+</tr>
+<tr>
+<td>production</td>
+<td>r1, r2, r3</td>
+<td>strict drift, tokens required for r3</td>
+</tr>
+<tr>
+<td>archive</td>
+<td>none</td>
+<td>terminal</td>
+</tr>
+</tbody>
+</table>
+<p>Transitions:</p>
+<ul>
+<li>sandbox → production (token required)  </li>
+<li>production → archive (token required)  </li>
+<li>archive → (forbidden)  </li>
+</ul>
+<hr>
+<h1 id="7-drift-semantics">7. Drift Semantics</h1>
+<p>Each operator has a drift characteristic:</p>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Drift</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>r1</td>
+<td>low</td>
+</tr>
+<tr>
+<td>r2</td>
+<td>medium</td>
+</tr>
+<tr>
+<td>r3</td>
+<td>high</td>
+</tr>
+<tr>
+<td>measurement</td>
+<td>reset</td>
+</tr>
+<tr>
+<td>meta</td>
+<td>zero</td>
+</tr>
+</tbody>
+</table>
+<p>Drift overflow:</p>
+<ul>
+<li>closes current frame  </li>
+<li>opens new frame  </li>
+<li>routes operator into new frame  </li>
+</ul>
+<hr>
+<h1 id="8-frame-semantics">8. Frame Semantics</h1>
+<p>A frame is valid if:</p>
+<ul>
+<li>tier is monotonic (no decrease)  </li>
+<li>backend is consistent  </li>
+<li>drift ≤ drift bound  </li>
+<li>environment is legal  </li>
+</ul>
+<p>Triggers for new frame:</p>
+<ul>
+<li>first operator  </li>
+<li>tier escalation  </li>
+<li>tier decrease  </li>
+<li>r3 operator  </li>
+<li>drift overflow  </li>
+<li>meta operator  </li>
+<li>environment transition  </li>
+</ul>
+<hr>
+<h1 id="9-capture-semantics">9. Capture Semantics</h1>
+<p>Each operator produces:</p>
+<pre><code>operator:
+  op_id: &quot;&lt;id&gt;&quot;
+  name: &quot;&lt;operator&gt;&quot;
+  params: {...}
+  validation: {...}
+  routing: {...}
+  drift: {...}
+  timestamp: &quot;&lt;iso8601&gt;&quot;
+  hash_prev: &quot;&lt;sha256&gt;&quot;
+  hash_self: &quot;&lt;sha256&gt;&quot;
+</code></pre>
+<p>All fields are required.</p>
+<hr>
+<h1 id="10-replay-semantics">10. Replay Semantics</h1>
+<p>Replay verifies:</p>
+<ul>
+<li>grammar  </li>
+<li>tier monotonicity  </li>
+<li>backend legality  </li>
+<li>environment legality  </li>
+<li>drift bounds  </li>
+<li>transition legality  </li>
+<li>hash chain integrity  </li>
+<li>canonical field presence  </li>
+</ul>
+<p>Replay is deterministic and read‑only.</p>
+<hr>
+<h1 id="11-invariants">11. Invariants</h1>
+<ol>
+<li>grammar must be valid  </li>
+<li>arguments must be valid  </li>
+<li>environment must allow tier  </li>
+<li>backend must match tier  </li>
+<li>r3 requires token  </li>
+<li>measurement forces new frame  </li>
+<li>meta forces new frame  </li>
+<li>drift must not exceed bound  </li>
+<li>archive is terminal  </li>
+<li>hash chain must be valid  </li>
+</ol>
+<hr>
+<h1 id="summary">Summary</h1>
+<p>The Operator Grammar defines:</p>
+<ul>
+<li>operator namespace  </li>
+<li>formal grammar  </li>
+<li>argument rules  </li>
+<li>tier semantics  </li>
+<li>backend legality  </li>
+<li>environment legality  </li>
+<li>drift + frame semantics  </li>
+<li>capture + replay invariants  </li>
+</ul>
+<p>This grammar is the <strong>foundation</strong> of qCompute.</p>
+  </main>
+</body>
+</html>

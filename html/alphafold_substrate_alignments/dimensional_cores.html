@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/alphafold_substrate_alignments/dimensional_cores.md">
+  <title>AlphaFold Substrate Alignments</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/alphafold_substrate_alignments/dimensional_cores.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/alphafold_substrate_alignments/dimensional_cores.md</code>
+  </aside>
+
+  <main>
+<h3 id="alphafold-substrate-alignments"><em>AlphaFold Substrate Alignments</em></h3>
+<h3 id="dimensional-cores"><em>Dimensional Cores</em></h3>
+<p>This document defines the dimensional cores used to interpret protein‑folding inference systems within the Resonance Substrate Model (RSM). Dimensional cores provide the structural basis for projecting high‑dimensional latent‑space representations into stable, interpretable geometric substrates. For AlphaFold‑class models, dimensional cores anchor folding coherence, motif‑level structure, and regime‑transition behavior.</p>
+<hr>
+<h2 id="1-purpose-of-dimensional-cores"><strong>1. Purpose of Dimensional Cores</strong></h2>
+<p>Dimensional cores serve three primary functions:</p>
+<ul>
+<li>provide a stable geometric substrate for folding interpretation  </li>
+<li>preserve motif‑level structure during projection from high‑dimensional latent spaces  </li>
+<li>support regime classification and resonance‑time analysis  </li>
+</ul>
+<p>The cores ensure that folding predictions remain interpretable across inference cycles and model variants.</p>
+<hr>
+<h2 id="2-core-dimensional-structure"><strong>2. Core Dimensional Structure</strong></h2>
+<p>The AlphaFold substrate uses a <strong>3D–9D triadic dimensional core</strong>, defined as follows:</p>
+<h3 id="21-3d-structural-core"><strong>2.1 3D Structural Core</strong></h3>
+<p>Represents the physical geometry of protein conformations.<br>
+Includes:</p>
+<ul>
+<li>backbone coordinates  </li>
+<li>side‑chain orientation  </li>
+<li>local motif geometry  </li>
+</ul>
+<p>This core anchors all structural projections.</p>
+<h3 id="22-6d-interaction-core"><strong>2.2 6D Interaction Core</strong></h3>
+<p>Extends the 3D core to capture interaction‑level structure.<br>
+Includes:</p>
+<ul>
+<li>residue‑pair relationships  </li>
+<li>orientation‑pair embeddings  </li>
+<li>local‑to‑global interaction patterns  </li>
+</ul>
+<p>This core corresponds to the latent‑space structures used in folding inference.</p>
+<h3 id="23-9d-coherence-core"><strong>2.3 9D Coherence Core</strong></h3>
+<p>Represents the minimal dimensional substrate required to capture folding‑pathway coherence.<br>
+Includes:</p>
+<ul>
+<li>motif‑level stability signals  </li>
+<li>regime‑transition indicators  </li>
+<li>resonance‑time alignment patterns  </li>
+</ul>
+<p>The 9D core is the highest‑resolution substrate used for folding interpretation.</p>
+<hr>
+<h2 id="3-projection-principles"><strong>3. Projection Principles</strong></h2>
+<p>Dimensional projection follows three rules:</p>
+<h3 id="31-structurepreserving-projection"><strong>3.1 Structure‑Preserving Projection</strong></h3>
+<p>Projections from high‑dimensional latent space into 3D–9D cores must preserve:</p>
+<ul>
+<li>motif‑level geometry  </li>
+<li>backbone continuity  </li>
+<li>residue‑interaction coherence  </li>
+</ul>
+<h3 id="32-regimeaware-projection"><strong>3.2 Regime‑Aware Projection</strong></h3>
+<p>Projection must maintain regime identity:</p>
+<ul>
+<li>R₁ → stable geometric surfaces  </li>
+<li>R₂ → transitional structures  </li>
+<li>R₃ → dispersed or unstable projections  </li>
+</ul>
+<h3 id="33-invariantaligned-projection"><strong>3.3 Invariant‑Aligned Projection</strong></h3>
+<p>Projection must preserve substrate invariants, including:</p>
+<ul>
+<li>resonance‑time patterns  </li>
+<li>motif‑level stability  </li>
+<li>latent‑space orientation consistency  </li>
+</ul>
+<hr>
+<h2 id="4-highdimensional-extensions"><strong>4. High‑Dimensional Extensions</strong></h2>
+<p>Although the core substrate is 3D–9D, AlphaFold’s latent space often operates in higher dimensions (e.g., 32D–128D).<br>
+High‑dimensional extensions follow these principles:</p>
+<ul>
+<li>projections must remain invertible at the motif level  </li>
+<li>coherence surfaces must remain identifiable  </li>
+<li>regime transitions must remain detectable  </li>
+<li>substrate invariants must remain stable  </li>
+</ul>
+<p>These extensions allow the substrate to interpret complex inference behaviors without losing structural clarity.</p>
+<hr>
+<h2 id="5-dimensionalcore-behavior-across-regimes"><strong>5. Dimensional‑Core Behavior Across Regimes</strong></h2>
+<p>Dimensional cores interact with folding regimes as follows:</p>
+<ul>
+<li><strong>R₁ (Stable):</strong> full alignment with 3D–9D cores; projections are compact and coherent  </li>
+<li><strong>R₂ (Transition):</strong> partial alignment; projections show branching or oscillatory structure  </li>
+<li><strong>R₃ (High‑Uncertainty):</strong> weak alignment; projections disperse across higher‑dimensional space  </li>
+</ul>
+<p>This behavior supports regime classification and drift detection.</p>
+<hr>
+<h2 id="6-integration-with-substrate-primitives"><strong>6. Integration with Substrate Primitives</strong></h2>
+<p>Dimensional cores integrate with:</p>
+<ul>
+<li><strong>Structural Axis (S‑axis):</strong> geometric projection  </li>
+<li><strong>Inference Axis (I‑axis):</strong> latent‑space mapping  </li>
+<li><strong>Resonance‑Time Axis (R‑axis):</strong> regime‑transition interpretation  </li>
+</ul>
+<p>Together, these axes form the SIR substrate triad used throughout this artifact.</p>
+<hr>
+<h2 id="7-outputs-of-dimensionalcore-analysis"><strong>7. Outputs of Dimensional‑Core Analysis</strong></h2>
+<p>Dimensional‑core analysis produces:</p>
+<ul>
+<li>stable structural projections  </li>
+<li>regime‑aware folding interpretations  </li>
+<li>coherence‑surface identification  </li>
+<li>high‑dimensional alignment diagnostics  </li>
+<li>substrate‑level validation signals  </li>
+</ul>
+<p>These outputs integrate with vST validation layers and downstream substrate artifacts.</p>
+  </main>
+</body>
+</html>

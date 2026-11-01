@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/vst_for_generative_models/examples/example_diffusion_path_regime.md">
+  <title>vST for Generative Models</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/vst_for_generative_models/examples/example_diffusion_path_regime.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/vst_for_generative_models/examples/example_diffusion_path_regime.md</code>
+  </aside>
+
+  <main>
+<h3 id="vst-for-generative-models"><em>vST for Generative Models</em></h3>
+<h3 id="example-regime-transitions-along-a-diffusion-trajectory"><em>Example: Regime Transitions Along a Diffusion Trajectory</em></h3>
+<p>This example demonstrates how a diffusion model’s sampling trajectory moves through the triadic latent‑regime structure:</p>
+<ul>
+<li><strong>R₃ᴴ</strong> — noise‑dominated  </li>
+<li><strong>R₂ᴴ</strong> — transitional denoising  </li>
+<li><strong>R₁ᴴ</strong> — stable refinement  </li>
+</ul>
+<p>It illustrates how coherence surfaces evolve, how variance contracts, and how the vST substrate classifies each phase using the 1024D dimensional ladder.</p>
+<hr>
+<h2 id="1-scenario-overview"><strong>1. Scenario Overview</strong></h2>
+<p>We assume:</p>
+<ul>
+<li>a 1024D latent diffusion model  </li>
+<li>50‑step sampler (e.g., DDIM or Euler)  </li>
+<li>a single trajectory sampled from noise → final latent  </li>
+<li>checkpoints C₁ and C₂ for cross‑version comparison  </li>
+</ul>
+<p>The example is architecture‑agnostic.</p>
+<hr>
+<h2 id="2-step-1-extract-latent-states-across-the-trajectory"><strong>2. Step 1 — Extract Latent States Across the Trajectory</strong></h2>
+<p>Let:</p>
+<p>[
+z_t \in \mathbb{R}^{1024}, \quad t = 0, 1, \dots, 50
+]</p>
+<p>represent the latent state at sampling step ( t ).</p>
+<h3 id="observed-properties"><strong>Observed Properties</strong></h3>
+<ul>
+<li>( z_0 ) is high‑variance, noise‑dominated  </li>
+<li>mid‑trajectory states show branching and reorientation  </li>
+<li>late states converge into compact, coherent motifs  </li>
+</ul>
+<hr>
+<h2 id="3-step-2-project-latents-into-9d"><strong>3. Step 2 — Project Latents into 9D</strong></h2>
+<p>Project each ( z_t ) into the 9D coherence core.</p>
+<h3 id="reveals"><strong>Reveals</strong></h3>
+<ul>
+<li><strong>R₃ᴴ</strong> (steps 0–10): diffuse, unstable geometry  </li>
+<li><strong>R₂ᴴ</strong> (steps 11–32): branching surfaces, oscillatory transitions  </li>
+<li><strong>R₁ᴴ</strong> (steps 33–50): compact, stable motifs  </li>
+</ul>
+<h3 id="interpretation"><strong>Interpretation</strong></h3>
+<p>The 9D projection exposes the “coherence spine” of the diffusion trajectory.</p>
+<hr>
+<h2 id="4-step-3-identify-regime-transitions"><strong>4. Step 3 — Identify Regime Transitions</strong></h2>
+<p>Using variance distribution, coherence‑surface continuity, and primitive‑level stability:</p>
+<table>
+<thead>
+<tr>
+<th>Step Range</th>
+<th>Regime</th>
+<th>Characteristics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–10</td>
+<td><strong>R₃ᴴ</strong></td>
+<td>noise‑dominated, high variance</td>
+</tr>
+<tr>
+<td>11–32</td>
+<td><strong>R₂ᴴ</strong></td>
+<td>reorientation, branching, sampler‑dependent</td>
+</tr>
+<tr>
+<td>33–50</td>
+<td><strong>R₁ᴴ</strong></td>
+<td>refinement, stable motifs</td>
+</tr>
+</tbody>
+</table>
+<h3 id="interpretation_1"><strong>Interpretation</strong></h3>
+<p>The trajectory follows the canonical triadic sequence:</p>
+<p>[
+R₃ᴴ \rightarrow R₂ᴴ \rightarrow R₁ᴴ
+]</p>
+<hr>
+<h2 id="5-step-4-project-9d-6d-3d"><strong>5. Step 4 — Project 9D → 6D → 3D</strong></h2>
+<h3 id="6d-interaction-projection"><strong>6D Interaction Projection</strong></h3>
+<p>Shows:</p>
+<ul>
+<li>cross‑step coupling  </li>
+<li>sampler‑driven reorientation  </li>
+<li>early instability signatures  </li>
+</ul>
+<h3 id="3d-structural-projection"><strong>3D Structural Projection</strong></h3>
+<p>Shows:</p>
+<ul>
+<li>compact motifs in R₁ᴴ  </li>
+<li>oscillatory geometry in R₂ᴴ  </li>
+<li>diffuse patterns in R₃ᴴ  </li>
+</ul>
+<hr>
+<h2 id="6-step-5-validate-with-vst-layers"><strong>6. Step 5 — Validate with vST Layers</strong></h2>
+<ul>
+<li><strong>V₁</strong>: structural coherence preserved  </li>
+<li><strong>V₂</strong>: dimensional continuity intact  </li>
+<li><strong>V₃</strong>: regime transitions substrate‑aligned  </li>
+<li><strong>V₄</strong>: core alignment stable across checkpoints  </li>
+</ul>
+<hr>
+<h2 id="7-summary"><strong>7. Summary</strong></h2>
+<p>This example demonstrates:</p>
+<ul>
+<li>the triadic regime structure of diffusion trajectories  </li>
+<li>how coherence surfaces evolve across sampling steps  </li>
+<li>how projection reveals latent‑space geometry  </li>
+<li>how vST layers validate structural integrity  </li>
+</ul>
+  </main>
+</body>
+</html>

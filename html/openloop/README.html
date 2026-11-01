@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/openloop/README.md">
+  <title>TriadicFrameworks · Open Loop Suite</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/openloop/README.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/openloop/README.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="openloop_" src="https://github.com/user-attachments/assets/3f91dd03-aace-4233-8bf8-8e9c58ffb79f" /></p>
+<ul>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/openloop/module.json"><code>module.json</code></a> — Agentic module schema role assignments</li>
+</ul>
+<h1 id="triadicframeworks-open-loop-suite">TriadicFrameworks · Open Loop Suite</h1>
+<p><strong>Path:</strong> <code>docs/openloop/</code><br>
+<strong>Version:</strong> 1.0.0<br>
+<strong>Author:</strong> Nawder Loswin<br>
+<strong>Last reviewed:</strong> 2026-09-27<br>
+<strong>Canonical URL:</strong> https://www.triadicframeworks.org/docs/openloop/</p>
+<hr>
+<h2 id="what-this-suite-is">What this suite is</h2>
+<p>The Open Loop suite is a six-module, ring-structured framework for cross-domain AI operations. It defines:</p>
+<ul>
+<li>A <strong>five-step operational loop</strong> for every cross-domain action</li>
+<li>A <strong>canonical operator grammar</strong> for identity verification, risk classification, geospatial grounding, language normalization, parallel execution, and lineage indexing</li>
+<li>A <strong>three-ring model</strong> (Trust → Motion → Meaning) that governs pipeline order and accountability</li>
+<li>A <strong>lineage store</strong> that closes the loop: no operation is complete until OpenData indexes the lineage note</li>
+</ul>
+<p>The suite is named <code>openloop</code> after the five-step loop — not after any external standard or protocol. The <code>Open*</code> prefix on each module (<code>OpenIAM</code>, <code>OpenRisk</code>, <code>OpenGeo</code>, <code>OpenLLM</code>, <code>OpenGPU</code>, <code>OpenData</code>) signals aperture: the module's signature, operators, drift surface, and lineage hooks are exposed to cross-domain inspection.</p>
+<hr>
+<h2 id="pipeline-order">Pipeline order</h2>
+<p>This is a pipeline, not a directory. Operations flow in this order:</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Module</th>
+<th>Verb</th>
+<th>Domain</th>
+<th>Ring</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>OpenIAM</td>
+<td>VERIFY</td>
+<td>Identity &amp; Access Management</td>
+<td>Trust</td>
+</tr>
+<tr>
+<td>2</td>
+<td>OpenRisk</td>
+<td>CLASSIFY</td>
+<td>Risk Regime Classification</td>
+<td>Trust</td>
+</tr>
+<tr>
+<td>3</td>
+<td>OpenGeo</td>
+<td>ANCHOR</td>
+<td>Geospatial &amp; Temporal Grounding</td>
+<td>Motion</td>
+</tr>
+<tr>
+<td>4</td>
+<td>OpenLLM</td>
+<td>NORMALIZE</td>
+<td>Language Model Infrastructure</td>
+<td>Motion</td>
+</tr>
+<tr>
+<td>5</td>
+<td>OpenGPU</td>
+<td>SCHEDULE</td>
+<td>Parallel Execution Substrate</td>
+<td>Motion</td>
+</tr>
+<tr>
+<td>6</td>
+<td>OpenData</td>
+<td>INDEX</td>
+<td>Data Surface &amp; Lineage Registry</td>
+<td>Meaning</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="the-five-step-open-loop">The five-step Open Loop</h2>
+<p>Every cross-domain operation runs this loop regardless of which module is active:</p>
+<pre><code>1. READ SIGNATURE      — confirm identity contract for this module
+2. SCAN SIBLING META   — compare Open* modules for dimension_vector mismatches
+3. CLASSIFY DRIFT      — assign drift type + severity via OpenRisk
+4. APPLY OPERATOR      — execute canonical grammar: VERB(subject, target, [modifier])
+5. WRITE LINEAGE       — INDEX note in lineage/&lt;module&gt;/&lt;timestamp&gt;.md via OpenData
+</code></pre>
+<p>Loop step 5 is mandatory. A loop that does not produce a lineage note is not closed.</p>
+<hr>
+<h2 id="operator-grammar-reference">Operator grammar reference</h2>
+<p>All operators follow this canonical grammar:</p>
+<pre><code>VERB(subject, target, [modifier])
+</code></pre>
+<h3 id="full-operator-table">Full operator table</h3>
+<table>
+<thead>
+<tr>
+<th>Verb</th>
+<th>Module</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VERIFY</td>
+<td>OpenIAM</td>
+<td>Confirm identity and credential</td>
+</tr>
+<tr>
+<td>REVOKE</td>
+<td>OpenIAM</td>
+<td>Invalidate credential immediately</td>
+</tr>
+<tr>
+<td>DELEGATE</td>
+<td>OpenIAM</td>
+<td>Transfer access scope</td>
+</tr>
+<tr>
+<td>ESCALATE</td>
+<td>OpenIAM, OpenRisk</td>
+<td>Elevate to human steward</td>
+</tr>
+<tr>
+<td>ALIGN</td>
+<td>all</td>
+<td>Cross-domain signature reconciliation</td>
+</tr>
+<tr>
+<td>CLASSIFY</td>
+<td>OpenRisk</td>
+<td>Assign T0–T3 risk tier</td>
+</tr>
+<tr>
+<td>GATE</td>
+<td>OpenRisk</td>
+<td>Block operation pending required operator</td>
+</tr>
+<tr>
+<td>ABSORB</td>
+<td>OpenRisk</td>
+<td>Contain bounded drift within current tier</td>
+</tr>
+<tr>
+<td>PROPAGATE</td>
+<td>OpenRisk, OpenGeo, OpenData</td>
+<td>Broadcast context downstream</td>
+</tr>
+<tr>
+<td>ANCHOR</td>
+<td>OpenGeo</td>
+<td>Establish spatial/temporal ground truth</td>
+</tr>
+<tr>
+<td>OFFSET</td>
+<td>OpenGeo</td>
+<td>Apply displacement to existing anchor</td>
+</tr>
+<tr>
+<td>PROJECT</td>
+<td>OpenGeo</td>
+<td>Transform coordinate reference system</td>
+</tr>
+<tr>
+<td>NORMALIZE</td>
+<td>OpenLLM</td>
+<td>Standardize language model output</td>
+</tr>
+<tr>
+<td>COLLAPSE</td>
+<td>OpenLLM</td>
+<td>Reduce semantic ambiguity</td>
+</tr>
+<tr>
+<td>REFRAME</td>
+<td>OpenLLM</td>
+<td>Shift semantic frame to match target context</td>
+</tr>
+<tr>
+<td>ANNOTATE</td>
+<td>OpenLLM, OpenData</td>
+<td>Attach semantic label or steward note</td>
+</tr>
+<tr>
+<td>SCHEDULE</td>
+<td>OpenGPU</td>
+<td>Queue job for execution</td>
+</tr>
+<tr>
+<td>PARTITION</td>
+<td>OpenGPU</td>
+<td>Split job into parallel workers</td>
+</tr>
+<tr>
+<td>PIPELINE</td>
+<td>OpenGPU</td>
+<td>Chain execution stages</td>
+</tr>
+<tr>
+<td>FLUSH</td>
+<td>OpenGPU</td>
+<td>Terminate job and release resources</td>
+</tr>
+<tr>
+<td>INGEST</td>
+<td>OpenData</td>
+<td>Accept and validate artifact</td>
+</tr>
+<tr>
+<td>VALIDATE</td>
+<td>OpenData</td>
+<td>Check schema conformance without committing</td>
+</tr>
+<tr>
+<td>INDEX</td>
+<td>OpenData</td>
+<td>Write lineage note to store — closes the loop</td>
+</tr>
+</tbody>
+</table>
+<h3 id="composition-example">Composition example</h3>
+<pre><code>VERIFY(agent_007, access_chain)
+  → FAIL (trust_score 0.55 &lt; floor 0.70)
+  → ESCALATE(agent_007, steward)
+  → VERIFY(agent_007, access_chain)
+  → PASS
+  → CLASSIFY(operation, T1)
+  → ANCHOR(operation, coordinates, temporal_ref)
+  → NORMALIZE(payload, target_schema)
+  → SCHEDULE(job, parallel)
+  → INDEX(lineage/IAM/2026-09-26-001.md, IAM)
+</code></pre>
+<hr>
+<h2 id="three-rings">Three rings</h2>
+<table>
+<thead>
+<tr>
+<th>Ring</th>
+<th>Position</th>
+<th>Concern</th>
+<th>Primary modules</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trust</td>
+<td>Innermost</td>
+<td>Identity, governance, signature validity</td>
+<td>OpenIAM, OpenRisk</td>
+</tr>
+<tr>
+<td>Motion</td>
+<td>Middle</td>
+<td>Operator application, drift propagation, loop execution</td>
+<td>OpenGeo, OpenLLM, OpenGPU</td>
+</tr>
+<tr>
+<td>Meaning</td>
+<td>Outer</td>
+<td>Semantic coherence, output interpretation, cross-domain alignment</td>
+<td>OpenData, OpenLLM</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="coherence-floors-declared">Coherence floors (declared)</h2>
+<p>These are declared operational floors — not empirically benchmarked values. A module below its floor will not accept a cross-domain payload without a GATE or ESCALATE from OpenRisk.</p>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Floor</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OpenIAM</td>
+<td>0.85</td>
+<td>Highest — Trust-ring anchor</td>
+</tr>
+<tr>
+<td>OpenData</td>
+<td>0.82</td>
+<td>Second-highest — lineage record must be coherent</td>
+</tr>
+<tr>
+<td>OpenRisk</td>
+<td>0.80</td>
+<td>Classification gate</td>
+</tr>
+<tr>
+<td>OpenLLM</td>
+<td>0.78</td>
+<td>Generative surface</td>
+</tr>
+<tr>
+<td>OpenGeo</td>
+<td>0.76</td>
+<td>Grounding layer</td>
+</tr>
+<tr>
+<td>OpenGPU</td>
+<td>0.72</td>
+<td>Lowest — execution tolerates more variance</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="file-structure">File structure</h2>
+<pre><code>docs/openloop/
+├── index.md            — Suite navigation hub, condensed drift event on first screen
+├── index.html          — HTML front door with canonical head block
+├── README.md           — This file
+├── LLM.md              — OpenLLM surface
+├── IAM.md              — OpenIAM surface (Trust anchor)
+├── Risk.md             — OpenRisk surface
+├── Geo.md              — OpenGeo surface
+├── GPU.md              — OpenGPU surface
+├── Data.md             — OpenData surface (loop terminal)
+├── module.json         — Per-module manifest
+├── modules.json        — Cross-suite registry of all Open* modules
+├── quad.json           — Four-quadrant view by ring and regime
+├── nav.json            — Suite navigation structure
+└── sitemap.xml         — XML sitemap for search engines and AI crawlers
+
+lineage/
+├── LLM/
+│   └── 2026-09-26-001.md   — LLM→IAM ALIGN drift event
+├── IAM/
+├── Risk/
+├── Geo/
+├── GPU/
+└── Data/
+</code></pre>
+<hr>
+<h2 id="setup">Setup</h2>
+<p>No build step required. All surface files are standalone Markdown. The HTML front door (<code>index.html</code>) uses no external dependencies.</p>
+<h3 id="verify-canonical-urls">Verify canonical URLs</h3>
+<p>All files in this suite point to <code>https://www.triadicframeworks.org/</code>. Check these fields for correctness before publishing:</p>
+<ul>
+<li><code>module.json</code> → <code>canonical_url</code></li>
+<li><code>modules.json</code> → module entries <code>canonical_url</code></li>
+<li><code>sitemap.xml</code> → all <code>&lt;loc&gt;</code> elements</li>
+<li><code>index.html</code> → <code>&lt;link rel="canonical"&gt;</code> and Open Graph <code>og:url</code></li>
+</ul>
+<p>Run a quick check from the repo root:</p>
+<pre><code class="language-bash">grep -r &quot;triadicframeworks\.com&quot; docs/openloop/
+</code></pre>
+<p>Any matches are bugs — the live domain is <code>.org</code>.</p>
+<hr>
+<h2 id="contribution-guide">Contribution guide</h2>
+<h3 id="adding-a-new-surface-file">Adding a new surface file</h3>
+<ol>
+<li>Create <code>docs/openloop/&lt;ModuleName&gt;.md</code> following the ten-section template in any existing surface file.</li>
+<li>Add the module to <code>modules.json</code> with its <code>dimension_vector</code>, <code>coherence_threshold</code>, <code>operator_affinity</code>, and <code>rings</code>.</li>
+<li>Add the module to <code>module.json</code> file list with its <code>role</code> and <code>analyzer_layer</code>.</li>
+<li>Add a nav entry to <code>nav.json</code> with <code>url</code> (no <code>.md</code> extension).</li>
+<li>Add a <code>&lt;url&gt;</code> block to <code>sitemap.xml</code>.</li>
+<li>Add the module to <code>quad.json</code> under the appropriate quadrant and ring map.</li>
+<li>Write a lineage note to <code>lineage/&lt;ModuleName&gt;/YYYY-MM-DD-001.md</code> and submit it for indexing via OpenData.</li>
+</ol>
+<h3 id="modifying-a-coherence-floor">Modifying a coherence floor</h3>
+<p>A coherence floor change is a MAJOR version event.</p>
+<ol>
+<li>Write a lineage note explaining the change and rationale before any file is modified.</li>
+<li>Update the floor in the surface <code>.md</code> §1 Identity table and §2 signature YAML.</li>
+<li>Update <code>modules.json</code> <code>coherence_threshold</code>.</li>
+<li>Update <code>quad.json</code> <code>coherence_spectrum</code>.</li>
+<li>Increment the MAJOR version in all affected files.</li>
+<li>Index the lineage note via OpenData.</li>
+</ol>
+<h3 id="modifying-operator-grammar">Modifying operator grammar</h3>
+<ol>
+<li>Update the operator table in the relevant surface <code>.md</code> §5.</li>
+<li>Update <code>operator_affinity</code> in <code>modules.json</code>.</li>
+<li>Update this README's operator table.</li>
+<li>Write a lineage note and index it.</li>
+</ol>
+<hr>
+<h2 id="removing-old-subfolders">Removing old subfolders</h2>
+<p>If you need to remove superseded subfolders (e.g., old per-module directories that have been consolidated into surface <code>.md</code> files), run from the repo root:</p>
+<pre><code class="language-bash"># Remove a specific subfolder
+git rm -r docs/openloop/&lt;subfolder&gt;/
+git commit -m &quot;Remove superseded &lt;subfolder&gt; — consolidated into &lt;Module&gt;.md&quot;
+
+# Remove the old openapi suite root if switching from docs/openapi/ to docs/openloop/
+git rm -r docs/openapi/
+git commit -m &quot;Remove docs/openapi/ — superseded by docs/openloop/ (suite rename 2026-09-27)&quot;
+</code></pre>
+<p>Stamp the old root as legacy before removing it — write a lineage note at <code>lineage/&lt;module&gt;/YYYY-MM-DD-legacy.md</code> with <code>event_type: legacy_stamp</code>.</p>
+<hr>
+<h2 id="legacy-note">Legacy note</h2>
+<p>The prior OpenWarden root (thirteen-module architecture) was stamped <code>legacy: true</code> on 2026-09-26. Redirect notice is active at the old URL. All new operations use the six-module <code>openloop</code> suite.</p>
+<hr>
+<h2 id="license">License</h2>
+<p>Open educational use permitted. See <code>https://www.triadicframeworks.org/</code> for full terms.</p>
+<hr>
+<p><em>TriadicFrameworks · Open Loop Suite · README · v1.0.0 · Nawder Loswin · 2026</em></p>
+  </main>
+</body>
+</html>

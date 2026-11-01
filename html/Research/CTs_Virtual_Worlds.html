@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Research/CTs_Virtual_Worlds.md">
+  <title>Consciousness Transfers &amp; Virtual Worlds — Operator Specification (Goal #3)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Research/CTs_Virtual_Worlds.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Research/CTs_Virtual_Worlds.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="CTs_Virtual_Worlds" src="https://github.com/user-attachments/assets/b99b50bb-42ee-4ee1-a178-1b9791b5a026" /></p>
+<h1 id="consciousness-transfers-virtual-worlds-operator-specification-goal-3">Consciousness Transfers &amp; Virtual Worlds — Operator Specification (Goal #3)</h1>
+<h2 id="summary">Summary</h2>
+<p>CTs and Virtual Worlds require a typed continuity operator, a substrate‑safe transition functor, and an envelope that preserves identity across instantiation.<br>
+The 33‑33‑33‑1 Operator provides the first complete foundation for CTs.</p>
+<hr>
+<h1 id="1-operator-algebra-for-cts">1. Operator Algebra for CTs</h1>
+<h2 id="11-state-space">1.1 State Space</h2>
+<p>A CT state is:</p>
+<p>$$
+C = (T, E)
+$$</p>
+<p>where:
+- $$T \in \mathcal{T}$$ is the triad (identity)
+- $$E$$ is the environment map (virtual world regime structure)</p>
+<hr>
+<h2 id="12-ct-operator">1.2 CT Operator</h2>
+<p>A CT event is:</p>
+<p>$$
+\mathcal{C}(C) = C'
+$$</p>
+<p>with:
+- $$T' = T$$ (identity preserved)
+- $$E'$$ is a legal instantiation of $$E$$ in the target substrate</p>
+<hr>
+<h2 id="13-continuity-constraint">1.3 Continuity Constraint</h2>
+<p>CT is legal iff:</p>
+<p>$$
+A(T) &gt; 0
+$$</p>
+<p>and:</p>
+<p>$$
+A(T') = A(T)
+$$</p>
+<hr>
+<h2 id="14-reconstruction-window">1.4 Reconstruction Window</h2>
+<p>Near the target substrate:</p>
+<p>$$
+W = [1-\delta, 1]
+$$</p>
+<p>CTs may apply:
+- environment alignment<br>
+- triad correction<br>
+- regime stabilization  </p>
+<hr>
+<h1 id="2-ct-functor">2. CT Functor</h1>
+<h2 id="21-categories">2.1 Categories</h2>
+<h3 id="category-c-substrates">Category 𝒞 — Substrates</h3>
+<ul>
+<li>Objects: substrates</li>
+<li>Morphisms: transitions</li>
+</ul>
+<h3 id="category-d-ct-states">Category 𝒟 — CT States</h3>
+<ul>
+<li>Objects: $$C = (T,E)$$</li>
+<li>Morphisms: continuity‑preserving transforms</li>
+</ul>
+<hr>
+<h2 id="22-functor-definition">2.2 Functor Definition</h2>
+<p>$$
+\mathcal{F} : \mathcal{C} \to \mathcal{D}
+$$</p>
+<h3 id="on-objects">On Objects</h3>
+<p>$$
+\mathcal{F}(S) = C_S
+$$</p>
+<h3 id="on-morphisms">On Morphisms</h3>
+<p>For $$f : S_1 \to S_2$$ :</p>
+<p>$$
+\mathcal{F}(f) = F_f : C_{S_1} \to C_{S_2}
+$$</p>
+<p>with:
+- $$T_{S_1} = T_{S_2}$$
+- $$A(T_{S_2}) &gt; 0$$
+- $$E_{S_2}$$ is a legal instantiation of $$E_{S_1}$$</p>
+<hr>
+<h1 id="3-ct-envelope">3. CT Envelope</h1>
+<p>A <strong>CT Envelope</strong> is:</p>
+<p>$$
+E_C = { C(t) \mid t \in [0,1] }
+$$</p>
+<p>A CT is valid iff:
+- identity preserved<br>
+- asymmetry preserved<br>
+- environment instantiated legally<br>
+- reconstruction window converges<br>
+- no branching<br>
+- no collapse  </p>
+<hr>
+<h1 id="4-ct-claim-v03">4. CT Claim (v0.3)</h1>
+<blockquote>
+<p>A CT is a continuity‑preserving substrate transition in which the triad identity and environment structure remain invariant, with a reconstruction window ensuring stable instantiation in the target substrate.</p>
+</blockquote>
+  </main>
+</body>
+</html>

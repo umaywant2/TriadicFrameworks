@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Harmonic_Stability_Profile/05b_Echo_Heatmap.md">
+  <title>🎼 Echo Heatmap</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Harmonic_Stability_Profile/05b_Echo_Heatmap.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Harmonic_Stability_Profile/05b_Echo_Heatmap.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Harmonic_Stability_Profile_05b_Echo_Heatmap_" src="https://github.com/user-attachments/assets/bf28c1f7-ede1-4ca2-a8a2-fdc588e6abf6" /></p>
+<h1 id="echo-heatmap">🎼 <strong>Echo Heatmap</strong></h1>
+<h3 id="visualizing-echo-intensity-across-substrates-families-recursion-modes"><em>Visualizing Echo Intensity Across Substrates, Families &amp; Recursion Modes</em></h3>
+<p>The <strong>Echo Heatmap</strong> provides a <strong>visual, at‑a‑glance diagnostic</strong> of echo behavior<br>
+across the TriadicFrameworks canon.</p>
+<p>It shows:</p>
+<ul>
+<li>echo intensity (ESI‑1 → ESI‑4)  </li>
+<li>cross‑substrate resonance  </li>
+<li>echo‑pressure zones  </li>
+<li>drift‑shadow regions  </li>
+<li>recursion‑echo coupling  </li>
+</ul>
+<p>Heatmaps are ASCII‑safe and GitHub‑friendly.</p>
+<hr>
+<h1 id="1-heatmap-legend">🔷 <strong>1. Heatmap Legend</strong></h1>
+<pre><code>.   = no echo
+░   = weak echo (ESI‑1)
+▒   = moderate echo (ESI‑2)
+▓   = strong echo (ESI‑3)
+█   = dominant echo (ESI‑4)
+</code></pre>
+<hr>
+<h1 id="2-echo-family-substrate-heatmap">🔷 <strong>2. Echo Family × Substrate Heatmap</strong></h1>
+<pre><code>+----------------------+-----------+-----------+-----------+-----------+--------+
+| Echo Family          | Symbolic  | Cognitive | Harmonic  | Social    | Atlas  |
++----------------------+-----------+-----------+-----------+-----------+--------+
+| F1 Structural        |    ▓      |    ▓      |    .      |    .      |   .    |
+| F2 Harmonic          |    .      |    .      |    █      |    .      |   .    |
+| F3 Substrate         |    ▒      |    ▒      |    ▓      |    ▒      |   .    |
+| F4 Recursion         |    .      |    .      |    ▓      |    .      |   ▓    |
+| F5 Drift-Shadow      |    ▓      |    .      |    ▓      |    .      |   █    |
+| F6 Atlas             |    ▒      |    ▒      |    ▓      |    ▒      |   █    |
++----------------------+-----------+-----------+-----------+-----------+--------+
+</code></pre>
+<p><strong>Interpretation:</strong><br>
+- F2 is harmonic‑dominant.<br>
+- F5 and F6 show atlas‑level resonance (potential drift‑shadow or recursion forcing).<br>
+- F3 is the most substrate‑distributed family.</p>
+<hr>
+<h1 id="3-echo-family-recursion-mode-heatmap">🔷 <strong>3. Echo Family × Recursion Mode Heatmap</strong></h1>
+<pre><code>+----------------------+---------+---------+---------+---------+
+| Echo Family          | Ladder  | Cycle   | Map     | Atlas   |
++----------------------+---------+---------+---------+---------+
+| F1 Structural        |   ▓     |   .     |   .     |   .     |
+| F2 Harmonic          |   ▒     |   ▓     |   .     |   .     |
+| F3 Substrate         |   .     |   ▒     |   ▓     |   .     |
+| F4 Recursion         |   ▓     |   ▓     |   ▓     |   ▓     |
+| F5 Drift-Shadow      |   .     |   .     |   ▓     |   █     |
+| F6 Atlas             |   .     |   .     |   ▒     |   █     |
++----------------------+---------+---------+---------+---------+
+</code></pre>
+<p><strong>Interpretation:</strong><br>
+- F4 is recursion‑aligned across all modes.<br>
+- F5 and F6 dominate atlas‑level recursion.<br>
+- F3 transitions cycle → map.</p>
+<hr>
+<h1 id="4-drift-type-d1d4-echo-family-heatmap">🔷 <strong>4. Drift Type (D1–D4) × Echo Family Heatmap</strong></h1>
+<pre><code>+----------------------+--------+--------+--------+--------+
+| Echo Family          |  D1    |  D2    |  D3    |  D4    |
++----------------------+--------+--------+--------+--------+
+| F1 Structural        |   ▓    |   .    |   .    |   .    |
+| F2 Harmonic          |   ▒    |   ▓    |   .    |   .    |
+| F3 Substrate         |   .    |   ▒    |   ▓    |   .    |
+| F4 Recursion         |   .    |   .    |   ▓    |   ▓    |
+| F5 Drift-Shadow      |   ▓    |   ▓    |   ▓    |   █    |
+| F6 Atlas             |   .    |   .    |   ▒    |   █    |
++----------------------+--------+--------+--------+--------+
+</code></pre>
+<p><strong>Interpretation:</strong><br>
+- F5 is the only family active across all drift types.<br>
+- F6 dominates D4 projection drift.<br>
+- F2 and F3 show mid‑tier drift alignment.</p>
+<hr>
+<h1 id="5-echopressure-heatmap-composite">🔷 <strong>5. Echo‑Pressure Heatmap (Composite)</strong></h1>
+<pre><code>Substrates:   S   C   H   So  A
+--------------------------------
+Pressure:     ▒   ▓   █   ▒   █
+</code></pre>
+<p><strong>Meaning:</strong><br>
+- Harmonic and Atlas layers show highest echo‑pressure.<br>
+- Cognitive and Social layers show moderate pressure.<br>
+- Symbolic layer shows mild pressure.</p>
+<hr>
+<h1 id="6-usage-notes">🔷 <strong>6. Usage Notes</strong></h1>
+<p>Use this file when:</p>
+<ul>
+<li>performing rapid echo diagnostics  </li>
+<li>identifying echo‑pressure zones  </li>
+<li>detecting drift‑shadow formation  </li>
+<li>predicting recursion activation  </li>
+<li>preparing stability or drift reports  </li>
+<li>visualizing cross‑substrate resonance  </li>
+</ul>
+<p>Referenced by:</p>
+<ul>
+<li><code>05_Echo_Matrices.md</code>  </li>
+<li><code>05a_CrossSubstrate_Echo_Matrix.md</code>  </li>
+<li><code>04c_Echo_Strength_Index.md</code>  </li>
+<li><code>04d_Echo_Summary.md</code>  </li>
+</ul>
+<hr>
+<h1 id="footer">🔷 <strong>Footer</strong></h1>
+<pre><code>HSP Module 05b — Loaded
+Version: v1.0
+Status: Canon-Stable
+</code></pre>
+  </main>
+</body>
+</html>

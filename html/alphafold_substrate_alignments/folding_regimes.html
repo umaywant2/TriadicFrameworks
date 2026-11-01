@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/alphafold_substrate_alignments/folding_regimes.md">
+  <title>AlphaFold Substrate Alignments</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/alphafold_substrate_alignments/folding_regimes.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/alphafold_substrate_alignments/folding_regimes.md</code>
+  </aside>
+
+  <main>
+<h3 id="alphafold-substrate-alignments"><em>AlphaFold Substrate Alignments</em></h3>
+<h3 id="folding-regimes"><em>Folding Regimes</em></h3>
+<p>This document defines the folding regimes used to interpret protein‑folding inference systems within the Resonance Substrate Model (RSM). Folding regimes classify the structural and inference‑cycle behavior of AlphaFold‑class models into stable, transitional, and high‑uncertainty states. These regimes correspond to triadic resonance primitives and provide a reproducible framework for analyzing folding coherence, regime transitions, and substrate‑level stability.</p>
+<hr>
+<h2 id="1-purpose-of-folding-regimes"><strong>1. Purpose of Folding Regimes</strong></h2>
+<p>Folding regimes provide a structural lens for interpreting:</p>
+<ul>
+<li>convergence behavior during inference  </li>
+<li>motif‑level stability  </li>
+<li>latent‑space coherence  </li>
+<li>resonance‑time transitions  </li>
+<li>dimensional‑core alignment  </li>
+</ul>
+<p>Regimes allow folding predictions to be analyzed independently of model architecture or training data.</p>
+<hr>
+<h2 id="2-triadic-folding-regime-structure"><strong>2. Triadic Folding Regime Structure</strong></h2>
+<p>Folding regimes follow the triadic resonance pattern used throughout RSM:</p>
+<ol>
+<li><strong>Stable Regime (R₁)</strong>  </li>
+<li><strong>Transition Regime (R₂)</strong>  </li>
+<li><strong>High‑Uncertainty Regime (R₃)</strong>  </li>
+</ol>
+<p>These regimes apply to both structural outputs and latent‑space inference signals.</p>
+<hr>
+<h2 id="3-regime-definitions"><strong>3. Regime Definitions</strong></h2>
+<h3 id="31-stable-regime-r1"><strong>3.1 Stable Regime (R₁)</strong></h3>
+<p>A region where folding predictions converge consistently across inference cycles.</p>
+<p>Characteristics:</p>
+<ul>
+<li>high motif‑level coherence  </li>
+<li>stable backbone geometry  </li>
+<li>consistent residue‑interaction patterns  </li>
+<li>low variance across inference iterations  </li>
+<li>alignment with 3D–9D dimensional cores  </li>
+</ul>
+<p>R₁ corresponds to resonance‑time stability and forms the substrate’s primary coherence surface.</p>
+<hr>
+<h3 id="32-transition-regime-r2"><strong>3.2 Transition Regime (R₂)</strong></h3>
+<p>A region where the model shifts between candidate conformations or latent‑space orientations.</p>
+<p>Characteristics:</p>
+<ul>
+<li>moderate structural variance  </li>
+<li>partial motif stability  </li>
+<li>detectable shifts in latent‑space orientation  </li>
+<li>increased sensitivity to input features  </li>
+<li>resonance‑time oscillation patterns  </li>
+</ul>
+<p>R₂ represents the dynamic region between stable conformations and is essential for interpreting folding pathways.</p>
+<hr>
+<h3 id="33-highuncertainty-regime-r3"><strong>3.3 High‑Uncertainty Regime (R₃)</strong></h3>
+<p>A region where folding predictions exhibit low coherence and high variance.</p>
+<p>Characteristics:</p>
+<ul>
+<li>unstable or conflicting structural outputs  </li>
+<li>weak motif‑level signals  </li>
+<li>diffuse latent‑space representations  </li>
+<li>inconsistent inference‑cycle behavior  </li>
+<li>sensitivity to noise or MSA variability  </li>
+</ul>
+<p>R₃ corresponds to resonance‑time divergence and often indicates insufficient structural information.</p>
+<hr>
+<h2 id="4-regime-transitions"><strong>4. Regime Transitions</strong></h2>
+<p>Regime transitions follow predictable resonance‑time patterns:</p>
+<ul>
+<li><strong>R₁ → R₂:</strong> onset of structural reorientation  </li>
+<li><strong>R₂ → R₁:</strong> convergence to a stable coherence surface  </li>
+<li><strong>R₂ → R₃:</strong> breakdown of motif‑level structure  </li>
+<li><strong>R₃ → R₂:</strong> partial recovery of structural coherence  </li>
+</ul>
+<p>Transitions are detectable through latent‑space orientation shifts, dimensional‑core projections, and vST validation signals.</p>
+<hr>
+<h2 id="5-dimensionalcore-behavior"><strong>5. Dimensional‑Core Behavior</strong></h2>
+<p>Folding regimes interact with dimensional cores as follows:</p>
+<ul>
+<li><strong>R₁:</strong> fully aligns with 3D–9D cores  </li>
+<li><strong>R₂:</strong> partially aligns; projections reveal transitional geometry  </li>
+<li><strong>R₃:</strong> weak alignment; projections show high‑dimensional dispersion  </li>
+</ul>
+<p>Dimensional‑core mapping provides a stable substrate for interpreting regime behavior.</p>
+<hr>
+<h2 id="6-inferencecycle-behavior"><strong>6. Inference‑Cycle Behavior</strong></h2>
+<p>Folding regimes correspond to characteristic inference‑cycle patterns:</p>
+<ul>
+<li><strong>R₁:</strong> monotonic convergence  </li>
+<li><strong>R₂:</strong> oscillatory or branching behavior  </li>
+<li><strong>R₃:</strong> divergent or unstable trajectories  </li>
+</ul>
+<p>These patterns support reproducibility analysis and drift detection.</p>
+<hr>
+<h2 id="7-regimebased-interpretation"><strong>7. Regime‑Based Interpretation</strong></h2>
+<p>Regimes enable:</p>
+<ul>
+<li>structural interpretation of folding pathways  </li>
+<li>identification of stable motifs  </li>
+<li>detection of ambiguous or low‑confidence regions  </li>
+<li>substrate‑level comparison across models  </li>
+<li>integration with vST validation layers  </li>
+</ul>
+<p>Regime analysis provides a consistent framework for interpreting high‑dimensional biological inference systems.</p>
+  </main>
+</body>
+</html>

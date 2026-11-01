@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/micro_core/toolkit/triad_templates.md">
+  <title>🔺 Triad Templates (MRT)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/micro_core/toolkit/triad_templates.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/micro_core/toolkit/triad_templates.md</code>
+  </aside>
+
+  <main>
+<h1 id="triad-templates-mrt">🔺 <strong>Triad Templates (MRT)</strong></h1>
+<p><em>Reusable structural patterns for constructing Micro Triads</em></p>
+<p>Triad Templates define how A (Active), B (Boundary), and P (Potential) are initialized, maintained, and transitioned across different micro‑regimes.<br>
+Each template is:</p>
+<ul>
+<li>minimal  </li>
+<li>deterministic  </li>
+<li>coherence‑preserving  </li>
+<li>aligned with the Micro‑Core substrate  </li>
+</ul>
+<hr>
+<h2 id="template-t1-stable-triad"><strong>Template T₁ — Stable Triad</strong></h2>
+<p><strong>Purpose</strong><br>
+A baseline triad for stable micro‑resonance.</p>
+<p><strong>Structure</strong><br>
+- A initialized to current micro‑state<br>
+- B set to fixed boundary<br>
+- P computed from local conditions  </p>
+<p><strong>Behavior</strong><br>
+Supports stable A ⇆ P oscillation using <strong>R₁</strong>.</p>
+<p><strong>Use Cases</strong><br>
+Heartbeat loops, periodic sampling, low‑power micro‑agents.</p>
+<hr>
+<h2 id="template-t2-adaptive-boundary-triad"><strong>Template T₂ — Adaptive Boundary Triad</strong></h2>
+<p><strong>Purpose</strong><br>
+A triad that adjusts its boundary under environmental drift.</p>
+<p><strong>Structure</strong><br>
+- A stable<br>
+- B dynamic (B⁺ / B⁻ allowed)<br>
+- P updated based on boundary shifts  </p>
+<p><strong>Behavior</strong><br>
+Uses <strong>K₃ (Boundary Alignment)</strong> to maintain coherence.</p>
+<p><strong>Use Cases</strong><br>
+Thermal drift, voltage variation, noisy environments.</p>
+<hr>
+<h2 id="template-t3-inversionready-triad"><strong>Template T₃ — Inversion‑Ready Triad</strong></h2>
+<p><strong>Purpose</strong><br>
+A triad designed for reversible state flips.</p>
+<p><strong>Structure</strong><br>
+- A and B symmetric<br>
+- P stable<br>
+- inversion trigger monitored via coherence sampling  </p>
+<p><strong>Behavior</strong><br>
+Uses <strong>R₂ (Inversion Operator)</strong> for clean ↺ transitions.</p>
+<p><strong>Use Cases</strong><br>
+Mode switching, polarity changes, reversible micro‑states.</p>
+<hr>
+<h2 id="template-t4-fractionalladder-triad"><strong>Template T₄ — Fractional‑Ladder Triad</strong></h2>
+<p><em>(Completed — your file cuts off here in the tab.)</em></p>
+<p><strong>Purpose</strong><br>
+A triad that evolves along fractional dimensions.</p>
+<p><strong>Structure</strong><br>
+- Dᶠ active and sampled each micro‑step<br>
+- A and P updated via fractional‑step logic<br>
+- B ensures dimensional coherence  </p>
+<p><strong>Behavior</strong><br>
+Uses <strong>P₇ (Fractional Step)</strong> and <strong>K₆ (Fractional‑Ladder Regulator)</strong> to maintain stability during Dᶠ transitions.</p>
+<p><strong>Use Cases</strong><br>
+Adaptive micro‑states, fine‑grained modeling, micro‑learning loops.</p>
+<hr>
+<h2 id="template-t5-bridgeready-triad"><strong>Template T₅ — Bridge‑Ready Triad (μ → Μ)</strong></h2>
+<p><strong>Purpose</strong><br>
+A triad configured for safe upward influence into macro‑regimes.</p>
+<p><strong>Structure</strong><br>
+- A stable<br>
+- B coherence‑validated<br>
+- P aggregates micro‑patterns<br>
+- C sampled continuously  </p>
+<p><strong>Behavior</strong><br>
+Activates the <strong>μ → Μ bridge</strong> only when <strong>C ≥ C*</strong> and drift/timing remain bounded.</p>
+<p><strong>Use Cases</strong><br>
+Micro‑to‑macro alignment, distributed micro‑agents, supervisory systems.</p>
+<hr>
+<h2 id="summary">✔️ <strong>Summary</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Template</th>
+<th>Focus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>T₁</strong></td>
+<td>Stable micro‑resonance</td>
+</tr>
+<tr>
+<td><strong>T₂</strong></td>
+<td>Adaptive boundary behavior</td>
+</tr>
+<tr>
+<td><strong>T₃</strong></td>
+<td>Reversible inversion</td>
+</tr>
+<tr>
+<td><strong>T₄</strong></td>
+<td>Fractional‑ladder evolution</td>
+</tr>
+<tr>
+<td><strong>T₅</strong></td>
+<td>Micro–macro bridge readiness</td>
+</tr>
+</tbody>
+</table>
+<p>Triad Templates provide the <strong>structural backbone</strong> for building coherent micro‑regimes using MRT and Micro‑Core.</p>
+  </main>
+</body>
+</html>

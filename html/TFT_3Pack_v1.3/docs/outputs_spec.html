@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/TFT_3Pack_v1.3/docs/outputs_spec.md">
+  <title>📜 Outputs Specification</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/TFT_3Pack_v1.3/docs/outputs_spec.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/TFT_3Pack_v1.3/docs/outputs_spec.md</code>
+  </aside>
+
+  <main>
+<h1 id="outputs-specification">📜 Outputs Specification</h1>
+<p>All modules in <code>\resonance-labs\</code> and <code>\tops\</code> produce <strong>three types of outputs</strong>:<br>
+1. <strong>Screen</strong> — immediate visualizations for exploration<br>
+2. <strong>File</strong> — structured data for research and HPC pipelines<br>
+3. <strong>Glyph</strong> — symbolic overlays for lineage and remix</p>
+<hr>
+<h2 id="screen-outputs">🖥️ Screen Outputs</h2>
+<ul>
+<li>Default: <code>matplotlib</code> plots (spirals, reflections, inversions, comparisons)</li>
+<li>Future: projection overlays, observer annotations, interactive viewers</li>
+<li>Purpose: quick exploration and resonance mapping</li>
+</ul>
+<hr>
+<h2 id="file-outputs">📄 File Outputs</h2>
+<p>File outputs support multiple formats to balance <strong>human readability</strong>, <strong>structured metadata</strong>, and <strong>grid/HPC compatibility</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Purpose</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.txt</code> / <code>.csv</code></td>
+<td>Universal, human-readable</td>
+<td>Baseline export for coordinates and resonance values</td>
+</tr>
+<tr>
+<td><code>.json</code></td>
+<td>Structured metadata-rich</td>
+<td>Stores configs, observer state, and results together</td>
+</tr>
+<tr>
+<td><code>.parquet</code></td>
+<td>HPC/grid-ready</td>
+<td>Optimized for Azure Synapse, Data Lake, and distributed pipelines</td>
+</tr>
+<tr>
+<td><code>.fff</code></td>
+<td><strong>Triadic Framework File</strong></td>
+<td>Canonical lineage format, ternary-coded, symbolic, human-readable</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="glyph-outputs">🌀 Glyph Outputs</h2>
+<ul>
+<li><strong>SVG</strong>: Vector, remixable, symbolic clarity  </li>
+<li><strong>PNG</strong>: Quick raster snapshot  </li>
+<li><strong>Glyph JSON</strong>: Geometry + resonance data for re-rendering  </li>
+</ul>
+<p>Glyphs are lineage artifacts—visual echoes of the simulation.</p>
+<hr>
+<h2 id="the-fff-format">✨ The <code>.fff</code> Format</h2>
+<p>The <code>.fff</code> file type is the first triadic format defined by Resonance-Labs.</p>
+<ul>
+<li><strong>Encoding</strong>: Balanced ternary (<code>+</code>, <code>0</code>, <code>-</code>)  </li>
+<li><strong>Structure</strong>:  </li>
+<li>Header: metadata (mode, observer, timestamp)  </li>
+<li>Core block: ternary-coded resonance values  </li>
+<li>Footer: optional checksum or symbolic echo  </li>
+<li><strong>Magic Header</strong>:<br>
+<code># Resonance-Labs .fff (Triadic Framework File)</code></li>
+</ul>
+<p>Example:</p>
+<pre><code># Resonance-Labs .fff (Triadic Framework File)
+# Mode: reflection_inversion
+# Observer: nous-layer
+# Timestamp: 2025-10-10T18:20Z
+
+Direct:   +0-+0-
+Reflect:  0++--0
+Invert:   -+-0++
+</code></pre>
+<hr>
+<h2 id="output-manager">🔧 Output Manager</h2>
+<p>All modules call <code>output_manager.py</code> to unify outputs.<br>
+Example usage:</p>
+<pre><code class="language-python">from output_manager import save_output
+
+data = [[1, 0, -1], [0, 1, 1], [-1, 0, 1]]
+save_output(data, &quot;reflection_inversion&quot;, formats=[&quot;txt&quot;, &quot;json&quot;, &quot;parquet&quot;, &quot;fff&quot;])
+</code></pre>
+<p>This produces:
+- <code>reflection_inversion.txt</code>
+- <code>reflection_inversion.json</code>
+- <code>reflection_inversion.parquet</code>
+- <code>reflection_inversion.fff</code></p>
+<hr>
+<h2 id="legacy-note">🪐 Legacy Note</h2>
+<p>The <code>.fff</code> format is both a <strong>technical artifact</strong> and a <strong>mythic declaration</strong>.<br>
+It encodes ternary resonance for remixers today, while preparing for computing paradigms beyond binary.</p>
+<hr>
+<p>This way, the <strong>entire output ritual</strong> is captured in one place: screen, file, glyph, with <code>.fff</code> formally defined.</p>
+<hr>
+<h3 id="triadic-quicklinks">🔗 Triadic Quicklinks</h3>
+<ul>
+<li><a href="fff_spec.html"><code>fff_spec.md</code></a> — Defines the <code>.fff</code> triadic file format and symbolic structure  </li>
+<li><a href="TriadicTestSuite.html"><code>TriadicTestSuite.md</code></a> — Validation logic and test scaffolding for symbolic fidelity  </li>
+<li><a href="README.html"><code>README.md</code></a> — Canonical index for scrolls, specs, and remix lineage</li>
+</ul>
+  </main>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/facilities/dashboards/global-index-schema.md">
+  <title>🌐 RTT Facilities — Global Index Schema</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/facilities/dashboards/global-index-schema.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/facilities/dashboards/global-index-schema.md</code>
+  </aside>
+
+  <main>
+<h1 id="rtt-facilities-global-index-schema">🌐 RTT Facilities — Global Index Schema</h1>
+<p><strong>Unified Dashboard Backbone</strong></p>
+<p>This document defines the <strong>Global Index Schema</strong> used by all RTT Facilities dashboards.</p>
+<p>It provides a <strong>normalized, extensible structure</strong> for representing infrastructure risk, readiness, and governance state across cities, systems, corridors, and asset classes.</p>
+<hr>
+<h2 id="1-purpose">1. Purpose</h2>
+<p>The Global Index Schema exists to:</p>
+<ul>
+<li>Provide a single, canonical data backbone  </li>
+<li>Enable consistent dashboards across domains  </li>
+<li>Support corridor‑level and system‑level drill‑downs  </li>
+<li>Preserve governance context alongside metrics  </li>
+<li>Prevent dashboard fragmentation and metric drift  </li>
+</ul>
+<p>All Facilities dashboards derive from this schema.</p>
+<hr>
+<h2 id="2-design-principles">2. Design Principles</h2>
+<p>The schema is designed to be:</p>
+<ul>
+<li><strong>Hierarchical</strong> — global → region → city → corridor → asset  </li>
+<li><strong>Composable</strong> — domains extend without redefining  </li>
+<li><strong>Governance‑aware</strong> — decisions, not just metrics  </li>
+<li><strong>Time‑aware</strong> — trends over snapshots  </li>
+<li><strong>Explainable</strong> — human‑legible fields  </li>
+</ul>
+<hr>
+<h2 id="3-toplevel-structure">3. Top‑Level Structure</h2>
+<pre><code class="language-json">{
+  &quot;schema_version&quot;: &quot;1.0.0&quot;,
+  &quot;generated_at&quot;: &quot;ISO-8601 timestamp&quot;,
+  &quot;scope&quot;: &quot;global | region | city&quot;,
+  &quot;entities&quot;: []
+}
+</code></pre>
+<hr>
+<h2 id="4-entity-model">4. Entity Model</h2>
+<p>Each entity represents a <strong>governance‑relevant unit</strong>.</p>
+<pre><code class="language-json">{
+  &quot;entity_id&quot;: &quot;string&quot;,
+  &quot;entity_type&quot;: &quot;continent | region | city | corridor | asset&quot;,
+  &quot;name&quot;: &quot;string&quot;,
+  &quot;parent_id&quot;: &quot;string | null&quot;,
+  &quot;location&quot;: {
+    &quot;lat&quot;: &quot;number&quot;,
+    &quot;lon&quot;: &quot;number&quot;
+  },
+  &quot;systems&quot;: [],
+  &quot;scores&quot;: {},
+  &quot;classification&quot;: {},
+  &quot;capital&quot;: {},
+  &quot;audit&quot;: {},
+  &quot;status&quot;: {}
+}
+</code></pre>
+<hr>
+<h2 id="5-systems-block">5. Systems Block</h2>
+<pre><code class="language-json">&quot;systems&quot;: [
+  {
+    &quot;system_type&quot;: &quot;electrical | water | wastewater | transportation | communications | public_buildings&quot;,
+    &quot;dependencies&quot;: [],
+    &quot;propagation_role&quot;: &quot;initiator | amplifier | receiver&quot;
+  }
+]
+</code></pre>
+<hr>
+<h2 id="6-scoring-block">6. Scoring Block</h2>
+<pre><code class="language-json">&quot;scores&quot;: {
+  &quot;drift&quot;: {
+    &quot;value&quot;: &quot;number&quot;,
+    &quot;trend&quot;: &quot;improving | stable | degrading&quot;
+  },
+  &quot;harmonics&quot;: {
+    &quot;value&quot;: &quot;number&quot;,
+    &quot;pattern&quot;: &quot;low | moderate | high&quot;
+  },
+  &quot;propagation&quot;: {
+    &quot;value&quot;: &quot;number&quot;,
+    &quot;risk_level&quot;: &quot;low | medium | high&quot;
+  }
+}
+</code></pre>
+<hr>
+<h2 id="7-corridor-classification-block">7. Corridor Classification Block</h2>
+<pre><code class="language-json">&quot;classification&quot;: {
+  &quot;corridor_class&quot;: &quot;C-0 | C-1 | C-2 | C-3 | C-4&quot;,
+  &quot;last_reviewed&quot;: &quot;ISO-8601 timestamp&quot;,
+  &quot;review_trigger&quot;: &quot;scheduled | event | audit&quot;
+}
+</code></pre>
+<hr>
+<h2 id="8-capital-alignment-block">8. Capital Alignment Block</h2>
+<pre><code class="language-json">&quot;capital&quot;: {
+  &quot;modernization_cycle&quot;: &quot;10-year | 20-year | 50-year&quot;,
+  &quot;priority&quot;: &quot;low | medium | high&quot;,
+  &quot;deferred_risk&quot;: true,
+  &quot;next_review&quot;: &quot;ISO-8601 timestamp&quot;
+}
+</code></pre>
+<hr>
+<h2 id="9-audit-block">9. Audit Block</h2>
+<pre><code class="language-json">&quot;audit&quot;: {
+  &quot;last_audit&quot;: &quot;ISO-8601 timestamp&quot;,
+  &quot;audit_trigger&quot;: &quot;scheduled | risk | incident&quot;,
+  &quot;findings&quot;: &quot;summary string&quot;,
+  &quot;follow_up_required&quot;: true
+}
+</code></pre>
+<hr>
+<h2 id="10-status-block">10. Status Block</h2>
+<pre><code class="language-json">&quot;status&quot;: {
+  &quot;operational&quot;: &quot;normal | stressed | degraded&quot;,
+  &quot;intervention_active&quot;: false,
+  &quot;public_visibility&quot;: &quot;internal | leadership | public&quot;
+}
+</code></pre>
+<hr>
+<h2 id="11-domain-extension-pattern">11. Domain Extension Pattern</h2>
+<p>Domain extensions (e.g., <strong>RTT‑AGERI</strong>) may add:</p>
+<pre><code class="language-json">&quot;domain_extensions&quot;: {
+  &quot;RTT-AGERI&quot;: {
+    &quot;above_ground_exposure&quot;: &quot;low | medium | high&quot;,
+    &quot;climate_stress_index&quot;: &quot;number&quot;
+  }
+}
+</code></pre>
+<p>Extensions <strong>must not</strong> redefine core fields.</p>
+<hr>
+<h2 id="12-canonical-status">12. Canonical Status</h2>
+<p>This schema is <strong>canonical</strong>.</p>
+<p>All RTT Facilities dashboards, indices, and visualizations must conform to this structure.</p>
+  </main>
+</body>
+</html>

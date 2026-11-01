@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/starter/docs/HOWTO.md">
+  <title>HOWTO: Create Your First RTT Module</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/starter/docs/HOWTO.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/starter/docs/HOWTO.md</code>
+  </aside>
+
+  <main>
+<h1 id="howto-create-your-first-rtt-module"><strong>HOWTO: Create Your First RTT Module</strong></h1>
+<p><strong>Time:</strong> 1–3 hours<br>
+<strong>Audience:</strong> Students and beginners<br>
+<strong>Goal:</strong> Go from zero → a working RTT module published on GitHub Pages.</p>
+<hr>
+<h2 id="1-download-the-starter-kit"><strong>1. Download the Starter Kit</strong></h2>
+<ol>
+<li>Get the <code>.zip</code> from your instructor.  </li>
+<li>Extract it.  </li>
+<li>You will see:</li>
+</ol>
+<pre><code>rtt/
+modules/
+schema/
+tools/
+docs/
+README.md
+</code></pre>
+<p>You only need <strong>RTT/1</strong> and the <strong>starter module</strong> to begin.</p>
+<hr>
+<h2 id="2-copy-the-starter-module"><strong>2. Copy the Starter Module</strong></h2>
+<p>Navigate to:</p>
+<pre><code>/modules/starter/
+</code></pre>
+<p>Copy the entire folder and rename it:</p>
+<pre><code>/modules/my-first-module/
+</code></pre>
+<p>This is now <em>your</em> module.</p>
+<hr>
+<h2 id="3-edit-modulejson-6-fields-only"><strong>3. Edit <code>module.json</code> (6 fields only)</strong></h2>
+<p>Open:</p>
+<pre><code>/modules/my-first-module/module.json
+</code></pre>
+<p>Fill in:</p>
+<ul>
+<li><code>module</code>  </li>
+<li><code>identity</code>  </li>
+<li><code>purpose</code>  </li>
+<li><code>files</code>  </li>
+<li><code>operators</code>  </li>
+</ul>
+<p>Example:</p>
+<pre><code class="language-json">{
+  &quot;$schema&quot;: &quot;../../schema/module.schema.json&quot;,
+  &quot;module&quot;: &quot;my-first-module&quot;,
+  &quot;identity&quot;: &quot;student.my-first-module&quot;,
+  &quot;purpose&quot;: &quot;My first RTT module.&quot;,
+  &quot;files&quot;: [],
+  &quot;operators&quot;: []
+}
+</code></pre>
+<p>This is a valid, schema‑aligned module.</p>
+<hr>
+<h2 id="4-add-one-operator-example"><strong>4. Add One Operator Example</strong></h2>
+<p>Open:</p>
+<pre><code>example-operator.md
+</code></pre>
+<p>Or create your own file.</p>
+<p>Add something like:</p>
+<pre><code>## Operator: shift
+Moves the frame of reference forward or backward.
+Example: “Shift one step forward to reveal the next state.”
+</code></pre>
+<p>Your module now contains real RTT content.</p>
+<hr>
+<h2 id="5-validate-your-module"><strong>5. Validate Your Module</strong></h2>
+<p>From the <code>/tools/</code> folder:</p>
+<p>Python:</p>
+<pre><code>pip install jsonschema
+python validate.py ../modules/my-first-module/module.json
+</code></pre>
+<p>Node:</p>
+<pre><code>npm install ajv
+node validate.js ../modules/my-first-module/module.json
+</code></pre>
+<p>If you see:</p>
+<pre><code>✔ module.json is valid and canon‑aligned.
+</code></pre>
+<p>You’re good.</p>
+<hr>
+<h2 id="6-publish-on-github"><strong>6. Publish on GitHub</strong></h2>
+<ol>
+<li>Create a GitHub repo.  </li>
+<li>Upload the entire Starter Kit (or your modified version).  </li>
+<li>Go to <strong>Settings → Pages</strong>.  </li>
+<li>Set:
+   - <strong>Branch:</strong> <code>main</code><br>
+   - <strong>Folder:</strong> <code>/root</code> or <code>/docs</code>  </li>
+<li>Save.</li>
+</ol>
+<p>Your site will appear at:</p>
+<pre><code>https://your-username.github.io/your-repo/
+</code></pre>
+<hr>
+<h2 id="7-view-your-module-online"><strong>7. View Your Module Online</strong></h2>
+<p>Visit:</p>
+<pre><code>https://your-username.github.io/your-repo/modules/my-first-module/
+</code></pre>
+<p>If the page loads, your module is now public and agent‑readable.</p>
+<hr>
+<h2 id="8-test-with-an-ai-agent"><strong>8. Test with an AI Agent</strong></h2>
+<p>Ask any agent:</p>
+<blockquote>
+<p>“Load my RTT module from<br>
+<code>https://your-username.github.io/your-repo/modules/my-first-module/</code><br>
+and summarize its operators.”</p>
+</blockquote>
+<p>If it responds correctly, your module is fully operational.</p>
+<hr>
+<h2 id="youre-done"><strong>You’re Done</strong></h2>
+<p>You now have:</p>
+<ul>
+<li>a working RTT module  </li>
+<li>a valid <code>module.json</code>  </li>
+<li>a published GitHub Pages site  </li>
+<li>a URL that any AI agent can load  </li>
+</ul>
+<p>You are officially part of the TriadicFrameworks ecosystem.</p>
+  </main>
+</body>
+</html>

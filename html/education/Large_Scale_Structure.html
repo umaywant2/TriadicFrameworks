@@ -1,0 +1,1108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/education/Large_Scale_Structure.md">
+  <title>Large-scale structure and the cosmic web in RTT/vST</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/education/Large_Scale_Structure.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/education/Large_Scale_Structure.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="education_Large_Scale_Structure_" src="https://github.com/user-attachments/assets/c203c098-8f5c-48f6-bd18-107326da3a39" /></p>
+<h1 id="large-scale-structure-and-the-cosmic-web-in-rttvst">Large-scale structure and the cosmic web in RTT/vST</h1>
+<h2 id="rttvst-reframing">RTT/vST reframing</h2>
+<p>Classical cosmology describes large-scale structure as “galaxies tracing dark matter” and “growth of perturbations.” RTT/vST reframes it as:</p>
+<ul>
+<li><strong>Substrate:</strong> what can carry coherence (dark matter, baryons, radiation, geometry)</li>
+<li><strong>Regime:</strong> how coherence stabilizes (linear growth, nonlinear collapse, filamentation)</li>
+<li><strong>Resonance role:</strong> what the structure <em>does</em> (scaffold, transport, boundary, sink)</li>
+</ul>
+<p>The cosmic web is not “a pattern”—it is the universe’s <strong>coherence transport network</strong>:<br>
+<strong>nodes</strong> (basins), <strong>filaments</strong> (channels), <strong>sheets</strong> (interfaces), <strong>voids</strong> (expansion-dominant domains).</p>
+<hr>
+<h2 id="layered-stack">Layered stack</h2>
+<ul>
+<li><strong>Layer 1 — Primordial perturbation substrate:</strong> tiny density variations as seed structure.</li>
+<li><strong>Layer 2 — Dark matter coherence scaffold:</strong> collisionless gravitational backbone (filaments/sheets/halos).</li>
+<li><strong>Layer 3 — Baryonic infall and thermodynamics:</strong> gas flows, shocks, cooling/heating, star formation gating.</li>
+<li><strong>Layer 4 — Network topology and transport:</strong> connectivity, percolation, accretion streams, merger highways.</li>
+<li><strong>Layer 5 — Observational projection:</strong> lensing maps, redshift surveys, BAO, cluster dynamics, absorption lines.</li>
+</ul>
+<hr>
+<h2 id="regime-classes">Regime classes</h2>
+<ul>
+<li><strong>Linear growth regime:</strong> perturbations amplify without topology change.</li>
+<li><strong>Filamentation regime:</strong> anisotropic collapse forms sheets/filaments.</li>
+<li><strong>Halo capture regime:</strong> nodes deepen; accretion becomes channelized.</li>
+<li><strong>Feedback-modulated regime:</strong> baryonic feedback reshapes visible tracers without erasing the scaffold.</li>
+<li><strong>Observation-limited regime:</strong> what we infer depends on projection (lensing vs galaxies vs gas).</li>
+</ul>
+<hr>
+<h1 id="large_scale_structure_cosmic_web_rttvstjson">Large_Scale_Structure_Cosmic_Web_RTTvST.json</h1>
+<pre><code class="language-json">{
+  &quot;artifact_id&quot;: &quot;Large_Scale_Structure_Cosmic_Web_RTTvST&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;type&quot;: &quot;rtt_vst_cosmic_web_ontology&quot;,
+  &quot;provenance&quot;: {
+    &quot;source&quot;: &quot;Large-scale structure theory and observational cosmic web mapping&quot;,
+    &quot;notes&quot;: &quot;Reorganized using RTT/vST. The cosmic web is treated as a coherence transport network across coupled substrates.&quot;
+  },
+  &quot;model&quot;: {
+    &quot;structure&quot;: &quot;layered_regime_stack&quot;,
+    &quot;allows_multi_membership&quot;: true,
+    &quot;primary_axes&quot;: [
+      &quot;substrate&quot;,
+      &quot;regime&quot;,
+      &quot;topology_role&quot;,
+      &quot;observational_projection&quot;
+    ],
+    &quot;core_claim&quot;: &quot;Nodes, filaments, sheets, and voids are coherence roles in a transport network, not merely shapes.&quot;
+  },
+  &quot;layers&quot;: {
+    &quot;layer_1_primordial_perturbations&quot;: {
+      &quot;name&quot;: &quot;Primordial perturbation substrate&quot;,
+      &quot;coherence_unit&quot;: &quot;seed_fluctuation_field&quot;,
+      &quot;entities&quot;: [
+        &quot;density_contrast_field&quot;,
+        &quot;power_spectrum_shape&quot;,
+        &quot;initial_gaussianity_assumption&quot;,
+        &quot;horizon_scale_constraints&quot;
+      ],
+      &quot;resonance_roles&quot;: [
+        &quot;seed_definition&quot;,
+        &quot;scale_imprinting&quot;
+      ]
+    },
+    &quot;layer_2_dark_matter_scaffold&quot;: {
+      &quot;name&quot;: &quot;Dark matter coherence scaffold&quot;,
+      &quot;coherence_unit&quot;: &quot;collisionless_gravitational_binding&quot;,
+      &quot;entities&quot;: [
+        &quot;dark_matter_filaments&quot;,
+        &quot;dark_matter_sheets&quot;,
+        &quot;dark_matter_halos&quot;,
+        &quot;void_boundaries&quot;
+      ],
+      &quot;resonance_roles&quot;: [
+        &quot;scaffold_formation&quot;,
+        &quot;channel_definition&quot;,
+        &quot;basin_creation&quot;
+      ]
+    },
+    &quot;layer_3_baryonic_infall_thermo&quot;: {
+      &quot;name&quot;: &quot;Baryonic infall and thermodynamics&quot;,
+      &quot;coherence_unit&quot;: &quot;gas_flow_and_phase_state&quot;,
+      &quot;entities&quot;: [
+        &quot;accretion_streams&quot;,
+        &quot;shock_heating&quot;,
+        &quot;radiative_cooling&quot;,
+        &quot;star_formation_gating&quot;,
+        &quot;feedback_outflows&quot;
+      ],
+      &quot;resonance_roles&quot;: [
+        &quot;visible_tracer_generation&quot;,
+        &quot;dissipation_and_condensation&quot;,
+        &quot;feedback_modulation&quot;
+      ]
+    },
+    &quot;layer_4_network_topology_transport&quot;: {
+      &quot;name&quot;: &quot;Network topology and transport&quot;,
+      &quot;coherence_unit&quot;: &quot;connectivity_and_flow&quot;,
+      &quot;entities&quot;: [
+        &quot;node_hub_connectivity&quot;,
+        &quot;filament_transport&quot;,
+        &quot;merger_highways&quot;,
+        &quot;percolation_structure&quot;,
+        &quot;anisotropic_collapse_axes&quot;
+      ],
+      &quot;resonance_roles&quot;: [
+        &quot;mass_transport&quot;,
+        &quot;hierarchical_assembly&quot;,
+        &quot;boundary_maintenance&quot;
+      ]
+    },
+    &quot;layer_5_observational_projection&quot;: {
+      &quot;name&quot;: &quot;Observational projection layer&quot;,
+      &quot;coherence_unit&quot;: &quot;measurable_signature&quot;,
+      &quot;entities&quot;: [
+        &quot;weak_lensing_shear_maps&quot;,
+        &quot;galaxy_redshift_surveys&quot;,
+        &quot;cluster_dynamics&quot;,
+        &quot;baryon_acoustic_oscillations&quot;,
+        &quot;quasar_absorption_tracers&quot;
+      ],
+      &quot;resonance_roles&quot;: [
+        &quot;scaffold_inference&quot;,
+        &quot;topology_estimation&quot;,
+        &quot;regime_calibration&quot;
+      ]
+    }
+  },
+  &quot;topological_primitives&quot;: {
+    &quot;nodes&quot;: {
+      &quot;description&quot;: &quot;Deep basins of gravitational coherence (clusters/halos).&quot;,
+      &quot;roles&quot;: [
+        &quot;basin&quot;,
+        &quot;sink&quot;,
+        &quot;assembly_hub&quot;
+      ]
+    },
+    &quot;filaments&quot;: {
+      &quot;description&quot;: &quot;Anisotropic channels of transport feeding nodes.&quot;,
+      &quot;roles&quot;: [
+        &quot;channel&quot;,
+        &quot;conduit&quot;,
+        &quot;alignment_axis&quot;
+      ]
+    },
+    &quot;sheets&quot;: {
+      &quot;description&quot;: &quot;Interface layers formed by partial collapse; filament nurseries.&quot;,
+      &quot;roles&quot;: [
+        &quot;boundary&quot;,
+        &quot;interface&quot;,
+        &quot;transition_surface&quot;
+      ]
+    },
+    &quot;voids&quot;: {
+      &quot;description&quot;: &quot;Expansion-dominant domains bounded by sheets/filaments.&quot;,
+      &quot;roles&quot;: [
+        &quot;expansion_domain&quot;,
+        &quot;low_density_reservoir&quot;,
+        &quot;topological_separator&quot;
+      ]
+    }
+  },
+  &quot;regime_classes&quot;: {
+    &quot;linear_growth&quot;: {
+      &quot;description&quot;: &quot;Perturbations amplify without strong topology formation.&quot;,
+      &quot;dominant_layers&quot;: [
+        &quot;layer_1_primordial_perturbations&quot;
+      ]
+    },
+    &quot;filamentation&quot;: {
+      &quot;description&quot;: &quot;Anisotropic collapse forms sheets and filaments.&quot;,
+      &quot;dominant_layers&quot;: [
+        &quot;layer_2_dark_matter_scaffold&quot;,
+        &quot;layer_4_network_topology_transport&quot;
+      ]
+    },
+    &quot;halo_capture&quot;: {
+      &quot;description&quot;: &quot;Nodes deepen; accretion becomes channelized and hierarchical.&quot;,
+      &quot;dominant_layers&quot;: [
+        &quot;layer_2_dark_matter_scaffold&quot;,
+        &quot;layer_3_baryonic_infall_thermo&quot;
+      ]
+    },
+    &quot;feedback_modulated_visibility&quot;: {
+      &quot;description&quot;: &quot;Baryonic feedback reshapes what is visible without erasing the scaffold.&quot;,
+      &quot;dominant_layers&quot;: [
+        &quot;layer_3_baryonic_infall_thermo&quot;,
+        &quot;layer_5_observational_projection&quot;
+      ]
+    },
+    &quot;observation_limited_inference&quot;: {
+      &quot;description&quot;: &quot;Different probes recover different projections of the same scaffold.&quot;,
+      &quot;dominant_layers&quot;: [
+        &quot;layer_5_observational_projection&quot;
+      ]
+    }
+  },
+  &quot;cross_layer_coupling&quot;: {
+    &quot;seed_to_scaffold&quot;: [
+      &quot;perturbation_growth_to_anisotropic_collapse&quot;
+    ],
+    &quot;scaffold_to_baryons&quot;: [
+      &quot;potential_wells_guide_gas_infall&quot;,
+      &quot;filaments_channel_accretion&quot;
+    ],
+    &quot;baryons_to_visibility&quot;: [
+      &quot;cooling_and_star_formation_create_galaxy_tracers&quot;,
+      &quot;feedback_biases_tracer_distribution&quot;
+    ],
+    &quot;topology_to_observation&quot;: [
+      &quot;lensing_recovers_mass_distribution&quot;,
+      &quot;redshift_surveys_recover_tracer_connectivity&quot;
+    ]
+  },
+  &quot;phase_alignment&quot;: {
+    &quot;I&quot;: &quot;seed_field&quot;,
+    &quot;II&quot;: &quot;scaffold_emergence&quot;,
+    &quot;III&quot;: &quot;dissipative_tracing&quot;,
+    &quot;IV&quot;: &quot;network_transport&quot;,
+    &quot;V&quot;: &quot;projection_and_inference&quot;
+  },
+  &quot;semantic_layers&quot;: {
+    &quot;resonance_tags&quot;: [
+      &quot;cosmic_web&quot;,
+      &quot;coherence_transport_network&quot;,
+      &quot;dark_matter_scaffold&quot;,
+      &quot;topology_roles&quot;,
+      &quot;projection_dependence&quot;
+    ],
+    &quot;notes&quot;: &quot;This artifact separates the mass scaffold from the visible tracers and treats topology as functional roles (basin/channel/interface/domain).&quot;
+  }
+}
+</code></pre>
+<hr>
+<h1 id="cosmic-web-regime-wheel">Cosmic web regime wheel</h1>
+<h2 id="cosmic_web_regime_wheeljson">Cosmic_Web_Regime_Wheel.json</h2>
+<p>This is the spaceship/Simon-Says view: center = coherence, middle = topology roles, outer = probes/projections.</p>
+<pre><code class="language-json">{
+  &quot;artifact_id&quot;: &quot;Cosmic_Web_Regime_Wheel&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;type&quot;: &quot;rtt_vst_sector_wheel&quot;,
+  &quot;provenance&quot;: {
+    &quot;source&quot;: &quot;Large-scale structure and cosmic web mapping reorganized via RTT/vST&quot;,
+    &quot;notes&quot;: &quot;Sector wheel encoding topology roles (node/filament/sheet/void) and observational projections.&quot;
+  },
+  &quot;wheel&quot;: {
+    &quot;layout&quot;: {
+      &quot;style&quot;: &quot;radial_sector_wheel&quot;,
+      &quot;orientation&quot;: &quot;counterclockwise&quot;,
+      &quot;rings&quot;: [
+        &quot;coherence_core&quot;,
+        &quot;topology_roles&quot;,
+        &quot;projection_probes&quot;
+      ],
+      &quot;centerpiece&quot;: &quot;gravitational_coherence&quot;
+    },
+    &quot;rings&quot;: {
+      &quot;coherence_core&quot;: {
+        &quot;description&quot;: &quot;Central gravitational coherence substrate that stabilizes large-scale structure.&quot;,
+        &quot;sectors&quot;: {
+          &quot;gravitational_coherence&quot;: {
+            &quot;entities&quot;: [
+              &quot;metric_response&quot;,
+              &quot;mass_distribution&quot;,
+              &quot;potential_wells&quot;
+            ],
+            &quot;role&quot;: &quot;coherence_backbone&quot;,
+            &quot;color&quot;: &quot;gold&quot;
+          }
+        }
+      },
+      &quot;topology_roles&quot;: {
+        &quot;description&quot;: &quot;Functional topology roles of the cosmic web.&quot;,
+        &quot;sectors&quot;: {
+          &quot;nodes&quot;: {
+            &quot;entities&quot;: [
+              &quot;halos&quot;,
+              &quot;clusters&quot;,
+              &quot;assembly_hubs&quot;
+            ],
+            &quot;resonance_role&quot;: &quot;basin_and_sink&quot;,
+            &quot;color&quot;: &quot;white&quot;
+          },
+          &quot;filaments&quot;: {
+            &quot;entities&quot;: [
+              &quot;accretion_channels&quot;,
+              &quot;transport_axes&quot;,
+              &quot;connectivity_strands&quot;
+            ],
+            &quot;resonance_role&quot;: &quot;channel_and_conduit&quot;,
+            &quot;color&quot;: &quot;purple&quot;
+          },
+          &quot;sheets&quot;: {
+            &quot;entities&quot;: [
+              &quot;interface_planes&quot;,
+              &quot;partial_collapse_surfaces&quot;
+            ],
+            &quot;resonance_role&quot;: &quot;boundary_and_transition&quot;,
+            &quot;color&quot;: &quot;blue&quot;
+          },
+          &quot;voids&quot;: {
+            &quot;entities&quot;: [
+              &quot;expansion_domains&quot;,
+              &quot;low_density_cells&quot;
+            ],
+            &quot;resonance_role&quot;: &quot;domain_separation&quot;,
+            &quot;color&quot;: &quot;black&quot;
+          }
+        }
+      },
+      &quot;projection_probes&quot;: {
+        &quot;description&quot;: &quot;Observational projections that recover different aspects of the same scaffold.&quot;,
+        &quot;sectors&quot;: {
+          &quot;weak_lensing&quot;: {
+            &quot;entities&quot;: [
+              &quot;shear_maps&quot;,
+              &quot;mass_reconstruction&quot;
+            ],
+            &quot;color&quot;: &quot;light_purple&quot;
+          },
+          &quot;redshift_surveys&quot;: {
+            &quot;entities&quot;: [
+              &quot;galaxy_tracer_network&quot;,
+              &quot;clustering_statistics&quot;
+            ],
+            &quot;color&quot;: &quot;light_blue&quot;
+          },
+          &quot;cluster_dynamics_xray&quot;: {
+            &quot;entities&quot;: [
+              &quot;hot_gas_offsets&quot;,
+              &quot;merger_geometry&quot;
+            ],
+            &quot;color&quot;: &quot;orange&quot;
+          },
+          &quot;absorption_tracers&quot;: {
+            &quot;entities&quot;: [
+              &quot;intergalactic_gas_signatures&quot;,
+              &quot;quasar_sightlines&quot;
+            ],
+            &quot;color&quot;: &quot;teal&quot;
+          },
+          &quot;bao_standard_ruler&quot;: {
+            &quot;entities&quot;: [
+              &quot;acoustic_feature&quot;,
+              &quot;scale_calibration&quot;
+            ],
+            &quot;color&quot;: &quot;yellow&quot;
+          }
+        }
+      }
+    }
+  },
+  &quot;radial_alignment&quot;: {
+    &quot;description&quot;: &quot;Each radial line represents a pathway from coherence to topology role to observational recovery.&quot;,
+    &quot;examples&quot;: [
+      &quot;gravitational_coherence -&gt; filaments -&gt; absorption_tracers&quot;,
+      &quot;gravitational_coherence -&gt; nodes -&gt; weak_lensing&quot;,
+      &quot;gravitational_coherence -&gt; sheets -&gt; redshift_surveys&quot;
+    ]
+  },
+  &quot;semantic_layers&quot;: {
+    &quot;phase_alignment&quot;: {
+      &quot;I&quot;: &quot;coherence_backbone&quot;,
+      &quot;II&quot;: &quot;topology_role&quot;,
+      &quot;III&quot;: &quot;projection_probe&quot;
+    },
+    &quot;resonance_tags&quot;: [
+      &quot;sector_wheel&quot;,
+      &quot;topology_as_function&quot;,
+      &quot;mass_vs_tracer_separation&quot;,
+      &quot;multi_probe_inference&quot;
+    ],
+    &quot;notes&quot;: &quot;The wheel makes explicit that probes do not disagree—they sample different projections of the same coherence scaffold.&quot;
+  }
+}
+</code></pre>
+<hr>
+<h1 id="largescale-structure-cosmic-web">🌌 Large‑Scale Structure / Cosmic Web</h1>
+<h2 id="layered-visual-diagram-description-rttvst">Layered Visual Diagram Description (RTT/vST)</h2>
+<h3 id="overall-form">Overall Form</h3>
+<p>The RTT/vST Cosmic Web diagram is a <strong>hybrid stack‑and‑overlay visualization</strong>:</p>
+<ul>
+<li>A <strong>vertical layered stack</strong> shows how structure emerges across substrates.</li>
+<li>A <strong>web‑like overlay</strong> spans the middle layers, representing the cosmic transport network.</li>
+</ul>
+<p>The diagram is read <strong>bottom → top</strong>, while the web overlay is read <strong>laterally</strong>, emphasizing connectivity rather than hierarchy.</p>
+<p>This explicitly rejects the idea that the universe is organized as isolated objects.</p>
+<hr>
+<h2 id="layer-1-primordial-perturbation-substrate-base-layer">Layer 1 — Primordial Perturbation Substrate (Base Layer)</h2>
+<p><strong>Visual form:</strong><br>
+A faint, nearly uniform background field with subtle ripples.</p>
+<p><strong>Key features:</strong>
+- Small amplitude density variations
+- No visible structure yet
+- Isotropic appearance</p>
+<p><strong>Interpretation:</strong><br>
+This layer defines <strong>where structure <em>can</em> form</strong>, not where it <em>has</em> formed.<br>
+It is the seed field, not the scaffold.</p>
+<hr>
+<h2 id="layer-2-dark-matter-coherence-scaffold">Layer 2 — Dark Matter Coherence Scaffold</h2>
+<p><strong>Visual form:</strong><br>
+A semi‑transparent, filamentary lattice emerging from the perturbation field.</p>
+<p><strong>Key features:</strong>
+- Filaments, sheets, and nodes appear
+- Baryons are not yet emphasized
+- Structure is continuous, not discrete</p>
+<p><strong>Interpretation:</strong><br>
+This is the <strong>true backbone</strong> of large‑scale structure.<br>
+Dark matter is shown as a <strong>coherence scaffold</strong>, not a collection of particles.</p>
+<hr>
+<h2 id="layer-3-baryonic-infall-thermodynamics">Layer 3 — Baryonic Infall &amp; Thermodynamics</h2>
+<p><strong>Visual form:</strong><br>
+Glowing streams and knots flowing along the dark matter lattice.</p>
+<p><strong>Key features:</strong>
+- Gas flows along filaments
+- Shocks and heating at nodes
+- Cooling regions highlighted</p>
+<p><strong>Interpretation:</strong><br>
+Visible matter does not define the web — it <strong>traces</strong> it.<br>
+This layer explains why galaxies appear where they do.</p>
+<hr>
+<h2 id="layer-4-network-topology-transport-web-overlay">Layer 4 — Network Topology &amp; Transport (Web Overlay)</h2>
+<p><strong>Visual form:</strong><br>
+A highlighted network overlay emphasizing connectivity:</p>
+<ul>
+<li><strong>Nodes</strong> as hubs</li>
+<li><strong>Filaments</strong> as channels</li>
+<li><strong>Sheets</strong> as interfaces</li>
+<li><strong>Voids</strong> as enclosed domains</li>
+</ul>
+<p><strong>Key features:</strong>
+- Directional flow arrows along filaments
+- Mergers shown as node‑to‑node transport
+- Voids shown as expansion‑dominant regions</p>
+<p><strong>Interpretation:</strong><br>
+The cosmic web is a <strong>transport network</strong>, not a static pattern.<br>
+Mass, energy, and information flow through it.</p>
+<hr>
+<h2 id="layer-5-observational-projection-layer-top-layer">Layer 5 — Observational Projection Layer (Top Layer)</h2>
+<p><strong>Visual form:</strong><br>
+Multiple semi‑transparent projection planes:</p>
+<ul>
+<li>Lensing maps</li>
+<li>Galaxy distributions</li>
+<li>X‑ray gas halos</li>
+<li>Absorption sightlines</li>
+</ul>
+<p><strong>Key features:</strong>
+- Each projection highlights different aspects
+- No single projection recovers the full web
+- Overlaps reveal inference limits</p>
+<p><strong>Interpretation:</strong><br>
+Observations are <strong>projections</strong>, not direct views.<br>
+Disagreements between probes reflect perspective, not contradiction.</p>
+<hr>
+<h2 id="key-visual-principles">Key Visual Principles</h2>
+<ul>
+<li><strong>Scaffold ≠ tracer</strong></li>
+<li><strong>Topology has function</strong></li>
+<li><strong>Connectivity matters more than location</strong></li>
+<li><strong>Voids are active regimes, not empty space</strong></li>
+<li><strong>Structure is emergent, not imposed</strong></li>
+</ul>
+<hr>
+<h2 id="teaching-impact">Teaching Impact</h2>
+<p>Students immediately see:
+- why dark matter is inferred, not seen
+- why galaxies form along filaments
+- why voids are dynamically important
+- why multiple probes are required</p>
+<p>The diagram visually unifies:
+- dark sector mediation
+- structure formation
+- observational cosmology</p>
+<hr>
+<h1 id="cosmic-web-regime-wheel_1">🌐 Cosmic Web Regime Wheel</h1>
+<h2 id="visual-description-sectorbased-view">Visual Description (Sector‑Based View)</h2>
+<h3 id="overall-form_1">Overall Form</h3>
+<p>The Cosmic Web Regime Wheel is a <strong>radial sector diagram</strong> that complements the layered stack.</p>
+<ul>
+<li><strong>Center:</strong> gravitational coherence</li>
+<li><strong>Middle ring:</strong> topology roles</li>
+<li><strong>Outer ring:</strong> observational probes</li>
+</ul>
+<p>All sectors are visible simultaneously.</p>
+<hr>
+<h2 id="center-gravitational-coherence-core">Center — Gravitational Coherence Core</h2>
+<p><strong>Visual form:</strong><br>
+A dense central hub.</p>
+<p><strong>Represents:</strong>
+- spacetime response to mass
+- gravitational potential structure
+- coherence backbone</p>
+<p>This is the <strong>source of all large‑scale structure</strong>.</p>
+<hr>
+<h2 id="middle-ring-topology-roles">Middle Ring — Topology Roles</h2>
+<p>Each sector represents a <strong>functional role</strong>, not a shape:</p>
+<h3 id="nodes">Nodes</h3>
+<ul>
+<li>Deep basins</li>
+<li>Assembly hubs</li>
+<li>Cluster centers</li>
+</ul>
+<h3 id="filaments">Filaments</h3>
+<ul>
+<li>Transport channels</li>
+<li>Accretion highways</li>
+<li>Alignment axes</li>
+</ul>
+<h3 id="sheets">Sheets</h3>
+<ul>
+<li>Interface layers</li>
+<li>Transition surfaces</li>
+<li>Filament nurseries</li>
+</ul>
+<h3 id="voids">Voids</h3>
+<ul>
+<li>Expansion‑dominant domains</li>
+<li>Low‑density reservoirs</li>
+<li>Topological separators</li>
+</ul>
+<p>These roles coexist and interlock.</p>
+<hr>
+<h2 id="outer-ring-projection-probes">Outer Ring — Projection Probes</h2>
+<p>Each sector shows how we <em>see</em> the web:</p>
+<ul>
+<li>Weak gravitational lensing → mass scaffold</li>
+<li>Redshift surveys → tracer connectivity</li>
+<li>X‑ray / SZ → hot gas in nodes</li>
+<li>Absorption lines → filamentary gas</li>
+<li>BAO → global scale calibration</li>
+</ul>
+<p>No probe is privileged.</p>
+<hr>
+<h2 id="radial-meaning">Radial Meaning</h2>
+<p>Each radial line represents a <strong>complete inference pathway</strong>:</p>
+<blockquote>
+<p>coherence → topology role → observational recovery</p>
+</blockquote>
+<p>This visually explains why:
+- probes disagree locally
+- yet converge globally</p>
+<hr>
+<h2 id="documentation-punchline">Documentation Punchline</h2>
+<p>The cosmic web is not:
+- a map of galaxies
+- a simulation artifact
+- a visualization trick</p>
+<p>It is the universe’s <strong>coherence transport network</strong>.</p>
+<p>RTT/vST makes this visible by separating:
+- scaffold from tracer
+- role from appearance
+- structure from projection</p>
+<hr>
+<h1 id="hubble-tension">🔭 Hubble Tension</h1>
+<h2 id="rttvst-reframing-as-a-regime-boundary-artifact"><em>RTT/vST Reframing as a Regime Boundary Artifact</em></h2>
+<hr>
+<h2 id="what-the-hubble-tension-is-classically">What the Hubble Tension Is (Classically)</h2>
+<p>The Hubble tension refers to the persistent discrepancy between:</p>
+<ul>
+<li>
+<p><strong>Early‑universe measurements</strong><br>
+  Inferred from the cosmic microwave background (CMB) assuming ΛCDM.</p>
+</li>
+<li>
+<p><strong>Late‑universe measurements</strong><br>
+  Derived from distance ladders, supernovae, and local structure.</p>
+</li>
+</ul>
+<p>These methods yield <strong>incompatible values</strong> for the present expansion rate.</p>
+<p>Despite improved data, the discrepancy remains.</p>
+<hr>
+<h2 id="why-classical-explanations-stall">Why Classical Explanations Stall</h2>
+<p>Traditional responses attempt to:
+- adjust parameters
+- add new particles
+- modify gravity
+- blame systematics</p>
+<p>Each approach treats the universe as a <strong>single coherent regime</strong> whose parameters should agree everywhere.</p>
+<p>RTT/vST rejects this assumption.</p>
+<hr>
+<h2 id="rttvst-reframing-principle">RTT/vST Reframing Principle</h2>
+<p>RTT/vST treats the Hubble tension as:</p>
+<blockquote>
+<p><strong>A regime boundary artifact arising from mismatched coherence calibrations across cosmic scales</strong></p>
+</blockquote>
+<p>The tension is not a contradiction — it is a <strong>boundary effect</strong>.</p>
+<hr>
+<h2 id="the-core-insight">The Core Insight</h2>
+<p>Early‑ and late‑universe measurements do <strong>not</strong> sample the same regime.</p>
+<p>They probe <strong>different coherence layers</strong> of the universe.</p>
+<hr>
+<h2 id="rttvst-layered-interpretation">RTT/vST Layered Interpretation</h2>
+<h3 id="layer-1-earlyuniverse-coherence-regime"><strong>Layer 1 — Early‑Universe Coherence Regime</strong></h3>
+<p><strong>Dominant structures:</strong>
+- primordial perturbations
+- radiation–matter coupling
+- near‑homogeneous geometry</p>
+<p><strong>Measurement character:</strong>
+- global
+- averaged
+- symmetry‑dominated</p>
+<p>The CMB calibrates the universe <strong>before</strong> large‑scale structure fully emerges.</p>
+<hr>
+<h3 id="layer-2-structuremediated-regime-cosmic-web"><strong>Layer 2 — Structure‑Mediated Regime (Cosmic Web)</strong></h3>
+<p><strong>Dominant structures:</strong>
+- dark matter filaments
+- halos
+- voids
+- anisotropic transport</p>
+<p><strong>Measurement character:</strong>
+- topology‑dependent
+- environment‑sensitive
+- scaffold‑mediated</p>
+<p>This regime <strong>reshapes expansion locally</strong> without altering global geometry.</p>
+<hr>
+<h3 id="layer-3-lateuniverse-expansion-stabilization"><strong>Layer 3 — Late‑Universe Expansion Stabilization</strong></h3>
+<p><strong>Dominant structures:</strong>
+- dark energy role
+- horizon‑scale smoothing
+- growth suppression</p>
+<p><strong>Measurement character:</strong>
+- projection‑dependent
+- path‑integrated
+- regime‑filtered</p>
+<p>Local measurements are taken <strong>inside</strong> the cosmic web, not outside it.</p>
+<hr>
+<h2 id="why-the-numbers-dont-match">Why the Numbers Don’t Match</h2>
+<p>RTT/vST explanation:</p>
+<ul>
+<li>Early‑universe measurements assume <strong>uniform coherence</strong></li>
+<li>Late‑universe measurements traverse a <strong>structured transport network</strong></li>
+<li>The cosmic web introduces <strong>scale‑dependent expansion mediation</strong></li>
+</ul>
+<p>Thus, the inferred expansion rate depends on <strong>which regime you sample</strong>.</p>
+<hr>
+<h2 id="the-cosmic-web-as-the-missing-mediator">The Cosmic Web as the Missing Mediator</h2>
+<p>The cosmic web:
+- channels matter
+- redistributes curvature
+- creates anisotropic expansion environments</p>
+<p>It acts as a <strong>regime filter</strong> between early and late cosmology.</p>
+<p>Ignoring it forces incompatible calibrations to agree.</p>
+<hr>
+<h2 id="why-this-is-not-a-failure-of-cdm">Why This Is Not a Failure of ΛCDM</h2>
+<p>RTT/vST does <strong>not</strong> discard ΛCDM.</p>
+<p>It reframes ΛCDM as:
+- a <strong>regime‑specific effective model</strong>
+- valid within defined coherence domains</p>
+<p>The tension signals <strong>where the model’s regime boundary lies</strong>.</p>
+<hr>
+<h2 id="educational-value">Educational Value</h2>
+<p>Students learn that:
+- cosmological parameters are regime‑dependent
+- precision does not imply universality
+- structure matters for inference
+- tensions reveal missing layers, not broken physics</p>
+<p>This mirrors:
+- climate regime boundaries
+- neural coding regime switches
+- biosphere tipping points</p>
+<hr>
+<h2 id="summary">Summary</h2>
+<p>The Hubble tension is not a paradox.</p>
+<p>It is the universe telling us:</p>
+<blockquote>
+<p><em>You are measuring across a regime boundary.</em></p>
+</blockquote>
+<p>RTT/vST provides the grammar to hear that message clearly.</p>
+<hr>
+<h3 id="where-this-sits-in-the-rttvst-stack">Where this sits in the RTT/vST stack</h3>
+<ul>
+<li><strong>Below:</strong> Cosmic Web (structure mediation)</li>
+<li><strong>Above:</strong> Dark Sector (coherence roles)</li>
+<li><strong>Across:</strong> Physical Cosmology (regime grammar)</li>
+</ul>
+<p>This completes the <strong>early → structure → late universe bridge</strong>.</p>
+<hr>
+<h2 id="hubble_tension_rttvstjson"><strong>Hubble_Tension_RTTvST.json</strong></h2>
+<pre><code class="language-json">{
+  &quot;artifact_id&quot;: &quot;Hubble_Tension_RTTvST&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;type&quot;: &quot;rtt_vst_regime_boundary_ontology&quot;,
+  &quot;provenance&quot;: {
+    &quot;source&quot;: &quot;Early- vs late-universe expansion-rate inference frameworks reorganized via RTT/vST&quot;,
+    &quot;notes&quot;: &quot;Treats the Hubble tension as a regime boundary artifact: mismatched coherence calibrations across early-universe symmetry-dominant inference and late-universe structure-mediated projection.&quot;
+  },
+
+  &quot;model&quot;: {
+    &quot;structure&quot;: &quot;layered_inference_stack&quot;,
+    &quot;allows_multi_membership&quot;: true,
+    &quot;primary_axes&quot;: [
+      &quot;coherence_regime&quot;,
+      &quot;inference_pathway&quot;,
+      &quot;projection_bias&quot;,
+      &quot;boundary_mismatch&quot;
+    ],
+    &quot;core_claim&quot;: &quot;The Hubble tension is a regime boundary artifact produced when early-universe global calibration is applied to late-universe structure-mediated projections.&quot;
+  },
+
+  &quot;layers&quot;: {
+    &quot;layer_1_early_universe_coherence&quot;: {
+      &quot;name&quot;: &quot;Early-universe coherence regime&quot;,
+      &quot;coherence_unit&quot;: &quot;near_homogeneous_global_state&quot;,
+      &quot;description&quot;: &quot;Symmetry-dominant, globally averaged regime prior to full nonlinear structure emergence.&quot;,
+      &quot;entities&quot;: [
+        &quot;primordial_perturbations&quot;,
+        &quot;photon_baryon_coupling&quot;,
+        &quot;sound_horizon_scale&quot;,
+        &quot;recombination_surface&quot;
+      ],
+      &quot;resonance_roles&quot;: [
+        &quot;global_calibration&quot;,
+        &quot;scale_imprinting&quot;
+      ],
+      &quot;typical_probes&quot;: [
+        &quot;cosmic_microwave_background&quot;,
+        &quot;baryon_acoustic_oscillations_early_calibration&quot;
+      ]
+    },
+
+    &quot;layer_2_structure_mediated_regime&quot;: {
+      &quot;name&quot;: &quot;Structure-mediated regime&quot;,
+      &quot;coherence_unit&quot;: &quot;cosmic_web_topology&quot;,
+      &quot;description&quot;: &quot;Nonlinear structure introduces environment-dependent transport, curvature distribution, and anisotropic pathways.&quot;,
+      &quot;entities&quot;: [
+        &quot;dark_matter_halos&quot;,
+        &quot;filaments&quot;,
+        &quot;sheets&quot;,
+        &quot;voids&quot;,
+        &quot;lensing_potential_field&quot;
+      ],
+      &quot;resonance_roles&quot;: [
+        &quot;pathway_filtering&quot;,
+        &quot;environmental_modulation&quot;,
+        &quot;topology_conditioning&quot;
+      ],
+      &quot;typical_probes&quot;: [
+        &quot;weak_lensing&quot;,
+        &quot;redshift_surveys&quot;,
+        &quot;cluster_dynamics&quot;
+      ]
+    },
+
+    &quot;layer_3_late_universe_expansion_stabilization&quot;: {
+      &quot;name&quot;: &quot;Late-universe expansion stabilization regime&quot;,
+      &quot;coherence_unit&quot;: &quot;horizon_scale_smoothing&quot;,
+      &quot;description&quot;: &quot;Late-time expansion behavior is stabilized at large scales while local measurements remain structure-conditioned.&quot;,
+      &quot;entities&quot;: [
+        &quot;accelerated_expansion&quot;,
+        &quot;growth_suppression&quot;,
+        &quot;distance_redshift_relation&quot;,
+        &quot;peculiar_velocity_field&quot;
+      ],
+      &quot;resonance_roles&quot;: [
+        &quot;large_scale_stabilization&quot;,
+        &quot;projection_dependence&quot;
+      ],
+      &quot;typical_probes&quot;: [
+        &quot;distance_ladder&quot;,
+        &quot;type_ia_supernovae&quot;,
+        &quot;time_delay_lensing&quot;,
+        &quot;standard_sirens&quot;
+      ]
+    },
+
+    &quot;layer_4_inference_projection_layer&quot;: {
+      &quot;name&quot;: &quot;Inference and projection layer&quot;,
+      &quot;coherence_unit&quot;: &quot;model_conditioned_estimation&quot;,
+      &quot;description&quot;: &quot;Parameter inference depends on which regime assumptions are baked into the estimator and which projections are sampled.&quot;,
+      &quot;entities&quot;: [
+        &quot;parameter_fit_pipeline&quot;,
+        &quot;priors_and_calibration&quot;,
+        &quot;selection_effects&quot;,
+        &quot;line_of_sight_inhomogeneity&quot;
+      ],
+      &quot;resonance_roles&quot;: [
+        &quot;regime_mapping&quot;,
+        &quot;uncertainty_shaping&quot;
+      ]
+    }
+  },
+
+  &quot;regime_boundary_artifact&quot;: {
+    &quot;name&quot;: &quot;Early-late coherence boundary&quot;,
+    &quot;description&quot;: &quot;Mismatch between early-universe global calibration and late-universe structure-mediated projection.&quot;,
+    &quot;boundary_mechanisms&quot;: [
+      &quot;projection_dependence_across_inhomogeneous_paths&quot;,
+      &quot;environment_sensitive_distance_inference&quot;,
+      &quot;structure_conditioned_velocity_fields&quot;,
+      &quot;scale_dependent_mapping_between_global_and_local_expansion&quot;
+    ]
+  },
+
+  &quot;inference_pathways&quot;: {
+    &quot;early_universe_path&quot;: {
+      &quot;description&quot;: &quot;Infer present expansion from early-universe calibration under a global coherence assumption.&quot;,
+      &quot;inputs&quot;: [
+        &quot;cmb_anisotropy_spectrum&quot;,
+        &quot;sound_horizon_scale&quot;,
+        &quot;early_universe_parameter_set&quot;
+      ],
+      &quot;outputs&quot;: [
+        &quot;inferred_H0_under_global_mapping&quot;
+      ],
+      &quot;dominant_layers&quot;: [
+        &quot;layer_1_early_universe_coherence&quot;,
+        &quot;layer_4_inference_projection_layer&quot;
+      ]
+    },
+    &quot;late_universe_path&quot;: {
+      &quot;description&quot;: &quot;Measure expansion through structured space using distance indicators and local dynamics.&quot;,
+      &quot;inputs&quot;: [
+        &quot;standard_candles_or_rulers&quot;,
+        &quot;redshift_measurements&quot;,
+        &quot;local_flow_corrections&quot;
+      ],
+      &quot;outputs&quot;: [
+        &quot;measured_H0_under_structure_conditioning&quot;
+      ],
+      &quot;dominant_layers&quot;: [
+        &quot;layer_2_structure_mediated_regime&quot;,
+        &quot;layer_3_late_universe_expansion_stabilization&quot;,
+        &quot;layer_4_inference_projection_layer&quot;
+      ]
+    }
+  },
+
+  &quot;tension_classes&quot;: {
+    &quot;calibration_mismatch&quot;: {
+      &quot;description&quot;: &quot;Early calibration is applied outside its coherence regime without explicit boundary mapping.&quot;
+    },
+    &quot;projection_mismatch&quot;: {
+      &quot;description&quot;: &quot;Different probes sample different projections of the same underlying expansion-plus-structure system.&quot;
+    },
+    &quot;regime_coupling_gap&quot;: {
+      &quot;description&quot;: &quot;Missing or incomplete description of how structure mediation maps onto late-time expansion inference.&quot;
+    }
+  },
+
+  &quot;cross_layer_coupling&quot;: {
+    &quot;early_to_structure&quot;: [
+      &quot;seed_field_to_cosmic_web_growth&quot;
+    ],
+    &quot;structure_to_late_inference&quot;: [
+      &quot;line_of_sight_inhomogeneity_bias&quot;,
+      &quot;peculiar_velocity_contamination&quot;,
+      &quot;lensing_magnification_scatter&quot;
+    ],
+    &quot;late_to_inference&quot;: [
+      &quot;growth_suppression_affects_tracer_statistics&quot;,
+      &quot;selection_effects_in_distance_samples&quot;
+    ]
+  },
+
+  &quot;phase_alignment&quot;: {
+    &quot;I&quot;: &quot;global_calibration_regime&quot;,
+    &quot;II&quot;: &quot;structure_mediation_regime&quot;,
+    &quot;III&quot;: &quot;late_time_stabilization_regime&quot;,
+    &quot;IV&quot;: &quot;projection_conditioned_inference&quot;,
+    &quot;V&quot;: &quot;boundary_mismatch_manifestation&quot;
+  },
+
+  &quot;semantic_layers&quot;: {
+    &quot;resonance_tags&quot;: [
+      &quot;hubble_tension&quot;,
+      &quot;regime_boundary_artifact&quot;,
+      &quot;early_late_mismatch&quot;,
+      &quot;structure_mediated_projection&quot;,
+      &quot;calibration_vs_measurement&quot;
+    ],
+    &quot;notes&quot;: &quot;This artifact does not assert a specific new component. It encodes the structural reason early and late inferences can disagree: they traverse different coherence regimes.&quot;
+  }
+}
+</code></pre>
+<hr>
+<h2 id="hubble-regime-boundary-wheel"><strong>Hubble Regime Boundary Wheel</strong></h2>
+<h3 id="hubble_regime_boundary_wheeljson"><strong>Hubble_Regime_Boundary_Wheel.json</strong></h3>
+<pre><code class="language-json">{
+  &quot;artifact_id&quot;: &quot;Hubble_Regime_Boundary_Wheel&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;type&quot;: &quot;rtt_vst_sector_wheel&quot;,
+  &quot;provenance&quot;: {
+    &quot;source&quot;: &quot;Hubble tension inference pathways reorganized via RTT/vST&quot;,
+    &quot;notes&quot;: &quot;Sector wheel showing early calibration vs late measurement as different regime projections separated by a structure-mediated boundary.&quot;
+  },
+
+  &quot;wheel&quot;: {
+    &quot;layout&quot;: {
+      &quot;style&quot;: &quot;radial_sector_wheel&quot;,
+      &quot;orientation&quot;: &quot;counterclockwise&quot;,
+      &quot;rings&quot;: [
+        &quot;coherence_core&quot;,
+        &quot;regime_domains&quot;,
+        &quot;inference_projections&quot;
+      ],
+      &quot;centerpiece&quot;: &quot;expansion_coherence&quot;
+    },
+
+    &quot;rings&quot;: {
+      &quot;coherence_core&quot;: {
+        &quot;description&quot;: &quot;Central expansion coherence substrate (global geometry response).&quot;,
+        &quot;sectors&quot;: {
+          &quot;expansion_coherence&quot;: {
+            &quot;entities&quot;: [
+              &quot;spacetime_scaling&quot;,
+              &quot;distance_redshift_mapping&quot;
+            ],
+            &quot;role&quot;: &quot;global_coherence_core&quot;,
+            &quot;color&quot;: &quot;gold&quot;
+          }
+        }
+      },
+
+      &quot;regime_domains&quot;: {
+        &quot;description&quot;: &quot;Domains that condition how expansion is inferred.&quot;,
+        &quot;sectors&quot;: {
+          &quot;early_universe_coherence&quot;: {
+            &quot;entities&quot;: [
+              &quot;recombination_surface&quot;,
+              &quot;sound_horizon_imprint&quot;
+            ],
+            &quot;resonance_role&quot;: &quot;global_calibration&quot;,
+            &quot;color&quot;: &quot;violet&quot;
+          },
+          &quot;structure_mediated_boundary&quot;: {
+            &quot;entities&quot;: [
+              &quot;cosmic_web_topology&quot;,
+              &quot;voids_filaments_nodes&quot;
+            ],
+            &quot;resonance_role&quot;: &quot;pathway_filtering&quot;,
+            &quot;color&quot;: &quot;blue&quot;
+          },
+          &quot;late_universe_stabilization&quot;: {
+            &quot;entities&quot;: [
+              &quot;accelerated_expansion&quot;,
+              &quot;growth_suppression&quot;
+            ],
+            &quot;resonance_role&quot;: &quot;late_time_smoothing&quot;,
+            &quot;color&quot;: &quot;dark_gray&quot;
+          }
+        }
+      },
+
+      &quot;inference_projections&quot;: {
+        &quot;description&quot;: &quot;Probe families as projections through different regimes.&quot;,
+        &quot;sectors&quot;: {
+          &quot;cmb_inference&quot;: {
+            &quot;entities&quot;: [
+              &quot;early_calibration_pipeline&quot;,
+              &quot;model_conditioned_H0&quot;
+            ],
+            &quot;color&quot;: &quot;light_violet&quot;
+          },
+          &quot;distance_ladder&quot;: {
+            &quot;entities&quot;: [
+              &quot;standard_candles&quot;,
+              &quot;local_flow_corrections&quot;
+            ],
+            &quot;color&quot;: &quot;light_blue&quot;
+          },
+          &quot;time_delay_lensing&quot;: {
+            &quot;entities&quot;: [
+              &quot;strong_lensing_delays&quot;,
+              &quot;mass_model_projection&quot;
+            ],
+            &quot;color&quot;: &quot;orange&quot;
+          },
+          &quot;standard_sirens&quot;: {
+            &quot;entities&quot;: [
+              &quot;gravitational_wave_distances&quot;,
+              &quot;host_redshift_mapping&quot;
+            ],
+            &quot;color&quot;: &quot;teal&quot;
+          },
+          &quot;bao_lss&quot;: {
+            &quot;entities&quot;: [
+              &quot;late_time_bao&quot;,
+              &quot;tracer_clustering_projection&quot;
+            ],
+            &quot;color&quot;: &quot;yellow&quot;
+          }
+        }
+      }
+    }
+  },
+
+  &quot;radial_alignment&quot;: {
+    &quot;description&quot;: &quot;Each radial line encodes a full pathway: coherence core → regime domain → probe projection.&quot;,
+    &quot;examples&quot;: [
+      &quot;expansion_coherence -&gt; early_universe_coherence -&gt; cmb_inference&quot;,
+      &quot;expansion_coherence -&gt; structure_mediated_boundary -&gt; distance_ladder&quot;,
+      &quot;expansion_coherence -&gt; late_universe_stabilization -&gt; bao_lss&quot;
+    ]
+  },
+
+  &quot;semantic_layers&quot;: {
+    &quot;phase_alignment&quot;: {
+      &quot;I&quot;: &quot;coherence_core&quot;,
+      &quot;II&quot;: &quot;regime_domain&quot;,
+      &quot;III&quot;: &quot;projection_probe&quot;
+    },
+    &quot;resonance_tags&quot;: [
+      &quot;sector_wheel&quot;,
+      &quot;boundary_effect&quot;,
+      &quot;projection_dependence&quot;,
+      &quot;early_late_inference_split&quot;
+    ],
+    &quot;notes&quot;: &quot;The wheel makes the punchline visible: probes disagree because they traverse different regime domains, not because reality is inconsistent.&quot;
+  }
+}
+</code></pre>
+  </main>
+</body>
+</html>

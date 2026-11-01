@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/packages/tft-3pack/TRIADIC_PATTERN_API.md">
+  <title>⚡ Triadic Pattern API</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/packages/tft-3pack/TRIADIC_PATTERN_API.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/packages/tft-3pack/TRIADIC_PATTERN_API.md</code>
+  </aside>
+
+  <main>
+<h1 id="triadic-pattern-api">⚡ <strong>Triadic Pattern API</strong></h1>
+<h6 id="by-nawder-loswin-142026-wwwtriadicframeworksorg">By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org</h6>
+<h3 id="mapping-triadic-patterns-to-shell-python-and-wrsadc-usage"><em>Mapping Triadic Patterns to Shell, Python, and WRSADC Usage</em></h3>
+<p>The <strong>3‑Pack</strong> primitives:</p>
+<ul>
+<li><code>primitive1.sh</code> → Begin  </li>
+<li><code>primitive2.sh</code> → Transform  </li>
+<li><code>primitive3.sh</code> → Close  </li>
+</ul>
+<p>In Python:</p>
+<pre><code class="language-python">from wrsadc_python import WRSADCCore
+core = WRSADCCore()
+</code></pre>
+<p>In WRSADC dispatch:</p>
+<pre><code class="language-python">core.dispatch(fn)
+</code></pre>
+<p>Below is the full API mapping.</p>
+<hr>
+<h1 id="1-core-3pack">1. <strong>Core 3‑Pack</strong></h1>
+<h3 id="shell">Shell</h3>
+<pre><code class="language-bash">primitive1.sh
+primitive2.sh
+primitive3.sh
+</code></pre>
+<h3 id="python">Python</h3>
+<pre><code class="language-python">core.interpret(&quot;begin&quot;)
+core.interpret(&quot;transform&quot;)
+core.interpret(&quot;close&quot;)
+</code></pre>
+<h3 id="wrsadc-dispatch">WRSADC Dispatch</h3>
+<pre><code class="language-python">core.dispatch(step1)
+core.dispatch(step2)
+core.dispatch(step3)
+</code></pre>
+<hr>
+<h1 id="2-sequential-triads-triadic-chain">2. <strong>Sequential Triads (Triadic Chain)</strong></h1>
+<h3 id="shell_1">Shell</h3>
+<pre><code class="language-bash">primitive1.sh; primitive2.sh; primitive3.sh
+primitive1.sh; primitive2.sh; primitive3.sh
+</code></pre>
+<h3 id="python_1">Python</h3>
+<pre><code class="language-python">for cycle in range(2):
+    core.interpret(f&quot;cycle-{cycle}-begin&quot;)
+    core.interpret(f&quot;cycle-{cycle}-transform&quot;)
+    core.interpret(f&quot;cycle-{cycle}-close&quot;)
+</code></pre>
+<h3 id="wrsadc-dispatch_1">WRSADC Dispatch</h3>
+<pre><code class="language-python">for fn in [step1, step2, step3, step1, step2, step3]:
+    core.dispatch(fn)
+</code></pre>
+<hr>
+<h1 id="3-nested-triads">3. <strong>Nested Triads</strong></h1>
+<h3 id="shell_2">Shell</h3>
+<pre><code class="language-bash">primitive1.sh
+primitive2.sh
+  primitive1.sh
+  primitive2.sh
+  primitive3.sh
+primitive3.sh
+</code></pre>
+<h3 id="python_2">Python</h3>
+<pre><code class="language-python">core.interpret(&quot;outer-begin&quot;)
+core.interpret(&quot;outer-transform&quot;)
+
+core.interpret(&quot;inner-begin&quot;)
+core.interpret(&quot;inner-transform&quot;)
+core.interpret(&quot;inner-close&quot;)
+
+core.interpret(&quot;outer-close&quot;)
+</code></pre>
+<h3 id="wrsadc-dispatch_2">WRSADC Dispatch</h3>
+<pre><code class="language-python">core.dispatch(outer_start)
+core.dispatch(outer_shift)
+
+core.dispatch(inner_start)
+core.dispatch(inner_shift)
+core.dispatch(inner_end)
+
+core.dispatch(outer_end)
+</code></pre>
+<hr>
+<h1 id="4-triadic-expansion-33-pattern">4. <strong>Triadic Expansion (3×3 Pattern)</strong></h1>
+<h3 id="shell_3">Shell</h3>
+<pre><code class="language-bash">for i in 1 2 3; do
+  primitive1.sh
+  primitive2.sh
+  primitive3.sh
+done
+</code></pre>
+<h3 id="python_3">Python</h3>
+<pre><code class="language-python">for phase in [&quot;P1&quot;, &quot;P2&quot;, &quot;P3&quot;]:
+    core.interpret(f&quot;{phase}-begin&quot;)
+    core.interpret(f&quot;{phase}-transform&quot;)
+    core.interpret(f&quot;{phase}-close&quot;)
+</code></pre>
+<h3 id="wrsadc-dispatch_3">WRSADC Dispatch</h3>
+<pre><code class="language-python">for fn in [step1, step2, step3] * 3:
+    core.dispatch(fn)
+</code></pre>
+<hr>
+<h1 id="5-triadic-ladder">5. <strong>Triadic Ladder</strong></h1>
+<h3 id="shell_4">Shell</h3>
+<pre><code class="language-bash">primitive1.sh; primitive2.sh; primitive3.sh
+  primitive1.sh; primitive2.sh; primitive3.sh
+    primitive1.sh; primitive2.sh; primitive3.sh
+</code></pre>
+<h3 id="python_4">Python</h3>
+<pre><code class="language-python">for depth in range(3):
+    for p in [&quot;begin&quot;, &quot;transform&quot;, &quot;close&quot;]:
+        core.interpret(f&quot;level-{depth}-{p}&quot;)
+</code></pre>
+<h3 id="wrsadc-dispatch_4">WRSADC Dispatch</h3>
+<pre><code class="language-python">for depth in range(3):
+    core.dispatch(level_begin)
+    core.dispatch(level_transform)
+    core.dispatch(level_close)
+</code></pre>
+<hr>
+<h1 id="6-triadic-mirror">6. <strong>Triadic Mirror</strong></h1>
+<h3 id="shell_5">Shell</h3>
+<pre><code class="language-bash">primitive1.sh
+primitive2.sh
+primitive3.sh
+primitive2.sh
+primitive1.sh
+</code></pre>
+<h3 id="python_5">Python</h3>
+<pre><code class="language-python">seq = [&quot;begin&quot;, &quot;transform&quot;, &quot;close&quot;, &quot;transform&quot;, &quot;begin&quot;]
+for s in seq:
+    core.interpret(s)
+</code></pre>
+<h3 id="wrsadc-dispatch_5">WRSADC Dispatch</h3>
+<pre><code class="language-python">for fn in [step1, step2, step3, step2, step1]:
+    core.dispatch(fn)
+</code></pre>
+<hr>
+<h1 id="7-triadic-spiral">7. <strong>Triadic Spiral</strong></h1>
+<h3 id="shell_6">Shell</h3>
+<pre><code class="language-bash"># Cycle 1
+primitive1.sh; primitive2.sh; primitive3.sh
+
+# Cycle 2 (expanded)
+primitive1.sh; primitive2.sh; primitive2.sh; primitive3.sh; primitive3.sh; primitive1.sh
+</code></pre>
+<h3 id="python_6">Python</h3>
+<pre><code class="language-python">core.interpret(&quot;c1-begin&quot;)
+core.interpret(&quot;c1-transform&quot;)
+core.interpret(&quot;c1-close&quot;)
+
+core.interpret(&quot;c2-begin&quot;)
+core.interpret(&quot;c2-transform&quot;)
+core.interpret(&quot;c2-transform&quot;)
+core.interpret(&quot;c2-close&quot;)
+core.interpret(&quot;c2-close&quot;)
+core.interpret(&quot;c2-return&quot;)
+</code></pre>
+<h3 id="wrsadc-dispatch_6">WRSADC Dispatch</h3>
+<pre><code class="language-python">for fn in [a, b, c, b, c, a]:
+    core.dispatch(fn)
+</code></pre>
+<hr>
+<h1 id="8-triadic-constellation">8. <strong>Triadic Constellation</strong></h1>
+<h3 id="shell_7">Shell</h3>
+<pre><code class="language-bash"># Three independent triads orbiting a shared intent
+(
+  primitive1.sh; primitive2.sh; primitive3.sh
+) &amp;
+(
+  primitive1.sh; primitive2.sh; primitive3.sh
+) &amp;
+(
+  primitive1.sh; primitive2.sh; primitive3.sh
+)
+wait
+</code></pre>
+<h3 id="python_7">Python</h3>
+<pre><code class="language-python">import threading
+
+def triad(label):
+    core.interpret(f&quot;{label}-begin&quot;)
+    core.interpret(f&quot;{label}-transform&quot;)
+    core.interpret(f&quot;{label}-close&quot;)
+
+threads = [threading.Thread(target=triad, args=(f&quot;T{i}&quot;,)) for i in range(3)]
+[t.start() for t in threads]
+[t.join() for t in threads]
+</code></pre>
+<h3 id="wrsadc-dispatch_7">WRSADC Dispatch</h3>
+<pre><code class="language-python">for triad in [T1, T2, T3]:
+    for fn in triad:
+        core.dispatch(fn)
+</code></pre>
+<hr>
+<h1 id="9-triadic-weave">9. <strong>Triadic Weave</strong></h1>
+<h3 id="shell_8">Shell</h3>
+<pre><code class="language-bash">primitive1.sh
+  primitive1.sh
+    primitive1.sh
+primitive2.sh
+  primitive2.sh
+    primitive2.sh
+primitive3.sh
+  primitive3.sh
+    primitive3.sh
+</code></pre>
+<h3 id="python_8">Python</h3>
+<pre><code class="language-python">for p in [&quot;begin&quot;, &quot;transform&quot;, &quot;close&quot;]:
+    for thread in [0,1,2]:
+        core.interpret(f&quot;{p}-thread-{thread}&quot;)
+</code></pre>
+<h3 id="wrsadc-dispatch_8">WRSADC Dispatch</h3>
+<pre><code class="language-python">for fn_group in [[a1,a2,a3], [b1,b2,b3], [c1,c2,c3]]:
+    for fn in fn_group:
+        core.dispatch(fn)
+</code></pre>
+<hr>
+<h1 id="10-triadic-cascade">10. <strong>Triadic Cascade</strong></h1>
+<h3 id="shell_9">Shell</h3>
+<pre><code class="language-bash">primitive1.sh; primitive2.sh; primitive3.sh
+primitive1.sh; primitive2.sh; primitive3.sh
+primitive1.sh; primitive2.sh; primitive3.sh
+</code></pre>
+<h3 id="python_9">Python</h3>
+<pre><code class="language-python">for stage in range(3):
+    core.interpret(f&quot;stage-{stage}-begin&quot;)
+    core.interpret(f&quot;stage-{stage}-transform&quot;)
+    core.interpret(f&quot;stage-{stage}-close&quot;)
+</code></pre>
+<h3 id="wrsadc-dispatch_9">WRSADC Dispatch</h3>
+<pre><code class="language-python">for stage in [stage1, stage2, stage3]:
+    for fn in stage:
+        core.dispatch(fn)
+</code></pre>
+<hr>
+<h1 id="mythmatical-architects-note">🧙 Mythmatical Architect’s Note</h1>
+<p>Patterns are the <strong>grammar</strong> of triadic action.<br>
+This API is the <strong>syntax</strong>.<br>
+Together, they let developers speak RTT fluently —<br>
+in shell, in Python, and across the WRSADC boundary.</p>
+  </main>
+</body>
+</html>

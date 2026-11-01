@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rfc/RFC_REG_0004_Registry_Indexer_for_Corridor_Events.md">
+  <title>RFC‑REG‑0004 — Registry Indexer for Corridor Events</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rfc/RFC_REG_0004_Registry_Indexer_for_Corridor_Events.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rfc/RFC_REG_0004_Registry_Indexer_for_Corridor_Events.md</code>
+  </aside>
+
+  <main>
+<h1 id="rfcreg0004-registry-indexer-for-corridor-events"><strong>RFC‑REG‑0004 — Registry Indexer for Corridor Events</strong></h1>
+<h3 id="canonical-indexer-for-glyph-rci-band-and-remix-lineage-metadata"><em>Canonical Indexer for Glyph, RCI Band, and Remix Lineage Metadata</em></h3>
+<p>RefId: turn0browsertab1</p>
+<p><strong>Title:</strong> Corridor Registry Indexer<br>
+<strong>Status:</strong> Draft<br>
+<strong>Author:</strong> Nawder Loswin + Copilot<br>
+<strong>Date:</strong> 2025‑11‑12<br>
+<strong>Version:</strong> 0.2  </p>
+<hr>
+<h2 id="1-purpose"><strong>1. Purpose</strong></h2>
+<p>The <strong>Corridor Registry Indexer (CRI)</strong> consumes <code>rci_registry_event.yml</code> entries, normalizes corridor metadata, and builds <strong>searchable, validator‑grade indices</strong> across three dimensions:</p>
+<ul>
+<li><strong>Glyph Type</strong> (cipher‑density classification)  </li>
+<li><strong>RCI Band</strong> (resonance clarity classification)  </li>
+<li><strong>Remix Ancestry</strong> (lineage mapping between scrolls)</li>
+</ul>
+<p>CRI is the backbone of corridor search, lineage visualization, dashboard filtering, and archival retrieval.</p>
+<p>It ensures:</p>
+<ul>
+<li>deterministic indexing  </li>
+<li>drift‑safe classification  </li>
+<li>lineage integrity  </li>
+<li>validator‑grade reproducibility  </li>
+</ul>
+<hr>
+<h2 id="2-index-dimensions"><strong>2. Index Dimensions</strong></h2>
+<p>CRI builds three canonical indices.</p>
+<hr>
+<h3 id="21-glyph-type-index"><strong>2.1 Glyph Type Index</strong></h3>
+<p>Glyphs represent <strong>cipher‑density classes</strong>:</p>
+<ul>
+<li><strong>◇</strong> — alpha (low density)  </li>
+<li><strong>◆</strong> — beta (medium density)  </li>
+<li><strong>⬣</strong> — gamma (high density)</li>
+</ul>
+<p><strong>Index Structure:</strong></p>
+<pre><code>glyph_type:
+  ◇: [c-002, c-010, ...]
+  ◆: [c-001, c-004, ...]
+  ⬣: [c-003, c-007, ...]
+</code></pre>
+<p>Glyph index enables:</p>
+<ul>
+<li>dashboard glyph wheel  </li>
+<li>corridor search filtering  </li>
+<li>lineage glyph inheritance  </li>
+<li>archival glyph queries  </li>
+</ul>
+<hr>
+<h3 id="22-rci-band-index"><strong>2.2 RCI Band Index</strong></h3>
+<p>RCI (Resonance Clarity Index) is a composite clarity score (0–1).</p>
+<p>Bands:</p>
+<ul>
+<li><strong>Low:</strong> 0.00–0.33  </li>
+<li><strong>Medium:</strong> 0.34–0.66  </li>
+<li><strong>High:</strong> 0.67–1.00  </li>
+</ul>
+<p><strong>Index Structure:</strong></p>
+<pre><code>rci_band:
+  low:    [c-002, c-005]
+  medium: [c-001, c-004]
+  high:   [c-003, c-007]
+</code></pre>
+<p>RCI band index powers:</p>
+<ul>
+<li>clarity histogram  </li>
+<li>search filtering  </li>
+<li>validator clarity checks  </li>
+<li>remix lineage clarity inheritance  </li>
+</ul>
+<hr>
+<h3 id="23-remix-ancestry-index"><strong>2.3 Remix Ancestry Index</strong></h3>
+<p>Tracks parent → child lineage relationships.</p>
+<p><strong>Index Structure:</strong></p>
+<pre><code>remix_ancestry:
+  parent_scrolls:
+    s-1001: [s-1002, s-1003]
+    s-2001: [s-2002]
+</code></pre>
+<p>Ancestry index powers:</p>
+<ul>
+<li>lineage graph  </li>
+<li>remix diff protocol  </li>
+<li>archival ancestry queries  </li>
+<li>validator lineage integrity checks  </li>
+</ul>
+<hr>
+<h2 id="3-schema-extension"><strong>3. Schema Extension</strong></h2>
+<p>File:  </p>
+<pre><code>registry/index/index_schema.yml
+</code></pre>
+<p>Canonical schema:</p>
+<pre><code class="language-yaml">index:
+  glyph_type:
+    ◇: [c-002, c-010]
+    ◆: [c-001, c-004]
+    ⬣: [c-003, c-007]
+
+  rci_band:
+    low:    [c-002, c-005]
+    medium: [c-001, c-004]
+    high:   [c-003, c-007]
+
+  remix_ancestry:
+    parent_scrolls:
+      s-1001: [s-1002, s-1003]
+      s-2001: [s-2002]
+</code></pre>
+<p>Schema integrates with:</p>
+<ul>
+<li><strong>RFC_SCHEMA_0001</strong> (scroll artifact schema)  </li>
+<li><strong>RFC_REMIX_0005</strong> (lineage diff protocol)  </li>
+<li><strong>RFC_EXP_0013</strong> (export module)  </li>
+<li><strong>RFC_ARC_0014</strong> (archival protocol)  </li>
+<li><strong>RFC_ENG_0012</strong> (search/filter engine)  </li>
+</ul>
+<hr>
+<h2 id="4-pythonstyle-indexer-stub"><strong>4. Python‑Style Indexer Stub</strong></h2>
+<p>File:  </p>
+<pre><code>registry/index/indexer.py
+</code></pre>
+<p>This scaffold ingests event YAMLs, builds indices, and exports them.</p>
+<pre><code class="language-python">import yaml
+from collections import defaultdict
+
+def load_events(event_files):
+    events = []
+    for f in event_files:
+        with open(f, &quot;r&quot;) as stream:
+            events.append(yaml.safe_load(stream))
+    return events
+
+def build_indices(events):
+    glyph_index = defaultdict(list)
+    rci_index = {&quot;low&quot;: [], &quot;medium&quot;: [], &quot;high&quot;: []}
+    ancestry_index = defaultdict(list)
+
+    for ev in events:
+        cid = ev[&quot;event&quot;][&quot;corridor_id&quot;]
+        glyph = ev[&quot;event&quot;][&quot;new_glyph&quot;]
+        rci = ev[&quot;event&quot;][&quot;new_rci&quot;]
+        parent = ev[&quot;event&quot;][&quot;lineage&quot;][&quot;parent_scroll&quot;]
+        child = ev[&quot;event&quot;][&quot;lineage&quot;][&quot;child_scroll&quot;]
+
+        # Glyph index
+        glyph_index[glyph].append(cid)
+
+        # RCI band index
+        if rci &lt;= 0.33:
+            rci_index[&quot;low&quot;].append(cid)
+        elif rci &lt;= 0.66:
+            rci_index[&quot;medium&quot;].append(cid)
+        else:
+            rci_index[&quot;high&quot;].append(cid)
+
+        # Remix ancestry
+        if parent and child:
+            ancestry_index[parent].append(child)
+
+    return {
+        &quot;glyph_type&quot;: glyph_index,
+        &quot;rci_band&quot;: rci_index,
+        &quot;remix_ancestry&quot;: ancestry_index
+    }
+
+def export_index(indices, outfile=&quot;registry/index/index_schema.yml&quot;):
+    with open(outfile, &quot;w&quot;) as stream:
+        yaml.dump({&quot;index&quot;: indices}, stream, sort_keys=False)
+</code></pre>
+<hr>
+<h2 id="5-validator-hooks"><strong>5. Validator Hooks</strong></h2>
+<h3 id="consistency"><strong>Consistency</strong></h3>
+<p>Corridor IDs must appear in:</p>
+<ul>
+<li>exactly one glyph bucket  </li>
+<li>exactly one RCI band  </li>
+</ul>
+<h3 id="lineage-integrity"><strong>Lineage Integrity</strong></h3>
+<p>Parent scrolls must exist before child scrolls are indexed.</p>
+<h3 id="checksum"><strong>Checksum</strong></h3>
+<p>Each index export includes a checksum of source events.</p>
+<h3 id="determinism"><strong>Determinism</strong></h3>
+<p>Given the same event set, CRI must produce identical indices.</p>
+<h3 id="incremental-updates"><strong>Incremental Updates</strong></h3>
+<p>New events append cleanly; indices rebuild deterministically.</p>
+<hr>
+<h2 id="6-notes"><strong>6. Notes</strong></h2>
+<ul>
+<li>CRI is the backbone of corridor search, lineage visualization, and archival retrieval.  </li>
+<li>Glyph, RCI band, and ancestry indices are queryable via API endpoints.  </li>
+<li>Indexer is deterministic and validator‑grade.  </li>
+<li>Integrates with all Remixathon workflows.</li>
+</ul>
+  </main>
+</body>
+</html>

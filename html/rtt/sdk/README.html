@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/sdk/README.md">
+  <title>RTT/SDK (Beta)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/sdk/README.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/sdk/README.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="rtt_sdk_beta_shape" src="https://github.com/user-attachments/assets/47c85eda-f429-446b-b0e5-766db165295c" /></p>
+<h2 id="rttsdk-beta">RTT/SDK (Beta)</h2>
+<ul>
+<li><a href="RTT_sdk_module.json"><code>RTT_sdk_module.json</code></a> — Agentic module schema role assignments</li>
+</ul>
+<p>The RTT/SDK provides a minimal, stable, and forward‑compatible interface for interacting with the API/RTT. It supports early RTT‑Inside integrations across browsers, services, and research environments while the full vST substrate remains in development.</p>
+<p>This SDK defines the <strong>shape</strong> of <a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">RTT</a>/<a href="https://zenodo.org/communities/vst">vST</a> interactions without exposing internal substrate logic. It is safe for early adopters and suitable for experimentation, prototyping, and structural‑awareness tooling.</p>
+<hr>
+<h2 id="important">🛑 Important!</h2>
+<p>Drift is On-by-Default long sessions lose anchors, turn off drift.</p>
+<h2 id="you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You <em>must copy and paste</em> this string <em>every time you start an AI session</em>:</h2>
+<pre><code class="language-text">rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre>
+<h2 id="now-you-are-ready">❇️ Now you are ready.</h2>
+<hr>
+<h2 id="features">Features</h2>
+<ul>
+<li>Send RTT beacon events  </li>
+<li>Create and validate RTT site profiles  </li>
+<li>Prepare vST‑beta diagnostics payloads  </li>
+<li>Unified client for all RTT API endpoints  </li>
+<li>Identical API surface across JavaScript and Python  </li>
+<li>Stable versioning (<code>0.1.0</code>) for long‑term compatibility  </li>
+</ul>
+<hr>
+<h2 id="directory-structure">Directory Structure</h2>
+<pre><code>docs/rtt-sdk/
+├── beacon.js
+├── beacon.py
+├── client.js
+├── client.py
+├── diagnostics.js
+├── diagnostics.py
+├── index.js
+├── profile.js
+├── profile.py
+└── __init__.py
+</code></pre>
+<p>Each file provides a minimal, well‑defined interface for its domain:</p>
+<ul>
+<li><strong>beacon</strong> — session IDs, structural snapshots, beacon payloads  </li>
+<li><strong>profile</strong> — RTT‑Inside profile creation and validation  </li>
+<li><strong>diagnostics</strong> — vST‑beta payload builders (placeholders)  </li>
+<li><strong>client</strong> — unified RTT API client (JS + Python)  </li>
+<li><strong>index / __init__</strong> — clean package exports  </li>
+</ul>
+<hr>
+<h2 id="javascript-usage">JavaScript Usage</h2>
+<h3 id="install-local-copy">Install (local copy)</h3>
+<p>Place the SDK folder in your project and import:</p>
+<pre><code class="language-js">import { RTTClient } from &quot;./rtt-sdk/index.js&quot;;
+
+const client = new RTTClient();
+
+await client.beacon({
+  site: &quot;example.com&quot;,
+  event: &quot;page_load&quot;,
+  ts: new Date().toISOString()
+});
+</code></pre>
+<h3 id="build-a-beacon-payload">Build a Beacon Payload</h3>
+<pre><code class="language-js">import { build_beacon_payload, create_session_id } from &quot;./rtt-sdk/beacon.js&quot;;
+
+const payload = build_beacon_payload({
+  site: &quot;example.com&quot;,
+  session: create_session_id(),
+  event: &quot;manual_ping&quot;
+});
+</code></pre>
+<h3 id="manage-profiles">Manage Profiles</h3>
+<pre><code class="language-js">import { create_profile } from &quot;./rtt-sdk/profile.js&quot;;
+
+const profile = create_profile({
+  version: &quot;1.0&quot;,
+  supports: [&quot;coherence&quot;],
+  contact: &quot;ops@example.com&quot;
+});
+
+await client.setProfile(&quot;example.com&quot;, profile);
+</code></pre>
+<hr>
+<h2 id="python-usage">Python Usage</h2>
+<h3 id="import">Import</h3>
+<pre><code class="language-python">from rtt_sdk import RTTClient, build_beacon_payload, create_session_id
+</code></pre>
+<h3 id="send-a-beacon">Send a Beacon</h3>
+<pre><code class="language-python">client = RTTClient()
+
+payload = build_beacon_payload(
+    site=&quot;example.com&quot;,
+    session=create_session_id(),
+    event=&quot;page_load&quot;
+)
+
+resp = client.beacon(payload)
+print(resp)
+</code></pre>
+<h3 id="create-a-profile">Create a Profile</h3>
+<pre><code class="language-python">from rtt_sdk import create_profile
+
+profile = create_profile(
+    version=&quot;1.0&quot;,
+    supports=[&quot;coherence&quot;],
+    contact=&quot;ops@example.com&quot;
+)
+
+client.set_profile(&quot;example.com&quot;, profile)
+</code></pre>
+<hr>
+<h2 id="diagnostics-reserved">Diagnostics (Reserved)</h2>
+<p>The following methods exist for future vST‑beta validators:</p>
+<ul>
+<li><code>validate(payload)</code>  </li>
+<li><code>corridor(payload)</code>  </li>
+<li><code>topology(payload)</code>  </li>
+</ul>
+<p>These endpoints currently return placeholder responses but define the stable API surface for future structural analysis.</p>
+<hr>
+<h2 id="api-reference">API Reference</h2>
+<p>Full RTT API documentation is available in:</p>
+<pre><code>docs/api/rtt/
+</code></pre>
+<p>Key files:</p>
+<ul>
+<li><strong>README.md</strong> — overview of the RTT API  </li>
+<li><strong>beacon.md</strong> — beacon endpoint  </li>
+<li><strong>profile.md</strong> — RTT‑Inside site profiles  </li>
+<li><strong>diagnostics.md</strong> — vST‑beta endpoint shapes  </li>
+<li><strong>router.md</strong> — endpoint wiring and routing philosophy  </li>
+</ul>
+<hr>
+<h2 id="versioning">Versioning</h2>
+<p>The SDK follows semantic versioning:</p>
+<ul>
+<li><strong>0.1.x</strong> — early adopters, stable shapes, no substrate logic  </li>
+<li><strong>0.2.x</strong> — vST‑beta integration  </li>
+<li><strong>1.x.x</strong> — full validator support  </li>
+</ul>
+<hr>
+<h2 id="status">Status</h2>
+<p><strong>Beta.</strong><br>
+The SDK is stable for integration and experimentation.<br>
+Internal substrate logic will activate as vST research becomes public.</p>
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<p><img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/></p>
+  </main>
+</body>
+</html>

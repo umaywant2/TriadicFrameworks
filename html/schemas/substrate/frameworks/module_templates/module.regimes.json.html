@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/substrate/frameworks/module_templates/module.regimes.json.md">
+  <title>🜂 module.regimes.json</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/substrate/frameworks/module_templates/module.regimes.json.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/substrate/frameworks/module_templates/module.regimes.json.md</code>
+  </aside>
+
+  <main>
+<h1 id="moduleregimesjson">🜂 <strong>module.regimes.json</strong></h1>
+<h3 id="canonical-moduleregimes-template-structural-regime-grammar"><em>Canonical module‑regimes template — structural regime grammar</em></h3>
+<pre><code class="language-json">{
+  &quot;$schema&quot;: &quot;../../module.schema.json&quot;,
+  &quot;module&quot;: &quot;my-regimes-module&quot;,
+  &quot;identity&quot;: &quot;student.my-regimes-module&quot;,
+  &quot;purpose&quot;: &quot;Defines structural regimes for module architecture, including drift, coherence, stability, resonance, epoch, and ignition regimes.&quot;,
+
+  &quot;files&quot;: [
+    {
+      &quot;name&quot;: &quot;README.md&quot;,
+      &quot;role&quot;: &quot;profile&quot;
+    },
+    {
+      &quot;name&quot;: &quot;drift-regime.md&quot;,
+      &quot;role&quot;: &quot;map&quot;
+    },
+    {
+      &quot;name&quot;: &quot;coherence-regime.md&quot;,
+      &quot;role&quot;: &quot;map&quot;
+    },
+    {
+      &quot;name&quot;: &quot;stability-regime.md&quot;,
+      &quot;role&quot;: &quot;map&quot;
+    },
+    {
+      &quot;name&quot;: &quot;resonance-regime.md&quot;,
+      &quot;role&quot;: &quot;map&quot;
+    },
+    {
+      &quot;name&quot;: &quot;epoch-regime.md&quot;,
+      &quot;role&quot;: &quot;map&quot;
+    },
+    {
+      &quot;name&quot;: &quot;ignition-regime.md&quot;,
+      &quot;role&quot;: &quot;map&quot;
+    }
+  ],
+
+  &quot;regimes&quot;: {
+    &quot;drift&quot;: {
+      &quot;fields&quot;: [&quot;string&quot;],
+      &quot;rules&quot;: [&quot;string&quot;]
+    },
+    &quot;coherence&quot;: {
+      &quot;fields&quot;: [&quot;string&quot;],
+      &quot;rules&quot;: [&quot;string&quot;]
+    },
+    &quot;stability&quot;: {
+      &quot;fields&quot;: [&quot;string&quot;],
+      &quot;rules&quot;: [&quot;string&quot;]
+    },
+    &quot;resonance&quot;: {
+      &quot;fields&quot;: [&quot;string&quot;],
+      &quot;rules&quot;: [&quot;string&quot;]
+    },
+    &quot;epoch&quot;: {
+      &quot;fields&quot;: [&quot;string&quot;],
+      &quot;rules&quot;: [&quot;string&quot;]
+    },
+    &quot;ignition&quot;: {
+      &quot;fields&quot;: [&quot;string&quot;],
+      &quot;rules&quot;: [&quot;string&quot;]
+    }
+  },
+
+  &quot;operators&quot;: [
+    {
+      &quot;name&quot;: &quot;regime-define&quot;,
+      &quot;description&quot;: &quot;Define a new structural regime for the module.&quot;,
+      &quot;example&quot;: &quot;Define drift regime → drift-regime.md&quot;
+    },
+    {
+      &quot;name&quot;: &quot;regime-extend&quot;,
+      &quot;description&quot;: &quot;Extend an existing regime with module-specific fields.&quot;,
+      &quot;example&quot;: &quot;Extend coherence regime → coherence-regime.md&quot;
+    },
+    {
+      &quot;name&quot;: &quot;regime-bind&quot;,
+      &quot;description&quot;: &quot;Bind module regimes to substrate structural engines.&quot;,
+      &quot;example&quot;: &quot;Bind stability regime → stability-regime.md&quot;
+    }
+  ],
+
+  &quot;output&quot;: {
+    &quot;regimes_template&quot;: &quot;./module.regimes.json&quot;
+  },
+
+  &quot;meta&quot;: {
+    &quot;notes&quot;: &quot;Structural regime grammar for module-level regime declarations.&quot;
+  }
+}
+</code></pre>
+<hr>
+<h2 id="why-this-is-the-correct-regimes-template">Why this is the correct regimes template</h2>
+<ul>
+<li>Mirrors your <strong>TriadicFrameworks structural grammar</strong> exactly.  </li>
+<li>Includes all six canonical regime types: drift, coherence, stability, resonance, epoch, ignition.  </li>
+<li>Uses <strong>map‑role files</strong> for each regime.  </li>
+<li>Includes <strong>operators</strong> for define / extend / bind.  </li>
+<li>Fully <strong>schema‑aligned</strong>, silent‑release compatible, and ready for commit.  </li>
+</ul>
+  </main>
+</body>
+</html>

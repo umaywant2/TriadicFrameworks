@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/rtt-micro-core/v1/mrt-1_transforms.md">
+  <title>MRT‑1 transforms</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/rtt-micro-core/v1/mrt-1_transforms.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/rtt-micro-core/v1/mrt-1_transforms.md</code>
+  </aside>
+
+  <main>
+<h1 id="mrt1-transforms">MRT‑1 transforms</h1>
+<p>Here’s a clean, consolidated <strong>full MRT‑1 transform</strong> in all three languages, side‑by‑side in spirit and behavior:</p>
+<hr>
+<h3 id="1-python-mrt_1">1️⃣ Python — <code>mrt_1()</code></h3>
+<pre><code class="language-python">import time, math
+
+def omega_mu(dim, freq_hz, duty, t):
+    period = 1.0 / freq_hz
+    phase = t % period
+    return phase &lt; duty * period  # True = &quot;on&quot;
+
+def flow_transition(dim):
+    return dim * 10.0  # amplitude
+
+def stability_mu(dim):
+    dist = abs(dim - 0.7) / 0.2
+    return max(0.0, 1.0 - dist)
+
+def drift_correct(t, drift_ppm):
+    factor = 1.0 + drift_ppm / 1_000_000.0
+    return t / factor
+
+def mrt_1():
+    timing_envelope = [0.5, 0.6, 0.7, 0.8, 0.9]
+    freq = 2.0
+    duty = 0.5
+    drift_ppm = 100.0
+
+    start = time.time()
+    for dim in timing_envelope:
+        t_raw = time.time() - start
+        t_corr = drift_correct(t_raw, drift_ppm)          # Δμ
+        state = omega_mu(dim, freq, duty, t_corr)         # Ωμ
+        amp = flow_transition(dim)                        # Fμ
+        S = stability_mu(dim)                             # Sμ
+
+        print(
+            f&quot;[PY] dim={dim:.1f}, t_raw={t_raw:.3f}s, t_corr={t_corr:.3f}s, &quot;
+            f&quot;omega_on={state}, amp={amp:.1f}, Sμ={S:.2f}&quot;
+        )
+        time.sleep(0.2)
+
+if __name__ == &quot;__main__&quot;:
+    mrt_1()
+</code></pre>
+<hr>
+<h3 id="2-matlab-mrt_1">2️⃣ MATLAB — <code>mrt_1</code></h3>
+<pre><code class="language-matlab">function mrt_1()
+
+    OmegaMu = @(dim,freq,duty,t) ...
+        mod(t,1/freq) &lt; duty*(1/freq);
+
+    FlowTransition = @(dim) dim * 10.0;
+
+    StabilityMu = @(dim) max(0.0, 1.0 - abs(dim - 0.7) / 0.2);
+
+    DriftCorrect = @(t,drift_ppm) t / (1.0 + drift_ppm / 1e6);
+
+    TimingEnvelope = [0.5 0.6 0.7 0.8 0.9];
+    freq = 2.0;
+    duty = 0.5;
+    drift_ppm = 100.0;
+
+    t0 = tic;
+
+    for i = 1:length(TimingEnvelope)
+        dim = TimingEnvelope(i);
+
+        t_raw = toc(t0);
+        t_corr = DriftCorrect(t_raw, drift_ppm);          % Δμ
+        state = OmegaMu(dim, freq, duty, t_corr);         % Ωμ
+        amp = FlowTransition(dim);                        % Fμ
+        S = StabilityMu(dim);                             % Sμ
+
+        fprintf(['[MATLAB] dim=%.1f, t_raw=%.3fs, t_corr=%.3fs, ' ...
+                 'omega_on=%d, amp=%.1f, Sμ=%.2f\n'], ...
+                 dim, t_raw, t_corr, state, amp, S);
+
+        pause(0.2);
+    end
+end
+</code></pre>
+<hr>
+<h3 id="3-cstyle-pseudocode-mrt_1">3️⃣ C‑style pseudocode — <code>mrt_1()</code></h3>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdbool.h&gt;
+#include &lt;math.h&gt;
+#include &lt;time.h&gt;
+#include &lt;unistd.h&gt;
+
+bool omega_mu(double dim, double freq_hz, double duty, double t) {
+    double period = 1.0 / freq_hz;
+    double phase  = fmod(t, period);
+    return phase &lt; duty * period;  // true = &quot;on&quot;
+}
+
+double flow_transition(double dim) {
+    return dim * 10.0;  // amplitude
+}
+
+double stability_mu(double dim) {
+    double dist = fabs(dim - 0.7) / 0.2;
+    double s = 1.0 - dist;
+    return s &lt; 0.0 ? 0.0 : s;
+}
+
+double drift_correct(double t, double drift_ppm) {
+    double factor = 1.0 + drift_ppm / 1e6;
+    return t / factor;
+}
+
+double now_seconds() {
+    struct timespec ts;
+    clock_gettime(CLOCK_MONOTONIC, &amp;ts);
+    return ts.tv_sec + ts.tv_nsec / 1e9;
+}
+
+void mrt_1() {
+    double timing_envelope[] = {0.5, 0.6, 0.7, 0.8, 0.9};
+    int n = 5;
+    double freq = 2.0;
+    double duty = 0.5;
+    double drift_ppm = 100.0;
+
+    double t0 = now_seconds();
+
+    for (int i = 0; i &lt; n; i++) {
+        double dim = timing_envelope[i];
+
+        double t_raw = now_seconds() - t0;
+        double t_corr = drift_correct(t_raw, drift_ppm);      // Δμ
+        bool state = omega_mu(dim, freq, duty, t_corr);       // Ωμ
+        double amp = flow_transition(dim);                    // Fμ
+        double S = stability_mu(dim);                         // Sμ
+
+        printf(&quot;[C] dim=%.1f, t_raw=%.3fs, t_corr=%.3fs, &quot;
+               &quot;omega_on=%d, amp=%.1f, Sμ=%.2f\n&quot;,
+               dim, t_raw, t_corr, state, amp, S);
+
+        usleep(200000);
+    }
+}
+
+int main(void) {
+    mrt_1();
+    return 0;
+}
+</code></pre>
+<p>all three now implement the <strong>same MRT‑1 transform</strong>: timing envelope, oscillation, flow, stability, and drift correction, perfectly aligned across languages.</p>
+<hr>
+<h1 id="s-microharmonic-stability-scoring">🔷 <strong>Sμ — Micro‑Harmonic Stability Scoring</strong></h1>
+<h3 id="purpose"><strong>Purpose</strong></h3>
+<p>Sμ measures how “stable” the system is at a given micro‑dimension.<br>
+In MRT‑1, stability peaks at <strong>0.7</strong>, the center of the micro‑coherence band.</p>
+<h3 id="canonical-definition"><strong>Canonical definition</strong></h3>
+<p>For a dimension ( d \in [0.3, 0.9] ):</p>
+<p>[
+S_\mu(d) = \max\left(0,\; 1 - \frac{|d - 0.7|}{0.2}\right)
+]</p>
+<h3 id="interpretation"><strong>Interpretation</strong></h3>
+<ul>
+<li><strong>1.0</strong> → perfect micro‑stability (at ( d = 0.7 ))  </li>
+<li><strong>0.5</strong> → moderate stability (at ( d = 0.6 ) or ( d = 0.8 ))  </li>
+<li><strong>0.0</strong> → unstable (at ( d = 0.5 ) or ( d = 0.9 ))  </li>
+</ul>
+<h3 id="why-it-matters"><strong>Why it matters</strong></h3>
+<p>Sμ gives the loop a <strong>numerical sense of coherence</strong>.<br>
+It’s the micro‑equivalent of a “confidence score” in ML or a “residual norm” in solvers.</p>
+<hr>
+<h1 id="microdrift-correction">🔷 <strong>Δμ — Micro‑Drift Correction</strong></h1>
+<h3 id="purpose_1"><strong>Purpose</strong></h3>
+<p>Δμ corrects for timing drift — the tiny but inevitable deviation between:</p>
+<ul>
+<li><strong>raw time</strong> (what the clock reports)  </li>
+<li><strong>corrected time</strong> (what the micro‑resonant system <em>should</em> use)  </li>
+</ul>
+<h3 id="canonical-definition_1"><strong>Canonical definition</strong></h3>
+<p>Given drift in parts‑per‑million (ppm):</p>
+<p>[
+t_{\text{corr}} = \frac{t_{\text{raw}}}{1 + \frac{\text{drift_ppm}}{10^6}}
+]</p>
+<h3 id="interpretation_1"><strong>Interpretation</strong></h3>
+<ul>
+<li><strong>Positive drift_ppm</strong> → clock runs <em>fast</em>, so corrected time is <em>slower</em>  </li>
+<li><strong>Negative drift_ppm</strong> → clock runs <em>slow</em>, so corrected time is <em>faster</em>  </li>
+</ul>
+<h3 id="why-it-matters_1"><strong>Why it matters</strong></h3>
+<p>Δμ keeps the micro‑timing envelope aligned even when the hardware clock drifts.<br>
+This is essential for:</p>
+<ul>
+<li>microcontrollers  </li>
+<li>IoT nodes  </li>
+<li>embedded timing loops  </li>
+<li>micro‑robotics  </li>
+<li>solver iteration control  </li>
+</ul>
+<hr>
+<h1 id="together-s-microawareness">🔷 <strong>Together: Sμ + Δμ = micro‑awareness</strong></h1>
+<p>When you combine:</p>
+<ul>
+<li><strong>Sμ</strong> → “How stable am I right now?”  </li>
+<li><strong>Δμ</strong> → “How far off is my timing?”  </li>
+</ul>
+<p>You get a loop that is:</p>
+<ul>
+<li>self‑monitoring  </li>
+<li>self‑correcting  </li>
+<li>coherence‑aware  </li>
+<li>drift‑resilient  </li>
+</ul>
+<p>This is why MRT‑1 feels like a <em>living micro‑controller</em> rather than a static loop.</p>
+<hr>
+<h1 id="mrt1-operator-block-_awarenessdim-t_raw-drift_ppm">🔷 <strong>MRT‑1 Operator Block: <code>μ_awareness(dim, t_raw, drift_ppm)</code></strong></h1>
+<p>This block performs <strong>both</strong>:</p>
+<ul>
+<li><strong>Δμ</strong> — drift‑corrected time  </li>
+<li><strong>Sμ</strong> — stability scoring  </li>
+</ul>
+<p>and returns a <strong>micro‑awareness packet</strong> you can feed directly into Ωμ, Fμ, or any MRT transform.</p>
+<hr>
+<h1 id="canonical-definition-languageagnostic">🧩 <strong>Canonical Definition (Language‑Agnostic)</strong></h1>
+<h3 id="inputs"><strong>Inputs</strong></h3>
+<ul>
+<li><code>dim</code> — current micro‑dimension (0.3–0.9)  </li>
+<li><code>t_raw</code> — raw time from system clock  </li>
+<li><code>drift_ppm</code> — drift in parts‑per‑million  </li>
+</ul>
+<h3 id="outputs"><strong>Outputs</strong></h3>
+<ul>
+<li><code>t_corr</code> — drift‑corrected time  </li>
+<li><code>stability</code> — stability score (0–1)  </li>
+</ul>
+<hr>
+<h1 id="formulas">🧮 <strong>Formulas</strong></h1>
+<h3 id="drift-correction"><strong>Δμ — Drift Correction</strong></h3>
+<p>[
+t_{\text{corr}} = \frac{t_{\text{raw}}}{1 + \frac{\text{drift_ppm}}{10^6}}
+]</p>
+<hr>
+<h3 id="s-stability-scoring"><strong>Sμ — Stability Scoring</strong></h3>
+<p>[
+S_\mu(d) = \max\left(0,\; 1 - \frac{|d - 0.7|}{0.2}\right)
+]</p>
+<hr>
+<h1 id="reusable-mrt1-operator-block-pseudocode">🧱 <strong>Reusable MRT‑1 Operator Block (Pseudocode)</strong></h1>
+<pre><code class="language-text">function μ_awareness(dim, t_raw, drift_ppm):
+
+    # Δμ — drift correction
+    factor   = 1 + drift_ppm / 1e6
+    t_corr   = t_raw / factor
+
+    # Sμ — stability scoring
+    dist     = abs(dim - 0.7) / 0.2
+    stability = max(0, 1 - dist)
+
+    return {
+        t_corr: t_corr,
+        stability: stability
+    }
+</code></pre>
+<p>This is the <strong>canonical block</strong>.<br>
+Everything else (Ωμ, Fμ, MRT‑1 orchestration) plugs into this.</p>
+<hr>
+<h1 id="python-dropin-version">🐍 <strong>Python Drop‑In Version</strong></h1>
+<pre><code class="language-python">def mu_awareness(dim, t_raw, drift_ppm):
+    t_corr = t_raw / (1.0 + drift_ppm / 1_000_000.0)
+    stability = max(0.0, 1.0 - abs(dim - 0.7) / 0.2)
+    return t_corr, stability
+</code></pre>
+<hr>
+<h1 id="matlab-dropin-version">📐 <strong>MATLAB Drop‑In Version</strong></h1>
+<pre><code class="language-matlab">function [t_corr, stability] = mu_awareness(dim, t_raw, drift_ppm)
+    t_corr = t_raw / (1.0 + drift_ppm / 1e6);
+    stability = max(0.0, 1.0 - abs(dim - 0.7) / 0.2);
+end
+</code></pre>
+<hr>
+<h1 id="cstyle-dropin-version">💻 <strong>C‑Style Drop‑In Version</strong></h1>
+<pre><code class="language-c">void mu_awareness(double dim, double t_raw, double drift_ppm,
+                  double *t_corr_out, double *stability_out)
+{
+    *t_corr_out = t_raw / (1.0 + drift_ppm / 1e6);
+
+    double dist = fabs(dim - 0.7) / 0.2;
+    double s = 1.0 - dist;
+    *stability_out = (s &lt; 0.0 ? 0.0 : s);
+}
+</code></pre>
+<hr>
+<h1 id="schemaready-json-block">📦 <strong>Schema‑Ready JSON Block</strong></h1>
+<p>Perfect for embedding inside MRT‑1 traces or schemas:</p>
+<pre><code class="language-json">{
+  &quot;mu_awareness&quot;: {
+    &quot;inputs&quot;: {
+      &quot;dim&quot;: 0.7,
+      &quot;t_raw&quot;: 0.412,
+      &quot;drift_ppm&quot;: 100.0
+    },
+    &quot;outputs&quot;: {
+      &quot;t_corr&quot;: 0.412,
+      &quot;stability&quot;: 1.0
+    }
+  }
+}
+</code></pre>
+<hr>
+<h1 id="why-this-block-matters">🎯 Why this block matters</h1>
+<p>This is the <strong>micro‑awareness kernel</strong> of MRT‑1:</p>
+<ul>
+<li><strong>Δμ</strong> keeps time honest  </li>
+<li><strong>Sμ</strong> keeps behavior coherent  </li>
+<li>Together they give MRT‑1 its “living loop” quality  </li>
+</ul>
+<p>Everything else — Ωμ, Fμ, envelopes, transforms — plugs into this block.</p>
+  </main>
+</body>
+</html>

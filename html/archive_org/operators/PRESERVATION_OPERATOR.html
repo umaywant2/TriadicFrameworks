@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/archive_org/operators/PRESERVATION_OPERATOR.md">
+  <title>🟡 PRESERVATIONOPERATOR</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/archive_org/operators/PRESERVATION_OPERATOR.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/archive_org/operators/PRESERVATION_OPERATOR.md</code>
+  </aside>
+
+  <main>
+<h1 id="preservation_operator">🟡 <strong>PRESERVATION_OPERATOR</strong></h1>
+<h3 id="rtt1-operator-specification-archive_org-module"><em>RTT/1 Operator Specification — archive_org Module</em></h3>
+<h2 id="identity"><strong>Identity</strong></h2>
+<ul>
+<li><strong>Operator Name:</strong> PRESERVATION_OPERATOR  </li>
+<li><strong>Operator Family:</strong> B‑Ops (Boundary / Substrate Operators)  </li>
+<li><strong>Module:</strong> archive_org  </li>
+<li><strong>Purpose:</strong> Evaluate the object’s <strong>substrate stability</strong>, <strong>drift risk</strong>, and <strong>multi‑layer structure</strong> to determine which versions are most reliable for continuity‑aligned retrieval.</li>
+</ul>
+<hr>
+<h2 id="purpose-one-sentence"><strong>Purpose (One Sentence)</strong></h2>
+<p>The PRESERVATION_OPERATOR assesses the object’s <strong>substrate format</strong>, <strong>stability score</strong>, <strong>drift risk</strong>, and <strong>multi‑layer flags</strong> to determine which snapshots are structurally trustworthy.</p>
+<hr>
+<h2 id="inputs"><strong>Inputs</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>target</code></td>
+<td>URL</td>
+<td>The object being evaluated.</td>
+</tr>
+<tr>
+<td><code>collection_id</code></td>
+<td>string</td>
+<td>Collection context from COLLECTION_OPERATOR.</td>
+</tr>
+<tr>
+<td><code>regime_profile</code></td>
+<td>string</td>
+<td>Combined regime identity from COLLECTION_OPERATOR.</td>
+</tr>
+<tr>
+<td><code>continuity_kernel</code></td>
+<td>list</td>
+<td>Stable structural elements from LINEAGE_OPERATOR.</td>
+</tr>
+<tr>
+<td><code>transformations</code></td>
+<td>list</td>
+<td>Structural changes from LINEAGE_OPERATOR.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="outputs"><strong>Outputs</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Output</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>format</code></td>
+<td>The detected substrate format (html, pdf, image, ocr, mixed).</td>
+</tr>
+<tr>
+<td><code>stability_score</code></td>
+<td>Numerical stability estimate (0–1).</td>
+</tr>
+<tr>
+<td><code>drift_risk</code></td>
+<td>Expected drift level based on substrate + regime.</td>
+</tr>
+<tr>
+<td><code>multi_layer_flags</code></td>
+<td>Indicators for mixed or layered substrates.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="operator-guarantees"><strong>Operator Guarantees</strong></h2>
+<ul>
+<li>No content‑based inference.  </li>
+<li>Substrate classification is <strong>structural</strong>, not semantic.  </li>
+<li>Stability score is <strong>evidence‑based</strong>, not assumed.  </li>
+<li>Drift risk is <strong>predictive</strong>, not retrospective.  </li>
+<li>Mixed substrates are handled explicitly, not collapsed.</li>
+</ul>
+<hr>
+<h2 id="substrate-stability-rtt1"><strong>Substrate Stability (RTT/1)</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Substrate</th>
+<th>Stability</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>pdf</strong></td>
+<td>high</td>
+<td>Static, layout‑preserving.</td>
+</tr>
+<tr>
+<td><strong>image</strong></td>
+<td>high</td>
+<td>Stable but incomplete.</td>
+</tr>
+<tr>
+<td><strong>html</strong></td>
+<td>medium</td>
+<td>Layout‑dependent, drift‑prone.</td>
+</tr>
+<tr>
+<td><strong>cms‑html</strong></td>
+<td>medium/low</td>
+<td>Template‑driven, redesign‑prone.</td>
+</tr>
+<tr>
+<td><strong>ocr</strong></td>
+<td>low</td>
+<td>Lossy, structurally degraded.</td>
+</tr>
+<tr>
+<td><strong>mixed</strong></td>
+<td>variable</td>
+<td>Requires multi‑layer analysis.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="drift-risk-levels"><strong>Drift Risk Levels</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>low</strong></td>
+<td>Stable substrate, minimal expected drift.</td>
+</tr>
+<tr>
+<td><strong>medium</strong></td>
+<td>Occasional structural changes.</td>
+</tr>
+<tr>
+<td><strong>high</strong></td>
+<td>Frequent redesigns, migrations, or lossy layers.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="multilayer-flags"><strong>Multi‑Layer Flags</strong></h2>
+<p>Examples:
+- <code>pdf + html</code><br>
+- <code>image + ocr</code><br>
+- <code>html + js‑rendered</code><br>
+- <code>flash + html5</code>  </p>
+<p>Multi‑layer objects require careful stability evaluation.</p>
+<hr>
+<h2 id="operator-procedure"><strong>Operator Procedure</strong></h2>
+<ol>
+<li>Detect substrate format(s) for the target.  </li>
+<li>Evaluate stability based on:<br>
+   - substrate type<br>
+   - collection context<br>
+   - regime profile<br>
+   - continuity kernel<br>
+   - transformations  </li>
+<li>Compute stability score (0–1).  </li>
+<li>Assign drift risk (low/medium/high).  </li>
+<li>Identify multi‑layer structures.  </li>
+<li>Emit outputs for DRIFTBOUND_RETRIEVAL_OPERATOR.</li>
+</ol>
+<hr>
+<h2 id="failure-modes"><strong>Failure Modes</strong></h2>
+<ul>
+<li><strong>Ambiguous substrate:</strong> mark as <code>mixed</code>.  </li>
+<li><strong>Missing layers:</strong> lower stability score.  </li>
+<li><strong>OCR‑only snapshots:</strong> mark as high drift risk.  </li>
+</ul>
+<hr>
+<h2 id="handoff-to-next-operator"><strong>Hand‑Off to Next Operator</strong></h2>
+<p>Outputs feed directly into:</p>
+<h3 id="driftbound_retrieval_operator"><strong>DRIFTBOUND_RETRIEVAL_OPERATOR</strong></h3>
+<ul>
+<li>format  </li>
+<li>stability_score  </li>
+<li>drift_risk  </li>
+<li>multi_layer_flags  </li>
+</ul>
+<hr>
+<h2 id="example-synthetic"><strong>Example (Synthetic)</strong></h2>
+<pre><code>Input:
+  target = &quot;https://example.gov/records&quot;
+  collection_id = &quot;govdocs&quot;
+  regime_profile = &quot;institutional (CMS-era)&quot;
+  continuity_kernel = [&quot;header&quot;, &quot;footer&quot;, &quot;records-index&quot;]
+  transformations = [&quot;CMS migration&quot;, &quot;PDF layer added&quot;]
+
+Output:
+  format = &quot;html + pdf&quot;
+  stability_score = 0.78
+  drift_risk = &quot;medium&quot;
+  multi_layer_flags = [&quot;html&quot;, &quot;pdf&quot;]
+</code></pre>
+<hr>
+<h2 id="rtt1-mindset"><strong>RTT/1 Mindset</strong></h2>
+<ul>
+<li>Substrate determines <strong>trustworthiness</strong>, not content.  </li>
+<li>Stability is <strong>measured</strong>, not assumed.  </li>
+<li>Mixed substrates require <strong>layer‑aware reasoning</strong>.  </li>
+<li>Drift risk must be <strong>explicit</strong> in the final summary.  </li>
+</ul>
+  </main>
+</body>
+</html>

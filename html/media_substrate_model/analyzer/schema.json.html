@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/media_substrate_model/analyzer/schema.json.md">
+  <title>schema.json</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/media_substrate_model/analyzer/schema.json.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/media_substrate_model/analyzer/schema.json.md</code>
+  </aside>
+
+  <main>
+<pre><code class="language-json">
+{
+  &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;$id&quot;: &quot;https://triadicframeworks.org/media_substrate_model/analyzer/schema.json&quot;,
+  &quot;title&quot;: &quot;Media Substrate Model Analyzer Schema&quot;,
+  &quot;description&quot;: &quot;Input and output schema for the Media Substrate Model (MSM) Analyzer.&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;properties&quot;: {
+    &quot;input&quot;: {
+      &quot;title&quot;: &quot;Analyzer Input&quot;,
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;vector&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/MediaVector&quot;
+        },
+        &quot;metadata&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;description&quot;: &quot;Optional adapter metadata used to refine analysis.&quot;,
+          &quot;additionalProperties&quot;: true
+        }
+      },
+      &quot;required&quot;: [&quot;vector&quot;],
+      &quot;additionalProperties&quot;: false
+    },
+    &quot;output&quot;: {
+      &quot;title&quot;: &quot;Analyzer Output&quot;,
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;vector&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/MediaVector&quot;
+        },
+        &quot;invariants&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/MediaInvariantState&quot;
+        },
+        &quot;basin&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/MediaBasinResult&quot;
+        },
+        &quot;mode&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/MediaModeState&quot;
+        },
+        &quot;drift&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/MediaDrift&quot;
+        },
+        &quot;transition&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/MediaTransition&quot;
+        }
+      },
+      &quot;required&quot;: [
+        &quot;vector&quot;,
+        &quot;invariants&quot;,
+        &quot;basin&quot;,
+        &quot;mode&quot;,
+        &quot;drift&quot;,
+        &quot;transition&quot;
+      ],
+      &quot;additionalProperties&quot;: false
+    }
+  },
+  &quot;required&quot;: [&quot;input&quot;, &quot;output&quot;],
+  &quot;additionalProperties&quot;: false,
+  &quot;$defs&quot;: {
+    &quot;MediaVector&quot;: {
+      &quot;title&quot;: &quot;MediaVector&quot;,
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;description&quot;: &quot;Five-axis media physics vector [S, D, A, N, T].&quot;,
+      &quot;properties&quot;: {
+        &quot;S&quot;: {
+          &quot;type&quot;: &quot;number&quot;,
+          &quot;minimum&quot;: 0,
+          &quot;maximum&quot;: 1,
+          &quot;description&quot;: &quot;Signal Integrity&quot;
+        },
+        &quot;D&quot;: {
+          &quot;type&quot;: &quot;number&quot;,
+          &quot;minimum&quot;: 0,
+          &quot;maximum&quot;: 1,
+          &quot;description&quot;: &quot;Distribution Topology&quot;
+        },
+        &quot;A&quot;: {
+          &quot;type&quot;: &quot;number&quot;,
+          &quot;minimum&quot;: 0,
+          &quot;maximum&quot;: 1,
+          &quot;description&quot;: &quot;Attention Dynamics&quot;
+        },
+        &quot;N&quot;: {
+          &quot;type&quot;: &quot;number&quot;,
+          &quot;minimum&quot;: 0,
+          &quot;maximum&quot;: 1,
+          &quot;description&quot;: &quot;Narrative Coherence&quot;
+        },
+        &quot;T&quot;: {
+          &quot;type&quot;: &quot;number&quot;,
+          &quot;minimum&quot;: 0,
+          &quot;maximum&quot;: 1,
+          &quot;description&quot;: &quot;Temporal Cadence&quot;
+        }
+      },
+      &quot;required&quot;: [&quot;S&quot;, &quot;D&quot;, &quot;A&quot;, &quot;N&quot;, &quot;T&quot;],
+      &quot;additionalProperties&quot;: false
+    },
+    &quot;MediaInvariantState&quot;: {
+      &quot;title&quot;: &quot;MediaInvariantState&quot;,
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;description&quot;: &quot;Strain values for MSM invariants (0.0 aligned, 1.0 broken).&quot;,
+      &quot;properties&quot;: {
+        &quot;signalNarrativeCoherence&quot;: {
+          &quot;type&quot;: &quot;number&quot;,
+          &quot;minimum&quot;: 0,
+          &quot;maximum&quot;: 1
+        },
+        &quot;distributionAttentionFit&quot;: {
+          &quot;type&quot;: &quot;number&quot;,
+          &quot;minimum&quot;: 0,
+          &quot;maximum&quot;: 1
+        },
+        &quot;temporalSignalStability&quot;: {
+          &quot;type&quot;: &quot;number&quot;,
+          &quot;minimum&quot;: 0,
+          &quot;maximum&quot;: 1
+        },
+        &quot;attentionNarrativeFeedback&quot;: {
+          &quot;type&quot;: &quot;number&quot;,
+          &quot;minimum&quot;: 0,
+          &quot;maximum&quot;: 1
+        }
+      },
+      &quot;required&quot;: [
+        &quot;signalNarrativeCoherence&quot;,
+        &quot;distributionAttentionFit&quot;,
+        &quot;temporalSignalStability&quot;,
+        &quot;attentionNarrativeFeedback&quot;
+      ],
+      &quot;additionalProperties&quot;: false
+    },
+    &quot;MediaBasinResult&quot;: {
+      &quot;title&quot;: &quot;MediaBasinResult&quot;,
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;description&quot;: &quot;Basin classification result.&quot;,
+      &quot;properties&quot;: {
+        &quot;basin&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;description&quot;: &quot;Identified basin name.&quot;,
+          &quot;enum&quot;: [
+            &quot;Broadcast&quot;,
+            &quot;Network&quot;,
+            &quot;Fragment&quot;,
+            &quot;Cascade&quot;,
+            &quot;Stagnation&quot;,
+            &quot;Reconstruction&quot;,
+            &quot;Unstable&quot;
+          ]
+        },
+        &quot;distance&quot;: {
+          &quot;type&quot;: &quot;number&quot;,
+          &quot;minimum&quot;: 0,
+          &quot;description&quot;: &quot;Distance to canonical basin vector.&quot;
+        },
+        &quot;gateSatisfied&quot;: {
+          &quot;type&quot;: &quot;boolean&quot;,
+          &quot;description&quot;: &quot;Whether basin gate conditions were satisfied.&quot;
+        }
+      },
+      &quot;required&quot;: [&quot;basin&quot;, &quot;distance&quot;, &quot;gateSatisfied&quot;],
+      &quot;additionalProperties&quot;: false
+    },
+    &quot;MediaModeState&quot;: {
+      &quot;title&quot;: &quot;MediaModeState&quot;,
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;description&quot;: &quot;Behavioral mode inside the current basin.&quot;,
+      &quot;properties&quot;: {
+        &quot;mode&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [
+            &quot;Stable&quot;,
+            &quot;Tension&quot;,
+            &quot;Drift&quot;,
+            &quot;Cascade&quot;,
+            &quot;Collapse&quot;,
+            &quot;Reconstruction&quot;
+          ]
+        },
+        &quot;driftMagnitude&quot;: {
+          &quot;type&quot;: &quot;number&quot;,
+          &quot;minimum&quot;: 0
+        },
+        &quot;dominantInvariant&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [
+            &quot;signalNarrativeCoherence&quot;,
+            &quot;distributionAttentionFit&quot;,
+            &quot;temporalSignalStability&quot;,
+            &quot;attentionNarrativeFeedback&quot;
+          ]
+        }
+      },
+      &quot;required&quot;: [&quot;mode&quot;, &quot;driftMagnitude&quot;, &quot;dominantInvariant&quot;],
+      &quot;additionalProperties&quot;: false
+    },
+    &quot;MediaDrift&quot;: {
+      &quot;title&quot;: &quot;MediaDrift&quot;,
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;description&quot;: &quot;Drift between previous and current vectors.&quot;,
+      &quot;properties&quot;: {
+        &quot;delta&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/MediaVector&quot;
+        },
+        &quot;magnitude&quot;: {
+          &quot;type&quot;: &quot;number&quot;,
+          &quot;minimum&quot;: 0
+        },
+        &quot;category&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [&quot;micro&quot;, &quot;meso&quot;, &quot;macro&quot;, &quot;regime_shift&quot;]
+        }
+      },
+      &quot;required&quot;: [&quot;delta&quot;, &quot;magnitude&quot;, &quot;category&quot;],
+      &quot;additionalProperties&quot;: false
+    },
+    &quot;MediaTransition&quot;: {
+      &quot;title&quot;: &quot;MediaTransition&quot;,
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;description&quot;: &quot;Detected structural transition between states.&quot;,
+      &quot;properties&quot;: {
+        &quot;from&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;description&quot;: &quot;Previous basin/mode label (implementation-defined).&quot;
+        },
+        &quot;to&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;description&quot;: &quot;Current basin/mode label (implementation-defined).&quot;
+        },
+        &quot;trigger&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [
+            &quot;invariant_break&quot;,
+            &quot;attention_spike&quot;,
+            &quot;cadence_acceleration&quot;,
+            &quot;signal_collapse&quot;,
+            &quot;narrative_collapse&quot;,
+            &quot;reconstruction&quot;,
+            &quot;none&quot;
+          ]
+        },
+        &quot;severity&quot;: {
+          &quot;type&quot;: &quot;number&quot;,
+          &quot;minimum&quot;: 0,
+          &quot;maximum&quot;: 1
+        }
+      },
+      &quot;required&quot;: [&quot;from&quot;, &quot;to&quot;, &quot;trigger&quot;, &quot;severity&quot;],
+      &quot;additionalProperties&quot;: false
+    }
+  }
+}
+</code></pre>
+  </main>
+</body>
+</html>

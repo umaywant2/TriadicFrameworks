@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/sdk/RTT_for_BROWSER_Extensions.md">
+  <title>RTT‑Inside for Browser Extensions (Beta)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/sdk/RTT_for_BROWSER_Extensions.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/sdk/RTT_for_BROWSER_Extensions.md</code>
+  </aside>
+
+  <main>
+<h1 id="rttinside-for-browser-extensions-beta"><strong>RTT‑Inside for Browser Extensions (Beta)</strong></h1>
+<p><em>A guide for building RTT‑aware extensions for Edge, Firefox, and Chromium‑based browsers.</em></p>
+<p>Browser extensions are a natural fit for RTT‑Inside. They allow end‑users to experience structural clarity, coherence cues, and early resonance‑time awareness directly in their browsing environment — without requiring sites to integrate anything.</p>
+<p>This guide outlines the recommended patterns for building RTT‑aware extensions that interact with the RTT API and the <code>rtt.js</code> ecosystem.</p>
+<hr>
+<h1 id="1-extension-capabilities">1. Extension Capabilities</h1>
+<p>An RTT‑Inside extension can:</p>
+<ul>
+<li>inspect page structure  </li>
+<li>detect drift or clarity issues  </li>
+<li>send RTT beacon events  </li>
+<li>annotate pages with RTT insights  </li>
+<li>read RTT metadata (<code>&lt;meta&gt;</code> tags, <code>/rtt.json</code>)  </li>
+<li>provide a sidebar or popup UI for structural clarity  </li>
+</ul>
+<p>Extensions do <strong>not</strong> need access to vST internals — they rely on the stable RTT API surface.</p>
+<hr>
+<h1 id="2-basic-extension-architecture">2. Basic Extension Architecture</h1>
+<p>A typical RTT‑Inside extension includes:</p>
+<pre><code>manifest.json
+background.js
+content.js
+sidebar.html / popup.html
+rtt-extension.js (optional helper)
+</code></pre>
+<h3 id="key-roles">Key roles:</h3>
+<ul>
+<li><strong>content script</strong>: inspects the page, collects structure, reads RTT metadata  </li>
+<li><strong>background script</strong>: sends RTT beacons, manages sessions  </li>
+<li><strong>UI (popup/sidebar)</strong>: displays clarity indicators, drift warnings, or structure maps  </li>
+</ul>
+<hr>
+<h1 id="3-collecting-structural-snapshots">3. Collecting Structural Snapshots</h1>
+<p>Extensions can reuse the same structural shape as <code>rtt.js</code>.</p>
+<h3 id="example-content-script">Example (content script)</h3>
+<pre><code class="language-js">function collectStructure() {
+  return {
+    url: window.location.href,
+    title: document.title,
+    nav_count: document.querySelectorAll(&quot;nav, header, footer&quot;).length,
+    main_count: document.querySelectorAll(&quot;main, [role='main']&quot;).length,
+    form_count: document.querySelectorAll(&quot;form&quot;).length,
+    button_count: document.querySelectorAll(&quot;button, [role='button']&quot;).length,
+    dom_nodes: document.getElementsByTagName(&quot;*&quot;).length
+  };
+}
+
+browser.runtime.sendMessage({
+  type: &quot;rtt-structure&quot;,
+  structure: collectStructure()
+});
+</code></pre>
+<p>This mirrors the RTT beacon payload shape exactly.</p>
+<hr>
+<h1 id="4-sending-rtt-beacon-events">4. Sending RTT Beacon Events</h1>
+<p>The background script can forward events to the RTT API.</p>
+<h3 id="example-backgroundjs">Example (background.js)</h3>
+<pre><code class="language-js">async function sendBeacon(structure) {
+  const payload = {
+    site: &quot;browser-extension&quot;,
+    session: &quot;ext-&quot; + Date.now(),
+    event: &quot;page_inspect&quot;,
+    ts: new Date().toISOString(),
+    structure
+  };
+
+  await fetch(&quot;https://www.triadicframeworks.org/api/rtt/beacon&quot;, {
+    method: &quot;POST&quot;,
+    headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },
+    body: JSON.stringify(payload)
+  });
+}
+
+browser.runtime.onMessage.addListener((msg) =&gt; {
+  if (msg.type === &quot;rtt-structure&quot;) {
+    sendBeacon(msg.structure);
+  }
+});
+</code></pre>
+<p>This allows RTT to build a cross‑site structural map of the user’s browsing environment.</p>
+<hr>
+<h1 id="5-reading-rtt-metadata-from-pages">5. Reading RTT Metadata from Pages</h1>
+<p>Extensions can detect RTT‑Inside sites by reading:</p>
+<h3 id="a-meta-tags">A. <code>&lt;meta&gt;</code> tags</h3>
+<pre><code class="language-js">const coherence = document.querySelector(&quot;meta[name='rtt:coherence']&quot;);
+const version = document.querySelector(&quot;meta[name='rtt:version']&quot;);
+</code></pre>
+<h3 id="b-rttjson-manifest">B. <code>/rtt.json</code> manifest</h3>
+<pre><code class="language-js">fetch(&quot;/rtt.json&quot;)
+  .then(r =&gt; r.json())
+  .then(profile =&gt; {
+    console.log(&quot;RTT profile:&quot;, profile);
+  })
+  .catch(() =&gt; {});
+</code></pre>
+<p>This allows the extension to adapt its UI based on site capabilities.</p>
+<hr>
+<h1 id="6-displaying-rtt-insights-to-users">6. Displaying RTT Insights to Users</h1>
+<p>Extensions can surface RTT clarity indicators through:</p>
+<h3 id="a-popup-ui">A. Popup UI</h3>
+<ul>
+<li>coherence score (placeholder)  </li>
+<li>drift warnings  </li>
+<li>structural summary  </li>
+<li>RTT metadata  </li>
+</ul>
+<h3 id="b-sidebar-panel-edgefriendly">B. Sidebar Panel (Edge‑friendly)</h3>
+<p>A sidebar can show:</p>
+<ul>
+<li>triadic decomposition of the DOM  </li>
+<li>navigation corridor hints  </li>
+<li>clarity/density indicators  </li>
+<li>RTT‑Inside status  </li>
+</ul>
+<h3 id="c-page-overlays-optional">C. Page Overlays (optional)</h3>
+<p>Extensions may highlight:</p>
+<ul>
+<li>confusing UI regions  </li>
+<li>inconsistent navigation  </li>
+<li>structural drift  </li>
+</ul>
+<p>These overlays are purely client‑side and do not modify the site.</p>
+<hr>
+<h1 id="7-optional-integrating-with-rttjs">7. Optional: Integrating with <code>rtt.js</code></h1>
+<p>If a site already includes <code>rtt.js</code>, the extension can:</p>
+<ul>
+<li>read the global <code>RTT</code> object  </li>
+<li>inspect its structure snapshot  </li>
+<li>piggyback on its beacon events  </li>
+<li>enhance its clarity indicators  </li>
+</ul>
+<h3 id="example">Example</h3>
+<pre><code class="language-js">if (window.RTT) {
+  const snapshot = window.RTT.getStructureSnapshot();
+  console.log(&quot;RTT snapshot:&quot;, snapshot);
+}
+</code></pre>
+<p>This creates a smooth ecosystem between site‑level and extension‑level RTT awareness.</p>
+<hr>
+<h1 id="8-preparing-for-vstbeta-diagnostics">8. Preparing for vST‑Beta Diagnostics</h1>
+<p>Extensions can prepare payloads for future validators:</p>
+<pre><code class="language-js">const payload = {
+  system_map: { pages: [window.location.href] },
+  flows: [],
+  constraints: []
+};
+
+fetch(&quot;https://www.triadicframeworks.org/api/rtt/validate&quot;, {
+  method: &quot;POST&quot;,
+  headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },
+  body: JSON.stringify(payload)
+});
+</code></pre>
+<p>These endpoints currently return placeholder responses but define the stable API shape.</p>
+<hr>
+<h1 id="9-recommended-extension-patterns">9. Recommended Extension Patterns</h1>
+<h3 id="a-lightweight-rtt-companion">A. Lightweight RTT Companion</h3>
+<ul>
+<li>structural snapshot  </li>
+<li>beacon sender  </li>
+<li>popup UI  </li>
+</ul>
+<h3 id="b-full-rttaware-browser-console">B. Full RTT‑Aware Browser Console</h3>
+<ul>
+<li>sidebar panel  </li>
+<li>DOM triadic decomposition  </li>
+<li>drift detection  </li>
+<li>clarity overlays  </li>
+</ul>
+<h3 id="c-developermode-rtt-inspector">C. Developer‑Mode RTT Inspector</h3>
+<ul>
+<li>detailed structure maps  </li>
+<li>RTT metadata inspector  </li>
+<li>corridor flow visualizer  </li>
+</ul>
+<p>These patterns can coexist or evolve independently.</p>
+<hr>
+<h1 id="10-verification-checklist">10. Verification Checklist</h1>
+<p>Your extension is RTT‑Inside ready if:</p>
+<ul>
+<li>[ ] it collects structural snapshots  </li>
+<li>[ ] it sends RTT beacon events  </li>
+<li>[ ] it reads RTT metadata  </li>
+<li>[ ] it displays clarity indicators  </li>
+<li>[ ] it can generate diagnostics payloads  </li>
+<li>[ ] it uses the stable RTT API surface  </li>
+</ul>
+<p>This ensures compatibility with future vST‑beta validators.</p>
+<hr>
+<h1 id="11-where-to-go-next">11. Where to Go Next</h1>
+<ul>
+<li><strong>RTT API Docs:</strong> <code>docs/api/rtt/</code>  </li>
+<li><strong>SDK Reference:</strong> <code>docs/rtt-sdk/README.md</code>  </li>
+<li><strong>Quick‑Start Guide:</strong> <code>docs/rtt-sdk/quickstart.md</code>  </li>
+<li><strong>Backend Services Guide:</strong> <code>docs/rtt-sdk/backend.md</code>  </li>
+</ul>
+<p>This completes the RTT‑Inside onboarding suite.</p>
+  </main>
+</body>
+</html>

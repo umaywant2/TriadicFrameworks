@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/NoS/INSTALLATION.md">
+  <title>Installing NawderOS 🛠️</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/NoS/INSTALLATION.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/NoS/INSTALLATION.md</code>
+  </aside>
+
+  <main>
+<h1 id="installing-nawderos">Installing NawderOS 🛠️</h1>
+<p><em>(RTT‑Aware, Minimal, and Reversible)</em></p>
+<p>NawderOS is designed to be <strong>easy to try and easy to remove</strong>.<br>
+If you can build a Linux kernel, you can install NawderOS.</p>
+<p>No special hardware required.<br>
+No permanent changes required.<br>
+No fear required 🙂</p>
+<hr>
+<h2 id="before-you-start">Before You Start</h2>
+<h3 id="what-youll-need">What You’ll Need</h3>
+<ul>
+<li>A Linux system (or VM)</li>
+<li>Basic familiarity with building a kernel</li>
+<li>Disk space for a kernel build</li>
+<li>Curiosity 😄</li>
+</ul>
+<h3 id="what-you-dont-need">What You <em>Don’t</em> Need</h3>
+<ul>
+<li>A dedicated machine</li>
+<li>Deep kernel hacking experience</li>
+<li>Belief in RTT (seriously)</li>
+</ul>
+<hr>
+<h2 id="recommended-setup">Recommended Setup 🧪</h2>
+<p>For first‑time users, we recommend:</p>
+<ul>
+<li>A <strong>virtual machine</strong> (QEMU, VirtualBox, etc.)</li>
+<li>Or a <strong>secondary boot entry</strong> on a dev machine</li>
+</ul>
+<p>NawderOS should never replace your daily driver OS.</p>
+<hr>
+<h2 id="step-1-get-the-source">Step 1: Get the Source 📦</h2>
+<p>Clone the TriadicFrameworks repository:</p>
+<pre><code class="language-bash">git clone https://github.com/umaywant2/TriadicFrameworks.git
+cd TriadicFrameworks
+</code></pre>
+<p>This repo contains:
+- Documentation
+- Kernel patch notes
+- Optional tooling</p>
+<hr>
+<h2 id="step-2-get-a-linux-kernel">Step 2: Get a Linux Kernel 🌱</h2>
+<p>Clone a vanilla Linux kernel (LTS preferred):</p>
+<pre><code class="language-bash">git clone https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
+cd linux
+</code></pre>
+<p>Any recent 6.x kernel should work.</p>
+<hr>
+<h2 id="step-3-apply-nawderos-patches">Step 3: Apply NawderOS Patches 🔧</h2>
+<p>NawderOS uses <strong>minimal, readable patches</strong>.</p>
+<p>From the kernel directory:</p>
+<pre><code class="language-bash">patch -p1 &lt; ../TriadicFrameworks/docs/NoS/patches/nawderos.patch
+</code></pre>
+<p>(Exact patch paths may evolve — check <code>KERNEL_BUILD.md</code>.)</p>
+<p>If the patch applies cleanly, you’re good 🙂</p>
+<hr>
+<h2 id="step-4-configure-the-kernel">Step 4: Configure the Kernel ⚙️</h2>
+<p>Start from a known‑good config:</p>
+<pre><code class="language-bash">make defconfig
+</code></pre>
+<p>Then enable RTT‑related options (names may change):</p>
+<pre><code class="language-bash">make menuconfig
+</code></pre>
+<p>Look for:
+- <code>CONFIG_NAWDEROS</code>
+- <code>CONFIG_RTT_OBSERVATION</code>
+- <code>CONFIG_NAWDER_BADGES</code></p>
+<p>These options <strong>only enable observation</strong>, not enforcement.</p>
+<hr>
+<h2 id="step-5-build-the-kernel">Step 5: Build the Kernel 🧠</h2>
+<p>Build as usual:</p>
+<pre><code class="language-bash">make -j$(nproc)
+</code></pre>
+<p>Then install modules and kernel:</p>
+<pre><code class="language-bash">sudo make modules_install
+sudo make install
+</code></pre>
+<p>This should add a new boot entry.</p>
+<hr>
+<h2 id="step-6-boot-and-observe">Step 6: Boot and Observe 👀</h2>
+<p>Reboot and select the NawderOS kernel.</p>
+<p>Once booted:
+- Check kernel logs
+- Look for badge emissions
+- Confirm the system behaves normally</p>
+<p>If something feels wrong, reboot into your previous kernel.<br>
+Nothing permanent has changed 🙂</p>
+<hr>
+<h2 id="where-to-see-rtt-in-action">Where to See RTT in Action 🏷️</h2>
+<p>Depending on configuration, badges may appear in:
+- kernel logs
+- trace output
+- <code>/proc/nawderian</code> (if enabled)</p>
+<p>Badges are <strong>signals</strong>, not errors.</p>
+<p>Seeing nothing is also valid — it means nothing drifted 😄</p>
+<hr>
+<h2 id="uninstalling-rolling-back">Uninstalling / Rolling Back 🔄</h2>
+<p>To remove NawderOS:
+- Boot into your original kernel
+- Remove the NawderOS kernel entry
+- Delete the patched kernel source if desired</p>
+<p>No system state is altered beyond the kernel itself.</p>
+<hr>
+<h2 id="troubleshooting">Troubleshooting 🛟</h2>
+<p>If something goes wrong:
+- Disable RTT options in <code>.config</code>
+- Rebuild the kernel
+- Boot clean</p>
+<p>If the system fails to boot:
+- Use your previous kernel
+- RTT hooks should never block boot</p>
+<hr>
+<h2 id="final-notes">Final Notes 🌱</h2>
+<p>NawderOS is about <strong>learning and observation</strong>, not perfection.</p>
+<p>If you break it:
+- you learned something
+- that’s a win 🙂</p>
+  </main>
+</body>
+</html>

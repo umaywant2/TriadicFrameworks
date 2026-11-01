@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/openloop/Stream/architecture.md">
+  <title>🌊 OpenStream — architecture.md</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/openloop/Stream/architecture.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/openloop/Stream/architecture.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="openloop_Stream_architecture_" src="https://github.com/user-attachments/assets/c3c36dcd-bc66-465a-b8bb-71b6eafb6bcd" /></p>
+<h1 id="openstream-architecturemd">🌊 <strong>OpenStream — architecture.md</strong></h1>
+<p><strong>OpenWarden Suite — Streaming Substrate</strong><br>
+<strong>Analyzer Layer:</strong> flow‑structural<br>
+<strong>Regime:</strong> open‑stream‑governance<br>
+<strong>Version:</strong> 1.0  </p>
+<hr>
+<h2 id="1-architectural-overview"><strong>1. Architectural Overview</strong></h2>
+<p>OpenStream provides a <strong>flow‑structural, drift‑aware, coherence‑declared streaming substrate</strong> for the OpenWarden suite.<br>
+Its architecture is built around five canonical components:</p>
+<ol>
+<li><strong>Flow Signature Engine</strong>  </li>
+<li><strong>Continuity &amp; Stream Block Layer</strong>  </li>
+<li><strong>Boundary &amp; Stability System</strong>  </li>
+<li><strong>Governance &amp; Drift Control</strong>  </li>
+<li><strong>Cross‑Module Integration Layer</strong></li>
+</ol>
+<p>Each component ensures stream stability, metadata correctness, and operator‑aligned transformations.</p>
+<hr>
+<h2 id="2-flow-signature-engine"><strong>2. Flow Signature Engine</strong></h2>
+<p>The Flow Signature Engine defines the <strong>identity</strong> of a stream using canonical fields.<br>
+It includes:</p>
+<ul>
+<li>flow signature  </li>
+<li>continuity block  </li>
+<li>boundary descriptor  </li>
+<li>coherence score  </li>
+<li>drift status  </li>
+<li>lineage ID  </li>
+</ul>
+<p>Flow signatures allow consistent interpretation across modules.</p>
+<h3 id="21-metadata-requirements"><strong>2.1 Metadata Requirements</strong></h3>
+<p>Every stream must include:</p>
+<ul>
+<li><code>open.stream.signature</code>  </li>
+<li><code>open.stream.continuity</code>  </li>
+<li><code>open.stream.boundary</code>  </li>
+<li><code>open.stream.coherence</code>  </li>
+<li><code>open.stream.drift</code>  </li>
+<li><code>open.stream.lineage</code>  </li>
+<li><code>open.stream.version</code>  </li>
+<li><code>open.stream.module</code>  </li>
+</ul>
+<p>Missing fields trigger drift correction.</p>
+<hr>
+<h2 id="3-continuity-stream-block-layer"><strong>3. Continuity &amp; Stream Block Layer</strong></h2>
+<p>The Continuity &amp; Stream Block Layer ensures:</p>
+<ul>
+<li>continuity correctness  </li>
+<li>flow stability  </li>
+<li>boundary integrity  </li>
+<li>drift detection  </li>
+<li>operator‑aligned transformations  </li>
+</ul>
+<h3 id="31-continuity-rules"><strong>3.1 Continuity Rules</strong></h3>
+<p>Continuity must be:</p>
+<ul>
+<li>canonical  </li>
+<li>bounded  </li>
+<li>reversible  </li>
+<li>structurally coherent  </li>
+</ul>
+<p>Continuity corruption is treated as flow drift.</p>
+<h3 id="32-stream-block-rules"><strong>3.2 Stream Block Rules</strong></h3>
+<p>Stream blocks must maintain:</p>
+<ul>
+<li>correct flow descriptors  </li>
+<li>non‑ambiguous continuity markers  </li>
+<li>stable boundary mapping  </li>
+</ul>
+<p>Stream block drift triggers correction and lineage update.</p>
+<hr>
+<h2 id="4-boundary-stability-system"><strong>4. Boundary &amp; Stability System</strong></h2>
+<p>Stream behavior is governed by:</p>
+<ul>
+<li>declared boundaries  </li>
+<li>continuity constraints  </li>
+<li>contextual overlays  </li>
+<li>canonical metadata  </li>
+</ul>
+<h3 id="41-boundary-inputs"><strong>4.1 Boundary Inputs</strong></h3>
+<ul>
+<li>flow signature  </li>
+<li>continuity block  </li>
+<li>boundary descriptor  </li>
+<li>operator grammar fields  </li>
+</ul>
+<h3 id="42-boundary-outputs"><strong>4.2 Boundary Outputs</strong></h3>
+<ul>
+<li>stability classification  </li>
+<li>boundary correction  </li>
+<li>continuity recalibration  </li>
+<li>lineage update  </li>
+</ul>
+<p>Boundary violations trigger suppression.</p>
+<hr>
+<h2 id="5-governance-drift-control"><strong>5. Governance &amp; Drift Control</strong></h2>
+<p>OpenStream enforces strict governance rules inherited from OpenWarden.</p>
+<h3 id="51-drift-types"><strong>5.1 Drift Types</strong></h3>
+<ul>
+<li><strong>Flow Drift</strong> — malformed or unstable flow metadata  </li>
+<li><strong>Continuity Drift</strong> — corrupted or ambiguous continuity blocks  </li>
+<li><strong>Boundary Drift</strong> — incorrect or mismatched flow boundaries  </li>
+<li><strong>Metadata Drift</strong> — missing or manipulated fields  </li>
+<li><strong>Lineage Drift</strong> — corrupted or ambiguous lineage  </li>
+</ul>
+<h3 id="52-drift-responses"><strong>5.2 Drift Responses</strong></h3>
+<ol>
+<li><strong>Flag</strong> — mark stream as drifted  </li>
+<li><strong>Suppress</strong> — remove from stream output  </li>
+<li><strong>Correct</strong> — repair metadata  </li>
+<li><strong>Recalibrate</strong> — adjust continuity or boundaries  </li>
+<li><strong>Update Lineage</strong> — record correction  </li>
+</ol>
+<p>All drift responses are logged.</p>
+<hr>
+<h2 id="6-operator-grammar-alignment"><strong>6. Operator Grammar Alignment</strong></h2>
+<p>OpenStream uses the OpenWarden operator grammar:</p>
+<ul>
+<li><strong>extend</strong> — add flow or continuity detail  </li>
+<li><strong>condense</strong> — simplify metadata  </li>
+<li><strong>refactor</strong> — reorganize stream fields  </li>
+<li><strong>capture</strong> — record drift or lineage  </li>
+<li><strong>annotate</strong> — add governance notes  </li>
+<li><strong>correct</strong> — fix drift or misalignment  </li>
+</ul>
+<p>Operators ensure safe, reversible stream evolution.</p>
+<hr>
+<h2 id="7-crossmodule-integration"><strong>7. Cross‑Module Integration</strong></h2>
+<p>OpenStream integrates with:</p>
+<ul>
+<li><strong>OpenFeed</strong> — stream‑aware feed rules  </li>
+<li><strong>OpenGeo</strong> — location‑aware stream boundaries  </li>
+<li><strong>OpenIAM</strong> — identity‑safe stream access  </li>
+<li><strong>OpenRisk</strong> — anomaly detection for stream drift  </li>
+<li><strong>OpenCatalog</strong> — stream metadata alignment  </li>
+<li><strong>OpenLLM</strong> — model‑aware stream interpretation  </li>
+<li><strong>OpenWarden</strong> — suite‑governed stream policies  </li>
+</ul>
+<p>All integrations are drift‑bounded and coherence‑declared.</p>
+<hr>
+<h2 id="8-canonical-metadata-block-example"><strong>8. Canonical Metadata Block (Example)</strong></h2>
+<pre><code class="language-html">&lt;meta name=&quot;open.stream.signature&quot; content=&quot;stream:openstream-core&quot;&gt;
+&lt;meta name=&quot;open.stream.continuity&quot; content=&quot;continuity:stable&quot;&gt;
+&lt;meta name=&quot;open.stream.boundary&quot; content=&quot;boundary:flow-safe&quot;&gt;
+&lt;meta name=&quot;open.stream.coherence&quot; content=&quot;0.94&quot;&gt;
+&lt;meta name=&quot;open.stream.drift&quot; content=&quot;bounded&quot;&gt;
+&lt;meta name=&quot;open.stream.lineage&quot; content=&quot;streamlineage:5b2e&quot;&gt;
+&lt;meta name=&quot;open.stream.version&quot; content=&quot;1.0&quot;&gt;
+&lt;meta name=&quot;open.stream.module&quot; content=&quot;OpenStream&quot;&gt;
+</code></pre>
+<hr>
+<h2 id="9-file-structure"><strong>9. File Structure</strong></h2>
+<ul>
+<li><code>README.md</code> — front door  </li>
+<li><code>architecture.md</code> — this file  </li>
+<li><code>canonical_metadata.md</code> — metadata schema  </li>
+<li><code>governance.md</code> — drift &amp; policy rules  </li>
+<li><code>operators.md</code> — operator grammar  </li>
+<li><code>index.html</code> — module front page  </li>
+<li><code>module.json</code> — manifest  </li>
+</ul>
+  </main>
+</body>
+</html>

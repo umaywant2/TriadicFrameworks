@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/prompts/engines/rtt_ipd_12/capture_unlock_matrix.md">
+  <title>IPD‑12 Capture → Drift Unlock Matrix</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/prompts/engines/rtt_ipd_12/capture_unlock_matrix.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/prompts/engines/rtt_ipd_12/capture_unlock_matrix.md</code>
+  </aside>
+
+  <main>
+<h1 id="ipd12-capture-drift-unlock-matrix"><strong>IPD‑12 Capture → Drift Unlock Matrix</strong></h1>
+<h3 id="formal-operator-unlock-conditions-for-interprocess-drift"><em>Formal Operator Unlock Conditions for Inter‑Process Drift</em></h3>
+<p>IPD‑12 enforces a strict contract:</p>
+<blockquote>
+<p><strong>No drift without capture.<br>
+No tensor without layered capture.<br>
+No coherence without a baseline.<br>
+No paradox without declared anchors.</strong></p>
+</blockquote>
+<p>This matrix defines those dependencies.</p>
+<hr>
+<h2 id="1-unlock-matrix-full-table"><strong>1. Unlock Matrix (Full Table)</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Capture Field</th>
+<th>Unlocks</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><code>map_process()</code></td>
+<td>Required for identity; no operator runs without it</td>
+</tr>
+<tr>
+<td><strong>purpose</strong></td>
+<td><code>map_process()</code></td>
+<td>Required for conceptual drift layer</td>
+</tr>
+<tr>
+<td><strong>boundaries</strong></td>
+<td><code>drift()</code></td>
+<td>Drift cannot be computed without constraints</td>
+</tr>
+<tr>
+<td><strong>structural_layers</strong></td>
+<td><code>drift_tensor()</code></td>
+<td>Tensor requires multi‑layer structure</td>
+</tr>
+<tr>
+<td><strong>operational_flow</strong></td>
+<td><code>drift_tensor(L2)</code></td>
+<td>Enables operational drift layer</td>
+</tr>
+<tr>
+<td><strong>coherence_baseline</strong></td>
+<td><code>align_coherence()</code></td>
+<td>Coherence cannot be aligned without a baseline</td>
+</tr>
+<tr>
+<td><strong>domain</strong></td>
+<td><code>drift_tensor(L5)</code></td>
+<td>Enables domain drift layer</td>
+</tr>
+<tr>
+<td><strong>regime_level</strong></td>
+<td>locks out substrate/inversion</td>
+<td>Ensures IPD‑12 stays ≤ deep regime</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="2-operator-unlock-conditions-canonical"><strong>2. Operator Unlock Conditions (Canonical)</strong></h2>
+<h3 id="map_process"><strong>map_process()</strong></h3>
+<p>Unlocked when:</p>
+<pre><code>name ∧ purpose
+</code></pre>
+<h3 id="compare_process"><strong>compare_process()</strong></h3>
+<p>Unlocked when:</p>
+<pre><code>map_process(A) ∧ map_process(B)
+</code></pre>
+<h3 id="drift"><strong>drift()</strong></h3>
+<p>Unlocked when:</p>
+<pre><code>boundaries ∧ structural_layers
+</code></pre>
+<h3 id="detect_divergence"><strong>detect_divergence()</strong></h3>
+<p>Unlocked when:</p>
+<pre><code>drift()
+</code></pre>
+<h3 id="drift_tensor"><strong>drift_tensor()</strong></h3>
+<p>Unlocked when:</p>
+<pre><code>structural_layers ∧ operational_flow ∧ domain
+</code></pre>
+<h3 id="align_coherence"><strong>align_coherence()</strong></h3>
+<p>Unlocked when:</p>
+<pre><code>coherence_baseline
+</code></pre>
+<h3 id="cross_system"><strong>cross_system()</strong></h3>
+<p>Unlocked when:</p>
+<pre><code>compare_process() ∧ drift_tensor()
+</code></pre>
+<hr>
+<h2 id="3-drifttensor-layer-unlocks"><strong>3. Drift‑Tensor Layer Unlocks</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Drift‑Tensor Layer</th>
+<th>Requires Capture Field</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L1: Geometric Drift</strong></td>
+<td>structural_layers</td>
+</tr>
+<tr>
+<td><strong>L2: Operational Drift</strong></td>
+<td>operational_flow</td>
+</tr>
+<tr>
+<td><strong>L3: Temporal Drift</strong></td>
+<td>operational_flow (with time notes)</td>
+</tr>
+<tr>
+<td><strong>L4: Conceptual Drift</strong></td>
+<td>purpose</td>
+</tr>
+<tr>
+<td><strong>L5: Domain Drift</strong></td>
+<td>domain</td>
+</tr>
+</tbody>
+</table>
+<p>If any field is missing, that layer is <strong>locked</strong>.</p>
+<hr>
+<h2 id="4-paradox-unlock-conditions-rtt1-structural-mode"><strong>4. Paradox Unlock Conditions (RTT‑1 Structural Mode)</strong></h2>
+<p>A structural paradox requires:</p>
+<pre><code>drift() ∧ coherence_baseline ∧ dependency
+</code></pre>
+<p>Where <strong>dependency</strong> is inferred from:</p>
+<ul>
+<li>shared boundaries  </li>
+<li>shared operators  </li>
+<li>shared constraints  </li>
+</ul>
+<p>Thus paradox unlocks when:</p>
+<pre><code>boundaries ∧ coherence_baseline ∧ compare_process()
+</code></pre>
+<hr>
+<h2 id="5-unlock-graph-compact"><strong>5. Unlock Graph (Compact)</strong></h2>
+<pre><code>name + purpose
+    ↓
+map_process()
+    ↓
+compare_process()
+    ↓
+boundaries + structural_layers
+    ↓
+drift()
+    ↓
+detect_divergence()
+    ↓
+operational_flow + domain
+    ↓
+drift_tensor()
+    ↓
+coherence_baseline
+    ↓
+align_coherence()
+    ↓
+cross_system()
+    ↓
+paradox(structural)
+</code></pre>
+<p>This is the <strong>canonical IPD‑12 unlock graph</strong>.</p>
+<hr>
+<h2 id="6-summary"><strong>6. Summary</strong></h2>
+<p>The IPD‑12 capture grammar enforces:</p>
+<ul>
+<li><strong>identity → structure → drift → coherence → paradox</strong>  </li>
+<li><strong>no drift without boundaries</strong>  </li>
+<li><strong>no tensor without layers</strong>  </li>
+<li><strong>no coherence without a baseline</strong>  </li>
+<li><strong>no paradox without dependency + drift + coherence</strong>  </li>
+</ul>
+<p>This matrix is the formal backbone of the IPD‑12 engine.</p>
+  </main>
+</body>
+</html>

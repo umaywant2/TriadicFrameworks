@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Enterprise/ABOUT.md">
+  <title>ABOUT.md — RTT/Inside Enterprise Identity Substrate</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Enterprise/ABOUT.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Enterprise/ABOUT.md</code>
+  </aside>
+
+  <main>
+<h1 id="aboutmd-rttinside-enterprise-identity-substrate">ABOUT.md — RTT/Inside Enterprise Identity Substrate</h1>
+<p><strong>Module:</strong> RTT/Inside Enterprise Identity Substrate
+<strong>Version:</strong> v0.1.0 (Experimental)
+<strong>Layer:</strong> RTT/Inside → substrate → enterprise_identity
+<strong>Status:</strong> Experimental — structural definitions subject to revision
+<strong>Canonical path:</strong> <code>docs/rtt/Inside/Enterprise/</code></p>
+<hr>
+<h2 id="1-what-is-rttinside-enterprise">1. What Is RTT/Inside Enterprise?</h2>
+<p>RTT/Inside Enterprise Identity Substrate is a lateral sub-module of RTT/Inside that maps enterprise identity infrastructure onto the RTT structural substrate.</p>
+<p><strong>It is not an authentication system.</strong> It is not a security framework. It is not a compliance tool.</p>
+<p>It is a <strong>structural annotation layer</strong> — a way of positioning enterprise identity infrastructure (Active Directory, LDAP, Kerberos, DNS SRV, OAuth/OIDC, cloud directory, zero-trust) within the RTT/Inside pipeline so that agents can read, annotate, trace, and capture identity substrate state as structured provenance records.</p>
+<p>The Enterprise module introduces the <strong>nine-layer Identity Substrate (L0–L8)</strong>, four <strong>substrate extensions</strong> (clarity, regime, triad_roles, coherence_envelopes), and the <strong>e_Capture</strong> record format — a specialization of the RTT/Inside CAPTURE_TEMPLATE for enterprise identity contexts.</p>
+<p><strong>The module is experimental at v0.1.0.</strong> All structural definitions are subject to revision as the RTT/Inside canon matures.</p>
+<hr>
+<h2 id="2-why-is-it-built-this-way">2. Why Is It Built This Way?</h2>
+<h3 id="21-why-nine-layers-l0l8">2.1 Why nine layers (L0–L8)?</h3>
+<p>Enterprise identity infrastructure is genuinely layered — from local machine identity through zero-trust policy enforcement. Flattening it into a single "identity" concept loses structural information that downstream modules need to trace provenance. Each layer (L0 local → L1 AD → L2 LDAP → L3 DNS SRV → L4 Kerberos → L5 service discovery → L6 modern identity → L7 cloud directory → L8 zero-trust) is a distinct structural position, not an implementation detail.</p>
+<h3 id="22-why-substrate-extensions-rather-than-additional-layers">2.2 Why substrate extensions rather than additional layers?</h3>
+<p>The four substrate extensions (clarity, regime, triad_roles, coherence_envelopes) are <strong>cross-cutting concerns</strong> that apply at multiple substrate layers simultaneously. They are not layer-specific; they modulate how any layer is read and annotated. Making them extensions rather than layers keeps the layer stack clean and the extension logic composable.</p>
+<h3 id="23-why-inherit-capture_template-rather-than-define-a-new-one">2.3 Why inherit CAPTURE_TEMPLATE rather than define a new one?</h3>
+<p>The e_Capture record is a <strong>specialization</strong> of RTT/Inside's CAPTURE_TEMPLATE — same five fields (scope, lineage, provenance, interoperability, governance), but applied to identity substrate context. Inheriting the template keeps Enterprise structurally aligned with its parent module and ensures that downstream consumers can read e_Capture records with the same parsers they use for any CAPTURE_TEMPLATE output.</p>
+<h3 id="24-why-rfc-8095-rfc-8923-and-http-semantics-as-anchors">2.4 Why RFC 8095, RFC 8923, and HTTP Semantics as anchors?</h3>
+<p>These RFCs are <strong>structural alignment references</strong> — not compliance mandates. They anchor the module's substrate definitions to externally recognized structural patterns (context-sensitive protocols, media type negotiation, HTTP semantics) without making any claim that the module implements or certifies compliance with these standards.</p>
+<h3 id="25-why-is-this-module-experimental-v010">2.5 Why is this module experimental (v0.1.0)?</h3>
+<p>Enterprise identity infrastructure is among the most complex and context-sensitive domains in RTT/Inside. The nine-layer substrate and four extensions represent a first structural pass. As the canon is used by enterprise architects and identity engineers, the layer definitions and extension behaviors will be refined. The experimental status signals that structural definitions should be treated as working drafts, not canonical specifications.</p>
+<h3 id="26-why-are-zone-x-and-mode-5-module-specific">2.6 Why are Zone X and Mode 5 module-specific?</h3>
+<p><code>IDENTITY_BREACH</code> (Zone X) and <code>IDENTITY_FABRICATION</code> (Mode 5) are the failure states specific to identity substrate processing. Importing Zone X or Mode 5 semantics from other modules (e.g., RTT/3's <code>RECURSION_COLLAPSE</code> or RTT/12's <code>FRAME_COLLAPSE</code>) would conflate structurally distinct failure modes. Each module owns its own Zone X and Mode 5 labels precisely because the failure conditions are domain-specific.</p>
+<hr>
+<h2 id="3-when-should-you-use-it">3. When Should You Use It?</h2>
+<h3 id="use-rttinside-enterprise-when">Use RTT/Inside Enterprise When:</h3>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Annotating documents or packets with enterprise identity context</td>
+<td>Enterprise module provides the IS annotation layer</td>
+</tr>
+<tr>
+<td>Tracing provenance of identity substrate transitions across a pipeline</td>
+<td>LINEAGE_CHAIN + DRIFT_GATE designed for this</td>
+</tr>
+<tr>
+<td>Recording identity substrate state as a structured capture record</td>
+<td>e_Capture is the purpose-built format</td>
+</tr>
+<tr>
+<td>Checking structural alignment of identity substrate annotations against RFC anchors</td>
+<td>Class D Compliance Auditor</td>
+</tr>
+<tr>
+<td>Attaching governance regime or clarity annotations to identity substrate data</td>
+<td><code>regime</code> and <code>clarity</code> substrate extensions</td>
+</tr>
+<tr>
+<td>Coordinating identity substrate context across a multi-module RTT pipeline</td>
+<td>Class F Orchestrator + cross-module handoff pattern</td>
+</tr>
+</tbody>
+</table>
+<h3 id="do-not-use-rttinside-enterprise-for">Do NOT Use RTT/Inside Enterprise For:</h3>
+<table>
+<thead>
+<tr>
+<th>Anti-Pattern</th>
+<th>Correct Alternative</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authenticating users or verifying credentials</td>
+<td>Use your actual identity provider (AD, Okta, Entra ID, etc.)</td>
+</tr>
+<tr>
+<td>Certifying security posture or compliance</td>
+<td>Use a real compliance framework (SOC 2, ISO 27001, FedRAMP)</td>
+</tr>
+<tr>
+<td>Making real-world zero-trust policy decisions</td>
+<td>Use your actual zero-trust platform</td>
+</tr>
+<tr>
+<td>Replacing an IAM or directory service</td>
+<td>Enterprise module is a structural annotation layer, not a service</td>
+</tr>
+<tr>
+<td>Importing as an auth library or SDK</td>
+<td>This is documentation, not implementation code</td>
+</tr>
+<tr>
+<td>Treating substrate layer position as authentication state</td>
+<td>IS positions are structural annotations, not auth tokens</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="4-where-does-it-live">4. Where Does It Live?</h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Canonical path</strong></td>
+<td><code>docs/rtt/Inside/Enterprise/</code></td>
+</tr>
+<tr>
+<td><strong>Parent module</strong></td>
+<td><code>docs/rtt/Inside/</code></td>
+</tr>
+<tr>
+<td><strong>Sibling modules</strong></td>
+<td><code>docs/rtt/Inside/Benchmarks/</code>, <code>docs/rtt/Inside/qCompute/</code></td>
+</tr>
+<tr>
+<td><strong>Pipeline position</strong></td>
+<td>Lateral sub-module of RTT/Inside; feeds into qCompute and external consumers</td>
+</tr>
+<tr>
+<td><strong>Layer</strong></td>
+<td>RTT/Inside → substrate → enterprise_identity</td>
+</tr>
+</tbody>
+</table>
+<h3 id="directory-structure">Directory Structure:</h3>
+<pre><code>docs/rtt/Inside/Enterprise/
+├── identity_substrate/          ← Identity layer definitions (L0–L8)
+├── substrate_extensions/        ← Extension definitions (clarity, regime, triad_roles, coherence_envelopes)
+├── ABOUT.md                     ← This file
+├── AGENTS.md                    ← Agent class definitions
+├── GLOSSARY.md                  ← Term definitions
+├── README.md                    ← Module overview
+├── e_Capture.md                 ← Enterprise capture template
+├── index.html                   ← Web entry point
+└── module.json                  ← Machine-readable module metadata
+</code></pre>
+<h3 id="cli-tools-implementation-reference">CLI Tools (Implementation Reference):</h3>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rtt-inside-identify</code></td>
+<td>Identity substrate operations</td>
+</tr>
+<tr>
+<td><code>rtt-inside-clarity</code></td>
+<td>Clarity substrate extension</td>
+</tr>
+<tr>
+<td><code>rtt-inside-regime</code></td>
+<td>Regime substrate extension</td>
+</tr>
+<tr>
+<td><code>rtt-inside-triad</code></td>
+<td>Triad roles substrate extension</td>
+</tr>
+<tr>
+<td><code>rtt-inside-coherence</code></td>
+<td>Coherence envelopes substrate extension</td>
+</tr>
+<tr>
+<td><code>rtt-inside-discovery</code></td>
+<td>Service discovery operations</td>
+</tr>
+<tr>
+<td><code>rtt-inside-negotiation</code></td>
+<td>Negotiation operations</td>
+</tr>
+<tr>
+<td><code>rtt-inside-enterprise</code></td>
+<td>Enterprise-level orchestration</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>These are implementation references, not structural definitions. The structural definitions live in this documentation.</p>
+</blockquote>
+<hr>
+<h2 id="5-core-constructs-at-a-glance">5. Core Constructs at a Glance</h2>
+<h3 id="identity-substrate-is">Identity Substrate (IS)</h3>
+<pre><code>IS(packet) = ∑ Lₙ(packet) for n ∈ {0..8}
+                                          [structural — no semantic inference]
+</code></pre>
+<p>The nine-layer stack:</p>
+<pre><code>L8  Zero-Trust Policy Substrate
+L7  Cloud Directory Substrate
+L6  Modern Identity (OAuth/OIDC/SAML) Substrate
+L5  Service Discovery Substrate
+L4  Kerberos Substrate
+L3  DNS SRV Substrate
+L2  LDAP Substrate
+L1  Active Directory Substrate
+L0  Local Identity Substrate
+</code></pre>
+<h3 id="substrate-extensions-se">Substrate Extensions (SE)</h3>
+<pre><code>SE(packet) = IS(packet) ⊕ {clarity, regime, triad_roles, coherence_envelopes}
+                                                          [structural — no semantic inference]
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Extension</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>clarity</code></td>
+<td>Disambiguates overlapping or ambiguous substrate layer assignments</td>
+</tr>
+<tr>
+<td><code>regime</code></td>
+<td>Applies governance regime context to substrate annotations</td>
+</tr>
+<tr>
+<td><code>triad_roles</code></td>
+<td>Maps triad role assignments onto substrate layers</td>
+</tr>
+<tr>
+<td><code>coherence_envelopes</code></td>
+<td>Wraps annotations in coherence boundary declarations</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enterprise-capture_template-e_capture">Enterprise CAPTURE_TEMPLATE (e_Capture)</h3>
+<pre><code>e_Capture {
+  scope:            &quot;...&quot; [structural — no semantic inference]
+  lineage:          &quot;...&quot; [structural — no semantic inference]
+  provenance:       &quot;...&quot; [structural — no semantic inference]
+  interoperability: &quot;...&quot; [structural — no semantic inference]
+  governance:       &quot;...&quot; [structural — no semantic inference]
+}
+</code></pre>
+<h3 id="drift_gate">DRIFT_GATE</h3>
+<pre><code>DRIFT_GATE(chain) = ∂(Lₙ → Lₙ₊₁)
+                    if discontinuity &gt; θ → MISALIGNMENT
+                                          [structural — no semantic inference]
+</code></pre>
+<h3 id="rfc-alignment-rfa">RFC Alignment (RFA)</h3>
+<pre><code>RFA(e_capture) = Δ(e_capture, RFC_anchors)
+                 RFC anchors: RFC 8095, RFC 8923, HTTP Semantics
+                                          [structural — no semantic inference]
+</code></pre>
+<hr>
+<h2 id="6-module-integrations">6. Module Integrations</h2>
+<h3 id="upstream-inherited-from-rttinside">Upstream (Inherited from RTT/Inside)</h3>
+<table>
+<thead>
+<tr>
+<th>Construct</th>
+<th>Inherited</th>
+<th>Enterprise Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CAPTURE_TEMPLATE</code></td>
+<td>✅</td>
+<td>Specialized as e_Capture</td>
+</tr>
+<tr>
+<td><code>DRIFT_GATE</code></td>
+<td>✅</td>
+<td>Applied to substrate layer transitions</td>
+</tr>
+<tr>
+<td><code>LINEAGE_CHAIN</code></td>
+<td>✅</td>
+<td>Tracks substrate provenance</td>
+</tr>
+<tr>
+<td><code>ALIGNMENT_PATTERN</code></td>
+<td>✅</td>
+<td>Coherence annotation for clean traces</td>
+</tr>
+<tr>
+<td><code>MISALIGNMENT</code></td>
+<td>✅</td>
+<td>Substrate discontinuity flag</td>
+</tr>
+<tr>
+<td><code>BKM</code></td>
+<td>✅</td>
+<td>Layer boundary markers</td>
+</tr>
+<tr>
+<td><code>CORRIDOR</code></td>
+<td>✅</td>
+<td>Identity routing paths</td>
+</tr>
+<tr>
+<td><code>OPERATOR_HOOK</code></td>
+<td>✅</td>
+<td>Extension attachment points</td>
+</tr>
+<tr>
+<td>Zone U/S/M/D/X framework</td>
+<td>✅</td>
+<td>Zone X = <code>IDENTITY_BREACH</code></td>
+</tr>
+<tr>
+<td>Mode 1–4/5 framework</td>
+<td>✅</td>
+<td>Mode 5 = <code>IDENTITY_FABRICATION</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="downstream-output">Downstream Output</h3>
+<table>
+<thead>
+<tr>
+<th>Consumer</th>
+<th>What Enterprise Provides</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Inside/qCompute</code></td>
+<td>Fully annotated enterprise packet (IS + SE + e_Capture + RFA + LINEAGE_CHAIN)</td>
+</tr>
+<tr>
+<td>External consumers</td>
+<td>e_Capture records as structured identity substrate provenance</td>
+</tr>
+<tr>
+<td>Compliance auditors</td>
+<td>RFA annotations for structural alignment review</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cross-module-disambiguation">Cross-Module Disambiguation</h3>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Enterprise (This Module)</th>
+<th>Other RTT Modules</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zone X</td>
+<td><code>IDENTITY_BREACH</code></td>
+<td>RTT/3: <code>RECURSION_COLLAPSE</code>; RTT/12: <code>FRAME_COLLAPSE</code>; The_Inverted_Star: <code>STAR_COLLAPSE</code>; RTT/Inside: <code>SUBSTRATE_BREACH</code>; Benchmarks: <code>BENCHMARK_COLLAPSE</code></td>
+</tr>
+<tr>
+<td>Mode 5</td>
+<td><code>IDENTITY_FABRICATION</code></td>
+<td>RTT/3: <code>RECURSIVE_HALLUCINATION</code>; RTT/12: <code>FRAME_FABRICATION</code>; The_Inverted_Star: <code>INVERSION_FABRICATION</code>; RTT/Inside: <code>CAPTURE_FABRICATION</code>; Benchmarks: <code>METRIC_FABRICATION</code></td>
+</tr>
+<tr>
+<td>Coherence</td>
+<td>Substrate layer continuity (L0–L8)</td>
+<td>RTT/12: frame coherence; The_Inverted_Star: inversion coherence</td>
+</tr>
+<tr>
+<td>Capture</td>
+<td>e_Capture 5-field identity record</td>
+<td>RTT/Inside: generic CAPTURE_TEMPLATE</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="7-what-rttinside-enterprise-is-not">7. What RTT/Inside Enterprise Is Not</h2>
+<table>
+<thead>
+<tr>
+<th>IS</th>
+<th>IS NOT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A structural annotation layer for enterprise identity infrastructure</td>
+<td>An authentication system or identity provider</td>
+</tr>
+<tr>
+<td>A provenance-tracking module for identity substrate state</td>
+<td>A security framework or compliance tool</td>
+</tr>
+<tr>
+<td>A nine-layer structural stack (L0–L8)</td>
+<td>A real-world implementation of AD, LDAP, Kerberos, or OAuth</td>
+</tr>
+<tr>
+<td>A capture-record format (e_Capture) for identity substrate</td>
+<td>A log aggregation or SIEM system</td>
+</tr>
+<tr>
+<td>A lateral sub-module of RTT/Inside</td>
+<td>A standalone tool deployable outside the RTT/Inside pipeline</td>
+</tr>
+<tr>
+<td>An experimental (v0.1.0) structural draft</td>
+<td>A production-ready, certified, or auditable system</td>
+</tr>
+<tr>
+<td>A structural reference to RFC 8095, RFC 8923, HTTP Semantics</td>
+<td>A compliance certification against any RFC or standard</td>
+</tr>
+<tr>
+<td>A module that detects <code>IDENTITY_BREACH</code> (Zone X) as a structural failure</td>
+<td>A system that detects real-world identity breaches or security incidents</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="8-quick-start-checklist">8. Quick-Start Checklist</h2>
+<p>Before working in the Enterprise module, confirm:</p>
+<ul>
+<li>[ ] You have read and understood the RTT-not-physics rule (Section 1 of this document)</li>
+<li>[ ] You understand that L0–L8 are structural positions, not authentication states</li>
+<li>[ ] You understand that RFC anchors are structural references, not compliance mandates</li>
+<li>[ ] You understand that Zone X (<code>IDENTITY_BREACH</code>) and Mode 5 (<code>IDENTITY_FABRICATION</code>) are structural failure states, not security incident declarations</li>
+<li>[ ] You have loaded the RTT/Inside parent module documentation (<code>docs/rtt/Inside/AGENTS.md</code>, <code>ABOUT.md</code>, <code>GLOSSARY.md</code>)</li>
+<li>[ ] You know which substrate layer (L0–L8) your input packet corresponds to</li>
+<li>[ ] You know which extensions (clarity, regime, triad_roles, coherence_envelopes) apply to your context</li>
+<li>[ ] You are prepared to annotate every output field with <code>[structural — no semantic inference]</code></li>
+<li>[ ] You understand that the module is experimental (v0.1.0) and structural definitions may change</li>
+</ul>
+<p><strong>For AI agents and automated pipelines:</strong>
+- Paste the Session Seed Block from AGENTS.md before beginning
+- Run Class A (Substrate Mapper) before any other class
+- Do not skip the DRIFT_GATE pass (Class E)
+- Do not invoke Class D (Compliance Auditor) as a real-world compliance check</p>
+<hr>
+<h2 id="9-see-also">9. See Also</h2>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Path</th>
+<th>Relationship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RTT/Inside ABOUT.md</td>
+<td><code>docs/rtt/Inside/ABOUT.md</code></td>
+<td>Parent module — all constructs inherited</td>
+</tr>
+<tr>
+<td>RTT/Inside AGENTS.md</td>
+<td><code>docs/rtt/Inside/AGENTS.md</code></td>
+<td>Parent agent class definitions</td>
+</tr>
+<tr>
+<td>RTT/Inside GLOSSARY.md</td>
+<td><code>docs/rtt/Inside/GLOSSARY.md</code></td>
+<td>Parent term definitions</td>
+</tr>
+<tr>
+<td>Inside/Benchmarks ABOUT.md</td>
+<td><code>docs/rtt/Inside/Benchmarks/ABOUT.md</code></td>
+<td>Sibling sub-module</td>
+</tr>
+<tr>
+<td>Inside/qCompute ABOUT.md</td>
+<td><code>docs/rtt/Inside/qCompute/ABOUT.md</code></td>
+<td>Downstream sibling sub-module</td>
+</tr>
+<tr>
+<td>AGENTS.md</td>
+<td><code>docs/rtt/Inside/Enterprise/AGENTS.md</code></td>
+<td>Agent class definitions for this module</td>
+</tr>
+<tr>
+<td>GLOSSARY.md</td>
+<td><code>docs/rtt/Inside/Enterprise/GLOSSARY.md</code></td>
+<td>Term definitions for this module</td>
+</tr>
+<tr>
+<td>module.json</td>
+<td><code>docs/rtt/Inside/Enterprise/module.json</code></td>
+<td>Machine-readable module metadata</td>
+</tr>
+<tr>
+<td>e_Capture.md</td>
+<td><code>docs/rtt/Inside/Enterprise/e_Capture.md</code></td>
+<td>Enterprise capture template</td>
+</tr>
+<tr>
+<td>RTT/1 ABOUT.md</td>
+<td><code>docs/rtt/1/ABOUT.md</code></td>
+<td>Pipeline entry module</td>
+</tr>
+</tbody>
+</table>
+  </main>
+</body>
+</html>

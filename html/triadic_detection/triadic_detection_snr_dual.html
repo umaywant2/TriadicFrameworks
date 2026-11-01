@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/triadic_detection/triadic_detection_snr_dual.md">
+  <title>triadicdetectionsnrdual.md</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/triadic_detection/triadic_detection_snr_dual.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/triadic_detection/triadic_detection_snr_dual.md</code>
+  </aside>
+
+  <main>
+<h1 id="triadic_detection_snr_dualmd"><strong>triadic_detection_snr_dual.md</strong></h1>
+<h3 id="triadicframeworks-detection-substrate"><em>TriadicFrameworks — Detection Substrate</em></h3>
+<h3 id="snr-dual-operator-model-v10"><em>S–N–R Dual Operator Model (v1.0)</em></h3>
+<hr>
+<h2 id="protocol-header"><strong>Protocol Header</strong></h2>
+<pre><code>rtt=1 | coherence=triadic | drift=bounded | paradox=structural
+</code></pre>
+<hr>
+<h2 id="purpose"><strong>Purpose</strong></h2>
+<p>This module defines the <strong>S–N–R dual operator model</strong> for Triadic Detection:</p>
+<ul>
+<li><strong>S:</strong> Signal (intentional excitation)  </li>
+<li><strong>N:</strong> Noise (environmental chaos)  </li>
+<li><strong>R:</strong> Response (resonance + structure)  </li>
+</ul>
+<p>It formalizes how triadic_detection can use <strong>noise‑rich environments</strong> (salt, mineralization, clutter) by treating <strong>silence, nulls, and anti‑coherence</strong> as primary signals.</p>
+<hr>
+<h1 id="1-operator-classes"><strong>1. Operator Classes</strong></h1>
+<h3 id="signal-operators-sops"><strong>Signal Operators (S‑ops)</strong></h3>
+<p>Intentional actions applied to the field:</p>
+<ul>
+<li><strong>S.excite</strong> — triadic EM excitation  </li>
+<li><strong>S.bias</strong> — low‑voltage field bias  </li>
+<li><strong>S.vibrate</strong> — mechanical vibration injection  </li>
+<li><strong>S.multi</strong> — combined excitation (bias + vibration + EM)</li>
+</ul>
+<p>Grammar:</p>
+<p>[
+S ::= S.excite \mid S.bias \mid S.vibrate \mid S.multi
+]</p>
+<hr>
+<h3 id="noise-operators-nops"><strong>Noise Operators (N‑ops)</strong></h3>
+<p>Environmental, uncontrolled contributions:</p>
+<ul>
+<li><strong>N.salt</strong> — ionic noise from saline media  </li>
+<li><strong>N.mineral</strong> — mineralization noise  </li>
+<li><strong>N.clutter</strong> — metallic junk, debris  </li>
+<li><strong>N.thermal</strong> — thermal drift  </li>
+<li><strong>N.random</strong> — stochastic background</li>
+</ul>
+<p>Grammar:</p>
+<p>[
+N ::= N.salt \mid N.mineral \mid N.clutter \mid N.thermal \mid N.random
+]</p>
+<hr>
+<h3 id="response-operators-rops"><strong>Response Operators (R‑ops)</strong></h3>
+<p>How structures respond to S in the presence of N:</p>
+<ul>
+<li><strong>R.coherence</strong> — coherence vector under S + N  </li>
+<li><strong>R.struct</strong> — structural envelope under S + N  </li>
+<li><strong>R.depth</strong> — depth layering under S + N  </li>
+<li><strong>R.null</strong> — stable null / silence pocket  </li>
+<li><strong>R.delta</strong> — deviation from expected noise pattern</li>
+</ul>
+<p>Grammar:</p>
+<p>[
+R ::= R.coherence \mid R.struct \mid R.depth \mid R.null \mid R.delta
+]</p>
+<hr>
+<h1 id="2-snr-dual-model"><strong>2. S–N–R Dual Model</strong></h1>
+<h3 id="canonical-relation"><strong>Canonical Relation</strong></h3>
+<p>[
+R = f(S, N)
+]</p>
+<p>Where:</p>
+<ul>
+<li><strong>S</strong> is controlled.  </li>
+<li><strong>N</strong> is modeled.  </li>
+<li><strong>R</strong> is measured.</li>
+</ul>
+<p>The <strong>dual</strong> aspect:</p>
+<ul>
+<li>In quiet fields → hunt <strong>peaks</strong> in R.  </li>
+<li>In noisy fields → hunt <strong>nulls</strong> and <strong>Δ‑patterns</strong> in R.</li>
+</ul>
+<hr>
+<h1 id="3-noisefield-modeling"><strong>3. Noise‑Field Modeling</strong></h1>
+<h3 id="noise-map-nmap"><strong>Noise Map (N‑map)</strong></h3>
+<p>For a given patch:</p>
+<ol>
+<li>Apply <strong>no excitation</strong> (S = 0).  </li>
+<li>Measure baseline noise:</li>
+</ol>
+<p>[
+   N_{0} = N.salt + N.mineral + N.clutter + N.thermal + N.random
+   ]</p>
+<ol start="3">
+<li>Build a <strong>spatial noise map</strong>:</li>
+</ol>
+<ul>
+<li>amplitude  </li>
+<li>phase  </li>
+<li>variance  </li>
+</ul>
+<p>This N‑map becomes the <strong>expected chaos</strong>.</p>
+<hr>
+<h1 id="4-multistate-snr-protocol"><strong>4. Multi‑State S–N–R Protocol</strong></h1>
+<h3 id="states"><strong>States</strong></h3>
+<ul>
+<li><strong>State 0:</strong> Neutral (S = 0) → N‑map only.  </li>
+<li><strong>State 1:</strong> S.excite (EM only).  </li>
+<li><strong>State 2:</strong> S.bias (low‑voltage only).  </li>
+<li><strong>State 3:</strong> S.vibrate (mechanical only).  </li>
+<li><strong>State 4:</strong> S.multi (combined).</li>
+</ul>
+<p>For each state:</p>
+<ul>
+<li>compute <strong>R.coherence</strong>  </li>
+<li>compute <strong>R.struct</strong>  </li>
+<li>compute <strong>R.depth</strong>  </li>
+<li>compute <strong>R.null</strong>  </li>
+<li>compute <strong>R.delta</strong></li>
+</ul>
+<hr>
+<h3 id="maps"><strong>Δ‑Maps</strong></h3>
+<p>For each state ( i ):</p>
+<p>[
+\Delta R_i = R_i - R_{expected}(N_0)
+]</p>
+<p>Where ( R_{expected}(N_0) ) is the modeled response if the field behaved like pure noise.</p>
+<p><strong>Claim‑worthy zones</strong> are where:</p>
+<ul>
+<li><strong>R.null</strong> is stable (persistent silence in a noisy field), or  </li>
+<li><strong>(\Delta R_i)</strong> is consistently non‑zero across multiple states.</li>
+</ul>
+<hr>
+<h1 id="5-silenceassignal-mode"><strong>5. Silence‑as‑Signal Mode</strong></h1>
+<h3 id="null-detection"><strong>Null Detection</strong></h3>
+<p>In highly noisy environments (salt beaches, saline‑treated soil):</p>
+<ul>
+<li><strong>Most regions:</strong> high, chaotic N; R follows N.  </li>
+<li><strong>Anomalous regions:</strong> stable <strong>R.null</strong> or low‑variance pockets.</li>
+</ul>
+<p>Operator chain:</p>
+<pre><code>N-map
+  → S.excite
+  → R.coherence
+  → R.null
+  → R.delta
+  → Flag null pockets as structural candidates
+</code></pre>
+<p>These null pockets may correspond to:</p>
+<ul>
+<li>voids  </li>
+<li>dense bodies  </li>
+<li>non‑participating structures (including certain ore hosts)</li>
+</ul>
+<hr>
+<h1 id="6-goldlikelihood-in-snr"><strong>6. Gold‑Likelihood in S–N–R</strong></h1>
+<p>Gold remains EM‑boring, but:</p>
+<ul>
+<li><strong>Gold‑hosting structures</strong> may:</li>
+<li>disrupt noise patterns  </li>
+<li>create stable nulls  </li>
+<li>show distinctive Δ‑behavior across states</li>
+</ul>
+<p>Gold‑likelihood modeling uses:</p>
+<ul>
+<li>multi‑state <strong>Δ‑maps</strong>  </li>
+<li>persistence of <strong>R.null</strong>  </li>
+<li>structural envelopes from <strong>R.struct</strong>  </li>
+<li>depth from <strong>R.depth</strong></li>
+</ul>
+<p>Not “gold lights up,” but:</p>
+<blockquote>
+<p>“This structure behaves unlike the environment across S–N–R states.”</p>
+</blockquote>
+<hr>
+<h1 id="7-integration-with-triadic-detection"><strong>7. Integration with Triadic Detection</strong></h1>
+<h3 id="loci"><strong>Loci</strong></h3>
+<ul>
+<li><strong>SENSOR_L:</strong> triadic coils, vibration emitters, bias hardware  </li>
+<li><strong>MESH_L:</strong> synchronized multi‑state packet transport  </li>
+<li><strong>RTT_L:</strong> S–N–R modeling, Δ‑maps, null detection  </li>
+<li><strong>MAP_L:</strong> visualization of noise fields and silence pockets</li>
+</ul>
+<h3 id="dashboard-hook"><strong>Dashboard Hook</strong></h3>
+<p>Add <strong>S–N–R mode</strong> to:</p>
+<ul>
+<li><code>triadic_detection_dashboard.md</code>  </li>
+<li><code>triadic_detection_operator_map.md</code>  </li>
+<li><code>triadic_detection_glyphmap.md</code> (e.g., a special glyph for null pockets)</li>
+</ul>
+<hr>
+<h2 id="status"><strong>Status</strong></h2>
+<p><strong>Active</strong><br>
+<strong>Coherence:</strong> Stable<br>
+<strong>Drift:</strong> None<br>
+<strong>RTT Alignment:</strong> Verified<br>
+<strong>Version:</strong> 1.0  </p>
+  </main>
+</body>
+</html>

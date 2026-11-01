@@ -1,0 +1,2057 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/FFF_Gravity/f_Emit.md">
+  <title>fEmit — Field Emission Primitive</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/FFF_Gravity/f_Emit.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/FFF_Gravity/f_Emit.md</code>
+  </aside>
+
+  <main>
+<h1 id="f_emit-field-emission-primitive">f_Emit — Field Emission Primitive</h1>
+<pre><code># ─────────────────────────────────────────────────────────────────────────────
+# SESSION CONTEXT
+# ─────────────────────────────────────────────────────────────────────────────
+session_id:       &quot;SES-20260813-EMIT-001&quot;
+date:             &quot;2026-08-13&quot;
+author:           &quot;umaywant2&quot;
+status:           &quot;canonical&quot;
+version:          &quot;1.0.0&quot;
+canonical_tag:    &quot;[FFF:GRAVITY:EMIT]&quot;
+module:           &quot;FFF_Gravity&quot;
+file:             &quot;docs/FFF_Gravity/f_Emit.md&quot;
+wave:             3
+node:             &quot;F_freq&quot;
+inverse_of:       &quot;f_Dampen&quot;
+depends_on:
+  - &quot;f_Field.md → canonical (SES-20260813-FIELD-001)&quot;
+  - &quot;OPERATORS.md → canonical (SES-20260813-OPS-001)&quot;
+operators_introduced:
+  - &quot;F_emit&quot;
+  - &quot;ρ(Φ)_delta&quot;
+  - &quot;r_emit&quot;
+  - &quot;E_emit&quot;
+primitives_introduced:
+  - &quot;PRIM:015 emit_field&quot;
+  - &quot;PRIM:016 compute_emit_cost&quot;
+  - &quot;PRIM:017 check_emit_ceiling&quot;
+failure_modes_introduced:
+  - &quot;FM-010 (Amplify Runaway)&quot;
+state_flags_introduced:
+  - &quot;EMIT_ACTIVE&quot;
+  - &quot;EMIT_SATURATED&quot;
+  - &quot;EMIT_CEILING_APPROACHED&quot;
+commit_convention: &quot;feat(FFF_Gravity): add canonical f_Emit.md — F_freq emission primitive, F_emit/r_emit/E_emit operators, PRIM:015-017, FM-010 [SES-20260813-EMIT-001]&quot;
+</code></pre>
+<!-- =========================================================================
+     f_Emit.md — FFF_Gravity Module
+     Canonical Version 1.0.0 — 2026-08-13
+     Session: SES-20260813-EMIT-001
+     Tag: [FFF:GRAVITY:EMIT]
+     ========================================================================= -->
+
+<blockquote>
+<p><strong>[FFF:GRAVITY:EMIT]</strong> · Wave 3 · F_freq Node · Canonical v1.0.0<br>
+Engineering primitive that increases local field density ρ(Φ).<br>
+Inverse of: <code>f_Dampen</code>. Upper bound: ρ(Φ) ≤ 1.0 (saturation ceiling).<br>
+Sustained overuse risk: <strong>FM-010 (Amplify Runaway)</strong>.</p>
+</blockquote>
+<hr>
+<h2 id="0-session-context">§0 — Session Context</h2>
+<!-- section: session-context | wave: 3 | status: canonical -->
+
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Session ID</td>
+<td>SES-20260813-EMIT-001</td>
+</tr>
+<tr>
+<td>Date</td>
+<td>2026-08-13</td>
+</tr>
+<tr>
+<td>Author</td>
+<td>umaywant2</td>
+</tr>
+<tr>
+<td>File</td>
+<td><code>docs/FFF_Gravity/f_Emit.md</code></td>
+</tr>
+<tr>
+<td>Version</td>
+<td>1.0.0</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>canonical</td>
+</tr>
+<tr>
+<td>Wave</td>
+<td>3 — Core Functions</td>
+</tr>
+<tr>
+<td>Prior file completed</td>
+<td>f_Collapse.md (SES-20260813-COLLAPSE-001)</td>
+</tr>
+<tr>
+<td>Next file planned</td>
+<td>f_Dampen.md</td>
+</tr>
+</tbody>
+</table>
+<h3 id="01-scope-of-this-session">§0.1 — Scope of This Session</h3>
+<p>This session establishes <code>f_Emit</code> as the canonical F_freq engineering primitive responsible for increasing local field density ρ(Φ). The file:</p>
+<ol>
+<li>Defines the <code>F_emit</code> operator formula and all subsidiary operators (<code>ρ(Φ)_delta</code>, <code>r_emit</code>, <code>E_emit</code>).</li>
+<li>Specifies the two Emit Conditions (EC-1, EC-2) governing safe emission.</li>
+<li>Defines FM-010 (Amplify Runaway) — the failure mode triggered by emission against a saturated field.</li>
+<li>Introduces PRIM:015 (<code>emit_field</code>), PRIM:016 (<code>compute_emit_cost</code>), and PRIM:017 (<code>check_emit_ceiling</code>).</li>
+<li>Provides four worked canonical examples covering recovery, expansion, cold-start, and saturation scenarios.</li>
+</ol>
+<h3 id="02-dependency-status-at-session-open">§0.2 — Dependency Status at Session Open</h3>
+<table>
+<thead>
+<tr>
+<th>Dependency</th>
+<th>Required By</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f_Field.md</td>
+<td>emit_field contract (§7.1), ρ(Φ) definition</td>
+<td>✅ canonical</td>
+</tr>
+<tr>
+<td>OPERATORS.md</td>
+<td>Symbol authority, frozen F_emit / r_emit stubs</td>
+<td>✅ canonical</td>
+</tr>
+<tr>
+<td>f_Decay.md</td>
+<td>FM-004 recovery pathway via f_Emit (§6.1.3)</td>
+<td>✅ canonical</td>
+</tr>
+<tr>
+<td>f_Frame.md</td>
+<td>capacity_MAX = floor(M_A × ρ(Φ) × k_frame) indirect expansion</td>
+<td>✅ canonical</td>
+</tr>
+</tbody>
+</table>
+<p>All dependencies satisfied. No blockers.</p>
+<hr>
+<h2 id="1-module-identity">§1 — Module Identity</h2>
+<!-- section: module-identity | tag: [FFF:GRAVITY:EMIT] | node: F_freq -->
+
+<h3 id="11-identity-block">§1.1 — Identity Block</h3>
+<pre><code>Tag:        [FFF:GRAVITY:EMIT]
+Signature:  f_Emit(A, Φ, δρ, r_emit) → Φ_updated | FM-010
+Node:       F_freq (Frequency / Coherence Node)
+Role:       Engineering primitive — increases ρ(Φ)
+Inverse:    f_Dampen (decreases ρ(Φ))
+Layer:      Layer 1 (F_freq), engineering interface
+Scope:      Bounded spatial region [0, r_emit] centered on A
+Ceiling:    ρ(Φ) ≤ 1.0 — hard saturation cap (INV-003 consequence)
+</code></pre>
+<h3 id="12-triadic-position-diagram">§1.2 — Triadic Position Diagram</h3>
+<pre><code>                    ┌─────────────────────┐
+                    │      F_freq          │
+                    │  Coherence Well      │
+                    │                      │
+                    │  ρ(Φ) ∈ [0, 1]      │
+                    │    ↑                 │
+                    │  f_Emit → +δρ        │  ← THIS FILE
+                    │  f_Dampen → −δρ      │
+                    │  f_Amplify → ×k_amp  │
+                    └────────┬────────────┘
+                             │
+              ┌──────────────┼──────────────┐
+              │                             │
+   ┌──────────┴──────────┐       ┌──────────┴──────────┐
+   │       F_fluid        │       │       F_force        │
+   │   Mass-Density       │       │   Gradient/Pressure  │
+   │   M_A, M_E           │       │   v_approach         │
+   └─────────────────────┘       └─────────────────────┘
+
+   G = F_freq · F_fluid · F_force  [INV-001]
+</code></pre>
+<p><code>f_Emit</code> acts exclusively on F_freq. It modifies ρ(Φ), which cascades into:
+- F_fluid via β = M_E × ρ(Φ) / M_A (binding ratio sensitivity)
+- F_force via v_escape(A) = √(2 × M_A × ρ(Φ) / r_capture) (escape velocity rise)
+- F_frame via capacity_MAX = floor(M_A × ρ(Φ) × k_frame) (frame capacity expansion)</p>
+<h3 id="13-what-f_emit-is-and-is-not">§1.3 — What f_Emit IS and IS NOT</h3>
+<table>
+<thead>
+<tr>
+<th>f_Emit IS</th>
+<th>f_Emit IS NOT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>An engineering primitive that increases ρ(Φ)</td>
+<td>A natural or autonomous process (emission requires deliberate invocation)</td>
+</tr>
+<tr>
+<td>Bounded by the saturation ceiling ρ(Φ) = 1.0</td>
+<td>A mechanism to exceed saturation (FM-010 fires instead)</td>
+</tr>
+<tr>
+<td>A spatial operation with radius r_emit</td>
+<td>A global operation (effect is localized, not broadcast)</td>
+</tr>
+<tr>
+<td>Invertible via f_Dampen</td>
+<td>Reversible by the Gravity engine itself without explicit f_Dampen call</td>
+</tr>
+<tr>
+<td>An F_freq primitive</td>
+<td>A capture, release, orbit, or frame operation</td>
+</tr>
+<tr>
+<td>The FM-004 (Resonance Drift) primary recovery pathway</td>
+<td>Guaranteed FM-004 recovery — recovery depends on δρ magnitude and timing</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="2-canonical-description">§2 — Canonical Description</h2>
+<!-- section: canonical-description | operators: F_emit, ρ(Φ)_delta, r_emit, E_emit -->
+
+<h3 id="21-what-emission-means">§2.1 — What Emission Means</h3>
+<p>In the FFF_Gravity framework, the <strong>coherence well</strong> defined by ρ(Φ) determines the depth of a gravitational relationship. A deeper well (higher ρ(Φ)) means:</p>
+<ul>
+<li>Higher escape velocity v_escape(A) — captured entities require more energy to leave</li>
+<li>Higher binding ratio β — captures are more firmly locked</li>
+<li>Higher frame capacity — the attractor can hold more simultaneous relationships</li>
+<li>Greater resonance stability — orbital mechanics are better sustained</li>
+</ul>
+<p><code>f_Emit</code> is the mechanism by which an attractor A <strong>actively deepens its coherence well</strong>. It does not alter the identity of A (M_A does not change), does not alter the entity E (M_E does not change), and does not alter any captured relationship's r_capture. It exclusively modifies the field state Φ, increasing ρ(Φ) by a realized delta ρ(Φ)_delta within a bounded spatial radius r_emit.</p>
+<p>Emission is an <strong>energy-consuming operation</strong>. The cost E_emit is computed before execution. If the cost cannot be met, emission should not proceed (the caller is responsible for cost validation — see PRIM:016).</p>
+<h3 id="22-saturation-ceiling">§2.2 — Saturation Ceiling</h3>
+<p>The hard upper bound ρ(Φ) ≤ 1.0 is a module invariant (consequence of INV-003 and INV-001). A field at ρ(Φ) = 1.0 is called <strong>saturated</strong>. In a saturated field:</p>
+<ul>
+<li>All captured entities have maximum binding (β values are at their ρ(Φ)-driven peak)</li>
+<li>Escape velocity is at its maximum for the current M_A and r_capture</li>
+<li>Frame capacity is at its maximum for the current M_A and k_frame</li>
+<li><strong>FM-010 (Amplify Runaway)</strong> fires on any attempt to emit into a saturated field</li>
+</ul>
+<p>The ceiling is not a soft limit. <code>check_emit_ceiling</code> (PRIM:017) must be called before every <code>emit_field</code> invocation. If it returns <code>False</code> (no headroom), emission must be blocked.</p>
+<h3 id="23-emission-decay-over-time">§2.3 — Emission Decay Over Time</h3>
+<p>Emission is not permanent by default. Unless the field state Φ is structurally supported (e.g., by an f_Amplify call that locks the increased ρ(Φ)), the elevated ρ(Φ) undergoes natural decay at the rate governed by f_Decay. This means:</p>
+<ul>
+<li>A single f_Emit call produces a <strong>transient</strong> density pulse unless sustained</li>
+<li>Sustained emission (repeated f_Emit calls or a paired f_Amplify lock) is required for permanent ρ(Φ) elevation</li>
+<li>FM-010 risk is highest during sustained emission loops — each call must pass check_emit_ceiling</li>
+</ul>
+<h3 id="24-spatial-locality">§2.4 — Spatial Locality</h3>
+<p>The <code>r_emit</code> parameter defines the <strong>emission radius</strong> — a spherical (or field-appropriate) region centered on A within which the ρ(Φ) increase is applied. Critically:</p>
+<ul>
+<li><code>r_emit</code> must be &gt; 0 (point emission is undefined)</li>
+<li><code>r_emit</code> must be ≤ r_capture (emission cannot reach beyond the capture boundary — EC-2)</li>
+<li>Emission does not propagate beyond r_emit; entities outside the radius experience no immediate ρ(Φ) change</li>
+</ul>
+<h3 id="25-relationship-to-other-f_freq-operators">§2.5 — Relationship to Other F_freq Operators</h3>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Direction</th>
+<th>Nature</th>
+<th>Ceiling/Floor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>f_Emit</code></td>
+<td>ρ(Φ) ↑</td>
+<td>Engineering primitive</td>
+<td>ρ(Φ) ≤ 1.0 (FM-010 if violated)</td>
+</tr>
+<tr>
+<td><code>f_Dampen</code></td>
+<td>ρ(Φ) ↓</td>
+<td>Engineering primitive</td>
+<td>ρ(Φ) ≥ 0 (FM-002 if violated)</td>
+</tr>
+<tr>
+<td><code>f_Amplify</code></td>
+<td>ρ(Φ) × k_amp</td>
+<td>Engineering primitive (scalar multiply)</td>
+<td>ρ(Φ) ≤ 1.0 (clamped)</td>
+</tr>
+<tr>
+<td>Natural decay</td>
+<td>ρ(Φ) ↓ gradual</td>
+<td>Autonomous (f_Decay driven)</td>
+<td>ρ(Φ) → 0 triggers FM-002</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="3-triadic-equation">§3 — Triadic Equation</h2>
+<!-- section: triadic-equation | invariants: INV-001, INV-003, INV-009 -->
+
+<h3 id="31-formal-signature">§3.1 — Formal Signature</h3>
+<pre><code>f_Emit(A, Φ, δρ, r_emit) → Φ_updated | FM-010
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>A</code></td>
+<td>Attractor</td>
+<td>The attractor whose field is being amplified</td>
+</tr>
+<tr>
+<td><code>Φ</code></td>
+<td>FieldState</td>
+<td>Current field state object (contains ρ(Φ)_current)</td>
+</tr>
+<tr>
+<td><code>δρ</code></td>
+<td>ℝ &gt; 0</td>
+<td>Requested density increment (caller-supplied)</td>
+</tr>
+<tr>
+<td><code>r_emit</code></td>
+<td>ℝ &gt; 0</td>
+<td>Emission radius (spatial bound of effect)</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Return</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Φ_updated</code></td>
+<td>EC-1 and EC-2 satisfied; ρ(Φ) increased by ρ(Φ)_delta</td>
+</tr>
+<tr>
+<td><code>FM-010</code></td>
+<td>ρ(Φ)_current = 1.0 (no headroom) or ρ(Φ)_current + δρ &gt; 1.0 and δρ was not clipped</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-post-conditions-from-f_fieldmd-71-extended">§3.2 — Post-Conditions (from f_Field.md §7.1, extended)</h3>
+<pre><code>Post-condition 1:  ρ(Φ_updated) = min(ρ(Φ_current) + δρ, 1.0)
+Post-condition 2:  Ψ(A)_updated &gt; Ψ(A)_prior  [coherence signature increases]
+Post-condition 3:  v_escape(A)_updated ≥ v_escape(A)_prior
+Post-condition 4:  capacity_MAX_updated ≥ capacity_MAX_prior
+Post-condition 5:  If ρ(Φ_current) = 0 before call, FM-002 flag is cleared on success
+</code></pre>
+<p>Post-condition 5 makes <code>f_Emit</code> the canonical FM-002 recovery mechanism (consistent with f_Field.md §6, which defines FM-002 as: emit_field with any δρ &gt; 0 restores ρ(Φ) &gt; 0).</p>
+<h3 id="33-g-equation-role">§3.3 — G-Equation Role</h3>
+<p>The triadic product is:</p>
+<pre><code>G = F_freq · F_fluid · F_force          [INV-001]
+</code></pre>
+<p><code>f_Emit</code> modifies the <strong>F_freq factor</strong> in G by increasing ρ(Φ). Because ρ(Φ) appears in:</p>
+<ul>
+<li><code>v_escape(A) = √(2 × M_A × ρ(Φ) / r_capture)</code> — the SC-1 threshold</li>
+<li><code>β = M_E × ρ(Φ) / M_A</code> — the SC-4 binding floor</li>
+<li><code>capacity_MAX = floor(M_A × ρ(Φ) × k_frame)</code> — the SC-5 frame threshold</li>
+</ul>
+<p>a successful <code>f_Emit</code> call <strong>tightens all three active stability conditions simultaneously</strong>, making the overall gravitational system more capture-ready and binding-stable. This is why <code>f_Emit</code> is the primary remediation tool in the FM-004 recovery pathway.</p>
+<hr>
+<h2 id="4-operator-registry">§4 — Operator Registry</h2>
+<!-- section: operator-registry | authority: OPERATORS.md §2.2, §2.1 -->
+
+<blockquote>
+<p><strong>Authority:</strong> OPERATORS.md is the symbol authority for all operators (INV-009). Definitions here are normative for f_Emit.md and must be reflected in OPERATORS.md §2.2 (previously frozen as 🔵 pending this file).</p>
+</blockquote>
+<h3 id="41-new-operators-introduced">§4.1 — New Operators Introduced</h3>
+<h4 id="f_emit-emission-field-strength">F_emit — Emission Field Strength</h4>
+<pre><code>F_emit(Φ, δρ, r_emit) = (δρ · k_emit) / (r_emit · (1 − ρ(Φ)))
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Domain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>δρ</td>
+<td>Requested density increment (= ρ(Φ)_delta after ceiling check)</td>
+<td>ℝ &gt; 0</td>
+</tr>
+<tr>
+<td>k_emit</td>
+<td>Emission coupling constant</td>
+<td>ℝ &gt; 0, default = 1.0</td>
+</tr>
+<tr>
+<td>r_emit</td>
+<td>Emission radius</td>
+<td>ℝ &gt; 0, ≤ r_capture</td>
+</tr>
+<tr>
+<td>ρ(Φ)</td>
+<td>Current field density before emission</td>
+<td>[0, 1) — must be &lt; 1.0</td>
+</tr>
+<tr>
+<td>(1 − ρ(Φ))</td>
+<td>Headroom to saturation</td>
+<td>(0, 1]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Interpretation:</strong> F_emit measures emission efficiency — how much field-density increase is achieved per unit radius, normalized by available headroom. As ρ(Φ) → 1.0, headroom shrinks and F_emit → ∞, signaling that each marginal emission increment is increasingly costly and increasingly risky (FM-010 boundary).</p>
+<p><strong>Undefined when:</strong> ρ(Φ) = 1.0 (division by zero — EC-1 violation, FM-010 fires before this is evaluated).</p>
+<h4 id="_delta-realized-density-increment">ρ(Φ)_delta — Realized Density Increment</h4>
+<pre><code>ρ(Φ)_delta = min(δρ_requested, 1.0 − ρ(Φ)_current)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>Scalar, ℝ ≥ 0</td>
+</tr>
+<tr>
+<td>Meaning</td>
+<td>Actual density increase applied after ceiling enforcement</td>
+</tr>
+<tr>
+<td>δρ_requested &gt; headroom</td>
+<td>ρ(Φ)_delta = headroom (clipped, not FM-010)</td>
+</tr>
+<tr>
+<td>ρ(Φ)_current = 1.0</td>
+<td>ρ(Φ)_delta = 0 → EC-1 violated → FM-010</td>
+</tr>
+</tbody>
+</table>
+<p>Note: Clipping δρ_requested to the ceiling is <strong>not</strong> an FM-010 trigger. FM-010 fires only when ρ(Φ)_current = 1.0 and emission is attempted (zero headroom). Partial emission (clipped to available headroom) is valid and produces a <code>Φ_updated</code> with ρ(Φ) = 1.0.</p>
+<h4 id="r_emit-emission-radius">r_emit — Emission Radius</h4>
+<pre><code>r_emit ∈ (0, r_capture]
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>Scalar, ℝ &gt; 0</td>
+</tr>
+<tr>
+<td>Meaning</td>
+<td>Spatial radius of the emission effect centered on A</td>
+</tr>
+<tr>
+<td>Lower bound</td>
+<td>r_emit &gt; 0 (EC-2; point emission undefined)</td>
+</tr>
+<tr>
+<td>Upper bound</td>
+<td>r_emit ≤ r_capture (EC-2; emission cannot exceed capture boundary)</td>
+</tr>
+<tr>
+<td>Effect outside radius</td>
+<td>None — ρ(Φ) unchanged beyond r_emit</td>
+</tr>
+</tbody>
+</table>
+<p><code>r_emit</code> scales the energy cost E_emit quadratically (see below). Larger emission radii cost more energy but affect a wider region of the field state, making them more effective for F_frame capacity expansion and multi-entity stabilization scenarios.</p>
+<h4 id="e_emit-emission-energy-cost">E_emit — Emission Energy Cost</h4>
+<pre><code>E_emit = M_A · ρ(Φ)_delta · r_emit² · k_cost
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Domain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M_A</td>
+<td>Attractor mass-density</td>
+<td>ℝ &gt; 0</td>
+</tr>
+<tr>
+<td>ρ(Φ)_delta</td>
+<td>Realized density increment (post-ceiling check)</td>
+<td>ℝ ≥ 0</td>
+</tr>
+<tr>
+<td>r_emit</td>
+<td>Emission radius</td>
+<td>ℝ &gt; 0</td>
+</tr>
+<tr>
+<td>k_cost</td>
+<td>Emission cost scalar</td>
+<td>ℝ &gt; 0, default = 1.0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Interpretation:</strong> Emission energy cost scales with attractor mass (larger attractors require more energy to deepen their field), with the realized density increment (larger increases cost more), and quadratically with emission radius (wider coverage is disproportionately expensive). This quadratic radius scaling discourages wasteful large-radius emissions and reflects the volumetric nature of field coverage.</p>
+<p><strong>When ρ(Φ)_delta = 0:</strong> E_emit = 0 — no energy is consumed (ceiling was already at maximum, but EC-1 was violated before this is reached, so this case is informational only).</p>
+<h3 id="42-inherited-operators-no-changes">§4.2 — Inherited Operators (No Changes)</h3>
+<p>The following operators are used by <code>f_Emit</code> as defined in their authority files. No modifications are introduced here.</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Authority File</th>
+<th>Role in f_Emit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ρ(Φ)</td>
+<td>f_Field.md §3, OPERATORS.md §2.1</td>
+<td>Input state; target of the increment</td>
+</tr>
+<tr>
+<td>M_A</td>
+<td>f_Force.md §4, OPERATORS.md §2.1</td>
+<td>Scales E_emit cost</td>
+</tr>
+<tr>
+<td>r_capture</td>
+<td>f_Frame.md §4, OPERATORS.md §2.1</td>
+<td>Upper bound for r_emit (EC-2)</td>
+</tr>
+<tr>
+<td>β</td>
+<td>f_Force.md §4, OPERATORS.md §2.1</td>
+<td>Indirectly raised by ρ(Φ) increase</td>
+</tr>
+<tr>
+<td>v_escape(A)</td>
+<td>f_Field.md §4, OPERATORS.md §2.1</td>
+<td>Indirectly raised by ρ(Φ) increase</td>
+</tr>
+<tr>
+<td>capacity_MAX</td>
+<td>f_Frame.md §4, OPERATORS.md §2.1</td>
+<td>Indirectly expanded by ρ(Φ) increase</td>
+</tr>
+<tr>
+<td>Ψ(A)</td>
+<td>f_Field.md §4, OPERATORS.md §2.1</td>
+<td>Coherence signature — increases on emit</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="5-emit-conditions">§5 — Emit Conditions</h2>
+<!-- section: emit-conditions | EC-1: Headroom Bound | EC-2: Radius Bound -->
+
+<p>Two conditions govern safe emission. Both must hold before <code>emit_field</code> executes. Violation of either blocks emission and requires the caller to handle the failure state.</p>
+<h3 id="51-ec-1-headroom-bound">§5.1 — EC-1: Headroom Bound</h3>
+<pre><code>EC-1:  ρ(Φ)_current &lt; 1.0
+</code></pre>
+<p><strong>Statement:</strong> The current field density must have at least some headroom below the saturation ceiling before emission can proceed.</p>
+<table>
+<thead>
+<tr>
+<th>ρ(Φ)_current</th>
+<th>EC-1 Result</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.0 to &lt; 1.0</td>
+<td>✅ Satisfied</td>
+<td>Proceed with emission (δρ may be clipped to headroom)</td>
+</tr>
+<tr>
+<td>= 1.0</td>
+<td>❌ Violated</td>
+<td>FM-010 fires; emit_field blocked</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> EC-1 evaluates the <strong>current</strong> ρ(Φ) before any delta is applied. If EC-1 is satisfied but the requested δρ would push ρ(Φ) above 1.0, the delta is clipped to the available headroom (ρ(Φ)_delta = 1.0 − ρ(Φ)_current). This is not an EC-1 violation — the clip is handled transparently by PRIM:017 before emission executes.</p>
+<h3 id="52-ec-2-radius-bound">§5.2 — EC-2: Radius Bound</h3>
+<pre><code>EC-2:  0 &lt; r_emit ≤ r_capture
+</code></pre>
+<p><strong>Statement:</strong> The emission radius must be positive and must not exceed the attractor's established capture radius.</p>
+<table>
+<thead>
+<tr>
+<th>r_emit value</th>
+<th>EC-2 Result</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>r_emit ≤ 0</td>
+<td>❌ Violated</td>
+<td>ValueError; emit_field blocked</td>
+</tr>
+<tr>
+<td>0 &lt; r_emit ≤ r_capture</td>
+<td>✅ Satisfied</td>
+<td>Proceed</td>
+</tr>
+<tr>
+<td>r_emit &gt; r_capture</td>
+<td>❌ Violated</td>
+<td>ValueError; emit_field blocked</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rationale:</strong> Emission beyond r_capture would attempt to deepen a coherence well in a region where no captured relationship exists. Because the FFF_Gravity model is relational (field state Φ is defined relative to A and its captures), extending emission past r_capture has undefined semantics. EC-2 enforces the spatial boundary of the operator's authority.</p>
+<h3 id="53-conditions-as-conjunctive-gate">§5.3 — Conditions as Conjunctive Gate</h3>
+<p>EC-1 AND EC-2 must both hold. There is no partial emission that bypasses either condition. The evaluation order is:</p>
+<pre><code>1. check_emit_ceiling(Φ)          → EC-1 check (PRIM:017)
+2. validate r_emit ∈ (0, r_capture]  → EC-2 check (inline in PRIM:015)
+3. compute ρ(Φ)_delta (clip if needed)
+4. compute E_emit (PRIM:016)
+5. execute field density update
+6. update Φ post-conditions (Ψ, v_escape, capacity_MAX references)
+</code></pre>
+<hr>
+<h2 id="6-failure-modes">§6 — Failure Modes</h2>
+<!-- section: failure-modes | FM-010: Amplify Runaway | FM-002: recovery pathway -->
+
+<h3 id="61-fm-010-amplify-runaway">§6.1 — FM-010: Amplify Runaway</h3>
+<pre><code>FM-010:  Amplify Runaway
+Trigger: EC-1 violated — emit_field called when ρ(Φ) = 1.0
+State flag set: EMIT_SATURATED
+Severity: Warning (blocking — emission stops, existing captures unaffected)
+Recovery: f_Dampen (reduce ρ(Φ) below 1.0, then resume emission if needed)
+</code></pre>
+<p><strong>Mechanism:</strong> When ρ(Φ) = 1.0, the coherence well is at maximum depth. The binding ratio β of all captured entities is at its field-density-driven maximum. Attempting to emit further has no legitimate physical effect — the field cannot deepen further. In the FFF_Gravity model, this represents a <strong>runaway amplification attempt</strong>: the caller is pushing emission into a field that has nowhere to go.</p>
+<p>The consequence is not catastrophic in the sense of f_Collapse (no entities are lost, no states are destroyed), but it is a hard block:</p>
+<ul>
+<li><code>emit_field</code> returns <code>FM-010</code> immediately</li>
+<li>No ρ(Φ) change occurs</li>
+<li>No E_emit is charged (zero-cost failure)</li>
+<li><code>EMIT_SATURATED</code> flag is set on Φ</li>
+<li>All active captures remain stable</li>
+</ul>
+<p><strong>Why the name "Amplify Runaway":</strong> In a real system using f_Amplify after f_Emit (the common sustained-emission pattern), FM-010 signals that the amplification loop has driven ρ(Φ) to 1.0 and must be paused. Without FM-010 detection, a naive amplification loop would spin indefinitely trying to push ρ(Φ) past its ceiling. FM-010 is the guard rail.</p>
+<h4 id="611-detection-code">§6.1.1 — Detection Code</h4>
+<pre><code class="language-python">def detect_fm010(phi: FieldState) -&gt; bool:
+    &quot;&quot;&quot;
+    Detect FM-010 (Amplify Runaway) condition.
+
+    FM-010 fires when emission is attempted against a saturated field.
+    This function checks the pre-condition; call before emit_field.
+
+    Args:
+        phi: Current field state.
+
+    Returns:
+        True if FM-010 condition is active (ρ(Φ) = 1.0), False if safe to emit.
+    &quot;&quot;&quot;
+    return phi.rho &gt;= 1.0
+</code></pre>
+<h4 id="612-recovery-code">§6.1.2 — Recovery Code</h4>
+<pre><code class="language-python">def recover_fm010(
+    attractor: Attractor,
+    phi: FieldState,
+    target_rho: float,
+    r_dampen: float
+) -&gt; FieldState:
+    &quot;&quot;&quot;
+    FM-010 recovery via f_Dampen.
+
+    Reduces ρ(Φ) from saturation to a target below 1.0 so that
+    emission can resume. The target_rho should leave meaningful
+    headroom (recommended: target_rho ≤ 0.90).
+
+    Args:
+        attractor:   The saturated attractor.
+        phi:         Current saturated field state (rho = 1.0).
+        target_rho:  Desired post-dampen field density (0.0 &lt; target &lt; 1.0).
+        r_dampen:    Dampening radius (see f_Dampen.md for constraints).
+
+    Returns:
+        Updated FieldState with rho = target_rho and EMIT_SATURATED cleared.
+
+    Raises:
+        ValueError: If target_rho &gt;= 1.0 or target_rho &lt;= 0.0.
+        RuntimeError: If f_Dampen fails (see f_Dampen.md for its own failure modes).
+    &quot;&quot;&quot;
+    if not (0.0 &lt; target_rho &lt; 1.0):
+        raise ValueError(
+            f&quot;FM-010 recovery target_rho must be in (0, 1); got {target_rho}&quot;
+        )
+
+    delta_dampen = phi.rho - target_rho  # amount to reduce
+
+    # Delegate to f_Dampen (canonical — see f_Dampen.md)
+    phi_recovered = f_dampen(attractor, phi, delta_rho=delta_dampen, r_dampen=r_dampen)
+
+    # Clear EMIT_SATURATED flag
+    phi_recovered.flags.discard(&quot;EMIT_SATURATED&quot;)
+    phi_recovered.flags.discard(&quot;EMIT_CEILING_APPROACHED&quot;)
+
+    return phi_recovered
+</code></pre>
+<h4 id="613-emit_ceiling_approached-early-warning-flag">§6.1.3 — EMIT_CEILING_APPROACHED — Early Warning Flag</h4>
+<p>Before FM-010 fires, the state flag <code>EMIT_CEILING_APPROACHED</code> is set when:</p>
+<pre><code>ρ(Φ) ≥ α_ceiling_warn  (default: α_ceiling_warn = 0.90)
+</code></pre>
+<p>This is an advisory flag — it does not block emission, but it signals to the caller that the field is within 10% of saturation (by default) and FM-010 is approaching. Automated emission loops should monitor for this flag and either:
+- Pause emission and allow natural decay to restore headroom, or
+- Invoke f_Dampen proactively to maintain a working range</p>
+<h3 id="62-fm-002-recovery-via-f_emit">§6.2 — FM-002 Recovery via f_Emit</h3>
+<p><code>f_Emit</code> is the <strong>primary recovery mechanism for FM-002 (Zero Field / Field Collapse)</strong>, as established in f_Field.md §6 and f_Decay.md §6.1.3.</p>
+<pre><code>FM-002 recovery condition:  emit_field called with any δρ &gt; 0 when ρ(Φ) = 0
+FM-002 recovery result:     ρ(Φ) = δρ &gt; 0 → FM-002 flag cleared
+Note: EC-1 is satisfied when ρ(Φ) = 0 (0 &lt; 1.0), so FM-002 recovery is always allowed
+</code></pre>
+<p>This means <code>f_Emit</code> and FM-002 have a special relationship: FM-002 is <strong>never</strong> a barrier to calling <code>emit_field</code>. A field at ρ(Φ) = 0 has maximum headroom (1.0), satisfies EC-1, and is the most cost-efficient state to emit into (E_emit is lowest per unit delta when ρ(Φ) is low).</p>
+<h3 id="63-fm-004-recovery-via-f_emit">§6.3 — FM-004 Recovery via f_Emit</h3>
+<p><code>f_Emit</code> is the <strong>primary recovery mechanism for FM-004 (Resonance Drift — Warn)</strong>, as established in f_Decay.md §6.1.3 (recovery pathway A):</p>
+<pre><code>FM-004 recovery pathway A:
+  1. detect FM-004 (d_bind &lt; d_warn, δ &lt; 0)
+  2. invoke f_Emit with δρ = recovery_delta &gt; 0
+  3. increased ρ(Φ) → increased v_escape(A) → tighter binding → d_bind rises next cycle
+  4. if d_bind rises above d_warn: FM-004 cleared, RESONANCE_STABLE restored
+</code></pre>
+<p>Note that f_Emit addresses the <strong>root cause</strong> of FM-004 (field weakening), not just the symptom. This distinguishes it from a patch: a successful f_Emit in FM-004 recovery produces a genuinely deepened coherence well, not a superficial state flag reset.</p>
+<hr>
+<h2 id="7-engineering-primitives">§7 — Engineering Primitives</h2>
+<!-- section: engineering-primitives | PRIM:015-017 -->
+
+<p>All primitives follow the established FFF_Gravity conventions:
+- <strong>Pure functions</strong> (no side effects beyond return value) are tagged <code>[PURE]</code>
+- <strong>Impure functions</strong> (modify FieldState, trigger side effects) are tagged <code>[IMPURE]</code>
+- All type hints are illustrative (implementation-language-agnostic)
+- Full docstrings are normative — they constitute the primitive's specification</p>
+<h3 id="71-prim015-emit_field-impure">§7.1 — PRIM:015 — emit_field [IMPURE]</h3>
+<pre><code class="language-python">def emit_field(
+    attractor: Attractor,
+    phi: FieldState,
+    delta_rho: float,
+    r_emit: float,
+    k_emit: float = 1.0,
+    k_cost: float = 1.0
+) -&gt; FieldState:
+    &quot;&quot;&quot;
+    PRIM:015 — emit_field [IMPURE]
+    ==============================
+    Canonical F_freq emission primitive. Increases the local field density
+    ρ(Φ) of the attractor A by delta_rho (clipped to available headroom) within
+    the spatial radius r_emit.
+
+    This is the canonical implementation of the emit_field contract established
+    in f_Field.md §7.1. PRIM:015 extends that contract with full condition
+    checking, cost computation, post-condition enforcement, and FM-010 handling.
+
+    Evaluation order (per INV-008):
+        1. EC-1 check via check_emit_ceiling (FM-010 if violated)
+        2. EC-2 check (r_emit bounds)
+        3. Compute ρ(Φ)_delta (clip to headroom)
+        4. Compute E_emit via compute_emit_cost
+        5. Update ρ(Φ) in phi
+        6. Update Ψ(A), v_escape(A) references
+        7. Set/clear state flags
+        8. Return Φ_updated
+
+    Args:
+        attractor:   The attractor whose field is being deepened.
+        phi:         Current field state (contains rho, flags, coherence data).
+        delta_rho:   Requested density increment. Must be &gt; 0.
+        r_emit:      Emission radius. Must satisfy 0 &lt; r_emit ≤ r_capture.
+        k_emit:      Emission coupling constant (default 1.0). See §4.1.
+        k_cost:      Emission cost scalar (default 1.0). See §4.1.
+
+    Returns:
+        FieldState: Updated field state with:
+            - rho increased by realized ρ(Φ)_delta
+            - Ψ(A) updated (coherence signature risen)
+            - v_escape updated (derived, not stored — recomputed on access)
+            - capacity_MAX updated (derived, not stored — recomputed on access)
+            - Flags updated (EMIT_ACTIVE set; EMIT_SATURATED cleared if was set)
+            - EMIT_CEILING_APPROACHED set if rho_new ≥ α_ceiling_warn
+
+    Raises:
+        FM010Error:    EC-1 violated — ρ(Φ)_current = 1.0 (no headroom).
+        ValueError:    delta_rho ≤ 0 or r_emit violates EC-2.
+        RuntimeError:  phi is in a terminal state (CAPTURE_COLLISION or COLLAPSED).
+
+    Side effects:
+        - Modifies phi.rho, phi.coherence_signature, phi.flags in place
+          (caller receives updated reference).
+        - Logs emission event to GravityGraph audit trail.
+        - Emits EMIT_COMPLETE event to registered observers.
+
+    Cost:
+        E_emit = M_A · ρ(Φ)_delta · r_emit² · k_cost
+        (Computed but not deducted here — caller is responsible for energy accounting.)
+        Call compute_emit_cost (PRIM:016) beforehand if pre-validation is required.
+    &quot;&quot;&quot;
+    # ── Guard: terminal states ──────────────────────────────────────────────
+    if phi.flags &amp; {&quot;CAPTURE_COLLISION&quot;, &quot;COLLAPSED&quot;}:
+        raise RuntimeError(
+            &quot;emit_field called on terminal field state — emission is not permitted &quot;
+            &quot;after CAPTURE_COLLISION or COLLAPSED. (INV-006: terminal states irreversible)&quot;
+        )
+
+    # ── Guard: delta_rho must be positive ──────────────────────────────────
+    if delta_rho &lt;= 0:
+        raise ValueError(f&quot;delta_rho must be &gt; 0; got {delta_rho}&quot;)
+
+    # ── EC-1: Headroom Bound ────────────────────────────────────────────────
+    ceiling_ok, headroom = check_emit_ceiling(phi)
+    if not ceiling_ok:
+        phi.flags.add(&quot;EMIT_SATURATED&quot;)
+        raise FM010Error(
+            &quot;FM-010 (Amplify Runaway): emit_field called on saturated field &quot;
+            f&quot;(ρ(Φ) = {phi.rho:.4f}). Invoke f_Dampen to restore headroom before &quot;
+            &quot;resuming emission.&quot;
+        )
+
+    # ── EC-2: Radius Bound ─────────────────────────────────────────────────
+    if r_emit &lt;= 0:
+        raise ValueError(f&quot;r_emit must be &gt; 0; got {r_emit}&quot;)
+    if r_emit &gt; attractor.r_capture:
+        raise ValueError(
+            f&quot;r_emit ({r_emit}) exceeds r_capture ({attractor.r_capture}). &quot;
+            &quot;EC-2 violated — emission radius cannot exceed capture boundary.&quot;
+        )
+
+    # ── Compute realized delta (clip to headroom) ──────────────────────────
+    rho_delta_realized = min(delta_rho, headroom)
+
+    # ── Compute emission cost (informational — energy deduction is caller's) ─
+    e_emit = compute_emit_cost(
+        m_a=attractor.mass,
+        rho_delta=rho_delta_realized,
+        r_emit=r_emit,
+        k_cost=k_cost
+    )
+    phi.last_emit_cost = e_emit  # record for caller inspection
+
+    # ── Apply density increment ────────────────────────────────────────────
+    rho_prior = phi.rho
+    phi.rho = rho_prior + rho_delta_realized  # always ≤ 1.0 by construction
+    phi.rho = min(phi.rho, 1.0)               # defensive clamp
+
+    # ── Update coherence signature Ψ(A) ───────────────────────────────────
+    phi.coherence_signature = _compute_coherence_signature(attractor, phi)
+
+    # ── Update state flags ─────────────────────────────────────────────────
+    phi.flags.discard(&quot;EMIT_SATURATED&quot;)       # clear stale saturation flag
+    phi.flags.add(&quot;EMIT_ACTIVE&quot;)
+
+    # Early-warning ceiling approach flag
+    ALPHA_CEILING_WARN: float = 0.90
+    if phi.rho &gt;= ALPHA_CEILING_WARN:
+        phi.flags.add(&quot;EMIT_CEILING_APPROACHED&quot;)
+    else:
+        phi.flags.discard(&quot;EMIT_CEILING_APPROACHED&quot;)
+
+    # FM-002 flag clear (ρ(Φ) &gt; 0 guaranteed here)
+    phi.flags.discard(&quot;FIELD_COLLAPSED&quot;)      # FM-002 state flag
+
+    # ── Notify GravityGraph ────────────────────────────────────────────────
+    _notify_gravity_graph(
+        event=&quot;EMIT_COMPLETE&quot;,
+        attractor=attractor,
+        rho_prior=rho_prior,
+        rho_new=phi.rho,
+        rho_delta=rho_delta_realized,
+        r_emit=r_emit,
+        e_emit=e_emit
+    )
+
+    return phi
+</code></pre>
+<h3 id="72-prim016-compute_emit_cost-pure">§7.2 — PRIM:016 — compute_emit_cost [PURE]</h3>
+<pre><code class="language-python">def compute_emit_cost(
+    m_a: float,
+    rho_delta: float,
+    r_emit: float,
+    k_cost: float = 1.0
+) -&gt; float:
+    &quot;&quot;&quot;
+    PRIM:016 — compute_emit_cost [PURE]
+    ====================================
+    Compute the energy cost of a prospective emission operation before execution.
+
+    This pure function enables callers to pre-validate cost before calling
+    emit_field (PRIM:015). It implements the E_emit formula:
+
+        E_emit = M_A · ρ(Φ)_delta · r_emit² · k_cost
+
+    Args:
+        m_a:       Attractor mass-density M_A. Must be &gt; 0.
+        rho_delta: Realized density increment ρ(Φ)_delta (already clipped
+                   to headroom by the caller or by check_emit_ceiling).
+                   Must be ≥ 0.
+        r_emit:    Emission radius. Must be &gt; 0.
+        k_cost:    Emission cost scalar (default 1.0).
+
+    Returns:
+        float: E_emit — the energy cost of the emission. Non-negative.
+               Returns 0.0 when rho_delta = 0 (no-op emission).
+
+    Raises:
+        ValueError: If m_a ≤ 0, r_emit ≤ 0, k_cost ≤ 0, or rho_delta &lt; 0.
+
+    Notes:
+        - This function is pure: it has no side effects and does not modify any state.
+        - The caller is responsible for energy deduction (E_emit is returned, not spent).
+        - The quadratic r_emit² term reflects volumetric field coverage cost.
+        - At fixed δρ and r_emit, cost scales linearly with M_A: more massive
+          attractors require proportionally more energy to deepen their field.
+    &quot;&quot;&quot;
+    if m_a &lt;= 0:
+        raise ValueError(f&quot;m_a must be &gt; 0; got {m_a}&quot;)
+    if r_emit &lt;= 0:
+        raise ValueError(f&quot;r_emit must be &gt; 0; got {r_emit}&quot;)
+    if k_cost &lt;= 0:
+        raise ValueError(f&quot;k_cost must be &gt; 0; got {k_cost}&quot;)
+    if rho_delta &lt; 0:
+        raise ValueError(f&quot;rho_delta must be ≥ 0; got {rho_delta}&quot;)
+
+    return m_a * rho_delta * (r_emit ** 2) * k_cost
+</code></pre>
+<h3 id="73-prim017-check_emit_ceiling-pure">§7.3 — PRIM:017 — check_emit_ceiling [PURE]</h3>
+<pre><code class="language-python">def check_emit_ceiling(
+    phi: FieldState,
+    alpha_warn: float = 0.90
+) -&gt; tuple[bool, float]:
+    &quot;&quot;&quot;
+    PRIM:017 — check_emit_ceiling [PURE]
+    =====================================
+    Check whether emission is safe (EC-1) and compute available headroom.
+
+    This is the canonical EC-1 gate. It must be called at the start of every
+    emit_field invocation. The function:
+      1. Returns False (blocked) if ρ(Φ) = 1.0 (FM-010 condition).
+      2. Returns True (safe) with headroom if ρ(Φ) &lt; 1.0.
+      3. Notes proximity to ceiling via the second return value.
+
+    Args:
+        phi:        Current field state.
+        alpha_warn: Ceiling approach threshold (default 0.90).
+                    When phi.rho ≥ alpha_warn, headroom is considered
+                    &quot;low&quot; and the caller should plan dampening.
+
+    Returns:
+        Tuple[bool, float]:
+            - bool:  True if emission is permitted (EC-1 satisfied),
+                     False if FM-010 applies (ρ(Φ) = 1.0).
+            - float: Available headroom = 1.0 − ρ(Φ)_current.
+                     0.0 when EC-1 is violated.
+
+    Raises:
+        ValueError: If phi.rho &lt; 0 (invalid field state — invariant violation).
+
+    Notes:
+        - Pure function: reads phi.rho only, no mutations.
+        - Headroom &lt; (1.0 − alpha_warn) signals EMIT_CEILING_APPROACHED territory.
+        - Callers should treat headroom &lt; 0.05 as requiring f_Dampen before
+          any further emission cycle to prevent FM-010 on the next call.
+
+    Examples:
+        &gt;&gt;&gt; check_emit_ceiling(phi_with_rho_0_7)
+        (True, 0.30)
+
+        &gt;&gt;&gt; check_emit_ceiling(phi_with_rho_1_0)
+        (False, 0.0)
+
+        &gt;&gt;&gt; check_emit_ceiling(phi_with_rho_0_95)
+        (True, 0.05)  # EMIT_CEILING_APPROACHED territory
+    &quot;&quot;&quot;
+    if phi.rho &lt; 0:
+        raise ValueError(
+            f&quot;Invalid field state: phi.rho = {phi.rho} &lt; 0. &quot;
+            &quot;Module invariant violation (INV-003 consequence).&quot;
+        )
+
+    if phi.rho &gt;= 1.0:
+        return False, 0.0
+
+    headroom = 1.0 - phi.rho
+    return True, headroom
+</code></pre>
+<hr>
+<h2 id="8-canonical-examples">§8 — Canonical Examples</h2>
+<!-- section: canonical-examples | 4 examples -->
+
+<h3 id="81-example-1-fm-004-recovery-via-emergency-emission">§8.1 — Example 1: FM-004 Recovery via Emergency Emission</h3>
+<p><strong>Scenario:</strong> A captured satellite is in FM-004 (Resonance Drift — Warn). The field density has decayed to ρ(Φ) = 0.28, below the d_warn threshold. f_Decay has issued a warn flag. f_Emit is called to restore field coherence before decay reaches d_collapse.</p>
+<p><strong>Initial Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M_A (planetary attractor)</td>
+<td>5.97</td>
+</tr>
+<tr>
+<td>M_E (satellite)</td>
+<td>0.15</td>
+</tr>
+<tr>
+<td>ρ(Φ)_current</td>
+<td>0.28</td>
+</tr>
+<tr>
+<td>r_capture</td>
+<td>12.4</td>
+</tr>
+<tr>
+<td>d_bind(0)</td>
+<td>9.40</td>
+</tr>
+<tr>
+<td>d_bind(t)</td>
+<td>3.94 (= 0.42 × d_bind(0))</td>
+</tr>
+<tr>
+<td>d_warn</td>
+<td>3.76 (= 0.40 × d_bind(0))</td>
+</tr>
+<tr>
+<td>d_collapse</td>
+<td>0.94 (= 0.10 × d_bind(0))</td>
+</tr>
+<tr>
+<td>Active flags</td>
+<td>FM_WARN_ACTIVE, RESONANCE_DRIFTING</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Emission Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>δρ_requested</td>
+<td>0.35</td>
+<td>—</td>
+</tr>
+<tr>
+<td>r_emit</td>
+<td>10.0</td>
+<td>≤ r_capture (12.4) ✅ EC-2</td>
+</tr>
+<tr>
+<td>EC-1: headroom</td>
+<td>0.72 (= 1.0 − 0.28)</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>ρ(Φ)_delta</td>
+<td>0.35</td>
+<td>(&lt; headroom; no clip)</td>
+</tr>
+<tr>
+<td>E_emit</td>
+<td>5.97 × 0.35 × 100 × 1.0 = <strong>208.95</strong></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Post-Emission State:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Before</th>
+<th>After</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ρ(Φ)</td>
+<td>0.28</td>
+<td><strong>0.63</strong></td>
+</tr>
+<tr>
+<td>v_escape(A)</td>
+<td>√(2 × 5.97 × 0.28 / 12.4) = 0.519</td>
+<td><strong>√(2 × 5.97 × 0.63 / 12.4) = 0.779</strong></td>
+</tr>
+<tr>
+<td>β</td>
+<td>0.15 × 0.28 / 5.97 = 0.00704</td>
+<td><strong>0.15 × 0.63 / 5.97 = 0.01584</strong></td>
+</tr>
+<tr>
+<td>capacity_MAX</td>
+<td>floor(5.97 × 0.28 × k_frame)</td>
+<td><strong>floor(5.97 × 0.63 × k_frame)</strong></td>
+</tr>
+<tr>
+<td>d_bind (next cycle)</td>
+<td>3.94 → rising</td>
+<td>Rising — FM-004 recovery pathway active</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Trace:</strong></p>
+<pre><code>[FM-004 detected] d_bind = 3.94, d_warn = 3.76 → WARN threshold crossed
+[EC-1 check] ρ(Φ) = 0.28 &lt; 1.0 → headroom = 0.72 ✅
+[EC-2 check] r_emit = 10.0 ≤ r_capture = 12.4 ✅
+[compute_emit_cost] E_emit = 5.97 × 0.35 × 100 = 208.95
+[emit_field] ρ(Φ): 0.28 → 0.63
+[flags] FM_WARN_ACTIVE cleared | EMIT_ACTIVE set
+[next decay cycle] d_bind rises (ρ(Φ) deepened) → RESONANCE_STABLE on track
+</code></pre>
+<p><strong>Outcome:</strong> FM-004 recovery initiated. If field holds at ρ(Φ) ≥ 0.63 for the next decay cycle, d_bind crosses back above d_warn and FM-004 is cleared.</p>
+<hr>
+<h3 id="82-example-2-frame-capacity-expansion-via-targeted-emission">§8.2 — Example 2: Frame Capacity Expansion via Targeted Emission</h3>
+<p><strong>Scenario:</strong> An attractor A has reached its frame capacity (capacity_MAX = 3, all slots filled). A new capture candidate arrives (entity E_4). Rather than calling f_Collapse or discarding E_4, the operator calls f_Emit to increase ρ(Φ), which indirectly expands capacity_MAX.</p>
+<p><strong>Initial Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M_A</td>
+<td>8.00</td>
+</tr>
+<tr>
+<td>ρ(Φ)_current</td>
+<td>0.45</td>
+</tr>
+<tr>
+<td>k_frame</td>
+<td>0.833</td>
+</tr>
+<tr>
+<td>capacity_MAX</td>
+<td>floor(8.00 × 0.45 × 0.833) = floor(2.999) = <strong>2</strong></td>
+</tr>
+<tr>
+<td>captured entities</td>
+<td>2 (slots full at capacity = 2)</td>
+</tr>
+</tbody>
+</table>
+<p><em>(Note: k_frame = 0.833 gives capacity = 2 for this M_A/ρ(Φ) combination.)</em></p>
+<p><strong>Goal:</strong> Raise capacity_MAX to 3 to accommodate E_4. Need: floor(M_A × ρ(Φ)_new × k_frame) ≥ 3.</p>
+<p><strong>Required ρ(Φ)_new:</strong> 3 / (8.00 × 0.833) = 3 / 6.664 = <strong>0.450...</strong> → need ρ(Φ) &gt; 0.450 strictly.</p>
+<p>Minimum viable ρ(Φ)_delta = 0.001 above current 0.45 → let's use δρ = 0.05 for safe margin.</p>
+<p><strong>Emission Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>δρ_requested</td>
+<td>0.05</td>
+<td>—</td>
+</tr>
+<tr>
+<td>r_emit</td>
+<td>6.0</td>
+<td>≤ r_capture (assumed 9.2) ✅ EC-2</td>
+</tr>
+<tr>
+<td>EC-1: headroom</td>
+<td>0.55</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>ρ(Φ)_delta</td>
+<td>0.05</td>
+<td>(no clip needed)</td>
+</tr>
+<tr>
+<td>E_emit</td>
+<td>8.00 × 0.05 × 36 × 1.0 = <strong>14.40</strong></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Post-Emission State:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Before</th>
+<th>After</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ρ(Φ)</td>
+<td>0.45</td>
+<td><strong>0.50</strong></td>
+</tr>
+<tr>
+<td>capacity_MAX</td>
+<td>floor(8.00 × 0.45 × 0.833) = <strong>2</strong></td>
+<td>floor(8.00 × 0.50 × 0.833) = floor(3.332) = <strong>3</strong></td>
+</tr>
+<tr>
+<td>Slots available</td>
+<td>0</td>
+<td><strong>1</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Trace:</strong></p>
+<pre><code>[SC-5 check] capacity_remaining = 0 → capture of E_4 blocked
+[decision] f_Emit to expand capacity_MAX
+[EC-1 check] ρ(Φ) = 0.45 &lt; 1.0 → headroom = 0.55 ✅
+[EC-2 check] r_emit = 6.0 ≤ r_capture = 9.2 ✅
+[compute_emit_cost] E_emit = 8.00 × 0.05 × 36 = 14.40
+[emit_field] ρ(Φ): 0.45 → 0.50
+[capacity_MAX] 2 → 3 (SC-5 now satisfied for E_4)
+[f_Capture] E_4 captured — SC-1 through SC-5 all satisfied
+</code></pre>
+<p><strong>Outcome:</strong> Frame capacity expanded from 2 to 3 via a minimal, cost-efficient f_Emit call (E_emit = 14.40). E_4 successfully captured without requiring any collapse of existing relationships.</p>
+<hr>
+<h3 id="83-example-3-cold-start-bootstrap">§8.3 — Example 3: Cold-Start Bootstrap</h3>
+<p><strong>Scenario:</strong> A newly initialized attractor A has ρ(Φ) = 0.0 (field not yet established). FM-002 (Zero Field) is active. No captures are possible until ρ(Φ) &gt; 0. A bootstrap emission sequence is required to bring the field to a viable operating density.</p>
+<p><strong>Initial Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M_A</td>
+<td>3.50</td>
+</tr>
+<tr>
+<td>ρ(Φ)_current</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>Active flags</td>
+<td>FIELD_COLLAPSED (FM-002)</td>
+</tr>
+<tr>
+<td>r_capture</td>
+<td>Undefined (no captures yet — use operational r_capture = 7.0)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bootstrap Sequence (3 pulses, conservative approach):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Pulse</th>
+<th>δρ</th>
+<th>r_emit</th>
+<th>E_emit</th>
+<th>ρ(Φ) after</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0.20</td>
+<td>4.0</td>
+<td>3.50 × 0.20 × 16 = 11.20</td>
+<td>0.20</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0.20</td>
+<td>5.0</td>
+<td>3.50 × 0.20 × 25 = 17.50</td>
+<td>0.40</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0.15</td>
+<td>6.0</td>
+<td>3.50 × 0.15 × 36 = 18.90</td>
+<td>0.55</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>0.55</strong></td>
+<td>—</td>
+<td><strong>47.60</strong></td>
+<td><strong>0.55</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Post-Bootstrap State:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Before</th>
+<th>After</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ρ(Φ)</td>
+<td>0.00</td>
+<td><strong>0.55</strong></td>
+</tr>
+<tr>
+<td>FM-002 (FIELD_COLLAPSED)</td>
+<td>Active</td>
+<td><strong>Cleared</strong> (after Pulse 1)</td>
+</tr>
+<tr>
+<td>v_escape(A)</td>
+<td>Undefined</td>
+<td><strong>√(2 × 3.50 × 0.55 / 7.0) = 0.742</strong></td>
+</tr>
+<tr>
+<td>SC-2 satisfied</td>
+<td>❌</td>
+<td><strong>✅</strong></td>
+</tr>
+<tr>
+<td>SC-3 satisfied</td>
+<td>❌</td>
+<td><strong>✅</strong> (assuming ω_res computed from ρ(Φ) = 0.55)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Trace:</strong></p>
+<pre><code>[FM-002 active] ρ(Φ) = 0.0 → no captures possible
+[Pulse 1] EC-1: 0.0 &lt; 1.0 ✅ | EC-2: 4.0 ≤ 7.0 ✅
+          emit_field → ρ(Φ): 0.00 → 0.20 | FIELD_COLLAPSED cleared ✅
+[Pulse 2] EC-1: 0.2 &lt; 1.0 ✅ | EC-2: 5.0 ≤ 7.0 ✅
+          emit_field → ρ(Φ): 0.20 → 0.40
+[Pulse 3] EC-1: 0.4 &lt; 1.0 ✅ | EC-2: 6.0 ≤ 7.0 ✅
+          emit_field → ρ(Φ): 0.40 → 0.55
+[SC-2] ρ(Φ) = 0.55 &gt; 0 ✅ | field uniform within r_emit = 6.0 ✅
+[operational] A ready for capture attempts — FM-002 resolved
+</code></pre>
+<p><strong>Outcome:</strong> A cold attractor bootstrapped to ρ(Φ) = 0.55 via 3 progressive pulses. Total cost: 47.60 energy units. FM-002 cleared after Pulse 1. The progressive pulse pattern (expanding r_emit each pulse) ensures spatial coherence builds from the center outward, avoiding discontinuities in the field state.</p>
+<hr>
+<h3 id="84-example-4-fm-010-trigger-and-prevention">§8.4 — Example 4: FM-010 Trigger and Prevention</h3>
+<p><strong>Scenario:</strong> An automated emission loop is running to sustain ρ(Φ) during high-activity capture operations. The loop fails to check <code>EMIT_CEILING_APPROACHED</code> and drives ρ(Φ) to 1.0, triggering FM-010.</p>
+<p><strong>Part A — FM-010 Trigger:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>ρ(Φ)</th>
+<th>δρ requested</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Loop iter 1</td>
+<td>0.70</td>
+<td>0.10</td>
+<td>✅ → ρ(Φ) = 0.80</td>
+</tr>
+<tr>
+<td>Loop iter 2</td>
+<td>0.80</td>
+<td>0.10</td>
+<td>✅ → ρ(Φ) = 0.90 (EMIT_CEILING_APPROACHED set)</td>
+</tr>
+<tr>
+<td>Loop iter 3</td>
+<td>0.90</td>
+<td>0.10</td>
+<td>✅ → ρ(Φ) = 1.00 (clipped to ceiling)</td>
+</tr>
+<tr>
+<td>Loop iter 4</td>
+<td>1.00</td>
+<td>0.10</td>
+<td>❌ <strong>FM-010</strong> — EMIT_SATURATED set; emission blocked</td>
+</tr>
+</tbody>
+</table>
+<pre><code>[Loop iter 4] EC-1: ρ(Φ) = 1.0 ≥ 1.0 → VIOLATION
+              FM-010 raised: FM010Error(&quot;Amplify Runaway&quot;)
+              EMIT_SATURATED flag set
+              Loop terminates (
+Resuming exactly where the file was cut. Paste this block immediately after the truncation point (starting at the `Loop terminates (unhandled exception if not caught))
+</code></pre>
+<p><strong>Part A Interpretation:</strong> The loop correctly ran for iterations 1–3, with iter 3 delivering a clipped increment (requested 0.10, headroom = 0.10, so ρ(Φ)_delta = 0.10 — exactly at ceiling). Iter 4 finds ρ(Φ) = 1.0, EC-1 fails, and FM-010 fires. The error is recoverable but interrupts the loop.</p>
+<hr>
+<p><strong>Part B — Prevention (Corrected Pattern):</strong></p>
+<p>The correct automated emission loop checks <code>EMIT_CEILING_APPROACHED</code> and pauses before FM-010 can fire:</p>
+<pre><code class="language-python">def sustained_emission_loop(
+    attractor: Attractor,
+    phi: FieldState,
+    target_rho: float,
+    delta_rho_per_pulse: float,
+    r_emit: float,
+    max_pulses: int = 100,
+    headroom_reserve: float = 0.05
+) -&gt; tuple[FieldState, int]:
+    &quot;&quot;&quot;
+    Safe sustained emission loop with FM-010 prevention.
+
+    Emits in repeated pulses toward target_rho, stopping automatically
+    when ρ(Φ) approaches the ceiling or the target is reached.
+
+    Args:
+        attractor:          Attractor whose field is being deepened.
+        phi:                Current field state.
+        target_rho:         Desired final ρ(Φ) (must be &lt; 1.0).
+        delta_rho_per_pulse: Density increment per pulse.
+        r_emit:             Emission radius (EC-2 constraint applies).
+        max_pulses:         Safety cap on loop iterations.
+        headroom_reserve:   Minimum headroom to maintain (stop before
+                            dropping below this). Default 0.05 = 5%.
+
+    Returns:
+        Tuple of (updated FieldState, pulses_executed).
+
+    Raises:
+        ValueError: If target_rho ≥ 1.0 or target_rho ≤ phi.rho.
+    &quot;&quot;&quot;
+    if target_rho &gt;= 1.0:
+        raise ValueError(f&quot;target_rho must be &lt; 1.0; got {target_rho}&quot;)
+    if target_rho &lt;= phi.rho:
+        return phi, 0  # already at or above target
+
+    pulses = 0
+    while pulses &lt; max_pulses:
+        # FM-010 prevention: check headroom before each pulse
+        ceiling_ok, headroom = check_emit_ceiling(phi)  # PRIM:017
+
+        if not ceiling_ok:
+            # Should never reach here in a safe loop, but defensive guard
+            break
+
+        # Stop if we've hit the headroom reserve floor
+        if headroom &lt; headroom_reserve:
+            # EMIT_CEILING_APPROACHED is set — pause and let natural decay
+            # restore some headroom before resuming, or call f_Dampen
+            break
+
+        # Stop if target is reached
+        if phi.rho &gt;= target_rho:
+            break
+
+        # Clip pulse to minimum of: requested delta, available headroom,
+        # and remaining distance to target
+        delta_this_pulse = min(
+            delta_rho_per_pulse,
+            headroom - headroom_reserve,        # keep reserve
+            target_rho - phi.rho                # don't overshoot target
+        )
+
+        if delta_this_pulse &lt;= 0:
+            break
+
+        phi = emit_field(attractor, phi, delta_this_pulse, r_emit)  # PRIM:015
+        pulses += 1
+
+    return phi, pulses
+</code></pre>
+<p><strong>Corrected loop trace for Example 4:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Pulse</th>
+<th>ρ(Φ) before</th>
+<th>headroom</th>
+<th>delta_applied</th>
+<th>ρ(Φ) after</th>
+<th>flags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0.70</td>
+<td>0.30</td>
+<td>0.10</td>
+<td>0.80</td>
+<td>EMIT_ACTIVE</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0.80</td>
+<td>0.20</td>
+<td>0.10</td>
+<td>0.90</td>
+<td>EMIT_CEILING_APPROACHED ⚠️</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0.90</td>
+<td>0.10</td>
+<td>0.05 (reserve=0.05 → stop delta = 0.10−0.05=0.05)</td>
+<td>0.95</td>
+<td>paused</td>
+</tr>
+<tr>
+<td>—</td>
+<td>Loop exits (headroom reserve 0.05 reached) — FM-010 never fires</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Outcome:</strong> FM-010 prevented by <code>headroom_reserve</code> guard. Loop exits cleanly at ρ(Φ) = 0.95 with 5% headroom intact. If more emission is needed, the caller must either accept the current level, wait for natural decay to free headroom, or call <code>f_Dampen</code> to intentionally lower ρ(Φ) before resuming.</p>
+<p><strong>Key lesson:</strong> FM-010 is always an engineering error, never an unavoidable condition. Any emission loop that lacks a <code>check_emit_ceiling</code> call and a headroom reserve will eventually trigger it. PRIM:017 exists precisely to prevent this.</p>
+<hr>
+<h2 id="9-cross-module-references">§9 — Cross-Module References</h2>
+<!-- section: cross-module-references | status: canonical -->
+
+<h3 id="91-files-that-call-f_emit">§9.1 — Files That Call f_Emit</h3>
+<table>
+<thead>
+<tr>
+<th>Caller</th>
+<th>Context</th>
+<th>Interface</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f_Decay.md</td>
+<td>FM-004 recovery pathway A (d_bind falling; increase ρ(Φ) to restore d_bind)</td>
+<td>emit_field(A, Φ, δρ, r_emit)</td>
+</tr>
+<tr>
+<td>f_Frame.md</td>
+<td>Capacity expansion when capacity_MAX insufficient (indirect — operator invocation)</td>
+<td>emit_field(A, Φ, δρ, r_emit)</td>
+</tr>
+<tr>
+<td>f_Capture_Resonant.md</td>
+<td>Target field tuning (set ρ(Φ) to achieve desired ω_res for resonant capture)</td>
+<td>emit_field(A, Φ, δρ, r_emit)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="92-files-that-f_emit-depends-on">§9.2 — Files That f_Emit Depends On</h3>
+<table>
+<thead>
+<tr>
+<th>Dependency</th>
+<th>Role</th>
+<th>What f_Emit Reads</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f_Field.md</td>
+<td>F_freq node definition, ρ(Φ) semantics, FM-002, Ψ(A)</td>
+<td>ρ(Φ), Ψ, coherence well model</td>
+</tr>
+<tr>
+<td>f_Frame.md</td>
+<td>capacity_MAX derivation (affected by ρ(Φ) change)</td>
+<td>M_A, k_frame, capacity formula</td>
+</tr>
+<tr>
+<td>f_Decay.md</td>
+<td>FM-004 context — caller provides d_bind, d_warn</td>
+<td>FM-004 state flag</td>
+</tr>
+<tr>
+<td>OPERATORS.md</td>
+<td>Symbol authority — F_emit, r_emit, E_emit all registered here</td>
+<td>Freeze registry</td>
+</tr>
+<tr>
+<td>GLOSSARY.md</td>
+<td>Prose definitions: Coherence Well, Field Density, Gravity Emitter</td>
+<td>Term authority</td>
+</tr>
+</tbody>
+</table>
+<h3 id="93-files-that-interact-inversely">§9.3 — Files That Interact Inversely</h3>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Relationship</th>
+<th>Interaction Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f_Dampen.md</td>
+<td>Inverse primitive — decreases ρ(Φ)</td>
+<td>FM-010 recovery calls f_Dampen; sustained emission + Dampen cycle is the field modulation pattern</td>
+</tr>
+<tr>
+<td>f_Amplify.md</td>
+<td>Complementary primitive — multiplies β (not ρ(Φ) directly)</td>
+<td>Often paired with f_Emit: Emit deepens the well, Amplify tightens the binding coefficient</td>
+</tr>
+<tr>
+<td>f_Capture_Resonant.md</td>
+<td>Consumer — uses f_Emit to tune field for target resonance</td>
+<td>Resonant approach engineering uses emit to pre-set ρ(Φ) to a target value before approach</td>
+</tr>
+</tbody>
+</table>
+<h3 id="94-gravitygraph-events-emitted">§9.4 — GravityGraph Events Emitted</h3>
+<p>When <code>emit_field</code> executes and a GravityGraph observer is registered, the following events are dispatched:</p>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Trigger</th>
+<th>Payload</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>EMIT_COMPLETE</code></td>
+<td>Successful emission</td>
+<td>attractor_id, rho_prior, rho_new, rho_delta, r_emit, e_emit, cycle</td>
+</tr>
+<tr>
+<td><code>EMIT_CEILING_APPROACHED</code></td>
+<td>ρ(Φ) ≥ α_ceiling_warn (0.90)</td>
+<td>attractor_id, rho_current, headroom_remaining</td>
+</tr>
+<tr>
+<td><code>EMIT_SATURATED</code></td>
+<td>FM-010 triggered</td>
+<td>attractor_id, rho_current, cycle</td>
+</tr>
+<tr>
+<td><code>FM002_CLEARED</code></td>
+<td>ρ(Φ) &gt; 0 after FM-002 recovery</td>
+<td>attractor_id, rho_new, cycle</td>
+</tr>
+</tbody>
+</table>
+<h3 id="95-operatorsmd-updates-required">§9.5 — OPERATORS.md Updates Required</h3>
+<p>The following entries must be updated in OPERATORS.md after this file is committed:</p>
+<table>
+<thead>
+<tr>
+<th>Entry</th>
+<th>Current State</th>
+<th>Update Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>F_emit</code></td>
+<td>🔵 pending (stub in §2.2)</td>
+<td>🟢 frozen — source: f_Emit.md §4.1</td>
+</tr>
+<tr>
+<td><code>ρ(Φ)_delta</code></td>
+<td>🔵 pending</td>
+<td>🟢 frozen — source: f_Emit.md §4.1</td>
+</tr>
+<tr>
+<td><code>r_emit</code></td>
+<td>🔵 pending (stub in §2.2)</td>
+<td>🟢 frozen — source: f_Emit.md §4.1</td>
+</tr>
+<tr>
+<td><code>E_emit</code></td>
+<td>🔵 pending</td>
+<td>🟢 frozen — source: f_Emit.md §4.1</td>
+</tr>
+<tr>
+<td>PRIM:015 <code>emit_field</code></td>
+<td>pending</td>
+<td>🟢 frozen — source: f_Emit.md §7.1</td>
+</tr>
+<tr>
+<td>PRIM:016 <code>compute_emit_cost</code></td>
+<td>pending</td>
+<td>🟢 frozen — source: f_Emit.md §7.2</td>
+</tr>
+<tr>
+<td>PRIM:017 <code>check_emit_ceiling</code></td>
+<td>pending</td>
+<td>🟢 frozen — source: f_Emit.md §7.3</td>
+</tr>
+<tr>
+<td>FM-010 <code>Amplify Runaway</code></td>
+<td>pending</td>
+<td>🟢 frozen — source: f_Emit.md §6.1</td>
+</tr>
+<tr>
+<td><code>EMIT_ACTIVE</code> state flag</td>
+<td>pending</td>
+<td>🟢 frozen — source: f_Emit.md §7.1</td>
+</tr>
+<tr>
+<td><code>EMIT_SATURATED</code> state flag</td>
+<td>pending</td>
+<td>🟢 frozen — source: f_Emit.md §6.1</td>
+</tr>
+<tr>
+<td><code>EMIT_CEILING_APPROACHED</code> state flag</td>
+<td>pending</td>
+<td>🟢 frozen — source: f_Emit.md §7.3</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="10-document-metadata">§10 — Document Metadata</h2>
+<!-- section: document-metadata | status: canonical | frozen: 2026-08-13 -->
+
+<h3 id="101-inv-compliance-table">§10.1 — INV Compliance Table</h3>
+<table>
+<thead>
+<tr>
+<th>INV</th>
+<th>Statement</th>
+<th>Compliance in f_Emit.md</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INV-001</td>
+<td>G = F_freq · F_fluid · F_force</td>
+<td>✅ §3.3 shows ρ(Φ) change propagates through all three nodes</td>
+</tr>
+<tr>
+<td>INV-002</td>
+<td>f_Capture(E, A, Φ) → Ω frozen</td>
+<td>✅ f_Emit is downstream; f_Capture signature not touched</td>
+</tr>
+<tr>
+<td>INV-003</td>
+<td>ρ(Φ) = 0 → FM-002</td>
+<td>✅ §6.2: FM-002 cleared by emit; EC-1 allows emission when ρ(Φ) = 0</td>
+</tr>
+<tr>
+<td>INV-004</td>
+<td>β &lt; 1.0 → flyby</td>
+<td>✅ f_Emit may raise β via ρ(Φ) — consistent; no bypass</td>
+</tr>
+<tr>
+<td>INV-005</td>
+<td>All SCs conjunctive</td>
+<td>✅ EC-1 and EC-2 are conjunctive (§5.3)</td>
+</tr>
+<tr>
+<td>INV-006</td>
+<td>Terminal states irreversible</td>
+<td>✅ PRIM:015 raises RuntimeError if called on terminal field state</td>
+</tr>
+<tr>
+<td>INV-007</td>
+<td>f_Source.md read-only</td>
+<td>✅ Not referenced</td>
+</tr>
+<tr>
+<td>INV-008</td>
+<td>Evaluation order normative</td>
+<td>✅ §7.1 PRIM:015 docstring specifies 8-step evaluation order</td>
+</tr>
+<tr>
+<td>INV-009</td>
+<td>OPERATORS.md is symbol authority</td>
+<td>✅ §9.5 lists all required OPERATORS.md updates</td>
+</tr>
+<tr>
+<td>INV-010</td>
+<td>Frozen symbols unrenameable</td>
+<td>✅ All four new operators declared frozen in §4.1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="102-primitive-registry-f_emitmd-additions">§10.2 — Primitive Registry (f_Emit.md Additions)</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Type</th>
+<th>Formula / Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PRIM:015</td>
+<td><code>emit_field</code></td>
+<td>Impure</td>
+<td>Apply ρ(Φ) increment: main execution primitive</td>
+</tr>
+<tr>
+<td>PRIM:016</td>
+<td><code>compute_emit_cost</code></td>
+<td>Pure</td>
+<td><code>E_emit = M_A · ρ(Φ)_delta · r_emit² · k_cost</code></td>
+</tr>
+<tr>
+<td>PRIM:017</td>
+<td><code>check_emit_ceiling</code></td>
+<td>Pure</td>
+<td>EC-1 gate: returns (bool, headroom)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="103-operator-registry-f_emitmd-additions">§10.3 — Operator Registry (f_Emit.md Additions)</h3>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Formula</th>
+<th>Node</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>F_emit</code></td>
+<td><code>(δρ · k_emit) / (r_emit · (1 − ρ(Φ)))</code></td>
+<td>F_freq</td>
+<td>🟢 frozen</td>
+</tr>
+<tr>
+<td><code>ρ(Φ)_delta</code></td>
+<td><code>min(δρ_requested, 1.0 − ρ(Φ)_current)</code></td>
+<td>F_freq</td>
+<td>🟢 frozen</td>
+</tr>
+<tr>
+<td><code>r_emit</code></td>
+<td>scalar ∈ (0, r_capture]</td>
+<td>F_freq</td>
+<td>🟢 frozen</td>
+</tr>
+<tr>
+<td><code>E_emit</code></td>
+<td><code>M_A · ρ(Φ)_delta · r_emit² · k_cost</code></td>
+<td>F_freq</td>
+<td>🟢 frozen</td>
+</tr>
+</tbody>
+</table>
+<h3 id="104-failure-mode-registry-f_emitmd">§10.4 — Failure Mode Registry (f_Emit.md)</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Severity</th>
+<th>Trigger</th>
+<th>Recoverable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FM-010</td>
+<td>Amplify Runaway</td>
+<td>Warning (blocking)</td>
+<td>ρ(Φ) = 1.0 at emission attempt</td>
+<td>Yes — via f_Dampen</td>
+</tr>
+<tr>
+<td>FM-002</td>
+<td>Zero Field</td>
+<td>(inherited from f_Field.md)</td>
+<td>ρ(Φ) = 0; cleared by f_Emit</td>
+<td>Yes — f_Emit is the recovery</td>
+</tr>
+</tbody>
+</table>
+<h3 id="105-wave-3-status">§10.5 — Wave 3 Status</h3>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f_Release.md</td>
+<td>✅ canonical</td>
+</tr>
+<tr>
+<td>f_Decay.md</td>
+<td>✅ canonical</td>
+</tr>
+<tr>
+<td>f_Orbit.md</td>
+<td>✅ canonical</td>
+</tr>
+<tr>
+<td>f_Collapse.md</td>
+<td>✅ canonical</td>
+</tr>
+<tr>
+<td><strong>f_Emit.md</strong></td>
+<td>✅ <strong>canonical ← this file</strong></td>
+</tr>
+<tr>
+<td>f_Dampen.md</td>
+<td>🔵 scaffold — <strong>next</strong></td>
+</tr>
+<tr>
+<td>f_Amplify.md</td>
+<td>🔵 scaffold</td>
+</tr>
+<tr>
+<td>f_Deflect.md</td>
+<td>🔵 scaffold</td>
+</tr>
+</tbody>
+</table>
+<h3 id="106-changelog-entry">§10.6 — Changelog Entry</h3>
+<pre><code>## [1.0.0] — 2026-08-13 — SES-20260813-EMIT-001
+
+### Added
+- f_Emit.md — canonical Wave 3 file 5 of 8
+- Operators frozen: F_emit, ρ(Φ)_delta, r_emit, E_emit
+- Primitives frozen: PRIM:015 emit_field, PRIM:016 compute_emit_cost,
+  PRIM:017 check_emit_ceiling
+- FM-010 (Amplify Runaway) fully specified and frozen
+- State flags frozen: EMIT_ACTIVE, EMIT_SATURATED, EMIT_CEILING_APPROACHED
+- Emit Conditions EC-1 (Headroom Bound) and EC-2 (Radius Bound) defined
+- 4 canonical examples: FM-004 recovery, frame capacity expansion,
+  cold-start bootstrap, FM-010 trigger and prevention
+- sustained_emission_loop safe pattern with headroom_reserve guard
+- GravityGraph event interface specified (4 event types)
+
+### Operator Status Updates Required in OPERATORS.md
+- F_emit:           🔵 → 🟢 frozen (f_Emit.md §4.1)
+- ρ(Φ)_delta:       🔵 → 🟢 frozen (f_Emit.md §4.1)
+- r_emit:           🔵 → 🟢 frozen (f_Emit.md §4.1)
+- E_emit:           🔵 → 🟢 frozen (f_Emit.md §4.1)
+- PRIM:015-017:     pending → frozen (f_Emit.md §7)
+- FM-010:           pending → frozen (f_Emit.md §6.1)
+</code></pre>
+<hr>
+<p><em>End of f_Emit.md — canonical v1.0.0 — [FFF:GRAVITY:EMIT] — SES-20260813-EMIT-001</em></p>
+  </main>
+</body>
+</html>

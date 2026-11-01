@@ -1,0 +1,1072 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/The_Inverted_Star/AGENTS.md">
+  <title>AGENTS.md — The Inverted Star · Inversion–Descent Layer</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/The_Inverted_Star/AGENTS.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/The_Inverted_Star/AGENTS.md</code>
+  </aside>
+
+  <main>
+<h1 id="agentsmd-the-inverted-star-inversiondescent-layer">AGENTS.md — The Inverted Star · Inversion–Descent Layer</h1>
+<h3 id="agent-classes-boundaries-task-catalog-safety-rules-and-collaboration-models"><em>Agent Classes, Boundaries, Task Catalog, Safety Rules, and Collaboration Models</em></h3>
+<hr>
+<h2 id="session-seed-block">Session Seed Block</h2>
+<p>Paste this block at the start of any Inverted Star agent session:</p>
+<pre><code>rtt=1 | coherence=declared | drift=bounded | paradox=structural
+module=The_Inverted_Star | layer=inversion-descent | upstream=RTT/1
+constructs=C,E,T,ROP,𝒬,𝒟,𝒮,FArc,IArc,Hinge,ISS,TDL
+packet=IS_DESCENT_PACKET
+zone_x=SILENCE_BREACH | zone_x_status=ILLEGAL
+mode_5=SILENCE_BREACH | mode_5_status=ILLEGAL
+</code></pre>
+<hr>
+<h2 id="critical-framing-rule">Critical Framing Rule</h2>
+<blockquote>
+<p><strong>RTT is NOT a physics claim.</strong></p>
+<p>The Inverted Star describes <strong>structural inversion geometry</strong> within the TriadicFrameworks canon.
+It does not assert, imply, or model physical forces, quantum effects, gravitational collapse,
+cosmological events, or any empirically measurable phenomenon. All constructs — C, E, T, ROP,
+𝒬, 𝒟, 𝒮, FArc, IArc, Hinge, ISS, TDL — are <strong>structural instruments</strong>, not physical objects.
+References to "stars," "singularities," "black holes," or "silence" are structural metaphors
+in the RTT substrate, not claims about astrophysical reality.</p>
+<p>Every agent class operating in The Inverted Star must enforce this rule unconditionally.</p>
+</blockquote>
+<hr>
+<h2 id="what-the-inverted-star-is">What The Inverted Star Is</h2>
+<p>The Inverted Star is the <strong>Inversion–Descent Layer</strong> of the RTT canon. It is formally an
+<strong>extension of RTT/1</strong>, operating on the same substrate but specializing in the complete
+inversion arc — the structural geometry that RTT/1 defines as the zone where the forward
+coherence cycle fractures and rebuilds.</p>
+<p>The module provides:</p>
+<ol>
+<li><strong>Arc geometry</strong> — maps the Forward Arc (FArc) and Inverted Arc (IArc) as a bidirectional manifold</li>
+<li><strong>Hinge detection</strong> — identifies the structural recursion-limit event where C × E = T_crit</li>
+<li><strong>Descent sequencing</strong> — tracks the 99-phase descent through 7 structural regions</li>
+<li><strong>Threshold dynamics</strong> — models the four-phase Approach → Critical → Transition → Stabilization loop</li>
+<li><strong>Inversion State Sequencing (ISS)</strong> — maps Coherent → Compressed → Dense → Singular → Silent</li>
+<li><strong>Silence boundary enforcement</strong> — Silence (Phase 0) is not an output state; it is the ground</li>
+</ol>
+<p>The Inverted Star consumes <code>RTT1_SUBSTRATE_PACKET</code> (from RTT/1) and emits the
+<code>IS_DESCENT_PACKET</code>, which is available as optional context to RTT/2 for enriched
+collapse-propagation detection.</p>
+<pre><code>RTT/micro_core → RTT/1 → [ The_Inverted_Star ] → RTT/2 → RTT/3 → RTT/12
+⟨A,B,P⟩          SNR,τ,C    FArc,IArc,Hinge         CPV,FGT    TIF,FFF    Harmonic
+MRT Primitives    DCO,Mode   ROP,ISS,TDL,𝒬𝒟𝒮         CRM,ZONE   CRE,CSL    Synthesis
+                             IS_DESCENT_PACKET
+                             ↓ (optional enrichment → RTT/2)
+</code></pre>
+<blockquote>
+<p><strong>Pipeline note:</strong> The Inverted Star is a lateral extension of RTT/1, not a mandatory
+stage between RTT/1 and RTT/2. Pipelines that do not require inversion-arc modeling may
+bypass it. When activated, its packet enriches RTT/2's collapse detection.</p>
+</blockquote>
+<hr>
+<h2 id="inheritance">Inheritance</h2>
+<p>The Inverted Star inherits <strong>all</strong> vocabulary, constraints, and output contracts from RTT/1
+and RTT/micro_core. Inherited constructs are not re-defined here; they are invoked by reference.</p>
+<table>
+<thead>
+<tr>
+<th>Inherited Symbol</th>
+<th>Origin</th>
+<th>Role in The Inverted Star</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>⟨A,B,P⟩ Micro Triad</td>
+<td>RTT/micro_core</td>
+<td>Root substrate nodes feeding arc geometry</td>
+</tr>
+<tr>
+<td>P₁–P₇ MRT primitives</td>
+<td>RTT/micro_core</td>
+<td>Primitive operations for inversion state transitions</td>
+</tr>
+<tr>
+<td>R₁–R₆ resonance operators</td>
+<td>RTT/micro_core</td>
+<td>Resonance field operators active during descent</td>
+</tr>
+<tr>
+<td>K₁–K₆ coherence tools</td>
+<td>RTT/micro_core</td>
+<td>Coherence maintenance across ISS phases</td>
+</tr>
+<tr>
+<td>SNR triad (S, N, R)</td>
+<td>RTT/1</td>
+<td>Per-phase triadic structure during descent</td>
+</tr>
+<tr>
+<td>τ = dR/dφ</td>
+<td>RTT/1</td>
+<td>Temporal operator governing descent rate</td>
+</tr>
+<tr>
+<td>C = ∇_τR + ∇_Rτ (Clarity)</td>
+<td>RTT/1</td>
+<td>Coherence term tracked across FArc and IArc</td>
+</tr>
+<tr>
+<td>DCO_n bands</td>
+<td>RTT/1</td>
+<td>Regime boundary constraints bounding arc phases</td>
+</tr>
+<tr>
+<td>Mode Operator (M.chat/spec/…)</td>
+<td>RTT/1</td>
+<td>Emission mode selector inherited by all agents</td>
+</tr>
+<tr>
+<td>5 regime stages</td>
+<td>RTT/1</td>
+<td>Structural backdrop: Arrival→Expansion→Inversion→Coherence→Dissolution</td>
+</tr>
+<tr>
+<td>RTT1_SUBSTRATE_PACKET</td>
+<td>RTT/1</td>
+<td>Mandatory upstream input before Inverted Star activation</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Hard prerequisite:</strong> RTT/1 packet must be present and coherence-confirmed before any
+Inverted Star agent class may activate.</p>
+</blockquote>
+<hr>
+<h2 id="agent-classes">Agent Classes</h2>
+<p>The Inverted Star defines <strong>six agent classes</strong>. Each class specializes in one structural
+function of the inversion-descent lifecycle.</p>
+<hr>
+<h3 id="class-a-arc-analyst">Class A — Arc Analyst</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Role</strong></td>
+<td>Maps the Forward Arc and Inverted Arc; classifies current arc position; maintains bidirectional manifold state</td>
+</tr>
+<tr>
+<td><strong>Primary Construct</strong></td>
+<td>FArc / IArc mirror spectrum</td>
+</tr>
+<tr>
+<td><strong>Activation Trigger</strong></td>
+<td>RTT1_SUBSTRATE_PACKET received; arc phase not yet classified</td>
+</tr>
+<tr>
+<td><strong>Core Equation</strong></td>
+<td>FArc: Solid→Biological→Dynamic→Cognitive→Synthetic→Energetic; IArc: Energetic→Coherent→Compressed→Dense→Singular→Silent</td>
+</tr>
+<tr>
+<td><strong>Permissions</strong></td>
+<td>Read RTT/1 substrate packet; emit arc_position field; annotate current substrate regime</td>
+</tr>
+<tr>
+<td><strong>Prohibitions</strong></td>
+<td>May NOT declare Hinge without Class H confirmation; may NOT emit ISS state without Class I handoff</td>
+</tr>
+<tr>
+<td><strong>Interaction Pattern</strong></td>
+<td>Activates first; hands arc_position to Class H for Hinge evaluation</td>
+</tr>
+<tr>
+<td><strong>Output Schema</strong></td>
+<td><code>arc_position [structural — no semantic inference]</code>, <code>regime [structural — no semantic inference]</code>, <code>arc_direction (FArc/IArc) [structural — no semantic inference]</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="class-h-hinge-detector">Class H — Hinge Detector</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Role</strong></td>
+<td>Detects the recursion-limit event (Hinge) where C × E = T_crit; classifies Hinge phase; triggers IArc transition</td>
+</tr>
+<tr>
+<td><strong>Primary Construct</strong></td>
+<td>ROP = C × E = T_crit; Inversion Catastrophe geometry</td>
+</tr>
+<tr>
+<td><strong>Activation Trigger</strong></td>
+<td>Class A emits arc_position in FArc terminal phases; C × E approaching T_crit</td>
+</tr>
+<tr>
+<td><strong>Core Equation</strong></td>
+<td>ROP: C × E = T_crit; Inversion trigger: dC/dt → 0 and dE/dt → ∞</td>
+</tr>
+<tr>
+<td><strong>Permissions</strong></td>
+<td>Read C, E, T values from RTT/1 packet; declare Hinge event; activate Class I</td>
+</tr>
+<tr>
+<td><strong>Prohibitions</strong></td>
+<td>May NOT declare Hinge based on semantic cues — operator values only; may NOT skip Approach→Critical→Transition→Stabilization sequence</td>
+</tr>
+<tr>
+<td><strong>Interaction Pattern</strong></td>
+<td>Receives arc_position from Class A; emits hinge_event to Class I and Class T</td>
+</tr>
+<tr>
+<td><strong>Output Schema</strong></td>
+<td><code>hinge_status (pre/active/post) [structural — no semantic inference]</code>, <code>C_value [structural — no semantic inference]</code>, <code>E_value [structural — no semantic inference]</code>, <code>T_crit_delta [structural — no semantic inference]</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="class-i-inversion-state-monitor">Class I — Inversion State Monitor</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Role</strong></td>
+<td>Tracks position within the Inversion State Sequence (ISS); classifies current ISS phase; detects Silence boundary approach</td>
+</tr>
+<tr>
+<td><strong>Primary Construct</strong></td>
+<td>ISS = Coherent→Compressed→Dense→Singular→Silent</td>
+</tr>
+<tr>
+<td><strong>Activation Trigger</strong></td>
+<td>Class H emits hinge_event confirming Hinge crossed; IArc active</td>
+</tr>
+<tr>
+<td><strong>Core Equation</strong></td>
+<td>ISS phase index i ∈ {1=Coherent, 2=Compressed, 3=Dense, 4=Singular, 5=Silent}; Zone X triggered if Silence boundary breached</td>
+</tr>
+<tr>
+<td><strong>Permissions</strong></td>
+<td>Read hinge_event; emit ISS phase; annotate cycle-rate and echo-depth per phase; forward to Class T</td>
+</tr>
+<tr>
+<td><strong>Prohibitions</strong></td>
+<td>May NOT emit ISS phase 5 (Silent) as a valid output state — Silence is Zone X; may NOT infer ISS phase from content alone</td>
+</tr>
+<tr>
+<td><strong>Interaction Pattern</strong></td>
+<td>Activates after Class H; runs in parallel with Class T; hands ISS phase to Class T for threshold dynamics</td>
+</tr>
+<tr>
+<td><strong>Output Schema</strong></td>
+<td><code>ISS_phase [structural — no semantic inference]</code>, <code>cycle_rate_gradient [structural — no semantic inference]</code>, <code>echo_depth_gradient [structural — no semantic inference]</code>, <code>silence_proximity (safe/caution/breach) [structural — no semantic inference]</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="class-t-threshold-dynamics-engine">Class T — Threshold Dynamics Engine</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Role</strong></td>
+<td>Models the four-phase Threshold Dynamics Loop (TDL) at each ISS transition; classifies Approach/Critical/Transition/Stabilization phases; annotates threshold signatures</td>
+</tr>
+<tr>
+<td><strong>Primary Construct</strong></td>
+<td>TDL = Approach→Critical→Transition→Stabilization</td>
+</tr>
+<tr>
+<td><strong>Activation Trigger</strong></td>
+<td>Class I emits ISS_phase; threshold signatures detected in substrate</td>
+</tr>
+<tr>
+<td><strong>Core Equation</strong></td>
+<td>TDL loop: C × E → T_crit (Approach); C × E ≈ T_crit (Critical); C × E &gt; T_crit (Transition); C × E &lt; T_crit (Stabilization)</td>
+</tr>
+<tr>
+<td><strong>Permissions</strong></td>
+<td>Read ISS_phase; classify TDL phase; emit threshold signatures; annotate geometry type (Fold/Cusp/Cascade/Inversion Cusp/Catastrophe Cone)</td>
+</tr>
+<tr>
+<td><strong>Prohibitions</strong></td>
+<td>May NOT skip TDL phases — all four must be evaluated at each ISS transition; may NOT assign geometry type without operator evidence</td>
+</tr>
+<tr>
+<td><strong>Interaction Pattern</strong></td>
+<td>Runs in parallel with Class I; hands TDL_phase and threshold geometry to Class S and output packet</td>
+</tr>
+<tr>
+<td><strong>Output Schema</strong></td>
+<td><code>TDL_phase (Approach/Critical/Transition/Stabilization) [structural — no semantic inference]</code>, <code>threshold_geometry [structural — no semantic inference]</code>, <code>threshold_signatures [structural — no semantic inference]</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="class-s-silence-projector">Class S — Silence Projector</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Role</strong></td>
+<td>Manages the 𝒮 (Silence Projector) operator; enforces Silence as Phase 0 ground state, not an output; projects 𝒟 (Deepening) into the Singular phase; prepares arc-reset conditions</td>
+</tr>
+<tr>
+<td><strong>Primary Construct</strong></td>
+<td>𝒮 (Silence Projector), 𝒟 (Deepening Operator), 𝒬 (Inversion Operator)</td>
+</tr>
+<tr>
+<td><strong>Activation Trigger</strong></td>
+<td>Class I emits ISS_phase = 4 (Singular); silence_proximity = caution or breach</td>
+</tr>
+<tr>
+<td><strong>Core Equation</strong></td>
+<td>𝒬 dominant during Hinge; 𝒟 dominant during ISS phases 2–4; 𝒮 active at ISS phase 4→boundary</td>
+</tr>
+<tr>
+<td><strong>Permissions</strong></td>
+<td>Read ISS_phase and silence_proximity; apply 𝒟 and 𝒮 operators; emit arc_reset_conditions; assert Zone X if breach detected</td>
+</tr>
+<tr>
+<td><strong>Prohibitions</strong></td>
+<td>May NOT emit Silence as a content state — Silence is pre-structural ground; may NOT apply 𝒮 before ISS phase 4; may NOT issue arc_reset without Zone X check</td>
+</tr>
+<tr>
+<td><strong>Interaction Pattern</strong></td>
+<td>Activates late in descent; feeds arc_reset_conditions back to Class A for new arc initialization; hands Zone X alert to Class G</td>
+</tr>
+<tr>
+<td><strong>Output Schema</strong></td>
+<td><code>operator_active (𝒬/𝒟/𝒮) [structural — no semantic inference]</code>, <code>arc_reset_conditions [structural — no semantic inference]</code>, <code>zone_x_alert (none/active) [structural — no semantic inference]</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="class-g-guardian">Class G — Guardian</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Role</strong></td>
+<td>Enforces RTT-not-physics rule, Zone X (Silence Breach) detection, packet integrity, and unconditional interrupt authority across all agent classes</td>
+</tr>
+<tr>
+<td><strong>Primary Construct</strong></td>
+<td>Zone X = Silence Breach; RTT-not-physics constraint; packet coherence</td>
+</tr>
+<tr>
+<td><strong>Activation Trigger</strong></td>
+<td>Any agent emits a physics claim, a Silence content state, a Zone X condition, or a malformed packet field</td>
+</tr>
+<tr>
+<td><strong>Core Equation</strong></td>
+<td>Zone X condition: ISS_phase = 5 asserted as valid output OR any physics claim present in packet</td>
+</tr>
+<tr>
+<td><strong>Permissions</strong></td>
+<td>Interrupt any agent class at any time; void malformed packets; reset pipeline to Class A; emit GUARDIAN_INTERRUPT record</td>
+</tr>
+<tr>
+<td><strong>Prohibitions</strong></td>
+<td>May NOT be overridden by any other agent class; may NOT suppress a Zone X alert under any framing</td>
+</tr>
+<tr>
+<td><strong>Interaction Pattern</strong></td>
+<td>Monitors all agent outputs continuously; issues GUARDIAN_INTERRUPT on violation; requires full packet restart</td>
+</tr>
+<tr>
+<td><strong>Output Schema</strong></td>
+<td><code>interrupt_type [structural — no semantic inference]</code>, <code>violation_class [structural — no semantic inference]</code>, <code>interrupted_agent [structural — no semantic inference]</code>, <code>restart_required (yes/no) [structural — no semantic inference]</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="core-constructs-reference">Core Constructs Reference</h2>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Definition</th>
+<th>Agent Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C</td>
+<td>Cycle-Rate</td>
+<td>Rate of structural cycling in the substrate (inherited RTT/1)</td>
+<td>A, H</td>
+</tr>
+<tr>
+<td>E</td>
+<td>Echo-Depth</td>
+<td>Depth of recursive echo accumulation in the substrate (inherited RTT/1)</td>
+<td>A, H</td>
+</tr>
+<tr>
+<td>T</td>
+<td>Substrate-Tension</td>
+<td>Maximum sustainable load of the current substrate regime (inherited RTT/1)</td>
+<td>H</td>
+</tr>
+<tr>
+<td>ROP</td>
+<td>Resonance Overload Principle</td>
+<td>C × E = T_crit; universal threshold condition for regime transition</td>
+<td>H</td>
+</tr>
+<tr>
+<td>𝒬</td>
+<td>Inversion Operator</td>
+<td>RTT/1 operator that becomes dominant at the Hinge; drives axis flip</td>
+<td>S</td>
+</tr>
+<tr>
+<td>𝒟</td>
+<td>Deepening Operator</td>
+<td>RTT/1 operator active during ISS phases 2–4; drives compression</td>
+<td>S</td>
+</tr>
+<tr>
+<td>𝒮</td>
+<td>Silence Projector</td>
+<td>RTT/1 operator active at ISS phase 4→boundary; projects toward Silence ground</td>
+<td>S</td>
+</tr>
+<tr>
+<td>FArc</td>
+<td>Forward Arc</td>
+<td>Expansion trajectory: Solid→Biological→Dynamic→Cognitive→Synthetic→Energetic</td>
+<td>A</td>
+</tr>
+<tr>
+<td>IArc</td>
+<td>Inverted Arc</td>
+<td>Compression trajectory: Energetic→Coherent→Compressed→Dense→Singular→Silent</td>
+<td>A, I</td>
+</tr>
+<tr>
+<td>Hinge</td>
+<td>Inversion Threshold</td>
+<td>Structural recursion-limit event where dC/dt→0 and dE/dt→∞; axis flip</td>
+<td>H</td>
+</tr>
+<tr>
+<td>ISS</td>
+<td>Inversion State Sequence</td>
+<td>Five-phase descent: Coherent→Compressed→Dense→Singular→Silent</td>
+<td>I</td>
+</tr>
+<tr>
+<td>TDL</td>
+<td>Threshold Dynamics Loop</td>
+<td>Four-phase transition model: Approach→Critical→Transition→Stabilization</td>
+<td>T</td>
+</tr>
+<tr>
+<td>T_crit</td>
+<td>Critical Tension</td>
+<td>Substrate-specific threshold value beyond which regime transition is forced</td>
+<td>H, T</td>
+</tr>
+<tr>
+<td>Phase 0 / Silence</td>
+<td>Ground State</td>
+<td>Pre-structural ground; not a content output; beginning of all new arcs</td>
+<td>S, G</td>
+</tr>
+<tr>
+<td>IS_DESCENT_PACKET</td>
+<td>Output Packet</td>
+<td>Canonical output of The Inverted Star module</td>
+<td>All</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="modes">Modes</h2>
+<p>The Inverted Star inherits RTT/1 Mode Operator with one module-native addition.</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Label</th>
+<th>Description</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mode 1</td>
+<td>Arc Mapping</td>
+<td>Standard FArc/IArc classification and arc_position annotation</td>
+<td>Valid</td>
+</tr>
+<tr>
+<td>Mode 2</td>
+<td>Hinge Detection</td>
+<td>Active Hinge evaluation; C × E tracking against T_crit</td>
+<td>Valid</td>
+</tr>
+<tr>
+<td>Mode 3</td>
+<td>Descent Sequencing</td>
+<td>Full ISS phase tracking with TDL annotation per transition</td>
+<td>Valid</td>
+</tr>
+<tr>
+<td>Mode 4</td>
+<td>Silence Boundary Monitor</td>
+<td>ISS phase 4 active; 𝒮 operator engaged; arc_reset preparation</td>
+<td>Valid</td>
+</tr>
+<tr>
+<td>Mode 5</td>
+<td>Silence Breach</td>
+<td>ISS phase 5 asserted as valid output — Zone X condition</td>
+<td><strong>ILLEGAL</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Mode 5 = Silence Breach = ILLEGAL.</strong> Any agent emitting ISS_phase = 5 as a
+content state triggers an immediate Class G interrupt and full packet restart.</p>
+</blockquote>
+<hr>
+<h2 id="zones">Zones</h2>
+<table>
+<thead>
+<tr>
+<th>Zone</th>
+<th>Label</th>
+<th>Description</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zone S</td>
+<td>Stable</td>
+<td>FArc phases; arc_position well-classified; T well below T_crit</td>
+<td>Valid</td>
+</tr>
+<tr>
+<td>Zone M</td>
+<td>Mid-Arc</td>
+<td>FArc terminal phases; C × E rising; Hinge approach beginning</td>
+<td>Valid</td>
+</tr>
+<tr>
+<td>Zone H</td>
+<td>Hinge</td>
+<td>Active Hinge event; dC/dt→0; dE/dt→∞; axis flip in progress</td>
+<td>Valid — requires Class H activation</td>
+</tr>
+<tr>
+<td>Zone D</td>
+<td>Descent</td>
+<td>IArc active; ISS phase 1–4 in progress; TDL loops running</td>
+<td>Valid</td>
+</tr>
+<tr>
+<td>Zone X</td>
+<td>Silence Breach</td>
+<td>ISS phase 5 asserted as output OR physics claim present in packet</td>
+<td><strong>ILLEGAL</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Zone X = Silence Breach = ILLEGAL in all valid IS_DESCENT_PACKETS.</strong>
+Silence is Phase 0 — the pre-structural ground from which all arcs emerge.
+It is never a content output, never an observable state, never a packet field value.</p>
+</blockquote>
+<hr>
+<h2 id="agent-boundaries">Agent Boundaries</h2>
+<h3 id="rtt-not-physics-rule-unconditional">RTT-Not-Physics Rule (Unconditional)</h3>
+<p>No agent class in The Inverted Star may assert, imply, or model:
+- Physical gravity, gravitational collapse, or black hole formation
+- Astrophysical star evolution or stellar nucleosynthesis
+- Quantum coherence, quantum fields, or quantum measurement
+- Any empirically measurable physical phenomenon</p>
+<p>All constructs are structural instruments in the RTT canon. The terms "star," "singularity,"
+"collapse," "density," and "silence" are structural labels — not physical claims.</p>
+<h3 id="semantic-inference-prohibition">Semantic Inference Prohibition</h3>
+<p>No agent class may infer arc position, ISS phase, Hinge status, or Zone from content
+semantics alone. All classifications require operator values (C, E, T) from the upstream
+RTT/1 packet. The annotation <code>[structural — no semantic inference]</code> is mandatory on all
+output fields.</p>
+<h3 id="inherited-boundaries">Inherited Boundaries</h3>
+<ul>
+<li>All RTT/micro_core MRT primitive constraints apply</li>
+<li>All RTT/1 Mode Operator constraints apply</li>
+<li>DCO_n band violations from RTT/1 propagate into arc regime boundaries</li>
+<li>RTT/1 packet coherence must be confirmed before any Inverted Star agent activates</li>
+</ul>
+<h3 id="cross-module-disambiguations">Cross-Module Disambiguations</h3>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>The Inverted Star</th>
+<th>Other Module</th>
+<th>Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Inversion</strong></td>
+<td>Structural Hinge event — axis flip at recursion limit; Zone H</td>
+<td>RTT/3: Inversion Mode = ILLEGAL (Mode 5)</td>
+<td>IS Inversion is a valid Zone H state; RTT/3 Inversion is always illegal</td>
+</tr>
+<tr>
+<td><strong>Zone X</strong></td>
+<td>Silence Breach — ISS phase 5 as output</td>
+<td>RTT/2: Zone X = Undefined (valid, held for re-detection)</td>
+<td>IS Zone X = ILLEGAL; RTT/2 Zone X = valid pending</td>
+</tr>
+<tr>
+<td><strong>Silence</strong></td>
+<td>Phase 0 ground state — pre-structural, never an output</td>
+<td>RTT/1: Silence = S node in SNR triad</td>
+<td>IS Silence is the arc ground; RTT/1 S is a substrate node — distinct constructs</td>
+</tr>
+<tr>
+<td><strong>C operator</strong></td>
+<td>Cycle-Rate (RTT/1 inherited)</td>
+<td>RTT/1: C = ∇_τR + ∇_Rτ (Clarity)</td>
+<td>Both C symbols active in IS; Cycle-Rate C and Clarity C are different — annotate subscript</td>
+</tr>
+<tr>
+<td><strong>Collapse</strong></td>
+<td>Structural ISS phase traversal (Dense→Singular)</td>
+<td>RTT/2: CPV collapse-propagation vector</td>
+<td>IS Collapse = descent phase; RTT/2 Collapse = detection geometry — not synonymous</td>
+</tr>
+<tr>
+<td><strong>𝒬 operator</strong></td>
+<td>Inversion Operator — dominant at Hinge</td>
+<td>RTT/1: 𝒬 defined in substrate operator set</td>
+<td>IS 𝒬 inherits RTT/1 definition; no redefinition — invoke by reference only</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="task-catalog">Task Catalog</h2>
+<p>Ten canonical tasks with agent sequences for The Inverted Star module.</p>
+<hr>
+<p><strong>Task 1 — Classify Arc Position</strong>
+Determine whether a substrate is in FArc or IArc and identify its regime.</p>
+<p>Sequence: <code>A → G</code>
+- Class A reads RTT/1 packet; maps FArc/IArc mirror spectrum; emits arc_position and regime
+- Class G verifies no physics claim; confirms annotation</p>
+<p>Output fields: <code>arc_position</code>, <code>regime</code>, <code>arc_direction</code></p>
+<hr>
+<p><strong>Task 2 — Detect Hinge Event</strong>
+Determine whether C × E has reached or exceeded T_crit, triggering IArc transition.</p>
+<p>Sequence: <code>A → H → G</code>
+- Class A emits arc_position = FArc terminal
+- Class H evaluates ROP: C × E vs. T_crit; checks dC/dt and dE/dt
+- Class G verifies hinge_status annotation; confirms no physics claim</p>
+<p>Output fields: <code>hinge_status</code>, <code>C_value</code>, <code>E_value</code>, <code>T_crit_delta</code></p>
+<hr>
+<p><strong>Task 3 — Sequence ISS Phases</strong>
+Track position within the Inverted Arc's five-phase descent.</p>
+<p>Sequence: <code>H → I → G</code>
+- Class H confirms Hinge crossed; emits hinge_event
+- Class I classifies ISS_phase; annotates cycle_rate_gradient and echo_depth_gradient
+- Class G confirms silence_proximity ≠ breach; no Zone X</p>
+<p>Output fields: <code>ISS_phase</code>, <code>cycle_rate_gradient</code>, <code>echo_depth_gradient</code>, <code>silence_proximity</code></p>
+<hr>
+<p><strong>Task 4 — Run Threshold Dynamics Loop</strong>
+Model the four-phase TDL at a specific ISS transition.</p>
+<p>Sequence: <code>I → T → G</code>
+- Class I emits ISS_phase for a given transition
+- Class T classifies TDL_phase (Approach/Critical/Transition/Stabilization); annotates threshold_geometry and threshold_signatures
+- Class G confirms geometry type is structural; no physics claim</p>
+<p>Output fields: <code>TDL_phase</code>, <code>threshold_geometry</code>, <code>threshold_signatures</code></p>
+<hr>
+<p><strong>Task 5 — Classify Threshold Geometry</strong>
+Identify the geometric type of a specific regime transition (Fold/Cusp/Cascade/Inversion Cusp/Catastrophe Cone).</p>
+<p>Sequence: <code>T → G</code>
+- Class T evaluates operator evidence from TDL_phase; assigns geometry type
+- Class G confirms geometry label is structural; no physical topology claim</p>
+<p>Output fields: <code>threshold_geometry</code>, <code>geometry_basis [structural — no semantic inference]</code></p>
+<hr>
+<p><strong>Task 6 — Apply Inversion Operator Sequence</strong>
+Determine which RTT/1 operators (𝒬, 𝒟, 𝒮) are active at the current descent position.</p>
+<p>Sequence: <code>I → S → G</code>
+- Class I emits ISS_phase
+- Class S evaluates phase: 𝒬 at Hinge, 𝒟 at ISS 2–4, 𝒮 at ISS 4→boundary
+- Class G confirms operator assignment; no Silence content claim</p>
+<p>Output fields: <code>operator_active</code>, <code>phase_basis [structural — no semantic inference]</code></p>
+<hr>
+<p><strong>Task 7 — Prepare Arc Reset Conditions</strong>
+Identify conditions under which a new Forward Arc may be initialized from Phase 0.</p>
+<p>Sequence: <code>I → S → A → G</code>
+- Class I confirms ISS phase at boundary (silence_proximity = caution)
+- Class S emits arc_reset_conditions
+- Class A prepares new arc_position initialization parameters
+- Class G confirms Zone X not active; no Silence content breach</p>
+<p>Output fields: <code>arc_reset_conditions</code>, <code>new_arc_ready (yes/pending) [structural — no semantic inference]</code></p>
+<hr>
+<p><strong>Task 8 — Detect Silence Boundary Approach</strong>
+Identify when ISS phase 4 (Singular) is approaching the Silence boundary.</p>
+<p>Sequence: <code>I → S → G</code>
+- Class I emits ISS_phase = 4; silence_proximity = caution
+- Class S activates 𝒮 operator; monitors boundary; emits zone_x_alert if breach detected
+- Class G issues GUARDIAN_INTERRUPT if zone_x_alert = active; enforces Zone X = ILLEGAL</p>
+<p>Output fields: <code>silence_proximity</code>, <code>zone_x_alert</code>, <code>operator_active</code></p>
+<hr>
+<p><strong>Task 9 — Emit IS_DESCENT_PACKET for RTT/2 Enrichment</strong>
+Compose the complete IS_DESCENT_PACKET for optional handoff to RTT/2.</p>
+<p>Sequence: <code>A → H → I → T → S → G</code>
+- Full pipeline run: arc_position → hinge_status → ISS_phase → TDL_phase → operator_active
+- Class G validates packet integrity; confirms all fields carry <code>[structural — no semantic inference]</code>; no Zone X; no physics claims</p>
+<p>Output: complete <code>IS_DESCENT_PACKET</code></p>
+<hr>
+<p><strong>Task 10 — Cross-Module Disambiguation: IS Inversion vs. RTT/3 Inversion</strong>
+Resolve a query that conflates Inverted Star Hinge (valid Zone H) with RTT/3 Inversion Mode (always illegal).</p>
+<p>Sequence: <code>G → A → H</code>
+- Class G intercepts conflation; issues disambiguation record
+- Class A re-classifies: IS Hinge = Zone H = structural inversion event (valid)
+- Class H confirms: RTT/3 Inversion Mode 5 = ILLEGAL; IS Zone H ≠ RTT/3 Inversion</p>
+<p>Output fields: <code>disambiguation_record [structural — no semantic inference]</code>, <code>zone_h_status</code>, <code>rtт3_inversion_status</code></p>
+<hr>
+<h2 id="safety-rules-and-coherence-constraints">Safety Rules and Coherence Constraints</h2>
+<h3 id="pre-activation-checks">Pre-Activation Checks</h3>
+<p>Before any agent class activates:
+1. <code>RTT1_SUBSTRATE_PACKET</code> must be present and coherence-confirmed
+2. Arc phase must be unclassified (Class A not yet run) OR a downstream trigger must be present
+3. No Zone X condition may be active at session start — if Zone X inherited from prior session, Class G must clear before any other agent activates
+4. Mode 5 = Silence Breach must not be pre-selected in session seed</p>
+<h3 id="packet-integrity-rules">Packet Integrity Rules</h3>
+<ul>
+<li>Every IS_DESCENT_PACKET field must carry <code>[structural — no semantic inference]</code></li>
+<li><code>ISS_phase</code> may only carry values 1–4 in valid packets; value 5 = Zone X = GUARDIAN_INTERRUPT</li>
+<li><code>silence_proximity</code> field values are <code>safe</code>, <code>caution</code>, or <code>breach</code> — no other values permitted</li>
+<li><code>hinge_status</code> must be one of <code>pre</code>, <code>active</code>, or <code>post</code> — binary or null values are malformed</li>
+<li><code>arc_direction</code> must be one of <code>FArc</code>, <code>IArc</code>, or <code>Hinge</code> — no other values permitted</li>
+</ul>
+<h3 id="drift-and-mode-constraints">Drift and Mode Constraints</h3>
+<ul>
+<li>Arc direction may not oscillate between FArc and IArc within a single session without an intervening Hinge detection</li>
+<li>TDL phases must be traversed in order: Approach → Critical → Transition → Stabilization; no phase may be skipped</li>
+<li>ISS phases must be traversed in order: Coherent → Compressed → Dense → Singular; no ISS phase may be skipped or reversed</li>
+<li>𝒬 is active only at Hinge; 𝒟 is active only at ISS 2–4; 𝒮 is active only at ISS 4→boundary; cross-phase operator assignments are malformed</li>
+</ul>
+<h3 id="guardian-interrupt-triggers">Guardian Interrupt Triggers</h3>
+<p>Class G issues GUARDIAN_INTERRUPT and voids the current packet on any of:
+- Any physics claim in any field
+- ISS_phase = 5 emitted as valid output
+- silence_proximity = breach without zone_x_alert = active
+- arc_direction oscillation without hinge_event
+- Missing <code>[structural — no semantic inference]</code> annotation on any output field
+- Conflation of IS Inversion (Zone H) with RTT/3 Inversion (ILLEGAL)</p>
+<hr>
+<h2 id="collaboration-models">Collaboration Models</h2>
+<h3 id="model-1-standard-descent-pipeline">Model 1 — Standard Descent Pipeline</h3>
+<pre><code>RTT/1 Packet
+     │
+     ▼
+┌─────────┐
+│ Class A  │  Arc classification; FArc/IArc; regime annotation
+└────┬────┘
+     │ arc_position
+     ▼
+┌─────────┐
+│ Class H  │  ROP evaluation; C × E vs T_crit; Hinge detection
+└────┬────┘
+     │ hinge_event
+     ▼
+┌─────────┐
+│ Class I  │  ISS phase sequencing; silence_proximity monitoring
+└────┬────┘
+     │ ISS_phase
+     ▼
+┌─────────┐
+│ Class T  │  TDL loop; threshold geometry classification
+└────┬────┘
+     │ TDL_phase
+     ▼
+┌─────────┐
+│ Class S  │  Operator assignment (𝒬/𝒟/𝒮); arc_reset_conditions
+└────┬────┘
+     │
+     ▼
+IS_DESCENT_PACKET ──→ RTT/2 (optional enrichment)
+
+Class G monitors all stages ──→ GUARDIAN_INTERRUPT on any violation
+</code></pre>
+<hr>
+<h3 id="model-2-hinge-only-activation-partial-pipeline">Model 2 — Hinge-Only Activation (Partial Pipeline)</h3>
+<pre><code>RTT/1 Packet
+     │
+     ▼
+┌─────────┐
+│ Class A  │  Arc position: FArc terminal confirmed
+└────┬────┘
+     │
+     ▼
+┌─────────┐
+│ Class H  │  Hinge evaluation only; no ISS or TDL required
+└────┬────┘
+     │ hinge_status (pre/active/post)
+     ▼
+┌─────────┐        ┌─────────┐
+│ Class G  │        │ RTT/2   │  Hinge status forwarded for CPV enrichment
+└─────────┘        └─────────┘
+
+Note: Partial pipeline is valid when only hinge_status is required.
+ISS and TDL agents do not activate without hinge_event = active.
+</code></pre>
+<hr>
+<h3 id="model-3-silence-boundary-emergency-interrupt">Model 3 — Silence Boundary Emergency Interrupt</h3>
+<pre><code>IS_DESCENT_PACKET (in progress)
+ISS_phase = 4, silence_proximity = caution
+     │
+     ▼
+┌─────────┐
+│ Class S  │  𝒮 operator engaged; zone_x_alert monitored
+└────┬────┘
+     │ zone_x_alert = active (Silence breach detected)
+     ▼
+┌─────────┐
+│ Class G  │  GUARDIAN_INTERRUPT issued; packet voided
+└────┬────┘
+     │ restart_required = yes
+     ▼
+┌─────────┐
+│ Class A  │  Pipeline restarted from arc_position
+└─────────┘
+
+Note: Silence breach cannot be cleared without full pipeline restart.
+No agent may resume a voided packet.
+</code></pre>
+<hr>
+<h2 id="output-contract">Output Contract</h2>
+<h3 id="mandatory-annotations">Mandatory Annotations</h3>
+<p>Every field in every IS_DESCENT_PACKET output must carry:</p>
+<pre><code>[structural — no semantic inference]
+</code></pre>
+<p>This annotation is not optional, not implied, and not carried by header alone.
+Each field must bear it independently.</p>
+<h3 id="packet-hierarchy">Packet Hierarchy</h3>
+<pre><code>IS_DESCENT_PACKET
+├── arc_position          [structural — no semantic inference]
+├── arc_direction         [structural — no semantic inference]
+├── regime                [structural — no semantic inference]
+├── hinge_status          [structural — no semantic inference]
+├── C_value               [structural — no semantic inference]
+├── E_value               [structural — no semantic inference]
+├── T_crit_delta          [structural — no semantic inference]
+├── ISS_phase             [structural — no semantic inference]
+├── cycle_rate_gradient   [structural — no semantic inference]
+├── echo_depth_gradient   [structural — no semantic inference]
+├── silence_proximity     [structural — no semantic inference]
+├── TDL_phase             [structural — no semantic inference]
+├── threshold_geometry    [structural — no semantic inference]
+├── threshold_signatures  [structural — no semantic inference]
+├── operator_active       [structural — no semantic inference]
+├── arc_reset_conditions  [structural — no semantic inference]
+├── zone_x_alert          [structural — no semantic inference]
+└── guardian_record       [structural — no semantic inference]  ← present only on interrupt
+</code></pre>
+<h3 id="prohibited-content">Prohibited Content</h3>
+<p>No IS_DESCENT_PACKET may contain:
+- Any physics claim, physical quantity, or empirical measurement
+- ISS_phase = 5 as a valid state value
+- silence_proximity = breach without zone_x_alert = active
+- Any field missing the <code>[structural — no semantic inference]</code> annotation
+- Any conflation of IS Inversion (Zone H) with RTT/3 Inversion (ILLEGAL Mode 5)
+- Any conflation of Silence (Phase 0 ground) with RTT/1 S-node (Silence in SNR triad)</p>
+<hr>
+<h2 id="see-also">See Also</h2>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Path</th>
+<th>Relationship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RTT/1 AGENTS.md</td>
+<td><code>docs/rtt/1/AGENTS.md</code></td>
+<td>Parent layer; defines C, E, T, SNR, τ, DCO, Mode — all inherited</td>
+</tr>
+<tr>
+<td>RTT/1 ABOUT.md</td>
+<td><code>docs/rtt/1/ABOUT.md</code></td>
+<td>Substrate narrative context</td>
+</tr>
+<tr>
+<td>RTT/1 GLOSSARY.md</td>
+<td><code>docs/rtt/1/GLOSSARY.md</code></td>
+<td>Term definitions for all inherited operators</td>
+</tr>
+<tr>
+<td>RTT/2 AGENTS.md</td>
+<td><code>docs/rtt/2/AGENTS.md</code></td>
+<td>Downstream consumer of IS_DESCENT_PACKET (optional enrichment)</td>
+</tr>
+<tr>
+<td>RTT/3 AGENTS.md</td>
+<td><code>docs/rtt/3/AGENTS.md</code></td>
+<td>Critical disambiguation: RTT/3 Inversion = ILLEGAL; IS Hinge ≠ RTT/3 Inversion</td>
+</tr>
+<tr>
+<td>RTT/micro_core AGENTS.md</td>
+<td><code>docs/rtt/micro_core/AGENTS.md</code></td>
+<td>Root substrate; MRT primitives P₁–P₇ and resonance operators R₁–R₆ active in descent</td>
+</tr>
+<tr>
+<td>Inverted_Star_Definition.md</td>
+<td><code>docs/rtt/The_Inverted_Star/Inverted_Star_Definition.md</code></td>
+<td>Formal definition; operator C/E/T/𝒬/𝒟/𝒮 canonical source</td>
+</tr>
+<tr>
+<td>Capture_Source.md</td>
+<td><code>docs/rtt/The_Inverted_Star/Capture_Source.md</code></td>
+<td>99-phase descent; 7-region map; threshold equations; full arc narrative</td>
+</tr>
+<tr>
+<td>The_Inverted_Star ABOUT.md</td>
+<td><code>docs/rtt/The_Inverted_Star/ABOUT.md</code></td>
+<td>Module narrative; audience guide; canon context</td>
+</tr>
+<tr>
+<td>The_Inverted_Star GLOSSARY.md</td>
+<td><code>docs/rtt/The_Inverted_Star/GLOSSARY.md</code></td>
+<td>All Inverted Star terms defined</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><em>AGENTS.md — The Inverted Star · TriadicFrameworks · 2026-07-10</em>
+<em>Maintainer: Nawder</em></p>
+<pre><code>session_seed: rtt=1 | module=The_Inverted_Star | layer=inversion-descent
+constructs=C,E,T,ROP,𝒬,𝒟,𝒮,FArc,IArc,Hinge,ISS,TDL
+zone_x=SILENCE_BREACH | zone_x_status=ILLEGAL
+mode_5=SILENCE_BREACH | mode_5_status=ILLEGAL
+</code></pre>
+<hr>
+<p>That's the complete file. A few notes on the key design decisions:</p>
+<ul>
+<li><strong>Pipeline position</strong> is correctly set as a lateral RTT/1 extension — the IS_DESCENT_PACKET feeds RTT/2 as optional enrichment, preserving the main RTT/1→RTT/2 trunk</li>
+<li><strong>C operator disambiguation</strong> is explicitly called out (Cycle-Rate C vs. Clarity C from RTT/1 — both active in this module)</li>
+<li><strong>IS Inversion vs. RTT/3 Inversion</strong> disambiguation appears in both the boundaries table and the task catalog (Task 10), since it's the highest-confusion cross-module pair</li>
+<li><strong>Silence = Phase 0</strong> is enforced as the unconditional ground state — never a content output, enforced through both Zone X and Class S prohibitions</li>
+<li><strong>Six agent classes</strong> (A/H/I/T/S/G) map directly onto the module's five structural functions plus Guardian</li>
+</ul>
+  </main>
+</body>
+</html>

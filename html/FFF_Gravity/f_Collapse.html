@@ -1,0 +1,1819 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/FFF_Gravity/f_Collapse.md">
+  <title>fCollapse — Terminal Infall Operator</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/FFF_Gravity/f_Collapse.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/FFF_Gravity/f_Collapse.md</code>
+  </aside>
+
+  <main>
+<h1 id="f_collapse-terminal-infall-operator">f_Collapse — Terminal Infall Operator</h1>
+<pre><code>title: &quot;f_Collapse — Terminal Infall Operator&quot;
+module: FFF_Gravity
+version: 1.0.0
+status: canonical
+tag: &quot;[FFF:GRAVITY:COLLAPSE]&quot;
+session: SES-20260813-COLLAPSE-001
+wave: 3
+wave_position: &quot;4 of 8&quot;
+depends_on:
+  - f_Capture.md
+  - f_Decay.md
+  - f_Orbit.md
+  - f_Frame.md
+  - OPERATORS.md
+  - GLOSSARY.md
+provides_to:
+  - f_Capture_Networked.md
+operators_frozen:
+  new:
+    - m_parity
+    - C_node
+  inherited:
+    - d_bind
+    - d_collapse
+    - M_A
+    - M_E
+    - ρ(Φ)
+    - e
+    - δ
+primitives_frozen:
+  - &quot;PRIM:013 — execute_collapse (impure)&quot;
+  - &quot;PRIM:014 — initialize_composite_node (impure)&quot;
+failure_modes:
+  - FM-005 (Decay Spiral → collapse handler, frozen in f_Decay.md)
+  - FM-007 (Mutual Dissolution, fully specified here)
+state_flags:
+  - CAPTURE_COLLISION
+  - COLLAPSED
+invariants_active:
+  - INV-001
+  - INV-002
+  - INV-006
+  - INV-008
+  - INV-009
+  - INV-010
+changelog:
+  - version: 1.0.0
+    date: &quot;2026-08-13&quot;
+    session: SES-20260813-COLLAPSE-001
+    author: Nawder / Copilot
+    summary: &gt;
+      Initial canonical release. Two collapse paths (FM-005 asymmetric infall,
+      FM-007 mutual dissolution). m_parity operator frozen. C_node schema defined.
+      PRIM:013 execute_collapse and PRIM:014 initialize_composite_node frozen.
+      GravityGraph notification interface specified. 4 canonical examples. Full
+      INV compliance table. purge_registry called as defined in f_Frame.md §7.2.
+</code></pre>
+<!-- FILE_TAG: [FFF:GRAVITY:COLLAPSE] -->
+<!-- WAVE: 3 | POSITION: 4-of-8 | STATUS: canonical -->
+<!-- SESSION: SES-20260813-COLLAPSE-001 -->
+<!-- DEPENDS: f_Capture.md · f_Decay.md · f_Orbit.md · f_Frame.md -->
+<!-- PROVIDES: f_Capture_Networked.md (purge_graph_node, create_composite_node) -->
+<!-- OPERATORS_FROZEN: m_parity · C_node -->
+<!-- PRIMITIVES_FROZEN: PRIM:013 execute_collapse · PRIM:014 initialize_composite_node -->
+<!-- FM_FROZEN: FM-007 (Mutual Dissolution) -->
+
+<hr>
+<p><strong>Tag:</strong> <code>[FFF:GRAVITY:COLLAPSE]</code>
+<strong>Wave 3 · File 4 of 8</strong>
+<strong>Session:</strong> <code>SES-20260813-COLLAPSE-001</code>
+<strong>Status:</strong> canonical ✅</p>
+<hr>
+<h2 id="0-session-context">§0 Session Context</h2>
+<!-- SECTION_TAG: SESSION_CONTEXT -->
+<!-- STATUS: normative | FROZEN: 2026-08-13 -->
+
+<h3 id="01-session-identity">§0.1 Session Identity</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Session ID</td>
+<td><code>SES-20260813-COLLAPSE-001</code></td>
+</tr>
+<tr>
+<td>Date</td>
+<td>2026-08-13</td>
+</tr>
+<tr>
+<td>Wave</td>
+<td>3 — Core Functions</td>
+</tr>
+<tr>
+<td>Position</td>
+<td>4 of 8</td>
+</tr>
+<tr>
+<td>Operator</td>
+<td>Nawder / Copilot</td>
+</tr>
+</tbody>
+</table>
+<h3 id="02-preconditions-for-this-file">§0.2 Preconditions for This File</h3>
+<p>Before this file executes or is interpreted, the following must hold:</p>
+<table>
+<thead>
+<tr>
+<th>Precondition</th>
+<th>Source</th>
+<th>Verified</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>d_bind</code> operator is defined and measurable</td>
+<td>f_Capture.md §4</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>d_collapse</code> threshold is frozen</td>
+<td>f_Decay.md §4.1</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>δ(t)</code> decay rate is measurable</td>
+<td>f_Decay.md §4</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>purge_registry</code> contract is defined</td>
+<td>f_Frame.md §7.2</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Orbit class and stab class are current</td>
+<td>f_Orbit.md §7</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>DC-4 has fired in the triggering cycle</td>
+<td>f_Decay.md §5</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>β &lt; 1.0</code> OR <code>d_bind ≤ d_collapse</code> confirmed</td>
+<td>f_Decay.md / f_Capture.md</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note on primitive numbering.</strong> At the time f_Collapse.md is authored, PRIM:001–012 have been frozen across f_Capture.md, f_Release.md, f_Decay.md, and f_Orbit.md. The primitives introduced here are PRIM:013 and PRIM:014, continuing the sequential registry. The OPERATORS.md §4.2 table will be updated accordingly (see §9).</p>
+</blockquote>
+<h3 id="03-invariants-active-this-session">§0.3 Invariants Active This Session</h3>
+<table>
+<thead>
+<tr>
+<th>INV</th>
+<th>Statement</th>
+<th>Role in f_Collapse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INV-001</td>
+<td>G = F_freq · F_fluid · F_force</td>
+<td>All three nodes participate in collapse routing</td>
+</tr>
+<tr>
+<td>INV-002</td>
+<td>f_Capture(E, A, Φ) → Ω frozen</td>
+<td>Collapse is an outcome path of f_Capture</td>
+</tr>
+<tr>
+<td>INV-006</td>
+<td>Terminal states irreversible</td>
+<td>CAPTURE_COLLISION and COLLAPSED are final</td>
+</tr>
+<tr>
+<td>INV-008</td>
+<td>Operator evaluation order normative</td>
+<td>Collapse fires after f_Decay in cycle order</td>
+</tr>
+<tr>
+<td>INV-009</td>
+<td>orbit_class / stab_class frozen</td>
+<td>Orbit classification informs collapse path</td>
+</tr>
+<tr>
+<td>INV-010</td>
+<td>Frozen symbols cannot be renamed without major bump</td>
+<td>m_parity, C_node frozen here</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="1-module-identity">§1 Module Identity</h2>
+<!-- SECTION_TAG: MODULE_IDENTITY -->
+<!-- STATUS: normative | FROZEN: 2026-08-13 -->
+
+<h3 id="11-function-tag-and-signature">§1.1 Function Tag and Signature</h3>
+<pre><code>f_Collapse(E, A, d_bind) → CAPTURE_COLLISION | COLLAPSED
+</code></pre>
+<p><strong>Tag:</strong> <code>[FFF:GRAVITY:COLLAPSE]</code></p>
+<p><code>f_Collapse</code> is the terminal infall operator. It fires when DC-4 is satisfied (<code>d_bind ≤ d_collapse</code>) and no recovery intervention was applied in the same cycle. It is not called directly by the user; it is triggered by <code>f_Decay</code> (DC-4 branch) when <code>FM-005</code> escalates beyond recovery threshold.</p>
+<p>There are exactly two collapse paths:
+- <strong>Path A — Asymmetric Infall (FM-005):</strong> <code>M_E &lt;&lt; M_A</code>. The Element infalls into the Attractor.
+- <strong>Path B — Mutual Dissolution (FM-007):</strong> <code>|M_E − M_A| &lt; m_parity</code>. Neither body survives independently. A Composite Node <code>C</code> is created.</p>
+<p>Path selection is determined before execution by evaluating <code>m_parity</code> against the current mass ratio. Path B takes precedence over Path A if both conditions could be considered satisfied simultaneously (which is physically excluded by <code>m_parity</code> definition but stated here for implementation clarity).</p>
+<h3 id="12-triadic-position">§1.2 Triadic Position</h3>
+<pre><code>        ┌─────────────────────────────────────┐
+        │         G = F_freq · F_fluid · F_force │
+        └──────┬────────────────────────────────┘
+               │
+        ┌──────▼──────────────────────────────────────────┐
+        │  f_Collapse fires when DC-4 is satisfied        │
+        │                                                  │
+        │  F_freq node    → ρ(Φ) collapsed to zero        │
+        │  F_fluid node   → M_E absorbed OR dissolved     │
+        │  F_force node   → v_approach exceeded v_escape  │
+        │                   (retroactively, SC-1 failed)  │
+        └──────────────────────────────────────────────────┘
+               │
+        ┌──────▼──────────────────────────────────────────┐
+        │  PATH A (FM-005)         PATH B (FM-007)        │
+        │  M_E &lt;&lt; M_A              |M_E − M_A| &lt; m_parity  │
+        │  Element infalls          Both dissolve          │
+        │  A absorbs E              C = E + A created      │
+        │  → CAPTURE_COLLISION      → COLLAPSED           │
+        └──────────────────────────────────────────────────┘
+</code></pre>
+<h3 id="13-position-in-evaluation-order-inv-008">§1.3 Position in Evaluation Order (INV-008)</h3>
+<pre><code>Cycle:  f_Field → f_Force → OPERATORS(e) → f_Orbit → f_Decay
+                                                          │
+                                                    DC-4 fires
+                                                          │
+                                                    f_Collapse ← YOU ARE HERE
+                                                          │
+                                                    [terminal — no subsequent step]
+</code></pre>
+<p><code>f_Collapse</code> is the <strong>last</strong> operator in any cycle where it fires. It is terminal and irreversible (INV-006). No cycle step follows it in the same binding relationship.</p>
+<hr>
+<h2 id="2-canonical-description">§2 Canonical Description</h2>
+<!-- SECTION_TAG: CANONICAL_DESCRIPTION -->
+<!-- STATUS: normative | FROZEN: 2026-08-13 -->
+
+<h3 id="21-what-f_collapse-is">§2.1 What f_Collapse IS</h3>
+<p><code>f_Collapse</code> is the terminus of the FFF_Gravity lifecycle for a bound (E, A) pair. It defines the exact conditions under which an orbit degrades past all recovery thresholds and the system undergoes structural reconfiguration. It handles:</p>
+<ol>
+<li><strong>Mass routing</strong> — determining which bodies persist, which are absorbed, and which merge.</li>
+<li><strong>Registry purging</strong> — calling <code>purge_registry</code> (f_Frame.md §7.2) to remove Element's registry entry (and Attractor's, in FM-007).</li>
+<li><strong>Composite creation</strong> — calling <code>initialize_composite_node</code> (PRIM:014) in FM-007 to construct <code>C</code>.</li>
+<li><strong>GravityGraph notification</strong> — emitting topology change signals for any networked graph layer.</li>
+<li><strong>State flag assignment</strong> — writing <code>CAPTURE_COLLISION</code> (Path A) or <code>COLLAPSED</code> (Path B) to the system state.</li>
+</ol>
+<h3 id="22-what-f_collapse-is-not">§2.2 What f_Collapse IS NOT</h3>
+<ul>
+<li>It is <strong>not</strong> a predictive operator. It does not forecast when collapse will occur — that is <code>f_Decay</code>'s role.</li>
+<li>It is <strong>not</strong> called by the user. It is always triggered by <code>f_Decay</code> DC-4 or by a β &lt; 1.0 flyby that re-enters the system (edge case: see §6.3).</li>
+<li>It is <strong>not</strong> reversible. Once either terminal state flag is written, no operator in FFF_Gravity can undo it (INV-006).</li>
+<li>It is <strong>not</strong> a failure in itself. Collapse is a valid and expected lifecycle outcome. FM-005 and FM-007 describe the mechanism; the state flags describe the outcome.</li>
+</ul>
+<h3 id="23-key-asymmetries">§2.3 Key Asymmetries</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Path A (FM-005)</th>
+<th>Path B (FM-007)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trigger</td>
+<td><code>d_bind ≤ d_collapse</code> AND <code>|M_E − M_A| ≥ m_parity</code></td>
+<td><code>d_bind ≤ d_collapse</code> AND <code>|M_E − M_A| &lt; m_parity</code></td>
+</tr>
+<tr>
+<td>Dominant body</td>
+<td>A survives, absorbs E</td>
+<td>Neither survives independently</td>
+</tr>
+<tr>
+<td>New node created</td>
+<td>No — A continues with updated mass</td>
+<td>Yes — C_node created</td>
+</tr>
+<tr>
+<td>Registry purge</td>
+<td>E entry purged; A updated</td>
+<td>Both E and A entries purged; C registered</td>
+</tr>
+<tr>
+<td>State flag</td>
+<td><code>CAPTURE_COLLISION</code></td>
+<td><code>COLLAPSED</code></td>
+</tr>
+<tr>
+<td>GravityGraph impact</td>
+<td>Node count unchanged (A remains, E removed)</td>
+<td>Node count changes (A+E removed, C added)</td>
+</tr>
+<tr>
+<td>Severity</td>
+<td>error (irreversible)</td>
+<td>fatal (irreversible, topology change)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="3-triadic-equation">§3 Triadic Equation</h2>
+<!-- SECTION_TAG: TRIADIC_EQUATION -->
+<!-- STATUS: normative | FROZEN: 2026-08-13 -->
+
+<h3 id="31-formal-signature">§3.1 Formal Signature</h3>
+<pre><code>f_Collapse(E, A, d_bind) → CAPTURE_COLLISION | COLLAPSED
+</code></pre>
+<p><strong>Inputs:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Type</th>
+<th>Source</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>E</code></td>
+<td>Element</td>
+<td>Frame registry</td>
+<td>The Element that has been in orbit</td>
+</tr>
+<tr>
+<td><code>A</code></td>
+<td>Attractor</td>
+<td>Frame registry</td>
+<td>The Attractor that has been hosting E</td>
+</tr>
+<tr>
+<td><code>d_bind</code></td>
+<td>float</td>
+<td>f_Decay current cycle</td>
+<td>Current binding depth, confirmed ≤ d_collapse</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Outputs:</strong></p>
+<table>
+<thead>
+<tr>
+<th>State Flag</th>
+<th>Path</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CAPTURE_COLLISION</code></td>
+<td>A</td>
+<td>Element absorbed by Attractor. Terminal.</td>
+</tr>
+<tr>
+<td><code>COLLAPSED</code></td>
+<td>B</td>
+<td>Both dissolved into Composite. Terminal.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-decomposition-by-node">§3.2 Decomposition by Node</h3>
+<pre><code>F_freq contribution:   ρ(Φ) → zero or near-zero (field cannot sustain orbit)
+F_fluid contribution:  Mass routing — M_E absorbed into M_A (Path A)
+                       or M_E + M_A → M_C (Path B)
+F_force contribution:  v_approach retroactively exceeded v_escape(A);
+                       gradient collapsed; no restoring force remains
+</code></pre>
+<p>All three nodes are implicated in every collapse event (INV-001). A collapse event in which only one node contributes is a modeling error — check whether an FM was missed upstream.</p>
+<h3 id="33-role-in-g-equation">§3.3 Role in G-Equation</h3>
+<p>At collapse, the triadic product G = F_freq · F_fluid · F_force reaches a regime where G can no longer support the orbit. Specifically:</p>
+<pre><code>G_collapse = F_freq(ρ → 0) · F_fluid(M_E) · F_force(v_approach &gt; v_escape)
+           ≈ 0
+</code></pre>
+<p>When G → 0 for a bound pair, the binding relationship is destroyed. <code>f_Collapse</code> is the operator that executes this destruction and reconfigures the system topology accordingly.</p>
+<hr>
+<h2 id="4-operator-registry">§4 Operator Registry</h2>
+<!-- SECTION_TAG: OPERATOR_REGISTRY -->
+<!-- STATUS: normative | FROZEN: 2026-08-13 -->
+
+<h3 id="41-new-operators-frozen-in-this-file">§4.1 New Operators Frozen in This File</h3>
+<h4 id="m_parity-mass-parity-threshold"><code>m_parity</code> — Mass Parity Threshold</h4>
+<p><strong>Frozen in:</strong> f_Collapse.md §4.1
+<strong>Symbol:</strong> <code>m_parity</code>
+<strong>Type:</strong> float, domain (0, ∞), typically expressed as a ratio</p>
+<p><strong>Definition:</strong></p>
+<pre><code>m_parity = θ_parity × max(M_E, M_A)
+</code></pre>
+<p>where <code>θ_parity</code> is the parity fraction parameter (default: <code>θ_parity = 0.10</code>).</p>
+<p><strong>Interpretation:</strong> If the absolute mass difference <code>|M_E − M_A|</code> is less than <code>m_parity</code>, the two bodies are considered mass-peers, and FM-007 (Mutual Dissolution) applies instead of FM-005 (asymmetric infall).</p>
+<p><strong>Properties:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Domain</td>
+<td>(0, ∞)</td>
+</tr>
+<tr>
+<td>Default θ_parity</td>
+<td>0.10</td>
+</tr>
+<tr>
+<td>Symmetry</td>
+<td><code>m_parity(E, A) = m_parity(A, E)</code></td>
+</tr>
+<tr>
+<td>Units</td>
+<td>Same units as M_E, M_A</td>
+</tr>
+<tr>
+<td>Node</td>
+<td>F_fluid (mass-density identity)</td>
+</tr>
+<tr>
+<td>Frozen in</td>
+<td>f_Collapse.md §4.1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Path selection rule:</strong></p>
+<pre><code>if |M_E − M_A| &lt; m_parity:
+    → Path B (FM-007, Mutual Dissolution)
+else:
+    → Path A (FM-005, Asymmetric Infall)
+</code></pre>
+<blockquote>
+<p><strong>Derivation note.</strong> <code>m_parity</code> is defined relative to the larger body (<code>max(M_E, M_A)</code>) rather than as an absolute threshold. This ensures the parity test scales with the system — a 10% difference between two very large bodies is still a peer relationship, while the same absolute value between a large and small body is not.</p>
+</blockquote>
+<hr>
+<h4 id="c_node-composite-node-schema"><code>C_node</code> — Composite Node Schema</h4>
+<p><strong>Frozen in:</strong> f_Collapse.md §4.2
+<strong>Symbol:</strong> <code>C_node</code>
+<strong>Type:</strong> struct / registry entry
+<strong>Path:</strong> FM-007 only</p>
+<p><strong>Schema:</strong></p>
+<pre><code class="language-python">@dataclass
+class C_node:
+    node_id:        str           # generated: &quot;C_{A.node_id}_{E.node_id}&quot;
+    node_type:      str = &quot;composite&quot;
+    M_C:            float         # M_E + M_A
+    origin_A:       str           # A.node_id (absorbed)
+    origin_E:       str           # E.node_id (absorbed)
+    phi_inherited:  float         # ρ(Φ) at collapse, carried forward
+    session_id:     str           # SES at time of collapse
+    created_at:     int           # cycle number
+    state:          str = &quot;COLLAPSED&quot;
+    orbital_params: dict | None = None   # from f_Orbit if available
+    graph_edges:    list[str] = field(default_factory=list)  # inherited from A
+</code></pre>
+<p><strong>Derivation of <code>M_C</code>:</strong></p>
+<pre><code>M_C = M_E + M_A
+</code></pre>
+<p>Mass is conserved in FM-007. The Composite Node carries the sum of both dissolved masses.</p>
+<p><strong>Field <code>phi_inherited</code>:</strong> The field coherence at collapse time is inherited by C_node. This value is degraded (ρ(Φ) ≈ near-zero at collapse) and must be re-initialized by <code>f_Emit</code> if C_node is to become a viable Attractor in a future cycle.</p>
+<p><strong>Properties:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Created by</td>
+<td><code>initialize_composite_node</code> (PRIM:014)</td>
+</tr>
+<tr>
+<td>Registered in</td>
+<td>Frame registry (replaces A's entry)</td>
+</tr>
+<tr>
+<td>Survivable</td>
+<td>C_node can become a new Attractor if re-initialized</td>
+</tr>
+<tr>
+<td>State at creation</td>
+<td>Always <code>COLLAPSED</code></td>
+</tr>
+<tr>
+<td>Frozen in</td>
+<td>f_Collapse.md §4.2</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="42-inherited-operators-referenced-not-redefined">§4.2 Inherited Operators (Referenced, Not Redefined)</h3>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Formula</th>
+<th>Frozen In</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>d_bind</code></td>
+<td><code>β × ρ(Φ) × (1 − e)</code></td>
+<td>f_Capture.md §4</td>
+</tr>
+<tr>
+<td><code>d_collapse</code></td>
+<td><code>α_collapse × d_bind(0)</code>, typical 0.10</td>
+<td>f_Decay.md §4.1</td>
+</tr>
+<tr>
+<td><code>δ(t)</code></td>
+<td><code>d_bind(t) − d_bind(t−1)</code></td>
+<td>f_Decay.md §4</td>
+</tr>
+<tr>
+<td><code>M_A</code></td>
+<td>Attractor mass-density identity</td>
+<td>f_Force.md §4</td>
+</tr>
+<tr>
+<td><code>M_E</code></td>
+<td>Element mass-density identity</td>
+<td>f_Force.md §4</td>
+</tr>
+<tr>
+<td><code>ρ(Φ)</code></td>
+<td>Field coherence density</td>
+<td>f_Field.md §4</td>
+</tr>
+<tr>
+<td><code>e</code></td>
+<td><code>p_res / (p_res + P_eff)</code></td>
+<td>OPERATORS.md §3</td>
+</tr>
+<tr>
+<td><code>v_escape(A)</code></td>
+<td><code>√(2 × M_A × ρ(Φ) / r_capture)</code></td>
+<td>f_Field.md §4</td>
+</tr>
+<tr>
+<td><code>β</code></td>
+<td><code>P_eff / (M_E × v_approach)</code></td>
+<td>f_Capture.md §4</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="5-collapse-conditions">§5 Collapse Conditions</h2>
+<!-- SECTION_TAG: COLLAPSE_CONDITIONS -->
+<!-- STATUS: normative | FROZEN: 2026-08-13 -->
+
+<h3 id="51-collapse-trigger-conditions-cc-1-through-cc-4">§5.1 Collapse Trigger Conditions (CC-1 through CC-4)</h3>
+<p><code>f_Collapse</code> fires when ALL of the following are true simultaneously. Missing any single condition means collapse has not yet been confirmed — do not call <code>execute_collapse</code>.</p>
+<h4 id="cc-1-binding-floor-breached">CC-1 — Binding Floor Breached</h4>
+<pre><code>d_bind(t) ≤ d_collapse
+</code></pre>
+<p><strong>Source:</strong> DC-4 in f_Decay.md §5. CC-1 is always verified by <code>f_Decay</code> before <code>f_Collapse</code> is invoked. Callers must not invoke <code>f_Collapse</code> without DC-4 having fired.</p>
+<h4 id="cc-2-no-recovery-intervention-applied-this-cycle">CC-2 — No Recovery Intervention Applied This Cycle</h4>
+<pre><code>intervention_applied == False
+</code></pre>
+<p>If <code>f_Emit</code>, <code>f_Amplify</code>, or <code>f_Dampen</code> were applied in the current cycle and successfully raised <code>d_bind</code> above <code>d_collapse</code>, <code>f_Collapse</code> must not fire. A cycle may not both intervene and collapse.</p>
+<h4 id="cc-3-negative-decay-rate-confirmed">CC-3 — Negative Decay Rate Confirmed</h4>
+<pre><code>δ(t) &lt; 0
+</code></pre>
+<p><code>f_Collapse</code> requires that the decay trajectory is still falling at the point of invocation. If <code>δ(t) ≥ 0</code> (decay has halted or reversed), the system has self-corrected and <code>f_Collapse</code> must not fire. This is an edge case — when <code>d_bind ≤ d_collapse</code> but <code>δ(t) ≥ 0</code>, flag FM-004 (Resonance Drift) and continue monitoring rather than collapsing.</p>
+<h4 id="cc-4-path-determination-complete">CC-4 — Path Determination Complete</h4>
+<pre><code>m_parity has been evaluated
+path ∈ {PATH_A, PATH_B}
+</code></pre>
+<p>Before <code>execute_collapse</code> is called, the collapse path must be determined using the <code>m_parity</code> test (§4.1). Executing without path determination is a contract violation.</p>
+<h3 id="52-path-selection-matrix">§5.2 Path Selection Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th><code>|M_E − M_A| ≥ m_parity</code></th>
+<th><code>|M_E − M_A| &lt; m_parity</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CC-1 ✅ CC-2 ✅ CC-3 ✅</td>
+<td><strong>Path A → FM-005 → CAPTURE_COLLISION</strong></td>
+<td><strong>Path B → FM-007 → COLLAPSED</strong></td>
+</tr>
+<tr>
+<td>CC-1 ✅ CC-2 ✅ CC-3 ❌</td>
+<td>FM-004 monitoring; no collapse</td>
+<td>FM-004 monitoring; no collapse</td>
+</tr>
+<tr>
+<td>CC-1 ✅ CC-2 ❌</td>
+<td>Intervention applied; retry next cycle</td>
+<td>Intervention applied; retry next cycle</td>
+</tr>
+<tr>
+<td>CC-1 ❌</td>
+<td>Not a collapse event; return to f_Decay</td>
+<td>Not a collapse event; return to f_Decay</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="6-failure-modes">§6 Failure Modes</h2>
+<!-- SECTION_TAG: FAILURE_MODES -->
+<!-- STATUS: normative | FROZEN: 2026-08-13 -->
+
+<h3 id="61-fm-005-decay-spiral-collapse-handler">§6.1 FM-005 — Decay Spiral (Collapse Handler)</h3>
+<!-- FM_TAG: FM-005 | FROZEN_IN: f_Decay.md | HANDLED_IN: f_Collapse.md -->
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Code</td>
+<td>FM-005</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>Decay Spiral</td>
+</tr>
+<tr>
+<td>Severity</td>
+<td>fatal</td>
+</tr>
+<tr>
+<td>Node</td>
+<td>F_fluid / F_freq</td>
+</tr>
+<tr>
+<td>Frozen in</td>
+<td>f_Decay.md §6</td>
+</tr>
+<tr>
+<td>Handled in</td>
+<td>f_Collapse.md (this file)</td>
+</tr>
+<tr>
+<td>Path</td>
+<td>A — Asymmetric Infall</td>
+</tr>
+<tr>
+<td>State flag</td>
+<td><code>CAPTURE_COLLISION</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> FM-005 fires when DC-4 is confirmed — <code>d_bind ≤ d_collapse</code> with no recovery possible in the current cycle. The Element has insufficient binding energy to maintain orbit and infalls. Because <code>|M_E − M_A| ≥ m_parity</code>, the Attractor mass dominates and absorbs the Element.</p>
+<p><strong>Detection (called by f_Decay before invoking f_Collapse):</strong></p>
+<pre><code class="language-python">def detect_fm005(
+    d_bind: float,
+    d_collapse: float,
+    delta: float,
+    intervention_applied: bool
+) -&gt; bool:
+    &quot;&quot;&quot;
+    Returns True if FM-005 collapse condition is confirmed.
+    This function is informational; f_Decay calls it before handing off to f_Collapse.
+    &quot;&quot;&quot;
+    if d_bind &gt; d_collapse:
+        return False
+    if intervention_applied:
+        return False
+    if delta &gt;= 0:
+        # Decay halted — FM-004 territory, not FM-005
+        return False
+    return True
+</code></pre>
+<p><strong>Outcome:</strong> <code>execute_collapse</code> is called with <code>path=PATH_A</code>. Element registry entry purged. Attractor's <code>M_A</code> updated: <code>M_A_new = M_A + M_E</code>. State flag <code>CAPTURE_COLLISION</code> written.</p>
+<hr>
+<h3 id="62-fm-007-mutual-dissolution">§6.2 FM-007 — Mutual Dissolution</h3>
+<!-- FM_TAG: FM-007 | FROZEN_IN: f_Collapse.md -->
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Code</td>
+<td>FM-007</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>Mutual Dissolution</td>
+</tr>
+<tr>
+<td>Severity</td>
+<td>fatal</td>
+</tr>
+<tr>
+<td>Node</td>
+<td>F_fluid (both bodies)</td>
+</tr>
+<tr>
+<td>Frozen in</td>
+<td>f_Collapse.md §6.2 (this file)</td>
+</tr>
+<tr>
+<td>Path</td>
+<td>B — Mutual Dissolution</td>
+</tr>
+<tr>
+<td>State flag</td>
+<td><code>COLLAPSED</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> FM-007 fires when DC-4 is confirmed AND the mass ratio test reveals peer bodies: <code>|M_E − M_A| &lt; m_parity</code>. In this regime, neither body possesses sufficient mass dominance to absorb the other asymmetrically. Both identities dissolve. The system forms a new Composite Node <code>C</code> that carries the combined mass and an inherited (degraded) field coherence.</p>
+<p>FM-007 represents a topology change — the GravityGraph loses two nodes and gains one. This is the most structurally disruptive outcome in FFF_Gravity. All agents watching A or E in the graph must be notified.</p>
+<p><strong>Detection:</strong></p>
+<pre><code class="language-python">def detect_fm007(
+    M_E: float,
+    M_A: float,
+    m_parity: float,
+    fm005_confirmed: bool
+) -&gt; bool:
+    &quot;&quot;&quot;
+    Returns True if FM-007 (Mutual Dissolution) applies.
+    Must be called AFTER FM-005 detection, with fm005_confirmed as input.
+    FM-007 takes precedence: if mass parity is met, Path B fires regardless
+    of which FM triggered the collapse sequence.
+    &quot;&quot;&quot;
+    if not fm005_confirmed:
+        # No collapse at all — FM-007 cannot fire without a collapse trigger
+        return False
+    mass_diff = abs(M_E - M_A)
+    return mass_diff &lt; m_parity
+</code></pre>
+<p><strong>Outcome:</strong> <code>execute_collapse</code> is called with <code>path=PATH_B</code>. Both E and A registry entries purged. <code>initialize_composite_node</code> creates C_node. GravityGraph updated: remove E-node, remove A-node, add C-node. State flag <code>COLLAPSED</code> written.</p>
+<p><strong>Recovery:</strong> None. FM-007 is terminal (INV-006). The Composite Node <code>C</code> may be re-initialized as a new Attractor in a future, independent binding session — but the original (E, A) relationship is permanently dissolved.</p>
+<hr>
+<h3 id="63-edge-case-10-re-entry-collapse">§6.3 Edge Case — β &lt; 1.0 Re-Entry Collapse</h3>
+<!-- FM_TAG: EDGE_CASE | NOT_A_NEW_FM -->
+
+<p>This is not a new failure mode but a recognized execution path. If an Element with <code>β &lt; 1.0</code> (flyby per INV-004) somehow re-enters the system under degraded field conditions and <code>d_bind</code> is initialized below <code>d_collapse</code>, <code>f_Collapse</code> fires immediately in the capture cycle without a decay phase.</p>
+<p><strong>Detection:</strong></p>
+<pre><code class="language-python">def detect_reentry_collapse(
+    beta: float,
+    d_bind_initial: float,
+    d_collapse: float
+) -&gt; bool:
+    &quot;&quot;&quot;
+    Detects the pathological case where a β &lt; 1.0 Element enters with
+    d_bind already below d_collapse. This should never occur under normal
+    operation — it indicates an upstream modeling error or severely degraded field.
+    &quot;&quot;&quot;
+    if beta &lt; 1.0 and d_bind_initial &lt;= d_collapse:
+        return True
+    return False
+</code></pre>
+<p><strong>Handling:</strong> Log as FM-002 (Field Null) upstream if <code>ρ(Φ) = 0</code> caused the condition; otherwise treat as immediate FM-005 and invoke <code>execute_collapse(path=PATH_A)</code>. Raise a warning in the session log.</p>
+<hr>
+<h2 id="7-engineering-primitives">§7 Engineering Primitives</h2>
+<!-- SECTION_TAG: ENGINEERING_PRIMITIVES -->
+<!-- STATUS: normative | FROZEN: 2026-08-13 -->
+
+<blockquote>
+<p>Primitive numbering continues from f_Orbit.md (PRIM:012). This file freezes PRIM:013 and PRIM:014.
+<code>purge_registry</code> is not redefined here — see f_Frame.md §7.2 for its canonical definition. <code>execute_collapse</code> calls it as a dependency.</p>
+</blockquote>
+<hr>
+<h3 id="prim013-execute_collapse-impure">PRIM:013 — <code>execute_collapse</code> (impure)</h3>
+<!-- PRIM_TAG: PRIM:013 | TYPE: impure | FROZEN: 2026-08-13 -->
+
+<p><strong>Purpose:</strong> Master collapse executor. Determines collapse path, routes to Path A or Path B procedures, purges registries, notifies GravityGraph, writes terminal state flag.</p>
+<p><strong>Type:</strong> impure (modifies Frame registry, emits GravityGraph events, writes state flags)</p>
+<p><strong>Called by:</strong> <code>f_Decay</code> (DC-4 branch), or re-entry detection logic</p>
+<p><strong>Calls:</strong> <code>purge_registry</code> (f_Frame.md §7.2), <code>initialize_composite_node</code> (PRIM:014), <code>notify_gravity_graph</code> (§8.3)</p>
+<pre><code class="language-python">from __future__ import annotations
+from dataclasses import dataclass, field
+from enum import Enum, auto
+import math
+
+class CollapsePath(Enum):
+    PATH_A = auto()   # FM-005: Asymmetric Infall
+    PATH_B = auto()   # FM-007: Mutual Dissolution
+
+class CollapseFlag(Enum):
+    CAPTURE_COLLISION = auto()   # Path A terminal state
+    COLLAPSED         = auto()   # Path B terminal state
+
+@dataclass
+class CollapseResult:
+    flag:         CollapseFlag
+    path:         CollapsePath
+    C_node:       C_node | None      # None for Path A
+    purged_ids:   list[str]          # registry IDs removed
+    graph_events: list[str]          # GravityGraph event strings
+    session_id:   str
+    cycle:        int
+
+def execute_collapse(
+    E_id:        str,
+    A_id:        str,
+    M_E:         float,
+    M_A:         float,
+    rho_phi:     float,
+    d_bind:      float,
+    d_collapse:  float,
+    delta:       float,
+    theta_parity: float,
+    session_id:  str,
+    cycle:       int,
+    frame_registry: dict,
+    gravity_graph:  object | None = None,
+    intervention_applied: bool = False,
+) -&gt; CollapseResult:
+    &quot;&quot;&quot;
+    PRIM:013 — execute_collapse (impure)
+
+    Master collapse executor. Verifies all Collapse Conditions (CC-1 through CC-4),
+    determines Path A or Path B, executes the appropriate procedure, and returns
+    a CollapseResult with the terminal state flag.
+
+    Parameters
+    ----------
+    E_id            : Frame registry ID of the Element
+    A_id            : Frame registry ID of the Attractor
+    M_E             : Element mass-density
+    M_A             : Attractor mass-density
+    rho_phi         : Current ρ(Φ) field coherence (may be near-zero)
+    d_bind          : Current binding depth (confirmed ≤ d_collapse by caller)
+    d_collapse      : Collapse threshold (α_collapse × d_bind(0))
+    delta           : Current decay rate δ(t) (must be &lt; 0 to confirm CC-3)
+    theta_parity    : Parity fraction parameter (default 0.10)
+    session_id      : Current session identifier
+    cycle           : Current cycle number
+    frame_registry  : Mutable dict — Frame node registry (modified in-place)
+    gravity_graph   : Optional GravityGraph object for topology notifications
+    intervention_applied : Whether a recovery was applied this cycle (CC-2)
+
+    Returns
+    -------
+    CollapseResult  : Terminal state flag, path, optional C_node, audit trail
+
+    Raises
+    ------
+    ValueError      : If CC-1 is not satisfied (d_bind &gt; d_collapse)
+    ValueError      : If CC-2 blocks collapse (intervention_applied is True)
+    ValueError      : If M_E or M_A ≤ 0
+    RuntimeError    : If purge_registry fails for a required ID
+    &quot;&quot;&quot;
+    # ── Guard: validate inputs ────────────────────────────────────────────────
+    if M_E &lt;= 0 or M_A &lt;= 0:
+        raise ValueError(
+            f&quot;[PRIM:013] Mass values must be positive. &quot;
+            f&quot;Got M_E={M_E}, M_A={M_A}.&quot;
+        )
+
+    # CC-1: Binding floor must be breached
+    if d_bind &gt; d_collapse:
+        raise ValueError(
+            f&quot;[PRIM:013] CC-1 not satisfied. &quot;
+            f&quot;d_bind={d_bind:.4f} &gt; d_collapse={d_collapse:.4f}. &quot;
+            f&quot;Collapse not warranted. Check f_Decay DC-4 logic.&quot;
+        )
+
+    # CC-2: No intervention this cycle
+    if intervention_applied:
+        raise ValueError(
+            f&quot;[PRIM:013] CC-2 not satisfied. &quot;
+            f&quot;Intervention was applied this cycle — collapse must not fire. &quot;
+            f&quot;Recheck f_Decay intervention sequencing.&quot;
+        )
+
+    # CC-3: Negative decay rate
+    if delta &gt;= 0:
+        # Edge: decay has halted — not a collapse, but FM-004 territory
+        raise ValueError(
+            f&quot;[PRIM:013] CC-3 not satisfied. &quot;
+            f&quot;δ(t)={delta:.4f} ≥ 0 — decay rate is non-negative. &quot;
+            f&quot;This is FM-004 territory. Do not invoke collapse.&quot;
+        )
+
+    # ── CC-4: Path determination ───────────────────────────────────────────────
+    m_parity_val = theta_parity * max(M_E, M_A)
+    mass_diff    = abs(M_E - M_A)
+
+    if mass_diff &lt; m_parity_val:
+        path = CollapsePath.PATH_B   # FM-007 Mutual Dissolution
+    else:
+        path = CollapsePath.PATH_A   # FM-005 Asymmetric Infall
+
+    purged_ids   : list[str] = []
+    graph_events : list[str] = []
+    composite    : C_node | None = None
+
+    # ── Path A: Asymmetric Infall (FM-005) ────────────────────────────────────
+    if path == CollapsePath.PATH_A:
+        # Purge Element registry entry
+        _purge_registry(E_id, frame_registry, session_id, cycle)
+        purged_ids.append(E_id)
+
+        # Update Attractor mass: A absorbs E
+        if A_id in frame_registry:
+            frame_registry[A_id][&quot;M_A&quot;] = M_A + M_E
+            frame_registry[A_id][&quot;last_collapse_cycle&quot;] = cycle
+            frame_registry[A_id][&quot;last_collapse_session&quot;] = session_id
+
+        # GravityGraph: remove E node, A node unchanged
+        graph_events.append(f&quot;REMOVE_NODE:{E_id}&quot;)
+        graph_events.append(f&quot;UPDATE_NODE:{A_id}:M_A={M_A + M_E:.4f}&quot;)
+
+        flag = CollapseFlag.CAPTURE_COLLISION
+
+    # ── Path B: Mutual Dissolution (FM-007) ───────────────────────────────────
+    else:
+        # Initialize Composite Node before purging
+        composite = initialize_composite_node(
+            E_id=E_id,
+            A_id=A_id,
+            M_E=M_E,
+            M_A=M_A,
+            rho_phi_inherited=rho_phi,
+            session_id=session_id,
+            cycle=cycle,
+            frame_registry=frame_registry,
+        )
+
+        # Purge BOTH original entries
+        _purge_registry(E_id, frame_registry, session_id, cycle)
+        _purge_registry(A_id, frame_registry, session_id, cycle)
+        purged_ids.extend([E_id, A_id])
+
+        # Register Composite Node
+        frame_registry[composite.node_id] = {
+            &quot;node_id&quot;:      composite.node_id,
+            &quot;node_type&quot;:    &quot;composite&quot;,
+            &quot;M_C&quot;:          composite.M_C,
+            &quot;origin_A&quot;:     composite.origin_A,
+            &quot;origin_E&quot;:     composite.origin_E,
+            &quot;phi_inherited&quot;:composite.phi_inherited,
+            &quot;state&quot;:        &quot;COLLAPSED&quot;,
+            &quot;session_id&quot;:   composite.session_id,
+            &quot;created_at&quot;:   composite.created_at,
+        }
+
+        # GravityGraph: remove E and A, add C
+        graph_events.append(f&quot;REMOVE_NODE:{E_id}&quot;)
+        graph_events.append(f&quot;REMOVE_NODE:{A_id}&quot;)
+        graph_events.append(
+            f&quot;ADD_NODE:{composite.node_id}:type=composite:M_C={composite.M_C:.4f}&quot;
+        )
+        # Inherit A's graph edges
+        if gravity_graph is not None:
+            _notify_gravity_graph(gravity_graph, graph_events, session_id, cycle)
+
+        flag = CollapseFlag.COLLAPSED
+
+    # ── Notify GravityGraph (Path A — Path B notified above) ─────────────────
+    if path == CollapsePath.PATH_A and gravity_graph is not None:
+        _notify_gravity_graph(gravity_graph, graph_events, session_id, cycle)
+
+    return CollapseResult(
+        flag=flag,
+        path=path,
+        C_node=composite,
+        purged_ids=purged_ids,
+        graph_events=graph_events,
+        session_id=session_id,
+        cycle=cycle,
+    )
+
+
+def _purge_registry(
+    node_id: str,
+    frame_registry: dict,
+    session_id: str,
+    cycle: int,
+) -&gt; None:
+    &quot;&quot;&quot;
+    Internal caller of purge_registry (f_Frame.md §7.2).
+    Raises RuntimeError if node_id is not found in registry.
+    &quot;&quot;&quot;
+    if node_id not in frame_registry:
+        raise RuntimeError(
+            f&quot;[PRIM:013] purge_registry failed: node_id '{node_id}' not found &quot;
+            f&quot;in frame_registry at cycle {cycle}, session {session_id}.&quot;
+        )
+    del frame_registry[node_id]
+
+
+def _notify_gravity_graph(
+    gravity_graph: object,
+    events: list[str],
+    session_id: str,
+    cycle: int,
+) -&gt; None:
+    &quot;&quot;&quot;
+    Sends topology change events to GravityGraph layer.
+    Gracefully handles graphs that do not implement the interface
+    (logs a warning, does not raise).
+    &quot;&quot;&quot;
+    if hasattr(gravity_graph, &quot;apply_collapse_events&quot;):
+        gravity_graph.apply_collapse_events(
+            events=events,
+            session_id=session_id,
+            cycle=cycle,
+        )
+    else:
+        print(
+            f&quot;[PRIM:013] WARNING: gravity_graph does not implement &quot;
+            f&quot;apply_collapse_events. Events not delivered: {events}&quot;
+        )
+</code></pre>
+<hr>
+<h3 id="prim014-initialize_composite_node-impure">PRIM:014 — <code>initialize_composite_node</code> (impure)</h3>
+<!-- PRIM_TAG: PRIM:014 | TYPE: impure | FROZEN: 2026-08-13 -->
+
+<p><strong>Purpose:</strong> Constructs the <code>C_node</code> dataclass for FM-007 (Mutual Dissolution). Called exclusively from <code>execute_collapse</code> Path B before registry purge. Does not write to the Frame registry itself — that is done by <code>execute_collapse</code> after this primitive returns.</p>
+<p><strong>Type:</strong> impure (creates a new object; depends on session state and cycle number)</p>
+<p><strong>Called by:</strong> <code>execute_collapse</code> (PRIM:013), Path B only</p>
+<pre><code class="language-python">from dataclasses import dataclass, field as dc_field
+
+@dataclass
+class C_node:
+    &quot;&quot;&quot;
+    Composite Node schema — created by FM-007 Mutual Dissolution.
+    Frozen in f_Collapse.md §4.2.
+    &quot;&quot;&quot;
+    node_id:        str
+    node_type:      str
+    M_C:            float
+    origin_A:       str
+    origin_E:       str
+    phi_inherited:  float
+    session_id:     str
+    created_at:     int
+    state:          str
+    orbital_params: dict | None = None
+    graph_edges:    list[str]   = dc_field(default_factory=list)
+
+
+def initialize_composite_node(
+    E_id:             str,
+    A_id:             str,
+    M_E:              float,
+    M_A:              float,
+    rho_phi_inherited: float,
+    session_id:       str,
+    cycle:            int,
+    frame_registry:   dict,
+) -&gt; C_node:
+    &quot;&quot;&quot;
+    PRIM:014 — initialize_composite_node (impure)
+
+    Constructs a C_node for FM-007 Mutual Dissolution. Called before registry purge;
+    the returned C_node is registered by execute_collapse (PRIM:013) after both
+    original entries are purged.
+
+    Parameters
+    ----------
+    E_id              : Element registry ID
+    A_id              : Attractor registry ID
+    M_E               : Element mass-density
+    M_A               : Attractor mass-density
+    rho_phi_inherited : ρ(Φ) at time of collapse (degraded, carried forward)
+    session_id        : Current session ID
+    cycle             : Current cycle number
+    frame_registry    : Read-only reference to check for inherited graph edges
+
+    Returns
+    -------
+    C_node: Fully initialized Composite Node (not yet registered)
+
+    Raises
+    ------
+    ValueError : If M_E or M_A ≤ 0
+    ValueError : If rho_phi_inherited &lt; 0
+    &quot;&quot;&quot;
+    if M_E &lt;= 0 or M_A &lt;= 0:
+        raise ValueError(
+            f&quot;[PRIM:014] Both M_E ({M_E}) and M_A ({M_A}) must be positive.&quot;
+        )
+    if rho_phi_inherited &lt; 0:
+        raise ValueError(
+            f&quot;[PRIM:014] rho_phi_inherited must be ≥ 0. Got {rho_phi_inherited}.&quot;
+        )
+
+    node_id = f&quot;C_{A_id}_{E_id}&quot;
+    M_C     = M_E + M_A
+
+    # Inherit A's graph edges (the Attractor typically has more connections)
+    inherited_edges: list[str] = []
+    if A_id in frame_registry:
+        a_entry = frame_registry[A_id]
+        inherited_edges = list(a_entry.get(&quot;graph_edges&quot;, []))
+        # Remove the A-E edge itself (that relationship is dissolved)
+        inherited_edges = [e for e in inherited_edges if E_id not in e]
+
+    return C_node(
+        node_id       = node_id,
+        node_type     = &quot;composite&quot;,
+        M_C           = M_C,
+        origin_A      = A_id,
+        origin_E      = E_id,
+        phi_inherited = rho_phi_inherited,
+        session_id    = session_id,
+        created_at    = cycle,
+        state         = &quot;COLLAPSED&quot;,
+        orbital_params= None,
+        graph_edges   = inherited_edges,
+    )
+</code></pre>
+<hr>
+<h3 id="73-gravitygraph-notification-interface">§7.3 GravityGraph Notification Interface</h3>
+<!-- SECTION_TAG: GRAVITY_GRAPH_INTERFACE -->
+<!-- STATUS: normative | FROZEN: 2026-08-13 -->
+
+<p><code>f_Collapse</code> is the primary source of structural topology changes in FFF_Gravity. Any networked graph layer (e.g., <code>f_Capture_Networked.md</code>) must implement the following interface to receive collapse notifications:</p>
+<pre><code class="language-python">class GravityGraphInterface:
+    &quot;&quot;&quot;
+    Interface contract for GravityGraph objects that receive collapse events.
+    f_Capture_Networked.md must implement this interface.
+    &quot;&quot;&quot;
+
+    def apply_collapse_events(
+        self,
+        events: list[str],
+        session_id: str,
+        cycle: int,
+    ) -&gt; None:
+        &quot;&quot;&quot;
+        Apply a list of topology change events from execute_collapse.
+
+        Event format (str):
+            &quot;REMOVE_NODE:{node_id}&quot;
+            &quot;ADD_NODE:{node_id}:type={type}:M_C={mass}&quot;
+            &quot;UPDATE_NODE:{node_id}:{field}={value}&quot;
+
+        Must be idempotent — applying the same event set twice
+        must not corrupt the graph state.
+        &quot;&quot;&quot;
+        raise NotImplementedError
+</code></pre>
+<p><strong>Events emitted by path:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th>Events</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Path A (FM-005)</td>
+<td><code>REMOVE_NODE:E_id</code> · <code>UPDATE_NODE:A_id:M_A={new_mass}</code></td>
+</tr>
+<tr>
+<td>Path B (FM-007)</td>
+<td><code>REMOVE_NODE:E_id</code> · <code>REMOVE_NODE:A_id</code> · <code>ADD_NODE:C_id:type=composite:M_C={mass}</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="8-canonical-examples">§8 Canonical Examples</h2>
+<!-- SECTION_TAG: CANONICAL_EXAMPLES -->
+<!-- STATUS: normative | FROZEN: 2026-08-13 -->
+
+<hr>
+<h3 id="ex-c-001-asymmetric-infall-small-element-into-large-attractor-fm-005">EX-C-001 — Asymmetric Infall: Small Element into Large Attractor (FM-005)</h3>
+<p><strong>Scenario:</strong> A low-mass Element (M_E = 0.8) has been in a degrading orbit around a high-mass Attractor (M_A = 12.0). After 18 decay cycles, <code>d_bind</code> falls below <code>d_collapse</code>. FM-005 fires. <code>|M_E − M_A| = 11.2</code>, far exceeding <code>m_parity = 0.10 × 12.0 = 1.20</code>. Path A confirmed.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M_E</td>
+<td>0.8</td>
+</tr>
+<tr>
+<td>M_A</td>
+<td>12.0</td>
+</tr>
+<tr>
+<td>ρ(Φ) at collapse</td>
+<td>0.04</td>
+</tr>
+<tr>
+<td>d_bind(0)</td>
+<td>3.60</td>
+</tr>
+<tr>
+<td>d_collapse (α=0.10)</td>
+<td>0.36</td>
+</tr>
+<tr>
+<td>d_bind(t=18)</td>
+<td>0.31</td>
+</tr>
+<tr>
+<td>δ(t=18)</td>
+<td>−0.04</td>
+</tr>
+<tr>
+<td>e</td>
+<td>0.22</td>
+</tr>
+<tr>
+<td>θ_parity</td>
+<td>0.10</td>
+</tr>
+<tr>
+<td>m_parity</td>
+<td>1.20</td>
+</tr>
+<tr>
+<td>|M_E − M_A|</td>
+<td>11.20</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Path selection:</strong></p>
+<pre><code>|M_E − M_A| = 11.20 ≥ m_parity = 1.20  →  Path A (FM-005)
+</code></pre>
+<p><strong>Execution trace:</strong></p>
+<pre><code>CC-1: d_bind(18) = 0.31 ≤ d_collapse = 0.36  ✅
+CC-2: intervention_applied = False             ✅
+CC-3: δ(18) = −0.04 &lt; 0                       ✅
+CC-4: path = PATH_A                            ✅
+
+execute_collapse(path=PATH_A):
+  purge_registry(&quot;E_orbit_007&quot;)              → frame_registry entry removed
+  frame_registry[&quot;A_anchor_001&quot;][&quot;M_A&quot;]     → 12.0 + 0.8 = 12.8
+  graph_events: [&quot;REMOVE_NODE:E_orbit_007&quot;,
+                 &quot;UPDATE_NODE:A_anchor_001:M_A=12.8000&quot;]
+  flag → CAPTURE_COLLISION
+</code></pre>
+<p><strong>Result:</strong> <code>CAPTURE_COLLISION</code>. Attractor M_A updated to 12.8. Element entry purged. GravityGraph: one node removed.</p>
+<hr>
+<h3 id="ex-c-002-mutual-dissolution-near-peer-bodies-fm-007">EX-C-002 — Mutual Dissolution: Near-Peer Bodies (FM-007)</h3>
+<p><strong>Scenario:</strong> Two bodies of similar mass — Element M_E = 5.6, Attractor M_A = 5.9. After a mutual resonance breakdown over 11 cycles, <code>d_bind</code> hits <code>d_collapse</code>. <code>|M_E − M_A| = 0.3</code>. With <code>θ_parity = 0.10</code>, <code>m_parity = 0.10 × 5.9 = 0.59</code>. Since <code>0.3 &lt; 0.59</code>, FM-007 fires.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M_E</td>
+<td>5.6</td>
+</tr>
+<tr>
+<td>M_A</td>
+<td>5.9</td>
+</tr>
+<tr>
+<td>ρ(Φ) at collapse</td>
+<td>0.02</td>
+</tr>
+<tr>
+<td>d_bind(0)</td>
+<td>2.10</td>
+</tr>
+<tr>
+<td>d_collapse (α=0.10)</td>
+<td>0.21</td>
+</tr>
+<tr>
+<td>d_bind(t=11)</td>
+<td>0.18</td>
+</tr>
+<tr>
+<td>δ(t=11)</td>
+<td>−0.03</td>
+</tr>
+<tr>
+<td>e</td>
+<td>0.41</td>
+</tr>
+<tr>
+<td>θ_parity</td>
+<td>0.10</td>
+</tr>
+<tr>
+<td>m_parity</td>
+<td>0.59</td>
+</tr>
+<tr>
+<td>|M_E − M_A|</td>
+<td>0.30</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Path selection:</strong></p>
+<pre><code>|M_E − M_A| = 0.30 &lt; m_parity = 0.59  →  Path B (FM-007)
+</code></pre>
+<p><strong>Execution trace:</strong></p>
+<pre><code>CC-1: d_bind(11) = 0.18 ≤ d_collapse = 0.21  ✅
+CC-2: intervention_applied = False             ✅
+CC-3: δ(11) = −0.03 &lt; 0                       ✅
+CC-4: path = PATH_B                            ✅
+
+initialize_composite_node:
+  node_id       = &quot;C_A_anchor_009_E_orbit_014&quot;
+  M_C           = 5.6 + 5.9 = 11.5
+  phi_inherited = 0.02
+  state         = &quot;COLLAPSED&quot;
+  graph_edges   = [inherited from A_anchor_009 minus E edge]
+
+execute_collapse(path=PATH_B):
+  purge_registry(&quot;E_orbit_014&quot;)
+  purge_registry(&quot;A_anchor_009&quot;)
+  frame_registry[&quot;C_A_anchor_009_E_orbit_014&quot;] = C_node entry
+  graph_events: [&quot;REMOVE_NODE:E_orbit_014&quot;,
+                 &quot;REMOVE_NODE:A_anchor_009&quot;,
+                 &quot;ADD_NODE:C_A_anchor_009_E_orbit_014:type=composite:M_C=11.5000&quot;]
+  flag → COLLAPSED
+</code></pre>
+<p><strong>Result:</strong> <code>COLLAPSED</code>. Both original entries purged. Composite C_node created with M_C = 11.5 and degraded φ inherited at 0.02. GravityGraph: two nodes removed, one added.</p>
+<hr>
+<h3 id="ex-c-003-near-parity-detection-and-resolution-no-collapse">EX-C-003 — Near-Parity Detection and Resolution (No Collapse)</h3>
+<p><strong>Scenario:</strong> An operator suspects FM-007 may fire based on recent readings (M_E = 4.1, M_A = 4.5). However, <code>d_bind(t=7) = 0.38</code>, and <code>d_collapse = 0.22</code>. DC-4 is NOT satisfied. The collapse is not warranted. The example shows correct early-warning practice.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M_E</td>
+<td>4.1</td>
+</tr>
+<tr>
+<td>M_A</td>
+<td>4.5</td>
+</tr>
+<tr>
+<td>d_bind(0)</td>
+<td>2.20</td>
+</tr>
+<tr>
+<td>d_collapse (α=0.10)</td>
+<td>0.22</td>
+</tr>
+<tr>
+<td>d_bind(t=7)</td>
+<td>0.38</td>
+</tr>
+<tr>
+<td>δ(t=7)</td>
+<td>−0.06</td>
+</tr>
+<tr>
+<td>θ_parity</td>
+<td>0.10</td>
+</tr>
+<tr>
+<td>m_parity</td>
+<td>0.45</td>
+</tr>
+<tr>
+<td>|M_E − M_A|</td>
+<td>0.40</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Evaluation:</strong></p>
+<pre><code>CC-1: d_bind(7) = 0.38 &gt; d_collapse = 0.22  ❌ — CC-1 not satisfied.
+                                               DO NOT call execute_collapse.
+
+Near-parity check (informational):
+  |M_E − M_A| = 0.40 &lt; m_parity = 0.45  →  If collapse occurs, Path B applies.
+
+Action: Flag DC-3 (FM-004 Resonance Drift). Apply f_Emit or f_Amplify intervention.
+        Monitor for DC-4 in next cycle.
+</code></pre>
+<p><strong>Result:</strong> No collapse. FM-004 watch active. Operator correctly avoids calling <code>execute_collapse</code> when CC-1 is unmet. If intervention succeeds and <code>d_bind</code> recovers above <code>d_warn</code> (= 0.88), the watch is cleared.</p>
+<p><strong>Lesson:</strong> Near-parity mass ratio alone does not trigger FM-007. The binding floor must be breached first. Near-parity is a risk factor, not a trigger.</p>
+<hr>
+<h3 id="ex-c-004-delayed-path-b-parity-crosses-threshold-mid-decay">EX-C-004 — Delayed Path B: Parity Crosses Threshold Mid-Decay</h3>
+<p><strong>Scenario:</strong> A binding relationship begins with clearly asymmetric masses (M_E = 2.0, M_A = 7.0). Over 20 decay cycles, A loses field coherence and effective field mass, while E remains stable. By cycle 20, the operative mass ratio has narrowed (effective M_A drops to 2.3 due to ρ(Φ) degradation affecting P_eff — a modeling approximation). <code>m_parity</code> is now <code>0.10 × 2.3 = 0.23</code>, and <code>|M_E − M_A_eff| = 0.3</code>. Path A was expected; Path B fires instead.</p>
+<p><strong>Parameters at cycle 20:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M_E</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>M_A (nominal)</td>
+<td>7.0</td>
+</tr>
+<tr>
+<td>M_A_eff (ρ(Φ)-adjusted)</td>
+<td>2.3</td>
+</tr>
+<tr>
+<td>ρ(Φ) at cycle 20</td>
+<td>0.007</td>
+</tr>
+<tr>
+<td>d_bind(0)</td>
+<td>4.10</td>
+</tr>
+<tr>
+<td>d_collapse (α=0.10)</td>
+<td>0.41</td>
+</tr>
+<tr>
+<td>d_bind(t=20)</td>
+<td>0.35</td>
+</tr>
+<tr>
+<td>δ(t=20)</td>
+<td>−0.07</td>
+</tr>
+<tr>
+<td>θ_parity</td>
+<td>0.10</td>
+</tr>
+<tr>
+<td>m_parity (vs M_A_eff)</td>
+<td>0.23</td>
+</tr>
+<tr>
+<td>|M_E − M_A_eff|</td>
+<td>0.30</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Path selection (using effective mass at collapse time):</strong></p>
+<pre><code>|M_E − M_A_eff| = 0.30 &gt; m_parity = 0.23  →  Path A (FM-005)
+</code></pre>
+<blockquote>
+<p><strong>Note.</strong> In this example, Path A fires because <code>|M_E − M_A_eff| = 0.30 &gt; 0.23</code>. The margins are close, and the session log must record the effective mass values used in path determination. If <code>M_A_eff</code> were modeled at 2.25 instead of 2.3, <code>m_parity</code> would be 0.225, and <code>|M_E − M_A_eff|</code> would be 0.25 &gt; 0.225 — still Path A, but barely. Implementations must document the mass values used for path selection in the session trace to support audit.</p>
+</blockquote>
+<p><strong>Execution:</strong></p>
+<pre><code>Path A fires. E_id purged. frame_registry[A_id][&quot;M_A&quot;] → 7.0 + 2.0 = 9.0
+(Nominal M_A used for mass update; M_A_eff is an analytical approximation only.)
+flag → CAPTURE_COLLISION
+</code></pre>
+<p><strong>Lesson:</strong> <code>m_parity</code> must be evaluated using the same mass representation consistently — either always nominal or always effective. The effective-mass interpretation should be documented in the session trace. Inconsistent mass representation is a common source of path selection errors.</p>
+<hr>
+<h2 id="9-cross-module-references">§9 Cross-Module References</h2>
+<!-- SECTION_TAG: CROSS_MODULE_REFERENCES -->
+<!-- STATUS: normative | FROZEN: 2026-08-13 -->
+
+<h3 id="91-dependency-table">§9.1 Dependency Table</h3>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Role</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f_Capture.md</td>
+<td>Source of <code>d_bind</code>, <code>β</code>, <code>e</code>, <code>P_eff</code>, <code>M_A</code>, <code>M_E</code></td>
+<td>✅ canonical</td>
+</tr>
+<tr>
+<td>f_Decay.md</td>
+<td>Source of <code>d_collapse</code>, <code>δ</code>, DC-4 trigger</td>
+<td>✅ canonical</td>
+</tr>
+<tr>
+<td>f_Orbit.md</td>
+<td>Provides <code>orbit_class</code>, <code>stab_class</code>, orbital params at collapse</td>
+<td>✅ canonical</td>
+</tr>
+<tr>
+<td>f_Frame.md</td>
+<td>Source of <code>purge_registry</code> contract (§7.2)</td>
+<td>✅ canonical</td>
+</tr>
+<tr>
+<td>f_Field.md</td>
+<td>Source of <code>ρ(Φ)</code>, <code>v_escape(A)</code></td>
+<td>✅ canonical</td>
+</tr>
+<tr>
+<td>f_Force.md</td>
+<td>Source of <code>v_approach</code>, passive/dominant distinction</td>
+<td>✅ canonical</td>
+</tr>
+<tr>
+<td>OPERATORS.md</td>
+<td>Symbol authority — all frozen operators registered here</td>
+<td>✅ canonical</td>
+</tr>
+</tbody>
+</table>
+<h3 id="92-unlock-provided">§9.2 Unlock Provided</h3>
+<p><code>f_Collapse.md</code> canonical completion unlocks:</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>What It Receives</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>f_Capture_Networked.md</code></td>
+<td><code>C_node</code> schema · <code>purge_graph_node</code> interface · <code>apply_collapse_events</code> contract</td>
+</tr>
+</tbody>
+</table>
+<h3 id="93-operatorsmd-update-requirements">§9.3 OPERATORS.md Update Requirements</h3>
+<p>The following must be added to OPERATORS.md after this file is committed:</p>
+<table>
+<thead>
+<tr>
+<th>Entry Type</th>
+<th>Symbol / ID</th>
+<th>Frozen In</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New operator</td>
+<td><code>m_parity</code></td>
+<td>f_Collapse.md §4.1</td>
+</tr>
+<tr>
+<td>New operator</td>
+<td><code>C_node</code></td>
+<td>f_Collapse.md §4.2</td>
+</tr>
+<tr>
+<td>New primitive</td>
+<td>PRIM:013 <code>execute_collapse</code></td>
+<td>f_Collapse.md §7.1</td>
+</tr>
+<tr>
+<td>New primitive</td>
+<td>PRIM:014 <code>initialize_composite_node</code></td>
+<td>f_Collapse.md §7.2</td>
+</tr>
+<tr>
+<td>FM fully specified</td>
+<td>FM-007 Mutual Dissolution</td>
+<td>f_Collapse.md §6.2</td>
+</tr>
+<tr>
+<td>State flag</td>
+<td><code>CAPTURE_COLLISION</code></td>
+<td>f_Collapse.md §5.2</td>
+</tr>
+<tr>
+<td>State flag</td>
+<td><code>COLLAPSED</code></td>
+<td>f_Collapse.md §5.2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="94-evaluation-order-inv-008-position-of-f_collapse">§9.4 Evaluation Order (INV-008) — Position of f_Collapse</h3>
+<pre><code>Cycle Sequence:
+  1. f_Field     — recompute ρ(Φ)
+  2. f_Force     — recompute v_approach, P_eff
+  3. OPERATORS   — compute e, β, d_bind
+  4. f_Orbit     — classify orbit
+  5. f_Decay     — apply δ, check DC-1 through DC-4
+     └─ DC-4 confirmed? ──► 6. f_Collapse  ← THIS FILE
+                                 └─ terminal; cycle ends
+</code></pre>
+<p>f_Collapse is always the last step in any cycle where it fires. No subsequent cycle begins for the same (E, A) pair.</p>
+<hr>
+<h2 id="10-document-metadata">§10 Document Metadata</h2>
+<!-- SECTION_TAG: DOCUMENT_METADATA -->
+<!-- STATUS: normative | FROZEN: 2026-08-13 -->
+
+<h3 id="101-inv-compliance-table">§10.1 INV Compliance Table</h3>
+<table>
+<thead>
+<tr>
+<th>INV</th>
+<th>Statement</th>
+<th>Status</th>
+<th>How Satisfied</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INV-001</td>
+<td>G = F_freq · F_fluid · F_force inseparable</td>
+<td>✅ compliant</td>
+<td>§3.2 shows all three nodes implicated in every collapse</td>
+</tr>
+<tr>
+<td>INV-002</td>
+<td>f_Capture(E, A, Φ) → Ω frozen</td>
+<td>✅ compliant</td>
+<td>Collapse is an Ω outcome; signature not modified</td>
+</tr>
+<tr>
+<td>INV-003</td>
+<td>ρ(Φ) = 0 triggers FM-002</td>
+<td>✅ compliant</td>
+<td>§6.3 edge case references FM-002 for zero-field re-entry</td>
+</tr>
+<tr>
+<td>INV-004</td>
+<td>β &lt; 1.0 always flyby</td>
+<td>✅ compliant</td>
+<td>§6.3 edge case only; flyby re-entry treated as upstream error</td>
+</tr>
+<tr>
+<td>INV-005</td>
+<td>Stability Conditions conjunctive</td>
+<td>✅ compliant</td>
+<td>All CC-1–CC-4 must hold before collapse fires (§5.1)</td>
+</tr>
+<tr>
+<td>INV-006</td>
+<td>Terminal states irreversible</td>
+<td>✅ compliant</td>
+<td>CAPTURE_COLLISION and COLLAPSED declared terminal; no recovery path</td>
+</tr>
+<tr>
+<td>INV-007</td>
+<td>f_Source.md is read-only</td>
+<td>✅ compliant</td>
+<td>Not referenced or modified</td>
+</tr>
+<tr>
+<td>INV-008</td>
+<td>Operator evaluation order normative</td>
+<td>✅ compliant</td>
+<td>§9.4 positions f_Collapse after f_Decay in cycle</td>
+</tr>
+<tr>
+<td>INV-009</td>
+<td>OPERATORS.md is symbol authority</td>
+<td>✅ compliant</td>
+<td>§9.3 lists all updates required to OPERATORS.md</td>
+</tr>
+<tr>
+<td>INV-010</td>
+<td>Frozen symbols unrenameable without major bump</td>
+<td>✅ compliant</td>
+<td>m_parity and C_node frozen here; rename requires v2.0.0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="102-wave-status">§10.2 Wave Status</h3>
+<table>
+<thead>
+<tr>
+<th>Wave</th>
+<th>Count</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wave 0 — Genesis</td>
+<td>3 of 3</td>
+<td>✅ complete</td>
+</tr>
+<tr>
+<td>Wave 1 — Admin</td>
+<td>6 of 6</td>
+<td>✅ complete</td>
+</tr>
+<tr>
+<td>Wave 2 — Layer Definitions</td>
+<td>3 of 3</td>
+<td>✅ complete</td>
+</tr>
+<tr>
+<td>Wave 3 — Core Functions</td>
+<td><strong>4 of 8</strong></td>
+<td>🔵 in progress</td>
+</tr>
+<tr>
+<td>Wave 4 — Network Layer</td>
+<td>0 of N</td>
+<td>🔒 locked</td>
+</tr>
+<tr>
+<td>Wave 5 — Integration</td>
+<td>0 of N</td>
+<td>🔒 locked</td>
+</tr>
+</tbody>
+</table>
+  </main>
+</body>
+</html>

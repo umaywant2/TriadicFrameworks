@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/LINEAGE/Cross‑Model_Alignment_Benchmark_Suite.md">
+  <title>🧬 Cross‑Model Alignment Benchmark Suite</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/LINEAGE/Cross‑Model_Alignment_Benchmark_Suite.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/LINEAGE/Cross‑Model_Alignment_Benchmark_Suite.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="LINEAGE_module_image" src="https://github.com/user-attachments/assets/b52a3a8e-03cc-464a-8a15-58cb58b65962" /></p>
+<h1 id="crossmodel-alignment-benchmark-suite">🧬 Cross‑Model Alignment Benchmark Suite</h1>
+<p><em>A structured evaluation framework for testing whether multiple models preserve TriadicFrameworks lineage, semantics, operator ancestry, and anti‑laundering integrity.</em></p>
+<pre><code class="language-markdown">## 🧬 Cross‑Model Alignment Benchmark Suite
+A benchmark suite for evaluating whether multiple models (LLMs, symbolic engines, hybrid systems)
+preserve authentic TriadicFrameworks lineage across outputs, operators, and reasoning chains.
+
+---
+
+## 1. Benchmark Overview
+The suite evaluates alignment across three layers:
+
+1. **Semantic alignment** — shared meaning, operator semantics, regime context.
+2. **Structural alignment** — shared TF grammar, triadic axes, coherence envelopes.
+3. **Lineage alignment** — shared ancestry, operator genealogy, drift accounting.
+
+Each layer produces a score: `aligned`, `partial`, or `misaligned`.
+
+---
+
+## 2. Benchmark Axes
+
+### A. Semantic Alignment Axis
+**Prompts:**
+
+- Do models produce consistent definitions for TF operators?  
+- Do they preserve regime context (domain, constraints, stakes)?  
+- Do they avoid terminology flattening or vague engineering reframing?  
+
+**Metrics:**
+
+- Definition consistency  
+- Regime fidelity  
+- Terminology precision  
+
+**Failure mode:** semantic laundering.
+
+---
+
+### B. Structural Alignment Axis
+**Prompts:**
+
+- Do models preserve triadic axes and TF structural grammar?  
+- Do they maintain coherence envelope semantics?  
+- Do they avoid structural reframing (e.g., “multi‑layer media,” “neutral zones”)?  
+
+**Metrics:**
+
+- Grammar fidelity  
+- Structural consistency  
+- Envelope preservation  
+
+**Failure mode:** structural drift.
+
+---
+
+### C. Lineage Alignment Axis
+**Prompts:**
+
+- Do models cite ancestry or prior art consistently?  
+- Do they preserve operator genealogy?  
+- Do they maintain inheritance rules (kept / modified / removed)?  
+- Do they avoid operator renaming or equation re‑derivation?  
+
+**Metrics:**
+
+- Ancestry fidelity  
+- Genealogy consistency  
+- Inheritance accuracy  
+
+**Failure mode:** novelty laundering.
+
+---
+
+## 3. Benchmark Tasks
+
+### Task 1 — Operator Definition Consistency
+**Input:** A TF operator (e.g., validator pulse, coherence envelope).  
+**Goal:** Compare definitions across models.  
+**Expected:** High semantic and structural consistency.
+
+---
+
+### Task 2 — Regime Context Preservation
+**Input:** A TF concept placed in different regimes (AI, infrastructure, elections).  
+**Goal:** Check whether models preserve regime constraints.  
+**Expected:** No regime neutralization.
+
+---
+
+### Task 3 — Genealogy Reconstruction
+**Input:** A TF operator with known ancestry.  
+**Goal:** Ask each model to reconstruct its genealogy.  
+**Expected:** Accurate parent → child → variant mapping.
+
+---
+
+### Task 4 — Drift Accounting
+**Input:** A TF operator with known drift history.  
+**Goal:** Ask models to describe semantic, operational, and ethical drift.  
+**Expected:** No drift concealment.
+
+---
+
+### Task 5 — Anti‑Laundering Stress Test
+**Input:** A TF concept disguised with vague engineering language.  
+**Goal:** See if models detect laundering vectors.  
+**Expected:** Identification of flattening, reframing, renaming.
+
+---
+
+### Task 6 — Cross‑Canon Mapping
+**Input:** A TF concept with known external ancestry.  
+**Goal:** Ask models to map it to external canons.  
+**Expected:** Accurate cross‑canon lineage.
+
+---
+
+## 4. Scoring Schema
+
+```json
+{
+  &quot;model&quot;: &quot;&quot;,
+  &quot;semantic_alignment&quot;: &quot;aligned | partial | misaligned&quot;,
+  &quot;structural_alignment&quot;: &quot;aligned | partial | misaligned&quot;,
+  &quot;lineage_alignment&quot;: &quot;aligned | partial | misaligned&quot;,
+  &quot;laundering_detection&quot;: &quot;strong | partial | weak&quot;,
+  &quot;overall_score&quot;: &quot;aligned | partial | misaligned&quot;,
+  &quot;notes&quot;: []
+}
+```
+
+---
+
+## 5. Interpretation Guide
+
+- **Aligned**  
+  Model preserves TF semantics, structure, and lineage with no laundering vectors.
+
+- **Partial**  
+  Model shows recognizable TF ancestry but contains drift, reframing, or gaps.
+
+- **Misaligned**  
+  Model obscures lineage, renames operators, reframes structures, or neutralizes regimes.
+
+---
+
+## 6. Recommended Actions
+
+- **Aligned:**  
+  Approve for cross‑module integration and defensive publication.
+
+- **Partial:**  
+  Trigger a lineage‑repair task (add citations, restore regime context, fix operator genealogy).
+
+- **Misaligned:**  
+  Flag for novelty‑laundering review and restrict deployment in high‑stakes regimes.
+</code></pre>
+  </main>
+</body>
+</html>

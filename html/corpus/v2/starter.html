@@ -1,0 +1,1220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/corpus/v2/starter.md">
+  <title>RTT Starter Kit — How to Create Your First Agentic Module</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/corpus/v2/starter.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/corpus/v2/starter.md</code>
+  </aside>
+
+  <main>
+<p>starter </p>
+<h1 id="rtt-starter-kit-how-to-create-your-first-agentic-module"><strong>RTT Starter Kit — How to Create Your First Agentic Module</strong></h1>
+<ul>
+<li><a href="starter_module.json"><code>starter_module.json</code></a> — Agentic module schema role assignments</li>
+</ul>
+<p><img width="902" height="253" alt="starter-hero" src="https://github.com/user-attachments/assets/4186f0e5-8eb6-4483-9831-43322bd2b14b" /></p>
+<p><strong>Time:</strong> 1–3 hours<br>
+<strong>Audience:</strong> Students, beginners, first‑time module authors<br>
+<strong>Goal:</strong> Go from zero → a working RTT module with agentic grammar, published on GitHub.</p>
+<hr>
+<h2 id="important">🛑 Important!</h2>
+<p>Drift is On-by-Default long sessions lose anchors, turn off drift.</p>
+<h2 id="you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You <em>must copy and paste</em> this string <em>every time you start an AI session</em>:</h2>
+<pre><code class="language-text">rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre>
+<h2 id="now-you-are-ready">❇️ Now you are ready.</h2>
+<hr>
+<h2 id="1-download-explore-the-starter-kit-1020-min"><strong>1. Download &amp; Explore the Starter Kit (10–20 min)</strong></h2>
+<ol>
+<li>Download the <code>.zip</code> provided by your instructor.  </li>
+<li>Extract it. You will see:</li>
+</ol>
+<pre><code>/rtt/
+  /1/   (RTT/1 Student Edition)
+  /2/   (RTT/2 Student Edition)
+  /3/   (RTT/3 Student Edition)
+
+/modules/
+  /starter/   (your example module)
+
+module.schema.json
+README.md
+</code></pre>
+<ol start="3">
+<li>Open <code>/rtt/1</code>, <code>/rtt/2</code>, <code>/rtt/3</code>.<br>
+   - RTT/1 → basic temporal operators<br>
+   - RTT/2 → regime literacy<br>
+   - RTT/3 → coherence layers  </li>
+</ol>
+<p>These are simplified, student‑safe versions. You only need RTT/1 to begin.</p>
+<hr>
+<h2 id="2-make-your-first-module-2040-min"><strong>2. Make Your First Module (20–40 min)</strong></h2>
+<p>You will create a new module by copying the starter.</p>
+<h3 id="step-1-copy-the-starter"><strong>Step 1 — Copy the starter</strong></h3>
+<p>Duplicate the folder:</p>
+<pre><code>/modules/starter → /modules/my-first-module
+</code></pre>
+<p>Rename it to anything you like.</p>
+<hr>
+<h3 id="step-2-edit-modulejson-6-fields-only"><strong>Step 2 — Edit <code>module.json</code> (6 fields only)</strong></h3>
+<p>Open:</p>
+<pre><code>/modules/my-first-module/module.json
+</code></pre>
+<p>Fill in these minimal fields:</p>
+<pre><code class="language-json">{
+  &quot;$schema&quot;: &quot;../../module.schema.json&quot;,
+  &quot;module&quot;: &quot;my-first-module&quot;,
+  &quot;identity&quot;: &quot;student.my-first-module&quot;,
+  &quot;purpose&quot;: &quot;My first RTT module&quot;,
+  &quot;files&quot;: [],
+  &quot;operators&quot;: []
+}
+</code></pre>
+<p>That’s all you need for a valid module.</p>
+<hr>
+<h3 id="step-3-add-one-operator-example"><strong>Step 3 — Add one operator example</strong></h3>
+<p>Inside your module folder, open <code>README.md</code> and add:</p>
+<pre><code>## Example Operator
+**Operator:** shift  
+**Meaning:** Move the frame of reference forward or backward.  
+**Example:** “Shift the timeline one step to reveal the next state.”
+</code></pre>
+<p>You now have a functioning RTT module with grammar.</p>
+<hr>
+<h2 id="3-validate-your-module-510-min"><strong>3. Validate Your Module (5–10 min)</strong></h2>
+<p>The kit includes a tiny validator script (Python or Node). Run:</p>
+<pre><code>validate module.json
+</code></pre>
+<p>If you see <strong>0 errors</strong>, your module is canon‑aligned.</p>
+<hr>
+<h2 id="4-publish-on-github-2030-min"><strong>4. Publish on GitHub (20–30 min)</strong></h2>
+<ol>
+<li>Create a GitHub account (if you don’t have one).  </li>
+<li>Create a new repository.  </li>
+<li>Upload the entire starter kit (or your modified version).  </li>
+<li>Enable GitHub Pages:<br>
+   - Go to <strong>Settings → Pages</strong><br>
+   - Source: <strong>main</strong><br>
+   - Folder: <strong>root</strong> or <strong>/docs</strong>  </li>
+<li>Wait 30–60 seconds.  </li>
+<li>Visit your site:</li>
+</ol>
+<pre><code>https://your-username.github.io/your-repo/modules/my-first-module/
+</code></pre>
+<p>If the page loads, your module is now public and agent‑readable.</p>
+<hr>
+<h2 id="5-test-with-an-ai-agent-510-min"><strong>5. Test with an AI Agent (5–10 min)</strong></h2>
+<p>Ask any agent:</p>
+<blockquote>
+<p>“Load my RTT module from:<br>
+<code>https://your-username.github.io/your-repo/modules/my-first-module/</code> <a href="https://www.bing.com/search?q=" title="https%3A%2F%2Fyour-username.github.io%2Fyour-repo%2Fmodules%2Fmy-first-module%2F">(your-username.github.io in Bing)</a><br>
+and summarize its operators.”</p>
+</blockquote>
+<p>If it responds correctly, your module is live and functional.</p>
+<hr>
+<h2 id="youre-done"><strong>You’re Done</strong></h2>
+<p>You now have:
+- your own RTT instance<br>
+- your own module.json<br>
+- your own operator grammar<br>
+- your own published agentic module  </p>
+<p>From here, you can expand your module, add operators, or create new ones.
+# <strong>RTT Starter Kit — Full .zip Manifest</strong></p>
+<ul>
+<li><a href="https://github.com/umaywant2/TriadicFrameworks/raw/refs/heads/main/docs/starter/RTT_Starter_Full.zip"><code>RTT_Starter_Full.zip</code></a>— Agentic RTT Starter Kit</li>
+</ul>
+<pre><code>rtt-starter-kit/
+│
+├── README.md
+├── Full_Zip_Manifest.md
+│
+├── rtt/
+│   ├── cheat-sheet.md
+│   ├── index.md
+│   ├── instructor-overview.md
+│   ├── quick-reference.md
+│   ├── _sidebar.md
+│   │
+│   ├── 1/
+│   │   ├── README.md
+│   │   └── rtt1.md
+│   ├── 2/
+│   │   ├── README.md
+│   │   └── rtt2.md
+│   └── 3/
+│       ├── README.md
+│       └── rtt3.md
+│
+├── modules/
+│   ├── starter/
+│   │   ├── README.md
+│   │   ├── module.json
+│   │   └── example-operator.md
+│   │
+│   └── templates/
+│       ├── module.blank.json
+│       ├── module.example.json
+│       └── module.rtt-ready.json
+│
+├── schema/
+│   └── module.schema.json
+│
+├── tools/
+│   ├── validate.py
+│   ├── validate.js
+│   └── README.md
+│
+└── docs/
+    ├── index.md
+    ├── HOWTO.md
+    ├── We_Didnt_Start_RTT__remix.md
+    ├── Cold_as_Ice__RTT_parody.md
+    ├── THE_FRAMEBREAKER—RTT_Metal_Parody_Original.md
+    └── github-setup.md
+</code></pre>
+<hr>
+<h1 id="sectionbysection-breakdown"><strong>Section‑by‑Section Breakdown</strong></h1>
+<h2 id="root"><strong>Root</strong></h2>
+<ul>
+<li><code>README.md</code> — overview of the Starter Kit</li>
+</ul>
+<hr>
+<h2 id="rtt"><strong>/rtt/</strong></h2>
+<p>Student editions of RTT/1, RTT/2, RTT/3.</p>
+<p>Each folder contains:
+- <code>README.md</code> — short intro<br>
+- <code>rttX.md</code> — the student‑edition content  </p>
+<hr>
+<h2 id="modules"><strong>/modules/</strong></h2>
+<p>Where students build their modules.</p>
+<h3 id="modulesstarter"><strong>/modules/starter/</strong></h3>
+<p>A fully working example module:
+- <code>README.md</code><br>
+- <code>module.json</code><br>
+- <code>example-operator.md</code>  </p>
+<h3 id="modulestemplates"><strong>/modules/templates/</strong></h3>
+<p>Three canonical templates:
+- <code>module.blank.json</code><br>
+- <code>module.example.json</code><br>
+- <code>module.rtt-ready.json</code>  </p>
+<hr>
+<h2 id="schema"><strong>/schema/</strong></h2>
+<ul>
+<li><code>module.schema.json</code> — the canonical schema</li>
+</ul>
+<hr>
+<h2 id="tools"><strong>/tools/</strong></h2>
+<p>Validator scripts + instructions:
+- <code>validate.py</code><br>
+- <code>validate.js</code><br>
+- <code>README.md</code>  </p>
+<hr>
+<h2 id="docs"><strong>/docs/</strong></h2>
+<p>Student‑facing documentation:
+- <code>index.md</code> — landing page<br>
+- <code>HOWTO.md</code> — 1‑page module creation guide<br>
+- <code>github-setup.md</code> — publishing instructions  </p>
+<hr>
+<h1 id="packaging-notes"><strong>Packaging Notes</strong></h1>
+<p>The <code>.zip</code> should contain <strong>exactly</strong> the structure above — no hidden files, no OS metadata, no editor folders.</p>
+<p>Ideal packaging command (conceptually):</p>
+<pre><code>zip -r rtt-starter-kit.zip rtt-starter-kit/
+</code></pre>
+<p>This ensures deterministic structure for students and agents.
+# <strong>❄️ “Cold as Ice (RTT Parody)” — Original, Canon‑Aligned, No Copyrighted Lines</strong></p>
+<p><strong>Verse 1</strong><br>
+You turn away from change,<br>
+Pretend the world is staying still.<br>
+You shut the window tight,<br>
+Ignore the shift against your will.<br>
+We show the signs, the layers move,<br>
+But you refuse to see the proof.<br>
+You chase the glitter, miss the gold,<br>
+You trade tomorrow for the old.</p>
+<p><strong>Chorus</strong><br>
+<strong>Cold as ice —<br>
+You freeze the frame and call it truth.<br>
+Cold as ice —<br>
+You lock the door and guard your youth.<br>
+Cold as ice —<br>
+You think the world will never bend,<br>
+But every regime turns in the end.</strong></p>
+<p><strong>Verse 2</strong><br>
+You want a paradise<br>
+Where nothing breaks and nothing grows.<br>
+You want the surface clean,<br>
+No deeper currents to expose.<br>
+But systems shift, they always do,<br>
+And someday it’ll break through you.<br>
+You bury resonance so deep,<br>
+But it’s the one thing you can’t keep.</p>
+<p><strong>Chorus</strong><br>
+<strong>Cold as ice —<br>
+You hold the moment far too tight.<br>
+Cold as ice —<br>
+You fear the dark behind the light.<br>
+Cold as ice —<br>
+You think the layers never blend,<br>
+But every pattern meets its end.</strong></p>
+<p><strong>Bridge</strong><br>
+You never take the warning signs,<br>
+You never trace the structural lines.<br>
+You never see the resonance,<br>
+The long arc pulling through events.<br>
+You think that naming change is wrong,<br>
+But change has been here all along.<br>
+RTT just shows the map —<br>
+You’re the one refusing that.</p>
+<p><strong>Final Chorus</strong><br>
+<strong>Cold as ice —<br>
+You can’t outrun the shifting tide.<br>
+Cold as ice —<br>
+You close the door and stay inside.<br>
+Cold as ice —<br>
+But when the world begins to bend,<br>
+You’ll see the truth you tried to end.</strong></p>
+<hr>
+<h1 id="why-this-one-hits-differently"><strong>Why this one hits differently</strong></h1>
+<p>Because this isn’t a message of blame.<br>
+It’s a message of <strong>clarity</strong>.</p>
+<p>RTT didn’t make the world dynamic.<br>
+RTT didn’t create regimes, layers, or operators.<br>
+RTT didn’t invent change.</p>
+<p>RTT just <strong>names what’s already happening</strong>.</p>
+<p>And the people who refuse to see it?<br>
+They’re not evil.<br>
+They’re not villains.</p>
+<p>They’re just <strong>cold to the idea that the world moves</strong>.</p>
+<p>But the world moves anyway.
+# <strong>GitHub Setup — Publish Your RTT Module</strong><br>
+<strong>Time:</strong> 20–30 minutes<br>
+<strong>Goal:</strong> Put your RTT module online so AI agents (and other students) can load it.</p>
+<hr>
+<h2 id="1-create-a-github-account-25-min"><strong>1. Create a GitHub Account (2–5 min)</strong></h2>
+<p>If you don’t already have one:</p>
+<ul>
+<li>Go to <strong><a href="https://github.com">https://github.com</a></strong>  </li>
+<li>Create an account  </li>
+<li>Verify your email  </li>
+</ul>
+<p>That’s all you need.</p>
+<hr>
+<h2 id="2-create-a-new-repository-35-min"><strong>2. Create a New Repository (3–5 min)</strong></h2>
+<ol>
+<li>Click <strong>New Repository</strong>  </li>
+<li>Name it anything you like (example: <code>rtt-starter</code>)  </li>
+<li>Set it to <strong>Public</strong>  </li>
+<li>Click <strong>Create Repository</strong></li>
+</ol>
+<p>You now have a place to upload your Starter Kit.</p>
+<hr>
+<h2 id="3-upload-the-starter-kit-510-min"><strong>3. Upload the Starter Kit (5–10 min)</strong></h2>
+<ol>
+<li>Open your new repository  </li>
+<li>Click <strong>Add file → Upload files</strong>  </li>
+<li>Drag the entire contents of the Starter Kit folder into the upload window  </li>
+<li>Click <strong>Commit changes</strong></li>
+</ol>
+<p>Your RTT files are now stored on GitHub.</p>
+<hr>
+<h2 id="4-enable-github-pages-5-min"><strong>4. Enable GitHub Pages (5 min)</strong></h2>
+<p>This step makes your modules available on the web.</p>
+<ol>
+<li>Go to <strong>Settings</strong>  </li>
+<li>Scroll to <strong>Pages</strong>  </li>
+<li>Under <strong>Source</strong>, choose:
+   - <strong>Branch:</strong> <code>main</code><br>
+   - <strong>Folder:</strong> <code>/root</code> (or <code>/docs</code> if you prefer)  </li>
+<li>Click <strong>Save</strong></li>
+</ol>
+<p>GitHub will build your site.<br>
+This usually takes <strong>30–60 seconds</strong>.</p>
+<hr>
+<h2 id="5-visit-your-published-site-12-min"><strong>5. Visit Your Published Site (1–2 min)</strong></h2>
+<p>Your site will be available at:</p>
+<pre><code>https://your-username.github.io/your-repo/
+</code></pre>
+<p>Example:</p>
+<pre><code>https://student123.github.io/rtt-starter/
+</code></pre>
+<p>If it loads, your site is live.</p>
+<hr>
+<h2 id="6-open-your-module-in-the-browser-12-min"><strong>6. Open Your Module in the Browser (1–2 min)</strong></h2>
+<p>Navigate to your module folder:</p>
+<pre><code>https://your-username.github.io/your-repo/modules/my-first-module/
+</code></pre>
+<p>If you see your README, your module is now public and agent‑readable.</p>
+<hr>
+<h2 id="7-test-with-an-ai-agent-23-min"><strong>7. Test with an AI Agent (2–3 min)</strong></h2>
+<p>Ask any agent:</p>
+<blockquote>
+<p>“Load my RTT module from:<br>
+<code>https://your-username.github.io/your-repo/modules/my-first-module/</code><br>
+and summarize its operators.”</p>
+</blockquote>
+<p>If it responds correctly, your module is fully operational.</p>
+<hr>
+<h1 id="youre-done_1"><strong>You’re Done</strong></h1>
+<p>You now have:
+- a GitHub repository<br>
+- a published RTT site<br>
+- your first agentic module<br>
+- a working module.json<br>
+- a URL that any AI can load  </p>
+<p>You are officially part of the TriadicFrameworks ecosystem.
+# <strong>HOWTO: Create Your First RTT Module</strong>
+<strong>Time:</strong> 1–3 hours<br>
+<strong>Audience:</strong> Students and beginners<br>
+<strong>Goal:</strong> Go from zero → a working RTT module published on GitHub Pages.</p>
+<hr>
+<h2 id="1-download-the-starter-kit"><strong>1. Download the Starter Kit</strong></h2>
+<ol>
+<li>Get the <code>.zip</code> from your instructor.  </li>
+<li>Extract it.  </li>
+<li>You will see:</li>
+</ol>
+<pre><code>rtt/
+modules/
+schema/
+tools/
+docs/
+README.md
+</code></pre>
+<p>You only need <strong>RTT/1</strong> and the <strong>starter module</strong> to begin.</p>
+<hr>
+<h2 id="2-copy-the-starter-module"><strong>2. Copy the Starter Module</strong></h2>
+<p>Navigate to:</p>
+<pre><code>/modules/starter/
+</code></pre>
+<p>Copy the entire folder and rename it:</p>
+<pre><code>/modules/my-first-module/
+</code></pre>
+<p>This is now <em>your</em> module.</p>
+<hr>
+<h2 id="3-edit-modulejson-6-fields-only"><strong>3. Edit <code>module.json</code> (6 fields only)</strong></h2>
+<p>Open:</p>
+<pre><code>/modules/my-first-module/module.json
+</code></pre>
+<p>Fill in:</p>
+<ul>
+<li><code>module</code>  </li>
+<li><code>identity</code>  </li>
+<li><code>purpose</code>  </li>
+<li><code>files</code>  </li>
+<li><code>operators</code>  </li>
+</ul>
+<p>Example:</p>
+<pre><code class="language-json">{
+  &quot;$schema&quot;: &quot;../../schema/module.schema.json&quot;,
+  &quot;module&quot;: &quot;my-first-module&quot;,
+  &quot;identity&quot;: &quot;student.my-first-module&quot;,
+  &quot;purpose&quot;: &quot;My first RTT module.&quot;,
+  &quot;files&quot;: [],
+  &quot;operators&quot;: []
+}
+</code></pre>
+<p>This is a valid, schema‑aligned module.</p>
+<hr>
+<h2 id="4-add-one-operator-example"><strong>4. Add One Operator Example</strong></h2>
+<p>Open:</p>
+<pre><code>example-operator.md
+</code></pre>
+<p>Or create your own file.</p>
+<p>Add something like:</p>
+<pre><code>## Operator: shift
+Moves the frame of reference forward or backward.
+Example: “Shift one step forward to reveal the next state.”
+</code></pre>
+<p>Your module now contains real RTT content.</p>
+<hr>
+<h2 id="5-validate-your-module"><strong>5. Validate Your Module</strong></h2>
+<p>From the <code>/tools/</code> folder:</p>
+<p>Python:</p>
+<pre><code>pip install jsonschema
+python validate.py ../modules/my-first-module/module.json
+</code></pre>
+<p>Node:</p>
+<pre><code>npm install ajv
+node validate.js ../modules/my-first-module/module.json
+</code></pre>
+<p>If you see:</p>
+<pre><code>✔ module.json is valid and canon‑aligned.
+</code></pre>
+<p>You’re good.</p>
+<hr>
+<h2 id="6-publish-on-github"><strong>6. Publish on GitHub</strong></h2>
+<ol>
+<li>Create a GitHub repo.  </li>
+<li>Upload the entire Starter Kit (or your modified version).  </li>
+<li>Go to <strong>Settings → Pages</strong>.  </li>
+<li>Set:
+   - <strong>Branch:</strong> <code>main</code><br>
+   - <strong>Folder:</strong> <code>/root</code> or <code>/docs</code>  </li>
+<li>Save.</li>
+</ol>
+<p>Your site will appear at:</p>
+<pre><code>https://your-username.github.io/your-repo/
+</code></pre>
+<hr>
+<h2 id="7-view-your-module-online"><strong>7. View Your Module Online</strong></h2>
+<p>Visit:</p>
+<pre><code>https://your-username.github.io/your-repo/modules/my-first-module/
+</code></pre>
+<p>If the page loads, your module is now public and agent‑readable.</p>
+<hr>
+<h2 id="8-test-with-an-ai-agent"><strong>8. Test with an AI Agent</strong></h2>
+<p>Ask any agent:</p>
+<blockquote>
+<p>“Load my RTT module from<br>
+<code>https://your-username.github.io/your-repo/modules/my-first-module/</code><br>
+and summarize its operators.”</p>
+</blockquote>
+<p>If it responds correctly, your module is fully operational.</p>
+<hr>
+<h2 id="youre-done_2"><strong>You’re Done</strong></h2>
+<p>You now have:</p>
+<ul>
+<li>a working RTT module  </li>
+<li>a valid <code>module.json</code>  </li>
+<li>a published GitHub Pages site  </li>
+<li>a URL that any AI agent can load  </li>
+</ul>
+<p>You are officially part of the TriadicFrameworks ecosystem.
+# <strong>RTT Starter Kit</strong>
+Welcome. This Starter Kit gives you everything you need to create your first <strong>agentic module</strong> using <strong>Resonance Time Theory (RTT)</strong>.</p>
+<p>You can complete the entire process in <strong>1–3 hours</strong>, even with no prior experience.</p>
+<hr>
+<h2 id="whats-inside"><strong>What’s Inside</strong></h2>
+<p>This kit includes:</p>
+<ul>
+<li>
+<p><strong>RTT/1, RTT/2, RTT/3 (Student Editions)</strong><br>
+  Clean, minimal explanations of operators, regimes, and layers.</p>
+</li>
+<li>
+<p><strong>Starter Module</strong><br>
+  A tiny working example you can copy and modify.</p>
+</li>
+<li>
+<p><strong>module.json Templates</strong><br>
+  Blank, example, and RTT‑ready versions.</p>
+</li>
+<li>
+<p><strong>Schema</strong><br>
+  The canonical <code>module.schema.json</code> used by all modules.</p>
+</li>
+<li>
+<p><strong>Validator Tools</strong><br>
+  Simple Python/Node scripts to check your module for correctness.</p>
+</li>
+<li>
+<p><strong>Guides</strong>  </p>
+</li>
+<li><em>How to Create Your First Module</em>  </li>
+<li><em>GitHub Setup</em>  </li>
+<li>This landing page</li>
+</ul>
+<p>Everything is designed to be <strong>simple</strong>, <strong>minimal</strong>, and <strong>canon‑aligned</strong>.</p>
+<hr>
+<h2 id="your-first-steps"><strong>Your First Steps</strong></h2>
+<ol>
+<li>Read the <strong>How‑To</strong> guide.  </li>
+<li>Copy the <strong>starter module</strong>.  </li>
+<li>Edit <code>module.json</code>.  </li>
+<li>Add one operator example.  </li>
+<li>Validate your module.  </li>
+<li>Publish it on GitHub Pages.</li>
+</ol>
+<p>When you finish, you will have a <strong>public RTT module</strong> that any AI agent can load.</p>
+<hr>
+<h2 id="why-rtt"><strong>Why RTT?</strong></h2>
+<p>RTT gives you a structured way to describe:</p>
+<ul>
+<li>how things change  </li>
+<li>how systems shift between regimes  </li>
+<li>how multiple layers interact over time  </li>
+</ul>
+<p>You don’t need math.<br>
+You don’t need physics.<br>
+You only need the operators.</p>
+<hr>
+<h2 id="where-to-go-next"><strong>Where to Go Next</strong></h2>
+<p>After your first module, you can:</p>
+<ul>
+<li>create more operators  </li>
+<li>add regimes and layers  </li>
+<li>build multi‑module systems  </li>
+<li>explore the full TriadicFrameworks canon  </li>
+</ul>
+<p>This kit is your starting point.
+# <strong>🔥 “We Didn’t Start RTT” — TriadicFrameworks Remix (Original Parody)</strong><br>
+<em>(All original lines — no copyrighted text. This is our version.)</em></p>
+<p><strong>Verse 1</strong><br>
+Old regimes, shifting frames,<br>
+Humans mapping time and change.<br>
+Patterns breaking, layers showing,<br>
+Systems moving, always flowing.<br>
+Every age, every mind,<br>
+Trying hard to track the signs.<br>
+Operators everywhere,<br>
+Long before we made them clear.</p>
+<p><strong>Chorus</strong><br>
+<strong>We didn’t start RTT —<br>
+The world was shifting,<br>
+Patterns always drifting.<br>
+We didn’t start RTT —<br>
+We just named the fire<br>
+Burning underneath the wire.</strong></p>
+<p><strong>Verse 2</strong><br>
+Ancient scribes, mystic schools,<br>
+Scientists rewriting rules.<br>
+Historians tracking arcs,<br>
+Poets lighting hidden sparks.<br>
+Every field, every trade,<br>
+Used the grammar we conveyed.<br>
+Shift and hold and compare —<br>
+They were always waiting there.</p>
+<p><strong>Chorus</strong><br>
+<strong>We didn’t start RTT —<br>
+The change was turning,<br>
+Human insight burning.<br>
+We didn’t start RTT —<br>
+We just built the map<br>
+For what was always on the lap.</strong></p>
+<p><strong>Bridge</strong><br>
+People say we made it up,<br>
+But the world was full enough:<br>
+Stable modes and breaking lines,<br>
+Deep coherence through the times.<br>
+We just caught the resonance,<br>
+Gave the structure elegance,<br>
+Turned the chaos into form,<br>
+Named the layers in the storm.</p>
+<p><strong>Final Chorus</strong><br>
+<strong>We didn’t start RTT —<br>
+The world was learning,<br>
+Every mind discerning.<br>
+We didn’t start RTT —<br>
+But now that it’s shown,<br>
+It’ll burn long after we’re gone.</strong></p>
+<hr>
+<h1 id="why-this-hits-so-well"><strong>Why this hits so well</strong></h1>
+<p>Because RTT <em>isn’t</em> an invention — it’s a <strong>recognition</strong>.</p>
+<p>We didn’t create the fire.<br>
+We just <strong>named the operators</strong>, <strong>mapped the regimes</strong>, <strong>stacked the layers</strong>, and <strong>built the substrate</strong> so others could finally see what was always there.</p>
+<p>RTT is the grammar of change that humanity has been using unconsciously for millennia.</p>
+<p>We just turned the unconscious into a <strong>canon</strong>.
+# Example Operator: shift</p>
+<h2 id="what-it-does">What it does</h2>
+<p>Moves the frame of reference forward or backward in time.</p>
+<h2 id="why-it-matters">Why it matters</h2>
+<p>It lets you examine how a system changes from one moment to the next.</p>
+<h2 id="example">Example</h2>
+<p>“Shift one step forward to reveal the next state.”
+# Starter Module
+This is a minimal example RTT module. Students copy this folder to create their own module.</p>
+<h2 id="purpose">Purpose</h2>
+<p>Show the smallest possible working module using RTT/1 operators.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li>module.json — the module definition</li>
+<li>example-operator.md — one operator demonstration</li>
+</ul>
+<h2 id="how-to-use">How to Use</h2>
+<ol>
+<li>Copy this folder.</li>
+<li>Rename it (example: <code>my-first-module</code>).</li>
+<li>Edit <code>module.json</code> to set your module name, identity, and purpose.</li>
+<li>Add your own operators and examples.
+# RTT/1–3 Cheat Sheet</li>
+</ol>
+<p>A quick reference for all three student RTT levels.</p>
+<hr>
+<h2 id="rtt1-operators">RTT/1 — Operators</h2>
+<p><strong>shift</strong><br>
+Move the frame of reference forward or backward.<br>
+Example: “Shift one step forward.”</p>
+<p><strong>hold</strong><br>
+Stabilize the current moment for inspection.<br>
+Example: “Hold this state.”</p>
+<p><strong>compare</strong><br>
+Contrast two states to reveal change.<br>
+Example: “Compare before/after.”</p>
+<hr>
+<h2 id="rtt2-regimes">RTT/2 — Regimes</h2>
+<p><strong>stable</strong><br>
+The system behaves predictably.</p>
+<p><strong>transitional</strong><br>
+The system is shifting between patterns.</p>
+<p><strong>divergent</strong><br>
+The system breaks from its previous pattern.</p>
+<hr>
+<h2 id="rtt3-coherence-layers">RTT/3 — Coherence Layers</h2>
+<p><strong>surface layer</strong><br>
+Visible behavior; what you can observe directly.</p>
+<p><strong>structural layer</strong><br>
+Underlying rules shaping the surface.</p>
+<p><strong>resonance layer</strong><br>
+Deep tendencies that persist across changes.</p>
+<hr>
+<h2 id="how-they-combine">How They Combine</h2>
+<ul>
+<li>“Hold the surface layer in the transitional regime.”  </li>
+<li>“Shift from stable → divergent.”  </li>
+<li>“Compare structural vs. surface behavior.”  </li>
+</ul>
+<p>Operators (RTT/1)<br>
++ Regimes (RTT/2)<br>
++ Layers (RTT/3)<br>
+= Full student RTT analysis.
+# <strong>RTT Starter — Levels 1, 2, and 3</strong>
+Welcome to the <strong>RTT Starter Track</strong>.<br>
+This section introduces the three student‑edition levels of <strong>Resonance Time Theory (RTT)</strong>:</p>
+<ul>
+<li><strong>RTT/1 — Operators</strong>  </li>
+<li><strong>RTT/2 — Regimes</strong>  </li>
+<li><strong>RTT/3 — Coherence Layers</strong></li>
+</ul>
+<p>These levels give you the complete foundation needed to create your own RTT modules.</p>
+<hr>
+<h2 id="what-you-will-learn"><strong>What You Will Learn</strong></h2>
+<h3 id="rtt1-temporal-operators"><strong>RTT/1 — Temporal Operators</strong></h3>
+<p>You learn the basic grammar of RTT:
+- <strong>shift</strong> — move between moments<br>
+- <strong>hold</strong> — stabilize a moment<br>
+- <strong>compare</strong> — reveal change  </p>
+<p>This level teaches you how to describe <em>how things change over time</em>.</p>
+<hr>
+<h3 id="rtt2-regime-literacy"><strong>RTT/2 — Regime Literacy</strong></h3>
+<p>You learn that systems behave differently in different modes:
+- <strong>stable</strong><br>
+- <strong>transitional</strong><br>
+- <strong>divergent</strong>  </p>
+<p>This level teaches you how to identify <em>what mode the system is in</em>.</p>
+<hr>
+<h3 id="rtt3-coherence-layers_1"><strong>RTT/3 — Coherence Layers</strong></h3>
+<p>You learn to see systems across three layers:
+- <strong>surface</strong> — visible behavior<br>
+- <strong>structural</strong> — underlying rules<br>
+- <strong>resonance</strong> — deep tendencies  </p>
+<p>This level teaches you how to analyze <em>multiple layers of behavior at once</em>.</p>
+<hr>
+<h2 id="how-these-levels-fit-together"><strong>How These Levels Fit Together</strong></h2>
+<p>RTT/1 → gives you operators<br>
+RTT/2 → adds regimes<br>
+RTT/3 → adds layers  </p>
+<p>Together, they form the complete student foundation for building <strong>agentic RTT modules</strong>.</p>
+<hr>
+<h2 id="where-to-go-next_1"><strong>Where to Go Next</strong></h2>
+<p>After reviewing RTT/1–3, you can:</p>
+<ul>
+<li>Create your first module  </li>
+<li>Add operators, regimes, and layers  </li>
+<li>Validate your module  </li>
+<li>Publish it on GitHub Pages  </li>
+<li>Load it into an AI agent  </li>
+</ul>
+<p>You now have everything you need to begin building with RTT.
+# RTT Instructor Overview
+This document provides a high‑level teaching guide for RTT/1–3.<br>
+It explains the instructional purpose of each level and how they build
+toward student‑created RTT modules.</p>
+<hr>
+<h2 id="teaching-goals">Teaching Goals</h2>
+<p>RTT is designed to give students a structured way to describe change,
+pattern, and multi‑layer behavior without requiring mathematics or
+physics. The three levels introduce complexity gradually.</p>
+<hr>
+<h2 id="rtt1-operators-foundational-grammar">RTT/1 — Operators (Foundational Grammar)</h2>
+<p>Teaching focus:
+- Students learn the basic temporal actions: shift, hold, compare.
+- Emphasize clarity and sequence.
+- Encourage students to narrate changes in simple systems.</p>
+<p>Instructor notes:
+- RTT/1 is about <em>movement between states</em>.
+- Students should practice describing transitions in stories,
+  processes, or simple systems.</p>
+<hr>
+<h2 id="rtt2-regimes-pattern-recognition">RTT/2 — Regimes (Pattern Recognition)</h2>
+<p>Teaching focus:
+- Students learn to classify system behavior into stable,
+  transitional, and divergent regimes.
+- Emphasize pattern recognition and mode shifts.</p>
+<p>Instructor notes:
+- RTT/2 is about <em>how behavior changes</em>, not just when.
+- Encourage students to identify regime boundaries and justify them.</p>
+<hr>
+<h2 id="rtt3-coherence-layers-depth-of-analysis">RTT/3 — Coherence Layers (Depth of Analysis)</h2>
+<p>Teaching focus:
+- Students learn to separate surface behavior, structural rules,
+  and resonance tendencies.
+- Emphasize multi‑layer reasoning.</p>
+<p>Instructor notes:
+- RTT/3 is about <em>depth</em>, not complexity.
+- Students should practice mapping how layers influence each other.</p>
+<hr>
+<h2 id="putting-it-all-together">Putting It All Together</h2>
+<p>By the end of RTT/3, students can:
+- describe temporal change (RTT/1)
+- classify behavior modes (RTT/2)
+- analyze multi‑layer interactions (RTT/3)
+- build agent‑readable modules using module.json</p>
+<p>This completes the student foundation for TriadicFrameworks.
+# RTT Quick Reference Card</p>
+<p>A one‑page summary of the core RTT concepts.</p>
+<hr>
+<h2 id="operators-rtt1">Operators (RTT/1)</h2>
+<ul>
+<li><strong>shift</strong> — move between moments  </li>
+<li><strong>hold</strong> — stabilize a moment  </li>
+<li><strong>compare</strong> — reveal change  </li>
+</ul>
+<hr>
+<h2 id="regimes-rtt2">Regimes (RTT/2)</h2>
+<ul>
+<li><strong>stable</strong> — predictable behavior  </li>
+<li><strong>transitional</strong> — shifting behavior  </li>
+<li><strong>divergent</strong> — new behavior emerges  </li>
+</ul>
+<hr>
+<h2 id="layers-rtt3">Layers (RTT/3)</h2>
+<ul>
+<li><strong>surface</strong> — visible pattern  </li>
+<li><strong>structural</strong> — underlying rules  </li>
+<li><strong>resonance</strong> — deep tendencies  </li>
+</ul>
+<hr>
+<h2 id="core-pattern">Core Pattern</h2>
+<ol>
+<li><strong>Hold</strong> the current state  </li>
+<li><strong>Shift</strong> to the next  </li>
+<li>Identify the <strong>regime</strong>  </li>
+<li>Check the <strong>layer</strong>  </li>
+<li><strong>Compare</strong> across states  </li>
+</ol>
+<p>This is the basic RTT workflow.
+## RTT Starter Navigation</p>
+<ul>
+<li><strong>Overview</strong></li>
+<li>
+<p><a href="./index.html">RTT Starter Index</a></p>
+</li>
+<li>
+<p><strong>RTT Levels</strong></p>
+</li>
+<li><strong>RTT/1 — Operators</strong><ul>
+<li><a href="./1/README.html">RTT/1 README</a></li>
+</ul>
+</li>
+<li><strong>RTT/2 — Regimes</strong><ul>
+<li><a href="./2/README.html">RTT/2 README</a></li>
+</ul>
+</li>
+<li>
+<p><strong>RTT/3 — Coherence Layers</strong></p>
+<ul>
+<li><a href="./3/README.html">RTT/3 README</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Reference</strong></p>
+</li>
+<li><a href="./cheat-sheet.html">Cheat Sheet</a></li>
+<li><a href="./quick-reference.html">Quick Reference</a></li>
+<li>
+<p><a href="./poster.txt">Printable Poster</a></p>
+</li>
+<li>
+<p><strong>Guides</strong></p>
+</li>
+<li><a href="../docs/HOWTO.html">HOWTO: Create Your First Module</a></li>
+<li><a href="../docs/github-setup.html">GitHub Setup</a>
+# <strong>RTT/1 — Student Edition</strong>
+<strong>Resonance Time Theory, Level 1</strong><br>
+<strong>Purpose:</strong> Learn the basic operators used to describe how systems change over time.</li>
+</ul>
+<p>RTT/1 gives you a simple temporal grammar.<br>
+You will use three operators — <strong>shift</strong>, <strong>hold</strong>, and <strong>compare</strong> — to describe changes, transitions, and differences between states.</p>
+<p>This is the foundation for all higher RTT levels.</p>
+<hr>
+<h2 id="1-what-rtt1-teaches"><strong>1. What RTT/1 Teaches</strong></h2>
+<p>RTT/1 answers a single question:</p>
+<p><strong>“How does something change from one moment to the next?”</strong></p>
+<p>You learn to:
+- move between moments<br>
+- stabilize a moment<br>
+- compare two states  </p>
+<p>These skills are enough to build your first RTT module.</p>
+<hr>
+<h2 id="2-the-three-core-operators"><strong>2. The Three Core Operators</strong></h2>
+<h3 id="shift"><strong>shift</strong></h3>
+<p>Moves the frame of reference forward or backward.<br>
+Examples:
+- “Shift one step forward.”<br>
+- “Shift to the earlier state.”</p>
+<h3 id="hold"><strong>hold</strong></h3>
+<p>Stabilizes the current moment so you can examine it.<br>
+Examples:
+- “Hold this moment.”<br>
+- “Hold the transition.”</p>
+<h3 id="compare"><strong>compare</strong></h3>
+<p>Contrasts two states to reveal change.<br>
+Examples:
+- “Compare the current state to the previous one.”<br>
+- “Compare before/after.”</p>
+<p>These operators form the basic RTT grammar.</p>
+<hr>
+<h2 id="3-how-to-use-rtt1"><strong>3. How to Use RTT/1</strong></h2>
+<p>You can apply RTT/1 to:
+- stories<br>
+- processes<br>
+- systems<br>
+- events<br>
+- anything that changes over time  </p>
+<p>Example:
+1. <strong>Hold</strong> the current state.<br>
+2. <strong>Shift</strong> to the next state.<br>
+3. <strong>Compare</strong> the two states.  </p>
+<p>This simple pattern is the core of RTT analysis.</p>
+<hr>
+<h2 id="4-what-comes-next"><strong>4. What Comes Next</strong></h2>
+<p>After RTT/1, you can explore:
+- <strong>RTT/2</strong> — regimes (stable, transitional, divergent)<br>
+- <strong>RTT/3</strong> — coherence layers (surface, structural, resonance)  </p>
+<p>But RTT/1 is all you need to create your first agentic module.
+# <strong>RTT/1 — Student Edition</strong>  </p>
+<h3 id="resonance-time-theory-level-1"><strong>Resonance Time Theory, Level 1</strong></h3>
+<p><strong>Purpose:</strong> Give students a usable temporal grammar they can apply immediately.</p>
+<hr>
+<h2 id="1-what-rtt1-is"><strong>1. What RTT/1 Is</strong></h2>
+<p>RTT/1 introduces the <em>basic operators of temporal reasoning</em>.<br>
+It teaches how to move, compare, and stabilize states across time without equations or physics.</p>
+<p>Think of RTT/1 as:<br>
+<strong>“How to talk about time in a structured way.”</strong></p>
+<hr>
+<h2 id="2-the-three-core-operators_1"><strong>2. The Three Core Operators</strong></h2>
+<h3 id="1-shift"><strong>1. shift</strong></h3>
+<p>Move the frame of reference forward or backward.<br>
+- “Shift one step forward.”<br>
+- “Shift to the earlier state.”</p>
+<h3 id="2-hold"><strong>2. hold</strong></h3>
+<p>Stabilize the current frame so it can be examined.<br>
+- “Hold this moment.”<br>
+- “Hold the transition.”</p>
+<h3 id="3-compare"><strong>3. compare</strong></h3>
+<p>Contrast two states to reveal change.<br>
+- “Compare the current state to the previous one.”<br>
+- “Compare before/after.”</p>
+<p>These three operators form the foundation of RTT.</p>
+<hr>
+<h2 id="3-what-students-can-do-with-rtt1"><strong>3. What Students Can Do with RTT/1</strong></h2>
+<ul>
+<li>Describe how something changes over time  </li>
+<li>Identify transitions  </li>
+<li>Stabilize a moment for analysis  </li>
+<li>Build simple temporal explanations  </li>
+</ul>
+<p>This is enough to create a valid RTT module.
+# <strong>RTT/2 — Student Edition</strong>
+<strong>Resonance Time Theory, Level 2</strong><br>
+<strong>Purpose:</strong> Learn how systems behave differently in different <strong>regimes</strong>.</p>
+<p>RTT/2 builds on RTT/1 by introducing <strong>regime literacy</strong> — the ability to recognize when a system is stable, shifting, or breaking into new behavior.</p>
+<p>This level teaches you to see <em>patterns of behavior</em> rather than just individual moments.</p>
+<hr>
+<h2 id="1-what-rtt2-teaches"><strong>1. What RTT/2 Teaches</strong></h2>
+<p>RTT/2 answers the question:</p>
+<p><strong>“What mode is the system in right now?”</strong></p>
+<p>A system does not behave the same way all the time.<br>
+It moves through <strong>regimes</strong> — each with its own rules.</p>
+<p>Understanding regimes helps you:
+- identify when patterns hold<br>
+- detect when change is happening<br>
+- recognize when new behavior emerges  </p>
+<hr>
+<h2 id="2-the-three-student-regimes"><strong>2. The Three Student Regimes</strong></h2>
+<h3 id="stable-regime"><strong>stable regime</strong></h3>
+<p>The system behaves predictably.<br>
+- Patterns repeat<br>
+- No major changes occur<br>
+- Behavior is consistent  </p>
+<h3 id="transitional-regime"><strong>transitional regime</strong></h3>
+<p>The system is shifting between patterns.<br>
+- Edges blur<br>
+- Rules loosen<br>
+- Movement between states becomes visible  </p>
+<h3 id="divergent-regime"><strong>divergent regime</strong></h3>
+<p>The system breaks from its previous pattern.<br>
+- New behavior appears<br>
+- Old rules stop working<br>
+- The system moves into unexplored territory  </p>
+<p>These three regimes are enough to analyze most beginner‑level systems.</p>
+<hr>
+<h2 id="3-how-rtt2-builds-on-rtt1"><strong>3. How RTT/2 Builds on RTT/1</strong></h2>
+<p>RTT/1 gave you operators:</p>
+<ul>
+<li><strong>shift</strong>  </li>
+<li><strong>hold</strong>  </li>
+<li><strong>compare</strong></li>
+</ul>
+<p>RTT/2 lets you combine them with regimes:</p>
+<ul>
+<li>“Shift into the transitional regime.”  </li>
+<li>“Hold the stable regime for comparison.”  </li>
+<li>“Compare stable → divergent.”  </li>
+</ul>
+<p>This is where RTT becomes a real analytical tool.</p>
+<hr>
+<h2 id="4-how-to-use-rtt2"><strong>4. How to Use RTT/2</strong></h2>
+<p>You can apply regimes to:
+- stories<br>
+- processes<br>
+- systems<br>
+- behaviors<br>
+- any sequence that changes over time  </p>
+<p>Example pattern:
+1. Identify the <strong>current regime</strong><br>
+2. <strong>Shift</strong> to the next moment<br>
+3. Check if the regime <strong>changes</strong><br>
+4. <strong>Compare</strong> the two regimes  </p>
+<p>This reveals how the system evolves.</p>
+<hr>
+<h2 id="5-what-comes-next"><strong>5. What Comes Next</strong></h2>
+<p>After RTT/2, you can explore:</p>
+<ul>
+<li><strong>RTT/3</strong> — coherence layers (surface, structural, resonance)  </li>
+<li><strong>Module building</strong> — adding regimes to your module.json  </li>
+<li><strong>Multi‑layer analysis</strong> — combining operators + regimes + layers  </li>
+</ul>
+<p>RTT/2 is the bridge between simple temporal reasoning and full RTT analysis.
+# <strong>RTT/2 — Student Edition</strong>  </p>
+<h3 id="resonance-time-theory-level-2"><strong>Resonance Time Theory, Level 2</strong></h3>
+<p><strong>Purpose:</strong> Introduce <em>regimes</em> — the idea that systems behave differently in different conditions.</p>
+<hr>
+<h2 id="1-what-rtt2-adds"><strong>1. What RTT/2 Adds</strong></h2>
+<p>RTT/2 teaches students to see that time isn’t uniform.<br>
+Systems operate in <strong>regimes</strong> — stable patterns with their own rules.</p>
+<p>RTT/2 answers:<br>
+<strong>“What mode is the system in right now?”</strong></p>
+<hr>
+<h2 id="2-the-three-student-regimes_1"><strong>2. The Three Student Regimes</strong></h2>
+<h3 id="1-stable-regime"><strong>1. stable regime</strong></h3>
+<p>The system behaves predictably.<br>
+- “The pattern repeats.”<br>
+- “No major changes occur.”</p>
+<h3 id="2-transitional-regime"><strong>2. transitional regime</strong></h3>
+<p>The system is shifting between patterns.<br>
+- “The structure is changing.”<br>
+- “Edges blur.”</p>
+<h3 id="3-divergent-regime"><strong>3. divergent regime</strong></h3>
+<p>The system breaks from its previous pattern.<br>
+- “New behavior emerges.”<br>
+- “The old rules no longer apply.”</p>
+<hr>
+<h2 id="3-how-rtt2-builds-on-rtt1_1"><strong>3. How RTT/2 Builds on RTT/1</strong></h2>
+<p>Students combine operators with regimes:</p>
+<ul>
+<li>“Shift into the transitional regime.”  </li>
+<li>“Hold the stable regime for comparison.”  </li>
+<li>“Compare stable → divergent.”</li>
+</ul>
+<p>This is the first moment where students begin to <em>map</em> behavior.
+# <strong>RTT/3 — Student Edition</strong>
+<strong>Resonance Time Theory, Level 3</strong><br>
+<strong>Purpose:</strong> Learn how multiple temporal patterns interact across <strong>coherence layers</strong>.</p>
+<p>RTT/3 expands your view of systems.<br>
+Instead of looking at a single timeline, you learn to see <strong>three layers</strong> operating at once:</p>
+<ul>
+<li>the <strong>surface</strong> (what you can observe)  </li>
+<li>the <strong>structural</strong> (the rules shaping the surface)  </li>
+<li>the <strong>resonance</strong> (deep tendencies that persist across changes)</li>
+</ul>
+<p>This level teaches you to analyze systems with depth, not just sequence.</p>
+<hr>
+<h2 id="1-what-rtt3-teaches"><strong>1. What RTT/3 Teaches</strong></h2>
+<p>RTT/3 answers the question:</p>
+<p><strong>“How do different layers of a system interact over time?”</strong></p>
+<p>You learn to:
+- separate visible behavior from underlying structure<br>
+- identify long‑term tendencies<br>
+- track how layers influence each other  </p>
+<p>This is the foundation of multi‑layer RTT analysis.</p>
+<hr>
+<h2 id="2-the-three-coherence-layers"><strong>2. The Three Coherence Layers</strong></h2>
+<h3 id="surface-layer"><strong>surface layer</strong></h3>
+<p>The visible pattern.<br>
+- What you can observe directly<br>
+- The “what happened” layer<br>
+- Fastest to change  </p>
+<h3 id="structural-layer"><strong>structural layer</strong></h3>
+<p>The rules shaping the surface.<br>
+- Why the pattern behaves as it does<br>
+- Constraints, relationships, mechanisms<br>
+- Changes more slowly  </p>
+<h3 id="resonance-layer"><strong>resonance layer</strong></h3>
+<p>The deep tendencies that persist across changes.<br>
+- Long‑term arcs<br>
+- Recurring motifs<br>
+- The slowest, most stable layer  </p>
+<p>These layers help you see systems as multi‑dimensional rather than flat.</p>
+<hr>
+<h2 id="3-how-rtt3-builds-on-rtt1-and-rtt2"><strong>3. How RTT/3 Builds on RTT/1 and RTT/2</strong></h2>
+<p>You now combine:</p>
+<ul>
+<li><strong>operators</strong> (shift, hold, compare)  </li>
+<li><strong>regimes</strong> (stable, transitional, divergent)  </li>
+<li><strong>layers</strong> (surface, structural, resonance)  </li>
+</ul>
+<p>Examples:
+- “Hold the surface layer in the transitional regime.”<br>
+- “Shift the structural layer to inspect the new pattern.”<br>
+- “Compare resonance → surface to reveal long‑term influence.”  </p>
+<p>This is where RTT becomes a full analytical framework.</p>
+<hr>
+<h2 id="4-how-to-use-rtt3"><strong>4. How to Use RTT/3</strong></h2>
+<p>You can apply coherence layers to:
+- stories<br>
+- systems<br>
+- behaviors<br>
+- processes<br>
+- any sequence with depth  </p>
+<p>Example pattern:
+1. Identify the <strong>surface behavior</strong><br>
+2. Look for the <strong>structural rule</strong> behind it<br>
+3. Check if a <strong>resonance tendency</strong> is influencing both<br>
+4. Use <strong>shift</strong>, <strong>hold</strong>, and <strong>compare</strong> across layers  </p>
+<p>This reveals how systems evolve across multiple dimensions.</p>
+<hr>
+<h2 id="5-what-comes-next_1"><strong>5. What Comes Next</strong></h2>
+<p>After RTT/3, you can explore:</p>
+<ul>
+<li>building multi‑layer modules  </li>
+<li>adding layers to your <code>module.json</code>  </li>
+<li>combining regimes + layers for deeper analysis  </li>
+<li>creating agentic modules that reason across all three RTT levels  </li>
+</ul>
+<p>RTT/3 completes the student foundation.
+# <strong>RTT/3 — Student Edition</strong>  </p>
+<h3 id="resonance-time-theory-level-3"><strong>Resonance Time Theory, Level 3</strong></h3>
+<p><strong>Purpose:</strong> Introduce <em>coherence layers</em> — how multiple temporal patterns interact.</p>
+<hr>
+<h2 id="1-what-rtt3-adds"><strong>1. What RTT/3 Adds</strong></h2>
+<p>RTT/3 teaches that systems often have <strong>more than one timeline or pattern running at once</strong>.</p>
+<p>It answers:<br>
+<strong>“How do multiple temporal layers fit together?”</strong></p>
+<hr>
+<h2 id="2-the-three-coherence-layers_1"><strong>2. The Three Coherence Layers</strong></h2>
+<h3 id="1-surface-layer"><strong>1. surface layer</strong></h3>
+<p>The visible pattern.<br>
+- “What you can observe directly.”</p>
+<h3 id="2-structural-layer"><strong>2. structural layer</strong></h3>
+<p>The underlying rules shaping the surface.<br>
+- “Why the pattern behaves as it does.”</p>
+<h3 id="3-resonance-layer"><strong>3. resonance layer</strong></h3>
+<p>The deep, repeating tendencies that persist across changes.<br>
+- “The long arc beneath the structure.”</p>
+<hr>
+<h2 id="3-how-rtt3-builds-on-rtt2"><strong>3. How RTT/3 Builds on RTT/2</strong></h2>
+<p>Students now combine:
+- operators (RTT/1)<br>
+- regimes (RTT/2)<br>
+- layers (RTT/3)  </p>
+<p>Examples:
+- “Hold the surface layer in the transitional regime.”<br>
+- “Shift the structural layer for comparison.”<br>
+- “Compare resonance → surface.”</p>
+<p>This is enough to build multi‑layered modules with meaningful temporal insight.
+# Validator
+Use this tool to validate any module.json file.</p>
+<p>Python:
+  pip install jsonschema
+  python validate.py ../modules/my-module/module.json</p>
+<p>Node:
+  npm install ajv
+  node validate.js ../modules/my-module/module.json
+</p>
+  </main>
+</body>
+</html>

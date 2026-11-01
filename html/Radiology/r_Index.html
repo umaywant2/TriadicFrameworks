@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Radiology/r_Index.md">
+  <title>📘 Radiology Operator Index</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Radiology/r_Index.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Radiology/r_Index.md</code>
+  </aside>
+
+  <main>
+<h1 id="radiology-operator-index"><strong>📘 Radiology Operator Index</strong></h1>
+<h3 id="triadicframeworks-canon-complete-operator-reference"><em>TriadicFrameworks Canon — Complete Operator Reference</em></h3>
+<p>This index consolidates <strong>all Radiology operators</strong> across the five layers:</p>
+<ul>
+<li><strong>r_Capture</strong>  </li>
+<li><strong>r_Drift</strong>  </li>
+<li><strong>r_Coherence</strong>  </li>
+<li><strong>r_Contrast</strong>  </li>
+<li><strong>r_VMRI</strong></li>
+</ul>
+<p>It is designed for radiology students, medical AI systems, imaging researchers, and TriadicFrameworks module authors.</p>
+<hr>
+<h2 id="1-r_capture-operators"><strong>1. r_Capture Operators</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>op_field()</code></td>
+<td>Select ROI from capture</td>
+</tr>
+<tr>
+<td><code>op_layer()</code></td>
+<td>Extract structural/density/contrast/metabolic/flow layer</td>
+</tr>
+<tr>
+<td><code>op_signal()</code></td>
+<td>Measure signal intensity</td>
+</tr>
+<tr>
+<td><code>op_noise()</code></td>
+<td>Identify non‑coherent signal</td>
+</tr>
+<tr>
+<td><code>op_drift_signal()</code></td>
+<td>Compute signal change between captures</td>
+</tr>
+<tr>
+<td><code>op_stability()</code></td>
+<td>Evaluate coherence vs drift</td>
+</tr>
+<tr>
+<td><code>op_enhancement()</code></td>
+<td>Analyze contrast uptake/washout</td>
+</tr>
+<tr>
+<td><code>op_resonance_attach()</code></td>
+<td>Attach resonance profile to capture</td>
+</tr>
+<tr>
+<td><code>op_resonance_predict()</code></td>
+<td>Predict drift/coherence behavior</td>
+</tr>
+<tr>
+<td><code>op_vmri_lite()</code></td>
+<td>Run micro‑simulation (VMRI‑Lite)</td>
+</tr>
+<tr>
+<td><code>op_overlay()</code></td>
+<td>Generate RTT‑Radiology overlay</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="2-r_drift-operators"><strong>2. r_Drift Operators</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>op_drift()</code></td>
+<td>Compute drift magnitude</td>
+</tr>
+<tr>
+<td><code>op_drift_velocity()</code></td>
+<td>Measure drift rate</td>
+</tr>
+<tr>
+<td><code>op_drift_vector()</code></td>
+<td>Determine drift direction</td>
+</tr>
+<tr>
+<td><code>op_drift_zone()</code></td>
+<td>Identify non‑random drift regions</td>
+</tr>
+<tr>
+<td><code>op_drift_burst()</code></td>
+<td>Detect sudden high‑velocity drift</td>
+</tr>
+<tr>
+<td><code>op_drift_decay()</code></td>
+<td>Measure reduction in drift velocity</td>
+</tr>
+<tr>
+<td><code>op_drift_noise()</code></td>
+<td>Separate drift from artifacts</td>
+</tr>
+<tr>
+<td><code>op_drift_map()</code></td>
+<td>Generate spatial drift map</td>
+</tr>
+<tr>
+<td><code>op_drift_profile()</code></td>
+<td>Summarize drift behavior</td>
+</tr>
+<tr>
+<td><code>op_drift_predict()</code></td>
+<td>Predict future drift</td>
+</tr>
+<tr>
+<td><code>op_drift_overlay()</code></td>
+<td>Drift‑only overlay</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="3-r_coherence-operators"><strong>3. r_Coherence Operators</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>op_coherence()</code></td>
+<td>Compute coherence</td>
+</tr>
+<tr>
+<td><code>op_coherence_field()</code></td>
+<td>Identify stable regions</td>
+</tr>
+<tr>
+<td><code>op_coherence_break()</code></td>
+<td>Detect coherence loss</td>
+</tr>
+<tr>
+<td><code>op_coherence_restore()</code></td>
+<td>Measure recovery</td>
+</tr>
+<tr>
+<td><code>op_coherence_map()</code></td>
+<td>Generate coherence map</td>
+</tr>
+<tr>
+<td><code>op_coherence_profile()</code></td>
+<td>Summarize coherence behavior</td>
+</tr>
+<tr>
+<td><code>op_coherence_predict()</code></td>
+<td>Predict future coherence</td>
+</tr>
+<tr>
+<td><code>op_coherence_collapse()</code></td>
+<td>Detect collapse risk</td>
+</tr>
+<tr>
+<td><code>op_coherence_overlay()</code></td>
+<td>Coherence‑only overlay</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="4-r_contrast-operators"><strong>4. r_Contrast Operators</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>op_uptake()</code></td>
+<td>Measure contrast absorption</td>
+</tr>
+<tr>
+<td><code>op_washout()</code></td>
+<td>Measure contrast clearance</td>
+</tr>
+<tr>
+<td><code>op_enhancement_zone()</code></td>
+<td>Identify abnormal enhancement</td>
+</tr>
+<tr>
+<td><code>op_false_uptake()</code></td>
+<td>Detect artifact‑driven uptake</td>
+</tr>
+<tr>
+<td><code>op_false_washout()</code></td>
+<td>Detect artifact‑driven washout</td>
+</tr>
+<tr>
+<td><code>op_toxicity_corridor()</code></td>
+<td>Predict contrast toxicity risk</td>
+</tr>
+<tr>
+<td><code>op_contrast_profile()</code></td>
+<td>Summarize contrast behavior</td>
+</tr>
+<tr>
+<td><code>op_contrast_predict()</code></td>
+<td>Predict contrast behavior</td>
+</tr>
+<tr>
+<td><code>op_contrast_map()</code></td>
+<td>Generate contrast map</td>
+</tr>
+<tr>
+<td><code>op_contrast_overlay()</code></td>
+<td>Contrast‑only overlay</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="5-r_vmri-operators"><strong>5. r_VMRI Operators</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>op_vmri_start()</code></td>
+<td>Initialize VMRI‑Lite simulation</td>
+</tr>
+<tr>
+<td><code>op_vmri_variant()</code></td>
+<td>Generate single variant</td>
+</tr>
+<tr>
+<td><code>op_vmri_batch()</code></td>
+<td>Generate batch of variants</td>
+</tr>
+<tr>
+<td><code>op_vmri_corridor()</code></td>
+<td>Build variant corridor</td>
+</tr>
+<tr>
+<td><code>op_vmri_pass()</code></td>
+<td>Extract stable/improving variants</td>
+</tr>
+<tr>
+<td><code>op_vmri_fail()</code></td>
+<td>Extract collapse/toxic variants</td>
+</tr>
+<tr>
+<td><code>op_vmri_optimal()</code></td>
+<td>Select best predicted outcome</td>
+</tr>
+<tr>
+<td><code>op_vmri_contrast_predict()</code></td>
+<td>Predict contrast behavior</td>
+</tr>
+<tr>
+<td><code>op_vmri_tissue_predict()</code></td>
+<td>Predict tissue behavior</td>
+</tr>
+<tr>
+<td><code>op_vmri_profile()</code></td>
+<td>Summarize VMRI outcomes</td>
+</tr>
+<tr>
+<td><code>op_vmri_overlay()</code></td>
+<td>VMRI‑Lite overlay</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="6-canonical-radiology-pipeline"><strong>6. Canonical Radiology Pipeline</strong></h2>
+<pre><code>CAPTURE → FIELD → LAYER → SIGNAL
+→ DRIFT → COHERENCE → CONTRAST
+→ RESONANCE → VMRI
+→ OVERLAY
+</code></pre>
+<p>This is the exact flow your students and AI systems will follow.</p>
+<hr>
+<h2 id="7-doc_map"><strong>7. DOC_MAP</strong></h2>
+<pre><code>r_Capture.md
+r_Drift.md
+r_Coherence.md
+r_Contrast.md
+r_VMRI.md
+r_Overlays.md
+r_Index.md
+r_Pantheon_Profile.md
+r_Glyphs.md
+r_Scaffold.md
+r_Student_Guide.md
+r_Tricorder.md
+</code></pre>
+<hr>
+<h2 id="index-ready"><strong>Index Ready</strong></h2>
+<p>Your Radiology Operator Index is now complete and ready for GitHub.</p>
+  </main>
+</body>
+</html>

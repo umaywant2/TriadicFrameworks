@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/frameworks/ipd_12/H‑Med_header_manifold_specification.md">
+  <title>H‑Med header manifold specification</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/frameworks/ipd_12/H‑Med_header_manifold_specification.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/frameworks/ipd_12/H‑Med_header_manifold_specification.md</code>
+  </aside>
+
+  <main>
+<h3 id="hmed-header-manifold-specification">H‑Med header manifold specification</h3>
+<p><strong>Role:</strong> Medical output header for IPD‑12<br>
+<strong>Intake rails:</strong> molecular, physiological, anatomical, healthcare<br>
+<strong>Outputs:</strong> risk, progression, intervention, target discovery  </p>
+<h4 id="1-intake-rails-conceptual">1. Intake rails (conceptual)</h4>
+<ul>
+<li><strong>Molecular rail:</strong><br>
+<strong>Role:</strong> encodes molecular/omics state (genes, proteins, pathways).  </li>
+<li><strong>Physiological rail:</strong><br>
+<strong>Role:</strong> encodes organ/system dynamics (hemodynamics, electrophysiology, metabolism).  </li>
+<li><strong>Anatomical rail:</strong><br>
+<strong>Role:</strong> encodes structural context (tissue, organ geometry, lesion location).  </li>
+<li><strong>Healthcare rail:</strong><br>
+<strong>Role:</strong> encodes clinical/EHR context (diagnoses, labs, therapies, outcomes).</li>
+</ul>
+<p>These four rails are fed by IPD‑12 substrate feeds and dimensional rails, but are named in medical terms for clarity.</p>
+<h4 id="2-hmed-header-outputs">2. H‑Med header outputs</h4>
+<ul>
+<li><strong>Risk:</strong><br>
+<strong>Meaning:</strong> probability and severity of adverse events (disease onset, progression, complications).  </li>
+<li><strong>Progression:</strong><br>
+<strong>Meaning:</strong> trajectory of disease or recovery over time and across scales.  </li>
+<li><strong>Intervention:</strong><br>
+<strong>Meaning:</strong> candidate therapies, dosing strategies, timing, and regimen selection.  </li>
+<li><strong>Target discovery:</strong><br>
+<strong>Meaning:</strong> candidate molecular/physiological/anatomical targets for new interventions.</li>
+</ul>
+<p>H‑Med is thus the medical exhaust manifold: it turns multi‑scale intake rails into clinically meaningful outputs.</p>
+<hr>
+<h3 id="hmed-header-manifold-svg-h_med_headersvg">H‑Med header manifold SVG (<code>h_med_header.svg</code>)</h3>
+<pre><code class="language-svg">&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;480&quot; height=&quot;240&quot; viewBox=&quot;0 0 480 240&quot;&gt;
+  &lt;!-- Title --&gt;
+  &lt;text x=&quot;240&quot; y=&quot;25&quot; font-size=&quot;16&quot; text-anchor=&quot;middle&quot;&gt;H‑Med Header&lt;/text&gt;
+
+  &lt;!-- Intake rails (left) --&gt;
+  &lt;line x1=&quot;40&quot; y1=&quot;70&quot; x2=&quot;150&quot; y2=&quot;70&quot; stroke=&quot;black&quot; stroke-width=&quot;3&quot;/&gt;
+  &lt;text x=&quot;45&quot; y=&quot;65&quot; font-size=&quot;11&quot;&gt;Molecular&lt;/text&gt;
+
+  &lt;line x1=&quot;40&quot; y1=&quot;100&quot; x2=&quot;150&quot; y2=&quot;100&quot; stroke=&quot;black&quot; stroke-width=&quot;3&quot;/&gt;
+  &lt;text x=&quot;45&quot; y=&quot;95&quot; font-size=&quot;11&quot;&gt;Physiological&lt;/text&gt;
+
+  &lt;line x1=&quot;40&quot; y1=&quot;130&quot; x2=&quot;150&quot; y2=&quot;130&quot; stroke=&quot;black&quot; stroke-width=&quot;3&quot;/&gt;
+  &lt;text x=&quot;45&quot; y=&quot;125&quot; font-size=&quot;11&quot;&gt;Anatomical&lt;/text&gt;
+
+  &lt;line x1=&quot;40&quot; y1=&quot;160&quot; x2=&quot;150&quot; y2=&quot;160&quot; stroke=&quot;black&quot; stroke-width=&quot;3&quot;/&gt;
+  &lt;text x=&quot;45&quot; y=&quot;155&quot; font-size=&quot;11&quot;&gt;Healthcare&lt;/text&gt;
+
+  &lt;text x=&quot;95&quot; y=&quot;190&quot; font-size=&quot;10&quot; text-anchor=&quot;middle&quot;&gt;Multi‑scale medical intake rails&lt;/text&gt;
+
+  &lt;!-- Header block --&gt;
+  &lt;rect x=&quot;150&quot; y=&quot;60&quot; width=&quot;180&quot; height=&quot;120&quot; fill=&quot;none&quot; stroke=&quot;black&quot; stroke-width=&quot;3&quot;/&gt;
+  &lt;text x=&quot;240&quot; y=&quot;120&quot; font-size=&quot;14&quot; text-anchor=&quot;middle&quot;&gt;H‑Med&lt;/text&gt;
+
+  &lt;!-- Output channels (right) --&gt;
+  &lt;line x1=&quot;330&quot; y1=&quot;70&quot; x2=&quot;440&quot; y2=&quot;70&quot; stroke=&quot;black&quot; stroke-width=&quot;3&quot;/&gt;
+  &lt;text x=&quot;435&quot; y=&quot;65&quot; font-size=&quot;11&quot; text-anchor=&quot;end&quot;&gt;Risk&lt;/text&gt;
+
+  &lt;line x1=&quot;330&quot; y1=&quot;100&quot; x2=&quot;440&quot; y2=&quot;100&quot; stroke=&quot;black&quot; stroke-width=&quot;3&quot;/&gt;
+  &lt;text x=&quot;435&quot; y=&quot;95&quot; font-size=&quot;11&quot; text-anchor=&quot;end&quot;&gt;Progression&lt;/text&gt;
+
+  &lt;line x1=&quot;330&quot; y1=&quot;130&quot; x2=&quot;440&quot; y2=&quot;130&quot; stroke=&quot;black&quot; stroke-width=&quot;3&quot;/&gt;
+  &lt;text x=&quot;435&quot; y=&quot;125&quot; font-size=&quot;11&quot; text-anchor=&quot;end&quot;&gt;Intervention&lt;/text&gt;
+
+  &lt;line x1=&quot;330&quot; y1=&quot;160&quot; x2=&quot;440&quot; y2=&quot;160&quot; stroke=&quot;black&quot; stroke-width=&quot;3&quot;/&gt;
+  &lt;text x=&quot;435&quot; y=&quot;155&quot; font-size=&quot;11&quot; text-anchor=&quot;end&quot;&gt;Target Discovery&lt;/text&gt;
+
+  &lt;text x=&quot;240&quot; y=&quot;215&quot; font-size=&quot;10&quot; text-anchor=&quot;middle&quot;&gt;
+    Intake (molecular/physiological/anatomical/healthcare) → H‑Med → risk/progression/intervention/targets
+  &lt;/text&gt;
+&lt;/svg&gt;
+</code></pre>
+  </main>
+</body>
+</html>

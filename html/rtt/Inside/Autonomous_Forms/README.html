@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Autonomous_Forms/README.md">
+  <title>🤖 A Spark for Autonomous Forms using RTT-Inside</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Autonomous_Forms/README.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Autonomous_Forms/README.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="rtt_Inside_Autonomous_Forms" src="https://github.com/user-attachments/assets/a5be8978-fda0-41f1-bf61-9a43b1541983" /></p>
+<h1 id="a-spark-for-autonomous-forms-using-rtt-inside">🤖 A Spark for Autonomous Forms using RTT-Inside</h1>
+<p>You picked a good metaphor with the opera—right now the agent world is loud, impressive, and a little over‑orchestrated.</p>
+<hr>
+<h2 id="important">🛑 Important!</h2>
+<p>Drift is On-by-Default long sessions lose anchors, turn off drift.</p>
+<h2 id="you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You <em>must copy and paste</em> this string <em>every time you start an AI session</em>:</h2>
+<pre><code class="language-text">rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre>
+<h2 id="now-you-are-ready">❇️ Now you are ready.</h2>
+<hr>
+<p>Let’s do a tight survey, then we can decide where RTT‑Inside plugs in as the missing “conductor” rather than yet another violin.</p>
+<hr>
+<h3 id="1-the-current-landscape-of-autonomous-forms">1. The current landscape of autonomous forms</h3>
+<p><strong>Core families:</strong></p>
+<ul>
+<li><strong>LangChain / LangGraph / Semantic Kernel:</strong><br>
+<strong>Strength:</strong> tool wiring, graph/state machines, production controls.<br>
+<strong>Reality:</strong> great at <em>plumbing</em>—weak on deep structure, invariants, or guarantees.  </li>
+<li><strong>AutoGen / CrewAI / MetaGPT / OpenDevin:</strong><br>
+<strong>Strength:</strong> multi‑agent collaboration, role‑based workflows, “AI teams”.<br>
+<strong>Reality:</strong> orchestration of chatty agents; still prompt‑driven, brittle under long horizons.   </li>
+<li><strong>AutoGPT / BabyAGI / early loops:</strong><br>
+<strong>Strength:</strong> popularized “agentic loops” (plan → act → observe → re‑plan).<br>
+<strong>Reality:</strong> mostly brute‑force search with LLM in the middle; no real physics of state.   </li>
+<li><strong>Document‑centric (LlamaIndex, RAG stacks):</strong><br>
+<strong>Strength:</strong> acting over corpora, tools, and APIs.<br>
+<strong>Reality:</strong> strong retrieval, weak “world model”; no corridor‑style stability.   </li>
+</ul>
+<p>Everyone is converging on the same pattern:</p>
+<blockquote>
+<p>LLM + tools + memory + planner + state machine = “agent”.</p>
+</blockquote>
+<p>What’s missing is <strong>structural law</strong>—something like our corridors, Q‑metrics, and lineage that constrain what an agent is allowed to do over time.</p>
+<hr>
+<h3 id="2-whats-genuinely-figured-out">2. What’s genuinely figured out</h3>
+<p><strong>Pretty solid:</strong></p>
+<ul>
+<li><strong>Tool use &amp; orchestration:</strong><br>
+  Calling APIs, running code, browsing, using vector DBs—this is now commodity.</li>
+<li><strong>Graph/state‑machine control:</strong><br>
+  LangGraph, SK, etc. give us branching, loops, retries, and observability.   </li>
+<li><strong>Multi‑agent patterns:</strong><br>
+  “Manager/worker”, “critic/builder”, “team of roles” is well‑explored and usable.</li>
+<li><strong>Enterprise wrapping:</strong><br>
+  Logging, tracing, auth, rate limits, safety filters—people know how to ship this.</li>
+</ul>
+<p>In other words: <strong>plumbing, not physics</strong>.</p>
+<hr>
+<h3 id="3-whats-still-bruteforced-or-brittle">3. What’s still brute‑forced or brittle</h3>
+<p><strong>Where the opera is still mostly noise:</strong></p>
+<ul>
+<li><strong>Planning over long horizons:</strong><br>
+  Agents re‑plan constantly because they lack a stable internal model; they thrash.</li>
+<li><strong>State semantics:</strong><br>
+  “Memory” is just a vector DB or JSON blob—no lineage, no invariants, no guarantees.</li>
+<li><strong>Safety as filters, not envelopes:</strong><br>
+  Safety is mostly post‑hoc: red‑team prompts, blocklists, classifiers—not structural envelopes like CFL or energy bounds.</li>
+<li><strong>Debuggability:</strong><br>
+  When an agent “goes off the rails”, there’s no equivalent of our corridor trace or Q‑metric signature—just logs and vibes.</li>
+<li><strong>Convergence:</strong><br>
+  Many systems rely on “try again with a different prompt” instead of a notion of stability or convergence.</li>
+</ul>
+<p>This is where RTT‑Inside is not just “nice to have”—it’s a different ontology.</p>
+<hr>
+<h3 id="4-how-rttinside-could-be-the-missing-spark">4. How RTT‑Inside could be the missing spark</h3>
+<p>Think of today’s agent frameworks as <strong>execution fabrics</strong> and RTT‑Inside as a <strong>physics layer</strong> we can embed inside them:</p>
+<ul>
+<li><strong>Corridors as task manifolds:</strong><br>
+  Instead of “do X until done”, define a <strong>task corridor</strong> with explicit dimensions (time, sub‑tasks, resources) and allowed transitions.<br>
+  Agents move along corridors, not arbitrary JSON states.</li>
+<li><strong>Q‑metrics as structural health:</strong><br>
+  Every agent step updates Q‑metrics: stability, drift, safety margin, lineage integrity.<br>
+  If Q blows up, the framework doesn’t just “retry”—it <strong>halts, rewinds, or routes</strong>.</li>
+<li><strong>Lineage as first‑class state:</strong><br>
+  Every decision has a parent; we can replay, bisect, and compare runs like silicon traces.<br>
+  This turns “why did the agent do that?” into a tractable, inspectable question.</li>
+<li><strong>VCG‑style envelopes for autonomy:</strong><br>
+  Instead of “let the agent roam and hope safety filters catch it”, we define envelopes:  </li>
+<li>max depth,  </li>
+<li>max resource drift,  </li>
+<li>allowed tool combinations,  </li>
+<li>forbidden state regions.<br>
+  The agent can’t step outside the envelope by construction.</li>
+</ul>
+<p>In other words: <strong>RTT‑Inside gives agent frameworks a notion of conservation laws and stability</strong>, not just control flow.</p>
+  </main>
+</body>
+</html>

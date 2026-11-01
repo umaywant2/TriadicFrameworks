@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/openloop/GPU/operators.md">
+  <title>operators — TFT.OpenGPU.Stack.Module</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/openloop/GPU/operators.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/openloop/GPU/operators.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="openloop_GPU_operators_" src="https://github.com/user-attachments/assets/5ed96d80-a768-4e10-a7a7-af4cf4979691" /></p>
+<h1 id="operators-tftopengpustackmodule">operators — TFT.OpenGPU.Stack.Module</h1>
+<p><strong>Operator Registry for TFT.OpenGPU.Stack.Module</strong><br>
+<strong>RTT:</strong> 1<br>
+<strong>Coherence:</strong> Declared<br>
+<strong>Drift:</strong> Bounded<br>
+<strong>Paradox:</strong> Structural  </p>
+<hr>
+<h2 id="1-substrate-operators">1. Substrate Operators</h2>
+<p>Substrate operators define the hidden-view mechanics of dimensional intent.</p>
+<ul>
+<li><strong>Op.Wrap</strong> — wrap external primitive into substrate form  </li>
+<li><strong>Op.Intent</strong> — declare dimensional intent  </li>
+<li><strong>Op.Cycle</strong> — substrate cycle for reconstruction  </li>
+<li><strong>Op.Bind</strong> — bind substrate primitive to rendering layer  </li>
+<li><strong>Op.Resolve</strong> — resolve substrate primitive into execution layer  </li>
+</ul>
+<hr>
+<h2 id="2-rendering-operators">2. Rendering Operators</h2>
+<p>Rendering operators define the middle-view reconstruction of scene primitives.</p>
+<ul>
+<li><strong>Render.Scene</strong> — construct scene graph  </li>
+<li><strong>Render.Node</strong> — create scene node  </li>
+<li><strong>Render.Mesh</strong> — represent surface geometry  </li>
+<li><strong>Render.Light</strong> — define lighting primitive  </li>
+<li><strong>Render.Camera</strong> — define camera primitive  </li>
+<li><strong>Render.Material</strong> — apply material intent  </li>
+<li><strong>Render.ShaderGraph</strong> — shader graph intent  </li>
+<li><strong>Render.Transform</strong> — apply dimensional transform  </li>
+<li><strong>Render.Viewport</strong> — declare viewport substrate  </li>
+<li><strong>Render.Pass</strong> — execute rendering pass  </li>
+</ul>
+<hr>
+<h2 id="3-execution-operators">3. Execution Operators</h2>
+<p>Execution operators define the visible-view GPU work.</p>
+<ul>
+<li><strong>Exec.Dispatch</strong> — dispatch substrate cycle to GPU  </li>
+<li><strong>Exec.Kernel</strong> — execution kernel  </li>
+<li><strong>Exec.Tile</strong> — tile-level compute block  </li>
+<li><strong>Exec.Warp</strong> — warp-equivalent execution group  </li>
+<li><strong>Exec.Stream</strong> — execution stream for parallel work  </li>
+<li><strong>Exec.VRAM.Surface</strong> — GPU surface allocation  </li>
+<li><strong>Exec.VRAM.Region</strong> — dimensional region mapping  </li>
+<li><strong>Exec.VRAM.Bind</strong> — bind primitive to VRAM surface  </li>
+<li><strong>Exec.DMA.Buffer</strong> — DMA-safe buffer for remote transport  </li>
+<li><strong>Exec.vGPU.Slice</strong> — allocate vGPU slice  </li>
+<li><strong>Exec.vGPU.Cycle</strong> — execution cycle for Cloud PC tiering  </li>
+<li><strong>Exec.vGPU.Priority</strong> — scheduling priority  </li>
+<li><strong>Exec.vGPU.Isolation</strong> — SR‑IOV isolation boundary  </li>
+<li><strong>Exec.Reconstruct.Surface</strong> — reconstruct dimensional surface  </li>
+<li><strong>Exec.Reconstruct.Material</strong> — reconstruct material intent  </li>
+<li><strong>Exec.Reconstruct.Transform</strong> — reconstruct transform intent  </li>
+<li><strong>Exec.Reconstruct.Viewport</strong> — reconstruct viewport substrate  </li>
+</ul>
+<hr>
+<h2 id="4-rdp-integration-operators">4. RDP Integration Operators</h2>
+<p>Operators enabling TFT primitive streams inside RDP.</p>
+<ul>
+<li><strong>RDP.PrimitiveStream</strong> — encode substrate primitives for transport  </li>
+<li><strong>RDP.Decode</strong> — decode primitive stream on endpoint  </li>
+<li><strong>RDP.Reconstruct</strong> — reconstruct dimensional intent via GPU  </li>
+</ul>
+<hr>
+<h2 id="5-cloud-pc-tiering-operators">5. Cloud PC Tiering Operators</h2>
+<p>Operators defining tier → vGPU → fidelity mapping.</p>
+<ul>
+<li><strong>Tier.Cycle</strong> — number of substrate cycles  </li>
+<li><strong>Tier.VRAM</strong> — VRAM allocation  </li>
+<li><strong>Tier.Priority</strong> — GPU scheduling priority  </li>
+<li><strong>Tier.Fidelity</strong> — reconstruction fidelity  </li>
+</ul>
+<hr>
+<h2 id="6-canonical-operator-summary">6. Canonical Operator Summary</h2>
+<p>Operators define the structural mechanics of the module:</p>
+<ul>
+<li>substrate → rendering → execution  </li>
+<li>dimensional intent → scene → GPU work  </li>
+<li>primitive stream → RDP → reconstruction  </li>
+<li>tier → vGPU slice → fidelity  </li>
+</ul>
+<p>All operators remain RTT-aligned and drift-bounded.</p>
+  </main>
+</body>
+</html>

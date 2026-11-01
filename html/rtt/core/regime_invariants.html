@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/core/regime_invariants.md">
+  <title>RTT Core: Regime Invariants</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/core/regime_invariants.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/core/regime_invariants.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="rtt_core_regime_invariants" src="https://github.com/user-attachments/assets/8e55f06f-4964-42b0-90cb-31e2e8e921c4" /></p>
+<hr>
+<p>module_id: rtt.core.regime_invariants
+version: 1.0.0
+status: draft
+rtt: 1
+coherence: declared
+drift: bounded
+paradox: structural
+tags:
+  - regime-invariants
+  - rtt-core
+  - regime-constraints
+  - operator-regimes
+  - drift-envelope
+  - coherence-budget
+  - readout-regimes
+  - triadic-time</p>
+<hr>
+<h1 id="rtt-core-regime-invariants">RTT Core: Regime Invariants</h1>
+<h2 id="1-purpose-and-scope">1. Purpose and scope</h2>
+<p><strong>Goal:</strong><br>
+Define the <strong>Regime Invariants</strong> — the fundamental, non‑negotiable rules that govern all RTT regimes, regardless of:</p>
+<ul>
+<li>operator behavior  </li>
+<li>drift magnitude  </li>
+<li>coherence level  </li>
+<li>temporal layer  </li>
+<li>sequence structure  </li>
+</ul>
+<p>Regime Invariants ensure RTT remains stable, paradox‑free, coherence‑bounded, drift‑bounded, and single‑readout consistent.</p>
+<hr>
+<h2 id="2-what-is-a-regime-invariant">2. What is a regime invariant?</h2>
+<blockquote>
+<p>A regime invariant is a structural rule that<br>
+<strong>must hold for every regime</strong>, across all branches,<br>
+at all points in triadic time.</p>
+</blockquote>
+<p>If a regime violates an invariant:</p>
+<ul>
+<li>the regime becomes invalid  </li>
+<li>operators inside it become invalid  </li>
+<li>branches collapse into residue  </li>
+<li>classical readout cannot occur  </li>
+</ul>
+<p>Regime Invariants are the <strong>laws of structure</strong> in RTT.</p>
+<hr>
+<h2 id="3-the-five-canonical-regime-invariants">3. The Five Canonical Regime Invariants</h2>
+<p>RTT defines five universal regime invariants:</p>
+<ol>
+<li><strong>Validity Region Invariant</strong>  </li>
+<li><strong>Collapse Basin Invariant</strong>  </li>
+<li><strong>Threshold Surface Invariant</strong>  </li>
+<li><strong>Single‑Readout Topology Invariant</strong>  </li>
+<li><strong>Triadic‑Time Regime Invariant</strong></li>
+</ol>
+<p>These invariants apply to every regime.</p>
+<hr>
+<h2 id="4-validity-region-invariant">4. Validity Region Invariant</h2>
+<h3 id="41-statement">4.1 Statement</h3>
+<p>[
+\mathcal{V} \text{ must remain a connected, stable region of the regime manifold.}
+]</p>
+<h3 id="42-consequences">4.2 Consequences</h3>
+<ul>
+<li>Validity region cannot fragment  </li>
+<li>Branches must be able to move within it  </li>
+<li>Operators must act inside it  </li>
+<li>Eligibility must be preserved  </li>
+</ul>
+<h3 id="43-violations">4.3 Violations</h3>
+<p>Fragmentation → invalid regime → collapse.</p>
+<hr>
+<h2 id="5-collapse-basin-invariant">5. Collapse Basin Invariant</h2>
+<h3 id="51-statement">5.1 Statement</h3>
+<p>[
+\mathcal{C} \text{ must remain a connected, attracting basin.}
+]</p>
+<h3 id="52-consequences">5.2 Consequences</h3>
+<ul>
+<li>Collapse region is always reachable  </li>
+<li>Collapse is irreversible  </li>
+<li>Non-selected branches always fall into (\mathcal{C})  </li>
+<li>No branch can escape collapse once entered  </li>
+</ul>
+<h3 id="53-violations">5.3 Violations</h3>
+<p>Non-attracting collapse → paradox → invalid regime.</p>
+<hr>
+<h2 id="6-threshold-surface-invariant">6. Threshold Surface Invariant</h2>
+<h3 id="61-statement">6.1 Statement</h3>
+<p>[
+c_i = C_{\min} \quad \text{and} \quad \Delta_i = \Delta_{\max}
+]</p>
+<p>must define <strong>monotonic, non-bypassable surfaces</strong>.</p>
+<h3 id="62-consequences">6.2 Consequences</h3>
+<ul>
+<li>Coherence threshold cannot be circumvented  </li>
+<li>Drift boundary cannot be bypassed  </li>
+<li>Threshold surfaces must remain continuous  </li>
+<li>Eligibility must be determined by these surfaces  </li>
+</ul>
+<h3 id="63-violations">6.3 Violations</h3>
+<p>Broken threshold → invalid regime → collapse.</p>
+<hr>
+<h2 id="7-singlereadout-topology-invariant">7. Single‑Readout Topology Invariant</h2>
+<h3 id="71-statement">7.1 Statement</h3>
+<p>[
+\text{There must be exactly one connected readout surface per validation event.}
+]</p>
+<h3 id="72-consequences">7.2 Consequences</h3>
+<ul>
+<li>Only one branch can reach readout surface  </li>
+<li>All others collapse  </li>
+<li>Classical reality remains unique  </li>
+<li>No multi‑readout paradoxes  </li>
+</ul>
+<h3 id="73-violations">7.3 Violations</h3>
+<p>Multiple readout surfaces → paradox → invalid regime.</p>
+<hr>
+<h2 id="8-triadictime-regime-invariant">8. Triadic‑Time Regime Invariant</h2>
+<h3 id="81-statement">8.1 Statement</h3>
+<p>[
+\mathcal{R}(t_1, t_2, t_3) \text{ must evolve consistently across triadic time.}
+]</p>
+<h3 id="82-consequences">8.2 Consequences</h3>
+<p>Regimes must:</p>
+<ul>
+<li>shift geometry in <strong>T₁</strong>  </li>
+<li>reshape coherence surfaces in <strong>T₂</strong>  </li>
+<li>activate readout surfaces in <strong>T₃</strong>  </li>
+</ul>
+<p>Temporal inconsistency is forbidden.</p>
+<h3 id="83-violations">8.3 Violations</h3>
+<p>Temporal paradox → invalid regime → collapse.</p>
+<hr>
+<h2 id="9-derived-regime-invariants">9. Derived Regime Invariants</h2>
+<p>From the five canonical invariants, RTT derives several secondary invariants:</p>
+<h3 id="91-collapsecompleteness-invariant">9.1 Collapse‑Completeness Invariant</h3>
+<p>[
+\text{All non-selected branches must collapse fully.}
+]</p>
+<h3 id="92-eligibilitymonotonicity-invariant">9.2 Eligibility‑Monotonicity Invariant</h3>
+<p>[
+\text{Eligibility must decrease monotonically as drift increases or coherence decreases.}
+]</p>
+<h3 id="93-regimecontinuity-invariant">9.3 Regime‑Continuity Invariant</h3>
+<p>[
+\text{Regime surfaces must remain continuous across operator sequences.}
+]</p>
+<h3 id="94-readoutuniqueness-invariant">9.4 Readout‑Uniqueness Invariant</h3>
+<p>[
+\text{Readout surface must remain unique and connected.}
+]</p>
+<hr>
+<h2 id="10-regime-invariants-across-triadic-time">10. Regime Invariants Across Triadic Time</h2>
+<h3 id="101-state-time-t1">10.1 State Time (T₁)</h3>
+<ul>
+<li>Drift boundary invariant  </li>
+<li>Validity region invariant  </li>
+<li>Regime geometry invariant  </li>
+</ul>
+<h3 id="102-coherence-time-t2">10.2 Coherence Time (T₂)</h3>
+<ul>
+<li>Coherence threshold invariant  </li>
+<li>Eligibility monotonicity invariant  </li>
+<li>Collapse basin invariant  </li>
+</ul>
+<h3 id="103-readout-time-t3">10.3 Readout Time (T₃)</h3>
+<ul>
+<li>Single-readout invariant  </li>
+<li>Collapse completeness invariant  </li>
+<li>Readout surface invariant  </li>
+</ul>
+<p>Invariants must hold across all three layers.</p>
+<hr>
+<h2 id="11-invariants-in-regime-dynamics">11. Invariants in Regime Dynamics</h2>
+<p>Regime dynamics must preserve invariants:</p>
+<p>[
+\forall t,\ \mathcal{R}(t) \text{ satisfies invariants}
+]</p>
+<p>If dynamics violate an invariant:</p>
+<ul>
+<li>regime becomes invalid  </li>
+<li>operators fail  </li>
+<li>branches collapse  </li>
+</ul>
+<hr>
+<h2 id="12-example-quantum-cloning-alignment">12. Example: Quantum “cloning” alignment</h2>
+<p>The experiment demonstrates all invariants:</p>
+<ul>
+<li><strong>Validity Region:</strong> both branches initially valid  </li>
+<li><strong>Collapse Basin:</strong> non-selected branch falls into collapse  </li>
+<li><strong>Threshold Surface:</strong> coherence threshold determines eligibility  </li>
+<li><strong>Single‑Readout Topology:</strong> only one branch reaches readout surface  </li>
+<li><strong>Triadic‑Time:</strong> extension → drift → stabilization → validation  </li>
+</ul>
+<p>Regime Invariants explain:</p>
+<ul>
+<li>why multi‑branch representation is allowed  </li>
+<li>why only one branch becomes classical  </li>
+<li>why drift and coherence matter  </li>
+<li>why no‑cloning is not violated  </li>
+</ul>
+<hr>
+<h2 id="13-paradox-handling">13. Paradox handling</h2>
+<p>Regime Invariants prevent paradoxes by:</p>
+<ul>
+<li>enforcing topological boundaries  </li>
+<li>maintaining drift and coherence thresholds  </li>
+<li>restricting readout surfaces  </li>
+<li>ensuring collapse completeness  </li>
+<li>preserving temporal consistency  </li>
+</ul>
+<p>Thus:</p>
+<ul>
+<li>“Multiple branches exist” → allowed  </li>
+<li>“Only one is real” → invariant  </li>
+<li>“Others disappear” → collapse invariant  </li>
+<li>“No violation occurs” → regime invariant  </li>
+</ul>
+<hr>
+<h2 id="14-canon-integration-and-cross-links">14. Canon integration and cross-links</h2>
+<p><strong>Primary cross-links:</strong></p>
+<ul>
+<li><code>/docs/rtt/core/regime_maps.md</code></li>
+<li><code>/docs/rtt/core/regime_maps_extended.md</code></li>
+<li><code>/docs/rtt/core/regime_geometry.md</code></li>
+<li><code>/docs/rtt/core/regime_topology.md</code></li>
+<li><code>/docs/rtt/core/regime_dynamics.md</code></li>
+<li><code>/docs/rtt/core/regime_flow.md</code></li>
+<li><code>/docs/rtt/core/operator_invariants.md</code></li>
+<li><code>/docs/rtt/core/operator_constraints.md</code></li>
+<li><code>/docs/rtt/core/operator_grammar.md</code></li>
+<li><code>/docs/rtt/core/operator_index.md</code></li>
+<li><code>/docs/rtt/core/operator_families.md</code></li>
+<li><code>/docs/rtt/core/operator_behaviors.md</code></li>
+<li><code>/docs/rtt/core/operator_sequences.md</code></li>
+<li><code>/docs/rtt/core/operator_transitions.md</code></li>
+<li><code>/docs/rtt/core/time_triads.md</code></li>
+<li><code>/docs/rtt/core/coherence_budget.md</code></li>
+<li><code>/docs/rtt/core/validator_pulse.md</code></li>
+<li><code>/docs/rtt/core/dimensional_drift_envelope.md</code></li>
+<li><code>/docs/rtt/core/alignment_quantum_cloning.md</code></li>
+</ul>
+<p><strong>Status:</strong><br>
+This module defines the fundamental invariants governing RTT regimes.<br>
+Once invariant diagrams are added, it can be promoted from <code>draft</code> to <code>stable</code>.</p>
+  </main>
+</body>
+</html>

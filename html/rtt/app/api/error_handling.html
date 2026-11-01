@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/app/api/error_handling.md">
+  <title>Error Handling</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/app/api/error_handling.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/app/api/error_handling.md</code>
+  </aside>
+
+  <main>
+<h1 id="error-handling">Error Handling</h1>
+<p>The RTT‑App handles errors in a conservative, predictable way to ensure that the Awareness model remains stable even when network conditions degrade or server responses are malformed. Error handling is intentionally simple and avoids any behavior that would require system permissions or background execution.</p>
+<hr>
+<h3 id="error-categories">Error Categories</h3>
+<p>The app may encounter several classes of errors when fetching or interpreting the server‑declared Awareness document:</p>
+<ul>
+<li><strong>Network errors</strong> — timeouts, unreachable hosts, captive portals, or protocol failures.</li>
+<li><strong>Transport errors</strong> — TLS handshake failures, protocol downgrades, or QUIC fallback.</li>
+<li><strong>Response errors</strong> — invalid JSON, missing fields, or unexpected structures.</li>
+<li><strong>Cache errors</strong> — expired or missing cached values.</li>
+<li><strong>Runtime errors</strong> — interruptions during fetch or merge operations.</li>
+</ul>
+<p>Each category is handled independently to maintain clarity and predictability.</p>
+<hr>
+<h3 id="network-errors">Network Errors</h3>
+<p>When the app cannot reach the Awareness endpoint:</p>
+<ul>
+<li>Retain the most recent cached server state.</li>
+<li>Do not attempt retries beyond the platform’s default behavior.</li>
+<li>Treat the server state as <em>Unknown</em> if no cached value exists.</li>
+<li>Allow the merge logic to proceed using local signals.</li>
+</ul>
+<p>This ensures that temporary outages do not cause oscillation or user confusion.</p>
+<hr>
+<h3 id="response-errors">Response Errors</h3>
+<p>If the server returns a malformed or incomplete response:</p>
+<ul>
+<li>Ignore the response entirely.</li>
+<li>Preserve the previous cached value.</li>
+<li>Treat the server state as <em>Unknown</em> if no valid cache exists.</li>
+<li>Do not attempt to infer missing fields.</li>
+</ul>
+<p>The app never attempts to repair or interpret invalid data.</p>
+<hr>
+<h3 id="cache-errors">Cache Errors</h3>
+<p>If the cached server state is missing or expired:</p>
+<ul>
+<li>Treat the server state as <em>Unknown</em>.</li>
+<li>Allow the merge logic to treat <em>Unknown</em> as <em>Stable</em>.</li>
+<li>Attempt to refresh the server state on the next safe opportunity.</li>
+</ul>
+<p>This behavior ensures that the app remains functional even after long offline periods.</p>
+<hr>
+<h3 id="mergelayer-errors">Merge‑Layer Errors</h3>
+<p>If an error occurs during the merge process:</p>
+<ul>
+<li>Default to the most conservative state: <strong>Drift</strong>.</li>
+<li>Log the event internally (platform‑native logging only).</li>
+<li>Continue normal operation on the next evaluation cycle.</li>
+</ul>
+<p>This prevents silent failures and ensures that the indicator never displays misleading clarity.</p>
+<hr>
+<h3 id="ui-behavior-during-errors">UI Behavior During Errors</h3>
+<p>The Awareness indicator must remain stable and predictable:</p>
+<ul>
+<li>Never flash or oscillate due to transient errors.</li>
+<li>Never display partial or intermediate states.</li>
+<li>Use the last known valid Awareness state until the next successful merge.</li>
+</ul>
+<p>The UI reflects the model’s stability guarantees.</p>
+<hr>
+<h3 id="forward-compatibility">Forward Compatibility</h3>
+<p>The error‑handling model is designed to support future versions of the Awareness endpoint:</p>
+<ul>
+<li>Unknown fields are ignored.</li>
+<li>Missing fields trigger fallback behavior.</li>
+<li>Additional metadata does not affect v1 behavior.</li>
+</ul>
+<p>This ensures that the RTT‑App remains compatible as the RTT ecosystem evolves.</p>
+  </main>
+</body>
+</html>

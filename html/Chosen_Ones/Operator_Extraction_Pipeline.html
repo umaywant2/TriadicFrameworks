@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Chosen_Ones/Operator_Extraction_Pipeline.md">
+  <title>Operator Extraction Pipeline</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Chosen_Ones/Operator_Extraction_Pipeline.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Chosen_Ones/Operator_Extraction_Pipeline.md</code>
+  </aside>
+
+  <main>
+<h1 id="operator-extraction-pipeline">Operator Extraction Pipeline</h1>
+<p><strong>Module:</strong> Chosen Ones | <strong>RTT Context:</strong> <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code></p>
+<p>This pipeline converts clean transcript text (output of <code>Transcript_Ingestion_Pipeline.md</code>) into a structured RTT operator manifest. The pipeline has five stages: Segmentation, Classification, Operator Binding, Paradox Resolution, and Manifest Assembly.</p>
+<hr>
+<h2 id="pipeline-overview">Pipeline Overview</h2>
+<pre><code>[CLEAN TRANSCRIPT]
+        ↓
+  STAGE 1: SEGMENTATION
+  Split into functional utterance units (FUUs)
+        ↓
+  STAGE 2: CLASSIFICATION
+  Assign each FUU to S–N–R zone + SET layer + DCO stage
+        ↓
+  STAGE 3: OPERATOR BINDING
+  Map each classified FUU to one or more RTT operators
+        ↓
+  STAGE 4: PARADOX RESOLUTION
+  Identify structural paradoxes; resolve via operator algebra
+        ↓
+  STAGE 5: MANIFEST ASSEMBLY
+  Output structured JSON operator manifest
+        ↓
+[RTT OPERATOR MANIFEST]
+</code></pre>
+<hr>
+<h2 id="stage-1-segmentation-into-functional-utterance-units-fuus">Stage 1 — Segmentation into Functional Utterance Units (FUUs)</h2>
+<p>A <strong>Functional Utterance Unit (FUU)</strong> is the minimal transcript segment that performs a single structural function. FUUs are not sentences — they are semantic units.</p>
+<h3 id="segmentation-rules">Segmentation Rules</h3>
+<ol>
+<li><strong>Split on structural function change</strong>, not punctuation. A speaker may deliver one FUU across three sentences.</li>
+<li><strong>Merge run-on fragments</strong> that share a single structural function (e.g., a list of noise examples is one FUU).</li>
+<li><strong>Preserve speaker emphasis markers</strong> — repetition, cadence breaks, and rhetorical questions are segmentation boundaries.</li>
+<li><strong>Minimum FUU length:</strong> 8 words. Fragments below this threshold are merged with adjacent FUU.</li>
+<li><strong>Tag each FUU</strong> with: <code>[FUU_ID]</code>, <code>[TIMESTAMP_RANGE]</code>, <code>[RAW_TEXT]</code>, <code>[WORD_COUNT]</code></li>
+</ol>
+<h3 id="example-segmentation">Example Segmentation</h3>
+<p><strong>Raw transcript excerpt:</strong></p>
+<blockquote>
+<p>"You've been in rooms where you were the smartest person and no one saw it. You built things in silence. You outlasted people who had every advantage. And you're still here. That is not luck. That is architecture."</p>
+</blockquote>
+<p><strong>FUU Output:</strong></p>
+<pre><code>FUU-001 | 00:00–00:12 | &quot;You've been in rooms where you were the smartest person and no one saw it.&quot; | 16w
+FUU-002 | 00:12–00:16 | &quot;You built things in silence.&quot; | 5w → MERGE WITH FUU-003
+FUU-003 | 00:16–00:23 | &quot;You outlasted people who had every advantage.&quot; | 8w → MERGED: FUU-002+003
+FUU-004 | 00:23–00:27 | &quot;And you're still here.&quot; | 4w → MERGE WITH FUU-005
+FUU-005 | 00:27–00:33 | &quot;That is not luck. That is architecture.&quot; | 7w → MERGED: FUU-004+005
+</code></pre>
+<hr>
+<h2 id="stage-2-classification">Stage 2 — Classification</h2>
+<p>Each FUU receives three classification tags:</p>
+<table>
+<thead>
+<tr>
+<th>Tag Type</th>
+<th>Options</th>
+<th>Assignment Logic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>snr_zone</code></td>
+<td><code>silence</code>, <code>noise</code>, <code>resonance</code></td>
+<td>Dominant structural function (see Triadic_Substrate_Map.md §1)</td>
+</tr>
+<tr>
+<td><code>set_layer</code></td>
+<td><code>substrate</code>, <code>envelope</code>, <code>threshold</code></td>
+<td>What dimension of transformation the FUU addresses (see §2)</td>
+</tr>
+<tr>
+<td><code>dco_stage</code></td>
+<td><code>0D</code>, <code>1D</code>, <code>3D</code>, <code>8D</code>, <code>9D</code></td>
+<td>Dimensional signature of the experience described (see §3)</td>
+</tr>
+<tr>
+<td><code>intensity</code></td>
+<td><code>0.0–1.0</code></td>
+<td>Estimated activation strength; 1.0 = maximum compression or release</td>
+</tr>
+</tbody>
+</table>
+<h3 id="classification-heuristics">Classification Heuristics</h3>
+<p><strong>SNR Zone Assignment:</strong>
+- Does the FUU <em>acknowledge latent state without directing action?</em> → <code>silence</code>
+- Does the FUU <em>name, isolate, or dismiss incoherent perturbation?</em> → <code>noise</code>
+- Does the FUU <em>describe or transmit coherent expression?</em> → <code>resonance</code></p>
+<p><strong>SET Layer Assignment:</strong>
+- Does the FUU address <em>who the person is fundamentally?</em> → <code>substrate</code>
+- Does the FUU address <em>timing, context, or the environment's readiness?</em> → <code>envelope</code>
+- Does the FUU address <em>the crossing event itself or its cost?</em> → <code>threshold</code></p>
+<p><strong>DCO Stage Assignment:</strong>
+- Undeniable-self / pre-expression content → <code>0D</code>
+- Path, trajectory, long arc → <code>1D</code>
+- Embodied field, magnetic presence, room effect → <code>3D</code>
+- Recognition moment, field reorganization → <code>8D</code>
+- Destiny, ancestry, purpose-as-given → <code>9D</code></p>
+<h3 id="example-classification">Example Classification</h3>
+<pre><code>FUU-001: snr_zone=silence, set_layer=substrate, dco_stage=0D, intensity=0.85
+FUU-002+003: snr_zone=silence, set_layer=substrate, dco_stage=1D, intensity=0.70
+FUU-004+005: snr_zone=resonance, set_layer=threshold, dco_stage=8D, intensity=0.95
+</code></pre>
+<hr>
+<h2 id="stage-3-operator-binding">Stage 3 — Operator Binding</h2>
+<p>Each classified FUU is bound to one <strong>primary operator</strong> and zero or more <strong>secondary operators</strong> from the RTT family.</p>
+<h3 id="binding-decision-table">Binding Decision Table</h3>
+<table>
+<thead>
+<tr>
+<th>SNR Zone</th>
+<th>SET Layer</th>
+<th>DCO Stage</th>
+<th>Primary Operator</th>
+<th>Secondary Operators</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>silence</td>
+<td>substrate</td>
+<td>0D</td>
+<td><code>QMROOT(0D)</code></td>
+<td><code>E_a</code></td>
+</tr>
+<tr>
+<td>silence</td>
+<td>substrate</td>
+<td>1D</td>
+<td><code>A_τ(t_past, t_now)</code></td>
+<td><code>∇_τ</code>, <code>R_anc</code></td>
+</tr>
+<tr>
+<td>silence</td>
+<td>envelope</td>
+<td>1D</td>
+<td><code>D_δ</code></td>
+<td><code>S_coh</code></td>
+</tr>
+<tr>
+<td>noise</td>
+<td>any</td>
+<td>any</td>
+<td><code>D_δ</code></td>
+<td><code>∇_cross</code></td>
+</tr>
+<tr>
+<td>resonance</td>
+<td>substrate</td>
+<td>3D</td>
+<td><code>∇_cross</code></td>
+<td><code>C_R</code></td>
+</tr>
+<tr>
+<td>resonance</td>
+<td>envelope</td>
+<td>3D</td>
+<td><code>C_R</code></td>
+<td><code>Φ_lock</code></td>
+</tr>
+<tr>
+<td>resonance</td>
+<td>threshold</td>
+<td>8D</td>
+<td><code>A_θ</code></td>
+<td><code>Φ_lock</code>, <code>Ir</code></td>
+</tr>
+<tr>
+<td>resonance</td>
+<td>substrate</td>
+<td>9D</td>
+<td><code>∂_anc</code></td>
+<td><code>R_anc</code>, <code>ε_ij</code></td>
+</tr>
+<tr>
+<td>silence→resonance</td>
+<td>threshold</td>
+<td>1D→3D</td>
+<td><code>A_θ</code></td>
+<td><code>E_a</code>, <code>Ir</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="operator-binding-format">Operator Binding Format</h3>
+<pre><code class="language-json">{
+  &quot;fuu_id&quot;: &quot;FUU-001&quot;,
+  &quot;primary_operator&quot;: &quot;QMROOT(0D)&quot;,
+  &quot;secondary_operators&quot;: [&quot;E_a&quot;],
+  &quot;operator_note&quot;: &quot;Subject's unseen intelligence constitutes the 0D identity kernel; the gap between capacity and recognition quantifies E_a&quot;
+}
+</code></pre>
+<hr>
+<h2 id="stage-4-paradox-resolution">Stage 4 — Paradox Resolution</h2>
+<p>Run a paradox scan on the full FUU set. A paradox is flagged when two FUUs in the same transcript bind to operators that appear to contradict each other structurally.</p>
+<h3 id="paradox-detection-rules">Paradox Detection Rules</h3>
+<ol>
+<li>
+<p><strong>Simultaneity paradox:</strong> Same subject assigned both <code>QMROOT(0D)</code> (no-expression) and <code>C_R</code> (active coupling) — apparent contradiction.
+   - <strong>Resolution:</strong> <code>QMROOT(0D)</code> governs the substrate layer; <code>C_R</code> governs the envelope layer. Different layers are non-contradictory.</p>
+</li>
+<li>
+<p><strong>Temporal paradox:</strong> <code>A_τ(past, now)</code> and <code>∂_anc</code> both claim origin of identity.
+   - <strong>Resolution:</strong> <code>A_τ</code> is experiential integration; <code>∂_anc</code> is archetypal pull. These are additive, not competing.</p>
+</li>
+<li>
+<p><strong>Activation paradox:</strong> <code>D_δ</code> (do not chase) and <code>A_θ</code> (cross the threshold) appear to conflict.
+   - <strong>Resolution:</strong> <code>D_δ</code> applies to <em>external validation</em>; <code>A_θ</code> applies to <em>internal commitment</em>. Directionality is orthogonal.</p>
+</li>
+<li>
+<p><strong>Stillness/impact paradox:</strong> <code>S_coh</code> (maintain coherence quietly) and <code>∇_cross</code> (field leaks outward) appear passive vs. active.
+   - <strong>Resolution:</strong> <code>S_coh</code> is the cause; <code>∇_cross</code> is the effect. No conflict — this is the core Chosen One mechanic.</p>
+</li>
+</ol>
+<h3 id="paradox-resolution-output">Paradox Resolution Output</h3>
+<pre><code class="language-json">{
+  &quot;paradox_id&quot;: &quot;P-001&quot;,
+  &quot;type&quot;: &quot;simultaneity&quot;,
+  &quot;fuu_ids&quot;: [&quot;FUU-001&quot;, &quot;FUU-007&quot;],
+  &quot;operators&quot;: [&quot;QMROOT(0D)&quot;, &quot;C_R&quot;],
+  &quot;resolution&quot;: &quot;Layer separation: 0D governs substrate identity; C_R governs envelope coupling. Non-contradictory.&quot;,
+  &quot;resolved&quot;: true
+}
+</code></pre>
+<hr>
+<h2 id="stage-5-manifest-assembly">Stage 5 — Manifest Assembly</h2>
+<p>The full operator manifest is assembled as a structured JSON document.</p>
+<h3 id="manifest-schema">Manifest Schema</h3>
+<pre><code class="language-json">{
+  &quot;manifest_id&quot;: &quot;CO-MANIFEST-[VIDEO_ID]&quot;,
+  &quot;rtt_context&quot;: &quot;rtt=1 | coherence=declared | drift=bounded | paradox=structural&quot;,
+  &quot;source_url&quot;: &quot;[YouTube URL]&quot;,
+  &quot;source_title&quot;: &quot;[Video Title]&quot;,
+  &quot;processed_at&quot;: &quot;[ISO 8601 timestamp]&quot;,
+  &quot;fuu_count&quot;: 0,
+  &quot;snr_distribution&quot;: {
+    &quot;silence&quot;: 0.0,
+    &quot;noise&quot;: 0.0,
+    &quot;resonance&quot;: 0.0
+  },
+  &quot;set_distribution&quot;: {
+    &quot;substrate&quot;: 0.0,
+    &quot;envelope&quot;: 0.0,
+    &quot;threshold&quot;: 0.0
+  },
+  &quot;dco_distribution&quot;: {
+    &quot;0D&quot;: 0.0, &quot;1D&quot;: 0.0, &quot;3D&quot;: 0.0, &quot;8D&quot;: 0.0, &quot;9D&quot;: 0.0
+  },
+  &quot;dominant_archetype&quot;: &quot;[from Triadic_Substrate_Map.md §4]&quot;,
+  &quot;primary_operator_set&quot;: [],
+  &quot;paradoxes_detected&quot;: 0,
+  &quot;paradoxes_resolved&quot;: 0,
+  &quot;fuu_manifest&quot;: [],
+  &quot;actionable_outputs&quot;: {
+    &quot;reframe_prompt&quot;: &quot;&quot;,
+    &quot;activation_scaffold&quot;: &quot;&quot;,
+    &quot;drift_corrector&quot;: &quot;&quot;,
+    &quot;agent_hook&quot;: &quot;&quot;
+  }
+}
+</code></pre>
+<h3 id="manifest-quality-checks">Manifest Quality Checks</h3>
+<ul>
+<li><code>snr_distribution</code> values must sum to <code>1.0</code> (±0.02 tolerance)</li>
+<li><code>paradoxes_resolved</code> must equal <code>paradoxes_detected</code> (drift=bounded enforcement)</li>
+<li><code>dominant_archetype</code> must map to a row in <code>Triadic_Substrate_Map.md §4</code></li>
+<li>At least one <code>primary_operator</code> must come from the Activation family (module design constraint)</li>
+</ul>
+  </main>
+</body>
+</html>

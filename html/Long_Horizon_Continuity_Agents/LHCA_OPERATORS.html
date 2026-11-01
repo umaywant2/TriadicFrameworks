@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Long_Horizon_Continuity_Agents/LHCA_OPERATORS.md">
+  <title>OPERATORS — LongHorizonContinuityAgents</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Long_Horizon_Continuity_Agents/LHCA_OPERATORS.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Long_Horizon_Continuity_Agents/LHCA_OPERATORS.md</code>
+  </aside>
+
+  <main>
+<h1 id="operators-long_horizon_continuity_agents">OPERATORS — Long_Horizon_Continuity_Agents</h1>
+<blockquote>
+<p>RTT Operator Grammar · Module <code>lhca-rtt-001</code> · Layer: <code>operator</code> (precedence 1)</p>
+</blockquote>
+<p>RTT operators are the primitives through which a continuity agent interacts with its own temporal substrate. Each operator mutates or queries the <strong>persistence tensor</strong> in a defined, composable way.</p>
+<hr>
+<h2 id="operator-registry">Operator Registry</h2>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Class</th>
+<th>Side Effects</th>
+<th>Safe to Retry?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PERSIST</code></td>
+<td>write</td>
+<td>Extends persistence stack</td>
+<td>✅ idempotent</td>
+</tr>
+<tr>
+<td><code>HANDOFF</code></td>
+<td>transfer</td>
+<td>Serializes + emits state bundle</td>
+<td>✅ with dedup</td>
+</tr>
+<tr>
+<td><code>REHYDRATE</code></td>
+<td>read/write</td>
+<td>Restores from checkpoint bundle</td>
+<td>⚠️ once per checkpoint</td>
+</tr>
+<tr>
+<td><code>CHECKPOINT</code></td>
+<td>snapshot</td>
+<td>Writes signed state snapshot</td>
+<td>✅ idempotent</td>
+</tr>
+<tr>
+<td><code>ROLLBACK</code></td>
+<td>restore</td>
+<td>Reverts to a previous checkpoint</td>
+<td>⚠️ destructive forward</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="persist"><code>PERSIST</code></h2>
+<p>Extends the persistence stack by appending the current agent state delta to the horizon tensor. Called at every action step.</p>
+<h3 id="signature">Signature</h3>
+<pre><code class="language-python">def PERSIST(state_delta: dict, horizon_clock: int) -&gt; PersistResult:
+    ...
+</code></pre>
+<h3 id="example">Example</h3>
+<pre><code class="language-python">from lhca.operators import PERSIST
+
+result = PERSIST(
+    state_delta={
+        &quot;goal_vector&quot;: [0.82, 0.11, 0.07],
+        &quot;last_action&quot;: &quot;literature_search&quot;,
+        &quot;behavioral_mode&quot;: &quot;exploratory&quot;,
+    },
+    horizon_clock=142,
+)
+
+print(result.stack_depth)   # 143
+print(result.drift_delta)   # 0.03
+</code></pre>
+<h3 id="json-payload">JSON payload</h3>
+<pre><code class="language-json">{
+  &quot;operator&quot;: &quot;PERSIST&quot;,
+  &quot;horizon_clock&quot;: 142,
+  &quot;state_delta&quot;: {
+    &quot;goal_vector&quot;: [0.82, 0.11, 0.07],
+    &quot;last_action&quot;: &quot;literature_search&quot;,
+    &quot;behavioral_mode&quot;: &quot;exploratory&quot;
+  },
+  &quot;result&quot;: {
+    &quot;stack_depth&quot;: 143,
+    &quot;drift_delta&quot;: 0.03,
+    &quot;persistence_ok&quot;: true
+  }
+}
+</code></pre>
+<hr>
+<h2 id="checkpoint"><code>CHECKPOINT</code></h2>
+<p>Writes a signed, immutable snapshot of the full agent state. Occurs automatically every <code>checkpoint_interval_steps</code> (default 50) or can be triggered manually.</p>
+<h3 id="signature_1">Signature</h3>
+<pre><code class="language-python">def CHECKPOINT(engine_state: dict, reason: str = &quot;scheduled&quot;) -&gt; CheckpointResult:
+    ...
+</code></pre>
+<h3 id="example_1">Example</h3>
+<pre><code class="language-python">from lhca.operators import CHECKPOINT
+
+cp = CHECKPOINT(
+    engine_state=engine.snapshot(),
+    reason=&quot;pre_handoff&quot;,
+)
+
+print(cp.checkpoint_id)    # &quot;cp-lhca-001-step0200&quot;
+print(cp.semantic_hash)    # &quot;sha256:e3b0c44298fc...&quot;
+print(cp.regime)           # &quot;WARM_CONTEXT&quot;
+</code></pre>
+<h3 id="json-payload_1">JSON payload</h3>
+<pre><code class="language-json">{
+  &quot;operator&quot;: &quot;CHECKPOINT&quot;,
+  &quot;reason&quot;: &quot;pre_handoff&quot;,
+  &quot;checkpoint_id&quot;: &quot;cp-lhca-001-step0200&quot;,
+  &quot;semantic_hash&quot;: &quot;sha256:e3b0c44298fc1c149afb4c8996fb92427ae41e4649b934ca495991b7852b855&quot;,
+  &quot;regime&quot;: &quot;WARM_CONTEXT&quot;,
+  &quot;step&quot;: 200,
+  &quot;coherence_score&quot;: 0.97,
+  &quot;drift&quot;: {
+    &quot;semantic&quot;: 0.08,
+    &quot;behavioral&quot;: 0.05,
+    &quot;goal_vector&quot;: 0.03,
+    &quot;identity&quot;: 0.01
+  }
+}
+</code></pre>
+<hr>
+<h2 id="handoff"><code>HANDOFF</code></h2>
+<p>Serializes the agent's full continuity bundle and emits it to the next execution context. Includes the most recent checkpoint, active regime, and drift history.</p>
+<h3 id="signature_2">Signature</h3>
+<pre><code class="language-python">def HANDOFF(
+    checkpoint_id: str,
+    target_context: str,
+    metadata: dict | None = None,
+) -&gt; HandoffBundle:
+    ...
+</code></pre>
+<h3 id="example_2">Example</h3>
+<pre><code class="language-python">from lhca.operators import HANDOFF
+
+bundle = HANDOFF(
+    checkpoint_id=&quot;cp-lhca-001-step0200&quot;,
+    target_context=&quot;session-2026-09-24&quot;,
+    metadata={&quot;handoff_reason&quot;: &quot;context_window_limit&quot;},
+)
+
+# Transmit bundle to next context
+next_context.receive(bundle.serialize())
+</code></pre>
+<h3 id="json-payload_2">JSON payload</h3>
+<pre><code class="language-json">{
+  &quot;operator&quot;: &quot;HANDOFF&quot;,
+  &quot;checkpoint_id&quot;: &quot;cp-lhca-001-step0200&quot;,
+  &quot;target_context&quot;: &quot;session-2026-09-24&quot;,
+  &quot;metadata&quot;: {
+    &quot;handoff_reason&quot;: &quot;context_window_limit&quot;
+  },
+  &quot;bundle&quot;: {
+    &quot;profile_hash&quot;: &quot;sha256:abc123...&quot;,
+    &quot;goal_vector&quot;: [0.82, 0.11, 0.07],
+    &quot;active_regime&quot;: &quot;COLD_HANDOFF&quot;,
+    &quot;drift_history_last_10&quot;: [0.02, 0.03, 0.03, 0.04, 0.04, 0.05, 0.06, 0.07, 0.07, 0.08],
+    &quot;signed_by&quot;: &quot;lhca-rtt-001&quot;
+  }
+}
+</code></pre>
+<hr>
+<h2 id="rehydrate"><code>REHYDRATE</code></h2>
+<p>Restores the agent's full continuity state from a received handoff bundle. Verifies signature integrity before applying. Transitions regime to <code>COLD_HANDOFF</code> automatically.</p>
+<h3 id="signature_3">Signature</h3>
+<pre><code class="language-python">def REHYDRATE(bundle: HandoffBundle, verify: bool = True) -&gt; RehydrateResult:
+    ...
+</code></pre>
+<h3 id="example_3">Example</h3>
+<pre><code class="language-python">from lhca.operators import REHYDRATE
+
+result = REHYDRATE(bundle=received_bundle, verify=True)
+
+if not result.integrity_ok:
+    raise ContinuityError(f&quot;Signature mismatch: {result.signature_failures}&quot;)
+
+print(result.active_regime)     # &quot;COLD_HANDOFF&quot;
+print(result.coherence_score)   # 0.89
+print(result.drift_at_restore)  # {&quot;semantic&quot;: 0.12, &quot;behavioral&quot;: 0.09, ...}
+</code></pre>
+<h3 id="json-payload_3">JSON payload</h3>
+<pre><code class="language-json">{
+  &quot;operator&quot;: &quot;REHYDRATE&quot;,
+  &quot;bundle_checkpoint_id&quot;: &quot;cp-lhca-001-step0200&quot;,
+  &quot;integrity_ok&quot;: true,
+  &quot;signature_failures&quot;: [],
+  &quot;active_regime&quot;: &quot;COLD_HANDOFF&quot;,
+  &quot;coherence_score&quot;: 0.89,
+  &quot;drift_at_restore&quot;: {
+    &quot;semantic&quot;: 0.12,
+    &quot;behavioral&quot;: 0.09,
+    &quot;goal_vector&quot;: 0.05,
+    &quot;identity&quot;: 0.02
+  }
+}
+</code></pre>
+<hr>
+<h2 id="rollback"><code>ROLLBACK</code></h2>
+<p>Reverts agent state to a named checkpoint. Requires authorized trigger (drift critical/halt, coherence anchor failure, or explicit call). Transitions regime to <code>RECOVERY</code>.</p>
+<h3 id="signature_4">Signature</h3>
+<pre><code class="language-python">def ROLLBACK(
+    target_checkpoint_id: str,
+    reason: str,
+    authorized_by: str,
+) -&gt; RollbackResult:
+    ...
+</code></pre>
+<h3 id="example_4">Example</h3>
+<pre><code class="language-python">from lhca.operators import ROLLBACK
+
+result = ROLLBACK(
+    target_checkpoint_id=&quot;cp-lhca-001-step0150&quot;,
+    reason=&quot;semantic_drift_critical&quot;,
+    authorized_by=&quot;drift_boundary_validator&quot;,
+)
+
+print(result.restored_step)      # 150
+print(result.steps_discarded)    # 52
+print(result.new_regime)         # &quot;RECOVERY&quot;
+</code></pre>
+<h3 id="json-payload_4">JSON payload</h3>
+<pre><code class="language-json">{
+  &quot;operator&quot;: &quot;ROLLBACK&quot;,
+  &quot;target_checkpoint_id&quot;: &quot;cp-lhca-001-step0150&quot;,
+  &quot;reason&quot;: &quot;semantic_drift_critical&quot;,
+  &quot;authorized_by&quot;: &quot;drift_boundary_validator&quot;,
+  &quot;result&quot;: {
+    &quot;restored_step&quot;: 150,
+    &quot;steps_discarded&quot;: 52,
+    &quot;new_regime&quot;: &quot;RECOVERY&quot;,
+    &quot;coherence_score_post_rollback&quot;: 0.91
+  }
+}
+</code></pre>
+<hr>
+<h2 id="operator-composition">Operator Composition</h2>
+<p>Operators can be composed sequentially. Common patterns:</p>
+<pre><code class="language-python"># Pre-handoff pattern
+CHECKPOINT(engine.snapshot(), reason=&quot;pre_handoff&quot;)
+bundle = HANDOFF(checkpoint_id=cp.checkpoint_id, target_context=next_ctx)
+
+# Post-handoff restoration pattern
+result = REHYDRATE(bundle=incoming_bundle)
+PERSIST(state_delta=first_action_delta, horizon_clock=result.restored_step + 1)
+
+# Emergency recovery pattern
+CHECKPOINT(engine.snapshot(), reason=&quot;pre_rollback&quot;)
+ROLLBACK(target_checkpoint_id=last_known_good, reason=&quot;ca_02_failure&quot;, authorized_by=&quot;coherence_anchor_validator&quot;)
+</code></pre>
+<hr>
+<h2 id="operator-constraint-matrix">Operator Constraint Matrix</h2>
+<table>
+<thead>
+<tr>
+<th>From \ Allowed Next</th>
+<th>PERSIST</th>
+<th>CHECKPOINT</th>
+<th>HANDOFF</th>
+<th>REHYDRATE</th>
+<th>ROLLBACK</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PERSIST</code></td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>CHECKPOINT</code></td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>HANDOFF</code></td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>REHYDRATE</code></td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>ROLLBACK</code></td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+  </main>
+</body>
+</html>

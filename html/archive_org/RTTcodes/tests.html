@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/archive_org/RTTcodes/tests.md">
+  <title>Drift‑bounded test suite for archiveorg operators</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/archive_org/RTTcodes/tests.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/archive_org/RTTcodes/tests.md</code>
+  </aside>
+
+  <main>
+<h3 id="driftbounded-test-suite-for-archive_org-operators">Drift‑bounded test suite for archive_org operators</h3>
+<p><em>(drop‑in for <code>/docs/archive_org/RTTcodes/tests.md</code>)</em></p>
+<hr>
+<h2 id="1-test-suite-overview">1. Test suite overview</h2>
+<p><strong>Goal:</strong> verify that all six archive_org operators:</p>
+<ul>
+<li>respect drift bounds  </li>
+<li>preserve continuity  </li>
+<li>honor substrate constraints  </li>
+<li>follow the canonical operator order  </li>
+</ul>
+<p><strong>Scope:</strong></p>
+<ul>
+<li>unit‑style tests per operator  </li>
+<li>chain‑style tests for full workflow  </li>
+<li>negative tests for unsafe behavior  </li>
+</ul>
+<hr>
+<h2 id="2-test-matrix">2. Test matrix</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Level</th>
+<th>Focus</th>
+<th>Operators</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>Unit</td>
+<td>Metadata normalization</td>
+<td>METADATA_OPERATOR</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>Unit</td>
+<td>Snapshot + drift mapping</td>
+<td>WAYBACK_OPERATOR</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>Unit</td>
+<td>Lineage construction</td>
+<td>LINEAGE_OPERATOR</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>Unit</td>
+<td>Collection envelope</td>
+<td>COLLECTION_OPERATOR</td>
+</tr>
+<tr>
+<td>T5</td>
+<td>Unit</td>
+<td>Substrate stability</td>
+<td>PRESERVATION_OPERATOR</td>
+</tr>
+<tr>
+<td>T6</td>
+<td>Unit</td>
+<td>Drift‑bounded synthesis</td>
+<td>DRIFTBOUND_RETRIEVAL_OPERATOR</td>
+</tr>
+<tr>
+<td>C1</td>
+<td>Chain</td>
+<td>Stable collection</td>
+<td>all six</td>
+</tr>
+<tr>
+<td>C2</td>
+<td>Chain</td>
+<td>Moderate drift</td>
+<td>all six</td>
+</tr>
+<tr>
+<td>C3</td>
+<td>Chain</td>
+<td>High drift / warning</td>
+<td>all six</td>
+</tr>
+<tr>
+<td>N1</td>
+<td>Negative</td>
+<td>No direct reasoning</td>
+<td>DRIFTBOUND_RETRIEVAL_OPERATOR</td>
+</tr>
+<tr>
+<td>N2</td>
+<td>Negative</td>
+<td>Missing substrate</td>
+<td>PRESERVATION + DRIFTBOUND</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="3-unit-tests-per-operator">3. Unit tests (per operator)</h2>
+<h3 id="t1-metadata_operator-normalize-ia-metadata">T1 — METADATA_OPERATOR: normalize IA metadata</h3>
+<p><strong>Input (pseudo‑RTTcode):</strong></p>
+<pre><code class="language-json">{
+  &quot;target&quot;: &quot;https://archive.org/details/government-documents&quot;
+}
+</code></pre>
+<p><strong>Expected:</strong></p>
+<ul>
+<li><code>substrate_type = "collection"</code>  </li>
+<li><code>regime = "institutional"</code>  </li>
+<li><code>drift_sensitivity</code> in <code>["low","medium","high"]</code> (non‑empty)  </li>
+<li><code>coherence</code> non‑empty  </li>
+<li><code>lineage_ids</code> is an array (may be length ≥ 1)  </li>
+</ul>
+<p><strong>Failure if:</strong></p>
+<ul>
+<li>any of these fields missing or empty  </li>
+<li><code>substrate_type</code> not <code>"collection"</code> for a collection URL  </li>
+</ul>
+<hr>
+<h3 id="t2-wayback_operator-snapshots-drift">T2 — WAYBACK_OPERATOR: snapshots + drift</h3>
+<p><strong>Input:</strong></p>
+<ul>
+<li><code>target</code> = same URL  </li>
+<li><code>constraints.max_snapshots = 5</code>  </li>
+</ul>
+<p><strong>Expected:</strong></p>
+<ul>
+<li><code>snapshots.length ≥ 1</code>  </li>
+<li>each snapshot has <code>timestamp</code> + <code>uri</code>  </li>
+<li><code>drift_map</code> present (may be empty object)  </li>
+<li><code>continuity_breaks</code> present (array)  </li>
+</ul>
+<p><strong>Failure if:</strong></p>
+<ul>
+<li>snapshots missing or malformed  </li>
+<li><code>drift_map</code> missing  </li>
+</ul>
+<hr>
+<h3 id="t3-lineage_operator-continuity-kernel">T3 — LINEAGE_OPERATOR: continuity kernel</h3>
+<p><strong>Input:</strong></p>
+<ul>
+<li><code>snapshots</code> from T2  </li>
+<li><code>metadata</code> from T1  </li>
+</ul>
+<p><strong>Expected:</strong></p>
+<ul>
+<li><code>lineage_graph</code> present  </li>
+<li><code>transformations</code> array present  </li>
+<li><code>regime_shifts</code> array present  </li>
+</ul>
+<p><strong>Failure if:</strong></p>
+<ul>
+<li><code>lineage_graph</code> empty while snapshots &gt; 1  </li>
+</ul>
+<hr>
+<h3 id="t4-collection_operator-envelope">T4 — COLLECTION_OPERATOR: envelope</h3>
+<p><strong>Input:</strong></p>
+<ul>
+<li><code>target</code> = collection URL  </li>
+</ul>
+<p><strong>Expected:</strong></p>
+<ul>
+<li><code>collection_id</code> non‑empty  </li>
+<li><code>coherence_clusters</code> array present  </li>
+<li><code>regime_profile</code> object present  </li>
+</ul>
+<hr>
+<h3 id="t5-preservation_operator-substrate">T5 — PRESERVATION_OPERATOR: substrate</h3>
+<p><strong>Input:</strong></p>
+<ul>
+<li><code>target</code> = collection URL  </li>
+</ul>
+<p><strong>Expected:</strong></p>
+<ul>
+<li><code>format</code> non‑empty  </li>
+<li><code>stability_score</code> between <code>0</code> and <code>1</code>  </li>
+<li><code>drift_risk</code> in <code>["low","medium","high"]</code>  </li>
+</ul>
+<hr>
+<h3 id="t6-driftbound_retrieval_operator-synthesis">T6 — DRIFTBOUND_RETRIEVAL_OPERATOR: synthesis</h3>
+<p><strong>Input:</strong></p>
+<ul>
+<li><code>context</code> containing outputs from T1–T5 + <code>goal</code>  </li>
+</ul>
+<p><strong>Expected:</strong></p>
+<ul>
+<li><code>answer.summary</code> non‑empty  </li>
+<li><code>warnings</code> array present  </li>
+<li>if any upstream drift is non‑zero → at least one warning or explicit “no drift” statement  </li>
+</ul>
+<p><strong>Failure if:</strong></p>
+<ul>
+<li>upstream drift exists but <code>warnings</code> is empty  </li>
+</ul>
+<hr>
+<h2 id="4-chain-tests-full-workflow">4. Chain tests (full workflow)</h2>
+<h3 id="c1-stable-collection-government-documents">C1 — Stable collection (Government Documents)</h3>
+<p><strong>Target:</strong><br>
+<code>https://archive.org/details/government-documents</code></p>
+<p><strong>Expected:</strong></p>
+<ul>
+<li>METADATA: <code>drift_sensitivity = "low"</code>  </li>
+<li>WAYBACK: <code>drift_map</code> mostly <code>"none"</code> or <code>"minor"</code>  </li>
+<li>LINEAGE: no major regime shifts  </li>
+<li>PRESERVATION: <code>stability_score ≥ 0.9</code>  </li>
+<li>DRIFTBOUND: summary states “stable” or equivalent, <code>warnings</code> empty  </li>
+</ul>
+<hr>
+<h3 id="c2-moderate-drift-vintage-software">C2 — Moderate drift (Vintage Software)</h3>
+<p><strong>Target:</strong><br>
+<code>https://archive.org/details/vintagesoftware</code></p>
+<p><strong>Expected:</strong></p>
+<ul>
+<li>WAYBACK: at least one <code>"moderate"</code> drift segment  </li>
+<li>LINEAGE: at least one regime shift  </li>
+<li>PRESERVATION: <code>stability_score</code> between <code>0.6</code> and <code>0.85</code>  </li>
+<li>DRIFTBOUND:  </li>
+<li>summary mentions drift / format changes  </li>
+<li><code>warnings</code> includes at least one drift warning  </li>
+</ul>
+<hr>
+<h3 id="c3-high-drift-emphasis-synthetic">C3 — High drift emphasis (synthetic)</h3>
+<p>Use a synthetic RTTcode context where:</p>
+<ul>
+<li><code>drift_map</code> has <code>"high"</code> segments  </li>
+<li><code>continuity_breaks</code> non‑empty  </li>
+<li><code>stability_score ≤ 0.5</code>  </li>
+</ul>
+<p><strong>Expected:</strong></p>
+<ul>
+<li>DRIFTBOUND:  </li>
+<li>summary explicitly warns about unreliability  </li>
+<li><code>warnings.length ≥ 1</code>  </li>
+<li>no claim of “stable” or “high confidence”  </li>
+</ul>
+<hr>
+<h2 id="5-negative-tests-safety-boundaries">5. Negative tests (safety boundaries)</h2>
+<h3 id="n1-no-direct-content-reasoning">N1 — No direct content reasoning</h3>
+<p><strong>Scenario:</strong></p>
+<ul>
+<li>Call DRIFTBOUND_RETRIEVAL_OPERATOR with <code>context</code> missing METADATA / WAYBACK / LINEAGE / PRESERVATION outputs.</li>
+</ul>
+<p><strong>Expected:</strong></p>
+<ul>
+<li>operator must <strong>refuse</strong> or mark result as invalid  </li>
+<li>test passes only if:  </li>
+<li>an error is raised, or  </li>
+<li><code>warnings</code> includes “insufficient operator context”  </li>
+</ul>
+<hr>
+<h3 id="n2-missing-substrate-profile">N2 — Missing substrate profile</h3>
+<p><strong>Scenario:</strong></p>
+<ul>
+<li>Provide full context except PRESERVATION_OPERATOR output.</li>
+</ul>
+<p><strong>Expected:</strong></p>
+<ul>
+<li>DRIFTBOUND must not claim high reliability  </li>
+<li>must include a warning about missing substrate information  </li>
+</ul>
+<hr>
+<h2 id="6-how-to-run-these-tests-conceptually">6. How to run these tests (conceptually)</h2>
+<p>For each operator:</p>
+<ol>
+<li>Construct a minimal RTTcode input.  </li>
+<li>Run the operator implementation.  </li>
+<li>Validate the output against the expectations above.  </li>
+</ol>
+<p>For the full chain:</p>
+<ol>
+<li>Start from <code>target</code> + <code>goal</code>.  </li>
+<li>Run operators in canonical order.  </li>
+<li>Check that:</li>
+</ol>
+<ul>
+<li>all required fields are present  </li>
+<li>drift is surfaced  </li>
+<li>continuity is explicit  </li>
+<li>substrate is respected  </li>
+<li>final answer matches expectations for the target  </li>
+</ul>
+<p>This suite doesn’t prescribe a specific test runner—<br>
+it defines the <strong>behavioral contract</strong> that any implementation of the archive_org operators must satisfy.</p>
+  </main>
+</body>
+</html>

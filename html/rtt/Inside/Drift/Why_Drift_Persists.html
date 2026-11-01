@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Drift/Why_Drift_Persists.md">
+  <title>Section 4 — Why Drift Persists: Structural Causes in Modern AI Architectures</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Drift/Why_Drift_Persists.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Drift/Why_Drift_Persists.md</code>
+  </aside>
+
+  <main>
+<h1 id="section-4-why-drift-persists-structural-causes-in-modern-ai-architectures"><strong>Section 4 — Why Drift Persists: Structural Causes in Modern AI Architectures</strong></h1>
+<p>Despite the scale of global investment and the diversity of mitigation strategies, drift remains a persistent and measurable behavior across all major generative AI systems. The reason is not a lack of effort or ingenuity; it is that drift is <strong>structurally embedded</strong> in the architecture of modern large language models. This section outlines the core mechanisms that make drift an inherent property of current systems.</p>
+<hr>
+<h2 id="41-autoregressive-prediction-without-structural-constraints"><strong>4.1 Autoregressive Prediction Without Structural Constraints</strong></h2>
+<p>At the heart of every major language model is the same fundamental mechanism:<br>
+<strong>predict the next token given the previous ones</strong>.</p>
+<p>This process is:</p>
+<ul>
+<li>statistical  </li>
+<li>unconstrained  </li>
+<li>non‑deterministic  </li>
+<li>context‑sensitive  </li>
+<li>prone to compounding error  </li>
+</ul>
+<p>Even when trained on vast corpora, the model has no intrinsic mechanism to:</p>
+<ul>
+<li>verify internal consistency  </li>
+<li>maintain a coherent world‑state  </li>
+<li>enforce logical invariants  </li>
+<li>detect when it is “making something up”  </li>
+<li>rewind or correct its own reasoning trajectory  </li>
+</ul>
+<p>As a result, drift is not an anomaly — it is a <strong>natural outcome</strong> of unconstrained generative prediction.</p>
+<hr>
+<h2 id="42-lack-of-grounded-world-models"><strong>4.2 Lack of Grounded World Models</strong></h2>
+<p>Modern LLMs do not possess:</p>
+<ul>
+<li>a persistent memory  </li>
+<li>a stable ontology  </li>
+<li>a grounded representation of the external world  </li>
+<li>a mechanism for verifying factual claims  </li>
+</ul>
+<p>Instead, they operate on <strong>statistical associations</strong> learned from text.<br>
+When the model encounters uncertainty, it fills gaps using the nearest plausible pattern — a behavior that appears coherent but may be incorrect.</p>
+<p>This leads to:</p>
+<ul>
+<li>fabricated citations  </li>
+<li>invented details  </li>
+<li>confident but incorrect explanations  </li>
+<li>plausible‑sounding narratives that drift from truth  </li>
+</ul>
+<p>Without a grounded world model, drift is unavoidable.</p>
+<hr>
+<h2 id="43-absence-of-internal-stability-metrics"><strong>4.3 Absence of Internal Stability Metrics</strong></h2>
+<p>Current architectures lack any internal measure of:</p>
+<ul>
+<li>semantic drift  </li>
+<li>reasoning coherence  </li>
+<li>uncertainty accumulation  </li>
+<li>deviation from expected behavior  </li>
+<li>degradation of context over time  </li>
+</ul>
+<p>Without such metrics, the model cannot detect when its reasoning is becoming unstable.<br>
+It continues generating tokens even when the internal state has diverged significantly from the intended trajectory.</p>
+<p>This absence of <strong>self‑monitoring</strong> is a primary cause of long‑form drift.</p>
+<hr>
+<h2 id="44-no-mechanism-for-rewind-or-correction"><strong>4.4 No Mechanism for Rewind or Correction</strong></h2>
+<p>Human reasoning includes:</p>
+<ul>
+<li>error detection  </li>
+<li>backtracking  </li>
+<li>revision  </li>
+<li>self‑correction  </li>
+</ul>
+<p>Autoregressive models do not.<br>
+Once a token is generated, it becomes part of the context and influences all subsequent predictions.</p>
+<p>This creates a <strong>one‑way drift dynamic</strong>:</p>
+<ul>
+<li>a small error early in the chain  </li>
+<li>→ propagates  </li>
+<li>→ compounds  </li>
+<li>→ becomes a narrative  </li>
+<li>→ becomes a drift  </li>
+</ul>
+<p>Without the ability to rewind or revise, the model cannot recover from early deviations.</p>
+<hr>
+<h2 id="45-context-decay-and-longhorizon-instability"><strong>4.5 Context Decay and Long‑Horizon Instability</strong></h2>
+<p>Even with large context windows, models exhibit:</p>
+<ul>
+<li><strong>context dilution</strong> (older tokens lose influence)  </li>
+<li><strong>semantic fading</strong> (details degrade over time)  </li>
+<li><strong>topic drift</strong> (the model shifts to statistically adjacent concepts)  </li>
+<li><strong>continuity errors</strong> (misremembered or inverted details)  </li>
+</ul>
+<p>These effects become more pronounced in:</p>
+<ul>
+<li>long conversations  </li>
+<li>multi‑step reasoning  </li>
+<li>planning tasks  </li>
+<li>iterative tool use  </li>
+</ul>
+<p>The longer the chain, the higher the probability of drift.</p>
+<hr>
+<h2 id="46-overconfidence-as-a-byproduct-of-training"><strong>4.6 Overconfidence as a Byproduct of Training</strong></h2>
+<p>Models are trained to produce <strong>high‑probability continuations</strong>, not to express uncertainty.<br>
+As a result:</p>
+<ul>
+<li>drift's are often delivered with confidence  </li>
+<li>fabricated details appear authoritative  </li>
+<li>incorrect reasoning is expressed fluently  </li>
+<li>users may not detect drift until late in the chain  </li>
+</ul>
+<p>This mismatch between <strong>confidence</strong> and <strong>accuracy</strong> is one of the most dangerous aspects of drift.</p>
+<hr>
+<h2 id="47-summary-drift-as-a-structural-property"><strong>4.7 Summary: Drift as a Structural Property</strong></h2>
+<p>Across all major architectures, drift persists because:</p>
+<ul>
+<li>the reasoning process is unconstrained  </li>
+<li>the model lacks internal stability metrics  </li>
+<li>there is no mechanism for self‑correction  </li>
+<li>context degrades over time  </li>
+<li>uncertainty is masked by fluency  </li>
+<li>the system has no grounded world model  </li>
+</ul>
+<p>These are <strong>architectural limitations</strong>, not training defects.<br>
+As such, they cannot be fully resolved through scaling, RLHF, RAG, or guardrails alone.</p>
+<p>A fundamentally different approach is required — one that introduces <strong>structural physics</strong> into the reasoning process.</p>
+  </main>
+</body>
+</html>

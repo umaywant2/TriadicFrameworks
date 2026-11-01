@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Philanthropy/donor_alignment_scoring.md">
+  <title>Donor Alignment Scoring — Philanthropy &amp; Funding Transparency Module</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Philanthropy/donor_alignment_scoring.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Philanthropy/donor_alignment_scoring.md</code>
+  </aside>
+
+  <main>
+<h1 id="donor-alignment-scoring-philanthropy-funding-transparency-module">Donor Alignment Scoring — Philanthropy &amp; Funding Transparency Module</h1>
+<p>This file defines the RTT-aligned donor alignment scoring model.<br>
+The goal is to measure how closely a donor’s <strong>intent</strong>, <strong>flows</strong>, and <strong>outcomes</strong> match across the entire philanthropic chain.</p>
+<p>This scoring model is structural, not moral.<br>
+It evaluates alignment using RTT operators, SET load, governance substrate, and the triadic observer.</p>
+<hr>
+<h1 id="1-purpose-of-donor-alignment-scoring">1. Purpose of Donor Alignment Scoring</h1>
+<p>Donors often have clear intentions, but the philanthropic system introduces:</p>
+<ul>
+<li>multi-layer routing  </li>
+<li>overhead  </li>
+<li>narrative distortion  </li>
+<li>governance asymmetry  </li>
+<li>incentive misalignment  </li>
+<li>drift at every layer  </li>
+</ul>
+<p>The Donor Alignment Score (DAS) reveals:</p>
+<ul>
+<li>how much of the donor’s intent becomes real outcomes  </li>
+<li>where alignment is strong  </li>
+<li>where drift occurs  </li>
+<li>where structural corrections are needed  </li>
+</ul>
+<hr>
+<h1 id="2-core-alignment-components">2. Core Alignment Components</h1>
+<p>The Donor Alignment Score is built from four pillars:</p>
+<ol>
+<li><strong>Intent Clarity</strong> — what the donor wants  </li>
+<li><strong>Flow Integrity</strong> — how money moves  </li>
+<li><strong>Outcome Coherence</strong> — what actually happens  </li>
+<li><strong>Regime Stability</strong> — what incentives shape the flow  </li>
+</ol>
+<p>Each pillar is evaluated using RTT operators.</p>
+<hr>
+<h1 id="3-intent-clarity-intent">3. Intent Clarity (INTENT)</h1>
+<p>Intent is extracted from:</p>
+<ul>
+<li>donor mission statements  </li>
+<li>grant agreements  </li>
+<li>public commitments  </li>
+<li>thematic priorities  </li>
+<li>stated values  </li>
+</ul>
+<p>Operator:</p>
+<pre><code>INTENT(donor)
+</code></pre>
+<p>Intent clarity is high when:</p>
+<ul>
+<li>goals are specific  </li>
+<li>constraints are explicit  </li>
+<li>time horizons are defined  </li>
+<li>metrics are measurable  </li>
+</ul>
+<hr>
+<h1 id="4-flow-integrity-flow-trace">4. Flow Integrity (FLOW + TRACE)</h1>
+<p>Flow integrity measures:</p>
+<ul>
+<li>routing transparency  </li>
+<li>leakage  </li>
+<li>overhead  </li>
+<li>conversion efficiency  </li>
+<li>governance substrate stability  </li>
+</ul>
+<p>Operators:</p>
+<pre><code>FLOW(src → dst)
+TRACE(path)
+LEAK(node)
+CONVERT(input → output)
+</code></pre>
+<p>Flow integrity is high when:</p>
+<ul>
+<li>routing is simple  </li>
+<li>leakage is low  </li>
+<li>overhead is justified  </li>
+<li>funds reach intended nodes  </li>
+</ul>
+<hr>
+<h1 id="5-outcome-coherence-sig-coh">5. Outcome Coherence (SIG + COH)</h1>
+<p>Outcome coherence measures:</p>
+<ul>
+<li>measurable results  </li>
+<li>alignment with intent  </li>
+<li>structural impact  </li>
+<li>community benefit  </li>
+</ul>
+<p>Operators:</p>
+<pre><code>SIG(data)
+COH(system)
+IMPACT(flow)
+</code></pre>
+<p>Outcome coherence is high when:</p>
+<ul>
+<li>outputs match intent  </li>
+<li>outcomes match outputs  </li>
+<li>community feedback aligns with results  </li>
+</ul>
+<hr>
+<h1 id="6-regime-stability-reg-drf">6. Regime Stability (REG + DRF)</h1>
+<p>Regime stability measures:</p>
+<ul>
+<li>authority balance  </li>
+<li>narrative accuracy  </li>
+<li>emotional cycles  </li>
+<li>structural governance  </li>
+</ul>
+<p>Operators:</p>
+<pre><code>REG(type)
+DRF(type)
+ASYM(node)
+OPA(node)
+</code></pre>
+<p>Regime stability is high when:</p>
+<ul>
+<li>authority is accountable  </li>
+<li>narrative matches signal  </li>
+<li>emotional cycles do not distort flows  </li>
+<li>governance is transparent  </li>
+</ul>
+<hr>
+<h1 id="7-donor-alignment-score-das">7. Donor Alignment Score (DAS)</h1>
+<p>The Donor Alignment Score is computed as:</p>
+<pre><code>DAS =
+  w1 * IntentClarity
++ w2 * FlowIntegrity
++ w3 * OutcomeCoherence
++ w4 * RegimeStability
+</code></pre>
+<p>Where each component is normalized to 0–1.</p>
+<p>Example:</p>
+<pre><code>DAS(DonorA) = 0.72 (strong alignment)
+</code></pre>
+<hr>
+<h1 id="8-component-scoring-01-scale">8. Component Scoring (0–1 Scale)</h1>
+<h3 id="81-intent-clarity"><strong>8.1 Intent Clarity</strong></h3>
+<ul>
+<li>0.9–1.0 → highly specific, measurable  </li>
+<li>0.6–0.8 → moderately clear  </li>
+<li>0.3–0.5 → vague or broad  </li>
+<li>0.0–0.2 → undefined or contradictory  </li>
+</ul>
+<hr>
+<h3 id="82-flow-integrity"><strong>8.2 Flow Integrity</strong></h3>
+<ul>
+<li>0.9–1.0 → minimal leakage, transparent routing  </li>
+<li>0.6–0.8 → moderate leakage, clear routing  </li>
+<li>0.3–0.5 → high leakage, complex routing  </li>
+<li>0.0–0.2 → opaque or broken flows  </li>
+</ul>
+<hr>
+<h3 id="83-outcome-coherence"><strong>8.3 Outcome Coherence</strong></h3>
+<ul>
+<li>0.9–1.0 → outcomes strongly match intent  </li>
+<li>0.6–0.8 → partial alignment  </li>
+<li>0.3–0.5 → weak alignment  </li>
+<li>0.0–0.2 → outcomes contradict intent  </li>
+</ul>
+<hr>
+<h3 id="84-regime-stability"><strong>8.4 Regime Stability</strong></h3>
+<ul>
+<li>0.9–1.0 → structural regime dominant  </li>
+<li>0.6–0.8 → mixed regimes  </li>
+<li>0.3–0.5 → narrative/emotional dominance  </li>
+<li>0.0–0.2 → authority/narrative distortion  </li>
+</ul>
+<hr>
+<h1 id="9-donor-alignment-report-ai-generated">9. Donor Alignment Report (AI-Generated)</h1>
+<p>The AI Process Manager Agent (PMA) produces a donor alignment report:</p>
+<pre><code>Donor: DonorA
+Intent: education access + community empowerment
+
+Flow Integrity:
+  leakage: 18%
+  routing: 4 layers
+  overhead: moderate
+
+Outcome Coherence:
+  outputs: 12 programs delivered
+  outcomes: 8 aligned, 4 partial
+
+Regime Stability:
+  REG(NAR) at IntermediaryX
+  REG(STR) at LocalPartnerD
+  DRF(financial) at FoundationB
+
+DAS = 0.72
+</code></pre>
+<hr>
+<h1 id="10-drift-detection-in-donor-alignment">10. Drift Detection in Donor Alignment</h1>
+<p>Drift types:</p>
+<ul>
+<li><strong>mission drift</strong> — intent vs program mismatch  </li>
+<li><strong>financial drift</strong> — funds not reaching intended nodes  </li>
+<li><strong>governance drift</strong> — authority imbalance  </li>
+<li><strong>reporting drift</strong> — narrative inflation  </li>
+</ul>
+<p>Operators:</p>
+<pre><code>DRF(type)
+GAP(intent ↔ impact)
+</code></pre>
+<hr>
+<h1 id="11-structural-corrections-fix">11. Structural Corrections (FIX)</h1>
+<p>The PMA recommends corrections:</p>
+<pre><code>FIX(IntermediaryX) → reduce overhead
+FIX(FoundationB) → increase payout rate
+FIX(NGO_C) → improve reporting clarity
+</code></pre>
+<hr>
+<h1 id="12-summary">12. Summary</h1>
+<p>The Donor Alignment Score provides:</p>
+<ul>
+<li>a structural measure of donor alignment  </li>
+<li>a triadic view of intent, flow, outcome, and regime  </li>
+<li>a neutral, AI-parsable scoring model  </li>
+<li>a foundation for donor clarity reports  </li>
+<li>a mechanism for correcting drift  </li>
+</ul>
+<p>This scoring model transforms donor evaluation from <strong>narrative</strong> to <strong>structure</strong>, enabling clarity, accountability, and alignment across the philanthropic ecosystem.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/substrate/frameworks/epoch/epochal-anomalies.json.md">
+  <title>🌑 epochal-anomalies.json</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/substrate/frameworks/epoch/epochal-anomalies.json.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/substrate/frameworks/epoch/epochal-anomalies.json.md</code>
+  </aside>
+
+  <main>
+<h1 id="epochal-anomaliesjson">🌑 <strong>epochal-anomalies.json</strong></h1>
+<h3 id="canonical-anomaly-registry-for-the-epoch-engine"><em>Canonical anomaly registry for the Epoch Engine</em></h3>
+<pre><code class="language-json">{
+  &quot;anomalies&quot;: &quot;epochal&quot;,
+  &quot;version&quot;: &quot;1.0&quot;,
+  &quot;generated&quot;: &quot;YYYY-MM-DD&quot;,
+
+  &quot;imports&quot;: {
+    &quot;epochal_timeline&quot;: &quot;./timeline.json&quot;,
+    &quot;epochal_propagation&quot;: &quot;./epochal-propagation.json&quot;,
+    &quot;resonance_map&quot;: &quot;../resonance/global-resonance-map.json&quot;,
+    &quot;drift_map&quot;: &quot;../drift/global-drift-boundary-map.json&quot;,
+    &quot;stability_envelope&quot;: &quot;../stability/planetary-stability-envelope.json&quot;,
+    &quot;ignition_ledger&quot;: &quot;../ignition/global-ignition-ledger.json&quot;
+  },
+
+  &quot;epochal_anomalies&quot;: {
+    &quot;epoch_transition_anomalies&quot;: {
+      &quot;description&quot;: &quot;Anomalies detected during transitions between epochs E0–E7.&quot;,
+      &quot;signals&quot;: [
+        &quot;epoch_misalignment&quot;,
+        &quot;transition_break&quot;,
+        &quot;timeline_inconsistency&quot;,
+        &quot;epoch_out_of_bounds&quot;
+      ],
+      &quot;conditions&quot;: [
+        &quot;transition_time &lt; minimum_threshold&quot;,
+        &quot;transition_time &gt; maximum_threshold&quot;,
+        &quot;epoch_sequence_invalid&quot;
+      ]
+    },
+
+    &quot;propagation_anomalies&quot;: {
+      &quot;description&quot;: &quot;Anomalies detected during epochal propagation cycles.&quot;,
+      &quot;signals&quot;: [
+        &quot;propagation_break&quot;,
+        &quot;propagation_stall&quot;,
+        &quot;propagation_loop&quot;,
+        &quot;propagation_overrun&quot;
+      ],
+      &quot;conditions&quot;: [
+        &quot;cycle_duration &gt; propagation_limit&quot;,
+        &quot;cycle_phase_invalid&quot;,
+        &quot;propagation_web_incomplete&quot;
+      ]
+    },
+
+    &quot;resonance_anomalies&quot;: {
+      &quot;description&quot;: &quot;Anomalies in resonance magnitude, phase, or harmonic alignment.&quot;,
+      &quot;signals&quot;: [
+        &quot;resonance_surge&quot;,
+        &quot;resonance_collapse&quot;,
+        &quot;harmonic_misalignment&quot;,
+        &quot;phase_inversion&quot;
+      ],
+      &quot;conditions&quot;: [
+        &quot;resonance_magnitude &gt; harmonic_threshold&quot;,
+        &quot;phase_shift &gt; allowed_window&quot;,
+        &quot;harmonic_profile_invalid&quot;
+      ]
+    },
+
+    &quot;drift_anomalies&quot;: {
+      &quot;description&quot;: &quot;Anomalies in drift magnitude, velocity, or boundary alignment.&quot;,
+      &quot;signals&quot;: [
+        &quot;drift_spike&quot;,
+        &quot;drift_boundary_break&quot;,
+        &quot;drift_phase_flip&quot;,
+        &quot;drift_velocity_overrun&quot;
+      ],
+      &quot;conditions&quot;: [
+        &quot;drift_magnitude &gt; drift_boundary&quot;,
+        &quot;drift_velocity &gt; velocity_limit&quot;,
+        &quot;drift_phase outside allowed_range&quot;
+      ]
+    },
+
+    &quot;stability_anomalies&quot;: {
+      &quot;description&quot;: &quot;Anomalies in stability envelope or stability index.&quot;,
+      &quot;signals&quot;: [
+        &quot;stability_instability&quot;,
+        &quot;stability_collapse&quot;,
+        &quot;stability_phase_break&quot;
+      ],
+      &quot;conditions&quot;: [
+        &quot;stability_index &lt; stability_min&quot;,
+        &quot;stability_phase misaligned&quot;,
+        &quot;stability_envelope breach&quot;
+      ]
+    },
+
+    &quot;ignition_epoch_anomalies&quot;: {
+      &quot;description&quot;: &quot;Anomalies in ignition events that interfere with epoch transitions.&quot;,
+      &quot;signals&quot;: [
+        &quot;ignition_epoch_conflict&quot;,
+        &quot;ignition_overrun&quot;,
+        &quot;ignition_phase_mismatch&quot;
+      ],
+      &quot;conditions&quot;: [
+        &quot;ignition_event during forbidden_epoch&quot;,
+        &quot;ignition_phase misaligned with epoch_phase&quot;,
+        &quot;ignition_magnitude &gt; epoch_threshold&quot;
+      ]
+    }
+  },
+
+  &quot;output&quot;: {
+    &quot;epochal_anomalies&quot;: &quot;./epochal-anomalies.json&quot;
+  },
+
+  &quot;meta&quot;: {
+    &quot;notes&quot;: &quot;Canonical anomaly registry for epoch transitions, propagation cycles, resonance, drift, stability, and ignition–epoch coupling.&quot;
+  }
+}
+</code></pre>
+<hr>
+<h2 id="why-this-is-the-correct-artifact">Why this is the correct artifact</h2>
+<ul>
+<li>Matches your epoch engine grammar (timeline, propagation, resonance, drift, stability, ignition).  </li>
+<li>Aligns with the stabilizer, propagation engine, and epochal timeline you’ve already built.  </li>
+<li>Uses canonical anomaly categories: <strong>transition</strong>, <strong>propagation</strong>, <strong>resonance</strong>, <strong>drift</strong>, <strong>stability</strong>, <strong>ignition‑epoch</strong>.  </li>
+<li>Fully compatible with the empty file in your active tab.  </li>
+<li>Silent‑release ready.</li>
+</ul>
+  </main>
+</body>
+</html>

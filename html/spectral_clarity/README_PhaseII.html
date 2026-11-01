@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/spectral_clarity/README_PhaseII.md">
+  <title>Spectral Clarity — Phase II Runtime Guide</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/spectral_clarity/README_PhaseII.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/spectral_clarity/README_PhaseII.md</code>
+  </aside>
+
+  <main>
+<h1 id="spectral-clarity-phase-ii-runtime-guide">Spectral Clarity — Phase II Runtime Guide</h1>
+<p>Phase II introduces <strong>RF lock-in overlays</strong> and <strong>chirp scans</strong> to surface resonance corridors and bifurcations.</p>
+<hr>
+<h2 id="file-map">📂 File Map</h2>
+<ul>
+<li><code>manifests/PhaseII_RFChirp_Manifest.yaml</code> → Session manifest for RF lock-in and chirp runs.</li>
+<li><code>manifests/SDR_Config_HPZ440.yaml</code> → SDR hardware configuration.</li>
+<li><code>overlays/RF_Overlay_Template.json</code> → Overlay template for RF quadratures.</li>
+<li><code>overlays/Chirp_Scan_Overlay.json</code> → Overlay template for chirp scans.</li>
+<li><code>atlases/PhaseII_RFChirp_Atlas_Schema.md</code> → Schema for RF/chirp atlas storage.</li>
+<li><code>scrolls/SpectralClarity_PhaseII_Scroll.md</code> → Narrative scroll for Phase II.</li>
+<li><code>runtime/rf_lockin_engine.py</code> → RF lock-in runtime scaffold.</li>
+<li><code>runtime/chirp_scan_engine.py</code> → Chirp scan runtime scaffold.</li>
+</ul>
+<hr>
+<h2 id="workflow-steps">⚙️ Workflow Steps</h2>
+<ol>
+<li>Configure SDR and RF generator (<code>SDR_Config_HPZ440.yaml</code>).</li>
+<li>Edit <code>PhaseII_RFChirp_Manifest.yaml</code> with session parameters.</li>
+<li>Run <code>rf_lockin_engine.py</code> to capture quadratures and build overlays.</li>
+<li>Run <code>chirp_scan_engine.py</code> to sweep frequencies and construct bifurcation atlases.</li>
+<li>Compose overlays using JSON templates.</li>
+<li>Document findings in <code>SpectralClarity_PhaseII_Scroll.md</code>.</li>
+</ol>
+<hr>
+<h2 id="validator-practices">🌀 Validator Practices</h2>
+<ul>
+<li>Always log manifests and scrolls.</li>
+<li>Use schema for reproducibility.</li>
+<li>Document bifurcations and resonance corridors clearly.</li>
+</ul>
+<hr>
+<h2 id="next-steps">🔮 Next Steps</h2>
+<ul>
+<li>Phase III: UV/THz modules and advanced safety protocols.</li>
+<li>Cross-band calibration library for multi-spectrum overlays.</li>
+</ul>
+  </main>
+</body>
+</html>

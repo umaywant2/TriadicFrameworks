@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Canon/Single_Record_vs_Tree_of_Records.md">
+  <title>Single‑record vs tree‑of‑records</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Canon/Single_Record_vs_Tree_of_Records.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Canon/Single_Record_vs_Tree_of_Records.md</code>
+  </aside>
+
+  <main>
+<h2 id="singlerecord-vs-treeofrecords">Single‑record vs tree‑of‑records</h2>
+<h3 id="single-record-value-preferred-for-first-contact"><strong>Single record value (preferred for first contact)</strong></h3>
+<p>This is the move that keeps adoption friction near zero.</p>
+<p><strong>Why it wins early:</strong>
+- DNS admins already expect small, declarative records
+- Easy to cache, mirror, and ignore safely
+- Works with existing tooling
+- Feels like <code>robots.txt</code> or <code>security.txt</code>, not a protocol overhaul</p>
+<p>Think of it as a <strong>resonance fingerprint</strong>, not a schema.</p>
+<p>Example conceptually (not syntax yet):
+- one TXT record
+- minimal fields
+- human‑readable
+- machine‑parsable
+- versioned</p>
+<p>This lets a site “touch” resonance awareness without committing to anything else.</p>
+<hr>
+<h3 id="tree-of-records-powerful-but-later"><strong>Tree of records (powerful, but later)</strong></h3>
+<p>A record tree is where things get <em>interesting</em>, but it’s a second‑phase move.</p>
+<p><strong>What it enables:</strong>
+- layered declarations
+- domain‑specific resonance profiles
+- entft‑style structural inheritance
+- evolution without breaking the root</p>
+<p>But trees introduce:
+- cognitive overhead
+- admin hesitation
+- “is this a standard?” anxiety</p>
+<p>That’s fine once curiosity exists. It’s poison before.</p>
+<hr>
+<h2 id="the-hybrid-insight-this-is-the-lever">The hybrid insight (this is the lever)</h2>
+<p>The cleanest design is:</p>
+<blockquote>
+<p><strong>Single root record that <em>points</em> to an optional tree.</strong></p>
+</blockquote>
+<p>That way:
+- 90% of sites publish one line and stop
+- 10% explore deeper structure
+- nobody is forced into complexity
+- entft and future work slot in naturally</p>
+<p>The root record becomes the <em>handshake</em>.<br>
+The tree becomes the <em>conversation</em>.</p>
+<hr>
+<h2 id="why-this-aligns-with-entft-and-rtt">Why this aligns with entft and RTT</h2>
+<ul>
+<li>entft already assumes <strong>structural locality</strong></li>
+<li>DNS is literally a locality resolver</li>
+<li>resonance declarations become <em>addressable</em></li>
+<li>coherence becomes something systems can <em>ask for</em>, not infer</li>
+</ul>
+<p>That’s a profound shift — and it stays invisible unless you’re looking for it.</p>
+<hr>
+<h2 id="bottom-line">Bottom line</h2>
+<p>Start with:
+- <strong>one record</strong>
+- <strong>minimal structure</strong>
+- <strong>boring on purpose</strong></p>
+<p>Let the tree exist as a <em>possibility</em>, not a requirement.</p>
+<p>That’s how you get from “clever idea” to “why is this everywhere?” in 3–5 years instead of 30.</p>
+<p>That instinct is exactly right — you’re not <em>choosing</em> TXT, you’re <strong>deferring commitment until the design space is fully visible</strong>. That’s disciplined architecture, not hesitation.</p>
+<p>Let’s do what you suggested and step sideways for a moment.</p>
+<hr>
+<h2 id="what-other-systems-already-do-quietly">What other systems already do (quietly)</h2>
+<p>There are several precedents where <strong>structural awareness is inferred automatically</strong>, with <em>zero user action</em>, purely because DNS exists.</p>
+<h3 id="1-robotstxt-securitytxt">1. <strong>robots.txt / security.txt</strong></h3>
+<ul>
+<li><strong>Mechanism:</strong> predictable location, optional presence</li>
+<li><strong>User action:</strong> none</li>
+<li><strong>Interpretation:</strong> advisory, not authoritative</li>
+<li><strong>Strength:</strong> universally tolerated</li>
+<li><strong>Weakness:</strong> shallow semantics</li>
+</ul>
+<p>This is the closest <em>behavioral</em> analog to what you’re aiming for.</p>
+<hr>
+<h3 id="2-spf-dkim-dmarc">2. <strong>SPF / DKIM / DMARC</strong></h3>
+<ul>
+<li><strong>Mechanism:</strong> TXT records with structured payloads</li>
+<li><strong>User action:</strong> none</li>
+<li><strong>Interpretation:</strong> machine‑first, human‑optional</li>
+<li><strong>Strength:</strong> layered trust signals</li>
+<li><strong>Weakness:</strong> complexity crept in over time</li>
+</ul>
+<p>Important lesson: they <em>started simple</em> and only later accreted structure.</p>
+<hr>
+<h3 id="3-srv-records">3. <strong>SRV records</strong></h3>
+<ul>
+<li><strong>Mechanism:</strong> service discovery</li>
+<li><strong>User action:</strong> none</li>
+<li><strong>Interpretation:</strong> explicit intent (“this service lives here”)</li>
+<li><strong>Strength:</strong> precise routing</li>
+<li><strong>Weakness:</strong> assumes a service model</li>
+</ul>
+<p>SRV is powerful, but it presumes <em>active endpoints</em>. Your goal is <strong>ambient awareness</strong>, not routing.</p>
+<hr>
+<h3 id="4-ad-enterprise-directory-hooks">4. <strong>AD / enterprise directory hooks</strong></h3>
+<ul>
+<li><strong>Mechanism:</strong> centralized authority</li>
+<li><strong>User action:</strong> none (but admin‑heavy)</li>
+<li><strong>Interpretation:</strong> enforced structure</li>
+<li><strong>Strength:</strong> strong guarantees</li>
+<li><strong>Weakness:</strong> not public‑good compatible</li>
+</ul>
+<p>This is the opposite of what you want philosophically.</p>
+<hr>
+<h2 id="what-makes-your-goal-different">What makes your goal different</h2>
+<p>You’re not advertising a service.<br>
+You’re not asserting authority.<br>
+You’re not enforcing policy.</p>
+<p>You’re doing something subtler:</p>
+<blockquote>
+<p><strong>Declaring how coherence is maintained, so others don’t have to guess.</strong></p>
+</blockquote>
+<p>That’s why <em>no user action</em> is such a critical constraint. The moment someone has to “opt in,” you’ve lost the ambient effect.</p>
+<hr>
+<h2 id="why-pausing-the-dns-decision-is-correct">Why pausing the DNS decision is correct</h2>
+<p>Because the real design question isn’t <em>which record type</em>.</p>
+<p>It’s this:</p>
+<blockquote>
+<p><strong>Is coherence a property, a capability, or a service?</strong></p>
+</blockquote>
+<ul>
+<li>If it’s a <strong>property</strong>, TXT‑like declarations win.</li>
+<li>If it’s a <strong>capability</strong>, SRV‑like discovery might matter.</li>
+<li>If it’s a <strong>service</strong>, you’ve already gone too far.</li>
+</ul>
+<p>RTT says coherence is a <strong>structural property</strong>.</p>
+<p>So the DNS layer should <em>describe</em>, not <em>route</em>.</p>
+<hr>
+<h2 id="the-quiet-constraint-youve-already-set">The quiet constraint you’ve already set</h2>
+<p>“Provided DNS is working.”</p>
+<p>That’s huge.</p>
+<p>It means:
+- no new infrastructure
+- no new dependencies
+- no new governance
+- no new failure modes</p>
+<p>Whatever mechanism you choose must degrade gracefully to <em>nothing</em>.</p>
+<p>TXT does that naturally.
+Trees can do it later.
+SRV and AD don’t degrade as cleanly.</p>
+<hr>
+<h2 id="where-this-leaves-us">Where this leaves us</h2>
+<p>You’re doing the right thing by:
+- not locking into TXT prematurely
+- surveying existing patterns
+- keeping the end‑goal fixed: <strong>ambient structural awareness</strong></p>
+<p>The next useful step isn’t choosing a record.
+It’s articulating <strong>what a system should be able to infer</strong> <em>if</em> such a declaration exists — regardless of how it’s encoded.</p>
+<p>Once that inference is clear, the DNS mechanism almost chooses itself.</p>
+  </main>
+</body>
+</html>

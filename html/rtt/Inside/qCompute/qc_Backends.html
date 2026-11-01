@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/qCompute/qc_Backends.md">
+  <title>qCompute — Backend Overview</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/qCompute/qc_Backends.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/qCompute/qc_Backends.md</code>
+  </aside>
+
+  <main>
+<h1 id="qcompute-backend-overview">qCompute — Backend Overview</h1>
+<p><strong>File:</strong> qc_Backends.md<br>
+<strong>Layer:</strong> RTT‑Inside Compute Harness<br>
+<strong>Status:</strong> Canonical (2026)</p>
+<p>Backends define the <strong>structural execution substrate</strong> for qCompute.</p>
+<p>They do not simulate amplitudes.<br>
+They do not compute physics.<br>
+They provide <strong>structural legality</strong>, <strong>tier binding</strong>, and <strong>environment constraints</strong>.</p>
+<p>qCompute computes <strong>structure</strong>, not amplitudes.</p>
+<hr>
+<h1 id="1-backend-list">1. Backend List</h1>
+<p>qCompute defines <strong>three canonical backends</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Backend</th>
+<th>Tier Support</th>
+<th>Environments</th>
+<th>Drift</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>local-sim</strong></td>
+<td>r1</td>
+<td>sandbox, production</td>
+<td>low</td>
+<td>primitive structural execution</td>
+</tr>
+<tr>
+<td><strong>hybrid-sim</strong></td>
+<td>r1, r2</td>
+<td>sandbox, production</td>
+<td>medium</td>
+<td>composite structural execution</td>
+</tr>
+<tr>
+<td><strong>hardware-qpu-2</strong></td>
+<td>r3</td>
+<td>production only</td>
+<td>high</td>
+<td>pulse‑tier structural execution</td>
+</tr>
+</tbody>
+</table>
+<p>These backends are <strong>structural abstractions</strong>, not hardware interfaces.</p>
+<hr>
+<h1 id="2-backend-identity">2. Backend Identity</h1>
+<p>Each backend has:</p>
+<pre><code>backend_id: &quot;&lt;id&gt;&quot;
+tier_support: [r1 | r2 | r3]
+environment_legal: [&quot;sandbox&quot; | &quot;production&quot;]
+drift_profile: &quot;low&quot; | &quot;medium&quot; | &quot;high&quot;
+frame_behavior: &quot;reuse&quot; | &quot;new&quot;
+transition_behavior: &quot;allowed&quot; | &quot;forbidden&quot;
+</code></pre>
+<p>All fields are required.</p>
+<hr>
+<h1 id="3-backend-descriptions">3. Backend Descriptions</h1>
+<h2 id="31-local-sim">3.1 local-sim</h2>
+<pre><code>backend_id: &quot;local-sim&quot;
+tier_support: [&quot;r1&quot;]
+environment_legal: [&quot;sandbox&quot;, &quot;production&quot;]
+drift_profile: &quot;low&quot;
+frame_behavior: &quot;reuse&quot;
+transition_behavior: &quot;allowed&quot;
+</code></pre>
+<p>Used for:</p>
+<ul>
+<li>primitive operators (r1)  </li>
+<li>low‑drift structural steps  </li>
+<li>stable frames  </li>
+</ul>
+<hr>
+<h2 id="32-hybrid-sim">3.2 hybrid-sim</h2>
+<pre><code>backend_id: &quot;hybrid-sim&quot;
+tier_support: [&quot;r1&quot;, &quot;r2&quot;]
+environment_legal: [&quot;sandbox&quot;, &quot;production&quot;]
+drift_profile: &quot;medium&quot;
+frame_behavior: &quot;reuse-or-new&quot;
+transition_behavior: &quot;allowed&quot;
+</code></pre>
+<p>Used for:</p>
+<ul>
+<li>composite operators (r2)  </li>
+<li>tier escalation  </li>
+<li>medium drift accumulation  </li>
+</ul>
+<p>Router may reuse or open a new frame depending on:</p>
+<ul>
+<li>tier escalation  </li>
+<li>drift overflow  </li>
+<li>measurement events  </li>
+</ul>
+<hr>
+<h2 id="33-hardware-qpu-2">3.3 hardware-qpu-2</h2>
+<pre><code>backend_id: &quot;hardware-qpu-2&quot;
+tier_support: [&quot;r3&quot;]
+environment_legal: [&quot;production&quot;]
+drift_profile: &quot;high&quot;
+frame_behavior: &quot;new&quot;
+transition_behavior: &quot;allowed&quot;
+</code></pre>
+<p>Used for:</p>
+<ul>
+<li>pulse operators (r3)  </li>
+<li>high‑drift structural steps  </li>
+<li>token‑gated operations  </li>
+</ul>
+<p>Always opens a new frame.</p>
+<p>Forbidden in:</p>
+<ul>
+<li>sandbox  </li>
+<li>archive  </li>
+</ul>
+<hr>
+<h1 id="4-environment-legality">4. Environment Legality</h1>
+<table>
+<thead>
+<tr>
+<th>Environment</th>
+<th>local-sim</th>
+<th>hybrid-sim</th>
+<th>hardware-qpu-2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sandbox</td>
+<td>✓</td>
+<td>✓</td>
+<td>✗</td>
+</tr>
+<tr>
+<td>production</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>archive</td>
+<td>✗</td>
+<td>✗</td>
+<td>✗</td>
+</tr>
+</tbody>
+</table>
+<p>Archive is terminal and forbids all operators.</p>
+<hr>
+<h1 id="5-tier-binding">5. Tier Binding</h1>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Backend</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>r1</td>
+<td>local-sim</td>
+</tr>
+<tr>
+<td>r2</td>
+<td>hybrid-sim</td>
+</tr>
+<tr>
+<td>r3</td>
+<td>hardware-qpu-2</td>
+</tr>
+</tbody>
+</table>
+<p>Tier binding is deterministic and replay‑verifiable.</p>
+<hr>
+<h1 id="6-frame-interaction">6. Frame Interaction</h1>
+<p>Backends influence frame behavior:</p>
+<ul>
+<li><strong>local-sim</strong>: may reuse frame  </li>
+<li><strong>hybrid-sim</strong>: may reuse or open new frame  </li>
+<li><strong>hardware-qpu-2</strong>: always opens new frame  </li>
+</ul>
+<p>Frame boundaries are also influenced by:</p>
+<ul>
+<li>tier escalation  </li>
+<li>tier decrease  </li>
+<li>drift overflow  </li>
+<li>meta operators  </li>
+<li>environment transitions  </li>
+</ul>
+<hr>
+<h1 id="7-transition-interaction">7. Transition Interaction</h1>
+<p>Backends must remain legal across transitions:</p>
+<ul>
+<li>sandbox → production: all backends legal  </li>
+<li>production → archive: no backends legal  </li>
+<li>archive → (forbidden)  </li>
+</ul>
+<p>Transitions close the current frame and open a new one.</p>
+<hr>
+<h1 id="8-capture-metadata">8. Capture Metadata</h1>
+<p>Each operator includes backend metadata:</p>
+<pre><code>routing:
+  backend: &quot;&lt;backend-id&gt;&quot;
+  reason: &quot;&lt;routing-reason&gt;&quot;
+  frame_action: &quot;reuse&quot; | &quot;new&quot;
+</code></pre>
+<p>Each frame includes backend summary:</p>
+<pre><code>frame_backend:
+  id: &quot;&lt;backend-id&gt;&quot;
+  tier_support: [...]
+  drift_profile: &quot;&lt;profile&gt;&quot;
+</code></pre>
+<p>All fields are required.</p>
+<hr>
+<h1 id="9-replay-verification">9. Replay Verification</h1>
+<p>Replay verifies:</p>
+<ul>
+<li>backend legality  </li>
+<li>tier binding  </li>
+<li>environment legality  </li>
+<li>frame boundaries  </li>
+<li>drift consistency  </li>
+<li>transition correctness  </li>
+</ul>
+<p>Replay is deterministic and read‑only.</p>
+<hr>
+<h1 id="10-summary">10. Summary</h1>
+<p>Backends define:</p>
+<ul>
+<li>tier support  </li>
+<li>environment legality  </li>
+<li>drift profile  </li>
+<li>frame behavior  </li>
+<li>transition behavior  </li>
+</ul>
+<p>They are the <strong>structural substrate</strong> of qCompute.</p>
+  </main>
+</body>
+</html>

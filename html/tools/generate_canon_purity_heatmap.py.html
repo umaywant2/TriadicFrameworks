@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/tools/generate_canon_purity_heatmap.py.md">
+  <title>🟦 generatecanonpurityheatmap.py</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/tools/generate_canon_purity_heatmap.py.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/tools/generate_canon_purity_heatmap.py.md</code>
+  </aside>
+
+  <main>
+<p>Here’s your <strong>canon‑wide purity heatmap generator</strong>, Nawder — a focused, SVG‑only view of drift across the entire framework.</p>
+<p>Save as:</p>
+<pre><code class="language-text">docs/tools/generate_canon_purity_heatmap.py
+</code></pre>
+<p>Run from repo root:</p>
+<pre><code class="language-bash">python3 docs/tools/generate_canon_purity_heatmap.py
+</code></pre>
+<hr>
+<h3 id="generate_canon_purity_heatmappy">🟦 generate_canon_purity_heatmap.py</h3>
+<pre><code class="language-python">import os
+import json
+from jsonschema import validate, ValidationError
+
+ROOT = &quot;docs&quot;
+EXCLUDED = {&quot;spine&quot;,&quot;_template&quot;,&quot;assets&quot;,&quot;images&quot;,&quot;tools&quot;}
+
+# ---------------- Schema ----------------
+MODULE_SCHEMA = {
+    &quot;type&quot;:&quot;object&quot;,
+    &quot;properties&quot;:{
+        &quot;module&quot;:{
+            &quot;type&quot;:&quot;object&quot;,
+            &quot;properties&quot;:{
+                &quot;name&quot;:{&quot;type&quot;:&quot;string&quot;},
+                &quot;summary&quot;:{&quot;type&quot;:&quot;string&quot;},
+                &quot;category&quot;:{&quot;type&quot;:&quot;string&quot;},
+                &quot;canon_ref&quot;:{&quot;type&quot;:&quot;string&quot;,&quot;enum&quot;:[&quot;/docs/spine/spine.json&quot;]},
+                &quot;inherit&quot;:{
+                    &quot;type&quot;:&quot;object&quot;,
+                    &quot;properties&quot;:{
+                        &quot;canon&quot;:{&quot;type&quot;:&quot;boolean&quot;},
+                        &quot;session_context&quot;:{&quot;type&quot;:&quot;boolean&quot;},
+                        &quot;triad_alias_resolution&quot;:{&quot;type&quot;:&quot;boolean&quot;}
+                    },
+                    &quot;required&quot;:[&quot;canon&quot;,&quot;session_context&quot;,&quot;triad_alias_resolution&quot;]
+                },
+                &quot;rtt&quot;:{
+                    &quot;type&quot;:&quot;object&quot;,
+                    &quot;properties&quot;:{
+                        &quot;layer&quot;:{&quot;type&quot;:&quot;integer&quot;},
+                        &quot;source&quot;:{&quot;type&quot;:&quot;string&quot;}
+                    },
+                    &quot;required&quot;:[&quot;layer&quot;,&quot;source&quot;]
+                },
+                &quot;ai&quot;:{
+                    &quot;type&quot;:&quot;object&quot;,
+                    &quot;properties&quot;:{
+                        &quot;initialization&quot;:{
+                            &quot;type&quot;:&quot;object&quot;,
+                            &quot;properties&quot;:{
+                                &quot;load_spine_first&quot;:{&quot;type&quot;:&quot;boolean&quot;},
+                                &quot;load_canon_first&quot;:{&quot;type&quot;:&quot;boolean&quot;},
+                                &quot;apply_session_context&quot;:{&quot;type&quot;:&quot;boolean&quot;},
+                                &quot;triad_validation&quot;:{&quot;type&quot;:&quot;boolean&quot;}
+                            },
+                            &quot;required&quot;:[
+                                &quot;load_spine_first&quot;,
+                                &quot;load_canon_first&quot;,
+                                &quot;apply_session_context&quot;,
+                                &quot;triad_validation&quot;
+                            ]
+                        }
+                    },
+                    &quot;required&quot;:[&quot;initialization&quot;]
+                }
+            },
+            &quot;required&quot;:[
+                &quot;name&quot;,&quot;summary&quot;,&quot;category&quot;,
+                &quot;canon_ref&quot;,&quot;inherit&quot;,&quot;rtt&quot;,&quot;ai&quot;
+            ]
+        }
+    },
+    &quot;required&quot;:[&quot;module&quot;]
+}
+
+# ---------------- Drift scoring ----------------
+def score_drift(errors):
+    c=len(errors)
+    if c==0: return 0
+    if c&lt;=2: return 1
+    if c&lt;=4: return 2
+    if c&lt;=7: return 3
+    return 4
+
+def drift_color(score):
+    return {
+        0:&quot;#2ecc71&quot;,
+        1:&quot;#f1c40f&quot;,
+        2:&quot;#e67e22&quot;,
+        3:&quot;#e74c3c&quot;,
+        4:&quot;#2c3e50&quot;
+    }[score]
+
+# ---------------- Discovery ----------------
+def find_modules():
+    out=[]
+    for root,dirs,files in os.walk(ROOT):
+        if any(ex in root for ex in EXCLUDED): continue
+        if &quot;module.json&quot; in files:
+            out.append(os.path.join(root,&quot;module.json&quot;))
+    return out
+
+# ---------------- Validation ----------------
+def validate_schema(path):
+    with open(path,&quot;r&quot;,encoding=&quot;utf-8&quot;) as f:
+        data=json.load(f)
+    try:
+        validate(instance=data,schema=MODULE_SCHEMA)
+        return []
+    except ValidationError as e:
+        return [str(e)]
+
+def validate_drift(path):
+    with open(path,&quot;r&quot;,encoding=&quot;utf-8&quot;) as f:
+        data=json.load(f)
+    m=data.get(&quot;module&quot;,{})
+    errs=[]
+
+    if m.get(&quot;canon_ref&quot;)!=&quot;/docs/spine/spine.json&quot;:
+        errs.append(&quot;canon_ref mismatch&quot;)
+
+    inh=m.get(&quot;inherit&quot;,{})
+    for k in [&quot;canon&quot;,&quot;session_context&quot;,&quot;triad_alias_resolution&quot;]:
+        if inh.get(k)!=True:
+            errs.append(f&quot;inherit.{k} mismatch&quot;)
+
+    rtt=m.get(&quot;rtt&quot;,{})
+    if rtt.get(&quot;layer&quot;)!=1:
+        errs.append(&quot;rtt.layer mismatch&quot;)
+    if rtt.get(&quot;source&quot;)!=&quot;https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html&quot;:
+        errs.append(&quot;rtt.source mismatch&quot;)
+
+    ai=m.get(&quot;ai&quot;,{}).get(&quot;initialization&quot;,{})
+    for k in [&quot;load_spine_first&quot;,&quot;load_canon_first&quot;,&quot;apply_session_context&quot;,&quot;triad_validation&quot;]:
+        if ai.get(k)!=True:
+            errs.append(f&quot;ai.initialization.{k} mismatch&quot;)
+
+    return errs
+
+# ---------------- Heatmap SVG ----------------
+def build_heatmap(report):
+    svg_path=os.path.join(ROOT,&quot;canon_purity_heatmap.svg&quot;)
+
+    cell=20
+    pad=5
+    cols=20
+    rows=(len(report)+cols-1)//cols
+    width=cols*cell+pad*2
+    height=rows*cell+pad*2
+
+    rects=[]
+    for i,r in enumerate(report):
+        row=i//cols
+        col=i%cols
+        x=pad+col*cell
+        y=pad+row*cell
+        color=drift_color(r[&quot;drift_score&quot;])
+        rects.append(
+            f'&lt;rect x=&quot;{x}&quot; y=&quot;{y}&quot; width=&quot;{cell-2}&quot; height=&quot;{cell-2}&quot; '
+            f'fill=&quot;{color}&quot; stroke=&quot;#333&quot; stroke-width=&quot;0.5&quot;&gt;'
+            f'&lt;title&gt;{r[&quot;name&quot;]} — drift {r[&quot;drift_score&quot;]}&lt;/title&gt;'
+            f'&lt;/rect&gt;'
+        )
+
+    svg=f&quot;&quot;&quot;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;{width}&quot; height=&quot;{height}&quot;&gt;
+&lt;rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;{width}&quot; height=&quot;{height}&quot; fill=&quot;#ffffff&quot;/&gt;
+{''.join(rects)}
+&lt;/svg&gt;
+&quot;&quot;&quot;
+    with open(svg_path,&quot;w&quot;,encoding=&quot;utf-8&quot;) as f:
+        f.write(svg)
+    print(f&quot;✔ Created {svg_path}&quot;)
+
+# ---------------- Main ----------------
+def main():
+    print(&quot;\n=== TriadicFrameworks Canon Purity Heatmap Generator ===\n&quot;)
+
+    modules=find_modules()
+    report=[]
+
+    for path in modules:
+        name=os.path.basename(os.path.dirname(path))
+        schema_err=validate_schema(path)
+        drift_err=validate_drift(path)
+        drift_score=score_drift(drift_err)
+
+        report.append({
+            &quot;name&quot;:name,
+            &quot;schema_errors&quot;:schema_err,
+            &quot;drift_errors&quot;:drift_err,
+            &quot;drift_score&quot;:drift_score
+        })
+
+    build_heatmap(report)
+    print(&quot;\n✨ Canon purity heatmap generated.\n&quot;)
+
+if __name__==&quot;__main__&quot;:
+    main()
+</code></pre>
+<hr>
+<h1 id="why-this-version-wont-truncate-in-github">⭐ Why this version won’t truncate in GitHub</h1>
+<ul>
+<li>No extremely long blocks  </li>
+<li>No excessive indentation  </li>
+<li>No trailing whitespace  </li>
+<li>No giant schema blocks repeated  </li>
+<li>No Mermaid or SVG embedded inside Markdown  </li>
+<li>Fits comfortably inside GitHub’s “new file” editor  </li>
+</ul>
+<p>This is the <strong>complete</strong>, <strong>final</strong>, <strong>ready‑to‑paste</strong> purity‑heatmap generator.</p>
+  </main>
+</body>
+</html>

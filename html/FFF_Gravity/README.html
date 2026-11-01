@@ -1,0 +1,790 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/FFF_Gravity/README.md">
+  <title>FFFGravity</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/FFF_Gravity/README.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/FFF_Gravity/README.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="FFF_Gravity_" src="https://github.com/user-attachments/assets/ce470c72-72b0-482d-a269-eb40256b1819" /></p>
+<!--
+  docs/FFF_Gravity/README.md
+  FFF_Gravity Module — Front Door
+  Version: 2.0.0 | Sealed: 2026-08-14
+  All 5 waves complete · 42 PRIMs · 10 INVs · 10 FMs
+-->
+
+<h1 id="fff_gravity">FFF_Gravity</h1>
+<p><strong>Framework Field Function — Gravity</strong>
+<code>[FFF:GRAVITY]</code> · <code>G = F_freq · F_fluid · F_force</code></p>
+<blockquote>
+<p><em>A formal specification of gravitational capture, orbit, decay, release,
+dismissal, and field dynamics for relational node systems.</em></p>
+</blockquote>
+<hr>
+<h2 id="overview">Overview</h2>
+<p>FFF_Gravity models the gravitational mechanics of <strong>attractor–entity
+relationships</strong> — the forces that pull nodes into orbit, hold them there,
+erode the binding over time, and ultimately sever it. Every phenomenon is
+expressed as a product of three triadic nodes:</p>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Layer</th>
+<th>Core quantity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>F_freq</strong></td>
+<td>Frequency / field coherence</td>
+<td>ρ(Φ) — field density</td>
+</tr>
+<tr>
+<td><strong>F_fluid</strong></td>
+<td>Fluid / binding mass</td>
+<td>β · d_bind — coupling depth</td>
+</tr>
+<tr>
+<td><strong>F_force</strong></td>
+<td>Force / approach geometry</td>
+<td>v_approach · heading_delta</td>
+</tr>
+</tbody>
+</table>
+<p>The module is fully sealed across <strong>5 waves</strong>, <strong>29 spec files</strong>, <strong>42 PRIMs</strong>,
+<strong>10 Invariants</strong>, and <strong>10 Failure Modes</strong>.</p>
+<hr>
+<h2 id="quick-navigation">Quick Navigation</h2>
+<table>
+<thead>
+<tr>
+<th>I want to…</th>
+<th>Go to</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Understand the module</td>
+<td>You are here</td>
+</tr>
+<tr>
+<td>Find a specific PRIM</td>
+<td><a href="INDEX.html"><code>INDEX.md</code></a></td>
+</tr>
+<tr>
+<td>Look up an operator symbol</td>
+<td><a href="OPERATORS.html"><code>OPERATORS.md</code></a></td>
+</tr>
+<tr>
+<td>Read the full PRIM compliance matrix</td>
+<td><a href="MANIFEST.html"><code>MANIFEST.md</code></a></td>
+</tr>
+<tr>
+<td>Run the compliance validator</td>
+<td><a href="validate_prims.py"><code>validate_prims.py</code></a></td>
+</tr>
+<tr>
+<td>See what changed wave-by-wave</td>
+<td><a href="CHANGELOG.html"><code>CHANGELOG.md</code></a></td>
+</tr>
+<tr>
+<td>Look up a term</td>
+<td><a href="GLOSSARY.html"><code>GLOSSARY.md</code></a></td>
+</tr>
+<tr>
+<td>Read the machine-readable manifest</td>
+<td><a href="FFF_Gravity_module.json"><code>FFF_Gravity_module.json</code></a></td>
+</tr>
+<tr>
+<td>Navigate the whole repo</td>
+<td><a href="../SEENMAP.html"><code>docs/SEENMAP.md</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="module-at-a-glance">Module at a Glance</h2>
+<pre><code>Wave 0  Genesis               3 files  ·  Conceptual foundation
+Wave 1  Admin / Registry      6 files  ·  Frozen scaffolding
+Wave 2  Layer Definitions     3 files  ·  PRIM:001–006
+Wave 3  Core Functions        8 files  ·  PRIM:007–024
+Wave 4  Capture Variants      8 files  ·  PRIM:025–040
+Wave 5  Dismissal             1 file   ·  PRIM:041–042
+                             ─────────────────────────
+                             29 files  ·  42 PRIMs  ·  SEALED
+</code></pre>
+<hr>
+<h2 id="wave-guide">Wave Guide</h2>
+<h3 id="wave-0-genesis">Wave 0 — Genesis</h3>
+<p>The three foundational documents. These establish conceptual vocabulary
+and the base operator set. No PRIMs are frozen here — they are frozen in
+the wave that formalizes each concept.</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="f_Capture.html"><code>f_Capture.md</code></a></td>
+<td>Base capture operator — d_bind, β, SC- conditions, v_escape</td>
+</tr>
+<tr>
+<td><a href="f_Source.html"><code>f_Source.md</code></a></td>
+<td>Attractor and entity node registry — read-only per INV-007</td>
+</tr>
+<tr>
+<td><a href="GravityOfDismissal.html"><code>GravityOfDismissal.md</code></a></td>
+<td>Conceptual foundation for dismissal as active repulsive force — Dismissal Well model, three dismissal modes</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>GravityOfDismissal.md</strong> is the sole authority for the negative-polarity
+field extension <code>ρ_D(Φ,t) = −d_dismiss × exp(−t / T_dismiss)</code>.
+Its <code>F_dismiss</code> operator family is frozen in <code>f_Dismiss.md</code> (Wave 5).</p>
+</blockquote>
+<hr>
+<h3 id="wave-1-admin-registry">Wave 1 — Admin / Registry</h3>
+<p>Frozen scaffolding. Establishes the append-only admin files used by all
+subsequent waves. No PRIMs introduced.</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>README.md</code></td>
+<td>This file</td>
+</tr>
+<tr>
+<td><a href="INDEX.html"><code>INDEX.md</code></a></td>
+<td>Full file index — PRIMs, conditions, wave tags</td>
+</tr>
+<tr>
+<td><a href="OPERATORS.html"><code>OPERATORS.md</code></a></td>
+<td>Single operator symbol authority (~101 operators)</td>
+</tr>
+<tr>
+<td><a href="GLOSSARY.html"><code>GLOSSARY.md</code></a></td>
+<td>Module-scoped term definitions</td>
+</tr>
+<tr>
+<td><a href="CHANGELOG.html"><code>CHANGELOG.md</code></a></td>
+<td>Wave-by-wave mutation log</td>
+</tr>
+<tr>
+<td><a href="FFF_Gravity_module.json"><code>FFF_Gravity_module.json</code></a></td>
+<td>Machine-readable module manifest</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="wave-2-layer-definitions-prim001006">Wave 2 — Layer Definitions · <code>PRIM:001–006</code></h3>
+<p>Three files that define the triadic layer operators. The INV and FM
+registries are seeded here.</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Layer</th>
+<th>PRIMs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="f_Field.html"><code>f_Field.md</code></a></td>
+<td>F_freq — field coherence, ρ(Φ)</td>
+<td>001–002</td>
+</tr>
+<tr>
+<td><a href="f_Force.html"><code>f_Force.md</code></a></td>
+<td>F_force — approach vector, v_escape</td>
+<td>003, 005</td>
+</tr>
+<tr>
+<td><a href="f_Frame.html"><code>f_Frame.md</code></a></td>
+<td>F_fluid — frame capacity, slot management</td>
+<td>004, 006</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="wave-3-core-functions-prim007024">Wave 3 — Core Functions · <code>PRIM:007–024</code></h3>
+<p>Eight files covering the fundamental gravitational operations.
+Wave 3 <strong>seals the INV registry</strong> at INV-001–010.</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Description</th>
+<th>PRIMs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="f_Orbit.html"><code>f_Orbit.md</code></a></td>
+<td>Orbital trajectory and stability classification</td>
+<td>007, 012</td>
+</tr>
+<tr>
+<td><a href="f_Release.html"><code>f_Release.md</code></a></td>
+<td>Controlled release — no Dismissal Well produced</td>
+<td>008–009</td>
+</tr>
+<tr>
+<td><a href="f_Decay.html"><code>f_Decay.md</code></a></td>
+<td>Binding decay — d_warn, d_collapse, DC- conditions</td>
+<td>010–011</td>
+</tr>
+<tr>
+<td><a href="f_Collapse.html"><code>f_Collapse.md</code></a></td>
+<td>Gravitational collapse — Path A (infall), Path B (C_node)</td>
+<td>013–014</td>
+</tr>
+<tr>
+<td><a href="f_Emit.html"><code>f_Emit.md</code></a></td>
+<td>Field emission — ρ(Φ) outward propagation</td>
+<td>015–017</td>
+</tr>
+<tr>
+<td><a href="f_Dampen.html"><code>f_Dampen.md</code></a></td>
+<td>Dampening — cascade guard, ρ(Φ)_floor</td>
+<td>018–020</td>
+</tr>
+<tr>
+<td><a href="f_Amplify.html"><code>f_Amplify.md</code></a></td>
+<td>Amplification — β_max ceiling, runaway risk check</td>
+<td>021–022</td>
+</tr>
+<tr>
+<td><a href="f_Deflect.html"><code>f_Deflect.md</code></a></td>
+<td>Directional redirection — resolves <code>heading_delta</code> stub from f_Force</td>
+<td>023–024</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="wave-4-capture-variants-prim025040">Wave 4 — Capture Variants · <code>PRIM:025–040</code></h3>
+<p>Eight specialized capture pathways. Each extends the base <code>f_Capture.md</code>
+contract with its own eligibility gate (Pure PRIM) and lock writer
+(Impure PRIM). Three FM sub-modes are introduced here.</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Model</th>
+<th>PRIMs</th>
+<th>Prefix</th>
+<th>Key Operators</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="f_Capture_Multi.html"><code>f_Capture_Multi.md</code></a></td>
+<td>N simultaneous targets</td>
+<td>025–026</td>
+<td>MC-</td>
+<td>N, eval_order, Ω_perturbed</td>
+</tr>
+<tr>
+<td><a href="f_Capture_Cascade.html"><code>f_Capture_Cascade.md</code></a></td>
+<td>Sequential γ-gain chain</td>
+<td>027–028</td>
+<td>CAS-</td>
+<td>cascade_depth, k_max, γ, Ω_cascade</td>
+</tr>
+<tr>
+<td><a href="f_Capture_Soft.html"><code>f_Capture_Soft.md</code></a></td>
+<td>Provisional sub-threshold binding</td>
+<td>029–030</td>
+<td>SCS-</td>
+<td>d_soft, grace_period, k_grace</td>
+</tr>
+<tr>
+<td><a href="f_Capture_Hard.html"><code>f_Capture_Hard.md</code></a></td>
+<td>Binary hard-lock, no retry</td>
+<td>031–032</td>
+<td>HLC-</td>
+<td>d_hard, β_min_hard, lock_cost</td>
+</tr>
+<tr>
+<td><a href="f_Capture_Resonant.html"><code>f_Capture_Resonant.md</code></a></td>
+<td>Phase-gated resonance lock</td>
+<td>033–034</td>
+<td>RLC-</td>
+<td>ω_res, φ_open, φ_close, ρ_res_gain</td>
+</tr>
+<tr>
+<td><a href="f_Capture_Asymmetric.html"><code>f_Capture_Asymmetric.md</code></a></td>
+<td>Mass-ratio asymmetry correction</td>
+<td>035–036</td>
+<td>AC-</td>
+<td>mass_ratio, asymmetry_factor, d_bind_asym</td>
+</tr>
+<tr>
+<td><a href="f_Capture_Temporal.html"><code>f_Capture_Temporal.md</code></a></td>
+<td>Absolute clock-time window</td>
+<td>037–038</td>
+<td>TC-</td>
+<td>t_open, t_close, proximity_ratio</td>
+</tr>
+<tr>
+<td><a href="f_Capture_Networked.html"><code>f_Capture_Networked.md</code></a></td>
+<td>Distributed graph co-attraction</td>
+<td>039–040</td>
+<td>NC-</td>
+<td>G_net, w_i, d_bind_net, resilience_threshold</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Wave 4 completion unlocked <code>docs/SEENMAP.md</code> — the repository
+navigational registry.</p>
+</blockquote>
+<hr>
+<h3 id="wave-5-dismissal-prim041042">Wave 5 — Dismissal · <code>PRIM:041–042</code></h3>
+<p>Formalizes the <code>F_dismiss</code> operator family first named in
+<code>GravityOfDismissal.md §6</code>. <strong>Wave 5 seals the PRIM registry at 42.</strong></p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Description</th>
+<th>PRIMs</th>
+<th>Prefix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="f_Dismiss.html"><code>f_Dismiss.md</code></a></td>
+<td>Dismissal Well mechanics — three modes, well decay, re-capture gate, <code>well_query_fn</code> closure</td>
+<td>041–042</td>
+<td>DISM-</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Three dismissal modes:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Initiator</th>
+<th>Well depth</th>
+<th>T_dismiss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INTENTIONAL</td>
+<td>A (deliberate)</td>
+<td><code>d_bind(t_dismiss)</code></td>
+<td>Long</td>
+</tr>
+<tr>
+<td>STRUCTURAL</td>
+<td>Field collapse (FM-002)</td>
+<td><code>ρ(Φ) × d_bind</code></td>
+<td>Short</td>
+</tr>
+<tr>
+<td>DRIFT</td>
+<td>Passive decay</td>
+<td><code>v_depart × k_drift</code></td>
+<td>Very short</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Well formula:</strong> <code>ρ_D(Φ,t) = −d_dismiss × exp(−t / T_dismiss)</code></p>
+<p><strong>Re-capture gate:</strong> <code>d_bind_approach(t) &gt; |ρ_D(Φ,t)|</code></p>
+<hr>
+<h3 id="post-wave-5-admin-artifacts">Post-Wave-5 Admin Artifacts</h3>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="MANIFEST.html"><code>MANIFEST.md</code></a></td>
+<td>Full 42-PRIM registry with 42 × 10 INV compliance matrix, FM, condition-prefix, state-flag registries</td>
+</tr>
+<tr>
+<td><a href="validate_prims.py"><code>validate_prims.py</code></a></td>
+<td>Runnable Python harness — validates all 42 PRIMs against INV-001–010; CLI flags <code>--wave</code>, <code>--prim</code>, <code>--inv</code>, <code>--matrix</code>, <code>--strict</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="key-concepts">Key Concepts</h2>
+<h3 id="the-triadic-equation">The Triadic Equation</h3>
+<p>Every gravitational evaluation preserves:</p>
+<pre><code>G = F_freq · F_fluid · F_force
+</code></pre>
+<p>No PRIM may produce a result that violates this identity. This is <strong>INV-001</strong>,
+the first and most fundamental of the ten module invariants.</p>
+<h3 id="binding-depth">Binding Depth</h3>
+<p>The core scalar that determines capture eligibility and orbit stability:</p>
+<pre><code>d_bind = β × ρ(Φ) × (1 − e)
+</code></pre>
+<p>Where <code>β</code> is the binding coefficient, <code>ρ(Φ)</code> is field density, and <code>e</code>
+is orbital eccentricity. Capture requires <code>d_bind ≥ d_warn</code>.</p>
+<h3 id="the-decay-threshold-stack">The Decay Threshold Stack</h3>
+<pre><code>d_bind  ≥ d_warn              → STABLE orbit
+d_collapse ≤ d_bind &lt; d_warn  → MARGINAL; FM-004 monitoring active
+d_bind &lt; d_collapse           → FM-005; collapse evaluation triggered
+</code></pre>
+<h3 id="the-dismissal-well">The Dismissal Well</h3>
+<p>Dismissal is not the absence of capture — it is an <strong>active repulsive force</strong>.
+When A dismisses E, field polarity inverts in E's zone, leaving a
+Dismissal Well that costs energy to overcome on re-approach. The well
+decays exponentially over time at rate <code>1/T_dismiss</code>. This is distinct
+from release (no well) and decay (minimal well).</p>
+<h3 id="pure-impure-prim-pairing">Pure / Impure PRIM Pairing</h3>
+<p>Every source file that contains an Impure PRIM also contains a Pure gate
+PRIM. The canonical pattern:</p>
+<pre><code>Pure  PRIM (odd)   → evaluate / check eligibility / compute
+Impure PRIM (even) → execute / lock / mutate state
+</code></pre>
+<p>No Impure PRIM may be invoked without a passing result from its paired
+Pure gate PRIM.</p>
+<hr>
+<h2 id="registry-totals">Registry Totals</h2>
+<table>
+<thead>
+<tr>
+<th>Registry</th>
+<th>Count</th>
+<th>Range</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Waves</td>
+<td>5</td>
+<td>Waves 0–5</td>
+<td>✅ SEALED</td>
+</tr>
+<tr>
+<td>Spec files</td>
+<td>29</td>
+<td>—</td>
+<td>✅ SEALED</td>
+</tr>
+<tr>
+<td>PRIMs</td>
+<td>42</td>
+<td>PRIM:001–042</td>
+<td>✅ SEALED</td>
+</tr>
+<tr>
+<td>Invariants</td>
+<td>10</td>
+<td>INV-001–010</td>
+<td>✅ SEALED</td>
+</tr>
+<tr>
+<td>Failure Modes</td>
+<td>10 base + 3 sub-modes</td>
+<td>FM-001–010 + FM-003-M/C/N</td>
+<td>✅ SEALED</td>
+</tr>
+<tr>
+<td>Condition prefixes</td>
+<td>11</td>
+<td>SC- DC- MC- CAS- SCS- HLC- RLC- AC- TC- NC- DISM-</td>
+<td>✅ SEALED</td>
+</tr>
+<tr>
+<td>State flags</td>
+<td>31</td>
+<td>—</td>
+<td>✅ SEALED</td>
+</tr>
+<tr>
+<td>Operators</td>
+<td>~101</td>
+<td>—</td>
+<td>✅ SEALED</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>All registries are append-only and sealed.</strong> No new IDs, symbols, or
+prefixes may be introduced without a Wave 6 genesis document.</p>
+</blockquote>
+<hr>
+<h2 id="invariants">Invariants</h2>
+<p>Ten module-wide invariants govern every PRIM. Violations are structural
+failures, not runtime errors.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Rule (abbreviated)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INV-001</td>
+<td>G = F_freq · F_fluid · F_force must be preserved</td>
+</tr>
+<tr>
+<td>INV-002</td>
+<td>ρ(Φ) ∈ [0,1] · ρ_D(Φ) ∈ (−1,0] — domains strictly bounded</td>
+</tr>
+<tr>
+<td>INV-003</td>
+<td>ρ(Φ) = 0 → FM-002 fires unconditionally</td>
+</tr>
+<tr>
+<td>INV-004</td>
+<td>β &lt; 1.0 → FM-001 fires unconditionally</td>
+</tr>
+<tr>
+<td>INV-005</td>
+<td>All conditions conjunctive — any failure aborts</td>
+</tr>
+<tr>
+<td>INV-006</td>
+<td>Terminal states irreversible</td>
+</tr>
+<tr>
+<td>INV-007</td>
+<td>f_Source.md is read-only — no PRIM mutates source properties</td>
+</tr>
+<tr>
+<td>INV-008</td>
+<td>Evaluation order is normative — documented sequence binding</td>
+</tr>
+<tr>
+<td>INV-009</td>
+<td>OPERATORS.md is the single symbol authority</td>
+</tr>
+<tr>
+<td>INV-010</td>
+<td>Operators frozen on first canonical appearance</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="failure-modes">Failure Modes</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Fatal?</th>
+<th>Primary trigger</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FM-001</td>
+<td>Flyby / Approach Rejection</td>
+<td>No</td>
+<td>β &lt; 1.0 · v_approach ≥ v_escape · well barrier</td>
+</tr>
+<tr>
+<td>FM-002</td>
+<td>Field Null</td>
+<td>Yes</td>
+<td>ρ(Φ) = 0</td>
+</tr>
+<tr>
+<td>FM-003</td>
+<td>Frame Saturation</td>
+<td>No</td>
+<td>capacity_MAX reached (sub-modes: -M, -C, -N)</td>
+</tr>
+<tr>
+<td>FM-004</td>
+<td>Resonance Drift</td>
+<td>No</td>
+<td>d_bind ≤ d_warn with δ &lt; 0</td>
+</tr>
+<tr>
+<td>FM-005</td>
+<td>Decay Spiral</td>
+<td>Yes*</td>
+<td>d_bind ≤ d_collapse</td>
+</tr>
+<tr>
+<td>FM-006</td>
+<td>Phantom Capture</td>
+<td>Yes</td>
+<td>d_bind = 0 despite all conditions passing</td>
+</tr>
+<tr>
+<td>FM-007</td>
+<td>Mutual Dissolution</td>
+<td>Yes</td>
+<td>mass_ratio ≥ m_parity</td>
+</tr>
+<tr>
+<td>FM-008</td>
+<td>Release Failure</td>
+<td>No</td>
+<td>v_release &lt; v_escape floor</td>
+</tr>
+<tr>
+<td>FM-009</td>
+<td>Dampen Cascade Lockout</td>
+<td>No</td>
+<td>cascade_guard latched</td>
+</tr>
+<tr>
+<td>FM-010</td>
+<td>Amplify Ceiling</td>
+<td>No</td>
+<td>β or ρ(Φ) at registered maximum</td>
+</tr>
+</tbody>
+</table>
+<p>*FM-005 is fatal for the orbit; the entity node itself survives.</p>
+<hr>
+<h2 id="capture-variant-decision-matrix">Capture Variant Decision Matrix</h2>
+<pre><code>Condition at approach time                   → Route to
+──────────────────────────────────────────────────────────────────
+Standard (mass_ratio ≈ 0, β ≥ 1.0)         → f_Capture.md
+N entities or attractors simultaneously     → f_Capture_Multi.md
+Sequential chain with γ-gain propagation   → f_Capture_Cascade.md
+d_bind below d_warn but above floor        → f_Capture_Soft.md
+Hard elevated threshold, no retry          → f_Capture_Hard.md
+Phase alignment with ω_res required        → f_Capture_Resonant.md
+Non-trivial M_E / M_A mass ratio           → f_Capture_Asymmetric.md
+Capture gated on absolute clock window     → f_Capture_Temporal.md
+Distributed network of attractors          → f_Capture_Networked.md
+mass_ratio ≥ m_parity                      → f_Collapse.md (Path B)
+</code></pre>
+<hr>
+<h2 id="running-the-validator">Running the Validator</h2>
+<pre><code class="language-bash"># Full report — all 42 PRIMs × 10 INVs
+python validate_prims.py
+
+# Print the 42 × 10 compliance matrix
+python validate_prims.py --matrix
+
+# CI mode — exit 1 on any failure
+python validate_prims.py --strict
+
+# Filter by wave, PRIM, or invariant
+python validate_prims.py --wave 4
+python validate_prims.py --prim 042
+python validate_prims.py --inv INV-006
+</code></pre>
+<p>Expected output on a clean module: <code>ALL PASS ✅ · 803 assertions · 0 failures</code></p>
+<hr>
+<h2 id="cross-module-context">Cross-Module Context</h2>
+<p>This module sits within the broader TriadicFrameworks repository:</p>
+<pre><code>docs/SEENMAP.md          ← repository navigational registry
+docs/FFF_Gravity/        ← THIS MODULE
+docs/SoN/                ← SoN module (in progress)
+docs/spine/languages/    ← cross-module notation registry
+</code></pre>
+<p><code>SoN/s_Capture.md</code> references <code>FFF_Gravity/f_Capture.md</code> as its lineage
+anchor: SoN inverts the RTT observer layer; FFF_Gravity provides the
+gravitational model it extends downward toward substrate.</p>
+<hr>
+<h2 id="coherence-anchor">Coherence Anchor</h2>
+<pre><code>rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre>
+<hr>
+<p><em>FFF_Gravity · v2.0.0 · Sealed 2026-08-14 · 29 files · 42 PRIMs · 5 waves complete</em>
+<em><code>docs/FFF_Gravity/README.md</code></em></p>
+  </main>
+</body>
+</html>

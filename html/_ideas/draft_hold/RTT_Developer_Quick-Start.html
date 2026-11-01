@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/_ideas/draft_hold/RTT_Developer_Quick-Start.md">
+  <title>RTTDeveloperQuick-Start.md</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/_ideas/draft_hold/RTT_Developer_Quick-Start.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/_ideas/draft_hold/RTT_Developer_Quick-Start.md</code>
+  </aside>
+
+  <main>
+<p align="center">
+  <img src="https://img.shields.io/badge/RTT-Inside-blueviolet" alt="RTT Inside" />
+  <img src="https://img.shields.io/badge/Resonance--Time-Theory%20Core-1.0-blue" alt="RTT Core 1.0" />
+  <img src="https://img.shields.io/badge/Schema-RTTcode%20v1.0-forestgreen" alt="RTTcode v1.0" />
+  <img src="https://img.shields.io/badge/Integration-Unity%20%7C%20Unreal%20%7C%20Custom-orange" alt="RTT Integrations" />
+  <img src="https://img.shields.io/badge/Status-Developer%20Preview-yellow" alt="Status: Developer Preview" />
+</p>
+
+<p align="center">
+  <b>TriadicFrameworks · Resonance‑Time Theory · RTT‑Inside</b><br/>
+  Minimal‑intrusion overlays for engines, simulations, and tools.
+</p>
+
+<h1 id="rtt_developer_quick-startmd">RTT_Developer_Quick-Start.md</h1>
+<p><em>A minimal‑intrusion, developer‑ready introduction to embedding Resonance‑Time Theory inside real‑world systems.</em></p>
+<pre><code>                                  ██████╗ ████████╗████████╗
+                                  ██╔══██╗╚══██╔══╝╚══██╔══╝   RTT: Resonance‑Time Theory
+                                  ██████╔╝   ██║      ██║      Developer Quick‑Start
+                                  ██╔══██╗   ██║      ██║
+                                  ██║  ██║   ██║      ██║
+                                  ╚═╝  ╚═╝   ╚═╝      ╚═╝
+</code></pre>
+<h2 id="badge-block">Badge Block</h2>
+<ul>
+<li><strong>Status:</strong> Draft / Developer‑Facing  </li>
+<li><strong>Audience:</strong> Game devs, engine integrators, simulation architects  </li>
+<li><strong>Dependencies:</strong> RTTcore, RTTcode schema, TriadicFrameworks overlays  </li>
+<li><strong>Guarantees:</strong> Minimal intrusion, deterministic integration, schema‑first onboarding  </li>
+</ul>
+<hr>
+<h2 id="1-what-this-document-is">1. What This Document Is</h2>
+<p>This is the <strong>fastest possible path</strong> for a developer to embed RTT into a game loop, simulation engine, or interactive system.<br>
+It assumes:
+- You know how to call an API<br>
+- You know how to serialize JSON<br>
+- You want <strong>RTT‑Inside</strong> without reading a 40‑page manuscript  </p>
+<p>This guide gives you:
+- The <strong>mental model</strong><br>
+- The <strong>core API pattern</strong><br>
+- The <strong>minimal schema</strong><br>
+- A <strong>working example</strong><br>
+- A <strong>drop‑in integration recipe</strong>  </p>
+<hr>
+<h2 id="2-rtt-in-30-seconds">2. RTT in 30 Seconds</h2>
+<p>RTT (Resonance‑Time Theory) models <strong>state evolution</strong> not as linear time but as <strong>resonance‑driven transitions</strong> between stable configurations.</p>
+<p>For developers, this collapses to a simple rule:</p>
+<blockquote>
+<p><strong>You send a state payload → RTT returns the next stable state.</strong></p>
+</blockquote>
+<p>RTT does not replace your physics, AI, or gameplay logic.<br>
+It overlays them with a <strong>resonance‑aware progression layer</strong>.</p>
+<hr>
+<h2 id="3-the-core-developer-loop">3. The Core Developer Loop</h2>
+<p>Every RTT‑Inside integration follows the same 3‑step pattern:</p>
+<ol>
+<li>
+<p><strong>Prepare a state packet</strong><br>
+   - Entities<br>
+   - Environment<br>
+   - Resonance inputs<br>
+   - Time‑slice metadata  </p>
+</li>
+<li>
+<p><strong>Send it to the RTT endpoint</strong><br>
+   - Local module<br>
+   - Cloud function<br>
+   - Embedded RTTcore  </p>
+</li>
+<li>
+<p><strong>Apply the returned state</strong><br>
+   - Update entities<br>
+   - Trigger events<br>
+   - Advance resonance clock  </p>
+</li>
+</ol>
+<p>This is the entire loop.</p>
+<hr>
+<h2 id="4-minimal-rttcode-payload">4. Minimal RTTcode Payload</h2>
+<p>RTTcode is the canonical schema for RTT‑Inside integrations.</p>
+<h3 id="example-minimal-payload">Example: Minimal Payload</h3>
+<pre><code class="language-json">{
+  &quot;rtt_version&quot;: &quot;1.0&quot;,
+  &quot;tick&quot;: 128,
+  &quot;entities&quot;: [
+    {
+      &quot;id&quot;: &quot;player&quot;,
+      &quot;state&quot;: {
+        &quot;position&quot;: [12.4, 0.0, -3.1],
+        &quot;velocity&quot;: [0.0, 0.0, 0.0],
+        &quot;resonance&quot;: 0.42
+      }
+    }
+  ],
+  &quot;environment&quot;: {
+    &quot;field_strength&quot;: 0.18,
+    &quot;phase_noise&quot;: 0.02
+  },
+  &quot;intent&quot;: &quot;advance&quot;
+}
+</code></pre>
+<h3 id="example-rtt-response">Example: RTT Response</h3>
+<pre><code class="language-json">{
+  &quot;tick_next&quot;: 129,
+  &quot;entities&quot;: {
+    &quot;player&quot;: {
+      &quot;position&quot;: [12.4, 0.0, -3.1],
+      &quot;resonance_state&quot;: &quot;stable&quot;,
+      &quot;resonance_next&quot;: 0.44
+    }
+  },
+  &quot;events&quot;: [
+    {
+      &quot;type&quot;: &quot;resonance-shift&quot;,
+      &quot;entity&quot;: &quot;player&quot;,
+      &quot;delta&quot;: 0.02
+    }
+  ]
+}
+</code></pre>
+<hr>
+<h2 id="5-integration-recipe-game-loop">5. Integration Recipe (Game Loop)</h2>
+<h3 id="pseudocode">Pseudocode</h3>
+<pre><code class="language-python">while game_running:
+    state = capture_state()
+    rtt_out = rttcore.step(state)
+    apply_state(rtt_out)
+    render()
+</code></pre>
+<h3 id="unitystyle">Unity‑Style</h3>
+<pre><code class="language-csharp">void Update() {
+    var packet = BuildRTTPacket();
+    var result = RTT.Step(packet);
+    ApplyRTT(result);
+}
+</code></pre>
+<h3 id="unrealstyle">Unreal‑Style</h3>
+<pre><code class="language-cpp">void AMyActor::Tick(float DeltaTime)
+{
+    FRTTPacket Packet = BuildPacket();
+    FRTTResult Result = URTTCore::Step(Packet);
+    Apply(Result);
+}
+</code></pre>
+<hr>
+<h2 id="6-developer-mental-model">6. Developer Mental Model</h2>
+<p>RTT is not:
+- A physics engine<br>
+- A magic AI system<br>
+- A replacement for your logic  </p>
+<p>RTT <strong>is</strong>:
+- A resonance‑aware state transition oracle<br>
+- A stabilizer for chaotic systems<br>
+- A unifying layer for time, phase, and interaction  </p>
+<p>The developer only needs to know:</p>
+<blockquote>
+<p><strong>RTT takes your state and returns the next stable one.</strong></p>
+</blockquote>
+<hr>
+<h2 id="7-recommended-folder-structure">7. Recommended Folder Structure</h2>
+<p>Matches your TriadicFrameworks canon:</p>
+<pre><code>/rtt/
+  /core/
+  /schemas/
+  /examples/
+  /integrations/
+    unity/
+    unreal/
+    python/
+    node/
+</code></pre>
+<hr>
+<h2 id="8-testing-debugging">8. Testing &amp; Debugging</h2>
+<ul>
+<li>Use <strong>deterministic seeds</strong> for reproducibility  </li>
+<li>Log <strong>incoming packets</strong> and <strong>RTT responses</strong>  </li>
+<li>Validate against the RTTcode schema  </li>
+<li>Use the <strong>RTT Visualizer</strong> (optional) to inspect resonance flows  </li>
+</ul>
+<hr>
+<h2 id="9-developer-checklist">9. Developer Checklist</h2>
+<ul>
+<li>[ ] RTTcore installed  </li>
+<li>[ ] RTTcode schema validated  </li>
+<li>[ ] State capture implemented  </li>
+<li>[ ] RTT step integrated  </li>
+<li>[ ] Events handled  </li>
+<li>[ ] Resonance clock advanced  </li>
+<li>[ ] Logs enabled  </li>
+</ul>
+<hr>
+<h2 id="10-next-steps">10. Next Steps</h2>
+<ul>
+<li>Add multi‑entity resonance coupling  </li>
+<li>Add environment‑driven resonance fields  </li>
+<li>Add narrative or gameplay triggers  </li>
+<li>Integrate RTT with AI decision layers  </li>
+</ul>
+<hr>
+<h2 id="11-appendix-extended-payload-example">11. Appendix: Extended Payload Example</h2>
+<p>A full multi‑entity example with resonance coupling, environment fields, and event triggers.</p>
+<hr>
+<h3 id="2-unity-starter-package-conceptual-layout-core-script">2. Unity starter package (conceptual layout + core script)</h3>
+<h4 id="21-folder-layout">2.1 Folder layout</h4>
+<h4 id="22-rttcoreconfigcs">2.2 <code>RTTCoreConfig.cs</code></h4>
+<h4 id="23-rttcoreclientcs">2.3 <code>RTTCoreClient.cs</code></h4>
+<h4 id="24-rtt_democontrollercs">2.4 <code>RTT_DemoController.cs</code></h4>
+<hr>
+<h3 id="3-unreal-starter-package-conceptual-layout-core-class">3. Unreal starter package (conceptual layout + core class)</h3>
+<h4 id="31-folder-layout">3.1 Folder layout</h4>
+<h4 id="32-rttcoreconfigh">3.2 <code>RTTCoreConfig.h</code></h4>
+<h4 id="33-rttcoreclienthcpp">3.3 <code>RTTCoreClient.h/.cpp</code></h4>
+<h4 id="34-rttdemoactorhcpp">3.4 <code>RTTDemoActor.h/.cpp</code></h4>
+<hr>
+<h3 id="4-rttcode-schema-v10-json-schema">4. RTTcode schema v1.0 (JSON Schema)</h3>
+  </main>
+</body>
+</html>

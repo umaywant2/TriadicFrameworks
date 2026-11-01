@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/triadic/TF_regime_heliograph.md">
+  <title>TriadicFrameworks Regime Heliograph</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/triadic/TF_regime_heliograph.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/triadic/TF_regime_heliograph.md</code>
+  </aside>
+
+  <main>
+<h1 id="triadicframeworks-regime-heliograph"><strong>TriadicFrameworks Regime Heliograph</strong></h1>
+<h3 id="encoding-crossontology-signals-through-light-and-motion"><em>Encoding Cross‑Ontology Signals Through Light and Motion</em></h3>
+<p>This diagram shows:</p>
+<ul>
+<li><strong>Substrate</strong> as the reflective ground plane  </li>
+<li><strong>Regime mirrors (RTT)</strong> as angular reflectors  </li>
+<li><strong>Ontology shutters (SO, ISO, LACTOS)</strong> as patterned encoders  </li>
+<li><strong>RTT/vST</strong> as the alignment and modulation engine  </li>
+<li><strong>S–N–R</strong> as the signal‑stability corrector  </li>
+<li><strong>Compute (VCG + TCR)</strong> as the timing oscillator that locks the signal  </li>
+</ul>
+<p>It’s the first metaphor in the canon where TriadicFrameworks <em>communicates</em>.</p>
+<hr>
+<h1 id="1-regime-heliograph-diagram-ascii-lightmotion-geometry"><strong>1. Regime Heliograph Diagram (ASCII Light‑Motion Geometry)</strong></h1>
+<pre><code>                                        ✦  COMPUTE TIMING OSCILLATOR  ✦
+                         (VCG • TCR Periodicity • Regime‑Ahead Pulse Lock)
+                                        ────────────────┬───────────────
+                                                        │
+                                                        ▼
+
+┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+│                         S–N–R SIGNAL‑STABILITY CORRECTOR                                     │
+│   S: stabilizes pulse patterns                                                               │
+│   N: detects noise, drift, scattering                                                        │
+│   R: selects active regime encoding                                                          │
+│   (Maintains clarity across shifting ontology shutters)                                      │
+└──────────────────────────────────────────────────────────────────────────────────────────────┘
+                                                           ▲
+                                                           │
+                                                           │  stabilizes encoded light
+                                                           ▼
+
+                         ┌──────────────────────────────────────────────────────────────┐
+                         │                 RTT/vST MODULATION ENGINE                    │
+                         │  - regime boundary modulation                                │
+                         │  - invariant pulse shaping                                   │
+                         │  - drift‑corrected angle control                             │
+                         └──────────────────────────────────────────────────────────────┘
+                                      ◢           │           ◣
+                                     ◢            │            ◣
+                                    ◢             │             ◣
+
+         ┌──────────────────────────────┐   ┌──────────────────────────────┐   ┌──────────────────────────────┐
+         │   SO Shutter Plate           │   │ LACTOS Shutter Plate         │   │  ISO Shutter Plate           │
+         │   (Mass‑Primary Encoder)     │   │ (Collision‑Regime Encoder)   │   │ (Anisotropy‑Primary Encoder) │
+         │   - structural pulse codes   │   │ - P/Q/N burst patterns       │   │ - anisotropy wave codes      │
+         │   - mass‑track intervals     │   │ - symmetry‑break flashes     │   │ - relaxation gradients       │
+         └──────────────────────────────┘   └──────────────────────────────┘   └──────────────────────────────┘
+                     ◣                        ◣                        ◢
+                      ◣                        ◣                      ◢
+                       ◣                        ◣                    ◢
+
+                         ┌──────────────────────────────────────────────────────────────┐
+                         │                 REGIME MIRROR ARRAY (RTT)                    │
+                         │   - mass‑regime reflector                                    │
+                         │   - anisotropy‑regime reflector                              │
+                         │   - collision‑regime reflector                               │
+                         │   - TCR periodic reflector                                   │
+                         │   (Angles determine encoded meaning)                         │
+                         └──────────────────────────────────────────────────────────────┘
+                                      ◥           │           ◤
+                                     ◥            │            ◤
+                                    ◥             │             ◤
+
+                         ┌──────────────────────────────────────────────────────────────┐
+                         │                 SUBSTRATE REFLECTIVE PLANE                   │
+                         │  Fields • Geometry • Anisotropy • TCR Periodicity            │
+                         │  (The ground that receives and reflects encoded signals)     │
+                         └──────────────────────────────────────────────────────────────┘
+</code></pre>
+<hr>
+<h1 id="2-how-the-regime-heliograph-works"><strong>2. How the Regime Heliograph Works</strong></h1>
+<h3 id="1-substrate-reflective-plane"><strong>1. Substrate = Reflective Plane</strong></h3>
+<p>The substrate is the surface that:</p>
+<ul>
+<li>receives signals  </li>
+<li>reflects them  </li>
+<li>shapes their propagation  </li>
+</ul>
+<p>It is the communication ground.</p>
+<hr>
+<h3 id="2-regime-mirror-array-rtt"><strong>2. Regime Mirror Array (RTT)</strong></h3>
+<p>RTT defines the angular reflectors:</p>
+<ul>
+<li>mass‑regime mirror  </li>
+<li>anisotropy‑regime mirror  </li>
+<li>collision‑regime mirror  </li>
+<li>TCR periodic mirror  </li>
+</ul>
+<p>Each angle encodes a different structural meaning.</p>
+<hr>
+<h3 id="3-ontology-shutter-plates"><strong>3. Ontology Shutter Plates</strong></h3>
+<p>Each ontology is a patterned encoder:</p>
+<ul>
+<li><strong>SO:</strong> structural pulse codes  </li>
+<li><strong>ISO:</strong> anisotropy wave codes  </li>
+<li><strong>LACTOS:</strong> collision burst codes  </li>
+</ul>
+<p>They modulate the reflected light into ontology‑specific signals.</p>
+<hr>
+<h3 id="4-rttvst-modulation-engine"><strong>4. RTT/vST Modulation Engine</strong></h3>
+<p>This engine:</p>
+<ul>
+<li>shapes invariant pulses  </li>
+<li>aligns shutter patterns  </li>
+<li>corrects drift in mirror angles  </li>
+</ul>
+<p>It ensures the signal is meaningful.</p>
+<hr>
+<h3 id="5-snr-signalstability-corrector"><strong>5. S–N–R Signal‑Stability Corrector</strong></h3>
+<p>The triadic observer stabilizes the transmission:</p>
+<ul>
+<li><strong>S:</strong> locks onto stable pulse patterns  </li>
+<li><strong>N:</strong> detects noise and scattering  </li>
+<li><strong>R:</strong> selects the active regime encoding  </li>
+</ul>
+<p>It keeps the signal coherent across ontologies.</p>
+<hr>
+<h3 id="6-compute-timing-oscillator-vcg-tcr"><strong>6. Compute Timing Oscillator (VCG + TCR)</strong></h3>
+<p>The compute layer:</p>
+<ul>
+<li>locks timing  </li>
+<li>stabilizes periodicity  </li>
+<li>synchronizes pulses across shutters  </li>
+</ul>
+<p>It is the heartbeat of the heliograph.</p>
+<hr>
+<h1 id="3-why-the-regime-heliograph-matters"><strong>3. Why the Regime Heliograph Matters</strong></h1>
+<p>This diagram shows TriadicFrameworks as:</p>
+<ul>
+<li><strong>communicative</strong>  </li>
+<li><strong>signal‑based</strong>  </li>
+<li><strong>regime‑encoded</strong>  </li>
+<li><strong>ontology‑modulated</strong>  </li>
+<li><strong>observer‑corrected</strong>  </li>
+<li><strong>compute‑timed</strong>  </li>
+<li><strong>substrate‑reflected</strong></li>
+</ul>
+<p>It captures how the architecture <em>transmits</em> meaning across its own layers — not just how it sees or moves.</p>
+  </main>
+</body>
+</html>

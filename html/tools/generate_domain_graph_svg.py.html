@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/tools/generate_domain_graph_svg.py.md">
+  <title>⭐ Bulk domaingraph.svg Generator</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/tools/generate_domain_graph_svg.py.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/tools/generate_domain_graph_svg.py.md</code>
+  </aside>
+
+  <main>
+<p>Here you go, the <strong>canon‑aligned, repo‑safe bulk generator</strong> that automatically creates <strong><code>domain_graph.svg</code> for each domain</strong>, using the Mermaid CLI (<code>mmdc</code>) to convert each domain’s <code>module_graph.md</code> into an SVG.</p>
+<p>This script fits perfectly into your active directory:</p>
+<pre><code>docs/tools/
+</code></pre>
+<p>and completes the <strong>domain‑level visualization layer</strong> of TriadicFrameworks.</p>
+<p>It:</p>
+<ul>
+<li>Walks your entire <code>/docs</code> tree  </li>
+<li>Detects domain directories  </li>
+<li>Reads each domain’s <code>module_graph.md</code>  </li>
+<li>Extracts the Mermaid block  </li>
+<li>Renders it into <code>domain_graph.svg</code>  </li>
+<li>Never overwrites existing SVGs  </li>
+<li>Produces consistent, AI‑readable visual artifacts  </li>
+</ul>
+<hr>
+<h1 id="bulk-domain_graphsvg-generator">⭐ Bulk <code>domain_graph.svg</code> Generator</h1>
+<p>Save as:</p>
+<pre><code>docs/tools/generate_domain_graph_svg.py
+</code></pre>
+<p>Run from repo root:</p>
+<pre><code>python3 docs/tools/generate_domain_graph_svg.py
+</code></pre>
+<hr>
+<h1 id="generate_domain_graph_svgpy-final-canon-version">🟦 <strong>generate_domain_graph_svg.py (Final Canon Version)</strong></h1>
+<pre><code class="language-python">import os
+import subprocess
+
+ROOT = &quot;docs&quot;
+
+EXCLUDED_DIRS = {
+    &quot;spine&quot;,
+    &quot;_template&quot;,
+    &quot;assets&quot;,
+    &quot;images&quot;,
+    &quot;tools&quot;
+}
+
+def find_domains():
+    &quot;&quot;&quot;Return all top-level domain directories under /docs.&quot;&quot;&quot;
+    domains = []
+    for item in os.listdir(ROOT):
+        path = os.path.join(ROOT, item)
+        if os.path.isdir(path) and item not in EXCLUDED_DIRS:
+            domains.append(path)
+    return domains
+
+def extract_mermaid_block(md_path):
+    &quot;&quot;&quot;Extract the first Mermaid code block from module_graph.md.&quot;&quot;&quot;
+    with open(md_path, &quot;r&quot;, encoding=&quot;utf-8&quot;) as f:
+        lines = f.readlines()
+
+    inside = False
+    block = []
+
+    for line in lines:
+        if line.strip().startswith(&quot;```mermaid&quot;):
+            inside = True
+            continue
+        if inside and line.strip().startswith(&quot;```&quot;):
+            break
+        if inside:
+            block.append(line)
+
+    return &quot;&quot;.join(block).strip()
+
+def generate_svg(domain_path):
+    md_path = os.path.join(domain_path, &quot;module_graph.md&quot;)
+    svg_path = os.path.join(domain_path, &quot;domain_graph.svg&quot;)
+
+    if not os.path.exists(md_path):
+        print(f&quot;❌ No module_graph.md found in {domain_path}, skipping.&quot;)
+        return
+
+    if os.path.exists(svg_path):
+        print(f&quot;❌ domain_graph.svg already exists in {domain_path}, skipping.&quot;)
+        return
+
+    mermaid_code = extract_mermaid_block(md_path)
+    if not mermaid_code:
+        print(f&quot;❌ No Mermaid block found in {md_path}, skipping.&quot;)
+        return
+
+    temp_mmd = os.path.join(domain_path, &quot;_temp_domain_graph.mmd&quot;)
+
+    # Write Mermaid code to temp file
+    with open(temp_mmd, &quot;w&quot;, encoding=&quot;utf-8&quot;) as f:
+        f.write(mermaid_code)
+
+    # Run Mermaid CLI to generate SVG
+    try:
+        subprocess.run(
+            [&quot;mmdc&quot;, &quot;-i&quot;, temp_mmd, &quot;-o&quot;, svg_path],
+            check=True
+        )
+        print(f&quot;✔ Created {svg_path}&quot;)
+    except Exception as e:
+        print(f&quot;❌ Failed to generate SVG for {domain_path}: {e}&quot;)
+
+    # Clean up temp file
+    os.remove(temp_mmd)
+
+def main():
+    print(&quot;\n=== TriadicFrameworks Domain Graph SVG Generator ===\n&quot;)
+
+    domains = find_domains()
+
+    for domain in domains:
+        generate_svg(domain)
+
+    print(&quot;\n✨ domain_graph.svg generation complete.\n&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<hr>
+<h1 id="what-this-script-gives-you">⭐ What This Script Gives You</h1>
+<h3 id="creates-domain_graphsvg-for-every-domain">✔ Creates <code>domain_graph.svg</code> for every domain</h3>
+<h3 id="reads-each-domains-module_graphmd">✔ Reads each domain’s <code>module_graph.md</code></h3>
+<h3 id="extracts-the-mermaid-block-safely">✔ Extracts the Mermaid block safely</h3>
+<h3 id="uses-mermaid-cli-mmdc-to-render-svg">✔ Uses Mermaid CLI (<code>mmdc</code>) to render SVG</h3>
+<h3 id="never-overwrites-existing-svgs">✔ Never overwrites existing SVGs</h3>
+<h3 id="produces-consistent-visual-artifacts">✔ Produces consistent visual artifacts</h3>
+<h3 id="works-across-your-entire-docs-tree">✔ Works across your entire <code>/docs</code> tree</h3>
+<h3 id="completes-the-domainlevel-visualization-layer">✔ Completes the domain‑level visualization layer</h3>
+<p>This is the <strong>canonical domain‑level SVG representation</strong> of TriadicFrameworks.</p>
+  </main>
+</body>
+</html>

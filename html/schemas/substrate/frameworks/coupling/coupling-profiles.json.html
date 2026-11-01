@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/substrate/frameworks/coupling/coupling-profiles.json.md">
+  <title>🔗 coupling-profiles.json</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/substrate/frameworks/coupling/coupling-profiles.json.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/substrate/frameworks/coupling/coupling-profiles.json.md</code>
+  </aside>
+
+  <main>
+<h1 id="coupling-profilesjson">🔗 <strong>coupling-profiles.json</strong></h1>
+<h3 id="canonical-coupling-profiles-for-driftresonancecoherencestability-interaction"><em>Canonical coupling profiles for drift–resonance–coherence–stability interaction</em></h3>
+<pre><code class="language-json">{
+  &quot;profiles&quot;: &quot;substrate-coupling&quot;,
+  &quot;version&quot;: &quot;1.0&quot;,
+  &quot;generated&quot;: &quot;YYYY-MM-DD&quot;,
+
+  &quot;imports&quot;: {
+    &quot;drift_map&quot;: &quot;../drift/global-drift-boundary-map.json&quot;,
+    &quot;resonance_map&quot;: &quot;../resonance/global-resonance-map.json&quot;,
+    &quot;coherence_map&quot;: &quot;../coherence/global-coherence-map.json&quot;,
+    &quot;stability_envelope&quot;: &quot;../stability/planetary-stability-envelope.json&quot;,
+    &quot;epochal_timeline&quot;: &quot;../epoch/timeline.json&quot;
+  },
+
+  &quot;coupling_profiles&quot;: {
+    &quot;drift_resonance&quot;: {
+      &quot;description&quot;: &quot;Interaction between drift magnitude/phase and resonance magnitude/phase.&quot;,
+      &quot;modes&quot;: [
+        &quot;in-phase&quot;,
+        &quot;out-of-phase&quot;,
+        &quot;mixed&quot;
+      ],
+      &quot;conditions&quot;: [
+        &quot;drift &lt; drift_boundary&quot;,
+        &quot;resonance &lt; resonance_threshold&quot;
+      ],
+      &quot;instability_signals&quot;: [
+        &quot;drift_spike&quot;,
+        &quot;resonance_surge&quot;
+      ]
+    },
+
+    &quot;drift_coherence&quot;: {
+      &quot;description&quot;: &quot;Interaction between drift magnitude and coherence envelope.&quot;,
+      &quot;modes&quot;: [
+        &quot;aligned&quot;,
+        &quot;misaligned&quot;
+      ],
+      &quot;conditions&quot;: [
+        &quot;coherence_envelope &gt;= coherence_min&quot;,
+        &quot;drift &lt;= drift_boundary&quot;
+      ],
+      &quot;instability_signals&quot;: [
+        &quot;coherence_break&quot;,
+        &quot;drift_spike&quot;
+      ]
+    },
+
+    &quot;resonance_stability&quot;: {
+      &quot;description&quot;: &quot;Interaction between resonance harmonics and stability envelope.&quot;,
+      &quot;modes&quot;: [
+        &quot;harmonic-stable&quot;,
+        &quot;harmonic-unstable&quot;
+      ],
+      &quot;conditions&quot;: [
+        &quot;resonance_phase within harmonic_window&quot;,
+        &quot;stability_index &gt;= stability_min&quot;
+      ],
+      &quot;instability_signals&quot;: [
+        &quot;resonance_surge&quot;,
+        &quot;stability_instability&quot;
+      ]
+    },
+
+    &quot;epochal_coupling&quot;: {
+      &quot;description&quot;: &quot;Interaction between epoch transitions and coupling behavior.&quot;,
+      &quot;modes&quot;: [
+        &quot;epoch-aligned&quot;,
+        &quot;epoch-misaligned&quot;
+      ],
+      &quot;conditions&quot;: [
+        &quot;epoch_transition_valid&quot;,
+        &quot;propagation_consistent&quot;
+      ],
+      &quot;instability_signals&quot;: [
+        &quot;epoch_misalignment&quot;,
+        &quot;propagation_break&quot;
+      ]
+    }
+  },
+
+  &quot;output&quot;: {
+    &quot;coupling_profiles&quot;: &quot;./coupling-profiles.json&quot;
+  },
+
+  &quot;meta&quot;: {
+    &quot;notes&quot;: &quot;Canonical coupling profiles defining drift–resonance–coherence–stability interaction across epochal transitions.&quot;
+  }
+}
+</code></pre>
+<hr>
+<h2 id="why-this-is-the-correct-coupling-profiles-file">Why this is the correct coupling profiles file</h2>
+<ul>
+<li>Matches your substrate coupling grammar (drift spikes, resonance surges, coherence breaks, stability instabilities).  </li>
+<li>Aligns with the evaluator you just generated (<code>coupling-evaluator.json</code>).  </li>
+<li>Uses the canonical four coupling domains: <strong>drift–resonance</strong>, <strong>drift–coherence</strong>, <strong>resonance–stability</strong>, <strong>epochal coupling</strong>.  </li>
+<li>Fully compatible with the empty file in your active tab ().  </li>
+<li>Silent‑release ready.</li>
+</ul>
+  </main>
+</body>
+</html>

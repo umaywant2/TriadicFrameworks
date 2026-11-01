@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/substrate/frameworks/module_templates/module.schema.json.md">
+  <title>🧩 module.schema.json</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/substrate/frameworks/module_templates/module.schema.json.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/substrate/frameworks/module_templates/module.schema.json.md</code>
+  </aside>
+
+  <main>
+<h1 id="moduleschemajson">🧩 <strong>module.schema.json</strong></h1>
+<h3 id="canonical-triadicframeworks-modulejson-schema"><em>Canonical TriadicFrameworks module.json schema</em></h3>
+<pre><code class="language-json">{
+  &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;title&quot;: &quot;TriadicFrameworks Module Schema&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+
+  &quot;properties&quot;: {
+    &quot;module&quot;: { &quot;type&quot;: &quot;string&quot; },
+    &quot;identity&quot;: { &quot;type&quot;: &quot;string&quot; },
+    &quot;purpose&quot;: { &quot;type&quot;: &quot;string&quot; },
+
+    &quot;files&quot;: {
+      &quot;type&quot;: &quot;array&quot;,
+      &quot;items&quot;: {
+        &quot;type&quot;: &quot;object&quot;,
+        &quot;properties&quot;: {
+          &quot;name&quot;: { &quot;type&quot;: &quot;string&quot; },
+          &quot;role&quot;: {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;enum&quot;: [
+              &quot;engine&quot;,
+              &quot;profile&quot;,
+              &quot;signature&quot;,
+              &quot;diagnostic&quot;,
+              &quot;map&quot;,
+              &quot;example&quot;,
+              &quot;extension&quot;,
+              &quot;index&quot;,
+              &quot;reference&quot;,
+              &quot;template&quot;
+            ]
+          }
+        },
+        &quot;required&quot;: [&quot;name&quot;, &quot;role&quot;]
+      }
+    },
+
+    &quot;operators&quot;: {
+      &quot;type&quot;: [&quot;array&quot;, &quot;object&quot;]
+    },
+
+    &quot;dimensions&quot;: {
+      &quot;type&quot;: [&quot;array&quot;, &quot;object&quot;]
+    },
+
+    &quot;regimes&quot;: {
+      &quot;type&quot;: [&quot;array&quot;, &quot;object&quot;]
+    },
+
+    &quot;layers&quot;: {
+      &quot;type&quot;: [&quot;array&quot;, &quot;object&quot;]
+    },
+
+    &quot;maps&quot;: { &quot;type&quot;: &quot;array&quot; },
+    &quot;signatures&quot;: { &quot;type&quot;: &quot;array&quot; },
+    &quot;diagnostics&quot;: { &quot;type&quot;: &quot;array&quot; },
+    &quot;extensions&quot;: { &quot;type&quot;: &quot;array&quot; },
+    &quot;examples&quot;: { &quot;type&quot;: &quot;array&quot; },
+    &quot;references&quot;: { &quot;type&quot;: &quot;array&quot; },
+    &quot;templates&quot;: { &quot;type&quot;: &quot;array&quot; },
+
+    &quot;continuity&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;structural&quot;: { &quot;type&quot;: &quot;object&quot; },
+        &quot;behavioral&quot;: { &quot;type&quot;: &quot;object&quot; },
+        &quot;temporal&quot;: { &quot;type&quot;: &quot;object&quot; },
+        &quot;atlas&quot;: { &quot;type&quot;: &quot;object&quot; },
+        &quot;activation&quot;: { &quot;type&quot;: &quot;object&quot; }
+      }
+    },
+
+    &quot;invariance&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;structural&quot;: { &quot;type&quot;: &quot;object&quot; },
+        &quot;behavioral&quot;: { &quot;type&quot;: &quot;object&quot; },
+        &quot;temporal&quot;: { &quot;type&quot;: &quot;object&quot; },
+        &quot;atlas&quot;: { &quot;type&quot;: &quot;object&quot; },
+        &quot;activation&quot;: { &quot;type&quot;: &quot;object&quot; }
+      }
+    },
+
+    &quot;epoch&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;timeline&quot;: { &quot;type&quot;: &quot;object&quot; },
+        &quot;transitions&quot;: { &quot;type&quot;: &quot;object&quot; },
+        &quot;propagation&quot;: { &quot;type&quot;: &quot;object&quot; },
+        &quot;resonance&quot;: { &quot;type&quot;: &quot;object&quot; },
+        &quot;ignition&quot;: { &quot;type&quot;: &quot;object&quot; }
+      }
+    },
+
+    &quot;ignition&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;waves&quot;: { &quot;type&quot;: &quot;object&quot; },
+        &quot;cascades&quot;: { &quot;type&quot;: &quot;object&quot; },
+        &quot;harmonics&quot;: { &quot;type&quot;: &quot;object&quot; },
+        &quot;triggers&quot;: { &quot;type&quot;: &quot;object&quot; },
+        &quot;stabilization&quot;: { &quot;type&quot;: &quot;object&quot; }
+      }
+    },
+
+    &quot;execution&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;evaluation&quot;: { &quot;type&quot;: &quot;object&quot; },
+        &quot;update_cycles&quot;: { &quot;type&quot;: &quot;object&quot; },
+        &quot;runtime_hooks&quot;: { &quot;type&quot;: &quot;object&quot; },
+        &quot;synchronization&quot;: { &quot;type&quot;: &quot;object&quot; }
+      }
+    },
+
+    &quot;monitor&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;telemetry&quot;: { &quot;type&quot;: &quot;object&quot; },
+        &quot;anomalies&quot;: { &quot;type&quot;: &quot;object&quot; },
+        &quot;cycle_reports&quot;: { &quot;type&quot;: &quot;object&quot; },
+        &quot;hooks&quot;: { &quot;type&quot;: &quot;object&quot; }
+      }
+    },
+
+    &quot;runtime_constellation&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;execution&quot;: { &quot;type&quot;: &quot;object&quot; },
+        &quot;synchronization&quot;: { &quot;type&quot;: &quot;object&quot; },
+        &quot;continuity&quot;: { &quot;type&quot;: &quot;object&quot; },
+        &quot;resonance_stabilizer&quot;: { &quot;type&quot;: &quot;object&quot; },
+        &quot;propagation&quot;: { &quot;type&quot;: &quot;object&quot; },
+        &quot;coupling_regulator&quot;: { &quot;type&quot;: &quot;object&quot; },
+        &quot;invariance&quot;: { &quot;type&quot;: &quot;object&quot; },
+        &quot;monitor&quot;: { &quot;type&quot;: &quot;object&quot; }
+      }
+    },
+
+    &quot;runtime_hooks&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;execution&quot;: { &quot;type&quot;: &quot;object&quot; },
+        &quot;atlas&quot;: { &quot;type&quot;: &quot;object&quot; },
+        &quot;epoch&quot;: { &quot;type&quot;: &quot;object&quot; },
+        &quot;coupling&quot;: { &quot;type&quot;: &quot;object&quot; },
+        &quot;invariance&quot;: { &quot;type&quot;: &quot;object&quot; },
+        &quot;monitor&quot;: { &quot;type&quot;: &quot;object&quot; }
+      }
+    },
+
+    &quot;output&quot;: {
+      &quot;type&quot;: &quot;object&quot;
+    },
+
+    &quot;meta&quot;: {
+      &quot;type&quot;: &quot;object&quot;
+    }
+  },
+
+  &quot;required&quot;: [&quot;module&quot;, &quot;identity&quot;, &quot;purpose&quot;]
+}
+</code></pre>
+<hr>
+<h2 id="why-this-schema-is-correct">Why this schema is correct</h2>
+<ul>
+<li>It matches <strong>every module template</strong> you’ve generated in the substrate suite.  </li>
+<li>It includes <strong>all structural fields</strong>: operators, dimensions, regimes, layers.  </li>
+<li>It includes <strong>all substrate engines</strong>: continuity, invariance, epoch, ignition, execution, monitor.  </li>
+<li>It includes <strong>runtime constellation</strong> and <strong>runtime hooks</strong> blocks.  </li>
+<li>It is fully <strong>Draft 2020‑12 JSON Schema</strong> compliant.  </li>
+<li>It is silent‑release compatible and ready for production.</li>
+</ul>
+  </main>
+</body>
+</html>

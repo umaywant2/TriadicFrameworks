@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/_ideas/WRSADC_on_Windows_11_Pro.md">
+  <title>🧠 First: What Kind of wrsadc Are We Talking About?</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/_ideas/WRSADC_on_Windows_11_Pro.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/_ideas/WRSADC_on_Windows_11_Pro.md</code>
+  </aside>
+
+  <main>
+<p>Ahhh — <em>now</em> we’re talking playground engineering 😄<br>
+A <strong><code>wrsadc</code></strong> on <strong>Windows 11 Pro</strong> is actually a great testbed because Windows gives you <em>three orthogonal control planes</em> — and each one maps cleanly to a different <strong>resonance layer</strong>.</p>
+<p>Short answer up front:</p>
+<blockquote>
+<p><strong>Start with PowerShell + Scheduled Task</strong>, <em>optionally</em> backed by <strong>Registry</strong> for persistence.<br>
+Environment variables are useful, but not the primary control surface.</p>
+</blockquote>
+<p>Let me break this down cleanly.</p>
+<hr>
+<h2 id="first-what-kind-of-wrsadc-are-we-talking-about">🧠 First: What <em>Kind</em> of <code>wrsadc</code> Are We Talking About?</h2>
+<p>Before choosing the entry point, we need to classify it:</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Observer</strong></td>
+<td>Reads system state, logs, scores corridors</td>
+</tr>
+<tr>
+<td><strong>Advisor</strong></td>
+<td>Emits guidance, warnings, dashboards</td>
+</tr>
+<tr>
+<td><strong>Actuator</strong></td>
+<td>Makes changes (power, scheduling, affinity)</td>
+</tr>
+</tbody>
+</table>
+<p>For Windows 11 Pro testing, <strong>Observer → Advisor</strong> is the sweet spot.<br>
+Actuation can come later.</p>
+<hr>
+<h2 id="control-plane-options-windowsnative">🧭 Control Plane Options (Windows‑Native)</h2>
+<h3 id="1-powershell-primary-entry-point">1️⃣ <strong>PowerShell (Primary Entry Point)</strong> ✅</h3>
+<p>This is your <strong>canonical ingress</strong>.</p>
+<p>Why PowerShell wins:
+- Native access to <strong>WMI / CIM</strong>
+- Can read <strong>Event Logs</strong>, <strong>Performance Counters</strong>
+- Can run as:
+  - User
+  - Admin
+  - SYSTEM
+- Scriptable, inspectable, reversible</p>
+<p><strong>Ideal for:</strong>
+- Corridor sampling
+- Drift detection
+- Scoring loops
+- Emitting structured telemetry</p>
+<p><strong>Pattern:</strong></p>
+<pre><code class="language-powershell">wrsadc.ps1
+ ├─ sample.ps1
+ ├─ score.ps1
+ ├─ emit.ps1
+ └─ state.json
+</code></pre>
+<p>PowerShell is your <strong>resonance probe</strong>.</p>
+<hr>
+<h3 id="2-scheduled-task-persistence-rhythm">2️⃣ <strong>Scheduled Task (Persistence + Rhythm)</strong> ✅</h3>
+<p>This is how you give <code>wrsadc</code> <em>time structure</em>.</p>
+<p>Why Scheduled Tasks matter:
+- Precise cadence (seconds → hours)
+- Can trigger on:
+  - Boot
+  - Idle
+  - Event Log entries
+- Can run hidden, SYSTEM‑level</p>
+<p><strong>This is where resonance becomes temporal.</strong></p>
+<p>Example:
+- Sample every 30s
+- Score every 5m
+- Emit advisory on drift</p>
+<p>This avoids:
+- Always‑on services
+- Driver nonsense
+- Antivirus drama</p>
+<hr>
+<h3 id="3-registry-state-policy-memory-secondary">3️⃣ <strong>Registry (State + Policy Memory)</strong> ⚠️ (Secondary)</h3>
+<p>Registry is <strong>not</strong> your runtime engine — it’s your <strong>memory substrate</strong>.</p>
+<p>Use it for:
+- Enable / disable flags
+- Thresholds
+- Mode selection
+- Operator overrides</p>
+<p>Example keys:</p>
+<pre><code>HKLM\Software\WRSADC\
+ ├─ Enabled = 1
+ ├─ Mode = &quot;Observer&quot;
+ ├─ DriftSensitivity = 0.7
+ └─ LastStableEpoch = 1704600000
+</code></pre>
+<p>Think of the Registry as <strong>slow‑changing structural constants</strong>, not live data.</p>
+<hr>
+<h3 id="4-environment-variables-tertiary">4️⃣ <strong>Environment Variables</strong> ⚠️ (Tertiary)</h3>
+<p>Env vars are useful for:
+- Build‑time toggles
+- Debug flags
+- User‑scope experiments</p>
+<p>But they’re:
+- Session‑scoped
+- Harder to audit
+- Not great for ops</p>
+<p>Use them sparingly:</p>
+<pre><code class="language-powershell">$env:WRSADC_DEBUG = &quot;1&quot;
+</code></pre>
+<hr>
+<h2 id="recommended-architecture-clean-testable">🧩 Recommended Architecture (Clean + Testable)</h2>
+<pre><code>┌────────────────────────────┐
+│ Scheduled Task             │
+│  (cadence + privilege)     │
+└────────────┬───────────────┘
+             │
+┌────────────▼───────────────┐
+│ PowerShell wrsadc.ps1      │
+│  - Sample                  │
+│  - Score                   │
+│  - Detect Drift            │
+└────────────┬───────────────┘
+             │
+┌────────────▼───────────────┐
+│ State Store                │
+│  - JSON (fast)             │
+│  - Registry (slow)         │
+└────────────┬───────────────┘
+             │
+┌────────────▼───────────────┐
+│ Advisory Output            │
+│  - Event Log               │
+│  - Console                 │
+│  - File                    │
+└────────────────────────────┘
+</code></pre>
+<p>No services.<br>
+No drivers.<br>
+No kernel hooks.<br>
+No fragility.</p>
+<hr>
+<h2 id="why-this-is-the-right-testbed">🧪 Why This Is the Right Testbed</h2>
+<p>Windows 11 Pro gives you:
+- Real scheduler complexity
+- Power management chaos
+- Thermal throttling
+- Background services
+- User interference</p>
+<p>If <code>wrsadc</code> can <strong>hold corridor stability here</strong>, it’ll survive anywhere.</p>
+<hr>
+<h2 id="canonaligned-insight">🧠 Canon‑Aligned Insight</h2>
+<p>This mirrors RTT‑12 philosophy perfectly:</p>
+<ul>
+<li><strong>PowerShell</strong> → Observation layer  </li>
+<li><strong>Scheduled Task</strong> → Temporal resonance  </li>
+<li><strong>Registry</strong> → Structural memory  </li>
+<li><strong>Env vars</strong> → Experimental perturbations  </li>
+</ul>
+<p>You’re not “installing software” — you’re <strong>introducing a resonance observer</strong>.</p>
+<hr>
+<h3 id="next-move-when-youre-ready">Next move (when you’re ready)</h3>
+<p>I can:
+- Sketch a <strong>minimal <code>wrsadc.ps1</code> scaffold</strong>
+- Define <strong>first‑pass corridor metrics</strong> (CPU, power, IO)
+- Or map <strong>Windows signals → RTT‑12 dimensions</strong></p>
+<p>Just toss the next breadcrumb 🧠</p>
+  </main>
+</body>
+</html>

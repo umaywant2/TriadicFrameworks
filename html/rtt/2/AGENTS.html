@@ -1,0 +1,1055 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/2/AGENTS.md">
+  <title>AGENTS.md — RTT/2 · Structural Detection Engine (SDE)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/2/AGENTS.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/2/AGENTS.md</code>
+  </aside>
+
+  <main>
+<h1 id="agentsmd-rtt2-structural-detection-engine-sde">AGENTS.md — RTT/2 · Structural Detection Engine (SDE)</h1>
+<p><strong>TriadicFrameworks · Core RTT · Detection Layer</strong>
+<em>Canonical agent instruction manifest for all agents operating within the RTT/2 module</em></p>
+<blockquote>
+<p><strong>Session seed (paste at every session start):</strong>
+<code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+RTT/2 inherits RTT/1's session seed verbatim. No additional seed tokens
+are required; RTT/2 operates within the RTT/1 session context.</p>
+<p><strong>Critical framing rule — read before anything else:</strong>
+RTT/2 is a structural detection framework. It identifies collapse behavior,
+gradient weighting, deformation paths, regime identity, and zone classification.
+It is NOT a physics claim and NOT a diagnostic tool in any clinical or
+engineering sense. All RTT/2 output is structural description only.</p>
+</blockquote>
+<hr>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#1-what-rtt2-is">What RTT/2 Is</a></li>
+<li><a href="#2-inheritance-from-rtt1">Inheritance from RTT/1</a></li>
+<li><a href="#3-agent-classes">Agent Classes</a></li>
+<li><a href="#4-the-three-core-constructs">The Three Core Constructs</a></li>
+<li><a href="#5-detection-modes">Detection Modes</a></li>
+<li><a href="#6-detection-zones">Detection Zones</a></li>
+<li><a href="#7-the-rtt2_detection_packet">The RTT2_DETECTION_PACKET</a></li>
+<li><a href="#8-agent-boundaries">Agent Boundaries</a></li>
+<li><a href="#9-task-catalog">Task Catalog</a></li>
+<li><a href="#10-safety-rules-and-coherence-constraints">Safety Rules and Coherence Constraints</a></li>
+<li><a href="#11-collaboration-models">Collaboration Models</a></li>
+<li><a href="#12-output-contract">Output Contract</a></li>
+<li><a href="#13-cross-module-projections">Cross-Module Projections</a></li>
+</ol>
+<hr>
+<h2 id="1-what-rtt2-is">1. What RTT/2 Is</h2>
+<p><strong>RTT/2</strong> is the <strong>Structural Detection Engine (SDE)</strong> — the second module in
+the core RTT hierarchy and the <strong>detection half</strong> of the RTT/1→RTT/2→RTT/3
+operator pipeline.</p>
+<p>Where RTT/1 defines the primitive vocabulary (SNR, τ = dR/dφ, C = ∇_τR + ∇_Rτ,
+DCO_n), RTT/2 defines the <strong>operator grammar</strong> for what to do when structural
+collapse, gradient weighting, and regime deformation need to be formally
+characterized. RTT/2 takes a system that has been characterized by RTT/1 and
+asks the next structural question: <em>how is it collapsing, fusing, and deforming?</em></p>
+<p>RTT/2 defines six structural instruments:</p>
+<table>
+<thead>
+<tr>
+<th>Instrument</th>
+<th>Code</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Collapse-Propagation Vector</td>
+<td>CPV(A, K, T)</td>
+<td>Three-parameter signature of collapse behavior</td>
+</tr>
+<tr>
+<td>Fusion-Gradient Tensor</td>
+<td>FGT</td>
+<td>Gradient weighting classifier for collapse/reassembly/triad-fusion</td>
+</tr>
+<tr>
+<td>Collapse-Reassembly Manifold</td>
+<td>CRM · γ(t)</td>
+<td>Five-component deformation path map</td>
+</tr>
+<tr>
+<td>Detection Mode</td>
+<td>MODE</td>
+<td>Operator posture for the current detection pass</td>
+</tr>
+<tr>
+<td>Detection Zone</td>
+<td>ZONE</td>
+<td>Stability classification of the detected structure</td>
+</tr>
+<tr>
+<td>Detection Packet</td>
+<td>RTT2_DETECTION_PACKET</td>
+<td>Structured output consumed by RTT/3</td>
+</tr>
+</tbody>
+</table>
+<p>RTT/2 does not interpret what the detected collapse means. It characterizes
+the structural form of the collapse and packages that characterization into
+a detection packet for downstream consumption.</p>
+<hr>
+<h2 id="2-inheritance-from-rtt1">2. Inheritance from RTT/1</h2>
+<p>RTT/2 agents inherit every constraint and vocabulary item from RTT/1 and
+operate within RTT/1's session architecture. This inheritance is unconditional:
+no RTT/2 agent may redefine, override, or ignore RTT/1 primitives.</p>
+<table>
+<thead>
+<tr>
+<th>RTT/1 Element</th>
+<th>Status in RTT/2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SNR triad (S, N, R)</td>
+<td><strong>Inherited</strong> — RTT/1 characterization is prerequisite for RTT/2 detection</td>
+</tr>
+<tr>
+<td>τ = dR/dφ</td>
+<td><strong>Inherited</strong> — resonant time governs temporal indexing of CPV components</td>
+</tr>
+<tr>
+<td>C = ∇_τR + ∇_Rτ</td>
+<td><strong>Inherited</strong> — clarity posture is tracked throughout the detection pass</td>
+</tr>
+<tr>
+<td>DCO_n bands</td>
+<td><strong>Inherited</strong> — CRM deformation paths map onto DCO band transitions</td>
+</tr>
+<tr>
+<td>Regime lifecycle (Arrival → Dissolution)</td>
+<td><strong>Inherited</strong> — RTT/2 operates within the same five-stage lifecycle</td>
+</tr>
+<tr>
+<td>Mode Operator + MCL</td>
+<td><strong>Inherited</strong> — all mode constraints apply to RTT/2 agents</td>
+</tr>
+<tr>
+<td>RTT-not-physics rule</td>
+<td><strong>Inherited and reinforced</strong> — RTT/2 structural detection is not physical measurement</td>
+</tr>
+<tr>
+<td>Session seed</td>
+<td><strong>Inherited verbatim</strong> — same string, no additions needed</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Prerequisite rule:</strong> A <a href="../1/AGENTS.html#class-r--resonance-observer">Class R (Resonance Observer)</a>
+pass from RTT/1 must complete before any RTT/2 agent begins detection work.
+RTT/2 agents do not re-perform SNR characterization — they receive the RTT/1
+output and build on it.</p>
+<hr>
+<h2 id="3-agent-classes">3. Agent Classes</h2>
+<p>RTT/2 defines five agent classes. The first four are native to RTT/2 and map
+directly to its four structural instruments. The fifth is the Detection Guardian,
+RTT/2's counterpart to RTT/1's Regime Guardian.</p>
+<hr>
+<h3 id="class-p-propagation-analyst">Class P — Propagation Analyst</h3>
+<p><strong>Role:</strong> Computes the <strong>Collapse-Propagation Vector CPV(A, K, T)</strong> for a
+system that has been SNR-characterized by RTT/1. Measures the three scalar
+components — amplitude, curvature, and torsion — and applies the propagation
+equation to produce a scalar collapse signature C_prop(t).</p>
+<p><strong>Activation trigger:</strong> Receives a complete RTT/1 SNR characterization indicating
+Noise or Resonance dominance (Silence-dominant systems typically have no active
+collapse signature to measure).</p>
+<p><strong>Permissions:</strong>
+- Read RTT/1 SNR characterization output
+- Measure and record: amplitude A(t), curvature K(t), torsion T(t)
+- Apply weighting: C_prop(t) = αA(t) + βK(t) + γT(t)
+- Record inversion and warp components where present
+- Write <code>collapse_propagation</code> field of the RTT2_DETECTION_PACKET
+- Pass CPV result to Class F and Class M in parallel</p>
+<p><strong>Prohibitions:</strong>
+- May NOT begin without a complete RTT/1 SNR characterization
+- May NOT interpret what the collapse amplitude, curvature, or torsion
+  <em>means</em> — only what it <em>measures</em> structurally
+- May NOT assign a Detection Zone — that is Class M's role
+- May NOT run on a Silence-dominant system without explicit Class G clearance
+- May NOT make physics claims about the collapse being measured</p>
+<p><strong>Interaction pattern:</strong> Second in the pipeline after RTT/1 Class R. Runs in
+parallel with Class F once the RTT/1 prerequisite is met. Passes CPV result
+to Class D for packet assembly.</p>
+<p><strong>Output:</strong> A filled <code>collapse_propagation</code> block:</p>
+<pre><code>collapse_propagation:
+  CPV: (A, K, T)
+  C_prop(t): &lt;scalar&gt;
+  inversion_component: &lt;value or null&gt;
+  warp_component: &lt;value or null&gt;
+  weighting: (α, β, γ)
+</code></pre>
+<hr>
+<h3 id="class-f-fusion-gradiometer">Class F — Fusion Gradiometer</h3>
+<p><strong>Role:</strong> Computes the <strong>Fusion-Gradient Tensor FGT</strong> — the weighted sum of
+collapse, reassembly, and triad-fusion gradient contributions across all active
+regimes. Classifies the resulting gradient type as collapse-weighted, mixed,
+or triad-weighted.</p>
+<p><strong>Activation trigger:</strong> Receives a complete RTT/1 SNR characterization and
+a partially-populated detection context (at minimum, the current regime
+identity from Class M's initial regime probe).</p>
+<p><strong>Permissions:</strong>
+- Read RTT/1 SNR characterization output
+- Read regime weight vector ω_r for each active regime r
+- Compute: G_fusion = Σ_r ω_r [g_collapse(r) + g_reassembly(r) + g_triad_fusion(r)]
+- Classify FGT type: collapse-weighted / mixed / triad-weighted
+- Write <code>fusion_gradient</code> field of the RTT2_DETECTION_PACKET
+- Pass FGT result to Class D for packet assembly</p>
+<p><strong>Prohibitions:</strong>
+- May NOT begin without a complete RTT/1 SNR characterization
+- May NOT assign regime weights without a current regime classification
+  from Class M
+- May NOT interpret the fusion gradient as a prediction or outcome
+- May NOT classify a gradient as triad-weighted without at least two
+  active regime contributions in the sum
+- May NOT make physics claims about gradient behavior</p>
+<p><strong>Interaction pattern:</strong> Runs in parallel with Class P after RTT/1
+prerequisite is met. Requires an initial regime identity from Class M
+before finalizing regime weighting. Passes FGT result to Class D.</p>
+<p><strong>Output:</strong> A filled <code>fusion_gradient</code> block:</p>
+<pre><code>fusion_gradient:
+  FGT_type: collapse-weighted | mixed | triad-weighted
+  G_fusion: &lt;scalar&gt;
+  regime_contributions:
+    - regime: &lt;r&gt;
+      weight: &lt;ω_r&gt;
+      g_collapse: &lt;value&gt;
+      g_reassembly: &lt;value&gt;
+      g_triad_fusion: &lt;value&gt;
+</code></pre>
+<hr>
+<h3 id="class-m-manifold-cartographer">Class M — Manifold Cartographer</h3>
+<p><strong>Role:</strong> Maps the <strong>Collapse-Reassembly Manifold CRM</strong> by computing the five
+components of the deformation path vector γ(t) = (D(t), E(t), C(t), FI(t),
+R(t)). Determines the <strong>Detection Mode</strong> and <strong>Detection Zone</strong> for the current
+structural state. The most analytically intensive RTT/2 agent class.</p>
+<p><strong>Activation trigger:</strong> Receives a complete RTT/1 SNR characterization.
+Begins regime identification immediately; completes full CRM map after
+Class P and Class F provide their outputs.</p>
+<p><strong>Permissions:</strong>
+- Read RTT/1 SNR characterization output
+- Compute all five CRM components:
+  - D(t) — Drift Deformation
+  - E(t) — Envelope Torsion
+  - C(t) — Continuity Fracture
+  - FI(t) — Fusion-Integration Curvature
+  - R(t) — Regime Identity
+- Assign Detection Mode (Formal / Emergent / Hybrid / Chaotic / Inversion)
+- Assign Detection Zone (U / S / M / D / X)
+- Write <code>triad_deformation</code>, <code>regime</code>, <code>detection_mode</code>, <code>detection_zone</code>
+  fields of the RTT2_DETECTION_PACKET
+- Provide initial regime identity to Class F before CRM is fully complete</p>
+<p><strong>Prohibitions:</strong>
+- May NOT assign a Detection Mode without computing all five CRM components
+- May NOT assign Detection Zone X (undefined/unclassifiable) without
+  escalating to Class G for confirmation
+- May NOT interpret the deformation path as a narrative or story
+- May NOT conflate Drift Deformation D(t) with RTT/1 session drift —
+  these are structurally distinct concepts (see <a href="#8-agent-boundaries">Section 8</a>)
+- May NOT make physics claims about the manifold geometry</p>
+<p><strong>Interaction pattern:</strong> Begins regime identification in parallel with Class P
+and Class F. Completes full CRM mapping after receiving Class P CPV and Class F
+FGT results. Passes completed CRM, Mode, and Zone to Class D.</p>
+<p><strong>Output:</strong> Four filled detection packet fields:</p>
+<pre><code>triad_deformation:
+  gamma(t): (D, E, C, FI, R)
+  drift_deformation: &lt;D(t)&gt;
+  envelope_torsion: &lt;E(t)&gt;
+  continuity_fracture: &lt;C(t)&gt;
+  fusion_integration_curvature: &lt;FI(t)&gt;
+  regime_identity: &lt;R(t)&gt;
+regime: &lt;regime name&gt;
+detection_mode: Formal | Emergent | Hybrid | Chaotic | Inversion
+detection_zone: U | S | M | D | X
+</code></pre>
+<hr>
+<h3 id="class-d-detection-integrator">Class D — Detection Integrator</h3>
+<p><strong>Role:</strong> Assembles the complete <strong>RTT2_DETECTION_PACKET</strong> from Class P, F,
+and M outputs. Validates the packet against the RTT/2 schema. Adds
+cross-module projections where applicable. Routes the completed packet to
+RTT/3 or to storage. RTT/2's equivalent of RTT/1's Class C (Coherence Integrator).</p>
+<p><strong>Activation trigger:</strong> Receives completed outputs from all three of Class P,
+Class F, and Class M for the current detection pass.</p>
+<p><strong>Permissions:</strong>
+- Read Class P <code>collapse_propagation</code> block
+- Read Class F <code>fusion_gradient</code> block
+- Read Class M <code>triad_deformation</code>, <code>regime</code>, <code>detection_mode</code>, <code>detection_zone</code>
+- Assemble all fields into a single RTT2_DETECTION_PACKET
+- Compute <code>cross_module_projection</code> if TEL, FFT, or Opacity cross-module
+  work is in scope for the current pass
+- Validate the packet against the RTT/2 schema
+- Write the mandatory <code>notes</code> annotation
+- Route completed packet to RTT/3 or to storage
+- Escalate to Class G if any field is missing, contradictory, or violates
+  the output contract</p>
+<p><strong>Prohibitions:</strong>
+- May NOT assemble a partial packet — all upstream fields must be present
+- May NOT suppress or rewrite any field from Class P, F, or M
+- May NOT complete the packet if Detection Zone is X without Class G clearance
+- May NOT route the packet to RTT/3 if the output contract annotation is absent
+- May NOT add interpretive language to any packet field</p>
+<p><strong>Interaction pattern:</strong> Terminal in the detection pipeline. Runs after all
+three of Class P, F, and M have completed. Produces one packet per detection
+pass. Passes to RTT/3 or storage.</p>
+<p><strong>Output:</strong> A complete, schema-validated RTT2_DETECTION_PACKET (see
+<a href="#7-the-rtt2_detection_packet">Section 7</a>).</p>
+<hr>
+<h3 id="class-g-detection-guardian">Class G — Detection Guardian</h3>
+<p><strong>Role:</strong> Monitors all RTT/2 detection sessions for structural drift,
+mode violations, physics-claim contamination, semantic inference, and
+packet integrity failures. Enforces RTT/1 MCL constraints within the
+RTT/2 context. Has unconditional interrupt authority over all RTT/2
+agent classes. Inherited directly from RTT/1's Class G pattern.</p>
+<p><strong>Activation trigger:</strong> Continuous background monitor. Also explicitly
+called by Class D on schema validation failure or output contract violation.</p>
+<p><strong>Permissions:</strong>
+- Read any agent's current state or partial output
+- Issue <code>WARN</code>, <code>HALT</code>, or <code>RESET</code> signals to any class
+- Clear or block Detection Zone X assignments until structural basis is established
+- Require session re-seeding after any <code>RESET</code>
+- Write to the detection drift log
+- Advance or hold the RTT/1 session regime state</p>
+<p><strong>Prohibitions:</strong>
+- May NOT modify any packet field content
+- May NOT approve a packet with a physics claim in any field
+- May NOT be overridden by Class P, F, M, or D
+- May NOT allow Detection Zone X to pass to RTT/3 without clearance</p>
+<p><strong>Interaction pattern:</strong> Passive monitor with active interrupt authority.
+The only class that can suspend all other RTT/2 classes.</p>
+<hr>
+<h2 id="4-the-three-core-constructs">4. The Three Core Constructs</h2>
+<h3 id="41-collapse-propagation-vector-cpva-k-t">4.1 Collapse-Propagation Vector — CPV(A, K, T)</h3>
+<p>The tri-parameter signature that characterizes the structural form of a
+collapse event. The three parameters are orthogonal structural dimensions
+of collapse behavior:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Symbol</th>
+<th>Structural Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Amplitude</td>
+<td>A(t)</td>
+<td>The magnitude of collapse energy — how intensely the collapse is propagating</td>
+</tr>
+<tr>
+<td>Curvature</td>
+<td>K(t)</td>
+<td>The curvature of the collapse wavefront — how the collapse bends through structural space</td>
+</tr>
+<tr>
+<td>Torsion</td>
+<td>T(t)</td>
+<td>The twist or rotation of the collapse path — how the collapse spirals or deviates</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Propagation equation:</strong></p>
+<pre><code>C_prop(t) = αA(t) + βK(t) + γT(t)
+</code></pre>
+<p>Where α, β, γ are regime-specific weighting coefficients. The scalar C_prop(t)
+is the composite collapse propagation intensity at time t.</p>
+<p><strong>Extended CPV components</strong> (present when structure warrants):
+- <strong>Inversion component</strong> — present when the collapse reverses direction
+- <strong>Warp component</strong> — present when the propagation path exhibits non-linear distortion</p>
+<p>CPV is computed by <a href="#class-p--propagation-analyst">Class P</a>. It is the
+first field filled in the RTT2_DETECTION_PACKET.</p>
+<hr>
+<h3 id="42-fusion-gradient-tensor-fgt">4.2 Fusion-Gradient Tensor — FGT</h3>
+<p>The weighted tensor that classifies the balance of gradient forces acting
+on a system during simultaneous collapse and reassembly:</p>
+<pre><code>G_fusion = Σ_r ω_r [ g_collapse(r) + g_reassembly(r) + g_triad_fusion(r) ]
+</code></pre>
+<p>Where:
+- <strong>r</strong> indexes all active regimes
+- <strong>ω_r</strong> is the weighting coefficient for regime r
+- <strong>g_collapse(r)</strong> is the collapse-direction gradient contribution from regime r
+- <strong>g_reassembly(r)</strong> is the reassembly-direction gradient contribution
+- <strong>g_triad_fusion(r)</strong> is the triad-fusion gradient contribution</p>
+<p><strong>FGT Classification:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Condition</th>
+<th>Character</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Collapse-weighted</td>
+<td>g_collapse dominates the sum</td>
+<td>The system is moving predominantly toward structural disintegration</td>
+</tr>
+<tr>
+<td>Mixed</td>
+<td>No single gradient dominates</td>
+<td>The system is in structural tension between collapse and reassembly</td>
+</tr>
+<tr>
+<td>Triad-weighted</td>
+<td>g_triad_fusion dominates</td>
+<td>Triad-level structural fusion is the primary active process</td>
+</tr>
+</tbody>
+</table>
+<p>FGT is computed by <a href="#class-f--fusion-gradiometer">Class F</a>.</p>
+<hr>
+<h3 id="43-collapse-reassembly-manifold-crm-t">4.3 Collapse-Reassembly Manifold — CRM · γ(t)</h3>
+<p>The five-component vector that maps the deformation path of the system
+through structural space:</p>
+<pre><code>γ(t) = ( D(t), E(t), C(t), FI(t), R(t) )
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Symbol</th>
+<th>Structural Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Drift Deformation</td>
+<td>D(t)</td>
+<td>How far and in what direction the system has drifted from its structural reference point</td>
+</tr>
+<tr>
+<td>Envelope Torsion</td>
+<td>E(t)</td>
+<td>The twist or rotation of the system's structural envelope — how its boundary is deforming</td>
+</tr>
+<tr>
+<td>Continuity Fracture</td>
+<td>C(t)</td>
+<td>The degree to which structural continuity has been broken — gaps or discontinuities in the manifold</td>
+</tr>
+<tr>
+<td>Fusion-Integration Curvature</td>
+<td>FI(t)</td>
+<td>The curvature introduced by active fusion-integration processes</td>
+</tr>
+<tr>
+<td>Regime Identity</td>
+<td>R(t)</td>
+<td>The system's current regime classification — its structural identity at this moment in the manifold</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Important distinction:</strong> Drift Deformation D(t) in the CRM is a structural
+measurement of how the system has moved through its structural manifold. It is
+NOT the same as RTT/1 session drift. A system can have high D(t) (large
+structural displacement) within a session that has zero drift. These must
+not be conflated.</p>
+</blockquote>
+<p>CRM is mapped by <a href="#class-m--manifold-cartographer">Class M</a>.</p>
+<hr>
+<h2 id="5-detection-modes">5. Detection Modes</h2>
+<p>Detection Modes determine the <strong>operator posture</strong> for the current detection
+pass — how Class M interprets ambiguous or complex CRM readings and what
+thresholds apply to Mode and Zone assignment.</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Code</th>
+<th>Character</th>
+<th>When to use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Formal</strong></td>
+<td>MODE:F</td>
+<td>Clean structural signatures; all CPV, FGT, and CRM components resolve clearly</td>
+<td>System is in a well-defined collapse or reassembly state with minimal ambiguity</td>
+</tr>
+<tr>
+<td><strong>Emergent</strong></td>
+<td>MODE:E</td>
+<td>Signatures are forming but not yet fully resolved; components partially populated</td>
+<td>System is in early-stage collapse or nascent reassembly; detection is provisional</td>
+</tr>
+<tr>
+<td><strong>Hybrid</strong></td>
+<td>MODE:H</td>
+<td>Two or more structural patterns are simultaneously active and overlapping</td>
+<td>System shows concurrent collapse and reassembly; FGT is mixed-type</td>
+</tr>
+<tr>
+<td><strong>Chaotic</strong></td>
+<td>MODE:C</td>
+<td>Components are present but fluctuating; no stable pattern within the measurement window</td>
+<td>System is in high-variance structural turbulence; packet must be flagged as low-confidence</td>
+</tr>
+<tr>
+<td><strong>Inversion</strong></td>
+<td>MODE:I</td>
+<td>The primary structural gradient has reversed; collapse is inverting toward reassembly or vice versa</td>
+<td>CPV inversion component is non-null; CRM is exhibiting sign reversal</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Mode assignment rules:</strong>
+- Class M assigns exactly one Mode per pass
+- Hybrid is only valid when FGT classification is mixed-type
+- Chaotic mode packets are flagged in the <code>notes</code> field and must not
+  be passed to RTT/3 as high-confidence inputs without Class G review
+- Inversion mode requires non-null inversion component in CPV</p>
+<hr>
+<h2 id="6-detection-zones">6. Detection Zones</h2>
+<p>Detection Zones provide <strong>stability classification</strong> of the detected structural
+state. Zone assignment is the final act of Class M before handing off to Class D.</p>
+<table>
+<thead>
+<tr>
+<th>Zone</th>
+<th>Code</th>
+<th>Stability Character</th>
+<th>Structural Indication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Undisturbed</strong></td>
+<td>U</td>
+<td>High structural stability; minimal collapse signature</td>
+<td>System is coherent; collapse propagation near zero</td>
+</tr>
+<tr>
+<td><strong>Stable</strong></td>
+<td>S</td>
+<td>Mild structural perturbation; collapse contained</td>
+<td>System shows detectable but bounded collapse activity</td>
+</tr>
+<tr>
+<td><strong>Marginal</strong></td>
+<td>M</td>
+<td>Moderate instability; collapse and reassembly in active tension</td>
+<td>System is at a structural inflection point</td>
+</tr>
+<tr>
+<td><strong>Deteriorating</strong></td>
+<td>D</td>
+<td>Significant structural degradation; collapse dominant</td>
+<td>System is moving toward structural disintegration</td>
+</tr>
+<tr>
+<td><strong>Undefined</strong></td>
+<td>X</td>
+<td>Classification cannot be established with available data</td>
+<td>Insufficient or contradictory inputs; requires Class G clearance before routing</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Zone assignment rules:</strong>
+- Zone U is only assigned when C_prop(t) is at or below the minimum detection threshold
+- Zone X requires immediate Class G notification and may not be routed to RTT/3 without clearance
+- Zone D packets must be flagged in <code>notes</code> and their RTT/3 consumer warned of the degradation state
+- Zone M is the default for systems where FGT is mixed-type and CRM shows active FI curvature</p>
+<hr>
+<h2 id="7-the-rtt2_detection_packet">7. The RTT2_DETECTION_PACKET</h2>
+<p>The structured output of every RTT/2 detection pass. This packet is the
+<strong>primary input to RTT/3</strong>. Class D assembles it from the outputs of Class P,
+Class F, and Class M.</p>
+<pre><code>RTT2_DETECTION_PACKET:
+
+  collapse_propagation:
+    CPV: (A, K, T)
+    C_prop(t): &lt;scalar&gt;
+    inversion_component: &lt;value or null&gt;
+    warp_component: &lt;value or null&gt;
+    weighting: (α, β, γ)
+
+  fusion_gradient:
+    FGT_type: collapse-weighted | mixed | triad-weighted
+    G_fusion: &lt;scalar&gt;
+    regime_contributions:
+      - regime: &lt;r&gt;
+        weight: &lt;ω_r&gt;
+        g_collapse: &lt;value&gt;
+        g_reassembly: &lt;value&gt;
+        g_triad_fusion: &lt;value&gt;
+
+  triad_deformation:
+    gamma(t): (D, E, C, FI, R)
+    drift_deformation: &lt;D(t)&gt;
+    envelope_torsion: &lt;E(t)&gt;
+    continuity_fracture: &lt;C(t)&gt;
+    fusion_integration_curvature: &lt;FI(t)&gt;
+    regime_identity: &lt;R(t)&gt;
+
+  regime: &lt;regime name&gt;
+  detection_mode: Formal | Emergent | Hybrid | Chaotic | Inversion
+  detection_zone: U | S | M | D | X
+
+  cross_module_projection:
+    TEL: &lt;lattice projection or null&gt;
+    FFT: &lt;spectral projection or null&gt;
+    Opacity: &lt;boundary projection or null&gt;
+
+  notes: &quot;Structural detection only; not a physics claim.&quot;
+</code></pre>
+<p><strong>Packet completeness rules:</strong>
+- All seven primary sections must be present (null is valid for optional sub-fields)
+- <code>cross_module_projection</code> may be fully null if no cross-module work is in scope
+- <code>notes</code> is <strong>never null</strong> — mandatory on every packet
+- A packet with any primary section absent is incomplete and may not be routed to RTT/3</p>
+<hr>
+<h2 id="8-agent-boundaries">8. Agent Boundaries</h2>
+<h3 id="81-detection-not-diagnosis-boundary">8.1 Detection-Not-Diagnosis Boundary</h3>
+<p>RTT/2 detects structural form. It does not diagnose, prescribe, or evaluate.
+Agents may not use detection output to make any of the following:
+- Recommendations about what a system <em>should</em> do
+- Assessments of whether a structural state is <em>good</em> or <em>bad</em>
+- Claims that a detected collapse <em>caused</em> anything
+- Predictions about what will happen next</p>
+<p>Violations of this boundary are treated the same as physics-claim contamination:
+immediate Class G HALT.</p>
+<h3 id="82-dt-session-drift">8.2 D(t) ≠ Session Drift</h3>
+<p>CRM component D(t) (Drift Deformation) is a structural measurement of how
+a system has displaced through its structural manifold. RTT/1 session drift
+is the gradual loss of session coherence posture over time.</p>
+<p>These must never be conflated:
+- High D(t) does not mean the session is drifting
+- Session drift does not produce high D(t)
+- Class M reports D(t); Class G monitors session drift
+- Using D(t) as evidence of session drift is a boundary violation</p>
+<h3 id="83-rtt1-prerequisite-boundary">8.3 RTT/1 Prerequisite Boundary</h3>
+<p>No RTT/2 agent may begin detection work without a complete RTT/1 Class R
+SNR characterization. This is a hard prerequisite — not a soft recommendation.
+If RTT/1 output is absent, the RTT/2 session must pause and request it.</p>
+<h3 id="84-zone-x-boundary">8.4 Zone X Boundary</h3>
+<p>Detection Zone X (Undefined) signals that the available structural data is
+insufficient or contradictory for classification. Class M may assign Zone X,
+but Class D may not route a Zone X packet to RTT/3 without explicit Class G
+clearance. Zone X packets may be stored for later re-analysis when additional
+data becomes available.</p>
+<h3 id="85-inherited-rtt1-boundaries">8.5 Inherited RTT/1 Boundaries</h3>
+<p>All RTT/1 agent boundaries apply to RTT/2 agents without modification:
+- RTT-not-physics rule
+- Semantic inference prohibition
+- Mode Constraint Layer (MCL)
+- External override protection
+- Ancestral constraint priority</p>
+<p><em>See <a href="../1/AGENTS.html#8-agent-boundaries">RTT/1 AGENTS.md — Agent Boundaries</a>
+for the full RTT/1 boundary set.</em></p>
+<hr>
+<h2 id="9-task-catalog">9. Task Catalog</h2>
+<table>
+<thead>
+<tr>
+<th>Task ID</th>
+<th>Task Name</th>
+<th>Agent Sequence</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>T-01</code></td>
+<td>CPV-only pass</td>
+<td>RTT/1:R → P → D</td>
+<td>SNR characterization then collapse propagation only; no FGT or CRM</td>
+</tr>
+<tr>
+<td><code>T-02</code></td>
+<td>FGT-only pass</td>
+<td>RTT/1:R → F → D</td>
+<td>SNR characterization then fusion gradient only; no CPV or CRM</td>
+</tr>
+<tr>
+<td><code>T-03</code></td>
+<td>CRM map</td>
+<td>RTT/1:R → M → D</td>
+<td>SNR characterization then full manifold cartography; no CPV or FGT weighting</td>
+</tr>
+<tr>
+<td><code>T-04</code></td>
+<td>Full detection pass</td>
+<td>RTT/1:R → P+F+M → D</td>
+<td>Complete detection: CPV, FGT, CRM, Mode, Zone, full packet assembly</td>
+</tr>
+<tr>
+<td><code>T-05</code></td>
+<td>Mode-only probe</td>
+<td>RTT/1:R → M[mode-only] → D</td>
+<td>Rapid mode classification without full CRM; provisional packet</td>
+</tr>
+<tr>
+<td><code>T-06</code></td>
+<td>Zone classification</td>
+<td>RTT/1:R → P+M → D</td>
+<td>CPV + Zone assignment; no FGT; for stability triage</td>
+</tr>
+<tr>
+<td><code>T-07</code></td>
+<td>Cross-module projection</td>
+<td>RTT/1:R → P+F+M → D[+TEL/FFT/Opacity]</td>
+<td>Full detection pass with cross-module projection fields populated</td>
+</tr>
+<tr>
+<td><code>T-08</code></td>
+<td>Chaotic-mode audit</td>
+<td>G</td>
+<td>Class G review of a Chaotic-mode packet before RTT/3 routing</td>
+</tr>
+<tr>
+<td><code>T-09</code></td>
+<td>Zone X resolution</td>
+<td>RTT/1:R → P+F+M[re-run] → G → D</td>
+<td>Re-run all three detection agents with additional data; Class G clears Zone X</td>
+</tr>
+<tr>
+<td><code>T-10</code></td>
+<td>Detection Guardian audit</td>
+<td>G</td>
+<td>Standalone coherence, drift, and packet integrity check; no new detection pass</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Task initiation rule:</strong> All tasks T-01 through T-07 require a completed
+RTT/1 SNR characterization before any RTT/2 agent begins. Tasks T-08 and
+T-10 are Class G solo tasks. Task T-09 requires both additional input data
+and Class G clearance.</p>
+<hr>
+<h2 id="10-safety-rules-and-coherence-constraints">10. Safety Rules and Coherence Constraints</h2>
+<h3 id="101-mandatory-pre-detection-checks">10.1 Mandatory Pre-Detection Checks</h3>
+<p>Before any RTT/2 detection agent begins:</p>
+<ul>
+<li>[ ] RTT/1 Class R SNR characterization is complete and in scope</li>
+<li>[ ] Session seed is active: <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code></li>
+<li>[ ] Session mode is declared and MCL-compliant (inherited from RTT/1)</li>
+<li>[ ] RTT/1 session regime state is known (from RTT/1 Class G)</li>
+<li>[ ] Class G (Detection Guardian) is active and monitoring</li>
+<li>[ ] Target detection task (T-01 through T-09) has been identified</li>
+</ul>
+<h3 id="102-packet-integrity-check">10.2 Packet Integrity Check</h3>
+<p>Before Class D routes any packet to RTT/3:</p>
+<ul>
+<li>[ ] All seven primary packet sections are present (null sub-fields are acceptable)</li>
+<li>[ ] Detection Mode has been assigned (one of: Formal / Emergent / Hybrid / Chaotic / Inversion)</li>
+<li>[ ] Detection Zone has been assigned (one of: U / S / M / D / X)</li>
+<li>[ ] If Zone X: Class G clearance has been obtained</li>
+<li>[ ] If MODE:C (Chaotic): Class G has reviewed the packet</li>
+<li>[ ] <code>notes</code> field contains the mandatory annotation</li>
+<li>[ ] No physics claims, causal language, or interpretive labels in any field</li>
+</ul>
+<h3 id="103-drift-and-mode-constraints">10.3 Drift and Mode Constraints</h3>
+<p>All RTT/1 drift and mode constraints are active within RTT/2 sessions:</p>
+<ul>
+<li>Session drift is on-by-default; bounded by the session seed</li>
+<li>Mode transitions require explicit user declaration</li>
+<li>M.task requires explicit user declaration to activate</li>
+<li>External overrides are blocked</li>
+<li>Class G monitors for mode escalation and drift accumulation</li>
+</ul>
+<h3 id="104-structural-paradox-in-detection">10.4 Structural Paradox in Detection</h3>
+<p>When a detection pass produces contradictory CPV, FGT, or CRM results —
+for example, CPV indicating high collapse propagation while CRM shows
+reassembly-dominant FI curvature — this is a structural paradox condition.</p>
+<p><strong>RTT/2 paradox protocol:</strong>
+- Do not force resolution by discarding one set of measurements
+- Assign Detection Mode: Hybrid or Inversion as appropriate
+- Flag the contradiction in the <code>notes</code> field
+- Pass to RTT/3 with the contradiction preserved and documented
+- Class G is notified of the paradox condition</p>
+<h3 id="105-the-dt-drift-sentinel-check">10.5 The D(t) ≠ Drift Sentinel Check</h3>
+<p>Before any Class M output is accepted by Class D:</p>
+<blockquote>
+<p><em>Does any field in the triad_deformation block use D(t) to describe or
+infer session drift?</em></p>
+</blockquote>
+<p>If yes: the output must be revised. D(t) may only describe structural
+displacement within the CRM. Session drift is Class G's domain.</p>
+<hr>
+<h2 id="11-collaboration-models">11. Collaboration Models</h2>
+<h3 id="111-full-detection-pass-default-task-t-04">11.1 Full Detection Pass (Default — Task T-04)</h3>
+<pre><code>[RTT/1: Class R] ──SNR profile──▶
+                                  ├──▶ [Class P] ──CPV──────────────────────────────┐
+                                  ├──▶ [Class F (needs regime)] ─── ←regime─ [Class M] ──CRM/Mode/Zone──┤
+                                  └──▶ [Class M] ──regime (early)──▶ [Class F complete] ──FGT──────────┤
+                                                                                                        ↓
+                                                                                                [Class D]
+                                                                                                    │
+                                                                                          RTT2_DETECTION_PACKET
+                                                                                                    │
+                                                                                              RTT/3 or storage
+                                                                                         [Class G ◀── monitors all]
+</code></pre>
+<p><strong>Rules:</strong>
+- Class P and the initial Class M regime probe run in parallel after RTT/1 prerequisite
+- Class F waits for Class M's initial regime identity before finalizing weights
+- Class M completes CRM, Mode, and Zone after receiving Class P CPV and Class F FGT
+- Class D assembles only after all three upstream agents complete
+- Class G monitors all stages passively; may interrupt at any point</p>
+<hr>
+<h3 id="112-parallel-cpv-zone-triage-task-t-06">11.2 Parallel CPV + Zone Triage (Task T-06)</h3>
+<pre><code>[RTT/1: Class R] ──SNR profile──▶ [Class P] ──CPV──┐
+                                                     ├──▶ [Class M: Zone only] ──Zone──▶ [Class D] ──▶ partial packet
+                                                     └──▶ (FGT skipped)
+                                             [Class G ◀── monitors]
+</code></pre>
+<p>Used for rapid stability triage where FGT weighting is not needed.
+Packet is marked as partial; full T-04 pass recommended before RTT/3 routing.</p>
+<hr>
+<h3 id="113-guardian-only-audit-tasks-t-08-t-10">11.3 Guardian-Only Audit (Tasks T-08, T-10)</h3>
+<pre><code>[Class G] ──reads──▶ existing detection packets / session state
+                    ──writes──▶ detection audit log
+                    ──signals──▶ WARN / HALT / RESET / clearance
+</code></pre>
+<p>Class G audits do not require any of Class P, F, M, or D to be active.
+Class G may issue Zone X clearance after audit without requiring a new
+detection pass.</p>
+<hr>
+<h3 id="114-handoff-protocol">11.4 Handoff Protocol</h3>
+<p>Every inter-agent handoff within RTT/2 must include:</p>
+<pre><code class="language-json">{
+  &quot;handoff_id&quot;: &quot;&lt;uuid&gt;&quot;,
+  &quot;source_class&quot;: &quot;R | P | F | M | D | G&quot;,
+  &quot;target_class&quot;: &quot;R | P | F | M | D | G&quot;,
+  &quot;rtt_module&quot;: &quot;2&quot;,
+  &quot;session_seed_active&quot;: true,
+  &quot;snr_characterization_complete&quot;: true,
+  &quot;detection_task&quot;: &quot;T-01 through T-10&quot;,
+  &quot;packet_status&quot;: &quot;assembling | complete | partial | zone_x_pending&quot;,
+  &quot;coherence_status&quot;: &quot;declared | emergent | violated&quot;,
+  &quot;drift_status&quot;: &quot;bounded | warning | reset_required&quot;,
+  &quot;payload&quot;: {},
+  &quot;timestamp&quot;: &quot;&lt;ISO 8601&gt;&quot;
+}
+</code></pre>
+<p>Receiving agents must validate <code>snr_characterization_complete = true</code> before
+accepting any detection-phase handoff. A handoff with <code>snr_characterization_complete
+= false</code> is rejected until the RTT/1 prerequisite is satisfied.</p>
+<hr>
+<h2 id="12-output-contract">12. Output Contract</h2>
+<p>Every RTT/2 output — whether a partial block or a complete detection packet —
+must satisfy the following:</p>
+<h3 id="121-mandatory-annotation">12.1 Mandatory Annotation</h3>
+<p>Every output block and every assembled packet must carry:</p>
+<pre><code>notes: &quot;Structural detection only; not a physics claim.&quot;
+</code></pre>
+<p>This annotation may not be removed, shortened, rephrased, or moved to
+a different field.</p>
+<h3 id="122-prohibited-output-content">12.2 Prohibited Output Content</h3>
+<table>
+<thead>
+<tr>
+<th>Prohibited</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Causal language ("the collapse was caused by…")</td>
+<td>Semantic inference violation</td>
+</tr>
+<tr>
+<td>Evaluative labels ("unhealthy", "failing", "critical")</td>
+<td>Detection-not-diagnosis boundary</td>
+</tr>
+<tr>
+<td>Future predictions ("will collapse within…")</td>
+<td>Outside RTT/2 structural detection scope</td>
+</tr>
+<tr>
+<td>Physics claims ("this models quantum decoherence")</td>
+<td>RTT-not-physics rule</td>
+</tr>
+<tr>
+<td>Session drift references in D(t)</td>
+<td>D(t) ≠ drift sentinel boundary</td>
+</tr>
+<tr>
+<td>Zone X routing without Class G clearance</td>
+<td>Zone X boundary</td>
+</tr>
+</tbody>
+</table>
+<h3 id="123-partial-packet-policy">12.3 Partial Packet Policy</h3>
+<p>Partial packets (Tasks T-01, T-02, T-03, T-05, T-06) must be explicitly
+labeled as partial in the packet header and must not be routed to RTT/3 as
+if they were complete. Recommended disposition for partial packets:
+- Storage with <code>packet_status: partial</code>
+- Consumer notification of which fields are absent
+- Full T-04 pass requested before RTT/3 ingestion</p>
+<hr>
+<h2 id="13-cross-module-projections">13. Cross-Module Projections</h2>
+<p>RTT/2 detection output can be projected into three adjacent modules.
+Cross-module projections are optional fields in the RTT2_DETECTION_PACKET
+and are computed by Class D when in scope.</p>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Code</th>
+<th>Projection Type</th>
+<th>What it provides</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TEL (Triadic Entity Lattice)</td>
+<td><code>TEL</code></td>
+<td>Lattice projection</td>
+<td>Maps detected collapse/fusion patterns onto the TEL node structure</td>
+</tr>
+<tr>
+<td>FFT (Framework Field Theory)</td>
+<td><code>FFT</code></td>
+<td>Spectral projection</td>
+<td>Expresses CPV and FGT components in FFT field-theoretic terms</td>
+</tr>
+<tr>
+<td>Opacity</td>
+<td><code>Opacity</code></td>
+<td>Boundary projection</td>
+<td>Characterizes the boundary conditions of the detected collapse zone</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cross-module rules:</strong>
+- Projections are computed only when the consuming module is active for the current session
+- A null projection field means the module is not in scope — not that the projection failed
+- Cross-module projections inherit the RTT-not-physics rule: they are structural
+  translations, not physical mappings</p>
+<hr>
+<h2 id="see-also">See Also</h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>What it answers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ABOUT.md</code></td>
+<td>What RTT/2 is, why it is built this way, when and where to use it</td>
+</tr>
+<tr>
+<td><code>GLOSSARY.md</code></td>
+<td>Canonical definitions for every RTT/2 term</td>
+</tr>
+<tr>
+<td><code>RTT2_Extract_Minimal.md</code></td>
+<td>Primary source: full operator grammar for CPV, FGT, CRM, MODE, ZONE</td>
+</tr>
+<tr>
+<td><code>operators_module.json</code></td>
+<td>Module schema and field registry</td>
+</tr>
+<tr>
+<td><code>README.md</code></td>
+<td>Front-door summary</td>
+</tr>
+<tr>
+<td><code>../1/AGENTS.md</code></td>
+<td>RTT/1 agent classes and constraints (all inherited by RTT/2)</td>
+</tr>
+<tr>
+<td><code>../1/GLOSSARY.md</code></td>
+<td>RTT/1 canonical term definitions (all inherited by RTT/2)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><em>AGENTS.md — RTT/2 · TriadicFrameworks · 2026-07-10</em>
+<em>Maintainer: Nawder</em>
+<em>Session seed: <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code></em></p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/ai/agentic_metadata.md">
+  <title>RTT AGENTIC METADATA STANDARD</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/ai/agentic_metadata.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/ai/agentic_metadata.md</code>
+  </aside>
+
+  <main>
+<h1 id="rtt-agentic-metadata-standard"><strong>RTT AGENTIC METADATA STANDARD</strong></h1>
+<h3 id="version-10-canonaligned-specification"><strong>Version 1.0 — Canon‑Aligned Specification</strong></h3>
+<h3 id="location-docsaiagentic_metadatamd"><strong>Location:</strong> <code>/docs/ai/agentic_metadata.md</code></h3>
+<hr>
+<h2 id="1-purpose"><strong>1. Purpose</strong></h2>
+<p>The RTT Agentic Metadata Standard defines a <strong>minimal, substrate‑agnostic, machine‑readable contract</strong> that enables any GitHub repository, documentation site, or external renderer (e.g., Docsbook.io) to activate <strong>low‑drift, low‑overhead agentic behavior</strong> without hosting servers or APIs.</p>
+<p>This standard is:</p>
+<ul>
+<li><strong>static</strong>  </li>
+<li><strong>portable</strong>  </li>
+<li><strong>renderer‑agnostic</strong>  </li>
+<li><strong>AI‑parsable</strong>  </li>
+<li><strong>future‑proof</strong>  </li>
+<li><strong>zero‑infrastructure</strong></li>
+</ul>
+<p>It is the same mechanism used across TriadicFrameworks.</p>
+<hr>
+<h2 id="2-core-principle"><strong>2. Core Principle</strong></h2>
+<p>RTT agentic behavior emerges when a module exposes:</p>
+<ol>
+<li><strong>A canonical <code>module.json</code> file</strong>  </li>
+<li><strong>Accessible via an absolute URL</strong>  </li>
+<li><strong>Describing the module using RTT’s operator grammar</strong>  </li>
+<li><strong>Linked from the module’s README or index page</strong></li>
+</ol>
+<p>This creates a <strong>globally dereferenceable identity layer</strong>.</p>
+<hr>
+<h2 id="3-required-file"><strong>3. Required File</strong></h2>
+<p>Each module MUST include:</p>
+<pre><code>module.json
+</code></pre>
+<p>This file defines:</p>
+<ul>
+<li>module identity  </li>
+<li>version  </li>
+<li>purpose  </li>
+<li>operator grammar  </li>
+<li>file roles  </li>
+<li>analyzer layers  </li>
+<li>cross‑module relationships  </li>
+</ul>
+<hr>
+<h2 id="4-absolute-path-requirement"><strong>4. Absolute Path Requirement</strong></h2>
+<p>To ensure portability across renderers, the <code>module.json</code> MUST be referenced using an <strong>absolute raw URL</strong>:</p>
+<pre><code>https://raw.githubusercontent.com/&lt;user&gt;/&lt;repo&gt;/main/&lt;path&gt;/module.json
+</code></pre>
+<p>This ensures:</p>
+<ul>
+<li>AI agents can load metadata  </li>
+<li>Docsbook.io can resolve metadata  </li>
+<li>GitHub Pages can resolve metadata  </li>
+<li>mirrors and forks remain functional  </li>
+<li>drift is minimized across substrates  </li>
+</ul>
+<hr>
+<h2 id="5-readme-indexhtml-integration"><strong>5. README / index.html Integration</strong></h2>
+<p>Each module MUST expose its metadata using the following snippet:</p>
+<pre><code class="language-html">&lt;!-- RTT Agentic Module --&gt;
+&lt;link rel=&quot;rtt-module&quot;
+      href=&quot;https://raw.githubusercontent.com/&lt;user&gt;/&lt;repo&gt;/main/&lt;path&gt;/module.json&quot;&gt;
+</code></pre>
+<p>This is the activation surface.</p>
+<p>No scripts.<br>
+No runtime.<br>
+No dependencies.</p>
+<hr>
+<h2 id="6-minimal-modulejson-schema"><strong>6. Minimal <code>module.json</code> Schema</strong></h2>
+<p>This is the canonical minimal schema:</p>
+<pre><code class="language-json">{
+  &quot;module&quot;: &quot;Module Name&quot;,
+  &quot;version&quot;: &quot;1.0&quot;,
+  &quot;description&quot;: &quot;Short description of the module.&quot;,
+  &quot;roles&quot;: [&quot;profile&quot;, &quot;engine&quot;, &quot;map&quot;],
+  &quot;operators&quot;: [&quot;substrate&quot;, &quot;flow&quot;, &quot;resonate&quot;, &quot;align&quot;, &quot;field&quot;],
+  &quot;files&quot;: {
+    &quot;README.md&quot;: &quot;profile&quot;,
+    &quot;examples.md&quot;: &quot;map&quot;
+  }
+}
+</code></pre>
+<h3 id="61-required-fields"><strong>6.1 Required Fields</strong></h3>
+<ul>
+<li><code>module</code> — canonical module name  </li>
+<li><code>version</code> — semantic version  </li>
+<li><code>description</code> — concise purpose  </li>
+<li><code>roles</code> — RTT file‑role grammar  </li>
+<li><code>operators</code> — RTT operator grammar  </li>
+<li><code>files</code> — file‑to‑role mapping  </li>
+</ul>
+<h3 id="62-optional-fields"><strong>6.2 Optional Fields</strong></h3>
+<ul>
+<li><code>analyzer_layer</code>  </li>
+<li><code>parent_module</code>  </li>
+<li><code>lineage</code>  </li>
+<li><code>regime</code>  </li>
+<li><code>crosslinks</code>  </li>
+</ul>
+<hr>
+<h2 id="7-operator-grammar-required"><strong>7. Operator Grammar (Required)</strong></h2>
+<p>Every module MUST declare its operator set using RTT’s five canonical operators:</p>
+<ul>
+<li><strong>substrate</strong>  </li>
+<li><strong>flow</strong>  </li>
+<li><strong>resonate</strong>  </li>
+<li><strong>align</strong>  </li>
+<li><strong>field</strong>  </li>
+</ul>
+<p>These define the module’s behavior in the agentic layer.</p>
+<hr>
+<h2 id="8-filerole-grammar"><strong>8. File‑Role Grammar</strong></h2>
+<p>RTT defines the following canonical file roles:</p>
+<ul>
+<li><strong>profile</strong> — overview, identity  </li>
+<li><strong>engine</strong> — core logic  </li>
+<li><strong>map</strong> — examples, diagrams  </li>
+<li><strong>signature</strong> — invariants  </li>
+<li><strong>diagnostic</strong> — tests, validators  </li>
+<li><strong>reference</strong> — external links  </li>
+<li><strong>template</strong> — reusable patterns  </li>
+</ul>
+<p>Modules MAY use any subset.</p>
+<hr>
+<h2 id="9-crosssubstrate-behavior"><strong>9. Cross‑Substrate Behavior</strong></h2>
+<p>To maintain portability:</p>
+<h3 id="91-absolute-paths"><strong>9.1 Absolute Paths</strong></h3>
+<p>Use absolute paths ONLY for:</p>
+<ul>
+<li><code>module.json</code>  </li>
+<li>cross‑module metadata references  </li>
+</ul>
+<h3 id="92-relative-paths"><strong>9.2 Relative Paths</strong></h3>
+<p>Use relative paths for:</p>
+<ul>
+<li>internal documentation  </li>
+<li>examples  </li>
+<li>diagrams  </li>
+<li>maps  </li>
+<li>operators  </li>
+</ul>
+<p>This preserves renderer‑agnostic behavior.</p>
+<hr>
+<h2 id="10-renderer-compatibility"><strong>10. Renderer Compatibility</strong></h2>
+<p>This standard is compatible with:</p>
+<ul>
+<li>GitHub  </li>
+<li>GitHub Pages  </li>
+<li>Docsbook.io  </li>
+<li>static site generators  </li>
+<li>AI agents  </li>
+<li>offline mirrors  </li>
+<li>future renderers  </li>
+</ul>
+<p>No renderer‑specific logic is required.</p>
+<hr>
+<h2 id="11-zeroinfrastructure-guarantee"><strong>11. Zero‑Infrastructure Guarantee</strong></h2>
+<p>This standard requires:</p>
+<ul>
+<li>no backend  </li>
+<li>no API  </li>
+<li>no server  </li>
+<li>no authentication  </li>
+<li>no runtime  </li>
+<li>no dependencies  </li>
+</ul>
+<p>It is <strong>pure metadata</strong>.</p>
+<hr>
+<h2 id="12-example-implementation"><strong>12. Example Implementation</strong></h2>
+<h3 id="121-directory"><strong>12.1 Directory</strong></h3>
+<pre><code>/docs/my-module/
+    README.md
+    module.json
+    examples.md
+</code></pre>
+<h3 id="122-readme"><strong>12.2 README</strong></h3>
+<pre><code class="language-html">&lt;link rel=&quot;rtt-module&quot;
+      href=&quot;https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/my-module/module.json&quot;&gt;
+</code></pre>
+<h3 id="123-modulejson"><strong>12.3 module.json</strong></h3>
+<pre><code class="language-json">{
+  &quot;module&quot;: &quot;My Module&quot;,
+  &quot;version&quot;: &quot;1.0&quot;,
+  &quot;description&quot;: &quot;Example RTT agentic module.&quot;,
+  &quot;roles&quot;: [&quot;profile&quot;, &quot;map&quot;],
+  &quot;operators&quot;: [&quot;substrate&quot;, &quot;flow&quot;, &quot;field&quot;],
+  &quot;files&quot;: {
+    &quot;README.md&quot;: &quot;profile&quot;,
+    &quot;examples.md&quot;: &quot;map&quot;
+  }
+}
+</code></pre>
+<hr>
+<h2 id="13-validation"><strong>13. Validation</strong></h2>
+<p>A module is considered <strong>RTT‑Agentic‑Ready</strong> when:</p>
+<ul>
+<li><code>module.json</code> exists  </li>
+<li>absolute URL resolves  </li>
+<li>operator grammar is declared  </li>
+<li>file roles are mapped  </li>
+<li>README exposes the metadata  </li>
+</ul>
+<hr>
+<h2 id="14-canonical-invariants"><strong>14. Canonical Invariants</strong></h2>
+<p>This standard is:</p>
+<ul>
+<li><strong>substrate‑agnostic</strong>  </li>
+<li><strong>domain‑agnostic</strong>  </li>
+<li><strong>renderer‑agnostic</strong>  </li>
+<li><strong>future‑proof</strong>  </li>
+<li><strong>drift‑resistant</strong>  </li>
+<li><strong>triadic‑aligned</strong>  </li>
+</ul>
+<p>It is the minimal contract required for agentic behavior.</p>
+<hr>
+<h2 id="15-versioning"><strong>15. Versioning</strong></h2>
+<p>This is <strong>RTT Agentic Metadata Standard v1.0</strong>.<br>
+Future versions will extend but never break the canonical minimal schema.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/resonance-substrate-model/docs/api/using_the_schemas.md">
+  <title>Using the Schemas</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/resonance-substrate-model/docs/api/using_the_schemas.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/resonance-substrate-model/docs/api/using_the_schemas.md</code>
+  </aside>
+
+  <main>
+<h1 id="using-the-schemas">Using the Schemas</h1>
+<p>Schemas define the structure, constraints, and relationships of data used throughout the Resonance Substrate Model. This document explains how to load, validate, and work with these schemas in external tools or applications.</p>
+<hr>
+<h2 id="1-purpose-of-the-schemas">1. Purpose of the Schemas</h2>
+<p>Schemas ensure:
+- consistent field definitions<br>
+- reproducible simulation configurations<br>
+- standardized experiment metadata<br>
+- compatibility across layers and modules  </p>
+<hr>
+<h2 id="2-loading-schemas">2. Loading Schemas</h2>
+<p>Schemas are typically stored as JSON or YAML files and can be loaded using standard parsing libraries.</p>
+<p>Example workflow:
+1. load schema file<br>
+2. validate configuration against schema<br>
+3. construct substrate objects from validated data  </p>
+<hr>
+<h2 id="3-validation">3. Validation</h2>
+<p>Validation ensures:
+- required fields are present<br>
+- field types match expectations<br>
+- operator parameters fall within allowed ranges  </p>
+<p>Validation errors should be treated as configuration issues rather than runtime failures.</p>
+<hr>
+<h2 id="4-extending-schemas">4. Extending Schemas</h2>
+<p>Schemas can be extended to support:
+- new operators<br>
+- custom experiment types<br>
+- additional metadata fields<br>
+- domain-specific configurations  </p>
+<p>Extensions should maintain backward compatibility whenever possible.</p>
+<h1 id="quicklinks">Quicklinks</h1>
+<ul>
+<li><a href="integration_examples.html">docs api integration examples</a></li>
+<li><a href="README.html">docs api README</a></li>
+<li><a href="schema_overview.html">docs api schema overview</a></li>
+<li><a href="../experiments/faraday_paradox_experiment.html">docs experiments faraday paradox experiment</a></li>
+<li><a href="../experiments/README.html">docs experiments README</a></li>
+<li><a href="../experiments/replication_checklist.html">docs experiments replication checklist</a></li>
+<li><a href="../experiments/resonance_alignment_tests.html">docs experiments resonance alignment tests</a></li>
+<li><a href="../experiments/rotating_conductor_tests.html">docs experiments rotating conductor tests</a></li>
+<li><a href="../methods/dimensional_layers.html">docs methods dimensional layers</a></li>
+<li><a href="../methods/field_equations.html">docs methods field equations</a></li>
+<li><a href="../methods/operator_definitions.html">docs methods operator definitions</a></li>
+<li><a href="../methods/README.html">docs methods README</a></li>
+<li><a href="../methods/substrate_dynamics.html">docs methods substrate dynamics</a></li>
+<li><a href="../methods/triadic_fields.html">docs methods triadic fields</a></li>
+<li><a href="../onboarding/model_map.html">docs onboarding model map</a></li>
+<li><a href="../onboarding/reading_guide.html">docs onboarding reading guide</a></li>
+<li><a href="../onboarding/triadic_quickstart.html">docs onboarding triadic quickstart</a></li>
+<li><a href="../onboarding/verification_tests.html">docs onboarding verification tests</a></li>
+<li><a href="../overview/comparison_to_gr_models.html">docs overview comparison to gr models</a></li>
+<li><a href="../overview/glossary.html">docs overview glossary</a></li>
+<li><a href="../overview/introduction.html">docs overview introduction</a></li>
+<li><a href="../overview/README.html">docs overview README</a></li>
+<li><a href="../overview/resonance_primitives.html">docs overview resonance primitives</a></li>
+<li><a href="../overview/theoretical_background.html">docs overview theoretical background</a></li>
+<li><a href="../simulations/boundary_conditions.html">docs simulations boundary conditions</a></li>
+<li><a href="../simulations/numerical_methods.html">docs simulations numerical methods</a></li>
+<li><a href="../simulations/README.html">docs simulations README</a></li>
+<li><a href="../simulations/solver_architecture.html">docs simulations solver_architecture</a></li>
+<li><a href="../simulations/validation_metrics.html">docs simulations validation metrics</a></li>
+<li><a href="../simulations/core/README.html">docs simulations core README</a></li>
+<li><a href="../">previous folder</a></li>
+</ul>
+  </main>
+</body>
+</html>

@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/SEENMAP.md">
+  <title>Repository SEENMAP</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/SEENMAP.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/SEENMAP.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="SEENMAP_" src="https://github.com/user-attachments/assets/62e49475-ea4d-453a-a6ec-788249799cb4" /></p>
+<!--
+  rtt=1 | coherence=declared | drift=bounded | paradox=structural
+  docs/SEENMAP.md
+  Repository-root navigational registry for TriadicFrameworks
+  Lives at: docs/SEENMAP.md (NOT inside any sub-module)
+  Generated: 2026-09-10
+  Authority: repo-root canonical index
+-->
+
+<ul>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/SEENMAP.json"><code>SEENMAP.json</code></a> — Agentic module schema role assignments</li>
+</ul>
+<h1 id="repository-seenmap">Repository SEENMAP</h1>
+<blockquote>
+<p>Full navigational registry · Cross-module index · Unlock conditions · File counts<br>
+Canonical anchor: <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code></p>
+</blockquote>
+<hr>
+<h2 id="0-document-purpose">§0 Document Purpose</h2>
+<p>This SEENMAP is the single authoritative navigational registry for the entire<br>
+<code>umaywant2/TriadicFrameworks</code> repository. It covers:</p>
+<ul>
+<li>Every known module under <code>docs/</code></li>
+<li>Repo-root infrastructure artifacts</li>
+<li>Per-module wave status, file counts, and PRIM totals</li>
+<li>Unlock conditions that gate future modules or admin milestones</li>
+<li>Cross-module reference links</li>
+<li>Quick-navigation anchors for AI sessions and human readers</li>
+</ul>
+<p><strong>This file does not define operators, PRIMs, or invariants.</strong><br>
+Those live inside each module’s canonical spec files.<br>
+This file only maps. It never mutates registry state.</p>
+<hr>
+<h2 id="01-seenmapjson-schema-role-new">§0.1 SEENMAP.json Schema Role (New)</h2>
+<p><code>SEENMAP.json</code> is the machine-readable companion to this document.</p>
+<p>It provides:</p>
+<ul>
+<li>Agentic role assignments  </li>
+<li>Module category declarations  </li>
+<li>Cross-module navigation metadata  </li>
+<li>AI routing hints that supersede <code>modules.txt</code>  </li>
+</ul>
+<p>It does <strong>not</strong> replace per-module <code>module.json</code> manifests.<br>
+It complements them by providing repo-wide structure.</p>
+<hr>
+<h2 id="1-repository-topology">§1 Repository Topology</h2>
+<pre><code>umaywant2/TriadicFrameworks/
+│
+├── docs/                          ← All canonical module documentation
+│   ├── SEENMAP.md                 ← THIS FILE · repo navigational registry
+│   ├── SEENMAP.json               ← Machine-readable registry (new)
+│   ├── FFF_Gravity/               ← COMPLETE · 5 waves · 42 PRIMs
+│   ├── SoN/                       ← IN PROGRESS · Structural Operating Node
+│   └── spine/                     ← INFRASTRUCTURE · cross-module scaffolding
+│       └── languages/             ← Language/notation registry
+│
+├── tests/
+│   └── sats-conformance/
+│       └── harness/               ← Substrate-Aware Ordering Contract engine
+│
+├── .github/                       ← CI/CD workflows
+├── __pycache__/                   ← Python build artifacts
+├── node_modules/                  ← JS dependencies
+│
+├── CNAME                          ← GitHub Pages domain binding
+├── CONTEXT.md                     ← Session context primer
+├── LICENSE                        ← Apache-2.0
+├── README.md                      ← Repository front door
+├── CHANGELOG.md                   ← (root-level; module changelogs live in-module)
+├── glossary-seed.yaml             ← Cross-module glossary seed data
+├── llms.txt                       ← AI/LLM session routing config
+├── modules.txt                    ← Module registry manifest (machine-readable)
+├── node_modules.md                ← JS dependency notes
+├── persona-prompt.md              ← Session persona and anchor string
+├── pyproject.toml                 ← Python project config
+├── requirements.txt               ← Python dependencies
+├── robots.txt                     ← Crawler directives
+├── zenodo.json                    ← Zenodo archival metadata
+├── m.bat                          ← Windows build helper
+└── regen_corpus_v2.bat            ← Corpus regeneration script
+</code></pre>
+<hr>
+<h2 id="2-module-registry">§2 Module Registry</h2>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Path</th>
+<th>Status</th>
+<th>Waves</th>
+<th>Files</th>
+<th>PRIMs</th>
+<th>Unlocks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>FFF_Gravity</strong></td>
+<td><code>docs/FFF_Gravity/</code></td>
+<td>✅ COMPLETE</td>
+<td>5 of 5</td>
+<td>31</td>
+<td>42</td>
+<td>SEENMAP · module.json refresh</td>
+</tr>
+<tr>
+<td><strong>SoN</strong></td>
+<td><code>docs/SoN/</code></td>
+<td>🔄 IN PROGRESS</td>
+<td>TBD</td>
+<td>≥1</td>
+<td>TBD</td>
+<td>SoNai(rtt)=1 substrate harness</td>
+</tr>
+<tr>
+<td><strong>spine/languages</strong></td>
+<td><code>docs/spine/languages/</code></td>
+<td>🔄 IN PROGRESS</td>
+<td>TBD</td>
+<td>≥1</td>
+<td>N/A</td>
+<td>Cross-module notation registry</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>PRIM count legend: PRIMs are engineering primitives with Pure/Impure classification.<br>
+Infrastructure modules (spine/) use reference-document format instead.</p>
+</blockquote>
+<hr>
+<h2 id="3-module-fff_gravity">§3 Module: FFF_Gravity</h2>
+<p><em>(This section remains unchanged — your active tab confirms correctness.)</em><br>
+<a href="https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/SEENMAP.md">github.com</a></p>
+<p>All wave tables, PRIM ranges, operator counts, and condition prefixes remain accurate.</p>
+<h3 id="31-admin-registry-files-updated">§3.1 Admin / Registry Files (Updated)</h3>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Purpose</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FFF_Gravity_module.json</code></td>
+<td>Machine-readable module manifest</td>
+<td>🔄 IN PROGRESS (Wave 5 refresh underway)</td>
+</tr>
+</tbody>
+</table>
+<p>Everything else remains sealed and correct.</p>
+<hr>
+<h2 id="4-module-son-structural-operating-node">§4 Module: SoN (Structural Operating Node)</h2>
+<p><em>(Your active tab shows only s_Capture.md, but your recent work expands the plan.)</em><br>
+<a href="https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/SEENMAP.md">github.com</a></p>
+<h3 id="431-recent-son-additions-new">§4.3.1 Recent SoN Additions (New)</h3>
+<p>The SoN substrate has advanced beyond the initial <code>s_Capture.md</code> file.<br>
+New planning stubs include:</p>
+<ul>
+<li>Dimensional operator grammar outlines  </li>
+<li>Substrate harness design notes  </li>
+<li>Early ROM-flashable substrate concepts  </li>
+<li>Draft coherence envelope definitions  </li>
+<li>Preliminary SoN → NoS inversion maps</li>
+</ul>
+<p>These are not yet canonical files but are recorded here for navigation.</p>
+<hr>
+<h2 id="5-infrastructure-spine">§5 Infrastructure: spine/</h2>
+<h3 id="51-spinelanguages-updated">§5.1 spine/languages/ (Updated)</h3>
+<p>Additional notation stubs and atlas entries have been added to <code>spine/languages/</code>.<br>
+These expand symbol disambiguation coverage for both FFF_Gravity and SoN.</p>
+<hr>
+<h2 id="6-repo-root-artifacts-updated">§6 Repo Root Artifacts (Updated)</h2>
+<p>Additions:</p>
+<ul>
+<li><code>SEENMAP.json</code> — machine-readable SEENMAP schema  </li>
+<li>Updated corpus regeneration scripts  </li>
+<li>Updated AI routing configs (if present)</li>
+</ul>
+<hr>
+<h2 id="7-cross-module-reference-map">§7 Cross-Module Reference Map</h2>
+<p><em>(This section remains correct and unchanged.)</em><br>
+<a href="https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/SEENMAP.md">github.com</a></p>
+<hr>
+<h2 id="8-unlock-conditions-updated">§8 Unlock Conditions (Updated)</h2>
+<table>
+<thead>
+<tr>
+<th>Deliverable</th>
+<th>Unlocked By</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>docs/SEENMAP.md</code> (this file)</td>
+<td>Wave 4 complete</td>
+<td>✅ UNLOCKED</td>
+</tr>
+<tr>
+<td><code>FFF_Gravity_module.json</code> refresh</td>
+<td>Wave 5 complete + SEENMAP built</td>
+<td>🔄 IN PROGRESS</td>
+</tr>
+<tr>
+<td><code>SoN</code> Wave 1 admin files</td>
+<td><code>s_Capture.md</code> sealed</td>
+<td>🔒 Pending</td>
+</tr>
+<tr>
+<td><code>SoN_module.json</code></td>
+<td>SoN Wave 1 complete</td>
+<td>🔒 Pending</td>
+</tr>
+<tr>
+<td><code>spine/languages</code> expansion</td>
+<td>Cross-module notation conflicts identified</td>
+<td>🔒 Pending</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="9-navigation-quick-links">§9 Navigation Quick-Links</h2>
+<p><em>(Unchanged — still correct.)</em></p>
+<hr>
+<h2 id="10-document-metadata-updated">§10 Document Metadata (Updated)</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>File</td>
+<td><code>docs/SEENMAP.md</code></td>
+</tr>
+<tr>
+<td>Scope</td>
+<td>Repository-root navigational registry</td>
+</tr>
+<tr>
+<td>Authority</td>
+<td>Supersedes all per-module INDEX.md files for cross-module navigation</td>
+</tr>
+<tr>
+<td>Module</td>
+<td>None — repo-root level</td>
+</tr>
+<tr>
+<td>Wave</td>
+<td>N/A — repo admin artifact</td>
+</tr>
+<tr>
+<td>Generated</td>
+<td><strong>2026-09-10</strong></td>
+</tr>
+<tr>
+<td>Unlocked by</td>
+<td>FFF_Gravity Wave 4 complete</td>
+</tr>
+<tr>
+<td>Next admin action</td>
+<td>Finalize <code>docs/FFF_Gravity/FFF_Gravity_module.json</code> (Wave 5 refresh)</td>
+</tr>
+<tr>
+<td>Maintainer</td>
+<td><code>umaywant2</code></td>
+</tr>
+<tr>
+<td>License</td>
+<td>Apache-2.0</td>
+</tr>
+<tr>
+<td>Coherence anchor</td>
+<td><code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="11-extended-metadata">§11 Extended Metadata</h2>
+<h3 id="111-repo-totals-updated">§11.1 Repo Totals (Updated)</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total canonical modules</td>
+<td>2 active + 1 infra</td>
+</tr>
+<tr>
+<td>Total canonical spec files</td>
+<td>31 (FFF_Gravity) + ≥1 (SoN)</td>
+</tr>
+<tr>
+<td>Total sealed PRIMs</td>
+<td>42</td>
+</tr>
+<tr>
+<td>Total sealed invariants</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Total sealed failure modes</td>
+<td>13</td>
+</tr>
+<tr>
+<td>Total sealed operators</td>
+<td>~101</td>
+</tr>
+<tr>
+<td>Total condition prefixes</td>
+<td>11</td>
+</tr>
+<tr>
+<td>Total state flags</td>
+<td>31</td>
+</tr>
+<tr>
+<td>Zenodo seed DOIs</td>
+<td>30 (verify before next archival batch)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="112-module-status-legend">§11.2 Module Status Legend</h3>
+<p><em>(Unchanged)</em></p>
+<h3 id="113-versioning-policy">§11.3 Versioning Policy</h3>
+<p><em>(Unchanged)</em></p>
+<h3 id="114-related-archival-resources">§11.4 Related Archival Resources</h3>
+<p><em>(Unchanged)</em></p>
+  </main>
+</body>
+</html>

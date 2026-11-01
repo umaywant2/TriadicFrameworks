@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Earth_Sims/Min_Interface_Spec.md">
+  <title>RTT‑Inside — Minimal Interface Specification</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Earth_Sims/Min_Interface_Spec.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Earth_Sims/Min_Interface_Spec.md</code>
+  </aside>
+
+  <main>
+<h1 id="rttinside-minimal-interface-specification"><strong>RTT‑Inside — Minimal Interface Specification</strong></h1>
+<h3 id="data-contracts-only"><em>Data Contracts Only</em></h3>
+<hr>
+<h2 id="design-principles"><strong>Design Principles</strong></h2>
+<ul>
+<li><strong>Non‑intrusive</strong> — wraps existing systems  </li>
+<li><strong>Append‑only</strong> — preserves history  </li>
+<li><strong>Fork‑safe</strong> — supports divergent futures  </li>
+<li><strong>Human‑interpretable</strong> — meaning is explicit  </li>
+<li><strong>Engine‑agnostic</strong> — works with any sim stack  </li>
+</ul>
+<hr>
+<h2 id="1-being-state-contract"><strong>1️⃣ BEING — State Contract</strong></h2>
+<blockquote>
+<p>Represents <em>current condition</em> of any entity.</p>
+</blockquote>
+<pre><code class="language-yaml">BeingState:
+  entity_id: string
+  entity_type: enum [agent, system, environment, group]
+  timestamp: time
+
+  condition:
+    health: float        # 0.0 – 1.0
+    stress: float        # 0.0 – 1.0
+    readiness: float     # 0.0 – 1.0
+    balance: float       # -1.0 – +1.0
+
+  notes: string?         # optional human context
+</code></pre>
+<p><strong>Guarantees</strong>
+- State is explicit
+- Change is observable
+- Care is possible</p>
+<hr>
+<h2 id="2-knowing-lineage-contract"><strong>2️⃣ KNOWING — Lineage Contract</strong></h2>
+<blockquote>
+<p>Records <em>how things came to be</em>.</p>
+</blockquote>
+<pre><code class="language-yaml">KnowingEvent:
+  event_id: string
+  timestamp: time
+
+  actor_id: string
+  intent: string?
+
+  decision:
+    description: string
+    inputs: list[string]
+
+  action:
+    description: string
+
+  outcome:
+    description: string
+    affected_entities: list[string]
+
+  confidence: float?     # optional uncertainty
+</code></pre>
+<p><strong>Guarantees</strong>
+- Causality is traceable
+- Memory persists across time
+- Forks remain interpretable</p>
+<hr>
+<h2 id="3-meaning-purpose-contract"><strong>3️⃣ MEANING — Purpose Contract</strong></h2>
+<blockquote>
+<p>Declares <em>why something exists</em>.</p>
+</blockquote>
+<pre><code class="language-yaml">MeaningDeclaration:
+  scope_id: string       # system, agent, domain
+  scope_type: enum [agent, system, environment]
+
+  purpose:
+    primary: string
+    secondary: list[string]?
+
+  success_criteria:
+    qualitative: list[string]
+    quantitative: list[string]?
+
+  constraints: list[string]?
+</code></pre>
+<p><strong>Guarantees</strong>
+- Purpose is explicit
+- Alignment is checkable
+- Ethics are structural</p>
+<hr>
+<h2 id="4-time-stewardship-contract"><strong>4️⃣ TIME — Stewardship Contract</strong></h2>
+<blockquote>
+<p>Tracks <em>long‑term signals</em>.</p>
+</blockquote>
+<pre><code class="language-yaml">TimeSignal:
+  scope_id: string
+  timestamp: time
+
+  indicators:
+    maintenance_debt: float
+    drift: float
+    recovery_rate: float
+    resilience: float
+
+  horizon: enum [short, medium, long]
+</code></pre>
+<p><strong>Guarantees</strong>
+- Futures remain visible
+- Fragility is detected early
+- Stewardship is measurable</p>
+<hr>
+<h2 id="5-artifact-human-output-contract"><strong>5️⃣ ARTIFACT — Human Output Contract</strong></h2>
+<blockquote>
+<p>Produces <em>explainable results</em>.</p>
+</blockquote>
+<pre><code class="language-yaml">Artifact:
+  artifact_id: string
+  timestamp: time
+
+  summary: string
+  related_events: list[string]
+  related_states: list[string]
+
+  interpretation:
+    alignment: enum [aligned, misaligned, unknown]
+    notes: string?
+</code></pre>
+<p><strong>Guarantees</strong>
+- Outputs explain themselves
+- Trust is structural
+- Knowledge survives translation</p>
+<hr>
+<h2 id="minimal-compliance-rule"><strong>Minimal Compliance Rule</strong></h2>
+<p>A system is <strong>RTT‑Inside compatible</strong> if it:</p>
+<ul>
+<li>Emits <strong>BeingState</strong></li>
+<li>Records <strong>KnowingEvent</strong></li>
+<li>Declares <strong>MeaningDeclaration</strong></li>
+</ul>
+<p>Everything else is optional.</p>
+<hr>
+<h2 id="why-this-spec-matters"><strong>Why This Spec Matters</strong></h2>
+<ul>
+<li>No engine assumptions  </li>
+<li>No ideology embedded  </li>
+<li>No forced behavior  </li>
+</ul>
+<p>Just <strong>structure</strong>.</p>
+<p>This is the smallest contract that allows:
+- understanding
+- memory
+- alignment
+- humane simulation</p>
+<hr>
+<h2 id="final-note"><strong>Final Note</strong></h2>
+<p>RTT‑Inside does not tell future builders <em>what to build</em>.</p>
+<p>It gives them:
+- a way to <strong>see</strong>
+- a way to <strong>remember</strong>
+- a way to <strong>care</strong></p>
+<p>That’s enough.</p>
+  </main>
+</body>
+</html>

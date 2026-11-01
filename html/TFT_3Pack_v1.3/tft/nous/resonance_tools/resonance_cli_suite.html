@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/TFT_3Pack_v1.3/tft/nous/resonance_tools/resonance_cli_suite.md">
+  <title>🌐 Resonance CLI Suite — Meta Architecture</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/TFT_3Pack_v1.3/tft/nous/resonance_tools/resonance_cli_suite.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/TFT_3Pack_v1.3/tft/nous/resonance_tools/resonance_cli_suite.md</code>
+  </aside>
+
+  <main>
+<h1 id="resonance-cli-suite-meta-architecture">🌐 Resonance CLI Suite — Meta Architecture</h1>
+<h2 id="root-layout">📂 Root Layout</h2>
+<pre><code>TFT_3Pack_v1.2/nous/
+  resonance-tools/
+    resonant-time/        # Tool 1
+    tfe/                  # Tool 2
+    triadic-numbers/      # Tool 3
+    harmonic-loops/       # Tool 4
+    tft-extended/         # Tool 5
+    fff/                  # Tool 6
+    integrations/         # Tool 7
+</code></pre>
+<p>Each subfolder has:
+- <code>README.md</code> (concept + usage)
+- <code>core.py</code> (logic)
+- <code>cli.py</code> (entrypoint)
+- <code>examples/</code>
+- <code>tests/</code></p>
+<hr>
+<h2 id="tool-interlock-map">🔑 Tool Interlock Map</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Name</th>
+<th>Role in Suite</th>
+<th>Depends On</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>#1</strong></td>
+<td>Resonant-Time</td>
+<td>Temporal engine. Defines E, M, OC and generates cycles.</td>
+<td>–</td>
+</tr>
+<tr>
+<td><strong>#2</strong></td>
+<td>Triadic Frameworks for Everything (TFE)</td>
+<td>General scaffolding layer. Encodes triadic logic across domains.</td>
+<td>Resonant-Time</td>
+</tr>
+<tr>
+<td><strong>#3</strong></td>
+<td>Triadic Number Genesis (1D–9D)</td>
+<td>Numerical backbone. Generates dimensional triads and symbolic math.</td>
+<td>Resonant-Time, TFE</td>
+</tr>
+<tr>
+<td><strong>#4</strong></td>
+<td>Resonance from Harmonic Nested Loops</td>
+<td>Dynamic systems engine. Models feedback, oscillation, recursion.</td>
+<td>Resonant-Time, Triadic Numbers</td>
+</tr>
+<tr>
+<td><strong>#5</strong></td>
+<td>TFT (with Quadratic Extensions)</td>
+<td>Applied technology branch. Encodes triadic/quadratic architectures for CPUs, batteries, etc.</td>
+<td>Resonant-Time, TFE, Triadic Numbers</td>
+</tr>
+<tr>
+<td><strong>#6</strong></td>
+<td>FFF (Forces, Fluids, Frequency)</td>
+<td>Physics triad. Models flow, oscillation, and resonance mechanics.</td>
+<td>Resonant-Time, Harmonic Loops</td>
+</tr>
+<tr>
+<td><strong>#7</strong></td>
+<td>Integrations (Resonant-Time + TFT + FFF)</td>
+<td>Meta‑tool. Demonstrates how temporal resonance drives technology and physics triads together.</td>
+<td>All prior tools</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="flow-narrative">🌀 Flow Narrative</h2>
+<ol>
+<li>
+<p><strong>Resonant-Time</strong> is the <em>heartbeat</em>.<br>
+   - Every other tool imports it to “call time.”<br>
+   - Without it, triads are static.</p>
+</li>
+<li>
+<p><strong>TFE</strong> is the <em>skeleton</em>.<br>
+   - Provides the general triadic scaffolding.<br>
+   - Think of it as the “grammar” of resonance.</p>
+</li>
+<li>
+<p><strong>Triadic Numbers</strong> are the <em>DNA</em>.<br>
+   - Encodes dimensionality (1D–9D).<br>
+   - Supplies symbolic math for higher tools.</p>
+</li>
+<li>
+<p><strong>Harmonic Loops</strong> are the <em>lungs</em>.<br>
+   - They breathe cycles into the system.<br>
+   - Nested loops = resonance amplification.</p>
+</li>
+<li>
+<p><strong>TFT</strong> is the <em>hands</em>.<br>
+   - Applies resonance to real‑world tech.<br>
+   - Quadratic extensions = dual‑triad expansions.</p>
+</li>
+<li>
+<p><strong>FFF</strong> is the <em>muscle</em>.<br>
+   - Models forces, fluids, and frequency.<br>
+   - Shows resonance in motion.</p>
+</li>
+<li>
+<p><strong>Integrations</strong> are the <em>mind</em>.<br>
+   - Demonstrates how time, tech, and physics triads interlock.<br>
+   - Produces mythic‑scientific dashboards.</p>
+</li>
+</ol>
+<hr>
+<h2 id="cli-philosophy">🛠️ CLI Philosophy</h2>
+<ul>
+<li><strong>Single entrypoint:</strong><br>
+<code>bash
+  resonance &lt;tool&gt; [options]</code></li>
+</ul>
+<h2 id="example">Example:</h2>
+<pre><code class="language-bash">resonance time --cycle 5 --ascii
+resonance tfe --define
+resonance numbers --genesis 9
+resonance loops --nest 3
+resonance tft --compare
+resonance fff --simulate
+resonance integrate --demo
+</code></pre>
+<ul>
+<li><strong>Consistent flags:</strong> <code>--define</code>, <code>--cycle</code>, <code>--compare</code>, <code>--simulate</code>, <code>--ascii</code>, <code>--export</code>.</li>
+<li><strong>Composable:</strong> Each tool can be piped into another.</li>
+<li>Example:
+    <code>bash
+    resonance time --cycle 9 --ascii | resonance numbers --map</code></li>
+</ul>
+<hr>
+<h2 id="resonance-cli-organism-map">🌐 Resonance CLI Organism Map</h2>
+<pre><code>┌───────────────┐ 
+│ Resonant-Time │ (heartbeat)
+└───────┬───────┘
+│
+┌───────▼───────┐
+│      TFE      │ (skeleton)
+└───────┬───────┘
+│
+┌───────▼───────┐
+│Triadic Numbers│ (DNA)
+└───────┬───────┘
+│
+┌───────▼───────┐
+│Harmonic Loops │ (lungs)
+└───────┬───────┘
+│ 
+┌───────▼───────┐
+│      TFT      │ (hands)
+└───────┬───────┘
+│
+┌───────▼───────┐
+│      FFF      │ (muscle)
+└───────┬───────┘
+│
+┌───────▼───────┐
+│ Integrations  │ (mind)
+└───────────────┘
+</code></pre>
+<p>Together, the suite is a <strong>living organism of resonance</strong>.   </p>
+  </main>
+</body>
+</html>

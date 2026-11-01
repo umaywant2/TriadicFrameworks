@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Regime_Interlock_Mapper/rtt_interlock_examples.md">
+  <title>Regime Interlock Examples — RTT/1</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Regime_Interlock_Mapper/rtt_interlock_examples.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Regime_Interlock_Mapper/rtt_interlock_examples.md</code>
+  </aside>
+
+  <main>
+<h1 id="regime-interlock-examples-rtt1"><strong>Regime Interlock Examples — RTT/1</strong></h1>
+<h3 id="examples-for-the-regime-interlock-mapper-rim"><em>Examples for the Regime Interlock Mapper (RIM)</em></h3>
+<p>This document provides <strong>canonical RTT/1 examples</strong> of regime interlocks detected and analyzed by the <strong>Regime Interlock Mapper (RIM)</strong>.<br>
+Each example demonstrates one or more RIM operators:</p>
+<ul>
+<li><strong>RIM‑Detect</strong>  </li>
+<li><strong>RIM‑Map</strong>  </li>
+<li><strong>RIM‑Interlock</strong>  </li>
+<li><strong>RIM‑Boundary</strong>  </li>
+<li><strong>RIM‑Entangle</strong>  </li>
+<li><strong>RIM‑Resolve</strong></li>
+</ul>
+<p>Examples are grouped by interlock type.</p>
+<hr>
+<h2 id="1-structural-interlock-examples"><strong>1. Structural Interlock Examples</strong></h2>
+<h3 id="example-1-structural-constraint-pairing-r1-r2"><strong>Example 1 — Structural Constraint Pairing (R1 ↔ R2)</strong></h3>
+<p><strong>Regimes:</strong><br>
+- R1: Conceptual<br>
+- R2: Computational  </p>
+<p><strong>Interlock:</strong><br>
+A conceptual invariant (e.g., “symmetry must be preserved”) forces a computational constraint (e.g., “algorithm must maintain parity across iterations”).</p>
+<p><strong>RIM Output:</strong><br>
+- <code>interlock_type</code>: structural<br>
+- <code>interlock_strength</code>: 0.82<br>
+- <code>boundary_condition</code>: symmetry‑preservation<br>
+- <code>entanglement_score</code>: 0.41  </p>
+<p><strong>Explanation:</strong><br>
+The conceptual rule directly shapes the computational structure, forming a stable structural interlock.</p>
+<hr>
+<h3 id="example-2-structural-dependency-chain-r2-r3"><strong>Example 2 — Structural Dependency Chain (R2 ↔ R3)</strong></h3>
+<p><strong>Regimes:</strong><br>
+- R2: Computational<br>
+- R3: Physical  </p>
+<p><strong>Interlock:</strong><br>
+A computational model requires physical calibration constants; the physical regime constrains the computational regime.</p>
+<p><strong>RIM Output:</strong><br>
+- <code>interlock_type</code>: structural<br>
+- <code>interlock_strength</code>: 0.74<br>
+- <code>boundary_condition</code>: calibration‑dependency<br>
+- <code>entanglement_score</code>: 0.33  </p>
+<hr>
+<h2 id="2-boundary-interlock-examples"><strong>2. Boundary Interlock Examples</strong></h2>
+<h3 id="example-3-boundary-transition-r1-r3"><strong>Example 3 — Boundary Transition (R1 ↔ R3)</strong></h3>
+<p><strong>Regimes:</strong><br>
+- R1: Conceptual<br>
+- R3: Physical  </p>
+<p><strong>Interlock:</strong><br>
+A conceptual model transitions into a physical implementation at a defined boundary (e.g., “abstract force → measurable force”).</p>
+<p><strong>RIM Output:</strong><br>
+- <code>interlock_type</code>: boundary<br>
+- <code>interlock_strength</code>: 0.67<br>
+- <code>boundary_condition</code>: abstraction‑to‑measurement<br>
+- <code>entanglement_score</code>: 0.22  </p>
+<hr>
+<h3 id="example-4-boundary-gradient-r2-r4"><strong>Example 4 — Boundary Gradient (R2 ↔ R4)</strong></h3>
+<p><strong>Regimes:</strong><br>
+- R2: Computational<br>
+- R4: Dimensional  </p>
+<p><strong>Interlock:</strong><br>
+A computational gradient (e.g., increasing complexity) aligns with a dimensional gradient (e.g., increasing dimensional coherence).</p>
+<p><strong>RIM Output:</strong><br>
+- <code>interlock_type</code>: boundary<br>
+- <code>interlock_strength</code>: 0.79<br>
+- <code>boundary_condition</code>: gradient‑alignment<br>
+- <code>entanglement_score</code>: 0.28  </p>
+<hr>
+<h2 id="3-entanglement-interlock-examples"><strong>3. Entanglement Interlock Examples</strong></h2>
+<h3 id="example-5-mutual-influence-loop-r1-r2"><strong>Example 5 — Mutual Influence Loop (R1 ↔ R2)</strong></h3>
+<p><strong>Regimes:</strong><br>
+- R1: Conceptual<br>
+- R2: Computational  </p>
+<p><strong>Interlock:</strong><br>
+Conceptual assumptions shape computational models, and computational outputs reshape conceptual assumptions.</p>
+<p><strong>RIM Output:</strong><br>
+- <code>interlock_type</code>: entanglement<br>
+- <code>interlock_strength</code>: 0.91<br>
+- <code>boundary_condition</code>: mutual‑feedback<br>
+- <code>entanglement_score</code>: 0.88  </p>
+<p><strong>Explanation:</strong><br>
+This is a high‑entanglement interlock with bidirectional influence.</p>
+<hr>
+<h3 id="example-6-crossregime-entanglement-r3-r4"><strong>Example 6 — Cross‑Regime Entanglement (R3 ↔ R4)</strong></h3>
+<p><strong>Regimes:</strong><br>
+- R3: Physical<br>
+- R4: Dimensional  </p>
+<p><strong>Interlock:</strong><br>
+Physical resonance patterns influence dimensional coherence, and dimensional coherence alters physical resonance.</p>
+<p><strong>RIM Output:</strong><br>
+- <code>interlock_type</code>: entanglement<br>
+- <code>interlock_strength</code>: 0.93<br>
+- <code>boundary_condition</code>: resonance‑coherence<br>
+- <code>entanglement_score</code>: 0.91  </p>
+<hr>
+<h2 id="4-gradient-interlock-examples"><strong>4. Gradient Interlock Examples</strong></h2>
+<h3 id="example-7-coherence-gradient-r1-r4"><strong>Example 7 — Coherence Gradient (R1 ↔ R4)</strong></h3>
+<p><strong>Regimes:</strong><br>
+- R1: Conceptual<br>
+- R4: Dimensional  </p>
+<p><strong>Interlock:</strong><br>
+A conceptual coherence gradient aligns with a dimensional coherence gradient.</p>
+<p><strong>RIM Output:</strong><br>
+- <code>interlock_type</code>: gradient<br>
+- <code>interlock_strength</code>: 0.76<br>
+- <code>boundary_condition</code>: coherence‑gradient<br>
+- <code>entanglement_score</code>: 0.35  </p>
+<hr>
+<h3 id="example-8-drift-gradient-r2-r3"><strong>Example 8 — Drift Gradient (R2 ↔ R3)</strong></h3>
+<p><strong>Regimes:</strong><br>
+- R2: Computational<br>
+- R3: Physical  </p>
+<p><strong>Interlock:</strong><br>
+Computational drift increases physical drift sensitivity.</p>
+<p><strong>RIM Output:</strong><br>
+- <code>interlock_type</code>: gradient<br>
+- <code>interlock_strength</code>: 0.81<br>
+- <code>boundary_condition</code>: drift‑alignment<br>
+- <code>entanglement_score</code>: 0.47  </p>
+<hr>
+<h2 id="5-tensor-interlock-examples"><strong>5. Tensor Interlock Examples</strong></h2>
+<h3 id="example-9-coherence-tensor-interlock-r1-r2-r3"><strong>Example 9 — Coherence Tensor Interlock (R1 ↔ R2 ↔ R3)</strong></h3>
+<p><strong>Regimes:</strong><br>
+- R1: Conceptual<br>
+- R2: Computational<br>
+- R3: Physical  </p>
+<p><strong>Interlock:</strong><br>
+A multi‑regime coherence tensor binds conceptual, computational, and physical coherence.</p>
+<p><strong>RIM Output:</strong><br>
+- <code>interlock_type</code>: tensor<br>
+- <code>interlock_strength</code>: 0.94<br>
+- <code>boundary_condition</code>: coherence‑tensor<br>
+- <code>entanglement_score</code>: 0.89  </p>
+<hr>
+<h3 id="example-10-dimensional-tensor-interlock-r2-r4"><strong>Example 10 — Dimensional Tensor Interlock (R2 ↔ R4)</strong></h3>
+<p><strong>Regimes:</strong><br>
+- R2: Computational<br>
+- R4: Dimensional  </p>
+<p><strong>Interlock:</strong><br>
+Dimensional tensors constrain computational pathways.</p>
+<p><strong>RIM Output:</strong><br>
+- <code>interlock_type</code>: tensor<br>
+- <code>interlock_strength</code>: 0.88<br>
+- <code>boundary_condition</code>: dimensional‑tensor<br>
+- <code>entanglement_score</code>: 0.72  </p>
+<hr>
+<h2 id="6-example-matrix-snippet"><strong>6. Example Matrix Snippet</strong></h2>
+<p>A typical entry in <code>regime_interlock_matrix.json</code>:</p>
+<pre><code class="language-json">{
+  &quot;regime_a&quot;: &quot;R2&quot;,
+  &quot;regime_b&quot;: &quot;R3&quot;,
+  &quot;interlock_type&quot;: &quot;gradient&quot;,
+  &quot;interlock_strength&quot;: 0.81,
+  &quot;boundary_condition&quot;: &quot;drift-alignment&quot;,
+  &quot;entanglement_score&quot;: 0.47,
+  &quot;stability_rating&quot;: 0.63
+}
+</code></pre>
+<hr>
+<h2 id="7-status"><strong>7. Status</strong></h2>
+<ul>
+<li><strong>Version:</strong> 1.0  </li>
+<li><strong>Status:</strong> canon‑stable  </li>
+<li><strong>Category:</strong> rtt‑structural  </li>
+<li><strong>Module Path:</strong> <code>/docs/rtt/Regime_Interlock_Mapper/</code></li>
+</ul>
+  </main>
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Substrate_Flow/integration.md">
+  <title>🌊 Substrate Flow — Integration Map</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Substrate_Flow/integration.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Substrate_Flow/integration.md</code>
+  </aside>
+
+  <main>
+<h1 id="substrate-flow-integration-map">🌊 Substrate Flow — Integration Map</h1>
+<blockquote>
+<p><em>Flow connects everything. This file maps where the currents run.</em></p>
+</blockquote>
+<p><strong>Module:</strong> Substrate Flow
+<strong>Canonical ID:</strong> SF
+<strong>HSP Section:</strong> 08
+<strong>Role:</strong> Cross‑module alignment</p>
+<hr>
+<h2 id="integration-principle">Integration Principle</h2>
+<p>Substrate Flow is the <strong>output stage</strong> of the HSP analytics triad. It
+receives classified, lattice‑placed echoes and maps their movement. Every
+upstream module contributes data; downstream systems consume flow records.</p>
+<hr>
+<h2 id="upstream-inputs">Upstream Inputs</h2>
+<hr>
+<h3 id="1-echo-classifier-06c">1. Echo Classifier (06c)</h3>
+<p><strong>Provides:</strong> Classified echo type (E1–E6) + input vector</p>
+<p>The Echo Classifier determines <em>what</em> the echo is. Substrate Flow uses
+the echo type to select the primary flow channel.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Echo Type</th>
+<th style="text-align: left;">Flow Channel Selection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">E1</td>
+<td style="text-align: left;">S → C</td>
+</tr>
+<tr>
+<td style="text-align: left;">E2</td>
+<td style="text-align: left;">C ↔ H</td>
+</tr>
+<tr>
+<td style="text-align: left;">E3</td>
+<td style="text-align: left;">Multi‑channel</td>
+</tr>
+<tr>
+<td style="text-align: left;">E4</td>
+<td style="text-align: left;">R‑line</td>
+</tr>
+<tr>
+<td style="text-align: left;">E5</td>
+<td style="text-align: left;">D‑line</td>
+</tr>
+<tr>
+<td style="text-align: left;">E6</td>
+<td style="text-align: left;">So → A</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Data Flow:</strong></p>
+<pre><code>EC-Tag → classified_echo → SF-Read
+</code></pre>
+<hr>
+<h3 id="2-triadic-echo-lattice-07">2. Triadic Echo Lattice (07)</h3>
+<p><strong>Provides:</strong> Lattice position + origin substrate</p>
+<p>TEL determines <em>where</em> the echo sits. Substrate Flow uses the origin
+substrate to establish the flow starting point.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">TEL Layer</th>
+<th style="text-align: left;">Origin Substrate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Ladder</td>
+<td style="text-align: left;">S or C</td>
+</tr>
+<tr>
+<td style="text-align: left;">Cycle</td>
+<td style="text-align: left;">C or H</td>
+</tr>
+<tr>
+<td style="text-align: left;">Map</td>
+<td style="text-align: left;">H or So</td>
+</tr>
+<tr>
+<td style="text-align: left;">Atlas</td>
+<td style="text-align: left;">A</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Data Flow:</strong></p>
+<pre><code>TEL → lattice_position + origin → SF-Read
+</code></pre>
+<hr>
+<h3 id="3-echo-strength-index-04c">3. Echo Strength Index (04c)</h3>
+<p><strong>Provides:</strong> ESI level (1–4)</p>
+<p>ESI determines flow range. Higher ESI = more channels accessible.</p>
+<p><strong>Data Flow:</strong></p>
+<pre><code>04c ESI → esi_level → SF-Read
+</code></pre>
+<hr>
+<h3 id="4-crosssubstrate-echo-matrix-05a">4. Cross‑Substrate Echo Matrix (05a)</h3>
+<p><strong>Provides:</strong> Substrate spread (1–5)</p>
+<p>Substrate spread confirms how many substrates the echo occupies,
+validating the flow channel assignment.</p>
+<p><strong>Data Flow:</strong></p>
+<pre><code>05a Matrix → substrate_count → SF-Read
+</code></pre>
+<hr>
+<h3 id="5-harmonic-recursion-detector-06">5. Harmonic Recursion Detector (06)</h3>
+<p><strong>Provides:</strong> Recursion mode (R1–R4) + drift status (D1–D4)</p>
+<p>Recursion mode selects the recursion‑driven flow line. Drift status
+activates the drift current mapper.</p>
+<p><strong>Data Flow:</strong></p>
+<pre><code>06 Recursion → recursion_mode + drift_type → SF-Read
+</code></pre>
+<hr>
+<h2 id="downstream-consumers">Downstream Consumers</h2>
+<hr>
+<h3 id="6-hsp-stability-analysis">6. HSP Stability Analysis</h3>
+<p><strong>Receives:</strong> Flow records (flow status, drift, atlas pull)</p>
+<p>HSP stability classes and drift maps consume flow records to assess
+system‑wide stability. Flow status directly feeds stability tier
+assignment:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Flow Status</th>
+<th style="text-align: left;">Stability Implication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Stable</td>
+<td style="text-align: left;">No stability concern</td>
+</tr>
+<tr>
+<td style="text-align: left;">Migrating</td>
+<td style="text-align: left;">Monitor for escalation</td>
+</tr>
+<tr>
+<td style="text-align: left;">Drifting</td>
+<td style="text-align: left;">Instability alert</td>
+</tr>
+<tr>
+<td style="text-align: left;">Forcing</td>
+<td style="text-align: left;">Critical — atlas‑level event</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="7-opacity-opc">7. Opacity (OPC)</h3>
+<p><strong>Receives:</strong> Flow records (channel, driver, drift)</p>
+<p>Opacity operators detect when flow channels become invisible:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Opacity Type</th>
+<th style="text-align: left;">SF Interaction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Flow Opacity</td>
+<td style="text-align: left;">Channel unmeasured → flow appears absent</td>
+</tr>
+<tr>
+<td style="text-align: left;">Boundary Opacity</td>
+<td style="text-align: left;">Channel boundary unmarked → migration invisible</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="sibling-module-relationships">Sibling Module Relationships</h2>
+<pre><code>        ┌──────────────────┐
+        │  Echo Classifier  │  ← what is it?
+        │      (06c)        │
+        └────────┬─────────┘
+                 │
+        ┌────────┴─────────┐
+        │                  │
+        v                  v
+┌──────────────┐  ┌──────────────────┐
+│     TEL      │  │  Substrate Flow  │  ← THIS MODULE
+│    (07)      │  │      (08)        │
+│  where?      │  │    how does it   │
+│              │  │    move?         │
+└──────────────┘  └──────────────────┘
+</code></pre>
+<p><strong>Triad responsibilities:</strong>
+- <strong>EC (06c):</strong> Decides <em>what</em> the echo is.
+- <strong>TEL (07):</strong> Decides <em>where</em> the echo sits.
+- <strong>SF (08):</strong> Decides <em>how</em> the echo moves.</p>
+<hr>
+<h2 id="integration-with-broader-canon">Integration with Broader Canon</h2>
+<h3 id="set-decomposition">SET Decomposition</h3>
+<p>Flow channels map to SET channels:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Flow Channel</th>
+<th style="text-align: left;">Dominant SET Channel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">S → C</td>
+<td style="text-align: left;">Spin (structural rotation)</td>
+</tr>
+<tr>
+<td style="text-align: left;">C ↔ H</td>
+<td style="text-align: left;">Electric (harmonic oscillation)</td>
+</tr>
+<tr>
+<td style="text-align: left;">H → So</td>
+<td style="text-align: left;">Thermal (governance energy)</td>
+</tr>
+<tr>
+<td style="text-align: left;">So → A</td>
+<td style="text-align: left;">Thermal (atlas forcing)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fff-lattice">FFF Lattice</h3>
+<p>Flow channels map to FFF layers:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Flow Channel</th>
+<th style="text-align: left;">Dominant FFF Layer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">S → C</td>
+<td style="text-align: left;">Frequency (pattern formation)</td>
+</tr>
+<tr>
+<td style="text-align: left;">C ↔ H</td>
+<td style="text-align: left;">Frequency (resonance oscillation)</td>
+</tr>
+<tr>
+<td style="text-align: left;">H → So</td>
+<td style="text-align: left;">Fluids (governance flow)</td>
+</tr>
+<tr>
+<td style="text-align: left;">So → A</td>
+<td style="text-align: left;">Forces (atlas pressure)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="inverted-star">Inverted Star</h3>
+<p>Flow direction encodes star face visibility:</p>
+<ul>
+<li>Upward flow illuminates higher star faces.</li>
+<li>Reversed flow (impossible in canon) would darken them.</li>
+<li>The unidirectional constraint preserves star coherence.</li>
+</ul>
+<hr>
+<h2 id="pipeline-summary">Pipeline Summary</h2>
+<pre><code>06c EC ──────┐
+07 TEL ──────┤
+04c ESI ─────┼──→ SF-Read → SF-Route → SF-Drift → SF-Tag ──┬──→ HSP Stability
+05a Matrix ──┤                                               └──→ Opacity (OPC)
+06 Recursion ┘
+</code></pre>
+<hr>
+<!-- SESSION_CONTEXT:START -->
+
+<pre><code class="language-yaml">file: integration.md
+module: Substrate Flow
+canonical_id: SF
+hsp_section: 08
+role: cross-module-map
+status: canon-stable
+upstream:
+  - { module: &quot;06c Echo Classifier&quot;, provides: &quot;classified_echo&quot; }
+  - { module: &quot;07 TEL&quot;, provides: &quot;lattice_position&quot; }
+  - { module: &quot;04c Echo Strength Index&quot;, provides: &quot;esi_level&quot; }
+  - { module: &quot;05a Cross-Substrate Echo Matrix&quot;, provides: &quot;substrate_count&quot; }
+  - { module: &quot;06 Recursion Detector&quot;, provides: &quot;recursion_mode, drift_type&quot; }
+downstream:
+  - { module: &quot;HSP Stability&quot;, receives: &quot;flow_record&quot; }
+  - { module: &quot;Opacity (OPC)&quot;, receives: &quot;flow_record&quot; }
+</code></pre>
+<!-- SESSION_CONTEXT:END -->
+  </main>
+</body>
+</html>

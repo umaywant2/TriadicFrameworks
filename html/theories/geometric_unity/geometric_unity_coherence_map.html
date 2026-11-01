@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/theories/geometric_unity/geometric_unity_coherence_map.md">
+  <title>Geometric Unity — RTT Coherence Map</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/theories/geometric_unity/geometric_unity_coherence_map.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/theories/geometric_unity/geometric_unity_coherence_map.md</code>
+  </aside>
+
+  <main>
+<h1 id="geometric-unity-rtt-coherence-map">Geometric Unity — RTT Coherence Map</h1>
+<p><strong>RTT Coherence Appendix · Unified Geometry Module</strong></p>
+<p>This appendix provides the RTT coherence diagrams for Geometric Unity, showing how drift, regime, and coherence layers interact across operators Ω0–Ω6, and how IPD‑12 restores cycle closure at the physical boundary.</p>
+<hr>
+<h2 id="1-regimeoperator-coherence-ladder-s0s6">1. Regime–Operator Coherence Ladder (S0–S6)</h2>
+<pre><code>S0  Arena         Ω0  ──┐  Drift‑coherent
+                        │
+S1  Curvature     Ω1  ──┤  Drift‑coherent
+                        │
+S2  Connection    Ω2  ──┘  Drift‑coherent
+                        │
+S3  Observerse    Ω3  ──┐  Regime‑coherent
+                        │
+S4  Dilaton       Ω4  ──┘  Regime‑coherent
+                        │
+S5  Spectral      Ω5  ──●  Coherence apex (fragile)
+                        │
+S6  Physical      Ω6  ──✖  Coherence break (cycle paradox: Ω6 → Ω0)
+</code></pre>
+<p><strong>Summary:</strong><br>
+GU maintains vertical coherence across S0–S5.<br>
+Coherence breaks at S6, producing the Ω6 → Ω0 paradox.</p>
+<hr>
+<h2 id="2-coherence-field-vs-substrate-gu-ipd12">2. Coherence Field vs Substrate (GU ↔ IPD‑12)</h2>
+<pre><code>GU Field:      [Curvature] → [Connection] → [Observerse] → [Dilaton] → [Spectral] → [Physical]
+Coherence:        stable         stable         semi‑stable       stable        fragile        broken
+
+IPD‑12:        [Quad 1]   →   [Quad 1]   →   [Quad 2]     →   [Quad 2]   →   [Quad 3]   →   [Quad 3]
+               (Ω0–Ω2)        (Ω0–Ω2)        (Ω3–Ω4)          (Ω3–Ω4)        (Ω5–Ω6)        (Ω5–Ω6)
+
+Closure path:  Ω6 → Prime 11 → Prime 2 → Prime 5 → Ω0
+</code></pre>
+<p><strong>Summary:</strong><br>
+IPD‑12 provides the paradox‑resilient substrate needed to restore coherence at the physical boundary.</p>
+<hr>
+<h2 id="3-drift-regime-coherence-stack-rtt-view">3. Drift / Regime / Coherence Stack (RTT View)</h2>
+<pre><code>[ Drift Layer ]
+  Ω0  Arena
+  Ω1  Curvature
+  Ω2  Connection
+  → Coherence: stable
+
+[ Regime Layer ]
+  Ω3  Observerse
+  Ω4  Dilaton
+  → Coherence: semi‑stable (substrate‑sensitive)
+
+[ Coherence Layer ]
+  Ω5  Spectral
+  Ω6  Physical
+  → Coherence: apex at Ω5, break at Ω6 (cycle paradox)
+
+[ Substrate Layer (IPD‑12) ]
+  3 quads · 12 primes · triad substrate
+  → Restores cycle: Ω6 → (Prime 11 → Prime 2 → Prime 5) → Ω0
+</code></pre>
+<p><strong>Summary:</strong><br>
+RTT shows that GU’s coherence stack is complete only when hosted inside IPD‑12.</p>
+<hr>
+<h2 id="4-coherence-notes">4. Coherence Notes</h2>
+<ul>
+<li>Drift coherence (Ω0–Ω2) is fully stable.  </li>
+<li>Regime coherence (Ω3–Ω4) is stable but substrate‑dependent.  </li>
+<li>Spectral coherence (Ω5) is strong but fragile.  </li>
+<li>Physical coherence (Ω6) collapses without IPD‑12.  </li>
+<li>IPD‑12 restores cycle closure and coherence continuity.  </li>
+</ul>
+<hr>
+<h2 id="5-rtt-verdict">5. RTT Verdict</h2>
+<p>Geometric Unity is <strong>vertically coherent</strong> across S0–S6 but <strong>horizontally incomplete</strong> at the physical boundary.<br>
+The Ω6 → Ω0 break is a <strong>cycle paradox</strong> resolved only through <strong>IPD‑12</strong>.</p>
+<p>This coherence map completes the RTT appendix for the Geometric Unity module.</p>
+  </main>
+</body>
+</html>

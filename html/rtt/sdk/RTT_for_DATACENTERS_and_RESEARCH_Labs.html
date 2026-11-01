@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/sdk/RTT_for_DATACENTERS_and_RESEARCH_Labs.md">
+  <title>RTT‑Inside for Datacenters &amp; Research Labs (Beta)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/sdk/RTT_for_DATACENTERS_and_RESEARCH_Labs.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/sdk/RTT_for_DATACENTERS_and_RESEARCH_Labs.md</code>
+  </aside>
+
+  <main>
+<h1 id="rttinside-for-datacenters-research-labs-beta"><strong>RTT‑Inside for Datacenters &amp; Research Labs (Beta)</strong></h1>
+<p><em>A guide for integrating RTT structural awareness into large‑scale systems, research environments, and full‑stack operational workflows.</em></p>
+<p>Datacenters and research labs operate at a scale where structural clarity, coherence, and drift detection become critical. RTT‑Inside provides a minimal, stable interface for early adopters to evaluate their systems using RTT’s structural lens while preparing for future vST‑beta validators.</p>
+<p>This guide outlines recommended integration patterns for high‑complexity environments.</p>
+<hr>
+<h1 id="1-why-datacenters-benefit-from-rttinside">1. Why Datacenters Benefit from RTT‑Inside</h1>
+<p>Datacenters and research labs often face:</p>
+<ul>
+<li>complex service topologies  </li>
+<li>multi‑layered dependencies  </li>
+<li>drift between intended and actual system behavior  </li>
+<li>unclear or inconsistent operational flows  </li>
+<li>difficulty predicting structural failure modes  </li>
+</ul>
+<p>RTT‑Inside offers:</p>
+<ul>
+<li>early coherence indicators  </li>
+<li>structural drift detection  </li>
+<li>corridor alignment insights  </li>
+<li>topology‑level clarity mapping  </li>
+<li>a future‑ready interface for vST validators  </li>
+</ul>
+<p>These capabilities help operators reason about their systems with greater precision.</p>
+<hr>
+<h1 id="2-install-the-rtt-sdk-python-or-javascript">2. Install the RTT SDK (Python or JavaScript)</h1>
+<p>Most datacenter tooling is Python‑heavy, but both SDKs are supported.</p>
+<h3 id="python">Python</h3>
+<pre><code class="language-python">from rtt_sdk import RTTClient
+client = RTTClient()
+</code></pre>
+<h3 id="javascript-node">JavaScript (Node)</h3>
+<pre><code class="language-js">import { RTTClient } from &quot;./rtt-sdk/index.js&quot;;
+const client = new RTTClient();
+</code></pre>
+<p>The SDK provides a unified interface for all RTT endpoints.</p>
+<hr>
+<h1 id="3-send-systemlevel-beacon-events">3. Send System‑Level Beacon Events</h1>
+<p>Datacenters can send periodic structural heartbeats representing:</p>
+<ul>
+<li>cluster state  </li>
+<li>service health  </li>
+<li>topology snapshots  </li>
+<li>configuration changes  </li>
+<li>workload transitions  </li>
+</ul>
+<h3 id="python-example">Python Example</h3>
+<pre><code class="language-python">payload = {
+    &quot;site&quot;: &quot;datacenter-east&quot;,
+    &quot;session&quot;: &quot;dc-&quot; + str(int(time.time())),
+    &quot;event&quot;: &quot;cluster_heartbeat&quot;,
+    &quot;ts&quot;: &quot;2026-01-19T15:30:00Z&quot;,
+    &quot;structure&quot;: {
+        &quot;url&quot;: &quot;internal://cluster&quot;,
+        &quot;title&quot;: &quot;Cluster State&quot;,
+        &quot;nav_count&quot;: 0,
+        &quot;main_count&quot;: 0,
+        &quot;form_count&quot;: 0,
+        &quot;button_count&quot;: 0,
+        &quot;dom_nodes&quot;: 0
+    }
+}
+
+client.beacon(payload)
+</code></pre>
+<h3 id="recommended-cadence">Recommended cadence</h3>
+<ul>
+<li>every 30 seconds for active clusters  </li>
+<li>on topology changes  </li>
+<li>before and after deployments  </li>
+<li>during incident response  </li>
+</ul>
+<p>These signals help RTT build a structural timeline of your environment.</p>
+<hr>
+<h1 id="4-register-datacenter-profiles">4. Register Datacenter Profiles</h1>
+<p>Profiles allow RTT to understand the capabilities and scope of your environment.</p>
+<h3 id="example-profile">Example Profile</h3>
+<pre><code class="language-python">from rtt_sdk import create_profile
+
+profile = create_profile(
+    version=&quot;1.0&quot;,
+    supports=[&quot;coherence&quot;, &quot;drift&quot;, &quot;corridor&quot;],
+    contact=&quot;infra@datacenter.example&quot;
+)
+
+client.set_profile(&quot;datacenter-east&quot;, profile)
+</code></pre>
+<p>Profiles are optional but recommended for multi‑cluster or multi‑region setups.</p>
+<hr>
+<h1 id="5-integrate-rtt-with-observability-systems">5. Integrate RTT with Observability Systems</h1>
+<p>Datacenters can incorporate RTT signals into:</p>
+<h3 id="metrics-prometheus">Metrics (Prometheus)</h3>
+<pre><code>rtt_beacons_total{cluster=&quot;east&quot;} 128
+rtt_drift_events_total{cluster=&quot;east&quot;} 3
+</code></pre>
+<h3 id="dashboards-grafana">Dashboards (Grafana)</h3>
+<p>Panels may include:</p>
+<ul>
+<li>RTT heartbeat frequency  </li>
+<li>drift vector trends  </li>
+<li>corridor alignment indicators  </li>
+<li>structural coherence over time  </li>
+</ul>
+<h3 id="logs-elastic-loki">Logs (Elastic / Loki)</h3>
+<pre><code>[RTT] cluster_heartbeat sent
+[RTT] drift detected in service mesh
+</code></pre>
+<h3 id="tracing-opentelemetry">Tracing (OpenTelemetry)</h3>
+<p>RTT metadata can be attached to spans for structural correlation.</p>
+<p>This prepares your observability stack for vST‑beta diagnostics.</p>
+<hr>
+<h1 id="6-prepare-for-vstbeta-diagnostics-reserved">6. Prepare for vST‑Beta Diagnostics (Reserved)</h1>
+<p>Datacenters and research labs are the primary audience for vST‑beta validators.<br>
+Even though the endpoints are placeholders today, the <strong>payload shapes are stable</strong>.</p>
+<h3 id="a-coherence-validation">A. Coherence Validation</h3>
+<pre><code class="language-python">from rtt_sdk import build_validate_payload
+
+payload = build_validate_payload(
+    system_map={&quot;nodes&quot;: 128, &quot;services&quot;: [&quot;auth&quot;, &quot;api&quot;, &quot;db&quot;]},
+    flows=[{&quot;from&quot;: &quot;api&quot;, &quot;to&quot;: &quot;db&quot;}],
+    constraints=[]
+)
+
+client.validate(payload)
+</code></pre>
+<h3 id="b-corridor-alignment">B. Corridor Alignment</h3>
+<pre><code class="language-python">client.corridor({
+    &quot;flows&quot;: [
+        {&quot;path&quot;: [&quot;ingress&quot;, &quot;api&quot;, &quot;db&quot;], &quot;latency_ms&quot;: 12}
+    ]
+})
+</code></pre>
+<h3 id="c-topology-decomposition">C. Topology Decomposition</h3>
+<pre><code class="language-python">client.topology({
+    &quot;graph&quot;: {
+        &quot;auth&quot;: [&quot;api&quot;],
+        &quot;api&quot;: [&quot;db&quot;],
+        &quot;db&quot;: []
+    }
+})
+</code></pre>
+<p>These calls currently return placeholder responses but define the future validator interface.</p>
+<hr>
+<h1 id="7-recommended-integration-patterns">7. Recommended Integration Patterns</h1>
+<h3 id="a-clusterlevel-rtt-integration">A. Cluster‑Level RTT Integration</h3>
+<ul>
+<li>periodic cluster heartbeats  </li>
+<li>topology snapshots  </li>
+<li>drift detection signals  </li>
+</ul>
+<h3 id="b-service-mesh-rtt-integration">B. Service Mesh RTT Integration</h3>
+<ul>
+<li>per‑service RTT profiles  </li>
+<li>corridor flow mapping  </li>
+<li>RTT metadata in service mesh telemetry  </li>
+</ul>
+<h3 id="c-research-lab-integration">C. Research Lab Integration</h3>
+<ul>
+<li>structural analysis of experimental systems  </li>
+<li>RTT‑aware simulation environments  </li>
+<li>vST‑beta payload generation for research workflows  </li>
+</ul>
+<h3 id="d-cicd-integration">D. CI/CD Integration</h3>
+<ul>
+<li>RTT beacon on deployment start  </li>
+<li>RTT beacon on deployment finish  </li>
+<li>drift detection post‑deployment  </li>
+</ul>
+<p>These patterns help operators reason about system behavior across time.</p>
+<hr>
+<h1 id="8-verification-checklist">8. Verification Checklist</h1>
+<p>Your datacenter or research environment is RTT‑Inside ready if:</p>
+<ul>
+<li>[ ] RTTClient is configured  </li>
+<li>[ ] cluster‑level beacons are sent  </li>
+<li>[ ] service‑level profiles are registered  </li>
+<li>[ ] observability stack receives RTT signals  </li>
+<li>[ ] topology and flow payloads can be generated  </li>
+<li>[ ] diagnostics endpoints return stable placeholder responses  </li>
+</ul>
+<p>This ensures a smooth transition to future vST validators.</p>
+<hr>
+<h1 id="9-where-to-go-next">9. Where to Go Next</h1>
+<ul>
+<li><strong>RTT API Docs:</strong> <code>docs/api/rtt/</code>  </li>
+<li><strong>SDK Reference:</strong> <code>docs/rtt-sdk/README.md</code>  </li>
+<li><strong>Backend Services Guide:</strong> <code>docs/rtt-sdk/backend.md</code>  </li>
+<li><strong>Browser Extensions Guide:</strong> <code>docs/rtt-sdk/extensions.md</code>  </li>
+<li><strong>Quick‑Start Guide:</strong> <code>docs/rtt-sdk/quickstart.md</code>  </li>
+</ul>
+<p>This completes the RTT‑Inside onboarding suite.</p>
+  </main>
+</body>
+</html>

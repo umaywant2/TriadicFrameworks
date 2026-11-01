@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/projects/VCG/src/gen1/vcg/clients/rust/vcg_client.md">
+  <title>vcgclient – Rust helper for Gen1 workloads</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/projects/VCG/src/gen1/vcg/clients/rust/vcg_client.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/projects/VCG/src/gen1/vcg/clients/rust/vcg_client.md</code>
+  </aside>
+
+  <main>
+<h1 id="vcg_client-rust-helper-for-gen1-workloads">vcg_client – Rust helper for Gen1 workloads</h1>
+<h2 id="purpose">Purpose</h2>
+<p>Provide a minimal, reusable Rust API for communicating with the VCG orchestrator and Resonant Time Daemon.</p>
+<hr>
+<h2 id="functions">Functions</h2>
+<h3 id="await_windowsock_path-str-stdioresult"><code>await_window(sock_path: &amp;str) -&gt; std::io::Result&lt;()&gt;</code></h3>
+<p>Blocks until a <code>WINDOW_TICK</code> message is received for the current dimension.</p>
+<h3 id="send_routefrom_d-str-to_d-str-payload-str-stdioresult"><code>send_route(from_d: &amp;str, to_d: &amp;str, payload: &amp;str) -&gt; std::io::Result&lt;()&gt;</code></h3>
+<p>Sends a payload to another dimension via the VCG orchestrator.</p>
+<h3 id="recv_routedimension_id-str-stdioresultoptionserde_jsonvalue"><code>recv_route(dimension_id: &amp;str) -&gt; std::io::Result&lt;Option&lt;serde_json::Value&gt;&gt;</code></h3>
+<p>Receives the next routed payload for this dimension, if available.</p>
+<hr>
+<h2 id="implementation">Implementation</h2>
+<pre><code class="language-rust">use std::os::unix::net::UnixDatagram;
+use std::path::Path;
+use serde_json::{Value, json};
+use std::fs;
+
+const BUFFER_SIZE: usize = 65535;
+const VCG_ROUTE_SOCK: &amp;str = &quot;/run/vcg/vcg_route.sock&quot;;
+
+pub fn await_window(sock_path: &amp;str) -&gt; std::io::Result&lt;()&gt; {
+    let sock = UnixDatagram::unbound()?;
+    sock.connect(sock_path)?;
+    let mut buf = vec![0u8; BUFFER_SIZE];
+    loop {
+        let size = sock.recv(&amp;mut buf)?;
+        let msg: Value = serde_json::from_slice(&amp;buf[..size])?;
+        if msg.get(&quot;type&quot;) == Some(&amp;Value::String(&quot;WINDOW_TICK&quot;.into())) {
+            return Ok(());
+        }
+    }
+}
+
+pub fn send_route(from_d: &amp;str, to_d: &amp;str, payload: &amp;str) -&gt; std::io::Result&lt;()&gt; {
+    let sock = UnixDatagram::unbound()?;
+    sock.connect(VCG_ROUTE_SOCK)?;
+    let msg = json!({
+        &quot;type&quot;: &quot;VCG_ROUTE&quot;,
+        &quot;from_d&quot;: from_d,
+        &quot;to_d&quot;: to_d,
+        &quot;payload&quot;: payload
+    });
+    let data = serde_json::to_vec(&amp;msg)?;
+    sock.send(&amp;data)?;
+    Ok(())
+}
+
+pub fn recv_route(dimension_id: &amp;str) -&gt; std::io::Result&lt;Option&lt;Value&gt;&gt; {
+    let sock_path = format!(&quot;/run/vcg/{}.sock&quot;, dimension_id.to_lowercase());
+    if !Path::new(&amp;sock_path).exists() {
+        return Err(std::io::Error::new(std::io::ErrorKind::NotFound, &quot;Socket not found&quot;));
+    }
+    let sock = UnixDatagram::unbound()?;
+    sock.connect(&amp;sock_path)?;
+    let mut buf = vec![0u8; BUFFER_SIZE];
+    let size = sock.recv(&amp;mut buf)?;
+    let msg: Value = serde_json::from_slice(&amp;buf[..size])?;
+    if msg.get(&quot;type&quot;) == Some(&amp;Value::String(&quot;VCG_ROUTE&quot;.into())) {
+        if let Some(payload) = msg.get(&quot;payload&quot;) {
+            let parsed: Value = serde_json::from_str(payload.as_str().unwrap_or(&quot;&quot;))?;
+            return Ok(Some(parsed));
+        }
+    }
+    Ok(None)
+}
+</code></pre>
+<h2 id="usage-example">Usage Example</h2>
+<pre><code class="language-rust">use vcg_client::{await_window, send_route, recv_route};
+
+fn main() -&gt; std::io::Result&lt;()&gt; {
+    let dim_id = &quot;D2&quot;;
+    let sock_path = format!(&quot;/run/vcg/{}.sock&quot;, dim_id.to_lowercase());
+
+    await_window(&amp;sock_path)?;
+    send_route(dim_id, &quot;D4&quot;, r#&quot;{&quot;msg&quot;: &quot;hello&quot;}&quot;#)?;
+    if let Some(msg) = recv_route(dim_id)? {
+        println!(&quot;Received: {:?}&quot;, msg);
+    }
+    Ok(())
+}
+</code></pre>
+  </main>
+</body>
+</html>

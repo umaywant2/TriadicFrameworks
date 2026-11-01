@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/education/polisci/TriadicFrameworks_Regime_Physics_Engine_Spec.md">
+  <title>🧠 TriadicFrameworks “Regime Physics Engine” — Spec</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/education/polisci/TriadicFrameworks_Regime_Physics_Engine_Spec.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/education/polisci/TriadicFrameworks_Regime_Physics_Engine_Spec.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="education_polisci_TriadicFrameworks_Regime_Physics_Engine_Spec_" src="https://github.com/user-attachments/assets/d61a946f-18f1-4121-910a-f6b325152f53" /></p>
+<h2 id="triadicframeworks-regime-physics-engine-spec">🧠 TriadicFrameworks “Regime Physics Engine” — Spec</h2>
+<h3 id="1-purpose">1. Purpose</h3>
+<p>The Regime Physics Engine (RPE) formalizes how <strong>substrates, regimes, and observers</strong> interact across:</p>
+<ul>
+<li>thermal systems  </li>
+<li>water systems  </li>
+<li>material systems  </li>
+<li>spatial/temporal scheduling  </li>
+</ul>
+<p>It’s not a simulator of particles; it’s a simulator of <strong>constraints, flows, and transitions</strong>.</p>
+<hr>
+<h3 id="2-core-abstractions">2. Core Abstractions</h3>
+<p><strong>2.1 Substrate</strong></p>
+<ul>
+<li><strong>Fields:</strong>  </li>
+<li><code>type</code> (sand, stone, air, water, ecology, civic)  </li>
+<li><code>depth</code> (m)  </li>
+<li><code>temperature</code> (°C)  </li>
+<li><code>capacity</code> (mass, volume, flow)  </li>
+<li>
+<p><code>stability</code> (low/med/high)</p>
+</li>
+<li>
+<p><strong>Role:</strong><br>
+  Defines what is <em>physically possible</em>.</p>
+</li>
+</ul>
+<hr>
+<p><strong>2.2 Regime</strong></p>
+<ul>
+<li><strong>Fields:</strong>  </li>
+<li><code>name</code> (thermal, water, material, civic)  </li>
+<li><code>bounds</code> (min/max, thresholds)  </li>
+<li><code>state</code> (stable, transitional, overloaded)  </li>
+<li>
+<p><code>links</code> (to other regimes)</p>
+</li>
+<li>
+<p><strong>Role:</strong><br>
+  Defines what is <em>allowed</em> and how transitions occur.</p>
+</li>
+</ul>
+<hr>
+<p><strong>2.3 Observer</strong></p>
+<ul>
+<li><strong>Fields:</strong>  </li>
+<li><code>agent_type</code> (human, building, system)  </li>
+<li><code>schedule</code> (time bands)  </li>
+<li><code>demands</code> (water, comfort, mobility)  </li>
+<li>
+<p><code>permissions</code> (which regimes it can touch)</p>
+</li>
+<li>
+<p><strong>Role:</strong><br>
+  Defines what is <em>requested</em> from the system.</p>
+</li>
+</ul>
+<hr>
+<h3 id="3-dimensional-mapping">3. Dimensional Mapping</h3>
+<p>RPE runs on the Triadic substrate:</p>
+<ul>
+<li><code>negative_regime</code> → depth, mass, stability  </li>
+<li><code>qmroot</code> → gradients, transitions, awareness  </li>
+<li><code>positive_regime</code> → interface, expression, ecology  </li>
+</ul>
+<p>Every subsystem must declare:</p>
+<pre><code class="language-text">negative_binding: [...]
+qmroot_binding:   [...]
+positive_binding: [...]
+</code></pre>
+<hr>
+<h3 id="4-engine-loops">4. Engine Loops</h3>
+<p><strong>4.1 Thermal Loop</strong></p>
+<ul>
+<li>Inputs: external temp curve, depth profile, occupancy  </li>
+<li>Outputs: ballast states, airflow routes, comfort bands  </li>
+</ul>
+<p>Steps:</p>
+<ol>
+<li>Compute subsurface baseline.  </li>
+<li>Propagate heat through mass.  </li>
+<li>Adjust RTT‑Inside ballasts.  </li>
+<li>Flag overloads (comfort violations).</li>
+</ol>
+<hr>
+<p><strong>4.2 Water Loop</strong></p>
+<ul>
+<li>Inputs: desal capacity, dew yield, industrial demand  </li>
+<li>Outputs: allocation, pressure, regime flags  </li>
+</ul>
+<p>Steps:</p>
+<ol>
+<li>Allocate desal → human.  </li>
+<li>Allocate dew → agriculture.  </li>
+<li>Allocate recycled → industry.  </li>
+<li>Enforce <strong>no aquifer use</strong>.</li>
+</ol>
+<hr>
+<p><strong>4.3 Material Loop</strong></p>
+<ul>
+<li>Inputs: excavation volume, binder capacity, infrastructure demand  </li>
+<li>Outputs: megalith formation, road/bridge feedstock  </li>
+</ul>
+<p>Steps:</p>
+<ol>
+<li>Convert sand → stone in forms.  </li>
+<li>Track voids → habitable volume.  </li>
+<li>Route surplus sand → surface infrastructure.</li>
+</ol>
+<hr>
+<p><strong>4.4 Governance Loop</strong></p>
+<ul>
+<li>Inputs: regime states, drift metrics, civic policies  </li>
+<li>Outputs: constraints, alerts, schedule adjustments  </li>
+</ul>
+<p>Steps:</p>
+<ol>
+<li>Monitor regime boundaries.  </li>
+<li>Detect drift (e.g., water tier mixing).  </li>
+<li>Enforce hard constraints.  </li>
+<li>Suggest schedule/usage changes.</li>
+</ol>
+<hr>
+<h3 id="5-interfaces">5. Interfaces</h3>
+<p><strong>5.1 Config</strong></p>
+<ul>
+<li><code>rpe.config.thermal.json</code>  </li>
+<li><code>rpe.config.water.json</code>  </li>
+<li><code>rpe.config.material.json</code>  </li>
+<li><code>rpe.config.civic.json</code></li>
+</ul>
+<p><strong>5.2 Outputs</strong></p>
+<ul>
+<li><code>rpe.state.regimes.json</code>  </li>
+<li><code>rpe.state.alerts.json</code>  </li>
+<li><code>rpe.state.flows.json</code></li>
+</ul>
+<hr>
+<h2 id="architectural-pattern-library-desert-regime-edition">🏛 Architectural Pattern Library (Desert Regime Edition)</h2>
+<p>Each pattern: <strong>Name → Intent → Structure → Regime Bindings</strong></p>
+<hr>
+<h3 id="1-6under1over-stack">1. 6‑Under‑1‑Over Stack</h3>
+<ul>
+<li><strong>Intent:</strong> Depth‑first, thermally stable city section.  </li>
+<li><strong>Structure:</strong></li>
+</ul>
+<pre><code class="language-text">Level 0: Interface
+-1, -2: Residential
+-3: Civic/Commercial
+-4: Industrial/Utility
+-5: Reservoirs/Ballasts
+-6: Deep Infra
+</code></pre>
+<ul>
+<li><strong>Bindings:</strong>  </li>
+<li>Negative: levels -6 to -3  </li>
+<li>qmroot: levels -2 to -1  </li>
+<li>Positive: level 0  </li>
+</ul>
+<hr>
+<h3 id="2-reverseskyscraper-megalith">2. Reverse‑Skyscraper Megalith</h3>
+<ul>
+<li><strong>Intent:</strong> Use in‑situ sand as structural stone.  </li>
+<li><strong>Structure:</strong> steel forms + sand + binder → cured stone.  </li>
+<li><strong>Bindings:</strong>  </li>
+<li>Negative: sand mass  </li>
+<li>qmroot: chemical transformation  </li>
+<li>Positive: habitable voids.</li>
+</ul>
+<hr>
+<h3 id="3-rttinside-room">3. RTT‑Inside Room</h3>
+<ul>
+<li><strong>Intent:</strong> Self‑regulating thermal cell.  </li>
+<li><strong>Structure:</strong></li>
+</ul>
+<pre><code class="language-text">Warm Ballast
+   ▲
+Gradient Chamber
+   ▼
+Cool Ballast
+</code></pre>
+<ul>
+<li><strong>Bindings:</strong>  </li>
+<li>Negative: cool ballast  </li>
+<li>qmroot: gradient chamber  </li>
+<li>Positive: warm ballast.</li>
+</ul>
+<hr>
+<h3 id="4-dew-farm-array">4. Dew Farm Array</h3>
+<ul>
+<li><strong>Intent:</strong> Harvest atmospheric water at band transitions.  </li>
+<li><strong>Structure:</strong> retractable mesh + tower.  </li>
+<li><strong>Bindings:</strong>  </li>
+<li>Negative: night‑cooled air  </li>
+<li>qmroot: condensation  </li>
+<li>Positive: stored water.</li>
+</ul>
+<hr>
+<h3 id="5-triadic-water-stack">5. Triadic Water Stack</h3>
+<ul>
+<li><strong>Intent:</strong> Hard separation of water regimes.  </li>
+<li><strong>Structure:</strong></li>
+</ul>
+<pre><code class="language-text">Desal → Humans
+Dew → Farming
+Recycled → Industry
+Aquifers → Untouched
+</code></pre>
+<ul>
+<li><strong>Bindings:</strong>  </li>
+<li>Negative: aquifers  </li>
+<li>qmroot: dew + filtration  </li>
+<li>Positive: human/industrial use.</li>
+</ul>
+<hr>
+<h3 id="6-seedcore-city-layout">6. Seed‑Core City Layout</h3>
+<ul>
+<li><strong>Intent:</strong> Perimeter experimentation, core consolidation.  </li>
+<li><strong>Structure:</strong></li>
+</ul>
+<pre><code class="language-text">Seed A, B, C → Core
+</code></pre>
+<ul>
+<li><strong>Bindings:</strong>  </li>
+<li>Negative: seeds (stability nodes)  </li>
+<li>qmroot: interactions  </li>
+<li>Positive: core (expression node).</li>
+</ul>
+<hr>
+<h3 id="7-subsurface-transit-grid">7. Subsurface Transit Grid</h3>
+<ul>
+<li><strong>Intent:</strong> Movement in safe thermal bands.  </li>
+<li><strong>Structure:</strong></li>
+</ul>
+<pre><code class="language-text">North/South/East/West tunnels → central hub
+</code></pre>
+<ul>
+<li><strong>Bindings:</strong>  </li>
+<li>Negative: tunnel mass  </li>
+<li>qmroot: flow scheduling  </li>
+<li>Positive: human movement.</li>
+</ul>
+<hr>
+<h3 id="8-light-well">8. Light Well</h3>
+<ul>
+<li><strong>Intent:</strong> Bring light down, not heat.  </li>
+<li><strong>Structure:</strong> tapered shaft, reflective surfaces.  </li>
+<li><strong>Bindings:</strong>  </li>
+<li>Negative: shaft walls  </li>
+<li>qmroot: light diffusion  </li>
+<li>Positive: illuminated vaults.</li>
+</ul>
+<hr>
+<h3 id="9-reservoir-vault">9. Reservoir Vault</h3>
+<ul>
+<li><strong>Intent:</strong> Thermal + water ballast.  </li>
+<li><strong>Structure:</strong> deep, shielded water chamber.  </li>
+<li><strong>Bindings:</strong>  </li>
+<li>Negative: water mass  </li>
+<li>qmroot: heat exchange  </li>
+<li>Positive: supply stability.</li>
+</ul>
+<hr>
+<h3 id="10-industrial-loop">10. Industrial Loop</h3>
+<ul>
+<li><strong>Intent:</strong> Close industrial water + heat loops.  </li>
+<li><strong>Structure:</strong> industry → recycle → towers → industry.  </li>
+<li><strong>Bindings:</strong>  </li>
+<li>Negative: infrastructure mass  </li>
+<li>qmroot: filtration + pumping  </li>
+<li>Positive: industrial output.</li>
+</ul>
+<hr>
+<h3 id="11-ecological-surface-band">11. Ecological Surface Band</h3>
+<ul>
+<li><strong>Intent:</strong> Restore desert ecology.  </li>
+<li><strong>Structure:</strong> native flora + minimal infrastructure.  </li>
+<li><strong>Bindings:</strong>  </li>
+<li>Negative: soil substrate  </li>
+<li>qmroot: water/light balance  </li>
+<li>Positive: visible ecology.</li>
+</ul>
+<hr>
+<h3 id="12-regime-boundary-pattern">12. Regime Boundary Pattern</h3>
+<ul>
+<li><strong>Intent:</strong> Prevent cross‑contamination.  </li>
+<li><strong>Structure:</strong> hard constraints + monitoring.  </li>
+<li><strong>Bindings:</strong>  </li>
+<li>Negative: rule set  </li>
+<li>qmroot: detection  </li>
+<li>Positive: enforcement.</li>
+</ul>
+  </main>
+</body>
+</html>

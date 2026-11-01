@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/API/Core_API_surface.md">
+  <title>3. Core API surface (HTTP/JSON example)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/API/Core_API_surface.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/API/Core_API_surface.md</code>
+  </aside>
+
+  <main>
+<h3 id="3-core-api-surface-httpjson-example">3. Core API surface (HTTP/JSON example)</h3>
+<p>We can later mirror this as gRPC, MQTT topics, etc.—but HTTP/JSON is a clean RFC baseline.</p>
+<h4 id="31-field-samples">3.1. Field samples</h4>
+<ul>
+<li>
+<p><code>POST /api/rtt/core/v1/field-samples</code><br>
+  Ingest a <code>ResonanceFieldSample</code>.</p>
+</li>
+<li>
+<p><code>GET /api/rtt/core/v1/field-samples?zone_id=…&amp;since=…</code><br>
+  Query samples for analysis / replay.</p>
+</li>
+</ul>
+<h4 id="32-zone-state">3.2. Zone state</h4>
+<ul>
+<li>
+<p><code>GET /api/rtt/core/v1/zones/{zone_id}/state</code><br>
+  Returns <code>ResonanceZoneState</code>.</p>
+</li>
+<li>
+<p><code>GET /api/rtt/core/v1/zones?mesh_id=…</code><br>
+  List all zones and their current state.</p>
+</li>
+</ul>
+<h4 id="33-nodes">3.3. Nodes</h4>
+<ul>
+<li>
+<p><code>POST /api/rtt/core/v1/nodes/register</code><br>
+  Register or update a <code>NodeDescriptor</code>.</p>
+</li>
+<li>
+<p><code>GET /api/rtt/core/v1/nodes/{node_id}</code><br>
+  Get node info.</p>
+</li>
+<li>
+<p><code>GET /api/rtt/core/v1/nodes?mesh_id=…&amp;zone_id=…</code><br>
+  List nodes in a mesh/zone.</p>
+</li>
+</ul>
+<h4 id="34-alerts">3.4. Alerts</h4>
+<ul>
+<li>
+<p><code>GET /api/rtt/core/v1/alerts?mesh_id=…&amp;since=…</code><br>
+  Fetch <code>ResonanceAlert</code> objects.</p>
+</li>
+<li>
+<p>(Optional) <code>POST /api/rtt/core/v1/alerts</code><br>
+  For systems that generate alerts externally but want to register them centrally.</p>
+</li>
+</ul>
+<h4 id="35-routes-clarity-gradients">3.5. Routes / clarity gradients</h4>
+<ul>
+<li><code>POST /api/rtt/core/v1/routes/suggest</code>  </li>
+</ul>
+<p><strong>Request:</strong></p>
+<p><code>json
+  {
+    "mesh_id": "uuid",
+    "from_zone": "urn:rtt:zone:coal:blue_hollow:section_c",
+    "to_zone": "urn:rtt:zone:coal:blue_hollow:primary_exit",
+    "constraints": {
+      "max_risk": "high",
+      "avoid_zones": ["urn:rtt:zone:coal:blue_hollow:panel_3"]
+    }
+  }</code></p>
+<p><strong>Response:</strong> <code>RouteSuggestion</code>.</p>
+<hr>
+<h3 id="4-agentfacing-api-for-opensource-ai-agents">4. Agent‑facing API (for open‑source AI agents)</h3>
+<p>This is the bit that matters for your “vendor agent + RTT‑Inside” vision.</p>
+<h4 id="41-local-agent-bindings-conceptual">4.1. Local agent bindings (conceptual)</h4>
+<p>Expose a <strong>local SDK</strong> (language‑agnostic spec, then bindings):</p>
+<ul>
+<li><code>rtt.get_clarity(zone_id: string | null) -&gt; int</code></li>
+<li><code>rtt.get_drift_vector(zone_id: string | null) -&gt; DriftVector</code></li>
+<li><code>rtt.subscribe(event_type: string, callback)</code></li>
+<li><code>event_type</code> examples: <code>"clarity_drop"</code>, <code>"resonance_spike"</code>, <code>"zone_status_change"</code></li>
+<li><code>rtt.get_zone_state(zone_id: string) -&gt; ResonanceZoneState</code></li>
+<li><code>rtt.get_route(from_zone: string, to_zone: string, constraints: RouteConstraints) -&gt; RouteSuggestion</code></li>
+</ul>
+<p>Agents don’t see raw sensor noise—they see <strong>structured resonance state</strong>.</p>
+<hr>
+<h3 id="5-standards-alignment-the-no-weird-snowflake-rule">5. Standards alignment (the “no weird snowflake” rule)</h3>
+<ul>
+<li><strong>Time:</strong> ISO‑8601 UTC (<code>YYYY-MM-DDThh:mm:ssZ</code>)  </li>
+<li><strong>IDs:</strong> UUIDv4 for entities, URNs/OIDs for zones and domains  </li>
+<li><strong>Units:</strong> SI only (<code>m</code>, <code>Pa</code>, <code>°C</code>, <code>Hz</code>, <code>1/s</code>, <code>ppm</code>)  </li>
+<li><strong>Encodings:</strong> JSON for RFC baseline; Protobuf/CBOR allowed as alternative encodings with identical schemas  </li>
+<li><strong>Error model:</strong> HTTP status codes + JSON error object with <code>code</code>, <code>message</code>, <code>details</code>  </li>
+</ul>
+<hr>
+<h3 id="6-how-we-extend-this-per-domain-next-step">6. How we extend this per domain (next step)</h3>
+<p>Once this <strong>core</strong> is locked, each domain gets an extension spec:</p>
+<ul>
+<li><code>rtt.coal.v1</code>  </li>
+<li><code>rtt.atc.v1</code>  </li>
+<li><code>rtt.deepsea.v1</code>  </li>
+<li><code>rtt.space.v1</code>  </li>
+<li><code>rtt.gpr.v1</code>  </li>
+<li>etc.</li>
+</ul>
+<p>Each extension:</p>
+<ul>
+<li>reuses <code>ResonanceFieldSample</code>, <code>ZoneState</code>, <code>NodeDescriptor</code>, <code>Alert</code>, <code>RouteSuggestion</code>  </li>
+<li>adds <strong>domain‑specific fields</strong> via <code>details</code> / <code>extensions</code> blocks or separate resources  </li>
+<li>never breaks core invariants</li>
+</ul>
+<p>Example: <code>ResonanceFieldSample.extensions.coal</code> could add:</p>
+<pre><code class="language-json">&quot;extensions&quot;: {
+  &quot;coal&quot;: {
+    &quot;roof_strata_type&quot;: &quot;shale&quot;,
+    &quot;pillar_load_kpa&quot;: 320.0
+  }
+}
+</code></pre>
+<hr>
+<h3 id="7-rfcready-framing">7. RFC‑ready framing</h3>
+<p>You’re basically ready to write:</p>
+<ul>
+<li><strong>Title:</strong> “RTT‑Inside Core API: A Resonance Structural Awareness Dimensional Interface”  </li>
+<li><strong>Sections:</strong>
+  1. Terminology and concepts (clarity, drift, resonance, zone, mesh, node)<br>
+  2. Data model (the JSON schemas above)<br>
+  3. Transport bindings (HTTP/JSON baseline)<br>
+  4. Agent bindings (local SDK expectations)<br>
+  5. Security and safety considerations (auth, integrity, misuse)<br>
+  6. Domain extension model  </li>
+</ul>
+<p>You’ve already got the narrative and the use‑cases in your docs; this API is the spine that ties them together.</p>
+  </main>
+</body>
+</html>

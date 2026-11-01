@@ -1,0 +1,1308 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/FFF_Gravity/f_Capture_Hard.md">
+  <title>fCaptureHard — Hard Lock Capture Variant</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/FFF_Gravity/f_Capture_Hard.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/FFF_Gravity/f_Capture_Hard.md</code>
+  </aside>
+
+  <main>
+<h1 id="f_capture_hard-hard-lock-capture-variant">f_Capture_Hard — Hard Lock Capture Variant</h1>
+<hr>
+<pre><code>id: FFF_Gravity/f_Capture_Hard
+title: &quot;f_Capture_Hard — Hard Lock Capture Variant&quot;
+version: 0.4.0
+wave: 4
+layer: F_fluid
+depends_on:
+  - FFF_Gravity/f_Capture
+  - FFF_Gravity/f_Decay
+  - FFF_Gravity/f_Orbit
+  - FFF_Gravity/f_Field
+status: canonical
+created: 2026-08-13
+authors: [umaywant2]
+</code></pre>
+<hr>
+<h2 id="0-preamble">§0 — Preamble</h2>
+<p><code>f_Capture_Hard</code> defines the <strong>hard lock</strong> capture pathway: a binary-threshold variant
+of the standard capture operator in which binding must clear an <strong>elevated floor</strong>
+(<code>d_hard</code>) before any commitment is recorded. If the threshold is met, the attractor
+node transitions immediately to <code>ORBIT_STABLE</code> with no provisional period. If the
+threshold is not met, the attempt is <strong>hard rejected</strong> — no grace period, no retry
+within the same encounter.</p>
+<p>This file is the structural inverse of <code>f_Capture_Soft</code>. Where Soft extends provisional
+binding below the standard floor, Hard refuses commitment below a floor that sits
+<em>above</em> the nominal binding distance. The elevated requirement ensures that only
+high-confidence, high-energy bindings enter the orbit registry.</p>
+<p><strong>Relationship to base capture:</strong></p>
+<pre><code>f_Capture.md         → standard path    (d_bind ≥ d_bind_min → CAPTURE_LOCKED → orbit eval)
+f_Capture_Soft.md    → sub-threshold    (soft_threshold ≤ d_bind &lt; d_warn; grace period)
+f_Capture_Hard.md    → supra-threshold  (d_bind ≥ d_hard, β ≥ β_min_hard → ORBIT_STABLE)
+</code></pre>
+<p>Hard capture <strong>bypasses</strong> the standard <code>CAPTURE_LOCKED</code> intermediate state. On success,
+the orbit registry entry is written directly at <code>ORBIT_STABLE</code>.</p>
+<hr>
+<h2 id="1-module-identity">§1 — Module Identity</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Operator</td>
+<td>hard_capture</td>
+</tr>
+<tr>
+<td>Layer</td>
+<td>F_fluid (binding coefficient domain)</td>
+</tr>
+<tr>
+<td>Wave</td>
+<td>4 — Capture Variants</td>
+</tr>
+<tr>
+<td>PRIM range</td>
+<td>PRIM:031 – PRIM:032</td>
+</tr>
+<tr>
+<td>Depends on</td>
+<td>f_Capture, f_Decay, f_Orbit, f_Field</td>
+</tr>
+<tr>
+<td>FM guards</td>
+<td>FM-001, FM-003, FM-004, FM-005</td>
+</tr>
+<tr>
+<td>INV scope</td>
+<td>INV-001 through INV-010</td>
+</tr>
+<tr>
+<td>Precondition</td>
+<td>Approach state = APPROACH_LIVE</td>
+</tr>
+<tr>
+<td>Success exit</td>
+<td>ORBIT_STABLE (immediate; no intermediate)</td>
+</tr>
+<tr>
+<td>Failure exit</td>
+<td>HARD_REJECTED (terminal for encounter)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="2-operator-definitions">§2 — Operator Definitions</h2>
+<h3 id="21-hard-lock-threshold-distance">2.1 Hard-Lock Threshold Distance</h3>
+<pre><code>d_hard = α_hard × d_bind_nominal
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Type</th>
+<th>Constraint</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>d_hard</td>
+<td>float</td>
+<td>&gt; d_bind_nominal</td>
+<td>Minimum binding distance required for hard eligibility</td>
+</tr>
+<tr>
+<td>α_hard</td>
+<td>float</td>
+<td>&gt; 1.0; default 1.5</td>
+<td>Hard lock multiplier</td>
+</tr>
+<tr>
+<td>d_bind_nominal</td>
+<td>float</td>
+<td>&gt; 0</td>
+<td>Nominal equilibrium binding distance for pair (E, A)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Threshold ordering relationship:</strong></p>
+<pre><code>d_collapse &lt; d_warn &lt; d_bind_nominal &lt; d_hard
+</code></pre>
+<p>Hard lock demands a binding stronger than nominal — the pair must already be
+over-bound relative to their equilibrium distance before the lock is written.</p>
+<h3 id="22-hard-binding-coefficient-floor">2.2 Hard Binding Coefficient Floor</h3>
+<pre><code>β_hard ≥ β_min_hard     (default β_min_hard = 2.0)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Type</th>
+<th>Constraint</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>β_hard</td>
+<td>float</td>
+<td>≥ β_min_hard</td>
+<td>Binding coefficient at the moment of lock attempt</td>
+</tr>
+<tr>
+<td>β_min_hard</td>
+<td>float</td>
+<td>&gt; 1.0; default 2.0</td>
+<td>Minimum β for hard eligibility</td>
+</tr>
+</tbody>
+</table>
+<p>The standard capture floor is β ≥ 1.0. Hard lock requires β ≥ 2.0, ensuring the
+coupling is at least doubly reinforced before the commitment becomes irrevocable.</p>
+<h3 id="23-lock-cost">2.3 Lock Cost</h3>
+<pre><code>lock_cost = M_E × β_hard × d_hard × k_lock
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Type</th>
+<th>Constraint</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lock_cost</td>
+<td>float</td>
+<td>≥ 0</td>
+<td>Energy expenditure to execute hard lock</td>
+</tr>
+<tr>
+<td>M_E</td>
+<td>float</td>
+<td>&gt; 0</td>
+<td>Mass of element node</td>
+</tr>
+<tr>
+<td>β_hard</td>
+<td>float</td>
+<td>≥ β_min_hard</td>
+<td>Binding coefficient at lock time (HLC-2 satisfied)</td>
+</tr>
+<tr>
+<td>d_hard</td>
+<td>float</td>
+<td>&gt; d_bind_nominal</td>
+<td>Binding distance at lock time (HLC-1 satisfied)</td>
+</tr>
+<tr>
+<td>k_lock</td>
+<td>float</td>
+<td>&gt; 0</td>
+<td>Lock cost coefficient; domain-calibrated constant</td>
+</tr>
+</tbody>
+</table>
+<p><code>lock_cost</code> is debited from <code>M_E</code> at execution time. Unlike <code>f_Capture_Soft</code>, there
+is no amortized cost schedule — the full cost is paid at the moment of lock,
+reflecting the commitment's irrevocability.</p>
+<hr>
+<h2 id="3-primitive-declarations">§3 — Primitive Declarations</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Type</th>
+<th>Inputs</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PRIM:031</td>
+<td>evaluate_hard_eligibility</td>
+<td>Pure</td>
+<td>d_bind, β, ρ(Φ), state, no_retry_flag</td>
+<td>HARD_ELIGIBLE or HARD_REJECTED</td>
+</tr>
+<tr>
+<td>PRIM:032</td>
+<td>execute_hard_lock</td>
+<td>Impure</td>
+<td>E, A, d_bind, β, ρ(Φ), k_lock</td>
+<td>ORBIT_STABLE; mutates orbit registry</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="4-formal-operator-specifications">§4 — Formal Operator Specifications</h2>
+<h3 id="41-hard-eligibility-check">4.1 Hard Eligibility Check</h3>
+<p>PRIM:031 evaluates the conjunctive condition set <code>{HLC-1, HLC-2, HLC-3, HLC-4}</code>. All
+four must hold simultaneously. A single failure returns <code>HARD_REJECTED</code> immediately.</p>
+<p><strong>HLC-1 (Binding distance floor):</strong></p>
+<pre><code>d_bind ≥ d_hard     ⟺     d_bind ≥ α_hard × d_bind_nominal
+</code></pre>
+<p><strong>HLC-2 (Binding coefficient floor):</strong></p>
+<pre><code>β ≥ β_min_hard
+</code></pre>
+<p><strong>HLC-3 (Field presence):</strong></p>
+<pre><code>ρ(Φ) &gt; 0.0
+</code></pre>
+<p>The attractor field must be live. A null field renders hard lock meaningless; FM-001
+is active on this condition.</p>
+<p><strong>HLC-4 (Approach state guard):</strong></p>
+<pre><code>state ∈ {APPROACH_LIVE}
+</code></pre>
+<p>Hard lock is only legal from a live approach. Any other state (<code>CAPTURE_LOCKED</code>,
+<code>ORBIT_STABLE</code>, <code>RELEASED</code>, <code>COLLAPSED</code>, <code>HARD_REJECTED</code>) causes immediate return
+of <code>HARD_REJECTED</code>.</p>
+<p><strong>No-retry policy:</strong></p>
+<pre><code>if no_retry_flag = TRUE → return HARD_REJECTED   (skip all HLC evaluation)
+</code></pre>
+<p>Once a hard rejection has been issued for a given (E, A) pair in the current
+encounter, <code>no_retry_flag</code> is latched to <code>TRUE</code>. All subsequent calls to PRIM:031
+for that pair return <code>HARD_REJECTED</code> without re-evaluation. The flag is
+encounter-scoped: it resets only when the approach fully terminates and a new
+approach begins.</p>
+<h3 id="42-orbit-registry-entry">4.2 Orbit Registry Entry</h3>
+<p>On <code>HARD_ELIGIBLE</code>, PRIM:032 writes the orbit registry entry directly at
+<code>ORBIT_STABLE</code>, bypassing the <code>CAPTURE_LOCKED</code> intermediate:</p>
+<pre><code>orbit_entry = {
+  E:            element node ID,
+  A:            attractor node ID,
+  d_bind:       d_bind at lock time,
+  β:            β at lock time,
+  ρ(Φ):         ρ(Φ) at lock time,
+  orbit_class:  classify_orbit(d_bind, e, T_orb),   ← PRIM:007
+  stab_class:   STABLE,
+  lock_type:    HARD,
+  lock_cost:    M_E × β × d_bind × k_lock,
+  state:        ORBIT_STABLE
+}
+</code></pre>
+<p>The <code>lock_type: HARD</code> field differentiates hard-locked entries from standard
+captures in the orbit registry. This distinction is available to downstream
+operators (f_Release, f_Decay, f_Amplify) for conditional logic.</p>
+<h3 id="43-state-transition-diagram">4.3 State Transition Diagram</h3>
+<pre><code>APPROACH_LIVE
+     │
+     ▼
+[PRIM:031: evaluate_hard_eligibility]
+     │
+     ├── All HLC pass ──→ HARD_ELIGIBLE
+     │                         │
+     │                         ▼
+     │                  [PRIM:032: execute_hard_lock]
+     │                         │
+     │                         ├── frame capacity OK ──→ ORBIT_STABLE  (terminal success)
+     │                         │
+     │                         └── FM-003 triggered  ──→ FRAME_SATURATED (retriable)
+     │
+     └── Any HLC fails ──→ HARD_REJECTED  (terminal failure; no retry)
+</code></pre>
+<p>No intermediate state is ever entered. The transition from <code>APPROACH_LIVE</code> to
+<code>ORBIT_STABLE</code> is atomic from the perspective of the orbit registry.</p>
+<hr>
+<h2 id="5-primitive-specifications">§5 — Primitive Specifications</h2>
+<h3 id="prim031-evaluate_hard_eligibility-pure">PRIM:031 — evaluate_hard_eligibility (Pure)</h3>
+<pre><code>PRIM:031 evaluate_hard_eligibility(
+  d_bind:        float,   // current binding distance
+  β:             float,   // current binding coefficient
+  ρ_phi:         float,   // current field density ∈ [0, 1]
+  state:         enum,    // current approach state
+  no_retry_flag: bool     // encounter-scoped hard-reject latch (write-once)
+) → EligibilityResult
+
+EligibilityResult ::= HARD_ELIGIBLE | HARD_REJECTED
+
+Algorithm:
+  if no_retry_flag:
+    return HARD_REJECTED                        // no-retry policy — skip all checks
+
+  if state ≠ APPROACH_LIVE:
+    no_retry_flag := TRUE                       // latch (only permitted mutation)
+    return HARD_REJECTED                        // HLC-4 violated
+
+  if ρ_phi ≤ 0.0:
+    no_retry_flag := TRUE
+    return HARD_REJECTED                        // HLC-3 violated; FM-001 active
+
+  if β &lt; β_min_hard:
+    no_retry_flag := TRUE
+    return HARD_REJECTED                        // HLC-2 violated
+
+  if d_bind &lt; d_hard:                          // d_hard = α_hard × d_bind_nominal
+    no_retry_flag := TRUE
+    return HARD_REJECTED                        // HLC-1 violated
+
+  return HARD_ELIGIBLE
+</code></pre>
+<p><strong>Purity note:</strong> The only permitted mutation is the write-once <code>no_retry_flag</code> latch.
+It does not mutate the binding registry, orbit registry, or any node state. All other
+outputs are read-only.</p>
+<p><strong>FM guards active in PRIM:031:</strong>
+- FM-001: ρ(Φ) ≤ 0.0 → HLC-3 fails immediately
+- FM-003: frame capacity is <em>not</em> checked here — it is a graph-level resource checked
+  in PRIM:032, not a pair-level eligibility condition</p>
+<h3 id="prim032-execute_hard_lock-impure">PRIM:032 — execute_hard_lock (Impure)</h3>
+<pre><code>PRIM:032 execute_hard_lock(
+  E:       node,    // element node
+  A:       node,    // attractor node
+  d_bind:  float,   // binding distance (HLC-1 verified by PRIM:031)
+  β:       float,   // binding coefficient (HLC-2 verified by PRIM:031)
+  ρ_phi:   float,   // field density (HLC-3 verified by PRIM:031)
+  k_lock:  float    // lock cost coefficient
+) → LockResult
+
+LockResult ::= ORBIT_STABLE | FRAME_SATURATED
+
+Precondition: PRIM:031 returned HARD_ELIGIBLE for (E, A) in this call chain.
+
+Algorithm:
+  // 1. Frame capacity check (FM-003 guard)
+  if GravityGraph.frame_capacity_reached():
+    emit FM-003 (HARD variant)
+    return FRAME_SATURATED                     // no_retry_flag unchanged
+
+  // 2. Compute and debit lock cost
+  lock_cost := M_E × β × d_bind × k_lock
+  E.energy  -= lock_cost
+  if E.energy &lt; 0:
+    E.energy := 0                             // floor at zero; INV-007 compliance
+
+  // 3. Classify orbit via PRIM:007 (f_Orbit)
+  orb_class := classify_orbit(d_bind, e, T_orb)
+
+  // 4. Write orbit registry entry
+  orbit_entry := {
+    E:           E.id,
+    A:           A.id,
+    d_bind:      d_bind,
+    β:           β,
+    ρ(Φ):        ρ_phi,
+    orbit_class: orb_class,
+    stab_class:  STABLE,
+    lock_type:   HARD,
+    lock_cost:   lock_cost,
+    state:       ORBIT_STABLE
+  }
+  GravityGraph.orbit_registry.write(orbit_entry)
+
+  // 5. Transition node states
+  E.state := ORBIT_STABLE
+  A.state := ORBIT_STABLE
+
+  // 6. Emit GravityGraph event
+  emit GravityGraph.event(
+    HARD_LOCK_CONFIRMED,
+    { E, A, d_bind, β, lock_cost }
+  )
+
+  return ORBIT_STABLE
+</code></pre>
+<p><strong>Side effects:</strong>
+- Debits <code>lock_cost</code> from <code>E.energy</code>
+- Writes new entry to <code>GravityGraph.orbit_registry</code>
+- Mutates <code>E.state</code> and <code>A.state</code> to <code>ORBIT_STABLE</code>
+- Emits <code>HARD_LOCK_CONFIRMED</code> event to GravityGraph</p>
+<p><strong>Caller contract:</strong> PRIM:032 must only be called after PRIM:031 returns <code>HARD_ELIGIBLE</code>
+in the same synchronous call chain. Out-of-order invocation is a protocol violation
+and yields undefined behavior.</p>
+<hr>
+<h2 id="6-failure-mode-guards">§6 — Failure Mode Guards</h2>
+<h3 id="fm-001-field-collapse-active-in-hlc-3">FM-001 — Field Collapse (active in HLC-3)</h3>
+<p>If <code>ρ(Φ) ≤ 0.0</code> at the time PRIM:031 is called, HLC-3 fails and <code>HARD_REJECTED</code> is
+returned. The attractor field has collapsed; hard lock is impossible without a live
+field. The caller should invoke <code>f_Emit</code> or restore field presence via <code>f_Amplify</code>
+before initiating a new approach.</p>
+<h3 id="fm-003-frame-saturation-active-in-prim032">FM-003 — Frame Saturation (active in PRIM:032)</h3>
+<p>If <code>GravityGraph.frame_capacity_reached()</code> returns <code>TRUE</code> inside PRIM:032, the lock
+is aborted and <code>FRAME_SATURATED</code> is returned. Unlike <code>HARD_REJECTED</code>,
+<code>FRAME_SATURATED</code> does <strong>not</strong> set <code>no_retry_flag</code> — the pair may retry once frame
+capacity is restored. The FM-003 guard is deferred to PRIM:032 (not PRIM:031) because
+frame capacity is a graph-level resource, not a pair-level eligibility condition.</p>
+<h3 id="fm-004-resonance-drift-monitoring-only">FM-004 — Resonance Drift (monitoring only)</h3>
+<p>Hard-locked orbits with <code>orbit_class = RESONANT</code> are flagged for enhanced decay
+monitoring. FM-004 governs resonance drift in <code>f_Decay</code>; the elevated <code>d_bind</code> at
+lock time provides greater margin before <code>d_warn</code> is crossed. No action taken in this
+file; FM-004 guard is noted for the decay integration contract.</p>
+<h3 id="fm-005-decay-spiral-awareness-only">FM-005 — Decay Spiral (awareness only)</h3>
+<p>Hard lock does not preclude decay after the orbit is established. <code>f_Decay</code> runs
+independently. The elevated <code>d_hard</code> floor provides margin, but FM-005 remains
+possible if decay accelerates post-lock. No guard implemented here; noted for
+downstream awareness.</p>
+<hr>
+<h2 id="7-invariant-compliance">§7 — Invariant Compliance</h2>
+<table>
+<thead>
+<tr>
+<th>INV</th>
+<th>Statement</th>
+<th>Compliance in f_Capture_Hard</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INV-001</td>
+<td>G = F_freq · F_fluid · F_force</td>
+<td>Hard lock operates in F_fluid; INV-001 globally required; not locally asserted</td>
+</tr>
+<tr>
+<td>INV-002</td>
+<td>d_bind &gt; 0 always</td>
+<td>HLC-1 enforces d_bind ≥ d_hard &gt; d_bind_nominal &gt; 0; strictly compliant</td>
+</tr>
+<tr>
+<td>INV-003</td>
+<td>ρ(Φ) ∈ [0, 1]</td>
+<td>HLC-3 tests ρ(Φ) &gt; 0; upper bound governed by f_Emit; compliant</td>
+</tr>
+<tr>
+<td>INV-004</td>
+<td>β ≥ 1.0 for any active orbit</td>
+<td>HLC-2 enforces β ≥ β_min_hard = 2.0 &gt; 1.0; strictly compliant</td>
+</tr>
+<tr>
+<td>INV-005</td>
+<td>All conditions within a file conjunctive</td>
+<td>HLC-1 through HLC-4 are fully conjunctive; compliant</td>
+</tr>
+<tr>
+<td>INV-006</td>
+<td>Terminal states are irreversible</td>
+<td>ORBIT_STABLE and HARD_REJECTED are both terminal; no re-entry path; compliant</td>
+</tr>
+<tr>
+<td>INV-007</td>
+<td>Energy is non-negative</td>
+<td>PRIM:032 floors E.energy at 0 after debit; compliant</td>
+</tr>
+<tr>
+<td>INV-008</td>
+<td>No phantom orbits</td>
+<td>Orbit registry written only after PRIM:031 returns HARD_ELIGIBLE; compliant</td>
+</tr>
+<tr>
+<td>INV-009</td>
+<td>OPERATORS.md is single symbol authority</td>
+<td>d_hard, β_hard, lock_cost registered in §9; compliant</td>
+</tr>
+<tr>
+<td>INV-010</td>
+<td>Frozen symbols immutable without bump</td>
+<td>All Wave 0–3 symbols used as-is; no renames; compliant</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="8-stability-condition-manifest">§8 — Stability &amp; Condition Manifest</h2>
+<h3 id="81-hard-lock-conditions-hlc">8.1 Hard Lock Conditions (HLC)</h3>
+<p>All four conditions are <strong>conjunctive</strong> (INV-005). Every HLC must be satisfied
+simultaneously for PRIM:031 to return <code>HARD_ELIGIBLE</code>.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Expression</th>
+<th>Severity</th>
+<th>On Failure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HLC-1</td>
+<td>d_bind ≥ α_hard × d_bind_nominal</td>
+<td>FATAL</td>
+<td>HARD_REJECTED</td>
+</tr>
+<tr>
+<td>HLC-2</td>
+<td>β ≥ β_min_hard</td>
+<td>FATAL</td>
+<td>HARD_REJECTED</td>
+</tr>
+<tr>
+<td>HLC-3</td>
+<td>ρ(Φ) &gt; 0.0</td>
+<td>FATAL</td>
+<td>HARD_REJECTED</td>
+</tr>
+<tr>
+<td>HLC-4</td>
+<td>state = APPROACH_LIVE</td>
+<td>FATAL</td>
+<td>HARD_REJECTED</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-no-retry-policy-specification">8.2 No-Retry Policy Specification</h3>
+<pre><code>no_retry_flag := FALSE                         // initialized at encounter start
+
+on any HLC failure:
+  no_retry_flag := TRUE                        // latched; never reset mid-encounter
+
+on FRAME_SATURATED from PRIM:032:
+  no_retry_flag unchanged                      // FM-003 path is retriable
+
+on encounter_end / full reset:
+  no_retry_flag := FALSE                       // encounter-scoped reset only
+</code></pre>
+<p><strong>Rationale:</strong> The no-retry policy enforces that hard lock is a one-shot commitment
+attempt. If the pair cannot meet the elevated threshold on the first try, the
+encounter is considered mismatched for this pathway. The caller must either route
+through standard <code>f_Capture</code>, wait for conditions to improve in a new encounter, or
+use <code>f_Amplify</code> and <code>f_Emit</code> to raise β and ρ(Φ) before a fresh approach begins.</p>
+<h3 id="83-state-flags">8.3 State Flags</h3>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Set By</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HARD_ELIGIBLE</td>
+<td>PRIM:031</td>
+<td>All HLC passed; PRIM:032 may proceed</td>
+</tr>
+<tr>
+<td>ORBIT_STABLE</td>
+<td>PRIM:032</td>
+<td>Hard lock successful; orbit registered at STABLE; terminal</td>
+</tr>
+<tr>
+<td>HARD_REJECTED</td>
+<td>PRIM:031</td>
+<td>Any HLC failed; encounter closed; no retry</td>
+</tr>
+<tr>
+<td>FRAME_SATURATED</td>
+<td>PRIM:032</td>
+<td>FM-003 triggered; lock aborted; no_retry_flag unchanged</td>
+</tr>
+</tbody>
+</table>
+<h3 id="84-comparison-hard-vs-soft-vs-standard">8.4 Comparison — Hard vs. Soft vs. Standard</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>f_Capture (std)</th>
+<th>f_Capture_Soft</th>
+<th>f_Capture_Hard</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Binding threshold</td>
+<td>d_bind ≥ d_bind_min</td>
+<td>soft_threshold ≤ d_bind &lt; d_warn</td>
+<td>d_bind ≥ d_hard &gt; d_bind_nominal</td>
+</tr>
+<tr>
+<td>β requirement</td>
+<td>β ≥ 1.0</td>
+<td>β ≥ 1.0</td>
+<td>β ≥ β_min_hard (default 2.0)</td>
+</tr>
+<tr>
+<td>Intermediate state</td>
+<td>CAPTURE_LOCKED</td>
+<td>CAPTURE_SOFT</td>
+<td>None (atomic skip to ORBIT_STABLE)</td>
+</tr>
+<tr>
+<td>On success</td>
+<td>CAPTURE_LOCKED → eval</td>
+<td>CAPTURE_SOFT → resolve cycle</td>
+<td>ORBIT_STABLE (direct)</td>
+</tr>
+<tr>
+<td>On failure</td>
+<td>retry possible</td>
+<td>dissolve / expire / hold</td>
+<td>HARD_REJECTED (no retry)</td>
+</tr>
+<tr>
+<td>Grace period</td>
+<td>N/A</td>
+<td>grace_period cycles (default 5)</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Lock cost timing</td>
+<td>at orbit write</td>
+<td>amortized across grace period</td>
+<td>full upfront at lock moment</td>
+</tr>
+<tr>
+<td>Registry lock_type</td>
+<td>STANDARD</td>
+<td>SOFT</td>
+<td>HARD</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="9-registry-footprint">§9 — Registry Footprint</h2>
+<h3 id="91-operatorsmd-registration">9.1 OPERATORS.md Registration</h3>
+<p>The following symbols must be appended to <code>OPERATORS.md</code> under the
+<strong>Wave 4 — Capture Variants</strong> heading:</p>
+<pre><code>### f_Capture_Hard Operators
+
+| Symbol      | Definition                          | Constraint              | Source file       |
+|-------------|-------------------------------------|-------------------------|-------------------|
+| d_hard      | α_hard × d_bind_nominal             | &gt; d_bind_nominal        | f_Capture_Hard.md |
+| α_hard      | Hard lock multiplier                | &gt; 1.0; default 1.5      | f_Capture_Hard.md |
+| β_hard      | Binding coefficient at lock time    | ≥ β_min_hard            | f_Capture_Hard.md |
+| β_min_hard  | Minimum β for hard eligibility      | &gt; 1.0; default 2.0      | f_Capture_Hard.md |
+| lock_cost   | M_E × β_hard × d_hard × k_lock     | ≥ 0                     | f_Capture_Hard.md |
+| k_lock      | Lock cost coefficient               | &gt; 0; domain-calibrated  | f_Capture_Hard.md |
+</code></pre>
+<h3 id="92-primitives-registry-update">9.2 PRIMITIVES Registry Update</h3>
+<pre><code>PRIM:031  evaluate_hard_eligibility  Pure    f_Capture_Hard.md
+PRIM:032  execute_hard_lock          Impure  f_Capture_Hard.md
+</code></pre>
+<h3 id="93-state-flags-registry-update">9.3 State Flags Registry Update</h3>
+<pre><code>HARD_ELIGIBLE    f_Capture_Hard.md  Transient — cleared after PRIM:032 executes
+ORBIT_STABLE     f_Capture_Hard.md  Terminal success (extended: lock_type = HARD)
+HARD_REJECTED    f_Capture_Hard.md  Terminal failure; encounter-scoped; no retry
+FRAME_SATURATED  f_Capture_Hard.md  Retriable abort; FM-003 path only
+</code></pre>
+<hr>
+<h2 id="10-worked-examples">§10 — Worked Examples</h2>
+<h3 id="example-1-clean-hard-lock-all-hlc-pass">Example 1 — Clean Hard Lock (All HLC Pass)</h3>
+<p><strong>Context:</strong> A high-energy pair where prior <code>f_Amplify</code> calls have elevated β and
+<code>f_Emit</code> has raised ρ(Φ). The binding distance comfortably exceeds <code>d_hard</code>.</p>
+<p><strong>Given:</strong></p>
+<pre><code>d_bind_nominal = 10.0
+α_hard         = 1.5
+d_hard         = 15.0
+
+d_bind         = 18.0    ← HLC-1: 18.0 ≥ 15.0   ✓
+β              = 3.2     ← HLC-2: 3.2  ≥ 2.0    ✓
+ρ(Φ)           = 0.75    ← HLC-3: 0.75 &gt; 0.0    ✓
+state          = APPROACH_LIVE                    ← HLC-4: ✓
+no_retry_flag  = FALSE
+
+M_E            = 5.0
+k_lock         = 0.1
+</code></pre>
+<p><strong>PRIM:031 → HARD_ELIGIBLE</strong></p>
+<p><strong>PRIM:032 execution:</strong></p>
+<pre><code>FM-003 check: frame not saturated → continue
+
+lock_cost = M_E × β × d_bind × k_lock
+          = 5.0 × 3.2 × 18.0 × 0.1
+          = 28.8
+
+E.energy -= 28.8
+
+orb_class = classify_orbit(18.0, e, T_orb)    ← PRIM:007
+
+orbit_entry.state     = ORBIT_STABLE
+orbit_entry.lock_type = HARD
+orbit_entry.lock_cost = 28.8
+</code></pre>
+<p><strong>Result:</strong> <code>ORBIT_STABLE</code>. GravityGraph event <code>HARD_LOCK_CONFIRMED</code> emitted.
+Lock is irrevocable. Downstream operators see <code>lock_type = HARD</code> in orbit registry.</p>
+<hr>
+<h3 id="example-2-hlc-1-failure-binding-distance-insufficient">Example 2 — HLC-1 Failure: Binding Distance Insufficient</h3>
+<p><strong>Context:</strong> An attractor pair where β has been amplified above the hard floor via
+<code>f_Amplify</code>, but the physical binding distance has not yet grown to <code>d_hard</code>. The
+attempt is routed prematurely to hard capture.</p>
+<p><strong>Given:</strong></p>
+<pre><code>d_bind_nominal = 10.0
+α_hard         = 1.5
+d_hard         = 15.0
+
+d_bind         = 12.5    ← HLC-1: 12.5 &lt; 15.0   ✗
+β              = 2.4     (HLC-2 would pass)
+ρ(Φ)           = 0.82    (HLC-3 would pass)
+state          = APPROACH_LIVE               (HLC-4 would pass)
+no_retry_flag  = FALSE
+</code></pre>
+<p><strong>PRIM:031 evaluation:</strong></p>
+<pre><code>HLC-1: d_bind(12.5) &lt; d_hard(15.0)  →  FAIL
+no_retry_flag := TRUE   (latched immediately)
+return HARD_REJECTED
+</code></pre>
+<p><strong>Result:</strong> <code>HARD_REJECTED</code>. PRIM:032 is never invoked. No energy debited.
+No orbit registry entry written. The encounter is closed for hard capture.</p>
+<p><strong>Post-rejection routing options:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Route</th>
+<th>Action</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standard capture</td>
+<td>Re-evaluate via f_Capture.md with d_bind = 12.5</td>
+<td>Succeeds if d_bind ≥ d_warn</td>
+</tr>
+<tr>
+<td>Soft capture</td>
+<td>Re-evaluate via f_Capture_Soft.md with d_bind = 12.5</td>
+<td>Succeeds if d_bind ≥ soft_threshold</td>
+</tr>
+<tr>
+<td>New encounter</td>
+<td>Let approach terminate; restore conditions; re-approach</td>
+<td>no_retry_flag resets</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Key distinction:</strong> The no-retry flag applies to the <em>hard capture pathway only</em>. It
+does not block the same pair from using standard <code>f_Capture.md</code> in the same encounter.
+Hard reject ≠ total encounter reject.</p>
+</blockquote>
+<hr>
+<h3 id="example-3-hlc-2-failure-below-_min_hard">Example 3 — HLC-2 Failure: β Below β_min_hard</h3>
+<p><strong>Context:</strong> The binding distance is well above <code>d_hard</code>, but β has not been
+sufficiently amplified. A strong field cannot compensate for an under-coupled
+binding coefficient in the hard capture pathway.</p>
+<p><strong>Given:</strong></p>
+<pre><code>d_bind_nominal = 10.0
+α_hard         = 1.5
+d_hard         = 15.0
+β_min_hard     = 2.0
+
+d_bind         = 19.0    ← HLC-1: 19.0 ≥ 15.0   ✓
+β              = 1.7     ← HLC-2: 1.7  &lt; 2.0    ✗
+ρ(Φ)           = 0.91    (HLC-3 would pass)
+state          = APPROACH_LIVE               (HLC-4 would pass)
+no_retry_flag  = FALSE
+</code></pre>
+<p><strong>PRIM:031 evaluation:</strong></p>
+<pre><code>HLC-1: 19.0 ≥ 15.0      → PASS
+HLC-2: 1.7  &lt; 2.0       → FAIL
+no_retry_flag := TRUE
+return HARD_REJECTED
+</code></pre>
+<p><strong>Result:</strong> <code>HARD_REJECTED</code>. HLC conditions are evaluated in order (1→2→3→4);
+the first failure latches the flag and exits. HLC-3 and HLC-4 are never reached.</p>
+<p><strong>Recovery analysis:</strong></p>
+<p>To succeed on a future encounter, β must reach β_min_hard = 2.0. The shortfall is:</p>
+<pre><code>Δβ_needed = β_min_hard − β_current = 2.0 − 1.7 = 0.3
+</code></pre>
+<p>If <code>f_Amplify</code> is used (PRIM:021) with F_amp:</p>
+<pre><code>β_new = β × F_amp ≥ 2.0
+F_amp ≥ 2.0 / 1.7 ≈ 1.18
+</code></pre>
+<p>A single <code>f_Amplify</code> call with F_amp ≥ 1.18 resolves the shortfall. After amplification,
+a <strong>new encounter</strong> must begin (no_retry_flag prevents retry in the current encounter).</p>
+<p><strong>Diagnostic note:</strong> HLC-2 failures are typically engineering failures, not field
+failures — the binding distance is sufficient but the coupling is under-maintained.
+<code>check_runaway_risk</code> (PRIM:022) should be called before any amplification to ensure
+β_new does not breach β_max.</p>
+<hr>
+<h3 id="example-4-near-threshold-lock-with-lock_cost-analysis">Example 4 — Near-Threshold Lock with lock_cost Analysis</h3>
+<p><strong>Context:</strong> A pair exactly at the hard lock eligibility boundary. All HLC pass
+with minimal margin. This example focuses on the lock_cost computation and its
+implications for the element's energy budget.</p>
+<p><strong>Given:</strong></p>
+<pre><code>d_bind_nominal = 10.0
+α_hard         = 1.5
+d_hard         = 15.0
+β_min_hard     = 2.0
+
+d_bind         = 15.1    ← HLC-1: margin = 0.1   (barely passes)
+β              = 2.05    ← HLC-2: margin = 0.05  (barely passes)
+ρ(Φ)           = 0.41    ← HLC-3: passes (&gt; 0)
+state          = APPROACH_LIVE               (HLC-4 passes)
+no_retry_flag  = FALSE
+
+M_E            = 8.0
+k_lock         = 0.12
+E.energy_pre   = 22.0    (available energy before lock)
+</code></pre>
+<p><strong>PRIM:031 evaluation:</strong></p>
+<pre><code>HLC-1: 15.1 ≥ 15.0   → PASS (margin: 0.1)
+HLC-2: 2.05 ≥ 2.0    → PASS (margin: 0.05)
+HLC-3: 0.41 &gt; 0.0    → PASS
+HLC-4: APPROACH_LIVE → PASS
+return HARD_ELIGIBLE
+</code></pre>
+<p><strong>PRIM:032 execution:</strong></p>
+<pre><code>lock_cost = M_E × β × d_bind × k_lock
+          = 8.0 × 2.05 × 15.1 × 0.12
+          = 8.0 × 2.05 × 1.812
+          = 8.0 × 3.7146
+          = 29.717
+
+E.energy_post = E.energy_pre − lock_cost
+              = 22.0 − 29.717
+              = −7.717  →  clamped to 0.0  (INV-007)
+</code></pre>
+<p><strong>Result:</strong> <code>ORBIT_STABLE</code>. Lock succeeds. However, E.energy is exhausted — the
+lock cost exceeds E's available energy budget.</p>
+<p><strong>Energy exhaustion implications:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Downstream Effect</th>
+<th>Consequence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>f_Amplify</code> calls</td>
+<td>E.energy = 0; no amplification budget available</td>
+</tr>
+<tr>
+<td><code>f_Emit</code> support</td>
+<td>Energy comes from field, not E — unaffected</td>
+</tr>
+<tr>
+<td>Decay resilience</td>
+<td>Hard lock provides high d_bind margin; decay risk is low</td>
+</tr>
+<tr>
+<td>Release cost</td>
+<td>v_release energy is still owed; E may need external energy provision</td>
+</tr>
+</tbody>
+</table>
+<p><strong>lock_cost sensitivity analysis (α_hard = 1.5, β_min_hard = 2.0):</strong></p>
+<table>
+<thead>
+<tr>
+<th>M_E</th>
+<th>β</th>
+<th>d_bind</th>
+<th>k_lock</th>
+<th>lock_cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5.0</td>
+<td>2.0</td>
+<td>15.0</td>
+<td>0.10</td>
+<td>15.00</td>
+</tr>
+<tr>
+<td>5.0</td>
+<td>2.0</td>
+<td>15.0</td>
+<td>0.20</td>
+<td>30.00</td>
+</tr>
+<tr>
+<td>8.0</td>
+<td>2.0</td>
+<td>15.0</td>
+<td>0.10</td>
+<td>24.00</td>
+</tr>
+<tr>
+<td>8.0</td>
+<td>3.0</td>
+<td>20.0</td>
+<td>0.10</td>
+<td>48.00</td>
+</tr>
+<tr>
+<td>8.0</td>
+<td>2.05</td>
+<td>15.1</td>
+<td>0.12</td>
+<td><strong>29.72</strong> ← this example</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Design implication:</strong> lock_cost scales with all three binding parameters (M_E, β,
+d_bind) and the system constant k_lock. Near-threshold hard locks carry disproportionate
+energy burden relative to their marginal eligibility. Operators should prefer well-above-
+threshold approaches unless energy budget is abundant.</p>
+<hr>
+<h2 id="11-document-metadata">§11 — Document Metadata</h2>
+<h3 id="111-inv-compliance-summary">§11.1 — INV Compliance Summary</h3>
+<table>
+<thead>
+<tr>
+<th>INV</th>
+<th>Compliance</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INV-001</td>
+<td>✅</td>
+<td>F_fluid operation; G = F_freq · F_fluid · F_force globally respected</td>
+</tr>
+<tr>
+<td>INV-002</td>
+<td>✅</td>
+<td>HLC-1 enforces d_bind ≥ d_hard &gt; 0</td>
+</tr>
+<tr>
+<td>INV-003</td>
+<td>✅</td>
+<td>HLC-3 enforces ρ(Φ) &gt; 0</td>
+</tr>
+<tr>
+<td>INV-004</td>
+<td>✅</td>
+<td>HLC-2 enforces β ≥ 2.0 &gt; 1.0</td>
+</tr>
+<tr>
+<td>INV-005</td>
+<td>✅</td>
+<td>All HLC conjunctive; any single failure → HARD_REJECTED</td>
+</tr>
+<tr>
+<td>INV-006</td>
+<td>✅</td>
+<td>ORBIT_STABLE and HARD_REJECTED are terminal; no re-entry</td>
+</tr>
+<tr>
+<td>INV-007</td>
+<td>✅</td>
+<td>E.energy floored at 0.0 after lock_cost debit</td>
+</tr>
+<tr>
+<td>INV-008</td>
+<td>✅</td>
+<td>Orbit entry written only after HARD_ELIGIBLE confirmed</td>
+</tr>
+<tr>
+<td>INV-009</td>
+<td>✅</td>
+<td>All symbols registered in §9.1 OPERATORS.md block</td>
+</tr>
+<tr>
+<td>INV-010</td>
+<td>✅</td>
+<td>d_hard, β_hard, lock_cost, k_lock frozen in this file</td>
+</tr>
+</tbody>
+</table>
+<h3 id="112-primitive-registry-this-file">§11.2 — Primitive Registry (This File)</h3>
+<table>
+<thead>
+<tr>
+<th>PRIM</th>
+<th>Name</th>
+<th>Type</th>
+<th>Key Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PRIM:031</td>
+<td><code>evaluate_hard_eligibility</code></td>
+<td>Pure</td>
+<td>Conjunctive HLC-1–4; no_retry_flag write-once latch</td>
+</tr>
+<tr>
+<td>PRIM:032</td>
+<td><code>execute_hard_lock</code></td>
+<td>Impure</td>
+<td>Debit lock_cost; write ORBIT_STABLE; emit HARD_LOCK_CONFIRMED</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Running PRIM total after this file:</strong> PRIM:032</p>
+<h3 id="113-operator-registry-this-file">§11.3 — Operator Registry (This File)</h3>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Definition</th>
+<th>Domain</th>
+<th>First Frozen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>d_hard</code></td>
+<td>Hard lock binding floor</td>
+<td>&gt; d_bind_nominal</td>
+<td>f_Capture_Hard.md §2.1</td>
+</tr>
+<tr>
+<td><code>α_hard</code></td>
+<td>Hard lock multiplier</td>
+<td>&gt; 1.0; default 1.5</td>
+<td>f_Capture_Hard.md §2.1</td>
+</tr>
+<tr>
+<td><code>β_hard</code></td>
+<td>β at lock time</td>
+<td>≥ β_min_hard</td>
+<td>f_Capture_Hard.md §2.2</td>
+</tr>
+<tr>
+<td><code>β_min_hard</code></td>
+<td>Minimum β for hard eligibility</td>
+<td>&gt; 1.0; default 2.0</td>
+<td>f_Capture_Hard.md §2.2</td>
+</tr>
+<tr>
+<td><code>lock_cost</code></td>
+<td>M_E × β_hard × d_hard × k_lock</td>
+<td>≥ 0</td>
+<td>f_Capture_Hard.md §2.3</td>
+</tr>
+<tr>
+<td><code>k_lock</code></td>
+<td>Lock cost coefficient</td>
+<td>&gt; 0</td>
+<td>f_Capture_Hard.md §2.3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="114-state-flags-registry-this-file">§11.4 — State Flags Registry (This File)</h3>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Terminal?</th>
+<th>Set By</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>HARD_ELIGIBLE</code></td>
+<td>No</td>
+<td>PRIM:031</td>
+<td>All HLC passed; PRIM:032 may proceed</td>
+</tr>
+<tr>
+<td><code>ORBIT_STABLE</code></td>
+<td>Yes</td>
+<td>PRIM:032</td>
+<td>Hard lock confirmed; irrevocable</td>
+</tr>
+<tr>
+<td><code>HARD_REJECTED</code></td>
+<td>Yes</td>
+<td>PRIM:031</td>
+<td>HLC failed; no_retry_flag latched</td>
+</tr>
+<tr>
+<td><code>FRAME_SATURATED</code></td>
+<td>No</td>
+<td>PRIM:032</td>
+<td>FM-003 aborted lock; retriable</td>
+</tr>
+</tbody>
+</table>
+<h3 id="115-failure-mode-summary">§11.5 — Failure Mode Summary</h3>
+<table>
+<thead>
+<tr>
+<th>FM</th>
+<th>Trigger in This File</th>
+<th>Severity</th>
+<th>Recovery</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FM-001</td>
+<td>ρ(Φ) = 0 (HLC-3)</td>
+<td>Fatal</td>
+<td>f_Emit to restore field; new encounter</td>
+</tr>
+<tr>
+<td>FM-003</td>
+<td>Frame full (PRIM:032)</td>
+<td>Retriable</td>
+<td>Purge registry slot; retry PRIM:032</td>
+</tr>
+<tr>
+<td>FM-004</td>
+<td>Post-lock resonance drift</td>
+<td>Monitoring</td>
+<td>f_Decay handles; noted in §6</td>
+</tr>
+<tr>
+<td>FM-005</td>
+<td>Post-lock decay spiral</td>
+<td>Monitoring</td>
+<td>f_Decay / f_Collapse handle; noted in §6</td>
+</tr>
+</tbody>
+</table>
+<h3 id="116-changelog-entry">§11.6 — Changelog Entry</h3>
+<pre><code>## [f_Capture_Hard v1.0.0] — 2026-08-13 — SES-20260813-HARD-001
+Wave 4, File 4 of 6. Hard lock capture variant.
+
+### Added
+- Hard lock threshold model: d_bind ≥ d_hard = α_hard × d_bind_nominal
+- Operators frozen: d_hard, α_hard, β_hard, β_min_hard, lock_cost, k_lock
+- Conditions: HLC-1 (binding floor) · HLC-2 (β floor) · HLC-3 (field
+  present) · HLC-4 (approach live) — all conjunctive
+- No-retry policy: no_retry_flag write-once latch; encounter-scoped reset
+- Atomic state skip: APPROACH_LIVE → ORBIT_STABLE (no CAPTURE_LOCKED
+  intermediate)
+- lock_cost debit: M_E × β × d_bind × k_lock; E.energy floored at 0
+- PRIM:031 evaluate_hard_eligibility (Pure)
+- PRIM:032 execute_hard_lock (Impure)
+- State flags: HARD_ELIGIBLE, ORBIT_STABLE, HARD_REJECTED, FRAME_SATURATED
+- FM guards: FM-001 (HLC-3), FM-003 (PRIM:032 frame check)
+- Four worked examples: clean lock, HLC-1 fail, HLC-2 fail, near-threshold
+  energy analysis
+- Comparison table: Hard vs. Soft vs. Standard capture
+</code></pre>
+<h3 id="117-wave-4-status-tracker">§11.7 — Wave 4 Status Tracker</h3>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Status</th>
+<th>PRIM Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f_Capture_Multi.md</td>
+<td>✅ Complete</td>
+<td>025–026</td>
+</tr>
+<tr>
+<td>f_Capture_Cascade.md</td>
+<td>✅ Complete</td>
+<td>027–028</td>
+</tr>
+<tr>
+<td>f_Capture_Soft.md</td>
+<td>✅ Complete</td>
+<td>029–030</td>
+</tr>
+<tr>
+<td><strong>f_Capture_Hard.md</strong></td>
+<td><strong>✅ Complete</strong></td>
+<td><strong>031–032</strong></td>
+</tr>
+<tr>
+<td>f_Capture_Resonant.md</td>
+<td>⏳ Pending</td>
+<td>033–034</td>
+</tr>
+<tr>
+<td>f_Capture_Asymmetric.md</td>
+<td>⏳ Pending</td>
+<td>035–036</td>
+</tr>
+</tbody>
+</table>
+<h3 id="118-suggested-commit-message">§11.8 — Suggested Commit Message</h3>
+<pre><code>docs(FFF_Gravity): add canonical f_Capture_Hard — hard lock variant,
+binary threshold, no-retry policy, PRIM:031-032 [Wave4 / SES-HARD-001]
+
+- Hard lock zone: d_bind ≥ α_hard × d_bind_nominal (default α_hard = 1.5)
+- β floor: β ≥ β_min_hard (default 2.0) — stricter than standard 1.0
+- PRIM:031 evaluate_hard_eligibility (Pure) — HLC-1–4 conjunctive gate
+- PRIM:032 execute_hard_lock (Impure) — atomic skip to ORBIT_STABLE
+- No-retry policy: encounter-scoped no_retry_flag write-once latch
+- lock_cost = M_E × β × d_bind × k_lock debited from E.energy at lock
+- FM-001 guard (HLC-3), FM-003 guard (PRIM:032 frame check)
+- 4 examples: clean lock; HLC-1 fail; HLC-2 fail; near-threshold analysis
+</code></pre>
+<hr>
+<p><em>End of f_Capture_Hard.md — [FFF:GRAVITY:CAPTURE:HARD] v1.0.0 — Wave 4 File 4 of 6</em></p>
+  </main>
+</body>
+</html>

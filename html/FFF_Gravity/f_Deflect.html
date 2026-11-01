@@ -1,0 +1,2183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/FFF_Gravity/f_Deflect.md">
+  <title>fDeflect — Heading Deflection Primitive</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/FFF_Gravity/f_Deflect.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/FFF_Gravity/f_Deflect.md</code>
+  </aside>
+
+  <main>
+<h1 id="f_deflect-heading-deflection-primitive"><code>f_Deflect</code> — Heading Deflection Primitive</h1>
+<pre><code>session_id: SES-20260813-DEFLECT-001
+file: docs/FFF_Gravity/f_Deflect.md
+module: FFF_Gravity
+wave: 3
+wave_position: 8 of 8
+node: F_force
+role: Engineering primitive — modifies approach heading (v_approach direction) without changing magnitude
+status: canonical
+version: 1.0.0
+created: 2026-08-13
+authors:
+  - umaywant2
+depends_on:
+  - docs/FFF_Gravity/f_Force.md        # canonical — defines v_approach, heading_delta stub
+  - docs/FFF_Gravity/f_Field.md        # canonical — defines ρ(Φ), v_escape(A)
+  - docs/FFF_Gravity/f_Frame.md        # canonical — defines r_capture, capacity_remaining
+  - docs/FFF_Gravity/OPERATORS.md      # symbol authority
+operators_introduced:
+  - heading_delta   # frozen here — pending stub resolved from f_Force.md §4.3
+  - r_deflect
+  - deflect_cost
+primitives_introduced:
+  - PRIM:023        # redirect_force_node (Impure)
+  - PRIM:024        # compute_deflection_cost (Pure)
+failure_modes_active:
+  - FM-001          # Overshoot — inherited from f_Force.md
+  - FM-006          # Phantom Capture — inherited from f_Force.md
+failure_modes_introduced: []
+changelog:
+  - version: 1.0.0
+    date: 2026-08-13
+    session: SES-20260813-DEFLECT-001
+    author: umaywant2
+    changes:
+      - Initial canonical publication
+      - Freezes heading_delta operator (resolves f_Force.md §4.3 stub)
+      - Introduces r_deflect and deflect_cost operators
+      - Introduces PRIM:023 redirect_force_node (Impure)
+      - Introduces PRIM:024 compute_deflection_cost (Pure)
+      - Wave 3 completion milestone — all 8 files canonical
+      - Wave 4 fully unlocked
+</code></pre>
+<!-- ============================================================
+     f_Deflect.md — FFF_Gravity Module
+     Wave 3 | File 8 of 8 | Node: F_force
+     Session: SES-20260813-DEFLECT-001
+     Status: CANONICAL
+     Wave 3 FINAL — all 8 files complete upon this publication
+     ============================================================ -->
+
+<blockquote>
+<p><strong>F_force engineering primitive.</strong><br>
+Modifies the direction of <code>v_approach</code> via angular redirect.<br>
+Magnitude of <code>v_approach</code> is invariant across deflection.<br>
+Resolves the <code>heading_delta</code> pending stub declared in <code>f_Force.md §4.3</code>.</p>
+</blockquote>
+<hr>
+<h2 id="0-session-context">§0 Session Context</h2>
+<!-- SECTION: session_context | scope: this-file -->
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Session ID</td>
+<td><code>SES-20260813-DEFLECT-001</code></td>
+</tr>
+<tr>
+<td>File</td>
+<td><code>docs/FFF_Gravity/f_Deflect.md</code></td>
+</tr>
+<tr>
+<td>Module</td>
+<td>FFF_Gravity</td>
+</tr>
+<tr>
+<td>Wave</td>
+<td>3 — final file (8 of 8)</td>
+</tr>
+<tr>
+<td>Node</td>
+<td>F_force</td>
+</tr>
+<tr>
+<td>Authored</td>
+<td>2026-08-13</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Canonical</td>
+</tr>
+<tr>
+<td>Prior session chain</td>
+<td>SES-20260813-AMPLIFY-001 → this file</td>
+</tr>
+</tbody>
+</table>
+<h3 id="01-purpose-of-this-session">§0.1 Purpose of This Session</h3>
+<p>This session produces the canonical <code>f_Deflect.md</code>. It is the <strong>last Wave 3 file</strong> and the <strong>last engineering primitive</strong> of the FFF_Gravity module's F_force node. Its central duty is to resolve the <code>heading_delta</code> pending stub referenced in <code>f_Force.md §4.3</code>, formalize the deflection geometry, and close Wave 3 by recording the completion milestone in §10.</p>
+<h3 id="02-stub-resolution-record">§0.2 Stub Resolution Record</h3>
+<pre><code>f_Force.md §4.3 declared:
+  heading_delta  [PENDING: defined in f_Deflect.md]
+
+Resolution:
+  This file (f_Deflect.md §4) freezes heading_delta.
+  Freeze date: 2026-08-13
+  Session: SES-20260813-DEFLECT-001
+</code></pre>
+<hr>
+<h2 id="1-module-identity">§1 Module Identity</h2>
+<!-- SECTION: module_identity | scope: this-file -->
+
+<h3 id="11-formal-signature">§1.1 Formal Signature</h3>
+<pre><code>f_Deflect(v_approach, heading_delta, r_deflect) → new_v_approach_heading
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>v_approach</code></td>
+<td>vector</td>
+<td>Current approach velocity vector (magnitude preserved)</td>
+</tr>
+<tr>
+<td><code>heading_delta</code></td>
+<td>float</td>
+<td>Angular deviation in radians; positive = clockwise</td>
+</tr>
+<tr>
+<td><code>r_deflect</code></td>
+<td>float</td>
+<td>Deflection radius; distance at which redirect is applied</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Return</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>new_v_approach_heading</code></td>
+<td>vector</td>
+<td>Redirected heading; same magnitude as <code>v_approach</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="12-triadic-position">§1.2 Triadic Position</h3>
+<pre><code>G = F_freq · F_fluid · F_force
+                         ↑
+                    f_Deflect lives here.
+                    It is a geometry-layer primitive
+                    operating strictly within the F_force node.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Function in G</th>
+<th>Deflect's Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F_freq</td>
+<td>Frequency field</td>
+<td>Provides ρ(Φ) — read-only in deflect context</td>
+</tr>
+<tr>
+<td>F_fluid</td>
+<td>Binding medium</td>
+<td>Provides β — read-only in deflect context</td>
+</tr>
+<tr>
+<td>F_force</td>
+<td>Force vector</td>
+<td><strong>Owner.</strong> Deflect modifies heading here.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="13-companion-primitive-table-f_force-node">§1.3 Companion Primitive Table (F_force Node)</h3>
+<table>
+<thead>
+<tr>
+<th>Primitive</th>
+<th>Name</th>
+<th>Type</th>
+<th>File</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PRIM:001</td>
+<td><code>apply_force_node</code></td>
+<td>Impure</td>
+<td>f_Force.md</td>
+<td>Frozen</td>
+</tr>
+<tr>
+<td>PRIM:002</td>
+<td><code>compute_approach_velocity</code></td>
+<td>Pure</td>
+<td>f_Force.md</td>
+<td>Frozen</td>
+</tr>
+<tr>
+<td>PRIM:013</td>
+<td><code>evaluate_collapse_path</code></td>
+<td>Pure</td>
+<td>f_Collapse.md</td>
+<td>Frozen</td>
+</tr>
+<tr>
+<td>PRIM:014</td>
+<td><code>execute_collapse</code></td>
+<td>Impure</td>
+<td>f_Collapse.md</td>
+<td>Frozen</td>
+</tr>
+<tr>
+<td><strong>PRIM:023</strong></td>
+<td><strong><code>redirect_force_node</code></strong></td>
+<td><strong>Impure</strong></td>
+<td><strong>f_Deflect.md</strong></td>
+<td><strong>Frozen</strong></td>
+</tr>
+<tr>
+<td><strong>PRIM:024</strong></td>
+<td><strong><code>compute_deflection_cost</code></strong></td>
+<td><strong>Pure</strong></td>
+<td><strong>f_Deflect.md</strong></td>
+<td><strong>Frozen</strong></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="2-canonical-description">§2 Canonical Description</h2>
+<!-- SECTION: canonical_description | scope: this-file -->
+
+<h3 id="21-what-f_deflect-is">§2.1 What f_Deflect IS</h3>
+<p><code>f_Deflect</code> is the heading-modification primitive of the F_force node. It takes an existing <code>v_approach</code> vector and rotates its direction by <code>heading_delta</code> radians while preserving the vector's scalar magnitude. The resulting <code>new_v_approach_heading</code> is then available to subsequent F_force evaluations, subject to Deflect Conditions (§5) and FM guards (§6).</p>
+<p>Deflection is a <strong>geometric operation</strong>, not an energetic one in the orbital sense. However, applying a redirect to a force node consumes <code>deflect_cost</code> units of binding budget — this cost is computed by PRIM:024 and is audited against the system's binding state before PRIM:023 executes.</p>
+<h3 id="22-what-f_deflect-is-not">§2.2 What f_Deflect IS NOT</h3>
+<table>
+<thead>
+<tr>
+<th>Incorrect Interpretation</th>
+<th>Correct Model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Changes the magnitude of v_approach</td>
+<td>Magnitude is strictly preserved across deflection</td>
+</tr>
+<tr>
+<td>A release or decay operation</td>
+<td>f_Deflect does not alter binding state; it alters geometry only</td>
+</tr>
+<tr>
+<td>An inversion of f_Capture</td>
+<td>f_Deflect is not an inverse — it is a pre-capture modifier</td>
+</tr>
+<tr>
+<td>Free of cost</td>
+<td>deflect_cost is always computed and must be ≤ binding budget</td>
+</tr>
+<tr>
+<td>Applicable post-CAPTURE</td>
+<td>Deflect only operates on states where approach is still live</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-design-motivation">§2.3 Design Motivation</h3>
+<p>The F_force node defines <code>v_approach</code> as the magnitude of approach — but direction matters for capture geometry. Without heading control, the only orbital outcome is determined by approach angle at genesis. <code>f_Deflect</code> introduces the <strong>angular engineering layer</strong>: the ability to steer approach trajectories before capture evaluation commits. This is the F_force analogue of <code>f_Amplify</code>'s fluid-layer engineering — both are cost-bearing interventions that expand the outcome envelope without breaking triadic invariants.</p>
+<h3 id="24-operating-modes">§2.4 Operating Modes</h3>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Condition</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>NOMINAL_DEFLECT</code></td>
+<td>All Deflect Conditions satisfied</td>
+<td>heading rotated by heading_delta; cost deducted</td>
+</tr>
+<tr>
+<td><code>NULL_DEFLECT</code></td>
+<td>heading_delta = 0.0</td>
+<td>No-op; returns current heading unchanged; zero cost</td>
+</tr>
+<tr>
+<td><code>OVERSHOOT_GUARD</code></td>
+<td>Post-deflect v_approach ≥ v_escape</td>
+<td>FM-001 raised; deflection not applied</td>
+</tr>
+<tr>
+<td><code>PHANTOM_GUARD</code></td>
+<td>β &lt; 1.0 at deflect time</td>
+<td>FM-006 raised; deflection not applied</td>
+</tr>
+</tbody>
+</table>
+<h3 id="25-relationship-to-capture-pipeline">§2.5 Relationship to Capture Pipeline</h3>
+<pre><code>Genesis of E approaching A
+        ↓
+  f_Force: compute v_approach
+        ↓
+  f_Deflect: redirect heading [OPTIONAL — this file]
+        ↓
+  f_Frame: register_capture slot check
+        ↓
+  f_Capture: final capture evaluation
+        ↓
+  Orbital states → f_Orbit, f_Decay, f_Orbit, f_Release, f_Collapse
+</code></pre>
+<p><code>f_Deflect</code> is the <strong>last engineering intervention point</strong> before capture locks. Once <code>f_Capture</code> transitions state to <code>CAPTURED</code>, deflection is no longer applicable.</p>
+<hr>
+<h2 id="3-triadic-equation">§3 Triadic Equation</h2>
+<!-- SECTION: triadic_equation | scope: this-file -->
+
+<h3 id="31-formal-operator-signature">§3.1 Formal Operator Signature</h3>
+<pre><code>f_Deflect : (v_approach: vector, heading_delta: float, r_deflect: float)
+          → new_v_approach_heading: vector
+
+Constraint: |new_v_approach_heading| = |v_approach|  [magnitude invariant]
+</code></pre>
+<h3 id="32-node-decomposition">§3.2 Node Decomposition</h3>
+<pre><code>F_force(deflect context):
+
+  v_approach_direction  := normalize(v_approach)
+  new_direction         := rotate(v_approach_direction, heading_delta)
+  new_v_approach_heading := new_direction * |v_approach|
+
+  Where:
+    rotate(d, δ)  → rotates unit vector d by δ radians
+    |v_approach|  → Euclidean norm of v_approach; invariant
+    heading_delta → angular deviation; domain ℝ; range (-π, π]
+</code></pre>
+<h3 id="33-g-equation-role">§3.3 G-Equation Role</h3>
+<pre><code>G = F_freq · F_fluid · F_force
+
+F_force contribution in deflect context:
+
+  F_force_deflect = redirect_force_node(
+      current_heading = normalize(v_approach),
+      target_heading  = rotate(normalize(v_approach), heading_delta),
+      delta           = heading_delta
+  ) → new_v_approach_heading
+
+  This new heading is injected back into v_approach before
+  f_Capture evaluates SC-1 (Approach Bound).
+  F_freq and F_fluid are read during cost computation (§4)
+  but their values are not modified by f_Deflect.
+</code></pre>
+<h3 id="34-magnitude-invariant-proof-informal">§3.4 Magnitude Invariant Proof (Informal)</h3>
+<pre><code>Let v := v_approach, |v| = m (scalar magnitude).
+Let d := v / m (unit direction vector).
+Let d' := rotate(d, δ).
+  Since rotate preserves unit length: |d'| = 1.
+Let v' := d' * m.
+  |v'| = |d'| * m = 1 * m = m.
+Therefore |new_v_approach_heading| = |v_approach|. ∎
+</code></pre>
+<hr>
+<h2 id="4-operator-registry">§4 Operator Registry</h2>
+<!-- SECTION: operator_registry | scope: this-file | freeze: heading_delta, r_deflect, deflect_cost -->
+
+<h3 id="41-operators-introduced-frozen-here">§4.1 Operators Introduced (Frozen Here)</h3>
+<h4 id="heading_delta"><code>heading_delta</code></h4>
+<!-- OPERATOR: heading_delta | status: frozen | resolves: f_Force.md §4.3 stub -->
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Symbol</td>
+<td><code>heading_delta</code> (also <code>δ</code> in formal notation)</td>
+</tr>
+<tr>
+<td>Node</td>
+<td>F_force</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>float (radians)</td>
+</tr>
+<tr>
+<td>Domain</td>
+<td><code>(-π, π]</code>  — signed angular deviation</td>
+</tr>
+<tr>
+<td>Range</td>
+<td>Same as domain</td>
+</tr>
+<tr>
+<td>Sign</td>
+<td>Positive = clockwise rotation in the approach plane</td>
+</tr>
+<tr>
+<td>Zero case</td>
+<td><code>heading_delta = 0.0</code> → NULL_DEFLECT; no-op</td>
+</tr>
+<tr>
+<td>Frozen</td>
+<td><strong>Yes</strong> — defined here; frozen as of 2026-08-13</td>
+</tr>
+<tr>
+<td>Authority</td>
+<td>OPERATORS.md §F_force</td>
+</tr>
+<tr>
+<td>Resolves</td>
+<td>Pending stub declared in <code>f_Force.md §4.3</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Formal definition:</strong></p>
+<pre><code>heading_delta (δ): ℝ → (-π, π]
+
+  The signed angular deviation, in radians, applied to
+  the current approach heading vector v_approach by
+  redirect_force_node (PRIM:023).
+
+  δ = 0.0   → no rotation; NULL_DEFLECT mode
+  δ &gt; 0.0   → clockwise rotation (in approach plane frame)
+  δ &lt; 0.0   → counter-clockwise rotation
+  |δ| &gt; π   → forbidden; raises DOMAIN_VIOLATION
+</code></pre>
+<hr>
+<h4 id="r_deflect"><code>r_deflect</code></h4>
+<!-- OPERATOR: r_deflect | status: frozen -->
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Symbol</td>
+<td><code>r_deflect</code></td>
+</tr>
+<tr>
+<td>Node</td>
+<td>F_force</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>float</td>
+</tr>
+<tr>
+<td>Domain</td>
+<td><code>(0, r_capture)</code>  — must be within capture radius</td>
+</tr>
+<tr>
+<td>Range</td>
+<td>Same as domain</td>
+</tr>
+<tr>
+<td>Meaning</td>
+<td>The radial distance from A at which deflection is applied</td>
+</tr>
+<tr>
+<td>Frozen</td>
+<td><strong>Yes</strong> — defined here; frozen as of 2026-08-13</td>
+</tr>
+<tr>
+<td>Authority</td>
+<td>OPERATORS.md §F_force</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Formal definition:</strong></p>
+<pre><code>r_deflect: (0, r_capture) → ℝ+
+
+  The distance from attractor A at which redirect_force_node
+  applies the heading rotation. Must be strictly inside the
+  capture radius (r_deflect &lt; r_capture) to affect orbital
+  outcome. Values ≥ r_capture are outside deflect jurisdiction
+  and raise FM-001 (Overshoot boundary condition).
+
+  Used by compute_deflection_cost (PRIM:024) to scale cost
+  with proximity — closer deflections are costlier.
+</code></pre>
+<hr>
+<h4 id="deflect_cost"><code>deflect_cost</code></h4>
+<!-- OPERATOR: deflect_cost | status: frozen -->
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Symbol</td>
+<td><code>deflect_cost</code></td>
+</tr>
+<tr>
+<td>Node</td>
+<td>F_force (read against F_fluid budget)</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>float</td>
+</tr>
+<tr>
+<td>Domain</td>
+<td><code>[0, ∞)</code></td>
+</tr>
+<tr>
+<td>Range</td>
+<td><code>[0, ∞)</code></td>
+</tr>
+<tr>
+<td>Meaning</td>
+<td>Binding budget consumed by one deflection operation</td>
+</tr>
+<tr>
+<td>Frozen</td>
+<td><strong>Yes</strong> — defined here; frozen as of 2026-08-13</td>
+</tr>
+<tr>
+<td>Authority</td>
+<td>OPERATORS.md §F_force</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Formal definition:</strong></p>
+<pre><code>deflect_cost: (|δ|, r_deflect, β) → ℝ+
+
+  deflect_cost = (|δ| / π) * (r_capture / r_deflect) * β
+
+  Components:
+    |δ| / π         → normalized angular effort (0 to 1)
+    r_capture / r_deflect → proximity amplifier (&gt; 1 when close)
+    β               → current binding coefficient (F_fluid)
+
+  Property:
+    deflect_cost = 0 when δ = 0 (NULL_DEFLECT; zero cost)
+    deflect_cost → ∞ as r_deflect → 0 (singularity guard applied)
+</code></pre>
+<hr>
+<h3 id="42-operators-inherited-read-only-in-this-file">§4.2 Operators Inherited (Read-Only in This File)</h3>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Source</th>
+<th>Role in f_Deflect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>v_approach</code></td>
+<td>f_Force.md</td>
+<td>Input vector; heading is modified; magnitude preserved</td>
+</tr>
+<tr>
+<td><code>v_escape(A)</code></td>
+<td>f_Field.md</td>
+<td>Bound against post-deflect v_approach for FM-001</td>
+</tr>
+<tr>
+<td><code>β</code></td>
+<td>f_Force.md</td>
+<td>Read for deflect_cost and FM-006 guard</td>
+</tr>
+<tr>
+<td><code>ρ(Φ)</code></td>
+<td>f_Field.md</td>
+<td>Presence confirmed (&gt; 0) in DC-2</td>
+</tr>
+<tr>
+<td><code>r_capture</code></td>
+<td>f_Frame.md</td>
+<td>Upper bound for r_deflect; used in cost formula</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-state-flags">§4.3 State Flags</h3>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Set When</th>
+<th>Cleared When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DEFLECT_ACTIVE</code></td>
+<td>redirect_force_node invoked, δ ≠ 0</td>
+<td>f_Capture commits or aborts</td>
+</tr>
+<tr>
+<td><code>NULL_DEFLECT</code></td>
+<td>δ = 0.0 — no-op pass-through</td>
+<td>Next non-zero deflect call</td>
+</tr>
+<tr>
+<td><code>DEFLECT_BLOCKED</code></td>
+<td>FM-001 or FM-006 guard raised during deflect</td>
+<td>System reset or new approach</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="5-deflect-conditions">§5 Deflect Conditions</h2>
+<!-- SECTION: deflect_conditions | scope: this-file -->
+
+<blockquote>
+<p><strong>All four Deflect Conditions are conjunctive (AND).</strong><br>
+A single failure blocks deflection and triggers the appropriate FM guard.</p>
+</blockquote>
+<h3 id="dc-1-approach-live">DC-1: Approach Live</h3>
+<pre><code>Condition:  capture_state(E, A) ∉ {CAPTURED, RELEASED, COLLAPSED}
+Rationale:  Deflection is pre-capture geometry. Once capture commits,
+            v_approach is no longer an active quantity.
+Guard:      If violated → DEFLECT_BLOCKED; operation not applied.
+</code></pre>
+<h3 id="dc-2-field-present">DC-2: Field Present</h3>
+<pre><code>Condition:  ρ(Φ) &gt; 0
+Rationale:  Deflection requires an active frequency field to define
+            the approach plane geometry. Null field (ρ = 0) raises FM-002
+            upstream; deflect inherits that guard.
+Guard:      If violated → DEFLECT_BLOCKED; FM-002 already active upstream.
+</code></pre>
+<h3 id="dc-3-binding-floor">DC-3: Binding Floor</h3>
+<pre><code>Condition:  β ≥ 1.0
+Rationale:  SC-4 must hold. A deflection attempted under β &lt; 1.0 constitutes
+            a phantom redirect into a non-binding medium. Raises FM-006.
+Guard:      If violated → FM-006 (Phantom Capture); DEFLECT_BLOCKED.
+</code></pre>
+<h3 id="dc-4-post-deflect-approach-bound">DC-4: Post-Deflect Approach Bound</h3>
+<pre><code>Condition:  |new_v_approach_heading| &lt; v_escape(A)
+            i.e., v_approach_magnitude &lt; v_escape(A)  [magnitude invariant applies]
+Rationale:  Deflection does not change magnitude, so this condition reduces
+            to confirming SC-1 still holds on the un-deflected magnitude.
+            If SC-1 already fails before deflect, FM-001 is raised.
+Guard:      If violated → FM-001 (Overshoot); DEFLECT_BLOCKED.
+</code></pre>
+<h3 id="51-deflect-condition-summary">§5.1 Deflect Condition Summary</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Formal Test</th>
+<th>Failure Mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DC-1</td>
+<td>Approach Live</td>
+<td>state ∉ terminal set</td>
+<td>DEFLECT_BLOCKED</td>
+</tr>
+<tr>
+<td>DC-2</td>
+<td>Field Present</td>
+<td>ρ(Φ) &gt; 0</td>
+<td>FM-002 (upstream)</td>
+</tr>
+<tr>
+<td>DC-3</td>
+<td>Binding Floor</td>
+<td>β ≥ 1.0</td>
+<td>FM-006</td>
+</tr>
+<tr>
+<td>DC-4</td>
+<td>Post-Deflect Bound</td>
+<td>v_approach_magnitude &lt; v_escape(A)</td>
+<td>FM-001</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="6-failure-modes">§6 Failure Modes</h2>
+<!-- SECTION: failure_modes | scope: this-file | modes: FM-001, FM-006 -->
+
+<blockquote>
+<p><code>f_Deflect</code> introduces <strong>no new failure modes</strong>.<br>
+It activates guards for FM-001 and FM-006, both frozen in <code>f_Force.md</code>.</p>
+</blockquote>
+<h3 id="fm-001-overshoot-active-in-deflect-context">FM-001 — Overshoot (active in Deflect context)</h3>
+<pre><code>Symbol:     FM-001
+Name:       Overshoot
+Frozen in:  f_Force.md
+Trigger:    v_approach ≥ v_escape(A) — magnitude already exceeds escape;
+            deflection cannot recover orbital binding.
+Effect:     redirect_force_node not invoked; DEFLECT_BLOCKED set.
+            E continues on escape trajectory.
+Recovery:   None within this approach. New approach required.
+</code></pre>
+<p><strong>Deflect-specific note:</strong> Since deflection preserves magnitude, if <code>v_approach ≥ v_escape(A)</code> before deflect, it will be <code>≥ v_escape(A)</code> after. FM-001 fires at DC-4 evaluation before PRIM:023 is invoked.</p>
+<h3 id="fm-006-phantom-capture-active-in-deflect-context">FM-006 — Phantom Capture (active in Deflect context)</h3>
+<pre><code>Symbol:     FM-006
+Name:       Phantom Capture
+Frozen in:  f_Force.md
+Trigger:    β &lt; 1.0 at deflect invocation time.
+Effect:     Deflection into a sub-binding medium produces a phantom
+            heading change with no orbital anchoring. redirect_force_node
+            not invoked; DEFLECT_BLOCKED set.
+Recovery:   β must be restored to ≥ 1.0 (via f_Amplify or f_Emit
+            upstream intervention) before deflect is re-attempted.
+</code></pre>
+<h3 id="61-fm-coverage-matrix">§6.1 FM Coverage Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>FM</th>
+<th>Triggered By</th>
+<th>In f_Deflect?</th>
+<th>Guard Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FM-001</td>
+<td>v_approach overshoot</td>
+<td>✅ DC-4</td>
+<td>Pre-PRIM:023</td>
+</tr>
+<tr>
+<td>FM-002</td>
+<td>ρ(Φ) = 0</td>
+<td>✅ DC-2 (proxy)</td>
+<td>Upstream</td>
+</tr>
+<tr>
+<td>FM-003</td>
+<td>Frame saturation</td>
+<td>❌ Not active</td>
+<td>f_Frame.md</td>
+</tr>
+<tr>
+<td>FM-004</td>
+<td>Resonance drift</td>
+<td>❌ Not active</td>
+<td>f_Decay.md</td>
+</tr>
+<tr>
+<td>FM-005</td>
+<td>Decay spiral</td>
+<td>❌ Not active</td>
+<td>f_Decay.md</td>
+</tr>
+<tr>
+<td>FM-006</td>
+<td>β &lt; 1.0 phantom</td>
+<td>✅ DC-3</td>
+<td>Pre-PRIM:023</td>
+</tr>
+<tr>
+<td>FM-007</td>
+<td>Mutual dissolution</td>
+<td>❌ Not active</td>
+<td>f_Collapse.md</td>
+</tr>
+<tr>
+<td>FM-008</td>
+<td>Release overshoot</td>
+<td>❌ Not active</td>
+<td>f_Release.md</td>
+</tr>
+<tr>
+<td>FM-009</td>
+<td>Dampen cascade</td>
+<td>❌ Not active</td>
+<td>f_Dampen.md</td>
+</tr>
+<tr>
+<td>FM-010</td>
+<td>Amplify runaway</td>
+<td>❌ Not active</td>
+<td>f_Emit/Amplify</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="7-engineering-primitives">§7 Engineering Primitives</h2>
+<!-- SECTION: engineering_primitives | scope: this-file -->
+
+<h3 id="prim023-redirect_force_node-impure">PRIM:023 — <code>redirect_force_node</code> (Impure)</h3>
+<!-- PRIMITIVE: PRIM:023 | type: Impure | node: F_force | frozen: 2026-08-13 -->
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>PRIM:023</td>
+</tr>
+<tr>
+<td>Name</td>
+<td><code>redirect_force_node</code></td>
+</tr>
+<tr>
+<td>Type</td>
+<td>Impure (mutates approach heading state)</td>
+</tr>
+<tr>
+<td>Node</td>
+<td>F_force</td>
+</tr>
+<tr>
+<td>Signature</td>
+<td><code>(current_heading, target_heading, delta) → new_v_approach_heading</code></td>
+</tr>
+<tr>
+<td>Inverse</td>
+<td>None — heading redirect is one-way geometry</td>
+</tr>
+<tr>
+<td>Frozen</td>
+<td><strong>Yes</strong> — 2026-08-13</td>
+</tr>
+<tr>
+<td>OPERATORS.md</td>
+<td>Requires §F_force update (see §9)</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-python">import math
+from typing import NamedTuple
+
+
+class Vector2D(NamedTuple):
+    &quot;&quot;&quot;Minimal 2D vector for approach-plane deflection geometry.&quot;&quot;&quot;
+    x: float
+    y: float
+
+    def norm(self) -&gt; float:
+        &quot;&quot;&quot;Euclidean magnitude.&quot;&quot;&quot;
+        return math.sqrt(self.x**2 + self.y**2)
+
+    def normalize(self) -&gt; &quot;Vector2D&quot;:
+        &quot;&quot;&quot;Return unit vector; raises if zero vector.&quot;&quot;&quot;
+        m = self.norm()
+        if m == 0.0:
+            raise ValueError(&quot;Cannot normalize zero vector — undefined heading.&quot;)
+        return Vector2D(self.x / m, self.y / m)
+
+    def rotate(self, radians: float) -&gt; &quot;Vector2D&quot;:
+        &quot;&quot;&quot;Rotate this vector by `radians` (positive = clockwise in approach plane).&quot;&quot;&quot;
+        cos_r = math.cos(radians)
+        sin_r = math.sin(radians)
+        return Vector2D(
+            self.x * cos_r - self.y * sin_r,
+            self.x * sin_r + self.y * cos_r,
+        )
+
+    def scale(self, factor: float) -&gt; &quot;Vector2D&quot;:
+        &quot;&quot;&quot;Scale by scalar factor.&quot;&quot;&quot;
+        return Vector2D(self.x * factor, self.y * factor)
+
+
+class DeflectState(NamedTuple):
+    &quot;&quot;&quot;Mutable approach-heading state managed by the F_force node.&quot;&quot;&quot;
+    v_approach: Vector2D          # Full approach velocity vector
+    capture_state: str            # 'APPROACHING' | 'CAPTURED' | 'RELEASED' | 'COLLAPSED'
+    rho_phi: float                # ρ(Φ) — field density at Φ
+    beta: float                   # β — binding coefficient
+    v_escape: float               # v_escape(A) — scalar escape velocity
+    r_capture: float              # capture radius from f_Frame.md
+
+
+class DeflectResult(NamedTuple):
+    &quot;&quot;&quot;Output of redirect_force_node.&quot;&quot;&quot;
+    success: bool
+    new_v_approach: Vector2D      # Redirected heading (same magnitude)
+    heading_delta_applied: float  # Actual delta applied (0.0 if blocked)
+    deflect_cost: float           # Cost deducted from binding budget
+    mode: str                     # 'NOMINAL_DEFLECT' | 'NULL_DEFLECT' | 'DEFLECT_BLOCKED'
+    failure_mode: str | None      # 'FM-001' | 'FM-006' | None
+    message: str
+
+
+def redirect_force_node(
+    state: DeflectState,
+    heading_delta: float,
+    r_deflect: float,
+) -&gt; DeflectResult:
+    &quot;&quot;&quot;
+    PRIM:023 — redirect_force_node (Impure)
+    ========================================
+    Modifies the direction of state.v_approach by heading_delta radians.
+    Magnitude of v_approach is strictly preserved.
+
+    Resolves the heading_delta pending stub from f_Force.md §4.3.
+
+    Parameters
+    ----------
+    state : DeflectState
+        Current F_force node state. Contains v_approach, capture_state,
+        rho_phi, beta, v_escape, r_capture.
+    heading_delta : float
+        Angular deviation in radians. Domain: (-π, π].
+        Positive = clockwise rotation in approach plane.
+        0.0 → NULL_DEFLECT (no-op, zero cost).
+    r_deflect : float
+        Radial distance at which deflection is applied.
+        Domain: (0, r_capture). Used in deflect_cost computation.
+
+    Returns
+    -------
+    DeflectResult
+        Contains redirected heading vector, cost, mode, and any FM raised.
+
+    Failure Modes
+    -------------
+    FM-001  Raised when v_approach_magnitude ≥ v_escape (DC-4 violation).
+    FM-006  Raised when β &lt; 1.0 (DC-3 violation).
+
+    Invariant
+    ---------
+    |new_v_approach| = |state.v_approach| — magnitude is never altered.
+    &quot;&quot;&quot;
+    # ── DC-1: Approach Live ──────────────────────────────────────────────
+    terminal_states = {&quot;CAPTURED&quot;, &quot;RELEASED&quot;, &quot;COLLAPSED&quot;}
+    if state.capture_state in terminal_states:
+        return DeflectResult(
+            success=False,
+            new_v_approach=state.v_approach,
+            heading_delta_applied=0.0,
+            deflect_cost=0.0,
+            mode=&quot;DEFLECT_BLOCKED&quot;,
+            failure_mode=None,
+            message=(
+                f&quot;DC-1 FAILED: capture_state='{state.capture_state}' is terminal. &quot;
+                &quot;Deflection not applicable post-capture.&quot;
+            ),
+        )
+
+    # ── DC-2: Field Present ──────────────────────────────────────────────
+    if state.rho_phi &lt;= 0.0:
+        return DeflectResult(
+            success=False,
+            new_v_approach=state.v_approach,
+            heading_delta_applied=0.0,
+            deflect_cost=0.0,
+            mode=&quot;DEFLECT_BLOCKED&quot;,
+            failure_mode=None,
+            message=(
+                f&quot;DC-2 FAILED: ρ(Φ)={state.rho_phi:.4f} ≤ 0. &quot;
+                &quot;FM-002 should be active upstream. Deflect blocked.&quot;
+            ),
+        )
+
+    # ── DC-3: Binding Floor (FM-006 guard) ───────────────────────────────
+    if state.beta &lt; 1.0:
+        return DeflectResult(
+            success=False,
+            new_v_approach=state.v_approach,
+            heading_delta_applied=0.0,
+            deflect_cost=0.0,
+            mode=&quot;DEFLECT_BLOCKED&quot;,
+            failure_mode=&quot;FM-006&quot;,
+            message=(
+                f&quot;DC-3 FAILED: β={state.beta:.4f} &lt; 1.0. &quot;
+                &quot;FM-006 (Phantom Capture) — deflect into sub-binding medium blocked.&quot;
+            ),
+        )
+
+    # ── domain validation: heading_delta ─────────────────────────────────
+    if not (-math.pi &lt; heading_delta &lt;= math.pi):
+        raise ValueError(
+            f&quot;heading_delta={heading_delta:.6f} rad out of domain (-π, π]. &quot;
+            &quot;Caller must normalize angular input before invoking PRIM:023.&quot;
+        )
+
+    # ── domain validation: r_deflect ─────────────────────────────────────
+    if r_deflect &lt;= 0.0:
+        raise ValueError(
+            f&quot;r_deflect={r_deflect} must be &gt; 0. &quot;
+            &quot;Singularity at r_deflect=0 — deflect_cost undefined.&quot;
+        )
+    if r_deflect &gt;= state.r_capture:
+        return DeflectResult(
+            success=False,
+            new_v_approach=state.v_approach,
+            heading_delta_applied=0.0,
+            deflect_cost=0.0,
+            mode=&quot;DEFLECT_BLOCKED&quot;,
+            failure_mode=&quot;FM-001&quot;,
+            message=(
+                f&quot;r_deflect={r_deflect:.4f} ≥ r_capture={state.r_capture:.4f}. &quot;
+                &quot;Deflection outside capture zone — FM-001 (Overshoot boundary).&quot;
+            ),
+        )
+
+    # ── NULL_DEFLECT: zero-angle no-op ───────────────────────────────────
+    if heading_delta == 0.0:
+        return DeflectResult(
+            success=True,
+            new_v_approach=state.v_approach,
+            heading_delta_applied=0.0,
+            deflect_cost=0.0,
+            mode=&quot;NULL_DEFLECT&quot;,
+            failure_mode=None,
+            message=&quot;heading_delta=0.0 — NULL_DEFLECT mode; no heading change applied.&quot;,
+        )
+
+    # ── DC-4: Post-Deflect Approach Bound (FM-001 guard) ─────────────────
+    v_magnitude = state.v_approach.norm()
+    if v_magnitude &gt;= state.v_escape:
+        return DeflectResult(
+            success=False,
+            new_v_approach=state.v_approach,
+            heading_delta_applied=0.0,
+            deflect_cost=0.0,
+            mode=&quot;DEFLECT_BLOCKED&quot;,
+            failure_mode=&quot;FM-001&quot;,
+            message=(
+                f&quot;DC-4 FAILED: v_approach_magnitude={v_magnitude:.4f} ≥ &quot;
+                f&quot;v_escape={state.v_escape:.4f}. FM-001 (Overshoot) — &quot;
+                &quot;deflection cannot restore orbital binding.&quot;
+            ),
+        )
+
+    # ── PRIM:024: compute deflect_cost ───────────────────────────────────
+    cost = compute_deflection_cost(
+        heading_delta=heading_delta,
+        r_deflect=r_deflect,
+        r_capture=state.r_capture,
+        beta=state.beta,
+    )
+
+    # ── NOMINAL_DEFLECT: apply heading rotation ───────────────────────────
+    unit_dir = state.v_approach.normalize()
+    rotated_dir = unit_dir.rotate(heading_delta)
+    new_v_approach = rotated_dir.scale(v_magnitude)
+
+    # Magnitude invariant assertion (defensive)
+    new_magnitude = new_v_approach.norm()
+    magnitude_error = abs(new_magnitude - v_magnitude)
+    if magnitude_error &gt; 1e-9:
+        raise RuntimeError(
+            f&quot;MAGNITUDE INVARIANT VIOLATED: original={v_magnitude:.10f}, &quot;
+            f&quot;new={new_magnitude:.10f}, error={magnitude_error:.2e}. &quot;
+            &quot;This is a bug in redirect_force_node — report immediately.&quot;
+        )
+
+    return DeflectResult(
+        success=True,
+        new_v_approach=new_v_approach,
+        heading_delta_applied=heading_delta,
+        deflect_cost=cost,
+        mode=&quot;NOMINAL_DEFLECT&quot;,
+        failure_mode=None,
+        message=(
+            f&quot;NOMINAL_DEFLECT: heading rotated by δ={heading_delta:.6f} rad &quot;
+            f&quot;at r_deflect={r_deflect:.4f}. &quot;
+            f&quot;deflect_cost={cost:.6f}. &quot;
+            f&quot;|v_approach| preserved at {v_magnitude:.6f}.&quot;
+        ),
+    )
+</code></pre>
+<hr>
+<h3 id="prim024-compute_deflection_cost-pure">PRIM:024 — <code>compute_deflection_cost</code> (Pure)</h3>
+<!-- PRIMITIVE: PRIM:024 | type: Pure | node: F_force | frozen: 2026-08-13 -->
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>PRIM:024</td>
+</tr>
+<tr>
+<td>Name</td>
+<td><code>compute_deflection_cost</code></td>
+</tr>
+<tr>
+<td>Type</td>
+<td>Pure (no side effects; returns float)</td>
+</tr>
+<tr>
+<td>Node</td>
+<td>F_force</td>
+</tr>
+<tr>
+<td>Signature</td>
+<td><code>(heading_delta, r_deflect, r_capture, beta) → float</code></td>
+</tr>
+<tr>
+<td>Inverse</td>
+<td>N/A (pure computation)</td>
+</tr>
+<tr>
+<td>Frozen</td>
+<td><strong>Yes</strong> — 2026-08-13</td>
+</tr>
+<tr>
+<td>OPERATORS.md</td>
+<td>Requires §F_force update (see §9)</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-python">import math
+
+
+def compute_deflection_cost(
+    heading_delta: float,
+    r_deflect: float,
+    r_capture: float,
+    beta: float,
+) -&gt; float:
+    &quot;&quot;&quot;
+    PRIM:024 — compute_deflection_cost (Pure)
+    ==========================================
+    Computes the binding budget cost of one deflection operation.
+
+    Formula
+    -------
+    deflect_cost = (|δ| / π) × (r_capture / r_deflect) × β
+
+    Components:
+      |δ| / π          — normalized angular effort in [0, 1]
+      r_capture / r_deflect — proximity amplifier; increases as
+                            deflection occurs closer to the attractor
+      β                — binding coefficient scaling; heavier binding
+                         makes heading changes more expensive
+
+    Properties
+    ----------
+    - deflect_cost = 0.0 when heading_delta = 0.0 (null deflect)
+    - deflect_cost is monotonically increasing in |heading_delta|
+    - deflect_cost → ∞ as r_deflect → 0 (singularity; caller must guard)
+    - deflect_cost is always ≥ 0.0
+
+    Parameters
+    ----------
+    heading_delta : float
+        Angular deviation in radians. Domain (-π, π].
+    r_deflect : float
+        Deflection radius. Must be &gt; 0 and &lt; r_capture.
+    r_capture : float
+        Capture radius from f_Frame.md. Must be &gt; 0.
+    beta : float
+        Current binding coefficient β from f_Force.md. Must be ≥ 1.0
+        (caller enforces DC-3 before invoking this function).
+
+    Returns
+    -------
+    float
+        deflect_cost ≥ 0.0
+
+    Raises
+    ------
+    ValueError
+        If r_deflect ≤ 0, r_capture ≤ 0, or r_deflect ≥ r_capture.
+    &quot;&quot;&quot;
+    # Guard: singularity prevention
+    if r_deflect &lt;= 0.0:
+        raise ValueError(
+            f&quot;r_deflect={r_deflect} must be &gt; 0 — singularity undefined.&quot;
+        )
+    if r_capture &lt;= 0.0:
+        raise ValueError(
+            f&quot;r_capture={r_capture} must be &gt; 0.&quot;
+        )
+    if r_deflect &gt;= r_capture:
+        raise ValueError(
+            f&quot;r_deflect={r_deflect} must be &lt; r_capture={r_capture}. &quot;
+            &quot;Deflection outside capture zone is meaningless.&quot;
+        )
+
+    # Normalized angular effort: |δ| / π ∈ [0, 1)
+    angular_effort = abs(heading_delta) / math.pi
+
+    # Proximity amplifier: r_capture / r_deflect &gt; 1 (always, given r_deflect &lt; r_capture)
+    proximity_amp = r_capture / r_deflect
+
+    # Binding scale: β ≥ 1.0 (DC-3 enforced by caller)
+    cost = angular_effort * proximity_amp * beta
+
+    return cost
+</code></pre>
+<hr>
+<h2 id="8-canonical-examples">§8 Canonical Examples</h2>
+<!-- SECTION: canonical_examples | scope: this-file -->
+
+<blockquote>
+<p>Four worked examples cover: nominal deflect, null deflect, FM-001 guard, FM-006 guard.</p>
+</blockquote>
+<hr>
+<h3 id="example-1-nominal-deflect-shallow-correction">Example 1 — Nominal Deflect: Shallow Correction</h3>
+<p><strong>Scenario:</strong> Entity E is approaching attractor A on a trajectory that will result in a fly-by. A small clockwise heading correction at mid-range brings E into capture geometry.</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v_approach</td>
+<td>(3.5, 0.0)</td>
+<td>Magnitude = 3.5 (approaching)</td>
+</tr>
+<tr>
+<td>v_escape(A)</td>
+<td>5.0</td>
+<td>SC-1 clear: 3.5 &lt; 5.0</td>
+</tr>
+<tr>
+<td>ρ(Φ)</td>
+<td>0.78</td>
+<td>DC-2 clear: &gt; 0</td>
+</tr>
+<tr>
+<td>β</td>
+<td>1.3</td>
+<td>DC-3 clear: ≥ 1.0</td>
+</tr>
+<tr>
+<td>r_capture</td>
+<td>10.0</td>
+<td>From f_Frame.md</td>
+</tr>
+<tr>
+<td>heading_delta</td>
+<td>+0.2618 rad</td>
+<td>≈ +15° clockwise</td>
+</tr>
+<tr>
+<td>r_deflect</td>
+<td>6.0</td>
+<td>Inside r_capture; mid-range</td>
+</tr>
+<tr>
+<td>capture_state</td>
+<td>APPROACHING</td>
+<td>DC-1 clear</td>
+</tr>
+</tbody>
+</table>
+<h4 id="deflect-condition-trace">Deflect Condition Trace</h4>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Test</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DC-1</td>
+<td CAPTURED_="CAPTURED," COLLAPSED RELEASED_="RELEASED,">APPROACHING ∉</td>
+<td>✅ PASS</td>
+</tr>
+<tr>
+<td>DC-2</td>
+<td>ρ(Φ) = 0.78 &gt; 0</td>
+<td>✅ PASS</td>
+</tr>
+<tr>
+<td>DC-3</td>
+<td>β = 1.3 ≥ 1.0</td>
+<td>✅ PASS</td>
+</tr>
+<tr>
+<td>DC-4</td>
+<td></td>
+<td>v_approach</td>
+</tr>
+</tbody>
+</table>
+<h4 id="computation-trace">Computation Trace</h4>
+<pre><code>Step 1: angular_effort  = |0.2618| / π     = 0.08333
+Step 2: proximity_amp   = 10.0 / 6.0       = 1.6667
+Step 3: deflect_cost    = 0.08333 × 1.6667 × 1.3 = 0.1806
+
+Step 4: unit_dir        = (3.5, 0.0) / 3.5 = (1.0, 0.0)
+Step 5: rotated_dir     = rotate((1.0, 0.0), +0.2618 rad)
+                        = (cos(0.2618), sin(0.2618))
+                        = (0.9659, 0.2588)
+Step 6: new_v_approach  = (0.9659, 0.2588) × 3.5
+                        = (3.3807, 0.9058)
+
+Step 7: magnitude check = √(3.3807² + 0.9058²)
+                        = √(11.4291 + 0.8205)
+                        = √12.2496 ≈ 3.5000  ✅ invariant holds
+</code></pre>
+<h4 id="post-state-analysis">Post-State Analysis</h4>
+<table>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Value</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>new_v_approach</td>
+<td>(3.3807, 0.9058)</td>
+<td>Heading rotated 15° clockwise</td>
+</tr>
+<tr>
+<td>heading_delta_applied</td>
+<td>+0.2618 rad</td>
+<td>Confirmed applied</td>
+</tr>
+<tr>
+<td>deflect_cost</td>
+<td>0.1806</td>
+<td>Deducted from binding budget</td>
+</tr>
+<tr>
+<td>mode</td>
+<td>NOMINAL_DEFLECT</td>
+<td>Success</td>
+</tr>
+<tr>
+<td>failure_mode</td>
+<td>None</td>
+<td>No FM raised</td>
+</tr>
+<tr>
+<td>DEFLECT_ACTIVE flag</td>
+<td>Set</td>
+<td>Until f_Capture commits</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="example-2-null-deflect-zero-angle-pass-through">Example 2 — Null Deflect: Zero-Angle Pass-Through</h3>
+<p><strong>Scenario:</strong> f_Deflect is called with δ = 0.0 as a no-op pipeline pass-through. No heading change; no cost.</p>
+<h4 id="parameters_1">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v_approach</td>
+<td>(2.1, 1.4)</td>
+<td>Magnitude ≈ 2.524</td>
+</tr>
+<tr>
+<td>heading_delta</td>
+<td>0.0</td>
+<td>Explicit no-op</td>
+</tr>
+<tr>
+<td>r_deflect</td>
+<td>4.0</td>
+<td>Valid; unused in null</td>
+</tr>
+<tr>
+<td>β</td>
+<td>1.1</td>
+<td>DC-3 clear</td>
+</tr>
+<tr>
+<td>capture_state</td>
+<td>APPROACHING</td>
+<td>DC-1 clear</td>
+</tr>
+</tbody>
+</table>
+<h4 id="computation-trace_1">Computation Trace</h4>
+<pre><code>heading_delta = 0.0 → NULL_DEFLECT mode triggered immediately.
+deflect_cost  = (0.0 / π) × (r_capture / r_deflect) × β = 0.0
+new_v_approach = v_approach (unchanged) = (2.1, 1.4)
+</code></pre>
+<h4 id="post-state-analysis_1">Post-State Analysis</h4>
+<table>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Value</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>new_v_approach</td>
+<td>(2.1, 1.4)</td>
+<td>Unchanged — pass-through</td>
+</tr>
+<tr>
+<td>heading_delta_applied</td>
+<td>0.0 rad</td>
+<td>None applied</td>
+</tr>
+<tr>
+<td>deflect_cost</td>
+<td>0.0</td>
+<td>Zero cost</td>
+</tr>
+<tr>
+<td>mode</td>
+<td>NULL_DEFLECT</td>
+<td>Correct — no-op</td>
+</tr>
+<tr>
+<td>NULL_DEFLECT flag</td>
+<td>Set</td>
+<td>Cleared on next non-zero deflect</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="example-3-fm-001-guard-overshoot-blocked">Example 3 — FM-001 Guard: Overshoot Blocked</h3>
+<p><strong>Scenario:</strong> Entity E is already on an escape trajectory (v_approach ≥ v_escape). Deflection is requested but cannot restore binding — FM-001 fires.</p>
+<h4 id="parameters_2">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v_approach</td>
+<td>(5.8, 0.0)</td>
+<td>Magnitude = 5.8</td>
+</tr>
+<tr>
+<td>v_escape(A)</td>
+<td>5.0</td>
+<td>SC-1 VIOLATION: 5.8 ≥ 5.0</td>
+</tr>
+<tr>
+<td>β</td>
+<td>1.2</td>
+<td>DC-3 would pass; moot</td>
+</tr>
+<tr>
+<td>ρ(Φ)</td>
+<td>0.65</td>
+<td>DC-2 would pass; moot</td>
+</tr>
+<tr>
+<td>heading_delta</td>
+<td>-0.5236 rad</td>
+<td>-30° counter-clockwise</td>
+</tr>
+<tr>
+<td>r_deflect</td>
+<td>3.0</td>
+<td>Valid range; moot</td>
+</tr>
+<tr>
+<td>capture_state</td>
+<td>APPROACHING</td>
+<td>DC-1 clear</td>
+</tr>
+</tbody>
+</table>
+<h4 id="deflect-condition-trace_1">Deflect Condition Trace</h4>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Test</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DC-1</td>
+<td>APPROACHING ∉ terminal set</td>
+<td>✅ PASS</td>
+</tr>
+<tr>
+<td>DC-2</td>
+<td>ρ(Φ) = 0.65 &gt; 0</td>
+<td>✅ PASS</td>
+</tr>
+<tr>
+<td>DC-3</td>
+<td>β = 1.2 ≥ 1.0</td>
+<td>✅ PASS</td>
+</tr>
+<tr>
+<td>DC-4</td>
+<td></td>
+<td>v_approach</td>
+</tr>
+</tbody>
+</table>
+<h4 id="post-state-analysis_2">Post-State Analysis</h4>
+<table>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Value</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>new_v_approach</td>
+<td>(5.8, 0.0)</td>
+<td>Unchanged — FM-001 block</td>
+</tr>
+<tr>
+<td>heading_delta_applied</td>
+<td>0.0</td>
+<td>Not applied</td>
+</tr>
+<tr>
+<td>deflect_cost</td>
+<td>0.0</td>
+<td>No cost — operation blocked</td>
+</tr>
+<tr>
+<td>mode</td>
+<td>DEFLECT_BLOCKED</td>
+<td>FM-001 active</td>
+</tr>
+<tr>
+<td>failure_mode</td>
+<td>FM-001</td>
+<td>Overshoot — escape trajectory</td>
+</tr>
+<tr>
+<td>DEFLECT_BLOCKED flag</td>
+<td>Set</td>
+<td>System must re-approach</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key insight:</strong> Deflection preserves magnitude. If E is already escaping, no angular redirect can change that — the magnitude invariant makes heading correction powerless against a speed violation.</p>
+<hr>
+<h3 id="example-4-fm-006-guard-phantom-binding-blocked">Example 4 — FM-006 Guard: Phantom Binding Blocked</h3>
+<p><strong>Scenario:</strong> The F_fluid node has degraded below β = 1.0 (binding floor violated). Deflection is attempted but enters a phantom binding state — FM-006 fires.</p>
+<h4 id="parameters_3">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v_approach</td>
+<td>(2.0, 0.5)</td>
+<td>Magnitude ≈ 2.062; well below escape</td>
+</tr>
+<tr>
+<td>v_escape(A)</td>
+<td>4.5</td>
+<td>DC-4 would pass; moot</td>
+</tr>
+<tr>
+<td>β</td>
+<td>0.72</td>
+<td>SC-4 VIOLATION: &lt; 1.0</td>
+</tr>
+<tr>
+<td>ρ(Φ)</td>
+<td>0.88</td>
+<td>DC-2 would pass; moot</td>
+</tr>
+<tr>
+<td>heading_delta</td>
+<td>+0.7854 rad</td>
+<td>+45° clockwise</td>
+</tr>
+<tr>
+<td>r_deflect</td>
+<td>5.0</td>
+<td>Valid range; moot</td>
+</tr>
+<tr>
+<td>capture_state</td>
+<td>APPROACHING</td>
+<td>DC-1 clear</td>
+</tr>
+</tbody>
+</table>
+<h4 id="deflect-condition-trace_2">Deflect Condition Trace</h4>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Test</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DC-1</td>
+<td>APPROACHING ∉ terminal set</td>
+<td>✅ PASS</td>
+</tr>
+<tr>
+<td>DC-2</td>
+<td>ρ(Φ) = 0.88 &gt; 0</td>
+<td>✅ PASS</td>
+</tr>
+<tr>
+<td>DC-3</td>
+<td>β = 0.72 ≥ 1.0</td>
+<td>❌ FAIL</td>
+</tr>
+</tbody>
+</table>
+<h4 id="post-state-analysis_3">Post-State Analysis</h4>
+<table>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Value</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>new_v_approach</td>
+<td>(2.0, 0.5)</td>
+<td>Unchanged — FM-006 block</td>
+</tr>
+<tr>
+<td>heading_delta_applied</td>
+<td>0.0</td>
+<td>Not applied</td>
+</tr>
+<tr>
+<td>deflect_cost</td>
+<td>0.0</td>
+<td>No cost — operation blocked</td>
+</tr>
+<tr>
+<td>mode</td>
+<td>DEFLECT_BLOCKED</td>
+<td>FM-006 active</td>
+</tr>
+<tr>
+<td>failure_mode</td>
+<td>FM-006</td>
+<td>Phantom Capture — sub-binding medium</td>
+</tr>
+<tr>
+<td>DEFLECT_BLOCKED flag</td>
+<td>Set</td>
+<td>Restore β via f_Amplify before retry</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recovery path:</strong> Invoke <code>f_Amplify</code> to restore β ≥ 1.0, then re-attempt deflect. Alternatively, <code>f_Emit</code> may restore ρ(Φ) gradient effects that indirectly support binding recovery.</p>
+<hr>
+<h2 id="9-cross-module-references">§9 Cross-Module References</h2>
+<!-- SECTION: cross_module_references | scope: this-file -->
+
+<h3 id="91-dependency-table">§9.1 Dependency Table</h3>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Dependency Type</th>
+<th>What f_Deflect Uses</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f_Force.md</td>
+<td>Primary (owner)</td>
+<td>v_approach, β, v_escape; heading_delta stub resolved here</td>
+</tr>
+<tr>
+<td>f_Field.md</td>
+<td>Read-only</td>
+<td>ρ(Φ) for DC-2; v_escape(A) for DC-4</td>
+</tr>
+<tr>
+<td>f_Frame.md</td>
+<td>Read-only</td>
+<td>r_capture for r_deflect domain + cost formula</td>
+</tr>
+<tr>
+<td>OPERATORS.md</td>
+<td>Authority</td>
+<td>Symbol registry; must be updated (see §9.2)</td>
+</tr>
+<tr>
+<td>f_Amplify.md</td>
+<td>Recovery path</td>
+<td>Restores β when FM-006 blocks deflect</td>
+</tr>
+<tr>
+<td>f_Emit.md</td>
+<td>Recovery path</td>
+<td>Restores ρ(Φ) when DC-2 blocks (upstream)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="92-operatorsmd-updates-required">§9.2 OPERATORS.md Updates Required</h3>
+<p>The following additions must be made to <code>OPERATORS.md</code> when this file is published:</p>
+<pre><code>§F_force — New Operators (f_Deflect.md canonical, 2026-08-13):
+
+  heading_delta   δ   float   (-π, π]   Angular deviation (radians); +CW; frozen
+  r_deflect           float   (0, r_capture)  Deflection radius; frozen
+  deflect_cost        float   [0, ∞)    Binding budget consumed by deflect; frozen
+
+§Primitives — New Entries:
+  PRIM:023  redirect_force_node    Impure  F_force  f_Deflect.md
+  PRIM:024  compute_deflection_cost Pure   F_force  f_Deflect.md
+
+§Stub Resolution:
+  heading_delta — previously marked [PENDING: f_Deflect.md] in f_Force.md §4.3.
+  Now frozen. Remove pending annotation from OPERATORS.md §F_force stub entry.
+</code></pre>
+<h3 id="93-f_forcemd-annotation-update-required">§9.3 f_Force.md Annotation Update Required</h3>
+<p>The following note must be appended to <code>f_Force.md §4.3</code> when this file is published:</p>
+<pre><code>heading_delta — RESOLVED: see f_Deflect.md §4.1
+Freeze date: 2026-08-13 | Session: SES-20260813-DEFLECT-001
+</code></pre>
+<hr>
+<h2 id="10-document-metadata">§10 Document Metadata</h2>
+<!-- SECTION: document_metadata | scope: this-file | wave3_complete: TRUE -->
+
+<h3 id="101-inv-compliance-table">§10.1 INV Compliance Table</h3>
+<table>
+<thead>
+<tr>
+<th>INV</th>
+<th>Statement</th>
+<th>f_Deflect Compliance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INV-001</td>
+<td>G = F_freq · F_fluid · F_force</td>
+<td>Deflect operates inside F_force node only; triadic structure preserved</td>
+</tr>
+<tr>
+<td>INV-002</td>
+<td>f_Capture(E,A,Φ) → Ω frozen</td>
+<td>Not touched; deflect is pre-capture geometry</td>
+</tr>
+<tr>
+<td>INV-003</td>
+<td>ρ(Φ)=0 triggers FM-002</td>
+<td>DC-2 proxy enforced; deflect blocks when ρ=0</td>
+</tr>
+<tr>
+<td>INV-004</td>
+<td>β&lt;1.0 always flyby</td>
+<td>DC-3 enforced; FM-006 raised when β&lt;1.0</td>
+</tr>
+<tr>
+<td>INV-005</td>
+<td>SC-1–SC-5 conjunctive</td>
+<td>DC-1 through DC-4 are conjunctive; SC compliance maintained</td>
+</tr>
+<tr>
+<td>INV-006</td>
+<td>Terminal states irreversible</td>
+<td>DC-1 blocks deflect in all terminal states</td>
+</tr>
+<tr>
+<td>INV-007</td>
+<td>f_Source.md read-only</td>
+<td>Not referenced or modified</td>
+</tr>
+<tr>
+<td>INV-008</td>
+<td>Operator eval order normative</td>
+<td>PRIM:024 always runs before PRIM:023</td>
+</tr>
+<tr>
+<td>INV-009</td>
+<td>OPERATORS.md is symbol authority</td>
+<td>§9.2 update required; symbols declared frozen here</td>
+</tr>
+<tr>
+<td>INV-010</td>
+<td>Frozen symbols immutable</td>
+<td>heading_delta, r_deflect, deflect_cost frozen 2026-08-13</td>
+</tr>
+</tbody>
+</table>
+<h3 id="102-primitive-registry-this-file">§10.2 Primitive Registry (This File)</h3>
+<table>
+<thead>
+<tr>
+<th>PRIM</th>
+<th>Name</th>
+<th>Type</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PRIM:023</td>
+<td>redirect_force_node</td>
+<td>Impure</td>
+<td>Frozen</td>
+</tr>
+<tr>
+<td>PRIM:024</td>
+<td>compute_deflection_cost</td>
+<td>Pure</td>
+<td>Frozen</td>
+</tr>
+</tbody>
+</table>
+<h3 id="103-operator-registry-this-file">§10.3 Operator Registry (This File)</h3>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Symbol</th>
+<th>Type</th>
+<th>Domain</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>heading_delta</td>
+<td>δ</td>
+<td>float</td>
+<td>(-π, π]</td>
+<td>Frozen — resolves f_Force.md §4.3 stub</td>
+</tr>
+<tr>
+<td>r_deflect</td>
+<td>—</td>
+<td>float</td>
+<td>(0,r_capture)</td>
+<td>Frozen</td>
+</tr>
+<tr>
+<td>deflect_cost</td>
+<td>—</td>
+<td>float</td>
+<td>[0, ∞)</td>
+<td>Frozen</td>
+</tr>
+</tbody>
+</table>
+<h3 id="104-failure-mode-registry-this-file">§10.4 Failure Mode Registry (This File)</h3>
+<table>
+<thead>
+<tr>
+<th>FM</th>
+<th>Name</th>
+<th>Triggered By</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FM-001</td>
+<td>Overshoot</td>
+<td>DC-4: v_approach ≥ v_escape</td>
+<td>Active guard (frozen in f_Force.md)</td>
+</tr>
+<tr>
+<td>FM-006</td>
+<td>Phantom Capture</td>
+<td>DC-3: β &lt; 1.0</td>
+<td>Active guard (frozen in f_Force.md)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="105-wave-3-completion-milestone">§10.5 ██ WAVE 3 COMPLETION MILESTONE ██</h3>
+<!-- MILESTONE: WAVE_3_COMPLETE | date: 2026-08-13 | session: SES-20260813-DEFLECT-001 -->
+
+<pre><code>╔══════════════════════════════════════════════════════════════════════╗
+║              FFF_Gravity Module — WAVE 3 COMPLETE                   ║
+║              All 8 Wave 3 files are now canonical.                  ║
+╠══════════════════════════════════════════════════════════════════════╣
+║                                                                      ║
+║  Date:     2026-08-13                                                ║
+║  Session:  SES-20260813-DEFLECT-001                                  ║
+║  Author:   umaywant2                                                 ║
+║                                                                      ║
+╠═══════════════════════════╦══════════════════╦══════════════════════╣
+║  File                     ║  Node            ║  Status              ║
+╠═══════════════════════════╬══════════════════╬══════════════════════╣
+║  f_Release.md             ║  F_force         ║  ✅ CANONICAL         ║
+║  f_Decay.md               ║  F_fluid/F_freq  ║  ✅ CANONICAL         ║
+║  f_Orbit.md               ║  F_freq          ║  ✅ CANONICAL         ║
+║  f_Collapse.md            ║  F_force/F_fluid ║  ✅ CANONICAL         ║
+║  f_Emit.md                ║  F_freq          ║  ✅ CANONICAL         ║
+║  f_Dampen.md              ║  F_freq          ║  ✅ CANONICAL         ║
+║  f_Amplify.md             ║  F_fluid         ║  ✅ CANONICAL         ║
+║  f_Deflect.md             ║  F_force         ║  ✅ CANONICAL         ║
+╠═══════════════════════════╩══════════════════╩══════════════════════╣
+║                                                                      ║
+║  PRIMITIVE REGISTRY COMPLETE: PRIM:001 — PRIM:024  (all frozen)     ║
+║  FAILURE MODE REGISTRY COMPLETE: FM-001 — FM-010   (all frozen)     ║
+║  OPERATOR REGISTRY: all symbols frozen; stub resolved               ║
+║                                                                      ║
+╠══════════════════════════════════════════════════════════════════════╣
+║              WAVE 4 — FULLY UNLOCKED                                 ║
+╚══════════════════════════════════════════════════════════════════════╝
+</code></pre>
+<hr>
+<h3 id="106-wave-4-unlock-manifest">§10.6 Wave 4 Unlock Manifest</h3>
+<p>Wave 4 contains the <strong>capture variant files</strong> — specialized f_Capture extensions for non-standard attractor/entity configurations. All 6 files are now unlocked.</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Node</th>
+<th>Role</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>f_Capture_Soft.md</code></td>
+<td>F_fluid</td>
+<td>Soft-binding capture; β near floor (1.0–1.2)</td>
+<td>Pending</td>
+</tr>
+<tr>
+<td><code>f_Capture_Hard.md</code></td>
+<td>F_force</td>
+<td>High-velocity capture; v_approach near v_escape</td>
+<td>Pending</td>
+</tr>
+<tr>
+<td><code>f_Capture_Resonant.md</code></td>
+<td>F_freq</td>
+<td>ω_res-gated capture; ω_res ∈ ℚ enforced</td>
+<td>Pending</td>
+</tr>
+<tr>
+<td><code>f_Capture_Mutual.md</code></td>
+<td>F_fluid</td>
+<td>Bidirectional capture; M_A ≈ M_E regime</td>
+<td>Pending</td>
+</tr>
+<tr>
+<td><code>f_Capture_Cascade.md</code></td>
+<td>F_freq</td>
+<td>Multi-entity sequential capture chaining</td>
+<td>Pending</td>
+</tr>
+<tr>
+<td><code>f_Capture_Asymmetric.md</code></td>
+<td>F_force</td>
+<td>FM-005 asymmetric dissolution variant</td>
+<td>Pending</td>
+</tr>
+</tbody>
+</table>
+<h3 id="107-full-module-wave-completion-status">§10.7 Full Module Wave Completion Status</h3>
+<table>
+<thead>
+<tr>
+<th>Wave</th>
+<th>Files</th>
+<th>Status</th>
+<th>Completion Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>3/3</td>
+<td>✅ Complete</td>
+<td>Prior session</td>
+</tr>
+<tr>
+<td>1</td>
+<td>6/6</td>
+<td>✅ Complete</td>
+<td>Prior session</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3/3</td>
+<td>✅ Complete</td>
+<td>Prior session</td>
+</tr>
+<tr>
+<td>3</td>
+<td>8/8</td>
+<td>✅ Complete</td>
+<td>2026-08-13</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0/6</td>
+<td>🔓 Unlocked</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="108-changelog-entry">§10.8 Changelog Entry</h3>
+<pre><code class="language-yaml">- version: 1.0.0
+  date: 2026-08-13
+  session: SES-20260813-DEFLECT-001
+  author: umaywant2
+  changes:
+    - Initial canonical publication of f_Deflect.md
+    - Freezes heading_delta operator (resolves f_Force.md §4.3 pending stub)
+    - Freezes r_deflect operator
+    - Freezes deflect_cost operator and formula
+    - Introduces PRIM:023 redirect_force_node (Impure, F_force)
+    - Introduces PRIM:024 compute_deflection_cost (Pure, F_force)
+    - Defines 4 Deflect Conditions (DC-1 through DC-4, conjunctive)
+    - Activates FM-001 and FM-006 guards in deflect context
+    - Establishes NULL_DEFLECT, NOMINAL_DEFLECT, DEFLECT_BLOCKED modes
+    - Provides 4 canonical worked examples
+    - Records Wave 3 Completion Milestone — all 8 files canonical
+    - Unlocks Wave 4 manifest (6 capture variant files)
+</code></pre>
+<h3 id="109-suggested-commit-message">§10.9 Suggested Commit Message</h3>
+<pre><code>docs(FFF_Gravity): publish canonical f_Deflect.md — Wave 3 complete
+
+- Introduces heading_delta, r_deflect, deflect_cost operators (frozen)
+- Resolves heading_delta pending stub from f_Force.md §4.3
+- PRIM:023 redirect_force_node (Impure) — modifies v_approach direction
+- PRIM:024 compute_deflection_cost (Pure) — cost = (|δ|/π)(r_c/r_d)(β)
+- Magnitude invariant enforced: |new_v_approach| = |v_approach|
+- FM-001 and FM-006 guards active via DC-3 and DC-4
+- 4 Deflect Conditions (conjunctive); 4 canonical examples
+- Wave 3 Completion Milestone: all 8 files canonical
+- Wave 4 (capture variants) fully unlocked — 6 files pending
+- Primitive registry now complete: PRIM:001–PRIM:024 all frozen
+- Failure mode registry now complete: FM-001–FM-010 all frozen
+
+Refs: SES-20260813-DEFLECT-001
+Closes: Wave 3
+</code></pre>
+<hr>
+<p><em>End of <code>f_Deflect.md</code> — FFF_Gravity Module, Wave 3, File 8 of 8.</em><br>
+<em>All Wave 3 primitives frozen. Wave 4 unlocked.</em></p>
+  </main>
+</body>
+</html>

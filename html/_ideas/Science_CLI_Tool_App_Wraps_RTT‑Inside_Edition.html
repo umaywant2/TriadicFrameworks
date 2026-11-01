@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/_ideas/Science_CLI_Tool_App_Wraps_RTT‑Inside_Edition.md">
+  <title>🌌 Science CLI Tool App Wraps — RTT‑Inside Edition</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/_ideas/Science_CLI_Tool_App_Wraps_RTT‑Inside_Edition.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/_ideas/Science_CLI_Tool_App_Wraps_RTT‑Inside_Edition.md</code>
+  </aside>
+
+  <main>
+<h1 id="science-cli-tool-app-wraps-rttinside-edition">🌌 Science CLI Tool App Wraps — RTT‑Inside Edition</h1>
+<p><em>A unified operator interface for scientific engines, corridor analysis, and warp‑drive scaffolding</em></p>
+<p>This document defines the <strong>RTT‑Inside–compliant wrapper layer</strong> for scientific CLI tools, simulators, and field‑engine prototypes. It transforms raw command‑line tools into <strong>structured sessions</strong>, <strong>corridor‑aware analytics</strong>, and <strong>operator‑safe workflows</strong>.</p>
+<p>This is the “hands‑on” layer for:</p>
+<ul>
+<li>Warp Lab v0.1  </li>
+<li>Natural corridor studies (vortex rings, solitons, etc.)  </li>
+<li>Field‑engine prototypes  </li>
+<li>Metric simulators  </li>
+<li>Stability validators  </li>
+<li>Q‑metric computation  </li>
+<li>Replay and provenance  </li>
+</ul>
+<p>It replaces the pre‑RTT procedural wrapper with a <strong>session‑based, corridor‑aware, triadic structure</strong>.</p>
+<hr>
+<h1 id="1-purpose">1. Purpose</h1>
+<p>The Science CLI Tool Wrap Layer provides:</p>
+<ul>
+<li>A <strong>standard session schema</strong> for any scientific tool  </li>
+<li>Automatic <strong>corridor tracking</strong>  </li>
+<li><strong>Q‑metric computation</strong>  </li>
+<li><strong>Validator hooks</strong>  </li>
+<li><strong>Replay‑ready logs</strong>  </li>
+<li><strong>Operator envelopes</strong>  </li>
+<li>Integration with <strong>warp‑drive scaffolding</strong>  </li>
+</ul>
+<p>This layer ensures that every scientific run — whether a vortex simulation, a field‑engine test, or a warp‑metric solver — becomes a <strong>canonical RTT‑Inside session</strong>.</p>
+<hr>
+<h1 id="2-rttinside-session-schema-universal">2. RTT‑Inside Session Schema (Universal)</h1>
+<p>Every CLI tool invocation becomes a structured session:</p>
+<pre><code class="language-markdown">### Session Schema (Universal)
+
+**Session ID:** &lt;tool_name&gt;::&lt;timestamp&gt;
+
+**Phase A – Invocation**
+- tool_name
+- tool_version
+- invocation_parameters
+- environment_snapshot
+- operator_notes_pre
+
+**Phase B – Output Interpretation**
+- raw_output (captured JSON/text)
+- parsed_output (structured fields)
+- coherence_criteria (tool-specific)
+- derived_metrics (tool-specific)
+- Q_metric (computed below)
+
+**Phase C – Validation &amp; Envelope**
+- validator_rules (tool-specific)
+- corridor_valid: true/false
+- failure_modes (if any)
+- operator_notes_post
+
+**Replay Metadata**
+- timestamp_start
+- timestamp_end
+- runtime
+- provenance_hash
+</code></pre>
+<p>This schema is identical in shape to:</p>
+<ul>
+<li>Vortex Ring Sessions  </li>
+<li>Soliton Sessions  </li>
+<li>Warp Lab v0.1 Sessions  </li>
+</ul>
+<p>This gives you a <strong>unified operator experience</strong> across all scientific domains.</p>
+<hr>
+<h1 id="3-qmetrics-universal-pattern">3. Q‑Metrics (Universal Pattern)</h1>
+<p>Every tool run produces a <strong>Q‑metric</strong> that measures corridor stability.</p>
+<p>The universal form:</p>
+<p>[
+Q = \frac{\text{coherent_extent}}{\text{characteristic_scale}}
+]</p>
+<p>Where:</p>
+<ul>
+<li><strong>coherent_extent</strong> = how long the output stays within tolerance  </li>
+<li><strong>characteristic_scale</strong> = natural size/time of the system  </li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>
+<p><strong>Vortex rings:</strong><br>
+  (Q = L_{\text{coherent}} / (2\pi R_0))</p>
+</li>
+<li>
+<p><strong>Solitons:</strong><br>
+  (Q = L_{\text{coherent}} / W_0)</p>
+</li>
+<li>
+<p><strong>Warp Lab field‑engine:</strong><br>
+  (Q = D_{\text{corridor_gain}} / (2\pi R_0))</p>
+</li>
+<li>
+<p><strong>CLI scientific tools:</strong><br>
+  (Q = T_{\text{stable_output}} / T_{\text{invocation}})<br>
+  or<br>
+  (Q = \text{stable_range} / \text{nominal_range})</p>
+</li>
+</ul>
+<p>Each tool defines its own <strong>coherence_criteria</strong> and <strong>characteristic_scale</strong>.</p>
+<hr>
+<h1 id="4-validators-universal-pattern">4. Validators (Universal Pattern)</h1>
+<p>Validators determine whether a session stayed in corridor.</p>
+<pre><code class="language-markdown">### Validator Rules (Universal)
+
+corridor_valid = (
+    Q_metric ≥ Q_min
+    AND all coherence_criteria satisfied
+    AND no safety_envelope violations
+)
+</code></pre>
+<p>Validators can be:</p>
+<ul>
+<li><strong>hard</strong> (must pass)  </li>
+<li><strong>soft</strong> (warnings only)  </li>
+</ul>
+<p>Warp‑drive work will use <strong>hard validators</strong> for safety envelopes.</p>
+<hr>
+<h1 id="5-integration-with-warpdrive-scaffolding">5. Integration with Warp‑Drive Scaffolding</h1>
+<p>This wrapper layer becomes the <strong>operator interface</strong> for:</p>
+<h3 id="51-warp-metric-simulators">5.1 Warp Metric Simulators</h3>
+<p>CLI tools that compute:</p>
+<ul>
+<li>curvature proxies  </li>
+<li>stress–energy approximations  </li>
+<li>bubble profiles  </li>
+<li>metric stability  </li>
+</ul>
+<p>Each run becomes a <strong>Warp Metric Session</strong>.</p>
+<h3 id="52-fieldengine-prototypes">5.2 Field‑Engine Prototypes</h3>
+<p>CLI tools that simulate:</p>
+<ul>
+<li>EM cavities  </li>
+<li>plasma envelopes  </li>
+<li>metamaterial distributions  </li>
+<li>refractive‑index shaping  </li>
+</ul>
+<p>Each run becomes a <strong>Warp Engine Session</strong>.</p>
+<h3 id="53-natural-corridor-studies">5.3 Natural Corridor Studies</h3>
+<p>CLI tools that analyze:</p>
+<ul>
+<li>vortex rings  </li>
+<li>solitons  </li>
+<li>bubble dynamics  </li>
+<li>nonlinear packets  </li>
+</ul>
+<p>Each run becomes a <strong>Natural Corridor Session</strong>.</p>
+<h3 id="54-warp-lab-v01">5.4 Warp Lab v0.1</h3>
+<p>This wrapper becomes the <strong>execution layer</strong> for:</p>
+<ul>
+<li>running field‑engine experiments  </li>
+<li>computing Q_warp  </li>
+<li>validating corridor stability  </li>
+<li>logging operator sessions  </li>
+<li>generating replay artifacts  </li>
+</ul>
+<p>Warp Lab becomes the <strong>application</strong>,<br>
+this wrapper becomes the <strong>engine</strong>.</p>
+<hr>
+<h1 id="6-example-cli-tool-wrapped-as-rttinside-session">6. Example: CLI Tool Wrapped as RTT‑Inside Session</h1>
+<p>Here’s a concrete example using a fictional tool <code>vortex_sim</code>:</p>
+<pre><code class="language-markdown">##### Example Session: vortex_sim
+
+**Session ID:** vortex_sim::2026-01-07-B
+
+**Phase A – Invocation**
+- tool_name: vortex_sim
+- tool_version: 1.4.2
+- invocation_parameters:
+  - aperture_diameter: 0.04
+  - impulse_velocity: 0.80
+  - medium: water
+- environment_snapshot:
+  - cpu: 8-core
+  - temp: 20°C
+- operator_notes_pre: baseline run
+
+**Phase B – Output Interpretation**
+- raw_output: {...}
+- parsed_output:
+  - R0: 0.020 m
+  - L_coherent: 1.50 m
+- coherence_criteria:
+  - shape_preservation: ±10%
+  - circulation: ±15%
+- derived_metrics:
+  - Q_corridor = 1.50 / (2π * 0.020) ≈ 11.9
+
+**Phase C – Validation**
+- validator_rules:
+  - Q_corridor ≥ 5.0
+- corridor_valid: true
+- failure_modes: none
+- operator_notes_post: stable corridor
+
+**Replay Metadata**
+- runtime: 0.42 s
+- provenance_hash: &lt;hash&gt;
+</code></pre>
+<p>This is identical in shape to your Warp Lab sessions.</p>
+<hr>
+<h1 id="7-example-warp-engine-cli-tool-wrapped-as-rttinside-session">7. Example: Warp Engine CLI Tool Wrapped as RTT‑Inside Session</h1>
+<pre><code class="language-markdown">##### Example Session: warp_field_engine
+
+**Session ID:** warp_field_engine::2026-01-07-A
+
+**Phase A – Invocation**
+- tool_name: warp_field_engine
+- tool_version: 0.3.1
+- invocation_parameters:
+  - cavity_radius: 0.50
+  - peak_intensity: 3e6
+  - ramp_time: 0.20
+- environment_snapshot:
+  - vacuum_pressure: 0.01 atm
+
+**Phase B – Output Interpretation**
+- parsed_output:
+  - R0: 0.50 m
+  - D_corridor_gain: 10.0 m
+- coherence_criteria:
+  - field_profile: ±5%
+  - curvature_proxy: ±3%
+- derived_metrics:
+  - Q_warp_engine = 10.0 / (2π * 0.50) ≈ 3.18
+
+**Phase C – Validation**
+- validator_rules:
+  - Q_warp_engine ≥ 2.0
+- corridor_valid: true
+- failure_modes: mode-hopping after 0.7 s
+
+**Replay Metadata**
+- runtime: 1.2 s
+- provenance_hash: &lt;hash&gt;
+</code></pre>
+<p>This is now a <strong>first‑class warp‑drive artifact</strong>.</p>
+<hr>
+<h1 id="8-summary">8. Summary</h1>
+<p>You now have:</p>
+<ul>
+<li>A <strong>modern RTT‑Inside rewrite</strong>  </li>
+<li>A <strong>universal session schema</strong>  </li>
+<li><strong>Validators</strong>  </li>
+<li><strong>Q‑metrics</strong>  </li>
+<li>Full <strong>integration with warp‑drive scaffolding</strong>  </li>
+<li>Drop‑in examples for your repo  </li>
+</ul>
+<p>This transforms your old procedural wrapper into a <strong>corridor‑aware scientific engine</strong> that matches your entire canon.</p>
+<hr>
+<ul>
+<li>generate a <strong>folder structure</strong> for Warp Lab v0.1  </li>
+<li>create <strong>operator templates</strong>  </li>
+<li>build <strong>session log examples</strong>  </li>
+</ul>
+  </main>
+</body>
+</html>

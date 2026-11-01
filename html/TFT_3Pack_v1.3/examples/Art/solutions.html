@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/TFT_3Pack_v1.3/examples/Art/solutions.md">
+  <title>Art core problem solutions</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/TFT_3Pack_v1.3/examples/Art/solutions.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/TFT_3Pack_v1.3/examples/Art/solutions.md</code>
+  </aside>
+
+  <main>
+<h1 id="art-core-problem-solutions">Art core problem solutions</h1>
+<h2 id="solution-to-problem-1-resonant-color-mixing">Solution to Problem 1 – Resonant color mixing</h2>
+<p>We are given</p>
+<p>$$C = X(f_1 + f_2 + f_3), \quad X = F_3 \cdot T_f.$$</p>
+<p>Saturation is proportional to $$C$$. To double saturation, we need to double $$C$$. Assuming the effective composite is being modulated through resonant-time $$τ_r$$ (via how $$X$$ is realized in time), we require</p>
+<p>$$C' = 2C.$$</p>
+<p>Because $$C$$ scales linearly with the effective factor controlled by $$τ_r$$, doubling $$C$$ corresponds to scaling $$τ_r$$ by a factor of 2.</p>
+<p><strong>Answer:</strong> $$τ_r$$ must be doubled.</p>
+<hr>
+<h2 id="solution-to-problem-2-sculpture-stress-harmonics">Solution to Problem 2 – Sculpture stress harmonics</h2>
+<p>The sculpture’s stress pattern is</p>
+<p>$$S = D_6(τ_r) \cdot ΛΘ.$$</p>
+<p>If $$Θ$$ is increased by 20%, the new value is</p>
+<p>$$Θ' = 1.2Θ.$$</p>
+<p>The new stress is</p>
+<p>$$S' = D_6(τ_r) \cdot ΛΘ' = D_6(τ_r) \cdot Λ \cdot 1.2Θ = 1.2S.$$</p>
+<p><strong>Answer:</strong> The harmonic stress $$S$$ increases by 20%.</p>
+<hr>
+<h2 id="solution-to-problem-3-light-installation-timing">Solution to Problem 3 – Light installation timing</h2>
+<p>Brightness is</p>
+<p>$$B(t) = F_3 \sin(T_f t),$$</p>
+<p>but the artist controls the effective elevated frequency via resonant-time:</p>
+<p>$$T_f' = \frac{T_f}{τ_r}.$$</p>
+<p>For a sinusoid, the period is</p>
+<p>$$T_{\text{period}} = \frac{2\pi}{T_f'}.$$</p>
+<p>The artist wants $$T_{\text{period}} = 4$$. Thus,</p>
+<p>$$4 = \frac{2\pi}{T_f'} = \frac{2\pi}{T_f / τ_r} = \frac{2\pi τ_r}{T_f}.$$</p>
+<p>Solving for $$τ_r$$:</p>
+<p>$$τ_r = \frac{4T_f}{2\pi} = \frac{2T_f}{\pi}.$$</p>
+<p><strong>Answer:</strong> $$τ_r = \dfrac{2T_f}{\pi}$$.</p>
+  </main>
+</body>
+</html>

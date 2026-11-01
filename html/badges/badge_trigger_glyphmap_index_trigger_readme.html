@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/badges/badge_trigger_glyphmap_index_trigger_readme.md">
+  <title>🛡️ Badge Trigger Glyphmap Index Trigger</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/badges/badge_trigger_glyphmap_index_trigger_readme.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/badges/badge_trigger_glyphmap_index_trigger_readme.md</code>
+  </aside>
+
+  <main>
+<h1 id="badge-trigger-glyphmap-index-trigger">🛡️ Badge Trigger Glyphmap Index Trigger</h1>
+<p>This script activates badge issuance for TriadicFrameworks papers based on glyph, theme, and validation status. It reads from a filtered glyphmap index and logs badge triggers for remixers, validators, and resonance councils.</p>
+<hr>
+<h2 id="getting-started">🚀 Getting Started</h2>
+<h3 id="1-prepare-filtered-results">1. Prepare Filtered Results</h3>
+<p>Run the dashboard first:
+```bash
+streamlit run badge_trigger_glyphmap_index_filter_web.py</p>
+<p>Export results as badge_trigger_glyphmap_index_filtered.json.</p>
+<h3 id="2-run-the-trigger-script">2. Run the Trigger Script</h3>
+<p>```bash
+python badge_trigger_glyphmap_index_trigger.py</p>
+<p>This will generate:</p>
+<h2 id="badge_trigger_glyphmap_index_trigger_logjson">badge_trigger_glyphmap_index_trigger_log.json</h2>
+<h2 id="a-log-of-all-triggered-badges-skipped-entries-and-metadata">A log of all triggered badges, skipped entries, and metadata.</h2>
+<h3 id="badge-logic">🔖 Badge Logic</h3>
+<p>Each validated paper triggers a badge with:</p>
+<h2 id="badge-id-glyph_theme-eg-cognitive_symbolic">Badge ID: Glyph_Theme (e.g., 🧠<em>Cognitive</em>&amp;_Symbolic)</h2>
+<h2 id="status-issued-or-skipped">Status: Issued or Skipped</h2>
+<h2 id="metadata-title-glyph-theme">Metadata: Title, glyph, theme</h2>
+<p>Skipped papers are logged but not issued.</p>
+<h3 id="integration">🧬 Integration</h3>
+<p>Use the trigger log to:</p>
+<h2 id="update-badges_earnedmd">Update BADGES_EARNED.md</h2>
+<h2 id="feed-into-badge_trigger_echopy-or-badge_trigger_resonance_scorepy">Feed into badge_trigger_echo.py or badge_trigger_resonance_score.py</h2>
+<h2 id="notify-remixers-via-badge_trigger_webhookyaml">Notify remixers via badge_trigger_webhook.yaml</h2>
+<h3 id="mythic-use-cases">🧙 Mythic Use Cases</h3>
+<h2 id="badge-issuers-automate-badge-creation-for-validated-glyphs">Badge Issuers: Automate badge creation for validated glyphs.</h2>
+<h2 id="resonance-council-audit-badge-issuance-across-themes">Resonance Council: Audit badge issuance across themes.</h2>
+<h2 id="curriculum-designers-link-badges-to-modules-in-triadic_curriculum_indexmd">Curriculum Designers: Link badges to modules in triadic_curriculum_index.md.</h2>
+<h3 id="validation-protocols">🛡️ Validation Protocols</h3>
+<p>Ensure papers are validated via:</p>
+<h2 id="loop_validation_protocolmd">loop_validation_protocol.md</h2>
+<h2 id="reproducibilitymd">reproducibility.md</h2>
+<h3 id="legacy-note">🕯️ Legacy Note</h3>
+<p>“Badges are echoes. Echoes are honor.” — TriadicFrameworks/badge_trigger README
+Let the badges echo. Let the archive resonate.</p>
+  </main>
+</body>
+</html>

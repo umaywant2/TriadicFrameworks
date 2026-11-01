@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/ecoechosystem/templates/cognitive_agent_sim/agent_loop.md">
+  <title>Agent Loop</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/ecoechosystem/templates/cognitive_agent_sim/agent_loop.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/ecoechosystem/templates/cognitive_agent_sim/agent_loop.md</code>
+  </aside>
+
+  <main>
+<h1 id="agent-loop"><strong>Agent Loop</strong></h1>
+<h3 id="the-canonical-cognition-cycle-for-ecoechosystem-agents"><em>The canonical cognition cycle for EcoEchoSystem agents</em></h3>
+<p>The agent loop defines how an agent <strong>experiences the world, updates itself, and acts back upon the system</strong>.<br>
+It is not a decision tree. It is a <strong>bounded, recursive process</strong> shaped by identity, learning, and social context.</p>
+<p>Agents do not optimize outcomes.<br>
+They <strong>navigate constraints over time</strong>.</p>
+<hr>
+<h2 id="purpose"><strong>Purpose</strong></h2>
+<p>This module exists to:</p>
+<ul>
+<li>define a reusable cognition cycle for all agent types  </li>
+<li>integrate perception, identity, learning, and interaction  </li>
+<li>enforce bounded rationality and temporal limits  </li>
+<li>enable feedback between agents and simulation layers  </li>
+<li>prevent scripted or omniscient behavior  </li>
+</ul>
+<p>The agent loop is the <strong>engine of emergence</strong>.</p>
+<hr>
+<h2 id="canonical-agent-loop-overview"><strong>Canonical Agent Loop Overview</strong></h2>
+<p>Each agent executes the following loop at every simulation step:</p>
+<ol>
+<li><strong>Perceive</strong></li>
+<li><strong>Interpret</strong></li>
+<li><strong>Evaluate</strong></li>
+<li><strong>Decide</strong></li>
+<li><strong>Act</strong></li>
+<li><strong>Learn</strong></li>
+<li><strong>Update Identity</strong></li>
+<li><strong>Update Social State</strong></li>
+</ol>
+<p>The loop is <strong>recursive and lossy</strong> — information degrades, bias accumulates, and timing matters.</p>
+<hr>
+<h2 id="1-perception"><strong>1. Perception</strong></h2>
+<p>Agents receive signals from:
+- environment (resources, threats, opportunities)
+- institutions (rules, enforcement, legitimacy cues)
+- other agents (signals, behavior, reputation)</p>
+<p>Perception is filtered by:
+- attention limits<br>
+- salience bias<br>
+- identity relevance  </p>
+<p>Agents never perceive the full state.</p>
+<hr>
+<h2 id="2-interpretation"><strong>2. Interpretation</strong></h2>
+<p>Perceived signals are interpreted through:
+- existing beliefs<br>
+- narrative identity<br>
+- group affiliation<br>
+- recent memory  </p>
+<p>Interpretation answers:</p>
+<blockquote>
+<p><em>What does this mean for someone like me?</em></p>
+</blockquote>
+<p>Meaning precedes accuracy.</p>
+<hr>
+<h2 id="3-evaluation"><strong>3. Evaluation</strong></h2>
+<p>Agents evaluate options using:
+- bounded utility proxies (safety, status, belonging, purpose)
+- risk tolerance shaped by stress
+- learned heuristics
+- social expectations</p>
+<p>Evaluation is <strong>comparative</strong>, not absolute.</p>
+<hr>
+<h2 id="4-decision"><strong>4. Decision</strong></h2>
+<p>Agents select an action based on:
+- perceived best‑fit option
+- identity consistency
+- coordination expectations
+- time pressure</p>
+<p>Decisions may be:
+- habitual<br>
+- reactive<br>
+- exploratory<br>
+- defensive  </p>
+<p>Perfect rationality is impossible by design.</p>
+<hr>
+<h2 id="5-action"><strong>5. Action</strong></h2>
+<p>Actions may include:
+- resource use<br>
+- communication<br>
+- cooperation or conflict<br>
+- institutional compliance or defiance  </p>
+<p>Actions modify:
+- local environment<br>
+- social networks<br>
+- institutional state  </p>
+<p>Every action feeds back into the system.</p>
+<hr>
+<h2 id="6-learning"><strong>6. Learning</strong></h2>
+<p>Agents update internal models based on:
+- outcome feedback<br>
+- social reinforcement<br>
+- stress response  </p>
+<p>Learning follows the <strong>learning curves</strong> module:
+- uneven<br>
+- delayed<br>
+- identity‑constrained  </p>
+<p>Failure to learn is common.</p>
+<hr>
+<h2 id="7-identity-update"><strong>7. Identity Update</strong></h2>
+<p>Identity is updated when:
+- actions conflict with self‑model<br>
+- narratives fail<br>
+- stress exceeds tolerance  </p>
+<p>Identity change may be:
+- gradual<br>
+- defensive<br>
+- fragmentary<br>
+- crisis‑driven  </p>
+<p>Most loops reinforce identity rather than change it.</p>
+<hr>
+<h2 id="8-social-state-update"><strong>8. Social State Update</strong></h2>
+<p>Agents update:
+- trust levels<br>
+- reputation assessments<br>
+- group alignment<br>
+- coordination readiness  </p>
+<p>Social state shapes the next perception cycle.</p>
+<hr>
+<h2 id="temporal-dynamics"><strong>Temporal Dynamics</strong></h2>
+<p>The agent loop operates across multiple time scales:
+- micro‑steps (attention, reaction)
+- meso‑steps (learning, trust)
+- macro‑steps (identity, institutional alignment)</p>
+<p>Not all updates occur every tick.</p>
+<hr>
+<h2 id="agent-types-and-loop-variants"><strong>Agent Types and Loop Variants</strong></h2>
+<p>The same loop applies to:
+- individuals<br>
+- groups<br>
+- institutions  </p>
+<p>Differences arise from:
+- memory depth<br>
+- learning rate<br>
+- identity inertia<br>
+- action scope  </p>
+<p>Institutions loop slower but act wider.</p>
+<hr>
+<h2 id="failure-modes"><strong>Failure Modes</strong></h2>
+<p>Agent loop modeling fails when:
+- agents see everything<br>
+- decisions ignore identity<br>
+- learning is instantaneous<br>
+- actions lack consequence  </p>
+<p>If outcomes feel scripted, the loop is broken.</p>
+<hr>
+<h2 id="integration-notes"><strong>Integration Notes</strong></h2>
+<p>The agent loop:
+- consumes identity, learning, and social modules<br>
+- feeds city and civilization simulations<br>
+- enables AI‑guided exploration<br>
+- preserves substrate coherence  </p>
+<p>This loop is the <strong>heartbeat</strong> of EcoEchoSystem cognition.</p>
+<hr>
+<h2 id="status"><strong>Status</strong></h2>
+<p>Canonical agent loop for cognitive agent simulation.<br>
+Designed for extensibility, realism, and emergent behavior.</p>
+  </main>
+</body>
+</html>

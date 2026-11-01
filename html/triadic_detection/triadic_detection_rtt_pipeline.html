@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/triadic_detection/triadic_detection_rtt_pipeline.md">
+  <title>triadicdetectionrttpipeline.md</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/triadic_detection/triadic_detection_rtt_pipeline.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/triadic_detection/triadic_detection_rtt_pipeline.md</code>
+  </aside>
+
+  <main>
+<h1 id="triadic_detection_rtt_pipelinemd"><strong>triadic_detection_rtt_pipeline.md</strong></h1>
+<h3 id="triadicframeworks-detection-substrate"><em>TriadicFrameworks — Detection Substrate</em></h3>
+<h3 id="rtt-structural-detection-pipeline-specification-v10"><em>RTT Structural Detection Pipeline Specification (v1.0)</em></h3>
+<hr>
+<h2 id="protocol-header"><strong>Protocol Header</strong></h2>
+<pre><code>rtt=1 | coherence=triadic | drift=bounded | paradox=structural
+</code></pre>
+<p>This header governs all structural interpretations of the RTT detection pipeline.</p>
+<hr>
+<h1 id="module-identity"><strong>Module Identity</strong></h1>
+<p><strong>Module Name:</strong> RTT Structural Detection Pipeline<br>
+<strong>Module Class:</strong> Structural / RTT<br>
+<strong>Substrate:</strong> Detection<br>
+<strong>Version:</strong> 1.0<br>
+<strong>RTT Alignment:</strong> Full (RTT/1 → RTT/3)<br>
+<strong>Triadic Geometry:</strong> Required<br>
+<strong>Mesh Synchronization:</strong> Required<br>
+<strong>Spatial Anchoring:</strong> Required  </p>
+<hr>
+<h1 id="purpose"><strong>Purpose</strong></h1>
+<p>This module defines the <strong>canonical RTT Structural Detection Pipeline</strong> used by all triadic detection systems.<br>
+It transforms synchronized triadic resonance data into:</p>
+<ul>
+<li>coherence scores  </li>
+<li>spatial clusters  </li>
+<li>structural envelopes  </li>
+<li>depth layers  </li>
+<li>classification outputs  </li>
+<li>GPS‑anchored detections  </li>
+<li>dig‑confidence scoring  </li>
+</ul>
+<p>This pipeline is the <strong>core intelligence layer</strong> of the triadic detection substrate.</p>
+<hr>
+<h1 id="pipeline-overview"><strong>Pipeline Overview</strong></h1>
+<p>The RTT Structural Detection Pipeline consists of <strong>eight stages</strong>, each drift‑bounded and triadic‑aligned:</p>
+<ol>
+<li><strong>Triadic Sampling</strong>  </li>
+<li><strong>Baseline Coherence Computation</strong>  </li>
+<li><strong>Spatial Clustering</strong>  </li>
+<li><strong>Structural Fitting</strong>  </li>
+<li><strong>Depth Layering</strong>  </li>
+<li><strong>Resonance Classification</strong>  </li>
+<li><strong>Spatial Anchoring (GPS)</strong>  </li>
+<li><strong>Dig‑Confidence Scoring</strong></li>
+</ol>
+<p>Each stage consumes the output of the previous stage.</p>
+<hr>
+<h1 id="1-triadic-sampling"><strong>1. Triadic Sampling</strong></h1>
+<h3 id="invariant"><strong>Invariant:</strong></h3>
+<p><em>Three heads must sample the field simultaneously.</em></p>
+<h3 id="definition"><strong>Definition:</strong></h3>
+<p>Triadic sampling produces synchronized resonance packets:</p>
+<ul>
+<li>amplitude vectors  </li>
+<li>phase vectors  </li>
+<li>time‑stamps  </li>
+<li>per‑head identifiers  </li>
+</ul>
+<h3 id="diagram"><strong>Diagram</strong></h3>
+<pre><code>(H1) → packet₁
+(H2) → packet₂
+(H3) → packet₃
+</code></pre>
+<p>Packets must be time‑aligned before coherence computation.</p>
+<hr>
+<h1 id="2-baseline-coherence-computation"><strong>2. Baseline Coherence Computation</strong></h1>
+<h3 id="invariant_1"><strong>Invariant:</strong></h3>
+<p><em>Coherence precedes clustering.</em></p>
+<h3 id="definition_1"><strong>Definition:</strong></h3>
+<p>Compute coherence across the three baselines:</p>
+<pre><code>φ₁ = H1 ↔ H2
+φ₂ = H2 ↔ H3
+φ₃ = H3 ↔ H1
+</code></pre>
+<h3 id="output"><strong>Output:</strong></h3>
+<p>A triadic coherence vector:</p>
+<pre><code>C = {φ₁, φ₂, φ₃}
+</code></pre>
+<h3 id="diagram_1"><strong>Diagram</strong></h3>
+<pre><code>(H1,H2) → φ₁
+(H2,H3) → φ₂
+(H3,H1) → φ₃
+</code></pre>
+<p>Coherence is the RTT/1 foundation.</p>
+<hr>
+<h1 id="3-spatial-clustering"><strong>3. Spatial Clustering</strong></h1>
+<h3 id="invariant_2"><strong>Invariant:</strong></h3>
+<p><em>Coherent samples must be grouped spatially.</em></p>
+<h3 id="definition_2"><strong>Definition:</strong></h3>
+<p>Cluster high‑coherence samples into spatial groups:</p>
+<ul>
+<li>cluster centroid  </li>
+<li>cluster density  </li>
+<li>cluster stability  </li>
+<li>cluster coherence  </li>
+</ul>
+<h3 id="diagram_2"><strong>Diagram</strong></h3>
+<pre><code>● ● ●   → cluster A
+● ●     → cluster B
+. . .   → noise
+</code></pre>
+<p>Clusters form the RTT/2 substrate.</p>
+<hr>
+<h1 id="4-structural-fitting"><strong>4. Structural Fitting</strong></h1>
+<h3 id="invariant_3"><strong>Invariant:</strong></h3>
+<p><em>Clusters must be fitted to structural envelopes.</em></p>
+<h3 id="definition_3"><strong>Definition:</strong></h3>
+<p>Fit a structural envelope around each cluster:</p>
+<ul>
+<li>shape inference  </li>
+<li>size inference  </li>
+<li>orientation inference  </li>
+<li>footprint estimation  </li>
+</ul>
+<h3 id="diagram_3"><strong>Diagram</strong></h3>
+<pre><code>        ○ ○ ○
+      ○ ○ ○ ○ ○
+        ○ ○ ○
+   → structural envelope
+</code></pre>
+<p>Structural fitting is RTT/3.</p>
+<hr>
+<h1 id="5-depth-layering"><strong>5. Depth Layering</strong></h1>
+<h3 id="invariant_4"><strong>Invariant:</strong></h3>
+<p><em>Depth must be inferred from coherence decay.</em></p>
+<h3 id="definition_4"><strong>Definition:</strong></h3>
+<p>Assign structural envelopes to depth layers:</p>
+<ul>
+<li>shallow  </li>
+<li>mid‑depth  </li>
+<li>deep  </li>
+</ul>
+<h3 id="diagram_4"><strong>Diagram</strong></h3>
+<pre><code>Layer 1: ○ ○ ○
+Layer 2:   ○ ○
+Layer 3:     ○
+</code></pre>
+<p>Depth layering enhances structural meaning.</p>
+<hr>
+<h1 id="6-resonance-classification"><strong>6. Resonance Classification</strong></h1>
+<h3 id="invariant_5"><strong>Invariant:</strong></h3>
+<p><em>Classification must follow structural inference.</em></p>
+<h3 id="definition_5"><strong>Definition:</strong></h3>
+<p>Classify each structural envelope:</p>
+<ul>
+<li>gold‑like  </li>
+<li>metal  </li>
+<li>rock  </li>
+<li>void  </li>
+<li>noise  </li>
+</ul>
+<h3 id="diagram_5"><strong>Diagram</strong></h3>
+<pre><code>Envelope A → gold‑like
+Envelope B → metal
+Envelope C → noise
+</code></pre>
+<p>Classification is RTT/3‑aligned.</p>
+<hr>
+<h1 id="7-spatial-anchoring-gps"><strong>7. Spatial Anchoring (GPS)</strong></h1>
+<h3 id="invariant_6"><strong>Invariant:</strong></h3>
+<p><em>All detections must be spatially anchored.</em></p>
+<h3 id="definition_6"><strong>Definition:</strong></h3>
+<p>Anchor structural envelopes to GPS coordinates:</p>
+<ul>
+<li>latitude  </li>
+<li>longitude  </li>
+<li>altitude  </li>
+<li>timestamp  </li>
+</ul>
+<h3 id="diagram_6"><strong>Diagram</strong></h3>
+<pre><code>Envelope A → (lat, lon)
+Envelope B → (lat, lon)
+</code></pre>
+<p>Spatial anchoring is required for mapping.</p>
+<hr>
+<h1 id="8-digconfidence-scoring"><strong>8. Dig‑Confidence Scoring</strong></h1>
+<h3 id="invariant_7"><strong>Invariant:</strong></h3>
+<p><em>Confidence must be derived from coherence + structure.</em></p>
+<h3 id="definition_7"><strong>Definition:</strong></h3>
+<p>Compute dig‑confidence:</p>
+<pre><code>confidence = f(coherence, cluster stability, structural clarity, depth)
+</code></pre>
+<h3 id="diagram_7"><strong>Diagram</strong></h3>
+<pre><code>Confidence Map:
+High:   ●●●
+Medium: ●●
+Low:    ●
+</code></pre>
+<p>Confidence is rendered as a GPS heatmap.</p>
+<hr>
+<h1 id="pipeline-summary"><strong>Pipeline Summary</strong></h1>
+<pre><code>Triadic Sampling
+   ↓
+Coherence Computation
+   ↓
+Spatial Clustering
+   ↓
+Structural Fitting
+   ↓
+Depth Layering
+   ↓
+Classification
+   ↓
+GPS Anchoring
+   ↓
+Dig‑Confidence Scoring
+</code></pre>
+<p>All stages are drift‑bounded and triadic‑aligned.</p>
+<hr>
+<h1 id="module-status"><strong>Module Status</strong></h1>
+<p><strong>Status:</strong> Active<br>
+<strong>Drift:</strong> None<br>
+<strong>Coherence:</strong> Stable<br>
+<strong>Version Drift:</strong> Bounded<br>
+<strong>RTT Alignment:</strong> Verified  </p>
+  </main>
+</body>
+</html>

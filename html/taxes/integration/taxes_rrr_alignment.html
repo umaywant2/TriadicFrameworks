@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/taxes/integration/taxes_rrr_alignment.md">
+  <title>Taxes ↔ RRR Alignment</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/taxes/integration/taxes_rrr_alignment.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/taxes/integration/taxes_rrr_alignment.md</code>
+  </aside>
+
+  <main>
+<h1 id="taxes-rrr-alignment">Taxes ↔ RRR Alignment</h1>
+<h3 id="continuity-incentives-drift-propagation">Continuity · Incentives · Drift · Propagation</h3>
+<hr>
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This file defines the <strong>alignment surface</strong> between the Taxes module and the RRR module.<br>
+It models how <strong>incentive regimes</strong> (Taxes) interact with <strong>continuity envelopes</strong> (RRR) across RTT/1 → RTT/2 → RTT/3.</p>
+<p>The alignment is used to:
+- map incentives to continuity<br>
+- detect incentive‑continuity drift<br>
+- model propagation behavior<br>
+- support fiscal‑stack coherence  </p>
+<hr>
+<h2 id="2-alignment-axes">2. Alignment Axes</h2>
+<h3 id="21-incentive-baseline-taxes">2.1 Incentive Baseline (Taxes)</h3>
+<p>Defines:
+- incentive strength<br>
+- incentive envelope<br>
+- depreciation behavior<br>
+- drift susceptibility  </p>
+<h3 id="22-continuity-envelope-rrr">2.2 Continuity Envelope (RRR)</h3>
+<p>Defines:
+- revenue continuity<br>
+- continuity half‑life<br>
+- continuity propagation<br>
+- continuity drift  </p>
+<p>Alignment occurs when:</p>
+<pre><code>incentive_envelope ≈ continuity_envelope
+</code></pre>
+<hr>
+<h2 id="3-alignment-operators">3. Alignment Operators</h2>
+<h3 id="31-incentive_continuity_alignment_operator">3.1 incentive_continuity_alignment_operator</h3>
+<p>Maps:
+- incentive baseline<br>
+- depreciation envelope<br>
+- drift amplitude<br>
+- propagation load  </p>
+<p>to:
+- continuity envelope<br>
+- continuity drift<br>
+- continuity propagation  </p>
+<p>Outputs:
+- alignment score<br>
+- stability adjustment<br>
+- drift correction  </p>
+<hr>
+<h2 id="4-alignment-surfaces">4. Alignment Surfaces</h2>
+<h3 id="41-stability-surface">4.1 Stability Surface</h3>
+<p>Region where:
+- incentive drift is low<br>
+- continuity drift is low<br>
+- propagation load is stable  </p>
+<h3 id="42-transition-surface">4.2 Transition Surface</h3>
+<p>Region where:
+- incentive drift increases<br>
+- continuity drift increases<br>
+- propagation load fluctuates  </p>
+<h3 id="43-fragmentation-surface">4.3 Fragmentation Surface</h3>
+<p>Region where:
+- incentive drift exceeds threshold<br>
+- continuity envelope collapses<br>
+- propagation destabilizes  </p>
+<hr>
+<h2 id="5-propagation-behavior">5. Propagation Behavior</h2>
+<h3 id="51-taxes-rrr">5.1 Taxes → RRR</h3>
+<p>Incentives influence:
+- continuity stability<br>
+- continuity drift<br>
+- continuity propagation  </p>
+<h3 id="52-rrr-taxes">5.2 RRR → Taxes</h3>
+<p>Continuity influences:
+- incentive stability<br>
+- incentive drift<br>
+- incentive propagation  </p>
+<p>Propagation modeled via:
+- <strong>jurisdiction_propagation_operator</strong><br>
+- <strong>incentive_drift_operator</strong><br>
+- <strong>continuity_drift_operator</strong> (RRR)</p>
+<hr>
+<h2 id="6-drift-interaction">6. Drift Interaction</h2>
+<h3 id="61-incentive-drift-continuity-drift">6.1 Incentive Drift → Continuity Drift</h3>
+<p>High incentive drift causes:
+- continuity compression<br>
+- continuity instability<br>
+- continuity half‑life reduction  </p>
+<h3 id="62-continuity-drift-incentive-drift">6.2 Continuity Drift → Incentive Drift</h3>
+<p>High continuity drift causes:
+- incentive envelope distortion<br>
+- incentive half‑life compression<br>
+- propagation‑induced drift  </p>
+<hr>
+<h2 id="7-rtt-layer-alignment">7. RTT Layer Alignment</h2>
+<h3 id="rtt1-localsubstrate">RTT/1 — Local/Substrate</h3>
+<ul>
+<li>direct incentive‑continuity interaction  </li>
+<li>short‑range drift fields  </li>
+</ul>
+<h3 id="rtt2-regionalstructural">RTT/2 — Regional/Structural</h3>
+<ul>
+<li>structural alignment  </li>
+<li>cross‑jurisdiction propagation  </li>
+</ul>
+<h3 id="rtt3-globalsystemic">RTT/3 — Global/Systemic</h3>
+<ul>
+<li>systemic alignment  </li>
+<li>coherence‑layer propagation  </li>
+</ul>
+<hr>
+<h2 id="8-alignment-summary">8. Alignment Summary</h2>
+<pre><code>Incentives → Drift → Half‑Life → Propagation
+        ↘          RRR Continuity          ↗
+</code></pre>
+<p>The alignment surface ensures:
+- fiscal‑stack coherence<br>
+- stable propagation<br>
+- bounded drift  </p>
+<hr>
+<h2 id="9-integration-status">9. Integration Status</h2>
+<ul>
+<li><strong>Modules:</strong> Taxes ↔ RRR  </li>
+<li><strong>Layer:</strong> Cross‑Module  </li>
+<li><strong>Version:</strong> 2026‑06  </li>
+<li><strong>Format:</strong> AI‑first · operator‑driven · minimal  </li>
+</ul>
+  </main>
+</body>
+</html>

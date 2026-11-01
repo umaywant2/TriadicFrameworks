@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/_ideas/CHANGELOG.md">
+  <title>Changelog — /docs/ideas/</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/_ideas/CHANGELOG.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/_ideas/CHANGELOG.md</code>
+  </aside>
+
+  <main>
+<h1 id="changelog-docs_ideas">Changelog — <code>/docs/_ideas/</code></h1>
+<blockquote>
+<p>Ideas Sandbox — non-canonical cooker for prototypes, sketches, drafts, and early-stage concepts.</p>
+</blockquote>
+<p>All notable changes to infrastructure files in <code>/docs/_ideas/</code> are documented in this file.
+Individual idea files are not tracked here — the sandbox is a living workspace.
+Format follows <a href="https://keepachangelog.com/en/1.1.0/">Keep a Changelog</a>.</p>
+<hr>
+<h2 id="11-2026-05-06">[1.1] — 2026-05-06</h2>
+<h3 id="context">Context</h3>
+<p>Metadata and session context refresh for the sandbox infrastructure. Census taken of all 288 entries. Promotion history documented for recently graduated articles.</p>
+<h3 id="census">Census</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th style="text-align: right;">Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Markdown (.md)</td>
+<td style="text-align: right;">219</td>
+</tr>
+<tr>
+<td>HTML (.html)</td>
+<td style="text-align: right;">39</td>
+</tr>
+<tr>
+<td>JSON (.json)</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr>
+<td>Python (.py)</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td>PDF (.pdf)</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td>ZIP (.zip)</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td>SVG (.svg)</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr>
+<td>Other</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td>Directories</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>288</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="changed-_ideas_modulejson-module-manifest">Changed — <code>_ideas_module.json</code> (Module Manifest)</h3>
+<ul>
+<li><strong><code>_meta</code></strong> — Added full module registry block with census_note documenting 288-entry inventory.</li>
+<li><strong><code>_session_context</code></strong> — Replaced old <code>session_context</code> with standardized <code>_session_context</code> block.</li>
+<li><strong><code>_version_history</code></strong> — Added array with v1.0 and v1.1 entries.</li>
+<li><strong><code>cross_module_propagation.recent_promotions</code></strong> — Added 10-entry promotion history tracking articles graduated from cooker to <code>/docs/Research/</code>.</li>
+<li><strong><code>submodules</code></strong> — Added 3 submodule groups:</li>
+<li><code>How_RTT_Helps_Planes_Not_Go_Boom/</code> (7 chapters, 3 asset dirs)</li>
+<li><code>art/</code> (4 SVGs)</li>
+<li>9 game/mythic JSON manifests</li>
+<li><strong><code>files</code></strong> — Expanded from 1 to 4 infrastructure entries (README.md, index.html, _ideas_module.json, LINEAGE.md).</li>
+<li><strong>Version</strong> — Bumped from 1.0 → 1.1.</li>
+</ul>
+<h3 id="changed-indexhtml-module-front-door">Changed — <code>index.html</code> (Module Front Door)</h3>
+<ul>
+<li><strong>Module identity block</strong> — Added 13 meta tags previously missing (module, canonical-id, module-type, version, status, parent, siblings, canonical-path, last-updated, license, ai-ready, ai-module-id, ai-operators).</li>
+<li><strong><code>last-updated</code></strong> — Updated from 2026-05-01 → 2026-05-06.</li>
+<li><strong><code>ai.version</code></strong> — Updated from 1.0 → 1.1.</li>
+<li><strong><code>ai.module.summary</code></strong> — Updated with 288-entry census breakdown.</li>
+<li><strong><code>description</code></strong> — Expanded to include census count and domain coverage.</li>
+<li><strong><code>citation_date</code></strong> — Updated from 2026-05-01 → 2026-05-06.</li>
+<li><strong>Session context</strong> — <code>Modules</code> field updated to include <code>→ promoted articles</code>. Version updated to 1.1. Format field expanded to include all file types.</li>
+<li><strong>Badge div</strong> — Updated to <code>📘 Non‑Canonical Cooker · 288 entries · v1.1</code>.</li>
+<li><strong>All existing tags</strong> — Preserved.</li>
+</ul>
+<h3 id="not-changed">Not Changed</h3>
+<ul>
+<li>All 219 idea markdown files — sandbox content, not tracked in changelog.</li>
+<li>All 39 HTML renderers — sandbox content.</li>
+<li>All 9 game/mythic JSON manifests — sandbox content.</li>
+<li>DOC_MAP (30 entries) — unchanged; remains the living navigation layer.</li>
+<li>CSS, SVG glyph, script block — unchanged.</li>
+</ul>
+<h3 id="noted-recent-promotions-to-docsresearch">Noted — Recent Promotions to <code>/docs/Research/</code></h3>
+<p>10 articles recently graduated from cooker to canonical Research module:</p>
+<ol>
+<li><code>Advance_DPU_VCG_NIMMS_Architecture.md</code></li>
+<li><code>Aging_Substrate_Analysis.md</code></li>
+<li><code>AI_Web_Agentic_Grammar_Options.md</code></li>
+<li><code>Domain_Forking_and_New_Governance_Through_Grammar_Not_Policy.md</code></li>
+<li><code>European_Spallation_Source_needs_TriadicFrameworksTech.md</code></li>
+<li><code>JWST-RTT_Triadic_Core_Primitive_as_a_QA_Layer.md</code></li>
+<li><code>Substrate_Communications.md</code></li>
+<li><code>Supercomputers_Are_Already_Triadic_They_Just_Dont_Know_It.md</code></li>
+<li><code>Warp_Drive_Architecture_Plan_Scaffolded_with_RTT-Inside.md</code></li>
+<li><code>ZipNN_Triadic_Patterns_and_the_Hidden_Two_Thirds.md</code></li>
+</ol>
+<p>HTML renderers for these articles remain in the sandbox as frozen references.</p>
+<h3 id="noted-doc_map-coverage">Noted — DOC_MAP Coverage</h3>
+<p>The DOC_MAP in <code>index.html</code> covers 30 of 219 markdown files (13%). This is <strong>by design</strong> — the sandbox is a low-friction workspace. Not every idea needs to be navigable from the sidebar. Ideas are promoted to the DOC_MAP as they mature, then graduated to canonical modules when ready.</p>
+<hr>
+<h2 id="10-2026-05-01">[1.0] — 2026-05-01</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li><code>_ideas_module.json</code> — Module manifest (1 file entry).</li>
+<li><code>index.html</code> — Interactive reader with DOC_MAP (30 entries).</li>
+<li><code>README.md</code> — Sandbox front door.</li>
+</ul>
+<hr>
+<h2 id="infrastructure-inventory">Infrastructure Inventory</h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Version</th>
+<th>Role</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>_ideas_module.json</code></td>
+<td>1.1</td>
+<td>index</td>
+<td>refreshed</td>
+</tr>
+<tr>
+<td><code>index.html</code></td>
+<td>1.1</td>
+<td>index</td>
+<td>refreshed</td>
+</tr>
+<tr>
+<td><code>README.md</code></td>
+<td>1.0</td>
+<td>index</td>
+<td>pass</td>
+</tr>
+<tr>
+<td><code>LINEAGE.md</code></td>
+<td>1.0</td>
+<td>reference</td>
+<td>pass</td>
+</tr>
+<tr>
+<td><code>CHANGELOG.md</code></td>
+<td>—</td>
+<td>—</td>
+<td>this file</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><em>Maintained by: Nawder Loswin · TriadicFrameworks · MIT</em></p>
+  </main>
+</body>
+</html>

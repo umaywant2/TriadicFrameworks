@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/openloop/Risk/operators.md">
+  <title>⚠️ OpenRisk — operators.md</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/openloop/Risk/operators.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/openloop/Risk/operators.md</code>
+  </aside>
+
+  <main>
+<h1 id="openrisk-operatorsmd">⚠️ <strong>OpenRisk — operators.md</strong></h1>
+<p><strong>OpenWarden Suite — Risk Analysis Substrate</strong><br>
+<strong>Analyzer Layer:</strong> dimensional<br>
+<strong>Regime:</strong> open‑risk‑governance<br>
+<strong>Version:</strong> 1.0  </p>
+<hr>
+<h2 id="1-operator-grammar-overview"><strong>1. Operator Grammar Overview</strong></h2>
+<p>OpenRisk uses the <strong>OpenWarden operator grammar</strong>, ensuring risk metadata evolves predictably, safely, and coherently across all TriadicFrameworks modules.<br>
+Operators define how risk metadata may be:</p>
+<ul>
+<li>transformed  </li>
+<li>reorganized  </li>
+<li>corrected  </li>
+<li>annotated  </li>
+<li>extended  </li>
+<li>condensed  </li>
+</ul>
+<p>Every operator is <strong>drift‑bounded</strong>, <strong>coherence‑declared</strong>, and <strong>dimensionally safe</strong>.</p>
+<hr>
+<h2 id="2-operator-categories"><strong>2. Operator Categories</strong></h2>
+<p>OpenRisk supports six canonical operator classes:</p>
+<ol>
+<li><strong>Extend</strong>  </li>
+<li><strong>Condense</strong>  </li>
+<li><strong>Refactor</strong>  </li>
+<li><strong>Capture</strong>  </li>
+<li><strong>Annotate</strong>  </li>
+<li><strong>Correct</strong></li>
+</ol>
+<p>Each operator is described below with risk‑specific semantics.</p>
+<hr>
+<h2 id="3-extend-operator"><strong>3. Extend Operator</strong></h2>
+<h3 id="purpose"><strong>Purpose</strong></h3>
+<p>Adds <strong>dimensional or severity detail</strong> to a risk object’s metadata without altering its declared risk category.</p>
+<h3 id="allowed-extensions"><strong>Allowed Extensions</strong></h3>
+<ul>
+<li>refining dimensional categories  </li>
+<li>expanding severity descriptors  </li>
+<li>adding contextual overlays  </li>
+</ul>
+<h3 id="forbidden-extensions"><strong>Forbidden Extensions</strong></h3>
+<ul>
+<li>adding non‑canonical fields  </li>
+<li>introducing ambiguous severity  </li>
+<li>altering declared risk identity  </li>
+</ul>
+<h3 id="example"><strong>Example</strong></h3>
+<p>Extending <code>risk:fraud-detection</code> → <code>risk:fraud-detection.transactional</code></p>
+<hr>
+<h2 id="4-condense-operator"><strong>4. Condense Operator</strong></h2>
+<h3 id="purpose_1"><strong>Purpose</strong></h3>
+<p>Simplifies metadata while preserving dimensional meaning and coherence.</p>
+<h3 id="allowed-condensation"><strong>Allowed Condensation</strong></h3>
+<ul>
+<li>collapsing overly granular severity descriptors  </li>
+<li>simplifying boundary metadata  </li>
+<li>reducing dimensional verbosity  </li>
+</ul>
+<h3 id="forbidden-condensation"><strong>Forbidden Condensation</strong></h3>
+<ul>
+<li>removing lineage fields  </li>
+<li>removing governance fields  </li>
+<li>removing operator grammar fields  </li>
+</ul>
+<h3 id="example_1"><strong>Example</strong></h3>
+<p>Condensing <code>severity:high.critical</code> → <code>severity:high</code></p>
+<hr>
+<h2 id="5-refactor-operator"><strong>5. Refactor Operator</strong></h2>
+<h3 id="purpose_2"><strong>Purpose</strong></h3>
+<p>Reorganizes risk metadata for clarity, stability, or dimensional coherence.</p>
+<h3 id="allowed-refactoring"><strong>Allowed Refactoring</strong></h3>
+<ul>
+<li>reorganizing risk score blocks  </li>
+<li>restructuring severity hierarchy  </li>
+<li>normalizing dimensional signatures  </li>
+</ul>
+<h3 id="forbidden-refactoring"><strong>Forbidden Refactoring</strong></h3>
+<ul>
+<li>altering declared risk identity  </li>
+<li>manipulating coherence scores  </li>
+<li>removing lineage identifiers  </li>
+</ul>
+<h3 id="example_2"><strong>Example</strong></h3>
+<p>Refactoring risk score fields from:<br>
+<code>score:0.72;severity:medium;boundary:moderate</code><br>
+to grouped structure:<br>
+<code>risk.score:0.72;risk.severity:medium;risk.boundary:moderate</code></p>
+<hr>
+<h2 id="6-capture-operator"><strong>6. Capture Operator</strong></h2>
+<h3 id="purpose_3"><strong>Purpose</strong></h3>
+<p>Records dimensional signals, anomaly behavior, or lineage events.</p>
+<h3 id="capture-targets"><strong>Capture Targets</strong></h3>
+<ul>
+<li>risk score fluctuations  </li>
+<li>severity changes  </li>
+<li>drift events  </li>
+<li>operator usage  </li>
+</ul>
+<h3 id="capture-rules"><strong>Capture Rules</strong></h3>
+<p>Captured data must be:</p>
+<ul>
+<li>canonical  </li>
+<li>non‑ambiguous  </li>
+<li>dimensionally relevant  </li>
+<li>governance‑safe  </li>
+</ul>
+<h3 id="example_3"><strong>Example</strong></h3>
+<p>Capturing a severity correction:<br>
+<code>severity:medium → severity:high</code></p>
+<hr>
+<h2 id="7-annotate-operator"><strong>7. Annotate Operator</strong></h2>
+<h3 id="purpose_4"><strong>Purpose</strong></h3>
+<p>Adds governance‑safe annotations to risk metadata.</p>
+<h3 id="allowed-annotations"><strong>Allowed Annotations</strong></h3>
+<ul>
+<li>coherence notes  </li>
+<li>drift warnings  </li>
+<li>severity clarifications  </li>
+<li>boundary markers  </li>
+</ul>
+<h3 id="forbidden-annotations"><strong>Forbidden Annotations</strong></h3>
+<ul>
+<li>personal identifiers  </li>
+<li>behavioral predictions  </li>
+<li>sensitive category labels  </li>
+</ul>
+<h3 id="example_4"><strong>Example</strong></h3>
+<p>Annotating: <code>coherence:stable</code> or <code>drift:corrected</code>.</p>
+<hr>
+<h2 id="8-correct-operator"><strong>8. Correct Operator</strong></h2>
+<h3 id="purpose_5"><strong>Purpose</strong></h3>
+<p>Fixes dimensional drift, metadata misalignment, or operator misuse.</p>
+<h3 id="correction-types"><strong>Correction Types</strong></h3>
+<ul>
+<li>risk score correction  </li>
+<li>severity normalization  </li>
+<li>boundary recalibration  </li>
+<li>governance field restoration  </li>
+</ul>
+<h3 id="forbidden-corrections"><strong>Forbidden Corrections</strong></h3>
+<ul>
+<li>altering declared risk identity  </li>
+<li>inflating coherence scores  </li>
+<li>removing lineage  </li>
+</ul>
+<h3 id="example_5"><strong>Example</strong></h3>
+<p>Correcting malformed metadata:<br>
+<code>score:1.42</code> → <code>score:0.42</code></p>
+<hr>
+<h2 id="9-operator-safety-rules"><strong>9. Operator Safety Rules</strong></h2>
+<p>Operators must obey:</p>
+<ul>
+<li><strong>dimensional integrity constraints</strong>  </li>
+<li><strong>drift boundaries</strong>  </li>
+<li><strong>coherence declarations</strong>  </li>
+<li><strong>canonical metadata rules</strong>  </li>
+<li><strong>suite governance policies</strong>  </li>
+</ul>
+<p>Operators may never introduce:</p>
+<ul>
+<li>ambiguous severity  </li>
+<li>malformed risk scores  </li>
+<li>non‑canonical fields  </li>
+<li>adversarial dimensional drift  </li>
+</ul>
+<hr>
+<h2 id="10-crossmodule-operator-alignment"><strong>10. Cross‑Module Operator Alignment</strong></h2>
+<p>OpenRisk operators align with:</p>
+<ul>
+<li><strong>OpenIAM</strong> — identity‑safe risk operators  </li>
+<li><strong>OpenGeo</strong> — location‑aware risk operators  </li>
+<li><strong>OpenFeed</strong> — risk‑aware feed operators  </li>
+<li><strong>OpenCatalog</strong> — risk metadata operators  </li>
+<li><strong>OpenSEO</strong> — semantic risk operators  </li>
+<li><strong>OpenLLM</strong> — model‑aware anomaly operators  </li>
+<li><strong>OpenWarden</strong> — suite‑governed structural operators  </li>
+</ul>
+<p>All alignment is drift‑bounded and coherence‑declared.</p>
+<hr>
+<h2 id="11-operator-metadata-fields"><strong>11. Operator Metadata Fields</strong></h2>
+<p>Risk objects must declare operator availability:</p>
+<pre><code class="language-html">&lt;meta name=&quot;open.risk.operator.extend&quot; content=&quot;true&quot;&gt;
+&lt;meta name=&quot;open.risk.operator.condense&quot; content=&quot;true&quot;&gt;
+&lt;meta name=&quot;open.risk.operator.refactor&quot; content=&quot;true&quot;&gt;
+&lt;meta name=&quot;open.risk.operator.capture&quot; content=&quot;true&quot;&gt;
+&lt;meta name=&quot;open.risk.operator.annotate&quot; content=&quot;true&quot;&gt;
+&lt;meta name=&quot;open.risk.operator.correct&quot; content=&quot;true&quot;&gt;
+</code></pre>
+<p>These fields ensure operator grammar compliance.</p>
+  </main>
+</body>
+</html>

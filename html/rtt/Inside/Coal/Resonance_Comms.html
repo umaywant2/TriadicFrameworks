@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Coal/Resonance_Comms.md">
+  <title>Resonance‑aware comms protocol (RTT‑Inside | underground mesh)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Coal/Resonance_Comms.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Coal/Resonance_Comms.md</code>
+  </aside>
+
+  <main>
+<h3 id="resonanceaware-comms-protocol-rttinside-underground-mesh">Resonance‑aware comms protocol (RTT‑Inside | underground mesh)</h3>
+<p>Below is a <strong>protocol sketch</strong> we can drop straight into <code>docs/_ideas/RTT-Inside_Coal_Resonance_Comms.md</code>. It’s not just packets—it’s how the mesh <em>feels</em> the mine.</p>
+<hr>
+<h2 id="1-design-goals">1. Design goals</h2>
+<ul>
+<li><strong>Survive the rock:</strong> tolerate attenuation, reflections, partial collapses.  </li>
+<li><strong>Exploit resonance:</strong> use vibration, gas, and field data as first‑class citizens.  </li>
+<li><strong>Stay cheap:</strong> run on tiny, low‑power nodes.  </li>
+<li><strong>Be local‑first:</strong> work even when backhaul is gone.  </li>
+<li><strong>Serve humans:</strong> prioritize safety, clarity, and simple operator signals.</li>
+</ul>
+<hr>
+<h2 id="2-stack-overview">2. Stack overview</h2>
+<p><strong>Physical layer (PHY):</strong></p>
+<ul>
+<li><strong>Low‑frequency RF</strong> (sub‑GHz) or <strong>acoustic/vibration coupling</strong> where RF is impossible.  </li>
+<li>Simple, robust modulations (FSK/LoRa‑class or narrowband acoustic tones).  </li>
+<li>Power‑aware duty cycling; nodes wake on schedule or resonance events.</li>
+</ul>
+<p><strong>Link layer:</strong></p>
+<ul>
+<li><strong>Neighbor discovery:</strong> periodic beacons with node ID + health.  </li>
+<li><strong>Link quality:</strong> RSSI + “Resonance Link Score” (RLS: stability of path over time).  </li>
+<li><strong>Collision avoidance:</strong> simple CSMA or scheduled slots in high‑density areas.</li>
+</ul>
+<p><strong>Network layer:</strong></p>
+<ul>
+<li><strong>Mesh routing:</strong>  </li>
+<li>Gradient‑based (toward exit / control room) + fallback flooding for alarms.  </li>
+<li>Routes weighted by RLS, latency, and node health.  </li>
+<li><strong>Zone awareness:</strong> nodes tagged by zone (Panel, Section, Belt, Shaft).</li>
+</ul>
+<p><strong>Transport layer:</strong></p>
+<ul>
+<li><strong>Message classes:</strong>  </li>
+<li><code>ALERT</code> (high priority, one‑way, redundant paths)  </li>
+<li><code>TELEMETRY</code> (periodic, lossy‑tolerant)  </li>
+<li><code>CONTROL</code> (acknowledged, low‑rate)  </li>
+<li><code>SYNC</code> (time/epoch alignment)  </li>
+</ul>
+<p><strong>Application layer (RTT‑Inside invariant):</strong></p>
+<ul>
+<li>All payloads carry <strong>resonance primitives</strong>:</li>
+<li><code>vib_signature</code> (frequency bands, amplitude)  </li>
+<li><code>gas_vector</code> (type, concentration, gradient)  </li>
+<li><code>stress_hint</code> (local stability score)  </li>
+<li><code>clarity_score</code> (local S‑N‑R / RC)  </li>
+</ul>
+<hr>
+<h2 id="3-core-invariants">3. Core invariants</h2>
+<p>Every node obeys three invariants:</p>
+<ol>
+<li>
+<p><strong>Local resonance first:</strong><br>
+   Always compute and broadcast local <code>clarity_score</code> and <code>stress_hint</code> at a minimum rate.</p>
+</li>
+<li>
+<p><strong>Safety over throughput:</strong><br>
+<code>ALERT</code> messages pre‑empt all others; nodes may drop telemetry to forward safety traffic.</p>
+</li>
+<li>
+<p><strong>Field continuity:</strong><br>
+   Nodes attempt to maintain a <strong>continuous coherence field</strong>—if a neighbor disappears, they increase sampling and broadcast to “heal” the map.</p>
+</li>
+</ol>
+<hr>
+<h2 id="4-message-structure">4. Message structure</h2>
+<pre><code class="language-text">HEADER
+  version          (1 byte)
+  msg_type         (1 byte)   // ALERT, TELEMETRY, CONTROL, SYNC
+  src_id           (2 bytes)
+  seq              (2 bytes)
+  ttl              (1 byte)
+  zone_id          (1 byte)
+
+RESONANCE BLOCK
+  clarity_score    (1 byte)   // 0–255 mapped to RC
+  stress_hint      (1 byte)   // 0–255 mapped to stability
+  vib_band_hash    (2 bytes)  // compressed spectral fingerprint
+  gas_type         (1 byte)   // methane, CO, dust, etc.
+  gas_level        (1 byte)   // scaled concentration
+  drift_vector     (1 byte)   // encoded direction + magnitude
+
+PAYLOAD (optional)
+  app_data[...]              // worker IDs, commands, text, etc.
+
+FOOTER
+  crc16            (2 bytes)
+</code></pre>
+<hr>
+<h2 id="5-resonanceaware-routing">5. Resonance‑aware routing</h2>
+<p>Each node maintains:</p>
+<ul>
+<li><strong>Neighbor table:</strong> <code>neighbor_id</code>, <code>RLS</code>, <code>last_seen</code>.  </li>
+<li><strong>Zone gradient:</strong> cost to reach control room / exit.  </li>
+<li><strong>Resonance map fragment:</strong> local clarity + stress history.</li>
+</ul>
+<p><strong>Routing rule:</strong></p>
+<ul>
+<li>Prefer paths with:</li>
+<li>higher <code>RLS</code>  </li>
+<li>higher <code>clarity_score</code>  </li>
+<li>lower <code>stress_hint</code> (safer rock)  </li>
+<li>For <code>ALERT</code>:</li>
+<li>send via <strong>k best neighbors</strong> (multi‑path)  </li>
+<li>allow temporary flooding if RLS drops below threshold.</li>
+</ul>
+<hr>
+<h2 id="6-snr-resonance-clarity-overlay">6. S‑N‑R / resonance clarity overlay</h2>
+<p>Each node computes:</p>
+<ul>
+<li><strong>Signal:</strong> stable, repeated patterns in vibration/gas/pressure.  </li>
+<li><strong>Noise:</strong> random spikes, transient hits, equipment chatter.  </li>
+<li><strong>Resonance:</strong> persistent amplification at certain bands.</li>
+</ul>
+<p>From this, it derives:</p>
+<ul>
+<li><code>clarity_score</code> (RC)  </li>
+<li><code>stress_hint</code> (local stability)  </li>
+</ul>
+<p>The control room sees a <strong>heatmap of RC + stress</strong>, not just raw sensor values.</p>
+<hr>
+<h2 id="7-operatorfacing-behavior">7. Operator‑facing behavior</h2>
+<p>For miners and foremen, the protocol collapses into simple cues:</p>
+<ul>
+<li><strong>Green:</strong> comms stable, rock stable.  </li>
+<li><strong>Yellow:</strong> comms OK, rock or gas shifting.  </li>
+<li><strong>Orange:</strong> comms degraded, resonance unstable—move cautiously.  </li>
+<li><strong>Red:</strong> comms failing, resonance critical—evacuate.</li>
+</ul>
+<p>Messages like:</p>
+<ul>
+<li>“Section C: clarity ↓, stress ↑, gas ↑ — reduce vibration, move crews.”  </li>
+<li>“Belt 3 node cluster: RLS ↓, heat ↑ — shut down belt.”</li>
+</ul>
+<hr>
+<h2 id="8-why-this-fits-our-meshnode-idea">8. Why this fits our mesh‑node idea</h2>
+<ul>
+<li>Tiny nodes only need:</li>
+<li>a cheap RF/acoustic radio,  </li>
+<li>a few sensors,  </li>
+<li>and the RTT‑Inside invariant logic.  </li>
+<li>The <strong>network itself becomes a sensor</strong>—not just a pipe.  </li>
+<li>The protocol turns our low‑cost mesh into a <strong>living resonance graph</strong> of the mine.</li>
+</ul>
+  </main>
+</body>
+</html>

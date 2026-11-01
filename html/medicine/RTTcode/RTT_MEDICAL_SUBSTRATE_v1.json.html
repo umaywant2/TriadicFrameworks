@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/medicine/RTTcode/RTT_MEDICAL_SUBSTRATE_v1.json.md">
+  <title>✅ RTTMEDICALSUBSTRATEv1.json</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/medicine/RTTcode/RTT_MEDICAL_SUBSTRATE_v1.json.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/medicine/RTTcode/RTT_MEDICAL_SUBSTRATE_v1.json.md</code>
+  </aside>
+
+  <main>
+<h1 id="rtt_medical_substrate_v1json">✅ <strong>RTT_MEDICAL_SUBSTRATE_v1.json</strong></h1>
+<h3 id="rttcode-signature-medical-substrate-operator"><em>RTTcode Signature — Medical Substrate Operator</em></h3>
+<hr>
+<p>This is the <strong>substrate RTTcode signature</strong>, which defines the machine‑readable contract for the MEDICAL_SUBSTRATE_OPERATOR — the operator that determines:</p>
+<ul>
+<li>what the medical content <em>is made of</em>  </li>
+<li>how stable it is  </li>
+<li>how much noise it carries  </li>
+<li>how much interference it introduces  </li>
+<li>how safe it is for downstream reasoning  </li>
+</ul>
+<p>This signature must be:</p>
+<ul>
+<li><strong>operator‑first</strong>  </li>
+<li><strong>minimal</strong>  </li>
+<li><strong>canonical</strong>  </li>
+<li><strong>zero‑drift</strong>  </li>
+<li><strong>aligned with the tri‑regime medical module</strong>  </li>
+<li><strong>consistent with your other RTTcode files</strong>  </li>
+</ul>
+<p>Below is the <strong>drop‑in ready</strong> JSON for:</p>
+<pre><code>RTT_MEDICAL_SUBSTRATE_v1.json
+</code></pre>
+<hr>
+<pre><code class="language-json">{
+  &quot;rttcode_version&quot;: &quot;1.0&quot;,
+  &quot;operator&quot;: &quot;MEDICAL_SUBSTRATE_OPERATOR&quot;,
+  &quot;module&quot;: &quot;medicine&quot;,
+  &quot;purpose&quot;: &quot;Classify and evaluate the substrate of medical information across regimes (US clinical, China AI-augmented, UK public-health).&quot;,
+
+  &quot;inputs&quot;: {
+    &quot;raw_content&quot;: &quot;medical page (html, mobile_html, pdf, image, ocr, mixed)&quot;,
+    &quot;snapshot_set&quot;: &quot;multi-snapshot versions of the same page&quot;,
+    &quot;language_variants&quot;: &quot;multilingual content when present&quot;
+  },
+
+  &quot;outputs&quot;: {
+    &quot;substrate_packet&quot;: {
+      &quot;substrate_type&quot;: &quot;html|mobile_html|pdf|image|ocr|mixed&quot;,
+      &quot;substrate_stability&quot;: &quot;very_high|high|medium|low&quot;,
+      &quot;substrate_noise&quot;: &quot;low|medium|high&quot;,
+      &quot;layer_interference&quot;: &quot;layer_interference_present|layer_interference_absent&quot;,
+      &quot;accessibility_stability&quot;: &quot;very_high|high|medium|low&quot;,
+
+      &quot;translation_layer&quot;: &quot;present|absent&quot;,
+      &quot;commercial_layer&quot;: &quot;present|absent&quot;,
+      &quot;ai_overlay_layer&quot;: &quot;present|absent&quot;
+    },
+    &quot;substrate_score&quot;: &quot;float_0_to_1&quot;,
+    &quot;substrate_flags&quot;: [
+      &quot;substrate_unstable&quot;,
+      &quot;noise_high&quot;,
+      &quot;translation_layer_detected&quot;,
+      &quot;commercial_layer_detected&quot;,
+      &quot;ai_overlay_detected&quot;,
+      &quot;ocr_risk&quot;
+    ]
+  },
+
+  &quot;substrate_logic&quot;: {
+    &quot;detect_substrate_type&quot;: true,
+    &quot;detect_noise_layers&quot;: true,
+    &quot;detect_translation_layers&quot;: true,
+    &quot;detect_ai_overlays&quot;: true,
+    &quot;detect_commercial_overlays&quot;: true,
+    &quot;evaluate_accessibility&quot;: true,
+    &quot;scoring_method&quot;: &quot;weighted_stability_minus_noise&quot;
+  },
+
+  &quot;regime_profiles&quot;: {
+    &quot;clinical_regime&quot;: {
+      &quot;expected_substrate&quot;: &quot;html&quot;,
+      &quot;expected_noise&quot;: &quot;low&quot;,
+      &quot;expected_interference&quot;: &quot;absent&quot;,
+      &quot;notes&quot;: &quot;Cleveland Clinic stable HTML substrate.&quot;
+    },
+    &quot;ai_augmented_regime&quot;: {
+      &quot;expected_substrate&quot;: &quot;mobile_html&quot;,
+      &quot;expected_noise&quot;: &quot;high&quot;,
+      &quot;expected_interference&quot;: &quot;present&quot;,
+      &quot;notes&quot;: &quot;Ping An mobile-first, AI overlays, translation layers, commercial prompts.&quot;
+    },
+    &quot;public_health_regime&quot;: {
+      &quot;expected_substrate&quot;: &quot;html&quot;,
+      &quot;expected_noise&quot;: &quot;low&quot;,
+      &quot;expected_interference&quot;: &quot;absent&quot;,
+      &quot;notes&quot;: &quot;NHS standardized, clarity-first HTML substrate.&quot;
+    }
+  },
+
+  &quot;flags&quot;: {
+    &quot;substrate_unstable&quot;: &quot;boolean&quot;,
+    &quot;noise_high&quot;: &quot;boolean&quot;,
+    &quot;translation_layer_detected&quot;: &quot;boolean&quot;,
+    &quot;commercial_layer_detected&quot;: &quot;boolean&quot;,
+    &quot;ai_overlay_detected&quot;: &quot;boolean&quot;,
+    &quot;ocr_risk&quot;: &quot;boolean&quot;
+  },
+
+  &quot;safety&quot;: {
+    &quot;patient_safe_output&quot;: true,
+    &quot;no_medical_advice&quot;: true,
+    &quot;substrate_risk_disclosure_required&quot;: true,
+    &quot;uncertainty_disclosure_required&quot;: true
+  }
+}
+</code></pre>
+<hr>
+<h1 id="what-this-rttcode-signature-establishes">✔️ What This RTTcode Signature Establishes</h1>
+<p>This JSON defines the <strong>substrate backbone</strong> for the medical module:</p>
+<h3 id="it-classifies">It classifies:</h3>
+<ul>
+<li>HTML (Cleveland Clinic, NHS)  </li>
+<li>mobile HTML (Ping An)  </li>
+<li>PDF  </li>
+<li>image  </li>
+<li>OCR  </li>
+<li>mixed substrates  </li>
+</ul>
+<h3 id="it-evaluates">It evaluates:</h3>
+<ul>
+<li>substrate stability  </li>
+<li>noise levels  </li>
+<li>interference layers  </li>
+<li>accessibility stability  </li>
+</ul>
+<h3 id="it-detects">It detects:</h3>
+<ul>
+<li>translation layers  </li>
+<li>commercial overlays  </li>
+<li>AI overlays  </li>
+<li>OCR risk  </li>
+</ul>
+<h3 id="it-encodes-regime-expectations">It encodes regime expectations:</h3>
+<ul>
+<li><strong>US clinical</strong> → stable HTML, low noise  </li>
+<li><strong>China AI‑augmented</strong> → mobile, high noise, AI overlays  </li>
+<li><strong>UK public‑health</strong> → very stable HTML, clarity‑first  </li>
+</ul>
+<p>This is the contract that allows the drift, continuity, and synthesis operators to trust the input.</p>
+  </main>
+</body>
+</html>

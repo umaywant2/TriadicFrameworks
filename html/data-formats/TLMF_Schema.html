@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/data-formats/TLMF_Schema.md">
+  <title>Temporal Layer Markup Format Schema</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/data-formats/TLMF_Schema.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/data-formats/TLMF_Schema.md</code>
+  </aside>
+
+  <main>
+<h1 id="temporal-layer-markup-format-schema">Temporal Layer Markup Format Schema</h1>
+<p><strong>Status:</strong> STUB
+<strong>Priority:</strong> P2
+<strong>Document ID:</strong> data-formats-002
+<strong>Canonical Path:</strong> <code>docs/data-formats/TLMF_Schema.md</code>
+<strong>Related Module:</strong> <code>docs/post-ASML_era/module.json</code></p>
+<hr>
+<h2 id="about-this-document">About This Document</h2>
+<p>This document is a <strong>planned stub</strong>. It has been registered in the TriadicFrameworks documentation graph and is referenced by two canonical post-ASML era documents. It is a <strong>P2 priority</strong> deliverable, required for PDK generation toolchains and model validation workflows.</p>
+<hr>
+<h2 id="purpose">Purpose</h2>
+<p>The Temporal Layer Markup Format (TLMF) Schema defines the file format used to encode SC Class Layer Maps (SCLM) within a TRS-Aware PDK deliverable. TLMF files carry spatially resolved SC class annotations, regime boundary positions, RWDL contours, and SC_eff scalar fields across the substrate plane. They are the primary data interchange format between fab metrology outputs (SC_eff maps from TGI Metrology) and EDA layer assignment toolchains.</p>
+<hr>
+<h2 id="citing-documents">Citing Documents</h2>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Context of Citation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>docs/post-ASML_era/The_TRS-Aware_PDK_Specification.md</code></td>
+<td>TLMF is the normative file format for the SCLM (SC Class Layer Map) PDK component; PDK deliverable directory must include one TLMF file per SC zone configuration; TLMF format version is part of the PDK version string</td>
+</tr>
+<tr>
+<td><code>docs/post-ASML_era/The_Multi-Regime_Semiconductor_Model.md</code></td>
+<td>TLMF is referenced as the export format for spatially resolved ψ(r,t) regime maps and CLG fields produced by model validation runs</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="expected-content">Expected Content</h2>
+<p>When authored, this document is expected to cover:</p>
+<ol>
+<li><strong>Format Overview</strong> — TLMF design goals; relationship to GDS/OASIS layer systems; TLMF as an overlay format annotating spatial coordinates with temporal properties.</li>
+<li><strong>File Structure</strong>
+   - <code>tlmf_header</code> — Format version, process node, fab ID, SCR zone config ID, generation timestamp, originating tool
+   - <code>tlmf_substrate</code> — Substrate geometry (die extent, coordinate origin, units)
+   - <code>tlmf_layers</code> — Array of named temporal layers, each containing:<ul>
+<li><code>layer_id</code> — Unique layer identifier within the PDK</li>
+<li><code>sc_class_map</code> — Rasterized or polygon-decomposed SC class assignment (SC-I / SC-II / SC-III) per region</li>
+<li><code>sc_eff_field</code> — Optional continuous SC_eff scalar field (floating point grid or contour list)</li>
+<li><code>rwdl_contours</code> — RWDL boundary polylines in substrate coordinates</li>
+<li><code>clg_field</code> — Optional Coherence Length Gradient field</li>
+<li><code>regime_boundaries</code> — CCR/CPR/TR regime boundary polygons (from MRSM validation data, where available)</li>
+<li><code>tlmf_metadata</code> — Measurement provenance (TCT-DEF session IDs, TGI Metrology run IDs, MRSM model version)</li>
+</ul>
+</li>
+<li><strong>Coordinate System</strong> — Origin convention; units (nm or μm); handedness; relationship to die corner marking.</li>
+<li><strong>SC Class Encoding</strong> — Integer codes for SC class values in raster maps; polygon winding rules for vector encoding.</li>
+<li><strong>Scalar Field Encoding</strong> — Grid resolution requirements; interpolation method specification; NaN handling for out-of-bounds regions.</li>
+<li><strong>TLMF Schema</strong> — Formal schema definition (JSON Schema or XML Schema); standalone schema file location in <code>docs/data-formats/schemas/</code>.</li>
+<li><strong>TLMF Version Field</strong> — Format version field; version lock to PDK version; backward compatibility policy.</li>
+<li><strong>Conformance</strong> — Minimum required layers for a conforming TLMF file; optional extended layers; producer/consumer conformance separately stated.</li>
+<li><strong>Toolchain Integration</strong> — How EDA tools load TLMF for layer assignment; how PDK generation scripts produce TLMF from metrology inputs; reference toolchain scripts.</li>
+<li><strong>Example File</strong> — Annotated example TLMF for a two-zone substrate with SC-I core and SC-II periphery.</li>
+</ol>
+<hr>
+<h2 id="dependencies">Dependencies</h2>
+<p>When authored, this document is expected to reference:</p>
+<ul>
+<li><code>docs/post-ASML_era/The_TRS-Aware_PDK_Specification.md</code> — Primary consumer; SCLM component definition</li>
+<li><code>docs/post-ASML_era/The_TGI_Metrology_Standard.md</code> — Source of SC_eff and RWDL maps that populate TLMF fields</li>
+<li><code>docs/data-formats/TCT_DEF_Schema.md</code> — TCT-DEF SC rating data used in TLMF SC class map generation</li>
+<li><code>docs/materials/SC_Classification.md</code> — SC class boundary definitions encoded in TLMF layer values</li>
+<li><code>docs/fab/SCR_Zone_Config.md</code> — Zone topology that defines TLMF zone partitioning</li>
+</ul>
+<hr>
+<h2 id="authoring-notes">Authoring Notes</h2>
+<ul>
+<li>Field names in TLMF layer records MUST be consistent with field names in the PDK SCLM deliverable as defined in <code>The_TRS-Aware_PDK_Specification.md</code>.</li>
+<li>The SC_eff scalar field resolution MUST be specified as a function of the minimum design rule pitch for the target SC class.</li>
+<li>Raster and vector encoding paths MUST both be defined; tools may support either or both.</li>
+<li>TLMF version number MUST be embedded in the PDK version string per the <code>{process_node}_{fab_id}_{scr_zone_config}_{major}.{minor}.{patch}[P]</code> format.</li>
+</ul>
+<hr>
+<h2 id="related-documents">Related Documents</h2>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Relationship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>docs/post-ASML_era/The_TRS-Aware_PDK_Specification.md</code></td>
+<td>Primary consumer — SCLM is a TLMF-encoded PDK component</td>
+</tr>
+<tr>
+<td><code>docs/post-ASML_era/The_Multi-Regime_Semiconductor_Model.md</code></td>
+<td>Secondary consumer — regime maps exported in TLMF format</td>
+</tr>
+<tr>
+<td><code>docs/data-formats/TCT_DEF_Schema.md</code></td>
+<td>Upstream data source — TCT-DEF SC ratings populate TLMF maps</td>
+</tr>
+<tr>
+<td><code>docs/data-formats/TDRC_Violation_Log_Schema.md</code></td>
+<td>Sibling schema — TDRC violations are spatially mapped against TLMF zone boundaries</td>
+</tr>
+<tr>
+<td><code>docs/materials/SC_Classification.md</code></td>
+<td>SC class authority for TLMF layer encoding</td>
+</tr>
+<tr>
+<td><code>docs/post-ASML_era/README.md</code></td>
+<td>Module index</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><em>This stub was scaffolded from the TriadicFrameworks post-ASML era documentation suite. See <code>docs/post-ASML_era/README.md</code> for the full document graph.</em></p>
+  </main>
+</body>
+</html>

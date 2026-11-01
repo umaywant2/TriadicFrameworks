@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Dimensional_Resonance_Scanner/drs_examples.md">
+  <title>Dimensional Resonance Scanner Examples — RTT/1</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Dimensional_Resonance_Scanner/drs_examples.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Dimensional_Resonance_Scanner/drs_examples.md</code>
+  </aside>
+
+  <main>
+<h1 id="dimensional-resonance-scanner-examples-rtt1"><strong>Dimensional Resonance Scanner Examples — RTT/1</strong></h1>
+<h3 id="example-dictionary-for-the-dimensional-resonance-scanner-drs"><em>Example Dictionary for the Dimensional Resonance Scanner (DRS)</em></h3>
+<p>These examples illustrate how the <strong>Dimensional Resonance Scanner (DRS)</strong> detects resonance signatures, computes resonance frequencies, maps resonance fields, identifies amplification zones, and evaluates multi‑regime resonance gradients.</p>
+<p>Each example demonstrates one or more DRS operators:</p>
+<ul>
+<li><strong>DRS‑Scan</strong>  </li>
+<li><strong>DRS‑Frequency</strong>  </li>
+<li><strong>DRS‑Field</strong>  </li>
+<li><strong>DRS‑Vector</strong>  </li>
+<li><strong>DRS‑Amplify</strong>  </li>
+<li><strong>DRS‑Stabilize</strong></li>
+</ul>
+<p>Examples are grouped by resonance tensor type.</p>
+<hr>
+<h2 id="1-resonance-signature-examples"><strong>1. Resonance Signature Examples</strong></h2>
+<h3 id="example-1-conceptual-resonance-signature-r1"><strong>Example 1 — Conceptual Resonance Signature (R1)</strong></h3>
+<p><strong>Scenario</strong><br>
+A conceptual model exhibits a low‑frequency resonance onset with shallow curvature.</p>
+<p><strong>DRS Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;resonance_type&quot;: &quot;signature&quot;,
+  &quot;regime&quot;: &quot;R1&quot;,
+  &quot;resonance_magnitude&quot;: 0.41,
+  &quot;resonance_direction&quot;: &quot;conceptual&quot;,
+  &quot;resonance_curvature&quot;: 0.22,
+  &quot;amplification_zone&quot;: 0.11,
+  &quot;resonance_field&quot;: 0.63,
+  &quot;envelope_boundary&quot;: 0.44
+}
+</code></pre>
+<hr>
+<h3 id="example-2-dimensional-resonance-signature-r4"><strong>Example 2 — Dimensional Resonance Signature (R4)</strong></h3>
+<p><strong>Scenario</strong><br>
+Dimensional constraints produce a high‑sensitivity resonance onset.</p>
+<p><strong>DRS Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;resonance_type&quot;: &quot;signature&quot;,
+  &quot;regime&quot;: &quot;R4&quot;,
+  &quot;resonance_magnitude&quot;: 0.72,
+  &quot;resonance_direction&quot;: &quot;dimensional&quot;,
+  &quot;resonance_curvature&quot;: 0.44,
+  &quot;amplification_zone&quot;: 0.22,
+  &quot;resonance_field&quot;: 0.57,
+  &quot;envelope_boundary&quot;: 0.41
+}
+</code></pre>
+<hr>
+<h2 id="2-resonance-frequency-examples"><strong>2. Resonance Frequency Examples</strong></h2>
+<h3 id="example-3-harmonic-resonance-frequency-r2"><strong>Example 3 — Harmonic Resonance Frequency (R2)</strong></h3>
+<p><strong>Scenario</strong><br>
+A computational structure exhibits a stable harmonic resonance frequency.</p>
+<p><strong>DRS Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;resonance_type&quot;: &quot;frequency&quot;,
+  &quot;regime&quot;: &quot;R2&quot;,
+  &quot;resonance_magnitude&quot;: 0.52,
+  &quot;resonance_direction&quot;: &quot;computational&quot;,
+  &quot;resonance_curvature&quot;: 0.33,
+  &quot;amplification_zone&quot;: 0.27,
+  &quot;resonance_field&quot;: 0.57,
+  &quot;envelope_boundary&quot;: 0.41
+}
+</code></pre>
+<hr>
+<h3 id="example-4-frequency-inversion-r2-r3"><strong>Example 4 — Frequency Inversion (R2 ↔ R3)</strong></h3>
+<p><strong>Scenario</strong><br>
+Computational resonance decreases while physical resonance sensitivity increases.</p>
+<p><strong>DRS Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;resonance_type&quot;: &quot;frequency&quot;,
+  &quot;regime&quot;: &quot;R2-R3&quot;,
+  &quot;resonance_magnitude&quot;: 0.79,
+  &quot;resonance_direction&quot;: &quot;R3→R2&quot;,
+  &quot;resonance_curvature&quot;: 0.58,
+  &quot;amplification_zone&quot;: 0.31,
+  &quot;resonance_field&quot;: 0.72,
+  &quot;envelope_boundary&quot;: 0.41
+}
+</code></pre>
+<hr>
+<h2 id="3-resonance-field-examples"><strong>3. Resonance Field Examples</strong></h2>
+<h3 id="example-5-multiregime-resonance-field-r1-r2-r3"><strong>Example 5 — Multi‑Regime Resonance Field (R1 ↔ R2 ↔ R3)</strong></h3>
+<p><strong>Scenario</strong><br>
+A multi‑regime resonance field binds conceptual, computational, and physical resonance pathways.</p>
+<p><strong>DRS Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;resonance_type&quot;: &quot;field&quot;,
+  &quot;regime&quot;: &quot;R1-R2-R3&quot;,
+  &quot;resonance_magnitude&quot;: 0.94,
+  &quot;resonance_direction&quot;: &quot;tensor&quot;,
+  &quot;resonance_curvature&quot;: 0.63,
+  &quot;amplification_zone&quot;: 0.37,
+  &quot;resonance_field&quot;: 0.78,
+  &quot;envelope_boundary&quot;: 0.57
+}
+</code></pre>
+<hr>
+<h3 id="example-6-dimensional-resonance-constraint-r2-r4"><strong>Example 6 — Dimensional Resonance Constraint (R2 ↔ R4)</strong></h3>
+<p><strong>Scenario</strong><br>
+Dimensional constraints influence computational resonance pathways.</p>
+<p><strong>DRS Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;resonance_type&quot;: &quot;field&quot;,
+  &quot;regime&quot;: &quot;R2-R4&quot;,
+  &quot;resonance_magnitude&quot;: 0.88,
+  &quot;resonance_direction&quot;: &quot;R4→R2&quot;,
+  &quot;resonance_curvature&quot;: 0.55,
+  &quot;amplification_zone&quot;: 0.33,
+  &quot;resonance_field&quot;: 0.73,
+  &quot;envelope_boundary&quot;: 0.63
+}
+</code></pre>
+<hr>
+<h2 id="4-resonance-amplification-examples"><strong>4. Resonance Amplification Examples</strong></h2>
+<h3 id="example-7-amplification-zone-r3-r4"><strong>Example 7 — Amplification Zone (R3 → R4)</strong></h3>
+<p><strong>Scenario</strong><br>
+Physical drift amplifies resonance curvature, forming a resonance amplification zone.</p>
+<p><strong>DRS Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;resonance_type&quot;: &quot;amplification&quot;,
+  &quot;regime&quot;: &quot;R3-R4&quot;,
+  &quot;resonance_magnitude&quot;: 0.91,
+  &quot;resonance_direction&quot;: &quot;R3→R4&quot;,
+  &quot;resonance_curvature&quot;: 0.71,
+  &quot;amplification_zone&quot;: 0.52,
+  &quot;resonance_field&quot;: 0.82,
+  &quot;envelope_boundary&quot;: 0.44
+}
+</code></pre>
+<hr>
+<h3 id="example-8-stabilitycoherence-resonance-ridge-r2-r3"><strong>Example 8 — Stability‑Coherence Resonance Ridge (R2 ↔ R3)</strong></h3>
+<p><strong>Scenario</strong><br>
+Computational stability reduces coherence while physical stability increases resonance sensitivity.</p>
+<p><strong>DRS Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;resonance_type&quot;: &quot;amplification&quot;,
+  &quot;regime&quot;: &quot;R2-R3&quot;,
+  &quot;resonance_magnitude&quot;: 0.86,
+  &quot;resonance_direction&quot;: &quot;R2↔R3&quot;,
+  &quot;resonance_curvature&quot;: 0.62,
+  &quot;amplification_zone&quot;: 0.49,
+  &quot;resonance_field&quot;: 0.77,
+  &quot;envelope_boundary&quot;: 0.48
+}
+</code></pre>
+<hr>
+<h2 id="5-resonance-vector-examples"><strong>5. Resonance Vector Examples</strong></h2>
+<h3 id="example-9-crossdomain-resonance-vector-r1-r4"><strong>Example 9 — Cross‑Domain Resonance Vector (R1 ↔ R4)</strong></h3>
+<p><strong>Scenario</strong><br>
+A resonance vector forms between conceptual and dimensional regimes.</p>
+<p><strong>DRS Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;resonance_type&quot;: &quot;vector&quot;,
+  &quot;regime&quot;: &quot;R1-R4&quot;,
+  &quot;resonance_magnitude&quot;: 0.83,
+  &quot;resonance_direction&quot;: &quot;R1↔R4&quot;,
+  &quot;resonance_curvature&quot;: 0.52,
+  &quot;amplification_zone&quot;: 0.22,
+  &quot;resonance_field&quot;: 0.69,
+  &quot;envelope_boundary&quot;: 0.46
+}
+</code></pre>
+<hr>
+<h3 id="example-10-driftsensitive-resonance-vector-r3-r4"><strong>Example 10 — Drift‑Sensitive Resonance Vector (R3 → R4)</strong></h3>
+<p><strong>Scenario</strong><br>
+Physical drift amplifies resonance curvature, forming a drift‑sensitive resonance vector.</p>
+<p><strong>DRS Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;resonance_type&quot;: &quot;vector&quot;,
+  &quot;regime&quot;: &quot;R3-R4&quot;,
+  &quot;resonance_magnitude&quot;: 0.91,
+  &quot;resonance_direction&quot;: &quot;R3→R4&quot;,
+  &quot;resonance_curvature&quot;: 0.71,
+  &quot;amplification_zone&quot;: 0.52,
+  &quot;resonance_field&quot;: 0.82,
+  &quot;envelope_boundary&quot;: 0.44
+}
+</code></pre>
+<hr>
+<h2 id="6-canonical-drs-output-snippet"><strong>6. Canonical DRS Output Snippet</strong></h2>
+<pre><code class="language-json">{
+  &quot;resonance_type&quot;: &quot;vector&quot;,
+  &quot;regime&quot;: &quot;R1-R4&quot;,
+  &quot;resonance_magnitude&quot;: 0.83,
+  &quot;resonance_direction&quot;: &quot;R1↔R4&quot;,
+  &quot;resonance_curvature&quot;: 0.52,
+  &quot;amplification_zone&quot;: 0.22,
+  &quot;resonance_field&quot;: 0.69,
+  &quot;envelope_boundary&quot;: 0.46
+}
+</code></pre>
+<hr>
+<h2 id="status"><strong>Status</strong></h2>
+<ul>
+<li><strong>Version:</strong> 1.0  </li>
+<li><strong>Status:</strong> canon‑stable  </li>
+<li><strong>Category:</strong> rtt‑resonance  </li>
+<li><strong>Module Path:</strong> <code>/docs/rtt/Dimensional_Resonance_Scanner/</code></li>
+</ul>
+  </main>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Examples/Advanced_Node_Scaling_Limits.md">
+  <title>RTT‑Inside mapping onto advanced node scaling limits</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Examples/Advanced_Node_Scaling_Limits.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Examples/Advanced_Node_Scaling_Limits.md</code>
+  </aside>
+
+  <main>
+<h1 id="rttinside-mapping-onto-advanced-node-scaling-limits">RTT‑Inside mapping onto advanced node scaling limits</h1>
+<table>
+<thead>
+<tr>
+<th>Scaling limit area</th>
+<th>What breaks at advanced nodes</th>
+<th>RTT‑Inside mapping focus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Device electrostatics</td>
+<td>Short‑channel control pushes new device forms</td>
+<td><strong>BEING:</strong> device health margins; <strong>KNOWING:</strong> design→process→behavior trace; <strong>MEANING:</strong> perf-per-watt intent</td>
+</tr>
+<tr>
+<td>Power density and leakage</td>
+<td>Voltage scaling stalls, leakage/power wall constraints</td>
+<td><strong>BEING:</strong> thermal/power headroom; <strong>KNOWING:</strong> workload→switching→heat lineage; <strong>MEANING:</strong> sustainable compute targets</td>
+</tr>
+<tr>
+<td>Interconnect RC and current density</td>
+<td>Wires become the limiter; delay and reliability pressures rise</td>
+<td><strong>BEING:</strong> interconnect “condition” (IR drop, EM stress); <strong>KNOWING:</strong> routing→load→delay causality; <strong>MEANING:</strong> latency vs reliability trade intent</td>
+</tr>
+<tr>
+<td>Lithography and patterning variability</td>
+<td>EUV and patterning variability/stochastics become dominant risks</td>
+<td><strong>BEING:</strong> pattern fidelity state; <strong>KNOWING:</strong> mask→exposure→etch→CD lineage; <strong>MEANING:</strong> yield stability over headline density</td>
+</tr>
+<tr>
+<td>Variability and manufacturability</td>
+<td>Geometry/process variability hurts sub‑3 nm behavior</td>
+<td><strong>BEING:</strong> variability budget health; <strong>KNOWING:</strong> parameter drift→PPA impact trace; <strong>MEANING:</strong> robustness as success criteria</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="device-architecture-limits-mapped-to-rttinside">Device architecture limits mapped to RTT‑Inside</h2>
+<p>As scaling pushes beyond FinFETs, <strong>gate‑all‑around nanosheet FETs</strong> are a leading approach to maintain electrostatic control and continue CMOS scaling past the 5 nm era. RTT‑Inside frames this not as “pick the next transistor,” but as <strong>BEING</strong> (electrostatic margin health and variability sensitivity), <strong>KNOWING</strong> (architecture choice → process windows → short‑channel outcomes), and <strong>MEANING</strong> (the declared purpose: low power, high performance, or reliability first).</p>
+<hr>
+<h2 id="power-wall-and-leakage-mapped-to-rttinside">Power wall and leakage mapped to RTT‑Inside</h2>
+<p>Dennard scaling’s promise—roughly constant power density as devices shrink—broke down as voltage stopped scaling cleanly and leakage became a baseline, contributing to the “power wall” era. RTT‑Inside treats power as living condition: <strong>BEING</strong> tracks thermal headroom and leakage pressure as state, <strong>KNOWING</strong> traces workload and design decisions to power density outcomes, and <strong>MEANING</strong> forces the system to declare whether the true goal is peak performance, energy stewardship, or longevity (so the optimization target doesn’t drift invisibly).</p>
+<hr>
+<h2 id="interconnect-limits-mapped-to-rttinside">Interconnect limits mapped to RTT‑Inside</h2>
+<p>At advanced nodes, interconnect parasitics and reliability pressures increasingly dominate: RC delay growth and rising current density constraints become central bottlenecks. RTT‑Inside makes interconnect “health” explicit: <strong>BEING</strong> captures IR‑drop margin and electromigration stress as condition, <strong>KNOWING</strong> links placement/routing choices to delay, noise, and failure risk, and <strong>MEANING</strong> declares acceptable trade lines (latency vs resilience, density vs maintainability).</p>
+<hr>
+<h2 id="euv-and-patterning-variability-mapped-to-rttinside">EUV and patterning variability mapped to RTT‑Inside</h2>
+<p>EUV has been used extensively for advanced interconnect patterning and GAA scaling perspectives increasingly emphasize patterning realities. RTT‑Inside reframes lithography from a step to a lineage: <strong>BEING</strong> records pattern fidelity and stochastic risk as state, <strong>KNOWING</strong> preserves mask → exposure → develop → etch → metrology causality, and <strong>MEANING</strong> makes the goal explicit (maximum density vs stable yield vs cycle‑time predictability) so fabs don’t “win node branding” while losing system trust. </p>
+<hr>
+<h2 id="sub3-nm-variability-mapped-to-rttinside">Sub‑3 nm variability mapped to RTT‑Inside</h2>
+<p>At sub‑3 nm, geometric variability (nanosheet thickness/width, oxide thickness, channel count) measurably impacts device performance. RTT‑Inside turns “variability” into a first‑class living budget: <strong>BEING</strong> tracks variability margin health, <strong>KNOWING</strong> keeps parameter-to-performance lineage intact across DOE and production drift, and <strong>MEANING</strong> defines robustness as part of success—not just nominal PPA—so the system optimizes for what matters long-term. </p>
+<hr>
+<h2 id="on-screen-takeaway-in-one-line">On-screen takeaway in one line</h2>
+<p>Advanced-node scaling is increasingly limited by <strong>margins, lineage, and intent</strong> (not just geometry), and RTT‑Inside makes those limits <strong>visible, traceable, and alignable</strong> across the full device→interconnect→litho→system stack.</p>
+  </main>
+</body>
+</html>

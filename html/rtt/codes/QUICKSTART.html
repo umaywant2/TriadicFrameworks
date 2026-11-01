@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/codes/QUICKSTART.md">
+  <title>⚡ Quickstart</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/codes/QUICKSTART.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/codes/QUICKSTART.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="rtt_codes__" src="https://github.com/user-attachments/assets/07ad32e9-cfe9-44bc-8cba-562397a23e97" /></p>
+<h1 id="quickstart">⚡ Quickstart</h1>
+<p>RTTcodes are QR‑compatible identifiers that bind any artifact to its canonical
+TriadicFrameworks metadata. To generate one:</p>
+<h3 id="1-create-a-payload-file">1. Create a payload file</h3>
+<pre><code class="language-json">{
+  &quot;domain&quot;: &quot;rtt&quot;,
+  &quot;artifact_type&quot;: &quot;paper&quot;,
+  &quot;version&quot;: &quot;v2.1.0&quot;,
+  &quot;triad&quot;: {
+    &quot;f_R&quot;: &quot;1.00&quot;,
+    &quot;tau_R&quot;: &quot;144ms&quot;,
+    &quot;Q_R&quot;: &quot;0.97&quot;
+  },
+  &quot;url&quot;: &quot;https://triadicframeworks.org/_ideas/Resonance-Time_Theory.html&quot;
+}
+</code></pre>
+<p>Save as:</p>
+<pre><code>payload.json
+</code></pre>
+<h3 id="2-generate-the-rttcode-qr-png">2. Generate the RTTcode (QR PNG)</h3>
+<p><strong>JavaScript:</strong></p>
+<pre><code>node generate_rttcode.js payload.json out.png
+</code></pre>
+<p><strong>Python:</strong></p>
+<pre><code>python generate_rttcode.py payload.json out.png
+</code></pre>
+<h3 id="3-use-the-rttcode">3. Use the RTTcode</h3>
+<p>Embed the PNG in:</p>
+<ul>
+<li>READMEs  </li>
+<li>PDFs  </li>
+<li>diagrams  </li>
+<li>print materials  </li>
+<li>onboarding docs  </li>
+</ul>
+<p>Every RTTcode encodes a URL+token that points to the artifact’s canonical home.</p>
+  </main>
+</body>
+</html>

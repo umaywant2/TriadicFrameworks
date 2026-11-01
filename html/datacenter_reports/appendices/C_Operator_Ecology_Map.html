@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/datacenter_reports/appendices/C_Operator_Ecology_Map.md">
+  <title>Appendix C — Operator Ecology Map</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/datacenter_reports/appendices/C_Operator_Ecology_Map.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/datacenter_reports/appendices/C_Operator_Ecology_Map.md</code>
+  </aside>
+
+  <main>
+<h1 id="appendix-c-operator-ecology-map"><strong>Appendix C — Operator Ecology Map</strong></h1>
+<p>RTT‑Inside • Structural • Human‑Layer • Drift‑Bounded<br>
+<em>(Datacenter Reports — Appendix C)</em></p>
+<p>The Operator Ecology Map describes how human‑layer forces interact with the physical and logical layers of the datacenter.<br>
+It is the <strong>behavioral substrate</strong> of the Datacenter Reports module.</p>
+<p>Operator ecology determines:</p>
+<ul>
+<li>drift emergence  </li>
+<li>coherence stability  </li>
+<li>regime transitions  </li>
+<li>cross‑team alignment  </li>
+<li>operational resilience  </li>
+<li>failure propagation  </li>
+<li>recovery behavior  </li>
+</ul>
+<p>This appendix defines the canonical operator types, ecological forces, interaction patterns, and regime‑level behaviors.</p>
+<hr>
+<h1 id="c1-operator-types-rtt-canon">🧬 <strong>C.1 — Operator Types (RTT Canon)</strong></h1>
+<p>Operators are categorized by their structural role, not their job title.</p>
+<h3 id="1-stabilizers"><strong>1. Stabilizers</strong></h3>
+<p>Reduce drift, enforce standards, maintain coherence.</p>
+<p>Examples:<br>
+- SREs<br>
+- Governance leads<br>
+- senior operators with strong institutional memory  </p>
+<h3 id="2-amplifiers"><strong>2. Amplifiers</strong></h3>
+<p>Increase dimensional intensity (compute, cultural, economic).</p>
+<p>Examples:<br>
+- performance engineers<br>
+- workload owners<br>
+- expansion planners  </p>
+<h3 id="3-translators"><strong>3. Translators</strong></h3>
+<p>Convert meaning across layers (human → logical → physical).</p>
+<p>Examples:<br>
+- technical program managers<br>
+- senior architects<br>
+- cross‑team communicators  </p>
+<h3 id="4-regime-shifters"><strong>4. Regime Shifters</strong></h3>
+<p>Trigger transitions between stable, transitional, emergent, chaotic regimes.</p>
+<p>Examples:<br>
+- incident commanders<br>
+- emergency responders<br>
+- operators making high‑impact decisions under pressure  </p>
+<hr>
+<h1 id="c2-operator-ecology-forces">🔺 <strong>C.2 — Operator Ecology Forces</strong></h1>
+<p>Operator behavior is shaped by five ecological forces:</p>
+<h3 id="1-cognitive-load"><strong>1. Cognitive Load</strong></h3>
+<p>The mental bandwidth required to operate the system.</p>
+<p>High load → drift increases<br>
+Low load → coherence increases</p>
+<h3 id="2-communication-density"><strong>2. Communication Density</strong></h3>
+<p>How frequently and clearly operators exchange information.</p>
+<p>High density → stable regimes<br>
+Low density → transitional or emergent regimes</p>
+<h3 id="3-institutional-memory"><strong>3. Institutional Memory</strong></h3>
+<p>The accumulated knowledge of how the system behaves.</p>
+<p>Strong memory → resilience<br>
+Weak memory → chaotic transitions</p>
+<h3 id="4-governance-alignment"><strong>4. Governance Alignment</strong></h3>
+<p>How well decision‑making structures match operational reality.</p>
+<p>Aligned → predictable behavior<br>
+Misaligned → drift spikes</p>
+<h3 id="5-cultural-resonance"><strong>5. Cultural Resonance</strong></h3>
+<p>Shared norms, trust, and operational intuition.</p>
+<p>High resonance → fast recovery<br>
+Low resonance → cascading failures</p>
+<hr>
+<h1 id="c3-ecology-interaction-map-canonical-diagram">🔄 <strong>C.3 — Ecology Interaction Map (Canonical Diagram)</strong></h1>
+<pre><code>+-------------------------------------------------------------+
+|                    Operator Ecology Map                     |
++-------------------------------------------------------------+
+| Stabilizers   &lt;----&gt;   Translators   &lt;----&gt;   Amplifiers    |
+|      ^                                                   ^   |
+|      |                                                   |   |
+| Regime Shifters ---------------------------------------------|
++-------------------------------------------------------------+
+</code></pre>
+<p><strong>Interpretation:</strong><br>
+- Stabilizers and Amplifiers form the horizontal tension line.<br>
+- Translators mediate meaning between them.<br>
+- Regime Shifters act vertically, triggering transitions.</p>
+<hr>
+<h1 id="c4-regime-behavior-humanlayer">🔥 <strong>C.4 — Regime Behavior (Human‑Layer)</strong></h1>
+<h3 id="stable-regime"><strong>Stable Regime</strong></h3>
+<ul>
+<li>high coherence  </li>
+<li>low drift  </li>
+<li>strong communication density  </li>
+<li>stabilizers dominate  </li>
+</ul>
+<h3 id="transitional-regime"><strong>Transitional Regime</strong></h3>
+<ul>
+<li>rising drift  </li>
+<li>mixed coherence  </li>
+<li>translators become critical  </li>
+<li>governance alignment determines direction  </li>
+</ul>
+<h3 id="emergent-regime"><strong>Emergent Regime</strong></h3>
+<ul>
+<li>new patterns forming  </li>
+<li>amplifiers dominate  </li>
+<li>cultural resonance determines stability  </li>
+</ul>
+<h3 id="chaotic-regime"><strong>Chaotic Regime</strong></h3>
+<ul>
+<li>high drift  </li>
+<li>low coherence  </li>
+<li>regime shifters dominate  </li>
+<li>recovery depends on stabilizer strength  </li>
+</ul>
+<hr>
+<h1 id="c5-drift-propagation-through-operator-ecology">🧭 <strong>C.5 — Drift Propagation Through Operator Ecology</strong></h1>
+<pre><code>Drift Source → Operator Load → Communication Gaps → Regime Shift
+</code></pre>
+<p>Propagation accelerates when:</p>
+<ul>
+<li>cognitive load exceeds threshold  </li>
+<li>communication density collapses  </li>
+<li>institutional memory is weak  </li>
+<li>governance is misaligned  </li>
+</ul>
+<p>Propagation slows when:</p>
+<ul>
+<li>stabilizers intervene  </li>
+<li>translators restore meaning  </li>
+<li>cultural resonance increases  </li>
+<li>regime shifters act early  </li>
+</ul>
+<hr>
+<h1 id="c6-operator-ecology-tensors">🧩 <strong>C.6 — Operator Ecology &amp; Tensors</strong></h1>
+<p>Operator ecology directly influences:</p>
+<h3 id="structural-field-tensor"><strong>Structural Field Tensor</strong></h3>
+<p>Human envelope, governance, cultural substrate.</p>
+<h3 id="dimensional-field-tensor"><strong>Dimensional Field Tensor</strong></h3>
+<p>Cultural, governance, economic dimensions.</p>
+<h3 id="qcompute-tensor"><strong>qCompute Tensor</strong></h3>
+<p>Thermal and energy envelope behavior under human‑layer decisions.</p>
+<p>Operator ecology is the <strong>hidden variable</strong> behind tensor drift.</p>
+<hr>
+<h1 id="c7-crossmodule-integration">🔗 <strong>C.7 — Cross‑Module Integration</strong></h1>
+<p>Operator ecology propagates into:</p>
+<ul>
+<li>Governance Substrate  </li>
+<li>NoS (Network of Substrate)  </li>
+<li>Integrations  </li>
+<li>Framework Field Theory  </li>
+<li>Low Dimensional Structures  </li>
+</ul>
+<p>This ensures human‑layer behavior is structurally represented across the canon.</p>
+<hr>
+<h1 id="end-of-appendix-c">End of Appendix C</h1>
+  </main>
+</body>
+</html>

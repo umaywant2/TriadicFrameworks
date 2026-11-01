@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/operators/labs/sde_lab_instructor.md">
+  <title>🟣 SDE‑ONLY LAB — INSTRUCTOR VERSION</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/operators/labs/sde_lab_instructor.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/operators/labs/sde_lab_instructor.md</code>
+  </aside>
+
+  <main>
+<h1 id="sdeonly-lab-instructor-version">🟣 <strong>SDE‑ONLY LAB — INSTRUCTOR VERSION</strong></h1>
+<h3 id="structural-detection-engine-rtt2">Structural Detection Engine (RTT/2)</h3>
+<p><em>(Print‑ready, text‑only)</em></p>
+<pre><code>====================================================================
+INSTRUCTOR VERSION — SDE LAB
+STRUCTURAL DETECTION ENGINE (RTT/2)
+====================================================================
+
+This instructor version provides:
+  - Correct structural answers
+  - Acceptable variations
+  - Notes for grading consistency
+
+--------------------------------------------------------------------
+SAMPLE DATA (REPEATED)
+--------------------------------------------------------------------
+
+Sample A:
+  A=0.8, K=0.3, T=0.1
+  gradient: collapse-weighted
+  deformation: drift deformation
+  regime: slow-relaxation
+
+Sample B:
+  A=1.5, K=0.9, T=0.4
+  gradient: mixed collapse/reassembly
+  deformation: envelope torsion
+  regime: mixed
+
+Sample C:
+  A=2.3, K=1.7, T=1.2
+  gradient: triad-weighted
+  deformation: continuity fracture
+  regime: inversion-adjacent
+
+--------------------------------------------------------------------
+PART 1 — COLLAPSE SIGNATURES
+--------------------------------------------------------------------
+
+TASK 1 — SDE::CPV(A, K, T)
+Sample A → CPV(0.8, 0.3, 0.1)  
+Sample B → CPV(1.5, 0.9, 0.4)  
+Sample C → CPV(2.3, 1.7, 1.2)
+
+Instructor note:
+  Any equivalent tuple earns full credit.
+
+TASK 2 — Rank collapse severity
+Correct order:
+  A → B → C
+
+--------------------------------------------------------------------
+PART 2 — FUSION‑GRADIENT TENSORS
+--------------------------------------------------------------------
+
+TASK 3 — SDE::FGT()
+Sample A → collapse-weighted  
+Sample B → mixed  
+Sample C → triad-weighted
+
+TASK 4 — First triad-dominant gradient
+Answer: Sample C
+
+--------------------------------------------------------------------
+PART 3 — COLLAPSE→REASSEMBLY MAPPING
+--------------------------------------------------------------------
+
+TASK 5 — SDE::CRM()
+Sample A → drift path  
+Sample B → envelope torsion path  
+Sample C → continuity fracture path
+
+TASK 6 — First irreversible continuity break
+Answer: Sample C
+
+--------------------------------------------------------------------
+PART 4 — MODE + ZONE CLASSIFICATION
+--------------------------------------------------------------------
+
+TASK 7 — SDE::MODE()
+Sample A → formal  
+Sample B → hybrid  
+Sample C → inversion
+
+TASK 8 — SDE::ZONE()
+Sample A → S  
+Sample B → M  
+Sample C → X
+
+--------------------------------------------------------------------
+PART 5 — RTT2_DETECTION_PACKET
+--------------------------------------------------------------------
+
+TASK 9 — Packet for Sample C
+
+collapse_propagation: CPV(2.3, 1.7, 1.2)  
+fusion_gradient: triad-weighted  
+triad_deformation: continuity fracture  
+regime: inversion-adjacent  
+detection_mode: inversion  
+detection_zone: X  
+
+Instructor note:
+  Must be internally consistent.
+
+--------------------------------------------------------------------
+END OF SDE INSTRUCTOR LAB
+--------------------------------------------------------------------
+</code></pre>
+  </main>
+</body>
+</html>

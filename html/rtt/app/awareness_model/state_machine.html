@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/app/awareness_model/state_machine.md">
+  <title>Awareness State Machine</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/app/awareness_model/state_machine.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/app/awareness_model/state_machine.md</code>
+  </aside>
+
+  <main>
+<h1 id="awareness-state-machine">Awareness State Machine</h1>
+<p>The Awareness state machine defines how the RTT‑App transitions between clarity states based on local observations and the server‑declared global state. It provides a stable, predictable model that ensures the app behaves consistently across platforms and conditions.</p>
+<hr>
+<h3 id="overview">Overview</h3>
+<p>The state machine reduces two independent inputs—local stability and global stability—into a single Awareness state. Each state represents a distinct interpretation of environmental clarity. Transitions occur whenever either input changes classification.</p>
+<p>The model is intentionally simple. It avoids inference, scoring, or probabilistic behavior, ensuring that the app’s indicator remains transparent and easy to reason about.</p>
+<hr>
+<h3 id="states">States</h3>
+<p>The Awareness layer exposes four states:</p>
+<ul>
+<li><strong>Clear</strong> — both local and server signals indicate stability.</li>
+<li><strong>Local Drift</strong> — local instability with a stable global state.</li>
+<li><strong>Global Drift</strong> — global instability with stable local conditions.</li>
+<li><strong>Drift</strong> — both local and global signals indicate instability.</li>
+</ul>
+<p>These states form the complete vocabulary of RTT‑App v1.</p>
+<hr>
+<h3 id="inputs">Inputs</h3>
+<p>The state machine consumes two coarse classifications:</p>
+<ul>
+<li><strong>Local State</strong>  </li>
+<li><em>Stable</em> — network and device signals within normal bounds.  </li>
+<li>
+<p><em>Unstable</em> — drift detected in network or device behavior.</p>
+</li>
+<li>
+<p><strong>Server State</strong>  </p>
+</li>
+<li><em>Stable</em> — server‑declared clarity is high.  </li>
+<li><em>Unstable</em> — server‑declared clarity is low.</li>
+</ul>
+<p>Each input is evaluated independently.</p>
+<hr>
+<h3 id="transition-rules">Transition Rules</h3>
+<p>The state machine transitions according to the following rules:</p>
+<ul>
+<li>Local stable + Server stable → <strong>Clear</strong></li>
+<li>Local unstable + Server stable → <strong>Local Drift</strong></li>
+<li>Local stable + Server unstable → <strong>Global Drift</strong></li>
+<li>Local unstable + Server unstable → <strong>Drift</strong></li>
+</ul>
+<p>Transitions occur immediately when either input changes classification.</p>
+<hr>
+<h3 id="transition-behavior">Transition Behavior</h3>
+<p>The state machine follows several behavioral guarantees:</p>
+<ul>
+<li><strong>No hysteresis</strong> — transitions are direct and immediate.</li>
+<li><strong>No hidden states</strong> — all possible outcomes are visible to the user.</li>
+<li><strong>No scoring</strong> — inputs are binary (stable/unstable), not weighted.</li>
+<li><strong>No memory</strong> — the current state depends only on current inputs.</li>
+</ul>
+<p>These guarantees keep the model predictable and easy to test.</p>
+<hr>
+<h3 id="offline-and-degraded-conditions">Offline and Degraded Conditions</h3>
+<p>When the server state is unavailable:</p>
+<ul>
+<li>The app uses the most recently cached server value.</li>
+<li>If the cache is expired, the server state is treated as <em>Unknown</em>.</li>
+<li><em>Unknown</em> behaves as <em>Stable</em> for the purpose of transitions.</li>
+</ul>
+<p>This ensures that the app remains usable even during degraded connectivity.</p>
+<hr>
+<h3 id="state-diagram-textual">State Diagram (Textual)</h3>
+<pre><code>           Server Stable                 Server Unstable
+         +----------------+            +----------------+
+Local    |                |            |                |
+Stable   |     CLEAR      |-----------&gt;|  GLOBAL DRIFT  |
+         |                |            |                |
+         +----------------+            +----------------+
+                ^   |                         ^   |
+                |   |                         |   |
+                |   v                         |   v
+         +----------------+            +----------------+
+Local    |                |            |                |
+Unstable |  LOCAL DRIFT   |-----------&gt;|     DRIFT      |
+         |                |            |                |
+         +----------------+            +----------------+
+</code></pre>
+<p>This diagram expresses the full transition space for RTT‑App v1.</p>
+  </main>
+</body>
+</html>

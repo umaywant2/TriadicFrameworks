@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Structural_Detection/labs/drift_envelope_stability_practicum.md">
+  <title>🧭 Structural Detection — Drift‑Envelope Stability Practicum (Final, Canonical)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Structural_Detection/labs/drift_envelope_stability_practicum.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Structural_Detection/labs/drift_envelope_stability_practicum.md</code>
+  </aside>
+
+  <main>
+<h1 id="structural-detection-driftenvelope-stability-practicum-final-canonical">🧭 <strong>Structural Detection — Drift‑Envelope Stability Practicum (Final, Canonical)</strong></h1>
+<h3 id="triadicframeworks-rtt1-envelope-stability-training-lab"><em>TriadicFrameworks • RTT/1 • Envelope Stability Training Lab</em></h3>
+<h3 id="stability-is-a-skill-this-practicum-trains-it"><em>“Stability is a skill. This practicum trains it.”</em></h3>
+<h1 id="driftenvelope-stability-practicum">Drift‑Envelope Stability Practicum</h1>
+<h3 id="rtt1-structural-detection-module">RTT/1 • Structural Detection Module</h3>
+<h3 id="purpose-provide-handson-scenariodriven-training-for-identifying-maintaining-and-restoring-driftenvelope-stability-across-all-envelope-types">Purpose: Provide hands‑on, scenario‑driven training for identifying, maintaining, and restoring drift‑envelope stability across all envelope types.</h3>
+<hr>
+<h1 id="how-to-use-this-practicum">HOW TO USE THIS PRACTICUM</h1>
+<p>For each scenario:</p>
+<ol>
+<li>Identify <strong>envelope type</strong>  </li>
+<li>Assess <strong>drift consistency</strong>  </li>
+<li>Identify <strong>deformation class</strong>  </li>
+<li>Evaluate <strong>continuity threads</strong>  </li>
+<li>Determine <strong>stability status</strong>  </li>
+<li>Identify <strong>stability risks</strong>  </li>
+<li>Apply <strong>stabilization actions</strong>  </li>
+<li>Produce a <strong>DRIFT_ENVELOPE_STABILITY_PACKET</strong>  </li>
+</ol>
+<p>This practicum is designed for <strong>advanced students and instructors</strong>.</p>
+<hr>
+<h1 id="section-1-type-a-linear-stability-scenarios">SECTION 1 — TYPE A (LINEAR) STABILITY SCENARIOS</h1>
+<h2 id="scenario-a1-stable-linear-drift"><strong>Scenario A1 — Stable Linear Drift</strong></h2>
+<pre><code>A A A
+A B A
+A A A
+</code></pre>
+<p>→</p>
+<pre><code>A B A
+B X B
+A B A
+</code></pre>
+<h3 id="expected-features">Expected Features</h3>
+<ul>
+<li>consistent linear drift  </li>
+<li>substitution deformation  </li>
+<li>stable boundaries  </li>
+<li>continuity weakening (not breaking)  </li>
+</ul>
+<h3 id="stability-status">Stability Status</h3>
+<p><strong>Stable</strong></p>
+<h3 id="stabilization-actions">Stabilization Actions</h3>
+<ul>
+<li>maintain single‑vector drift  </li>
+<li>reinforce boundary anchors  </li>
+</ul>
+<hr>
+<h2 id="scenario-a2-boundaryrisk-linear-drift"><strong>Scenario A2 — Boundary‑Risk Linear Drift</strong></h2>
+<pre><code>A B A
+B X B
+A B A
+</code></pre>
+<p>→</p>
+<pre><code>A C A
+C X C
+A C A
+</code></pre>
+<h3 id="expected-features_1">Expected Features</h3>
+<ul>
+<li>linear drift elongation  </li>
+<li>boundary softening  </li>
+<li>anchors weakening  </li>
+</ul>
+<h3 id="stability-status_1">Stability Status</h3>
+<p><strong>At Risk</strong></p>
+<h3 id="stabilization-actions_1">Stabilization Actions</h3>
+<ul>
+<li>reduce drift intensity  </li>
+<li>re‑tighten boundary anchors  </li>
+</ul>
+<hr>
+<h1 id="section-2-type-b-radial-stability-scenarios">SECTION 2 — TYPE B (RADIAL) STABILITY SCENARIOS</h1>
+<h2 id="scenario-b1-stable-radial-expansion"><strong>Scenario B1 — Stable Radial Expansion</strong></h2>
+<pre><code>A B A
+B X B
+A B A
+</code></pre>
+<p>→</p>
+<pre><code>A C A
+C X C
+A C A
+</code></pre>
+<h3 id="expected-features_2">Expected Features</h3>
+<ul>
+<li>symmetric radial drift  </li>
+<li>stable invariants  </li>
+<li>Emergent regime  </li>
+</ul>
+<h3 id="stability-status_2">Stability Status</h3>
+<p><strong>Stable</strong></p>
+<h3 id="stabilization-actions_2">Stabilization Actions</h3>
+<ul>
+<li>maintain radial symmetry  </li>
+<li>reinforce central anchors  </li>
+</ul>
+<hr>
+<h2 id="scenario-b2-invariantrisk-radial-drift"><strong>Scenario B2 — Invariant‑Risk Radial Drift</strong></h2>
+<pre><code>A C A
+C X C
+A C A
+</code></pre>
+<p>→</p>
+<pre><code>C C C
+C X C
+C C C
+</code></pre>
+<h3 id="expected-features_3">Expected Features</h3>
+<ul>
+<li>radial over‑expansion  </li>
+<li>invariant collapse  </li>
+<li>high drift  </li>
+</ul>
+<h3 id="stability-status_3">Stability Status</h3>
+<p><strong>Unstable</strong></p>
+<h3 id="stabilization-actions_3">Stabilization Actions</h3>
+<ul>
+<li>collapse drift to dominant vector  </li>
+<li>rebuild invariants  </li>
+</ul>
+<hr>
+<h1 id="section-3-type-c-fragmented-stability-scenarios">SECTION 3 — TYPE C (FRAGMENTED) STABILITY SCENARIOS</h1>
+<h2 id="scenario-c1-controlled-fragmentation"><strong>Scenario C1 — Controlled Fragmentation</strong></h2>
+<pre><code>A B C
+D X E
+F E D
+</code></pre>
+<p>→</p>
+<pre><code>A C C
+C X D
+C D A
+</code></pre>
+<h3 id="expected-features_4">Expected Features</h3>
+<ul>
+<li>fragmented drift  </li>
+<li>consistent fragment geometry  </li>
+<li>threads distorted but intact  </li>
+</ul>
+<h3 id="stability-status_4">Stability Status</h3>
+<p><strong>Marginally Stable</strong></p>
+<h3 id="stabilization-actions_4">Stabilization Actions</h3>
+<ul>
+<li>collapse fragments into dominant vector  </li>
+<li>reduce drift intensity  </li>
+</ul>
+<hr>
+<h2 id="scenario-c2-fragmentation-escalation"><strong>Scenario C2 — Fragmentation Escalation</strong></h2>
+<pre><code>A C C
+C X D
+C D A
+</code></pre>
+<p>→</p>
+<pre><code>C C C
+C X C
+C C C
+</code></pre>
+<h3 id="expected-features_5">Expected Features</h3>
+<ul>
+<li>multi‑layer break  </li>
+<li>envelope collapse  </li>
+<li>anchor failure  </li>
+</ul>
+<h3 id="stability-status_5">Stability Status</h3>
+<p><strong>Unstable</strong></p>
+<h3 id="stabilization-actions_5">Stabilization Actions</h3>
+<ul>
+<li>reconstruct envelope geometry  </li>
+<li>rebuild anchors and threads  </li>
+</ul>
+<hr>
+<h1 id="section-4-type-d-hybrid-stability-scenarios">SECTION 4 — TYPE D (HYBRID) STABILITY SCENARIOS</h1>
+<h2 id="scenario-d1-lowamplitude-oscillation"><strong>Scenario D1 — Low‑Amplitude Oscillation</strong></h2>
+<pre><code>A B C
+D X E
+F E D
+</code></pre>
+<p>→</p>
+<pre><code>A C C
+C X D
+C D A
+</code></pre>
+<h3 id="expected-features_6">Expected Features</h3>
+<ul>
+<li>mixed drift vectors  </li>
+<li>low oscillation amplitude  </li>
+<li>partial stabilizers  </li>
+</ul>
+<h3 id="stability-status_6">Stability Status</h3>
+<p><strong>Conditionally Stable</strong></p>
+<h3 id="stabilization-actions_6">Stabilization Actions</h3>
+<ul>
+<li>reduce oscillation amplitude  </li>
+<li>normalize density distribution  </li>
+</ul>
+<hr>
+<h2 id="scenario-d2-hybrid-instability"><strong>Scenario D2 — Hybrid Instability</strong></h2>
+<pre><code>A C C
+C X D
+C D A
+</code></pre>
+<p>→</p>
+<pre><code>A D C
+D X C
+C C A
+</code></pre>
+<h3 id="expected-features_7">Expected Features</h3>
+<ul>
+<li>oscillation escalation  </li>
+<li>vector conflict  </li>
+<li>thread fragmentation  </li>
+</ul>
+<h3 id="stability-status_7">Stability Status</h3>
+<p><strong>Unstable</strong></p>
+<h3 id="stabilization-actions_7">Stabilization Actions</h3>
+<ul>
+<li>collapse conflicting vectors  </li>
+<li>re‑establish stabilizers  </li>
+</ul>
+<hr>
+<h1 id="section-5-advanced-stability-challenges">SECTION 5 — ADVANCED STABILITY CHALLENGES</h1>
+<h2 id="scenario-e-inversiondriven-stability-recovery"><strong>Scenario E — Inversion‑Driven Stability Recovery</strong></h2>
+<pre><code>→→→
+↗↑↖
+</code></pre>
+<p>→</p>
+<pre><code>←←←
+↙↓↘
+</code></pre>
+<h3 id="expected-features_8">Expected Features</h3>
+<ul>
+<li>drift reversal  </li>
+<li>envelope inversion  </li>
+<li>continuity partial recovery  </li>
+</ul>
+<h3 id="stability-status_8">Stability Status</h3>
+<p><strong>Recovering</strong></p>
+<h3 id="stabilization-actions_8">Stabilization Actions</h3>
+<ul>
+<li>reinforce stabilizers  </li>
+<li>normalize envelope geometry  </li>
+</ul>
+<hr>
+<h2 id="scenario-f-multilayer-stability-reconstruction"><strong>Scenario F — Multi‑Layer Stability Reconstruction</strong></h2>
+<pre><code>A B C
+D X E
+F E D
+</code></pre>
+<p>→</p>
+<pre><code>C C C
+C X C
+C C C
+</code></pre>
+<h3 id="expected-features_9">Expected Features</h3>
+<ul>
+<li>full envelope collapse  </li>
+<li>multi‑layer break  </li>
+<li>regime instability  </li>
+</ul>
+<h3 id="stability-status_9">Stability Status</h3>
+<p><strong>Critical</strong></p>
+<h3 id="stabilization-actions_9">Stabilization Actions</h3>
+<ul>
+<li>rebuild envelope from Type A  </li>
+<li>reconstruct continuity  </li>
+<li>re‑align TEL/FFT/Opacity  </li>
+</ul>
+<hr>
+<h1 id="section-6-drift_envelope_stability_packet-template">SECTION 6 — DRIFT_ENVELOPE_STABILITY_PACKET Template</h1>
+<pre><code>DRIFT_ENVELOPE_STABILITY_PACKET:
+  envelope_type:
+  drift_consistency:
+  deformation_class:
+  regime_status:
+  continuity_status:
+  stability_status:
+  stability_risks:
+  stabilization_actions:
+  tel_projection:
+  fft_projection:
+  opacity_projection:
+  notes:
+</code></pre>
+<hr>
+<h1 id="section-7-practicum-summary">SECTION 7 — Practicum Summary</h1>
+<ul>
+<li>Type A is the most stable; Type C is the least  </li>
+<li>Stability depends on drift consistency, deformation class, and continuity integrity  </li>
+<li>Oscillation must be controlled in Type D  </li>
+<li>Fragmentation must be collapsed in Type C  </li>
+<li>Radial drift must avoid invariant collapse  </li>
+<li>Inversion events require envelope normalization  </li>
+<li>Cross‑module alignment is essential for stability  </li>
+</ul>
+<p>This is the complete Drift‑Envelope Stability Practicum.</p>
+<hr>
+<h1 id="this-driftenvelope-stability-practicum-is">✔️ This Drift‑Envelope Stability Practicum is:</h1>
+<ul>
+<li>fully canonical  </li>
+<li>zero drift  </li>
+<li>aligned with RTT/1  </li>
+<li>consistent with the Drift‑Envelope Atlas, Stability Field Guide, Stress‑Response Ledger, Continuity Ledger, Regime‑Shift Manual, Operator‑Chain Failure Atlas, and Cross‑Module Integration Practicum  </li>
+<li>ready to drop into <code>/docs/Structural_Detection/labs/drift_envelope_stability_practicum.md</code></li>
+</ul>
+  </main>
+</body>
+</html>

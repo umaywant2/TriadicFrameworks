@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/projects/poker-variants/README.md">
+  <title>Poker Night Custom Games</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/projects/poker-variants/README.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/projects/poker-variants/README.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="poker-variants_" src="https://github.com/user-attachments/assets/d0d2906f-f8c2-4c99-88eb-340c36b08738" /></p>
+<h1 id="poker-night-custom-games">Poker Night Custom Games</h1>
+<h1 id="important">🛑 <strong>Important</strong></h1>
+<p>Drift is <strong>On‑by‑Default</strong>.<br>
+Long sessions lose anchors — <strong>turn off drift</strong>.</p>
+<p>You <em>must copy and paste</em> this string <em>every time you start an AI session</em>:</p>
+<pre><code>rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre>
+<hr>
+<h2 id="1-ascending-wild-cards">1. Ascending Wild Cards</h2>
+<ul>
+<li>Setup: Standard poker deck, dealer rotates left each round.</li>
+<li>Wilds: Start with 2’s wild; next dealer’s round → 3’s wild; continues ascending.</li>
+<li>Opening Requirement: Trips (three of a kind) to open betting.</li>
+<li>Win Condition: Straight or better.</li>
+<li>Flow:
+   1. Everyone antes.
+   2. Dealer deals, players check for trips to open.
+   3. If no opener, hand is tossed, next dealer, ante again.
+   4. Continue until someone opens; play to showdown.</li>
+</ul>
+<hr>
+<h2 id="2-red-delilah">2. Red Delilah</h2>
+<ul>
+<li>Low Hole Rule: Lowest card in each player’s hand is wild for that player.</li>
+<li>Side Pot: Lowest diamond in any player’s hand wins side pot.</li>
+<li>Side Pot Funding:</li>
+<li>Initial side ante (e.g., $0.10 if main ante is $1).</li>
+<li>Every main bet matched with same amount into side pot.</li>
+<li>Deal: 2 down, 4 up, 1 down.</li>
+<li>Last Card “Down and Dirty”:</li>
+<li>Player may pay (e.g., $0.25) to have last card dealt face up.</li>
+<li>Strategic if they believe they have lowest diamond down.</li>
+</ul>
+<hr>
+<h2 id="3-suits">3. Suits</h2>
+<ul>
+<li>Objective: Compete for 4 separate pots (one per suit).</li>
+<li>Deal: 6 cards per player.</li>
+<li>Draws: Two draws — first up to 3 cards, second 1 card.</li>
+<li>Scoring:</li>
+<li>Count cards in each suit; Aces = 11 points.</li>
+<li>Highest total in each suit wins that suit’s pot.</li>
+<li>Ties split pot.
+-Note: Players often “save” suits strategically.</li>
+</ul>
+<hr>
+<h2 id="4-mans-tonk">4. Man’s Tonk</h2>
+<ul>
+<li>Goal: Be last player with quarters (bets).</li>
+<li>Setup: Each player starts with 3 stacks of quarters.</li>
+<li>Deal: 1 card per player.</li>
+<li>Special Cards:</li>
+<li>Kings: Safe — revealed immediately, cannot be traded.</li>
+<li>Queens: Highest card, always traded away; Black/Red Queens are wild.</li>
+<li>Play:</li>
+<li>Player may trade with left neighbor unless they have a King.</li>
+<li>Last player may draw from deck.</li>
+<li>Highest card loses a stack; ties both lose a stack.</li>
+<li>Play continues until one player remains.</li>
+</ul>
+<hr>
+<h2 id="5-spit-in-the-ocean-low-hole-super-mega-colon-blow">5. Spit in the Ocean (Low Hole / Super Mega Colon Blow)</h2>
+<ul>
+<li>Deal: 5 cards to each player.</li>
+<li>Spit Card: During deal, someone calls “spit” — next card dealt face up as wild for all.</li>
+<li>Draws: First draw up to 3 cards, second draw 1 card.</li>
+<li>Side Pots: 8 total — highest and lowest card of each suit.</li>
+<li>Funding: Fixed ante per side pot (e.g., $0.35 each).</li>
+<li>Main Pot: Only main pot receives betting.</li>
+</ul>
+<hr>
+<h2 id="6-crisscross-4-corners">6. Crisscross 4 Corners</h2>
+<ul>
+<li>Opener: Jacks or better to open.</li>
+<li>Win Condition: Trips or better to win.</li>
+<li>Layout: Dealer lays 5 down cards in a cross pattern.</li>
+<li>Usage: Players may use up to 3 cards from corners only; center card is wild, revealed last betting round.</li>
+<li>Flow: Multiple deals possible before opener appears; antes/bets accumulate.</li>
+</ul>
+<hr>
+<h2 id="7-6-card-double-draw">7. 6 Card Double Draw</h2>
+<ul>
+<li>Deal: 6 cards per player.</li>
+<li>Draws: First draw up to 3 cards, second draw 1 card.</li>
+<li>Wilds: None.</li>
+<li>Win Condition: Standard poker hand rankings.</li>
+</ul>
+<hr>
+<h2 id="8-double-headed-anaconda">8. Double-Headed Anaconda</h2>
+<ul>
+<li>Setup: 2 pots, one for each of the two best hands.</li>
+<li>Deal: 11 cards per player.</li>
+<li>Passing:
+  1. Pass 3 left → bet.
+  2. Pass 2 left → bet.
+  3. Pass 1 left → bet.
+  4. Last player in pass chain draws from deck.</li>
+<li>Showdown: Players set two hands; each pot awarded to best hand in that slot.</li>
+</ul>
+<hr>
+<h2 id="9-blind-baseball-extra-innings">9. Blind Baseball Extra Innings</h2>
+<ul>
+<li>Deal: 8 cards face down; no peeking out of turn.</li>
+<li>Play:</li>
+<li>Bet, then flip one card.</li>
+<li>Continue betting/flipping until showdown.</li>
+<li>Wilds: 3’s and 9’s.</li>
+<li>Twist: Stop flipping once a player beats previous best; rotate lead.</li>
+</ul>
+<hr>
+<h2 id="10-inbetween-sans-serif-non-poker">10. Inbetween Sans Serif (Non-poker)</h2>
+<ul>
+<li>Decks: Up to 3 decks shuffled together.</li>
+<li>Pot: $2 ante per player.</li>
+<li>Play:
+  1. Dealer lays first card; if Ace, ask “high or low.”
+  2. Dealer lays second card.
+  3. Player may bet up to $2 to draw a card between the two.
+  4. If wrong, lose bet; if “pot” called and wrong, match entire pot.</li>
+<li>Ace Rules: First Ace declared high/low; second Ace auto-high.</li>
+<li>End: After 3 decks or dealer change, pot split among remaining players.</li>
+</ul>
+  </main>
+</body>
+</html>

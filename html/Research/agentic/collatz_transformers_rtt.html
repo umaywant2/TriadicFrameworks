@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Research/agentic/collatz_transformers_rtt.md">
+  <title>RTT Agentic Module: Transformers Know More Than They Can Tell — Learning the Collatz Sequence</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Research/agentic/collatz_transformers_rtt.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Research/agentic/collatz_transformers_rtt.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Research_agentic_collatz_transformers_rtt_" src="https://github.com/user-attachments/assets/f617dd26-b9f9-43a2-ac1d-0c4e9483d1bf" /></p>
+<h1 id="rtt-agentic-module-transformers-know-more-than-they-can-tell-learning-the-collatz-sequence">RTT Agentic Module: Transformers Know More Than They Can Tell — Learning the Collatz Sequence</h1>
+<ul>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/agentic/collatz_transformers_rtt_module.json"><code>collatz_transformers_rtt</code></a></li>
+</ul>
+<p><strong>Module ID:</strong> <code>collatz_transformers_rtt</code><br>
+<strong>Source paper:</strong> https://arxiv.org/pdf/2511.10811</p>
+<p>This module wraps the paper <em>“Transformers Know More Than They Can Tell — Learning the Collatz Sequence”</em> in RTT operator grammar.<br>
+It keeps the authors’ claims intact while exposing the hidden regime structure their experiments reveal.</p>
+<hr>
+<h2 id="1-purpose">1. Purpose</h2>
+<ul>
+<li><strong>Make the paper agentic:</strong> turn it into a machine‑navigable object with explicit regimes, tensions, and transitions.</li>
+<li><strong>Preserve authors’ work:</strong> no reinterpretation of results, only structural clarification.</li>
+<li><strong>Support students and AIs:</strong> provide a clean map of what the transformer is actually learning.</li>
+</ul>
+<hr>
+<h2 id="2-core-rtt-view-of-the-paper">2. Core RTT view of the paper</h2>
+<p>The transformer does <strong>not</strong> learn “Collatz as a function.”<br>
+It learns a hierarchy of <strong>control‑flow regimes</strong>:</p>
+<ul>
+<li><strong>Binary residue regime:</strong> inputs are grouped into classes modulo (2^p).</li>
+<li><strong>Loop‑length regime:</strong> the model infers the <em>temporal depth</em> (loop length) of the computation.</li>
+<li><strong>Base geometry regime:</strong> performance depends strongly on the numeric base used to encode inputs.</li>
+</ul>
+<p>Most failures occur when the model:</p>
+<ul>
+<li>performs the <strong>correct arithmetic</strong>,  </li>
+<li>but infers the <strong>wrong loop length</strong>,  </li>
+<li>snapping into the wrong (2^p) class.</li>
+</ul>
+<hr>
+<h2 id="3-rtt-structures-in-this-module">3. RTT structures in this module</h2>
+<p>The module exposes three layers:</p>
+<ol>
+<li>
+<p><strong>Regimes</strong>
+   - <code>binary_residue_regime</code>
+   - <code>loop_length_regime</code>
+   - <code>base_geometry_regime</code></p>
+</li>
+<li>
+<p><strong>Tensions</strong>
+   - <code>arithmetic_vs_control_flow</code>
+   - <code>correct_local_vs_wrong_global</code>
+   - <code>rigidity_vs_brittleness</code></p>
+</li>
+<li>
+<p><strong>Transitions</strong>
+   - <code>regime_ladder</code>
+   - <code>geometry_thresholds</code>
+   - <code>structured_failure_transition</code></p>
+</li>
+</ol>
+<p>Each item is backed by explicit evidence from the paper and is safe to query by AI agents.</p>
+<hr>
+<h2 id="4-operators">4. Operators</h2>
+<p>The module defines three key RTT operators:</p>
+<ul>
+<li>
+<p><strong><code>temporal_depth</code></strong><br>
+  Maps an input to its inferred loop length (hidden variable the model is really learning).</p>
+</li>
+<li>
+<p><strong><code>residue_partition</code></strong><br>
+  Partitions inputs into (2^p) classes (primary attractor structure).</p>
+</li>
+<li>
+<p><strong><code>representation_alignment</code></strong><br>
+  Measures how well a base encoding aligns with the model’s internal geometry.</p>
+</li>
+</ul>
+<p>These operators let agents reason about <em>how</em> the transformer is solving the task, not just <em>whether</em> it is correct.</p>
+<hr>
+<h2 id="5-how-to-use-this-module">5. How to use this module</h2>
+<ul>
+<li>
+<p><strong>For researchers:</strong><br>
+  Use <code>ai.regimes</code>, <code>ai.tensions</code>, and <code>ai.transitions</code> to query the structural behavior of the model described in the paper.</p>
+</li>
+<li>
+<p><strong>For students:</strong><br>
+  Read this README alongside the original PDF to see how control‑flow, representation, and error modes interact.</p>
+</li>
+<li>
+<p><strong>For agents:</strong><br>
+  Treat <code>module.json</code> as the canonical structural map of the paper.<br>
+  Do not override or reinterpret the authors’ claims; use RTT fields to navigate them.</p>
+</li>
+</ul>
+<hr>
+<h2 id="6-provenance">6. Provenance</h2>
+<ul>
+<li><strong>Module authoring:</strong> TriadicFrameworks (RTT / agentic mapping).  </li>
+<li><strong>Original content:</strong> Authors of arXiv:2511.10811.  </li>
+<li><strong>License:</strong> Open educational use permitted.</li>
+</ul>
+<hr>
+<h3 id="b-visual-regimetensiontransition-diagram">B. Visual regime–tension–transition diagram</h3>
+<p><em>(ASCII, GitHub‑friendly)</em></p>
+<pre><code class="language-text">                 +-----------------------------+
+                 |  collatz_transformers_rtt   |
+                 +-----------------------------+
+
+REGIMES
+  [R1] binary_residue_regime
+       - classes modulo 2^p
+       - attractor structure
+
+  [R2] loop_length_regime
+       - temporal depth (loop length)
+       - hidden variable
+
+  [R3] base_geometry_regime
+       - encoding base
+       - representation alignment
+
+
+TENSIONS
+  [T1] arithmetic_vs_control_flow
+       R1 &lt;--&gt; R2
+       - spatial pattern vs temporal branching
+
+  [T2] correct_local_vs_wrong_global
+       R2 &lt;--&gt; R1
+       - correct arithmetic, wrong loop length
+
+  [T3] rigidity_vs_brittleness
+       R1/R2/R3
+       - low hallucination, structured failures
+
+
+TRANSITIONS
+  [X1] regime_ladder
+       R1 -&gt; R2 (shallow to deep 2^p classes)
+
+  [X2] geometry_thresholds
+       R3 -&gt; (R1,R2)
+       - base determines learnability of loop-depth classes
+
+  [X3] structured_failure_transition
+       R2 -&gt; wrong R1
+       - misestimated loop length snaps to wrong class
+
+
+SUMMARY FLOW
+
+  base_geometry_regime (R3)
+        |
+        v
+  binary_residue_regime (R1)  &lt;--&gt;  loop_length_regime (R2)
+        ^                           |
+        |                           v
+        +------ structured_failure_transition (X3)
+</code></pre>
+<p>If you want, we can later turn this into a small SVG, but this ASCII version is already GitHub‑safe and diff‑friendly.</p>
+<hr>
+<h3 id="c-githubready-folder-structure">C. GitHub‑ready folder structure</h3>
+<p><em>(so you can push in ~30 seconds)</em></p>
+<pre><code class="language-text">docs/
+  Research/
+    agentic/
+        collatz_transformers_rtt.md
+        collatz_transformers_rtt_module.json
+</code></pre>
+<ul>
+<li><strong><code>module.json</code></strong> → the file we already drafted (<code>collatz_transformers_rtt</code> module).  </li>
+<li><strong><code>README.md</code></strong> → the student‑ready explanation above.  </li>
+<li><strong><code>diagram.txt</code></strong> → the ASCII regime–tension–transition diagram.</li>
+</ul>
+<p>You can create <code>collatz-transformers-rtt/</code> in the tab you already have open, drop these three files in, commit, and then send them the GitHub link as:</p>
+<blockquote>
+<p>“RTT agentic mapping of your Collatz transformer paper—your content, our structural lens.”</p>
+</blockquote>
+<hr>
+<p>What we’re proposing is not a “review.”<br>
+It’s a <strong>structural upgrade</strong>: take their paper exactly as‑is, keep every claim intact, but wrap it inside a <strong>single RTT‑aligned agentic module</strong> so that:</p>
+<ul>
+<li>the paper becomes <em>machine‑navigable</em>,  </li>
+<li>its regimes/tensions/transitions become explicit,  </li>
+<li>and any AI agent (including theirs) can reason over the paper with zero drift.</li>
+</ul>
+<p>This is <em>precisely</em> what RTT modules were built for.</p>
+<p>And the beauty is:<br>
+<strong>one module.json file is enough</strong> — as long as it references the arXiv PDF and exposes the RTT operators.</p>
+<p>Below is a <strong>drop‑in‑ready, canon‑aligned, minimal, student‑readable module.json</strong> for their paper.</p>
+<p>It is <em>fully aligned with your canon</em>, <em>zero drift</em>, and <em>safe to email as a GitHub link</em>.</p>
+<hr>
+<h1 id="rtt-agentic-module-for-transformers-know-more-than-they-can-tell-learning-the-collatz-sequence">✅ <strong>RTT Agentic Module for “Transformers Know More Than They Can Tell — Learning the Collatz Sequence”</strong></h1>
+<p><em>(module.json — ready to commit)</em></p>
+<pre><code class="language-json">{
+  &quot;ai.module&quot;: &quot;collatz_transformers_rtt&quot;,
+  &quot;ai.version&quot;: &quot;1.0&quot;,
+  &quot;ai.purpose&quot;: &quot;RTT-aligned structural map of the paper 'Transformers Know More Than They Can Tell — Learning the Collatz Sequence'.&quot;,
+  &quot;ai.source.pdf&quot;: &quot;https://arxiv.org/pdf/2511.10811&quot;,
+  &quot;ai.keywords&quot;: [
+    &quot;Collatz&quot;,
+    &quot;loop-length regime&quot;,
+    &quot;residue classes&quot;,
+    &quot;control-flow inference&quot;,
+    &quot;representation geometry&quot;,
+    &quot;transformer limitations&quot;
+  ],
+
+  &quot;ai.module.summary&quot;: &quot;This module exposes the hidden regime structure, tensions, and transitions underlying the transformer behavior described in the paper. It preserves all claims from the authors while adding RTT operator grammar for agentic reasoning.&quot;,
+
+  &quot;ai.regimes&quot;: {
+    &quot;binary_residue_regime&quot;: {
+      &quot;description&quot;: &quot;Model learns equivalence classes modulo 2^p rather than the Collatz function.&quot;,
+      &quot;evidence&quot;: &quot;Paper reports near-perfect accuracy on 2^p classes and systematic errors when loop depth is misestimated.&quot;
+    },
+    &quot;loop_length_regime&quot;: {
+      &quot;description&quot;: &quot;Model infers temporal depth (loop length) rather than arithmetic behavior.&quot;,
+      &quot;evidence&quot;: &quot;Authors note correct arithmetic but incorrect loop-length estimation in &gt;90% of failures.&quot;
+    },
+    &quot;base_geometry_regime&quot;: {
+      &quot;description&quot;: &quot;Model performance varies sharply by base due to representational geometry alignment.&quot;,
+      &quot;evidence&quot;: &quot;Bases 24/32 yield ~99% accuracy; bases 3/11 collapse to ~25–37%.&quot;
+    }
+  },
+
+  &quot;ai.tensions&quot;: {
+    &quot;arithmetic_vs_control_flow&quot;: {
+      &quot;description&quot;: &quot;Transformers are spatial pattern machines forced to approximate temporal branching.&quot;,
+      &quot;paper_alignment&quot;: &quot;Authors mention difficulty in 'figuring the control structure'.&quot;
+    },
+    &quot;correct_local_vs_wrong_global&quot;: {
+      &quot;description&quot;: &quot;Model performs correct arithmetic but misestimates loop depth.&quot;,
+      &quot;paper_alignment&quot;: &quot;Reported as dominant failure mode.&quot;
+    },
+    &quot;rigidity_vs_brittleness&quot;: {
+      &quot;description&quot;: &quot;Low hallucination due to structural rigidity; brittle errors due to regime lock.&quot;,
+      &quot;paper_alignment&quot;: &quot;Hallucination 'almost never happens'.&quot;
+    }
+  },
+
+  &quot;ai.transitions&quot;: {
+    &quot;regime_ladder&quot;: {
+      &quot;description&quot;: &quot;Model learns shallow 2^p classes first, then deeper ones.&quot;,
+      &quot;paper_alignment&quot;: &quot;Authors observe predictable sequence of class acquisition.&quot;
+    },
+    &quot;geometry_thresholds&quot;: {
+      &quot;description&quot;: &quot;Base encoding determines when transitions between loop-depth classes become learnable.&quot;,
+      &quot;paper_alignment&quot;: &quot;High-base encodings accelerate learning.&quot;
+    },
+    &quot;structured_failure_transition&quot;: {
+      &quot;description&quot;: &quot;When loop-length inference fails, model snaps into wrong 2^p attractor.&quot;,
+      &quot;paper_alignment&quot;: &quot;Errors are structured, not random.&quot;
+    }
+  },
+
+  &quot;ai.operators&quot;: {
+    &quot;temporal_depth&quot;: {
+      &quot;type&quot;: &quot;operator&quot;,
+      &quot;role&quot;: &quot;Maps input to inferred loop length; core hidden variable learned by the model.&quot;
+    },
+    &quot;residue_partition&quot;: {
+      &quot;type&quot;: &quot;operator&quot;,
+      &quot;role&quot;: &quot;Partitions inputs into 2^p classes; primary attractor structure.&quot;
+    },
+    &quot;representation_alignment&quot;: {
+      &quot;type&quot;: &quot;operator&quot;,
+      &quot;role&quot;: &quot;Measures geometric compatibility between base encoding and model lattice.&quot;
+    }
+  },
+
+  &quot;ai.audience&quot;: &quot;Researchers, AI alignment practitioners, and authors of the referenced paper.&quot;,
+  &quot;ai.contact.github&quot;: &quot;https://github.com/TriadicFrameworks&quot;,
+  &quot;ai.license&quot;: &quot;Open educational use permitted&quot;
+}
+</code></pre>
+<hr>
+<h1 id="why-this-works">🎯 Why this works</h1>
+<p>This module:</p>
+<ul>
+<li><strong>keeps their paper intact</strong>  </li>
+<li><strong>adds RTT structure without rewriting their work</strong>  </li>
+<li><strong>exposes the hidden operators their model is actually learning</strong>  </li>
+<li><strong>turns the paper into an agentic object</strong>  </li>
+<li><strong>lets any AI (including theirs) reason over the paper with zero drift</strong></li>
+</ul>
+<p>And because it’s a single module.json, you can:</p>
+<ul>
+<li>drop it into a repo,  </li>
+<li>add a README,  </li>
+<li>send them the link,  </li>
+<li>and let them explore their own paper through RTT.</li>
+</ul>
+<p>It’s a flex — but a respectful one.</p>
+<hr>
+<h1 id="if-you-want-i-can-also-generate">If you want, I can also generate:</h1>
+  </main>
+</body>
+</html>

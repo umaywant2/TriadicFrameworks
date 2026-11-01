@@ -1,0 +1,2419 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/FFF_Gravity/f_Capture_Cascade.md">
+  <title>fCaptureCascade.md</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/FFF_Gravity/f_Capture_Cascade.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/FFF_Gravity/f_Capture_Cascade.md</code>
+  </aside>
+
+  <main>
+<h1 id="f_capture_cascademd">f_Capture_Cascade.md</h1>
+<h2 id="fff_gravity-cascade-capture-variant">FFF_Gravity — Cascade Capture Variant</h2>
+<hr>
+<pre><code>session_id: SES-20260813-CASCADE-001
+tag: &quot;[FFF:GRAVITY:CAPTURE:CASCADE]&quot;
+version: 1.0.0
+status: STABLE
+wave: 4
+file: docs/FFF_Gravity/f_Capture_Cascade.md
+module: FFF_Gravity
+dependencies:
+  - f_Capture.md        # base capture semantics — d_bind, e, r_capture
+  - f_Field.md          # ρ(Φ), coherence well, F_freq
+  - f_Force.md          # F_fluid (β), F_force (v_approach)
+  - f_Frame.md          # capacity_MAX, register_capture, GravityGraph
+  - f_Emit.md           # ρ(Φ) saturation ceiling (≤ 1.0)
+  - f_Capture_Multi.md  # Φ_perturbed, δ_perturb, k_perturb field-perturbation model
+new_operators:
+  - cascade_depth    (k_max)   # maximum chain depth before hard termination
+  - cascade_gain     (γ)       # transmission factor applied at each cascade step
+  - Ω_cascade        (k)       # cascade transmission value at depth k
+new_primitives:
+  - PRIM:027  evaluate_cascade_eligibility   Pure
+  - PRIM:028  execute_cascade_step           Impure
+new_failure_modes:
+  - FM-003-C  # sub-mode of FM-003 — Cascade Frame Saturation (partial-chain state)
+inv_compliance: enforced   # INV-001–INV-010
+</code></pre>
+<h2 id="0-session-context">§0 — Session Context</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Session ID</td>
+<td>SES-20260813-CASCADE-001</td>
+</tr>
+<tr>
+<td>Tag</td>
+<td>[FFF:GRAVITY:CAPTURE:CASCADE]</td>
+</tr>
+<tr>
+<td>Timestamp</td>
+<td>2026-08-13T21:52 EDT</td>
+</tr>
+<tr>
+<td>Wave</td>
+<td>4 — Capture Variants</td>
+</tr>
+<tr>
+<td>Wave Position</td>
+<td>File 2 of 6 in Wave 4</td>
+</tr>
+<tr>
+<td>Prior file</td>
+<td>f_Capture_Multi.md (PRIM:025–026, FM-003-M)</td>
+</tr>
+<tr>
+<td>Next file</td>
+<td>f_Capture_Soft.md</td>
+</tr>
+<tr>
+<td>PRIM block</td>
+<td>PRIM:027–028 (Wave 4 block; PRIM:025–026 assigned to Multi)</td>
+</tr>
+<tr>
+<td>FM registry</td>
+<td>Frozen at FM-001–FM-010. Sub-modes only.</td>
+</tr>
+<tr>
+<td>INV registry</td>
+<td>Frozen at INV-001–INV-010. All enforced.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="01-architectural-position">§0.1 — Architectural Position</h3>
+<p><code>f_Capture_Cascade.md</code> defines <strong>cascade capture</strong>: a sequential chain mechanism in which
+one successful capture event triggers evaluation of a downstream candidate, propagating
+through depth <code>k</code> until the chain terminates naturally, hits a depth bound, or exhausts
+frame capacity.</p>
+<p><strong>Distinction from Multi-Capture</strong> (<code>f_Capture_Multi.md</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Multi-Capture (f_Capture_Multi.md)</th>
+<th>Cascade Capture (this file)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Structure</td>
+<td>Breadth — N independent candidates in parallel</td>
+<td>Depth — sequential chain, one step at a time</td>
+</tr>
+<tr>
+<td>Coupling</td>
+<td>Candidates are independent</td>
+<td>Step k output is step k+1 stimulus</td>
+</tr>
+<tr>
+<td>Termination</td>
+<td>Exhausted candidate list or FM-003-M</td>
+<td>Binding failure, depth bound, or FM-003-C</td>
+</tr>
+<tr>
+<td>Field model</td>
+<td>Φ_perturbed degrades per candidate</td>
+<td>Φ_perturbed degrades per chain step</td>
+</tr>
+<tr>
+<td>Gain</td>
+<td>Not applicable</td>
+<td>γ — amplifies or attenuates across steps</td>
+</tr>
+</tbody>
+</table>
+<p>Cascade and Multi are orthogonal variants. A cascade where each step is itself a
+multi-capture batch is a valid extension (see §9 cross-references) but is not
+specified in this file.</p>
+<hr>
+<h2 id="1-module-identity">§1 — Module Identity</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>File</td>
+<td><code>docs/FFF_Gravity/f_Capture_Cascade.md</code></td>
+</tr>
+<tr>
+<td>Module</td>
+<td>FFF_Gravity</td>
+</tr>
+<tr>
+<td>Layer</td>
+<td>Capture Variant — applied over Layer 1/2/3 substrate</td>
+</tr>
+<tr>
+<td>Core equation</td>
+<td>G = F_freq · F_fluid · F_force (INV-001)</td>
+</tr>
+<tr>
+<td>Capture variant</td>
+<td>Sequential chain — Ω_cascade(k) = Ω_cascade(k−1) × γ</td>
+</tr>
+<tr>
+<td>Conditions</td>
+<td>CAS-1 through CAS-4 (conjunctive per INV-005)</td>
+</tr>
+<tr>
+<td>Failure sub-mode</td>
+<td>FM-003-C (Cascade Frame Saturation)</td>
+</tr>
+<tr>
+<td>New primitives</td>
+<td>PRIM:027, PRIM:028</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>STABLE</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="2-canonical-description">§2 — Canonical Description</h2>
+<h3 id="21-mechanism">§2.1 — Mechanism</h3>
+<p>A cascade capture begins with an initial binding event — the <strong>trigger capture</strong> at depth
+<code>k = 0</code>. The trigger capture is a standard capture (per <code>f_Capture.md</code>) that produces
+a binding value <code>Ω_cascade(0)</code> equal to the achieved <code>d_bind(0)</code>.</p>
+<p>At each subsequent depth <code>k ≥ 1</code>:</p>
+<ol>
+<li>
+<p><strong>Transmission:</strong> The prior step's output is multiplied by the cascade gain <code>γ</code>:
+   <code>Ω_cascade(k) = Ω_cascade(k−1) × γ</code></p>
+</li>
+<li>
+<p><strong>Field perturbation:</strong> The field at depth <code>k</code> is degraded from the trigger field
+   using the same perturbation model as <code>f_Capture_Multi.md</code>:
+   <code>Φ_perturbed(k) = Φ_perturbed(k−1) − δ_perturb(k)</code></p>
+</li>
+<li>
+<p><strong>Binding threshold at depth k:</strong>
+   <code>d_bind(k) = β × ρ(Φ_perturbed(k)) × (1 − e(k))</code></p>
+</li>
+<li>
+<p><strong>Eligibility check:</strong> Step k captures the downstream candidate if and only if
+   all four cascade conditions CAS-1 through CAS-4 hold. The critical check:
+   <code>Ω_cascade(k) ≥ d_bind(k)</code></p>
+</li>
+<li>
+<p><strong>Frame registration:</strong> On success, the downstream element is registered in the
+   Frame via <code>register_capture</code> (PRIM:003). Frame capacity is guarded by CAS-4.</p>
+</li>
+</ol>
+<h3 id="22-gain-regimes">§2.2 — Gain Regimes</h3>
+<table>
+<thead>
+<tr>
+<th>γ value</th>
+<th>Regime</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>γ &gt; 1.0</td>
+<td>Amplifying</td>
+<td>Each step carries more transmission than the last; chain grows</td>
+</tr>
+<tr>
+<td>γ = 1.0</td>
+<td>Neutral</td>
+<td>Transmission is preserved; chain length governed by field decay alone</td>
+</tr>
+<tr>
+<td>0 &lt; γ &lt; 1</td>
+<td>Attenuating</td>
+<td>Each step carries less; chain terminates when Ω_cascade &lt; d_bind</td>
+</tr>
+<tr>
+<td>γ ≤ 0</td>
+<td>Invalid</td>
+<td>Violates CAS-1; cascade is rejected before any step executes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-termination-taxonomy">§2.3 — Termination Taxonomy</h3>
+<p>A cascade terminates under exactly one of four conditions (whichever is reached first):</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Condition</th>
+<th>State at termination</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T-NAT</td>
+<td>Ω_cascade(k) &lt; d_bind(k)</td>
+<td>Natural termination — chain exhausted</td>
+</tr>
+<tr>
+<td>T-DEPTH</td>
+<td>k = k_max</td>
+<td>Depth bound — hard ceiling reached</td>
+</tr>
+<tr>
+<td>T-CAP</td>
+<td>FM-003-C triggered</td>
+<td>Frame saturation mid-chain (partial state)</td>
+</tr>
+<tr>
+<td>T-INIT</td>
+<td>CAS-1 violated (γ ≤ 0)</td>
+<td>Chain never starts — pre-flight rejection</td>
+</tr>
+</tbody>
+</table>
+<h3 id="24-partial-cascade-state-t-cap">§2.4 — Partial Cascade State (T-CAP)</h3>
+<p>When FM-003-C fires, the cascade halts with <code>m &lt; k_max</code> successful steps. Elements
+captured in steps 0 through <code>m−1</code> remain bound; the element at step <code>m</code> is <strong>not</strong>
+captured. The system enters <code>PARTIAL_CASCADE</code> — a recoverable state requiring
+<code>purge_registry</code> (PRIM:004) or field amplification via <code>f_Emit.md</code> before a new
+cascade can be initiated.</p>
+<hr>
+<h2 id="3-triadic-equation">§3 — Triadic Equation</h2>
+<h3 id="31-base-triadic-identity-inv-001">§3.1 — Base Triadic Identity (INV-001)</h3>
+<pre><code>G = F_freq · F_fluid · F_force
+</code></pre>
+<p>All three nodes are inseparable. Cascade does not relax this invariant.</p>
+<h3 id="32-cascade-specialized-form">§3.2 — Cascade-Specialized Form</h3>
+<p>At chain depth <code>k</code>, the triadic equation maps as:</p>
+<pre><code>G_cascade(k) = ρ(Φ_perturbed(k))  ·  β  ·  Ω_cascade(k)
+               └── F_freq node ──┘  └F_fluid┘  └── F_force node ──┘
+</code></pre>
+<p>Where:</p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Node</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ρ(Φ_perturbed(k))</td>
+<td>F_freq</td>
+<td>Coherence well at cascade depth k, field-perturbed</td>
+</tr>
+<tr>
+<td>β</td>
+<td>F_fluid</td>
+<td>Binding capacity — invariant across all steps</td>
+</tr>
+<tr>
+<td>Ω_cascade(k)</td>
+<td>F_force</td>
+<td>Cascade transmission force at depth k</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-cascade-recurrence">§3.3 — Cascade Recurrence</h3>
+<pre><code>Ω_cascade(0) = d_bind(0)                          # trigger capture binding value
+Ω_cascade(k) = Ω_cascade(k−1) × γ,   k ≥ 1      # geometric transmission
+</code></pre>
+<h3 id="34-binding-condition-at-depth-k">§3.4 — Binding Condition at Depth k</h3>
+<pre><code>Ω_cascade(k) ≥ d_bind(k)
+</code></pre>
+<p>Where:</p>
+<pre><code>d_bind(k) = β × ρ(Φ_perturbed(k)) × (1 − e(k))
+Φ_perturbed(k) = Φ_perturbed(k−1) − δ_perturb(k)
+δ_perturb(k)   = d_bind(k−1) × (1 − e(k−1)) × k_perturb
+</code></pre>
+<h3 id="35-chain-length-formula">§3.5 — Chain Length Formula</h3>
+<p>In the purely attenuating case (γ &lt; 1, constant e, constant k_perturb):</p>
+<pre><code>k_terminate ≈ log(d_bind_base / Ω_cascade(0)) / log(γ / (1 − k_perturb))
+</code></pre>
+<p>This gives an analytic estimate of natural chain depth before numerical evaluation.</p>
+<hr>
+<h2 id="4-operator-registry">§4 — Operator Registry</h2>
+<h3 id="41-cascade_depth-k_max">§4.1 — cascade_depth (k_max)</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Symbol</td>
+<td><code>k_max</code></td>
+</tr>
+<tr>
+<td>Type</td>
+<td><code>int</code>, k_max ≥ 1</td>
+</tr>
+<tr>
+<td>Domain</td>
+<td>Positive integers</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Maximum chain depth; hard termination at k = k_max regardless of Ω</td>
+</tr>
+<tr>
+<td>Default</td>
+<td>System-configured; recommend ≤ 16 to bound frame load</td>
+</tr>
+<tr>
+<td>Guard</td>
+<td>CAS-2. Violation → T-DEPTH termination (not an error)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-cascade_gain">§4.2 — cascade_gain (γ)</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Symbol</td>
+<td><code>γ</code> (<code>gamma</code>)</td>
+</tr>
+<tr>
+<td>Type</td>
+<td><code>float</code>, γ &gt; 0</td>
+</tr>
+<tr>
+<td>Domain</td>
+<td>(0, ∞). Values &gt; 1 amplify; values &lt; 1 attenuate.</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Transmission factor applied to Ω_cascade at each chain step</td>
+</tr>
+<tr>
+<td>Guard</td>
+<td>CAS-1. γ ≤ 0 → T-INIT rejection before any step</td>
+</tr>
+<tr>
+<td>Warning</td>
+<td>γ &gt; 1 in amplifying regime risks rapid FM-003-C saturation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-_cascade-cascade-transmission">§4.3 — Ω_cascade (cascade transmission)</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Symbol</td>
+<td><code>Ω_cascade(k)</code></td>
+</tr>
+<tr>
+<td>Type</td>
+<td><code>float</code>, Ω_cascade(k) ≥ 0</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Cascade transmission value at depth k; represents binding stimulus</td>
+</tr>
+<tr>
+<td></td>
+<td>carried forward from the prior step</td>
+</tr>
+<tr>
+<td>Recurrence</td>
+<td>Ω_cascade(0) = d_bind(0); Ω_cascade(k) = Ω_cascade(k−1) × γ</td>
+</tr>
+<tr>
+<td>Guard</td>
+<td>CAS-3. Ω_cascade(k) &lt; d_bind(k) → T-NAT termination</td>
+</tr>
+</tbody>
+</table>
+<h3 id="44-inherited-operators-from-f_capture_multimd">§4.4 — Inherited Operators (from f_Capture_Multi.md)</h3>
+<p>The field perturbation model is carried forward unchanged:</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Source</th>
+<th>Role in cascade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Φ_perturbed(k)</td>
+<td>f_Capture_Multi.md</td>
+<td>Field at cascade depth k</td>
+</tr>
+<tr>
+<td>δ_perturb(k)</td>
+<td>f_Capture_Multi.md</td>
+<td>Per-step field decrement</td>
+</tr>
+<tr>
+<td>k_perturb</td>
+<td>f_Capture_Multi.md</td>
+<td>Perturbation rate coefficient (system constant)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="45-operator-interaction-map">§4.5 — Operator Interaction Map</h3>
+<pre><code>Ω_cascade(k−1) ──×γ──→ Ω_cascade(k) ──┐
+                                        ├──→ CAS-3: Ω_cascade(k) ≥ d_bind(k)?
+d_bind(k) = β·ρ(Φ_perturbed(k))·(1−e) ─┘         │
+                                                    ├─ YES → register_capture (PRIM:003)
+Φ_perturbed(k) = Φ_perturbed(k−1) − δ_perturb(k)  │         advance to k+1
+                                                    └─ NO  → T-NAT termination
+</code></pre>
+<hr>
+<h2 id="5-cascade-conditions">§5 — Cascade Conditions</h2>
+<p>All four conditions are <strong>conjunctive</strong> (INV-005): all must hold at each step for the
+cascade to proceed. Failure of any one condition terminates the chain.</p>
+<h3 id="cas-1-gain-positivity">CAS-1 — Gain Positivity</h3>
+<pre><code>γ &gt; 0
+</code></pre>
+<p>Evaluated once before the chain initiates. γ ≤ 0 is a pre-flight violation (T-INIT).</p>
+<p><strong>Rationale:</strong> Negative or zero gain inverts or eliminates transmission, producing
+undefined or degenerate chain behavior. The cascade model does not support these regimes.</p>
+<h3 id="cas-2-depth-bound">CAS-2 — Depth Bound</h3>
+<pre><code>k &lt; k_max  at the point of chain entry for step k
+</code></pre>
+<p>Evaluated at the start of each step. When k = k_max, the step is not attempted; the
+chain terminates as T-DEPTH. This is a <strong>clean</strong> termination — not an error state.</p>
+<p><strong>Rationale:</strong> Unbounded cascade chains can exhaust frame capacity and computational
+resources. k_max imposes a hard architectural ceiling.</p>
+<h3 id="cas-3-binding-threshold">CAS-3 — Binding Threshold</h3>
+<pre><code>Ω_cascade(k) ≥ d_bind(k)
+</code></pre>
+<p>Evaluated at each step after computing Ω_cascade(k) and d_bind(k). Failure → T-NAT.</p>
+<p><strong>Rationale:</strong> Transmission must exceed the binding cost of the downstream candidate.
+This is the cascade analog of the standard capture binding check from <code>f_Capture.md</code>.</p>
+<h3 id="cas-4-frame-capacity-guard-fm-003-c">CAS-4 — Frame Capacity Guard (FM-003-C)</h3>
+<pre><code>frame_count + 1 ≤ capacity_MAX
+</code></pre>
+<p>Evaluated before each <code>register_capture</code> call. Failure → FM-003-C (T-CAP).</p>
+<p><strong>Rationale:</strong> The Frame has a hard capacity ceiling (INV-003). A cascade must not
+bypass this ceiling, even mid-chain. See §6 for FM-003-C details.</p>
+<h3 id="51-condition-evaluation-order">§5.1 — Condition Evaluation Order</h3>
+<pre><code>CAS-1 (pre-flight) → [loop begins]
+  CAS-2 (depth) → CAS-3 (binding) → CAS-4 (capacity) → register → advance k
+                                                          [repeat]
+</code></pre>
+<p>CAS-1 is evaluated once. CAS-2, CAS-3, CAS-4 are re-evaluated at every step.</p>
+<hr>
+<h2 id="6-failure-modes">§6 — Failure Modes</h2>
+<blockquote>
+<p>FM registry is frozen at FM-001–FM-010. No new FM IDs are introduced.
+FM-003-C is a sub-mode of FM-003 (Frame Saturation) specific to cascade context.</p>
+</blockquote>
+<h3 id="fm-003-c-cascade-frame-saturation">FM-003-C — Cascade Frame Saturation</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>FM-003-C (sub-mode of FM-003)</td>
+</tr>
+<tr>
+<td>Severity</td>
+<td>FATAL (for this cascade chain)</td>
+</tr>
+<tr>
+<td>Domain</td>
+<td>Layer 3 — Frame</td>
+</tr>
+<tr>
+<td>Trigger</td>
+<td>CAS-4 fails: frame_count + 1 &gt; capacity_MAX mid-cascade</td>
+</tr>
+<tr>
+<td>State</td>
+<td>PARTIAL_CASCADE — elements at k=0…m−1 bound; step m not executed</td>
+</tr>
+<tr>
+<td>Recovery path</td>
+<td><code>purge_registry</code> (PRIM:004) to free slots, then re-initiate chain</td>
+</tr>
+<tr>
+<td></td>
+<td>OR <code>f_Emit.md</code> to raise ρ(Φ) → capacity_MAX expansion</td>
+</tr>
+<tr>
+<td>Cascade effect</td>
+<td>Chain halts immediately; no further steps are attempted</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Distinction from FM-003 (base Frame Saturation):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>FM-003 (base)</th>
+<th>FM-003-C (cascade)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Context</td>
+<td>Single or multi-capture overflow</td>
+<td>Mid-chain saturation during cascade</td>
+</tr>
+<tr>
+<td>State left</td>
+<td>Frame full, clean boundary</td>
+<td>Partial cascade — chain half-committed</td>
+</tr>
+<tr>
+<td>Recovery complexity</td>
+<td>Standard purge or emit</td>
+<td>Must also decide whether to re-enter chain</td>
+</tr>
+<tr>
+<td>Notification</td>
+<td>GravityGraph: FRAME_SATURATED</td>
+<td>GravityGraph: CASCADE_INTERRUPTED</td>
+</tr>
+</tbody>
+</table>
+<h3 id="61-active-fm-guards-during-cascade">§6.1 — Active FM Guards During Cascade</h3>
+<p>All 10 base failure modes remain active throughout cascade execution:</p>
+<table>
+<thead>
+<tr>
+<th>FM</th>
+<th>Domain</th>
+<th>Relevance in cascade context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FM-001</td>
+<td>F_force</td>
+<td>v_approach guards still apply at each step's target candidate</td>
+</tr>
+<tr>
+<td>FM-002</td>
+<td>F_freq</td>
+<td>ρ(Φ) floor must not drop to zero (chain collapses naturally before)</td>
+</tr>
+<tr>
+<td>FM-003</td>
+<td>Frame</td>
+<td>Base saturation; FM-003-C is the cascade sub-mode</td>
+</tr>
+<tr>
+<td>FM-004</td>
+<td>Decay</td>
+<td>Existing orbits may decay while cascade executes</td>
+</tr>
+<tr>
+<td>FM-005</td>
+<td>Decay</td>
+<td>A decay spiral on existing orbit does not block cascade</td>
+</tr>
+<tr>
+<td>FM-006</td>
+<td>F_force</td>
+<td>Escape velocity guard active per step</td>
+</tr>
+<tr>
+<td>FM-007</td>
+<td>F_fluid</td>
+<td>Mass-parity guard does not block cascade; affects orbit quality</td>
+</tr>
+<tr>
+<td>FM-008</td>
+<td>Release</td>
+<td>Not triggered during capture; relevant post-cascade</td>
+</tr>
+<tr>
+<td>FM-009</td>
+<td>Dampen</td>
+<td>Dampening a live cascade field — see CAS-4 interaction note</td>
+</tr>
+<tr>
+<td>FM-010</td>
+<td>F_freq/β</td>
+<td>ρ(Φ) ceiling and β ceiling enforced; amplification is blocked</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>CAS-4 / FM-009 interaction:</strong> If <code>f_Dampen.md</code> fires mid-cascade (DAMP-C-3
+active-orbit guard), ρ(Φ) may drop enough to make CAS-3 fail at the next step,
+producing a T-NAT termination that is causally attributable to dampening. The
+GravityGraph notification should record this causal chain.</p>
+</blockquote>
+<hr>
+<h2 id="7-engineering-primitives">§7 — Engineering Primitives</h2>
+<h3 id="prim027-evaluate_cascade_eligibility-pure">PRIM:027 — evaluate_cascade_eligibility (Pure)</h3>
+<p><strong>Classification:</strong> Pure — no side effects, no registry mutation.</p>
+<p><strong>Purpose:</strong> Evaluate whether cascade step <code>k</code> is eligible to execute, returning
+a structured eligibility result with margin and termination reason.</p>
+<pre><code class="language-python">from dataclasses import dataclass
+from typing import Optional
+
+
+@dataclass
+class CascadeEligibility:
+    &quot;&quot;&quot;Result of a cascade step eligibility evaluation.&quot;&quot;&quot;
+    eligible: bool
+    k: int
+    omega_k: float
+    d_bind_k: float
+    margin: float                   # omega_k - d_bind_k; positive = eligible
+    termination_reason: Optional[str]  # None if eligible; T-NAT / T-DEPTH / T-CAP / T-INIT
+
+
+def evaluate_cascade_eligibility(
+    omega_k: float,
+    d_bind_k: float,
+    k: int,
+    k_max: int,
+    frame_count: int,
+    capacity_MAX: int,
+    gamma: float,
+) -&gt; CascadeEligibility:
+    &quot;&quot;&quot;
+    Evaluate cascade step k for eligibility under conditions CAS-1 through CAS-4.
+
+    This function is PURE — it does not mutate any external state.
+    All four conditions are conjunctive; the first failure encountered terminates.
+
+    Parameters
+    ----------
+    omega_k       : float  — Cascade transmission at depth k (already computed).
+    d_bind_k      : float  — Binding threshold at depth k (field-perturbed).
+    k             : int    — Current cascade depth (0-indexed, where k=0 is trigger).
+    k_max         : int    — Maximum allowed cascade depth (hard ceiling).
+    frame_count   : int    — Current number of registered elements in Frame.
+    capacity_MAX  : int    — Maximum Frame capacity (from f_Frame.md §4.3).
+    gamma         : float  — Cascade gain coefficient (checked for CAS-1 pre-flight).
+
+    Returns
+    -------
+    CascadeEligibility
+        eligible           : True iff all four conditions pass.
+        k                  : Echo of depth parameter.
+        omega_k            : Echo of cascade transmission.
+        d_bind_k           : Echo of binding threshold.
+        margin             : omega_k - d_bind_k (positive = eligible on CAS-3).
+        termination_reason : None if eligible; one of T-INIT / T-DEPTH / T-NAT / T-CAP.
+
+    Invariants enforced
+    -------------------
+    INV-001 : F_freq · F_fluid · F_force inseparability — all three nodes
+              contributed to producing omega_k and d_bind_k upstream.
+    INV-005 : Conditions are conjunctive; all must pass.
+
+    Examples
+    --------
+    &gt;&gt;&gt; evaluate_cascade_eligibility(
+    ...     omega_k=0.48, d_bind_k=0.285, k=1, k_max=10,
+    ...     frame_count=2, capacity_MAX=8, gamma=0.6
+    ... )
+    CascadeEligibility(eligible=True, k=1, omega_k=0.48, d_bind_k=0.285,
+                       margin=0.195, termination_reason=None)
+
+    &gt;&gt;&gt; evaluate_cascade_eligibility(
+    ...     omega_k=0.173, d_bind_k=0.255, k=3, k_max=10,
+    ...     frame_count=2, capacity_MAX=8, gamma=0.6
+    ... )
+    CascadeEligibility(eligible=False, k=3, omega_k=0.173, d_bind_k=0.255,
+                       margin=-0.082, termination_reason='T-NAT')
+    &quot;&quot;&quot;
+    # CAS-1: Gain Positivity (pre-flight; caller should check before loop,
+    # but guarded here defensively)
+    if gamma &lt;= 0.0:
+        return CascadeEligibility(
+            eligible=False, k=k, omega_k=omega_k, d_bind_k=d_bind_k,
+            margin=omega_k - d_bind_k, termination_reason=&quot;T-INIT&quot;
+        )
+
+    # CAS-2: Depth Bound
+    if k &gt;= k_max:
+        return CascadeEligibility(
+            eligible=False, k=k, omega_k=omega_k, d_bind_k=d_bind_k,
+            margin=omega_k - d_bind_k, termination_reason=&quot;T-DEPTH&quot;
+        )
+
+    # CAS-3: Binding Threshold
+    margin = omega_k - d_bind_k
+    if margin &lt; 0.0:
+        return CascadeEligibility(
+            eligible=False, k=k, omega_k=omega_k, d_bind_k=d_bind_k,
+            margin=margin, termination_reason=&quot;T-NAT&quot;
+        )
+
+    # CAS-4: Frame Capacity Guard (FM-003-C)
+    if frame_count + 1 &gt; capacity_MAX:
+        return CascadeEligibility(
+            eligible=False, k=k, omega_k=omega_k, d_bind_k=d_bind_k,
+            margin=margin, termination_reason=&quot;T-CAP&quot;
+        )
+
+    return CascadeEligibility(
+        eligible=True, k=k, omega_k=omega_k, d_bind_k=d_bind_k,
+        margin=margin, termination_reason=None
+    )
+</code></pre>
+<p><strong>Parameter table:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Constraint</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>omega_k</td>
+<td>float</td>
+<td>≥ 0</td>
+<td>Pre-computed cascade transmission at depth k</td>
+</tr>
+<tr>
+<td>d_bind_k</td>
+<td>float</td>
+<td>&gt; 0</td>
+<td>Field-perturbed binding threshold at depth k</td>
+</tr>
+<tr>
+<td>k</td>
+<td>int</td>
+<td>≥ 0</td>
+<td>Cascade depth (0 = trigger capture)</td>
+</tr>
+<tr>
+<td>k_max</td>
+<td>int</td>
+<td>≥ 1</td>
+<td>Hard depth ceiling</td>
+</tr>
+<tr>
+<td>frame_count</td>
+<td>int</td>
+<td>≥ 0</td>
+<td>Elements currently registered in Frame</td>
+</tr>
+<tr>
+<td>capacity_MAX</td>
+<td>int</td>
+<td>≥ 1</td>
+<td>Frame capacity ceiling from f_Frame.md</td>
+</tr>
+<tr>
+<td>gamma</td>
+<td>float</td>
+<td>&gt; 0 required</td>
+<td>Cascade gain (validated for CAS-1)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return schema:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eligible</td>
+<td>bool</td>
+<td>True iff all four conditions pass</td>
+</tr>
+<tr>
+<td>k</td>
+<td>int</td>
+<td>Echo of depth</td>
+</tr>
+<tr>
+<td>omega_k</td>
+<td>float</td>
+<td>Echo of cascade transmission</td>
+</tr>
+<tr>
+<td>d_bind_k</td>
+<td>float</td>
+<td>Echo of binding threshold</td>
+</tr>
+<tr>
+<td>margin</td>
+<td>float</td>
+<td>omega_k − d_bind_k; negative signals T-NAT</td>
+</tr>
+<tr>
+<td>termination_reason</td>
+<td>str</td>
+<td>None if eligible; T-INIT / T-DEPTH / T-NAT / T-CAP</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="prim028-execute_cascade_step-impure">PRIM:028 — execute_cascade_step (Impure)</h3>
+<p><strong>Classification:</strong> Impure — mutates GravityGraph registry on success.</p>
+<p><strong>Purpose:</strong> Execute one cascade step: compute Ω_cascade(k) and d_bind(k), evaluate
+eligibility via PRIM:027, register the element if eligible, and advance state for
+the next step.</p>
+<pre><code class="language-python">from dataclasses import dataclass, field
+from typing import Any, Optional
+
+
+@dataclass
+class CascadeStepResult:
+    &quot;&quot;&quot;Result of executing a single cascade step.&quot;&quot;&quot;
+    status: str                       # CAPTURED / TERMINATED / FM-003-C
+    k: int                            # cascade depth at which result was determined
+    omega_k: float                    # cascade transmission at this step
+    d_bind_k: float                   # binding threshold at this step
+    phi_perturbed_k: float            # field value after perturbation at this step
+    frame_count: int                  # frame count after this step (updated on CAPTURED)
+    termination_reason: Optional[str] # None on CAPTURED; T-NAT / T-DEPTH / T-CAP / T-INIT
+    margin: float                     # omega_k - d_bind_k
+
+
+def execute_cascade_step(
+    omega_prev: float,
+    gamma: float,
+    phi_perturbed_prev: float,
+    k_perturb: float,
+    d_bind_prev: float,
+    e_prev: float,
+    beta: float,
+    e_k: float,
+    k: int,
+    k_max: int,
+    frame_count: int,
+    capacity_MAX: int,
+    registry: Any,          # GravityGraph instance (f_Frame.md §4.5)
+    element_id: str,
+) -&gt; CascadeStepResult:
+    &quot;&quot;&quot;
+    Execute a single cascade step k, integrating field perturbation,
+    transmission propagation, eligibility evaluation, and registry update.
+
+    This function is IMPURE — it calls register_capture (PRIM:003) on
+    the registry when the step is eligible, mutating Frame state.
+
+    Parameters
+    ----------
+    omega_prev          : float  — Ω_cascade(k−1); cascade transmission from prior step.
+    gamma               : float  — Cascade gain coefficient γ. Must be &gt; 0 (CAS-1).
+    phi_perturbed_prev  : float  — Φ_perturbed(k−1); field value after prior perturbation.
+    k_perturb           : float  — Perturbation rate coefficient (system constant).
+                                   From f_Capture_Multi.md §4.4.
+    d_bind_prev         : float  — d_bind(k−1); prior step's binding threshold.
+    e_prev              : float  — eccentricity at step k−1 (for δ_perturb computation).
+    beta                : float  — F_fluid binding capacity (invariant across chain).
+    e_k                 : float  — eccentricity at step k (for d_bind(k) computation).
+    k                   : int    — Current cascade depth (k ≥ 1).
+    k_max               : int    — Maximum cascade depth (CAS-2 ceiling).
+    frame_count         : int    — Current Frame registration count before this step.
+    capacity_MAX        : int    — Frame capacity ceiling (CAS-4).
+    registry            : Any    — GravityGraph instance; mutated on CAPTURED.
+    element_id          : str    — Identifier of the downstream candidate at depth k.
+
+    Returns
+    -------
+    CascadeStepResult with fields described in class definition above.
+
+    Side effects
+    ------------
+    On CAPTURED: calls registry.register_capture(element_id, ...) — mutates Frame.
+    On TERMINATED / FM-003-C: no registry mutation.
+
+    On FM-003-C: emits GravityGraph notification CASCADE_INTERRUPTED.
+
+    Formulas applied (in order)
+    ---------------------------
+    1. δ_perturb(k) = d_bind_prev × (1 − e_prev) × k_perturb
+    2. Φ_perturbed(k) = phi_perturbed_prev − δ_perturb(k)
+       Φ_perturbed(k) = max(Φ_perturbed(k), 0.0)      # floor at 0
+    3. ρ(Φ_perturbed(k)) = Φ_perturbed(k)              # simplified linear mapping
+    4. d_bind(k) = beta × ρ(Φ_perturbed(k)) × (1 − e_k)
+    5. Ω_cascade(k) = omega_prev × gamma
+    6. eligibility = evaluate_cascade_eligibility(...)  # PRIM:027
+
+    Invariants enforced
+    -------------------
+    INV-001 : Triadic product intact — ρ(Φ_perturbed(k)) · β · Ω_cascade(k).
+    INV-003 : Frame capacity ceiling via CAS-4 / FM-003-C.
+    INV-005 : CAS-1..CAS-4 conjunctive.
+
+    Examples
+    --------
+    &gt;&gt;&gt; result = execute_cascade_step(
+    ...     omega_prev=0.8, gamma=0.6,
+    ...     phi_perturbed_prev=0.9, k_perturb=0.05,
+    ...     d_bind_prev=0.3, e_prev=0.1,
+    ...     beta=0.5, e_k=0.1,
+    ...     k=1, k_max=10, frame_count=2, capacity_MAX=8,
+    ...     registry=graph, element_id=&quot;E-beta-1&quot;
+    ... )
+    &gt;&gt;&gt; result.status
+    'CAPTURED'
+    &gt;&gt;&gt; result.omega_k
+    0.48
+    &quot;&quot;&quot;
+    # Step 1: Field perturbation
+    delta_perturb_k = d_bind_prev * (1.0 - e_prev) * k_perturb
+    phi_perturbed_k = max(phi_perturbed_prev - delta_perturb_k, 0.0)
+
+    # Step 2: Field coherence at depth k (linear mapping)
+    rho_phi_k = phi_perturbed_k
+
+    # Step 3: Binding threshold at depth k
+    d_bind_k = beta * rho_phi_k * (1.0 - e_k)
+
+    # Step 4: Cascade transmission at depth k
+    omega_k = omega_prev * gamma
+
+    # Step 5: Eligibility evaluation (PRIM:027 — pure)
+    eligibility = evaluate_cascade_eligibility(
+        omega_k=omega_k,
+        d_bind_k=d_bind_k,
+        k=k,
+        k_max=k_max,
+        frame_count=frame_count,
+        capacity_MAX=capacity_MAX,
+        gamma=gamma,
+    )
+
+    if not eligibility.eligible:
+        # FM-003-C: special notification for capacity exhaustion mid-chain
+        if eligibility.termination_reason == &quot;T-CAP&quot;:
+            registry.notify(&quot;CASCADE_INTERRUPTED&quot;, {
+                &quot;element_id&quot;: element_id,
+                &quot;k&quot;: k,
+                &quot;frame_count&quot;: frame_count,
+                &quot;capacity_MAX&quot;: capacity_MAX,
+                &quot;fm&quot;: &quot;FM-003-C&quot;,
+            })
+            return CascadeStepResult(
+                status=&quot;FM-003-C&quot;, k=k, omega_k=omega_k, d_bind_k=d_bind_k,
+                phi_perturbed_k=phi_perturbed_k, frame_count=frame_count,
+                termination_reason=&quot;T-CAP&quot;, margin=eligibility.margin
+            )
+
+        return CascadeStepResult(
+            status=&quot;TERMINATED&quot;, k=k, omega_k=omega_k, d_bind_k=d_bind_k,
+            phi_perturbed_k=phi_perturbed_k, frame_count=frame_count,
+            termination_reason=eligibility.termination_reason,
+            margin=eligibility.margin
+        )
+
+    # Step 6: Register capture — IMPURE (mutates registry)
+    registry.register_capture(element_id, d_bind=d_bind_k, depth=k)
+    new_frame_count = frame_count + 1
+
+    return CascadeStepResult(
+        status=&quot;CAPTURED&quot;, k=k, omega_k=omega_k, d_bind_k=d_bind_k,
+        phi_perturbed_k=phi_perturbed_k, frame_count=new_frame_count,
+        termination_reason=None, margin=eligibility.margin
+    )
+</code></pre>
+<p><strong>Parameter table:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Constraint</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>omega_prev</td>
+<td>float</td>
+<td>≥ 0</td>
+<td>Cascade transmission from prior step</td>
+</tr>
+<tr>
+<td>gamma</td>
+<td>float</td>
+<td>&gt; 0</td>
+<td>Cascade gain (CAS-1 enforced inside PRIM:027)</td>
+</tr>
+<tr>
+<td>phi_perturbed_prev</td>
+<td>float</td>
+<td>[0, 1]</td>
+<td>Field value at prior step</td>
+</tr>
+<tr>
+<td>k_perturb</td>
+<td>float</td>
+<td>[0, 1)</td>
+<td>Perturbation sensitivity coefficient</td>
+</tr>
+<tr>
+<td>d_bind_prev</td>
+<td>float</td>
+<td>≥ 0</td>
+<td>Binding demand at prior step (for δ_perturb calc)</td>
+</tr>
+<tr>
+<td>e_prev</td>
+<td>float</td>
+<td>[0, 1)</td>
+<td>Eccentricity at prior step (for δ_perturb calc)</td>
+</tr>
+<tr>
+<td>beta</td>
+<td>float</td>
+<td>[0, 1]</td>
+<td>Binding coefficient β at current step</td>
+</tr>
+<tr>
+<td>e_k</td>
+<td>float</td>
+<td>[0, 1)</td>
+<td>Eccentricity of current candidate element</td>
+</tr>
+<tr>
+<td>k</td>
+<td>int</td>
+<td>≥ 1</td>
+<td>Current step index (1-based)</td>
+</tr>
+<tr>
+<td>k_max</td>
+<td>int</td>
+<td>≥ 1</td>
+<td>Maximum chain depth (CAS-2 ceiling)</td>
+</tr>
+<tr>
+<td>frame_count</td>
+<td>int</td>
+<td>≥ 0</td>
+<td>Current count of bound elements in registry</td>
+</tr>
+<tr>
+<td>capacity_MAX</td>
+<td>int</td>
+<td>≥ 1</td>
+<td>Registry hard capacity (FM-003-C guard)</td>
+</tr>
+<tr>
+<td>registry</td>
+<td>list</td>
+<td>—</td>
+<td>Mutable registry of currently bound elements</td>
+</tr>
+<tr>
+<td>element_id</td>
+<td>str</td>
+<td>non-empty</td>
+<td>Identifier of candidate element being evaluated</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return value:</strong> <code>CascadeStepResult</code> — a typed record:</p>
+<pre><code class="language-python">@dataclass
+class CascadeStepResult:
+    status:        str    # &quot;BOUND&quot;, &quot;T-NAT&quot;, &quot;T-DEPTH&quot;, &quot;T-CAP&quot;
+    element_id:    str    # candidate processed
+    k:             int    # step index
+    omega_k:       float  # Ω_cascade(k) used
+    phi_k:         float  # Φ_perturbed at this step
+    d_bind_k:      float  # binding demand at this step
+    bound:         bool   # True iff element was captured
+    fm_triggered:  str | None  # &quot;FM-003-C&quot; or None
+</code></pre>
+<p><strong>Implementation:</strong></p>
+<pre><code class="language-python">def execute_cascade_step(
+    omega_prev: float,
+    gamma: float,
+    phi_perturbed_prev: float,
+    k_perturb: float,
+    d_bind_prev: float,
+    e_prev: float,
+    beta: float,
+    e_k: float,
+    k: int,
+    k_max: int,
+    frame_count: int,
+    capacity_MAX: int,
+    registry: list,
+    element_id: str,
+) -&gt; CascadeStepResult:
+    &quot;&quot;&quot;
+    Execute one step of a cascade chain.
+
+    Guards checked in order:
+      1. k_max ceiling  → T-DEPTH
+      2. FM-003-C capacity → T-CAP
+      3. CAS-3 binding condition → T-NAT (if fails)
+      4. Success → BOUND
+    &quot;&quot;&quot;
+
+    # ── Step 1: depth ceiling ──────────────────────────────────────────
+    if k &gt; k_max:
+        return CascadeStepResult(
+            status=&quot;T-DEPTH&quot;,
+            element_id=element_id,
+            k=k,
+            omega_k=omega_prev * gamma,   # still compute for audit
+            phi_k=phi_perturbed_prev,
+            d_bind_k=None,
+            bound=False,
+            fm_triggered=None,
+        )
+
+    # ── Step 2: advance Ω and Φ ───────────────────────────────────────
+    omega_k       = omega_prev * gamma
+    delta_perturb = d_bind_prev * (1.0 - e_prev) * k_perturb
+    phi_k         = max(0.0, phi_perturbed_prev - delta_perturb)
+
+    # ── Step 3: compute d_bind(k) ─────────────────────────────────────
+    # d_bind(k) = beta * (1 − e_k) * phi_k   (from f_Capture.md §3)
+    d_bind_k = beta * (1.0 - e_k) * phi_k
+
+    # ── Step 4: FM-003-C capacity guard ───────────────────────────────
+    if frame_count &gt;= capacity_MAX:
+        return CascadeStepResult(
+            status=&quot;T-CAP&quot;,
+            element_id=element_id,
+            k=k,
+            omega_k=omega_k,
+            phi_k=phi_k,
+            d_bind_k=d_bind_k,
+            bound=False,
+            fm_triggered=&quot;FM-003-C&quot;,
+        )
+
+    # ── Step 5: CAS-3 binding condition ───────────────────────────────
+    if omega_k &lt; d_bind_k:
+        return CascadeStepResult(
+            status=&quot;T-NAT&quot;,
+            element_id=element_id,
+            k=k,
+            omega_k=omega_k,
+            phi_k=phi_k,
+            d_bind_k=d_bind_k,
+            bound=False,
+            fm_triggered=None,
+        )
+
+    # ── Step 6: capture ───────────────────────────────────────────────
+    registry.append(element_id)
+    return CascadeStepResult(
+        status=&quot;BOUND&quot;,
+        element_id=element_id,
+        k=k,
+        omega_k=omega_k,
+        phi_k=phi_k,
+        d_bind_k=d_bind_k,
+        bound=True,
+        fm_triggered=None,
+    )
+</code></pre>
+<p><strong>Orchestration wrapper</strong> (calls PRIM:027 → PRIM:028 in sequence):</p>
+<pre><code class="language-python">def run_cascade(
+    d_bind_0: float,
+    gamma: float,
+    phi_0: float,
+    k_perturb: float,
+    beta: float,
+    candidates: list[dict],   # each: {&quot;id&quot;: str, &quot;e&quot;: float}
+    k_max: int,
+    capacity_MAX: int,
+    registry: list,
+) -&gt; dict:
+    &quot;&quot;&quot;
+    Full cascade orchestration.
+
+    candidates: ordered list of dicts with keys 'id' (str) and 'e' (float).
+    Returns summary dict with termination code, chain depth, and step log.
+    &quot;&quot;&quot;
+
+    # ── PRIM:027: validate eligibility before any steps ───────────────
+    elig = evaluate_cascade_eligibility(
+        gamma=gamma,
+        phi_0=phi_0,
+        d_bind_0=d_bind_0,
+        k_max=k_max,
+        capacity_MAX=capacity_MAX,
+        frame_count=len(registry),
+    )
+    if not elig[&quot;eligible&quot;]:
+        return {
+            &quot;termination&quot;: &quot;T-INIT&quot;,
+            &quot;reason&quot;: elig[&quot;reason&quot;],
+            &quot;chain_depth&quot;: 0,
+            &quot;steps&quot;: [],
+        }
+
+    omega_prev         = d_bind_0
+    phi_prev           = phi_0
+    d_bind_prev        = d_bind_0
+    e_prev             = candidates[0][&quot;e&quot;] if candidates else 0.0
+    steps              = []
+
+    for k, candidate in enumerate(candidates, start=1):
+        result = execute_cascade_step(
+            omega_prev        = omega_prev,
+            gamma             = gamma,
+            phi_perturbed_prev= phi_prev,
+            k_perturb         = k_perturb,
+            d_bind_prev       = d_bind_prev,
+            e_prev            = e_prev,
+            beta              = beta,
+            e_k               = candidate[&quot;e&quot;],
+            k                 = k,
+            k_max             = k_max,
+            frame_count       = len(registry),
+            capacity_MAX      = capacity_MAX,
+            registry          = registry,
+            element_id        = candidate[&quot;id&quot;],
+        )
+        steps.append(result)
+
+        if result.status != &quot;BOUND&quot;:
+            return {
+                &quot;termination&quot;: result.status,
+                &quot;chain_depth&quot;: k - 1,
+                &quot;steps&quot;: steps,
+                &quot;fm_triggered&quot;: result.fm_triggered,
+            }
+
+        # advance state for next step
+        omega_prev  = result.omega_k
+        phi_prev    = result.phi_k
+        d_bind_prev = result.d_bind_k
+        e_prev      = candidate[&quot;e&quot;]
+
+    # exhausted candidate list without a stopping condition
+    return {
+        &quot;termination&quot;: &quot;T-NAT&quot;,
+        &quot;chain_depth&quot;: len(steps),
+        &quot;steps&quot;: steps,
+        &quot;fm_triggered&quot;: None,
+    }
+</code></pre>
+<blockquote>
+<p><strong>Purity note:</strong> <code>evaluate_cascade_eligibility</code> (PRIM:027) is <strong>Pure</strong>;
+<code>execute_cascade_step</code> (PRIM:028) and the <code>run_cascade</code> wrapper are
+<strong>Impure</strong> (mutate <code>registry</code>). Callers must hold a registry lock for
+the duration of the cascade.</p>
+</blockquote>
+<hr>
+<h2 id="8-canonical-examples">§8  Canonical Examples</h2>
+<p>Four worked traces cover the full termination taxonomy.</p>
+<hr>
+<h3 id="example-81-attenuating-cascade-natural-exhaustion-t-nat">Example 8.1 — Attenuating Cascade, Natural Exhaustion (T-NAT)</h3>
+<p><strong>Scenario:</strong> A weak gravitational field admits an initial capture but each
+successive element faces a progressively smaller cascade transmission.
+The chain runs to natural exhaustion after three steps.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>d_bind_0</td>
+<td>0.40</td>
+<td>Seed binding demand</td>
+</tr>
+<tr>
+<td>γ (gamma)</td>
+<td>0.70</td>
+<td>Attenuating — chain loses 30 % per step</td>
+</tr>
+<tr>
+<td>Φ_0</td>
+<td>0.75</td>
+<td>Initial field coherence</td>
+</tr>
+<tr>
+<td>k_perturb</td>
+<td>0.08</td>
+<td>Mild perturbation sensitivity</td>
+</tr>
+<tr>
+<td>β</td>
+<td>0.60</td>
+<td>Binding coefficient</td>
+</tr>
+<tr>
+<td>k_max</td>
+<td>10</td>
+<td>Depth ceiling (not hit)</td>
+</tr>
+<tr>
+<td>capacity_MAX</td>
+<td>8</td>
+<td>Frame has headroom</td>
+</tr>
+<tr>
+<td>registry (t₀)</td>
+<td>2 bound</td>
+<td>Frame not near saturation</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Candidate queue:</strong></p>
+<table>
+<thead>
+<tr>
+<th>k</th>
+<th>element_id</th>
+<th>e_k</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>"E_alpha"</td>
+<td>0.10</td>
+</tr>
+<tr>
+<td>2</td>
+<td>"E_beta"</td>
+<td>0.15</td>
+</tr>
+<tr>
+<td>3</td>
+<td>"E_gamma"</td>
+<td>0.20</td>
+</tr>
+<tr>
+<td>4</td>
+<td>"E_delta"</td>
+<td>0.25</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step-by-step trace:</strong></p>
+<p><strong>Step k = 1</strong>
+- Ω(1) = 0.40 × 0.70 = <strong>0.280</strong>
+- δ_perturb = 0.40 × (1 − 0.10) × 0.08 = 0.0288
+- Φ_perturbed(1) = 0.75 − 0.0288 = <strong>0.7212</strong>
+- d_bind(1) = 0.60 × (1 − 0.10) × 0.7212 = <strong>0.3895</strong>
+- CAS-3: 0.280 &lt; 0.3895 → <strong>FAIL</strong>
+- Termination: <strong>T-NAT at k = 1</strong></p>
+<blockquote>
+<p>The first cascade step already fails the binding condition. The chain
+never advances beyond the seed; zero additional elements are captured.
+This is the degenerate-attenuating case — γ &lt; 1 and d_bind is
+large enough that even step 1 is unreachable.</p>
+</blockquote>
+<p><strong>Post-state:</strong>
+- <code>chain_depth = 0</code>
+- <code>registry</code> unchanged (2 bound)
+- <code>fm_triggered = None</code>
+- Partial cascade state: none (no steps committed)</p>
+<p><strong>Adjusted trace (γ = 0.90 to show multi-step exhaustion):</strong></p>
+<table>
+<thead>
+<tr>
+<th>k</th>
+<th>Ω(k)</th>
+<th>δ_perturb</th>
+<th>Φ_pert(k)</th>
+<th>d_bind(k)</th>
+<th>CAS-3?</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0.360</td>
+<td>0.0288</td>
+<td>0.7212</td>
+<td>0.3895</td>
+<td>✅ pass</td>
+<td>BOUND</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0.324</td>
+<td>0.0234</td>
+<td>0.6978</td>
+<td>0.3528</td>
+<td>✅ pass</td>
+<td>BOUND</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0.292</td>
+<td>0.0197</td>
+<td>0.6781</td>
+<td>0.3257</td>
+<td>✅ pass</td>
+<td>BOUND</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0.263</td>
+<td>0.0163</td>
+<td>0.6618</td>
+<td>0.3017</td>
+<td>✅ pass</td>
+<td>BOUND</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0.236</td>
+<td>0.0133</td>
+<td>0.6485</td>
+<td>0.2794</td>
+<td>✅ pass</td>
+<td>BOUND</td>
+</tr>
+<tr>
+<td>6</td>
+<td>0.213</td>
+<td>0.0107</td>
+<td>0.6378</td>
+<td>0.2592</td>
+<td>❌ fail</td>
+<td>T-NAT</td>
+</tr>
+</tbody>
+</table>
+<p><em>(γ = 0.90 variant: chain runs 5 steps, exhausts at k = 6)</em></p>
+<p><strong>Post-state (γ = 0.90 variant):</strong>
+- <code>chain_depth = 5</code>
+- <code>registry</code> += ["E_alpha", "E_beta", "E_gamma", "E_delta", and one more]
+- Termination: <strong>T-NAT</strong> (natural exhaustion — no FM triggered)</p>
+<hr>
+<h3 id="example-82-fm-003-c-mid-chain-saturation-t-cap">Example 8.2 — FM-003-C Mid-Chain Saturation (T-CAP)</h3>
+<p><strong>Scenario:</strong> A neutral-to-mild cascade runs into a nearly full frame.
+Capture proceeds until the registry hits <code>capacity_MAX</code>, triggering FM-003-C.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>d_bind_0</td>
+<td>0.35</td>
+<td>Moderate seed demand</td>
+</tr>
+<tr>
+<td>γ (gamma)</td>
+<td>0.95</td>
+<td>Near-neutral; chain stays healthy</td>
+</tr>
+<tr>
+<td>Φ_0</td>
+<td>0.80</td>
+<td>Strong initial coherence</td>
+</tr>
+<tr>
+<td>k_perturb</td>
+<td>0.05</td>
+<td>Low perturbation</td>
+</tr>
+<tr>
+<td>β</td>
+<td>0.55</td>
+<td>Binding coefficient</td>
+</tr>
+<tr>
+<td>k_max</td>
+<td>20</td>
+<td>Deep ceiling (not limiting here)</td>
+</tr>
+<tr>
+<td>capacity_MAX</td>
+<td>5</td>
+<td>Frame tight — only 2 slots remain</td>
+</tr>
+<tr>
+<td>registry (t₀)</td>
+<td>3 bound</td>
+<td>Pre-filled; headroom = 2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Candidate queue:</strong></p>
+<table>
+<thead>
+<tr>
+<th>k</th>
+<th>element_id</th>
+<th>e_k</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>"E_1"</td>
+<td>0.10</td>
+</tr>
+<tr>
+<td>2</td>
+<td>"E_2"</td>
+<td>0.12</td>
+</tr>
+<tr>
+<td>3</td>
+<td>"E_3"</td>
+<td>0.14</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step-by-step trace:</strong></p>
+<p><strong>Step k = 1</strong> (frame_count = 3, capacity_MAX = 5 → 2 slots free)
+- Ω(1) = 0.35 × 0.95 = <strong>0.3325</strong>
+- δ_perturb = 0.35 × (1 − 0.10) × 0.05 = 0.01575
+- Φ_pert(1) = 0.80 − 0.01575 = <strong>0.7843</strong>
+- d_bind(1) = 0.55 × (1 − 0.10) × 0.7843 = <strong>0.3877</strong>
+- CAS-3: 0.3325 &lt; 0.3877 → <strong>FAIL → T-NAT</strong></p>
+<p><em>(Adjust β = 0.45 so the chain clears a few steps:)</em></p>
+<p><strong>Adjusted trace (β = 0.45):</strong></p>
+<table>
+<thead>
+<tr>
+<th>k</th>
+<th>frame_count (entry)</th>
+<th>Ω(k)</th>
+<th>Φ_pert(k)</th>
+<th>d_bind(k)</th>
+<th>Cap guard</th>
+<th>CAS-3</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>3</td>
+<td>0.3325</td>
+<td>0.7843</td>
+<td>0.3172</td>
+<td>pass</td>
+<td>✅</td>
+<td>BOUND</td>
+</tr>
+<tr>
+<td>2</td>
+<td>4</td>
+<td>0.3159</td>
+<td>0.7699</td>
+<td>0.3005</td>
+<td>pass</td>
+<td>✅</td>
+<td>BOUND</td>
+</tr>
+<tr>
+<td>3</td>
+<td>5 = capacity_MAX</td>
+<td>0.3001</td>
+<td>0.7559</td>
+<td>0.2844</td>
+<td><strong>FAIL</strong></td>
+<td>—</td>
+<td><strong>T-CAP</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>FM-003-C trigger at k = 3:</strong>
+- Elements E_1 and E_2 (steps 1–2) are <strong>committed</strong> to the registry.
+- E_3 (step 3) is <strong>abandoned</strong> — partial cascade state holds.
+- <code>fm_triggered = "FM-003-C"</code></p>
+<p><strong>Post-state:</strong>
+- <code>chain_depth = 2</code> (steps committed before FM)
+- <code>registry</code> = [original 3] + ["E_1", "E_2"] = 5 bound
+- Partial cascade: E_3 evaluated but not captured; cascade halted.
+- Caller must log the partial state and surface FM-003-C to the attractor.</p>
+<hr>
+<h3 id="example-83-deep-chain-neutral-gain-depth-bound-termination-t-depth">Example 8.3 — Deep Chain, Neutral Gain, Depth-Bound Termination (T-DEPTH)</h3>
+<p><strong>Scenario:</strong> γ = 1.0 (neutral cascade — Ω stays constant at d_bind_0).
+The binding condition is satisfied at every step. The chain terminates
+only when k &gt; k_max.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>d_bind_0</td>
+<td>0.30</td>
+<td>Moderate seed</td>
+</tr>
+<tr>
+<td>γ (gamma)</td>
+<td>1.00</td>
+<td>Neutral — Ω constant</td>
+</tr>
+<tr>
+<td>Φ_0</td>
+<td>0.85</td>
+<td>High coherence</td>
+</tr>
+<tr>
+<td>k_perturb</td>
+<td>0.02</td>
+<td>Very low perturbation (field stays high)</td>
+</tr>
+<tr>
+<td>β</td>
+<td>0.35</td>
+<td>Deliberately low so d_bind stays ≤ Ω</td>
+</tr>
+<tr>
+<td>k_max</td>
+<td>4</td>
+<td>Tight ceiling to force T-DEPTH</td>
+</tr>
+<tr>
+<td>capacity_MAX</td>
+<td>20</td>
+<td>Frame has plenty of room</td>
+</tr>
+<tr>
+<td>registry (t₀)</td>
+<td>1 bound</td>
+<td>Nearly empty</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Candidate queue (5 elements, but k_max = 4):</strong></p>
+<table>
+<thead>
+<tr>
+<th>k</th>
+<th>element_id</th>
+<th>e_k</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>"E_A"</td>
+<td>0.10</td>
+</tr>
+<tr>
+<td>2</td>
+<td>"E_B"</td>
+<td>0.10</td>
+</tr>
+<tr>
+<td>3</td>
+<td>"E_C"</td>
+<td>0.10</td>
+</tr>
+<tr>
+<td>4</td>
+<td>"E_D"</td>
+<td>0.10</td>
+</tr>
+<tr>
+<td>5</td>
+<td>"E_E"</td>
+<td>0.10</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step-by-step trace (γ = 1.0 → Ω(k) = 0.30 always):</strong></p>
+<table>
+<thead>
+<tr>
+<th>k</th>
+<th>Ω(k)</th>
+<th>δ_perturb</th>
+<th>Φ_pert(k)</th>
+<th>d_bind(k)</th>
+<th>CAS-3?</th>
+<th>Cap?</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0.300</td>
+<td>0.0054</td>
+<td>0.8446</td>
+<td>0.2660</td>
+<td>✅</td>
+<td>pass</td>
+<td>BOUND</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0.300</td>
+<td>0.0048</td>
+<td>0.8398</td>
+<td>0.2645</td>
+<td>✅</td>
+<td>pass</td>
+<td>BOUND</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0.300</td>
+<td>0.0048</td>
+<td>0.8350</td>
+<td>0.2630</td>
+<td>✅</td>
+<td>pass</td>
+<td>BOUND</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0.300</td>
+<td>0.0047</td>
+<td>0.8303</td>
+<td>0.2615</td>
+<td>✅</td>
+<td>pass</td>
+<td>BOUND</td>
+</tr>
+<tr>
+<td>5</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td><strong>T-DEPTH</strong> (k=5 &gt; k_max=4)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Post-state:</strong>
+- <code>chain_depth = 4</code> (all four within-ceiling steps committed)
+- <code>registry</code> += ["E_A", "E_B", "E_C", "E_D"] → 5 total bound
+- <code>fm_triggered = None</code> (T-DEPTH is a policy ceiling, not a failure mode)
+- E_E is never evaluated — it remains in the candidate queue.</p>
+<p><strong>Key insight:</strong> With γ = 1.0 and low β, the cascade is self-sustaining
+indefinitely. Only the depth ceiling terminates it. Operators who want
+an unbounded neutral cascade must explicitly raise k_max, understanding
+that frame capacity (FM-003-C) then becomes the final safety valve.</p>
+<hr>
+<h3 id="example-84-amplifying-cascade-fm-003-c-at-step-2-t-cap">Example 8.4 — Amplifying Cascade, FM-003-C at Step 2 (T-CAP)</h3>
+<p><strong>Scenario:</strong> γ &gt; 1.0 causes Ω to grow geometrically. Each successive
+element faces a larger transmission than the one before. The cascade
+captures aggressively until the frame saturates.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>d_bind_0</td>
+<td>0.25</td>
+<td>Low initial demand (easy first capture)</td>
+</tr>
+<tr>
+<td>γ (gamma)</td>
+<td>1.30</td>
+<td>Amplifying — 30 % growth per step</td>
+</tr>
+<tr>
+<td>Φ_0</td>
+<td>0.70</td>
+<td>Moderate field</td>
+</tr>
+<tr>
+<td>k_perturb</td>
+<td>0.10</td>
+<td>Elevated sensitivity</td>
+</tr>
+<tr>
+<td>β</td>
+<td>0.50</td>
+<td>Binding coefficient</td>
+</tr>
+<tr>
+<td>k_max</td>
+<td>10</td>
+<td>Not the limiting factor here</td>
+</tr>
+<tr>
+<td>capacity_MAX</td>
+<td>3</td>
+<td>Very tight — only 1 slot remains</td>
+</tr>
+<tr>
+<td>registry (t₀)</td>
+<td>2 bound</td>
+<td>Nearly saturated</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Candidate queue:</strong></p>
+<table>
+<thead>
+<tr>
+<th>k</th>
+<th>element_id</th>
+<th>e_k</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>"E_X"</td>
+<td>0.12</td>
+</tr>
+<tr>
+<td>2</td>
+<td>"E_Y"</td>
+<td>0.18</td>
+</tr>
+<tr>
+<td>3</td>
+<td>"E_Z"</td>
+<td>0.20</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step-by-step trace:</strong></p>
+<p><strong>Step k = 1</strong> (frame_count = 2, 1 slot free)
+- Ω(1) = 0.25 × 1.30 = <strong>0.325</strong>
+- δ_perturb = 0.25 × (1 − 0.12) × 0.10 = 0.0220
+- Φ_pert(1) = 0.70 − 0.0220 = <strong>0.6780</strong>
+- d_bind(1) = 0.50 × (1 − 0.12) × 0.6780 = <strong>0.2983</strong>
+- Cap guard: frame_count(2) &lt; capacity_MAX(3) → pass
+- CAS-3: 0.325 ≥ 0.2983 → <strong>pass</strong>
+- Result: <strong>BOUND</strong> — E_X captured; frame_count → 3</p>
+<p><strong>Step k = 2</strong> (frame_count = 3 = capacity_MAX)
+- Cap guard fires <strong>before</strong> CAS-3 check
+- Result: <strong>T-CAP</strong> — FM-003-C triggered
+- E_Y abandoned; cascade halted</p>
+<p><strong>Ω(2) would have been:</strong> 0.325 × 1.30 = 0.4225<br>
+<em>(Transmitted with surplus — amplifying cascade is most dangerous near saturation because Ω is growing while capacity is shrinking)</em></p>
+<p><strong>Post-state:</strong>
+- <code>chain_depth = 1</code>
+- <code>registry</code> += ["E_X"] → 3 bound (frame full)
+- <code>fm_triggered = "FM-003-C"</code>
+- Partial cascade: E_X committed, E_Y and E_Z abandoned</p>
+<p><strong>Amplification hazard analysis:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Ω(k) if unconstrained</th>
+<th>Growth factor vs. seed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0.250</td>
+<td>1.00×</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0.325</td>
+<td>1.30×</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0.423</td>
+<td>1.69×</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0.549</td>
+<td>2.20×</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0.927</td>
+<td>3.71×</td>
+</tr>
+</tbody>
+</table>
+<p>With γ = 1.30, Ω doubles by step ~6 and approaches Φ saturation by
+step ~10. Frame saturation (FM-003-C) is almost always the first
+terminator in amplifying cascades — not depth or natural binding failure.
+Operators <strong>must</strong> enforce conservative <code>capacity_MAX</code> when γ &gt; 1.0.</p>
+<hr>
+<h2 id="9-cross-module-references">§9  Cross-Module References</h2>
+<h3 id="91-upstream-dependencies">§9.1  Upstream Dependencies</h3>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Operator / Concept Used</th>
+<th>Section</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f_Capture.md</td>
+<td>d_bind(k), β, e, base capture mechanics</td>
+<td>§3, §4</td>
+</tr>
+<tr>
+<td>f_Capture_Multi.md</td>
+<td>Φ_perturbed model, δ_perturb, k_perturb, MC-1, MC-2</td>
+<td>§4, §5</td>
+</tr>
+<tr>
+<td>f_Field.md</td>
+<td>ρ(Φ), v_escape, SC-1/SC-2/SC-3</td>
+<td>§3, §5</td>
+</tr>
+<tr>
+<td>f_Force.md</td>
+<td>M_A, M_E, v_approach, β derivation</td>
+<td>§3, §4</td>
+</tr>
+<tr>
+<td>f_Frame.md</td>
+<td>registry, capacity_MAX, register_capture, FM-003</td>
+<td>§4, §5</td>
+</tr>
+<tr>
+<td>f_Orbit.md</td>
+<td>orbit_class assignment post-cascade, T_orb</td>
+<td>§4</td>
+</tr>
+<tr>
+<td>f_Amplify.md</td>
+<td>β_max guard relevant when γ &gt; 1 and β is elevated</td>
+<td>§5</td>
+</tr>
+<tr>
+<td>f_Dampen.md</td>
+<td>cascade_guard (BFS) must wrap run_cascade in dampened fields</td>
+<td>§5</td>
+</tr>
+<tr>
+<td>OPERATORS.md</td>
+<td>All inherited operator symbols must be pre-registered</td>
+<td>global</td>
+</tr>
+</tbody>
+</table>
+<h3 id="92-downstream-consumers">§9.2  Downstream Consumers</h3>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>How It Consumes Cascade Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f_Capture_Soft.md</td>
+<td>May use cascade as sub-step in soft approach sequences</td>
+</tr>
+<tr>
+<td>f_Capture_Resonant.md</td>
+<td>Resonant chains may initialize a cascade at resonance lock</td>
+</tr>
+<tr>
+<td>f_Collapse.md</td>
+<td>FM-003-C partial state feeds Path A infall assessment</td>
+</tr>
+<tr>
+<td>f_Emit.md</td>
+<td>Post-cascade field density drop (ρ(Φ)_delta) may trigger emit</td>
+</tr>
+<tr>
+<td>f_Decay.md</td>
+<td>Overcrowded registry post-cascade increases δ decay rate</td>
+</tr>
+<tr>
+<td>INDEX.md</td>
+<td>Cascade depth and termination code surfaced in module index</td>
+</tr>
+<tr>
+<td>FFF_Gravity_module.json</td>
+<td>cascade_depth, gamma, Ω_cascade added to operator manifest</td>
+</tr>
+</tbody>
+</table>
+<h3 id="93-operatorsmd-registration-block">§9.3  OPERATORS.md Registration Block</h3>
+<p>Add the following block to <code>OPERATORS.md</code> under the <strong>Wave 4 — Capture Variants</strong> section:</p>
+<pre><code class="language-markdown">### Wave 4 Operators — f_Capture_Cascade.md
+
+| Symbol         | Name              | Type   | Domain      | Defined In              |
+|----------------|-------------------|--------|-------------|-------------------------|
+| cascade_depth  | Cascade Depth     | int    | ≥ 0         | f_Capture_Cascade §4.1  |
+| k_max          | Max Chain Depth   | int    | ≥ 1         | f_Capture_Cascade §4.1  |
+| γ (gamma)      | Cascade Gain      | float  | &gt; 0         | f_Capture_Cascade §4.2  |
+| Ω_cascade(k)   | Cascade Binding   | float  | ≥ 0         | f_Capture_Cascade §4.3  |
+| k_perturb      | Perturb Coeff     | float  | [0, 1)      | f_Capture_Multi §4      |
+| δ_perturb(k)   | Field Perturbation| float  | ≥ 0         | f_Capture_Multi §4      |
+| Φ_perturbed(k) | Perturbed Field   | float  | [0, 1]      | f_Capture_Multi §4      |
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong> k_perturb, δ_perturb, and Φ_perturbed are first-registered
+in f_Capture_Multi.md. The entries above are cross-reference markers
+only; do not create duplicate registrations in OPERATORS.md.</p>
+</blockquote>
+<hr>
+<h2 id="10-document-metadata">§10  Document Metadata</h2>
+<h3 id="101-inv-compliance">§10.1  INV Compliance</h3>
+<table>
+<thead>
+<tr>
+<th>Invariant</th>
+<th>Statement (abbreviated)</th>
+<th>Status</th>
+<th>How Satisfied</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INV-001</td>
+<td>G = F_freq · F_fluid · F_force</td>
+<td>✅ Compliant</td>
+<td>Cascade operates within established G product; no bypass</td>
+</tr>
+<tr>
+<td>INV-002</td>
+<td>ρ(Φ) ∈ [0, 1]</td>
+<td>✅ Compliant</td>
+<td>Φ_perturbed clamped to [0,1]; CAS-4 enforces floor ≥ 0</td>
+</tr>
+<tr>
+<td>INV-003</td>
+<td>β ∈ [0, 1]</td>
+<td>✅ Compliant</td>
+<td>β parameter validated by PRIM:027 eligibility check</td>
+</tr>
+<tr>
+<td>INV-004</td>
+<td>v_approach &gt; 0 for any capture</td>
+<td>✅ Compliant</td>
+<td>Inherited from f_Capture.md; cascade does not modify v</td>
+</tr>
+<tr>
+<td>INV-005</td>
+<td>d_bind ≥ 0</td>
+<td>✅ Compliant</td>
+<td>d_bind(k) computed as non-negative product; no subtraction</td>
+</tr>
+<tr>
+<td>INV-006</td>
+<td>SC-1 through SC-5 are conjunctive</td>
+<td>✅ Compliant</td>
+<td>CAS-1–CAS-4 are additive; do not relax base SCs</td>
+</tr>
+<tr>
+<td>INV-007</td>
+<td>FM registry is frozen at FM-010</td>
+<td>✅ Compliant</td>
+<td>FM-003-C is a sub-mode suffix; no new FM ID allocated</td>
+</tr>
+<tr>
+<td>INV-008</td>
+<td>PRIM IDs are sequential and non-reused</td>
+<td>✅ Compliant</td>
+<td>PRIM:027–028 follow PRIM:026 from f_Capture_Multi.md</td>
+</tr>
+<tr>
+<td>INV-009</td>
+<td>Operators registered before use</td>
+<td>✅ Compliant</td>
+<td>§9.3 OPERATORS.md block registers all new symbols</td>
+</tr>
+<tr>
+<td>INV-010</td>
+<td>Impure primitives must not bypass guards</td>
+<td>✅ Compliant</td>
+<td>PRIM:028 checks depth → capacity → CAS-3 in strict order</td>
+</tr>
+</tbody>
+</table>
+<h3 id="102-primitive-registry">§10.2  Primitive Registry</h3>
+<table>
+<thead>
+<tr>
+<th>PRIM ID</th>
+<th>Name</th>
+<th>Purity</th>
+<th>Defined In</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PRIM:027</td>
+<td>evaluate_cascade_eligibility</td>
+<td>Pure</td>
+<td>§7, PRIM:027</td>
+</tr>
+<tr>
+<td>PRIM:028</td>
+<td>execute_cascade_step</td>
+<td>Impure</td>
+<td>§7, PRIM:028</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Running PRIM total after this file:</strong> PRIM:028</p>
+<h3 id="103-operator-registry-this-file">§10.3  Operator Registry (This File)</h3>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>First Defined</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cascade_depth</td>
+<td>Cascade Depth</td>
+<td>§4.1 (this file)</td>
+</tr>
+<tr>
+<td>k_max</td>
+<td>Max Chain Depth</td>
+<td>§4.1 (this file)</td>
+</tr>
+<tr>
+<td>γ (gamma)</td>
+<td>Cascade Gain</td>
+<td>§4.2 (this file)</td>
+</tr>
+<tr>
+<td>Ω_cascade(k)</td>
+<td>Cascade Binding</td>
+<td>§4.3 (this file)</td>
+</tr>
+</tbody>
+</table>
+<p>Inherited from f_Capture_Multi.md (not re-registered here):
+<code>k_perturb</code>, <code>δ_perturb(k)</code>, <code>Φ_perturbed(k)</code>, <code>N</code>, <code>eval_order</code></p>
+<h3 id="104-failure-mode-registry">§10.4  Failure Mode Registry</h3>
+<table>
+<thead>
+<tr>
+<th>FM ID</th>
+<th>Name</th>
+<th>Type</th>
+<th>Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FM-003-C</td>
+<td>Cascade Frame Saturation</td>
+<td>Fatal</td>
+<td>Mid-chain partial</td>
+</tr>
+</tbody>
+</table>
+<p>All base FMs (FM-001 through FM-010) remain active and are inherited
+from the module-level registry. FM-003-C is a sub-mode of FM-003
+(Frame Overflow) and uses its suffix per the frozen FM convention.</p>
+<h3 id="105-changelog-entry">§10.5  Changelog Entry</h3>
+<pre><code class="language-markdown">## [Wave 4] f_Capture_Cascade.md — Initial Release
+
+### Added
+- Cascade capture variant: sequential chain mechanics with geometric gain γ
+- Operators: cascade_depth, k_max, γ, Ω_cascade(k)
+- Conditions: CAS-1 (γ validity), CAS-2 (depth ceiling), CAS-3 (binding),
+  CAS-4 (field floor)
+- Failure mode: FM-003-C (Cascade Frame Saturation), sub-mode of FM-003
+- Primitives: PRIM:027 evaluate_cascade_eligibility (Pure),
+  PRIM:028 execute_cascade_step (Impure)
+- Orchestration wrapper: run_cascade (convenience, not a registered PRIM)
+- Termination codes: T-NAT, T-DEPTH, T-CAP, T-INIT
+- Canonical examples: 4 (attenuating, mid-chain FM-003-C,
+  neutral deep chain, amplifying)
+- OPERATORS.md registration block (§9.3)
+
+### Cross-references
+- Upstream: f_Capture.md, f_Capture_Multi.md, f_Field.md, f_Force.md,
+  f_Frame.md, f_Orbit.md, f_Amplify.md, f_Dampen.md
+- Downstream: f_Capture_Soft.md, f_Capture_Resonant.md,
+  f_Collapse.md, f_Emit.md, f_Decay.md
+</code></pre>
+<h3 id="106-wave-4-status-tracker">§10.6  Wave 4 Status Tracker</h3>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Status</th>
+<th>PRIM Range</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f_Capture_Multi.md</td>
+<td>✅ Complete</td>
+<td>025–026</td>
+<td>MULTI_ELEMENT, MULTI_ATTRACTOR</td>
+</tr>
+<tr>
+<td>f_Capture_Cascade.md</td>
+<td>✅ Complete</td>
+<td>027–028</td>
+<td>This file</td>
+</tr>
+<tr>
+<td>f_Capture_Soft.md</td>
+<td>⏳ Pending</td>
+<td>029–030</td>
+<td>Soft-approach mechanics</td>
+</tr>
+<tr>
+<td>f_Capture_Hard.md</td>
+<td>⏳ Pending</td>
+<td>TBD</td>
+<td>Hard-lock mechanics</td>
+</tr>
+<tr>
+<td>f_Capture_Resonant.md</td>
+<td>⏳ Pending</td>
+<td>TBD</td>
+<td>Resonance-lock mechanics</td>
+</tr>
+<tr>
+<td>f_Capture_Asymmetric.md</td>
+<td>⏳ Pending</td>
+<td>TBD</td>
+<td>Asymmetric mass-ratio captures</td>
+</tr>
+</tbody>
+</table>
+<h3 id="107-suggested-commit-message">§10.7  Suggested Commit Message</h3>
+<pre><code>docs(FFF_Gravity): add f_Capture_Cascade.md [Wave 4]
+
+Implements cascade capture variant with geometric gain γ, chain depth
+k_max, Ω_cascade recurrence, and CAS-1–CAS-4 conditions. Defines
+FM-003-C (partial frame saturation sub-mode), PRIM:027 (eligibility
+check, Pure) and PRIM:028 (step executor, Impure). Includes four
+canonical examples covering T-NAT, T-CAP (×2), and T-DEPTH terminations.
+Adds OPERATORS.md registration block for Wave 4 symbols.
+
+PRIM range: 027–028 | Operators added: 4 | FM sub-modes added: 1
+</code></pre>
+<hr>
+<p><em>— end of f_Capture_Cascade.md —</em></p>
+  </main>
+</body>
+</html>

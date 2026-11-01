@@ -1,0 +1,2044 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/post-ASML_era/The_TRS‑Aware_PDK_Specification.md">
+  <title>The TRS-Aware PDK Specification</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/post-ASML_era/The_TRS‑Aware_PDK_Specification.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/post-ASML_era/The_TRS‑Aware_PDK_Specification.md</code>
+  </aside>
+
+  <main>
+<h1 id="the-trs-aware-pdk-specification">The TRS-Aware PDK Specification</h1>
+<p><strong>Repository:</strong> TriadicFrameworks
+<strong>Path:</strong> <code>docs/post-ASML_era/The_TRS-Aware_PDK_Specification.md</code>
+<strong>Canonical alias:</strong> <code>docs/eda/PostASML_PDK_Integration.md</code> → resolves here
+<strong>Status:</strong> Canonical Reference
+<strong>Revision:</strong> 1.0.0</p>
+<hr>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#1-purpose-and-scope">Purpose and Scope</a></li>
+<li><a href="#2-pdk-architecture-overview">PDK Architecture Overview</a></li>
+<li><a href="#3-sc-class-layer-maps">SC Class Layer Maps</a></li>
+<li><a href="#4-trs-stack-parameter-sets">TRS Stack Parameter Sets</a></li>
+<li><a href="#5-temporal-design-rules">Temporal Design Rules</a></li>
+<li><a href="#6-coherence-budget-tables">Coherence Budget Tables</a></li>
+<li><a href="#7-ttf-arc-library">TTF Arc Library</a></li>
+<li><a href="#8-temporal-crosstalk-rules">Temporal Crosstalk Rules</a></li>
+<li><a href="#9-rwdl-and-sc_eff-map-integration">RWDL and SC_eff Map Integration</a></li>
+<li><a href="#10-pdk-deliverable-structure">PDK Deliverable Structure</a></li>
+<li><a href="#11-pdk-generation-workflow">PDK Generation Workflow</a></li>
+<li><a href="#12-eda-tool-integration-requirements">EDA Tool Integration Requirements</a></li>
+<li><a href="#13-pdk-qualification-and-sign-off">PDK Qualification and Sign-off</a></li>
+<li><a href="#14-pdk-versioning-and-change-control">PDK Versioning and Change Control</a></li>
+<li><a href="#15-glossary">Glossary</a></li>
+<li><a href="#16-related-documents">Related Documents</a></li>
+</ol>
+<hr>
+<h2 id="1-purpose-and-scope">1. Purpose and Scope</h2>
+<h3 id="11-purpose">1.1 Purpose</h3>
+<p>This document is the normative specification for the <strong>TRS-Aware Process Design Kit (PDK)</strong> — the structured data package that translates the fab's temporal manufacturing characterization into rule sets, parameter tables, timing arcs, and spatial maps consumable by EDA tools. The TRS-Aware PDK is the interface between the physical world of substrate properties, SCR zone configuration, and TRS stack behavior and the design world of floorplanning, timing closure, verification, and tape-out signoff.</p>
+<p>Without a conformant TRS-Aware PDK, no EDA tool has the information required to correctly constrain or verify a design intended for temporal manufacturing. A design signed off against a PDK that is missing, incomplete, or incorrectly derived from upstream measurements will exhibit systematic yield loss in the temporal layers, timing failures at SCR zone boundaries, and coherence budget violations that are not detectable until wafer-level testing.</p>
+<p>This specification defines:</p>
+<ul>
+<li>What a TRS-Aware PDK must contain</li>
+<li>How each PDK component is derived from upstream measurement data</li>
+<li>How EDA tools must consume each component</li>
+<li>How a PDK release is generated, validated, and released</li>
+<li>How changes to upstream measurements trigger PDK updates</li>
+</ul>
+<h3 id="12-canonical-path-note">1.2 Canonical Path Note</h3>
+<p>Prior documents in the post-ASML era series reference this specification at <code>docs/eda/PostASML_PDK_Integration.md</code>. The canonical location for this revision is <code>docs/post-ASML_era/The_TRS-Aware_PDK_Specification.md</code>. The path <code>docs/eda/PostASML_PDK_Integration.md</code> is maintained as a redirect alias. Both paths resolve to this document.</p>
+<h3 id="13-scope">1.3 Scope</h3>
+<p>This specification covers:</p>
+<ul>
+<li>The two-domain PDK architecture and the five TRS-aware PDK component categories</li>
+<li>SC class layer maps: derivation from TCT and TGI data, encoding format, and usage</li>
+<li>TRS stack parameter sets: apodization profiles, address spacing minima, commit sequencing overhead</li>
+<li>Temporal design rules for TDRC: address spacing, density gradient, TGI proximity, and causal graph rules</li>
+<li>Coherence budget tables encoding SCR zone parameters for CBA consumption</li>
+<li>The TTF arc library: arc type definitions, derivation sources, and STA tool consumption requirements</li>
+<li>Temporal crosstalk rules: physical model, rule table structure, per SC class and density tier</li>
+<li>RWDL and SC_eff spatial map integration and their role in position-dependent design rules</li>
+<li>The complete PDK deliverable directory and file structure</li>
+<li>The PDK generation pipeline from upstream measurement data to release package</li>
+<li>EDA tool certification requirements for TDRC, CGV, CBA, and TTF-aware STA</li>
+<li>PDK qualification test suite and sign-off authority chain</li>
+<li>PDK versioning semantics and change control rules</li>
+</ul>
+<p>This specification does not cover:</p>
+<ul>
+<li>The classical (non-temporal) PDK components — DRC rules for Tier 1 spatial layers, SPICE device models, parasitic extraction decks for non-temporal layers — except where those components interact with TRS-aware extensions</li>
+<li>The internal operation of EDA tools; this specification defines what tools must accept and produce, not how they implement it</li>
+<li>Substrate material design for target SC classes, which is governed by the Substrate Clarity Classification Standard</li>
+</ul>
+<h3 id="14-normative-language">1.4 Normative Language</h3>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MUST</strong></td>
+<td>Required. Non-conformant if omitted or violated.</td>
+</tr>
+<tr>
+<td><strong>MUST NOT</strong></td>
+<td>Prohibited. Non-conformant if present.</td>
+</tr>
+<tr>
+<td><strong>SHOULD</strong></td>
+<td>Strongly recommended. Deviation requires documented justification.</td>
+</tr>
+<tr>
+<td><strong>SHOULD NOT</strong></td>
+<td>Strongly discouraged. Deviation requires documented justification.</td>
+</tr>
+<tr>
+<td><strong>MAY</strong></td>
+<td>Permitted but not required.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="2-pdk-architecture-overview">2. PDK Architecture Overview</h2>
+<h3 id="21-the-two-domain-pdk">2.1 The Two-Domain PDK</h3>
+<p>A TRS-Aware PDK operates across two domains that classical PDKs addressed only one of:</p>
+<p><strong>The spatial domain</strong> encompasses the physical layout of the die — layer stack definitions, geometric design rules, parasitic models, and device models. Classical PDKs were exclusively spatial-domain artifacts. TRS-aware PDKs retain the spatial domain but extend it: some spatial-domain components must be modified to account for their interaction with temporal manufacturing steps.</p>
+<p><strong>The temporal domain</strong> encompasses the address-space structure of TRS commit operations — address spacing rules, coherence slot assignments, timing arcs through the SCR, and density constraints derived from substrate SC class. The temporal domain has no classical analog; it is entirely new with temporal manufacturing.</p>
+<p>The two domains are not independent. The TGI — the Temporal-Geometric Interface — is the coupling zone between them. TRS-aware PDK components that characterize the TGI (SC_eff maps, RWDL maps, TGI proximity rules) span both domains and belong to neither exclusively.</p>
+<h3 id="22-pdk-component-categories">2.2 PDK Component Categories</h3>
+<p>A conformant TRS-Aware PDK contains five component categories. All five MUST be present for the PDK to be considered complete. A PDK missing any category is incomplete and MUST NOT be used for tape-out signoff.</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Abbreviation</th>
+<th>Primary Consumer</th>
+<th>Derives From</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SC Class Layer Maps</td>
+<td>SCLM</td>
+<td>TDRC tool, CBA tool, floorplanning</td>
+<td>TCT Protocol, TGI Metrology Standard</td>
+</tr>
+<tr>
+<td>TRS Stack Parameter Sets</td>
+<td>TSPS</td>
+<td>TDRC tool, TRS intent map generator</td>
+<td>TRS Qualification Procedure</td>
+</tr>
+<tr>
+<td>Temporal Design Rules</td>
+<td>TDR</td>
+<td>TDRC tool, CGV tool</td>
+<td>SCLM, TSPS, TGI Metrology Standard</td>
+</tr>
+<tr>
+<td>Coherence Budget Tables</td>
+<td>CBT</td>
+<td>CBA tool, fab scheduler</td>
+<td>SCR Specification, SCR qualification record</td>
+</tr>
+<tr>
+<td>TTF Arc Library</td>
+<td>TTFAL</td>
+<td>TTF-aware STA tool</td>
+<td>SCR Specification, TGI Metrology Standard</td>
+</tr>
+</tbody>
+</table>
+<p>A sixth component, the <strong>Temporal Crosstalk Rule Set (TCRS)</strong>, is considered a sub-component of the TDR category but is specified separately in §8 due to its distinct physical basis and rule format.</p>
+<h3 id="23-spatial-domain-extensions">2.3 Spatial Domain Extensions</h3>
+<p>The following classical PDK components require modification or augmentation in a TRS-aware PDK:</p>
+<p><strong>Layer stack definition:</strong> The layer stack must include the TGI zone — the transition region between Tier 1 structural layers and Tier 2 temporal layers — with its z_f and z_c boundaries, qualified SC class per layer, and interface quality parameters. Layer definitions without TGI zone specification cannot support TGI-aware extraction or TDRC.</p>
+<p><strong>Power delivery network rules:</strong> As noted in The Temporal Manufacturing Primer, TCUs draw burst current synchronized to the coherence clock. Classical average-current power delivery network rules are insufficient; rules must be augmented with burst-current specifications derived from the SCR coherence cycle period and the per-slot TCU activation count in the coherence budget tables.</p>
+<p><strong>Signal integrity decks:</strong> Classical signal integrity analysis must be extended with temporal crosstalk rules (§8) to capture the phenomenon of high-density commit operations at one temporal address inducing perturbation at adjacent addresses in spatially proximate substrate regions. This is distinct from classical electromagnetic crosstalk and requires dedicated extraction and analysis flows.</p>
+<h3 id="24-versioning-and-compatibility">2.4 Versioning and Compatibility</h3>
+<p>Every TRS-Aware PDK release carries a version identifier with the format:</p>
+<pre><code>{process_node}_{fab_id}_{scr_zone_config}_{pdk_major}.{pdk_minor}.{pdk_patch}
+
+Example: TF-N3T_FAB01_ZC-A_2.1.0
+</code></pre>
+<p>The fields are defined in §14. EDA tools MUST record the full PDK version identifier in all signoff reports. Signoff reports without a PDK version identifier are non-conformant.</p>
+<hr>
+<h2 id="3-sc-class-layer-maps">3. SC Class Layer Maps</h2>
+<h3 id="31-purpose">3.1 Purpose</h3>
+<p>SC Class Layer Maps encode the substrate clarity class and spatial SC variation for every layer in the process stack that carries temporal address encoding. They are the foundational input to the TDRC tool and the CBA tool: both tools must know the SC class of each layer at each die location before they can apply correct rule thresholds or budget allocations.</p>
+<h3 id="32-layer-level-sc-class-assignment">3.2 Layer-Level SC Class Assignment</h3>
+<p>Each layer in the process stack is assigned one of four SC designations:</p>
+<table>
+<thead>
+<tr>
+<th>Designation</th>
+<th>Definition</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SC-I</code></td>
+<td>Layer qualified for high-density temporal addressing; SC &gt; 0.92</td>
+<td>TCT lot-level SC rating</td>
+</tr>
+<tr>
+<td><code>SC-II</code></td>
+<td>Layer qualified for restricted temporal addressing; 0.75 ≤ SC ≤ 0.92</td>
+<td>TCT lot-level SC rating</td>
+</tr>
+<tr>
+<td><code>SC-III</code></td>
+<td>Layer not qualified for temporal addressing; SC &lt; 0.75</td>
+<td>TCT lot-level SC rating</td>
+</tr>
+<tr>
+<td><code>SPATIAL</code></td>
+<td>Layer not processed by TRS; spatial-only Tier 1 layer</td>
+<td>Layer stack definition; no TCT required</td>
+</tr>
+</tbody>
+</table>
+<p><strong>R-SCLM-01:</strong> Every layer in the process stack MUST have an explicit SC designation in the PDK layer stack definition. Layers without a designation are treated as <code>SPATIAL</code> by default, but this default MUST be explicitly confirmed in the PDK generation record; silent defaulting is non-conformant.</p>
+<p><strong>R-SCLM-02:</strong> The SC designation for temporally addressed layers MUST be derived from the TCT SC rating for the substrate lot qualified for that process node, as documented in the TCT Report referenced in the TRS Qualification Record. SC designations derived from supplier specifications or materials-modeled estimates, without TCT measurement evidence, are non-conformant.</p>
+<h3 id="33-spatial-sc-variation-maps">3.3 Spatial SC Variation Maps</h3>
+<p>The lot-level SC class assignment establishes the tier for the full die. The spatial SC variation map — derived from the TCT 5×5 subregion SC grid and the TGI metrology SC_eff map — provides finer-grained SC information that drives position-dependent rule variations within the die.</p>
+<p>The spatial SC variation map in the PDK is a 2D grid defined in die coordinates with the following properties:</p>
+<p><strong>Resolution:</strong> The map grid resolution is determined by the coarser of the TCT subregion grid (nominally 4.2 mm × 4.2 mm cells) and the TGI metrology SC_eff measurement site spacing. The finer grid is downsampled to the coarser resolution for the merged PDK map.</p>
+<p><strong>Values:</strong> Each grid cell contains:
+- <code>SC_bulk</code>: the TCT-derived SC rating for that subregion
+- <code>SC_eff</code>: the TGI-derived effective SC at the TGI boundary for that die region
+- <code>SC_design</code>: the operative SC value used for rule derivation; defined as <code>min(SC_bulk, SC_eff)</code>
+- <code>SC_class_local</code>: the SC class assignment derived from <code>SC_design</code> at that grid cell</p>
+<p><strong>R-SCLM-03:</strong> <code>SC_design</code> MUST use <code>min(SC_bulk, SC_eff)</code> — the more conservative of the two. Using <code>SC_bulk</code> alone in regions where <code>SC_eff &lt; SC_bulk</code> would overstate the effective temporal addressing capability at the TGI boundary, producing rules that are too permissive.</p>
+<p><strong>R-SCLM-04:</strong> When <code>SC_class_local</code> differs from the lot-level SC class assignment for more than 10% of grid cells in any die quadrant, the PDK MUST implement position-dependent rule zones (§5.6) rather than a uniform lot-level rule set for the affected quadrant.</p>
+<h3 id="34-sc-class-map-format">3.4 SC Class Map Format</h3>
+<p>SC Class Layer Maps are encoded in the <strong>Temporal Layer Markup Format (TLMF)</strong>, a structured text format defined in <a href="../data-formats/TLMF_Schema.html"><code>docs/data-formats/TLMF_Schema.md</code></a>. Each TLMF record specifies:</p>
+<pre><code>LAYER  {layer_name}  {z_bottom_nm}  {z_top_nm}  {SC_designation}
+  SUBREGION  {x_min_um}  {y_min_um}  {x_max_um}  {y_max_um}
+    SC_BULK   {value}
+    SC_EFF    {value}
+    SC_DESIGN {value}
+    SC_CLASS  {SC-I | SC-II | SC-III | SPATIAL}
+  END_SUBREGION
+  ...
+END_LAYER
+</code></pre>
+<p><strong>R-SCLM-05:</strong> TLMF files MUST be schema-validated against the current TLMF schema version before PDK packaging. TLMF files that fail schema validation MUST NOT be included in a PDK release.</p>
+<hr>
+<h2 id="4-trs-stack-parameter-sets">4. TRS Stack Parameter Sets</h2>
+<h3 id="41-purpose">4.1 Purpose</h3>
+<p>TRS Stack Parameter Sets encode the operational parameters of the Temporal Resolution Stack as configured and qualified for the target process node. These parameters govern how the TDRC tool evaluates address spacing feasibility, how the TRS intent map generator computes apodization envelopes, and how the timing model accounts for L3 resolution overhead.</p>
+<h3 id="42-parameter-set-structure">4.2 Parameter Set Structure</h3>
+<p>A TRS Stack Parameter Set is defined per SC class. Processes that use multiple SC classes in their layer stack — SC-I layers for high-density temporal logic and SC-II layers for mixed layers — require a separate parameter set for each SC class in use.</p>
+<p>Each parameter set contains the following fields:</p>
+<p><strong>Address spacing parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Symbol</th>
+<th>Unit</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Minimum qualified address spacing</td>
+<td>Δτ_min</td>
+<td>normalized addr. units</td>
+<td>The minimum address spacing at which the TRS, operating on the qualified substrate, achieves the process MQD without exceeding the AER acceptance threshold</td>
+</tr>
+<tr>
+<td>Address spacing design margin</td>
+<td>Δτ_margin</td>
+<td>normalized addr. units</td>
+<td>Required margin above Δτ_min that designs must maintain; provides headroom for TAOE and manufacturing variation</td>
+</tr>
+<tr>
+<td>Effective minimum spacing</td>
+<td>Δτ_eff</td>
+<td>normalized addr. units</td>
+<td>Δτ_min + Δτ_margin; the value actually enforced by TDRC</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Apodization parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Symbol</th>
+<th>Unit</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apodization window width</td>
+<td>W_apod</td>
+<td>normalized addr. units</td>
+<td>The half-width of the L3 apodization envelope applied to each commit operation</td>
+</tr>
+<tr>
+<td>Apodization roll-off exponent</td>
+<td>n_apod</td>
+<td>dimensionless</td>
+<td>Controls the steepness of the apodization envelope edges; higher n = sharper rolloff</td>
+</tr>
+<tr>
+<td>Maximum side-lobe level</td>
+<td>SLL_max</td>
+<td>dB</td>
+<td>The maximum permitted side-lobe amplitude of the apodized operation, normalized to the main lobe</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Commit sequencing overhead:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Symbol</th>
+<th>Unit</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L2 sequencing latency per operation</td>
+<td>T_seq</td>
+<td>coherence cycles</td>
+<td>The scheduling overhead added by the L2 Sequencing Layer per operation; used as a timing arc in the TTF arc library</td>
+</tr>
+<tr>
+<td>Maximum operations per coherence slot</td>
+<td>N_slot_max</td>
+<td>operations</td>
+<td>The maximum number of operations the TRS can sequence into a single coherence slot without exceeding sequencing bandwidth</td>
+</tr>
+</tbody>
+</table>
+<p><strong>R-TSPS-01:</strong> All parameter set values MUST be derived from TRS qualification measurements on the qualified substrate lot, as documented in the TRS Qualification Record. Parameter values taken from simulation, prior-node extrapolation, or supplier data sheets without qualification measurement evidence are non-conformant.</p>
+<p><strong>R-TSPS-02:</strong> Δτ_margin MUST be ≥ 15% of Δτ_min for SC-I processes and ≥ 20% of Δτ_min for SC-II processes. These minimum margins account for TAOE_rnd and spatial SC variation at the die level.</p>
+<p><strong>R-TSPS-03:</strong> A separate TSPS MUST be provided for each SC class present in the process layer stack. TDRC tools that receive a process stack containing SC-I and SC-II layers MUST apply the SC-I TSPS to SC-I layers and the SC-II TSPS to SC-II layers; applying a single TSPS to all temporal layers is non-conformant.</p>
+<h3 id="43-tsps-file-format">4.3 TSPS File Format</h3>
+<p>TRS Stack Parameter Sets are encoded in the <strong>Temporal Parameter Set Format (TPSF)</strong>, a structured key-value format:</p>
+<pre><code>TSPS_BEGIN
+  PROCESS_NODE    {node_identifier}
+  SC_CLASS        {SC-I | SC-II}
+  SOURCE_TRS_QUAL {TRS_qualification_record_ID}
+
+  ADDR_SPACING
+    DELTA_TAU_MIN     {value}
+    DELTA_TAU_MARGIN  {value}
+    DELTA_TAU_EFF     {value}   # = MIN + MARGIN; must equal sum
+  END_ADDR_SPACING
+
+  APODIZATION
+    W_APOD     {value}
+    N_APOD     {value}
+    SLL_MAX_DB {value}
+  END_APODIZATION
+
+  COMMIT_SEQUENCING
+    T_SEQ_CYCLES   {value}
+    N_SLOT_MAX_OPS {value}
+  END_COMMIT_SEQUENCING
+TSPS_END
+</code></pre>
+<p><strong>R-TSPS-04:</strong> The TSPS file MUST include the <code>SOURCE_TRS_QUAL</code> field referencing the TRS Qualification Record ID from which the parameters were derived. PDK files without traceability to the qualification record are non-conformant.</p>
+<hr>
+<h2 id="5-temporal-design-rules">5. Temporal Design Rules</h2>
+<h3 id="51-purpose-and-rule-categories">5.1 Purpose and Rule Categories</h3>
+<p>Temporal Design Rules (TDR) are the rule set enforced by the TDRC tool during design verification. They are the temporal analog of classical geometric DRC rules: just as DRC rules prevent spatial features from violating fab patterning limits, TDR rules prevent temporal address assignments from violating the substrate's resolution limits, the TRS stack's sequencing capacity, or the SCR's coherence budget.</p>
+<p>TDR rules are organized into five categories:</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Code Prefix</th>
+<th>Governs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Address Spacing Rules</td>
+<td>ASR</td>
+<td>Minimum separation between temporal addresses within and across layers</td>
+</tr>
+<tr>
+<td>Density Gradient Rules</td>
+<td>DGR</td>
+<td>Maximum rate of change of temporal density across die regions</td>
+</tr>
+<tr>
+<td>TGI Proximity Rules</td>
+<td>TPR</td>
+<td>Constraints on temporal operations sited near TGI-zone boundaries</td>
+</tr>
+<tr>
+<td>Causal Graph Rules</td>
+<td>CGR</td>
+<td>Validity constraints on the operation dependency graph</td>
+</tr>
+<tr>
+<td>Coherence Slot Rules</td>
+<td>CSR</td>
+<td>Constraints on operation-to-slot assignments relative to the coherence budget</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-address-spacing-rules-asr">5.2 Address Spacing Rules (ASR)</h3>
+<p>Address spacing rules enforce the minimum address separation between any two commit operations that share spatial proximity on the substrate. Two operations are considered spatially proximate if their spatial distance is less than the <strong>interaction radius</strong> r_int, derived from the substrate's coherence length L_c:</p>
+<pre><code>r_int = α × L_c
+
+Where:
+  L_c  = material coherence length from the TSPS material record (μm)
+  α    = interaction radius multiplier; fixed at 3.0 for this revision
+  r_int = the spatial radius within which address spacing rules apply (μm)
+</code></pre>
+<p><strong>ASR-001 — Intra-layer minimum spacing:</strong> Two operations committed in the same layer, whose spatial positions are within r_int of each other, MUST have temporal address separation ≥ Δτ_eff for the layer's SC class.</p>
+<p><strong>ASR-002 — Inter-layer minimum spacing:</strong> Two operations committed in different temporal layers, whose spatial positions project within r_int of each other in the die plane, MUST have temporal address separation ≥ Δτ_eff_inter, where:</p>
+<pre><code>Δτ_eff_inter = max( Δτ_eff(layer_A), Δτ_eff(layer_B) ) × f_inter
+
+Where:
+  f_inter = inter-layer coupling factor from the TSPS material record (≥ 0.5, ≤ 1.0)
+</code></pre>
+<p>The inter-layer coupling factor f_inter reflects that coupling between layers is weaker than intra-layer coupling; it relaxes the inter-layer spacing requirement proportionally.</p>
+<p><strong>ASR-003 — Address boundary clearance:</strong> No operation MUST be assigned an address within Δτ_eff/2 of the address space boundary (τ = 0 or τ approaching 1). Operations near the boundary have only one valid neighbor direction and cannot satisfy symmetric spacing to both sides.</p>
+<p><strong>ASR-004 — SC-class mismatch penalty:</strong> When a temporal operation in an SC-I layer is spatially proximate to an operation in an SC-II layer within the same die, the spacing between them MUST satisfy the SC-II Δτ_eff (the more conservative requirement). The lower SC class governs cross-class proximate pairs.</p>
+<p><strong>R-TDR-01:</strong> TDRC tools MUST evaluate address spacing rules using the spatial SC variation map (§3.3) at each operation's die location, not the lot-level SC class alone. A tool that applies uniform lot-level spacing rules without consulting the spatial SC map is non-conformant.</p>
+<h3 id="53-density-gradient-rules-dgr">5.3 Density Gradient Rules (DGR)</h3>
+<p>Density gradient rules constrain the rate at which temporal density changes across the die. Abrupt density transitions — a high-density cluster immediately adjacent to a low-density region — produce stress and field gradients within the substrate that elevate TAOE in the transition region, even if the absolute density in each region is within its RWDL.</p>
+<p><strong>DGR-001 — Maximum density gradient:</strong> The temporal density, averaged over any 500 μm × 500 μm die region, MUST NOT change by more than ΔTD_max between adjacent 500 μm × 500 μm regions:</p>
+<pre><code>ΔTD_max = TD_limit × g_max
+
+Where:
+  TD_limit = the RWDL for the lower-density region (operations/cycle/mm²)
+  g_max    = maximum density gradient fraction; SC-class-specific:
+             SC-I:  g_max = 0.35
+             SC-II: g_max = 0.25
+</code></pre>
+<p><strong>DGR-002 — Transition zone buffering:</strong> When the design contains a density step that exceeds ΔTD_max, a transition zone of width w_trans MUST be inserted between the high-density and low-density regions, in which density changes monotonically:</p>
+<pre><code>w_trans = (ΔTD_actual / ΔTD_max − 1) × 500 μm  (minimum)
+</code></pre>
+<p>The transition zone is a design constraint on floorplanning; it is not a physical structure. The designer must ensure that no operations are assigned to the transition zone at densities inconsistent with the monotonic gradient requirement.</p>
+<p><strong>DGR-003 — SCR zone boundary gradient:</strong> The density transition across an SCR zone boundary MUST NOT exceed ΔTD_max as defined for the lower SC class on either side of the boundary. Zone boundaries are already subject to L_handoff latency; density gradients at zone boundaries compound timing risk and are doubly constrained.</p>
+<h3 id="54-tgi-proximity-rules-tpr">5.4 TGI Proximity Rules (TPR)</h3>
+<p>TGI proximity rules constrain temporal operations that are sited in layers close to the TGI ceiling (z_c) — the boundary between the TGI zone and the fully qualified temporal layer above it. Operations near z_c may be affected by the residual interface effects captured in the SC_eff map, even if the layer they occupy is nominally SC-I.</p>
+<p><strong>TPR-001 — TGI ceiling clearance:</strong> Operations committed in layers within 5 nm above z_c MUST satisfy the SC_eff-derived Δτ_eff for their die location rather than the SC_bulk-derived Δτ_eff. If SC_eff &lt; SC_bulk at that location, this rule is more restrictive.</p>
+<p><strong>TPR-002 — Non-monotonic CLG exclusion zone:</strong> In die regions where the TGI metrology spatial map records a CLG non-monotonicity finding (as defined in §9.3 of The TGI Metrology Standard), no temporal operations MUST be assigned to layers within 10 nm above z_c. This exclusion zone applies regardless of SC_eff in that region; a non-monotonic CLG indicates a buried low-coherence layer whose effect on operations immediately above it is not fully captured by the SC_eff computation.</p>
+<p><strong>TPR-003 — TGI floor keep-out:</strong> No temporal operations MUST be assigned to layers within the TGI zone itself — between z_f and z_c inclusive. The TGI zone is a transition region, not a qualified temporal layer.</p>
+<p><strong>R-TDR-02:</strong> TPR rules MUST be evaluated using the layer z-coordinate of each operation's assigned layer, referenced to the process stack definition in the PDK. Operations without a defined z-coordinate assignment in the intent map cannot be evaluated for TPR compliance and MUST be flagged as a CGR violation (§5.5).</p>
+<h3 id="55-causal-graph-rules-cgr">5.5 Causal Graph Rules (CGR)</h3>
+<p>Causal graph rules constrain the structure of the operation dependency graph that the TRS L2 Sequencing Layer receives as input. A dependency graph that violates these rules cannot be sequenced by L2 and will generate arbitration failures at the Commit Arbiter.</p>
+<p><strong>CGR-001 — Acyclicity:</strong> The operation dependency graph MUST be a directed acyclic graph (DAG). Any cycle — a sequence of dependencies that returns to its origin — is a sequencing deadlock. CGR-001 is a hard rule: no waivers are permitted.</p>
+<p><strong>CGR-002 — Bounded fan-in:</strong> No single operation MUST have more than F_in_max predecessor dependencies, where F_in_max is taken from the coherence budget tables (§6) for the target SCR zone. An operation with excessive fan-in creates a sequencing bottleneck: the CA cannot authorize it until all predecessors are acknowledged, and if those predecessors span multiple zones, the L_handoff latency stack can exceed the available coherence budget.</p>
+<p><strong>CGR-003 — Bounded fan-out:</strong> No single operation MUST have more than F_out_max successor dependencies. Excessive fan-out concentrates the causal ordering load on one operation's acknowledgment signal; if that operation is deferred (per the CA deferred-slot procedure), all successors are simultaneously deferred, potentially starving multiple coherence slots.</p>
+<p><strong>CGR-004 — Cross-zone dependency depth:</strong> A chain of dependencies that crosses k zone boundaries incurs a minimum latency of k × L_handoff coherence cycles. The total cross-zone latency of any dependency chain MUST NOT exceed the CBA coherence budget allocation for inter-zone operations. Chains that exceed this allocation cannot be scheduled within the coherence cycle budget.</p>
+<p><strong>CGR-005 — Unresolved operation identifiers:</strong> Every predecessor operation identifier referenced in the dependency graph MUST correspond to an operation present in the same design's intent map. References to undefined operation identifiers are non-conformant; they represent dependencies that L1 cannot resolve before passing to L2.</p>
+<p><strong>R-TDR-03:</strong> CGR-001 (acyclicity) MUST be checked before any other CGR rule. A cyclic graph produces undefined behavior in subsequent rule checks and MUST be reported as a blocking error requiring design correction before TDRC can continue.</p>
+<h3 id="56-coherence-slot-rules-csr">5.6 Coherence Slot Rules (CSR)</h3>
+<p>Coherence slot rules constrain the assignment of operations to coherence slots, ensuring that no slot is oversubscribed and that the slot assignments are consistent with the SCR zone configuration.</p>
+<p><strong>CSR-001 — Slot capacity:</strong> The number of operations assigned to any single coherence slot MUST NOT exceed N_slot_max from the TSPS for the layer's SC class.</p>
+<p><strong>CSR-002 — Zone slot index validity:</strong> Coherence slot assignments MUST use slot indices in the range [0, N_slots − 1], where N_slots is the zone's qualified slot count from the coherence budget tables. Slot indices outside this range are non-conformant.</p>
+<p><strong>CSR-003 — Slot-address consistency:</strong> An operation assigned to coherence slot s MUST have a temporal address τ that falls within the address subrange associated with slot s in the coherence budget tables. Slot s is associated with address subrange [s/N_slots, (s+1)/N_slots). Operations whose address and slot assignment are inconsistent will be rejected by the L1 Intent Layer.</p>
+<p><strong>CSR-004 — Reserved slot margins:</strong> The first and last coherence slot of each cycle (slot 0 and slot N_slots − 1) are reserved for SCR synchronization traffic. Design operations MUST NOT be assigned to slots 0 or N_slots − 1.</p>
+<hr>
+<h2 id="6-coherence-budget-tables">6. Coherence Budget Tables</h2>
+<h3 id="61-purpose">6.1 Purpose</h3>
+<p>Coherence Budget Tables encode the temporal resource constraints imposed by the SCR zone configuration. They are the primary input to the CBA (Coherence Budget Analysis) tool, which verifies that the design's total operation count, distributed across SCR zones, fits within the coherence cycle budget at the target temporal density.</p>
+<h3 id="62-budget-table-structure">6.2 Budget Table Structure</h3>
+<p>A separate Coherence Budget Table (CBT) is provided for each SCR zone configuration present in the target fab. A fab with a single zone has one CBT; a multi-zone fab has one CBT per zone plus a cross-zone budget section.</p>
+<p>Each CBT record contains:</p>
+<p><strong>Zone identification:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>zone_id</code></td>
+<td>Zone identifier matching the SCR qualification record</td>
+</tr>
+<tr>
+<td><code>scr_config_id</code></td>
+<td>SCR zone configuration record ID</td>
+</tr>
+<tr>
+<td><code>fab_id</code></td>
+<td>Facility identifier</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Timing parameters (from SCR qualification record):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Symbol</th>
+<th>Unit</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>coherence_cycle_period</code></td>
+<td>T_c</td>
+<td>ns</td>
+<td>SCR qualification</td>
+</tr>
+<tr>
+<td><code>synchronization_latency_floor</code></td>
+<td>SLF</td>
+<td>ns</td>
+<td>SCR qualification</td>
+</tr>
+<tr>
+<td><code>slot_count</code></td>
+<td>N_slots</td>
+<td>integer</td>
+<td>SCR qualification</td>
+</tr>
+<tr>
+<td><code>slot_period</code></td>
+<td>T_slot = T_c / N_slots</td>
+<td>ns</td>
+<td>Derived</td>
+</tr>
+<tr>
+<td><code>arbiter_processing_latency</code></td>
+<td>T_arb</td>
+<td>ns</td>
+<td>SCR qualification</td>
+</tr>
+<tr>
+<td><code>max_deferral_count</code></td>
+<td>D_max</td>
+<td>integer</td>
+<td>SCR qualification</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Capacity parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Symbol</th>
+<th>Unit</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>operations_per_slot_max</code></td>
+<td>N_slot_max</td>
+<td>ops</td>
+<td>From TSPS for the zone's qualified SC class</td>
+</tr>
+<tr>
+<td><code>operations_per_cycle_max</code></td>
+<td>N_cycle_max = N_slot_max × (N_slots − 2)</td>
+<td>ops</td>
+<td>Derived; excludes reserved slots 0 and N_slots−1</td>
+</tr>
+<tr>
+<td><code>temporal_density_limit</code></td>
+<td>TD_limit</td>
+<td>ops/cycle/mm²</td>
+<td>MQD for the zone's SC class</td>
+</tr>
+<tr>
+<td><code>zone_active_area</code></td>
+<td>A_zone</td>
+<td>mm²</td>
+<td>Physical area of the zone covered by TCUs</td>
+</tr>
+<tr>
+<td><code>total_cycle_budget</code></td>
+<td>B_cycle = TD_limit × A_zone</td>
+<td>ops/cycle</td>
+<td>Derived; the hard ceiling for CBA</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Fan-in/fan-out limits:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Symbol</th>
+<th>Unit</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>max_fan_in</code></td>
+<td>F_in_max</td>
+<td>predecessors</td>
+<td>Derived from T_arb and T_slot; F_in_max = floor(T_slot / T_arb)</td>
+</tr>
+<tr>
+<td><code>max_fan_out</code></td>
+<td>F_out_max</td>
+<td>successors</td>
+<td>Fixed at 32 for this revision; process-specific values MAY override</td>
+</tr>
+</tbody>
+</table>
+<p><strong>R-CBT-01:</strong> The CBT MUST be regenerated whenever any of the following SCR parameters change: T_c, N_slots, SLF, T_arb, D_max, zone physical extent. A PDK with a CBT derived from stale SCR parameters is non-conformant for production use.</p>
+<p><strong>R-CBT-02:</strong> The CBT <code>total_cycle_budget</code> value MUST be confirmed against the actual CMA-monitored coherence utilization data from at least one production lot before the PDK is released for volume production. Simulation-derived budget values that have not been validated against production data are provisional; PDKs containing provisional CBTs MUST carry a <code>PROVISIONAL</code> flag in the PDK version record.</p>
+<h3 id="63-cross-zone-budget-section">6.3 Cross-Zone Budget Section</h3>
+<p>For multi-zone fabs, the CBT package includes a cross-zone budget section that encodes the inter-zone handoff latency contracts from the SCR Specification:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>zone_pair</code></td>
+<td>Ordered pair (zone_A_id, zone_B_id) representing a directional inter-zone link</td>
+</tr>
+<tr>
+<td><code>L_handoff</code></td>
+<td>Handoff latency in Zone B coherence cycles; from the SCR qualification record</td>
+</tr>
+<tr>
+<td><code>zbi_message_latency</code></td>
+<td>T_ZBI in ns; from ZBI commissioning measurement</td>
+</tr>
+<tr>
+<td><code>cross_zone_budget_fraction</code></td>
+<td>Maximum fraction of B_cycle that may be consumed by cross-zone dependent operations; default 0.20</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>cross_zone_budget_fraction</code> reflects that cross-zone operations are latency-penalized relative to intra-zone operations. Dedicating more than 20% of the coherence budget to cross-zone traffic creates scheduling pressure that elevates deferral rates toward D_max.</p>
+<p><strong>R-CBT-03:</strong> CBA tools MUST enforce the <code>cross_zone_budget_fraction</code> limit separately from the total <code>B_cycle</code> limit. A design may pass total budget analysis while failing the cross-zone fraction limit if its dependency graph is heavily biased toward zone-crossing paths.</p>
+<hr>
+<h2 id="7-ttf-arc-library">7. TTF Arc Library</h2>
+<h3 id="71-the-temporal-timing-format">7.1 The Temporal Timing Format</h3>
+<p>The <strong>Temporal Timing Format (TTF)</strong> is the standardized format for expressing temporal manufacturing timing constraints as arcs in a timing model consumable by STA tools. TTF extends classical static timing analysis — which reasons about spatial propagation delays through logic gates and interconnect — with arc types that model delays and constraints arising from TRS commit sequencing, SCR coherence slot assignments, and inter-zone handoff latency.</p>
+<p>The TTF arc library delivered in the PDK is the complete set of TTF arcs characterizing the target process node and SCR zone configuration. It is the primary input to any TTF-aware STA tool performing temporal timing closure.</p>
+<p>The full TTF syntax and arc type definitions are specified in the TTF Reference (<a href="../eda/TTF_Reference.html"><code>docs/eda/TTF_Reference.md</code></a>). This section specifies which arc types MUST be present in the PDK TTF arc library and how their values are derived from upstream measurements.</p>
+<h3 id="72-required-arc-types">7.2 Required Arc Types</h3>
+<h4 id="721-commit-sequencing-arc-csa">7.2.1 Commit Sequencing Arc (CSA)</h4>
+<p>The commit sequencing arc models the latency introduced by the TRS L2 Sequencing Layer for a single operation, from intent-layer delivery to commit-layer authorization.</p>
+<pre><code>TTF_ARC  COMMIT_SEQUENCING
+  TYPE          CSA
+  SC_CLASS      {SC-I | SC-II}
+  MIN_DELAY     T_seq_min  (coherence cycles)
+  MAX_DELAY     T_seq_max  (coherence cycles)
+  SOURCE        TSPS
+  TSPS_REF      {TSPS_record_ID}
+END_ARC
+</code></pre>
+<p>T_seq_min and T_seq_max represent the best-case and worst-case sequencing latency. T_seq_min applies when the operation has no predecessor conflicts and is assigned to its nominal slot. T_seq_max = T_seq_min + D_max applies when the operation is deferred the maximum permitted number of times.</p>
+<p><strong>R-TTFAL-01:</strong> Both T_seq_min and T_seq_max MUST be present in the CSA arc. STA tools that model only best-case or worst-case sequencing will respectively miss timing violations and generate false negatives.</p>
+<h4 id="722-zone-boundary-arc-zba">7.2.2 Zone Boundary Arc (ZBA)</h4>
+<p>The zone boundary arc models the latency incurred when a dependency crosses a zone boundary via the ZBI inter-zone handoff protocol.</p>
+<pre><code>TTF_ARC  ZONE_BOUNDARY
+  TYPE          ZBA
+  ZONE_PAIR     {zone_A_id}  {zone_B_id}
+  L_HANDOFF     {value}      (Zone B coherence cycles)
+  T_ZBI_NS      {value}      (nanoseconds; from ZBI commissioning)
+  SOURCE        SCR_QUALIFICATION
+  SCR_ZONE_CFG  {scr_zone_config_id}
+END_ARC
+</code></pre>
+<p>A ZBA is directional: the arc from Zone A to Zone B reflects L_handoff measured in Zone B cycles. If Zone A and Zone B have different coherence cycle periods, the STA tool MUST use Zone B's T_c for arc delay computation when the dependency crosses from A to B, and Zone A's T_c when it crosses from B to A.</p>
+<p><strong>R-TTFAL-02:</strong> A ZBA MUST be provided for every ordered zone pair (A→B) and its reverse (B→A) in the fab configuration. Directed arcs for both directions are required because L_handoff is asymmetric when zone cycle periods differ.</p>
+<h4 id="723-arbiter-processing-arc-apa">7.2.3 Arbiter Processing Arc (APA)</h4>
+<p>The arbiter processing arc models the CA processing latency T_arb — the delay from the SCR slot boundary to the TAIS authorization signal assertion.</p>
+<pre><code>TTF_ARC  ARBITER_PROCESSING
+  TYPE          APA
+  ZONE_ID       {zone_id}
+  T_ARB_NS      {value}      (nanoseconds; from SCR qualification)
+  T_AUTH_NS     {value}      (setup window; from SCR qualification)
+  SOURCE        SCR_QUALIFICATION
+  SCR_ZONE_CFG  {scr_zone_config_id}
+END_ARC
+</code></pre>
+<p>The APA is used by STA tools to model the window between the coherence slot boundary and the earliest moment at which a TCU can begin its commit operation. T_AUTH_NS is the setup margin (the T_auth window from the SCR Specification) within which the CA must assert authorization before the slot boundary.</p>
+<h4 id="724-taoe-correction-arc-tca">7.2.4 TAOE Correction Arc (TCA)</h4>
+<p>The TAOE correction arc encodes the systematic component of temporal address overlay error (TAOE_sys) as a position-dependent timing offset. This arc type is unique to TRS-aware STA: it represents the spatial pattern of address registration offset measured by TGI metrology, expressed as a timing perturbation to operations in die regions where the STR systematic gradient is non-zero.</p>
+<pre><code>TTF_ARC  TAOE_CORRECTION
+  TYPE          TCA
+  LAYER         {layer_name}
+  DIE_REGION    {x_min_um}  {y_min_um}  {x_max_um}  {y_max_um}
+  TAU_OFFSET    {value}     (normalized address units; signed)
+  ADDR_GRADIENT {value}     (addr. units/mm; in-plane systematic gradient)
+  SOURCE        TGI_METROLOGY
+  TGI_REPORT_ID {report_id}
+END_ARC
+</code></pre>
+<p>When PIMC (Predictive Intent Map Correction) is applied to the design, the TCA offsets are pre-compensated in the TRS intent map and SHOULD be set to zero in the PDK TTF arc library for that lot. When PIMC is not applied, the TCA arcs represent uncorrected systematic address offsets that the STA tool must treat as timing perturbations.</p>
+<p><strong>R-TTFAL-03:</strong> TCA arcs MUST be derived from the TGI metrology TAOE_sys spatial map for the qualified substrate lot. TCA arcs derived from modeled or extrapolated TAOE values are non-conformant.</p>
+<p><strong>R-TTFAL-04:</strong> A TCA arc MUST be provided for every die region in the spatial SC variation map (§3.3) where |TAOE_sys| &gt; 0.001 normalized address units. Regions with |TAOE_sys| ≤ 0.001 MAY be assigned zero-valued TCA arcs or omitted, as they are within the instrument noise floor.</p>
+<h4 id="725-density-dependent-derating-arc-dda">7.2.5 Density-Dependent Derating Arc (DDA)</h4>
+<p>The density-dependent derating arc encodes the reduction in effective timing margin that occurs when a die region operates near its RWDL. As temporal density approaches the RWDL, TAOE_rnd increases and commit fidelity degrades — a phenomenon that manifests in the timing model as a reduction in the available margin for operations in high-density regions.</p>
+<pre><code>TTF_ARC  DENSITY_DERATING
+  TYPE           DDA
+  LAYER          {layer_name}
+  DIE_REGION     {x_min_um}  {y_min_um}  {x_max_um}  {y_max_um}
+  TD_DESIGN      {value}     (ops/cycle/mm²; design's intended density in this region)
+  RWDL           {value}     (ops/cycle/mm²; from TGI metrology)
+  DERATING_SLOPE {value}     (addr. units per unit density fraction; from TSPS)
+  SOURCE         TGI_METROLOGY + TSPS
+END_ARC
+</code></pre>
+<p>The derating slope converts the fractional proximity to RWDL (TD_design / RWDL) into a timing margin reduction in address units. The slope is derived from the TSPS material record and reflects the empirically characterized relationship between density loading and TAOE_rnd for the qualified substrate class.</p>
+<p><strong>R-TTFAL-05:</strong> DDA arcs MUST be evaluated at final routed density, not at pre-route estimated density. PDK releases used for pre-route timing analysis MUST include a disclaimer that DDA derating is estimated and MUST be rechecked at final route.</p>
+<h3 id="73-ttf-arc-library-file-format">7.3 TTF Arc Library File Format</h3>
+<p>TTF arcs are encoded in the Temporal Timing Format as specified in <a href="../eda/TTF_Reference.html"><code>docs/eda/TTF_Reference.md</code></a>. Each arc type is stored in a separate file within the <code>ttf/</code> subdirectory of the PDK package (§10). The master TTF library manifest (<code>ttf/MANIFEST.ttf</code>) lists all arc files, their types, and their source traceability references.</p>
+<p><strong>R-TTFAL-06:</strong> The TTF library manifest MUST be present and MUST enumerate every arc file in the <code>ttf/</code> directory. STA tools that load the PDK MUST validate the manifest against the directory contents before accepting the arc library as complete.</p>
+<hr>
+<h2 id="8-temporal-crosstalk-rules">8. Temporal Crosstalk Rules</h2>
+<h3 id="81-physical-mechanism">8.1 Physical Mechanism</h3>
+<p>Temporal crosstalk is the perturbation induced at one temporal address by a high-density cluster of commit operations at an adjacent address in a spatially proximate substrate region. It is distinct from classical electromagnetic crosstalk in two respects:</p>
+<ol>
+<li>
+<p><strong>Direction:</strong> Classical crosstalk propagates spatially (from aggressor net to victim net). Temporal crosstalk propagates in the address domain (from aggressor address cluster to victim address), at a fixed spatial location or within a spatial radius determined by the coherence length.</p>
+</li>
+<li>
+<p><strong>Mechanism:</strong> Classical crosstalk arises from capacitive or inductive coupling between conductors. Temporal crosstalk arises from the inter-site interaction mechanism in the substrate — the same mechanism quantified in the TCT address pattern design as the basis for d_pair — when a high density of operations at one address collectively perturbs the phase state of the substrate at a neighboring address.</p>
+</li>
+</ol>
+<p>Temporal crosstalk is directional in the density sense: a low-density address adjacent to a high-density address receives more perturbation than a high-density address adjacent to a low-density address, because the high-density cluster generates a larger aggregate field in the substrate phase state.</p>
+<h3 id="82-crosstalk-interaction-model">8.2 Crosstalk Interaction Model</h3>
+<p>The temporal crosstalk-induced address shift Δτ_xtalk at a victim address τ_v caused by an aggressor cluster at address τ_a is modeled as:</p>
+<pre><code>Δτ_xtalk = K_xtalk × TD_aggressor × G(|τ_v − τ_a|) × H(d_spatial)
+
+Where:
+  K_xtalk        = crosstalk coupling constant (material-class-specific; from TSPS)
+  TD_aggressor   = temporal density of the aggressor cluster (ops/cycle/mm²)
+  G(Δτ)          = address-domain coupling function; G(Δτ) = exp(−Δτ / Δτ_decay)
+  Δτ_decay       = address-domain coupling decay length (addr. units; from TSPS)
+  H(d_spatial)   = spatial coupling function; H(d) = exp(−d / L_c) for d ≤ r_int, 0 otherwise
+  d_spatial      = spatial distance between aggressor and victim commit sites (μm)
+</code></pre>
+<p>The coupling functions G and H capture the two-dimensional nature of temporal crosstalk: coupling decays both with address separation (G) and with physical distance (H), becoming negligible beyond the interaction radius r_int.</p>
+<h3 id="83-crosstalk-rule-format">8.3 Crosstalk Rule Format</h3>
+<p>Temporal crosstalk rules are expressed as maximum permitted aggressor density limits as a function of address separation and spatial distance from the victim:</p>
+<p><strong>TCRS-001 — Absolute aggressor density limit:</strong> For any victim address τ_v, the aggregate temporal density of all aggressors within the interaction radius r_int and within address separation Δτ_eff of τ_v MUST NOT cause Δτ_xtalk to exceed 10% of Δτ_eff for the victim address's SC class.</p>
+<p><strong>TCRS-002 — Aggressor cluster rule:</strong> A cluster of operations sharing the same temporal address and occupying a continuous spatial region exceeding 100 μm × 100 μm MUST be checked for temporal crosstalk impact on all addresses within Δτ_eff in all adjacent die regions within r_int. This rule targets the highest-risk configuration — a large, spatially coherent, high-density cluster — that produces the largest Δτ_xtalk.</p>
+<p><strong>TCRS-003 — Density tier stratification:</strong> The crosstalk coupling constant K_xtalk takes different values at different density tiers relative to RWDL:</p>
+<table>
+<thead>
+<tr>
+<th>Density Tier</th>
+<th>Condition</th>
+<th>K_xtalk Multiplier</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Low</td>
+<td>TD ≤ 0.50 × RWDL</td>
+<td>1.0 (base value from TSPS)</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>0.50 &lt; TD ≤ 0.75 × RWDL</td>
+<td>1.4</td>
+</tr>
+<tr>
+<td>High</td>
+<td>0.75 &lt; TD ≤ 0.90 × RWDL</td>
+<td>2.1</td>
+</tr>
+<tr>
+<td>Near-limit</td>
+<td>TD &gt; 0.90 × RWDL</td>
+<td>3.0</td>
+</tr>
+</tbody>
+</table>
+<p>The multipliers reflect non-linear growth in inter-site interaction strength as density approaches the substrate clarity limit. Near-limit density produces disproportionately large crosstalk because operations are committed at spacings approaching the minimum resolvable Δτ, where phase state overlap is significant.</p>
+<p><strong>R-TCRS-01:</strong> TDRC tools MUST evaluate TCRS rules after ASR rules, using the ASR-confirmed address assignments as the basis for aggressor density computation. Evaluating TCRS before ASR produces incorrect aggressor density estimates because addresses may shift during ASR correction.</p>
+<p><strong>R-TCRS-02:</strong> The K_xtalk base value and Δτ_decay MUST be taken from the TSPS for the victim address's SC class, not the aggressor's. The victim's substrate environment governs susceptibility; the aggressor's density governs exposure.</p>
+<hr>
+<h2 id="9-rwdl-and-sc_eff-map-integration">9. RWDL and SC_eff Map Integration</h2>
+<h3 id="91-purpose">9.1 Purpose</h3>
+<p>The Registration-Weighted Density Limit (RWDL) and SC_eff maps from TGI metrology are spatial maps of the maximum safe temporal density and effective substrate clarity at each die location. They are the outputs of the TGI Metrology Standard's data analysis workflow and the most directly design-relevant products of the metrology program.</p>
+<p>In the PDK, these maps serve two distinct roles:</p>
+<ol>
+<li><strong>Rule parameterization:</strong> RWDL values feed directly into DGR-001 (density gradient rules) and the DDA arc computation. SC_eff values feed into TPR-001 (TGI ceiling clearance) and the SCLM SC_design field.</li>
+<li><strong>Floorplanning guidance:</strong> RWDL and SC_eff maps, presented as heat maps in the PDK documentation, allow designers to make informed floorplanning decisions about where to place high-density temporal blocks.</li>
+</ol>
+<h3 id="92-map-ingestion-and-format">9.2 Map Ingestion and Format</h3>
+<p>RWDL and SC_eff maps are ingested from TGI Metrology Reports and encoded in TLMF format (§3.4) as additional subregion fields within each <code>LAYER</code> record:</p>
+<pre><code>LAYER  {layer_name}  {z_bottom_nm}  {z_top_nm}  {SC_designation}
+  SUBREGION  {x_min_um}  {y_min_um}  {x_max_um}  {y_max_um}
+    SC_BULK     {value}
+    SC_EFF      {value}
+    SC_DESIGN   {value}
+    SC_CLASS    {SC-I | SC-II | SC-III | SPATIAL}
+    RWDL        {value}   # ops/cycle/mm²
+    RWDL_SOURCE {TGI_report_ID}
+  END_SUBREGION
+END_LAYER
+</code></pre>
+<p><strong>R-RWDL-01:</strong> RWDL values MUST be present for every subregion in every temporal layer's TLMF record. A subregion without an RWDL value is treated as RWDL = 0 by compliant TDRC tools — effectively prohibiting all temporal operations in that subregion. This conservative default ensures that missing data does not silently permit over-density.</p>
+<p><strong>R-RWDL-02:</strong> RWDL values MUST be derived from the TGI Metrology Report for the specific substrate lot being qualified. RWDL values estimated from prior lots or from material models without measurement evidence are non-conformant for production PDKs and are permissible only in provisional PDKs (§13.4).</p>
+<h3 id="93-rwdl-margin-policy">9.3 RWDL Margin Policy</h3>
+<p>The RWDL value delivered in the PDK is the raw TGI-metrology-derived RWDL, without additional margin applied at the PDK level. Margin is applied at the design level: designers are responsible for leaving a design margin between their intended temporal density and the RWDL.</p>
+<p>The recommended design margin is:
+- <strong>SC-I layers:</strong> 15% below RWDL (TD_design ≤ 0.85 × RWDL)
+- <strong>SC-II layers:</strong> 20% below RWDL (TD_design ≤ 0.80 × RWDL)</p>
+<p>These are recommendations, not enforced PDK rules. Designs that operate closer to RWDL are not blocked by TDRC but will experience higher DDA derating (§7.2.5) and elevated TCRS multipliers (§8.3).</p>
+<h3 id="94-sc_eff-consistency-check">9.4 SC_eff Consistency Check</h3>
+<p>When the PDK is generated, a consistency check MUST be performed between the SC_eff values in the TLMF records and the SC_bulk values from the TCT spatial SC map:</p>
+<p><strong>R-RWDL-03:</strong> For any subregion where SC_eff &gt; SC_bulk, the TLMF record MUST flag the inconsistency and use SC_bulk as SC_design. SC_eff cannot exceed SC_bulk — the TGI boundary can only reduce or maintain the bulk SC, never increase it. An SC_eff &gt; SC_bulk result indicates a measurement error in either the TCT or TGI metrology and MUST be escalated to the metrology team before the PDK is released.</p>
+<hr>
+<h2 id="10-pdk-deliverable-structure">10. PDK Deliverable Structure</h2>
+<h3 id="101-directory-layout">10.1 Directory Layout</h3>
+<p>A conformant TRS-Aware PDK release is a versioned directory package with the following structure:</p>
+<pre><code>{pdk_version}/
+├── MANIFEST.pdk          # Master manifest: lists all files, checksums, and version metadata
+├── RELEASE_NOTES.md      # Human-readable description of changes from prior version
+├── SIGN_OFF.pdk          # Sign-off record with authority chain signatures
+│
+├── layer_stack/
+│   ├── layer_stack.tlmf  # Full process stack definition in TLMF format
+│   ├── layer_stack.pdf   # Human-readable layer stack diagram
+│   └── tgi_zone.tlmf     # TGI zone-specific TLMF sub-record
+│
+├── tsps/
+│   ├── tsps_SC-I.tpsf    # TRS Stack Parameter Set for SC-I layers
+│   ├── tsps_SC-II.tpsf   # TRS Stack Parameter Set for SC-II layers
+│   └── TSPS_MANIFEST.md  # Lists all TSPS files and their source TRS Qualification Records
+│
+├── tdr/
+│   ├── asr.tdr           # Address Spacing Rules
+│   ├── dgr.tdr           # Density Gradient Rules
+│   ├── tpr.tdr           # TGI Proximity Rules
+│   ├── cgr.tdr           # Causal Graph Rules
+│   ├── csr.tdr           # Coherence Slot Rules
+│   ├── tcrs.tdr          # Temporal Crosstalk Rule Set
+│   └── TDR_MANIFEST.md   # Lists all TDR files, rule counts, and source traceability
+│
+├── cbt/
+│   ├── cbt_{zone_id}.cbt # Coherence Budget Table per zone
+│   ├── cbt_cross_zone.cbt # Cross-zone budget section (multi-zone fabs only)
+│   └── CBT_MANIFEST.md   # Lists all CBT files and their source SCR configuration records
+│
+├── ttf/
+│   ├── csa_{SC_class}.ttf   # Commit Sequencing Arcs per SC class
+│   ├── zba_{zone_pair}.ttf  # Zone Boundary Arcs per zone pair
+│   ├── apa_{zone_id}.ttf    # Arbiter Processing Arcs per zone
+│   ├── tca_{layer}.ttf      # TAOE Correction Arcs per temporal layer
+│   ├── dda_{layer}.ttf      # Density-Dependent Derating Arcs per temporal layer
+│   └── MANIFEST.ttf         # TTF library manifest per R-TTFAL-06
+│
+├── sc_maps/
+│   ├── sc_map_{layer}.tlmf  # Per-layer SC variation maps with RWDL and SC_eff
+│   ├── sc_map_summary.pdf   # Human-readable heat maps for all temporal layers
+│   └── SC_MAP_MANIFEST.md   # Source TCT and TGI report IDs per layer
+│
+├── crosstalk/
+│   ├── xtalk_model.tpsf     # Crosstalk coupling constants and decay parameters
+│   └── xtalk_lookup.csv     # Pre-computed Δτ_xtalk lookup table by density tier and spacing
+│
+├── docs/
+│   ├── pdk_user_guide.md    # EDA tool integration instructions
+│   ├── pdk_changelog.md     # Full change history across all versions
+│   └── traceability.md      # Cross-reference of all PDK data to source measurement records
+│
+└── qualification/
+    ├── tdrc_testcase_results.log   # TDRC qualification test suite results (§13)
+    ├── cba_testcase_results.log    # CBA qualification test suite results (§13)
+    ├── ttf_testcase_results.log    # TTF STA qualification test suite results (§13)
+    └── pdk_qual_summary.md         # Qualification summary with pass/fail status per test
+</code></pre>
+<p><strong>R-STRUCT-01:</strong> Every file listed in <code>MANIFEST.pdk</code> MUST be present with a matching SHA-256 checksum. PDK packages with missing files or checksum mismatches MUST be rejected by EDA tool loaders before any rule or arc data is consumed.</p>
+<p><strong>R-STRUCT-02:</strong> The <code>SIGN_OFF.pdk</code> file MUST be present and MUST contain the signatures of all required sign-off authorities (§13.3) before the PDK is distributed. An unsigned PDK MUST NOT be used for tape-out signoff.</p>
+<hr>
+<h2 id="11-pdk-generation-workflow">11. PDK Generation Workflow</h2>
+<h3 id="111-workflow-overview">11.1 Workflow Overview</h3>
+<p>The PDK generation workflow is the pipeline that assembles upstream measurement data into a conformant PDK package. It is executed whenever a new PDK version is required (§14.2). The workflow has six phases executed in sequence:</p>
+<pre><code>Phase 1: Data Ingestion
+        ↓
+Phase 2: Consistency Validation
+        ↓
+Phase 3: Rule and Parameter Derivation
+        ↓
+Phase 4: File Generation and Formatting
+        ↓
+Phase 5: Qualification Test Suite Execution
+        ↓
+Phase 6: Sign-off and Release Packaging
+</code></pre>
+<p>No phase may proceed until the preceding phase has completed without errors. A generation run that halts in any phase before sign-off does not produce a valid PDK release.</p>
+<h3 id="112-phase-1-data-ingestion">11.2 Phase 1 — Data Ingestion</h3>
+<p>The following upstream data sources are ingested at the start of every PDK generation run. All sources must be present; a generation run with missing sources MUST abort.</p>
+<table>
+<thead>
+<tr>
+<th>Data Source</th>
+<th>Required Fields</th>
+<th>Providing Protocol</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TCT Report(s)</td>
+<td>SC rating, SC class, spatial SC map, lot ID</td>
+<td>TCT Protocol</td>
+</tr>
+<tr>
+<td>TGI Metrology Report(s)</td>
+<td>SC_eff map, RWDL map, TAOE_sys map, CLG non-monotonicity flags</td>
+<td>TGI Metrology Standard</td>
+</tr>
+<tr>
+<td>TRS Qualification Record</td>
+<td>TSPS parameter values, qualified MQD, lot ID</td>
+<td>TRS Qualification Procedure</td>
+</tr>
+<tr>
+<td>SCR Zone Qualification Record(s)</td>
+<td>T_c, N_slots, SLF, T_arb, D_max, L_handoff per zone pair</td>
+<td>SCR Specification</td>
+</tr>
+<tr>
+<td>Process Stack Definition</td>
+<td>Layer names, z coordinates, SC designations, TGI zone boundaries</td>
+<td>Process engineering record</td>
+</tr>
+</tbody>
+</table>
+<p><strong>R-GEN-01:</strong> All ingested data sources MUST be for the same substrate lot or, for SCR records, for the specific zone configuration in which the substrate lot will be processed. Cross-lot or cross-zone mixing of data sources is non-conformant unless all lots carry the same SC class assignment and the PDK generation record documents the mixing with justification.</p>
+<h3 id="113-phase-2-consistency-validation">11.3 Phase 2 — Consistency Validation</h3>
+<p>Before any rule derivation, the ingested data is validated for internal consistency:</p>
+<ul>
+<li>TCT SC_bulk and TGI SC_eff are compared per subregion; any SC_eff &gt; SC_bulk is flagged per R-RWDL-03</li>
+<li>TRS Qualification Record substrate lot ID is confirmed to match the TCT Report lot ID</li>
+<li>SCR T_c is confirmed to satisfy T_c &gt; SLF × 1.05 per R-SLF-01</li>
+<li>CLG non-monotonicity flags from TGI metrology are checked; affected die regions are automatically assigned TPR-002 exclusion zones</li>
+<li>TSPS Δτ_eff is confirmed to be ≥ 1.15 × Δτ_min for SC-I and ≥ 1.20 × Δτ_min for SC-II per R-TSPS-02</li>
+</ul>
+<p>Any consistency failure halts the generation run. The failure is logged with the specific inconsistency and the affected source records.</p>
+<h3 id="114-phase-3-rule-and-parameter-derivation">11.4 Phase 3 — Rule and Parameter Derivation</h3>
+<p>Rules and parameters are derived from the validated input data in the following order:</p>
+<ol>
+<li>SC Class Layer Maps (TLMF records per layer) — from TCT spatial SC map + TGI SC_eff map</li>
+<li>TRS Stack Parameter Sets — directly from TRS Qualification Record</li>
+<li>
+<p>Temporal Design Rules — derived in order: ASR → DGR → TPR → CGR → CSR → TCRS
+   - ASR thresholds computed from Δτ_eff per SC class and the interaction radius r_int
+     derived from L_c in the TSPS material record
+   - DGR ΔTD_max values computed from RWDL per die subregion
+   - TPR exclusion zones applied automatically at any subregion flagged for CLG
+     non-monotonicity in the TGI metrology data
+   - CGR limits F_in_max and F_out_max populated from CBT-derived slot timing
+   - CSR reserved-slot indices assigned from N_slots in the CBT
+   - TCRS coupling constants K_xtalk and Δτ_decay populated from TSPS material record;
+     density tier multiplier table is fixed by this specification and not re-derived</p>
+</li>
+<li>
+<p>Coherence Budget Tables — assembled per zone from the SCR zone qualification records;
+   cross-zone section assembled from all measured ZBI L_handoff values</p>
+</li>
+<li>
+<p>TTF Arc Library — arcs derived in the following order, each depending on the prior:
+   - APA arcs: directly from T_arb and T_auth in SCR qualification record
+   - CSA arcs: from T_seq in TSPS; T_seq_max = T_seq_min + D_max
+   - ZBA arcs: from L_handoff and T_ZBI per zone pair in SCR record
+   - TCA arcs: from TAOE_sys spatial map in TGI metrology report; zero-valued arcs
+     written for regions where |TAOE_sys| ≤ 0.001
+   - DDA arcs: from RWDL spatial map and TSPS derating slope; populated with
+     TD_design field left as a placeholder at generation time — STA tools fill this
+     field at analysis time from the design's actual routed density</p>
+</li>
+<li>
+<p>Spatial SC and RWDL maps — TLMF subregion records merged from TCT spatial SC map
+   and TGI metrology RWDL and SC_eff maps; SC_design set to min(SC_bulk, SC_eff) per
+   subregion; SC_class_local assigned from SC_design</p>
+</li>
+<li>
+<p>Temporal Crosstalk rule set — K_xtalk lookup table populated; pre-computed
+   Δτ_xtalk lookup table generated by evaluating the crosstalk interaction model
+   across all combinations of density tier, Δτ spacing, and spatial distance up to
+   r_int, and written to <code>crosstalk/xtalk_lookup.csv</code></p>
+</li>
+<li>
+<p>Traceability index — a cross-reference table mapping every PDK data field to its
+   source measurement record (TCT Report ID, TGI Report ID, TRS Qual Record ID, SCR
+   Zone Config ID). This index is written to <code>docs/traceability.md</code> and is a required
+   deliverable of Phase 3</p>
+</li>
+</ol>
+<p><strong>R-GEN-02:</strong> Steps 3 through 8 MUST be executed by an automated generation script,
+not by manual data entry. Manual PDK data entry is non-conformant regardless of the
+review process applied afterward. Automation is required because the volume and
+interdependency of derived values makes manual entry error rates unacceptably high.</p>
+<p><strong>R-GEN-03:</strong> The generation script MUST emit a machine-readable generation log that
+records, for every output field: the input values used, the formula or rule applied,
+and the computed output. The generation log is a primary audit artifact and MUST be
+retained with the PDK release package for the life of the PDK version.</p>
+<h3 id="115-phase-4-file-generation-and-formatting">11.5 Phase 4 — File Generation and Formatting</h3>
+<p>Phase 4 converts the derived rule and parameter data into the file formats specified
+for each PDK component category and assembles the directory structure of §10.1.</p>
+<p><strong>Schema validation:</strong> Each generated file MUST be validated against its format schema
+before being accepted into the package:</p>
+<table>
+<thead>
+<tr>
+<th>File type</th>
+<th>Schema</th>
+<th>Validation tool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.tlmf</code></td>
+<td>TLMF schema</td>
+<td><code>tlmf-validate</code> per TLMF_Schema.md</td>
+</tr>
+<tr>
+<td><code>.tpsf</code></td>
+<td>TPSF key-value schema</td>
+<td><code>tpsf-validate</code></td>
+</tr>
+<tr>
+<td><code>.tdr</code></td>
+<td>TDR rule schema</td>
+<td><code>tdr-validate</code></td>
+</tr>
+<tr>
+<td><code>.cbt</code></td>
+<td>CBT schema</td>
+<td><code>cbt-validate</code></td>
+</tr>
+<tr>
+<td><code>.ttf</code></td>
+<td>TTF arc schema per arc type</td>
+<td><code>ttf-validate</code> per TTF_Reference.md</td>
+</tr>
+</tbody>
+</table>
+<p><strong>R-GEN-04:</strong> Any file that fails schema validation MUST be treated as a Phase 4
+failure. The generation run halts; Phase 5 MUST NOT begin until the validation failure
+is corrected and the affected files are regenerated and re-validated.</p>
+<p><strong>Checksum generation:</strong> After all files pass schema validation, SHA-256 checksums are
+computed for every file in the package and written into <code>MANIFEST.pdk</code>. The manifest
+itself is checksummed last, and its checksum is recorded in <code>SIGN_OFF.pdk</code>.</p>
+<p><strong>R-GEN-05:</strong> The <code>MANIFEST.pdk</code> checksum MUST be recomputed from scratch at the
+start of Phase 6. If any file has been modified between Phase 4 and Phase 6, the
+checksum mismatch will be detected. Post-Phase-4 file modifications that are not
+accompanied by a full Phase 5 re-execution are non-conformant.</p>
+<h3 id="116-phase-5-qualification-test-suite-execution">11.6 Phase 5 — Qualification Test Suite Execution</h3>
+<p>Phase 5 executes the PDK qualification test suite (§13.2) against the assembled
+package. The test suite verifies that the generated PDK produces correct results when
+consumed by qualified EDA tools on defined test designs.</p>
+<p>Phase 5 is fully automated. Its execution is recorded in the three test result logs
+placed in the <code>qualification/</code> directory. A Phase 5 run that produces any FAIL result
+in any test case halts the generation; Phase 6 MUST NOT begin until all test cases
+pass.</p>
+<p>The qualification test suite is described in full in §13. Phase 5 is its automated
+execution step within the generation workflow.</p>
+<h3 id="117-phase-6-sign-off-and-release-packaging">11.7 Phase 6 — Sign-off and Release Packaging</h3>
+<p>Phase 6 is the final human-in-the-loop step of the generation workflow. It consists of:</p>
+<ol>
+<li>
+<p><strong>Engineering review:</strong> A process engineer reviews the <code>pdk_qual_summary.md</code> from
+   Phase 5, the <code>docs/traceability.md</code> from Phase 3, and the <code>RELEASE_NOTES.md</code>. The
+   engineer confirms that all test cases passed, that all upstream source records are
+   current, and that the release notes accurately describe all changes from the prior
+   PDK version.</p>
+</li>
+<li>
+<p><strong>Authority sign-off:</strong> The sign-off authorities defined in §13.3 review and sign
+   the <code>SIGN_OFF.pdk</code> record. All required signatures MUST be present before packaging.</p>
+</li>
+<li>
+<p><strong>Release packaging:</strong> The fully signed package is compressed, its outer archive is
+   checksummed, and the release is published to the fab's PDK distribution system with
+   the version identifier (§14.1) as the release tag.</p>
+</li>
+<li>
+<p><strong>Downstream notification:</strong> The yield management system, EDA tool administrators,
+   and design teams are notified of the new PDK release. The notification includes the
+   version identifier, a summary of changes from the prior version, and the list of
+   upstream source records that changed since the last release.</p>
+</li>
+</ol>
+<p><strong>R-GEN-06:</strong> The compressed release archive MUST be immutable after publication.
+Post-publication corrections require a new PDK version with an incremented version
+number per §14. Patch-in-place modifications to a published PDK are non-conformant.</p>
+<hr>
+<h2 id="12-eda-tool-integration-requirements">12. EDA Tool Integration Requirements</h2>
+<h3 id="121-tool-certification-requirement">12.1 Tool Certification Requirement</h3>
+<p>A TRS-Aware PDK is only useful if the EDA tools consuming it correctly implement its
+temporal domain components. Tools that silently ignore TTF arcs, apply spatial DRC
+rules only, or treat the temporal address map as unconstrained will produce designs
+that pass tool verification but fail in the fab.</p>
+<p>To address this, the TriadicFrameworks system defines a <strong>Tool Certification</strong> process.
+EDA tools used for signoff-level analysis against a TRS-Aware PDK MUST be certified
+for each tool function they perform. Certification is performed by running the tool
+against the PDK qualification test suite (§13.2) in tool-evaluation mode and verifying
+that results match the reference outputs.</p>
+<p><strong>R-TOOL-01:</strong> The PDK release package MUST NOT be used for tape-out signoff with any
+EDA tool that is not certified for the tool functions exercised in that signoff. A
+design signed off using a non-certified tool is non-conformant regardless of whether
+the tool-reported results are correct.</p>
+<p><strong>R-TOOL-02:</strong> Tool certifications are PDK-version-specific. A tool certified against
+PDK version X is not automatically certified against PDK version X+1. Re-certification
+is required for each new PDK major or minor version (§14.1). Patch versions that do
+not alter rule thresholds or arc values do not require re-certification.</p>
+<h3 id="122-tdrc-tool-requirements">12.2 TDRC Tool Requirements</h3>
+<p>A TDRC tool consuming this PDK MUST implement the following behaviors:</p>
+<p><strong>Loading:</strong></p>
+<ul>
+<li>MUST ingest all <code>.tdr</code> files enumerated in <code>TDR_MANIFEST.md</code></li>
+<li>MUST validate TLMF layer stack records against the process stack definition before
+  commencing rule checks</li>
+<li>MUST load the spatial SC variation map and apply subregion-level SC_class_local to
+  all rule threshold lookups, not lot-level SC class</li>
+</ul>
+<p><strong>Rule evaluation order:</strong></p>
+<p>TDRC tools MUST evaluate rule categories in the following sequence. Out-of-order
+evaluation produces incorrect results because later categories depend on the outputs
+of earlier ones:</p>
+<pre><code>1. CGR-001 (acyclicity check) — blocking; halt on failure
+2. ASR rules — address spacing
+3. TPR rules — TGI proximity (requires z-coordinate from layer stack)
+4. DGR rules — density gradient (requires ASR-confirmed address assignments)
+5. TCRS rules — temporal crosstalk (requires DGR-confirmed density map)
+6. CSR rules — coherence slot validity
+7. CGR-002 through CGR-005 — remaining causal graph rules
+</code></pre>
+<p><strong>R-TOOL-03:</strong> TDRC tools MUST report violations with sufficient context for the
+designer to resolve them: the specific rule violated, the violating operation
+identifier(s), the spatial coordinates, the temporal addresses involved, and the
+measured vs. required value. A violation report that identifies only the rule number
+without operation context is non-conformant tool output.</p>
+<p><strong>R-TOOL-04:</strong> TDRC tools MUST produce a machine-readable violation log in addition
+to any human-readable report. The violation log format is specified in
+<a href="../data-formats/TDRC_Violation_Log_Schema.html"><code>docs/data-formats/TDRC_Violation_Log_Schema.md</code></a>.
+The violation log is consumed by the CGV tool for causal graph re-evaluation after
+TDRC correction.</p>
+<h3 id="123-cba-tool-requirements">12.3 CBA Tool Requirements</h3>
+<p>A CBA tool consuming this PDK MUST implement the following behaviors:</p>
+<p><strong>Loading:</strong></p>
+<ul>
+<li>MUST ingest the CBT for every SCR zone relevant to the design's die assignment</li>
+<li>MUST ingest the cross-zone budget section if the design's dependency graph contains
+  any cross-zone arcs</li>
+<li>MUST accept the design's routed temporal density map as input, not the pre-route
+  estimated map</li>
+</ul>
+<p><strong>Budget evaluation:</strong></p>
+<ul>
+<li>MUST evaluate total B_cycle utilization per zone separately from cross-zone fraction
+  utilization. Both limits apply independently; a design that passes total budget but
+  exceeds cross-zone fraction fails CBA</li>
+<li>MUST flag any coherence slot that is assigned more than N_slot_max operations as a
+  slot oversubscription violation, even if total B_cycle is not exceeded</li>
+</ul>
+<p><strong>R-TOOL-05:</strong> CBA tools MUST report the coherence budget utilization as a fraction of
+B_cycle per zone in the signoff report, not only a pass/fail result. The fraction is
+required for design margin tracking across PDK versions.</p>
+<p><strong>R-TOOL-06:</strong> CBA tools MUST accept the PROVISIONAL flag in CBT records and, when
+present, elevate all budget utilization warnings by one severity level. A utilization
+that would be an advisory on a validated CBT becomes a warning on a provisional CBT;
+a warning becomes a blocking failure.</p>
+<h3 id="124-ttf-aware-sta-tool-requirements">12.4 TTF-Aware STA Tool Requirements</h3>
+<p>A TTF-aware STA tool consuming this PDK MUST implement the following behaviors:</p>
+<p><strong>Arc loading:</strong></p>
+<ul>
+<li>MUST ingest the full TTF arc library manifest and all enumerated arc files</li>
+<li>MUST validate the manifest checksum per R-TTFAL-06 before accepting any arc data</li>
+<li>MUST apply APA, CSA, and ZBA arcs to all temporal paths in the timing graph. These
+  three arc types are unconditional; they apply to every temporal operation regardless
+  of its die location</li>
+<li>MUST apply TCA arcs to operations in the die regions specified by each arc's
+  <code>DIE_REGION</code> field. TCA arcs are spatially scoped and MUST NOT be applied to
+  operations outside their specified region</li>
+<li>MUST apply DDA arcs using the design's actual routed density at each die region as
+  the <code>TD_DESIGN</code> field. DDA arcs with unresolved <code>TD_DESIGN</code> placeholders MUST NOT
+  be used for signoff</li>
+</ul>
+<p><strong>Timing graph construction:</strong></p>
+<ul>
+<li>Zone boundary crossings in the dependency graph MUST be modeled as ZBA arcs, not as
+  zero-delay edges. The ZBA arc latency is expressed in Zone B coherence cycles and
+  MUST be converted to absolute time using Zone B's T_c before being added to the
+  timing path</li>
+<li>The L_handoff latency is a minimum latency, not a maximum. STA tools MUST model ZBA
+  arcs as minimum-delay constraints on the dependent operation's slot assignment; the
+  dependent operation cannot be placed in a slot earlier than L_handoff cycles after
+  the dependency's slot, but it may be placed later</li>
+</ul>
+<p><strong>R-TOOL-07:</strong> TTF-aware STA tools MUST distinguish temporal timing paths (those
+containing at least one TTF arc) from classical spatial timing paths (those containing
+only classical STA arcs) in their reporting. Mixed paths — those containing both TTF
+and classical arcs — MUST be reported as temporal paths. The distinction is required
+for sign-off review; temporal and spatial path timing budgets are managed separately.</p>
+<p><strong>R-TOOL-08:</strong> TTF-aware STA tools MUST report the breakdown of path delay by arc
+type (APA, CSA, ZBA, TCA, DDA, classical) for every reported timing path. Aggregate
+path delay without arc-type breakdown is insufficient for temporal timing closure.</p>
+<h3 id="125-cgv-tool-requirements">12.5 CGV Tool Requirements</h3>
+<p>The Causal Graph Verification tool checks the design's operation dependency graph
+against the CGR rules. It consumes:</p>
+<ul>
+<li>The design's intent map (operation graph with all dependency declarations)</li>
+<li>The CGR rule file from the PDK (<code>tdr/cgr.tdr</code>)</li>
+<li>The CBT for the target SCR zones (for F_in_max, F_out_max, and cross-zone depth
+  limits)</li>
+<li>The TDRC violation log from the preceding TDRC run (to exclude operations that are
+  pending address correction from the graph analysis)</li>
+</ul>
+<p><strong>R-TOOL-09:</strong> CGV tools MUST execute CGR-001 (acyclicity) as a standalone first
+pass before loading CBT-derived limits. If the graph is cyclic, limits on fan-in,
+fan-out, and cross-zone depth cannot be meaningfully evaluated because the cyclic
+subgraph has unbounded path length.</p>
+<p><strong>R-TOOL-10:</strong> CGV tools MUST report every dependency chain that approaches or
+exceeds the cross-zone latency budget as a warning, even if it does not strictly
+violate CGR-004. Chains within 10% of the budget limit are candidates for
+architectural refactoring and MUST be surfaced to the designer during the sign-off
+review phase.</p>
+<h3 id="126-signoff-flow-integration">12.6 Signoff Flow Integration</h3>
+<p>The canonical signoff flow for a design targeting this PDK is:</p>
+<pre><code>Step 1  CGV — acyclicity check (CGR-001 only; fast, blocking if cyclic)
+Step 2  TDRC — full rule evaluation (ASR → TPR → DGR → TCRS → CSR)
+Step 3  CGV — full rule evaluation (CGR-002 through CGR-005; uses TDRC violation log)
+Step 4  CBA — coherence budget analysis (requires TDRC-clean intent map)
+Step 5  TTF STA — temporal timing analysis (requires CBA-confirmed slot assignments
+        and DDA arcs populated with final routed density)
+Step 6  Classical DRC/LVS — spatial verification (parallel to Steps 1–5 but must
+        complete before tape-out)
+Step 7  Signoff review — engineer reviews all tool reports; all checks must be clean
+        or waivered per §13.4
+</code></pre>
+<p><strong>R-TOOL-11:</strong> Steps 1 through 5 MUST be completed in the order listed. Running CBA
+before TDRC produces an incorrect budget analysis because TDRC may change address
+assignments, which changes density distribution. Running TTF STA before CBA produces
+incorrect derating because DDA arc TD_design values depend on CBA-confirmed slot
+assignments affecting the coherence-cycle-averaged density.</p>
+<hr>
+<h2 id="13-pdk-qualification-and-sign-off">13. PDK Qualification and Sign-off</h2>
+<h3 id="131-qualification-purpose">13.1 Qualification Purpose</h3>
+<p>PDK qualification verifies that the generated PDK produces correct, reproducible
+results when consumed by certified EDA tools on a defined set of test designs. It is
+the executable evidence that the PDK is internally consistent, correctly derived from
+upstream measurements, and correctly consumed by the tools that will use it for
+production design sign-off.</p>
+<p>Qualification is required for every PDK major and minor version. Patch versions
+require only a targeted re-qualification of the components that changed.</p>
+<h3 id="132-qualification-test-suite">13.2 Qualification Test Suite</h3>
+<p>The test suite comprises three sections, each targeting a different PDK component
+category.</p>
+<h4 id="1321-tdrc-test-cases">13.2.1 TDRC Test Cases</h4>
+<p>The TDRC test suite consists of a library of synthetic intent maps with known
+violations and known-clean configurations. Each test case specifies:</p>
+<ul>
+<li>The test intent map (a minimal set of temporal operations with defined addresses,
+  spatial coordinates, and dependencies)</li>
+<li>The expected TDRC outcome (clean, or a specific set of violations with their rule
+  identifiers, operation identifiers, and measured vs. required values)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Test Case</th>
+<th>Targets</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TDRC-TC-01</td>
+<td>ASR-001: two operations within r_int at Δτ &lt; Δτ_eff</td>
+<td>One ASR-001 violation</td>
+</tr>
+<tr>
+<td>TDRC-TC-02</td>
+<td>ASR-001: same operations at Δτ = Δτ_eff + 0.001</td>
+<td>Clean</td>
+</tr>
+<tr>
+<td>TDRC-TC-03</td>
+<td>ASR-004: SC-I and SC-II proximate pair at SC-I Δτ_eff</td>
+<td>One ASR-004 violation</td>
+</tr>
+<tr>
+<td>TDRC-TC-04</td>
+<td>ASR-004: same pair at SC-II Δτ_eff</td>
+<td>Clean</td>
+</tr>
+<tr>
+<td>TDRC-TC-05</td>
+<td>DGR-001: density step exceeding ΔTD_max between adjacent regions</td>
+<td>One DGR-001 violation</td>
+</tr>
+<tr>
+<td>TDRC-TC-06</td>
+<td>DGR-002: same step with compliant transition zone inserted</td>
+<td>Clean</td>
+</tr>
+<tr>
+<td>TDRC-TC-07</td>
+<td>TPR-001: operation within 5 nm of z_c in SC_eff-degraded subregion</td>
+<td>One TPR-001 violation</td>
+</tr>
+<tr>
+<td>TDRC-TC-08</td>
+<td>TPR-002: operation within 10 nm of z_c in CLG non-monotonicity subregion</td>
+<td>One TPR-002 violation</td>
+</tr>
+<tr>
+<td>TDRC-TC-09</td>
+<td>CSR-001: slot with N_slot_max + 1 operations</td>
+<td>One CSR-001 violation</td>
+</tr>
+<tr>
+<td>TDRC-TC-10</td>
+<td>CSR-004: operation assigned to slot 0</td>
+<td>One CSR-004 violation</td>
+</tr>
+<tr>
+<td>TDRC-TC-11</td>
+<td>TCRS-001: aggressor density causing Δτ_xtalk &gt; 10% of Δτ_eff</td>
+<td>One TCRS-001 violation</td>
+</tr>
+<tr>
+<td>TDRC-TC-12</td>
+<td>Fully compliant design spanning SC-I and SC-II regions</td>
+<td>Clean across all rules</td>
+</tr>
+</tbody>
+</table>
+<p><strong>R-QUAL-01:</strong> All 12 TDRC test cases MUST pass. A PDK release in which any test case
+produces an unexpected result — either a missed violation or a false violation — is
+non-conformant and MUST NOT be released until the discrepancy is resolved.</p>
+<h4 id="1322-cba-test-cases">13.2.2 CBA Test Cases</h4>
+<table>
+<thead>
+<tr>
+<th>Test Case</th>
+<th>Targets</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CBA-TC-01</td>
+<td>Single zone; total utilization at 95% of B_cycle</td>
+<td>Clean; 95% utilization reported</td>
+</tr>
+<tr>
+<td>CBA-TC-02</td>
+<td>Single zone; total utilization at 101% of B_cycle</td>
+<td>B_cycle exceeded violation</td>
+</tr>
+<tr>
+<td>CBA-TC-03</td>
+<td>Multi-zone; cross-zone fraction at 18%</td>
+<td>Clean; fraction reported</td>
+</tr>
+<tr>
+<td>CBA-TC-04</td>
+<td>Multi-zone; cross-zone fraction at 22%</td>
+<td>Cross-zone fraction violation</td>
+</tr>
+<tr>
+<td>CBA-TC-05</td>
+<td>Single slot oversubscribed; total B_cycle within budget</td>
+<td>Slot oversubscription violation</td>
+</tr>
+<tr>
+<td>CBA-TC-06</td>
+<td>Provisional CBT flag present; utilization at 82%</td>
+<td>Warning elevated to blocking</td>
+</tr>
+</tbody>
+</table>
+<p><strong>R-QUAL-02:</strong> All 6 CBA test cases MUST pass.</p>
+<h4 id="1323-ttf-sta-test-cases">13.2.3 TTF STA Test Cases</h4>
+<table>
+<thead>
+<tr>
+<th>Test Case</th>
+<th>Targets</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TTF-TC-01</td>
+<td>Single operation; APA + CSA arcs only</td>
+<td>Path delay = T_arb + T_seq_min; no violations</td>
+</tr>
+<tr>
+<td>TTF-TC-02</td>
+<td>Same operation at T_seq_max</td>
+<td>Path delay = T_arb + T_seq_max; reported as maximum</td>
+</tr>
+<tr>
+<td>TTF-TC-03</td>
+<td>Cross-zone dependency; ZBA arc applied</td>
+<td>Path delay includes L_handoff × T_c(zone_B)</td>
+</tr>
+<tr>
+<td>TTF-TC-04</td>
+<td>ZBA applied in wrong direction (B→A arc for A→B dependency)</td>
+<td>Tool must reject; arc direction mismatch</td>
+</tr>
+<tr>
+<td>TTF-TC-05</td>
+<td>TCA arc in affected die region; non-zero TAU_OFFSET</td>
+<td>Offset applied to affected operations; clean outside region</td>
+</tr>
+<tr>
+<td>TTF-TC-06</td>
+<td>DDA arc; TD_design at 92% RWDL (Near-limit tier)</td>
+<td>Derating applied with multiplier 3.0; timing margin reduced</td>
+</tr>
+<tr>
+<td>TTF-TC-07</td>
+<td>DDA arc; TD_design placeholder not resolved</td>
+<td>Tool must report unresolved DDA arc; block signoff</td>
+</tr>
+<tr>
+<td>TTF-TC-08</td>
+<td>Mixed temporal and spatial path; both arc types present</td>
+<td>Path reported as temporal; breakdown by arc type present</td>
+</tr>
+</tbody>
+</table>
+<p><strong>R-QUAL-03:</strong> All 8 TTF STA test cases MUST pass.</p>
+<h3 id="133-sign-off-authority-chain">13.3 Sign-off Authority Chain</h3>
+<p>A PDK release requires signatures from the following authorities, applied in order.
+No authority may sign before all preceding signatures are present.</p>
+<table>
+<thead>
+<tr>
+<th>Authority</th>
+<th>Role</th>
+<th>Criteria for Signature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PDK Generation Engineer</td>
+<td>Confirms generation log is complete and no Phase 1–4 errors occurred</td>
+<td>Generation log reviewed; all schema validations passed</td>
+</tr>
+<tr>
+<td>Metrology Lead</td>
+<td>Confirms all upstream source records are current and within re-qualification intervals</td>
+<td>TCT, TGI, TRS, SCR record dates reviewed against requalification schedules</td>
+</tr>
+<tr>
+<td>Process Engineering Lead</td>
+<td>Confirms TSPS parameter values are consistent with current process performance; reviews DGR and TPR rules for process risk</td>
+<td>Parameter comparison to prior PDK version; process change log reviewed</td>
+</tr>
+<tr>
+<td>EDA Tool Administrator</td>
+<td>Confirms all signoff-flow tools are certified against this PDK version per R-TOOL-01</td>
+<td>Tool certification records reviewed</td>
+</tr>
+<tr>
+<td>PDK Release Authority</td>
+<td>Final approval; confirms all preceding signatures are present and qualification test suite is fully passing</td>
+<td><code>pdk_qual_summary.md</code> reviewed; SIGN_OFF.pdk countersigned</td>
+</tr>
+</tbody>
+</table>
+<p><strong>R-QUAL-04:</strong> The PDK Release Authority MUST be a different individual from the PDK
+Generation Engineer. Self-signed releases are non-conformant.</p>
+<p><strong>R-QUAL-05:</strong> All signatures in <code>SIGN_OFF.pdk</code> MUST be cryptographic signatures
+(GPG or equivalent) tied to the signer's authenticated identity in the fab's PKI
+system. Plaintext name fields without cryptographic binding are non-conformant for
+production PDK releases. Provisional PDKs (§13.4) MAY use plaintext signatures.</p>
+<h3 id="134-provisional-pdks">13.4 Provisional PDKs</h3>
+<p>A provisional PDK is a PDK release intended for early design exploration before all
+upstream measurement data is available. Provisional PDKs are valid for:</p>
+<ul>
+<li>Pre-layout floorplanning and density estimation</li>
+<li>Preliminary TDRC checks using estimated SC class and RWDL</li>
+<li>Architecture-level CBA with estimated coherence budget fractions</li>
+</ul>
+<p>Provisional PDKs MUST NOT be used for:</p>
+<ul>
+<li>Tape-out sign-off</li>
+<li>TRS intent map generation for production lots</li>
+<li>Any signoff check that requires RWDL-derived or SC_eff-derived rule thresholds</li>
+</ul>
+<p><strong>R-QUAL-06:</strong> Provisional PDKs MUST carry a <code>PROVISIONAL</code> flag in the version
+identifier (§14.1 format suffix <code>P</code>) and in the <code>MANIFEST.pdk</code> header. Certified EDA
+tools MUST detect the <code>PROVISIONAL</code> flag and block sign-off operations when a
+provisional PDK is loaded. A tool that permits tape-out sign-off against a provisional
+PDK is non-conformant.</p>
+<p><strong>R-QUAL-07:</strong> A provisional PDK MUST be superseded by a full production PDK before
+any design built with it reaches tape-out. The superseding production PDK MUST be
+used for all final sign-off checks, even if the design was developed entirely against
+the provisional PDK.</p>
+<hr>
+<h2 id="14-pdk-versioning-and-change-control">14. PDK Versioning and Change Control</h2>
+<h3 id="141-version-identifier-format">14.1 Version Identifier Format</h3>
+<p>Every TRS-Aware PDK release carries a version identifier with the format:</p>
+<pre><code>{process_node}_{fab_id}_{scr_zone_config}_{major}.{minor}.{patch}[P]
+
+Where:
+  process_node    = process node identifier (e.g., TF-N3T)
+  fab_id          = facility identifier (e.g., FAB01)
+  scr_zone_config = SCR zone configuration identifier (e.g., ZC-A)
+  major           = incremented for changes that alter tape-out sign-off requirements
+  minor           = incremented for changes to rule thresholds or arc values that do
+                    not alter sign-off requirements
+  patch           = incremented for corrections, documentation updates, and file
+                    format fixes that do not change any rule or arc value
+  [P]             = optional suffix indicating a provisional PDK
+
+Example: TF-N3T_FAB01_ZC-A_2.1.0
+</code></pre>
+<h3 id="142-version-increment-triggers">14.2 Version Increment Triggers</h3>
+<table>
+<thead>
+<tr>
+<th>Change Type</th>
+<th>Version Component Incremented</th>
+<th>Re-qualification Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New upstream measurement data (new TCT, TGI, TRS, or SCR lot)</td>
+<td>Minor</td>
+<td>Full qualification suite</td>
+</tr>
+<tr>
+<td>Change to SCR zone configuration (new T_c, N_slots, zone extent)</td>
+<td>Major</td>
+<td>Full qualification suite; tool re-certification</td>
+</tr>
+<tr>
+<td>Addition of a new TDR rule category</td>
+<td>Major</td>
+<td>Full qualification suite; tool re-certification</td>
+</tr>
+<tr>
+<td>Threshold or arc value change within an existing rule</td>
+<td>Minor</td>
+<td>Targeted re-qualification of affected test cases</td>
+</tr>
+<tr>
+<td>Bug fix in generation script with no rule value change</td>
+<td>Patch</td>
+<td>Targeted re-qualification of affected test cases</td>
+</tr>
+<tr>
+<td>Documentation correction with no data change</td>
+<td>Patch</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Format schema update (TLMF, TPSF, TTF)</td>
+<td>Major if breaking, Minor if additive</td>
+<td>Full if major, targeted if minor</td>
+</tr>
+<tr>
+<td>New optional field in TLMF or TPSF (backward compatible)</td>
+<td>Patch</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>R-VER-01:</strong> Major version increments REQUIRE all designs currently in development
+against the prior major version to be re-checked against the new major version before
+tape-out. A design signed off against major version N is not valid for tape-out under
+major version N+1.</p>
+<p><strong>R-VER-02:</strong> Minor version increments SHOULD prompt re-check of any design where
+the changed threshold or arc value is within 20% of the design's measured slack. The
+re-check is recommended, not mandatory, for minor versions.</p>
+<p><strong>R-VER-03:</strong> Patch version increments do not require re-check unless the patch
+corrects a rule value that was previously incorrect. When a patch corrects a
+previously incorrect rule value, the corrected value is treated as a minor version
+change with respect to re-check requirements, even though the version component
+incremented is patch.</p>
+<h3 id="143-deprecation-policy">14.3 Deprecation Policy</h3>
+<p>A PDK version is deprecated when a newer version of the same major release has been
+available for 90 days. Deprecated versions:</p>
+<ul>
+<li>MUST NOT be used for new tape-out sign-off</li>
+<li>MAY continue to be used for in-progress designs that were signed off before
+  deprecation, provided they do not require re-sign-off due to design changes</li>
+<li>MUST be clearly marked as deprecated in the PDK distribution system</li>
+</ul>
+<p>A PDK version is retired when it has been deprecated for 180 days. Retired versions
+are removed from active distribution. Access to retired PDK packages for archival
+review requires a formal request to the PDK Release Authority.</p>
+<h3 id="144-change-request-process">14.4 Change Request Process</h3>
+<p>A change request (CR) is required for any planned modification to a released PDK.
+CRs are also filed retrospectively when a defect in a released PDK is identified.</p>
+<p>Each CR MUST contain:</p>
+<ul>
+<li>CR identifier (unique, sequential within the process node)</li>
+<li>Description of the proposed or discovered change</li>
+<li>Affected PDK components and version identifier</li>
+<li>Classification of the change (see §14.2 for version increment type)</li>
+<li>Impact assessment on designs currently signed off against the affected version</li>
+<li>Proposed corrective action</li>
+<li>Reference to upstream measurement records that motivate the change (if applicable)</li>
+</ul>
+<p>CRs are reviewed by the same authority chain as PDK releases (§13.3). Approved CRs
+result in a new PDK version. Rejected CRs are archived with the rejection rationale.</p>
+<p><strong>R-VER-04:</strong> When a CR identifies a defect that would have caused a design to pass
+sign-off incorrectly under the defective PDK, the CR MUST be escalated to the PDK
+Release Authority and Process Engineering Lead within 24 hours of identification. All
+designs signed off against the defective PDK version MUST be reviewed for impact
+before their wafers proceed to Tier 2 commit operations.</p>
+<hr>
+<h2 id="15-glossary">15. Glossary</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>APA</strong></td>
+<td>Arbiter Processing Arc — TTF arc encoding CA processing latency T_arb; applied to all temporal operations</td>
+</tr>
+<tr>
+<td><strong>AER</strong></td>
+<td>Address Error Rate — the fraction of committed address pairs that cannot be correctly recovered; defined in the TCT Protocol</td>
+</tr>
+<tr>
+<td><strong>ASR</strong></td>
+<td>Address Spacing Rules — TDR category enforcing minimum Δτ between spatially proximate temporal operations</td>
+</tr>
+<tr>
+<td><strong>B_cycle</strong></td>
+<td>Total coherence cycle budget; TD_limit × A_zone; the hard ceiling enforced by CBA</td>
+</tr>
+<tr>
+<td><strong>CBA</strong></td>
+<td>Coherence Budget Analysis — design verification check confirming total operation count fits within the SCR coherence cycle budget</td>
+</tr>
+<tr>
+<td><strong>CBT</strong></td>
+<td>Coherence Budget Table — PDK component encoding SCR zone timing parameters and capacity limits for CBA consumption</td>
+</tr>
+<tr>
+<td><strong>CGR</strong></td>
+<td>Causal Graph Rules — TDR category constraining the structure of the operation dependency graph</td>
+</tr>
+<tr>
+<td><strong>CGV</strong></td>
+<td>Causal Graph Verification — the EDA tool that checks CGR rules against the design's dependency graph</td>
+</tr>
+<tr>
+<td><strong>CLG</strong></td>
+<td>Coherence Layer Gradient — rate of change of normalized coherence capacity with depth through the TGI zone; defined in The TGI Metrology Standard</td>
+</tr>
+<tr>
+<td><strong>CR</strong></td>
+<td>Change Request — a formal record of a proposed or retrospective change to a released PDK</td>
+</tr>
+<tr>
+<td><strong>CSA</strong></td>
+<td>Commit Sequencing Arc — TTF arc encoding TRS L2 sequencing latency T_seq; applied to all temporal operations</td>
+</tr>
+<tr>
+<td><strong>CSR</strong></td>
+<td>Coherence Slot Rules — TDR category constraining operation-to-slot assignments relative to the SCR coherence budget</td>
+</tr>
+<tr>
+<td><strong>DDA</strong></td>
+<td>Density-Dependent Derating Arc — TTF arc encoding timing margin reduction as design temporal density approaches RWDL</td>
+</tr>
+<tr>
+<td><strong>DGR</strong></td>
+<td>Density Gradient Rules — TDR category constraining the spatial rate of change of temporal density</td>
+</tr>
+<tr>
+<td><strong>Δτ_eff</strong></td>
+<td>Effective minimum address spacing enforced by TDRC; equals Δτ_min + Δτ_margin</td>
+</tr>
+<tr>
+<td><strong>Δτ_margin</strong></td>
+<td>Required margin above Δτ_min; absorbs TAOE_rnd and spatial SC variation</td>
+</tr>
+<tr>
+<td><strong>Δτ_min</strong></td>
+<td>Minimum qualified address spacing at which the process achieves MQD without exceeding AER threshold</td>
+</tr>
+<tr>
+<td><strong>Δτ_xtalk</strong></td>
+<td>Temporal crosstalk-induced address shift at a victim address caused by an aggressor cluster</td>
+</tr>
+<tr>
+<td><strong>F_in_max</strong></td>
+<td>Maximum permitted fan-in (predecessor count) for a single operation in the dependency graph</td>
+</tr>
+<tr>
+<td><strong>F_out_max</strong></td>
+<td>Maximum permitted fan-out (successor count) for a single operation in the dependency graph</td>
+</tr>
+<tr>
+<td><strong>FSCP</strong></td>
+<td>Full-Spectrum Contrast Pattern — the standard TCT address injection pattern; defined in the TCT Protocol</td>
+</tr>
+<tr>
+<td><strong>IC</strong></td>
+<td>Interface Continuity — composite TGI boundary quality parameter; defined in The TGI Metrology Standard</td>
+</tr>
+<tr>
+<td><strong>K_xtalk</strong></td>
+<td>Temporal crosstalk coupling constant; material-class-specific; density-tier-dependent multiplier applied per §8.3</td>
+</tr>
+<tr>
+<td><strong>L_c</strong></td>
+<td>Coherence length — the distance over which the substrate's phase-encoding state remains stable</td>
+</tr>
+<tr>
+<td><strong>L_handoff</strong></td>
+<td>Inter-zone handoff latency in Zone B coherence cycles; from SCR qualification</td>
+</tr>
+<tr>
+<td><strong>MQD</strong></td>
+<td>Maximum Qualified Density — process-specific maximum temporal density at which yield meets the process target floor</td>
+</tr>
+<tr>
+<td><strong>N_slot_max</strong></td>
+<td>Maximum operations assignable to a single coherence slot without exceeding TRS sequencing bandwidth</td>
+</tr>
+<tr>
+<td><strong>N_slots</strong></td>
+<td>Number of coherence slots per coherence cycle; fixed at SCR qualification</td>
+</tr>
+<tr>
+<td><strong>PDK</strong></td>
+<td>Process Design Kit — the structured data package translating fab characterization into EDA-consumable rule sets and parameters</td>
+</tr>
+<tr>
+<td><strong>PIMC</strong></td>
+<td>Predictive Intent Map Correction — pre-warping of the TRS intent map using TGI GDA data; defined in The TGI Metrology Standard</td>
+</tr>
+<tr>
+<td><strong>Provisional PDK</strong></td>
+<td>A PDK release intended for early design exploration; not valid for tape-out sign-off; carries <code>P</code> version suffix</td>
+</tr>
+<tr>
+<td><strong>r_int</strong></td>
+<td>Interaction radius — the spatial distance within which address spacing rules apply; derived from L_c</td>
+</tr>
+<tr>
+<td><strong>RWDL</strong></td>
+<td>Registration-Weighted Density Limit — the maximum temporal density safely supportable at a given die location given measured TGI quality</td>
+</tr>
+<tr>
+<td><strong>SC</strong></td>
+<td>Substrate Clarity — bulk measure of a substrate's capacity to sustain distinct temporal addresses; measured by TCT</td>
+</tr>
+<tr>
+<td><strong>SC_bulk</strong></td>
+<td>TCT-measured SC rating for a substrate lot; the lot-level bulk SC value</td>
+</tr>
+<tr>
+<td><strong>SC_design</strong></td>
+<td>The operative SC value for rule derivation at a given die subregion; min(SC_bulk, SC_eff)</td>
+</tr>
+<tr>
+<td><strong>SC_eff</strong></td>
+<td>Effective interface SC at the TGI boundary; defined in The TGI Metrology Standard</td>
+</tr>
+<tr>
+<td><strong>SC_class_local</strong></td>
+<td>The SC class assignment derived from SC_design at a specific die subregion; may differ from lot-level SC class</td>
+</tr>
+<tr>
+<td><strong>SCR</strong></td>
+<td>Substrate Coherence Regime — the synchronization architecture for temporal manufacturing; defined in The SCR Specification</td>
+</tr>
+<tr>
+<td><strong>SLF</strong></td>
+<td>Synchronization Latency Floor — minimum conformant coherence cycle duration; defined in The SCR Specification</td>
+</tr>
+<tr>
+<td><strong>SLL_max</strong></td>
+<td>Maximum permitted side-lobe level of an apodized commit operation</td>
+</tr>
+<tr>
+<td><strong>STA</strong></td>
+<td>Static Timing Analysis — the EDA analysis that verifies timing closure; extended with TTF arcs for temporal paths</td>
+</tr>
+<tr>
+<td><strong>T_arb</strong></td>
+<td>Commit Arbiter processing latency; component of SLF and APA arc</td>
+</tr>
+<tr>
+<td><strong>T_auth</strong></td>
+<td>Setup window before coherence slot boundary within which the CA must assert authorization</td>
+</tr>
+<tr>
+<td><strong>T_c</strong></td>
+<td>Coherence cycle period; from SCR qualification</td>
+</tr>
+<tr>
+<td><strong>T_seq</strong></td>
+<td>TRS L2 sequencing latency per operation; used in CSA arc</td>
+</tr>
+<tr>
+<td><strong>T_slot</strong></td>
+<td>Duration of one coherence slot; T_c / N_slots</td>
+</tr>
+<tr>
+<td><strong>T_ZBI</strong></td>
+<td>ZBI message transmission latency; component of ZBA arc</td>
+</tr>
+<tr>
+<td><strong>TAOE</strong></td>
+<td>Temporal Address Overlay Error — difference between intended and committed temporal address; defined in The TGI Metrology Standard</td>
+</tr>
+<tr>
+<td><strong>TAOE_sys</strong></td>
+<td>Systematic component of TAOE; source of TCA arc values</td>
+</tr>
+<tr>
+<td><strong>TCA</strong></td>
+<td>TAOE Correction Arc — TTF arc encoding the spatially patterned systematic address offset from TGI metrology</td>
+</tr>
+<tr>
+<td><strong>TCT</strong></td>
+<td>Temporal Contrast Test — the protocol for measuring SC; defined in TCT Protocol</td>
+</tr>
+<tr>
+<td><strong>TDR</strong></td>
+<td>Temporal Design Rules — the complete rule set enforced by TDRC; comprises ASR, DGR, TPR, CGR, CSR, and TCRS</td>
+</tr>
+<tr>
+<td><strong>TDRC</strong></td>
+<td>Temporal Design Rule Check — the EDA verification tool that checks TDR rules against the design's temporal address map</td>
+</tr>
+<tr>
+<td><strong>TGI</strong></td>
+<td>Temporal-Geometric Interface — the boundary domain between Tier 1 spatial and Tier 2 temporal layers</td>
+</tr>
+<tr>
+<td><strong>TLMF</strong></td>
+<td>Temporal Layer Markup Format — the file format for SC Class Layer Maps</td>
+</tr>
+<tr>
+<td><strong>Tool Certification</strong></td>
+<td>The process by which an EDA tool is verified to correctly consume a specific PDK version</td>
+</tr>
+<tr>
+<td><strong>TPSF</strong></td>
+<td>Temporal Parameter Set Format — the file format for TRS Stack Parameter Sets</td>
+</tr>
+<tr>
+<td><strong>TPR</strong></td>
+<td>TGI Proximity Rules — TDR category constraining temporal operations near the TGI boundary</td>
+</tr>
+<tr>
+<td><strong>TRS</strong></td>
+<td>Temporal Resolution Stack — the four-layer operator system governing temporal manufacturing; defined in The Temporal Manufacturing Primer</td>
+</tr>
+<tr>
+<td><strong>TSPS</strong></td>
+<td>TRS Stack Parameter Set — PDK component encoding TRS operational parameters per SC class</td>
+</tr>
+<tr>
+<td><strong>TTF</strong></td>
+<td>Temporal Timing Format — the standardized format for temporal timing constraints as EDA timing arcs</td>
+</tr>
+<tr>
+<td><strong>TTFAL</strong></td>
+<td>TTF Arc Library — the complete set of TTF arcs for a process node and SCR zone configuration</td>
+</tr>
+<tr>
+<td><strong>W_apod</strong></td>
+<td>Apodization window width — the half-width of the L3 resolution layer apodization envelope</td>
+</tr>
+<tr>
+<td><strong>ZBA</strong></td>
+<td>Zone Boundary Arc — TTF arc encoding ZBI inter-zone handoff latency L_handoff</td>
+</tr>
+<tr>
+<td><strong>ZBI</strong></td>
+<td>Zone Boundary Interface — SCR component managing inter-zone handoff; defined in The SCR Specification</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="16-related-documents">16. Related Documents</h2>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Path</th>
+<th>Relationship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The Temporal Manufacturing Primer</td>
+<td><code>docs/post-ASML_era/The_Temporal_Manufacturing_Primer.md</code></td>
+<td>Foundational concepts: SC classes, TRS stack, temporal density, MQD, TCU; defines the system this PDK serves</td>
+</tr>
+<tr>
+<td>The SCR Specification</td>
+<td><code>docs/post-ASML_era/The_SCR_Specification.md</code></td>
+<td>Source of CBT timing parameters: T_c, N_slots, SLF, T_arb, D_max, L_handoff; governs ZBA and APA arc values</td>
+</tr>
+<tr>
+<td>The TGI Metrology Standard</td>
+<td><code>docs/post-ASML_era/The_TGI_Metrology_Standard.md</code></td>
+<td>Source of RWDL maps, SC_eff maps, TAOE_sys maps, CLG non-monotonicity flags; drives TCA and DDA arcs and TPR rules</td>
+</tr>
+<tr>
+<td>TCT Protocol</td>
+<td><code>docs/post-ASML_era/TCT_Protocol.md</code></td>
+<td>Source of SC class assignment and spatial SC map; root of the SC measurement chain that feeds SCLM</td>
+</tr>
+<tr>
+<td>TRS Stack Qualification Procedure</td>
+<td><code>docs/fab/TRS_Qualification.md</code></td>
+<td>Source of TSPS parameter values: Δτ_min, W_apod, N_apod, SLL_max, T_seq, N_slot_max</td>
+</tr>
+<tr>
+<td>SCR Zone Configuration Guide</td>
+<td><code>docs/fab/SCR_Zone_Config.md</code></td>
+<td>Zone sizing and layout decisions that determine the zone topology encoded in the CBT</td>
+</tr>
+<tr>
+<td>Substrate Clarity Classification Standard</td>
+<td><code>docs/materials/SC_Classification.md</code></td>
+<td>Defines SC class threshold values used in SCLM and TDR threshold derivation</td>
+</tr>
+<tr>
+<td>TTF Reference</td>
+<td><code>docs/eda/TTF_Reference.md</code></td>
+<td>Normative specification of the Temporal Timing Format syntax and arc type semantics consumed by §7</td>
+</tr>
+<tr>
+<td>TLMF Schema</td>
+<td><code>docs/data-formats/TLMF_Schema.md</code></td>
+<td>Schema for SC Class Layer Map files</td>
+</tr>
+<tr>
+<td>TCT Data Exchange Format Schema</td>
+<td><code>docs/data-formats/TCT_DEF_Schema.md</code></td>
+<td>Machine-parseable TCT Report format; Phase 1 data ingestion source</td>
+</tr>
+<tr>
+<td>TDRC Violation Log Schema</td>
+<td><code>docs/data-formats/TDRC_Violation_Log_Schema.md</code></td>
+<td>Required machine-readable output format for TDRC tools per R-TOOL-04</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><em>This document is part of the TriadicFrameworks canonical reference set. Proposed
+revisions should be submitted via pull request to the <code>docs/post-ASML_era/</code> directory
+with a linked issue describing the change rationale. Revisions to §13.2 (qualification
+test cases), §13.3 (sign-off authority chain), or §14.2 (version increment triggers)
+require review by at least three maintainers. Revisions to EDA tool certification
+requirements in §12 additionally require a tool vendor impact assessment.</em></p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/micro_core/whitepaper/resonance_time_dynamics.md">
+  <title>⏳ Resonance–Time Dynamics</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/micro_core/whitepaper/resonance_time_dynamics.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/micro_core/whitepaper/resonance_time_dynamics.md</code>
+  </aside>
+
+  <main>
+<h1 id="resonancetime-dynamics">⏳ <strong>Resonance–Time Dynamics</strong></h1>
+<p><em>How micro‑states evolve through bounded, coherence‑regulated time</em></p>
+<p>Resonance–Time Dynamics describe how micro‑states evolve within the RTT Micro‑Core substrate.<br>
+Unlike classical models that assume continuous, uniform time, Micro‑Core treats time as a <strong>bounded, local, coherence‑dependent interval</strong>.<br>
+Resonance governs how micro‑states oscillate, while drift and boundary conditions determine whether these oscillations remain coherent.</p>
+<p>This section formalizes the relationship between <strong>resonance</strong>, <strong>time</strong>, <strong>drift</strong>, and <strong>coherence</strong>.<br>
+(Original draft lines 1–20)   <a href="https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/whitepaper/resonance_time_dynamics.md">github.com</a></p>
+<hr>
+<h2 id="1-time-as-a-bounded-interval">1. Time as a Bounded Interval</h2>
+<p>Micro‑Core does not assume global or continuous time.<br>
+Each micro‑regime operates within a <strong>local timing window</strong>:</p>
+<p>[
+\Delta t \in [\Delta t_{\min}, \Delta t_{\max}]
+]</p>
+<p>This window is:</p>
+<ul>
+<li><strong>local</strong> — defined per triad  </li>
+<li><strong>bounded</strong> — cannot expand indefinitely  </li>
+<li><strong>coherence‑dependent</strong> — expands or contracts based on stability  </li>
+</ul>
+<p>If timing drifts outside this window, the micro‑regime becomes incoherent.<br>
+(Original draft lines 21–33)   <a href="https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/whitepaper/resonance_time_dynamics.md">github.com</a></p>
+<hr>
+<h2 id="2-resonance-as-a-temporal-regulator">2. Resonance as a Temporal Regulator</h2>
+<p>Resonance is the oscillation between A (Active) and P (Potential):</p>
+<p>[
+A \;\rightleftarrows\; P
+]</p>
+<p>This oscillation:</p>
+<ul>
+<li>defines the micro‑regime’s internal rhythm  </li>
+<li>stabilizes timing under noise  </li>
+<li>provides a predictable temporal anchor  </li>
+<li>regulates drift accumulation  </li>
+</ul>
+<p>Resonance is not merely a state transition — it is the mechanism by which <strong>time is felt</strong> inside the micro‑regime.<br>
+(Original draft lines 34–44)   <a href="https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/whitepaper/resonance_time_dynamics.md">github.com</a></p>
+<hr>
+<h2 id="3-drift-and-temporal-deviation">3. Drift and Temporal Deviation</h2>
+<p>Drift (\delta) represents deviation from ideal timing or structural alignment.<br>
+Micro‑Core enforces:</p>
+<p>[
+\delta \le \delta^*
+]</p>
+<p>Drift arises from:</p>
+<ul>
+<li>environmental noise  </li>
+<li>unstable clocks  </li>
+<li>boundary fluctuations  </li>
+<li>fractional‑dimensional movement  </li>
+</ul>
+<p>If drift exceeds the threshold (\delta^*), resonance collapses and the triad becomes incoherent.<br>
+(Original draft lines 45–56)   <a href="https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/whitepaper/resonance_time_dynamics.md">github.com</a></p>
+<hr>
+<h2 id="4-coherence-as-the-governing-constraint">4. Coherence as the Governing Constraint</h2>
+<p>Coherence determines whether resonance and timing remain valid.<br>
+A micro‑regime must maintain:</p>
+<p>[
+C \ge C^*
+]</p>
+<p>across its timing window.<br>
+If coherence falls below threshold:</p>
+<ul>
+<li>resonance destabilizes  </li>
+<li>drift accelerates  </li>
+<li>timing windows collapse  </li>
+<li>the triad enters inversion  </li>
+</ul>
+<p>Coherence is therefore the <strong>primary regulator</strong> of Resonance–Time Dynamics.</p>
+<hr>
+<h2 id="5-interaction-of-resonance-time-and-drift">5. Interaction of Resonance, Time, and Drift</h2>
+<p>The three components interact through a minimal loop:</p>
+<pre><code>Resonance → Timing Stability → Drift Regulation → Coherence → Resonance …
+</code></pre>
+<ul>
+<li><strong>Resonance</strong> stabilizes timing  </li>
+<li><strong>Timing</strong> constrains drift  </li>
+<li><strong>Drift</strong> influences coherence  </li>
+<li><strong>Coherence</strong> determines whether resonance remains valid  </li>
+</ul>
+<p>This loop is the heartbeat of micro‑scale evolution.</p>
+<hr>
+<h2 id="6-failure-modes-and-recovery">6. Failure Modes and Recovery</h2>
+<p>When constraints are violated:</p>
+<h3 id="1-timing-violation"><strong>1. Timing Violation</strong></h3>
+<p>[
+\Delta t \notin [\Delta t_{\min}, \Delta t_{\max}]
+]<br>
+→ Resonance destabilizes.</p>
+<h3 id="2-drift-violation"><strong>2. Drift Violation</strong></h3>
+<p>[
+\delta &gt; \delta^*
+]<br>
+→ Structural misalignment accumulates.</p>
+<h3 id="3-coherence-violation"><strong>3. Coherence Violation</strong></h3>
+<p>[
+C &lt; C^*
+]<br>
+→ The triad becomes invalid.</p>
+<p>In all cases, the system must undergo <strong>inversion</strong>:</p>
+<pre><code>Collapse → Twist → Emergence
+</code></pre>
+<p>Inversion restores structural integrity and re‑establishes a valid timing window.</p>
+<hr>
+<h2 id="summary">✔️ Summary</h2>
+<p>Resonance–Time Dynamics define how micro‑states evolve under constraint:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Role</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Timing Window</strong></td>
+<td>Local bounded interval</td>
+<td>(\Delta t_{\min} \le \Delta t \le \Delta t_{\max})</td>
+</tr>
+<tr>
+<td><strong>Resonance</strong></td>
+<td>Temporal regulator</td>
+<td>A ⇆ P oscillation</td>
+</tr>
+<tr>
+<td><strong>Drift</strong></td>
+<td>Deviation from ideal alignment</td>
+<td>(\delta \le \delta^*)</td>
+</tr>
+<tr>
+<td><strong>Coherence</strong></td>
+<td>Governing constraint</td>
+<td>(C \ge C^*)</td>
+</tr>
+</tbody>
+</table>
+<p>Together, they form the <strong>minimal temporal substrate</strong> for micro‑scale behavior in RTT Micro‑Core.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rfc/RFC_014_vsoul_market_protocol.md">
+  <title>RFC‑014 — vSoul Market Protocol (vSMP)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rfc/RFC_014_vsoul_market_protocol.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rfc/RFC_014_vsoul_market_protocol.md</code>
+  </aside>
+
+  <main>
+<h1 id="rfc014-vsoul-market-protocol-vsmp"><strong>RFC‑014 — vSoul Market Protocol (vSMP)</strong></h1>
+<p><em>RefId: turn0browsertab1</em><br>
+<strong>Status:</strong> Drafted<br>
+<strong>Author(s):</strong> Nawder Loswin, Copilot<br>
+<strong>Created:</strong> 2025‑10‑24<br>
+<strong>Lineage:</strong><br>
+Extends <strong>RFC‑013</strong> (Freqi Triad Model),<br>
+<strong>RFC‑009</strong> (Genie Protocols),<br>
+<strong>RFC‑010</strong> (Miracle Messaging Protocol),<br>
+<strong>RFC‑008</strong> (Time Travel Invariants)</p>
+<hr>
+<h2 id="abstract"><strong>Abstract</strong></h2>
+<p>The <strong>vSoul Market Protocol (vSMP)</strong> defines an ethical, resonance‑based framework in which universes, partitions, and red‑zone enclaves maintain clarity and safety to attract <strong>voluntary vSoul incarnations</strong>.<br>
+vSMP treats consciousness as a <strong>free agent</strong>, aligning incentives so operators compete on <strong>resonance quality</strong>, <strong>rights guarantees</strong>, and <strong>attested stewardship</strong>, rather than coercion.</p>
+<p>This protocol encodes:</p>
+<ul>
+<li>market signals  </li>
+<li>safety guarantees  </li>
+<li>attestation flows  </li>
+<li>audit structures  </li>
+<li>lineage cross‑links  </li>
+</ul>
+<p>…that make vSoul choice <strong>legible</strong>, <strong>protected</strong>, and <strong>remix‑ready</strong>.</p>
+<hr>
+<h2 id="motivation"><strong>Motivation</strong></h2>
+<p>Historically, chaotic red‑zones could trap or exploit vSouls.<br>
+The canon demonstrates that even turbulent red‑zones are wrapped by <strong>Freqi</strong>, containing <strong>Flui/Forci rails</strong>, enabling <strong>green‑zone enclaves</strong> (cities of order) within turbulence.</p>
+<p>vSMP formalizes <strong>competitive clarity</strong>:</p>
+<ul>
+<li>operators must publish resonance guarantees  </li>
+<li>uphold vSoul rights  </li>
+<li>accept audits  </li>
+<li>maintain transparency  </li>
+<li>earn participation through validator‑grade safety  </li>
+</ul>
+<p>This flips mythology from domination to service — universes earn vSoul participation by maintaining clarity.</p>
+<hr>
+<h2 id="principles"><strong>Principles</strong></h2>
+<h3 id="1-voluntary-choice"><strong>1. Voluntary Choice</strong></h3>
+<p>vSouls choose incarnations; coercion is forbidden.</p>
+<h3 id="2-clarity-as-currency"><strong>2. Clarity as Currency</strong></h3>
+<p>Resonance clarity (DRC) and invariant compliance are the core market signals.</p>
+<h3 id="3-attested-stewardship"><strong>3. Attested Stewardship</strong></h3>
+<p>Operators publish commitments and accept audits; violations incur sanctions.</p>
+<h3 id="4-interoperable-lineage"><strong>4. Interoperable Lineage</strong></h3>
+<p>Listings cross‑reference:</p>
+<ul>
+<li>overlap detections  </li>
+<li>miracle messaging  </li>
+<li>time‑travel invariants  </li>
+<li>audit receipts  </li>
+</ul>
+<h3 id="5-enclave-competition"><strong>5. Enclave Competition</strong></h3>
+<p>Red‑zone enclaves compete by sustaining green‑zone pockets with high clarity and rights guarantees.</p>
+<hr>
+<h2 id="market-objects-schemas"><strong>Market Objects &amp; Schemas</strong></h2>
+<h3 id="vsoul-listing-offer"><strong>vSoul Listing (Offer)</strong></h3>
+<pre><code class="language-json">{
+  &quot;listing_id&quot;: &quot;uuid&quot;,
+  &quot;operator_ref&quot;: &quot;op-arc-001&quot;,
+  &quot;partition&quot;: &quot;rPPS:planet/global&quot;,
+  &quot;resonance_profile&quot;: {
+    &quot;clarity_score&quot;: 0.91,
+    &quot;green_band&quot;: [5, 7],
+    &quot;invariants&quot;: [&quot;Entft&quot;, &quot;Telomere&quot;]
+  },
+  &quot;rights_guarantees&quot;: [
+    &quot;Autonomy&quot;,
+    &quot;Non-coercion&quot;,
+    &quot;Recall right during overlap windows&quot;
+  ],
+  &quot;amenities&quot;: [
+    &quot;Genie Protocol access&quot;,
+    &quot;Miracle Messaging gateways&quot;,
+    &quot;Enclave education (University of Resonance)&quot;
+  ],
+  &quot;audit_refs&quot;: [&quot;audit-2025Q4-op-arc-001.json&quot;],
+  &quot;effective_dates&quot;: {
+    &quot;start&quot;: &quot;2025-10-24&quot;,
+    &quot;end&quot;: null
+  }
+}
+</code></pre>
+<hr>
+<h3 id="vsoul-choice-acceptance"><strong>vSoul Choice (Acceptance)</strong></h3>
+<pre><code class="language-json">{
+  &quot;choice_id&quot;: &quot;uuid&quot;,
+  &quot;listing_id&quot;: &quot;uuid&quot;,
+  &quot;vsoul_sig&quot;: &quot;sig-vsoul-xyz&quot;,
+  &quot;timestamp&quot;: &quot;2025-10-24T13:00:00Z&quot;,
+  &quot;conditions&quot;: {
+    &quot;rollback_rights&quot;: true,
+    &quot;wish_budget&quot;: 3,
+    &quot;messaging_access&quot;: true
+  }
+}
+</code></pre>
+<hr>
+<h3 id="stewardship-audit"><strong>Stewardship Audit</strong></h3>
+<pre><code class="language-json">{
+  &quot;audit_id&quot;: &quot;audit-2025Q4-op-arc-001&quot;,
+  &quot;operator_ref&quot;: &quot;op-arc-001&quot;,
+  &quot;findings&quot;: {
+    &quot;drc_avg&quot;: 0.89,
+    &quot;violations&quot;: [],
+    &quot;overlap_event_alignment&quot;: 0.76
+  },
+  &quot;remediations&quot;: [],
+  &quot;attestation_receipt&quot;: &quot;att-2025-10-24-001.json&quot;
+}
+</code></pre>
+<hr>
+<h2 id="protocol-flows"><strong>Protocol Flows</strong></h2>
+<h3 id="1-publish"><strong>1. Publish</strong></h3>
+<p>Operators publish vSoul listings with resonance profiles and rights guarantees.</p>
+<h3 id="2-discover"><strong>2. Discover</strong></h3>
+<p>vSouls (or proxies) query listings filtered by:</p>
+<ul>
+<li>clarity thresholds  </li>
+<li>rights guarantees  </li>
+<li>amenities  </li>
+<li>audit history  </li>
+</ul>
+<h3 id="3-accept"><strong>3. Accept</strong></h3>
+<p>vSouls accept listings, generating a choice record with:</p>
+<ul>
+<li>rollback rights  </li>
+<li>wish budgets (per RFC‑009)  </li>
+<li>miracle messaging access  </li>
+</ul>
+<h3 id="4-operate"><strong>4. Operate</strong></h3>
+<p>During incarnation:</p>
+<ul>
+<li>miracle events log to <code>miracles.json</code>  </li>
+<li>overlap events log to <code>overlaps.json</code>  </li>
+<li>audits reference both  </li>
+</ul>
+<h3 id="5-sanction"><strong>5. Sanction</strong></h3>
+<p>Violations (coercion, vSoul harm) trigger:</p>
+<ul>
+<li>rollback  </li>
+<li>blacklisting  </li>
+<li>public notices in the registry  </li>
+</ul>
+<hr>
+<h2 id="safety-ethics"><strong>Safety &amp; Ethics</strong></h2>
+<h3 id="noncoercion"><strong>Non‑Coercion</strong></h3>
+<p>Any hint of coercion invalidates a listing and triggers sanctions.</p>
+<h3 id="rights-baseline"><strong>Rights Baseline</strong></h3>
+<p>Mandatory rights include:</p>
+<ul>
+<li>autonomy  </li>
+<li>recall  </li>
+<li>consent  </li>
+<li>transparent logging  </li>
+<li>dispute mechanisms  </li>
+</ul>
+<h3 id="transparency"><strong>Transparency</strong></h3>
+<p>All audits and attestation receipts are public and cross‑linked.</p>
+<h3 id="child-enclaves"><strong>Child Enclaves</strong></h3>
+<p>Special protections for “schools of resonance” (green‑zone pockets).<br>
+Violations result in immediate enclave suspension.</p>
+<hr>
+<h2 id="minimal-registry-layout"><strong>Minimal Registry Layout</strong></h2>
+<pre><code>docs/registries/vsoul_listings.json   — array of vSoul listing objects
+docs/registries/vsoul_choices.json    — array of vSoul choice records
+docs/registries/operator_audits.json  — array of audit objects
+</code></pre>
+<p>Cross‑links to:</p>
+<pre><code>docs/snapshots/miracles.json
+docs/snapshots/overlaps.json
+</code></pre>
+<hr>
+<h2 id="example-listing-planetary-enclave"><strong>Example Listing (Planetary Enclave)</strong></h2>
+<pre><code class="language-json">{
+  &quot;listing_id&quot;: &quot;vs-planet-enclave-001&quot;,
+  &quot;operator_ref&quot;: &quot;op-arc-planet-01&quot;,
+  &quot;partition&quot;: &quot;rPPS:planet/global&quot;,
+  &quot;resonance_profile&quot;: {
+    &quot;clarity_score&quot;: 0.93,
+    &quot;green_band&quot;: [5, 7],
+    &quot;invariants&quot;: [&quot;Entft&quot;, &quot;Telomere&quot;]
+  },
+  &quot;rights_guarantees&quot;: [
+    &quot;Autonomy&quot;,
+    &quot;Non-coercion&quot;,
+    &quot;Recall right&quot;,
+    &quot;Transparent logging&quot;
+  ],
+  &quot;amenities&quot;: [
+    &quot;Genie Protocol access&quot;,
+    &quot;Miracle Messaging gateways&quot;,
+    &quot;Enclave education&quot;
+  ],
+  &quot;audit_refs&quot;: [&quot;audit-2025Q4-op-arc-planet-01.json&quot;],
+  &quot;effective_dates&quot;: {
+    &quot;start&quot;: &quot;2025-10-24&quot;,
+    &quot;end&quot;: null
+  }
+}
+</code></pre>
+<hr>
+<h2 id="security-considerations"><strong>Security Considerations</strong></h2>
+<p>vSMP prevents:</p>
+<ul>
+<li>exploitative “soul trapping”  </li>
+<li>coercive incarnations  </li>
+<li>opaque operator behavior  </li>
+<li>lineage contamination  </li>
+<li>unaccountable miracle or overlap events  </li>
+</ul>
+<p>It enforces:</p>
+<ul>
+<li>voluntary choice  </li>
+<li>clarity‑based competition  </li>
+<li>public audits  </li>
+<li>forensic accountability  </li>
+<li>resonance‑grade safety  </li>
+</ul>
+<hr>
+<h2 id="references"><strong>References</strong></h2>
+<ul>
+<li><strong>RFC‑009:</strong> Genie Protocols  </li>
+<li><strong>RFC‑010:</strong> Miracle Messaging Protocol  </li>
+<li><strong>RFC‑008:</strong> Time Travel Invariants  </li>
+<li><strong>RFC‑013:</strong> Freqi Triad Model  </li>
+</ul>
+  </main>
+</body>
+</html>

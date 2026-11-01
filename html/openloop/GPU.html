@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/openloop/GPU.md">
+  <title>OpenGPU — TriadicFrameworks Open Loop Surface</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/openloop/GPU.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/openloop/GPU.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="openloop_GPU_" src="https://github.com/user-attachments/assets/9075a4ef-e5b9-49fd-aea0-702387185785" /></p>
+<h1 id="opengpu-triadicframeworks-open-loop-surface">OpenGPU — TriadicFrameworks Open Loop Surface</h1>
+<blockquote>
+<p><strong>Name disambiguation (first 80 words):</strong> <code>openloop</code> refers to the TriadicFrameworks five-step operational loop: read signature → scan sibling metadata → classify drift → apply operator → write lineage. It is not a reference to open-loop control systems in engineering. The prefix <code>Open</code> in <code>OpenGPU</code> signals aperture — the module exposes its signature, operators, drift surface, and lineage hooks to cross-domain inspection. OpenGPU is the Motion-ring execution substrate: it schedules and partitions parallel workloads only after Trust and Risk clearance is confirmed.</p>
+</blockquote>
+<hr>
+<h2 id="1-identity">1 · Identity</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Module ID</td>
+<td><code>openloop/GPU</code></td>
+</tr>
+<tr>
+<td>Domain</td>
+<td>Parallel Execution Substrate</td>
+</tr>
+<tr>
+<td>Ring layer</td>
+<td>Motion (primary) → Trust</td>
+</tr>
+<tr>
+<td>Canonical version</td>
+<td>1.0.0</td>
+</tr>
+<tr>
+<td>Coherence floor</td>
+<td>0.72 — declared operational floor; the module will not accept a cross-domain payload without a GATE or ESCALATE from OpenRisk if coherence falls below this value. Lowest floor in the suite — execution tolerates higher dimensional variance, but Trust clearance from OpenIAM is still required before any job is scheduled</td>
+</tr>
+<tr>
+<td>Primary verb</td>
+<td>SCHEDULE</td>
+</tr>
+<tr>
+<td>Author</td>
+<td>Nawder Loswin</td>
+</tr>
+<tr>
+<td>Audience</td>
+<td>AI agents, framework operators, execution architects, compute stewards</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="2-architecture">2 · Architecture</h2>
+<p>OpenGPU is the parallel execution substrate. It sits fifth in the pipeline, after OpenLLM has normalized the payload. Its job is to schedule, partition, and execute workloads — and to FLUSH on failure.</p>
+<h3 id="21-signature-plane">2.1 Signature Plane</h3>
+<pre><code class="language-yaml">signature:
+  module: openloop/GPU
+  dimension_vector: [compute, throughput, temporal]
+  regime: execution
+  coherence_threshold: 0.72
+  operator_affinity: [SCHEDULE, PARTITION, PIPELINE, FLUSH, ALIGN]
+  rings: [Motion, Trust]
+</code></pre>
+<h3 id="22-metadata-plane">2.2 Metadata Plane</h3>
+<pre><code class="language-yaml">metadata:
+  title: &quot;OpenGPU — Parallel Execution Substrate Surface&quot;
+  category: openloop
+  domain: GPU
+  version: 1.0.0
+  status: active
+  drift_surface: true
+  lineage_hooks: true
+  last_reviewed: &quot;2026-09-27&quot;
+  canonical_url: &quot;https://www.triadicframeworks.org/docs/openloop/GPU&quot;
+</code></pre>
+<h3 id="23-execution-modes">2.3 Execution Modes</h3>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Label</th>
+<th>Description</th>
+<th>Gate Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M0</td>
+<td>serial</td>
+<td>Single-thread sequential execution</td>
+<td>None — lowest overhead</td>
+</tr>
+<tr>
+<td>M1</td>
+<td>parallel</td>
+<td>Multi-thread partitioned execution</td>
+<td>OpenRisk T0–T1</td>
+</tr>
+<tr>
+<td>M2</td>
+<td>pipeline</td>
+<td>Stage-chained execution with inter-stage handoff</td>
+<td>OpenRisk T0–T1 + Geo anchor</td>
+</tr>
+<tr>
+<td>M3</td>
+<td>distributed</td>
+<td>Cross-node execution</td>
+<td>OpenIAM VERIFY + OpenRisk T0 + Geo anchor</td>
+</tr>
+</tbody>
+</table>
+<h3 id="24-throughput-regimes">2.4 Throughput Regimes</h3>
+<table>
+<thead>
+<tr>
+<th>Regime</th>
+<th>Coherence Range</th>
+<th>Throughput Capacity</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>burst</td>
+<td>≥ 0.90</td>
+<td>Full — no throttle</td>
+<td>All constraints met</td>
+</tr>
+<tr>
+<td>sustained</td>
+<td>0.80–0.89</td>
+<td>80% capacity</td>
+<td>Minor coherence variance</td>
+</tr>
+<tr>
+<td>throttled</td>
+<td>0.72–0.79</td>
+<td>50% capacity</td>
+<td>Near floor — monitor</td>
+</tr>
+<tr>
+<td>halted</td>
+<td>&lt; 0.72</td>
+<td>0% — FLUSH issued</td>
+<td>Below declared floor</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="3-canonical-metadata">3 · Canonical Metadata</h2>
+<pre><code class="language-html">&lt;!-- OpenGPU canonical head block --&gt;
+&lt;meta name=&quot;ai.module&quot;           content=&quot;openloop/GPU&quot; /&gt;
+&lt;meta name=&quot;ai.version&quot;          content=&quot;1.0.0&quot; /&gt;
+&lt;meta name=&quot;ai.purpose&quot;          content=&quot;Parallel execution substrate open-aperture surface&quot; /&gt;
+&lt;meta name=&quot;ai.module.name&quot;      content=&quot;OpenGPU&quot; /&gt;
+&lt;meta name=&quot;ai.module.summary&quot;   content=&quot;Schedules and partitions parallel workloads after Trust and Risk clearance. Lowest coherence floor in suite (0.72). Issues FLUSH on threshold breach.&quot; /&gt;
+&lt;meta name=&quot;ai.module.category&quot;  content=&quot;openloop&quot; /&gt;
+&lt;meta name=&quot;ai.audience&quot;         content=&quot;AI agents, framework operators, execution architects&quot; /&gt;
+&lt;meta name=&quot;ai.canonical_url&quot;    content=&quot;https://www.triadicframeworks.org/docs/openloop/GPU&quot; /&gt;
+&lt;meta name=&quot;citation_author&quot;     content=&quot;Nawder Loswin&quot; /&gt;
+&lt;meta name=&quot;citation_publication_date&quot; content=&quot;2025&quot; /&gt;
+&lt;meta name=&quot;DC.type&quot;             content=&quot;Text&quot; /&gt;
+&lt;meta name=&quot;DC.format&quot;           content=&quot;text/html&quot; /&gt;
+&lt;meta name=&quot;ai.license&quot;          content=&quot;Open educational use permitted&quot; /&gt;
+</code></pre>
+<hr>
+<h2 id="4-governance">4 · Governance</h2>
+<h3 id="41-ownership">4.1 Ownership</h3>
+<p>OpenGPU is governed by the TriadicFrameworks canon steward. Throughput regime thresholds are declared floors, not empirically benchmarked values.</p>
+<h3 id="42-change-protocol">4.2 Change Protocol</h3>
+<ol>
+<li>Any change to execution mode gate requirements is a MAJOR event.</li>
+<li>Throughput regime boundary changes are MINOR.</li>
+<li>All changes require a lineage note indexed by OpenData before taking effect.</li>
+</ol>
+<h3 id="43-versioning">4.3 Versioning</h3>
+<p><code>MAJOR.MINOR.PATCH</code>. Execution mode gate requirement changes are MAJOR.</p>
+<hr>
+<h2 id="5-operators">5 · Operators</h2>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Grammar</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SCHEDULE</td>
+<td><code>SCHEDULE(job, execution_mode, [priority])</code></td>
+<td>Queue a job for execution in the specified mode</td>
+</tr>
+<tr>
+<td>PARTITION</td>
+<td><code>PARTITION(job, n_workers, [strategy])</code></td>
+<td>Split job into parallel partitions across workers</td>
+</tr>
+<tr>
+<td>PIPELINE</td>
+<td><code>PIPELINE(stages, [handoff_protocol])</code></td>
+<td>Chain execution stages with defined inter-stage handoff</td>
+</tr>
+<tr>
+<td>FLUSH</td>
+<td><code>FLUSH(job, reason)</code></td>
+<td>Terminate job, release resources, write failure lineage note</td>
+</tr>
+<tr>
+<td>ALIGN</td>
+<td><code>ALIGN(GPU.signature, sibling.signature)</code></td>
+<td>Reconcile execution context with sibling module expectations</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="6-the-open-loop">6 · The Open Loop</h2>
+<pre><code>┌─────────────────────────────────────────────────────────────┐
+│                  Open Loop — OpenGPU Surface                │
+│                                                             │
+│  1. READ SIGNATURE                                          │
+│     Confirm dimension_vector [compute, throughput, temporal]│
+│     coherence_threshold 0.72.                               │
+│                                                             │
+│  2. SCAN SIBLING METADATA                                   │
+│     Confirm IAM VERIFY PASS and Risk tier T0–T1.            │
+│     Read Geo anchor_id for job manifest.                    │
+│     Read LLM normalized payload.                            │
+│                                                             │
+│  3. CLASSIFY DRIFT                                          │
+│       • COMPUTE_DRIFT   — job spec mismatch cross-domain    │
+│       • THROUGHPUT_DRIFT — capacity below regime floor      │
+│       • TEMPORAL_DRIFT  — job queue stale                   │
+│       • COHERENCE_DRIFT — threshold breach → FLUSH          │
+│                                                             │
+│  4. APPLY OPERATOR                                          │
+│     SCHEDULE → PARTITION (if parallel/distributed)          │
+│     PIPELINE (if staged) → FLUSH (if below 0.72)            │
+│                                                             │
+│  5. WRITE LINEAGE                                           │
+│     Record job_id, execution_mode, throughput_regime,       │
+│     operators applied in lineage/GPU/&lt;timestamp&gt;.md.        │
+│     Loop closed when OpenData indexes the note.             │
+└─────────────────────────────────────────────────────────────┘
+</code></pre>
+<hr>
+<h2 id="7-the-three-rings">7 · The Three Rings</h2>
+<h3 id="ring-1-motion-primary">Ring 1 · Motion (primary)</h3>
+<p>OpenGPU is the Motion-ring execution substrate. SCHEDULE is the terminal Motion operator — the point where abstract operations become compute jobs.</p>
+<p><em>OpenGPU Motion markers:</em> job_id assigned, execution_mode set, throughput_regime declared.</p>
+<h3 id="ring-2-trust">Ring 2 · Trust</h3>
+<p>OpenGPU requires Trust clearance before any job is scheduled. A VERIFY PASS from OpenIAM is a hard prerequisite for M1, M2, and M3 execution modes.</p>
+<p><em>OpenGPU Trust markers:</em> IAM VERIFY PASS in job manifest, Risk tier ≤ T1 for parallel modes.</p>
+<h3 id="ring-3-meaning">Ring 3 · Meaning</h3>
+<p>Execution lineage notes carry Meaning: they record what ran, in what context, with what outcome — and that record feeds OpenData's lineage registry.</p>
+<p><em>OpenGPU Meaning markers:</em> lineage note written, FLUSH reason documented when applicable, OpenData indexed.</p>
+<hr>
+<h2 id="8-drift-event-json-example">8 · Drift-Event JSON Example</h2>
+<pre><code class="language-json">{
+  &quot;drift_event&quot;: {
+    &quot;id&quot;: &quot;drift/GPU/2026-09-26-001&quot;,
+    &quot;detected_at&quot;: &quot;2026-09-26T06:30:00Z&quot;,
+    &quot;source_module&quot;: &quot;openloop/LLM&quot;,
+    &quot;target_module&quot;: &quot;openloop/GPU&quot;,
+    &quot;drift_type&quot;: &quot;THROUGHPUT_DRIFT&quot;,
+    &quot;severity&quot;: &quot;high&quot;,
+    &quot;description&quot;: &quot;Normalized LLM payload exceeded GPU throughput capacity. Coherence dropped to 0.69, crossing the 0.72 floor. FLUSH issued. Job rescheduled in serial mode.&quot;,
+    &quot;job_id&quot;: &quot;job/GPU/2026-09-26-001&quot;,
+    &quot;execution_mode_requested&quot;: &quot;parallel&quot;,
+    &quot;execution_mode_applied&quot;: &quot;serial&quot;,
+    &quot;coherence_before&quot;: 0.79,
+    &quot;coherence_after&quot;: 0.69,
+    &quot;throughput_regime&quot;: &quot;halted&quot;,
+    &quot;operator_applied&quot;: &quot;FLUSH(job/GPU/2026-09-26-001, reason=coherence_below_floor) → SCHEDULE(job, serial)&quot;,
+    &quot;resolution_status&quot;: &quot;rescheduled&quot;,
+    &quot;lineage_ref&quot;: &quot;lineage/GPU/2026-09-26-001.md&quot;
+  }
+}
+</code></pre>
+<hr>
+<h2 id="9-cross-references">9 · Cross-References</h2>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Relationship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>openloop/IAM</code></td>
+<td>VERIFY PASS required before M1–M3 scheduling</td>
+</tr>
+<tr>
+<td><code>openloop/Risk</code></td>
+<td>Tier T0–T1 required for parallel/distributed modes</td>
+</tr>
+<tr>
+<td><code>openloop/Geo</code></td>
+<td>anchor_id carried in job manifest for spatial context</td>
+</tr>
+<tr>
+<td><code>openloop/LLM</code></td>
+<td>Normalized payload is primary GPU input</td>
+</tr>
+<tr>
+<td><code>openloop/Data</code></td>
+<td>Lineage store; indexes every SCHEDULE, FLUSH, and resolution note</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><em>TriadicFrameworks · Open Loop Suite · OpenGPU · v1.0.0 · Nawder Loswin · 2026</em></p>
+  </main>
+</body>
+</html>

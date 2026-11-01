@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Research/agentic/quadratic-rational-dinv.md">
+  <title>RTT Agentic Module: A Quadratic Form Generalization of Rational dinv</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Research/agentic/quadratic-rational-dinv.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Research/agentic/quadratic-rational-dinv.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Research_agentic_quadratic_rational_dinv_" src="https://github.com/user-attachments/assets/97562a6d-db4a-4633-aa46-c419df07700c" /></p>
+<h1 id="rtt-agentic-module-a-quadratic-form-generalization-of-rational-dinv">RTT Agentic Module: A Quadratic Form Generalization of Rational dinv</h1>
+<ul>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/agentic/quadratic-rational-dinv_module.json"><code>quadratic-rational-dinv_module.json</code></a> — Agentic module schema role assignments</li>
+</ul>
+<p><strong>Module ID:</strong> <code>quadratic_rational_dinv_rtt</code><br>
+<strong>Source paper:</strong> https://arxiv.org/pdf/2604.13238</p>
+<p>This module wraps the paper <em>“A quadratic form generalization of rational dinv”</em> in RTT operator grammar.<br>
+It preserves the authors’ mathematics while exposing the structural regimes that govern the finiteness and stability of Q-dinv.</p>
+<hr>
+<h2 id="1-purpose">1. Purpose</h2>
+<ul>
+<li>Make the paper <strong>agentic</strong> and machine-navigable.  </li>
+<li>Clarify the <strong>regime structure</strong> behind the quadratic-form generalization of dinv.  </li>
+<li>Provide students with a clean conceptual map.  </li>
+<li>Support AI agents in reasoning over the paper without drift.</li>
+</ul>
+<hr>
+<h2 id="2-core-rtt-view-of-the-paper">2. Core RTT view of the paper</h2>
+<p>The authors generalize the classical rational dinv statistic by:</p>
+<ul>
+<li>replacing the linear slope comparison with a <strong>positive definite quadratic form</strong> Q,  </li>
+<li>proving that the resulting statistic is <strong>finite</strong>,  </li>
+<li>and showing that it is <strong>stable</strong> across rational Dyck-path families.</li>
+</ul>
+<p>This involves three interacting structures:</p>
+<ul>
+<li><strong>Dyck-path combinatorics</strong>  </li>
+<li><strong>Quadratic-form geometry</strong>  </li>
+<li><strong>Finiteness and stability arguments</strong></li>
+</ul>
+<p>The proof moves between these regimes, often implicitly.<br>
+This module makes those transitions explicit.</p>
+<hr>
+<h2 id="3-rtt-structures-in-this-module">3. RTT structures in this module</h2>
+<h3 id="regimes">Regimes</h3>
+<ul>
+<li><code>dyck_path_regime</code>  </li>
+<li><code>quadratic_form_regime</code>  </li>
+<li><code>finiteness_regime</code>  </li>
+<li><code>stability_regime</code>  </li>
+<li><code>combinatorial_geometry_regime</code></li>
+</ul>
+<h3 id="tensions">Tensions</h3>
+<ul>
+<li><code>linear_vs_quadratic</code>  </li>
+<li><code>combinatorial_vs_geometric</code>  </li>
+<li><code>finiteness_vs_growth</code>  </li>
+<li><code>local_comparison_vs_global_stability</code></li>
+</ul>
+<h3 id="transitions">Transitions</h3>
+<ul>
+<li><code>linear_to_quadratic_transition</code>  </li>
+<li><code>quadratic_to_finiteness_transition</code>  </li>
+<li><code>finiteness_to_stability_transition</code>  </li>
+<li><code>combinatorial_to_geometric_transition</code></li>
+</ul>
+<hr>
+<h2 id="4-operators">4. Operators</h2>
+<ul>
+<li><strong><code>q_dinv_operator</code></strong> — computes Q-weighted dinv.  </li>
+<li><strong><code>quadratic_region_operator</code></strong> — identifies Q-defined geometric regions.  </li>
+<li><strong><code>finiteness_operator</code></strong> — bounds contributing pairs using positivity.  </li>
+<li><strong><code>stability_operator</code></strong> — determines stability under rational scaling.</li>
+</ul>
+<hr>
+<h2 id="5-how-to-use-this-module">5. How to use this module</h2>
+<ul>
+<li>
+<p><strong>Students:</strong><br>
+  Use this README alongside the PDF to understand how quadratic forms interact with Dyck-path combinatorics.</p>
+</li>
+<li>
+<p><strong>Researchers:</strong><br>
+  Query the module’s regimes and operators to explore structural dependencies.</p>
+</li>
+<li>
+<p><strong>Agents:</strong><br>
+  Treat <code>module.json</code> as the canonical structural map of the paper.</p>
+</li>
+</ul>
+<hr>
+<h2 id="6-provenance">6. Provenance</h2>
+<ul>
+<li><strong>Module authoring:</strong> TriadicFrameworks (RTT / agentic mapping).  </li>
+<li><strong>Original content:</strong> Authors of arXiv:2604.13238.  </li>
+<li><strong>License:</strong> Open educational use permitted.</li>
+</ul>
+<hr>
+<h1 id="diagramtxt">✅ <strong>diagram.txt</strong></h1>
+<p><em>(ASCII regime–tension–transition map)</em></p>
+<pre><code class="language-text">      +-----------------------------------------------------------+
+      | quadratic_rational_dinv_rtt                               |
+      +-----------------------------------------------------------+
+
+REGIMES
+  [R1] dyck_path_regime
+  [R2] quadratic_form_regime
+  [R3] finiteness_regime
+  [R4] stability_regime
+  [R5] combinatorial_geometry_regime
+
+TENSIONS
+  [T1] linear_vs_quadratic              (R1 &lt;--&gt; R2)
+  [T2] combinatorial_vs_geometric       (R1 &lt;--&gt; R5)
+  [T3] finiteness_vs_growth             (R2 &lt;--&gt; R3)
+  [T4] local_comparison_vs_global_stability (R2/R3 &lt;--&gt; R4)
+
+TRANSITIONS
+  [X1] linear_to_quadratic_transition
+  [X2] quadratic_to_finiteness_transition
+  [X3] finiteness_to_stability_transition
+  [X4] combinatorial_to_geometric_transition
+
+FLOW
+  dyck_path_regime (R1)
+        |
+        v
+  quadratic_form_regime (R2)
+        |
+        v
+  finiteness_regime (R3)
+        |
+        v
+  stability_regime (R4)
+        |
+        v
+  combinatorial_geometry_regime (R5)
+</code></pre>
+  </main>
+</body>
+</html>

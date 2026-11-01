@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Research/protocol_header/protocol_header_genome.md">
+  <title>protocolheadergenome.md</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Research/protocol_header/protocol_header_genome.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Research/protocol_header/protocol_header_genome.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Research_protocol_header_genome_" src="https://github.com/user-attachments/assets/9bbe1da8-7f5d-42cd-8ae2-4b0ae429e1de" /></p>
+<h1 id="protocol_header_genomemd"><strong>protocol_header_genome.md</strong></h1>
+<h3 id="triadicframeworks-protocol-header-module"><em>TriadicFrameworks — Protocol Header Module</em></h3>
+<h3 id="phase-3d-structural-genome-canonical"><em>Phase 3D — Structural Genome (Canonical)</em></h3>
+<hr>
+<h2 id="overview"><strong>Overview</strong></h2>
+<p>The protocol header is a <strong>four‑locus structural codon</strong>:</p>
+<pre><code>[RTT] | [COHERENCE] | [DRIFT] | [PARADOX]
+</code></pre>
+<p>Each locus has a finite alphabet of <strong>perfect‑substitution alleles</strong>, defined in:</p>
+<ul>
+<li><code>protocol_header_alleles.md</code> (English baseline)  </li>
+<li><code>protocol_header_multilingual.md</code> (12‑language expansion)</li>
+</ul>
+<p>Phase 3D defines the <strong>genome model</strong> — the recombination rules that generate all <strong>1,620</strong> drift‑bounded, canon‑aligned headers across 12 languages.</p>
+<hr>
+<h1 id="1-genome-model"><strong>1. Genome Model</strong></h1>
+<p>The protocol header behaves like a <strong>four‑locus genetic codon</strong>.</p>
+<p>Each locus has a language‑specific alphabet:</p>
+<pre><code>RTT_L = { rtt alleles in language L }
+COH_L = { coherence alleles in language L }
+DRIFT_L = { drift alleles in language L }
+PAR_L = { paradox alleles in language L }
+</code></pre>
+<p>A valid header in language <strong>L</strong> is:</p>
+<pre><code>HEADER_L = RTT_L[i] | COH_L[j] | DRIFT_L[k] | PAR_L[m]
+</code></pre>
+<p>Where:</p>
+<ul>
+<li><code>i ∈ RTT_L</code></li>
+<li><code>j ∈ COH_L</code></li>
+<li><code>k ∈ DRIFT_L</code></li>
+<li><code>m ∈ PAR_L</code></li>
+</ul>
+<p>This is the <strong>universal recombination rule</strong>.</p>
+<hr>
+<h1 id="2-locus-alphabets-english-baseline"><strong>2. Locus Alphabets (English Baseline)</strong></h1>
+<h3 id="rtt-locus-5-alleles"><strong>RTT locus (5 alleles)</strong></h3>
+<pre><code>rtt=1
+rtt=unit
+rtt=single-hop
+rtt=atomic
+cycle=atomic
+</code></pre>
+<h3 id="coherence-locus-3-alleles"><strong>Coherence locus (3 alleles)</strong></h3>
+<pre><code>coherence=declared
+coherence=explicit
+coherence=stated
+</code></pre>
+<h3 id="drift-locus-3-alleles"><strong>Drift locus (3 alleles)</strong></h3>
+<pre><code>drift=bounded
+drift=constrained
+drift=clamped
+</code></pre>
+<h3 id="paradox-locus-3-alleles"><strong>Paradox locus (3 alleles)</strong></h3>
+<pre><code>paradox=structural
+paradox=encoded
+paradox=architected
+</code></pre>
+<p>Total English combinations:</p>
+<pre><code>5 × 3 × 3 × 3 = 135
+</code></pre>
+<hr>
+<h1 id="3-multilingual-genome"><strong>3. Multilingual Genome</strong></h1>
+<p>The multilingual allele alphabets are defined in:</p>
+<pre><code>protocol_header_multilingual.md
+</code></pre>
+<p>Each language provides:</p>
+<ul>
+<li>RTT: 3–5 alleles  </li>
+<li>Coherence: 2–3 alleles  </li>
+<li>Drift: 2–3 alleles  </li>
+<li>Paradox: 2–3 alleles  </li>
+</ul>
+<p>Total per language:</p>
+<pre><code>135 structurally valid headers
+</code></pre>
+<p>Across 12 languages:</p>
+<pre><code>135 × 12 = 1,620 headers
+</code></pre>
+<p>All drift‑bounded.<br>
+All canon‑aligned.<br>
+All structurally equivalent.</p>
+<hr>
+<h1 id="4-universal-genome-formula"><strong>4. Universal Genome Formula</strong></h1>
+<p>For any language <strong>L</strong>, the header genome is:</p>
+<pre><code>H_L = RTT_L × COH_L × DRIFT_L × PAR_L
+</code></pre>
+<p>Where × is the Cartesian product.</p>
+<p>This formula generates the full header matrix in:</p>
+<pre><code>protocol_header_full_matrix.md
+</code></pre>
+<hr>
+<h1 id="5-structural-integrity-rules"><strong>5. Structural Integrity Rules</strong></h1>
+<p>All recombined headers must:</p>
+<ul>
+<li>preserve locus order  </li>
+<li>preserve invariant meaning  </li>
+<li>use only perfect‑substitution alleles  </li>
+<li>maintain <code>&lt;locus&gt;=&lt;allele&gt;</code> structure (where applicable)  </li>
+<li>remain drift‑bounded  </li>
+<li>remain canon‑aligned  </li>
+<li>remain operator‑grammar‑safe  </li>
+</ul>
+<p>These rules ensure multilingual recombination produces <strong>structurally identical</strong> headers.</p>
+<hr>
+<h1 id="6-example-recombinations-one-per-language"><strong>6. Example Recombinations (One per Language)</strong></h1>
+<h3 id="english">English</h3>
+<pre><code>rtt=atomic | coherence=explicit | drift=clamped | paradox=encoded
+</code></pre>
+<h3 id="mandarin-chinese">Mandarin Chinese</h3>
+<pre><code>原子 | 明示 | 有界 | 内嵌
+</code></pre>
+<h3 id="spanish">Spanish</h3>
+<pre><code>atómico | explícita | acotada | codificada
+</code></pre>
+<h3 id="hindi">Hindi</h3>
+<pre><code>परमाण्विक | स्पष्ट | सीमित | अंतर्निहित
+</code></pre>
+<h3 id="arabic">Arabic</h3>
+<pre><code>ذري | صريح | محدود | مشفر
+</code></pre>
+<h3 id="bengali">Bengali</h3>
+<pre><code>পরমাণবিক | স্পষ্ট | সীমাবদ্ধ | এনকোডেড
+</code></pre>
+<h3 id="portuguese">Portuguese</h3>
+<pre><code>atômico | explícita | restrito | codificado
+</code></pre>
+<h3 id="russian">Russian</h3>
+<pre><code>атомарный | явная | ограниченный | встроенный
+</code></pre>
+<h3 id="japanese">Japanese</h3>
+<pre><code>原子的 | 明示的 | 有界 | 埋め込み型
+</code></pre>
+<h3 id="punjabi">Punjabi</h3>
+<pre><code>ਪਰਮਾਣੂ | ਸਪਸ਼ਟ | ਸੀਮਿਤ | ਕੋਡਿਤ
+</code></pre>
+<h3 id="german">German</h3>
+<pre><code>atomar | explizit | geklemmt | kodiert
+</code></pre>
+<h3 id="french">French</h3>
+<pre><code>atomique | explicite | bornée | encodée
+</code></pre>
+<p>All are structurally equivalent codons.</p>
+<hr>
+<h1 id="7-role-in-the-module"><strong>7. Role in the Module</strong></h1>
+<p>This genome file:</p>
+<ul>
+<li>defines the recombination engine  </li>
+<li>anchors multilingual expansion  </li>
+<li>ensures drift‑bounded equivalence  </li>
+<li>feeds the full header matrix  </li>
+<li>supports operator‑grammar modules  </li>
+<li>enables protocol‑style system integration  </li>
+</ul>
+<p>It is the <strong>structural core</strong> of the protocol header module.</p>
+  </main>
+</body>
+</html>

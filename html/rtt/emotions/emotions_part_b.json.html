@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/emotions/emotions_part_b.json.md">
+  <title>emotions_part_b.json</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/emotions/emotions_part_b.json.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/emotions/emotions_part_b.json.md</code>
+  </aside>
+
+  <main>
+<pre><code class="language-json">{
+  &quot;module&quot;: &quot;RTT_Emotions_Part_B&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;parent&quot;: &quot;emotions_module.json&quot;,
+  &quot;category&quot;: &quot;rtt-emotional-dynamics.part-b&quot;,
+  &quot;summary&quot;: &quot;Coherence and group-alignment emotions (set B): 10 stabilizing emotional operators.&quot;,
+  &quot;description&quot;: &quot;Part B of the RTT Emotions Module. Contains 10 coherence and group-alignment emotions with RTT equations, alignment triads, drift effects, and transition conditions.&quot;,
+
+  &quot;emotions&quot;: {
+
+    &quot;respect&quot;: {
+      &quot;equation&quot;: &quot;R_esp = k_r * σ * (R / (1 + ΔO))&quot;,
+      &quot;regime&quot;: &quot;coherence&quot;,
+      &quot;alignment_triad&quot;: { &quot;self&quot;: 1, &quot;other&quot;: 1, &quot;world&quot;: 0 },
+      &quot;drift_effect&quot;: &quot;reduces&quot;,
+      &quot;transition&quot;: &quot;R_esp &gt; D&quot;
+    },
+
+    &quot;hope&quot;: {
+      &quot;equation&quot;: &quot;H = k_h * σ * (R_future / (1 + D))&quot;,
+      &quot;regime&quot;: &quot;coherence&quot;,
+      &quot;alignment_triad&quot;: { &quot;self&quot;: 1, &quot;other&quot;: 0, &quot;world&quot;: 1 },
+      &quot;drift_effect&quot;: &quot;reduces&quot;,
+      &quot;transition&quot;: &quot;H &gt; D&quot;
+    },
+
+    &quot;affection&quot;: {
+      &quot;equation&quot;: &quot;A_ff = k_aff * σ * (R / (1 + ΔO))&quot;,
+      &quot;regime&quot;: &quot;coherence&quot;,
+      &quot;alignment_triad&quot;: { &quot;self&quot;: 1, &quot;other&quot;: 1, &quot;world&quot;: 0 },
+      &quot;drift_effect&quot;: &quot;reduces&quot;,
+      &quot;transition&quot;: &quot;A_ff &gt; D&quot;
+    },
+
+    &quot;belonging&quot;: {
+      &quot;equation&quot;: &quot;B = k_b * σ * (R_group / (1 + ΔO_group))&quot;,
+      &quot;regime&quot;: &quot;coherence&quot;,
+      &quot;alignment_triad&quot;: { &quot;self&quot;: 1, &quot;other&quot;: 1, &quot;world&quot;: 1 },
+      &quot;drift_effect&quot;: &quot;reduces&quot;,
+      &quot;transition&quot;: &quot;B &gt; D&quot;
+    },
+
+    &quot;admiration&quot;: {
+      &quot;equation&quot;: &quot;A_dm = k_adm * σ * (R_other / (1 + ΔO))&quot;,
+      &quot;regime&quot;: &quot;coherence&quot;,
+      &quot;alignment_triad&quot;: { &quot;self&quot;: 1, &quot;other&quot;: 1, &quot;world&quot;: 0 },
+      &quot;drift_effect&quot;: &quot;reduces&quot;,
+      &quot;transition&quot;: &quot;A_dm &gt; D&quot;
+    },
+
+    &quot;courage_stabilizing&quot;: {
+      &quot;equation&quot;: &quot;C_stab = k_c2 * σ * (R / (1 + D))&quot;,
+      &quot;regime&quot;: &quot;coherence&quot;,
+      &quot;alignment_triad&quot;: { &quot;self&quot;: 1, &quot;other&quot;: 0, &quot;world&quot;: 1 },
+      &quot;drift_effect&quot;: &quot;reduces&quot;,
+      &quot;transition&quot;: &quot;C_stab &gt; D&quot;
+    },
+
+    &quot;loyalty&quot;: {
+      &quot;equation&quot;: &quot;L_oy = k_loy * σ * (A_s + A_o)&quot;,
+      &quot;regime&quot;: &quot;coherence&quot;,
+      &quot;alignment_triad&quot;: { &quot;self&quot;: 1, &quot;other&quot;: 1, &quot;world&quot;: 0 },
+      &quot;drift_effect&quot;: &quot;reduces&quot;,
+      &quot;transition&quot;: &quot;L_oy &gt; D&quot;
+    },
+
+    &quot;security&quot;: {
+      &quot;equation&quot;: &quot;Sec = k_sec * σ * (C / (1 + D))&quot;,
+      &quot;regime&quot;: &quot;coherence&quot;,
+      &quot;alignment_triad&quot;: { &quot;self&quot;: 1, &quot;other&quot;: 0, &quot;world&quot;: 1 },
+      &quot;drift_effect&quot;: &quot;reduces&quot;,
+      &quot;transition&quot;: &quot;Sec &gt; D&quot;
+    },
+
+    &quot;stability&quot;: {
+      &quot;equation&quot;: &quot;Stab = k_stab * σ * C&quot;,
+      &quot;regime&quot;: &quot;coherence&quot;,
+      &quot;alignment_triad&quot;: { &quot;self&quot;: 1, &quot;other&quot;: 0, &quot;world&quot;: 1 },
+      &quot;drift_effect&quot;: &quot;reduces&quot;,
+      &quot;transition&quot;: &quot;Stab &gt; D&quot;
+    },
+
+    &quot;warmth&quot;: {
+      &quot;equation&quot;: &quot;W = k_w * σ * (A_s + A_o)&quot;,
+      &quot;regime&quot;: &quot;coherence&quot;,
+      &quot;alignment_triad&quot;: { &quot;self&quot;: 1, &quot;other&quot;: 1, &quot;world&quot;: 0 },
+      &quot;drift_effect&quot;: &quot;reduces&quot;,
+      &quot;transition&quot;: &quot;W &gt; D&quot;
+    }
+
+  },
+
+  &quot;status&quot;: &quot;complete&quot;,
+  &quot;license&quot;: &quot;Open educational use permitted&quot;
+}
+</code></pre>
+  </main>
+</body>
+</html>

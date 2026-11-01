@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/code/CODE_ResourceSchema.json.md">
+  <title>⭐ 4. RESOURCE‑MAPPING SCHEMA (JSON)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/code/CODE_ResourceSchema.json.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/code/CODE_ResourceSchema.json.md</code>
+  </aside>
+
+  <main>
+<h2 id="4-resourcemapping-schema-json">⭐ 4. RESOURCE‑MAPPING SCHEMA (JSON)</h2>
+<p>This schema powers the “ethical search” layer — clean, ad‑free, privacy‑safe.  </p>
+<pre><code>{
+  &quot;resource&quot;: {
+    &quot;name&quot;: &quot;string&quot;,
+    &quot;type&quot;: &quot;emergency | transitional | long_arc | legal | mental_health | foster_support | food | clothing | documents&quot;,
+    &quot;description&quot;: &quot;string&quot;,
+    &quot;location&quot;: {
+      &quot;city&quot;: &quot;string&quot;,
+      &quot;state&quot;: &quot;string&quot;,
+      &quot;address&quot;: &quot;string | null&quot;,
+      &quot;service_area&quot;: &quot;string&quot;
+    },
+    &quot;contact&quot;: {
+      &quot;phone&quot;: &quot;string | null&quot;,
+      &quot;website&quot;: &quot;string | null&quot;,
+      &quot;hours&quot;: &quot;string | null&quot;
+    },
+    &quot;eligibility&quot;: {
+      &quot;age&quot;: &quot;string | null&quot;,
+      &quot;requirements&quot;: &quot;string | null&quot;
+    },
+    &quot;safety&quot;: {
+      &quot;verified&quot;: &quot;boolean&quot;,
+      &quot;notes&quot;: &quot;string | null&quot;
+    },
+    &quot;stabilizers&quot;: [
+      &quot;dignity&quot;,
+      &quot;privacy&quot;,
+      &quot;clarity&quot;,
+      &quot;safety&quot;,
+      &quot;continuity&quot;,
+      &quot;compassion&quot;,
+      &quot;navigation&quot;
+    ]
+  }
+}
+</code></pre>
+<p>This schema is non‑extractive, non‑tracking, and non‑commercial.</p>
+  </main>
+</body>
+</html>

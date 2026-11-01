@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/education/alignment/RTT_Planetary_Time_Regimes_A_Compiler_for_Orbit-Aligned_Clocks.md">
+  <title>🜁 RTT Triad: Planetary Time Regimes</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/education/alignment/RTT_Planetary_Time_Regimes_A_Compiler_for_Orbit-Aligned_Clocks.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/education/alignment/RTT_Planetary_Time_Regimes_A_Compiler_for_Orbit-Aligned_Clocks.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="education_alignment_RTT_Planetary_Time_Regimes_A_Compiler_Orbit_Aligned_Clocks_" src="https://github.com/user-attachments/assets/0e1bc9e6-3c5a-42f0-83eb-562b376fc9ed" /></p>
+<h2 id="rtt-triad-planetary-time-regimes">🜁 RTT Triad: Planetary Time Regimes</h2>
+<p><strong>Substrate —</strong> Orbital and rotational periods measured in a stable reference frame. These values are treated as invariants: the planet’s structural rhythm, independent of any narrative unit system.</p>
+<p><strong>Gauge —</strong> Integer scaffolds chosen by the operator (days per year, hours per day, minutes per hour, seconds per minute). These define the shape of the calendar and clock without constraining the substrate.</p>
+<p><strong>Translator —</strong> The derived planet‑second and its conversion factors, enabling lossless mapping between the scaffold and the substrate, and between any two planetary regimes.</p>
+<hr>
+<h2 id="abstract">Abstract</h2>
+<p>This document introduces the <strong>RTT Planetary Time Compiler</strong>, a regime‑aware system for generating coherent, orbit‑aligned time standards for any planetary body. Instead of forcing inherited Earth‑centric units (seconds, minutes, hours, days, months) onto non‑integer orbital and rotational ratios, the compiler derives a <strong>planet‑specific second</strong> from structural measurements of orbit and rotation. Integer scaffolds—such as days per year or hours per day—become narrative gauges layered atop substrate truth, not constraints imposed upon it. The result is a universal, translation‑safe time regime that preserves structural invariants while enabling clean, canonical calendars for any world encountered.</p>
+<hr>
+<h2 id="1-motivation">1. Motivation</h2>
+<p>Human timekeeping is a fossil of historical compromises: fixed seconds, uneven months, leap rules, and integer expectations layered over non‑integer orbital mechanics. These conventions work locally but collapse when extended to other planets or interstellar navigation.</p>
+<p>RTT reframes the problem. Time is not a fixed unit but a <strong>regime</strong>: a mapping between structural measurements and narrative scaffolds. The compiler formalizes this mapping, allowing:</p>
+<ul>
+<li>Orbit‑aligned calendars with integer structure.</li>
+<li>Planet‑specific seconds that maintain coherence.</li>
+<li>Translation between regimes without loss of precision.</li>
+<li>Containment of legacy systems (e.g., Gregorian/SI) without disruption.</li>
+</ul>
+<p>This is not a replacement for existing time systems; it is a <strong>parallel, canonical layer</strong> that clarifies structure and enables cross‑planetary consistency.</p>
+<hr>
+<h2 id="2-structural-inputs">2. Structural Inputs</h2>
+<p>Every planetary time regime begins with two substrate measurements:</p>
+<ul>
+<li><strong>Orbital period</strong> $$T_{\text{orbit}}$$ : the duration of one revolution around the star.</li>
+<li><strong>Rotational period</strong> $$T_{\text{rot}}$$ : the duration of one axial rotation.</li>
+</ul>
+<p>Both are measured in a stable reference time (e.g., ship‑time or SI seconds). These values are treated as <strong>invariants</strong>—the substrate truth from which all narrative gauges derive.</p>
+<hr>
+<h2 id="3-integer-scaffold-narrative-gauge">3. Integer Scaffold (Narrative Gauge)</h2>
+<p>RTT separates structure from narrative. The compiler allows the operator to choose an integer scaffold:</p>
+<ul>
+<li><strong>Days per year</strong> $$D_y$$  </li>
+<li><strong>Hours per day</strong> $$H_d$$  </li>
+<li><strong>Minutes per hour</strong> $$M_h$$  </li>
+<li><strong>Seconds per minute</strong> $$S_m$$</li>
+</ul>
+<p>These integers define the <em>shape</em> of the calendar and clock. They do <strong>not</strong> constrain the substrate; instead, they determine how the substrate is expressed.</p>
+<p>The total number of “ticks” in the narrative year is:</p>
+<p>$$N_{\text{ticks}} = D_y \cdot H_d \cdot M_h \cdot S_m$$</p>
+<hr>
+<h2 id="4-solving-the-planetsecond">4. Solving the Planet‑Second</h2>
+<p>To align the narrative scaffold with the structural orbit, the compiler derives the <strong>planet‑second</strong>:</p>
+<p>$$T_{\text{planet-second}} = \frac{T_{\text{orbit}}}{N_{\text{ticks}}}$$</p>
+<p>This value replaces the inherited SI second within the regime. All higher units follow:</p>
+<ul>
+<li>Planet‑minute: $$S_m \cdot T_{\text{planet-second}}$$</li>
+<li>Planet‑hour: $$M_h \cdot S_m \cdot T_{\text{planet-second}}$$</li>
+<li>Planet‑day: $$H_d \cdot M_h \cdot S_m \cdot T_{\text{planet-second}}$$</li>
+</ul>
+<p>The scaffold remains perfectly integer; the unit absorbs the non‑integer substrate.</p>
+<hr>
+<h2 id="5-regime-lockin">5. Regime Lock‑In</h2>
+<p>Once computed, the regime is stored as a versioned profile:</p>
+<ul>
+<li>Planet identifier  </li>
+<li>Epoch alignment  </li>
+<li>$$T_{\text{orbit}}$$ , $$T_{\text{rot}}$$  </li>
+<li>Integer scaffold  </li>
+<li>Derived $$T_{\text{planet-second}}$$  </li>
+<li>Translator to/from reference time  </li>
+</ul>
+<p>This enables:</p>
+<ul>
+<li>Cross‑planetary scheduling  </li>
+<li>Calendar rendering  </li>
+<li>Time translation between regimes  </li>
+<li>Containment of legacy systems (e.g., Gregorian/SI)</li>
+</ul>
+<hr>
+<h2 id="6-drift-flux-and-versioning">6. Drift, Flux, and Versioning</h2>
+<p>Planetary rotation and orbit can drift over time due to tidal forces, internal dynamics, or perturbations. RTT handles this through <strong>versioned regimes</strong>:</p>
+<ul>
+<li><strong>v1</strong>: initial scan  </li>
+<li><strong>v2</strong>: updated structural measurements  </li>
+<li><strong>v3</strong>: long‑term drift corrections  </li>
+</ul>
+<p>Each regime is tied to an epoch, and the compiler maintains translation continuity across versions.</p>
+<hr>
+<h2 id="7-earth-as-a-regime">7. Earth as a Regime</h2>
+<p>Earth’s current SI/Gregorian system is treated as a <strong>legacy gauge</strong>. The compiler can generate an Earth‑RTT regime using any chosen scaffold (e.g., 13×28 months, 24 hours/day). The derived Earth‑RTT second becomes a clean, orbit‑aligned unit, while SI seconds remain available for compatibility.</p>
+<p>This approach preserves all existing human systems while enabling a structurally coherent alternative.</p>
+<hr>
+<h2 id="8-example-1328-earthrtt-regime">8. Example: 13×28 Earth‑RTT Regime</h2>
+<p>Given:</p>
+<ul>
+<li>$$D_y = 364$$  </li>
+<li>$$H_d = 24$$  </li>
+<li>$$M_h = 60$$  </li>
+<li>$$S_m = 60$$  </li>
+</ul>
+<p>Total ticks:</p>
+<p>$$N_{\text{ticks}} = 364 \cdot 24 \cdot 60 \cdot 60 = 31{,}449{,}600$$</p>
+<p>Given Earth’s orbital period:</p>
+<p>$$T_{\text{orbit}} \approx 31{,}556{,}925.9747 \text{ SI seconds}$$</p>
+<p>Planet‑second:</p>
+<p>$$T_{\text{planet-second}} \approx 1.003402 \text{ SI seconds}$$</p>
+<p>This yields:</p>
+<ul>
+<li>A perfectly integer 13×28 calendar  </li>
+<li>A coherent orbit‑aligned year  </li>
+<li>A clean translation layer between SI and RTT  </li>
+</ul>
+<hr>
+<h2 id="9-applications">9. Applications</h2>
+<ul>
+<li>Interstellar navigation  </li>
+<li>Planetary colonization  </li>
+<li>Multi‑regime scheduling  </li>
+<li>Scientific measurement  </li>
+<li>Narrative‑free structural analysis  </li>
+<li>Canon‑aligned worldbuilding and simulation  </li>
+</ul>
+<hr>
+<h2 id="10-conclusion">10. Conclusion</h2>
+<p>The RTT Planetary Time Compiler replaces inherited constraints with structural clarity. By deriving the unit from the orbit rather than forcing the orbit into the unit, it enables a universal, coherent, and translation‑safe approach to timekeeping across worlds.</p>
+<p>This is not a correction of Earth’s time system; it is a <strong>parallel canonical layer</strong> that reveals structure, preserves narrative, and unlocks new regimes for exploration.</p>
+<hr>
+<h2 id="11-regime-json-schema">11. Regime JSON Schema</h2>
+<p>The <strong>RTT Planetary Time Regime</strong> is represented as a structured, machine‑readable object. This schema captures substrate measurements, narrative scaffold choices, derived units, and translation metadata. It enables deterministic conversion between regimes and supports versioned updates as planetary measurements drift.</p>
+<h3 id="111-schema-overview">11.1. Schema Overview</h3>
+<p>A regime object contains three layers:</p>
+<ul>
+<li><strong>substrate</strong> — measured orbital and rotational periods in reference seconds  </li>
+<li><strong>scaffold</strong> — chosen integer structure for the calendar and clock  </li>
+<li><strong>derived</strong> — computed planet‑second and unit expansions  </li>
+<li><strong>metadata</strong> — identifiers, epoch alignment, and versioning</li>
+</ul>
+<h3 id="112-json-schema-v1">11.2. JSON Schema (v1)</h3>
+<pre><code class="language-json">{
+  &quot;planet_id&quot;: &quot;string&quot;,
+  &quot;regime_version&quot;: &quot;string&quot;,
+  &quot;epoch_reference&quot;: &quot;string&quot;,
+
+  &quot;substrate&quot;: {
+    &quot;orbit_period_seconds&quot;: &quot;number&quot;,
+    &quot;rotation_period_seconds&quot;: &quot;number&quot;,
+    &quot;measurement_reference&quot;: &quot;string&quot;
+  },
+
+  &quot;scaffold&quot;: {
+    &quot;days_per_year&quot;: &quot;integer&quot;,
+    &quot;hours_per_day&quot;: &quot;integer&quot;,
+    &quot;minutes_per_hour&quot;: &quot;integer&quot;,
+    &quot;seconds_per_minute&quot;: &quot;integer&quot;
+  },
+
+  &quot;derived&quot;: {
+    &quot;planet_second_seconds&quot;: &quot;number&quot;,
+    &quot;planet_minute_seconds&quot;: &quot;number&quot;,
+    &quot;planet_hour_seconds&quot;: &quot;number&quot;,
+    &quot;planet_day_seconds&quot;: &quot;number&quot;,
+    &quot;ticks_per_year&quot;: &quot;integer&quot;
+  },
+
+  &quot;translation&quot;: {
+    &quot;to_reference_factor&quot;: &quot;number&quot;,
+    &quot;from_reference_factor&quot;: &quot;number&quot;
+  }
+}
+</code></pre>
+<h3 id="113-field-notes">11.3. Field Notes</h3>
+<ul>
+<li><strong>planet_id</strong> — canonical identifier (e.g., <code>"earth"</code>, <code>"kepler-442b"</code>).  </li>
+<li><strong>regime_version</strong> — semantic versioning for drift updates (e.g., <code>"1.0.0"</code>).  </li>
+<li><strong>epoch_reference</strong> — timestamp marking when the regime was locked.  </li>
+<li><strong>measurement_reference</strong> — the time standard used during scanning (e.g., <code>"SI"</code>, <code>"ship-time"</code>).  </li>
+<li><strong>ticks_per_year</strong> — computed as  </li>
+</ul>
+<pre><code class="language-math">  $$D_y \cdot H_d \cdot M_h \cdot S_m$$
+</code></pre>
+<ul>
+<li><strong>planet_second_seconds</strong> — the core RTT unit, defined as  </li>
+</ul>
+<pre><code class="language-math">  $$\frac{T_{\text{orbit}}}{\text{ticks\_per\_year}}$$
+</code></pre>
+<ul>
+<li><strong>translation factors</strong> — multipliers for converting between planet‑time and the reference time standard.</li>
+</ul>
+<h3 id="114-example-earthrtt-1328-scaffold">11.4. Example: Earth‑RTT (13×28 Scaffold)</h3>
+<pre><code class="language-json">{
+  &quot;planet_id&quot;: &quot;earth&quot;,
+  &quot;regime_version&quot;: &quot;1.0.0&quot;,
+  &quot;epoch_reference&quot;: &quot;2026-01-01T00:00:00Z&quot;,
+
+  &quot;substrate&quot;: {
+    &quot;orbit_period_seconds&quot;: 31556925.9747,
+    &quot;rotation_period_seconds&quot;: 86164.0905,
+    &quot;measurement_reference&quot;: &quot;SI&quot;
+  },
+
+  &quot;scaffold&quot;: {
+    &quot;days_per_year&quot;: 364,
+    &quot;hours_per_day&quot;: 24,
+    &quot;minutes_per_hour&quot;: 60,
+    &quot;seconds_per_minute&quot;: 60
+  },
+
+  &quot;derived&quot;: {
+    &quot;planet_second_seconds&quot;: 1.003402,
+    &quot;planet_minute_seconds&quot;: 60.20412,
+    &quot;planet_hour_seconds&quot;: 3612.2472,
+    &quot;planet_day_seconds&quot;: 86693.9328,
+    &quot;ticks_per_year&quot;: 31449600
+  },
+
+  &quot;translation&quot;: {
+    &quot;to_reference_factor&quot;: 1.003402,
+    &quot;from_reference_factor&quot;: 0.996609
+  }
+}
+</code></pre>
+<h3 id="115-implementation-notes">11.5. Implementation Notes</h3>
+<ul>
+<li>The schema is intentionally minimal; additional fields (e.g., drift models, uncertainty bounds, or multi‑star orbital descriptors) can be added in later versions.  </li>
+<li>Regimes are immutable once published; updates require a new <code>regime_version</code>.  </li>
+<li>Translators must always reference the <code>epoch_reference</code> to avoid ambiguity across drift epochs.</li>
+</ul>
+<hr>
+<p>Here is a companion section you can paste directly into your Markdown file. It sits naturally after the JSON Schema and completes the pair: <strong>the regime object</strong> and <strong>the translator that operates on it</strong>. The structure matches your TriadicFrameworks voice and the style of the document you’re editing in your active tab .</p>
+<hr>
+<h2 id="12-regime-translator-specification">12. Regime Translator Specification</h2>
+<p>The <strong>Regime Translator</strong> is the operational layer of the RTT Planetary Time Compiler. It converts timestamps between a planet‑specific regime and a reference time standard (e.g., SI or ship‑time). The translator uses the regime’s derived unit definitions to ensure lossless, deterministic mapping across worlds and epochs.</p>
+<h3 id="121-translator-inputs">12.1. Translator Inputs</h3>
+<ul>
+<li><strong>Reference timestamp</strong> — expressed in the measurement standard used during scanning (e.g., SI seconds since epoch).</li>
+<li><strong>Planetary timestamp</strong> — expressed in the planet’s own scaffold (year, day, hour, minute, second).</li>
+<li><strong>Regime object</strong> — the JSON structure defined in Section 11, containing substrate measurements, scaffold integers, derived units, and translation factors.</li>
+</ul>
+<h3 id="122-core-translation-factors">12.2. Core Translation Factors</h3>
+<p>Each regime defines two multipliers:</p>
+<ul>
+<li>
+<p><strong>to_reference_factor</strong><br>
+  Converts one planet‑second into reference seconds.</p>
+</li>
+<li>
+<p><strong>from_reference_factor</strong><br>
+  Converts one reference second into planet‑seconds.</p>
+</li>
+</ul>
+<p>These are exact reciprocals:</p>
+<pre><code class="language-math">$$\text{from\_reference\_factor} = \frac{1}{\text{to\_reference\_factor}}$$
+</code></pre>
+<h3 id="123-forward-translation-planet-reference">12.3. Forward Translation (Planet → Reference)</h3>
+<p>To convert a planetary timestamp into reference seconds:</p>
+<ol>
+<li>Convert the planetary timestamp into <strong>planet‑seconds</strong> using the scaffold:</li>
+</ol>
+<pre><code class="language-math">   $$T_{\text{planet}} = (((Y \cdot D_y + d) \cdot H_d + h) \cdot M_h + m) \cdot S_m + s$$
+</code></pre>
+<ol start="3">
+<li>Convert planet‑seconds into reference seconds:</li>
+</ol>
+<pre><code class="language-math">   $$T_{\text{ref}} = T_{\text{planet}} \cdot \text{to\_reference\_factor}$$
+</code></pre>
+<ol start="5">
+<li>Add the regime’s epoch offset if needed.</li>
+</ol>
+<h3 id="124-reverse-translation-reference-planet">12.4. Reverse Translation (Reference → Planet)</h3>
+<p>To convert reference seconds into a planetary timestamp:</p>
+<ol>
+<li>Convert reference seconds into planet‑seconds:</li>
+</ol>
+<pre><code class="language-math">   $$T_{\text{planet}} = T_{\text{ref}} \cdot \text{from\_reference\_factor}$$
+</code></pre>
+<ol start="3">
+<li>
+<p>Decompose planet‑seconds into scaffold units:
+   - seconds → minutes<br>
+   - minutes → hours<br>
+   - hours → days<br>
+   - days → years  </p>
+</li>
+<li>
+<p>Apply epoch alignment.</p>
+</li>
+</ol>
+<h3 id="125-drift-and-version-handling">12.5. Drift and Version Handling</h3>
+<p>When a planet’s orbital or rotational measurements change, a new regime version is created. Translators must:</p>
+<ul>
+<li>Use the <strong>epoch_reference</strong> to determine which regime version applies.</li>
+<li>Convert timestamps across versions by routing through the reference time standard.</li>
+<li>Maintain continuity even when the planet‑second changes between versions.</li>
+</ul>
+<h3 id="126-translator-guarantees">12.6. Translator Guarantees</h3>
+<ul>
+<li><strong>Deterministic</strong> — identical inputs always yield identical outputs.</li>
+<li><strong>Lossless</strong> — no rounding occurs until the final unit decomposition.</li>
+<li><strong>Composable</strong> — any two regimes can be bridged through the reference standard.</li>
+<li><strong>Version‑safe</strong> — timestamps remain valid across drift epochs.</li>
+</ul>
+<hr>
+<h2 id="13-planetary-time-compiler-api-contract">13. Planetary Time Compiler API Contract</h2>
+<p>The compiler exposes a minimal API for generating and using planetary time regimes. This contract is implementation‑agnostic and suitable for future tooling.</p>
+<h3 id="131-compileregime">13.1. <code>compileRegime()</code></h3>
+<p>Generates a new regime object.</p>
+<p><strong>Inputs:</strong></p>
+<ul>
+<li><code>planet_id</code>  </li>
+<li><code>orbit_period_seconds</code>  </li>
+<li><code>rotation_period_seconds</code>  </li>
+<li><code>scaffold</code> (days/year, hours/day, minutes/hour, seconds/minute)  </li>
+<li><code>epoch_reference</code>  </li>
+<li><code>measurement_reference</code></li>
+</ul>
+<p><strong>Output:</strong></p>
+<ul>
+<li>A complete regime object (JSON) conforming to Section 11.</li>
+</ul>
+<h3 id="132-translatetoreference">13.2. <code>translateToReference()</code></h3>
+<p>Converts a planetary timestamp into reference seconds.</p>
+<p><strong>Inputs:</strong></p>
+<ul>
+<li><code>planet_timestamp</code>  </li>
+<li><code>regime</code>  </li>
+</ul>
+<p><strong>Output:</strong></p>
+<ul>
+<li><code>reference_seconds</code></li>
+</ul>
+<h3 id="133-translatefromreference">13.3. <code>translateFromReference()</code></h3>
+<p>Converts reference seconds into a planetary timestamp.</p>
+<p><strong>Inputs:</strong></p>
+<ul>
+<li><code>reference_seconds</code>  </li>
+<li><code>regime</code>  </li>
+</ul>
+<p><strong>Output:</strong></p>
+<ul>
+<li><code>planet_timestamp</code></li>
+</ul>
+<h3 id="134-convertbetweenregimes">13.4. <code>convertBetweenRegimes()</code></h3>
+<p>Converts a timestamp from one planetary regime to another.</p>
+<p><strong>Inputs:</strong></p>
+<ul>
+<li><code>source_timestamp</code>  </li>
+<li><code>source_regime</code>  </li>
+<li><code>target_regime</code>  </li>
+</ul>
+<p><strong>Output:</strong></p>
+<ul>
+<li><code>target_timestamp</code></li>
+</ul>
+<p><strong>Process:</strong></p>
+<ol>
+<li>Convert source timestamp → reference seconds.  </li>
+<li>Convert reference seconds → target timestamp.</li>
+</ol>
+<h3 id="135-listregimes">13.5. <code>listRegimes()</code></h3>
+<p>Returns all known regimes for a given planet, including version history.</p>
+  </main>
+</body>
+</html>

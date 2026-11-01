@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/resonance-substrate-model/docs/methods/field_equations.md">
+  <title>Field Equations</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/resonance-substrate-model/docs/methods/field_equations.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/resonance-substrate-model/docs/methods/field_equations.md</code>
+  </aside>
+
+  <main>
+<h1 id="field-equations">Field Equations</h1>
+<h2 id="draft-formulation-for-the-set-resonance-substrate">Draft Formulation for the SET Resonance Substrate</h2>
+<p>This document provides a working draft of the evolution equations for the Spin (S), Charge (C), and Temperature (T) fields in the resonance‑substrate model. The goal is to define a minimal, testable system that can be implemented in numerical solvers and compared against experimental data.</p>
+<hr>
+<h1 id="quicklinks">Quicklinks</h1>
+<ul>
+<li><a href="../README.html">docs README</a></li>
+<li><a href="../api/integration_examples.html">docs api integration examples</a></li>
+<li><a href="../api/README.html">docs api README</a></li>
+<li><a href="../api/schema_overview.html">docs api schema overview</a></li>
+<li><a href="../api/using_the_schemas.html">docs api using the schemas</a></li>
+<li><a href="../experiments/faraday_paradox_experiment.html">docs experiments faraday paradox experiment</a></li>
+<li><a href="../experiments/README.html">docs experiments README</a></li>
+<li><a href="../experiments/replication_checklist.html">docs experiments replication checklist</a></li>
+<li><a href="../experiments/resonance_alignment_tests.html">docs experiments resonance alignment tests</a></li>
+<li><a href="../experiments/rotating_conductor_tests.html">docs experiments rotating conductor tests</a></li>
+<li><a href="dimensional_layers.html">docs methods dimensional layers</a></li>
+<li><a href="operator_definitions.html">docs methods operator definitions</a></li>
+<li><a href="README.html">docs methods README</a></li>
+<li><a href="substrate_dynamics.html">docs methods substrate dynamics</a></li>
+<li><a href="triadic_fields.html">docs methods triadic fields</a></li>
+<li><a href="../onboarding/model_map.html">docs onboarding model map</a></li>
+<li><a href="../onboarding/reading_guide.html">docs onboarding reading guide</a></li>
+<li><a href="../onboarding/triadic_quickstart.html">docs onboarding triadic quickstart</a></li>
+<li><a href="../onboarding/verification_tests.html">docs onboarding verification tests</a></li>
+<li><a href="../overview/comparison_to_gr_models.html">docs overview comparison to gr models</a></li>
+<li><a href="../overview/glossary.html">docs overview glossary</a></li>
+<li><a href="../overview/introduction.html">docs overview introduction</a></li>
+<li><a href="../overview/README.html">docs overview README</a></li>
+<li><a href="../overview/resonance_primitives.html">docs overview resonance primitives</a></li>
+<li><a href="../overview/theoretical_background.html">docs overview theoretical background</a></li>
+<li><a href="../simulations/boundary_conditions.html">docs simulations boundary conditions</a></li>
+<li><a href="../simulations/numerical_methods.html">docs simulations numerical methods</a></li>
+<li><a href="../simulations/README.html">docs simulations README</a></li>
+<li><a href="../simulations/solver_architecture.html">docs simulations solver_architecture</a></li>
+<li><a href="../simulations/validation_metrics.html">docs simulations validation metrics</a></li>
+<li><a href="../simulations/core/README.html">docs simulations core README</a></li>
+<li><a href="../">previous folder</a></li>
+</ul>
+<hr>
+<h2 id="1-notation-and-conventions">1. Notation and Conventions</h2>
+<ul>
+<li>Spatial coordinate: (\mathbf{x} \in \mathbb{R}^3)  </li>
+<li>Time: (t \in \mathbb{R})  </li>
+<li>Spin field: (S(\mathbf{x}, t) \in \mathbb{R}^3)  </li>
+<li>Charge field: (C(\mathbf{x}, t) \in \mathbb{R}) (scalar form for baseline model)  </li>
+<li>Temperature field: (T(\mathbf{x}, t) \in \mathbb{R})  </li>
+<li>(\nabla): spatial gradient  </li>
+<li>(\nabla^2): Laplacian  </li>
+<li>(\partial_t): time derivative  </li>
+</ul>
+<hr>
+<h2 id="2-spin-field-evolution">2. Spin Field Evolution</h2>
+<p>The Spin field encodes local rotational alignment and coherence.</p>
+<h3 id="21-baseline-equation">2.1 Baseline Equation</h3>
+<p>[
+\partial_t S = D_S \nabla^2 S - \gamma_S S + \lambda_{SC} \nabla C - \lambda_{ST} \nabla T
+]</p>
+<p>Where:</p>
+<ul>
+<li>(D_S): spin diffusion coefficient  </li>
+<li>(\gamma_S): spin damping coefficient  </li>
+<li>(\lambda_{SC}): coupling of Spin to Charge gradients  </li>
+<li>(\lambda_{ST}): coupling of Spin to Temperature gradients  </li>
+</ul>
+<p>Interpretation:</p>
+<ul>
+<li>(D_S \nabla^2 S): smooths spin inhomogeneities  </li>
+<li>(-\gamma_S S): relaxes spin toward zero alignment  </li>
+<li>(\lambda_{SC} \nabla C): aligns spin with charge gradients  </li>
+<li>(-\lambda_{ST} \nabla T): destabilizes spin in high‑T gradients  </li>
+</ul>
+<hr>
+<h2 id="3-charge-field-evolution">3. Charge Field Evolution</h2>
+<p>The Charge field encodes interaction bias and potential gradients.</p>
+<h3 id="31-baseline-equation">3.1 Baseline Equation</h3>
+<p>[
+\partial_t C = D_C \nabla^2 C - \gamma_C C + \beta_{CS} \nabla \cdot S
+]</p>
+<p>Where:</p>
+<ul>
+<li>(D_C): charge diffusion coefficient  </li>
+<li>(\gamma_C): charge relaxation coefficient  </li>
+<li>(\beta_{CS}): coupling of Charge to Spin divergence  </li>
+</ul>
+<p>Interpretation:</p>
+<ul>
+<li>(D_C \nabla^2 C): smooths charge gradients  </li>
+<li>(-\gamma_C C): relaxes charge bias  </li>
+<li>(\beta_{CS} \nabla \cdot S): generates or modulates charge bias from spin structure  </li>
+</ul>
+<hr>
+<h2 id="4-temperature-field-evolution">4. Temperature Field Evolution</h2>
+<p>The Temperature field encodes stochastic and dissipative contributions.</p>
+<h3 id="41-baseline-equation">4.1 Baseline Equation</h3>
+<p>[
+\partial_t T = D_T \nabla^2 T - \gamma_T (T - T_0) + \eta_S |S|^2 + \eta_C |\nabla C|^2
+]</p>
+<p>Where:</p>
+<ul>
+<li>(D_T): thermal diffusion coefficient  </li>
+<li>(\gamma_T): relaxation toward background temperature (T_0)  </li>
+<li>(\eta_S): heating from spin activity  </li>
+<li>(\eta_C): heating from charge gradients  </li>
+</ul>
+<p>Interpretation:</p>
+<ul>
+<li>(D_T \nabla^2 T): spreads thermal energy  </li>
+<li>(-\gamma_T (T - T_0)): relaxes toward ambient  </li>
+<li>(\eta_S |S|^2): spin‑induced heating  </li>
+<li>(\eta_C |\nabla C|^2): gradient‑induced heating  </li>
+</ul>
+<hr>
+<h2 id="5-resonance-envelope-condition">5. Resonance Envelope Condition</h2>
+<p>A resonance envelope is defined as a region where SET gradients exceed a threshold:</p>
+<p>[
+\mathcal{R}(\mathbf{x}, t) = 
+\left( |\nabla S| + |\nabla C| - \alpha |\nabla T| \right) - \Theta
+]</p>
+<p>Resonant region:</p>
+<p>[
+\mathcal{R}(\mathbf{x}, t) &gt; 0
+]</p>
+<p>Where:</p>
+<ul>
+<li>(\alpha): dissipation weighting factor  </li>
+<li>(\Theta): resonance threshold  </li>
+</ul>
+<hr>
+<h2 id="6-dimensionless-form-optional">6. Dimensionless Form (Optional)</h2>
+<p>For numerical work, the equations can be non‑dimensionalized by introducing characteristic scales:</p>
+<ul>
+<li>Length scale (L)  </li>
+<li>Time scale (\tau)  </li>
+<li>Field scales (S_0, C_0, T_0)  </li>
+</ul>
+<p>Resulting in dimensionless parameters:</p>
+<ul>
+<li>(\tilde{D}_S, \tilde{D}_C, \tilde{D}_T)  </li>
+<li>(\tilde{\gamma}_S, \tilde{\gamma}_C, \tilde{\gamma}_T)  </li>
+<li>(\tilde{\lambda}<em ST>{SC}, \tilde{\lambda}</em>_C)  }, \tilde{\beta}_{CS}, \tilde{\eta}_S, \tilde{\eta</li>
+</ul>
+<p>A separate note can specify the chosen scaling for a given simulation.</p>
+<hr>
+<h2 id="7-implementation-notes">7. Implementation Notes</h2>
+<ul>
+<li>Discretization: finite difference, finite volume, or spectral methods.  </li>
+<li>Time integration: explicit or implicit schemes (e.g., Runge–Kutta, Crank–Nicolson).  </li>
+<li>Boundary conditions: periodic, Dirichlet, or Neumann, depending on experiment.  </li>
+</ul>
+<p>These equations are intended as a minimal, testable starting point. Coefficients and coupling terms can be refined based on experimental calibration and further theoretical development.</p>
+  </main>
+</body>
+</html>

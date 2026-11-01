@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Research/Unified_Operator_Grammar_v1.0.md">
+  <title>Unified Operator Grammar v1.0</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Research/Unified_Operator_Grammar_v1.0.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Research/Unified_Operator_Grammar_v1.0.md</code>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Research_Unified_Operators_Grammar_" src="https://github.com/user-attachments/assets/dd5ac22f-b5e2-44f8-90f6-ded06b08fbfa" /></p>
+<h1 id="unified-operator-grammar-v10">Unified Operator Grammar v1.0</h1>
+<h2 id="triadicframeworks-canonical-operator-grammar">TriadicFrameworks — Canonical Operator Grammar</h2>
+<h2 id="summary">Summary</h2>
+<p>This grammar unifies all operators across Goals #1, #2, and #3 into a single typed system.<br>
+It defines the legal forms, transforms, and continuity rules for identity‑preserving operations across all substrates.</p>
+<hr>
+<h1 id="1-core-types">1. Core Types</h1>
+<h3 id="11-triad">1.1 Triad</h3>
+<p>$$
+T = (s,c,u),\quad s+c+u=1
+$$</p>
+<h3 id="12-asymmetry">1.2 Asymmetry</h3>
+<p>$$
+A(T)=0.01
+$$</p>
+<h3 id="13-extended-state">1.3 Extended State</h3>
+<p>$$
+S = (T, X)
+$$</p>
+<p>where $$X$$ is:
+- blueprint $$M$$ (Goal #1)<br>
+- substrate $$S_i$$ (Goal #2)<br>
+- environment $$E$$ (Goal #3)  </p>
+<hr>
+<h1 id="2-core-operators">2. Core Operators</h1>
+<h3 id="21-continuity-operator">2.1 Continuity Operator</h3>
+<p>$$
+O(T) = (T, A(T))
+$$</p>
+<h3 id="22-replication-operator-goal-1">2.2 Replication Operator (Goal #1)</h3>
+<p>$$
+\mathcal{R}(T,M) = (T,M')
+$$</p>
+<p>with $$M'=M$$</p>
+<h3 id="23-transport-operator-goal-2">2.3 Transport Operator (Goal #2)</h3>
+<p>$$
+\mathcal{T}(T,S_1 \to S_2) = (T,S_2)
+$$</p>
+<h3 id="24-ct-operator-goal-3">2.4 CT Operator (Goal #3)</h3>
+<p>$$
+\mathcal{C}(T,E) = (T,E')
+$$</p>
+<hr>
+<h1 id="3-functorial-structure">3. Functorial Structure</h1>
+<h3 id="categories">Categories</h3>
+<ul>
+<li>𝒞: substrates  </li>
+<li>𝒟₁: replicator states  </li>
+<li>𝒟₂: transporter states  </li>
+<li>𝒟₃: CT states  </li>
+</ul>
+<h3 id="functors">Functors</h3>
+<p>$$
+\mathcal{F}_1 : \mathcal{C} \to \mathcal{D}_1
+$$</p>
+<p>$$
+\mathcal{F}_2 : \mathcal{C} \to \mathcal{D}_2
+$$</p>
+<p>$$
+\mathcal{F}_3 : \mathcal{C} \to \mathcal{D}_3
+$$</p>
+<p>All preserve:
+- identity<br>
+- asymmetry<br>
+- continuity  </p>
+<hr>
+<h1 id="4-envelopes">4. Envelopes</h1>
+<h3 id="replicator-envelope">Replicator Envelope</h3>
+<p>$$
+E_R = {(T,M)(t)}
+$$</p>
+<h3 id="transporter-envelope">Transporter Envelope</h3>
+<p>$$
+E_T = {(T,S(t))}
+$$</p>
+<h3 id="ct-envelope">CT Envelope</h3>
+<p>$$
+E_C = {(T,E(t))}
+$$</p>
+<p>All require:
+- no branching<br>
+- no duplication<br>
+- no collapse<br>
+- reconstruction window allowed only for CTs  </p>
+<hr>
+<h1 id="5-composition-rules">5. Composition Rules</h1>
+<h3 id="sequential-composition">Sequential Composition</h3>
+<p>$$
+\mathcal{C} \circ \mathcal{T} \circ \mathcal{R}
+$$</p>
+<p>is legal iff:
+- triad preserved<br>
+- asymmetry preserved<br>
+- reconstruction windows converge  </p>
+<hr>
+<h1 id="6-arrival-substrate">6. Arrival Substrate</h1>
+<p>Arrival substrate is the canonical fixed point:</p>
+<p>$$
+T \approx T^*,\quad A(T)=0.01
+$$</p>
+<p>All operators converge here.</p>
+<hr>
+<h2 id="claim">Claim</h2>
+<blockquote>
+<p>Unified Operator Grammar v1.0 provides the first complete, typed, continuity‑safe operator system spanning replication, transport, and CT instantiation.</p>
+</blockquote>
+  </main>
+</body>
+</html>

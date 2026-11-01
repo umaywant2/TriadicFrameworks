@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/inverted_star_ontology/ontology_pie_flow.md">
+  <title>Ontology Pie — Information Flow Diagram</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/inverted_star_ontology/ontology_pie_flow.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/inverted_star_ontology/ontology_pie_flow.md</code>
+  </aside>
+
+  <main>
+<h1 id="ontology-pie-information-flow-diagram"><strong>Ontology Pie — Information Flow Diagram</strong></h1>
+<h3 id="how-so-iso-rttvst-exchange-structure-invariants-and-calibration-signals"><em>How SO ↔ ISO ↔ RTT/vST exchange structure, invariants, and calibration signals</em></h3>
+<p>This diagram shows:</p>
+<ul>
+<li><strong>Upward flow</strong> → evidence, invariants, regime signals  </li>
+<li><strong>Horizontal flow</strong> → comparison, mismatch detection  </li>
+<li><strong>Downward flow</strong> → calibration, reinterpretation, ontology updates  </li>
+</ul>
+<p>It’s a <strong>triadic loop</strong>:<br>
+<strong>substrate → ontologies → RTT/vST → ontologies → substrate (updated models)</strong></p>
+<hr>
+<h2 id="1-full-informationflow-diagram"><strong>1. Full Information‑Flow Diagram</strong></h2>
+<pre><code>                                 ┌──────────────────────────────────────────┐
+                                 │            RTT / vST Layer               │
+                                 │  (Comparison • Drift • Calibration)      │
+                                 └──────────────────────────────────────────┘
+                                      ▲                 ▲                 ▲
+                                      │                 │                 │
+                                      │   Cross‑Signals │                 │
+                                      │ (Regime + Invariant Disagreements)│
+                                      │                 │                 │
+        ┌─────────────────────────────┘                 │                 └─────────────────────────────┐
+        │                                               │                                               │
+        │                                               │                                               │
+┌───────────────────────────┐                 Horizontal Comparison                         ┌───────────────────────────┐
+│   Star Ontology (SO)      │◄─────────────────────────────────────────────────────────────►│ Inverted Star Ontology    │
+│   Mass‑Primary Stack      │                (SO ↔ ISO Regime Mapping)                      │ (ISO) Anisotropy‑Primary  │
+├───────────────────────────┤                                                               ├───────────────────────────┤
+│ SO‑1: Formation           │                                                               │ ISO‑1: Anisotropy Inject. │
+│ SO‑2: Main Sequence       │                                                               │ ISO‑2: Local Condensation │
+│ SO‑3: Evolution Stages    │                                                               │ ISO‑3: Relaxation Regimes │
+│ SO‑4: Interactions        │                                                               │ ISO‑4: Interaction Field  │
+│ SO‑5: Death/Remnants      │                                                               │ ISO‑5: Bottlenecks/Resets │
+│ SO‑6: Cosmic Role         │                                                               │ ISO‑6: Pattern Imprint    │
+└───────────────────────────┘                                                               └───────────────────────────┘
+        │                                               │                                               │
+        │                                               │                                               │
+        └─────────────────────────────┐                 │                 ┌─────────────────────────────┘
+                                      │                 │                 │
+                                      ▼                 ▼                 ▼
+                                 ┌──────────────────────────────────────────┐
+                                 │          Shared Substrate Layer          │
+                                 │ (fields • matter • interactions • geom.) │
+                                 └──────────────────────────────────────────┘
+</code></pre>
+<hr>
+<h2 id="2-how-information-flows-narrative"><strong>2. How Information Flows (Narrative)</strong></h2>
+<h3 id="a-upward-flow-evidence-rttvst"><strong>A. Upward Flow — Evidence → RTT/vST</strong></h3>
+<p>Both SO and ISO send upward:</p>
+<ul>
+<li>regime boundaries  </li>
+<li>invariants  </li>
+<li>drift signals  </li>
+<li>mismatches  </li>
+<li>unexplained behaviors  </li>
+<li>symmetry breaks  </li>
+<li>anomalies  </li>
+</ul>
+<p>RTT/vST receives these and performs <strong>cross‑ontology comparison</strong>.</p>
+<hr>
+<h3 id="b-horizontal-flow-so-iso-comparison"><strong>B. Horizontal Flow — SO ↔ ISO Comparison</strong></h3>
+<p>RTT/vST compares:</p>
+<ul>
+<li>SO’s mass‑primary regimes  </li>
+<li>ISO’s anisotropy‑primary regimes  </li>
+</ul>
+<p>It looks for:</p>
+<ul>
+<li>symmetry  </li>
+<li>asymmetry  </li>
+<li>missing invariants  </li>
+<li>mismatched regime boundaries  </li>
+<li>over‑compressed parameters (e.g., “mass explains everything”)  </li>
+<li>under‑modeled anisotropy channels  </li>
+</ul>
+<p>This is where the <strong>calibration insights</strong> come from.</p>
+<hr>
+<h3 id="c-downward-flow-calibration-ontologies"><strong>C. Downward Flow — Calibration → Ontologies</strong></h3>
+<p>RTT/vST sends back:</p>
+<ul>
+<li>refined regime boundaries  </li>
+<li>corrected invariants  </li>
+<li>new decomposition options  </li>
+<li>warnings about over‑reliance on single parameters  </li>
+<li>suggestions for alternative regime interpretations  </li>
+</ul>
+<p>SO and ISO update their internal logic accordingly.</p>
+<hr>
+<h3 id="d-substrate-feedback-loop"><strong>D. Substrate Feedback Loop</strong></h3>
+<p>Finally, both ontologies:</p>
+<ul>
+<li>update their models of the substrate  </li>
+<li>refine how they interpret evidence  </li>
+<li>adjust how they carve regimes  </li>
+<li>improve predictions and explanations  </li>
+</ul>
+<p>This closes the loop.</p>
+<hr>
+<h2 id="3-what-this-diagram-shows-at-a-glance"><strong>3. What This Diagram Shows at a Glance</strong></h2>
+<ul>
+<li>SO and ISO are <strong>parallel regime stacks</strong> describing the same universe.  </li>
+<li>RTT/vST sits above them as a <strong>triadic comparison engine</strong>.  </li>
+<li>Information flows <strong>upward</strong> as evidence, <strong>sideways</strong> as comparison, and <strong>downward</strong> as calibration.  </li>
+<li>The substrate is the <strong>shared ground truth</strong> both ontologies attempt to model.  </li>
+<li>Disagreements between SO and ISO are <strong>not errors</strong> — they are <strong>calibration opportunities</strong>.  </li>
+</ul>
+<p>This is the full “flow of information” model for the Inverted Star Ontology project.</p>
+  </main>
+</body>
+</html>

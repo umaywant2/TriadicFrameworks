@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Integrations/UE6/WBP_RTT_OperatorPanel.md">
+  <title>WBPRTTOperatorPanel — Runtime Operator Inspector</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Integrations/UE6/WBP_RTT_OperatorPanel.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Integrations/UE6/WBP_RTT_OperatorPanel.md</code>
+  </aside>
+
+  <main>
+<h1 id="wbp_rtt_operatorpanel-runtime-operator-inspector">WBP_RTT_OperatorPanel — Runtime Operator Inspector</h1>
+<p><strong>RTT / Integrations / UE6 / UI</strong></p>
+<p>A runtime UMG widget that displays live RTT operator values for any actor with an <code>URTTComponent</code>.</p>
+<hr>
+<h2 id="widget-name">Widget Name</h2>
+<p><code>WBP_RTT_OperatorPanel</code></p>
+<h2 id="parent-class">Parent Class</h2>
+<p><code>UserWidget</code></p>
+<hr>
+<h2 id="hierarchy">Hierarchy</h2>
+<pre><code>CanvasPanel
+    ├── Border_Header
+    │       └── TextBlock_Title (&quot;RTT Operator Panel&quot;)
+    ├── VerticalBox_Values
+    │       ├── HorizontalBox_Phi
+    │       │       ├── TextBlock_Label (&quot;φ (Phi)&quot;)
+    │       │       └── TextBlock_Value (bound)
+    │       ├── HorizontalBox_Variance
+    │       ├── HorizontalBox_Resonance
+    │       └── HorizontalBox_Entropy
+    └── Border_Footer
+            └── TextBlock_TargetActor (bound)
+</code></pre>
+<hr>
+<h2 id="variables">Variables</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TargetActor</code></td>
+<td>Actor</td>
+<td>Actor being inspected</td>
+</tr>
+<tr>
+<td><code>PhiValue</code></td>
+<td>float</td>
+<td>φ operator output</td>
+</tr>
+<tr>
+<td><code>VarianceValue</code></td>
+<td>float</td>
+<td>variance operator output</td>
+</tr>
+<tr>
+<td><code>ResonanceValue</code></td>
+<td>float</td>
+<td>resonance amplitude</td>
+</tr>
+<tr>
+<td><code>EntropyValue</code></td>
+<td>float</td>
+<td>entropy intensity</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="bindings">Bindings</h2>
+<ul>
+<li><code>TextBlock_Value_Phi</code> → <code>PhiValue</code>  </li>
+<li><code>TextBlock_Value_Variance</code> → <code>VarianceValue</code>  </li>
+<li><code>TextBlock_Value_Resonance</code> → <code>ResonanceValue</code>  </li>
+<li><code>TextBlock_Value_Entropy</code> → <code>EntropyValue</code>  </li>
+<li><code>TextBlock_TargetActor</code> → <code>TargetActor.DisplayName</code></li>
+</ul>
+<hr>
+<h2 id="graph-logic">Graph Logic</h2>
+<h3 id="event-tick">Event: <code>Tick</code></h3>
+<ul>
+<li>If <code>TargetActor</code> has <code>URTTComponent</code>:</li>
+<li>Call:<ul>
+<li><code>RTT_ProbeResonance</code></li>
+<li><code>RTT_TraceEntropy</code></li>
+</ul>
+</li>
+<li>Update bound variables</li>
+<li>Redraw values</li>
+</ul>
+<hr>
+<h2 id="status">Status</h2>
+<p>Ready for implementation.<br>
+Fully aligned with the 2026 RTT Integrations standard.</p>
+  </main>
+</body>
+</html>

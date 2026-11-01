@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rfc/RFC_052_RSADI_Coal_Industry_Extension_to_RSADI_Core.md">
+  <title>📘 RFC‑052 — RSADI‑Coal: Industry Extension to RSADI Core</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rfc/RFC_052_RSADI_Coal_Industry_Extension_to_RSADI_Core.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rfc/RFC_052_RSADI_Coal_Industry_Extension_to_RSADI_Core.md</code>
+  </aside>
+
+  <main>
+<h1 id="rfc052-rsadicoal-industry-extension-to-rsadi-core">📘 <strong>RFC‑052 — RSADI‑Coal: Industry Extension to RSADI Core</strong></h1>
+<h3 id="a-resonance-structural-awareness-dimensional-interface-for-underground-coal-mines"><em>A Resonance Structural Awareness Dimensional Interface for Underground Coal Mines</em></h3>
+<p>RefId: turn0browsertab1</p>
+<pre><code>Internet‑Draft                Triadic Frameworks
+Intended status: Standards Track                January 2026
+Expires: TBD
+
+RFC‑052: RSADI‑Coal — Coal Industry Extension
+draft-rsadi-coal-00
+</code></pre>
+<hr>
+<h1 id="abstract"><strong>Abstract</strong></h1>
+<p>RSADI‑Coal defines the <strong>coal‑industry‑specific extension</strong> of the Resonance Structural Awareness Dimensional Interface (RSADI).<br>
+It introduces additional data fields, message semantics, and safety‑critical behaviors required for underground coal mining environments, including:</p>
+<ul>
+<li>methane &amp; CO sensing  </li>
+<li>roof &amp; floor strata characterization  </li>
+<li>pillar load &amp; roof convergence  </li>
+<li>equipment vibration signatures  </li>
+<li>collapse vectors &amp; ignition risk  </li>
+<li>resonance‑aware evacuation routing  </li>
+</ul>
+<p>RSADI‑Coal <strong>extends</strong> RSADI‑Core without altering core invariants, ensuring compatibility across all RSADI‑aligned systems.</p>
+<p><a href="https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rfc/RFC_052_RSADI_Coal_Industry_Extension_to_RSADI_Core.md">github.com</a></p>
+<hr>
+<h1 id="status-of-this-memo"><strong>Status of This Memo</strong></h1>
+<p>This Internet‑Draft is a work in progress.<br>
+It may change, expand, or be refined through validator review.<br>
+It is not yet a standard.</p>
+<p><a href="https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rfc/RFC_052_RSADI_Coal_Industry_Extension_to_RSADI_Core.md">github.com</a></p>
+<hr>
+<h1 id="table-of-contents"><strong>Table of Contents</strong></h1>
+<ol>
+<li>Introduction  </li>
+<li>Terminology  </li>
+<li>Relationship to RSADI Core  </li>
+<li>Coal‑Specific Data Extensions  </li>
+<li>RSADI‑Coal Message Semantics  </li>
+<li>Evacuation &amp; Clarity Gradient Semantics  </li>
+<li>Node Roles &amp; Mesh Behavior in Coal Mines  </li>
+<li>Security Considerations  </li>
+<li>Safety Considerations  </li>
+<li>Privacy Considerations  </li>
+<li>IANA Considerations  </li>
+</ol>
+<p><a href="https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rfc/RFC_052_RSADI_Coal_Industry_Extension_to_RSADI_Core.md">github.com</a></p>
+<hr>
+<h1 id="1-introduction"><strong>1. Introduction</strong></h1>
+<p>Underground coal mines present <strong>unique resonance‑structural challenges</strong>:</p>
+<ul>
+<li>confined geometry  </li>
+<li>methane accumulation  </li>
+<li>strata instability  </li>
+<li>equipment vibration  </li>
+<li>ignition risk  </li>
+<li>collapse propagation  </li>
+</ul>
+<p>RSADI‑Coal extends RSADI‑Core with <strong>industry‑specific fields and semantics</strong> enabling:</p>
+<ul>
+<li>real‑time hazard detection  </li>
+<li>mesh‑network clarity routing  </li>
+<li>collapse‑vector prediction  </li>
+<li>resonance‑aware evacuation planning  </li>
+<li>multi‑agent structural awareness  </li>
+</ul>
+<p>RSADI‑Coal is <strong>transport‑agnostic</strong> and compatible with all RSADI‑Core bindings.</p>
+<hr>
+<h1 id="2-terminology"><strong>2. Terminology</strong></h1>
+<p><strong>Methane Resonance Index (MRI)</strong><br>
+Resonance‑weighted methane concentration.</p>
+<p><strong>Strata Coherence (SC)</strong><br>
+Stability measure of roof/floor layers.</p>
+<p><strong>Pillar Load Vector (PLV)</strong><br>
+Multi‑axis load distribution across support pillars.</p>
+<p><strong>Ignition Risk Gradient (IRG)</strong><br>
+Resonance‑weighted ignition probability.</p>
+<p><strong>Collapse Vector (CV)</strong><br>
+Directional prediction of structural failure.</p>
+<p><strong>Evacuation Clarity Gradient (ECG)</strong><br>
+Clarity‑optimized routing metric for miners.</p>
+<hr>
+<h1 id="3-relationship-to-rsadi-core"><strong>3. Relationship to RSADI Core</strong></h1>
+<p>RSADI‑Coal:</p>
+<ul>
+<li><strong>inherits</strong> all RSADI‑Core objects  </li>
+<li><strong>adds</strong> coal‑specific fields  </li>
+<li><strong>defines</strong> new message semantics  </li>
+<li><strong>preserves</strong> RSADI invariants  </li>
+<li><strong>extends</strong> dimensional signatures with mining‑specific axes  </li>
+</ul>
+<p>RSADI‑Core remains the canonical foundation.</p>
+<hr>
+<h1 id="4-coalspecific-data-extensions"><strong>4. Coal‑Specific Data Extensions</strong></h1>
+<h3 id="41-rfield-extensions"><strong>4.1 RField Extensions</strong></h3>
+<pre><code>RFieldCoal {
+    methane_ppm: float,
+    carbon_monoxide_ppm: float,
+    strata_coherence: float,
+    pillar_load_vector: vector3,
+    roof_convergence_mm: float,
+    vibration_signature: VibrationProfile,
+    ignition_risk: float,
+    collapse_vector: vector3
+}
+</code></pre>
+<h3 id="42-vibrationprofile"><strong>4.2 VibrationProfile</strong></h3>
+<pre><code>VibrationProfile {
+    frequency: float,
+    amplitude: float,
+    harmonic_signature: array&lt;float&gt;
+}
+</code></pre>
+<h3 id="43-collapsevector"><strong>4.3 CollapseVector</strong></h3>
+<p>Directional collapse prediction derived from:</p>
+<ul>
+<li>strata coherence  </li>
+<li>pillar load  </li>
+<li>vibration harmonics  </li>
+<li>methane ignition risk  </li>
+</ul>
+<hr>
+<h1 id="5-rsadicoal-message-semantics"><strong>5. RSADI‑Coal Message Semantics</strong></h1>
+<h3 id="51-hazard-messages"><strong>5.1 Hazard Messages</strong></h3>
+<ul>
+<li><strong>HAZ_METHANE_HIGH</strong>  </li>
+<li><strong>HAZ_CO_HIGH</strong>  </li>
+<li><strong>HAZ_STRATA_WEAK</strong>  </li>
+<li><strong>HAZ_PILLAR_OVERLOAD</strong>  </li>
+<li><strong>HAZ_VIBRATION_ANOMALY</strong>  </li>
+<li><strong>HAZ_IGNITION_RISK</strong>  </li>
+<li><strong>HAZ_COLLAPSE_VECTOR_DETECTED</strong></li>
+</ul>
+<h3 id="52-structural-messages"><strong>5.2 Structural Messages</strong></h3>
+<ul>
+<li><strong>STRATA_UPDATE</strong>  </li>
+<li><strong>PILLAR_LOAD_UPDATE</strong>  </li>
+<li><strong>ROOF_CONVERGENCE_UPDATE</strong></li>
+</ul>
+<h3 id="53-evacuation-messages"><strong>5.3 Evacuation Messages</strong></h3>
+<ul>
+<li><strong>EVACUATION_ROUTE_UPDATE</strong>  </li>
+<li><strong>CLARITY_GRADIENT_SHIFT</strong>  </li>
+<li><strong>DIMENSIONAL_SIGNATURE_MISMATCH</strong></li>
+</ul>
+<hr>
+<h1 id="6-evacuation-clarity-gradient-semantics"><strong>6. Evacuation &amp; Clarity Gradient Semantics</strong></h1>
+<p>Evacuation routing uses the <strong>Evacuation Clarity Gradient (ECG)</strong>:</p>
+<p>[
+ECG = f(C_\ell,\; D_s,\; S_g,\; MRI,\; IRG)
+]</p>
+<p>Where:</p>
+<ul>
+<li><strong>Cₗ</strong> = clarity  </li>
+<li><strong>Dₛ</strong> = drift  </li>
+<li><strong>Sg</strong> = stress  </li>
+<li><strong>MRI</strong> = methane resonance index  </li>
+<li><strong>IRG</strong> = ignition risk gradient  </li>
+</ul>
+<p>Routes are selected by maximizing ECG while minimizing collapse‑vector alignment.</p>
+<hr>
+<h1 id="7-node-roles-mesh-behavior-in-coal-mines"><strong>7. Node Roles &amp; Mesh Behavior in Coal Mines</strong></h1>
+<h3 id="71-node-types"><strong>7.1 Node Types</strong></h3>
+<ul>
+<li><strong>Sensor Nodes</strong>  </li>
+<li><strong>Pillar Load Nodes</strong>  </li>
+<li><strong>Strata Nodes</strong>  </li>
+<li><strong>Evacuation Nodes</strong>  </li>
+<li><strong>Validator Nodes</strong></li>
+</ul>
+<h3 id="72-mesh-behavior"><strong>7.2 Mesh Behavior</strong></h3>
+<p>Coal‑mesh networks must:</p>
+<ul>
+<li>propagate hazard messages with priority  </li>
+<li>maintain clarity fidelity  </li>
+<li>avoid drift amplification  </li>
+<li>preserve coherence invariants  </li>
+<li>support dimensional‑signature routing  </li>
+</ul>
+<hr>
+<h1 id="8-security-considerations"><strong>8. Security Considerations</strong></h1>
+<p>RSADI‑Coal must prevent:</p>
+<ul>
+<li>spoofed hazard messages  </li>
+<li>malicious collapse‑vector injection  </li>
+<li>drift‑based destabilization  </li>
+<li>clarity‑gradient manipulation  </li>
+<li>unauthorized node impersonation  </li>
+</ul>
+<hr>
+<h1 id="9-safety-considerations"><strong>9. Safety Considerations</strong></h1>
+<p>Safety is the primary purpose of RSADI‑Coal.</p>
+<p>Implementations must:</p>
+<ul>
+<li>ensure deterministic hazard propagation  </li>
+<li>maintain clarity under load  </li>
+<li>avoid false positives/negatives  </li>
+<li>support offline fallback modes  </li>
+<li>preserve evacuation‑route integrity  </li>
+</ul>
+<hr>
+<h1 id="10-privacy-considerations"><strong>10. Privacy Considerations</strong></h1>
+<p>RSADI‑Coal may encode:</p>
+<ul>
+<li>miner location  </li>
+<li>equipment telemetry  </li>
+<li>environmental logs  </li>
+</ul>
+<p>Deployments must follow strict privacy and retention policies.</p>
+<hr>
+<h1 id="11-iana-considerations"><strong>11. IANA Considerations</strong></h1>
+<p>Future versions may define:</p>
+<ul>
+<li>RSADI‑Coal media types  </li>
+<li>RSADI‑Coal registry entries  </li>
+<li>RSADI‑Coal protocol identifiers  </li>
+</ul>
+  </main>
+</body>
+</html>

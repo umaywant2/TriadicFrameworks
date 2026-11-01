@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/TFT.OpenGPU.Stack.Module/t_Rendering.md">
+  <title>tRendering — TFT.OpenGPU.Stack.Module</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/TFT.OpenGPU.Stack.Module/t_Rendering.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/TFT.OpenGPU.Stack.Module/t_Rendering.md</code>
+  </aside>
+
+  <main>
+<h1 id="t_rendering-tftopengpustackmodule">t_Rendering — TFT.OpenGPU.Stack.Module</h1>
+<p><strong>Resonance-Time Theory Rendering Document</strong><br>
+<strong>Module:</strong> TFT.OpenGPU.Stack.Module<br>
+<strong>RTT:</strong> 1<br>
+<strong>Coherence:</strong> Declared<br>
+<strong>Drift:</strong> Bounded<br>
+<strong>Paradox:</strong> Structural  </p>
+<hr>
+<h2 id="1-rendering-intent">1. Rendering Intent</h2>
+<p>The rendering layer defines the <strong>open rendering primitives</strong> that receive dimensional intent from the substrate and produce the visible scene.<br>
+It is the <strong>middle view</strong> of the module — the bridge between hidden substrate intent and visible execution work.</p>
+<p>Its purpose is to:</p>
+<ul>
+<li>map TFT dimensional primitives into GPU-renderable structures  </li>
+<li>provide an open, vendor-neutral rendering surface (Vulkan/WebGPU/custom)  </li>
+<li>support remote reconstruction via TFT primitive streams  </li>
+<li>maintain RTT coherence across substrate and execution layers  </li>
+<li>enable Cloud PC rendering fidelity independent of vendor lock-in  </li>
+</ul>
+<hr>
+<h2 id="2-rendering-principles">2. Rendering Principles</h2>
+<h3 id="21-middle-view-inverted-star-alignment"><strong>2.1 Middle View (Inverted Star Alignment)</strong></h3>
+<p>The rendering layer is the <strong>inversion boundary</strong>:</p>
+<ul>
+<li><strong>Substrate (hidden view):</strong> dimensional intent  </li>
+<li><strong>Rendering (middle view):</strong> scene/viewport abstraction  </li>
+<li><strong>Execution (visible view):</strong> GPU work  </li>
+</ul>
+<p>Rendering is where dimensional primitives become:</p>
+<ul>
+<li>surfaces  </li>
+<li>materials  </li>
+<li>transforms  </li>
+<li>viewports  </li>
+<li>scene graphs  </li>
+</ul>
+<h3 id="22-open-rendering-model"><strong>2.2 Open Rendering Model</strong></h3>
+<p>The rendering layer is intentionally <strong>open</strong>:</p>
+<ul>
+<li>Vulkan  </li>
+<li>WebGPU  </li>
+<li>custom lightweight rendering layer  </li>
+<li>UE-style scene graph (optional)  </li>
+<li>GPU-native reconstruction  </li>
+</ul>
+<p>This avoids proprietary rendering stacks and aligns with the module’s open substrate philosophy.</p>
+<h3 id="23-bounded-drift"><strong>2.3 Bounded Drift</strong></h3>
+<p>Rendering reinterpretation of substrate primitives is allowed only within bounded drift:</p>
+<ul>
+<li>reinterpretation must preserve dimensional intent  </li>
+<li>reinterpretation must remain structurally consistent  </li>
+<li>reinterpretation must not alter RTT coherence  </li>
+</ul>
+<hr>
+<h2 id="3-rendering-primitive-families">3. Rendering Primitive Families</h2>
+<h3 id="31-scene-primitives"><strong>3.1 Scene Primitives</strong></h3>
+<ul>
+<li><code>Render.Scene</code> — scene container  </li>
+<li><code>Render.Node</code> — scene node  </li>
+<li><code>Render.Mesh</code> — mesh or surface representation  </li>
+<li><code>Render.Light</code> — light primitive  </li>
+<li><code>Render.Camera</code> — camera primitive  </li>
+</ul>
+<h3 id="32-material-primitives"><strong>3.2 Material Primitives</strong></h3>
+<ul>
+<li><code>Render.Material</code> — material wrapper  </li>
+<li><code>Render.ShaderGraph</code> — shader graph intent  </li>
+<li><code>Render.Texture</code> — texture binding  </li>
+<li><code>Render.Color</code> — color primitive  </li>
+</ul>
+<h3 id="33-transform-primitives"><strong>3.3 Transform Primitives</strong></h3>
+<ul>
+<li><code>Render.Transform</code> — transform operator  </li>
+<li><code>Render.Matrix</code> — matrix representation  </li>
+<li><code>Render.Space</code> — dimensional space mapping  </li>
+</ul>
+<h3 id="34-viewport-primitives"><strong>3.4 Viewport Primitives</strong></h3>
+<ul>
+<li><code>Render.Viewport</code> — viewport declaration  </li>
+<li><code>Render.Frame</code> — frame substrate  </li>
+<li><code>Render.Pass</code> — rendering pass  </li>
+</ul>
+<h3 id="35-reconstruction-primitives"><strong>3.5 Reconstruction Primitives</strong></h3>
+<ul>
+<li><code>Render.Reconstruct.Surface</code> — reconstruct surface intent  </li>
+<li><code>Render.Reconstruct.Material</code> — reconstruct material intent  </li>
+<li><code>Render.Reconstruct.Transform</code> — reconstruct transform intent  </li>
+<li><code>Render.Reconstruct.Viewport</code> — reconstruct viewport substrate  </li>
+</ul>
+<hr>
+<h2 id="4-substrate-rendering-mapping">4. Substrate → Rendering Mapping</h2>
+<p>Rendering primitives map substrate primitives through declared coherence:</p>
+<table>
+<thead>
+<tr>
+<th>Substrate Primitive</th>
+<th>Rendering Primitive</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dim.Surface</td>
+<td>Render.Mesh / Render.Scene</td>
+</tr>
+<tr>
+<td>Dim.Material</td>
+<td>Render.Material / Render.ShaderGraph</td>
+</tr>
+<tr>
+<td>Dim.Transform</td>
+<td>Render.Transform / Render.Matrix</td>
+</tr>
+<tr>
+<td>Dim.Viewport</td>
+<td>Render.Viewport / Render.Camera</td>
+</tr>
+<tr>
+<td>Op.Cycle</td>
+<td>Render.Pass / Render.Frame</td>
+</tr>
+<tr>
+<td>Stream.Primitive</td>
+<td>Render.Reconstruct.Surface / Material / Transform</td>
+</tr>
+</tbody>
+</table>
+<p>This mapping is <strong>declared</strong>, not inferred.</p>
+<hr>
+<h2 id="5-rendering-and-rdp-integration">5. Rendering and RDP Integration</h2>
+<p>The rendering layer defines the reconstruction path for RDP:</p>
+<ul>
+<li>substrate primitives → encoded as TFT primitive stream  </li>
+<li>stream transported via RDPEGFX or custom virtual channel  </li>
+<li>rendering layer reconstructs scene primitives  </li>
+<li>execution layer resolves GPU work  </li>
+<li>final view presented to user  </li>
+</ul>
+<p>Rendering provides:</p>
+<ul>
+<li>scene graph reconstruction  </li>
+<li>material application  </li>
+<li>transform resolution  </li>
+<li>viewport mapping  </li>
+<li>frame substrate generation  </li>
+</ul>
+<p>RDP retains:</p>
+<ul>
+<li>TLS  </li>
+<li>CredSSP  </li>
+<li>NLA  </li>
+<li>reliability  </li>
+<li>ordering  </li>
+<li>session setup  </li>
+</ul>
+<hr>
+<h2 id="6-rendering-and-cloud-pc-tiering">6. Rendering and Cloud PC Tiering</h2>
+<p>Cloud PC tiers map directly to rendering fidelity:</p>
+<ul>
+<li><strong>Tier → reconstruction fidelity</strong>  </li>
+<li><strong>Tier → material complexity</strong>  </li>
+<li><strong>Tier → transform precision</strong>  </li>
+<li><strong>Tier → viewport resolution</strong>  </li>
+<li><strong>Tier → rendering pass count</strong>  </li>
+</ul>
+<p>Even minimal tiers achieve smooth rendering due to dimensional primitives.</p>
+<hr>
+<h2 id="7-open-rendering-surface">7. Open Rendering Surface</h2>
+<p>The rendering layer defines the open rendering surface:</p>
+<ul>
+<li>Vulkan alignment  </li>
+<li>WebGPU compatibility  </li>
+<li>UE-style scene graph (optional)  </li>
+<li>GPU-native reconstruction  </li>
+<li>vendor-neutral rendering primitives  </li>
+<li>open shader graph semantics  </li>
+</ul>
+<p>This is the layer that ensures the stack remains open and AMD-friendly.</p>
+<hr>
+<h2 id="8-canonical-rendering-summary">8. Canonical Rendering Summary</h2>
+<p>The rendering layer of the TFT.OpenGPU.Stack.Module:</p>
+<ul>
+<li>defines open rendering primitives  </li>
+<li>maps substrate intent into visible scene structures  </li>
+<li>reconstructs dimensional primitives for remote rendering  </li>
+<li>supports RDP integration  </li>
+<li>enables Cloud PC tiering  </li>
+<li>aligns with RTT (rtt=1, coherence declared, drift bounded, paradox structural)  </li>
+<li>establishes an open rendering surface independent of NVIDIA’s closed ecosystem  </li>
+</ul>
+<p>This document captures the rendering layer for canonical reference.</p>
+  </main>
+</body>
+</html>

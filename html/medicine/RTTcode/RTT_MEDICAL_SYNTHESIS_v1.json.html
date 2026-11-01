@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/medicine/RTTcode/RTT_MEDICAL_SYNTHESIS_v1.json.md">
+  <title>✅ RTTMEDICALSYNTHESISv1.json</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/medicine/RTTcode/RTT_MEDICAL_SYNTHESIS_v1.json.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/medicine/RTTcode/RTT_MEDICAL_SYNTHESIS_v1.json.md</code>
+  </aside>
+
+  <main>
+<h1 id="rtt_medical_synthesis_v1json">✅ <strong>RTT_MEDICAL_SYNTHESIS_v1.json</strong></h1>
+<h3 id="rttcode-signature-medical-synthesis-operator"><em>RTTcode Signature — Medical Synthesis Operator</em></h3>
+<hr>
+<p>This is the <strong>final RTTcode signature</strong> in the medical module — the contract that defines how all upstream operators (metadata, drift, substrate, regime, continuity) are fused into a <strong>drift‑bounded, regime‑aware, patient‑safe synthesis</strong>.</p>
+<p>This file must be:</p>
+<ul>
+<li><strong>operator‑first</strong>  </li>
+<li><strong>minimal and canonical</strong>  </li>
+<li><strong>zero‑drift</strong>  </li>
+<li><strong>machine‑readable</strong>  </li>
+<li><strong>aligned with the tri‑regime medical module</strong>  </li>
+<li><strong>consistent with the structure of your other RTTcode signatures</strong>  </li>
+</ul>
+<p>Below is the <strong>drop‑in ready</strong> JSON for:</p>
+<pre><code>RTT_MEDICAL_SYNTHESIS_v1.json
+</code></pre>
+<hr>
+<pre><code class="language-json">{
+  &quot;rttcode_version&quot;: &quot;1.0&quot;,
+  &quot;operator&quot;: &quot;MEDICAL_SYNTHESIS_OPERATOR&quot;,
+  &quot;module&quot;: &quot;medicine&quot;,
+  &quot;purpose&quot;: &quot;Integrate continuity, metadata, drift, substrate, and regime packets into a drift-bounded, regime-aware, patient-safe medical synthesis.&quot;,
+
+  &quot;inputs&quot;: {
+    &quot;continuity_packet&quot;: &quot;RTT_MEDICAL_CONTINUITY_v1&quot;,
+    &quot;metadata_packet&quot;: &quot;RTT_MEDICAL_METADATA_v1&quot;,
+    &quot;drift_packet&quot;: &quot;RTT_MEDICAL_DRIFT_v1&quot;,
+    &quot;substrate_packet&quot;: &quot;RTT_MEDICAL_SUBSTRATE_v1&quot;,
+    &quot;regime_packet&quot;: &quot;RTT_MEDICAL_REGIME_v1&quot;,
+    &quot;raw_content&quot;: &quot;multi-regime, multi-snapshot, multilingual medical pages&quot;
+  },
+
+  &quot;outputs&quot;: {
+    &quot;synthesis_packet&quot;: {
+      &quot;stable_elements&quot;: &quot;list&quot;,
+      &quot;unstable_elements&quot;: &quot;list&quot;,
+      &quot;regime_specific_elements&quot;: {
+        &quot;clinical&quot;: &quot;list&quot;,
+        &quot;ai_augmented&quot;: &quot;list&quot;,
+        &quot;public_health&quot;: &quot;list&quot;
+      },
+      &quot;drift_sensitive_elements&quot;: &quot;list&quot;,
+      &quot;substrate_risks&quot;: &quot;list&quot;,
+      &quot;continuity_kernel&quot;: &quot;list&quot;,
+      &quot;uncertainty_flags&quot;: &quot;list&quot;,
+      &quot;escalation_indicators&quot;: &quot;list&quot;
+    },
+    &quot;synthesis_summary&quot;: &quot;patient_safe_natural_language_summary&quot;,
+    &quot;synthesis_score&quot;: &quot;float_0_to_1&quot;,
+    &quot;synthesis_flags&quot;: [
+      &quot;high_regime_divergence&quot;,
+      &quot;high_drift_risk&quot;,
+      &quot;substrate_interference_detected&quot;,
+      &quot;translation_instability_detected&quot;,
+      &quot;ai_generated_instability_detected&quot;,
+      &quot;continuity_kernel_weak&quot;
+    ]
+  },
+
+  &quot;synthesis_logic&quot;: {
+    &quot;align_structures_across_regimes&quot;: true,
+    &quot;remove_drift_sensitive_elements&quot;: true,
+    &quot;preserve_continuity_kernel&quot;: true,
+    &quot;separate_regime_specific_elements&quot;: true,
+    &quot;evaluate_substrate_risks&quot;: true,
+    &quot;compute_synthesis_score&quot;: true,
+    &quot;generate_patient_safe_summary&quot;: true,
+    &quot;scoring_method&quot;: &quot;weighted_coherence_across_regimes&quot;
+  },
+
+  &quot;regime_profiles&quot;: {
+    &quot;clinical_regime&quot;: {
+      &quot;notes&quot;: &quot;Cleveland Clinic baseline; conservative, stable, explicit escalation logic.&quot;
+    },
+    &quot;ai_augmented_regime&quot;: {
+      &quot;notes&quot;: &quot;Ping An high drift; AI overlays, translation variance, commercial layers.&quot;
+    },
+    &quot;public_health_regime&quot;: {
+      &quot;notes&quot;: &quot;NHS clarity-first; standardized escalation rules, extremely low drift.&quot;
+    }
+  },
+
+  &quot;flags&quot;: {
+    &quot;high_regime_divergence&quot;: &quot;boolean&quot;,
+    &quot;high_drift_risk&quot;: &quot;boolean&quot;,
+    &quot;substrate_interference_detected&quot;: &quot;boolean&quot;,
+    &quot;translation_instability_detected&quot;: &quot;boolean&quot;,
+    &quot;ai_generated_instability_detected&quot;: &quot;boolean&quot;,
+    &quot;continuity_kernel_weak&quot;: &quot;boolean&quot;
+  },
+
+  &quot;safety&quot;: {
+    &quot;patient_safe_output&quot;: true,
+    &quot;no_medical_advice&quot;: true,
+    &quot;escalation_indicators_required&quot;: true,
+    &quot;uncertainty_disclosure_required&quot;: true,
+    &quot;regime_difference_disclosure_required&quot;: true
+  }
+}
+</code></pre>
+<hr>
+<h1 id="what-this-rttcode-signature-achieves">✔️ What This RTTcode Signature Achieves</h1>
+<p>This is the <strong>capstone contract</strong> for the medical module. It defines:</p>
+<h3 id="1-the-full-synthesis-pipeline"><strong>1. The full synthesis pipeline</strong></h3>
+<ul>
+<li>ingest all upstream packets  </li>
+<li>align structures across regimes  </li>
+<li>remove drift  </li>
+<li>preserve continuity  </li>
+<li>classify regime‑specific differences  </li>
+<li>evaluate substrate risks  </li>
+<li>generate a patient‑safe summary  </li>
+</ul>
+<h3 id="2-the-synthesis-packet"><strong>2. The synthesis packet</strong></h3>
+<p>A structured, machine‑readable output containing:</p>
+<ul>
+<li>stable elements  </li>
+<li>unstable elements  </li>
+<li>regime‑specific elements  </li>
+<li>drift‑sensitive elements  </li>
+<li>substrate risks  </li>
+<li>continuity kernel  </li>
+<li>uncertainty flags  </li>
+<li>escalation indicators  </li>
+</ul>
+<h3 id="3-safety-requirements"><strong>3. Safety requirements</strong></h3>
+<ul>
+<li>no medical advice  </li>
+<li>uncertainty disclosure  </li>
+<li>escalation indicators  </li>
+<li>regime difference disclosure  </li>
+</ul>
+<h3 id="4-regimeaware-reasoning"><strong>4. Regime‑aware reasoning</strong></h3>
+<p>It encodes the structural logic of:</p>
+<ul>
+<li>US clinical  </li>
+<li>China AI‑augmented  </li>
+<li>UK public‑health  </li>
+</ul>
+<p>This is the operator that makes the module <em>coherent</em>.</p>
+  </main>
+</body>
+</html>

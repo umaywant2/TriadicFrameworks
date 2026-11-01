@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/resonance-substrate-model/docs/methods/operator_definitions.md">
+  <title>Operator Definitions</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/resonance-substrate-model/docs/methods/operator_definitions.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/resonance-substrate-model/docs/methods/operator_definitions.md</code>
+  </aside>
+
+  <main>
+<h1 id="operator-definitions"><strong>Operator Definitions</strong></h1>
+<p><em>A unified, canonical reference for all substrate operators</em></p>
+<p>Operators define how fields evolve, interact, and transform within the Resonance Substrate Model. They are the core mathematical and conceptual tools that drive substrate dynamics across classical, quantum, semantic, and distributed layers.</p>
+<p>This document merges the early conceptual framing with the newer structured taxonomy to provide a complete, extensible foundation.</p>
+<hr>
+<h1 id="quicklinks">Quicklinks</h1>
+<ul>
+<li><a href="../README.html">docs README</a></li>
+<li><a href="../api/integration_examples.html">docs api integration examples</a></li>
+<li><a href="../api/README.html">docs api README</a></li>
+<li><a href="../api/schema_overview.html">docs api schema overview</a></li>
+<li><a href="../api/using_the_schemas.html">docs api using the schemas</a></li>
+<li><a href="../experiments/faraday_paradox_experiment.html">docs experiments faraday paradox experiment</a></li>
+<li><a href="../experiments/README.html">docs experiments README</a></li>
+<li><a href="../experiments/replication_checklist.html">docs experiments replication checklist</a></li>
+<li><a href="../experiments/resonance_alignment_tests.html">docs experiments resonance alignment tests</a></li>
+<li><a href="../experiments/rotating_conductor_tests.html">docs experiments rotating conductor tests</a></li>
+<li><a href="dimensional_layers.html">docs methods dimensional layers</a></li>
+<li><a href="field_equations.html">docs methods field equations</a></li>
+<li><a href="README.html">docs methods README</a></li>
+<li><a href="substrate_dynamics.html">docs methods substrate dynamics</a></li>
+<li><a href="triadic_fields.html">docs methods triadic fields</a></li>
+<li><a href="../onboarding/model_map.html">docs onboarding model map</a></li>
+<li><a href="../onboarding/reading_guide.html">docs onboarding reading guide</a></li>
+<li><a href="../onboarding/triadic_quickstart.html">docs onboarding triadic quickstart</a></li>
+<li><a href="../onboarding/verification_tests.html">docs onboarding verification tests</a></li>
+<li><a href="../overview/comparison_to_gr_models.html">docs overview comparison to gr models</a></li>
+<li><a href="../overview/glossary.html">docs overview glossary</a></li>
+<li><a href="../overview/introduction.html">docs overview introduction</a></li>
+<li><a href="../overview/README.html">docs overview README</a></li>
+<li><a href="../overview/resonance_primitives.html">docs overview resonance primitives</a></li>
+<li><a href="../overview/theoretical_background.html">docs overview theoretical background</a></li>
+<li><a href="../simulations/boundary_conditions.html">docs simulations boundary conditions</a></li>
+<li><a href="../simulations/numerical_methods.html">docs simulations numerical methods</a></li>
+<li><a href="../simulations/README.html">docs simulations README</a></li>
+<li><a href="../simulations/solver_architecture.html">docs simulations solver_architecture</a></li>
+<li><a href="../simulations/validation_metrics.html">docs simulations validation metrics</a></li>
+<li><a href="../simulations/core/README.html">docs simulations core README</a></li>
+<li><a href="../">previous folder</a></li>
+</ul>
+<hr>
+<h2 id="1-diffusion-operator"><strong>1. Diffusion Operator</strong></h2>
+<h3 id="purpose">Purpose</h3>
+<p>Smooths or spreads field values across the substrate, modeling transport, dissipation, and coherence propagation.</p>
+<h3 id="applies-to">Applies To</h3>
+<ul>
+<li>scalar fields  </li>
+<li>vector fields  </li>
+<li>resonance envelopes (optional, controlled diffusion)</li>
+</ul>
+<h3 id="variants">Variants</h3>
+<ul>
+<li><strong>isotropic diffusion</strong> — uniform spreading  </li>
+<li><strong>anisotropic diffusion</strong> — directionally biased  </li>
+<li><strong>manifold-aware diffusion</strong> — respects curvature and metric structure  </li>
+</ul>
+<h3 id="notes">Notes</h3>
+<p>Early versions emphasized diffusion as a “substrate equalizer.”<br>
+The unified model treats it as a first-class operator with tunable geometry and stability constraints.</p>
+<hr>
+<h2 id="2-alignment-operator"><strong>2. Alignment Operator</strong></h2>
+<h3 id="purpose_1">Purpose</h3>
+<p>Encourages local or global coherence among directional or spin-like fields.</p>
+<h3 id="applies-to_1">Applies To</h3>
+<ul>
+<li>spin-fields  </li>
+<li>vector fields  </li>
+<li>semantic alignment structures (higher layers)</li>
+</ul>
+<h3 id="behavior">Behavior</h3>
+<ul>
+<li>normalizes local vectors  </li>
+<li>pulls neighbors toward shared orientation  </li>
+<li>may include damping or resonance-weighted influence  </li>
+</ul>
+<h3 id="notes_1">Notes</h3>
+<p>Earlier drafts described alignment as “coherence pressure.”<br>
+This merged version formalizes it as a directional operator with explicit normalization rules.</p>
+<hr>
+<h2 id="3-coupling-operator"><strong>3. Coupling Operator</strong></h2>
+<h3 id="purpose_2">Purpose</h3>
+<p>Links multiple fields so that changes in one influence another.</p>
+<h3 id="common-couplings">Common Couplings</h3>
+<ul>
+<li>scalar ↔ vector  </li>
+<li>resonance envelope ↔ spin-field  </li>
+<li>classical layer ↔ quantum layer  </li>
+<li>semantic layer ↔ resonance layer  </li>
+</ul>
+<h3 id="forms">Forms</h3>
+<ul>
+<li>linear coupling  </li>
+<li>nonlinear coupling  </li>
+<li>thresholded or gated coupling  </li>
+</ul>
+<h3 id="notes_2">Notes</h3>
+<p>The early operator doc emphasized “cross-field influence.”<br>
+This unified version formalizes coupling as a structured, configurable operator family.</p>
+<hr>
+<h2 id="4-resonance-activation-operator"><strong>4. Resonance Activation Operator</strong></h2>
+<h3 id="purpose_3">Purpose</h3>
+<p>Determines when and where resonance envelopes activate, intensify, or decay.</p>
+<h3 id="activation-modes">Activation Modes</h3>
+<ul>
+<li>threshold-based  </li>
+<li>gradient-based  </li>
+<li>operator-driven (e.g., alignment-triggered)  </li>
+<li>coherence-driven (quantum layer influence)</li>
+</ul>
+<h3 id="behavior_1">Behavior</h3>
+<ul>
+<li>amplifies local field activity  </li>
+<li>creates localized “resonance pockets”  </li>
+<li>interacts with diffusion and alignment operators  </li>
+</ul>
+<h3 id="notes_3">Notes</h3>
+<p>Early drafts described resonance activation as “field ignition.”<br>
+This merged version integrates it into the operator taxonomy with explicit activation logic.</p>
+<hr>
+<h2 id="5-decay-stabilization-operator"><strong>5. Decay / Stabilization Operator</strong></h2>
+<h3 id="purpose_4">Purpose</h3>
+<p>Prevents runaway growth, oscillation, or instability in evolving fields.</p>
+<h3 id="applies-to_2">Applies To</h3>
+<ul>
+<li>scalar fields  </li>
+<li>spin-fields  </li>
+<li>resonance envelopes  </li>
+<li>coherence structures  </li>
+</ul>
+<h3 id="forms_1">Forms</h3>
+<ul>
+<li>exponential decay  </li>
+<li>damping  </li>
+<li>normalization  </li>
+<li>clipping or bounding  </li>
+</ul>
+<h3 id="notes_4">Notes</h3>
+<p>This operator was implicit in early drafts; now it is explicitly defined as a stabilizing component of the substrate.</p>
+<hr>
+<h2 id="6-projection-and-mapping-operators"><strong>6. Projection and Mapping Operators</strong></h2>
+<h3 id="purpose_5">Purpose</h3>
+<p>Translate fields across layers, dimensions, or coordinate systems.</p>
+<h3 id="examples">Examples</h3>
+<ul>
+<li>classical → quantum projection  </li>
+<li>semantic → resonance modulation  </li>
+<li>manifold coordinate transforms  </li>
+<li>layer-to-layer embeddings  </li>
+</ul>
+<h3 id="notes_5">Notes</h3>
+<p>Early drafts hinted at “dimensional bridges.”<br>
+This unified version formalizes them as projection operators with clear roles.</p>
+<hr>
+<h2 id="7-custom-and-experimental-operators"><strong>7. Custom and Experimental Operators</strong></h2>
+<h3 id="purpose_6">Purpose</h3>
+<p>Support domain-specific or experimental behaviors.</p>
+<h3 id="examples_1">Examples</h3>
+<ul>
+<li>rotating-frame transforms (Faraday paradox experiments)  </li>
+<li>external field injection  </li>
+<li>semantic packet modulation  </li>
+<li>coherence perturbation operators  </li>
+</ul>
+<h3 id="notes_6">Notes</h3>
+<p>This section preserves the exploratory spirit of the early operator doc while giving it a structured home.</p>
+<hr>
+<h1 id="summary"><strong>Summary</strong></h1>
+<p>This merged operator document now reflects:</p>
+<ul>
+<li>the <strong>conceptual richness</strong> of the early drafts  </li>
+<li>the <strong>structured clarity</strong> of the newer scaffolds  </li>
+<li>the <strong>extensibility</strong> needed for future layers and experiments  </li>
+</ul>
+  </main>
+</body>
+</html>

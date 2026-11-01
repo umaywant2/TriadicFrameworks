@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/openloop/Risk/architecture.md">
+  <title>⚠️ OpenRisk — architecture.md</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/openloop/Risk/architecture.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/openloop/Risk/architecture.md</code>
+  </aside>
+
+  <main>
+<h1 id="openrisk-architecturemd">⚠️ <strong>OpenRisk — architecture.md</strong></h1>
+<p><strong>OpenWarden Suite — Risk Analysis Substrate</strong><br>
+<strong>Analyzer Layer:</strong> dimensional<br>
+<strong>Regime:</strong> open‑risk‑governance<br>
+<strong>Version:</strong> 1.0  </p>
+<hr>
+<h2 id="1-architectural-overview"><strong>1. Architectural Overview</strong></h2>
+<p>OpenRisk provides a <strong>dimensional, drift‑aware, coherence‑declared risk substrate</strong> for the OpenWarden suite.<br>
+Its architecture is built around five canonical components:</p>
+<ol>
+<li><strong>Dimensional Signature Model</strong>  </li>
+<li><strong>Risk Score &amp; Anomaly Engine</strong>  </li>
+<li><strong>Boundary &amp; Severity Layer</strong>  </li>
+<li><strong>Governance &amp; Drift Control</strong>  </li>
+<li><strong>Cross‑Module Integration Layer</strong></li>
+</ol>
+<p>Each component ensures risk stability, metadata correctness, and operator‑aligned transformations.</p>
+<hr>
+<h2 id="2-dimensional-signature-model"><strong>2. Dimensional Signature Model</strong></h2>
+<p>The Dimensional Signature Model defines the <strong>identity</strong> of a risk object using canonical fields.<br>
+It includes:</p>
+<ul>
+<li>dimensional category  </li>
+<li>risk score block  </li>
+<li>anomaly lineage  </li>
+<li>coherence score  </li>
+<li>drift status  </li>
+</ul>
+<p>Risk metadata is designed for:</p>
+<ul>
+<li>fraud detection  </li>
+<li>anomaly interpretation  </li>
+<li>lineage tracking  </li>
+<li>interoperability  </li>
+<li>AI‑safe risk scoring  </li>
+</ul>
+<h3 id="21-metadata-requirements"><strong>2.1 Metadata Requirements</strong></h3>
+<p>Every risk object must include:</p>
+<ul>
+<li><code>open.risk.dimension</code>  </li>
+<li><code>open.risk.score</code>  </li>
+<li><code>open.risk.severity</code>  </li>
+<li><code>open.risk.coherence</code>  </li>
+<li><code>open.risk.drift</code>  </li>
+<li><code>open.risk.lineage</code>  </li>
+<li><code>open.risk.version</code>  </li>
+<li><code>open.risk.module</code>  </li>
+</ul>
+<p>Missing fields trigger drift correction.</p>
+<hr>
+<h2 id="3-risk-score-anomaly-engine"><strong>3. Risk Score &amp; Anomaly Engine</strong></h2>
+<p>The Risk Score &amp; Anomaly Engine ensures:</p>
+<ul>
+<li>risk score correctness  </li>
+<li>anomaly lineage stability  </li>
+<li>fraud metadata integrity  </li>
+<li>drift detection  </li>
+<li>operator‑aligned transformations  </li>
+</ul>
+<h3 id="31-risk-score-rules"><strong>3.1 Risk Score Rules</strong></h3>
+<p>Risk scores must be:</p>
+<ul>
+<li>canonical  </li>
+<li>bounded  </li>
+<li>reversible  </li>
+<li>dimensionally coherent  </li>
+</ul>
+<p>Risk score corruption is treated as dimensional drift.</p>
+<h3 id="32-anomaly-rules"><strong>3.2 Anomaly Rules</strong></h3>
+<p>Anomalies must maintain:</p>
+<ul>
+<li>correct lineage  </li>
+<li>non‑ambiguous descriptors  </li>
+<li>stable severity mapping  </li>
+</ul>
+<p>Anomaly drift triggers correction and lineage update.</p>
+<hr>
+<h2 id="4-boundary-severity-layer"><strong>4. Boundary &amp; Severity Layer</strong></h2>
+<p>Risk interpretation is governed by:</p>
+<ul>
+<li>severity boundaries  </li>
+<li>anomaly magnitude  </li>
+<li>contextual overlays  </li>
+<li>canonical metadata  </li>
+</ul>
+<h3 id="41-boundary-inputs"><strong>4.1 Boundary Inputs</strong></h3>
+<ul>
+<li>dimensional category  </li>
+<li>risk score block  </li>
+<li>severity descriptor  </li>
+<li>operator grammar fields  </li>
+</ul>
+<h3 id="42-boundary-outputs"><strong>4.2 Boundary Outputs</strong></h3>
+<ul>
+<li>severity classification  </li>
+<li>boundary correction  </li>
+<li>anomaly recalibration  </li>
+<li>lineage update  </li>
+</ul>
+<p>Boundary violations trigger suppression.</p>
+<hr>
+<h2 id="5-governance-drift-control"><strong>5. Governance &amp; Drift Control</strong></h2>
+<p>OpenRisk enforces strict governance rules inherited from OpenWarden.</p>
+<h3 id="51-drift-types"><strong>5.1 Drift Types</strong></h3>
+<ul>
+<li><strong>Risk Drift</strong> — malformed or unstable risk scores  </li>
+<li><strong>Anomaly Drift</strong> — corrupted or ambiguous anomalies  </li>
+<li><strong>Boundary Drift</strong> — incorrect or mismatched severity boundaries  </li>
+<li><strong>Metadata Drift</strong> — missing or manipulated fields  </li>
+<li><strong>Lineage Drift</strong> — corrupted or ambiguous lineage  </li>
+</ul>
+<h3 id="52-drift-responses"><strong>5.2 Drift Responses</strong></h3>
+<ol>
+<li><strong>Flag</strong> — mark risk object as drifted  </li>
+<li><strong>Suppress</strong> — remove from risk output  </li>
+<li><strong>Correct</strong> — repair metadata  </li>
+<li><strong>Recalibrate</strong> — adjust severity or score  </li>
+<li><strong>Update Lineage</strong> — record correction  </li>
+</ol>
+<p>All drift responses are logged.</p>
+<hr>
+<h2 id="6-operator-grammar-alignment"><strong>6. Operator Grammar Alignment</strong></h2>
+<p>OpenRisk uses the OpenWarden operator grammar:</p>
+<ul>
+<li><strong>extend</strong> — add dimensional detail  </li>
+<li><strong>condense</strong> — simplify metadata  </li>
+<li><strong>refactor</strong> — reorganize risk fields  </li>
+<li><strong>capture</strong> — record drift or lineage  </li>
+<li><strong>annotate</strong> — add governance notes  </li>
+<li><strong>correct</strong> — fix drift or misalignment  </li>
+</ul>
+<p>Operators ensure safe, reversible risk evolution.</p>
+<hr>
+<h2 id="7-crossmodule-integration"><strong>7. Cross‑Module Integration</strong></h2>
+<p>OpenRisk integrates with:</p>
+<ul>
+<li><strong>OpenIAM</strong> — identity‑safe risk rules  </li>
+<li><strong>OpenGeo</strong> — location‑aware risk boundaries  </li>
+<li><strong>OpenFeed</strong> — risk‑aware feed filtering  </li>
+<li><strong>OpenCatalog</strong> — risk metadata alignment  </li>
+<li><strong>OpenSEO</strong> — semantic risk metadata  </li>
+<li><strong>OpenLLM</strong> — model‑aware anomaly detection  </li>
+<li><strong>OpenWarden</strong> — suite‑governed risk policies  </li>
+</ul>
+<p>All integrations are drift‑bounded and coherence‑declared.</p>
+<hr>
+<h2 id="8-canonical-metadata-block-example"><strong>8. Canonical Metadata Block (Example)</strong></h2>
+<pre><code class="language-html">&lt;meta name=&quot;open.risk.dimension&quot; content=&quot;risk:fraud-detection&quot;&gt;
+&lt;meta name=&quot;open.risk.score&quot; content=&quot;score:0.72&quot;&gt;
+&lt;meta name=&quot;open.risk.severity&quot; content=&quot;severity:medium&quot;&gt;
+&lt;meta name=&quot;open.risk.coherence&quot; content=&quot;0.91&quot;&gt;
+&lt;meta name=&quot;open.risk.drift&quot; content=&quot;bounded&quot;&gt;
+&lt;meta name=&quot;open.risk.lineage&quot; content=&quot;risklineage:7c3f&quot;&gt;
+&lt;meta name=&quot;open.risk.version&quot; content=&quot;1.0&quot;&gt;
+&lt;meta name=&quot;open.risk.module&quot; content=&quot;OpenRisk&quot;&gt;
+</code></pre>
+<hr>
+<h2 id="9-file-structure"><strong>9. File Structure</strong></h2>
+<ul>
+<li><code>README.md</code> — front door  </li>
+<li><code>architecture.md</code> — this file  </li>
+<li><code>canonical_metadata.md</code> — metadata schema  </li>
+<li><code>governance.md</code> — drift &amp; policy rules  </li>
+<li><code>operators.md</code> — operator grammar  </li>
+<li><code>index.html</code> — module front page  </li>
+<li><code>module.json</code> — manifest  </li>
+</ul>
+  </main>
+</body>
+</html>

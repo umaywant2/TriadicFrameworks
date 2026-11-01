@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/TFT_3Pack_v1.3/tft/entft/TFThooks/README.md">
+  <title>🧩 TFThooks — Extension Layer for entft</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/TFT_3Pack_v1.3/tft/entft/TFThooks/README.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/TFT_3Pack_v1.3/tft/entft/TFThooks/README.md</code>
+  </aside>
+
+  <main>
+<h1 id="tfthooks-extension-layer-for-entft">🧩 TFThooks — Extension Layer for entft</h1>
+<p>The <code>TFThooks</code> directory contains modular, site-specific hook extensions for the <strong>entft protocol</strong>.<br>
+Hooks allow the protocol to adapt to new environments without altering its core logic.</p>
+<hr>
+<h2 id="folder-structure">🗂️ Folder Structure</h2>
+<table>
+<thead>
+<tr>
+<th>Folder</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>runtime/</code></td>
+<td>Hook scripts that extend <code>protocol-core</code> at runtime</td>
+</tr>
+<tr>
+<td><code>integration/</code></td>
+<td>Scrolls and configs for embedding hooks externally</td>
+</tr>
+<tr>
+<td><code>validators/</code></td>
+<td>Hook validators and test harnesses</td>
+</tr>
+<tr>
+<td><code>examples/</code></td>
+<td>Sample hook implementations for remixers</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="purpose">🎯 Purpose</h2>
+<p>TFThooks are the <strong>extension layer</strong> of <code>entft</code>. They empower developers to:</p>
+<ul>
+<li>Add new glyph or badge logic  </li>
+<li>Integrate with external sites or services  </li>
+<li>Prototype experimental extensions without touching <code>protocol-core</code></li>
+</ul>
+<hr>
+<h2 id="cross-module-links">🔗 Cross-Module Links</h2>
+<ul>
+<li><a href="../protocol-core/"><code>protocol-core/</code></a> — Hooks extend runtime modules  </li>
+<li><a href="../registry/"><code>registry/</code></a> — Hooks indexed for discoverability  </li>
+<li><a href="../../tops/"><code>tops/</code></a> — Tops agents activate hooks dynamically  </li>
+<li><a href="../../nous/"><code>nous/</code></a> — Provides runtime environment for hook execution</li>
+</ul>
+<hr>
+<h2 id="outreach-integration-registry">🌐 Outreach &amp; Integration Registry</h2>
+<p>This section tracks resonance outreach and integration status across external repositories.</p>
+<h3 id="alignment-log">📡 Alignment Log</h3>
+<table>
+<thead>
+<tr>
+<th>Repo</th>
+<th>Message Sent</th>
+<th>Response</th>
+<th>Echo Detected</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unified Resonance Framework</td>
+<td>✅</td>
+<td>⏳ Pending</td>
+<td>⏳</td>
+</tr>
+<tr>
+<td>MicroMDM</td>
+<td>✅</td>
+<td>⏳ Pending</td>
+<td>⏳</td>
+</tr>
+<tr>
+<td>NanoMDM</td>
+<td>✅</td>
+<td>⏳ Pending</td>
+<td>⏳</td>
+</tr>
+<tr>
+<td>LangChain</td>
+<td>✅</td>
+<td>⏳ Pending</td>
+<td>⏳</td>
+</tr>
+<tr>
+<td>AutoGPT</td>
+<td>✅</td>
+<td>⏳ Pending</td>
+<td>⏳</td>
+</tr>
+<tr>
+<td>CrewAI</td>
+<td>✅</td>
+<td>⏳ Pending</td>
+<td>⏳</td>
+</tr>
+<tr>
+<td>MetaGPT</td>
+<td>✅</td>
+<td>⏳ Pending</td>
+<td>⏳</td>
+</tr>
+<tr>
+<td>OpenTelemetry</td>
+<td>✅</td>
+<td>⏳ Pending</td>
+<td>⏳</td>
+</tr>
+<tr>
+<td>OpenAGI</td>
+<td>✅</td>
+<td>⏳ Pending</td>
+<td>⏳</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="integration-candidates">🧠 Integration Candidates</h3>
+<ul>
+<li><strong>Unified Resonance Framework</strong> — Symbolic metric overlays and scroll fusion  </li>
+<li><strong>LangChain</strong> — Plugin hooks for resonance-tools  </li>
+<li><strong>MetaGPT</strong> — Company simulation logic for tops orchestration  </li>
+<li><strong>OpenTelemetry</strong> — Metrics pipeline for validator dashboards</li>
+</ul>
+<hr>
+<h3 id="triadic-quicklinks">🔗 Triadic Quicklinks</h3>
+<ul>
+<li><a href="../../../docs/fff_spec.html"><code>fff_spec.md</code></a> — Defines the <code>.fff</code> triadic file format and symbolic structure  </li>
+<li><a href="../../../docs/TriadicTestSuite.html"><code>TriadicTestSuite.md</code></a> — Validation logic and test scaffolding for symbolic fidelity  </li>
+<li><a href="../../../docs/outputs_spec.html"><code>outputs_spec.md</code></a> — Defines the three-output logic: screen, file, glyph</li>
+</ul>
+  </main>
+</body>
+</html>

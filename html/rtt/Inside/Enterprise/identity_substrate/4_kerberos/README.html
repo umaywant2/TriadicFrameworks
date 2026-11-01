@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Enterprise/identity_substrate/4_kerberos/README.md">
+  <title>Kerberos Identity Substrate (Layer 4)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Enterprise/identity_substrate/4_kerberos/README.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Enterprise/identity_substrate/4_kerberos/README.md</code>
+  </aside>
+
+  <main>
+<h1 id="kerberos-identity-substrate-layer-4"><strong>Kerberos Identity Substrate (Layer 4)</strong></h1>
+<h3 id="triadic-substrate-semantics-applied-to-realmbased-authentication-identity"><em>Triadic substrate semantics applied to realm‑based authentication identity</em></h3>
+<hr>
+<h2 id="overview"><strong>Overview</strong></h2>
+<p>The <strong>Kerberos Identity Substrate</strong> represents <strong>Layer 4</strong> of the RTT/Inside Enterprise Identity model.<br>
+It is the first <em>cryptographic identity substrate</em> — the layer where identity becomes:</p>
+<ul>
+<li>ticket‑based  </li>
+<li>realm‑scoped  </li>
+<li>time‑bounded  </li>
+<li>trust‑anchored  </li>
+<li>protocol‑enforced  </li>
+<li>coherence‑sensitive  </li>
+</ul>
+<p>Kerberos is the authentication backbone for many enterprise systems, including Active Directory, MIT Kerberos realms, and hybrid cloud identity bridges.<br>
+This makes it an ideal layer to demonstrate <strong>triadic regime tagging</strong>, <strong>clarity envelopes</strong>, <strong>coherence boundaries</strong>, and <strong>triad roles</strong> in a secure, time‑sensitive identity substrate.</p>
+<hr>
+<h2 id="purpose"><strong>Purpose</strong></h2>
+<p>Layer 4 exists to:</p>
+<ul>
+<li>Show how RTT/Inside substrate metadata attaches to Kerberos principals and tickets  </li>
+<li>Demonstrate clarity, regime, triad roles, and coherence envelopes in authentication flows  </li>
+<li>Provide a working example of substrate‑aware identity in a cryptographic context  </li>
+<li>Serve as the bridge between DNS SRV discovery (Layer 3) and service discovery / modern identity (Layers 5–6)  </li>
+<li>Offer a minimal, operator‑safe demonstration of substrate‑aware Kerberos metadata  </li>
+</ul>
+<p>Kerberos is the <strong>identity authentication substrate</strong> — the layer where identity becomes verified.</p>
+<hr>
+<h2 id="identity-characteristics"><strong>Identity Characteristics</strong></h2>
+<p>Kerberos provides:</p>
+<h3 id="1-realmscoped-identity"><strong>1. Realm‑Scoped Identity</strong></h3>
+<p>Kerberos identities are defined as:</p>
+<ul>
+<li>principals  </li>
+<li>realms  </li>
+<li>service principals  </li>
+<li>tickets  </li>
+<li>renewable sessions  </li>
+</ul>
+<p>This makes Kerberos ideal for substrate metadata.</p>
+<h3 id="2-timebound-identity"><strong>2. Time‑Bound Identity</strong></h3>
+<p>Kerberos tickets include:</p>
+<ul>
+<li>start time  </li>
+<li>end time  </li>
+<li>renewable lifetime  </li>
+<li>session keys  </li>
+</ul>
+<p>These map naturally to <strong>coherence envelopes</strong> and <strong>clarity scores</strong>.</p>
+<h3 id="3-trust-anchors"><strong>3. Trust Anchors</strong></h3>
+<p>Kerberos enforces:</p>
+<ul>
+<li>realm boundaries  </li>
+<li>cross‑realm trust  </li>
+<li>KDC authority  </li>
+<li>secure ticket issuance  </li>
+</ul>
+<p>These map directly to <strong>regime tags</strong> and <strong>triad roles</strong>.</p>
+<hr>
+<h2 id="substrateaware-kerberos-metadata"><strong>Substrate‑Aware Kerberos Metadata</strong></h2>
+<p>Kerberos supports metadata via:</p>
+<ul>
+<li>FAST (Flexible Authentication Secure Tunneling)  </li>
+<li>ticket authorization data  </li>
+<li>PAC (Privilege Attribute Certificate)  </li>
+<li>AD‑style extensions  </li>
+<li>custom authorization data types  </li>
+</ul>
+<p>A minimal substrate extension might define:</p>
+<pre><code>AuthorizationData: TRIADIC-SUBSTRATE
+{
+  clarity: 0.93,
+  regime: &quot;control&quot;,
+  triad_role: &quot;A&quot;,
+  coherence: &quot;realm&quot;
+}
+</code></pre>
+<p>This metadata is optional and non‑breaking.</p>
+<hr>
+<h2 id="example-substrateaware-kerberos-ticket"><strong>Example: Substrate‑Aware Kerberos Ticket</strong></h2>
+<pre><code>Principal: operator@ENTERPRISE.LOCAL
+Realm: ENTERPRISE.LOCAL
+Service: krbtgt/ENTERPRISE.LOCAL
+
+AuthorizationData:
+  triadicClarityScore: 0.93
+  triadicRegimeTag: control
+  triadicRole: A
+  triadicCoherenceEnvelope: realm
+
+TicketLifetime:
+  start: 2026-07-02T18:46:00Z
+  end:   2026-07-02T20:46:00Z
+</code></pre>
+<p>This example shows how substrate metadata attaches to Kerberos tickets without altering cryptographic behavior.</p>
+<hr>
+<h2 id="how-layer-4-connects-to-higher-layers"><strong>How Layer 4 Connects to Higher Layers</strong></h2>
+<p>Kerberos feeds directly into:</p>
+<ul>
+<li><strong>Service Discovery (Layer 5)</strong> — Kerberos tickets authenticate service access  </li>
+<li><strong>Modern Identity (Layer 6)</strong> — Kerberos integrates with SAML/OIDC via ADFS and cloud bridges  </li>
+<li><strong>Cloud Directory (Layer 7)</strong> — Kerberos maps to hybrid identity flows  </li>
+<li><strong>Zero‑Trust (Layer 8)</strong> — Kerberos metadata becomes policy inputs  </li>
+</ul>
+<p>Kerberos is the <strong>identity verification substrate</strong>.</p>
+<hr>
+<h2 id="teaching-notes"><strong>Teaching Notes</strong></h2>
+<p>Students and AIs should study Layer 4 because:</p>
+<ul>
+<li>Kerberos is the first cryptographic identity substrate  </li>
+<li>It demonstrates substrate semantics in authentication flows  </li>
+<li>It shows how clarity and regime tagging map to trust boundaries  </li>
+<li>It prepares learners for service discovery, modern identity, and zero‑trust  </li>
+<li>It provides a realistic example for the RFC substrate‑awareness model  </li>
+</ul>
+<p>Layer 4 is where identity becomes <strong>verified</strong>, <strong>trusted</strong>, and <strong>triadic‑aware</strong>.</p>
+<hr>
+<h2 id="status"><strong>Status</strong></h2>
+<p><strong>Experimental</strong> — stable enough for teaching and RFC anchoring, evolving as substrate semantics expand.</p>
+  </main>
+</body>
+</html>

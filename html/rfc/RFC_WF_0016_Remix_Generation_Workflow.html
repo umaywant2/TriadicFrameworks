@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rfc/RFC_WF_0016_Remix_Generation_Workflow.md">
+  <title>RFC‑WF‑0016 — Remix Generation Workflow</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rfc/RFC_WF_0016_Remix_Generation_Workflow.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rfc/RFC_WF_0016_Remix_Generation_Workflow.md</code>
+  </aside>
+
+  <main>
+<h1 id="rfcwf0016-remix-generation-workflow"><strong>RFC‑WF‑0016 — Remix Generation Workflow</strong></h1>
+<h3 id="continuous-validator-cycle-for-remixathons"><em>Continuous Validator Cycle for Remixathons</em></h3>
+<p>RefId: turn0browsertab1</p>
+<p><strong>Title:</strong> Continuous Validator Cycle for Remixathons<br>
+<strong>Status:</strong> Draft<br>
+<strong>Author:</strong> Nawder Loswin + Copilot<br>
+<strong>Date:</strong> 2025‑11‑12<br>
+<strong>Version:</strong> 0.1  </p>
+<hr>
+<h2 id="1-purpose"><strong>1. Purpose</strong></h2>
+<p>The <strong>Remix Generation Workflow (RGW)</strong> defines the canonical validator cycle that powers remixathons.<br>
+It chains four validator stages:</p>
+<ol>
+<li><strong>Retrieval</strong>  </li>
+<li><strong>Remix</strong>  </li>
+<li><strong>Export</strong>  </li>
+<li><strong>Archive</strong></li>
+</ol>
+<p>Each cycle:</p>
+<ul>
+<li>produces new scrolls  </li>
+<li>preserves legacy artifacts  </li>
+<li>extends remix lineage  </li>
+<li>maintains validator‑grade integrity  </li>
+</ul>
+<p>RGW transforms remixathons into <strong>continuous validator events</strong>, where each archive becomes the retrieval source for the next cycle.</p>
+<hr>
+<h1 id="2-workflow-chain"><strong>2. Workflow Chain</strong></h1>
+<hr>
+<h2 id="step-1-retrieval"><strong>Step 1: Retrieval</strong></h2>
+<p><strong>Source:</strong><br>
+<code>registry/archive/</code></p>
+<p><strong>API:</strong><br>
+Legacy Retrieval API (RFC‑API‑0015)</p>
+<p><strong>Action:</strong><br>
+Contributors query archived scrolls by:</p>
+<ul>
+<li>glyph  </li>
+<li>tag  </li>
+<li>lineage  </li>
+</ul>
+<p>to select scrolls for remix.</p>
+<p><strong>Validator Hook:</strong><br>
+Retrieved scrolls MUST conform to <code>archive_schema.yml</code>.</p>
+<hr>
+<h2 id="step-2-remix"><strong>Step 2: Remix</strong></h2>
+<p><strong>Source:</strong><br>
+Retrieved scrolls + contributor annotations</p>
+<p><strong>Module:</strong><br>
+Remix Export Module (RFC‑EXP‑0013)</p>
+<p><strong>Action:</strong><br>
+Contributors:</p>
+<ul>
+<li>select corridors  </li>
+<li>apply new tags  </li>
+<li>assign glyphs  </li>
+<li>add dignity‑layer narratives  </li>
+</ul>
+<p><strong>Validator Hook:</strong><br>
+Remix lineage diff protocol (RFC‑REMIX‑0005) ensures ancestry links.</p>
+<hr>
+<h2 id="step-3-export"><strong>Step 3: Export</strong></h2>
+<p><strong>Source:</strong><br>
+Remix results</p>
+<p><strong>Module:</strong><br>
+Export function packages scrolls into <code>remix_scroll_schema.yml</code>.</p>
+<p><strong>Action:</strong><br>
+Generate new scroll artifact containing:</p>
+<ul>
+<li>glyph distribution  </li>
+<li>RCI bands  </li>
+<li>dignity layer  </li>
+<li>lineage diff summary  </li>
+</ul>
+<p><strong>Validator Hook:</strong><br>
+Scroll MUST be signed and checksum logged.</p>
+<hr>
+<h2 id="step-4-archive"><strong>Step 4: Archive</strong></h2>
+<p><strong>Source:</strong><br>
+Exported scrolls</p>
+<p><strong>Protocol:</strong><br>
+Remixathon Archival Protocol (RFC‑ARC‑0014)</p>
+<p><strong>Action:</strong><br>
+Archive scrolls as immutable legacy artifacts and update archival index.</p>
+<p><strong>Validator Hook:</strong><br>
+Archive entry MUST be stamped with:</p>
+<ul>
+<li>validator version  </li>
+<li>timestamp  </li>
+</ul>
+<hr>
+<h1 id="3-workflow-diagram-textual"><strong>3. Workflow Diagram (Textual)</strong></h1>
+<pre><code>[ Retrieval ] → [ Remix ] → [ Export ] → [ Archive ]
+       ↑                                         ↓
+       └────────────── Continuous Cycle ─────────┘
+</code></pre>
+<p>The cycle is perpetual: archive feeds retrieval, retrieval feeds remix, remix feeds export, export feeds archive.</p>
+<hr>
+<h1 id="4-pythonstyle-orchestration-stub"><strong>4. Python‑Style Orchestration Stub</strong></h1>
+<p>File:<br>
+<code>workflows/remix_generation.py</code></p>
+<pre><code class="language-python">def run_cycle(parent_scroll):
+    retrieved = retrieve_scrolls(parent_scroll)
+    remixed = remix_scrolls(retrieved)
+    exported = export_scrolls(remixed)
+    archive_scrolls(exported)
+    return exported
+</code></pre>
+<p>This stub illustrates the canonical four‑stage chain.</p>
+<hr>
+<h1 id="5-validator-hooks"><strong>5. Validator Hooks</strong></h1>
+<h3 id="cycle-integrity"><strong>Cycle Integrity</strong></h3>
+<p>Each step MUST produce validator‑grade artifacts.</p>
+<h3 id="lineage-continuity"><strong>Lineage Continuity</strong></h3>
+<p>Remix scrolls MUST cite parent ancestry; archive MUST preserve immutable record.</p>
+<h3 id="checksum"><strong>Checksum</strong></h3>
+<p>Each cycle MUST generate reproducibility checksums.</p>
+<h3 id="dignity-separation"><strong>Dignity Separation</strong></h3>
+<p>Narratives MUST remain distinct from empirical metrics.</p>
+<hr>
+<h1 id="6-notes"><strong>6. Notes</strong></h1>
+<ul>
+<li>Workflow is iterative: each archive becomes the retrieval source for the next cycle.  </li>
+<li>Remixathons become continuous validator events, producing legacy artifacts each round.  </li>
+<li>Contributors can join at any stage: retrieval, remix, export, or archival.  </li>
+<li>RGW is the backbone of collaborative remixathon infrastructure.</li>
+</ul>
+<hr>
+<h1 id="7-concept-sketch-textual"><strong>7. Concept Sketch (Textual)</strong></h1>
+<pre><code>Cycle 1:
+  scroll-003 (⬣ Gamma Corridor)
+    → remixed
+    → scroll-010
+    → archived
+
+Cycle 2:
+  scroll-010 retrieved
+    → remixed
+    → scroll-020
+    → archived
+
+Cycle 3:
+  scroll-020 retrieved
+    → remixed
+    → scroll-030
+    → archived
+
+...
+</code></pre>
+<p>The Remix Generation Workflow makes remixathons <strong>perpetual validator cycles</strong>:<br>
+retrieval feeds remix, remix feeds export, export feeds archive, and archive feeds retrieval again.</p>
+  </main>
+</body>
+</html>

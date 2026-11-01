@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/frameworks/ipd_12/hpc_qc_substrate_engine.md">
+  <title>IPD‑12 HPC+QC Substrate Engine Profile</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/frameworks/ipd_12/hpc_qc_substrate_engine.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/frameworks/ipd_12/hpc_qc_substrate_engine.md</code>
+  </aside>
+
+  <main>
+<h1 id="ipd12-hpcqc-substrate-engine-profile">IPD‑12 HPC+QC Substrate Engine Profile</h1>
+<p><strong>Module:</strong> IPD‑12 Engine<br>
+<strong>Role:</strong> Hybrid HPC + Quantum Computing Substrate Integration<br>
+<strong>Version:</strong> 2026‑0.1 (Draft)</p>
+<hr>
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This module profiles how <strong>hybrid HPC+QC systems</strong> (LRZ‑style QPU integration) can be modeled as <strong>IPD‑12 substrate engines</strong>, with:</p>
+<ul>
+<li>QPU + environment mapped to <strong>substrate feeds (S1–S4)</strong>  </li>
+<li>calibration, telemetry, and noise mapped to <strong>observer rails and loops (O1–O4)</strong>  </li>
+<li>hybrid workflows expressed as <strong>intake manifolds + headers</strong></li>
+</ul>
+<p>The goal is to make QPU integration a <strong>first‑class observer process</strong> inside IPD‑12.</p>
+<hr>
+<h2 id="2-substrate-engine-mapping-hpcqc">2. Substrate engine mapping (HPC+QC)</h2>
+<h3 id="21-substrate-feeds-s1s4">2.1 Substrate feeds (S1–S4)</h3>
+<p>For a hybrid HPC+QC stack:</p>
+<ul>
+<li><strong>S1 — Seed / Transition</strong>  </li>
+<li>QPU availability, topology, basic device parameters  </li>
+<li>
+<p>initial compilation choices (gate set, layout)</p>
+</li>
+<li>
+<p><strong>S2 — Drift / Regime</strong>  </p>
+</li>
+<li>HPC scheduler state (queues, priorities, resource allocation)  </li>
+<li>
+<p>QPU usage regime (calibration mode, production mode, test mode)</p>
+</li>
+<li>
+<p><strong>S3 — Coherence / Paradox</strong>  </p>
+</li>
+<li>QPU coherence metrics (T1/T2, error rates, noise profiles)  </li>
+<li>
+<p>hybrid paradox: classical vs quantum representation mismatches</p>
+</li>
+<li>
+<p><strong>S4 — Boundary / Lift / Collapse / Apex</strong>  </p>
+</li>
+<li>boundaries between HPC and QC (API, middleware, orchestration layer)  </li>
+<li>lift: sending workloads to QPU  </li>
+<li>collapse: returning results to HPC  </li>
+<li>apex: regime where QC meaningfully improves HPC outcomes</li>
+</ul>
+<p>Each QPU + environment is treated as a <strong>substrate engine instance</strong> with S1–S4 active.</p>
+<hr>
+<h2 id="3-observer-loops-for-hpcqc">3. Observer loops for HPC+QC</h2>
+<h3 id="31-observer-modes-o1o4">3.1 Observer modes (O1–O4)</h3>
+<ul>
+<li><strong>O1 — Field Observer</strong>  </li>
+<li>monitors raw telemetry: QPU status, noise, calibration logs, HPC resource usage  </li>
+<li><strong>O2 — Regime Observer</strong>  </li>
+<li>tracks which regime the hybrid stack is in: calibration, test, production, degraded  </li>
+<li><strong>O3 — Coherence Observer</strong>  </li>
+<li>stabilizes hybrid workflows: retries, re‑calibration, routing around unstable QPUs  </li>
+<li><strong>O4 — Apex Observer</strong>  </li>
+<li>decides when QC is beneficial vs when HPC alone is preferable  </li>
+<li>manages lift/collapse decisions for hybrid workloads</li>
+</ul>
+<p>These observer modes are bound to the substrate feeds:</p>
+<ul>
+<li>O1 ↔ S1 (raw device + environment)  </li>
+<li>O2 ↔ S2 (scheduler + regime)  </li>
+<li>O3 ↔ S3 (coherence + paradox)  </li>
+<li>O4 ↔ S4 (boundary + apex decisions)</li>
+</ul>
+<hr>
+<h2 id="4-calibration-telemetry-as-observer-rails">4. Calibration &amp; telemetry as observer rails</h2>
+<h3 id="41-dimensional-rails-lcn-in-hpcqc">4.1 Dimensional rails (L/C/N) in HPC+QC</h3>
+<ul>
+<li><strong>Lift rails (L1–L4)</strong>  </li>
+<li>L1: lift from “HPC‑only” to “HPC+QC candidate”  </li>
+<li>L2: lift from “candidate” to “scheduled on QPU”  </li>
+<li>L3: lift from “scheduled” to “executing with stable coherence”  </li>
+<li>
+<p>L4: lift to “apex regime” where QC provides net benefit</p>
+</li>
+<li>
+<p><strong>Collapse rails (C1–C4)</strong>  </p>
+</li>
+<li>C1: collapse from “candidate” back to HPC (QPU unavailable)  </li>
+<li>C2: collapse from “executing” due to noise/error thresholds  </li>
+<li>C3: collapse from “apex” when benefit disappears (drift in device or workload)  </li>
+<li>
+<p>C4: collapse to “HPC‑only safe mode” (QC temporarily disabled)</p>
+</li>
+<li>
+<p><strong>Neutral rails (N1–N4)</strong>  </p>
+</li>
+<li>N1: neutral device state (idle, calibrated)  </li>
+<li>N2: neutral scheduler state (no hybrid jobs)  </li>
+<li>N3: neutral coherence state (baseline metrics)  </li>
+<li>N4: neutral boundary state (interfaces ready but unused)</li>
+</ul>
+<h3 id="42-calibration-as-observer-process">4.2 Calibration as observer process</h3>
+<p>Calibration cycles are modeled as:</p>
+<ul>
+<li>intake on S1/S3 (device + coherence)  </li>
+<li>O1/O3 loops monitoring metrics  </li>
+<li>lift/collapse along L/C rails to decide:</li>
+<li>when to accept workloads  </li>
+<li>when to re‑calibrate  </li>
+<li>when to route around a QPU</li>
+</ul>
+<p>Telemetry (logs, metrics, traces) becomes <strong>observer rail data</strong> feeding O1–O4.</p>
+<hr>
+<h2 id="5-intake-manifolds-for-hybrid-workflows">5. Intake manifolds for hybrid workflows</h2>
+<h3 id="51-manifold-roles">5.1 Manifold roles</h3>
+<ul>
+<li><strong>SIM (Single Intake)</strong>  </li>
+<li>single QPU or single hybrid workflow  </li>
+<li>
+<p>minimal observer overhead; good for experiments</p>
+</li>
+<li>
+<p><strong>DIM (Double Intake)</strong>  </p>
+</li>
+<li>two QPUs or two hybrid regimes (e.g., calibration + production)  </li>
+<li>
+<p>observer loops compare regimes and route workloads</p>
+</li>
+<li>
+<p><strong>TIM (Triple Intake)</strong>  </p>
+</li>
+<li>three regimes: test, production, degraded  </li>
+<li>
+<p>observer loops manage transitions between them</p>
+</li>
+<li>
+<p><strong>QIM (Quad Intake)</strong>  </p>
+</li>
+<li>four regimes or four QPU clusters  </li>
+<li>
+<p>full hybrid orchestration with regime‑aware scheduling</p>
+</li>
+<li>
+<p><strong>FSI (Full 12‑Stack Intake)</strong>  </p>
+</li>
+<li>multi‑site, multi‑QPU, multi‑HPC cluster integration  </li>
+<li>research‑grade hybrid substrate engine</li>
+</ul>
+<p>Each manifold attaches to the <strong>HPC+QC substrate engine</strong> via intake ports and feeds S1–S4.</p>
+<hr>
+<h2 id="6-headers-for-hybrid-outputs">6. Headers for hybrid outputs</h2>
+<h3 id="61-relevant-headers">6.1 Relevant headers</h3>
+<ul>
+<li><strong>H‑RTT</strong>  </li>
+<li>expresses hybrid regime logic: when QC is beneficial, when HPC dominates  </li>
+<li><strong>H‑GU</strong>  </li>
+<li>expresses geometric/topological aspects of QPU connectivity and compilation  </li>
+<li><strong>H‑FFT</strong>  </li>
+<li>expresses spectral/transform views of hybrid workloads  </li>
+<li><strong>H‑Substrate</strong>  </li>
+<li>exposes raw substrate state (S1–S4) for diagnostics  </li>
+<li><strong>H‑Observer</strong>  </li>
+<li>exposes O1–O4 state for control and monitoring</li>
+</ul>
+<p>Hybrid HPC+QC research can read these headers to:</p>
+<ul>
+<li>analyze regime decisions  </li>
+<li>study calibration impact  </li>
+<li>optimize scheduling and routing  </li>
+<li>quantify observer overhead vs performance gains</li>
+</ul>
+<hr>
+<h2 id="7-summary">7. Summary</h2>
+<p>The <strong>HPC+QC substrate engine profile</strong>:</p>
+<ul>
+<li>treats QPU + environment as an <strong>IPD‑12 substrate engine</strong> (S1–S4)  </li>
+<li>models calibration and telemetry as <strong>observer rails and loops</strong> (O1–O4, L/C/N)  </li>
+<li>uses intake manifolds (SIM–FSI) to represent hybrid workflow complexity  </li>
+<li>uses headers (RTT/GU/FFT/Substrate/Observer) to expose hybrid behavior</li>
+</ul>
+<p>This gives you a <strong>canon‑aligned way</strong> to study:</p>
+<ul>
+<li>overhead of observer‑centric hybrid integration  </li>
+<li>gains in stability, coherence, and regime‑aware scheduling  </li>
+<li>cross‑domain alignment between physics, computation, and medicine.</li>
+</ul>
+  </main>
+</body>
+</html>

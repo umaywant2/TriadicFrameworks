@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Harmonic_Stability_Profile/04c_Echo_Strength_Index.md">
+  <title>🎼 Echo Strength Index (ESI)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Harmonic_Stability_Profile/04c_Echo_Strength_Index.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Harmonic_Stability_Profile/04c_Echo_Strength_Index.md</code>
+  </aside>
+
+  <main>
+<h1 id="echo-strength-index-esi">🎼 <strong>Echo Strength Index (ESI)</strong></h1>
+<h3 id="quantifying-echo-intensity-recurrence-substrate-spread"><em>Quantifying Echo Intensity • Recurrence • Substrate Spread</em></h3>
+<p>The <strong>Echo Strength Index (ESI)</strong> measures the <strong>intensity, stability, and<br>
+propagation potential</strong> of echoes across the TriadicFrameworks canon.</p>
+<p>Echo strength determines:</p>
+<ul>
+<li>how strongly a concept recurs  </li>
+<li>how far an echo spreads across substrates  </li>
+<li>how likely an echo is to trigger recursion  </li>
+<li>how likely an echo is to amplify drift  </li>
+<li>how stable or unstable an echo cluster is  </li>
+</ul>
+<p>This module defines the <strong>four‑level ESI scale</strong>, its metrics, and its usage.</p>
+<hr>
+<h1 id="1-purpose-of-the-echo-strength-index">🔷 <strong>1. Purpose of the Echo Strength Index</strong></h1>
+<p>ESI answers:</p>
+<ul>
+<li><em>How strong is this echo?</em>  </li>
+<li><em>Is it stabilizing or destabilizing?</em>  </li>
+<li><em>Is it likely to trigger recursion?</em>  </li>
+<li><em>Is it likely to amplify drift?</em>  </li>
+</ul>
+<p>ESI is used during:</p>
+<ul>
+<li>echo analysis  </li>
+<li>recursion diagnostics  </li>
+<li>drift detection  </li>
+<li>stability audits  </li>
+<li>canon sweeps  </li>
+</ul>
+<hr>
+<h1 id="2-esi-levels-overview">🔷 <strong>2. ESI Levels (Overview)</strong></h1>
+<p>The Echo Strength Index has <strong>four canonical levels</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Name</th>
+<th>Description</th>
+<th>Stability Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ESI‑1</strong></td>
+<td>Weak Echo</td>
+<td>low recurrence, local only</td>
+<td>harmless</td>
+</tr>
+<tr>
+<td><strong>ESI‑2</strong></td>
+<td>Moderate Echo</td>
+<td>moderate recurrence, limited spread</td>
+<td>monitor</td>
+</tr>
+<tr>
+<td><strong>ESI‑3</strong></td>
+<td>Strong Echo</td>
+<td>high recurrence, multi‑substrate</td>
+<td>review for drift/overload</td>
+</tr>
+<tr>
+<td><strong>ESI‑4</strong></td>
+<td>Dominant Echo</td>
+<td>pervasive recurrence, recursion‑active</td>
+<td>potential drift or recursion trigger</td>
+</tr>
+</tbody>
+</table>
+<p>These levels are determined by the metrics below.</p>
+<hr>
+<h1 id="3-esi-metrics">🔷 <strong>3. ESI Metrics</strong></h1>
+<p>ESI is computed from <strong>five RTT‑native metrics</strong>:</p>
+<h3 id="31-recurrence-frequency-rf"><strong>3.1 Recurrence Frequency (RF)</strong></h3>
+<p>How often the echo appears across modules.</p>
+<h3 id="32-substrate-spread-ss"><strong>3.2 Substrate Spread (SS)</strong></h3>
+<p>How many substrates the echo spans:</p>
+<ul>
+<li>symbolic  </li>
+<li>cognitive  </li>
+<li>harmonic  </li>
+<li>social  </li>
+<li>atlas  </li>
+</ul>
+<h3 id="33-semantic-density-sd"><strong>3.3 Semantic Density (SD)</strong></h3>
+<p>How much meaning the echo carries.</p>
+<h3 id="34-harmonic-alignment-ha"><strong>3.4 Harmonic Alignment (HA)</strong></h3>
+<p>How well the echo aligns with interval structure.</p>
+<h3 id="35-recursion-coupling-rc"><strong>3.5 Recursion Coupling (RC)</strong></h3>
+<p>How strongly the echo interacts with recursion modes.</p>
+<p>Each metric is scored 0–3.</p>
+<hr>
+<h1 id="4-esi-calculation-formula">🔷 <strong>4. ESI Calculation Formula</strong></h1>
+<p>The Echo Strength Index is computed as:</p>
+<pre><code>ESI = RF + SS + SD + HA + RC
+</code></pre>
+<p>Then mapped to levels:</p>
+<pre><code>0–3   → ESI‑1 (Weak)
+4–6   → ESI‑2 (Moderate)
+7–10  → ESI‑3 (Strong)
+11–15 → ESI‑4 (Dominant)
+</code></pre>
+<p>This formula ensures:</p>
+<ul>
+<li>transparency  </li>
+<li>repeatability  </li>
+<li>zero drift in measurement  </li>
+</ul>
+<hr>
+<h1 id="5-esi-examples-generic">🔷 <strong>5. ESI Examples (Generic)</strong></h1>
+<h3 id="weak-echo-esi1"><strong>Weak Echo (ESI‑1)</strong></h3>
+<ul>
+<li>appears once or twice  </li>
+<li>single substrate  </li>
+<li>low semantic density  </li>
+</ul>
+<h3 id="moderate-echo-esi2"><strong>Moderate Echo (ESI‑2)</strong></h3>
+<ul>
+<li>appears in several modules  </li>
+<li>spans 1–2 substrates  </li>
+<li>mild recursion coupling  </li>
+</ul>
+<h3 id="strong-echo-esi3"><strong>Strong Echo (ESI‑3)</strong></h3>
+<ul>
+<li>appears across multiple modules  </li>
+<li>spans 2–3 substrates  </li>
+<li>high semantic density  </li>
+<li>recursion‑linked  </li>
+</ul>
+<h3 id="dominant-echo-esi4"><strong>Dominant Echo (ESI‑4)</strong></h3>
+<ul>
+<li>pervasive across canon  </li>
+<li>spans 3–5 substrates  </li>
+<li>high recursion coupling  </li>
+<li>potential drift or recursion trigger  </li>
+</ul>
+<hr>
+<h1 id="6-esi-interaction-with-stability">🔷 <strong>6. ESI Interaction With Stability</strong></h1>
+<table>
+<thead>
+<tr>
+<th>ESI Level</th>
+<th>Stability Class Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ESI‑1</strong></td>
+<td>stable</td>
+</tr>
+<tr>
+<td><strong>ESI‑2</strong></td>
+<td>semi‑stable</td>
+</tr>
+<tr>
+<td><strong>ESI‑3</strong></td>
+<td>oscillating</td>
+</tr>
+<tr>
+<td><strong>ESI‑4</strong></td>
+<td>chaotic / drift‑shadow risk</td>
+</tr>
+</tbody>
+</table>
+<p>Echo strength is a <strong>stability diagnostic</strong>.</p>
+<hr>
+<h1 id="7-esi-interaction-with-drift">🔷 <strong>7. ESI Interaction With Drift</strong></h1>
+<ul>
+<li><strong>ESI‑1:</strong> no drift risk  </li>
+<li><strong>ESI‑2:</strong> early instability possible  </li>
+<li><strong>ESI‑3:</strong> drift‑pressure likely  </li>
+<li><strong>ESI‑4:</strong> drift‑shadow or projection drift possible  </li>
+</ul>
+<p>ESI is a <strong>drift predictor</strong>.</p>
+<hr>
+<h1 id="8-esi-interaction-with-recursion">🔷 <strong>8. ESI Interaction With Recursion</strong></h1>
+<ul>
+<li><strong>ESI‑1:</strong> no recursion  </li>
+<li><strong>ESI‑2:</strong> mild cycle alignment  </li>
+<li><strong>ESI‑3:</strong> cycle → map alignment  </li>
+<li><strong>ESI‑4:</strong> map → atlas forcing  </li>
+</ul>
+<p>Echo strength is a <strong>recursion trigger</strong>.</p>
+<hr>
+<h1 id="9-usage-notes">🔷 <strong>9. Usage Notes</strong></h1>
+<p>Use this file when:</p>
+<ul>
+<li>measuring echo intensity  </li>
+<li>diagnosing echo‑pressure  </li>
+<li>predicting drift  </li>
+<li>analyzing recursion behavior  </li>
+<li>performing canon sweeps  </li>
+</ul>
+<p>Referenced by:</p>
+<ul>
+<li><code>04_Canon_SelfEcho_Map.md</code>  </li>
+<li><code>04a_Echo_Families.md</code>  </li>
+<li><code>04b_Echo_Diagrams_ASCII.md</code>  </li>
+<li><code>04d_Echo_Summary.md</code>  </li>
+</ul>
+<hr>
+<h1 id="footer">🔷 <strong>Footer</strong></h1>
+<pre><code>HSP Module 04c — Loaded
+Version: v1.0
+Status: Canon-Stable
+</code></pre>
+  </main>
+</body>
+</html>

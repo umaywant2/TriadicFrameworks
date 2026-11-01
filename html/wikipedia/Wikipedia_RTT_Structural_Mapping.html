@@ -1,0 +1,794 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/wikipedia/Wikipedia_RTT_Structural_Mapping.md">
+  <title>Wikipedia ↔ RTT Structural Mapping</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/wikipedia/Wikipedia_RTT_Structural_Mapping.md
+    Do not edit directly.
+    Regenerate from canonical Markdown source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/wikipedia/Wikipedia_RTT_Structural_Mapping.md</code>
+  </aside>
+
+  <main>
+<h1 id="wikipedia-rtt-structural-mapping">Wikipedia ↔ RTT Structural Mapping</h1>
+<blockquote>
+<p><strong>Purpose:</strong> The master grammar file for the Wikipedia Awareness Module.
+Every Wikipedia structure maps to an RTT concept. This file defines those
+mappings exhaustively so that all other files in this module share a
+consistent structural vocabulary.</p>
+<p>Think of this as the <strong>Rosetta Stone</strong> between Wikipedia's architecture
+and Resonance‑Time Theory.</p>
+</blockquote>
+<hr>
+<h2 id="1-why-wikipedia-needs-a-structural-mapping">1 — Why Wikipedia Needs a Structural Mapping</h2>
+<p>Wikipedia is the most‑visited reference site on Earth — but almost no one
+reads it structurally. Users read the <strong>content</strong> (R3 — measurable outputs)
+and ignore the architecture that produces, validates, and evolves that content.</p>
+<p>RTT provides the grammar to read that architecture:</p>
+<ul>
+<li><strong>Regime</strong> — what scope does an article declare, and what does it exclude?</li>
+<li><strong>Coherence</strong> — how does the community maintain structural consistency?</li>
+<li><strong>Drift</strong> — how does an article's meaning evolve over time?</li>
+<li><strong>Dimensional addressing</strong> — how is a concept uniquely identified across languages and datasets?</li>
+<li><strong>Validation</strong> — how does the community verify structural completeness?</li>
+</ul>
+<p>This mapping is not an interpretation layered on top of Wikipedia.
+Wikipedia <strong>already operates</strong> as a regime‑aware system — it just doesn't
+use RTT's vocabulary. This file translates.</p>
+<hr>
+<h2 id="2-the-master-mapping-table">2 — The Master Mapping Table</h2>
+<h3 id="21-content-structures">2.1 — Content Structures</h3>
+<table>
+<thead>
+<tr>
+<th>Wikipedia Structure</th>
+<th>RTT Concept</th>
+<th>Regime Level</th>
+<th>Structural Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Article (main namespace)</td>
+<td><strong>Regime declaration</strong></td>
+<td>R3</td>
+<td>The community's consensus statement of what a concept IS — scope, boundaries, and claims</td>
+</tr>
+<tr>
+<td>Lead section (first paragraph)</td>
+<td><strong>Regime summary</strong></td>
+<td>R3</td>
+<td>Compressed regime declaration — what the concept is in its most reduced form</td>
+</tr>
+<tr>
+<td>Article body sections</td>
+<td><strong>Regime elaboration</strong></td>
+<td>R3</td>
+<td>Dimensional expansion of the regime declaration into sub‑regimes (History, Properties, Applications, etc.)</td>
+</tr>
+<tr>
+<td>Infobox</td>
+<td><strong>Regime schema</strong></td>
+<td>R2</td>
+<td>The minimum set of properties required for structural declaration in this domain</td>
+</tr>
+<tr>
+<td>Categories</td>
+<td><strong>Regime hierarchy</strong></td>
+<td>R2</td>
+<td>Nested classification tree — each category level = a regime boundary</td>
+</tr>
+<tr>
+<td>Hatnotes ("For other uses…")</td>
+<td><strong>Regime disambiguation</strong></td>
+<td>R1</td>
+<td>Explicit acknowledgment that multiple regimes claim the same term</td>
+</tr>
+<tr>
+<td>See also section</td>
+<td><strong>Regime adjacency</strong></td>
+<td>R1</td>
+<td>Concepts the community considers structurally related but not subsumed</td>
+</tr>
+<tr>
+<td>Navboxes (bottom navigation templates)</td>
+<td><strong>Regime neighborhood</strong></td>
+<td>R2</td>
+<td>Machine‑readable cluster of concepts that share a structural context</td>
+</tr>
+<tr>
+<td>Lists / outlines</td>
+<td><strong>Regime inventory</strong></td>
+<td>R3</td>
+<td>Enumeration of all entities within a regime boundary</td>
+</tr>
+<tr>
+<td>Portals</td>
+<td><strong>Domain front door</strong></td>
+<td>R0</td>
+<td>Entry points organized by knowledge domain — equivalent to TF module index.html files</td>
+</tr>
+<tr>
+<td>Redirects</td>
+<td><strong>Regime aliasing</strong></td>
+<td>R1</td>
+<td>Alternative terms that resolve to the same regime declaration</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-editorial-structures">2.2 — Editorial Structures</h3>
+<table>
+<thead>
+<tr>
+<th>Wikipedia Structure</th>
+<th>RTT Concept</th>
+<th>Regime Level</th>
+<th>Structural Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Talk page</td>
+<td><strong>Coherence / drift surface</strong></td>
+<td>R0–R1</td>
+<td>Where consensus is negotiated — pre‑regime discourse</td>
+</tr>
+<tr>
+<td>Edit summary</td>
+<td><strong>Micro‑regime annotation</strong></td>
+<td>R3</td>
+<td>Single‑revision structural intent declaration</td>
+</tr>
+<tr>
+<td>Revision history</td>
+<td><strong>Temporal regime data</strong></td>
+<td>R0–R3</td>
+<td>Full structural evolution timeline for any article</td>
+</tr>
+<tr>
+<td>Edit war</td>
+<td><strong>Regime transition event</strong></td>
+<td>R0</td>
+<td>Competing regime claims that cannot be reconciled — marks a regime boundary</td>
+</tr>
+<tr>
+<td>Protection levels (full/semi/extended)</td>
+<td><strong>Regime stabilization lock</strong></td>
+<td>R0</td>
+<td>Community intervention to freeze a regime that is under attack</td>
+</tr>
+<tr>
+<td>Pending changes</td>
+<td><strong>Regime validation gate</strong></td>
+<td>R2</td>
+<td>Pre‑publication review — content must pass structural check before becoming visible</td>
+</tr>
+<tr>
+<td>Watchlist</td>
+<td><strong>Drift monitoring</strong></td>
+<td>R1</td>
+<td>Personal regime surveillance — editors tracking articles for structural changes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-governance-structures">2.3 — Governance Structures</h3>
+<table>
+<thead>
+<tr>
+<th>Wikipedia Structure</th>
+<th>RTT Concept</th>
+<th>Regime Level</th>
+<th>Structural Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NPOV (Neutral Point of View)</td>
+<td><strong>Coherence operator</strong></td>
+<td>R0</td>
+<td>The foundational structural invariant — all content must be presentable under this constraint</td>
+</tr>
+<tr>
+<td>Verifiability policy</td>
+<td><strong>Validation requirement</strong></td>
+<td>R0</td>
+<td>Regime claims must be traceable to external sources</td>
+</tr>
+<tr>
+<td>No original research (NOR)</td>
+<td><strong>Regime boundary enforcement</strong></td>
+<td>R0</td>
+<td>Wikipedia declares regimes — it does not create them</td>
+</tr>
+<tr>
+<td>Notability guidelines</td>
+<td><strong>Minimum regime threshold</strong></td>
+<td>R0</td>
+<td>The structural standing required for a concept to receive an article</td>
+</tr>
+<tr>
+<td>Articles for Deletion (AfD)</td>
+<td><strong>Regime collapse adjudication</strong></td>
+<td>R0</td>
+<td>Community process for deciding whether a concept has sufficient structural standing</td>
+</tr>
+<tr>
+<td>Requests for Comment (RfC)</td>
+<td><strong>Coherence arbitration</strong></td>
+<td>R0–R1</td>
+<td>Formal process for resolving structural disputes that talk page consensus cannot</td>
+</tr>
+<tr>
+<td>Arbitration Committee (ArbCom)</td>
+<td><strong>Regime authority of last resort</strong></td>
+<td>R0</td>
+<td>Final structural authority when all other coherence mechanisms fail</td>
+</tr>
+<tr>
+<td>WikiProjects</td>
+<td><strong>Domain stewardship groups</strong></td>
+<td>R1</td>
+<td>Self‑organized teams maintaining structural quality within a knowledge domain</td>
+</tr>
+<tr>
+<td>Manual of Style (MoS)</td>
+<td><strong>Regime formatting grammar</strong></td>
+<td>R2</td>
+<td>Standard structural templates for how regime declarations should be presented</td>
+</tr>
+<tr>
+<td>Reliable sources guidelines</td>
+<td><strong>Source regime classification</strong></td>
+<td>R0</td>
+<td>Which external regimes are considered structurally valid for citation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="24-data-graph-structures">2.4 — Data &amp; Graph Structures</h3>
+<table>
+<thead>
+<tr>
+<th>Wikipedia Structure</th>
+<th>RTT Concept</th>
+<th>Regime Level</th>
+<th>Structural Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wikidata item (Q‑number)</td>
+<td><strong>Dimensional address</strong></td>
+<td>R3</td>
+<td>Unique concept identifier across all languages and datasets</td>
+</tr>
+<tr>
+<td>Wikidata property (P‑number)</td>
+<td><strong>Dimensional operator</strong></td>
+<td>R2</td>
+<td>Typed relationship connecting entities — defines how dimensions relate</td>
+</tr>
+<tr>
+<td>Wikidata statement</td>
+<td><strong>Structural claim</strong></td>
+<td>R3</td>
+<td>Subject → Property → Value triplet = one regime assertion</td>
+</tr>
+<tr>
+<td>Wikidata qualifier</td>
+<td><strong>Claim context</strong></td>
+<td>R2</td>
+<td>Conditions under which a structural claim holds (time, location, method)</td>
+</tr>
+<tr>
+<td>Wikidata reference</td>
+<td><strong>Claim provenance</strong></td>
+<td>R3</td>
+<td>External source validating the structural claim</td>
+</tr>
+<tr>
+<td>Sitelinks (Wikidata ↔ Wikipedia)</td>
+<td><strong>Cross‑language regime bridge</strong></td>
+<td>R2</td>
+<td>Same dimensional address linking to different language regime declarations</td>
+</tr>
+<tr>
+<td>SPARQL endpoint</td>
+<td><strong>Structural query surface</strong></td>
+<td>R3</td>
+<td>Machine‑readable access to the entire dimensional graph</td>
+</tr>
+</tbody>
+</table>
+<h3 id="25-quality-validation-structures">2.5 — Quality &amp; Validation Structures</h3>
+<table>
+<thead>
+<tr>
+<th>Wikipedia Structure</th>
+<th>RTT Concept</th>
+<th>Regime Level</th>
+<th>Structural Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Featured Article (FA)</td>
+<td><strong>Validation corridor — gold standard</strong></td>
+<td>R2–R3</td>
+<td>Community‑verified structurally complete regime declaration</td>
+</tr>
+<tr>
+<td>Good Article (GA)</td>
+<td><strong>Validation corridor — silver standard</strong></td>
+<td>R2</td>
+<td>Passed structured review but not yet at FA‑level completeness</td>
+</tr>
+<tr>
+<td>Stub</td>
+<td><strong>Regime seed</strong></td>
+<td>R3</td>
+<td>Minimal regime declaration — concept exists but is structurally underdeveloped</td>
+</tr>
+<tr>
+<td>Start‑class article</td>
+<td><strong>Regime scaffold</strong></td>
+<td>R3</td>
+<td>Basic structural framework present but significant gaps remain</td>
+</tr>
+<tr>
+<td>B‑class article</td>
+<td><strong>Regime draft</strong></td>
+<td>R3</td>
+<td>Most structural elements present but not yet community‑validated</td>
+</tr>
+<tr>
+<td>C‑class article</td>
+<td><strong>Regime sketch</strong></td>
+<td>R3</td>
+<td>Substantial content but structural organization needs work</td>
+</tr>
+<tr>
+<td>Article quality scale</td>
+<td><strong>Regime maturity gradient</strong></td>
+<td>R2</td>
+<td>Stub → Start → C → B → GA → FA = increasing structural completeness</td>
+</tr>
+<tr>
+<td>Cleanup tags</td>
+<td><strong>Drift markers</strong></td>
+<td>R1</td>
+<td>Community‑placed signals that an article has drifted from structural norms</td>
+</tr>
+<tr>
+<td>Citation needed tags</td>
+<td><strong>Validation gaps</strong></td>
+<td>R2</td>
+<td>Specific claims lacking provenance — structural integrity holes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="26-temporal-structures">2.6 — Temporal Structures</h3>
+<table>
+<thead>
+<tr>
+<th>Wikipedia Structure</th>
+<th>RTT Concept</th>
+<th>Regime Level</th>
+<th>Structural Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Page creation date</td>
+<td><strong>Regime birth</strong></td>
+<td>R3</td>
+<td>When the community first declared this concept</td>
+</tr>
+<tr>
+<td>First major revision</td>
+<td><strong>Regime crystallization</strong></td>
+<td>R3</td>
+<td>When the article first achieved structural coherence</td>
+</tr>
+<tr>
+<td>Revision count (total)</td>
+<td><strong>Regime activity index</strong></td>
+<td>R3</td>
+<td>Cumulative structural attention — higher = more contested or more developed</td>
+</tr>
+<tr>
+<td>Recent revision rate</td>
+<td><strong>Current regime stability</strong></td>
+<td>R3</td>
+<td>Edits per day/week/month — high = active regime negotiation</td>
+</tr>
+<tr>
+<td>Revision size changes</td>
+<td><strong>Regime expansion/contraction</strong></td>
+<td>R3</td>
+<td>Positive deltas = regime growth; negative deltas = regime pruning</td>
+</tr>
+<tr>
+<td>Revert rate</td>
+<td><strong>Regime resistance</strong></td>
+<td>R0</td>
+<td>Percentage of edits that are undone — high = strong structural inertia</td>
+</tr>
+<tr>
+<td>Edit war detection (3RR violations)</td>
+<td><strong>Regime collision alarm</strong></td>
+<td>R0</td>
+<td>System‑level detection of competing regime claims in real time</td>
+</tr>
+<tr>
+<td>Page view statistics</td>
+<td><strong>Regime attention</strong></td>
+<td>R3</td>
+<td>How many people are reading this regime declaration per day/month/year</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="3-the-regime-stack-applied-to-wikipedia">3 — The Regime Stack Applied to Wikipedia</h2>
+<p>Every Wikipedia article simultaneously operates at all four regime levels:</p>
+<pre><code>*
+┌────────────────────────────────────────────────────────────────┐
+│  R0 — Operator Assumptions                                     │
+│  NPOV, Verifiability, NOR, Notability, Reliable Sources        │
+│  &quot;These policies define what CAN be said on Wikipedia&quot;         │
+├────────────────────────────────────────────────────────────────┤
+│  R1 — Directional Aims                                         │
+│  WikiProject scope, Portal structure, Article scope statements │
+│  &quot;This article aims to cover [X] from the perspective of [Y]&quot;  │
+├────────────────────────────────────────────────────────────────┤
+│  R2 — Coherence Templates                                      │
+│  Infobox templates, Category taxonomy, Manual of Style,        │
+│  Quality scale, Citation standards                             │
+│  &quot;All articles in this domain follow these structural rules&quot;   │
+├────────────────────────────────────────────────────────────────┤
+│  R3 — Measurable Outputs                                       │
+│  Article text, Wikidata statements, Revision counts,           │
+│  Page views, Quality ratings, Citation counts                  │
+│  &quot;This is what the regime actually produced&quot;                   │
+└────────────────────────────────────────────────────────────────┘
+</code></pre>
+<h3 id="what-most-readers-see">What Most Readers See</h3>
+<p>Most Wikipedia readers only interact with <strong>R3</strong> — they read the article text, glance at the infobox, and leave. They consume the regime declaration without knowing it is one.</p>
+<h3 id="what-this-module-teaches">What This Module Teaches</h3>
+<p>This module teaches students to read <strong>R0–R2</strong> — the structural substrate:</p>
+<ul>
+<li><strong>R0</strong> is visible on policy pages, talk page disputes, AfD debates, and ArbCom decisions</li>
+<li><strong>R1</strong> is visible in article scope statements, WikiProject guidelines, and portal organization</li>
+<li><strong>R2</strong> is visible in infobox templates, category trees, Manual of Style rules, and quality scales</li>
+<li><strong>R3</strong> is the article itself — but now understood as the <strong>output</strong> of the regime, not the regime itself</li>
+</ul>
+<hr>
+<h2 id="4-structural-comparison-wikipedia-vs-other-knowledge-sources">4 — Structural Comparison: Wikipedia vs. Other Knowledge Sources</h2>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Wikipedia</th>
+<th>NIST</th>
+<th>Academic Papers</th>
+<th>Textbooks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authority model</td>
+<td>Consensus</td>
+<td>Institutional</td>
+<td>Peer review</td>
+<td>Editorial</td>
+</tr>
+<tr>
+<td>Regime declaration</td>
+<td>Article (negotiated)</td>
+<td>Standard (published)</td>
+<td>Abstract + claims</td>
+<td>Chapter scope</td>
+</tr>
+<tr>
+<td>Temporal depth</td>
+<td>Full (every revision since 2001)</td>
+<td>Versioned (sparse)</td>
+<td>Published once</td>
+<td>Editions (sparse)</td>
+</tr>
+<tr>
+<td>Coherence mechanism</td>
+<td>NPOV + talk page</td>
+<td>Internal review</td>
+<td>Peer review</td>
+<td>Editor discretion</td>
+</tr>
+<tr>
+<td>Drift visibility</td>
+<td>High (revision history is public)</td>
+<td>Low (internal)</td>
+<td>None (static once published)</td>
+<td>Low (between editions)</td>
+</tr>
+<tr>
+<td>Knowledge graph</td>
+<td>Wikidata (120M+ entities, CC0)</td>
+<td>None</td>
+<td>Citation graph (unstructured)</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Cross‑cultural</td>
+<td>300+ language editions</td>
+<td>English only</td>
+<td>Language of publication</td>
+<td>Language of publication</td>
+</tr>
+<tr>
+<td>Validation corridor</td>
+<td>FA/GA process (public, observable)</td>
+<td>Certification (closed)</td>
+<td>Peer review (closed)</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Regime conflicts</td>
+<td>Visible (edit wars, AfD, talk pages)</td>
+<td>Hidden (internal)</td>
+<td>Hidden (reviewer comments)</td>
+<td>Hidden (editorial decisions)</td>
+</tr>
+<tr>
+<td>Machine accessibility</td>
+<td>REST API, SPARQL, dumps</td>
+<td>API (limited)</td>
+<td>DOI + PDF</td>
+<td>ISBN + purchase</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key insight:</strong> Wikipedia is the <strong>only major knowledge source</strong> where regime conflicts, coherence negotiations, and temporal evolution are <strong>publicly observable in real time</strong>. This makes it an unparalleled substrate for teaching regime awareness.</p>
+<hr>
+<h2 id="5-mapping-depth-levels">5 — Mapping Depth Levels</h2>
+<p>Not all mappings require the same depth. This module operates at three levels:</p>
+<h3 id="level-1-surface-mapping-any-student-5-minutes">Level 1 — Surface Mapping (any student, 5 minutes)</h3>
+<p>Read an article's lead paragraph as a regime declaration. Check revision count. Find the Wikidata Q‑number.</p>
+<p><strong>Tools needed:</strong> Web browser only.</p>
+<h3 id="level-2-structural-mapping-engaged-student-30-minutes">Level 2 — Structural Mapping (engaged student, 30 minutes)</h3>
+<p>Trace the category tree. Read the talk page for coherence disputes. Compare 2–3 language versions. Check the quality rating. Apply 3–4 meta‑operators from the Cross‑Domain file.</p>
+<p><strong>Tools needed:</strong> Web browser + Wikidata search.</p>
+<h3 id="level-3-deep-mapping-researcher-or-ai-hours-to-days">Level 3 — Deep Mapping (researcher or AI, hours to days)</h3>
+<p>Query Wikidata via SPARQL for dimensional bridges. Analyze revision history for regime stability curves. Map edit wars to regime transition events. Build cross‑domain operator matrices. Compare FA articles to non‑FA articles for validation corridor analysis.</p>
+<p><strong>Tools needed:</strong> SPARQL client + revision analysis tools + statistical software.</p>
+<hr>
+<h2 id="6-mapping-notation-conventions">6 — Mapping Notation Conventions</h2>
+<p>Throughout this module, mappings are written using consistent notation:</p>
+<table>
+<thead>
+<tr>
+<th>Notation</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>WP:Article → regime_declaration</code></td>
+<td>A Wikipedia article maps to an RTT regime declaration</td>
+<td><code>WP:Water → regime_declaration(chemistry, liquid, standard conditions)</code></td>
+</tr>
+<tr>
+<td><code>WD:Qnnn → dimensional_address</code></td>
+<td>A Wikidata Q‑number maps to an RTT dimensional address</td>
+<td><code>WD:Q283 → dimensional_address(water)</code></td>
+</tr>
+<tr>
+<td><code>WD:Pnnn → dimensional_operator</code></td>
+<td>A Wikidata P‑number maps to an RTT dimensional operator</td>
+<td><code>WD:P274 → dimensional_operator(chemical_formula)</code></td>
+</tr>
+<tr>
+<td><code>WP:Talk → coherence_surface</code></td>
+<td>A talk page maps to an RTT coherence/drift surface</td>
+<td><code>WP:Talk:Evolution → coherence_surface(high_tension)</code></td>
+</tr>
+<tr>
+<td><code>WP:Rev[n] → temporal_regime[t]</code></td>
+<td>A revision maps to a temporal regime data point</td>
+<td><code>WP:Rev[47291] → temporal_regime[2024-03-15]</code></td>
+</tr>
+<tr>
+<td><code>WP:Cat → regime_hierarchy</code></td>
+<td>A category maps to an RTT regime hierarchy node</td>
+<td><code>WP:Cat:Algebra → regime_hierarchy(Mathematics, depth=3)</code></td>
+</tr>
+<tr>
+<td><code>WP:FA → validation_corridor(gold)</code></td>
+<td>A Featured Article maps to a gold‑standard validation</td>
+<td><code>WP:FA:Photosynthesis → validation_corridor(gold, Biology)</code></td>
+</tr>
+<tr>
+<td><code>R0/R1/R2/R3</code></td>
+<td>Regime level</td>
+<td><code>NPOV = R0; Infobox = R2; Article text = R3</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="7-unmapped-structures-known-gaps">7 — Unmapped Structures (Known Gaps)</h2>
+<p>Some Wikipedia structures do not yet have clean RTT mappings. These are documented here for future work:</p>
+<table>
+<thead>
+<tr>
+<th>Wikipedia Structure</th>
+<th>Current Status</th>
+<th>Candidate RTT Mapping</th>
+<th>Difficulty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Barnstars and user awards</td>
+<td>Unmapped</td>
+<td>Operator recognition / stewardship signals</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Bot edits (automated maintenance)</td>
+<td>Unmapped</td>
+<td>Regime maintenance automation</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>WikiSpecies / WikiSource / Wiktionary</td>
+<td>Unmapped</td>
+<td>Sibling regime substrates</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Commons media files</td>
+<td>Unmapped</td>
+<td>Regime illustration layer</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Sockpuppet investigations</td>
+<td>Unmapped</td>
+<td>Regime integrity enforcement</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Paid editing disclosure</td>
+<td>Unmapped</td>
+<td>Regime conflict of interest surface</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Mobile app reading patterns</td>
+<td>Unmapped</td>
+<td>Regime consumption analytics</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Machine translation (Content Translation tool)</td>
+<td>Unmapped</td>
+<td>Cross‑regime automated bridging</td>
+<td>Medium</td>
+</tr>
+</tbody>
+</table>
+<p>These gaps are <strong>not blockers</strong> — the 65+ mapped structures in Section 2 provide more than sufficient coverage for all 15 knowledge domains.</p>
+<hr>
+<h2 id="8-how-this-file-connects-to-everything-else">8 — How This File Connects to Everything Else</h2>
+<pre><code>Wikipedia_RTT_Structural_Mapping.md (this file)
+    │
+    ├── defines grammar for ──→ Cross_Domain_Meta_Operators.md
+    │                              (12 operators use this vocabulary)
+    │
+    ├── defines grammar for ──→ All 7 Wikipedia‑Specific Analysis Files
+    │                              (each file references these mappings)
+    │
+    ├── defines grammar for ──→ All 15 Domain Directories
+    │                              (every regime_alignment.md uses this notation)
+    │
+    ├── extends ──→ NIST Structural Mapping (../nist/)
+    │                (same R0–R3 grammar, richer substrate)
+    │
+    └── feeds ──→ Wikidata_Ingestion_Format.md
+                     (dimensional addressing layer)
+</code></pre>
+<hr>
+<h2 id="9-student-exercise">9 — Student Exercise</h2>
+<p><strong>Build your own mapping entry:</strong></p>
+<ol>
+<li>Find a Wikipedia structure <strong>not listed in Section 2</strong> (hint: there are dozens — Templates, Modules, Lua scripts, admin actions, CSD criteria…)</li>
+<li>Identify which RTT concept it maps to (regime declaration, coherence operator, drift marker, validation corridor, dimensional address, or something new)</li>
+<li>Assign it a regime level (R0, R1, R2, or R3)</li>
+<li>Write a one‑sentence structural function description</li>
+<li>Add it to Section 2's format and submit it as a candidate mapping</li>
+</ol>
+<p><strong>Bonus:</strong> If your mapping doesn't fit any existing RTT concept, you may have discovered a <strong>new structural operator</strong>. Document it and cross‑reference it against the 12 meta‑operators in <code>Cross_Domain_Meta_Operators.md</code>.</p>
+<hr>
+<p><em>This file is part of the <a href="README.html">Wikipedia Awareness Module</a> in the <a href="https://www.triadicframeworks.org/">TriadicFrameworks</a> canon.</em></p>
+  </main>
+</body>
+</html>
