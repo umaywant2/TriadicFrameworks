@@ -292,7 +292,6 @@ def rewrite_markdown_url(url: str) -> str:
         return url
 
     parts = urlsplit(url)
-
     path = parts.path
 
     if path.lower().endswith(".md"):
@@ -314,19 +313,13 @@ def rewrite_markdown_url(url: str) -> str:
 
 
 def rewrite_html_links(rendered_html: str) -> str:
-    """
-    Rewrite .md/.markdown links in generated href/src attributes.
-    """
+    """Rewrite .md/.markdown links in generated href/src attributes."""
 
     def replace(match: re.Match[str]) -> str:
         original = match.group("url")
         rewritten = rewrite_markdown_url(original)
 
-        return (
-            match.group("prefix")
-            + rewritten
-            + match.group("suffix")
-        )
+        return match.group("prefix") + rewritten + match.group("suffix")
 
     return _HTML_URL_ATTR_RE.sub(replace, rendered_html)
 
@@ -340,8 +333,7 @@ def discover_markdown_files() -> list[Path]:
     files = [
         path
         for path in DOCS_ROOT.rglob("*")
-        if path.is_file()
-        and path.suffix.lower() in {".md", ".markdown"}
+        if path.is_file() and path.suffix.lower() in {".md", ".markdown"}
     ]
 
     return sorted(
@@ -353,18 +345,11 @@ def discover_markdown_files() -> list[Path]:
 def target_for_source(source: Path) -> Path:
     """Map a /docs Markdown path to its corresponding /html path."""
     relative = source.relative_to(DOCS_ROOT)
-
-    return (
-        HTML_ROOT
-        / relative
-    ).with_suffix(".html")
+    return (HTML_ROOT / relative).with_suffix(".html")
 
 
 def expected_html_files(sources: Iterable[Path]) -> set[Path]:
-    return {
-        target_for_source(source).resolve()
-        for source in sources
-    }
+    return {target_for_source(source).resolve() for source in sources}
 
 
 # ---------------------------------------------------------------------------
@@ -386,7 +371,6 @@ def title_from_markdown(
     source: Path,
 ) -> str:
     """Choose a useful HTML document title."""
-
     metadata_title = metadata.get("title")
 
     if metadata_title:
@@ -396,12 +380,7 @@ def title_from_markdown(
 
     if heading:
         title = heading.group(1)
-
-        title = _MARKDOWN_LINK_RE.sub(
-            lambda match: match.group(1),
-            title,
-        )
-
+        title = _MARKDOWN_LINK_RE.sub(lambda match: match.group(1), title)
         title = _MARKDOWN_INLINE_RE.sub("", title).strip()
 
         if title:
@@ -422,7 +401,6 @@ def render_markdown(source_text: str) -> str:
     )
 
     rendered = md.convert(source_text)
-
     return rewrite_html_links(rendered)
 
 
@@ -433,18 +411,11 @@ def build_document(source: Path) -> str:
     )
 
     markdown_body, metadata = strip_front_matter(source_text)
-
-    title = title_from_markdown(
-        markdown_body,
-        metadata,
-        source,
-    )
-
+    title = title_from_markdown(markdown_body, metadata, source)
     rendered_body = render_markdown(markdown_body)
 
     canonical_source = (
-        Path("/docs")
-        / source.relative_to(DOCS_ROOT)
+        Path("/docs") / source.relative_to(DOCS_ROOT)
     ).as_posix()
 
     return HTML_TEMPLATE.format(
@@ -499,7 +470,8 @@ def write_if_changed(
 # Orphan reconciliation
 # ---------------------------------------------------------------------------
 
-def discover_generated_html() -> listif not HTML_ROOT.exists():
+def discover_generated_html() -> list[Path]:
+    if not HTML_ROOT.exists():
         return []
 
     return sorted(
@@ -525,7 +497,6 @@ def remove_orphans(
             continue
 
         removed += 1
-
         relative = html_file.relative_to(REPO_ROOT)
 
         if verbose or check:
@@ -607,9 +578,7 @@ def build(
 
     sources = discover_markdown_files()
     stats = BuildStats(sources=len(sources))
-
     expected = expected_html_files(sources)
-
     mode = "CHECK" if check else "BUILD"
 
     print()
@@ -622,18 +591,12 @@ def build(
 
     for source in sources:
         target = target_for_source(source)
-
         source_rel = source.relative_to(REPO_ROOT)
         target_rel = target.relative_to(REPO_ROOT)
 
         try:
             content = build_document(source)
-
-            result = write_if_changed(
-                target,
-                content,
-                check=check,
-            )
+            result = write_if_changed(target, content, check=check)
 
             if result == "generated":
                 stats.generated += 1
@@ -645,7 +608,6 @@ def build(
                         f"{source_rel.as_posix()} -> "
                         f"{target_rel.as_posix()}"
                     )
-
             else:
                 stats.unchanged += 1
 
@@ -658,7 +620,6 @@ def build(
 
         except Exception as exc:
             stats.errors += 1
-
             print(
                 f"[ERROR] {source_rel.as_posix()}: {exc}",
                 file=sys.stderr,
@@ -703,16 +664,10 @@ def build(
             print("MIRROR STATUS: OUT OF SYNC")
 
             for path in missing:
-                print(
-                    "[MISSING] "
-                    + path.relative_to(REPO_ROOT).as_posix()
-                )
+                print("[MISSING] " + path.relative_to(REPO_ROOT).as_posix())
 
             for path in orphaned:
-                print(
-                    "[ORPHAN] "
-                    + path.relative_to(REPO_ROOT).as_posix()
-                )
+                print("[ORPHAN] " + path.relative_to(REPO_ROOT).as_posix())
 
             return 1
 
@@ -728,15 +683,13 @@ def build(
 
         for path in missing:
             print(
-                "[MISSING] "
-                + path.relative_to(REPO_ROOT).as_posix(),
+                "[MISSING] " + path.relative_to(REPO_ROOT).as_posix(),
                 file=sys.stderr,
             )
 
         for path in orphaned:
             print(
-                "[ORPHAN] "
-                + path.relative_to(REPO_ROOT).as_posix(),
+                "[ORPHAN] " + path.relative_to(REPO_ROOT).as_posix(),
                 file=sys.stderr,
             )
 
@@ -746,7 +699,6 @@ def build(
 
     print()
     print("MIRROR STATUS: OK")
-
     return 0
 
 
@@ -782,7 +734,6 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     args = parse_args()
-
     return build(
         check=args.check,
         verbose=args.verbose,
