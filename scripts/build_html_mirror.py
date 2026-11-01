@@ -333,8 +333,23 @@ def discover_markdown_files() -> list[Path]:
 
 
 def target_for_source(source: Path) -> Path:
-    """Map a /docs Markdown path to its corresponding /html path."""
+    """
+    Map a /docs Markdown path to its corresponding /html path.
+
+    Root publication mappings:
+        docs/README.md -> html/index.html
+        docs/index.md  -> html/repo-index.html
+
+    All other Markdown sources preserve their relative path.
+    """
     relative = source.relative_to(DOCS_ROOT)
+
+    if relative == Path("README.md"):
+        return HTML_ROOT / "index.html"
+
+    if relative == Path("index.md"):
+        return HTML_ROOT / "repo-index.html"
+
     return (HTML_ROOT / relative).with_suffix(".html")
 
 
@@ -383,8 +398,22 @@ def title_from_markdown(
 # Rendering
 # ---------------------------------------------------------------------------
 
+def rewrite_public_hostname(source_text: str) -> str:
+    """
+    Rewrite canonical public-site links for the HTML mirror.
+
+    Markdown sources remain unchanged. Only the generated HTML projection
+    uses docs.triadicframeworks.org.
+    """
+    return source_text.replace(
+        "www.triadicframeworks.org",
+        "docs.triadicframeworks.org",
+    )
+    
 
 def render_markdown(source_text: str) -> str:
+    source_text = rewrite_public_hostname(source_text)
+
     md = markdown.Markdown(
         extensions=MARKDOWN_EXTENSIONS,
         extension_configs=MARKDOWN_EXTENSION_CONFIGS,
@@ -392,13 +421,7 @@ def render_markdown(source_text: str) -> str:
     )
 
     rendered = md.convert(source_text)
-    rendered = rewrite_html_links(rendered)
-    rendered = rendered.replace(
-        "www.triadicframeworks.org",
-        "docs.triadicframeworks.org",
-    )
-
-    return rendered
+    return rewrite_html_links(rendered)
 
 
 def sitemap_href_for_target(target: Path) -> str:
