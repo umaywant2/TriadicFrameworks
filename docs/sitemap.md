@@ -1,12 +1,12 @@
 <img width="1194" height="672" alt="Sitemap_" src="https://github.com/user-attachments/assets/365dfd30-384a-44dc-bbf4-6c27c18b6fab" />
 
-- [`sitemap_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/sitemap_module.json) — Agentic module schema role assignments
+- [`sitemap_module.json`](sitemap_module.json) — Agentic module schema role assignments
 - [`sitemap_main.xml`](https://www.triadicframeworks.org/sitemap_main.xml) — Machine sitemap (urlset)
 
 # 🌐 Site‑Map | TriadicFrameworks  
 *Structural, harmonic, and substrate‑aligned overview*
 
-_Alternate Site_ 🥈 [Docusaurus online](https://docs.triadicframeworks.org) more pending
+_Alternate Site_ 🥈 [HTML mirror online](https://docs.triadicframeworks.org) 
 
 _Inventory refresh: **2026-09-02** · **410** public URLs_
 
