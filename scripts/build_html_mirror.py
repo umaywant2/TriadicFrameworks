@@ -8,10 +8,18 @@ Canonical source:
 Generated mirror:
     /html/**/*.html
 
-Examples:
+Root publication mappings:
     docs/README.md
-        -> html/README.html
+        -> html/index.html
 
+    docs/index.md
+        -> html/repo-index.html
+
+Nested index mappings:
+    docs/<module>/index.md
+        -> html/<module>/index_md.html
+
+Examples:
     docs/rtt/Harmonic_Stability_Profile/README.md
         -> html/rtt/Harmonic_Stability_Profile/README.html
 
@@ -59,7 +67,6 @@ REPO_ROOT = SCRIPT_DIR.parent
 
 DOCS_ROOT = REPO_ROOT / "docs"
 HTML_ROOT = REPO_ROOT / "html"
-SITEMAP_SOURCE = DOCS_ROOT / "sitemap.md"
 SITEMAP_TARGET = HTML_ROOT / "sitemap.html"
 
 
@@ -276,7 +283,15 @@ def rewrite_markdown_url(url: str) -> str:
     lowered = url.lower()
 
     if (
-        lowered.startswith(("http://", "https://", "mailto:", "tel:", "data:"))
+        lowered.startswith(
+            (
+                "http://",
+                "https://",
+                "mailto:",
+                "tel:",
+                "data:",
+            )
+        )
         or url.startswith(("#", "//"))
     ):
         return url
@@ -308,7 +323,12 @@ def rewrite_html_links(rendered_html: str) -> str:
     def replace(match: re.Match[str]) -> str:
         original = match.group("url")
         rewritten = rewrite_markdown_url(original)
-        return match.group("prefix") + rewritten + match.group("suffix")
+
+        return (
+            match.group("prefix")
+            + rewritten
+            + match.group("suffix")
+        )
 
     return _HTML_URL_ATTR_RE.sub(replace, rendered_html)
 
@@ -317,13 +337,13 @@ def rewrite_html_links(rendered_html: str) -> str:
 # Source discovery
 # ---------------------------------------------------------------------------
 
-
 def discover_markdown_files() -> list[Path]:
     """Return every Markdown source under /docs in deterministic order."""
     files = [
         path
         for path in DOCS_ROOT.rglob("*")
-        if path.is_file() and path.suffix.lower() in {".md", ".markdown"}
+        if path.is_file()
+        and path.suffix.lower() in {".md", ".markdown"}
     ]
 
     return sorted(
@@ -340,7 +360,7 @@ def target_for_source(source: Path) -> Path:
         docs/README.md -> html/index.html
         docs/index.md  -> html/repo-index.html
 
-    Nested index.md files avoid colliding with copied index.html files:
+    Nested index.md files avoid colliding with existing index.html files:
         docs/<module>/index.md -> html/<module>/index_md.html
 
     All other Markdown sources preserve their relative path.
@@ -360,7 +380,10 @@ def target_for_source(source: Path) -> Path:
 
 
 def expected_html_files(sources: Iterable[Path]) -> set[Path]:
-    return {target_for_source(source).resolve() for source in sources}
+    return {
+        target_for_source(source).resolve()
+        for source in sources
+    }
 
 
 # ---------------------------------------------------------------------------
@@ -372,8 +395,13 @@ _ATX_HEADING_RE = re.compile(
     flags=re.MULTILINE,
 )
 
-_MARKDOWN_LINK_RE = re.compile(r"!?\[([^\]]+)\]\([^)]*\)")
-_MARKDOWN_INLINE_RE = re.compile(r"[*_`~]")
+_MARKDOWN_LINK_RE = re.compile(
+    r"!?\[([^\]]+)\]\([^)]*\)"
+)
+
+_MARKDOWN_INLINE_RE = re.compile(
+    r"[*_`~]"
+)
 
 
 def title_from_markdown(
@@ -391,8 +419,16 @@ def title_from_markdown(
 
     if heading:
         title = heading.group(1)
-        title = _MARKDOWN_LINK_RE.sub(lambda match: match.group(1), title)
-        title = _MARKDOWN_INLINE_RE.sub("", title).strip()
+
+        title = _MARKDOWN_LINK_RE.sub(
+            lambda match: match.group(1),
+            title,
+        )
+
+        title = _MARKDOWN_INLINE_RE.sub(
+            "",
+            title,
+        ).strip()
 
         if title:
             return title
@@ -415,7 +451,7 @@ def rewrite_public_hostname(source_text: str) -> str:
         "www.triadicframeworks.org",
         "docs.triadicframeworks.org",
     )
-    
+
 
 def render_markdown(source_text: str) -> str:
     source_text = rewrite_public_hostname(source_text)
@@ -427,12 +463,20 @@ def render_markdown(source_text: str) -> str:
     )
 
     rendered = md.convert(source_text)
+
     return rewrite_html_links(rendered)
 
 
 def sitemap_href_for_target(target: Path) -> str:
-    """Return a POSIX-style relative URL from target to /html/sitemap.html."""
-    relative = os.path.relpath(SITEMAP_TARGET, start=target.parent)
+    """
+    Return a POSIX-style relative URL from the generated page
+    to /html/sitemap.html.
+    """
+    relative = os.path.relpath(
+        SITEMAP_TARGET,
+        start=target.parent,
+    )
+
     return Path(relative).as_posix()
 
 
@@ -442,27 +486,43 @@ def build_document(source: Path) -> str:
         errors="strict",
     )
 
-    markdown_body, metadata = strip_front_matter(source_text)
-    title = title_from_markdown(markdown_body, metadata, source)
-    rendered_body = render_markdown(markdown_body)
+    markdown_body, metadata = strip_front_matter(
+        source_text
+    )
 
-    if source.resolve() == SITEMAP_SOURCE.resolve():
-        rendered_body = rendered_body.replace(
-            "www.triadicframeworks.org",
-            "docs.triadicframeworks.org",
-        )
+    title = title_from_markdown(
+        markdown_body,
+        metadata,
+        source,
+    )
 
-    canonical_source = (
-        Path("/docs") / source.relative_to(DOCS_ROOT)
+    rendered_body = render_markdown(
+        markdown_body
+    )
+
+    canonical_"/docs")
+        / source.relative_to(DOCS_ROOT)
     ).as_posix()
 
     target = target_for_source(source)
-    sitemap_href = sitemap_href_for_target(target)
+
+    sitemap_href = sitemap_href_for_target(
+        target
+    )
 
     return HTML_TEMPLATE.format(
-        source_path=html.escape(canonical_source, quote=True),
-        title=html.escape(title, quote=True),
-        sitemap_href=html.escape(sitemap_href, quote=True),
+        source_path=html.escape(
+            canonical_source,
+            quote=True,
+        ),
+        title=html.escape(
+            title,
+            quote=True,
+        ),
+        sitemap_href=html.escape(
+            sitemap_href,
+            quote=True,
+        ),
         body=rendered_body,
     )
 
@@ -470,7 +530,6 @@ def build_document(source: Path) -> str:
 # ---------------------------------------------------------------------------
 # File writing
 # ---------------------------------------------------------------------------
-
 
 def write_if_changed(
     target: Path,
@@ -513,9 +572,7 @@ def write_if_changed(
 # Orphan reconciliation
 # ---------------------------------------------------------------------------
 
-
-def discover_generated_html() -> list[Path]:
-    if not HTML_ROOT.exists():
+def discover_generated_html() -> listif not HTML_ROOT.exists():
         return []
 
     return sorted(
@@ -524,7 +581,11 @@ def discover_generated_html() -> list[Path]:
             for path in HTML_ROOT.rglob("*.html")
             if path.is_file()
         ),
-        key=lambda path: path.relative_to(HTML_ROOT).as_posix().lower(),
+        key=lambda path: (
+            path.relative_to(HTML_ROOT)
+            .as_posix()
+            .lower()
+        ),
     )
 
 
@@ -541,22 +602,37 @@ def remove_orphans(
             continue
 
         removed += 1
-        relative = html_file.relative_to(REPO_ROOT)
+
+        relative = html_file.relative_to(
+            REPO_ROOT
+        )
 
         if verbose or check:
-            action = "ORPHAN" if check else "REMOVE"
-            print(f"[{action}] {relative.as_posix()}")
+            action = (
+                "ORPHAN"
+                if check
+                else "REMOVE"
+            )
+
+            print(
+                f"[{action}] "
+                f"{relative.as_posix()}"
+            )
 
         if not check:
             html_file.unlink()
 
     if not check:
-        remove_empty_directories(HTML_ROOT)
+        remove_empty_directories(
+            HTML_ROOT
+        )
 
     return removed
 
 
-def remove_empty_directories(root: Path) -> None:
+def remove_empty_directories(
+    root: Path,
+) -> None:
     if not root.exists():
         return
 
@@ -574,6 +650,7 @@ def remove_empty_directories(root: Path) -> None:
         try:
             directory.rmdir()
         except OSError:
+            # Directory is not empty.
             pass
 
 
@@ -581,11 +658,13 @@ def remove_empty_directories(root: Path) -> None:
 # Validation
 # ---------------------------------------------------------------------------
 
-
 def validate_mirror(
     sources: list[Path],
 ) -> tuple[list[Path], list[Path]]:
-    expected = expected_html_files(sources)
+    expected = expected_html_files(
+        sources
+    )
+
     actual = {
         path.resolve()
         for path in discover_generated_html()
@@ -593,12 +672,16 @@ def validate_mirror(
 
     missing = sorted(
         expected - actual,
-        key=lambda path: path.as_posix().lower(),
+        key=lambda path: (
+            path.as_posix().lower()
+        ),
     )
 
     orphaned = sorted(
         actual - expected,
-        key=lambda path: path.as_posix().lower(),
+        key=lambda path: (
+            path.as_posix().lower()
+        ),
     )
 
     return missing, orphaned
@@ -608,7 +691,6 @@ def validate_mirror(
 # Build
 # ---------------------------------------------------------------------------
 
-
 def build(
     *,
     check: bool,
@@ -616,15 +698,30 @@ def build(
 ) -> int:
     if not DOCS_ROOT.is_dir():
         print(
-            f"ERROR: docs directory does not exist: {DOCS_ROOT}",
+            (
+                "ERROR: docs directory does "
+                f"not exist: {DOCS_ROOT}"
+            ),
             file=sys.stderr,
         )
+
         return 2
 
     sources = discover_markdown_files()
-    stats = BuildStats(sources=len(sources))
-    expected = expected_html_files(sources)
-    mode = "CHECK" if check else "BUILD"
+
+    stats = BuildStats(
+        sources=len(sources)
+    )
+
+    expected = expected_html_files(
+        sources
+    )
+
+    mode = (
+        "CHECK"
+        if check
+        else "BUILD"
+    )
 
     print()
     print("TriadicFrameworks HTML Mirror")
@@ -635,38 +732,64 @@ def build(
     print()
 
     for source in sources:
-        target = target_for_source(source)
-        source_rel = source.relative_to(REPO_ROOT)
-        target_rel = target.relative_to(REPO_ROOT)
+        target = target_for_source(
+            source
+        )
+
+        source_rel = source.relative_to(
+            REPO_ROOT
+        )
+
+        target_rel = target.relative_to(
+            REPO_ROOT
+        )
 
         try:
-            content = build_document(source)
-            result = write_if_changed(target, content, check=check)
+            content = build_document(
+                source
+            )
+
+            result = write_if_changed(
+                target,
+                content,
+                check=check,
+            )
 
             if result == "generated":
                 stats.generated += 1
 
                 if verbose or check:
-                    action = "STALE" if check else "WRITE"
+                    action = (
+                        "STALE"
+                        if check
+                        else "WRITE"
+                    )
+
                     print(
                         f"[{action}] "
                         f"{source_rel.as_posix()} -> "
                         f"{target_rel.as_posix()}"
                     )
+
             else:
                 stats.unchanged += 1
 
                 if verbose:
                     print(
-                        f"[OK]    "
+                        "[OK]    "
                         f"{source_rel.as_posix()} -> "
                         f"{target_rel.as_posix()}"
                     )
 
         except Exception as exc:
             stats.errors += 1
+
             print(
-                f"[ERROR] {source_rel.as_posix()}: {exc}",
+                (
+                    f"[ERROR] "
+                    f"{source_rel.as_posix()}: "
+                    f"{exc}"
+                ),
                 file=sys.stderr,
             )
 
@@ -679,11 +802,21 @@ def build(
     print()
     print("Mirror Summary")
     print("-" * 32)
-    print(f"Markdown sources : {stats.sources}")
-    print(f"HTML changed     : {stats.generated}")
-    print(f"HTML unchanged   : {stats.unchanged}")
-    print(f"Orphan HTML      : {stats.removed}")
-    print(f"Conversion errors: {stats.errors}")
+    print(
+        f"Markdown sources : {stats.sources}"
+    )
+    print(
+        f"HTML changed     : {stats.generated}"
+    )
+    print(
+        f"HTML unchanged   : {stats.unchanged}"
+    )
+    print(
+        f"Orphan HTML      : {stats.removed}"
+    )
+    print(
+        f"Conversion errors: {stats.errors}"
+    )
 
     if stats.errors:
         print()
@@ -693,24 +826,41 @@ def build(
     if check:
         if stats.generated or stats.removed:
             print()
-            print("MIRROR STATUS: OUT OF SYNC")
+            print(
+                "MIRROR STATUS: OUT OF SYNC"
+            )
             print(
                 "Run scripts/build_html_mirror.py "
                 "to reconcile the mirror."
             )
+
             return 1
 
-        missing, orphaned = validate_mirror(sources)
+        missing, orphaned = validate_mirror(
+            sources
+        )
 
         if missing or orphaned:
             print()
-            print("MIRROR STATUS: OUT OF SYNC")
+            print(
+                "MIRROR STATUS: OUT OF SYNC"
+            )
 
             for path in missing:
-                print("[MISSING] " + path.relative_to(REPO_ROOT).as_posix())
+                print(
+                    "[MISSING] "
+                    + path.relative_to(
+                        REPO_ROOT
+                    ).as_posix()
+                )
 
             for path in orphaned:
-                print("[ORPHAN] " + path.relative_to(REPO_ROOT).as_posix())
+                print(
+                    "[ORPHAN] "
+                    + path.relative_to(
+                        REPO_ROOT
+                    ).as_posix()
+                )
 
             return 1
 
@@ -718,20 +868,28 @@ def build(
         print("MIRROR STATUS: OK")
         return 0
 
-    missing, orphaned = validate_mirror(sources)
+    missing, orphaned = validate_mirror(
+        sources
+    )
 
     if missing or orphaned:
         print()
 
         for path in missing:
             print(
-                "[MISSING] " + path.relative_to(REPO_ROOT).as_posix(),
+                "[MISSING] "
+                + path.relative_to(
+                    REPO_ROOT
+                ).as_posix(),
                 file=sys.stderr,
             )
 
         for path in orphaned:
             print(
-                "[ORPHAN] " + path.relative_to(REPO_ROOT).as_posix(),
+                "[ORPHAN] "
+                + path.relative_to(
+                    REPO_ROOT
+                ).as_posix(),
                 file=sys.stderr,
             )
 
@@ -741,6 +899,7 @@ def build(
 
     print()
     print("MIRROR STATUS: OK")
+
     return 0
 
 
@@ -748,11 +907,11 @@ def build(
 # CLI
 # ---------------------------------------------------------------------------
 
-
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description=(
-            "Build and validate the TriadicFrameworks "
+            "Build and validate the "
+            "TriadicFrameworks "
             "/docs -> /html Markdown mirror."
         )
     )
@@ -761,8 +920,9 @@ def parse_args() -> argparse.Namespace:
         "--check",
         action="store_true",
         help=(
-            "Do not modify files. Exit nonzero if generated HTML "
-            "would change or orphan HTML exists."
+            "Do not modify files. Exit nonzero "
+            "if generated HTML would change "
+            "or orphan HTML exists."
         ),
     )
 
@@ -772,4 +932,17 @@ def parse_args() -> argparse.Namespace:
         help="Print each mirror operation.",
     )
 
-    return parser.p
+    return parser.parse_args()
+
+
+def main() -> int:
+    args = parse_args()
+
+    return build(
+        check=args.check,
+        verbose=args.verbose,
+    )
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
