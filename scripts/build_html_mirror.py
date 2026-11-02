@@ -481,36 +481,46 @@ def build_target_map(
     markdown_sources: Iterable[Path],
     asset_sources: Iterable[Path],
 ) -> dict[Path, Path]:
-    """Build and validate the complete source-to-target publication map."""
+    """
+    Build and validate the complete source-to-target publication map.
+
+    Every Markdown source and copied asset receives exactly one target.
+    Duplicate publication targets are rejected before processing begins.
+    """
     target_map: dict[Path, Path] = {}
     owners: dict[Path, Path] = {}
 
-    for source in asset_sources:
-        target = target_for_asset(source)
-        resolved = target.resolve()
+    def add_mapping(
+        source: Path,
+        target: Path,
+    ) -> None:
+        resolved_target = target.resolve()
 
-        if resolved in owners:
+        if resolved_target in owners:
+            other_source = owners[resolved_target]
+
             raise ValueError(
                 "Target collision: "
-                f"{source} and {owners[resolved]} "
-                f"-> {target}"
-            )
-
-        owners[resolved] = source
-
-    for source in markdown_sources:
-        target = target_for_markdown(source)
-        resolved = target.resolve()
-
-        if resolved in owners:
-            raise ValueError(
-                "Target collision: "
-                f"{source} and {owners[resolved]} "
+                f"{source} and {other_source} "
                 f"-> {target}"
             )
 
         target_map[source] = target
-        owners[resolved] = source
+        owners[resolved_target] = source
+
+    # Register copied assets first.
+    for source in asset_sources:
+        add_mapping(
+            source,
+            target_for_asset(source),
+        )
+
+    # Register generated Markdown targets second.
+    for source in markdown_sources:
+        add_mapping(
+            source,
+            target_for_markdown(source),
+        )
 
     return target_map
 
