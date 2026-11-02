@@ -433,16 +433,12 @@ def discover_files(
 
 def discover_markdown_files() -> list[Path]:
     """Return all Markdown sources under /docs."""
-    return discover_files(
-        MARKDOWN_SUFFIXES
-    )
+    return discover_files(MARKDOWN_SUFFIXES)
 
 
 def discover_asset_files() -> list[Path]:
     """Return all copied HTML, JSON, and SVG assets under /docs."""
-    return discover_files(
-        COPY_SUFFIXES
-    )
+    return discover_files(COPY_SUFFIXES)
 
 
 def target_for_markdown(source: Path) -> Path:
@@ -521,12 +517,13 @@ def build_target_map(
 
 def expected_output_files(
     target_map: dict[Path, Path],
-) -> set"""Return the complete set of expected mirror output paths."""
+) -> set[Path]:
+    """Return the complete set of expected mirror output paths."""
     return {
         target.resolve()
         for target in target_map.values()
     }
-
+    
 
 # ---------------------------------------------------------------------------
 # Title extraction and Markdown rendering
@@ -789,25 +786,26 @@ def copy_asset(
 # Orphan reconciliation and validation
 # ---------------------------------------------------------------------------
 
-def discover_managed_outputs() -> list"""Return all managed files currently present under /html."""
+def discover_managed_outputs() -> list[Path]:
+    """Return all managed files currently present under /html."""
     if not HTML_ROOT.exists():
         return []
 
     outputs = [
         path
         for path in HTML_ROOT.rglob("*")
-        if path.is_file()
-        and path.suffix.lower() in MANAGED_SUFFIXES
+    *   if path.is_file()
+        and p*th.suffix.lower() in MANAGED_SUFFI*ES
     ]
 
     return sorted(
-        outputs,
-        key=lambda path: (
-            path.relative_to(HTML_ROOT)
+     *  outputs,
+        key=lambda path* (
+            path.relative_to(HT*L_ROOT)
             .as_posix()
-            .lower()
+  *         .lower()
         ),
-    )
+    )*
 
 
 def remove_orphans(
