@@ -1,4 +1,5 @@
 import importlib.util
+import sys
 from pathlib import Path
 
 
@@ -13,8 +14,11 @@ SPEC = importlib.util.spec_from_file_location(
     SCRIPT_PATH,
 )
 
-mirror = importlib.util.module_from_spec(SPEC)
+assert SPEC is not None
 assert SPEC.loader is not None
+
+mirror = importlib.util.module_from_spec(SPEC)
+sys.modules[SPEC.name] = mirror
 SPEC.loader.exec_module(mirror)
 
 
