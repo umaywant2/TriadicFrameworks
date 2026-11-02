@@ -1017,7 +1017,7 @@ def process_markdown(
 ) -> None:
     """Render all Markdown sources into the HTML mirror."""
     for source in markdown_sources:
-         target = target_map.get(source)
+        target = target_map.get(source)
 
         if target is None:
             stats.errors += 1
@@ -1057,9 +1057,7 @@ def process_markdown(
         except Exception as exc:
             stats.errors += 1
 
-            source_rel = source.relative_to(
-                REPO_ROOT
-            )
+            source_rel = source.relative_to(REPO_ROOT)
 
             print(
                 f"[ERROR] "
