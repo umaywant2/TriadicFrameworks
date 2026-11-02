@@ -17,3 +17,6 @@ echo python scripts\build_html_mirror.py --check
 echo.
 echo.
 echo python -m pytest tests\test_build_html_mirror.py -q
+echo.
+echo.
+echo python scripts\build_html_mirror.py --check
