@@ -371,7 +371,7 @@ micro-regime behavior.</p>
 </tr>
 <tr>
 <td><strong>Core Equation</strong></td>
-<td>A ⇆ P oscillation governed by δ ≤ δ* and C ≥ C* at each micro-step</td>
+<td>A ⇆ P oscillation governed by δ ≤ δ<em> and C ≥ C</em> at each micro-step</td>
 </tr>
 <tr>
 <td><strong>Permissions</strong></td>
@@ -490,7 +490,7 @@ micro-regime behavior.</p>
 <td>No</td>
 </tr>
 <tr>
-<td>0.5·δ* ≤ δ &lt; δ*</td>
+<td>0.5·δ<em> ≤ δ &lt; δ</em></td>
 <td>In bounds</td>
 <td>K₁ correction + K₂ stabilization</td>
 <td>No</td>
@@ -674,7 +674,7 @@ Post-conditions:
 </tr>
 </tbody>
 </table>
-<p><em><em>Inversion Protocol (when C &lt; C</em> unrecoverable):</em>*</p>
+<p><strong>Inversion Protocol (when C &lt; C* unrecoverable):</strong></p>
 <pre><code>Phase 1 — Collapse
   Lock all oscillation (R₄ unconditional)
   Freeze Dᶠ transitions (Class F halt)
@@ -933,7 +933,7 @@ active micro-regime.</p>
 <tr>
 <td>Zone M</td>
 <td>Modulating</td>
-<td>δ between 0.5·δ* and δ*; K₁/K₂ active</td>
+<td>δ between 0.5·δ<em> and δ</em>; K₁/K₂ active</td>
 <td>CAUTION</td>
 </tr>
 <tr>
@@ -1195,7 +1195,7 @@ RTT/1 may not instantiate SNR primitives from a fault record.</p>
 </tr>
 <tr>
 <td>Bridge gate</td>
-<td>C ≥ C* + δ ≤ δ* + G clearance</td>
+<td>C ≥ C<em> + δ ≤ δ</em> + G clearance</td>
 <td>Bridge blocked; MRT_MICRO_PACKET not emitted</td>
 </tr>
 </tbody>
@@ -1220,7 +1220,7 @@ RTT/1 may not instantiate SNR primitives from a fault record.</p>
 </code></pre>
 <hr>
 <h3 id="model-2-drift-crisis-and-inversion-recovery">Model 2 — Drift Crisis and Inversion Recovery</h3>
-<p>Triggered when δ exceeds δ* and C falls below C*:</p>
+<p>Triggered when δ exceeds δ<em> and C falls below C</em>:</p>
 <pre><code>Class D          Class G          Class R          Class T
    │                │                │                │
    │─ δ ≥ δ* ──────▶│                │                │
