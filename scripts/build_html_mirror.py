@@ -794,18 +794,18 @@ def discover_managed_outputs() -> list[Path]:
     outputs = [
         path
         for path in HTML_ROOT.rglob("*")
-    *   if path.is_file()
-        and p*th.suffix.lower() in MANAGED_SUFFI*ES
+        if path.is_file()
+        and path.suffix.lower() in MANAGED_SUFFIXES
     ]
 
     return sorted(
-     *  outputs,
-        key=lambda path* (
-            path.relative_to(HT*L_ROOT)
+        outputs,
+        key=lambda path: (
+            path.relative_to(HTML_ROOT)
             .as_posix()
-  *         .lower()
+            .lower()
         ),
-    )*
+    )
 
 
 def remove_orphans(
