@@ -962,7 +962,20 @@ def process_assets(
 ) -> None:
     """Copy all support assets into the HTML mirror."""
     for source in asset_sources:
-        target = target_map[source]
+        target = target_map.get(source)
+
+        if target is None:
+            stats.errors += 1
+
+            source_rel = source.relative_to(REPO_ROOT)
+
+            print(
+                f"[ERROR] Missing target mapping for "
+                f"{source_rel.as_posix()}",
+                file=sys.stderr,
+            )
+
+            continue
 
         try:
             result = copy_asset(
@@ -984,9 +997,7 @@ def process_assets(
         except Exception as exc:
             stats.errors += 1
 
-            source_rel = source.relative_to(
-                REPO_ROOT
-            )
+            source_rel = source.relative_to(REPO_ROOT)
 
             print(
                 f"[ERROR] "
@@ -1006,7 +1017,20 @@ def process_markdown(
 ) -> None:
     """Render all Markdown sources into the HTML mirror."""
     for source in markdown_sources:
-        target = target_map[source]
+         target = target_map.get(source)
+
+        if target is None:
+            stats.errors += 1
+
+            source_rel = source.relative_to(REPO_ROOT)
+
+            print(
+                f"[ERROR] Missing target mapping for "
+                f"{source_rel.as_posix()}",
+                file=sys.stderr,
+            )
+
+            continue
 
         try:
             content = build_markdown_document(
