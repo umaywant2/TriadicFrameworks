@@ -1215,7 +1215,7 @@ micro-regime behavior.</p>
 </tr>
 <tr>
 <td><strong>Core Equation</strong></td>
-<td>A ⇆ P oscillation governed by δ ≤ δ<em> and C ≥ C</em> at each micro-step</td>
+<td>A ⇆ P oscillation governed by δ ≤ δ* and C ≥ C* at each micro-step</td>
 </tr>
 <tr>
 <td><strong>Permissions</strong></td>
@@ -1334,7 +1334,7 @@ micro-regime behavior.</p>
 <td>No</td>
 </tr>
 <tr>
-<td>0.5·δ<em> ≤ δ &lt; δ</em></td>
+<td>0.5·δ* ≤ δ &lt; δ*</td>
 <td>In bounds</td>
 <td>K₁ correction + K₂ stabilization</td>
 <td>No</td>
@@ -1518,7 +1518,7 @@ Post-conditions:
 </tr>
 </tbody>
 </table>
-<p><strong>Inversion Protocol (when C &lt; C* unrecoverable):</strong></p>
+<p><em><em>Inversion Protocol (when C &lt; C</em> unrecoverable):</em>*</p>
 <pre><code>Phase 1 — Collapse
   Lock all oscillation (R₄ unconditional)
   Freeze Dᶠ transitions (Class F halt)
@@ -1777,7 +1777,7 @@ active micro-regime.</p>
 <tr>
 <td>Zone M</td>
 <td>Modulating</td>
-<td>δ between 0.5·δ<em> and δ</em>; K₁/K₂ active</td>
+<td>δ between 0.5·δ* and δ*; K₁/K₂ active</td>
 <td>CAUTION</td>
 </tr>
 <tr>
@@ -2039,7 +2039,7 @@ RTT/1 may not instantiate SNR primitives from a fault record.</p>
 </tr>
 <tr>
 <td>Bridge gate</td>
-<td>C ≥ C<em> + δ ≤ δ</em> + G clearance</td>
+<td>C ≥ C* + δ ≤ δ* + G clearance</td>
 <td>Bridge blocked; MRT_MICRO_PACKET not emitted</td>
 </tr>
 </tbody>
@@ -2064,7 +2064,7 @@ RTT/1 may not instantiate SNR primitives from a fault record.</p>
 </code></pre>
 <hr>
 <h3 id="model-2-drift-crisis-and-inversion-recovery">Model 2 — Drift Crisis and Inversion Recovery</h3>
-<p>Triggered when δ exceeds δ<em> and C falls below C</em>:</p>
+<p>Triggered when δ exceeds δ* and C falls below C*:</p>
 <pre><code>Class D          Class G          Class R          Class T
    │                │                │                │
    │─ δ ≥ δ* ──────▶│                │                │
@@ -2588,8 +2588,8 @@ evolution occurs.</p>
 given micro-step. C measures the degree to which the triad maintains internal consistency
 across drift, timing, and fractional dimensionality. C is sampled by P₆ without mutation.</p>
 <p><strong>Equations:</strong>
-- Valid state: C ≥ C<em>
-- Coherence-critical zone: C approaching C</em> from above → escalate to Class G
+- Valid state: C ≥ C*
+- Coherence-critical zone: C approaching C* from above → escalate to Class G
 - Inversion trigger: C &lt; C* and unrecoverable → R₂ activates</p>
 <p><strong>Failure cascade:</strong>
 - C below C* → Coherence Violation → Inversion (↺) → Collapse → Twist → Emergence</p>
@@ -2622,7 +2622,7 @@ These are structurally distinct constructs operating at different pipeline layer
 </tbody>
 </table>
 <p><strong>Definition:</strong> The minimum coherence value required for the micro triad to remain in a
-valid operational state. C<em> is the lower bound enforced continuously. Sustained C &lt; C</em>
+valid operational state. C* is the lower bound enforced continuously. Sustained C &lt; C*
 constitutes a Coherence Violation and triggers Inversion if unrecoverable.</p>
 <p><strong>Cross-references:</strong> C (Coherence), K₅ (Inversion Guard), R₄ (Resonance Lock), Zone C (Coherence-Critical), Zone X (Inversion)</p>
 <hr>
@@ -4005,8 +4005,8 @@ which is itself coherence-dependent.</p>
 </code></pre>
 <p><strong>Failure modes (any triggers Inversion):</strong>
 - Timing Violation: Δt exits [Δtₘᵢₙ, Δtₘₐₓ]
-- Drift Violation: δ exceeds δ<em>
-- Coherence Violation: C &lt; C</em> unrecoverable</p>
+- Drift Violation: δ exceeds δ*
+- Coherence Violation: C &lt; C* unrecoverable</p>
 <p>[structural — no semantic inference]</p>
 <p><strong>Cross-references:</strong> R₁ (Oscillation), K₁–K₂, C, δ, Δt, Zone X (Inversion)</p>
 <hr>
@@ -4067,8 +4067,8 @@ constitute the minimal coherent resonance-time unit. No subset of ⟨A, B, P⟩ 
 to form a valid unit.</p>
 <p><strong>Four core properties (all required simultaneously):</strong>
 1. Minimalism — ⟨A, B, P⟩ is the minimal unit; no subset is sufficient
-2. Determinism — δ ≤ δ<em> and Δt ∈ [Δtₘᵢₙ, Δtₘₐₓ]
-3. Coherence — C ≥ C</em>; inversion if below threshold
+2. Determinism — δ ≤ δ* and Δt ∈ [Δtₘᵢₙ, Δtₘₐₓ]
+3. Coherence — C ≥ C*; inversion if below threshold
 4. Fractional Dimensionality — Dᶠ continuous; integer jumps forbidden</p>
 <p>[structural — no semantic inference]</p>
 <p><strong>Cross-references:</strong> A, B, P, Four Core Properties, Class T (Triad Constructor), MRT_MICRO_PACKET</p>
@@ -4315,8 +4315,8 @@ measurement method, and resolution path are all distinct.
 </tr>
 </tbody>
 </table>
-<p><strong>Definition:</strong> The maximum allowable drift value. δ<em> is the upper bound enforced by K₁
-and Class D. When δ exceeds δ</em>, a Drift Violation is recorded and Class G is escalated.</p>
+<p><strong>Definition:</strong> The maximum allowable drift value. δ* is the upper bound enforced by K₁
+and Class D. When δ exceeds δ*, a Drift Violation is recorded and Class G is escalated.</p>
 <p><strong>Cross-references:</strong> δ (Drift), K₁ (Drift Bounding), Class D (Drift Regulator), Class G (Micro Guardian)</p>
 <hr>
 <h3 id="t-timing-interval">Δt — Timing Interval</h3>
@@ -6964,9 +6964,9 @@ The orchestrator coordinates regimes; it does not manipulate internals.</p>
 </ul>
 <p>Most importantly:</p>
 <h3 id="we-do-not-turn-microcore-into-a-product">**We do not turn Micro‑Core into a product.</h3>
-<p>We turn it into a touchpoint.<strong>
-# 🔀 </strong>Flow Diagrams (MRT)<em><em><br>
-</em>Minimal structural pathways for micro‑scale behavior</em></p>
+<p>We turn it into a touchpoint.**
+# 🔀 <strong>Flow Diagrams (MRT)</strong><br>
+<em>Minimal structural pathways for micro‑scale behavior</em></p>
 <p>Flow diagrams illustrate the structural pathways that micro‑states follow during resonance, inversion, drift correction, boundary alignment, and fractional‑ladder transitions.<br>
 They provide a <strong>visual grammar</strong> for Micro‑Core behavior and serve as <strong>implementation‑ready templates</strong> for constrained environments.</p>
 <p>Each diagram is:</p>
@@ -7502,9 +7502,9 @@ It tells educators and engineers what the regime <em>means</em>, not how it beha
 </ul>
 <p>Most importantly:</p>
 <h3 id="it-does-not-turn-microcore-into-a-product">**It does not turn Micro‑Core into a product.</h3>
-<p>It turns it into a touchpoint.<strong>
-# 🔸 </strong>Resonance Operators (MRT)<em><em><br>
-</em>Core actions that shape micro‑scale resonance within RTT Micro‑Core</em></p>
+<p>It turns it into a touchpoint.**
+# 🔸 <strong>Resonance Operators (MRT)</strong><br>
+<em>Core actions that shape micro‑scale resonance within RTT Micro‑Core</em></p>
 <p>Resonance Operators define the essential behaviors that micro‑regimes can perform.<br>
 They shape oscillation, inversion, stability, boundary modulation, and fractional‑dimensional transitions.</p>
 <p>Each operator is:</p>

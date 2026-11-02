@@ -887,7 +887,7 @@
 <h2 id="the-memory-controller-review-question">The Memory Controller Review Question</h2>
 <p>At every design review involving the memory controller, this checklist prompts one question:</p>
 <blockquote>
-<p><em>"If a value passed through the memory controller — could we later determine </em><em>who</em><em> initiated the transaction, </em><em>when</em><em> it was issued vs. when it was scheduled, </em><em>whether</em><em> it was combined with other writes, </em><em>whether</em><em> it was corrected by ECC, and </em><em>what</em><em> the memory clock domain was at the time?"</em></p>
+<p><em>"If a value passed through the memory controller — could we later determine <strong>who</strong> initiated the transaction, <strong>when</strong> it was issued vs. when it was scheduled, <strong>whether</strong> it was combined with other writes, <strong>whether</strong> it was corrected by ECC, and <strong>what</strong> the memory clock domain was at the time?"</em></p>
 </blockquote>
 <p>If the answer is <strong>"yes, without redesign,"</strong> the controller is aligned.</p>
 <p>If the answer is <strong>"no, but we could log it without changing the data path,"</strong> the reservation is achievable — return to the failing items.</p>
